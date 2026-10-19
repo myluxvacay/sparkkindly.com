@@ -1,0 +1,10 @@
+{
+  "approvedBy": "REPLACE_WITH_ACTUAL_REVIEWER",
+  "approvedAt": "2026-10-19",
+  "decision": "fully-reviewed-release",
+  "authorization": "REPLACE_WITH_ACTUAL_PUBLICATION_AUTHORIZATION",
+  "editorialApprovalFile": "docs/editorial-approval.json",
+  "outstandingReviews": [],
+  "ownerDirectedPublicationWithDisclosedOutstandingReviews": false,
+  "note": "Example only. Record real approvals; do not invent reviews or bypass revision fingerprints."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "reflection-011",
+  "scheduledDate": "2026-10-27",
+  "brand": "grow",
+  "prompt": "In the five-minute reflection, where should you enter your personal thoughts?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A public leaderboard"
+    },
+    {
+      "id": "b",
+      "text": "A required signup form"
+    },
+    {
+      "id": "c",
+      "text": "A comment thread"
+    },
+    {
+      "id": "d",
+      "text": "Nowhere on the site; private paper is optional"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "This activity has no form, account or submission. You can write on your own paper, think quietly, or skip the activity entirely.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

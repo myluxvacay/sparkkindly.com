@@ -1,0 +1,63 @@
+{
+  "id": "play-01",
+  "slug": "number-detective",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Number Detective",
+  "description": "A familiar sequence, a new way to see it. Can you find the next number?",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-10-19",
+  "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start with a rule",
+      "paragraphs": [
+        "Here is your puzzle: using n × (n + 1), starting at n = 1, what comes after 2, 6, 12, 20? Take a moment before reading on. There is no clock to beat.",
+        "An unrestricted number sequence can have many possible continuations. This puzzle gives you its rule, so you can test one specific idea rather than guess what the author intended."
+      ]
+    },
+    {
+      "heading": "Look at the building blocks",
+      "paragraphs": [
+        "Write the first four terms as products: 1 × 2, 2 × 3, 3 × 4, and 4 × 5. Each term multiplies a number by the number immediately after it.",
+        "The next product is 5 × 6, which makes 30. You can check it a second way: the gaps are 4, 6, 8, and then 10. Adding 10 to 20 gives the same answer."
+      ]
+    },
+    {
+      "heading": "Make a puzzle of your own",
+      "paragraphs": [
+        "Choose a starting value for n and write three consecutive products using the same rule. Give a friend both the terms and the rule, then ask for the next product.",
+        "Try explaining why your answer works without saying “it just looks right.” Finding a pattern is fun; explaining it gives someone else a way to follow your thinking."
+      ]
+    }
+  ],
+  "takeaway": "The next term is 30: 5 × 6. A stated rule turns a guess into a checkable answer.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Pencil"
+  ],
+  "supervision": "Independent activity for adults; children need an adult.",
+  "safetyNotes": [
+    "Use paper and pencils safely; no uploads or personal information needed."
+  ]
+}

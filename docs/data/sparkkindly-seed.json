@@ -1,0 +1,1140 @@
+[
+  {
+    "_id": "article:discover-03",
+    "kind": "article",
+    "id": "discover-03",
+    "slug": "a-day-in-shadows",
+    "brand": "discover",
+    "contentType": "article",
+    "title": "A day in shadows",
+    "description": "The quiet movement at your feet can reveal a little about the sky.",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "hero": {
+      "src": "/images/shadows.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "discover",
+      "curiosity"
+    ],
+    "sources": [
+      {
+        "title": "NASA: I Tell Only Sunny Hours",
+        "url": "https://science.gsfc.nasa.gov/attic/sunearthday.nasa.gov/2005/images/Sun_Dial_pdf.pdf",
+        "accessedAt": "2026-10-17"
+      }
+    ],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "Notice the light",
+        "paragraphs": [
+          "A shadow forms where an object blocks light. On a sunny day, a fixed object\u2019s shadow can change as the Sun appears to move across the sky. Looking at the shadow lets you observe the light without looking directly at the Sun.",
+          "Use the same object and the same level surface each time. A moving object or a sloping surface can make comparisons harder to interpret."
+        ]
+      },
+      {
+        "heading": "Follow a changing angle",
+        "paragraphs": [
+          "When the Sun is low in the sky, a vertical object often casts a long shadow. As the Sun gets higher, that shadow becomes shorter. Its direction changes as well.",
+          "The shortest shadow is around local solar noon, which need not be 12:00 on a clock. Location, season, and the clock system all matter. A cloudy day can make a shadow difficult to see."
+        ]
+      },
+      {
+        "heading": "Keep an observation notebook",
+        "paragraphs": [
+          "Make two or three drawings at different times. Label the time, the weather, and which way the shadow points. Describe what you actually saw before trying to explain it.",
+          "Never look directly at the Sun. If you investigate outside, choose a safe place away from roads and use ordinary sun protection. Children should work with an adult."
+        ]
+      }
+    ],
+    "takeaway": "Watch one fixed object at different times. Changing sunlight can change both the length and direction of its shadow.",
+    "fiction": false
+  },
+  {
+    "_id": "article:grow-08",
+    "kind": "article",
+    "id": "grow-08",
+    "slug": "a-smaller-next-step",
+    "brand": "grow",
+    "contentType": "article",
+    "title": "A smaller next step",
+    "description": "Turn \u201cI should do that\u201d into one concrete action you can see.",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "hero": {
+      "src": "/images/grow.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "grow",
+      "curiosity"
+    ],
+    "sources": [],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "Name the task",
+        "paragraphs": [
+          "Some tasks sound small until we try to start them. \u201cSort the cupboard\u201d contains many decisions: where to begin, what to keep, and where everything should go. Write the task down in plain language.",
+          "Choose just one part. You might pick the top shelf or a single drawer. Defining a boundary gives you a clear place to stop as well as a place to start."
+        ]
+      },
+      {
+        "heading": "Make the next action visible",
+        "paragraphs": [
+          "Replace \u201cget organised\u201d with \u201cput the empty boxes together.\u201d An action is easier to recognise when you can imagine what your hands will do. If it still feels vague, divide it again.",
+          "Prepare only what that step needs. For the cupboard, that might mean a clear patch of floor and one bag. Avoid making a new project out of preparing for the old one."
+        ]
+      },
+      {
+        "heading": "Decide when enough is enough",
+        "paragraphs": [
+          "Choose a stopping point before beginning. After one shelf, you can continue, take a break, or leave the rest for another day. Finishing a small part is still a real change.",
+          "This is a practical planning suggestion, not a promise of productivity or wellbeing. Tasks differ, and asking someone for practical help may be the useful next step."
+        ]
+      }
+    ],
+    "takeaway": "Choose one visible action and a stopping point that makes sense for today.",
+    "fiction": false
+  },
+  {
+    "_id": "article:discover-04",
+    "kind": "article",
+    "id": "discover-04",
+    "slug": "beneath-the-blue",
+    "brand": "discover",
+    "contentType": "article",
+    "title": "Beneath the blue",
+    "description": "An introduction to the ocean\u2019s layers, one change in light at a time.",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "hero": {
+      "src": "/images/ocean.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "discover",
+      "curiosity"
+    ],
+    "sources": [
+      {
+        "title": "NOAA: How far does light travel in the ocean?",
+        "url": "https://oceanservice.noaa.gov/facts/light_travel.html",
+        "accessedAt": "2026-10-17"
+      }
+    ],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "A world shaped by light",
+        "paragraphs": [
+          "The ocean is not evenly lit from top to bottom. NOAA describes a sunlit upper region, a twilight region, and deeper water without sunlight. These are useful guides, rather than painted boundaries in the sea.",
+          "Significant sunlight is rarely present below about 200 metres. Water clarity and other conditions affect how far the light travels."
+        ]
+      },
+      {
+        "heading": "Into the twilight",
+        "paragraphs": [
+          "The twilight zone extends roughly from 200 to 1,000 metres. A little sunlight can reach this region under the right conditions, but not enough for photosynthesis.",
+          "Below about 1,000 metres is the aphotic zone, where sunlight does not reach. The deep ocean includes further depth divisions; \u201cmidnight\u201d names the bathypelagic region from about 1,000 to 4,000 metres."
+        ]
+      },
+      {
+        "heading": "Read a diagram with care",
+        "paragraphs": [
+          "A simple layer diagram compresses enormous distances into a few bands of colour. Its colours are a teaching aid, not a photograph of what a diver would see.",
+          "When you meet a dramatic ocean image, ask whether it is a photograph, a diagram, or an illustration. Each can help us learn, but they tell us different kinds of things."
+        ]
+      }
+    ],
+    "takeaway": "Use sunlight as your first guide to ocean layers, and read approximate depths as guides rather than hard borders.",
+    "fiction": false
+  },
+  {
+    "_id": "article:grow-07",
+    "kind": "article",
+    "id": "grow-07",
+    "slug": "five-minute-pause",
+    "brand": "grow",
+    "contentType": "article",
+    "title": "A five-minute pause",
+    "description": "A gentle reflection for an ordinary day. A notebook is optional.",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "hero": {
+      "src": "/images/grow.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "grow",
+      "curiosity"
+    ],
+    "sources": [],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "Arrive as you are",
+        "paragraphs": [
+          "This is an optional writing prompt, not a test. Choose a comfortable place and give yourself about five minutes if you have them. Keep your eyes open or simply look around. You can stop whenever you want.",
+          "Start with one neutral observation: the colour of a wall, the sound of a passing car, or the feeling of a cup in your hand. You do not need to achieve a particular mood."
+        ]
+      },
+      {
+        "heading": "Ask three small questions",
+        "paragraphs": [
+          "What caught my attention today? Write a sentence about something specific, however ordinary. A conversation, a sentence in a book, or a patch of light is enough.",
+          "What took more effort than I expected? Name the task without turning it into a judgment about yourself. Then ask: what is one thing I would like to carry into tomorrow?"
+        ]
+      },
+      {
+        "heading": "Choose what to keep",
+        "paragraphs": [
+          "Read back only if you want to. Circle one phrase, close the notebook, or leave the page unfinished. There is no score and no correct answer.",
+          "This reflection offers a structure for thinking, not a health outcome. If reflecting feels unhelpful, choose a different activity or leave it for another day. Nothing needs to be entered on this website."
+        ]
+      }
+    ],
+    "takeaway": "Notice one thing, name one effort, and choose one thought to carry forward.",
+    "fiction": false
+  },
+  {
+    "_id": "article:together-06",
+    "kind": "article",
+    "id": "together-06",
+    "slug": "give-your-attention",
+    "brand": "together",
+    "contentType": "article",
+    "title": "Five ways to give someone your attention",
+    "description": "Small, ordinary invitations to be a little more present.",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "hero": {
+      "src": "/images/together.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "together",
+      "curiosity"
+    ],
+    "sources": [],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "Make a little space",
+        "paragraphs": [
+          "1. Ask whether now is a good time. Attention is easier to offer when both people can choose the moment. \u201cWould you like to talk?\u201d leaves room for a yes, a no, or a later.",
+          "2. Put one distraction aside. You might silence your own phone or turn away from a screen, if doing so is practical. Do not demand that someone else do the same."
+        ]
+      },
+      {
+        "heading": "Let the other person lead",
+        "paragraphs": [
+          "3. Ask an open question. \u201cWhat was the interesting part?\u201d can invite a fuller answer than a rapid series of guesses. Let silence be part of the conversation.",
+          "4. Check what you heard. Try \u201cHave I understood that correctly?\u201d rather than assuming you know how someone feels. People can correct your understanding in their own words."
+        ]
+      },
+      {
+        "heading": "Finish thoughtfully",
+        "paragraphs": [
+          "5. Ask what would be useful. Someone may want company, an idea, practical help, or simply to finish a sentence. Accept their answer, including a wish for space.",
+          "These are everyday conversation suggestions, not therapy or a promise to repair a relationship. Your own boundaries matter too. You can offer attention without agreeing to do everything asked of you."
+        ]
+      }
+    ],
+    "takeaway": "Ask, listen, check your understanding, and respect the other person\u2019s choice.",
+    "fiction": false
+  },
+  {
+    "_id": "article:play-01",
+    "kind": "article",
+    "id": "play-01",
+    "slug": "number-detective",
+    "brand": "play",
+    "contentType": "activity",
+    "title": "Number Detective",
+    "description": "A familiar sequence, a new way to see it. Can you find the next number?",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "hero": {
+      "src": "/images/play.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "play",
+      "curiosity"
+    ],
+    "sources": [],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "Start with a rule",
+        "paragraphs": [
+          "Here is your puzzle: using n \u00d7 (n + 1), starting at n = 1, what comes after 2, 6, 12, 20? Take a moment before reading on. There is no clock to beat.",
+          "An unrestricted number sequence can have many possible continuations. This puzzle gives you its rule, so you can test one specific idea rather than guess what the author intended."
+        ]
+      },
+      {
+        "heading": "Look at the building blocks",
+        "paragraphs": [
+          "Write the first four terms as products: 1 \u00d7 2, 2 \u00d7 3, 3 \u00d7 4, and 4 \u00d7 5. Each term multiplies a number by the number immediately after it.",
+          "The next product is 5 \u00d7 6, which makes 30. You can check it a second way: the gaps are 4, 6, 8, and then 10. Adding 10 to 20 gives the same answer."
+        ]
+      },
+      {
+        "heading": "Make a puzzle of your own",
+        "paragraphs": [
+          "Choose a starting value for n and write three consecutive products using the same rule. Give a friend both the terms and the rule, then ask for the next product.",
+          "Try explaining why your answer works without saying \u201cit just looks right.\u201d Finding a pattern is fun; explaining it gives someone else a way to follow your thinking."
+        ]
+      }
+    ],
+    "takeaway": "The next term is 30: 5 \u00d7 6. A stated rule turns a guess into a checkable answer.",
+    "fiction": false,
+    "materials": [
+      "Paper",
+      "Pencil"
+    ],
+    "supervision": "Independent activity for adults; children need an adult.",
+    "safetyNotes": [
+      "Use paper and pencils safely; no uploads or personal information needed."
+    ]
+  },
+  {
+    "_id": "article:play-02",
+    "kind": "article",
+    "id": "play-02",
+    "slug": "one-word-five-clues",
+    "brand": "play",
+    "contentType": "activity",
+    "title": "One word, five clues",
+    "description": "Five carefully chosen clues. One everyday word. Take it one clue at a time.",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "hero": {
+      "src": "/images/play.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "play",
+      "curiosity"
+    ],
+    "sources": [],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "The challenge",
+        "paragraphs": [
+          "Choose one word from this set: planet, pencil, kettle, garden. It must satisfy every clue: it has six letters; it begins with P; its second letter is E; it names something you can hold; and it is used to make marks on paper.",
+          "You can solve this on paper. Cross out a word only when you can name a clue it fails. There is no need to use every clue in order."
+        ]
+      },
+      {
+        "heading": "Check each candidate",
+        "paragraphs": [
+          "Planet begins with P and has six letters, but its second letter is L. Kettle starts with K. Garden starts with G. Pencil is the only candidate with P followed by E.",
+          "Pencil also has six letters, fits in a hand, and can make marks on paper. Within the supplied candidate set it is the unique solution. The set matters: we are not claiming to have checked every word in the English language."
+        ]
+      },
+      {
+        "heading": "Swap roles",
+        "paragraphs": [
+          "Write down four new candidate words and choose a target. Build clues that eliminate the other three, checking each one before you share the puzzle.",
+          "Invite your partner to explain which clue did the most work. Sometimes one precise clue can be more helpful than a long list of vague ones."
+        ]
+      }
+    ],
+    "takeaway": "Pencil is the unique answer among the four supplied words.",
+    "fiction": false,
+    "materials": [
+      "Paper",
+      "Pencil"
+    ],
+    "supervision": "Independent activity for adults; children need an adult.",
+    "safetyNotes": [
+      "Use paper and pencils safely; no uploads or personal information needed."
+    ]
+  },
+  {
+    "_id": "article:kids-09",
+    "kind": "article",
+    "id": "kids-09",
+    "slug": "shadow-explorers",
+    "brand": "kids",
+    "contentType": "activity",
+    "title": "Shadow explorers",
+    "description": "For ages 6\u20139 with an adult: trace a shadow and see what changes.",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "ageGuidance": "Ages 6\u20139, with an adult",
+    "hero": {
+      "src": "/images/shadows.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "kids",
+      "curiosity"
+    ],
+    "sources": [
+      {
+        "title": "NASA: I Tell Only Sunny Hours",
+        "url": "https://science.gsfc.nasa.gov/attic/sunearthday.nasa.gov/2005/images/Sun_Dial_pdf.pdf",
+        "accessedAt": "2026-10-17"
+      }
+    ],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "Set up together",
+        "paragraphs": [
+          "Ask an adult to choose a safe, flat outdoor spot away from roads. Place a small, sturdy toy on a sheet of paper in sunlight. Keep the paper from blowing away without using anything sharp.",
+          "The adult stays with you. Never look directly at the Sun, even for a moment. If it is too hot, wet, or uncomfortable, save the activity for another time."
+        ]
+      },
+      {
+        "heading": "Trace, wait, compare",
+        "paragraphs": [
+          "Draw around the toy\u2019s shadow. The adult can write the time next to your line. Leave the toy and paper in the same place and return together later.",
+          "Use a different colour to trace the new shadow. Has its direction or length changed? Clouds might make it faint. \u201cWe could not see a clear shadow\u201d is a useful observation too."
+        ]
+      },
+      {
+        "heading": "Take the wonder off-screen",
+        "paragraphs": [
+          "Talk about which line is longer. You can compare with a strip of paper instead of a ruler. Your drawing records what you saw; it does not have to look like anyone else\u2019s.",
+          "For a screen-free extension, hold your hand near a wall while an adult shines an ordinary torch. Move the light, and describe how the shadow changes. Never shine the torch into anyone\u2019s eyes."
+        ]
+      }
+    ],
+    "takeaway": "A shadow shows where light is blocked. Try changing the light and noticing what happens.",
+    "fiction": false,
+    "materials": [
+      "Paper",
+      "Coloured pencils",
+      "A sturdy toy"
+    ],
+    "supervision": "An adult stays alongside throughout.",
+    "safetyNotes": [
+      "Never look directly at the Sun. Choose a safe location and suitable weather."
+    ],
+    "screenFreeExtension": "Try the final pretend scene or light experiment together away from the website."
+  },
+  {
+    "_id": "article:together-05",
+    "kind": "article",
+    "id": "together-05",
+    "slug": "the-little-things-that-matter",
+    "brand": "together",
+    "contentType": "video",
+    "title": "The Little Things That Matter",
+    "description": "A fictional story about a rainy morning, a missed bus, and one small act of attention.",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "hero": {
+      "src": "/images/together.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "together",
+      "curiosity"
+    ],
+    "sources": [],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "A rainy morning",
+        "paragraphs": [
+          "Fiction \u00b7 Pilot storyboard. Mara reached the bus stop just as the red tail lights disappeared around the corner. Rain slipped from the edge of her umbrella onto one shoe. She sighed and moved along the bench to make room for someone else.",
+          "An older neighbour stood nearby holding a paper bag. The bottom was beginning to soften. Mara offered the dry corner under her umbrella. \u201cYour bag might need this more than I do,\u201d she said."
+        ]
+      },
+      {
+        "heading": "A little room",
+        "paragraphs": [
+          "The neighbour laughed and shifted closer. Inside the bag was a loaf of bread for a friend who had asked for company over breakfast. They talked about the bakery window, then about nothing in particular.",
+          "When the next bus came, Mara helped hold the bag while the neighbour found a ticket. Nobody gave a speech. Nobody called it a life-changing moment. It was simply a little less rain, shared between two people."
+        ]
+      },
+      {
+        "heading": "Storyboard and descriptive transcript",
+        "paragraphs": [
+          "Panel one: a wide view of a wet bus stop; Mara watches the bus turn a corner. Panel two: a close view of the damp paper bag. Panel three: two figures stand beneath one umbrella. Panel four: hands steady the bag beside the bus door.",
+          "This is a written production concept, not footage of a real event. A finished video, duration, synchronized captions, and audio description have not been produced."
+        ]
+      }
+    ],
+    "takeaway": "A small offer can be specific: a dry space, a free hand, a moment of attention.",
+    "fiction": true,
+    "productionStatus": "in-production",
+    "durationSeconds": null,
+    "poster": {
+      "src": "/images/together.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "videoSrc": null,
+    "captionsSrc": null,
+    "transcript": "Panel one: a wide view of a wet bus stop; Mara watches the bus turn a corner. Panel two: a close view of the damp paper bag. Panel three: two figures stand beneath one umbrella. Panel four: hands steady the bag beside the bus door."
+  },
+  {
+    "_id": "article:kids-10",
+    "kind": "article",
+    "id": "kids-10",
+    "slug": "words-that-help",
+    "brand": "kids",
+    "contentType": "activity",
+    "title": "Words that help",
+    "description": "For ages 6\u20139 with an adult: match three everyday moments with thoughtful words.",
+    "publishedAt": "2026-10-19",
+    "updatedAt": "2026-10-19",
+    "author": "SparkKindly \u00b7 AI-assisted",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+    "ageGuidance": "Ages 6\u20139, with an adult",
+    "hero": {
+      "src": "/images/kids.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 800,
+      "credit": "Development reference photograph \u00b7 Unsplash",
+      "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    },
+    "tags": [
+      "kids",
+      "curiosity"
+    ],
+    "sources": [],
+    "factualClaimsReviewedAt": "2026-10-19",
+    "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+    "body": [
+      {
+        "heading": "Make the cards",
+        "paragraphs": [
+          "Ask a grown-up to write three moments on separate pieces of paper: someone lends you a crayon; you accidentally knock over a tower; you want to join a game. No names or personal stories are needed.",
+          "On three more cards, write: \u201cThank you for sharing\u201d; \u201cI\u2019m sorry. May I help rebuild it?\u201d; and \u201cMay I join in?\u201d Read all six cards together."
+        ]
+      },
+      {
+        "heading": "Try a match",
+        "paragraphs": [
+          "Place a words card beside each moment. For the crayon, try \u201cThank you for sharing.\u201d For the fallen tower, try an apology and an offer to help. To join a game, try asking first.",
+          "These are examples, not magic words. The other person can still say no. You can be disappointed and still respect their choice. Talk with your grown-up about another activity you could choose."
+        ]
+      },
+      {
+        "heading": "Practise away from the screen",
+        "paragraphs": [
+          "Swap roles and act out a pretend scene using toys. You do not need to record it, upload it, or tell the website how it went. There is no score.",
+          "For a screen-free extension, draw a new imaginary moment and invent a helpful sentence together. Keep it kind and specific. The grown-up can help if any part feels confusing."
+        ]
+      }
+    ],
+    "takeaway": "Helpful words can thank, repair, or invite. Listening to the answer matters too.",
+    "fiction": false,
+    "materials": [
+      "Paper",
+      "Pencil"
+    ],
+    "supervision": "An adult stays alongside throughout.",
+    "safetyNotes": [
+      "Use paper and pencils safely; no uploads or personal information needed."
+    ],
+    "screenFreeExtension": "Try the final pretend scene or light experiment together away from the website."
+  },
+  {
+    "_id": "quiz:attention-010",
+    "kind": "quiz",
+    "id": "attention-010",
+    "scheduledDate": "2026-10-26",
+    "brand": "together",
+    "prompt": "Which question checks whether you understood what someone said?",
+    "options": [
+      {
+        "id": "a",
+        "text": "I already know everything."
+      },
+      {
+        "id": "b",
+        "text": "You must agree with me."
+      },
+      {
+        "id": "c",
+        "text": "Have I understood that correctly?"
+      },
+      {
+        "id": "d",
+        "text": "Why are you always wrong?"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "\u201cHave I understood that correctly?\u201d invites the other person to confirm or correct your interpretation in their own words.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:double-rule-012",
+    "kind": "quiz",
+    "id": "double-rule-012",
+    "scheduledDate": "2026-10-28",
+    "brand": "play",
+    "prompt": "Starting at 3 and doubling each time gives 3, 6, 12, 24. What is next?",
+    "options": [
+      {
+        "id": "a",
+        "text": "27"
+      },
+      {
+        "id": "b",
+        "text": "36"
+      },
+      {
+        "id": "c",
+        "text": "48"
+      },
+      {
+        "id": "d",
+        "text": "60"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Doubling means multiplying by 2. The next term after 24 is 24\u00d72 = 48. Adding 3 would be a different rule.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:kind-invitation-004",
+    "kind": "quiz",
+    "id": "kind-invitation-004",
+    "scheduledDate": "2026-10-20",
+    "brand": "together",
+    "prompt": "In this scenario, someone says they want quiet time. Which reply respects that request?",
+    "options": [
+      {
+        "id": "a",
+        "text": "You must talk now."
+      },
+      {
+        "id": "b",
+        "text": "I will keep asking."
+      },
+      {
+        "id": "c",
+        "text": "That is fine; I will give you space."
+      },
+      {
+        "id": "d",
+        "text": "You cannot be quiet."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Giving the person space follows their stated request. In this scenario, respect means accepting the boundary instead of pressuring them to talk.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:midnight-zone-013",
+    "kind": "quiz",
+    "id": "midnight-zone-013",
+    "scheduledDate": "2026-10-29",
+    "brand": "discover",
+    "prompt": "Which NOAA depth range is commonly called the ocean\u2019s midnight zone?",
+    "options": [
+      {
+        "id": "a",
+        "text": "0\u2013200 metres"
+      },
+      {
+        "id": "b",
+        "text": "200\u20131,000 metres"
+      },
+      {
+        "id": "c",
+        "text": "1,000\u20134,000 metres"
+      },
+      {
+        "id": "d",
+        "text": "Above sea level"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "The bathypelagic or midnight zone is about 1,000 to 4,000 metres deep. It is part of the aphotic region where sunlight does not reach.",
+    "difficulty": "easy",
+    "sources": [
+      {
+        "title": "NOAA: How far does light travel in the ocean?",
+        "url": "https://oceanservice.noaa.gov/facts/light_travel.html",
+        "accessedAt": "2026-10-17"
+      }
+    ],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:number-detective-001",
+    "kind": "quiz",
+    "id": "number-detective-001",
+    "scheduledDate": "2026-10-17",
+    "brand": "play",
+    "prompt": "Using n \u00d7 (n + 1), starting at n = 1, what comes after 2, 6, 12, 20?",
+    "options": [
+      {
+        "id": "a",
+        "text": "24"
+      },
+      {
+        "id": "b",
+        "text": "28"
+      },
+      {
+        "id": "c",
+        "text": "30"
+      },
+      {
+        "id": "d",
+        "text": "32"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "The terms are 1\u00d72, 2\u00d73, 3\u00d74 and 4\u00d75. The next term is 5\u00d76 = 30. The stated rule makes this answer unambiguous.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:ocean-light-003",
+    "kind": "quiz",
+    "id": "ocean-light-003",
+    "scheduledDate": "2026-10-19",
+    "brand": "discover",
+    "prompt": "According to NOAA, significant sunlight is rarely found below about what depth?",
+    "options": [
+      {
+        "id": "a",
+        "text": "20 metres"
+      },
+      {
+        "id": "b",
+        "text": "200 metres"
+      },
+      {
+        "id": "c",
+        "text": "2,000 metres"
+      },
+      {
+        "id": "d",
+        "text": "20,000 metres"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "NOAA states that significant sunlight is rarely present beyond 200 metres. Water conditions affect penetration, so this is an approximate guide, not a fixed boundary.",
+    "difficulty": "easy",
+    "sources": [
+      {
+        "title": "NOAA: How far does light travel in the ocean?",
+        "url": "https://oceanservice.noaa.gov/facts/light_travel.html",
+        "accessedAt": "2026-10-17"
+      }
+    ],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:reflection-011",
+    "kind": "quiz",
+    "id": "reflection-011",
+    "scheduledDate": "2026-10-27",
+    "brand": "grow",
+    "prompt": "In the five-minute reflection, where should you enter your personal thoughts?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A public leaderboard"
+      },
+      {
+        "id": "b",
+        "text": "A required signup form"
+      },
+      {
+        "id": "c",
+        "text": "A comment thread"
+      },
+      {
+        "id": "d",
+        "text": "Nowhere on the site; private paper is optional"
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "This activity has no form, account or submission. You can write on your own paper, think quietly, or skip the activity entirely.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:shadow-safety-006",
+    "kind": "quiz",
+    "id": "shadow-safety-006",
+    "scheduledDate": "2026-10-22",
+    "brand": "kids",
+    "prompt": "With your grown-up, which is the safe way to investigate sunlight outdoors?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Look straight at the Sun."
+      },
+      {
+        "id": "b",
+        "text": "Observe a toy\u2019s shadow on paper."
+      },
+      {
+        "id": "c",
+        "text": "Use a magnifying glass to stare at the Sun."
+      },
+      {
+        "id": "d",
+        "text": "Stand in the road to see better."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Observe the shadow on paper with your adult in a safe place. Never look directly at the Sun, and stay away from roads.",
+    "difficulty": "easy",
+    "sources": [
+      {
+        "title": "NASA: I Tell Only Sunny Hours",
+        "url": "https://science.gsfc.nasa.gov/attic/sunearthday.nasa.gov/2005/images/Sun_Dial_pdf.pdf",
+        "accessedAt": "2026-10-17"
+      }
+    ],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:small-step-005",
+    "kind": "quiz",
+    "id": "small-step-005",
+    "scheduledDate": "2026-10-21",
+    "brand": "grow",
+    "prompt": "Which is the most specific next action for sorting a desk?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Be organised."
+      },
+      {
+        "id": "b",
+        "text": "Improve everything."
+      },
+      {
+        "id": "c",
+        "text": "Become productive."
+      },
+      {
+        "id": "d",
+        "text": "Put the loose pencils in a cup."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Putting loose pencils in a cup is a concrete action with a visible finish. The other choices describe broad goals without specifying what to do next.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:square-rule-007",
+    "kind": "quiz",
+    "id": "square-rule-007",
+    "scheduledDate": "2026-10-23",
+    "brand": "play",
+    "prompt": "Using the rule n\u00b2, starting at n = 1, which term follows 1, 4, 9, 16?",
+    "options": [
+      {
+        "id": "a",
+        "text": "20"
+      },
+      {
+        "id": "b",
+        "text": "24"
+      },
+      {
+        "id": "c",
+        "text": "25"
+      },
+      {
+        "id": "d",
+        "text": "36"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "The sequence is 1\u00b2, 2\u00b2, 3\u00b2, 4\u00b2. The next is 5\u00b2, which equals 25. The question specifies the rule rather than relying on a guessed pattern.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:thanks-card-009",
+    "kind": "quiz",
+    "id": "thanks-card-009",
+    "scheduledDate": "2026-10-25",
+    "brand": "kids",
+    "prompt": "In our matching game, which sentence goes with someone lending you a crayon?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Thank you for sharing."
+      },
+      {
+        "id": "b",
+        "text": "Go away."
+      },
+      {
+        "id": "c",
+        "text": "That belongs to me now."
+      },
+      {
+        "id": "d",
+        "text": "I will hide it."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "\u201cThank you for sharing\u201d acknowledges the offer of a crayon. The question asks for the match in our game, not a score for how kind a person is.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:twilight-zone-008",
+    "kind": "quiz",
+    "id": "twilight-zone-008",
+    "scheduledDate": "2026-10-24",
+    "brand": "discover",
+    "prompt": "NOAA describes the ocean\u2019s twilight zone as roughly which depth range?",
+    "options": [
+      {
+        "id": "a",
+        "text": "0\u201320 metres"
+      },
+      {
+        "id": "b",
+        "text": "200\u20131,000 metres"
+      },
+      {
+        "id": "c",
+        "text": "4,000\u20136,000 metres"
+      },
+      {
+        "id": "d",
+        "text": "Only at the surface"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "The twilight or dysphotic zone is approximately 200 to 1,000 metres deep. Light fades rapidly; there is not enough for photosynthesis.",
+    "difficulty": "easy",
+    "sources": [
+      {
+        "title": "NOAA: How far does light travel in the ocean?",
+        "url": "https://oceanservice.noaa.gov/facts/light_travel.html",
+        "accessedAt": "2026-10-17"
+      }
+    ],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:visible-action-014",
+    "kind": "quiz",
+    "id": "visible-action-014",
+    "scheduledDate": "2026-10-30",
+    "brand": "grow",
+    "prompt": "For the task \u201cread a chapter\u201d, which choice defines a clear smaller stopping point?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Read the first two pages."
+      },
+      {
+        "id": "b",
+        "text": "Read everything ever written."
+      },
+      {
+        "id": "c",
+        "text": "Be a better person."
+      },
+      {
+        "id": "d",
+        "text": "Never take a break."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Reading the first two pages specifies an action and a stopping point. You can decide afterwards whether to continue; there is no timer or score.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  },
+  {
+    "_id": "quiz:word-clues-002",
+    "kind": "quiz",
+    "id": "word-clues-002",
+    "scheduledDate": "2026-10-18",
+    "brand": "play",
+    "prompt": "Which six-letter candidate begins with PE and is used to write on paper?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Planet"
+      },
+      {
+        "id": "b",
+        "text": "Pencil"
+      },
+      {
+        "id": "c",
+        "text": "Kettle"
+      },
+      {
+        "id": "d",
+        "text": "Garden"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Pencil has six letters, begins with PE, and can write on paper. Planet begins with PL; the other two words do not begin with P.",
+    "difficulty": "easy",
+    "sources": [],
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly site owner",
+    "reviewedAt": "2026-10-19",
+    "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+  }
+]

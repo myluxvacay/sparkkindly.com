@@ -1,0 +1,32 @@
+{
+  "id": "attention-010",
+  "scheduledDate": "2026-10-26",
+  "brand": "together",
+  "prompt": "Which question checks whether you understood what someone said?",
+  "options": [
+    {
+      "id": "a",
+      "text": "I already know everything."
+    },
+    {
+      "id": "b",
+      "text": "You must agree with me."
+    },
+    {
+      "id": "c",
+      "text": "Have I understood that correctly?"
+    },
+    {
+      "id": "d",
+      "text": "Why are you always wrong?"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "“Have I understood that correctly?” invites the other person to confirm or correct your interpretation in their own words.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "shadow-safety-006",
+  "scheduledDate": "2026-10-22",
+  "brand": "kids",
+  "prompt": "With your grown-up, which is the safe way to investigate sunlight outdoors?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Look straight at the Sun."
+    },
+    {
+      "id": "b",
+      "text": "Observe a toy’s shadow on paper."
+    },
+    {
+      "id": "c",
+      "text": "Use a magnifying glass to stare at the Sun."
+    },
+    {
+      "id": "d",
+      "text": "Stand in the road to see better."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Observe the shadow on paper with your adult in a safe place. Never look directly at the Sun, and stay away from roads.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "NASA: I Tell Only Sunny Hours",
+      "url": "https://science.gsfc.nasa.gov/attic/sunearthday.nasa.gov/2005/images/Sun_Dial_pdf.pdf",
+      "accessedAt": "2026-10-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

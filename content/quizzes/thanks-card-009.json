@@ -1,0 +1,32 @@
+{
+  "id": "thanks-card-009",
+  "scheduledDate": "2026-10-25",
+  "brand": "kids",
+  "prompt": "In our matching game, which sentence goes with someone lending you a crayon?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Thank you for sharing."
+    },
+    {
+      "id": "b",
+      "text": "Go away."
+    },
+    {
+      "id": "c",
+      "text": "That belongs to me now."
+    },
+    {
+      "id": "d",
+      "text": "I will hide it."
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "“Thank you for sharing” acknowledges the offer of a crayon. The question asks for the match in our game, not a score for how kind a person is.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

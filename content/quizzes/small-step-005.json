@@ -1,0 +1,32 @@
+{
+  "id": "small-step-005",
+  "scheduledDate": "2026-10-21",
+  "brand": "grow",
+  "prompt": "Which is the most specific next action for sorting a desk?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Be organised."
+    },
+    {
+      "id": "b",
+      "text": "Improve everything."
+    },
+    {
+      "id": "c",
+      "text": "Become productive."
+    },
+    {
+      "id": "d",
+      "text": "Put the loose pencils in a cup."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Putting loose pencils in a cup is a concrete action with a visible finish. The other choices describe broad goals without specifying what to do next.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

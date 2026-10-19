@@ -1,0 +1,32 @@
+{
+  "id": "number-detective-001",
+  "scheduledDate": "2026-10-17",
+  "brand": "play",
+  "prompt": "Using n × (n + 1), starting at n = 1, what comes after 2, 6, 12, 20?",
+  "options": [
+    {
+      "id": "a",
+      "text": "24"
+    },
+    {
+      "id": "b",
+      "text": "28"
+    },
+    {
+      "id": "c",
+      "text": "30"
+    },
+    {
+      "id": "d",
+      "text": "32"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The terms are 1×2, 2×3, 3×4 and 4×5. The next term is 5×6 = 30. The stated rule makes this answer unambiguous.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

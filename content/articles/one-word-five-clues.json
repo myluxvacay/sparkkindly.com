@@ -1,0 +1,63 @@
+{
+  "id": "play-02",
+  "slug": "one-word-five-clues",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "One word, five clues",
+  "description": "Five carefully chosen clues. One everyday word. Take it one clue at a time.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-10-19",
+  "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The challenge",
+      "paragraphs": [
+        "Choose one word from this set: planet, pencil, kettle, garden. It must satisfy every clue: it has six letters; it begins with P; its second letter is E; it names something you can hold; and it is used to make marks on paper.",
+        "You can solve this on paper. Cross out a word only when you can name a clue it fails. There is no need to use every clue in order."
+      ]
+    },
+    {
+      "heading": "Check each candidate",
+      "paragraphs": [
+        "Planet begins with P and has six letters, but its second letter is L. Kettle starts with K. Garden starts with G. Pencil is the only candidate with P followed by E.",
+        "Pencil also has six letters, fits in a hand, and can make marks on paper. Within the supplied candidate set it is the unique solution. The set matters: we are not claiming to have checked every word in the English language."
+      ]
+    },
+    {
+      "heading": "Swap roles",
+      "paragraphs": [
+        "Write down four new candidate words and choose a target. Build clues that eliminate the other three, checking each one before you share the puzzle.",
+        "Invite your partner to explain which clue did the most work. Sometimes one precise clue can be more helpful than a long list of vague ones."
+      ]
+    }
+  ],
+  "takeaway": "Pencil is the unique answer among the four supplied words.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Pencil"
+  ],
+  "supervision": "Independent activity for adults; children need an adult.",
+  "safetyNotes": [
+    "Use paper and pencils safely; no uploads or personal information needed."
+  ]
+}

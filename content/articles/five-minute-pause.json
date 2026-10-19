@@ -1,0 +1,55 @@
+{
+  "id": "grow-07",
+  "slug": "five-minute-pause",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "A five-minute pause",
+  "description": "A gentle reflection for an ordinary day. A notebook is optional.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-10-19",
+  "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Arrive as you are",
+      "paragraphs": [
+        "This is an optional writing prompt, not a test. Choose a comfortable place and give yourself about five minutes if you have them. Keep your eyes open or simply look around. You can stop whenever you want.",
+        "Start with one neutral observation: the colour of a wall, the sound of a passing car, or the feeling of a cup in your hand. You do not need to achieve a particular mood."
+      ]
+    },
+    {
+      "heading": "Ask three small questions",
+      "paragraphs": [
+        "What caught my attention today? Write a sentence about something specific, however ordinary. A conversation, a sentence in a book, or a patch of light is enough.",
+        "What took more effort than I expected? Name the task without turning it into a judgment about yourself. Then ask: what is one thing I would like to carry into tomorrow?"
+      ]
+    },
+    {
+      "heading": "Choose what to keep",
+      "paragraphs": [
+        "Read back only if you want to. Circle one phrase, close the notebook, or leave the page unfinished. There is no score and no correct answer.",
+        "This reflection offers a structure for thinking, not a health outcome. If reflecting feels unhelpful, choose a different activity or leave it for another day. Nothing needs to be entered on this website."
+      ]
+    }
+  ],
+  "takeaway": "Notice one thing, name one effort, and choose one thought to carry forward.",
+  "fiction": false
+}

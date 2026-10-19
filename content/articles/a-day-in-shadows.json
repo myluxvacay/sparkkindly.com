@@ -1,0 +1,61 @@
+{
+  "id": "discover-03",
+  "slug": "a-day-in-shadows",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "A day in shadows",
+  "description": "The quiet movement at your feet can reveal a little about the sky.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "discover",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "NASA: I Tell Only Sunny Hours",
+      "url": "https://science.gsfc.nasa.gov/attic/sunearthday.nasa.gov/2005/images/Sun_Dial_pdf.pdf",
+      "accessedAt": "2026-10-17"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-10-19",
+  "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Notice the light",
+      "paragraphs": [
+        "A shadow forms where an object blocks light. On a sunny day, a fixed object’s shadow can change as the Sun appears to move across the sky. Looking at the shadow lets you observe the light without looking directly at the Sun.",
+        "Use the same object and the same level surface each time. A moving object or a sloping surface can make comparisons harder to interpret."
+      ]
+    },
+    {
+      "heading": "Follow a changing angle",
+      "paragraphs": [
+        "When the Sun is low in the sky, a vertical object often casts a long shadow. As the Sun gets higher, that shadow becomes shorter. Its direction changes as well.",
+        "The shortest shadow is around local solar noon, which need not be 12:00 on a clock. Location, season, and the clock system all matter. A cloudy day can make a shadow difficult to see."
+      ]
+    },
+    {
+      "heading": "Keep an observation notebook",
+      "paragraphs": [
+        "Make two or three drawings at different times. Label the time, the weather, and which way the shadow points. Describe what you actually saw before trying to explain it.",
+        "Never look directly at the Sun. If you investigate outside, choose a safe place away from roads and use ordinary sun protection. Children should work with an adult."
+      ]
+    }
+  ],
+  "takeaway": "Watch one fixed object at different times. Changing sunlight can change both the length and direction of its shadow.",
+  "fiction": false
+}

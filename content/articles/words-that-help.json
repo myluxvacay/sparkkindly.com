@@ -1,0 +1,65 @@
+{
+  "id": "kids-10",
+  "slug": "words-that-help",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Words that help",
+  "description": "For ages 6–9 with an adult: match three everyday moments with thoughtful words.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "kids",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-10-19",
+  "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make the cards",
+      "paragraphs": [
+        "Ask a grown-up to write three moments on separate pieces of paper: someone lends you a crayon; you accidentally knock over a tower; you want to join a game. No names or personal stories are needed.",
+        "On three more cards, write: “Thank you for sharing”; “I’m sorry. May I help rebuild it?”; and “May I join in?” Read all six cards together."
+      ]
+    },
+    {
+      "heading": "Try a match",
+      "paragraphs": [
+        "Place a words card beside each moment. For the crayon, try “Thank you for sharing.” For the fallen tower, try an apology and an offer to help. To join a game, try asking first.",
+        "These are examples, not magic words. The other person can still say no. You can be disappointed and still respect their choice. Talk with your grown-up about another activity you could choose."
+      ]
+    },
+    {
+      "heading": "Practise away from the screen",
+      "paragraphs": [
+        "Swap roles and act out a pretend scene using toys. You do not need to record it, upload it, or tell the website how it went. There is no score.",
+        "For a screen-free extension, draw a new imaginary moment and invent a helpful sentence together. Keep it kind and specific. The grown-up can help if any part feels confusing."
+      ]
+    }
+  ],
+  "takeaway": "Helpful words can thank, repair, or invite. Listening to the answer matters too.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Use paper and pencils safely; no uploads or personal information needed."
+  ],
+  "screenFreeExtension": "Try the final pretend scene or light experiment together away from the website."
+}

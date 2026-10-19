@@ -1,0 +1,32 @@
+{
+  "id": "visible-action-014",
+  "scheduledDate": "2026-10-30",
+  "brand": "grow",
+  "prompt": "For the task “read a chapter”, which choice defines a clear smaller stopping point?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Read the first two pages."
+    },
+    {
+      "id": "b",
+      "text": "Read everything ever written."
+    },
+    {
+      "id": "c",
+      "text": "Be a better person."
+    },
+    {
+      "id": "d",
+      "text": "Never take a break."
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Reading the first two pages specifies an action and a stopping point. You can decide afterwards whether to continue; there is no timer or score.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

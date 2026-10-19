@@ -1,0 +1,38 @@
+{
+  "id": "twilight-zone-008",
+  "scheduledDate": "2026-10-24",
+  "brand": "discover",
+  "prompt": "NOAA describes the ocean’s twilight zone as roughly which depth range?",
+  "options": [
+    {
+      "id": "a",
+      "text": "0–20 metres"
+    },
+    {
+      "id": "b",
+      "text": "200–1,000 metres"
+    },
+    {
+      "id": "c",
+      "text": "4,000–6,000 metres"
+    },
+    {
+      "id": "d",
+      "text": "Only at the surface"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The twilight or dysphotic zone is approximately 200 to 1,000 metres deep. Light fades rapidly; there is not enough for photosynthesis.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "NOAA: How far does light travel in the ocean?",
+      "url": "https://oceanservice.noaa.gov/facts/light_travel.html",
+      "accessedAt": "2026-10-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

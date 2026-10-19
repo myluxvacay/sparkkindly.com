@@ -1,0 +1,30 @@
+{
+  "approvedBy": "myluxvacay (SparkKindly site owner; explicit chat approval)",
+  "approvedAt": "2026-10-19",
+  "decision": "owner-directed-public-launch",
+  "authorization": "The owner explicitly instructed in this chat: \"No go live with everything. mark draft as approved\", after being informed that editorial, rights and privacy approvals were outstanding.",
+  "editorialApprovalFile": "docs/editorial-approval.json",
+  "ownerDirectedPublicationWithDisclosedOutstandingReviews": true,
+  "outstandingReviews": [
+    {
+      "area": "media-rights",
+      "status": "not-independently-verified",
+      "note": "Owner supplied and authorized brand artwork. Unsplash license was checked; detailed photographer provenance and final independent rights review remain incomplete."
+    },
+    {
+      "area": "hosting-privacy",
+      "status": "not-independently-verified",
+      "note": "Hostinger VPS and Caddy are used. Host-level retention, deletion and subprocessor settings have not been independently verified."
+    },
+    {
+      "area": "child-privacy",
+      "status": "not-independently-verified",
+      "note": "No analytics, forms, visitor identifiers or response storage. A jurisdiction-specific independent child-privacy review has not been completed."
+    },
+    {
+      "area": "contact-channel",
+      "status": "not-independently-verified",
+      "note": "A verified adult contact email has not been supplied; no address is invented."
+    }
+  ]
+}

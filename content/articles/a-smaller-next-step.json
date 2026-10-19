@@ -1,0 +1,55 @@
+{
+  "id": "grow-08",
+  "slug": "a-smaller-next-step",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "A smaller next step",
+  "description": "Turn “I should do that” into one concrete action you can see.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-10-19",
+  "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Name the task",
+      "paragraphs": [
+        "Some tasks sound small until we try to start them. “Sort the cupboard” contains many decisions: where to begin, what to keep, and where everything should go. Write the task down in plain language.",
+        "Choose just one part. You might pick the top shelf or a single drawer. Defining a boundary gives you a clear place to stop as well as a place to start."
+      ]
+    },
+    {
+      "heading": "Make the next action visible",
+      "paragraphs": [
+        "Replace “get organised” with “put the empty boxes together.” An action is easier to recognise when you can imagine what your hands will do. If it still feels vague, divide it again.",
+        "Prepare only what that step needs. For the cupboard, that might mean a clear patch of floor and one bag. Avoid making a new project out of preparing for the old one."
+      ]
+    },
+    {
+      "heading": "Decide when enough is enough",
+      "paragraphs": [
+        "Choose a stopping point before beginning. After one shelf, you can continue, take a break, or leave the rest for another day. Finishing a small part is still a real change.",
+        "This is a practical planning suggestion, not a promise of productivity or wellbeing. Tasks differ, and asking someone for practical help may be the useful next step."
+      ]
+    }
+  ],
+  "takeaway": "Choose one visible action and a stopping point that makes sense for today.",
+  "fiction": false
+}

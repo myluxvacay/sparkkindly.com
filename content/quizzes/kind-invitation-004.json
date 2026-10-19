@@ -1,0 +1,32 @@
+{
+  "id": "kind-invitation-004",
+  "scheduledDate": "2026-10-20",
+  "brand": "together",
+  "prompt": "In this scenario, someone says they want quiet time. Which reply respects that request?",
+  "options": [
+    {
+      "id": "a",
+      "text": "You must talk now."
+    },
+    {
+      "id": "b",
+      "text": "I will keep asking."
+    },
+    {
+      "id": "c",
+      "text": "That is fine; I will give you space."
+    },
+    {
+      "id": "d",
+      "text": "You cannot be quiet."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Giving the person space follows their stated request. In this scenario, respect means accepting the boundary instead of pressuring them to talk.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

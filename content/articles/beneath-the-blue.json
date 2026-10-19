@@ -1,0 +1,61 @@
+{
+  "id": "discover-04",
+  "slug": "beneath-the-blue",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Beneath the blue",
+  "description": "An introduction to the ocean’s layers, one change in light at a time.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "discover",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "NOAA: How far does light travel in the ocean?",
+      "url": "https://oceanservice.noaa.gov/facts/light_travel.html",
+      "accessedAt": "2026-10-17"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-10-19",
+  "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A world shaped by light",
+      "paragraphs": [
+        "The ocean is not evenly lit from top to bottom. NOAA describes a sunlit upper region, a twilight region, and deeper water without sunlight. These are useful guides, rather than painted boundaries in the sea.",
+        "Significant sunlight is rarely present below about 200 metres. Water clarity and other conditions affect how far the light travels."
+      ]
+    },
+    {
+      "heading": "Into the twilight",
+      "paragraphs": [
+        "The twilight zone extends roughly from 200 to 1,000 metres. A little sunlight can reach this region under the right conditions, but not enough for photosynthesis.",
+        "Below about 1,000 metres is the aphotic zone, where sunlight does not reach. The deep ocean includes further depth divisions; “midnight” names the bathypelagic region from about 1,000 to 4,000 metres."
+      ]
+    },
+    {
+      "heading": "Read a diagram with care",
+      "paragraphs": [
+        "A simple layer diagram compresses enormous distances into a few bands of colour. Its colours are a teaching aid, not a photograph of what a diver would see.",
+        "When you meet a dramatic ocean image, ask whether it is a photograph, a diagram, or an illustration. Each can help us learn, but they tell us different kinds of things."
+      ]
+    }
+  ],
+  "takeaway": "Use sunlight as your first guide to ocean layers, and read approximate depths as guides rather than hard borders.",
+  "fiction": false
+}

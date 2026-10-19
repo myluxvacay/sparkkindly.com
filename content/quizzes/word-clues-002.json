@@ -1,0 +1,32 @@
+{
+  "id": "word-clues-002",
+  "scheduledDate": "2026-10-18",
+  "brand": "play",
+  "prompt": "Which six-letter candidate begins with PE and is used to write on paper?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Planet"
+    },
+    {
+      "id": "b",
+      "text": "Pencil"
+    },
+    {
+      "id": "c",
+      "text": "Kettle"
+    },
+    {
+      "id": "d",
+      "text": "Garden"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Pencil has six letters, begins with PE, and can write on paper. Planet begins with PL; the other two words do not begin with P.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

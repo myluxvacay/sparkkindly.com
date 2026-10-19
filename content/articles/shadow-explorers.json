@@ -1,0 +1,72 @@
+{
+  "id": "kids-09",
+  "slug": "shadow-explorers",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Shadow explorers",
+  "description": "For ages 6–9 with an adult: trace a shadow and see what changes.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "kids",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "NASA: I Tell Only Sunny Hours",
+      "url": "https://science.gsfc.nasa.gov/attic/sunearthday.nasa.gov/2005/images/Sun_Dial_pdf.pdf",
+      "accessedAt": "2026-10-17"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-10-19",
+  "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Set up together",
+      "paragraphs": [
+        "Ask an adult to choose a safe, flat outdoor spot away from roads. Place a small, sturdy toy on a sheet of paper in sunlight. Keep the paper from blowing away without using anything sharp.",
+        "The adult stays with you. Never look directly at the Sun, even for a moment. If it is too hot, wet, or uncomfortable, save the activity for another time."
+      ]
+    },
+    {
+      "heading": "Trace, wait, compare",
+      "paragraphs": [
+        "Draw around the toy’s shadow. The adult can write the time next to your line. Leave the toy and paper in the same place and return together later.",
+        "Use a different colour to trace the new shadow. Has its direction or length changed? Clouds might make it faint. “We could not see a clear shadow” is a useful observation too."
+      ]
+    },
+    {
+      "heading": "Take the wonder off-screen",
+      "paragraphs": [
+        "Talk about which line is longer. You can compare with a strip of paper instead of a ruler. Your drawing records what you saw; it does not have to look like anyone else’s.",
+        "For a screen-free extension, hold your hand near a wall while an adult shines an ordinary torch. Move the light, and describe how the shadow changes. Never shine the torch into anyone’s eyes."
+      ]
+    }
+  ],
+  "takeaway": "A shadow shows where light is blocked. Try changing the light and noticing what happens.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Coloured pencils",
+    "A sturdy toy"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Never look directly at the Sun. Choose a safe location and suitable weather."
+  ],
+  "screenFreeExtension": "Try the final pretend scene or light experiment together away from the website."
+}

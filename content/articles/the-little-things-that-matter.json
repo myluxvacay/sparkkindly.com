@@ -1,0 +1,68 @@
+{
+  "id": "together-05",
+  "slug": "the-little-things-that-matter",
+  "brand": "together",
+  "contentType": "video",
+  "title": "The Little Things That Matter",
+  "description": "A fictional story about a rainy morning, a missed bus, and one small act of attention.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "together",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-10-19",
+  "aiDisclosure": "Created with AI assistance. Approved for publication by the SparkKindly site owner on 19 October 2026. Primary sources and puzzle reasoning were checked with AI assistance; no independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A rainy morning",
+      "paragraphs": [
+        "Fiction · Pilot storyboard. Mara reached the bus stop just as the red tail lights disappeared around the corner. Rain slipped from the edge of her umbrella onto one shoe. She sighed and moved along the bench to make room for someone else.",
+        "An older neighbour stood nearby holding a paper bag. The bottom was beginning to soften. Mara offered the dry corner under her umbrella. “Your bag might need this more than I do,” she said."
+      ]
+    },
+    {
+      "heading": "A little room",
+      "paragraphs": [
+        "The neighbour laughed and shifted closer. Inside the bag was a loaf of bread for a friend who had asked for company over breakfast. They talked about the bakery window, then about nothing in particular.",
+        "When the next bus came, Mara helped hold the bag while the neighbour found a ticket. Nobody gave a speech. Nobody called it a life-changing moment. It was simply a little less rain, shared between two people."
+      ]
+    },
+    {
+      "heading": "Storyboard and descriptive transcript",
+      "paragraphs": [
+        "Panel one: a wide view of a wet bus stop; Mara watches the bus turn a corner. Panel two: a close view of the damp paper bag. Panel three: two figures stand beneath one umbrella. Panel four: hands steady the bag beside the bus door.",
+        "This is a written production concept, not footage of a real event. A finished video, duration, synchronized captions, and audio description have not been produced."
+      ]
+    }
+  ],
+  "takeaway": "A small offer can be specific: a dry space, a free hand, a moment of attention.",
+  "fiction": true,
+  "productionStatus": "in-production",
+  "durationSeconds": null,
+  "poster": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "videoSrc": null,
+  "captionsSrc": null,
+  "transcript": "Panel one: a wide view of a wet bus stop; Mara watches the bus turn a corner. Panel two: a close view of the damp paper bag. Panel three: two figures stand beneath one umbrella. Panel four: hands steady the bag beside the bus door."
+}

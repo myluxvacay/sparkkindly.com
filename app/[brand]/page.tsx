@@ -1,0 +1,11 @@
+import Picture from '@/components/Picture';
+import {notFound} from 'next/navigation';
+import Link from 'next/link';
+import {brands,isBrand} from '@/lib/config';
+import {articles,articlePath} from '@/lib/content';
+import ContentCard from '@/components/ContentCard';
+import {metadata as seo} from '@/lib/seo';
+export const dynamicParams=false;
+export function generateStaticParams(){return Object.keys(brands).map(brand=>({brand}));}
+export async function generateMetadata({params}:{params:Promise<{brand:string}>}){const {brand}=await params;if(!isBrand(brand))return {};return seo(brands[brand].name,brands[brand].description,`/${brand}/`);}
+export default async function BrandPage({params}:{params:Promise<{brand:string}>}) {const {brand}=await params;if(!isBrand(brand))notFound();const b=brands[brand];const entries=articles.filter(a=>a.brand===brand);const a=entries[0];return <div className="container section"><nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span aria-hidden="true">/</span><span>{b.name}</span></nav><header className={`brand-intro intro-${b.color}`}><p className="eyebrow">THE WORLD OF {b.name.toUpperCase()}</p><h1>{b.promise}</h1><p>{b.description}</p><span className="intro-symbol" aria-hidden="true">{b.icon}</span></header>{brand==='kids'&&<aside className="grown-ups"><h2>For grown-ups</h2><p>These activities are for ages 6–9 with an adult. Stay alongside, follow the safety guidance, and take the discoveries off-screen. No names, accounts, uploads, response storage, or tracking.</p><Link href="/privacy/">Read our privacy explanation →</Link></aside>}{a&&<section className="brand-feature"><Picture src={a.hero.src} width={800} height={540} alt={a.hero.alt} priority/><div><p className="eyebrow">FEATURED {a.contentType==='video'?'STORYBOARD':'READ'}</p><h2><Link href={articlePath(a)}>{a.title}</Link></h2><p>{a.description}</p><Link className="button" href={articlePath(a)}>Take a closer look ↗</Link></div></section>}<section className="section"><p className="eyebrow">KEEP EXPLORING</p><h2>More from {b.name}</h2><div className="content-grid two-col">{entries.map(a=><ContentCard article={a} key={a.id}/>)}</div>{!entries.length&&<p>Our first pieces are being reviewed. Please come back for a little more wonder.</p>}</section></div>}

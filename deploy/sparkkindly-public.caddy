@@ -1,0 +1,24 @@
+# Additive site configuration: do not replace MyLuxVacation's existing blocks.
+# Install this file outside the public web root, then import it from BOTH
+# /etc/caddy/Caddyfile and MyLuxVacation's tracked deploy/Caddyfile.
+# Root must contain the separately reviewed public artifact, never preview/.
+sparkkindly.com {
+    root * /var/www/sparkkindly/public/current
+    encode gzip zstd
+    header {
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        X-Frame-Options "DENY"
+        -Server
+    }
+    @fingerprinted path /_next/static/*
+    header @fingerprinted Cache-Control "public, max-age=31536000, immutable"
+    file_server
+    handle_errors {
+        rewrite * /404.html
+        file_server
+    }
+}
+www.sparkkindly.com {
+    redir https://sparkkindly.com{uri} permanent
+}

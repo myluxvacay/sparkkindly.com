@@ -1,0 +1,21 @@
+node_modules/
+.next/
+out/
+playwright-report/
+test-results/
+*.tsbuildinfo
+.env*
+!.env.example
+.DS_Store
+
+# Unused source images pasted into the workspace; canonical assets are in public/.
+ChatGPT Image*.png
+# Local credentials and temporary content snapshots
+*.pem
+*.key
+*.hash
+*.users
+content/*.tmp
+
+__pycache__/
+*.pyc

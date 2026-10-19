@@ -1,0 +1,32 @@
+{
+  "id": "square-rule-007",
+  "scheduledDate": "2026-10-23",
+  "brand": "play",
+  "prompt": "Using the rule n², starting at n = 1, which term follows 1, 4, 9, 16?",
+  "options": [
+    {
+      "id": "a",
+      "text": "20"
+    },
+    {
+      "id": "b",
+      "text": "24"
+    },
+    {
+      "id": "c",
+      "text": "25"
+    },
+    {
+      "id": "d",
+      "text": "36"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The sequence is 1², 2², 3², 4². The next is 5², which equals 25. The question specifies the rule rather than relying on a guessed pattern.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

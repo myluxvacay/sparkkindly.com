@@ -1,0 +1,38 @@
+{
+  "status": "owner-supplied-assets-integrated",
+  "approvedLogo": "/brand/sparkkindly-logo.png",
+  "icon": "/brand/icon.png",
+  "socialBanner": "/brand/social-banner.jpg",
+  "provenance": {
+    "providedBy": "Site owner in this conversation",
+    "providedAt": "2026-10-17",
+    "permission": "Owner requested use in site, browser icon and banner. No independent copyright or model-release verification asserted.",
+    "rightsReview": "Owner provenance/license confirmation remains part of launch review"
+  },
+  "originals": [
+    {
+      "file": "source/heart-badge.png",
+      "originalFilename": "SparkKindly Heart Badge.png",
+      "sha256": "199aa0a857f7bcb34aa6291ab028af2b58260709dade27c220072471624ea8a6",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "file": "source/banner.png",
+      "originalFilename": "SparkKindly_ Brighter Minds, Kinder Tomorrows.png",
+      "sha256": "fec25088f0cadcd167e688a8eae7decc801497e53bbcdba7bad783cd239f494d",
+      "width": 1983,
+      "height": 793
+    }
+  ],
+  "derivatives": {
+    "logo": "Badge resized proportionally, full circle and lettering retained.",
+    "icon": "Heart and spark crop x=300 y=125 width=650 height=575; outer-ring corner remnants excluded with white corner masks; centered within a white square.",
+    "banner": "Full artwork, uncropped, responsive WebP sizes. Social derivative contains the whole image within 1200\u00d7630 cream canvas."
+  },
+  "previousStatus": "awaiting-owner-assets",
+  "publicationAuthorization": {
+    "date": "2026-10-19",
+    "scope": "Owner explicitly requested full public launch with supplied assets. Independent ownership/release verification is not asserted."
+  }
+}

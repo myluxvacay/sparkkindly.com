@@ -1,0 +1,38 @@
+{
+  "id": "midnight-zone-013",
+  "scheduledDate": "2026-10-29",
+  "brand": "discover",
+  "prompt": "Which NOAA depth range is commonly called the ocean’s midnight zone?",
+  "options": [
+    {
+      "id": "a",
+      "text": "0–200 metres"
+    },
+    {
+      "id": "b",
+      "text": "200–1,000 metres"
+    },
+    {
+      "id": "c",
+      "text": "1,000–4,000 metres"
+    },
+    {
+      "id": "d",
+      "text": "Above sea level"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The bathypelagic or midnight zone is about 1,000 to 4,000 metres deep. It is part of the aphotic region where sunlight does not reach.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "NOAA: How far does light travel in the ocean?",
+      "url": "https://oceanservice.noaa.gov/facts/light_travel.html",
+      "accessedAt": "2026-10-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "double-rule-012",
+  "scheduledDate": "2026-10-28",
+  "brand": "play",
+  "prompt": "Starting at 3 and doubling each time gives 3, 6, 12, 24. What is next?",
+  "options": [
+    {
+      "id": "a",
+      "text": "27"
+    },
+    {
+      "id": "b",
+      "text": "36"
+    },
+    {
+      "id": "c",
+      "text": "48"
+    },
+    {
+      "id": "d",
+      "text": "60"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Doubling means multiplying by 2. The next term after 24 is 24×2 = 48. Adding 3 would be a different rule.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}

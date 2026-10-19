@@ -1,0 +1,38 @@
+{
+  "id": "ocean-light-003",
+  "scheduledDate": "2026-10-19",
+  "brand": "discover",
+  "prompt": "According to NOAA, significant sunlight is rarely found below about what depth?",
+  "options": [
+    {
+      "id": "a",
+      "text": "20 metres"
+    },
+    {
+      "id": "b",
+      "text": "200 metres"
+    },
+    {
+      "id": "c",
+      "text": "2,000 metres"
+    },
+    {
+      "id": "d",
+      "text": "20,000 metres"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "NOAA states that significant sunlight is rarely present beyond 200 metres. Water conditions affect penetration, so this is an approximate guide, not a fixed boundary.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "NOAA: How far does light travel in the ocean?",
+      "url": "https://oceanservice.noaa.gov/facts/light_travel.html",
+      "accessedAt": "2026-10-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-10-19",
+  "reviewNote": "Approved for publication by the site owner through an explicit instruction in chat. This records owner publication approval, not an independent specialist review."
+}
