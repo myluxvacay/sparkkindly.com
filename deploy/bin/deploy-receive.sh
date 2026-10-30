@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
-# Forced-command release receiver, installed at /opt/sparkkindly/bin/deploy-receive.sh.
-# GitHub Actions (or the owner) pipes a gzipped release tarball to it over SSH; the target comes from
-# SSH_ORIGINAL_COMMAND and must be "prod" or "staging". It extracts the release beside the others, runs the
-# release's optional migrate.sh, switches the "current" symlink, restarts the service and waits for /api/health.
-# If the new release is not healthy it switches back. "previous" is only ever set from a release that passed health.
+# Forced-command release receiver, installed (root-owned) at /opt/sparkkindly/bin/deploy-receive.sh.
+# GitHub Actions (or the owner) pipes a gzipped release tarball to it over SSH. The target is fixed by the login:
+# each deploy user's authorized_keys line runs "deploy-receive.sh prod" or "deploy-receive.sh staging", and whatever
+# command the client sends is ignored, so the staging login can never deploy production.
+# It extracts the release beside the others, runs the release's optional migrate.sh, switches the "current" symlink,
+# restarts the service and waits for /api/health. If the new release is not healthy it switches back.
+# "previous" is only ever set from a release that passed health.
 # Verified by: plan Task 5 steps 3 to 8.
 set -euo pipefail
 
-TARGET="${SSH_ORIGINAL_COMMAND:-}"
+TARGET="${1:-}"
 case "$TARGET" in
-  prod)    ROOT=/opt/sparkkindly;         SERVICE=sparkkindly-web;         PORT=3100; ENVFILE=prod.env ;;
-  staging) ROOT=/opt/sparkkindly-staging; SERVICE=sparkkindly-web-staging; PORT=3101; ENVFILE=staging.env ;;
+  prod)    ROOT=/opt/sparkkindly/app;      SERVICE=sparkkindly-web;         PORT=3100; ENVFILE=prod.env ;;
+  staging) ROOT=/opt/sparkkindly-staging;  SERVICE=sparkkindly-web-staging; PORT=3101; ENVFILE=staging.env ;;
   *) echo "Unknown target: ${TARGET}" >&2; exit 2 ;;
 esac
-SHARED=/opt/sparkkindly/shared
 umask 027
 
 # 1. Extract into a scratch directory; nothing goes live unless the release looks complete.
@@ -37,8 +38,9 @@ mv "$INCOMING" "$NEW"
 trap - EXIT
 
 # 2. Optional migration hook (Project 1). A failing migration leaves the old release running.
+#    The env file is readable only by this login's own user (root:<user> 640), so it never sees the other environment's secrets.
 if [ -x "$NEW/migrate.sh" ]; then
-  if ! (cd "$NEW" && set -a && . "$SHARED/$ENVFILE" && set +a && ./migrate.sh); then
+  if ! (cd "$NEW" && set -a && . "/opt/sparkkindly/shared/$ENVFILE" && set +a && ./migrate.sh); then
     echo "Migration failed; the previous release is still serving" >&2
     exit 1
   fi
@@ -78,6 +80,6 @@ else
   else
     echo "No earlier release to roll back to (first deploy)" >&2
   fi
-  journalctl -u "$SERVICE" -n 50 --no-pager >&2 || true
+  sudo journalctl -u "$SERVICE" -n 50 --no-pager >&2 || true
   exit 1
 fi

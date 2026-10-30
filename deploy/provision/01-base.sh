@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
-# Base provisioning for the SparkKindly VM: OS updates, swap, the sparkkindly service user, a private Node 24.
+# Base provisioning for the SparkKindly VM: OS updates, swap, two service users, a private Node 24.
 # Run as root on the VM. Idempotent: running it again changes nothing.
+#
+# Layout and ownership (the runtime users may write only their own release directory):
+#   /opt/sparkkindly                root:root 755   node/, bin/ (deploy script), home/ (deploy logins), shared/ (root only)
+#   /opt/sparkkindly/app            sparkkindly      releases/, current, previous        (production)
+#   /opt/sparkkindly-staging        sparkkindly-staging  releases/, current, previous    (staging)
 # Verified by: docs/superpowers/plans/2026-10-30-project-0-foundations.md, Task 3 (steps 4 and 5).
 set -euo pipefail
 
@@ -29,10 +34,18 @@ grep -qE '^/swapfile\s' /etc/fstab || echo '/swapfile none swap sw 0 0' >> /etc/
 echo 'vm.swappiness=10' > /etc/sysctl.d/90-sparkkindly.conf
 sysctl -q -w vm.swappiness=10
 
-echo "== Service user and directories"
-id sparkkindly >/dev/null 2>&1 || useradd --system --create-home --home-dir /opt/sparkkindly --shell /bin/bash sparkkindly
-install -d -o sparkkindly -g sparkkindly /opt/sparkkindly/releases /opt/sparkkindly/bin /opt/sparkkindly-staging /opt/sparkkindly-staging/releases
-install -d -o root -g sparkkindly -m 750 /opt/sparkkindly/shared
+echo "== Service users (separate for production and staging) and directories"
+install -d -o root -g root -m 755 /opt/sparkkindly /opt/sparkkindly/bin /opt/sparkkindly/home
+# shared/ is traverse-only (711): nobody can list it, and each file inside carries its own mode, so a user can open
+# only the env file that names its group. The release receiver needs this to run a migration with its own env.
+install -d -o root -g root -m 711 /opt/sparkkindly/shared
+for u in sparkkindly sparkkindly-staging; do
+  id "$u" >/dev/null 2>&1 || useradd --system --no-create-home --home-dir "/opt/sparkkindly/home/$u" --shell /bin/bash "$u"
+  # Root-owned home and .ssh: the service user cannot replace its own forced-command key.
+  install -d -o root -g root -m 755 "/opt/sparkkindly/home/$u" "/opt/sparkkindly/home/$u/.ssh"
+done
+install -d -o sparkkindly -g sparkkindly /opt/sparkkindly/app /opt/sparkkindly/app/releases
+install -d -o sparkkindly-staging -g sparkkindly-staging /opt/sparkkindly-staging /opt/sparkkindly-staging/releases
 
 echo "== Node ${NODE_VERSION} (private install, system Node untouched)"
 if [ "$("$NODE_DIR/bin/node" --version 2>/dev/null || true)" != "v${NODE_VERSION}" ]; then

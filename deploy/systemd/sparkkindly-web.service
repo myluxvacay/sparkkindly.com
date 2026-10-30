@@ -6,7 +6,7 @@ Wants=postgresql.service
 [Service]
 User=sparkkindly
 Group=sparkkindly
-WorkingDirectory=/opt/sparkkindly/current
+WorkingDirectory=/opt/sparkkindly/app/current
 EnvironmentFile=/opt/sparkkindly/shared/prod.env
 Environment=NEXT_TELEMETRY_DISABLED=1
 # Heap kept under MemoryMax so Node collects garbage before the kernel kills it.

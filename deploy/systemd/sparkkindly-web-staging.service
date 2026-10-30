@@ -4,8 +4,8 @@ After=network.target postgresql.service
 Wants=postgresql.service
 
 [Service]
-User=sparkkindly
-Group=sparkkindly
+User=sparkkindly-staging
+Group=sparkkindly-staging
 WorkingDirectory=/opt/sparkkindly-staging/current
 EnvironmentFile=/opt/sparkkindly/shared/staging.env
 Environment=NEXT_TELEMETRY_DISABLED=1

@@ -13,10 +13,11 @@
 ## Global Constraints
 
 - Node **24.22.0** everywhere (`.nvmrc`, `engines`, the VM install). No Docker.
-- PostgreSQL 16 from Ubuntu's packages, listening on **127.0.0.1 only**; one role `sparkkindly`; databases `sparkkindly` (prod) and `sparkkindly_staging`.
-- Services run as the `sparkkindly` system user under systemd with `MemoryMax=1G` (prod web) and `MemoryMax=512M` (staging web). Ports: prod **3100**, staging **3101**, loopback only.
-- Releases live in `/opt/sparkkindly/releases/<UTC timestamp>-<short sha>`; `/opt/sparkkindly/current` is the live symlink; keep the **last 5**. Rollback = switch symlink + restart.
-- Secrets live only in GitHub Actions secrets and in `/opt/sparkkindly/shared/*.env` (mode 640, `root:sparkkindly`). Never in the repository.
+- PostgreSQL 16 from Ubuntu's packages, listening on **127.0.0.1 only**; **separate roles with separate passwords** `sparkkindly` (owns database `sparkkindly`) and `sparkkindly_staging` (owns `sparkkindly_staging`); `CONNECT` revoked from `PUBLIC` on both, so neither environment can open the other's database.
+- **Separate OS users:** `sparkkindly` runs and deploys production, `sparkkindly-staging` runs and deploys staging, under systemd with `MemoryMax=1G` (prod web) and `MemoryMax=512M` (staging web). Ports: prod **3100**, staging **3101**, loopback only.
+- Ownership rule: `/opt/sparkkindly` (with `bin/`, `node/`, `home/`, `shared/`) is **root-owned**; a service user may write only its own release directory (`/opt/sparkkindly/app` for prod, `/opt/sparkkindly-staging` for staging). The deploy script, the forced-command keys and the env files are therefore beyond the reach of the web processes.
+- Releases live in `<root>/releases/<UTC timestamp>-<short sha>` where `<root>` is `/opt/sparkkindly/app` (prod) or `/opt/sparkkindly-staging`; `<root>/current` is the live symlink; keep the **last 5**. Rollback = switch symlink + restart.
+- Secrets live only in GitHub Actions secrets and in `/opt/sparkkindly/shared/*.env` (mode 640, `root:<that environment's user>`: `prod.env` → `sparkkindly`, `staging.env` → `sparkkindly-staging`). Never in the repository.
 - **MyLuxVacation is not touched.** `/etc/caddy/Caddyfile` is edited only by adding `import` lines, and `/opt/myluxvacation/deploy/Caddyfile` gets the same line (the existing `activate-public.py` enforces that both files match). `ufw` stays at 22/80/443.
 - **The mock-up stays live** for all of Project 0: Caddy's `sparkkindly.com` block is not changed.
 - Staging is `staging.sparkkindly.com`, basic-auth protected at Caddy, and runs with `SITE_RELEASE=false` (noindex, empty sitemap).
@@ -243,8 +244,8 @@ Expected: uptime under 2 minutes; `active` twice. Check `https://myluxvacation` 
 
 - [ ] **Step 4: Verify the result**
 
-Run: `ssh root@2.25.121.2 'swapon --show; id sparkkindly; ls -ld /opt/sparkkindly /opt/sparkkindly/shared; /opt/sparkkindly/node/bin/node --version; systemctl is-enabled unattended-upgrades; ufw status | head -3'`
-Expected: a 2G swap line; uid for `sparkkindly`; `shared` is `drwxr-x--- root sparkkindly`; `v24.22.0`; `enabled`; `Status: active`.
+Run: `ssh root@2.25.121.2 'swapon --show; id sparkkindly; id sparkkindly-staging; ls -ld /opt/sparkkindly /opt/sparkkindly/bin /opt/sparkkindly/shared /opt/sparkkindly/home/sparkkindly/.ssh /opt/sparkkindly/app /opt/sparkkindly-staging; /opt/sparkkindly/node/bin/node --version; systemctl is-enabled unattended-upgrades; ufw status | head -3'`
+Expected: a 2G swap line; two distinct uids; `/opt/sparkkindly`, `bin` and `.ssh` are `root root`; `shared` is `drwx--x--x root root`; `app` is `sparkkindly sparkkindly` and `/opt/sparkkindly-staging` is `sparkkindly-staging sparkkindly-staging`; `v24.22.0`; `enabled`; `Status: active`.
 
 - [ ] **Step 5: Re-run the script to prove idempotence**
 
@@ -270,26 +271,26 @@ git commit -m "ops: VM base provisioning (updates, swap, sparkkindly user, Node 
 - Modify: `docs/OPERATIONS.md` (section "Database and environment files")
 
 **Interfaces:**
-- Produces on the VM: PostgreSQL 16 on 127.0.0.1:5432; role `sparkkindly` (login, password in `/opt/sparkkindly/shared/db.pass`, mode 600 root); databases `sparkkindly`, `sparkkindly_staging` owned by it; `/opt/sparkkindly/shared/prod.env` and `staging.env` (mode 640, `root:sparkkindly`) containing `NODE_ENV=production`, `PORT=3100|3101`, `HOSTNAME=127.0.0.1`, `DATABASE_URL=postgres://sparkkindly:<pass>@127.0.0.1:5432/sparkkindly[_staging]`, `MAIL_FROM=hello@sparkkindly.com`, `MAILERSEND_API_TOKEN=pending` (a placeholder so `/api/health` passes before the real token arrives; Task 10 replaces it), `SITE_RELEASE=true|false`.
+- Produces on the VM: PostgreSQL 16 on 127.0.0.1:5432; roles `sparkkindly` and `sparkkindly_staging` (each with its own password in `/opt/sparkkindly/shared/db-prod.pass` and `db-staging.pass`, mode 600 root), each owning only its own database (`sparkkindly`, `sparkkindly_staging`), `CONNECT` revoked from `PUBLIC`; `/opt/sparkkindly/shared/prod.env` (mode 640, `root:sparkkindly`) and `staging.env` (mode 640, `root:sparkkindly-staging`) containing `NODE_ENV=production`, `PORT=3100|3101`, `HOSTNAME=127.0.0.1`, `DATABASE_URL=postgres://<role>:<that role's pass>@127.0.0.1:5432/<its database>`, `MAIL_FROM=hello@sparkkindly.com`, `MAILERSEND_API_TOKEN=pending` (a placeholder so `/api/health` passes before the real token arrives; Task 10 replaces it), `SITE_RELEASE=true|false`.
 
 - [ ] **Step 1: Write the script**
 
-`deploy/provision/02-postgres.sh`, root, idempotent: `apt-get -y install postgresql`; confirm `pg_lsclusters` shows a 16 cluster; generate the password once (`openssl rand -hex 24 > /opt/sparkkindly/shared/db.pass` if absent, `chmod 600`); `runuser -u postgres -- psql -tc "SELECT 1 FROM pg_roles WHERE rolname='sparkkindly'" | grep -q 1 || runuser -u postgres -- psql -c "CREATE ROLE sparkkindly LOGIN PASSWORD '$(cat …/db.pass)'"`; create each database if missing with `OWNER sparkkindly`; write the two env files from the `.example` templates only if absent (substituting the password), `chown root:sparkkindly`, `chmod 640`; assert `grep -E '^listen_addresses' /etc/postgresql/16/main/postgresql.conf` is absent or `localhost` (Ubuntu default) and `ss -tln | grep 5432` shows only `127.0.0.1`.
+`deploy/provision/02-postgres.sh`, root, idempotent: `apt-get -y install postgresql`; confirm `pg_lsclusters` shows a 16 cluster; for each of prod and staging: generate that environment's password once (`openssl rand -hex 24`, mode 600 root), create its role if missing and sync the password, create its database if missing owned by that role, `REVOKE CONNECT ... FROM PUBLIC`, and write its env file from the `.example` template only if absent (`root:<that environment's OS user>`, mode 640); assert via `ss` that port 5432 is bound to loopback only.
 
 - [ ] **Step 2: Run it**
 
 Run: `scp -r deploy/provision deploy/env root@2.25.121.2:/root/ && ssh root@2.25.121.2 'bash /root/provision/02-postgres.sh'`
 Expected: completes; prints the `ss` line with `127.0.0.1:5432`.
 
-- [ ] **Step 3: Verify the app user can connect to both databases over TCP**
+- [ ] **Step 3: Verify each environment reaches its own database and cannot reach the other's**
 
-Run: `ssh root@2.25.121.2 'for db in sparkkindly sparkkindly_staging; do PGPASSWORD=$(cat /opt/sparkkindly/shared/db.pass) psql -h 127.0.0.1 -U sparkkindly -d $db -tc "select current_database()"; done; ls -l /opt/sparkkindly/shared/'`
-Expected: the two database names; env files `-rw-r----- root sparkkindly`, `db.pass` `-rw------- root root`.
+Run: `ssh root@2.25.121.2 'P=/opt/sparkkindly/shared; for pair in sparkkindly:sparkkindly:prod sparkkindly:sparkkindly_staging:prod sparkkindly_staging:sparkkindly_staging:staging sparkkindly_staging:sparkkindly:staging; do IFS=: read role db pw <<<"$pair"; printf "%s -> %s: " $role $db; PGPASSWORD=$(cat $P/db-$pw.pass) psql -h 127.0.0.1 -U $role -d $db -tAc "select current_database()" 2>&1 | head -1; done; ls -l $P'`
+Expected: `sparkkindly -> sparkkindly: sparkkindly` and `sparkkindly_staging -> sparkkindly_staging: sparkkindly_staging` succeed; the two crossed pairs print `permission denied for database` (or `FATAL`). The listing shows `prod.env` as `-rw-r----- root sparkkindly`, `staging.env` as `-rw-r----- root sparkkindly-staging`, and both `.pass` files `-rw------- root root`.
 
-- [ ] **Step 4: Verify the sparkkindly user can read the env files and nothing else can**
+- [ ] **Step 4: Verify each user reads only its own env file**
 
-Run: `ssh root@2.25.121.2 'runuser -u sparkkindly -- cat /opt/sparkkindly/shared/prod.env | grep -c DATABASE_URL; runuser -u nobody -- cat /opt/sparkkindly/shared/prod.env 2>&1 | grep -c "Permission denied"'`
-Expected: `1` then `1`.
+Run: `ssh root@2.25.121.2 'for u in sparkkindly sparkkindly-staging nobody; do for f in prod staging; do printf "%s reads %s.env: " $u $f; runuser -u $u -- cat /opt/sparkkindly/shared/$f.env >/dev/null 2>&1 && echo yes || echo no; done; done'`
+Expected: `sparkkindly reads prod.env: yes`, `sparkkindly-staging reads staging.env: yes`, and `no` for the other four lines (`shared/` is `root:root 711`: traversable, not listable, each file guarded by its own group).
 
 - [ ] **Step 5: Document and commit**
 
@@ -310,14 +311,14 @@ git commit -m "ops: PostgreSQL 16 role, databases and environment files"
 - Modify: `docs/OPERATIONS.md` (section "Deploy and rollback")
 
 **Interfaces:**
-- Produces: `deploy-receive.sh` reads a gzipped tarball on **stdin** and the target from `SSH_ORIGINAL_COMMAND` (`prod` or `staging`; anything else → exit 2). Layout per target: `ROOT=/opt/sparkkindly` or `/opt/sparkkindly-staging`, `SERVICE=sparkkindly-web` or `sparkkindly-web-staging`, `PORT=3100` or `3101`. Behaviour: `NEW=$ROOT/releases/$(date -u +%Y%m%dT%H%M%SZ)-$(cat RELEASE | cut -c1-7)`; extract to a temp dir, require `server.js` and `RELEASE` to exist, move into place; if `$ROOT/current/migrate.sh` exists in the new release, run it (hook for Project 1; absent now); `ln -sfn $NEW $ROOT/current.tmp && mv -T $ROOT/current.tmp $ROOT/current`; `sudo systemctl restart $SERVICE`; poll `curl -fsS http://127.0.0.1:$PORT/api/health` up to 30 times, 1 s apart; on success write the old target into `$ROOT/previous` (a symlink) and prune releases beyond the newest 5; on failure switch `current` back to the old target, restart, print the last 50 lines of `journalctl -u $SERVICE`, exit 1.
-- Produces: the deploy SSH key pair. Public key goes into `/opt/sparkkindly/.ssh/authorized_keys` as `command="/opt/sparkkindly/bin/deploy-receive.sh",no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-ed25519 …`. Private key goes to GitHub secret `VPS_SSH_KEY` in Task 6.
-- Produces: `/etc/sudoers.d/sparkkindly`: `sparkkindly ALL=(root) NOPASSWD: /usr/bin/systemctl restart sparkkindly-web, /usr/bin/systemctl restart sparkkindly-web-staging`.
-- Unit files: `User=sparkkindly`, `EnvironmentFile=/opt/sparkkindly/shared/prod.env` (staging: `staging.env`), `WorkingDirectory=/opt/sparkkindly/current` (staging: `/opt/sparkkindly-staging/current`), `ExecStart=/opt/sparkkindly/node/bin/node server.js`, `Restart=always`, `RestartSec=2`, `MemoryMax=1G` (staging `512M`), `NoNewPrivileges=true`, `PrivateTmp=true`, `ProtectSystem=full`, `WantedBy=multi-user.target`.
+- Produces: `deploy-receive.sh <prod|staging>` reads a gzipped tarball on **stdin**; the target is its first argument, fixed per login by the forced command (the client's own command is ignored; an unknown argument → exit 2). Layout per target: `ROOT=/opt/sparkkindly/app` or `/opt/sparkkindly-staging`, `SERVICE=sparkkindly-web` or `sparkkindly-web-staging`, `PORT=3100` or `3101`. Behaviour: `NEW=$ROOT/releases/$(date -u +%Y%m%dT%H%M%SZ)-$(cat RELEASE | cut -c1-7)`; extract to a temp dir, require `server.js` and `RELEASE` to exist, move into place; if `$ROOT/current/migrate.sh` exists in the new release, run it (hook for Project 1; absent now); `ln -sfn $NEW $ROOT/current.tmp && mv -T $ROOT/current.tmp $ROOT/current`; `sudo systemctl restart $SERVICE`; poll `curl -fsS http://127.0.0.1:$PORT/api/health` up to 30 times, 1 s apart; on success write the old target into `$ROOT/previous` (a symlink) and prune releases beyond the newest 5; on failure switch `current` back to the old target, restart, print the last 50 lines of the service's journal via `sudo journalctl -u $SERVICE -n 50 --no-pager`, exit 1.
+- Produces: one deploy SSH key pair, installed for **both** logins as root-owned files in root-owned directories: `/opt/sparkkindly/home/sparkkindly/.ssh/authorized_keys` with `command="/opt/sparkkindly/bin/deploy-receive.sh prod",no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-ed25519 …` and `/opt/sparkkindly/home/sparkkindly-staging/.ssh/authorized_keys` with `… deploy-receive.sh staging …`. Private key goes to GitHub secret `VPS_SSH_KEY` in Task 6; the login name picks the target (`sparkkindly` → prod, `sparkkindly-staging` → staging).
+- Produces: `/etc/sudoers.d/sparkkindly`: each user may run exactly `systemctl restart <its own service>` and `journalctl -u <its own service> -n 50 --no-pager` with no password (no `systemd-journal` group).
+- Unit files: `User=sparkkindly` (staging: `sparkkindly-staging`), `EnvironmentFile=/opt/sparkkindly/shared/prod.env` (staging: `staging.env`), `WorkingDirectory=/opt/sparkkindly/app/current` (staging: `/opt/sparkkindly-staging/current`), `ExecStart=/opt/sparkkindly/node/bin/node server.js`, `Restart=always`, `RestartSec=2`, `MemoryMax=1G` (staging `512M`), `NoNewPrivileges=true`, `PrivateTmp=true`, `ProtectSystem=full`, `WantedBy=multi-user.target`.
 
 - [ ] **Step 1: Write the unit files, receiver, sudoers file and `03-services.sh`**
 
-`03-services.sh` (root, idempotent): copies units to `/etc/systemd/system/`, `daemon-reload`, `enable` both (not start; nothing deployed yet); installs `deploy-receive.sh` to `/opt/sparkkindly/bin/` mode 755 root; installs the sudoers file mode 440 and validates with `visudo -cf`; creates `/opt/sparkkindly/.ssh` (700, sparkkindly) and writes `authorized_keys` (600) from a public key passed as `$1`, with the forced-command prefix above.
+`03-services.sh` (root, idempotent): copies units to `/etc/systemd/system/`, `daemon-reload`, `enable` both (not start; nothing deployed yet); installs `deploy-receive.sh` to `/opt/sparkkindly/bin/` mode 755 root; installs the sudoers file mode 440 and validates with `visudo -cf`; writes each login's root-owned `authorized_keys` (644) from a public key passed as `$1`, with that login's forced-command prefix above.
 
 - [ ] **Step 2: Generate the deploy key on the dev machine and provision**
 
@@ -326,7 +327,7 @@ Expected: `visudo` prints nothing (valid); `systemctl is-enabled sparkkindly-web
 
 - [ ] **Step 3: Build a release tarball locally and deliver it to staging through the forced command**
 
-Run (PowerShell, repo root): `$env:SITE_RELEASE='false'; npm run build` (staging builds are noindex: `robots.ts` and `sitemap.ts` are prerendered at build time, so the flag must be set when building, not only at runtime); then assemble: `Remove-Item -Recurse -Force release -ErrorAction SilentlyContinue; New-Item -ItemType Directory release | Out-Null; Copy-Item -Recurse .next/standalone/* release/; Copy-Item -Recurse .next/static release/.next/static; Copy-Item -Recurse public release/public; git rev-parse HEAD | Out-File -Encoding ascii -NoNewline release/RELEASE; tar -czf release.tgz -C release .`; then `Get-Content -Raw -AsByteStream release.tgz | ssh -i $env:USERPROFILE\.ssh\sparkkindly-deploy sparkkindly@2.25.121.2 staging`
+Run (PowerShell, repo root): `$env:SITE_RELEASE='false'; npm run build` (staging builds are noindex: `robots.ts` and `sitemap.ts` are prerendered at build time, so the flag must be set when building, not only at runtime); then assemble: `Remove-Item -Recurse -Force release -ErrorAction SilentlyContinue; New-Item -ItemType Directory release | Out-Null; Copy-Item -Recurse .next/standalone/* release/; Copy-Item -Recurse .next/static release/.next/static; Copy-Item -Recurse public release/public; git rev-parse HEAD | Out-File -Encoding ascii -NoNewline release/RELEASE; tar -czf release.tgz -C release .`; then `Get-Content -Raw -AsByteStream release.tgz | ssh -i $env:USERPROFILE\.ssh\sparkkindly-deploy sparkkindly-staging@2.25.121.2 anything` (the command word is ignored; the login picks the target)
 Expected: output ends with `Healthy: staging <sha7>`; exit code 0.
 
 (The `build` script runs `content:validate` first; with `SITE_RELEASE=false` it runs in preview mode and passes on unchanged content.)
@@ -338,22 +339,22 @@ Expected: `active`; a path under `releases/`; `{"ok":true,"release":"<sha7>","db
 
 - [ ] **Step 5: Test Review Focus 2 — garbage on stdin leaves `current` untouched**
 
-Run: `$before = ssh root@2.25.121.2 'readlink /opt/sparkkindly-staging/current'; 'not a tarball' | ssh -i $env:USERPROFILE\.ssh\sparkkindly-deploy sparkkindly@2.25.121.2 staging; echo "exit=$LASTEXITCODE"; ssh root@2.25.121.2 'readlink /opt/sparkkindly-staging/current'`
+Run: `$before = ssh root@2.25.121.2 'readlink /opt/sparkkindly-staging/current'; 'not a tarball' | ssh -i $env:USERPROFILE\.ssh\sparkkindly-deploy sparkkindly-staging@2.25.121.2 anything; echo "exit=$LASTEXITCODE"; ssh root@2.25.121.2 'readlink /opt/sparkkindly-staging/current'`
 Expected: non-zero exit; the two `readlink` outputs are identical; `ls /opt/sparkkindly-staging/releases | wc -l` has not grown.
 
 - [ ] **Step 6: Test Review Focus 1 — a release that fails health is rolled back and never becomes `previous`**
 
-Run: create a tarball whose `server.js` is just `process.exit(1)` (copy `release/` to `release-bad/`, overwrite `release-bad/server.js` with that one line, `tar -czf release-bad.tgz -C release-bad .`), and deliver it to `staging` the same way as Step 3.
+Run: create a tarball whose `server.js` is just `process.exit(1)` (copy `release/` to `release-bad/`, overwrite `release-bad/server.js` with that one line, `tar -czf release-bad.tgz -C release-bad .`), and deliver it as `sparkkindly-staging` the same way as Step 3.
 Expected: output contains `Health check failed, rolling back`, exit 1; `readlink current` equals the good release; `readlink previous` is unchanged from before (or absent if this was the first deploy); `systemctl is-active sparkkindly-web-staging` is `active`; `curl -s http://127.0.0.1:3101/api/health` is `ok:true`.
 
-- [ ] **Step 7: Test an unknown target**
+- [ ] **Step 7: Test that the staging login cannot deploy production, whatever the client asks for**
 
-Run: `Get-Content -Raw -AsByteStream release.tgz | ssh -i … sparkkindly@2.25.121.2 production`
-Expected: `Unknown target: production`, exit 2.
+Run: `$before = ssh root@2.25.121.2 'readlink /opt/sparkkindly/app/current 2>/dev/null; ls /opt/sparkkindly/app/releases | wc -l'; Get-Content -Raw -AsByteStream release.tgz | ssh -i $env:USERPROFILE\.ssh\sparkkindly-deploy sparkkindly-staging@2.25.121.2 prod; ssh root@2.25.121.2 'readlink /opt/sparkkindly/app/current 2>/dev/null; ls /opt/sparkkindly/app/releases | wc -l'`
+Expected: the deploy lands on **staging** (output says `Healthy: staging …`), and the two prod lines (symlink and release count) are identical before and after. Then `ssh root@2.25.121.2 'runuser -u sparkkindly-staging -- touch /opt/sparkkindly/bin/x /opt/sparkkindly/home/sparkkindly-staging/.ssh/x 2>&1 | grep -c "Permission denied"'` prints `2`: the staging user cannot write the deploy script or its own key directory.
 
 - [ ] **Step 8: Build a release tarball for prod and verify it runs on 3100 but is not reachable from the internet**
 
-Run: `$env:SITE_RELEASE='true'; npm run build`, assemble and tar exactly as in Step 3, deliver with target `prod`; then `ssh root@2.25.121.2 'curl -s http://127.0.0.1:3100/api/health; ss -tlnp | grep 3100'` and from the dev machine `curl -s -o /dev/null -w '%{http_code}' https://sparkkindly.com/api/health`
+Run: `$env:SITE_RELEASE='true'; npm run build`, assemble and tar exactly as in Step 3, deliver as login `sparkkindly@2.25.121.2` (which is pinned to prod); then `ssh root@2.25.121.2 'curl -s http://127.0.0.1:3100/api/health; ss -tlnp | grep 3100'` and from the dev machine `curl -s -o /dev/null -w '%{http_code}' https://sparkkindly.com/api/health`
 Expected: `ok:true`; `127.0.0.1:3100` only; the public URL returns the mock-up's **404** page status (Caddy still serves the static export).
 
 - [ ] **Step 9: Document and commit**
@@ -376,7 +377,7 @@ git commit -m "ops: systemd services and forced-command release receiver with ro
 
 **Interfaces:**
 - Consumes: the tarball layout and the `prod`/`staging` targets from Task 5.
-- Produces: workflow `Deploy` triggered on `push` to `main` and `staging`. One job per run with `TARGET=$([ "$GITHUB_REF_NAME" = main ] && echo prod || echo staging)` and `SITE_RELEASE` set to `true` for `main` and `false` for `staging` on the build step. Steps: `npm ci`, `content:validate`, `lint`, `typecheck`, `test -- --run`, `build`; assemble `release/` exactly as Task 5 Step 3 (bash equivalents) and `tar czf release.tgz -C release .`; write secret `VPS_SSH_KEY` to a file (mode 600) and secret `VPS_KNOWN_HOSTS` to `~/.ssh/known_hosts` (a pinned host key, never trust-on-first-use); `ssh -i key sparkkindly@$VPS_HOST $TARGET < release.tgz`. Concurrency group `deploy-$TARGET`, `cancel-in-progress: false`. `timeout-minutes: 15`.
+- Produces: workflow `Deploy` triggered on `push` to `main` and `staging`. One job per run with `TARGET=$([ "$GITHUB_REF_NAME" = main ] && echo prod || echo staging)` and `SITE_RELEASE` set to `true` for `main` and `false` for `staging` on the build step. Steps: `npm ci`, `content:validate`, `lint`, `typecheck`, `test -- --run`, `build`; assemble `release/` exactly as Task 5 Step 3 (bash equivalents) and `tar czf release.tgz -C release .`; write secret `VPS_SSH_KEY` to a file (mode 600) and secret `VPS_KNOWN_HOSTS` to `~/.ssh/known_hosts` (a pinned host key, never trust-on-first-use); `ssh -i key $DEPLOY_USER@$VPS_HOST deploy < release.tgz` with `DEPLOY_USER=sparkkindly` for `main` and `sparkkindly-staging` for `staging` (the login, not the command, picks the target). Concurrency group `deploy-$TARGET`, `cancel-in-progress: false`. `timeout-minutes: 15`.
 - Secrets: `VPS_HOST` (`2.25.121.2`), `VPS_SSH_KEY` (private key from Task 5), `VPS_KNOWN_HOSTS` (output of `ssh-keyscan -t ed25519 2.25.121.2`).
 
 - [ ] **Step 1: Write `deploy.yml`**
@@ -396,7 +397,7 @@ Expected: two `Deploy` runs appear.
 - [ ] **Step 4: Verify both runs and the timing**
 
 Run: `gh run list --workflow Deploy --limit 2` and `gh run view <id>` for each
-Expected: both `completed success`; total duration under 10 minutes each; the deploy step log ends with `Healthy: prod <sha7>` and `Healthy: staging <sha7>`. On the VM: `readlink /opt/sparkkindly/current` ends with the pushed commit's short SHA.
+Expected: both `completed success`; total duration under 10 minutes each; the deploy step log ends with `Healthy: prod <sha7>` and `Healthy: staging <sha7>`. On the VM: `readlink /opt/sparkkindly/app/current` ends with the pushed commit's short SHA.
 
 - [ ] **Step 5: Verify a failing check blocks the deploy**
 
