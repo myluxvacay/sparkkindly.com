@@ -19,3 +19,6 @@ content/*.tmp
 
 __pycache__/
 *.pyc
+
+# superpowers plan workspaces (ledgers, briefs, review packages)
+.superpowers/
