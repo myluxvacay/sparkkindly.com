@@ -1,0 +1,2 @@
+# The deploy user may restart only SparkKindly's own two services, with no password and nothing else.
+sparkkindly ALL=(root) NOPASSWD: /usr/bin/systemctl restart sparkkindly-web, /usr/bin/systemctl restart sparkkindly-web-staging

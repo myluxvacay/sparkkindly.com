@@ -1,0 +1,23 @@
+[Unit]
+Description=SparkKindly web (production)
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+User=sparkkindly
+Group=sparkkindly
+WorkingDirectory=/opt/sparkkindly/current
+EnvironmentFile=/opt/sparkkindly/shared/prod.env
+Environment=NEXT_TELEMETRY_DISABLED=1
+# Heap kept under MemoryMax so Node collects garbage before the kernel kills it.
+Environment=NODE_OPTIONS=--max-old-space-size=768
+ExecStart=/opt/sparkkindly/node/bin/node server.js
+Restart=always
+RestartSec=2
+MemoryMax=1G
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target
