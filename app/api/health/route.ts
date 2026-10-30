@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { Pool } from 'pg';
+import { getPool } from '@/lib/db';
 import { getHealth, viewFor, isInternalHost } from '@/lib/health';
 import { memoizeFor } from '@/lib/ttl-cache';
 
@@ -15,18 +15,7 @@ function readRelease(): string {
   }
 }
 
-// One small shared pool and a 5-second cache: a public endpoint must not open a database connection per request.
-let pool: Pool | undefined;
-function getPool(): Pool {
-  pool ??= new Pool({
-    connectionString: process.env.DATABASE_URL,
-    max: 1,
-    connectionTimeoutMillis: 3000,
-    statement_timeout: 3000,
-    idleTimeoutMillis: 30_000,
-  });
-  return pool;
-}
+// A 5-second cache over the shared pool: a public endpoint must not open a database connection per request.
 const checkDb = memoizeFor(5000, async () => {
   await getPool().query('SELECT 1');
 });
