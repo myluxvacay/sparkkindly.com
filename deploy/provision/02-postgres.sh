@@ -38,8 +38,12 @@ SELECT format('ALTER ROLE %I PASSWORD %L', :'role', :'pw') \gexec
 SQL
   runuser -u postgres -- psql -tAc "SELECT 1 FROM pg_database WHERE datname='$db'" | grep -q 1 \
     || runuser -u postgres -- createdb -O "$role" "$db"
+  # Asserted on every run, not only at creation, so a database that already existed ends up in the same state.
   # Only the owner may connect: no other role (including the other environment's) can open this database.
-  runuser -u postgres -- psql -v ON_ERROR_STOP=1 -q -c "REVOKE CONNECT ON DATABASE \"$db\" FROM PUBLIC"
+  runuser -u postgres -- psql -v ON_ERROR_STOP=1 -q \
+    -c "ALTER DATABASE \"$db\" OWNER TO \"$role\"" \
+    -c "REVOKE CONNECT ON DATABASE \"$db\" FROM PUBLIC" \
+    -c "GRANT CONNECT ON DATABASE \"$db\" TO \"$role\""
 
   envfile="$SHARED/$target.env"
   if [ ! -f "$envfile" ]; then

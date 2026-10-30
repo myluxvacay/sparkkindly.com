@@ -40,7 +40,11 @@ install -d -o root -g root -m 755 /opt/sparkkindly /opt/sparkkindly/bin /opt/spa
 # only the env file that names its group. The release receiver needs this to run a migration with its own env.
 install -d -o root -g root -m 711 /opt/sparkkindly/shared
 for u in sparkkindly sparkkindly-staging; do
-  id "$u" >/dev/null 2>&1 || useradd --system --no-create-home --home-dir "/opt/sparkkindly/home/$u" --shell /bin/bash "$u"
+  if id "$u" >/dev/null 2>&1; then
+    usermod -d "/opt/sparkkindly/home/$u" "$u"   # an existing user must not keep a user-writable home
+  else
+    useradd --system --no-create-home --home-dir "/opt/sparkkindly/home/$u" --shell /bin/bash "$u"
+  fi
   # Root-owned home and .ssh: the service user cannot replace its own forced-command key.
   install -d -o root -g root -m 755 "/opt/sparkkindly/home/$u" "/opt/sparkkindly/home/$u/.ssh"
 done

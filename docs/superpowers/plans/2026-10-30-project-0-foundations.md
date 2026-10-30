@@ -312,17 +312,17 @@ git commit -m "ops: PostgreSQL 16 role, databases and environment files"
 
 **Interfaces:**
 - Produces: `deploy-receive.sh <prod|staging>` reads a gzipped tarball on **stdin**; the target is its first argument, fixed per login by the forced command (the client's own command is ignored; an unknown argument → exit 2). Layout per target: `ROOT=/opt/sparkkindly/app` or `/opt/sparkkindly-staging`, `SERVICE=sparkkindly-web` or `sparkkindly-web-staging`, `PORT=3100` or `3101`. Behaviour: `NEW=$ROOT/releases/$(date -u +%Y%m%dT%H%M%SZ)-$(cat RELEASE | cut -c1-7)`; extract to a temp dir, require `server.js` and `RELEASE` to exist, move into place; if `$ROOT/current/migrate.sh` exists in the new release, run it (hook for Project 1; absent now); `ln -sfn $NEW $ROOT/current.tmp && mv -T $ROOT/current.tmp $ROOT/current`; `sudo systemctl restart $SERVICE`; poll `curl -fsS http://127.0.0.1:$PORT/api/health` up to 30 times, 1 s apart; on success write the old target into `$ROOT/previous` (a symlink) and prune releases beyond the newest 5; on failure switch `current` back to the old target, restart, print the last 50 lines of the service's journal via `sudo journalctl -u $SERVICE -n 50 --no-pager`, exit 1.
-- Produces: one deploy SSH key pair, installed for **both** logins as root-owned files in root-owned directories: `/opt/sparkkindly/home/sparkkindly/.ssh/authorized_keys` with `command="/opt/sparkkindly/bin/deploy-receive.sh prod",no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-ed25519 …` and `/opt/sparkkindly/home/sparkkindly-staging/.ssh/authorized_keys` with `… deploy-receive.sh staging …`. Private key goes to GitHub secret `VPS_SSH_KEY` in Task 6; the login name picks the target (`sparkkindly` → prod, `sparkkindly-staging` → staging).
+- Produces: **two different** deploy SSH key pairs (`sparkkindly-deploy-prod`, `sparkkindly-deploy-staging`; the script refuses identical keys), each installed only for its own login as a root-owned file in root-owned directories: `/opt/sparkkindly/home/sparkkindly/.ssh/authorized_keys` with `command="/opt/sparkkindly/bin/deploy-receive.sh prod",no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty ssh-ed25519 …` and `/opt/sparkkindly/home/sparkkindly-staging/.ssh/authorized_keys` with `… deploy-receive.sh staging …`. Private keys go to GitHub secrets `VPS_SSH_KEY_PROD` and `VPS_SSH_KEY_STAGING` in Task 6; the login name picks the target (`sparkkindly` → prod, `sparkkindly-staging` → staging).
 - Produces: `/etc/sudoers.d/sparkkindly`: each user may run exactly `systemctl restart <its own service>` and `journalctl -u <its own service> -n 50 --no-pager` with no password (no `systemd-journal` group).
 - Unit files: `User=sparkkindly` (staging: `sparkkindly-staging`), `EnvironmentFile=/opt/sparkkindly/shared/prod.env` (staging: `staging.env`), `WorkingDirectory=/opt/sparkkindly/app/current` (staging: `/opt/sparkkindly-staging/current`), `ExecStart=/opt/sparkkindly/node/bin/node server.js`, `Restart=always`, `RestartSec=2`, `MemoryMax=1G` (staging `512M`), `NoNewPrivileges=true`, `PrivateTmp=true`, `ProtectSystem=full`, `WantedBy=multi-user.target`.
 
 - [ ] **Step 1: Write the unit files, receiver, sudoers file and `03-services.sh`**
 
-`03-services.sh` (root, idempotent): copies units to `/etc/systemd/system/`, `daemon-reload`, `enable` both (not start; nothing deployed yet); installs `deploy-receive.sh` to `/opt/sparkkindly/bin/` mode 755 root; installs the sudoers file mode 440 and validates with `visudo -cf`; writes each login's root-owned `authorized_keys` (644) from a public key passed as `$1`, with that login's forced-command prefix above.
+`03-services.sh` (root, idempotent): copies units to `/etc/systemd/system/`, `daemon-reload`, `enable` both (not start; nothing deployed yet); installs `deploy-receive.sh` to `/opt/sparkkindly/bin/` mode 755 root; installs the sudoers file mode 440 and validates with `visudo -cf`; writes each login's root-owned `authorized_keys` (644) from the public keys passed as `$1` (prod) and `$2` (staging), refusing identical keys, with that login's forced-command prefix above.
 
 - [ ] **Step 2: Generate the deploy key on the dev machine and provision**
 
-Run (PowerShell): `ssh-keygen -t ed25519 -N '""' -C sparkkindly-deploy -f $env:USERPROFILE\.ssh\sparkkindly-deploy` then `scp -r deploy root@2.25.121.2:/root/ && ssh root@2.25.121.2 "bash /root/deploy/provision/03-services.sh '$(Get-Content $env:USERPROFILE\.ssh\sparkkindly-deploy.pub)'"`
+Run (PowerShell): `foreach ($t in 'prod','staging') { ssh-keygen -t ed25519 -N '""' -C "sparkkindly-deploy-$t" -f "$env:USERPROFILE\.ssh\sparkkindly-deploy-$t" }` then `scp -r deploy root@2.25.121.2:/root/ && ssh root@2.25.121.2 "bash /root/deploy/provision/03-services.sh '$(Get-Content $env:USERPROFILE\.ssh\sparkkindly-deploy-prod.pub)' '$(Get-Content $env:USERPROFILE\.ssh\sparkkindly-deploy-staging.pub)'"`
 Expected: `visudo` prints nothing (valid); `systemctl is-enabled sparkkindly-web sparkkindly-web-staging` prints `enabled` twice.
 
 - [ ] **Step 3: Build a release tarball locally and deliver it to staging through the forced command**
@@ -378,7 +378,7 @@ git commit -m "ops: systemd services and forced-command release receiver with ro
 **Interfaces:**
 - Consumes: the tarball layout and the `prod`/`staging` targets from Task 5.
 - Produces: workflow `Deploy` triggered on `push` to `main` and `staging`. One job per run with `TARGET=$([ "$GITHUB_REF_NAME" = main ] && echo prod || echo staging)` and `SITE_RELEASE` set to `true` for `main` and `false` for `staging` on the build step. Steps: `npm ci`, `content:validate`, `lint`, `typecheck`, `test -- --run`, `build`; assemble `release/` exactly as Task 5 Step 3 (bash equivalents) and `tar czf release.tgz -C release .`; write secret `VPS_SSH_KEY` to a file (mode 600) and secret `VPS_KNOWN_HOSTS` to `~/.ssh/known_hosts` (a pinned host key, never trust-on-first-use); `ssh -i key $DEPLOY_USER@$VPS_HOST deploy < release.tgz` with `DEPLOY_USER=sparkkindly` for `main` and `sparkkindly-staging` for `staging` (the login, not the command, picks the target). Concurrency group `deploy-$TARGET`, `cancel-in-progress: false`. `timeout-minutes: 15`.
-- Secrets: `VPS_HOST` (`2.25.121.2`), `VPS_SSH_KEY` (private key from Task 5), `VPS_KNOWN_HOSTS` (output of `ssh-keyscan -t ed25519 2.25.121.2`).
+- Secrets: `VPS_HOST` (`2.25.121.2`), `VPS_KNOWN_HOSTS` (output of `ssh-keyscan -t ed25519 2.25.121.2`), and **two environment-scoped secrets**: `VPS_SSH_KEY` in a GitHub environment `production` (deployment branches restricted to `main`) holding the prod private key, and `VPS_SSH_KEY` in an environment `staging` holding the staging private key. The job sets `environment: production` or `staging` by branch, so a workflow running on the `staging` branch can never read the prod key.
 
 - [ ] **Step 1: Write `deploy.yml`**
 
@@ -386,7 +386,7 @@ As specified. Use `actions/checkout@v4`, `actions/setup-node@v4` with `node-vers
 
 - [ ] **Step 2: Add the secrets**
 
-Run (PowerShell): `gh auth status` — if authenticated: `gh secret set VPS_HOST -b 2.25.121.2; gh secret set VPS_SSH_KEY < $env:USERPROFILE\.ssh\sparkkindly-deploy; ssh-keyscan -t ed25519 2.25.121.2 | gh secret set VPS_KNOWN_HOSTS`. If `gh` is unavailable, paste the three values at `https://github.com/myluxvacay/sparkkindly.com/settings/secrets/actions`.
+Run (PowerShell): `gh auth status` — if authenticated: `gh secret set VPS_HOST -b 2.25.121.2; gh api -X PUT repos/myluxvacay/sparkkindly.com/environments/production; gh api -X PUT repos/myluxvacay/sparkkindly.com/environments/staging; gh secret set VPS_SSH_KEY --env production < $env:USERPROFILE\.ssh\sparkkindly-deploy-prod; gh secret set VPS_SSH_KEY --env staging < $env:USERPROFILE\.ssh\sparkkindly-deploy-staging; ssh-keyscan -t ed25519 2.25.121.2 | gh secret set VPS_KNOWN_HOSTS`, then in the repository settings restrict the `production` environment's deployment branches to `main`. If `gh` is unavailable, paste the values (including the two environment secrets) at `https://github.com/myluxvacay/sparkkindly.com/settings/secrets/actions`.
 Expected: `gh secret list` shows the three names.
 
 - [ ] **Step 3: Create the `staging` branch and push both branches**
@@ -406,7 +406,7 @@ Expected: `check` fails at `typecheck`; `deploy` is skipped; staging still serve
 
 - [ ] **Step 6: Document**
 
-"Pipeline" in `docs/OPERATIONS.md`: what triggers what, the secrets and where they live, how to rotate the deploy key (new keypair → `03-services.sh` with the new public key → update `VPS_SSH_KEY`). Commit with the revert from Step 5.
+"Pipeline" in `docs/OPERATIONS.md`: what triggers what, the secrets and where they live, how to rotate a deploy key (new keypair → `03-services.sh` with both public keys → update that environment's `VPS_SSH_KEY`). Commit with the revert from Step 5.
 
 ---
 
