@@ -1,3 +1,10 @@
 import type { NextConfig } from 'next';
-const config: NextConfig = { output: 'export', trailingSlash: true, images: { unoptimized: true }, poweredByHeader: false };
+// Standalone server build: the deploy ships .next/standalone (+ .next/static and public) as one release.
+const config: NextConfig = {
+  output: 'standalone',
+  trailingSlash: true,
+  images: { unoptimized: true },
+  poweredByHeader: false,
+  serverExternalPackages: ['pg'],
+};
 export default config;
