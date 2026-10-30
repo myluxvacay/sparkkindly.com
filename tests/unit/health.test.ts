@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getHealth } from '@/lib/health';
+import { getHealth, viewFor, isInternalHost } from '@/lib/health';
 import { missingEnv } from '@/lib/env';
 
 const fullEnv = {
@@ -32,6 +32,22 @@ describe('health', () => {
     const h = await getHealth({ env, checkDb: async () => {}, release: 'abc1234' });
     expect(h.ok).toBe(false);
     expect(h.missingEnv).toEqual(['MAIL_FROM']);
+  });
+
+  it('shows full detail to internal callers and only ok to callers that came through the proxy', () => {
+    const h = { ok: false, release: 'abc1234', db: 'error' as const, missingEnv: ['MAIL_FROM'] };
+    expect(viewFor(h, true)).toEqual(h);
+    expect(viewFor(h, false)).toEqual({ ok: false });
+  });
+
+  it('treats only loopback hosts as internal callers', () => {
+    expect(isInternalHost('127.0.0.1:3100')).toBe(true);
+    expect(isInternalHost('localhost:3101')).toBe(true);
+    expect(isInternalHost('[::1]:3100')).toBe(true);
+    expect(isInternalHost('sparkkindly.com')).toBe(false);
+    expect(isInternalHost('staging.sparkkindly.com')).toBe(false);
+    expect(isInternalHost('127.0.0.1.evil.com')).toBe(false);
+    expect(isInternalHost(null)).toBe(false);
   });
 
   it('missingEnv lists every absent required variable in order', () => {
