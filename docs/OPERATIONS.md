@@ -79,10 +79,20 @@ were checked unchanged afterwards, and myluxvacation.com, beta.myluxvacation.com
 - Production: release deployed on 3100, healthy, loopback only, not reachable from outside; the public site still
   serves the mock-up (Caddy untouched).
 
+## Staging site
+
+`https://staging.sparkkindly.com` is the staging environment (service `sparkkindly-web-staging`, port 3101) behind Caddy with basic auth. It is noindex three ways: `SITE_RELEASE=false` (robots `Disallow: /`, empty sitemap) and an `X-Robots-Tag` header.
+
+- **Config:** `deploy/caddy/sparkkindly-staging.caddy`, installed to `/etc/caddy/` by `deploy/provision/04-caddy-staging.sh`, with a single `import` line added to **both** `/etc/caddy/Caddyfile` and MyLuxVacation's tracked `/opt/myluxvacation/deploy/Caddyfile` (`activate-public.py` requires them identical). The script backs both up to `/root/caddy-backups/<timestamp>/`, validates, and restores them if validation fails.
+- **Login:** user `sparkkindly`; the hash is in `/etc/caddy/sparkkindly-staging.users` (root:caddy 640) and the generated password in `/opt/sparkkindly/shared/staging-basic-auth.txt` (root only). The owner's copy is in their local secrets file.
+- **Rotate the password:** delete both files, re-run `04-caddy-staging.sh`, update the Better Stack monitor.
+- **Open item for the owner:** the tracked `deploy/Caddyfile` in the MyLuxVacation repository now has one extra line; commit it there so a future MyLuxVacation deploy does not drop the staging site.
+- **Verified 31 October 2026:** no password 401, wrong password 401, right password 200 with only `{"ok":true}` visible, robots `Disallow: /`, sitemap empty, article page 200, HTTP redirects to HTTPS; other sites unchanged (200, 401, 200), 6 firewall rules.
+
 ## Reboot (31 October 2026)
 
 Rebooted with the owner's permission to load the updated libraries. Back in about 40 seconds. Afterwards: all ten services active (Caddy, MongoDB, SSH socket, ufw, fail2ban, PostgreSQL, both MyLuxVacation apps, SparkKindly production and staging), 2 GB swap active, 6 firewall rules, both SparkKindly releases healthy (200), no failed units, no service listed as running old libraries, kernel current. myluxvacation.com 200, beta 401, sparkkindly.com 200.
 
 ## Not yet done
 
-Staging routing in Caddy, the GitHub pipeline push, backups, monitoring and email come in later tasks of the Project 0 plan.
+Backups, monitoring and email come in later tasks of the Project 0 plan.

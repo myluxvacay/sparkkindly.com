@@ -1,0 +1,18 @@
+# Additive site configuration for the private staging site. Install outside any web root and import it from BOTH
+# /etc/caddy/Caddyfile and MyLuxVacation's tracked deploy/Caddyfile (they must stay identical; see
+# deploy/activate-public.py). Does not touch MyLuxVacation's blocks.
+# The user and password hash live in /etc/caddy/sparkkindly-staging.users (root:caddy 640), never in this file.
+staging.sparkkindly.com {
+    basic_auth {
+        import /etc/caddy/sparkkindly-staging.users
+    }
+    encode gzip zstd
+    header {
+        X-Robots-Tag "noindex, nofollow, noarchive"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        X-Frame-Options "DENY"
+        -Server
+    }
+    reverse_proxy 127.0.0.1:3101
+}
