@@ -6,7 +6,7 @@
 
 **Architecture:** Plain SQL migrations applied by a dependency-light runner that ships inside each release and runs through the receiver's `migrate.sh` hook. All data access goes through a small `Db` interface (`pg` in the app, in-process PGlite in tests, so tests run on Windows and CI with no database server). Business rules live in `lib/items/` and `lib/agents/` with no Next.js imports; route files only parse and respond.
 
-**Tech Stack:** PostgreSQL 16, `pg` 8.23.1 (already installed), `@electric-sql/pglite` (test only, exact pin), zod 4.6.7 (existing), Vitest, Next.js 16.4.2 route handlers.
+**Tech Stack:** PostgreSQL 16, `pg` 8.23.1 (already installed), `@electric-sql/pglite` (test only, exact pin), `@modelcontextprotocol/sdk` (owner-machine connector only, exact pin), zod 4.6.7 (existing), Vitest, Next.js 16.4.2 route handlers.
 
 **Spec:** `docs/superpowers/specs/2026-10-30-sparkkindly-platform-design.md` — Project 1 (schema, publish API, quality gates, approval policy, starter content), section 4a.4 (risk tiers) and section 7a. This plan covers the first half of Project 1; the public site, admin, worker service, digest and cut-over are plan 1B.
 
@@ -19,14 +19,15 @@
 - Statuses: `draft`, `in_review`, `scheduled`, `published`, `rejected`, `archived`. Kinds: `article`, `game`, `quiz`, `video_script`, `puzzle`. Audiences: `kids`, `all`, `adults` (`adults` means "aimed at adults", not an age gate). Risk tiers: `excluded`, `sourced`, `computable`, `reflective`, `kids`. Approval modes per world: `auto`, `review`.
 - Launch game mechanics (one generic renderer, answer-based): `multiple_choice`, `true_false`, `short_text`, `number`, `odd_one_out`, `put_in_order`, `clue_reveal`. Anything else is rejected.
 - Slug regex `^[a-z0-9-]+$`; unique per `(world, locale)`. Locale `en` only for now.
-- Agent keys: format `skagt_<8 hex>_<48 hex>`; only `sha256(secret)` and the 8-hex prefix are stored; compared with `timingSafeEqual`.
+- Agent keys: format `skagt_<8 hex>_<48 hex>`; only `sha256(secret)` and the 8-hex prefix are stored; compared with `timingSafeEqual`. The key is sent in the **`X-Agent-Key`** header, never `Authorization`, because staging sits behind HTTP basic auth that uses `Authorization`.
+- **Claude Code reaches the API through an MCP connector** (Task 11): tools to read the brief, submit an item and check its status, usable interactively and from scheduled headless runs. Keys live only in the owner's secrets file, never in the repository or `.mcp.json`.
 - Migrations are **expand-then-contract**: a release must run against the schema of the next one. Each migration runs in a transaction under `pg_advisory_lock(7263001)`.
 - The **production database is not touched in this plan**: starter content is imported on **staging only**. Importing to production happens at the Project 1B cut-over, and only after backups (Project 0 tasks 0.9–0.10, deferred by the owner) exist.
 - Commits follow `.claude/rules/git.md` (no AI co-author trailers). Pushing `staging` deploys staging; pushing `main` deploys production and waits for the independent review.
 
 ## Methodology
 
-Executed under `AGENTS.md`. **High-risk:** Tasks 1, 2, 3 (schema, migrations, data import), 6 and 7 (quality gates and approval policy protect child safety), 8 (agent keys and API), 10 (deploy-time migration). **Standard:** Tasks 4, 5, 9. High-risk tasks get an independent review before merge; the reviewer re-runs the Review Focus tests below.
+Executed under `AGENTS.md`. **High-risk:** Tasks 1, 2, 3 (schema, migrations, data import), 6 and 7 (quality gates and approval policy protect child safety), 8 (agent keys and API), 10 (deploy-time migration), 11 (a new external tool that holds production keys). **Standard:** Tasks 4, 5, 9. High-risk tasks get an independent review before merge; the reviewer re-runs the Review Focus tests below.
 
 ## Review Focus
 
@@ -189,7 +190,7 @@ Executed under `AGENTS.md`. **High-risk:** Tasks 1, 2, 3 (schema, migrations, da
 
 **Interfaces:**
 - Produces in `keys.ts`: `generateKey(): { key: string; prefix: string; hash: string }` (`key` = `skagt_<prefix>_<secret>`), `hashSecret(secret: string): string` (sha256 hex), `parseKey(key: string): { prefix: string; secret: string } | null`.
-- Produces in `auth.ts`: `authenticate(db: Db, header: string | null): Promise<Agent | null>` (looks up by prefix, `timingSafeEqual` on hashes, rejects disabled agents, updates `last_run_at` at most once a minute).
+- Produces in `auth.ts`: `authenticate(db: Db, header: string | null): Promise<Agent | null>` (`header` is the value of `X-Agent-Key`; an `Authorization` header is ignored; looks up by prefix, `timingSafeEqual` on hashes, rejects disabled agents, updates `last_run_at` at most once a minute).
 - Produces in `rate-limit.ts`: `createLimiter(opts: { perMinute: number; now?: () => number }): (key: string) => boolean`. In-memory token bucket, 60 per minute per agent — **`// ponytail:` single-process limiter; move to the database if the app ever runs more than one instance.**
 - Produces in `api.ts` (framework-free handlers taking `(db, agent, body|params)` and returning `{ status: number; json: unknown }`): `getBrief(db, agent)` → `{ today, world: {slug, goals, approvalMode, bufferDays}, supported: {kinds, mechanics}, topics: {slug, name, recentCount}[], recentTitles: string[30], scheduledDaysAhead: number }` (a world-less master agent must pass `?world=slug`); `submitItem(db, agent, body, deps?)` → validates with `itemSubmissionSchema`, **ignores any `status` field**, resolves the world (agent's own, or body `world` for the master), **rejects a world other than the agent's own with 403**, returns the existing item for a repeated `(agent, idempotencyKey)` (HTTP 200) or creates it (HTTP 201) after `runGates` + `riskTierFor` + `decideStatus`, storing the `quality_report`; `getItemStatus(db, agent, id)` → `{ id, status, qualityReport }` only for items created by that agent's world.
 - Route files parse JSON, call `authenticate` (401 on failure), apply the limiter (429), call the handler, and return `Response.json`. Responses never include another agent's data, hashes or stack traces.
@@ -239,8 +240,33 @@ Executed under `AGENTS.md`. **High-risk:** Tasks 1, 2, 3 (schema, migrations, da
 - [ ] **Step 5: Deliver to staging by hand and verify** — deliver the tarball with the staging key (`cmd /c "ssh -i … sparkkindly-staging@2.25.121.2 deploy < release.tgz"`). Expected: `Healthy: staging <sha7>`; then run on the VM as root: `runuser -u sparkkindly-staging -- env $(cat /opt/sparkkindly/shared/staging.env | xargs) /opt/sparkkindly/node/bin/node /opt/sparkkindly-staging/current/db/migrate.mjs` prints no pending migrations; `psql` as the staging role lists the tables from Task 2 and `schema_migrations` has 2 rows.
 - [ ] **Step 6: Failure drill on staging** — deliver a release whose `migrate.sh` is `exit 1`. Expected: `Migration failed; the previous release is still serving`, exit 1, `current` unchanged, staging health 200.
 - [ ] **Step 7: Import the starter content on staging only** — run `scripts/import-starter-content.ts` against the staging database through an SSH tunnel to loopback Postgres (`ssh -L 55432:127.0.0.1:5432`) with the staging role's credentials read from the root-only file. Expected: 5 worlds, 24 items, 14 answer rows; running it again changes nothing. **Do not run it against the production database.**
-- [ ] **Step 8: Publish through the API on staging** — create an agent key for the Play world with `agent:create`, submit a valid `multiple_choice` quiz with a source, then a Kids submission, over HTTPS with the staging basic-auth credentials plus the agent key header. Expected: the Play item is `scheduled`; the Kids item is `in_review`; replaying the Play submission returns 200 with the same id; running `publishDue` (by hand through a one-off script) after moving `publish_at` into the past moves the Play item to `published` and leaves the Kids item untouched.
+- [ ] **Step 8: Publish through the API on staging** — create an agent key for the Play world with `agent:create`, submit a valid `multiple_choice` quiz with a source, then a Kids submission, over HTTPS with the staging basic-auth credentials in `Authorization` and the agent key in `X-Agent-Key`. Expected: the Play item is `scheduled`; the Kids item is `in_review`; replaying the Play submission returns 200 with the same id; running `publishDue` (by hand through a one-off script) after moving `publish_at` into the past moves the Play item to `published` and leaves the Kids item untouched.
 - [ ] **Step 9: Commit and ledger** — `git commit -m "ops: run migrations on deploy; staging rolled out and verified"`; record evidence in `docs/OPERATIONS.md`.
+
+---
+
+### Task 11: The SparkKindly connector for Claude Code (MCP)
+
+**Files:**
+- Create: `agents/client.ts` (HTTP client for the agent API), `agents/mcp/server.ts` (stdio MCP server), `agents/secrets.ts` (reads the owner's secrets file), `agents/README.md`, `scripts/mcp-smoke.ts`
+- Create: `.mcp.json` (project-scoped registration; no secrets in it)
+- Modify: `package.json` (devDependency `@modelcontextprotocol/sdk`, exact pin)
+- Test: `tests/unit/agent-client.test.ts`, `tests/unit/agent-secrets.test.ts`, `tests/unit/mcp-server.test.ts`
+
+**Interfaces:**
+- Consumes: the three routes from Task 8 and `itemSubmissionSchema` / `docs/item-format.md` from Task 4.
+- Produces in `secrets.ts`: `loadSecrets(path?: string): Record<string, string>` parsing `KEY=value` lines (default path from `SPARKKINDLY_SECRETS_FILE` or `~/sparkkindly-secrets.txt`), ignoring comments and blank lines; a missing file gives `{}`. Keys used: `SPARKKINDLY_STAGING_URL`, `SPARKKINDLY_STAGING_AGENT_KEY`, `STAGING_BASIC_AUTH_USER`, `STAGING_BASIC_AUTH_PASSWORD`, `SPARKKINDLY_PROD_URL`, `SPARKKINDLY_PROD_AGENT_KEY`.
+- Produces in `client.ts`: `createClient(opts: { baseUrl: string; agentKey: string; basicAuth?: { user: string; password: string }; fetch?: typeof fetch }): { brief(world?: string): Promise<Result>; submit(item: unknown): Promise<Result>; status(id: string): Promise<Result> }` where `Result = { ok: boolean; status: number; data: unknown; error?: string }`. HTTP errors are returned, not thrown, and `error` never contains the key. Always sends `X-Agent-Key`; sends `Authorization: Basic …` only when `basicAuth` is given; every call has a 15 s timeout. `submit` fills a missing `idempotencyKey` with `sha256(world + ':' + slug)` so a retried submission cannot duplicate.
+- Produces in `server.ts`: an MCP server over stdio, started with `--env staging|prod`, exposing four tools: `sparkkindly_item_format` (returns the text of `docs/item-format.md` so Claude knows the exact shapes), `sparkkindly_brief` (`{ world?: string }`), `sparkkindly_submit_item` (`{ item: object }`), `sparkkindly_item_status` (`{ id: string }`). Tool results are the `Result` as JSON text. An API rejection is a normal tool result with `ok:false` so Claude can read the failing gate and fix the item, never a crash.
+- `.mcp.json` registers `sparkkindly-staging` (`npx tsx agents/mcp/server.ts --env staging`) and `sparkkindly-prod` (`--env prod`); neither entry contains a URL or key.
+
+- [ ] **Step 1: Write the failing tests:** secrets: `parses KEY=value lines and ignores comments`, `a missing file returns an empty object`; client (fetch stub): `sends X-Agent-Key and no Authorization header by default`, `with basic auth sends both headers`, `a 422 response becomes ok:false with the body`, **`the error text never contains the agent key`**, `a network error becomes ok:false, not a throw`, `submit adds a deterministic idempotency key when missing and keeps a given one`, `brief passes the world as a query parameter`, `every request carries a timeout signal`; server (SDK in-memory transport, fake client): `lists exactly the four tools`, `sparkkindly_submit_item returns the API result as text`, `sparkkindly_item_format returns the format document`, `an unconfigured environment returns an ok:false result naming the missing setting, not the contents of the secrets file`.
+- [ ] **Step 2: Run to verify failure** — `npx vitest run tests/unit/agent-client.test.ts tests/unit/agent-secrets.test.ts tests/unit/mcp-server.test.ts` → FAIL (modules missing).
+- [ ] **Step 3: Implement** the modules, the registration file and `agents/README.md` (create a key with `agent:create`, where to put it in the secrets file, how to connect: open Claude Code in the project, accept the project MCP servers, check `/mcp`; how scheduled `claude -p` runs use the same servers; what each tool does; staging is the place to practise).
+- [ ] **Step 4: Verify** — the three test files pass; full suite, lint and typecheck green; `scripts/mcp-smoke.ts --env staging` (no `--live`) starts the server over stdio with the SDK client and prints the four tool names.
+- [ ] **Step 5: Live check on staging** — with the staging URL and an agent key (made in Task 10 Step 8) in the owner's secrets file, run `scripts/mcp-smoke.ts --env staging --live`. Expected: `brief` returns the Play world and the supported mechanics; submitting one Play quiz returns 201 with status `scheduled`; resubmitting returns 200 with the same id; an invalid item returns `ok:false` naming the failing gate.
+- [ ] **Step 6: Use it from Claude Code** — restart the Claude Code session so it loads the project MCP servers, run `/mcp` and confirm `sparkkindly-staging` is connected, then ask Claude to create a game and a post on staging. Expected: the items appear as `scheduled` (or `in_review` for Kids) and the status tool reports them. Record the result in `docs/OPERATIONS.md`.
+- [ ] **Step 7: Commit** — `git commit -m "feat: SparkKindly MCP connector so Claude Code can create content on demand"`.
 
 ---
 
@@ -249,7 +275,7 @@ Executed under `AGENTS.md`. **High-risk:** Tasks 1, 2, 3 (schema, migrations, da
 - Schema with worlds, topics, items (audience, locale, evergreen, risk_tier, sources, status, publish_at, quality_report), revisions (10 kept), item_answers, events, agents, audit_log, sponsor tables, failed_jobs → Tasks 2 and 5. Image origin and licence recorded → Task 3.
 - Starter content import with answers apart → Task 3. Item format per kind and per mechanic, documented → Task 4.
 - Quality gates (schema, duplicates 90 days, blocked words and topics, sources resolve, Kids reading level, explained answer) → Task 6. Approval policy with Kids always in review and a per-world switch → Tasks 2, 7.
-- Agent API (brief, submit with idempotency, status), per-agent hashed keys, rate limits → Task 8. Scheduled publishing, idempotent jobs with retries and failed_jobs → Task 9.
+- Agent API (brief, submit with idempotency, status), per-agent hashed keys, rate limits → Task 8. **Claude Code access through an MCP connector, interactive and scheduled → Task 11 (owner request, 31 October 2026).** Scheduled publishing, idempotent jobs with retries and failed_jobs → Task 9.
 - Migrations on deploy with rollback behaviour → Tasks 1 and 10. Staging verification of the done-when path (draft → published, Kids stops in the queue) → Task 10.
 - **Deliberately in plan 1B:** public pages from the database, anonymous play checking answers server-side, search and topic pages, template images, "Report a problem", admin sign-in with second factor, admin screens, the worker service, the daily digest, trust pages, accessibility pass, URL redirects and the production cut-over (with its backup precondition).
 - Type consistency: `Db`, `Status`, `Audience`, `RiskTier`, `ItemSubmission`, `StoredItem`, `PublicItem`, `GateResult` are each defined in one task and used by name in later ones.
