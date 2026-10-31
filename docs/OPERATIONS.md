@@ -79,8 +79,10 @@ were checked unchanged afterwards, and myluxvacation.com, beta.myluxvacation.com
 - Production: release deployed on 3100, healthy, loopback only, not reachable from outside; the public site still
   serves the mock-up (Caddy untouched).
 
+## Reboot (31 October 2026)
+
+Rebooted with the owner's permission to load the updated libraries. Back in about 40 seconds. Afterwards: all ten services active (Caddy, MongoDB, SSH socket, ufw, fail2ban, PostgreSQL, both MyLuxVacation apps, SparkKindly production and staging), 2 GB swap active, 6 firewall rules, both SparkKindly releases healthy (200), no failed units, no service listed as running old libraries, kernel current. myluxvacation.com 200, beta 401, sparkkindly.com 200.
+
 ## Not yet done
 
-The server has not been rebooted since the library updates, so MongoDB, `sshd` and `systemd` still run the older
-loaded libraries (listed by `needrestart`); a reboot is pending the owner's window. Caddy routing for staging and the
-cut-over, backups, monitoring and email come in later tasks of the Project 0 plan.
+Staging routing in Caddy, the GitHub pipeline push, backups, monitoring and email come in later tasks of the Project 0 plan.
