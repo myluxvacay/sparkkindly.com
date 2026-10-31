@@ -303,6 +303,8 @@ git commit -m "ops: PostgreSQL 16 role, databases and environment files"
 
 ### Task 5: systemd services and the release receiver
 
+> **Executor notes from the first run (31 October 2026, Windows PowerShell 7):** (1) generate keys with `-N ''`; `-N '""'` sets the literal passphrase `""` in PowerShell 7 and the key then cannot be used unattended. (2) Deliver tarballs with `cmd /c "ssh -i KEY USER@HOST deploy < file.tgz"`; piping bytes through PowerShell corrupts them. (3) The health URL is `/api/health/` with a trailing slash, because `trailingSlash` makes `/api/health` a 308 that `curl -f` accepts as success. (4) Quote-heavy remote commands are fragile in PowerShell: write them to a file, strip `\r`, `scp` it and run it. (5) Stop test servers with `taskkill /T`, not by port.
+
 **Files:**
 - Create: `deploy/systemd/sparkkindly-web.service`, `deploy/systemd/sparkkindly-web-staging.service`
 - Create: `deploy/bin/deploy-receive.sh` (installed to `/opt/sparkkindly/bin/`)
@@ -322,7 +324,7 @@ git commit -m "ops: PostgreSQL 16 role, databases and environment files"
 
 - [ ] **Step 2: Generate the deploy key on the dev machine and provision**
 
-Run (PowerShell): `foreach ($t in 'prod','staging') { ssh-keygen -t ed25519 -N '""' -C "sparkkindly-deploy-$t" -f "$env:USERPROFILE\.ssh\sparkkindly-deploy-$t" }` then `scp -r deploy root@2.25.121.2:/root/ && ssh root@2.25.121.2 "bash /root/deploy/provision/03-services.sh '$(Get-Content $env:USERPROFILE\.ssh\sparkkindly-deploy-prod.pub)' '$(Get-Content $env:USERPROFILE\.ssh\sparkkindly-deploy-staging.pub)'"`
+Run (PowerShell): `foreach ($t in 'prod','staging') { ssh-keygen -t ed25519 -N '' -C "sparkkindly-deploy-$t" -f "$env:USERPROFILE\.ssh\sparkkindly-deploy-$t" }` then `scp -r deploy root@2.25.121.2:/root/ && ssh root@2.25.121.2 "bash /root/deploy/provision/03-services.sh '$(Get-Content $env:USERPROFILE\.ssh\sparkkindly-deploy-prod.pub)' '$(Get-Content $env:USERPROFILE\.ssh\sparkkindly-deploy-staging.pub)'"`
 Expected: `visudo` prints nothing (valid); `systemctl is-enabled sparkkindly-web sparkkindly-web-staging` prints `enabled` twice.
 
 - [ ] **Step 3: Build a release tarball locally and deliver it to staging through the forced command**

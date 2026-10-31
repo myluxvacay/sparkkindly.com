@@ -53,9 +53,11 @@ mv -T "$ROOT/current.tmp" "$ROOT/current"
 sudo systemctl restart "$SERVICE"
 
 # 4. Health gate: 30 tries, one second apart. The deploy only succeeds on an ok:true report.
+#    The URL ends in a slash on purpose: the site uses trailingSlash, so "/api/health" answers with a 308 redirect,
+#    which curl -f accepts as success even when the app is unhealthy. "/api/health/" returns the real 200 or 503.
 healthy=0
 for _ in $(seq 1 30); do
-  if curl -fsS -m 3 "http://127.0.0.1:$PORT/api/health" >/dev/null 2>&1; then healthy=1; break; fi
+  if curl -fsS -m 3 "http://127.0.0.1:$PORT/api/health/" >/dev/null 2>&1; then healthy=1; break; fi
   sleep 1
 done
 
