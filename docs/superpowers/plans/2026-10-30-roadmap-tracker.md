@@ -25,8 +25,8 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 - [ ] 0.6 systemd units with memory limits, forced-command release receiver with health check and automatic rollback, sudoers — *bad tarball and failing release both leave `current` unchanged; prod on 3100 is not reachable from the internet.*
 - [ ] 0.7 GitHub Actions: `main` → prod, `staging` → staging — *two green runs under 10 minutes; failing typecheck blocks deploy.*
 - [ ] 0.8 Staging behind Caddy basic auth, noindex — *401 without credentials; `Disallow: /`; both Caddyfiles identical.*
-- [ ] 0.9 Nightly encrypted backups to B2 with 30-day retention and heartbeat — *file in B2; failed dump uploads nothing and pings nothing.*
-- [ ] 0.10 Restore script and monthly restore test — *restore test passes once by hand; refuses to overwrite prod without `--force`.*
+- [ ] 0.9 **DEFERRED by owner (31 Oct 2026); must be done before Project 1 imports any data or any visitor data exists** — Nightly encrypted backups to B2 with 30-day retention and heartbeat — *file in B2; failed dump uploads nothing and pings nothing.*
+- [ ] 0.10 **DEFERRED with 0.9** — Restore script and monthly restore test — *restore test passes once by hand; refuses to overwrite prod without `--force`.*
 - [ ] 0.11 MailerSend verified; first real email from `hello@sparkkindly.com` — *SPF and DKIM pass; health `ok` on both envs.*
 - [ ] 0.12 Disk check heartbeat and outage drill — *down and up emails received.*
 - [ ] 0.13 Done-when evidence recorded; README updated for Windows — *deploy under 10 min, backup restored, alert received, firewall and Caddy unchanged.*
