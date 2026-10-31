@@ -22,3 +22,7 @@ __pycache__/
 
 # superpowers plan workspaces (ledgers, briefs, review packages)
 .superpowers/
+
+# Codex-format mirrors of .claude/ (not used on this project)
+.agents/
+.codex/
