@@ -1,0 +1,61 @@
+name: Deploy
+
+# A push to main deploys production; a push to staging deploys staging. The environment decides which SSH key the job
+# can read, so a run on the staging branch can never see the production key (production is restricted to main).
+on:
+  push:
+    branches: [main, staging]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: ${{ github.ref_name == 'main' && 'production' || 'staging' }}
+    env:
+      DEPLOY_USER: ${{ github.ref_name == 'main' && 'sparkkindly' || 'sparkkindly-staging' }}
+      SITE_RELEASE: ${{ github.ref_name == 'main' && 'true' || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run content:validate
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test -- --run
+      - run: npm run build
+
+      - name: Assemble release
+        run: |
+          mkdir release
+          cp -r .next/standalone/. release/
+          mkdir -p release/.next
+          cp -r .next/static release/.next/static
+          cp -r public release/public
+          printf '%s' "$GITHUB_SHA" > release/RELEASE
+          tar -czf release.tgz -C release .
+          ls -lh release.tgz
+
+      - name: Deliver to the server
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$VPS_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$VPS_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          # The login, not this command word, picks the target; the receiver gates on /api/health/ and rolls back itself.
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
+              "$DEPLOY_USER@$VPS_HOST" deploy < release.tgz
+          rm -f ~/.ssh/deploy_key
