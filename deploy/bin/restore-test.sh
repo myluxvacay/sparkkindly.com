@@ -28,15 +28,17 @@ tables() { runuser -u postgres -- env -u RCLONE_CONFIG_B2_KEY -u RCLONE_CONFIG_B
 restored=$(tables "$SCRATCH")
 live=$(tables "$SOURCE_DB")
 [ "$restored" = "$live" ] || { echo "Table count differs: restored $restored, live $live" >&2; exit 1; }
-# Restored content is data, not trusted code: query it as the low-privilege owner with a fixed search_path and a
-# schema-qualified table, never as the superuser.
-rows=$(runuser -u postgres -- env -u RCLONE_CONFIG_B2_KEY -u RCLONE_CONFIG_B2_ACCOUNT -u HEARTBEAT_BACKUP_URL -u HEARTBEAT_RESTORE_URL -u HEARTBEAT_DISK_URL psql -d "$SCRATCH" -v ON_ERROR_STOP=1 -tA <<SQL | tail -n 1
-SET ROLE $SOURCE_DB;
+# Restored content is data, not trusted code, and SET ROLE inside a superuser session is not a sandbox (restored code could
+# reset it). So run nothing from the restored database: confirm public.items is a plain table (relkind r, not a view whose
+# definition could call restored functions), then count it with ONLY from a fixed search_path. A plain-table count(*) as
+# superuser executes no user-defined code (no triggers or output functions run on a SELECT).
+rows=$(runuser -u postgres -- env -u RCLONE_CONFIG_B2_KEY -u RCLONE_CONFIG_B2_ACCOUNT -u HEARTBEAT_BACKUP_URL -u HEARTBEAT_RESTORE_URL -u HEARTBEAT_DISK_URL psql -d "$SCRATCH" -v ON_ERROR_STOP=1 -tA <<'SQL' | tail -n 1
 SET search_path = pg_catalog;
-SELECT count(*) FROM public.items;
+SELECT CASE WHEN (SELECT relkind FROM pg_class WHERE oid = 'public.items'::regclass) = 'r'
+            THEN (SELECT count(*) FROM ONLY public.items) ELSE -1 END;
 SQL
 )
-[ "$rows" -ge 1 ] || { echo "Restored items table is empty" >&2; exit 1; }
+[ "$rows" -ge 1 ] || { echo "Restored items is missing, not a plain table, or empty" >&2; exit 1; }
 echo "Table count matches: $restored; items: $rows"
 
 cleanup
