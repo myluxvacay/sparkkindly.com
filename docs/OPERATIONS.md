@@ -207,3 +207,52 @@ database with the same 14 tables as live staging and 24 items, dropped it, and p
 `postgres` user could not read root's decrypted file), so the restore now pipes the decrypted dump into `pg_restore`.
 The disk job reported 10 percent used, and restoring over `sparkkindly_staging` without `--force` was refused (exit 3).
 **Production** is not yet in `BACKUP_DATABASES` (add it at the cut-over).
+
+## Admin and worker (Project 1C)
+
+**Admin sign-in.** `/admin/` is for the addresses in `ADMIN_EMAILS` (comma-separated, in the root-owned env file
+`/opt/sparkkindly/shared/<env>.env`; never in the repository). Sign-in is an emailed link (15 minutes, single use, used
+by pressing Continue so mail scanners cannot spend it) and then the code from an authenticator app. Sessions last at most
+12 hours and end after 60 idle minutes; five wrong codes end the attempt. Every admin action and sign-in step is in
+`audit_log`. Staging sets `ADMIN_LINK_BASE=https://staging.sparkkindly.com` so its links point at staging.
+- **Add or remove an approver:** edit `ADMIN_EMAILS` and `sudo systemctl restart sparkkindly-web` (or `-staging`).
+  Removing an address ends its sessions on the next request. This is also the recovery path if sign-in links are
+  being flooded: while a link is still valid it is re-sent at most every 5 minutes, and a new one is minted only when
+  it has expired or been used (at most 6 an hour), so a flood never leaves the owner without a working link and
+  never grants access.
+- **Encryption key:** `ADMIN_SECRET_KEY` (base64, 32 bytes; generate as in the env example) encrypts the stored
+  authenticator secrets. Without it, or with the wrong one, sign-in fails closed ("Sign-in is unavailable").
+  Keep a copy in the password manager; losing it means re-enrolling every authenticator.
+- **Enrol an authenticator** (once per approver, and again to replace a lost phone): through the SSH tunnel with
+  `DATABASE_URL` and the same `ADMIN_SECRET_KEY` as that environment's env file (in the shell for that one command,
+  never saved to a file), run `npm run admin:totp -- <email>`; it prints an `otpauth://` URI once. Add it to
+  the authenticator app (paste it, or make a QR code locally), and do not save it anywhere else. Re-running replaces the
+  secret and ends that address's sessions.
+
+**Agent keys** are created, rotated (old key dead at once) and revoked in `/admin/agents/`; the new key is shown once,
+after a redirect, to the same session within 5 minutes (a reload shows nothing and rotates nothing). Keys older than 90 days are flagged there and in the digest.
+
+**Worker.** `sparkkindly-worker.timer` (and `-staging`) runs `sparkkindly-worker.service` once a minute: a oneshot that
+runs the live release's `worker.mjs` (built in the deploy by `npm run worker:build`), so deploys need no worker restart.
+Each tick publishes due items (enabled worlds only) and, once a day after `DIGEST_HOUR_UTC` (default 7), emails the digest
+to `ADMIN_EMAILS`. Failures land in `failed_jobs` (shown in `/admin/runs/` and the next digest); a failed digest is not
+re-sent the same day. Logs: `journalctl -u sparkkindly-worker -n 50`.
+- **Install (owner-authorized server step, after the first deploy that contains `worker.mjs`):** re-run
+  `deploy/provision/03-services.sh` (it installs the four units and starts each timer once its release has `worker.mjs`),
+  or `systemctl enable --now sparkkindly-worker-staging.timer`. Check with `systemctl list-timers 'sparkkindly-worker*'`.
+- **Manual check:** `cd /opt/sparkkindly-staging/current && set -a && . /opt/sparkkindly/shared/staging.env && set +a &&
+  /opt/sparkkindly/node/bin/node worker.mjs` prints `worker tick: published N, ...; digest: ...`.
+- **Real digest verification (needs the MailerSend token):** on staging set `DIGEST_HOUR_UTC` to the current UTC hour,
+  delete today's `job_runs` row for `digest` if one exists, run the manual check, and confirm the email arrives and SPF/DKIM
+  pass. Not yet done: MailerSend is still a placeholder token (Project 0, task 0.11).
+
+**Verified locally, 1 November 2026.** Unit suites (PGlite) and the Playwright suite (in-process database) pass; the
+bundled `worker.mjs` run against the e2e database published a due item, claimed the day's digest, recorded the failed send
+(no MailerSend token) once in `failed_jobs`, and on the second run reported `already_sent`. Not verified on staging.
+
+**Migration 005 rollback** (only if 1C is withdrawn; nothing else depends on it): `DROP TABLE admin_users,
+admin_login_tokens, admin_sessions, job_runs; ALTER TABLE agents DROP COLUMN key_rotated_at; DELETE FROM
+schema_migrations WHERE name = '005_admin.sql';` after the data-correction backup step.
+
+**Before the production cut-over:** the production Caddy block must send `X-Frame-Options: DENY` (or
+`Content-Security-Policy: frame-ancestors 'none'`) so `/admin/` cannot be framed. Not set by this project.

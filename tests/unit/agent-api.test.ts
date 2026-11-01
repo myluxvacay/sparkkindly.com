@@ -57,6 +57,16 @@ const source = { title: 'S', url: 'https://example.org/s', accessedAt: '2026-10-
 const count = async (sql: string, params: unknown[] = []) => Number((await db.query<{ n: string }>(sql, params)).rows[0].n);
 type Json = Record<string, unknown> & { id?: string; status?: string; qualityReport?: { gates: { gate: string; ok: boolean }[]; riskTier: string; decision: string } };
 
+describe('submitItem slots', () => {
+  it('two simultaneous passing submissions in one world get different publish slots', async () => {
+    const [a, b] = await Promise.all([submitItem(db, master, article({ world: 'together' }), deps()), submitItem(db, master, article({ world: 'together' }), deps())]);
+    const ja = a.json as { publishAt: string; status: string };
+    const jb = b.json as { publishAt: string; status: string };
+    expect([ja.status, jb.status]).toEqual(['scheduled', 'scheduled']);
+    expect(ja.publishAt).not.toBe(jb.publishAt);
+  });
+});
+
 describe('submitItem', () => {
   it('schedules a passing Play submission with a publish time, the answer apart from the body, and the agent recorded', async () => {
     const r = await submitItem(db, play, quiz({ idempotencyKey: 'first-submission-1' }), deps());

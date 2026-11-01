@@ -43,3 +43,9 @@ export async function nextSlot(db: Queryable, worldId: number, now: Date): Promi
   if (slot.getTime() <= base.getTime()) slot.setUTCDate(slot.getUTCDate() + 1);
   return slot;
 }
+
+// Serialises slot choice per world: call inside the transaction that inserts or schedules the item, before nextSlot,
+// so two simultaneous submissions cannot both take the same day.
+export async function lockWorldSlots(tx: Queryable, worldId: number): Promise<void> {
+  await tx.query('SELECT pg_advisory_xact_lock(7263002, $1)', [worldId]);
+}

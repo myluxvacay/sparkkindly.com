@@ -213,31 +213,59 @@ export async function transition(
   reason?: string,
   approval?: { by: string },
 ): Promise<StoredItem> {
-  return db.transaction(async (tx) => {
-    const current = await tx.query<{ status: Status }>('SELECT status FROM items WHERE id = $1 FOR UPDATE', [id]);
-    if (!current.rows[0]) throw new NotFoundError();
-    const from = current.rows[0].status;
-    if (!allowedTransitions[from].includes(to)) throw new IllegalTransitionError(from, to);
-    let stored: StoredItem;
-    try {
-      const r = await tx.query<Row>(
-        `UPDATE items SET
-           status = $2,
-           published_at = CASE WHEN $2 = 'published' THEN COALESCE(published_at, now()) ELSE published_at END,
-           approved_by = COALESCE($3::text, approved_by),
-           approved_at = CASE WHEN $3::text IS NOT NULL THEN now() ELSE approved_at END,
-           updated_at = now()
-         WHERE id = $1
-         RETURNING ${ITEM_COLUMNS}`,
-        [id, to, approval?.by ?? null],
-      );
-      stored = toStored(r.rows[0]);
-    } catch (err) {
-      throw domainError(err);
-    }
-    await writeRevision(tx, id, snapshotOf(stored), by, reason ?? `${from} -> ${to}`);
-    return stored;
-  });
+  return db.transaction((tx) => transitionTx(tx, id, to, by, reason, approval));
+}
+
+// The same move on a transaction the caller owns, so it can write related rows (an event, an audit entry) atomically.
+export async function transitionTx(
+  tx: Queryable,
+  id: string,
+  to: Status,
+  by: string,
+  reason?: string,
+  approval?: { by: string },
+): Promise<StoredItem> {
+  const current = await tx.query<{ status: Status }>('SELECT status FROM items WHERE id = $1 FOR UPDATE', [id]);
+  if (!current.rows[0]) throw new NotFoundError();
+  const from = current.rows[0].status;
+  if (!allowedTransitions[from].includes(to)) throw new IllegalTransitionError(from, to);
+  let stored: StoredItem;
+  try {
+    const r = await tx.query<Row>(
+      `UPDATE items SET
+         status = $2,
+         published_at = CASE WHEN $2 = 'published' THEN COALESCE(published_at, now()) ELSE published_at END,
+         approved_by = COALESCE($3::text, approved_by),
+         approved_at = CASE WHEN $3::text IS NOT NULL THEN now() ELSE approved_at END,
+         updated_at = now()
+       WHERE id = $1
+       RETURNING ${ITEM_COLUMNS}`,
+      [id, to, approval?.by ?? null],
+    );
+    stored = toStored(r.rows[0]);
+  } catch (err) {
+    throw domainError(err);
+  }
+  await writeRevision(tx, id, snapshotOf(stored), by, reason ?? `${from} -> ${to}`);
+  return stored;
+}
+
+// An owner's correction of an item's title and summary, kept as a revision. Returns null when there is no such item.
+export async function updateText(
+  tx: Queryable,
+  id: string,
+  text: { title: string; summary: string },
+  by: string,
+  reason: string,
+): Promise<StoredItem | null> {
+  const r = await tx.query<Row>(
+    `UPDATE items SET title = $2, summary = $3, updated_at = now() WHERE id = $1 RETURNING ${ITEM_COLUMNS}`,
+    [id, text.title, text.summary],
+  );
+  if (!r.rows[0]) return null;
+  const stored = toStored(r.rows[0]);
+  await writeRevision(tx, id, snapshotOf(stored), by, reason);
+  return stored;
 }
 
 export const PUBLIC_SELECT = `

@@ -1,0 +1,20 @@
+[Unit]
+Description=SparkKindly worker tick (production): publish due items, daily digest
+After=network.target postgresql.service
+Wants=postgresql.service
+
+# Started once a minute by sparkkindly-worker.timer. Oneshot: systemd never starts a second run while one is active.
+# It runs the live release's worker.mjs, so a deploy needs no worker restart.
+[Service]
+Type=oneshot
+User=sparkkindly
+Group=sparkkindly
+WorkingDirectory=/opt/sparkkindly/app/current
+EnvironmentFile=/opt/sparkkindly/shared/prod.env
+Environment=NODE_OPTIONS=--max-old-space-size=192
+ExecStart=/opt/sparkkindly/node/bin/node worker.mjs
+TimeoutStartSec=300
+MemoryMax=256M
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full

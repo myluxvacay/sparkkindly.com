@@ -20,7 +20,9 @@
     "preview": "next start -p 4173",
     "test:e2e": "playwright test",
     "content:approve": "tsx scripts/apply-editorial-approval.ts",
-    "build:preview": "SITE_RELEASE=false npm run build"
+    "build:preview": "SITE_RELEASE=false npm run build",
+    "admin:totp": "tsx scripts/admin-totp.ts",
+    "worker:build": "esbuild worker/main.ts --bundle --platform=node --format=esm --target=node24 --packages=external --outfile=release/worker.mjs"
   },
   "keywords": [],
   "author": "",
@@ -52,6 +54,7 @@
     "@types/pg": "8.23.1",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
+    "esbuild": "0.28.2",
     "eslint": "9.39.5",
     "eslint-config-next": "16.4.2",
     "jsdom": "30.1.3",

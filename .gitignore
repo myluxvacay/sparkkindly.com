@@ -26,3 +26,4 @@ __pycache__/
 # Codex-format mirrors of .claude/ (not used on this project)
 .agents/
 .codex/
+release/

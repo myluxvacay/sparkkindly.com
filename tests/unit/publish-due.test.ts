@@ -94,7 +94,54 @@ describe('publishDue', () => {
   });
 
   it('does nothing when nothing is due', async () => {
-    expect(await publishDue(db, new Date('2020-01-01T00:00:00Z'))).toEqual({ published: [], held: [] });
+    expect(await publishDue(db, new Date('2020-01-01T00:00:00Z'))).toEqual({ published: [], held: [], failed: [] });
+  });
+});
+
+describe('publishDue (1C hardening)', () => {
+  it("leaves a disabled world's due item scheduled", async () => {
+    const item = await make('scheduled', at('2026-11-05T01:30:00Z'), growId);
+    await db.query('UPDATE worlds SET enabled = false WHERE id = $1', [growId]);
+    try {
+      const result = await publishDue(db, NOW);
+      expect(result.published).not.toContain(item.id);
+      expect((await getItem(db, item.id))?.status).toBe('scheduled');
+    } finally {
+      await db.query('UPDATE worlds SET enabled = true WHERE id = $1', [growId]);
+    }
+  });
+
+  it('writes the item_published event in the publish transaction, and one failing item does not stop the rest', async () => {
+    const bad = await make('scheduled', at('2026-11-05T01:10:00Z'));
+    const good = await make('scheduled', at('2026-11-05T01:20:00Z'));
+    await db.exec(`CREATE FUNCTION fail_event() RETURNS trigger AS $$ BEGIN
+      IF NEW.meta->>'item' = '${bad.id}' THEN RAISE EXCEPTION 'event store unavailable'; END IF; RETURN NEW; END; $$ LANGUAGE plpgsql;
+      CREATE TRIGGER fail_event BEFORE INSERT ON events FOR EACH ROW EXECUTE FUNCTION fail_event();`);
+    const spy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    try {
+      const result = await publishDue(db, NOW);
+      expect(result.failed).toContain(bad.id);
+      expect(result.published).toContain(good.id);
+      expect((await getItem(db, bad.id))?.status).toBe('scheduled');
+    } finally {
+      spy.mockRestore();
+      await db.exec('DROP TRIGGER fail_event ON events; DROP FUNCTION fail_event();');
+      await db.query("UPDATE items SET status = 'archived' WHERE id = $1", [bad.id]);
+    }
+  });
+
+  it('skips an item another runner already sent back to review instead of aborting', async () => {
+    const stranded = await make('scheduled', at('2026-11-05T00:40:00Z'), growId);
+    const fine = await make('scheduled', at('2026-11-05T00:50:00Z'), playId);
+    await db.query("UPDATE worlds SET approval_mode = 'review' WHERE id = $1", [growId]);
+    try {
+      const [a, b] = await Promise.all([publishDue(db, NOW), publishDue(db, NOW)]);
+      expect([...a.held, ...b.held].filter((id) => id === stranded.id)).toHaveLength(1);
+      expect([...a.published, ...b.published]).toContain(fine.id);
+      expect([...a.failed, ...b.failed]).toEqual([]);
+    } finally {
+      await db.query("UPDATE worlds SET approval_mode = 'auto' WHERE id = $1", [growId]);
+    }
   });
 });
 
