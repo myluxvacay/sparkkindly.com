@@ -114,6 +114,14 @@ describe('transition', () => {
     expect(approved.approvedAt).toBeInstanceOf(Date);
   });
 
+  it('treats any item in a review-mode world as needing approval, even if labelled audience all', async () => {
+    const inKids = await make({ worldId: kidsId, audience: 'all', riskTier: 'reflective' });
+    await expect(transition(db, inKids.id, 'scheduled', 'system')).rejects.toBeInstanceOf(ApprovalRequiredError);
+    await expect(make({ worldId: kidsId, audience: 'all', riskTier: 'reflective', status: 'scheduled' })).rejects.toBeInstanceOf(ApprovalRequiredError);
+    const approved = await transition(db, inKids.id, 'scheduled', 'owner', undefined, { by: 'owner' });
+    expect(approved.status).toBe('scheduled');
+  });
+
   it('reports a missing item', async () => {
     await expect(transition(db, '00000000-0000-0000-0000-000000000000', 'archived', 'x')).rejects.toBeInstanceOf(NotFoundError);
   });

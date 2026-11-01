@@ -106,6 +106,47 @@ describe('the Kids approval guarantee lives in the database', () => {
   });
 });
 
+describe('review-mode worlds need approval whatever the item says about itself', () => {
+  async function reviewWorld(): Promise<number> {
+    const r = await db.query<{ id: number }>(
+      "INSERT INTO worlds (slug, name, approval_mode) VALUES ($1, $1, 'review') RETURNING id", [unique()]);
+    return r.rows[0].id;
+  }
+
+  it('an audience-all, reflective item in a review-mode world cannot be scheduled or published without approved_by', async () => {
+    const w = await reviewWorld();
+    const id = await item({ world_id: w, audience: 'all', risk_tier: 'reflective' });
+    await expect(db.query("UPDATE items SET status='scheduled' WHERE id=$1", [id])).rejects.toThrow(/kids_requires_approval/);
+    await expect(db.query("UPDATE items SET status='published' WHERE id=$1", [id])).rejects.toThrow(/kids_requires_approval/);
+    await expect(db.query("UPDATE items SET status='scheduled', approved_by='owner' WHERE id=$1", [id])).resolves.toBeTruthy();
+  });
+
+  it('an item cannot be inserted already scheduled in a review-mode world without approval', async () => {
+    const w = await reviewWorld();
+    await expect(item({ world_id: w, status: 'scheduled' })).rejects.toThrow(/kids_requires_approval/);
+    await expect(item({ world_id: w, status: 'scheduled', approved_by: 'owner' })).resolves.toBeTruthy();
+  });
+
+  it('an unapproved scheduled item cannot be moved into a review-mode world', async () => {
+    const w = await reviewWorld();
+    const id = await item({ status: 'scheduled' });
+    await expect(db.query('UPDATE items SET world_id=$2 WHERE id=$1', [id, w])).rejects.toThrow(/kids_requires_approval/);
+  });
+
+  it('draft and in_review items in a review-mode world need nothing', async () => {
+    const w = await reviewWorld();
+    await expect(item({ world_id: w, status: 'draft' })).resolves.toBeTruthy();
+    await expect(item({ world_id: w, status: 'in_review' })).resolves.toBeTruthy();
+  });
+
+  it('switching a world to review mode does not block archiving what is already published', async () => {
+    const w = await world();
+    const id = await item({ world_id: w, status: 'published' });
+    await db.query("UPDATE worlds SET approval_mode='review' WHERE id=$1", [w]);
+    await expect(db.query("UPDATE items SET status='archived' WHERE id=$1", [id])).resolves.toBeTruthy();
+  });
+});
+
 describe('relations', () => {
   it('deleting an item removes its answers, topics and revisions', async () => {
     const id = await item();

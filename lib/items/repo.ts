@@ -31,7 +31,7 @@ export class IllegalTransitionError extends Error {
 }
 export class ApprovalRequiredError extends Error {
   constructor() {
-    super('Kids content needs owner approval before it can be scheduled or published');
+    super('This item needs owner approval (Kids content, or a world in review mode) before it can be scheduled or published');
     this.name = 'ApprovalRequiredError';
   }
 }
