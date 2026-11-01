@@ -1,0 +1,23 @@
+# Production site block for the cut-over: sparkkindly.com is served by the Next.js app on loopback port 3100.
+# It REPLACES the import of /etc/caddy/sparkkindly-public.caddy (the static export, kept on disk for rollback) in BOTH
+# /etc/caddy/Caddyfile and MyLuxVacation's tracked deploy/Caddyfile; deploy/cutover/switch-to-app.sh does the swap.
+# No MyLuxVacation block is touched. Not installed anywhere until the owner authorizes the cut-over (docs/CUTOVER.md).
+sparkkindly.com {
+    encode gzip zstd
+    header {
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        X-Frame-Options "DENY"
+        -Server
+    }
+    reverse_proxy 127.0.0.1:3100 {
+        # The app and its report limiter read the client address from X-Forwarded-For; Caddy sets it.
+        transport http {
+            dial_timeout 3s
+            response_header_timeout 30s
+        }
+    }
+}
+www.sparkkindly.com {
+    redir https://sparkkindly.com{uri} permanent
+}

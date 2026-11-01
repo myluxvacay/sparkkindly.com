@@ -38,7 +38,7 @@ Files: `components/TrustPage.tsx` (new), `app/(trust)/{about,privacy,accessibili
 - KBs titled by symptom: a reader reports a wrong answer or problem; the site shows an error page after a deploy.
 
 ### Task 4: cut-over preparation (written, not executed)
-Files: `scripts/url-inventory.ts`, `lib/cutover/inventory.ts`, `tests/unit/url-inventory.test.ts`, `scripts/load-test.ts`, `deploy/caddy/sparkkindly-public-app.caddy`, `deploy/cutover/{switch-to-app.sh,rollback-to-static.sh,verify.sh}`, `docs/CUTOVER.md`, `docs/release/deployment-readiness-1d.md`.
+Files: `scripts/url-inventory.ts`, `lib/cutover/inventory.ts`, `tests/unit/url-inventory.test.ts`, `scripts/load-test.ts`, `deploy/caddy/sparkkindly-public-app.caddy`, `deploy/cutover/{switch-to-app.sh,rollback-to-static.sh}` (post-switch verification is `scripts/url-inventory.ts`, so no separate verify script), `tests/unit/cutover-scripts.test.ts`, `docs/CUTOVER.md`, `docs/release/deployment-readiness-1d.md`.
 - Inventory: the live mock-up's URL list from the spec, each with expected status (200 or 308 target), checked against any base URL with optional basic auth from the environment. Unit-tested pure logic; CLI run against the local e2e server.
 - Load test: dependency-free concurrent GET loop with a fixed request mix and latency percentiles, refusing the production host unless `--allow-production`; run against the local server only.
 - Caddy block that reverse-proxies `sparkkindly.com` to 127.0.0.1:3100 keeping the static export path for rollback. Switch script mirrors `activate-public.py`: timestamped backup of both Caddyfiles (they must stay identical), `caddy validate`, reload, restore on failure. `bash -n` and a dry-run mode are the verification here; the real run is the owner's.

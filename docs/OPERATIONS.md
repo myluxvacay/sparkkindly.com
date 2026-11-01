@@ -166,3 +166,9 @@ the owner's secrets file (not echoed): `/`, the five worlds, a starter article, 
 explanation text and `?r=c` shows "Correct"; the sitemap has no entries and `robots.txt` is `Disallow: /`.
 **Not yet verified on staging:** a report submitted from an item landing in `problem_reports` (needs the SSH-tunnel row
 count), and that production, `ufw` and the Caddyfiles are unchanged (no change was made to any of them by this deploy).
+
+## Trust pages, accessibility and cut-over preparation (Project 1D)
+
+The trust pages (About, Editorial policy, Privacy, Terms, Accessibility, Contact) are drafts written to match the running product; the owner decisions they still need are listed in `docs/CUTOVER.md`. `CONTACT_EMAIL` in the env file publishes a contact address on the Contact and Accessibility pages once the owner confirms a mailbox they read; unset, no address is shown. The accessibility record is `docs/ACCESSIBILITY-REVIEW-1D.md`. Support articles: `docs/kb/`.
+
+The cut-over is prepared and **not executed**: checklist, runbook, rollback and the owner authorizations are in `docs/CUTOVER.md`; the scripts are `deploy/cutover/switch-to-app.sh` and `rollback-to-static.sh` (tested against stub commands only), `scripts/url-inventory.ts` and `scripts/load-test.ts`. Pushing `main` updates the loopback app only; the public switch is the Caddy change.
