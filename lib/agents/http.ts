@@ -30,13 +30,39 @@ export async function agentRoute(
   }
 }
 
+// Reads the body chunk by chunk and gives up the moment the running total passes the cap, so a client that streams
+// without a Content-Length cannot make the server buffer an unbounded body before the size check.
+async function readCapped(request: Request): Promise<Uint8Array | null> {
+  if (!request.body) return new Uint8Array(0);
+  const reader = request.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > MAX_BODY_BYTES) {
+      await reader.cancel();
+      return null;
+    }
+    chunks.push(value);
+  }
+  const all = new Uint8Array(total);
+  let offset = 0;
+  for (const c of chunks) {
+    all.set(c, offset);
+    offset += c.byteLength;
+  }
+  return all;
+}
+
 export async function readJson(request: Request): Promise<{ ok: true; value: unknown } | { ok: false; response: Response }> {
-  const declared = Number(request.headers.get('content-length') ?? 0);
-  if (declared > MAX_BODY_BYTES) return { ok: false, response: reply(413, { error: 'body_too_large' }) };
-  const text = await request.text();
-  if (text.length > MAX_BODY_BYTES) return { ok: false, response: reply(413, { error: 'body_too_large' }) };
+  const declared = Number(request.headers.get('content-length'));
+  if (Number.isFinite(declared) && declared > MAX_BODY_BYTES) return { ok: false, response: reply(413, { error: 'body_too_large' }) };
+  const bytes = await readCapped(request);
+  if (!bytes) return { ok: false, response: reply(413, { error: 'body_too_large' }) };
   try {
-    return { ok: true, value: JSON.parse(text) };
+    return { ok: true, value: JSON.parse(new TextDecoder().decode(bytes)) };
   } catch {
     return { ok: false, response: reply(400, { error: 'invalid_json' }) };
   }

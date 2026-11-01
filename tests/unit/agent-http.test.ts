@@ -80,6 +80,23 @@ describe('readJson', () => {
     expect(await readJson(post('{not json'))).toMatchObject({ ok: false, response: expect.objectContaining({ status: 400 }) });
     expect(await readJson(post(''))).toMatchObject({ ok: false, response: expect.objectContaining({ status: 400 }) });
   });
+  it('stops reading a streamed body (no Content-Length) as soon as it passes the limit', async () => {
+    let pulled = 0;
+    const chunk = new Uint8Array(1_000).fill(97); // 'a'
+    const stream = new ReadableStream<Uint8Array>({
+      pull(controller) {
+        pulled++;
+        if (pulled > 100_000) controller.close();
+        else controller.enqueue(chunk);
+      },
+    });
+    const request = new Request('https://example.test/api/agent/items/', { method: 'POST', body: stream, duplex: 'half' } as RequestInit);
+    const result = await readJson(request);
+    expect(result).toMatchObject({ ok: false, response: expect.objectContaining({ status: 413 }) });
+    // 200 chunks reach the 200 000-byte limit; allow slack for stream read-ahead, but never the 100 000 on offer.
+    expect(pulled).toBeLessThan(1_000);
+  });
+
   it('answers 413 for a body over the limit, whether declared or actual', async () => {
     const big = JSON.stringify({ x: 'a'.repeat(300_000) });
     const declared = await readJson(post('{}', { 'content-length': '300000' }));
