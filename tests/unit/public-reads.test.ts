@@ -4,7 +4,7 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { seedReference } from '@/db/seed';
 import { worldSeeds } from '@/db/seed/worlds';
-import { getPublicItem, listPublic, searchPublic, listQuizzes, latestQuiz } from '@/lib/public/reads';
+import { getPublicItem, listPublic, searchPublic, listQuizzes, latestQuiz, findQuizBySlug } from '@/lib/public/reads';
 import { listWorlds, getWorld, getTopic } from '@/lib/public/worlds';
 import { anonymousScope, RESERVED_WORLD_SLUGS, type Scope } from '@/lib/public/scope';
 
@@ -162,6 +162,18 @@ describe('listing', () => {
     } finally {
       await dbq.close();
     }
+  });
+});
+
+describe('findQuizBySlug', () => {
+  it('finds a published quiz in any world and nothing else', async () => {
+    const quiz = await put({ world: 'discover', kind: 'quiz', slug: 'fq-quiz' });
+    const art = await put({ world: 'discover', kind: 'article', slug: 'fq-article' });
+    const draft = await put({ world: 'discover', kind: 'quiz', slug: 'fq-draft', status: 'draft', publishedAt: null });
+    const future = await put({ world: 'discover', kind: 'quiz', slug: 'fq-future', publishedAt: '2026-12-01T00:00:00Z' });
+    expect((await findQuizBySlug(db, anon, quiz))?.world).toBe('discover');
+    for (const s of [art, draft, future, 'no-such-slug']) expect(await findQuizBySlug(db, anon, s), s).toBeNull();
+    expect(await findQuizBySlug(db, none, quiz)).toBeNull();
   });
 });
 

@@ -49,6 +49,15 @@ export async function listPublic(
 
 export const listQuizzes = (db: Queryable, scope: Scope, page: Page) => listPublic(db, scope, { kind: 'quiz', ...page });
 
+// Old /quiz/<id>/ links carry only a slug, so find the published quiz with that slug in any world (the newest if several).
+export async function findQuizBySlug(db: Queryable, scope: Scope, slug: string): Promise<PublicItem | null> {
+  const r = await db.query<Row>(
+    `${PUBLIC_SELECT} WHERE ${VISIBLE} AND i.kind = 'quiz' AND i.slug = $3 ORDER BY i.published_at DESC LIMIT 1`,
+    [...base(scope), slug],
+  );
+  return r.rows[0] ? toPublic(r.rows[0]) : null;
+}
+
 export async function latestQuiz(db: Queryable, scope: Scope): Promise<PublicItem | null> {
   return (await listQuizzes(db, scope, { limit: 1, offset: 0 }))[0] ?? null;
 }

@@ -11,17 +11,18 @@ test('home to brand to article, direct refresh and useful 404',async({page})=>{
  await page.reload();await expect(page.getByRole('heading',{name:'Follow a changing angle'})).toBeVisible();expect(errors).toEqual([]);
  await page.goto('/404.html');await expect(page.getByRole('heading',{name:'This spark wandered off.'})).toBeVisible();
 });
-test('quiz submit, explanation, retry, archive and UTC rollover',async({page})=>{
- await page.goto('/quiz/');await page.getByRole('radio',{name:/30/}).check();await expect(page.getByText('Correct answer: 30')).not.toBeVisible();await page.getByRole('button',{name:/Check answer/}).click();await expect(page.getByText('Correct answer: 30')).toBeVisible();await expect(page.getByText(/The terms are 1×2/)).toBeVisible();await page.getByRole('button',{name:/Try again/}).click();await expect(page.getByRole('button',{name:/Check answer/})).toBeDisabled();
- await page.clock.setSystemTime(new Date('2026-10-17T23:59:59Z'));await page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));await page.clock.fastForward(2000);await expect(page.getByText(/Which six-letter candidate/)).toBeVisible();
- await page.getByRole('link',{name:/Browse the dated quiz archive/}).click();await page.getByRole('link',{name:/Using n ×/}).click();await page.getByText('Read the answer and full explanation').click();await expect(page.getByText(/The terms are 1×2/)).toBeVisible();await page.reload();await expect(page.getByRole('heading',{level:1})).toContainText('October 17, 2026');
+test('quiz submit, explanation and archive work on the server',async({page})=>{
+ await page.goto('/play/number-detective-001/');await expect(page.getByText(/The terms are 1×2/)).toHaveCount(0);await page.getByRole('radio',{name:/30/}).check();await page.getByRole('button',{name:/Check answer/}).click();
+ await expect(page.getByRole('status')).toContainText('Answer: 30');await expect(page.getByText(/The terms are 1×2/)).toBeVisible();
+ await page.getByRole('link',{name:/Try this one again/}).click();await expect(page.getByRole('button',{name:/Check answer/})).toBeVisible();
+ await page.goto('/quiz/archive/');await expect(page.getByRole('heading',{level:1})).toHaveText('The quiz archive');
 });
 test('mobile disclosure keyboard, Escape, focus and 320px reflow',async({page})=>{
  await page.setViewportSize({width:390,height:844});await page.goto('/');const menu=page.getByRole('button',{name:'Menu ☰'});await menu.focus();await page.keyboard.press('Enter');await expect(page.getByRole('button',{name:'Close ✕'})).toHaveAttribute('aria-expanded','true');await page.keyboard.press('Tab');await expect(page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Play',exact:true})).toBeFocused();await page.keyboard.press('Escape');await expect(menu).toBeFocused();await expect(menu).toHaveAttribute('aria-expanded','false');
  for(const route of ['/','/kids/','/kids/shadow-explorers/','/quiz/']){await page.setViewportSize({width:320,height:800});await page.goto(route);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);}
 });
 test('axe homepage, Kids, article and submitted quiz have no serious/critical violations',async({page})=>{
- for(const path of ['/','/kids/','/discover/a-day-in-shadows/','/quiz/']){await page.goto(path);if(path==='/quiz/'){await page.getByRole('radio',{name:/24/}).check();await page.getByRole('button',{name:/Check answer/}).click();}const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(result.violations.filter(v=>v.impact==='serious'||v.impact==='critical'),JSON.stringify(result.violations)).toEqual([]);}
+ for(const path of ['/','/kids/','/discover/a-day-in-shadows/','/quiz/']){await page.goto(path);if(path==='/quiz/'){await page.getByRole('radio').first().check();await page.getByRole('button',{name:/Check answer/}).click();await expect(page.getByRole('status')).toBeVisible();}const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(result.violations.filter(v=>v.impact==='serious'||v.impact==='critical'),JSON.stringify(result.violations)).toEqual([]);}
 });
 test('Kids navigation sends no third party requests, stores no identifiers',async({page,context})=>{
  const thirdParty:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://localhost:4173/'))thirdParty.push(r.url());});
@@ -29,7 +30,7 @@ test('Kids navigation sends no third party requests, stores no identifiers',asyn
  expect(await context.cookies()).toEqual([]);expect(thirdParty).toEqual([]);
 });
 test('without JavaScript, articles and dated answers remain readable',async({browser})=>{
- const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto('http://localhost:4173/kids/shadow-explorers/');await expect(page.getByRole('heading',{name:'Trace, wait, compare'})).toBeVisible();await page.goto('http://localhost:4173/quiz/number-detective-001/');await page.getByText('Read the answer and full explanation').click();await expect(page.getByText(/The terms are 1×2/)).toBeVisible();await context.close();
+ const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto('http://localhost:4173/kids/shadow-explorers/');await expect(page.getByRole('heading',{name:'Trace, wait, compare'})).toBeVisible();await page.goto('http://localhost:4173/play/number-detective-001/');await page.getByRole('radio',{name:/30/}).check();await page.getByRole('button',{name:/Check answer/}).click();await expect(page.getByText(/The terms are 1×2/)).toBeVisible();await context.close();
 });
 test('metadata, sitemap exclusions, local assets and screenshot evidence',async({page})=>{
  await page.goto('/discover/a-day-in-shadows/');await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://sparkkindly.com/discover/a-day-in-shadows/');await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content',release?'index, follow':'noindex, nofollow');const data=await page.locator('script[type="application/ld+json"]').allTextContents();expect(data.map(d=>JSON.parse(d)['@type'])).toContain('BreadcrumbList');
