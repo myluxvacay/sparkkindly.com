@@ -9,6 +9,7 @@
     "db:migrate": "node db/migrate.mjs",
     "content:import": "tsx scripts/import-starter-content.ts",
     "agent:create": "tsx scripts/create-agent.ts",
+    "job:publish-due": "tsx scripts/publish-due-once.ts",
     "content:pull": "tsx scripts/sync-mongodb.ts",
     "build": "npm run content:validate && next build",
     "build:release": "SITE_RELEASE=true npm run build",

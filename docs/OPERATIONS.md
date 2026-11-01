@@ -89,6 +89,43 @@ were checked unchanged afterwards, and myluxvacation.com, beta.myluxvacation.com
 - **Open item for the owner:** the tracked `deploy/Caddyfile` in the MyLuxVacation repository now has one extra line; commit it there so a future MyLuxVacation deploy does not drop the staging site.
 - **Verified 31 October 2026:** no password 401, wrong password 401, right password 200 with only `{"ok":true}` visible, robots `Disallow: /`, sitemap empty, article page 200, HTTP redirects to HTTPS; other sites unchanged (200, 401, 200), 6 firewall rules.
 
+## Database, migrations and the agent API (Project 1A)
+
+**Migrations.** SQL files in `db/migrations/` (`NNN_name.sql`, consecutive from 000). Every release ships them with
+`migrate.sh`; the receiver runs it from the new release, with that environment's env file loaded, **before** switching
+the live symlink. All pending migrations apply in one transaction under an advisory lock. If it fails, the old release
+keeps serving (`Migration failed; the previous release is still serving`, exit 1). Rule: **expand-then-contract**, so the
+previous release must still run on the newer schema; a migration may only drop something if its filename contains
+`contract` (a test enforces this). By hand on the VM, as the staging user:
+`cd /opt/sparkkindly-staging/current && set -a && . /opt/sparkkindly/shared/staging.env && set +a && /opt/sparkkindly/node/bin/node db/migrate.mjs`.
+
+**Starter content (staging only).** `npm run content:import` seeds the five worlds and the curated topics and imports the
+10 articles and 14 quizzes, with answers stored apart. It is idempotent and **refuses the production database** unless
+given `--allow-production`, which is a cut-over step that needs a verified backup first. Run it through a temporary SSH
+tunnel (`ssh -N -L 55432:127.0.0.1:5432 root@2.25.121.2`) with `DATABASE_URL` built from
+`/opt/sparkkindly/shared/db-staging.pass`, and close the tunnel afterwards.
+
+**Agents.** `npm run agent:create -- <name> [--world <slug>]` (no `--world` makes the master agent) prints a key once and
+stores only its hash. The key goes in the `X-Agent-Key` header, never `Authorization`, because staging's basic auth uses
+that one. Endpoints, all with a trailing slash: `GET /api/agent/brief/?world=`, `POST /api/agent/items/`,
+`GET /api/agent/items/<id>/`. Shapes are in `docs/item-format.md`. Limits: 60 requests a minute per agent, 200 KB bodies.
+
+**Publishing.** Items the policy schedules publish when due. `npm run job:publish-due` runs the same job once by hand (the
+worker service that runs it on a schedule is Project 1B). Kids content, and anything in a world set to review mode, never
+reaches `scheduled` or `published` without `approved_by`. The database enforces this itself (constraint
+`kids_requires_approval` and a trigger), not only the code.
+
+**Verified on staging, 1 November 2026 (UTC).** Release 67fb91b: the receiver applied migrations 000, 001 and 002 and then
+reported healthy; 13 tables including `schema_migrations`, the constraint and the trigger present, tables owned by the
+staging role, the production database still empty. The Kids guarantee refused an unapproved scheduled insert in a
+review-mode world on the real PostgreSQL. A release whose migration failed was rejected and the old release stayed
+healthy. Import: 24 items and 14 answers; a second run added nothing. Live API over HTTPS: brief 200 (57 topics, 7
+mechanics); a passing quiz was scheduled for the next 06:00 UTC; a replay returned the same item; a Kids submission went
+to `in_review`; invalid input got 422; a wrong key, no key, or a key without the staging login each got 401; a real source
+URL passed, and `localtest.me` (a public name that resolves to 127.0.0.1) was refused by the pinned lookup; the publish job
+published the one due item and left the Kids item, the future item and the draft alone. The test items were removed
+afterwards, leaving the 24 starter items and one agent, `staging-play`.
+
 ## Reboot (31 October 2026)
 
 Rebooted with the owner's permission to load the updated libraries. Back in about 40 seconds. Afterwards: all ten services active (Caddy, MongoDB, SSH socket, ufw, fail2ban, PostgreSQL, both MyLuxVacation apps, SparkKindly production and staging), 2 GB swap active, 6 firewall rules, both SparkKindly releases healthy (200), no failed units, no service listed as running old libraries, kernel current. myluxvacation.com 200, beta 401, sparkkindly.com 200.
