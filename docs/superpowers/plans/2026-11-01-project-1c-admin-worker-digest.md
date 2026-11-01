@@ -96,7 +96,7 @@
 **Files:** Create `lib/admin/guard.ts`, `lib/admin/next.ts`, `app/admin/sign-in/page.tsx`, `app/admin/sign-in/request/route.ts`, `app/admin/sign-in/link/page.tsx`, `app/admin/sign-in/link/confirm/route.ts`, `app/admin/sign-in/code/page.tsx`, `app/admin/sign-in/code/submit/route.ts`. Test `tests/unit/admin-guard.test.ts`.
 
 **Interfaces — Produces:**
-- `guard.ts`: `sameOrigin(request: Request): boolean` (Origin **required** and its host equals `Host`); `clientKey(request): string` (first `X-Forwarded-For` entry or `unknown`); `safeReturn(raw: unknown): string` (only `/admin/…` paths matching `^/admin/[A-Za-z0-9/_\-?=&.]*$` with no `//` or `\`, else `/admin/`); `createSignInLimits(clock?)` → `(client: string, email: string) => boolean` (10/hour per client, 3/hour per email, 100/hour overall); `createCodeLimits(clock?)` → `(client) => boolean` (20/hour); `readForm(request, max = 8192): Promise<URLSearchParams | null>`.
+- `guard.ts`: `sameOrigin(request: Request): boolean` (Origin **required** and its host equals `Host`); `clientKey(request): string` (first `X-Forwarded-For` entry or `unknown`); `safeReturn(raw: unknown): string` (only `/admin/…` paths matching `^/admin/[A-Za-z0-9/_\-?=&.]*$` with no `//` or `\`, else `/admin/`); `createSignInLimits(clock?)` → `(client, email, allowed) => 'new' | 'resend' | 'skip'` (see ruling below); `createCodeLimits(clock?)` → `(client) => boolean` (20/hour per IPv4 /24 or IPv6 /64); `readForm(request, max = 8192): Promise<URLSearchParams | null>`.
 - `next.ts`: `ADMIN_COOKIE = '__Host-sk_admin'`; `cookieOptions(maxAgeSeconds)` (`httpOnly`, `secure`, `sameSite: 'strict'`, `path: '/'`); `currentAdmin(): Promise<{ email: string; csrf: string } | null>`; `requireAdmin()` (redirects to `/admin/sign-in/`).
 - Flow: `/admin/sign-in/` email form → POST `request/` always 303 to `/admin/sign-in/?sent=1` (rate-limited 429; the email send is not awaited) → email link `/admin/sign-in/link/?token=…` shows a "Continue" button (a GET never consumes the token, so link scanners cannot) → POST `link/confirm/` sets the cookie and 303 to `code/` → POST `code/submit/` with `csrf`, `code` → 303 `/admin/`. Every sign-in route writes an audit row (`sign_in_link_requested` only for allow-listed, `sign_in_link_used`, `sign_in_code_ok`, `sign_in_code_bad`, `sign_in_locked`). All admin pages are `robots: noindex` and `force-dynamic`.
 
@@ -167,3 +167,23 @@
 **Type consistency.** `transitionTx`/`lockWorldSlots` (Task 1) are used by Task 4; `getAdmin`/`checkCsrf`/`csrfToken` (Task 2) by Tasks 3, 6; `runAction` (Task 4) by Task 6; `buildDigest`/`renderDigest` (Task 5) by the digest page (Task 6).
 
 **Review Focus coverage.** 1 → Tasks 2, 6; 2 → Tasks 3, 6; 3 → Tasks 2, 6; 4 → Tasks 4, 6; 5 → Tasks 1, 5.
+
+## Rulings made during execution
+
+- **Sign-in link limits (settled 1 November 2026 after three automated review rounds; no further iteration).** Client
+  key = full IPv4 address or IPv6 /64; 10 requests an hour per client is the main control and the only thing an
+  unknown address spends. An allow-listed address gets at most 3 new links an hour whoever asks (no shared site-wide
+  bucket); past that the still-valid pending link is re-sent at most once per 5 minutes. The browser always gets the
+  same 303. Residual risk: an attacker can delay, never bypass, a sign-in (links only reach the owner's inbox and the
+  code and allow-list still gate access); at most about 18 emails an hour reach one allowed address. Recovery: edit
+  `ADMIN_EMAILS` and restart.
+- **Code limiter** keys IPv4 by /24 (IPv6 /64); malformed addresses share one `unknown` bucket; each challenge also dies
+  after 5 wrong codes from any source.
+- **Referrer policy** on admin pages is `same-origin`, not `no-referrer`: `no-referrer` makes browsers send
+  `Origin: null` on form posts, which the strict origin check refuses (found by e2e).
+- **Key age:** migration 005 also adds `agents.key_rotated_at`, so `/admin/agents/` and the digest flag keys over 90 days.
+- **Owner-written articles** publish at once (scheduled then published in one transaction, owner as approver), so the
+  done-when "create an item in /admin and see it live" needs no worker tick.
+- **Pre-existing:** `tests/unit/item-format-docs.test.ts` fails on a Windows CRLF checkout (its regex expects `
+`);
+  it passes on Linux CI. Not changed here.

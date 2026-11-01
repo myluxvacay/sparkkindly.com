@@ -166,3 +166,40 @@ the owner's secrets file (not echoed): `/`, the five worlds, a starter article, 
 explanation text and `?r=c` shows "Correct"; the sitemap has no entries and `robots.txt` is `Disallow: /`.
 **Not yet verified on staging:** a report submitted from an item landing in `problem_reports` (needs the SSH-tunnel row
 count), and that production, `ufw` and the Caddyfiles are unchanged (no change was made to any of them by this deploy).
+
+## Admin and worker (Project 1C)
+
+**Admin sign-in.** `/admin/` is for the addresses in `ADMIN_EMAILS` (comma-separated, in the root-owned env file
+`/opt/sparkkindly/shared/<env>.env`; never in the repository). Sign-in is an emailed link (15 minutes, single use, used
+by pressing Continue so mail scanners cannot spend it) and then the code from an authenticator app. Sessions last at most
+12 hours and end after 60 idle minutes; five wrong codes end the attempt. Every admin action and sign-in step is in
+`audit_log`. Staging sets `ADMIN_LINK_BASE=https://staging.sparkkindly.com` so its links point at staging.
+- **Add or remove an approver:** edit `ADMIN_EMAILS` and `sudo systemctl restart sparkkindly-web` (or `-staging`).
+  Removing an address ends its sessions on the next request. This is also the recovery path if sign-in links are
+  being flooded: links are capped at 3 new per address per hour, then the pending link is re-sent at most every 5 minutes,
+  so a flood can delay a link but never grant access.
+- **Enrol an authenticator** (once per approver, and again to replace a lost phone): through the SSH tunnel with
+  `DATABASE_URL` for that environment, run `npm run admin:totp -- <email>`; it prints an `otpauth://` URI once. Add it to
+  the authenticator app (paste it, or make a QR code locally), and do not save it anywhere else. Re-running replaces the
+  secret and ends that address's sessions.
+
+**Agent keys** are created, rotated (old key dead at once) and revoked in `/admin/agents/`; the new key is shown once on
+a page that is not cached. Keys older than 90 days are flagged there and in the digest.
+
+**Worker.** `sparkkindly-worker.timer` (and `-staging`) runs `sparkkindly-worker.service` once a minute: a oneshot that
+runs the live release's `worker.mjs` (built in the deploy by `npm run worker:build`), so deploys need no worker restart.
+Each tick publishes due items (enabled worlds only) and, once a day after `DIGEST_HOUR_UTC` (default 7), emails the digest
+to `ADMIN_EMAILS`. Failures land in `failed_jobs` (shown in `/admin/runs/` and the next digest); a failed digest is not
+re-sent the same day. Logs: `journalctl -u sparkkindly-worker -n 50`.
+- **Install (owner-authorized server step, after the first deploy that contains `worker.mjs`):** re-run
+  `deploy/provision/03-services.sh` (it installs the four units and starts each timer once its release has `worker.mjs`),
+  or `systemctl enable --now sparkkindly-worker-staging.timer`. Check with `systemctl list-timers 'sparkkindly-worker*'`.
+- **Manual check:** `cd /opt/sparkkindly-staging/current && set -a && . /opt/sparkkindly/shared/staging.env && set +a &&
+  /opt/sparkkindly/node/bin/node worker.mjs` prints `worker tick: published N, ...; digest: ...`.
+- **Real digest verification (needs the MailerSend token):** on staging set `DIGEST_HOUR_UTC` to the current UTC hour,
+  delete today's `job_runs` row for `digest` if one exists, run the manual check, and confirm the email arrives and SPF/DKIM
+  pass. Not yet done: MailerSend is still a placeholder token (Project 0, task 0.11).
+
+**Verified locally, 1 November 2026.** Unit suites (PGlite) and the Playwright suite (in-process database) pass; the
+bundled `worker.mjs` run against the e2e database published a due item, claimed the day's digest, recorded the failed send
+(no MailerSend token) once in `failed_jobs`, and on the second run reported `already_sent`. Not verified on staging.
