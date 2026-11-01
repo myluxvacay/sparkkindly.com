@@ -1,13 +1,16 @@
-import { lookup } from 'node:dns/promises';
 import type { Queryable } from '@/lib/db';
 import { itemSubmissionSchema, type ItemSubmission } from './format';
 import { findBlockedWord, findBlockedTopic } from './blocked';
 import { fleschKincaidGrade } from './readability';
+import { isSafeSourceUrl, isPublicAddress } from './net-safety';
+import { httpsProbe, type Probe } from './probe';
 import type { RiskTier } from './repo';
+
+export { isSafeSourceUrl, isPublicAddress };
 
 export type GateResult = { gate: string; ok: boolean; reason?: string };
 export type GateWorld = { id: number; slug: string };
-type Deps = { fetch?: typeof fetch; now?: Date; sourceBudgetMs?: number };
+type Deps = { probe?: Probe; now?: Date; sourceBudgetMs?: number };
 
 const MAX_KIDS_GRADE = 6;
 const DUPLICATE_WINDOW_DAYS = 90;
@@ -68,71 +71,28 @@ function jaccard(a: string, b: string): number {
   return shared / (x.size + y.size - shared);
 }
 
-// True for an address on the public internet. Everything private, loopback, link-local (including the cloud metadata
-// address), CGNAT, multicast or reserved is refused, and an IPv4-mapped IPv6 address is judged as the IPv4 it wraps.
-export function isPublicAddress(ip: string): boolean {
-  const addr = ip.toLowerCase();
-  const mapped = addr.match(/^::ffff:(\d+\.\d+\.\d+\.\d+)$/);
-  if (mapped) return isPublicAddress(mapped[1]);
-  if (addr.includes(':')) {
-    if (addr === '::' || addr === '::1') return false;
-    if (/^f[cd]/.test(addr) || /^fe[89ab]/.test(addr) || addr.startsWith('ff')) return false; // unique-local, link-local, multicast
-    return true;
-  }
-  const p = addr.split('.').map(Number);
-  if (p.length !== 4 || p.some((n) => !Number.isInteger(n) || n < 0 || n > 255)) return false;
-  const [a, b, c] = p;
-  if (a === 0 || a === 10 || a === 127 || a >= 224) return false;
-  if (a === 100 && b >= 64 && b <= 127) return false; // CGNAT
-  if (a === 169 && b === 254) return false; // link-local, cloud metadata
-  if (a === 172 && b >= 16 && b <= 31) return false;
-  if (a === 192 && (b === 168 || (b === 0 && c === 0))) return false;
-  if (a === 198 && (b === 18 || b === 19)) return false;
-  return true;
-}
-
-// Source URLs are untrusted input and we fetch them from the server, so refuse anything that is not a named public
-// https site: no credentials in the URL, no IP literals, no single-label or internal names, no numeric top level.
-export function isSafeSourceUrl(raw: string): boolean {
-  let u: URL;
-  try {
-    u = new URL(raw);
-  } catch {
-    return false;
-  }
-  if (u.protocol !== 'https:' || u.username || u.password) return false;
-  const host = u.hostname.toLowerCase().replace(/\.+$/, ''); // "localhost." is localhost
-  if (!host || host === 'localhost' || /\.(localhost|local|internal|lan)$/.test(host)) return false;
-  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(host) || host.includes(':') || host.startsWith('[')) return false; // IP literals
-  const labels = host.split('.');
-  return labels.length >= 2 && !/^\d+$/.test(labels[labels.length - 1]);
-}
-
-// ponytail: the address is checked before the fetch, but the fetch resolves the name again, so DNS rebinding between
-// the two is not closed. Pin the checked address with a custom dispatcher before sources can come from contributors.
-async function resolvesPublicly(host: string): Promise<boolean> {
-  const addresses = await lookup(host.replace(/\.+$/, ''), { all: true });
-  return addresses.length > 0 && addresses.every((a) => isPublicAddress(a.address));
-}
-
-async function reachable(url: string, doFetch: typeof fetch, deadline: number): Promise<string | null> {
+// Follows redirects by hand, at most MAX_REDIRECTS, re-checking the address text of every hop. The probe vets the
+// resolved IP inside the connection (see probe.ts), so a name that resolves privately fails here with its reason.
+async function reachable(url: string, probe: Probe, deadline: number): Promise<string | null> {
   let current = url;
   for (let hop = 0; hop <= MAX_REDIRECTS; hop++) {
     if (!isSafeSourceUrl(current)) return `not an allowed source address: ${current}`;
-    if (!(await resolvesPublicly(new URL(current).hostname))) return `source resolves to a private address: ${current}`;
-    const remaining = deadline - Date.now();
-    if (remaining <= 0) return 'source checks ran out of time';
-    const signal = () => AbortSignal.timeout(Math.max(1, Math.min(SOURCE_TIMEOUT_MS, deadline - Date.now())));
-    let res = await doFetch(current, { method: 'HEAD', redirect: 'manual', signal: signal() });
+    const signal = () => {
+      const left = deadline - Date.now();
+      return left <= 0 ? null : AbortSignal.timeout(Math.min(SOURCE_TIMEOUT_MS, left));
+    };
+    let s = signal();
+    if (!s) return 'source checks ran out of time';
+    let res = await probe(current, 'HEAD', s);
     if (res.status >= 400) {
-      res = await doFetch(current, { method: 'GET', redirect: 'manual', signal: signal() });
-      await res.body?.cancel();
+      s = signal();
+      if (!s) return 'source checks ran out of time';
+      res = await probe(current, 'GET', s);
     }
     if (res.status >= 200 && res.status < 300) return null;
     if (res.status >= 300 && res.status < 400) {
-      const location = res.headers.get('location');
-      if (!location) return `redirect without a location: ${current}`;
-      current = new URL(location, current).toString();
+      if (!res.location) return `redirect without a location: ${current}`;
+      current = new URL(res.location, current).toString();
       continue;
     }
     return `source answered ${res.status}: ${current}`;
@@ -156,7 +116,7 @@ export async function runGates(
   world: GateWorld,
   deps: Deps = {},
 ): Promise<{ ok: boolean; results: GateResult[] }> {
-  const doFetch = deps.fetch ?? fetch;
+  const probe = deps.probe ?? httpsProbe;
   const now = deps.now ?? new Date();
   const tier = riskTierFor(sub, world);
   const results: GateResult[] = [];
@@ -201,7 +161,7 @@ export async function runGates(
       for (const s of sub.sources) {
         let problem: string | null;
         try {
-          problem = await reachable(s.url, doFetch, deadline);
+          problem = await reachable(s.url, probe, deadline);
         } catch (err) {
           problem = `could not reach ${s.url}: ${(err as Error).message}`;
         }
