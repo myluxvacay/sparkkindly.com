@@ -179,7 +179,7 @@ Scripts live in `deploy/bin/`, units in `deploy/systemd/`, installed by `deploy/
   (Backblaze > Buckets > sparkkindly-backups > Lifecycle Settings > Custom: hide after 30 days, delete 1 day after hiding).
   Postgres child processes are started without the Backblaze key or heartbeat URLs in their environment. The `sparkkindly-backup` heartbeat is pinged only after everything succeeded. A failed or truncated dump
   uploads nothing and pings nothing (tested, including a dump that dies midway: `tests/unit/backup-scripts.test.ts`).
-  List: `rclone ls b2:sparkkindly-backups/db/`. **At the production cut-over add `sparkkindly` to `BACKUP_DATABASES`.**
+  List: `( set -a; . /opt/sparkkindly/shared/backup.env; rclone ls b2:sparkkindly-backups/db/ )` (the subshell keeps the Backblaze key out of your login shell). **At the production cut-over add `sparkkindly` to `BACKUP_DATABASES`.**
 - **Encryption key.** The age private key is created once on the server at `/root/.config/sparkkindly/age.key` (mode 600). The
   owner copies it into their password manager from their own terminal; it is never sent through chat or committed. Without
   it, backups cannot be restored if the server is lost.

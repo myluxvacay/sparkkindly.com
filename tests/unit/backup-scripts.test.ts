@@ -52,7 +52,7 @@ beforeEach(() => {
   stub('rclone', 'echo "rclone $*" >> "$LOG"');
   stub('curl', 'echo "curl $*" >> "$LOG"');
   stub('createdb', 'echo "createdb $*" >> "$LOG"');
-  stub('pg_restore', 'echo "pg_restore $*" >> "$LOG"');
+  stub('pg_restore', 'echo "pg_restore $*" >> "$LOG"; cat > /dev/null');
   stub('dropdb', 'echo "dropdb $*" >> "$LOG"');
   stub('df', 'printf "Use%%\n %s%%\n" "${FAKE_DISK:-7}"');
 });
@@ -103,11 +103,14 @@ describe.skipIf(!hasBash)('restore.sh', () => {
 
   it('gives a scratch database a low-privilege owner, never the production role by default', () => {
     fs.writeFileSync(path.join(dir, 'x.dump.age'), 'x');
-    stub('age', 'out=""; while [ $# -gt 0 ]; do [ "$1" = -o ] && out=$2; shift; done; : > "$out"');
+    stub('age', 'echo "age $*" >> "$LOG"; echo plaintext-dump');
     const posixFile = posix(path.join(dir, 'x.dump.age'));
     expect(run('restore.sh', [posixFile, 'scratchdb'], { RESTORE_OWNER: 'sparkkindly_staging' }).code).toBe(0);
     expect(calls()).toMatch(/createdb -O sparkkindly_staging scratchdb/);
     expect(calls()).toMatch(/--role=sparkkindly_staging/);
+    // The decrypted dump goes to pg_restore on stdin: no file argument, and no plaintext file left in the work directory.
+    expect(calls()).toMatch(/pg_restore -d scratchdb --no-owner --role=sparkkindly_staging\s*$/m);
+    expect(fs.readdirSync(path.join(dir, 'restore')).filter((f) => f.endsWith('.dump'))).toEqual([]);
     expect(run('restore.sh', [posixFile, 'scratchdb', ''], { RESTORE_OWNER: 'x; drop role y' }).code).toBe(2);
   });
 
