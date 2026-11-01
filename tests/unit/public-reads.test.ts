@@ -4,7 +4,7 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { seedReference } from '@/db/seed';
 import { worldSeeds } from '@/db/seed/worlds';
-import { getPublicItem, listPublic, searchPublic, listQuizzes, latestQuiz, findQuizBySlug } from '@/lib/public/reads';
+import { getPublicItem, listPublic, searchPublic, listQuizzes, latestQuiz, findQuizBySlug, sitemapRows } from '@/lib/public/reads';
 import { listWorlds, getWorld, getTopic } from '@/lib/public/worlds';
 import { anonymousScope, RESERVED_WORLD_SLUGS, type Scope } from '@/lib/public/scope';
 
@@ -174,6 +174,20 @@ describe('findQuizBySlug', () => {
     expect((await findQuizBySlug(db, anon, quiz))?.world).toBe('discover');
     for (const s of [art, draft, future, 'no-such-slug']) expect(await findQuizBySlug(db, anon, s), s).toBeNull();
     expect(await findQuizBySlug(db, none, quiz)).toBeNull();
+  });
+});
+
+describe('sitemapRows', () => {
+  it('lists published items and their topics only', async () => {
+    const ok = await put({ world: 'discover', slug: 'sm-ok', topics: ['sm-topic'] }).catch(() => put({ world: 'discover', slug: 'sm-ok' }));
+    const draft = await put({ world: 'discover', slug: 'sm-draft', status: 'draft', publishedAt: null });
+    const script = await put({ world: 'discover', slug: 'sm-script', kind: 'video_script' });
+    const hiddenWorld = await put({ world: 'hidden', slug: 'sm-hidden' });
+    const { items } = await sitemapRows(db, anon);
+    const got = items.map((i) => i.slug);
+    expect(got).toContain(ok);
+    for (const s of [draft, script, hiddenWorld]) expect(got, s).not.toContain(s);
+    expect((await sitemapRows(db, none)).items).toEqual([]);
   });
 });
 

@@ -1,5 +1,16 @@
-import type {MetadataRoute} from 'next';
-import {site,brands} from '@/lib/config';
-import {articles,quizzes,articlePath} from '@/lib/content';
-export const dynamic='force-static';
-export default function sitemap():MetadataRoute.Sitemap {if(!site.published)return [];return ['/',...Object.keys(brands).map(b=>`/${b}/`),'/quiz/','/quiz/archive/','/about/','/privacy/','/editorial-policy/','/accessibility/','/contact/',...articles.filter(a=>a.reviewStatus==='approved').map(articlePath),...quizzes.filter(q=>q.reviewStatus==='approved').map(q=>`/quiz/${q.id}/`)].map(p=>({url:site.url+p}));}
+import type { MetadataRoute } from 'next';
+import { site } from '@/lib/config';
+import { getDb } from '@/lib/db';
+import { sitemapRows } from '@/lib/public/reads';
+import { anonymousScope } from '@/lib/public/scope';
+import { buildSitemap } from '@/lib/public/sitemap';
+import { listWorlds } from '@/lib/public/worlds';
+
+export const dynamic = 'force-dynamic';
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  if (!site.published) return [];
+  const db = getDb();
+  const [{ items, topics }, worlds] = await Promise.all([sitemapRows(db, anonymousScope()), listWorlds(db)]);
+  return buildSitemap(items, worlds.map((w) => w.slug), site.url, topics);
+}

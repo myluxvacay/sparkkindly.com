@@ -80,3 +80,24 @@ export async function searchPublic(db: Queryable, scope: Scope, q: string, page:
   );
   return r.rows.map(toPublic);
 }
+
+const SITEMAP_LIMIT = 5000;
+
+// Everything the sitemap may list, under the same VISIBLE predicate as every other read: item locations with their
+// last change, and the topics that have at least one visible item.
+export async function sitemapRows(
+  db: Queryable,
+  scope: Scope,
+): Promise<{ items: { world: string; slug: string; updatedAt: Date }[]; topics: string[] }> {
+  const items = await db.query<{ world: string; slug: string; updated_at: Date }>(
+    `SELECT w.slug AS world, i.slug, i.updated_at FROM items i JOIN worlds w ON w.id = i.world_id
+     WHERE ${VISIBLE} ORDER BY i.published_at DESC, i.id LIMIT ${SITEMAP_LIMIT}`,
+    base(scope),
+  );
+  const topics = await db.query<{ slug: string }>(
+    `SELECT DISTINCT t.slug FROM topics t JOIN item_topics it ON it.topic_id = t.id JOIN items i ON i.id = it.item_id
+     JOIN worlds w ON w.id = i.world_id WHERE ${VISIBLE} ORDER BY t.slug`,
+    base(scope),
+  );
+  return { items: items.rows.map((r) => ({ world: r.world, slug: r.slug, updatedAt: r.updated_at })), topics: topics.rows.map((r) => r.slug) };
+}
