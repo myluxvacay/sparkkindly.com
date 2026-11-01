@@ -29,8 +29,13 @@ id sparkkindly >/dev/null 2>&1 && id sparkkindly-staging >/dev/null 2>&1 || { ec
 
 echo "== systemd units"
 install -m 644 "$DEPLOY/systemd/sparkkindly-web.service" "$DEPLOY/systemd/sparkkindly-web-staging.service" /etc/systemd/system/
+# Worker (Project 1C): a oneshot service per environment, run every minute by its timer.
+install -m 644 "$DEPLOY/systemd/sparkkindly-worker.service" "$DEPLOY/systemd/sparkkindly-worker.timer"   "$DEPLOY/systemd/sparkkindly-worker-staging.service" "$DEPLOY/systemd/sparkkindly-worker-staging.timer" /etc/systemd/system/
 systemctl daemon-reload
 systemctl enable sparkkindly-web sparkkindly-web-staging >/dev/null 2>&1
+# A timer starts only once its live release contains worker.mjs (the first deploy that includes Project 1C).
+[ -f /opt/sparkkindly/app/current/worker.mjs ] && systemctl enable --now sparkkindly-worker.timer >/dev/null 2>&1
+[ -f /opt/sparkkindly-staging/current/worker.mjs ] && systemctl enable --now sparkkindly-worker-staging.timer >/dev/null 2>&1
 
 echo "== Release receiver (root-owned; the service users can run it but not change it)"
 install -m 755 -o root -g root "$DEPLOY/bin/deploy-receive.sh" /opt/sparkkindly/bin/deploy-receive.sh
@@ -53,3 +58,4 @@ write_key sparkkindly prod "$PROD_KEY"
 write_key sparkkindly-staging staging "$STAGING_KEY"
 
 systemctl is-enabled sparkkindly-web sparkkindly-web-staging
+systemctl list-timers --all 'sparkkindly-worker*' --no-pager || true

@@ -44,6 +44,8 @@ jobs:
           # Migrations ship with the release; the receiver runs migrate.sh before switching to it.
           cp -r db release/db
           cp deploy/migrate.sh release/migrate.sh
+          # The worker (systemd timer) runs release/worker.mjs; pg resolves from the standalone node_modules.
+          npm run worker:build
           chmod +x release/migrate.sh
           printf '%s' "$GITHUB_SHA" > release/RELEASE
           tar -czf release.tgz -C release .

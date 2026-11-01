@@ -1,0 +1,11 @@
+[Unit]
+Description=Run the SparkKindly worker (production) every minute
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+AccuracySec=5s
+Unit=sparkkindly-worker.service
+
+[Install]
+WantedBy=timers.target

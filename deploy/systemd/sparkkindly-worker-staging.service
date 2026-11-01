@@ -1,0 +1,19 @@
+[Unit]
+Description=SparkKindly worker tick (staging): publish due items, daily digest
+After=network.target postgresql.service
+Wants=postgresql.service
+
+# Started once a minute by sparkkindly-worker-staging.timer. Oneshot: never two runs at once.
+[Service]
+Type=oneshot
+User=sparkkindly-staging
+Group=sparkkindly-staging
+WorkingDirectory=/opt/sparkkindly-staging/current
+EnvironmentFile=/opt/sparkkindly/shared/staging.env
+Environment=NODE_OPTIONS=--max-old-space-size=128
+ExecStart=/opt/sparkkindly/node/bin/node worker.mjs
+TimeoutStartSec=300
+MemoryMax=192M
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
