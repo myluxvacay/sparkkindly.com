@@ -200,3 +200,10 @@ Scripts live in `deploy/bin/`, units in `deploy/systemd/`, installed by `deploy/
 The trust pages (About, Editorial policy, Privacy, Terms, Accessibility, Contact) are drafts written to match the running product; the owner decisions they still need are listed in `docs/CUTOVER.md`. `CONTACT_EMAIL` in the env file publishes a contact address on the Contact and Accessibility pages once the owner confirms a mailbox they read; unset, no address is shown. The accessibility record is `docs/ACCESSIBILITY-REVIEW-1D.md`. Support articles: `docs/kb/`.
 
 The cut-over is prepared and **not executed**: checklist, runbook, rollback and the owner authorizations are in `docs/CUTOVER.md`; the scripts are `deploy/cutover/switch-to-app.sh` and `rollback-to-static.sh` (tested against stub commands only), `scripts/url-inventory.ts` and `scripts/load-test.ts`. Pushing `main` updates the loopback app only; the public switch is the Caddy change.
+
+**Backup and restore verified on staging, 1 November 2026 (UTC).** Install via `05-backups-and-monitoring.sh`; the first backup uploaded
+`sparkkindly_staging-20261101T192210Z.dump.age` (61127 bytes) and pinged its heartbeat; the restore test restored it into a scratch
+database with the same 14 tables as live staging and 24 items, dropped it, and pinged. The restore test first failed (the
+`postgres` user could not read root's decrypted file), so the restore now pipes the decrypted dump into `pg_restore`.
+The disk job reported 10 percent used, and restoring over `sparkkindly_staging` without `--force` was refused (exit 3).
+**Production** is not yet in `BACKUP_DATABASES` (add it at the cut-over).

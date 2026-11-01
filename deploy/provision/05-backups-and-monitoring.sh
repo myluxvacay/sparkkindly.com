@@ -26,17 +26,19 @@ if [ ! -f "$KEY" ]; then
 fi
 RECIPIENT=$(age-keygen -y "$KEY")
 
-ask() { # ask NAME "prompt": use the environment value, else the stored one, else prompt (hidden)
-  local name=$1 prompt=$2 current=""
-  [ -f "$ENV_FILE" ] && current=$(sed -n "s/^$name=//p" "$ENV_FILE" | head -n 1)
+ask() { # ask NAME "prompt" [STORED_NAME]: the environment value, else the stored one, else a hidden prompt; never empty
+  local name=$1 prompt=$2 stored=${3:-$1} current=""
+  [ -f "$ENV_FILE" ] && current=$(sed -n "s/^$stored=//p" "$ENV_FILE" | head -n 1)
   if [ -n "${!name:-}" ]; then printf '%s' "${!name}"; return; fi
   if [ -n "$current" ]; then printf '%s' "$current"; return; fi
   [ -t 0 ] || { echo "$name not set and no terminal to ask on" >&2; exit 1; }
-  local v; read -rsp "$prompt: " v < /dev/tty; echo >&2; printf '%s' "$v"
+  local v; read -rsp "$prompt: " v < /dev/tty; echo >&2
+  [ -n "$v" ] || { echo "$name was left empty; nothing changed" >&2; exit 1; }
+  printf '%s' "$v"
 }
 
-B2_ACCOUNT=$(ask B2_ACCOUNT "Backblaze keyID")
-B2_KEY=$(ask B2_KEY "Backblaze applicationKey")
+B2_ACCOUNT=$(ask B2_ACCOUNT "Backblaze keyID" RCLONE_CONFIG_B2_ACCOUNT)
+B2_KEY=$(ask B2_KEY "Backblaze applicationKey" RCLONE_CONFIG_B2_KEY)
 HB_BACKUP=$(ask HEARTBEAT_BACKUP_URL "Heartbeat URL for backup")
 HB_RESTORE=$(ask HEARTBEAT_RESTORE_URL "Heartbeat URL for restore test")
 HB_DISK=$(ask HEARTBEAT_DISK_URL "Heartbeat URL for disk")
