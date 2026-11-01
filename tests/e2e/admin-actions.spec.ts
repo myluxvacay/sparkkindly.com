@@ -75,7 +75,7 @@ test('a world named after a page is refused with a readable error', async ({ pag
   await page.getByLabel(/Address/).fill('admin');
   await page.getByLabel('Name', { exact: true }).last().fill('Admin world');
   await page.getByRole('button', { name: 'Add world' }).click();
-  await expect(page.getByRole('alert')).toContainText('page name on the site');
+  await expect(page.getByRole('alert').filter({ hasText: 'page name on the site' })).toBeVisible();
 });
 
 test("rotating an agent's key shows the new key once; the old key is refused and another agent's key still works", async ({ page }) => {
