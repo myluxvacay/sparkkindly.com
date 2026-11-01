@@ -1,0 +1,143 @@
+// @vitest-environment node
+import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import { newTestDb } from '../helpers/test-db';
+
+type TestDb = Awaited<ReturnType<typeof newTestDb>>;
+let db: TestDb;
+
+beforeAll(async () => {
+  db = await newTestDb();
+});
+afterAll(async () => {
+  await db.close();
+});
+
+let n = 0;
+const unique = () => `t${++n}`;
+
+async function world(slug = unique()): Promise<number> {
+  const r = await db.query<{ id: number }>('INSERT INTO worlds (slug, name) VALUES ($1, $1) RETURNING id', [slug]);
+  return r.rows[0].id;
+}
+
+async function item(over: Record<string, unknown> = {}): Promise<string> {
+  const w = (over.world_id as number | undefined) ?? (await world());
+  const row = {
+    kind: 'article',
+    slug: unique(),
+    locale: 'en',
+    title: 'A title',
+    summary: 'A summary',
+    body: {},
+    audience: 'all',
+    status: 'draft',
+    created_by: 'test',
+    risk_tier: 'reflective',
+    approved_by: null,
+    agent_id: null,
+    idempotency_key: null,
+    ...over,
+    world_id: w,
+  };
+  const r = await db.query<{ id: string }>(
+    `INSERT INTO items (world_id, kind, slug, locale, title, summary, body, audience, status, created_by, risk_tier, approved_by, agent_id, idempotency_key)
+     VALUES ($1,$2,$3,$4,$5,$6,$7::jsonb,$8,$9,$10,$11,$12,$13,$14) RETURNING id`,
+    [row.world_id, row.kind, row.slug, row.locale, row.title, row.summary, JSON.stringify(row.body), row.audience,
+      row.status, row.created_by, row.risk_tier, row.approved_by, row.agent_id, row.idempotency_key],
+  );
+  return r.rows[0].id;
+}
+
+describe('items constraints', () => {
+  it('rejects an unknown status', async () => {
+    await expect(item({ status: 'live' })).rejects.toThrow(/check constraint/);
+  });
+
+  it('rejects an unknown audience, risk tier and kind', async () => {
+    await expect(item({ audience: 'teens' })).rejects.toThrow(/check constraint/);
+    await expect(item({ risk_tier: 'safe' })).rejects.toThrow(/check constraint/);
+    await expect(item({ kind: 'poll' })).rejects.toThrow(/check constraint/);
+  });
+
+  it('(world, locale, slug) is unique', async () => {
+    const w = await world();
+    await item({ world_id: w, slug: 'same' });
+    await expect(item({ world_id: w, slug: 'same' })).rejects.toThrow(/unique|duplicate/);
+    await expect(item({ world_id: w, slug: 'same', locale: 'fr' })).resolves.toBeTruthy();
+  });
+
+  it('(agent, idempotency key) is unique, and many items may have no key', async () => {
+    const w = await world();
+    const a = await db.query<{ id: number }>(
+      "INSERT INTO agents (name, key_prefix, key_hash) VALUES ($1, $2, 'h') RETURNING id", [unique(), unique()]);
+    const agentId = a.rows[0].id;
+    await item({ world_id: w, agent_id: agentId, idempotency_key: 'k1' });
+    await expect(item({ world_id: w, agent_id: agentId, idempotency_key: 'k1' })).rejects.toThrow(/unique|duplicate/);
+    await expect(item({ world_id: w })).resolves.toBeTruthy();
+    await expect(item({ world_id: w })).resolves.toBeTruthy();
+  });
+});
+
+describe('the Kids approval guarantee lives in the database', () => {
+  it('a Kids item cannot be scheduled without approved_by', async () => {
+    const id = await item({ risk_tier: 'kids', audience: 'kids' });
+    await expect(db.query("UPDATE items SET status='scheduled' WHERE id=$1", [id])).rejects.toThrow(/kids_requires_approval/);
+    await expect(
+      db.query("UPDATE items SET status='scheduled', approved_by='owner' WHERE id=$1", [id]),
+    ).resolves.toBeTruthy();
+  });
+
+  it('an audience kids item cannot be published without approved_by, whatever its risk tier', async () => {
+    const id = await item({ audience: 'kids', risk_tier: 'reflective' });
+    await expect(db.query("UPDATE items SET status='published' WHERE id=$1", [id])).rejects.toThrow(/kids_requires_approval/);
+  });
+
+  it('a risk-tier kids item cannot be inserted already published without approval', async () => {
+    await expect(item({ risk_tier: 'kids', audience: 'all', status: 'published' })).rejects.toThrow(/kids_requires_approval/);
+  });
+
+  it('a Kids item may sit in draft and in_review without approval', async () => {
+    await expect(item({ risk_tier: 'kids', audience: 'kids', status: 'draft' })).resolves.toBeTruthy();
+    await expect(item({ risk_tier: 'kids', audience: 'kids', status: 'in_review' })).resolves.toBeTruthy();
+  });
+
+  it('a non-Kids item can be scheduled without approval', async () => {
+    await expect(item({ status: 'scheduled' })).resolves.toBeTruthy();
+  });
+});
+
+describe('relations', () => {
+  it('deleting an item removes its answers, topics and revisions', async () => {
+    const id = await item();
+    const t = await db.query<{ id: number }>("INSERT INTO topics (slug, name) VALUES ($1, 'T') RETURNING id", [unique()]);
+    await db.query('INSERT INTO item_topics (item_id, topic_id) VALUES ($1, $2)', [id, t.rows[0].id]);
+    await db.query("INSERT INTO item_answers (item_id, answer, explanation) VALUES ($1, '\"a\"'::jsonb, 'because')", [id]);
+    await db.query("INSERT INTO item_revisions (item_id, revision, snapshot, changed_by) VALUES ($1, 1, '{}'::jsonb, 'x')", [id]);
+    await db.query('DELETE FROM items WHERE id = $1', [id]);
+    for (const table of ['item_topics', 'item_answers', 'item_revisions']) {
+      const r = await db.query(`SELECT 1 FROM ${table} WHERE item_id = $1`, [id]);
+      expect(r.rows).toHaveLength(0);
+    }
+  });
+
+  it('a sponsorship must target exactly one of world, topic, item', async () => {
+    const s = await db.query<{ id: number }>("INSERT INTO sponsors (name, link, disclosure) VALUES ('S','https://s.example','d') RETURNING id");
+    const w = await world();
+    const sid = s.rows[0].id;
+    await expect(db.query("INSERT INTO sponsorships (sponsor_id, label) VALUES ($1, 'none')", [sid])).rejects.toThrow(/check constraint/);
+    const i = await item({ world_id: w });
+    await expect(
+      db.query("INSERT INTO sponsorships (sponsor_id, world_id, item_id, label) VALUES ($1,$2,$3,'two')", [sid, w, i]),
+    ).rejects.toThrow(/check constraint/);
+    await expect(
+      db.query("INSERT INTO sponsorships (sponsor_id, world_id, label) VALUES ($1,$2,'one')", [sid, w]),
+    ).resolves.toBeTruthy();
+  });
+
+  it('a world defaults to auto approval with a three-day buffer', async () => {
+    const w = await world();
+    const r = await db.query<{ approval_mode: string; buffer_days: number }>('SELECT approval_mode, buffer_days FROM worlds WHERE id=$1', [w]);
+    expect(r.rows[0]).toEqual({ approval_mode: 'auto', buffer_days: 3 });
+    await expect(db.query("UPDATE worlds SET approval_mode='manual' WHERE id=$1", [w])).rejects.toThrow(/check constraint/);
+  });
+});
