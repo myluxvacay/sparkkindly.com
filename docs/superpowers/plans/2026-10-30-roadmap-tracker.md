@@ -65,7 +65,7 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 - [ ] 2.8 Usage budget and limit handling: clean stop on rate limit; digest recommends upgrade when buffer missed 3 of 7 days — *simulated limit stops cleanly.*
 - [ ] 2.9 Heartbeat alert: worker alerts if no master heartbeat in 36 hours — *alert fires when the task is disabled for a test.*
 - [ ] 2.10 `video_script` items produced from day one (not shown on site) — *scripts accumulate in the database.*
-- [ ] 2.11 **[owner]** Name the backup approver for Kids items and contributor submissions — *name recorded in 4a.6.*
+- [x] 2.11 (named by the owner on 1 Nov 2026; the address is held in the server's `ADMIN_EMAILS` config, not in this public repo) **[owner]** Name the backup approver for Kids items and contributor submissions — *name recorded in 4a.6.*
 - [ ] 2.12 **[owner]** Name the first new world and what it covers — *goals file written.*
 - [ ] 2.13 Add the new world with no code change (row, goals file, key) — *its agent publishes on the next run.*
 - [ ] 2.14 Done-when: seven consecutive unattended days with at least one new item per world per day; Kids items in the queue; new world added without code.
