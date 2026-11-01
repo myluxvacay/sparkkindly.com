@@ -12,10 +12,12 @@ try {
 try {
   const db = getDb();
   const name = (await db.query<{ db: string }>('SELECT current_database() AS db')).rows[0].db;
-  const { published, held } = await publishDue(db, new Date());
+  const { published, held, failed } = await publishDue(db, new Date());
   console.log(`Database ${name}: published ${published.length} item(s), sent ${held.length} back to review.`);
   for (const id of published) console.log(`  published ${id}`);
   for (const id of held) console.log(`  held for review ${id}`);
+  for (const id of failed) console.log(`  failed (left scheduled) ${id}`);
+  if (failed.length) process.exitCode = 1;
 } catch (err) {
   console.error((err as Error).message);
   process.exitCode = 2;

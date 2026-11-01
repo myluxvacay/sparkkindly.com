@@ -1,7 +1,7 @@
 import type { Db, Queryable } from '@/lib/db';
 import { itemSubmissionSchema, mechanics, supportedKinds, splitAnswer } from '@/lib/items/format';
 import { runGates, riskTierFor } from '@/lib/items/gates';
-import { decideStatus, nextSlot } from '@/lib/items/policy';
+import { decideStatus, lockWorldSlots, nextSlot } from '@/lib/items/policy';
 import { insertItem, UnknownTopicError, type StoredItem } from '@/lib/items/repo';
 import type { Probe } from '@/lib/items/probe';
 import type { Agent } from './auth';
@@ -94,15 +94,17 @@ export async function submitItem(db: Db, agent: Agent, body: unknown, deps: Deps
   const gates = await runGates(db, sub, { id: world.id, slug: world.slug }, { probe: deps.probe, now, ignoreItemId: existing?.id });
   const blockedTopic = gates.results.find((g) => g.gate === 'blocked-topics' && !g.ok);
   const riskTier = blockedTopic ? 'excluded' : riskTierFor(sub, { id: world.id, slug: world.slug });
-  const decision = decideStatus({
-    gatesOk: gates.ok, audience: sub.audience, riskTier, worldApprovalMode: world.approvalMode,
-    publishAt: sub.publishAt ? new Date(sub.publishAt) : null, now, slot: await nextSlot(db, world.id, now),
-  });
   const { body: itemBody, answer } = splitAnswer(sub);
 
   let stored: StoredItem;
   try {
     stored = await db.transaction(async (tx) => {
+      // The slot is chosen under a per-world lock, so two simultaneous submissions cannot take the same day.
+      await lockWorldSlots(tx, world.id);
+      const decision = decideStatus({
+        gatesOk: gates.ok, audience: sub.audience, riskTier, worldApprovalMode: world.approvalMode,
+        publishAt: sub.publishAt ? new Date(sub.publishAt) : null, now, slot: await nextSlot(tx, world.id, now),
+      });
       if (existing) await tx.query("DELETE FROM items WHERE id = $1 AND status = 'draft' AND agent_id = $2", [existing.id, agent.id]);
       return insertItem(tx, {
         worldId: world.id, kind: sub.kind, slug: sub.slug, title: sub.title, summary: sub.summary, body: itemBody,
