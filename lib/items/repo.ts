@@ -250,6 +250,24 @@ export async function transitionTx(
   return stored;
 }
 
+// An owner's correction of an item's title and summary, kept as a revision. Returns null when there is no such item.
+export async function updateText(
+  tx: Queryable,
+  id: string,
+  text: { title: string; summary: string },
+  by: string,
+  reason: string,
+): Promise<StoredItem | null> {
+  const r = await tx.query<Row>(
+    `UPDATE items SET title = $2, summary = $3, updated_at = now() WHERE id = $1 RETURNING ${ITEM_COLUMNS}`,
+    [id, text.title, text.summary],
+  );
+  if (!r.rows[0]) return null;
+  const stored = toStored(r.rows[0]);
+  await writeRevision(tx, id, snapshotOf(stored), by, reason);
+  return stored;
+}
+
 export const PUBLIC_SELECT = `
   SELECT i.id, w.slug AS world, i.kind, i.slug, i.title, i.summary, i.body, i.audience, i.evergreen, i.published_at,
          i.sources, i.image,
