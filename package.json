@@ -6,6 +6,7 @@
     "dev": "next dev",
     "content:validate": "tsx scripts/validate-content.ts",
     "email:test": "tsx scripts/send-test-email.ts",
+    "db:migrate": "node db/migrate.mjs",
     "content:pull": "tsx scripts/sync-mongodb.ts",
     "build": "npm run content:validate && next build",
     "build:release": "SITE_RELEASE=true npm run build",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
+    "@electric-sql/pglite": "0.5.14",
     "@playwright/test": "1.64.1",
     "@testing-library/jest-dom": "7.0.1",
     "@testing-library/react": "16.3.3",
