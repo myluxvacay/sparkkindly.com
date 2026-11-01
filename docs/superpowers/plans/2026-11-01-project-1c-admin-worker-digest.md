@@ -170,7 +170,9 @@
 
 ## Rulings made during execution
 
-- **Sign-in link limits (settled 1 November 2026 after three automated review rounds; no further iteration).** Client
+- **Sign-in link limits (revised after the independent review, 1 November 2026).** Superseded wording below: a
+  still-valid pending link is re-sent at most every 5 minutes; a new link is minted only when the pending one has
+  expired or been used, under a hard cap of 6 per address per hour. Earlier ruling, for the record: Client
   key = full IPv4 address or IPv6 /64; 10 requests an hour per client is the main control and the only thing an
   unknown address spends. An allow-listed address gets at most 3 new links an hour whoever asks (no shared site-wide
   bucket); past that the still-valid pending link is re-sent at most once per 5 minutes. The browser always gets the
@@ -187,3 +189,16 @@
 - **Pre-existing:** `tests/unit/item-format-docs.test.ts` fails on a Windows CRLF checkout (its regex expects `
 `);
   it passes on Linux CI. Not changed here.
+
+## Independent review fixes (1 November 2026)
+
+- Approve only from `in_review` and never excluded-tier; unpublish only from published/scheduled; reject only
+  from `in_review`.
+- A new agent key is handed over after a redirect, once, to the same session, within 5 minutes.
+- Digest: the day is claimed, then built and sent per recipient with a delivery row each, inside runJob, so a
+  build failure is recorded and a retry never re-sends to someone who already got it.
+- Authenticator secrets are sealed with AES-256-GCM (`ADMIN_SECRET_KEY`, address as associated data); the
+  column refuses anything not in the `v1:` format; sign-in fails closed without the key. 005 had never been
+  applied anywhere, so it was edited in place (no enrolments existed to migrate).
+- A new session token is issued when the code is accepted; sign-out deletes the session and writes its audit
+  row in one transaction; admin pages show only server-side text for message codes.

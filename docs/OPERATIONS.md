@@ -176,15 +176,20 @@ by pressing Continue so mail scanners cannot spend it) and then the code from an
 `audit_log`. Staging sets `ADMIN_LINK_BASE=https://staging.sparkkindly.com` so its links point at staging.
 - **Add or remove an approver:** edit `ADMIN_EMAILS` and `sudo systemctl restart sparkkindly-web` (or `-staging`).
   Removing an address ends its sessions on the next request. This is also the recovery path if sign-in links are
-  being flooded: links are capped at 3 new per address per hour, then the pending link is re-sent at most every 5 minutes,
-  so a flood can delay a link but never grant access.
+  being flooded: while a link is still valid it is re-sent at most every 5 minutes, and a new one is minted only when
+  it has expired or been used (at most 6 an hour), so a flood never leaves the owner without a working link and
+  never grants access.
+- **Encryption key:** `ADMIN_SECRET_KEY` (base64, 32 bytes; generate as in the env example) encrypts the stored
+  authenticator secrets. Without it, or with the wrong one, sign-in fails closed ("Sign-in is unavailable").
+  Keep a copy in the password manager; losing it means re-enrolling every authenticator.
 - **Enrol an authenticator** (once per approver, and again to replace a lost phone): through the SSH tunnel with
-  `DATABASE_URL` for that environment, run `npm run admin:totp -- <email>`; it prints an `otpauth://` URI once. Add it to
+  `DATABASE_URL` and the same `ADMIN_SECRET_KEY` as that environment's env file (in the shell for that one command,
+  never saved to a file), run `npm run admin:totp -- <email>`; it prints an `otpauth://` URI once. Add it to
   the authenticator app (paste it, or make a QR code locally), and do not save it anywhere else. Re-running replaces the
   secret and ends that address's sessions.
 
-**Agent keys** are created, rotated (old key dead at once) and revoked in `/admin/agents/`; the new key is shown once on
-a page that is not cached. Keys older than 90 days are flagged there and in the digest.
+**Agent keys** are created, rotated (old key dead at once) and revoked in `/admin/agents/`; the new key is shown once,
+after a redirect, to the same session within 5 minutes (a reload shows nothing and rotates nothing). Keys older than 90 days are flagged there and in the digest.
 
 **Worker.** `sparkkindly-worker.timer` (and `-staging`) runs `sparkkindly-worker.service` once a minute: a oneshot that
 runs the live release's `worker.mjs` (built in the deploy by `npm run worker:build`), so deploys need no worker restart.
@@ -203,3 +208,10 @@ re-sent the same day. Logs: `journalctl -u sparkkindly-worker -n 50`.
 **Verified locally, 1 November 2026.** Unit suites (PGlite) and the Playwright suite (in-process database) pass; the
 bundled `worker.mjs` run against the e2e database published a due item, claimed the day's digest, recorded the failed send
 (no MailerSend token) once in `failed_jobs`, and on the second run reported `already_sent`. Not verified on staging.
+
+**Migration 005 rollback** (only if 1C is withdrawn; nothing else depends on it): `DROP TABLE admin_users,
+admin_login_tokens, admin_sessions, job_runs; ALTER TABLE agents DROP COLUMN key_rotated_at; DELETE FROM
+schema_migrations WHERE name = '005_admin.sql';` after the data-correction backup step.
+
+**Before the production cut-over:** the production Caddy block must send `X-Frame-Options: DENY` (or
+`Content-Security-Policy: frame-ancestors 'none'`) so `/admin/` cannot be framed. Not set by this project.
