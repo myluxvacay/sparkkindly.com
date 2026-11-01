@@ -101,7 +101,7 @@ describe('sign-in limits', () => {
   });
 
   it('a flood from unknown addresses and from one /64 cannot stop a legitimate sign-in from another network', () => {
-    let t = 0;
+    const t = 0;
     const decide = createSignInLimits(() => t);
     for (let i = 0; i < 5000; i++) {
       decide(`2001:db8:dead:beef:${(i >> 16).toString(16)}:${(i & 0xffff).toString(16)}::1`, `j${i}@example.test`, false);

@@ -206,7 +206,7 @@ const handlers: Record<string, Handler> = {
   async 'agent.rotate'({ tx, form }) {
     const id = intId(form, 'That agent');
     const { key, prefix, hash } = generateKey();
-    await one(tx, 'UPDATE agents SET key_prefix = $2, key_hash = $3 WHERE id = $1', [id, prefix, hash], 'That agent');
+    await one(tx, 'UPDATE agents SET key_prefix = $2, key_hash = $3, key_rotated_at = now() WHERE id = $1', [id, prefix, hash], 'That agent');
     return { message: 'Key rotated. Copy the new key now: it is shown once.', target: `agent:${id}`, secret: key };
   },
 

@@ -65,6 +65,17 @@ describe('buildDigest', () => {
   });
 });
 
+describe('key age alert', () => {
+  it('flags enabled agents whose key is over 90 days old', async () => {
+    await db.query("INSERT INTO agents (name, key_prefix, key_hash, created_at) VALUES ('old-agent', 'aaaaaaaa', 'h', $1)", [new Date('2026-07-01T00:00:00Z').toISOString()]);
+    const d = await buildDigest(db, NOW);
+    expect(d.alerts.join(' ')).toMatch(/1 agent key is over 90 days old/);
+    await db.query("UPDATE agents SET key_rotated_at = $1 WHERE name = 'old-agent'", [NOW.toISOString()]);
+    expect((await buildDigest(db, NOW)).alerts.join(' ')).not.toMatch(/90 days/);
+    await db.query("DELETE FROM agents WHERE name = 'old-agent'");
+  });
+});
+
 describe('renderDigest', () => {
   it('is plain text naming each section, and treats titles as data', async () => {
     const d = await buildDigest(db, NOW);

@@ -7,10 +7,11 @@ type Props = {
   label: string;
   fields?: Record<string, string>;
   plain?: boolean;
+  ariaLabel?: string; // when several buttons share a label, name each one (e.g. "Approve: <title>")
   children?: React.ReactNode;
 };
 
-export default function ActionForm({ csrf, action, returnTo, label, fields = {}, plain, children }: Props) {
+export default function ActionForm({ csrf, action, returnTo, label, fields = {}, plain, ariaLabel, children }: Props) {
   return (
     <form method="post" action="/admin/act/" className="admin-action">
       <input type="hidden" name="csrf" value={csrf} />
@@ -20,7 +21,7 @@ export default function ActionForm({ csrf, action, returnTo, label, fields = {},
         <input key={k} type="hidden" name={k} value={v} />
       ))}
       {children}
-      <button type="submit" className={plain ? 'text-button' : 'button'}>
+      <button type="submit" className={plain ? 'text-button' : 'button'} aria-label={ariaLabel}>
         {label}
       </button>
     </form>

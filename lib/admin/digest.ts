@@ -69,6 +69,12 @@ export async function buildDigest(db: Queryable, now: Date): Promise<Digest> {
   if (thin.length) d.alerts.push(`Less than one day of buffer: ${thin.join(', ')}.`);
   if (d.failedJobs.length) d.alerts.push(`${d.failedJobs.length} job failed in the last day.`);
   if (Number(agents.rows[0].n) === 0) d.alerts.push('No agent has run in 3 days.');
+  const oldKeys = await db.query<{ n: string }>(
+    'SELECT count(*) AS n FROM agents WHERE enabled AND COALESCE(key_rotated_at, created_at) < $1::timestamptz',
+    [new Date(now.getTime() - 90 * DAY).toISOString()],
+  );
+  const stale = Number(oldKeys.rows[0].n);
+  if (stale) d.alerts.push(`${stale} agent key is over 90 days old: rotate it in /admin/agents/.`);
   return d;
 }
 

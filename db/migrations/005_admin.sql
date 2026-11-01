@@ -35,3 +35,6 @@ CREATE TABLE job_runs (
   at      timestamptz NOT NULL DEFAULT now(),
   PRIMARY KEY (job, run_key)
 );
+
+-- When an agent's key was last issued, so /admin and the digest can flag keys older than 90 days (spec section 7).
+ALTER TABLE agents ADD COLUMN key_rotated_at timestamptz;
