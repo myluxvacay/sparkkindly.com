@@ -19,18 +19,18 @@ newest=$(rclone lsf --files-only "b2:$B2_BUCKET/db/" | grep "^$SOURCE_DB-" | sor
 [ -n "$newest" ] || { echo "No $SOURCE_DB backup found in B2" >&2; exit 1; }
 echo "Newest backup: $newest"
 
-cleanup() { runuser -u postgres -- dropdb --if-exists "$SCRATCH" > /dev/null 2>&1 || true; }
+cleanup() { runuser -u postgres -- env -u RCLONE_CONFIG_B2_KEY -u RCLONE_CONFIG_B2_ACCOUNT -u HEARTBEAT_BACKUP_URL -u HEARTBEAT_RESTORE_URL -u HEARTBEAT_DISK_URL dropdb --if-exists "$SCRATCH" > /dev/null 2>&1 || true; }
 trap cleanup EXIT
 
 # The role that owns the live data owns the scratch copy too (role names match database names).
 RESTORE_OWNER=$SOURCE_DB "$HERE/restore.sh" "b2:$B2_BUCKET/db/$newest" "$SCRATCH"
-tables() { runuser -u postgres -- psql -d "$1" -tAc "select count(*) from pg_tables where schemaname='public'"; }
+tables() { runuser -u postgres -- env -u RCLONE_CONFIG_B2_KEY -u RCLONE_CONFIG_B2_ACCOUNT -u HEARTBEAT_BACKUP_URL -u HEARTBEAT_RESTORE_URL -u HEARTBEAT_DISK_URL psql -d "$1" -tAc "select count(*) from pg_tables where schemaname='public'"; }
 restored=$(tables "$SCRATCH")
 live=$(tables "$SOURCE_DB")
 [ "$restored" = "$live" ] || { echo "Table count differs: restored $restored, live $live" >&2; exit 1; }
 # Restored content is data, not trusted code: query it as the low-privilege owner with a fixed search_path and a
 # schema-qualified table, never as the superuser.
-rows=$(runuser -u postgres -- psql -d "$SCRATCH" -v ON_ERROR_STOP=1 -tA <<SQL | tail -n 1
+rows=$(runuser -u postgres -- env -u RCLONE_CONFIG_B2_KEY -u RCLONE_CONFIG_B2_ACCOUNT -u HEARTBEAT_BACKUP_URL -u HEARTBEAT_RESTORE_URL -u HEARTBEAT_DISK_URL psql -d "$SCRATCH" -v ON_ERROR_STOP=1 -tA <<SQL | tail -n 1
 SET ROLE $SOURCE_DB;
 SET search_path = pg_catalog;
 SELECT count(*) FROM public.items;

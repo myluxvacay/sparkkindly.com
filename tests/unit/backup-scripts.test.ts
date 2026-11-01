@@ -59,14 +59,14 @@ beforeEach(() => {
 afterEach(() => fs.rmSync(dir, { recursive: true, force: true }));
 
 describe.skipIf(!hasBash)('backup.sh', () => {
-  it('uploads, prunes and pings the heartbeat last on success', () => {
+  it('uploads and pings the heartbeat last on success, and never deletes from B2', () => {
     const r = run('backup.sh');
     expect(r.code, r.out).toBe(0);
     const log = calls().trim().split('\n');
     expect(log[0]).toMatch(/^rclone copyto .*dbone-.*\.dump\.age b2:bkt\/db\/dbone-/);
-    expect(log[1]).toMatch(/^rclone delete --min-age 30d --b2-hard-delete b2:bkt\/db\/$/);
-    expect(log[2]).toMatch(/^curl .*https:\/\/hb\.example\.test\/b$/);
-    expect(log).toHaveLength(3);
+    expect(log[1]).toMatch(/^curl .*https:\/\/hb\.example\.test\/b$/);
+    expect(log).toHaveLength(2);
+    expect(calls()).not.toMatch(/rclone delete|--b2-hard-delete/);
   });
 
   it('uploads nothing and pings nothing when pg_dump fails', () => {

@@ -174,8 +174,10 @@ Scripts live in `deploy/bin/`, units in `deploy/systemd/`, installed by `deploy/
 
 - **Backups.** `sparkkindly-backup.timer`, daily 03:15 UTC: for each database in `BACKUP_DATABASES`
   (`/opt/sparkkindly/shared/backup.env`, mode 600) `pg_dump -Fc`, encrypted with `age` to `AGE_RECIPIENT`, minimum 10 KB,
-  uploaded to B2 `sparkkindly-backups/db/<database>-<UTC stamp>.dump.age`, objects older than 30 days hard-deleted, local copies
-  kept two days. The `sparkkindly-backup` heartbeat is pinged only after everything succeeded. A failed or truncated dump
+  uploaded to B2 `sparkkindly-backups/db/<database>-<UTC stamp>.dump.age`; local copies kept two days. The server never deletes
+  from B2 (a compromised server must not be able to wipe the backups): the 30 days are a B2 **bucket lifecycle rule**
+  (Backblaze > Buckets > sparkkindly-backups > Lifecycle Settings > Custom: hide after 30 days, delete 1 day after hiding).
+  Postgres child processes are started without the Backblaze key or heartbeat URLs in their environment. The `sparkkindly-backup` heartbeat is pinged only after everything succeeded. A failed or truncated dump
   uploads nothing and pings nothing (tested, including a dump that dies midway: `tests/unit/backup-scripts.test.ts`).
   List: `rclone ls b2:sparkkindly-backups/db/`. **At the production cut-over add `sparkkindly` to `BACKUP_DATABASES`.**
 - **Encryption key.** The age private key is created once on the server at `/root/.config/sparkkindly/age.key` (mode 600). The

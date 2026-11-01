@@ -41,7 +41,7 @@ age -d -i "$AGE_KEY" -o "$DUMP" "$FILE"
 OWNER=${RESTORE_OWNER:-sparkkindly}
 [ -n "${RESTORE_OWNER:-}" ] || [[ "$DB" != *staging* ]] || OWNER=sparkkindly_staging
 [[ "$OWNER" =~ ^[a-z0-9_]+$ ]] || { echo "Bad owner role" >&2; exit 2; }
-runuser -u postgres -- dropdb --if-exists "$DB"
-runuser -u postgres -- createdb -O "$OWNER" "$DB"
-runuser -u postgres -- pg_restore -d "$DB" --no-owner --role="$OWNER" "$DUMP"
+runuser -u postgres -- env -u RCLONE_CONFIG_B2_KEY -u RCLONE_CONFIG_B2_ACCOUNT -u HEARTBEAT_BACKUP_URL -u HEARTBEAT_RESTORE_URL -u HEARTBEAT_DISK_URL dropdb --if-exists "$DB"
+runuser -u postgres -- env -u RCLONE_CONFIG_B2_KEY -u RCLONE_CONFIG_B2_ACCOUNT -u HEARTBEAT_BACKUP_URL -u HEARTBEAT_RESTORE_URL -u HEARTBEAT_DISK_URL createdb -O "$OWNER" "$DB"
+runuser -u postgres -- env -u RCLONE_CONFIG_B2_KEY -u RCLONE_CONFIG_B2_ACCOUNT -u HEARTBEAT_BACKUP_URL -u HEARTBEAT_RESTORE_URL -u HEARTBEAT_DISK_URL pg_restore -d "$DB" --no-owner --role="$OWNER" "$DUMP"
 echo "Restored $(basename "$FILE") into $DB"
