@@ -32,12 +32,12 @@ export default async function ReportPage({ params, searchParams }: Props) {
         About: <Link href={itemPath}>{item.title}</Link>
       </p>
       {sent === '1' && (
-        <div role="status" className="takeaway">
+        <div role="status" id="result" tabIndex={-1} className="takeaway">
           <p>Thank you. Your report was received and will be read.</p>
         </div>
       )}
       {error === '1' && (
-        <div role="alert" className="grown-ups">
+        <div role="alert" id="result" tabIndex={-1} className="grown-ups">
           <p>Your report was not sent. Please choose a reason and keep the message under 1000 characters.</p>
         </div>
       )}
@@ -45,9 +45,9 @@ export default async function ReportPage({ params, searchParams }: Props) {
         <fieldset>
           <legend>What kind of problem is it?</legend>
           <div className="options">
-            {REASONS.map(([value, label], i) => (
+            {REASONS.map(([value, label]) => (
               <label key={value} className="option">
-                <input type="radio" name="reason" value={value} required defaultChecked={i === 0} />
+                <input type="radio" name="reason" value={value} required />
                 {label}
               </label>
             ))}

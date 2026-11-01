@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ItemCard from '@/components/item/ItemCard';
+import Breadcrumb from '@/components/Breadcrumb';
+import Pager from '@/components/Pager';
 import { getDb } from '@/lib/db';
 import { anonymousScope } from '@/lib/public/scope';
 import { getWorld } from '@/lib/public/worlds';
@@ -34,11 +36,7 @@ export default async function WorldPage({ params, searchParams }: Props) {
 
   return (
     <div className="container section">
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link href="/">Home</Link>
-        <span aria-hidden="true">/</span>
-        <span>{w.name}</span>
-      </nav>
+      <Breadcrumb trail={[{ name: 'Home', href: '/' }, { name: w.name }]} />
       <header className={`brand-intro intro-${w.color ?? 'gold'}`}>
         <p className="eyebrow">THE WORLD OF {w.name.toUpperCase()}</p>
         <h1>{w.promise ?? w.name}</h1>
@@ -76,10 +74,12 @@ export default async function WorldPage({ params, searchParams }: Props) {
         {!items.length && page > 1 && (
           <p>There is nothing on this page. <Link href={here}>Back to the first page</Link>.</p>
         )}
-        <nav aria-label="Pages" className="pager">
-          {page > 1 && <Link rel="prev" href={page === 2 ? here : `${here}?page=${page - 1}`}>← Newer</Link>}
-          {hasNext && <Link rel="next" href={`${here}?page=${page + 1}`}>Older →</Link>}
-        </nav>
+        <Pager
+          prev={page > 1 ? (page === 2 ? here : `${here}?page=${page - 1}`) : undefined}
+          next={hasNext ? `${here}?page=${page + 1}` : undefined}
+          prevLabel="← Newer"
+          nextLabel="Older →"
+        />
       </section>
     </div>
   );

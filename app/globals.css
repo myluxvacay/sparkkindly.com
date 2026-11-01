@@ -22,3 +22,7 @@
 .content-card h3,.content-card p,.brand-feature h2,.brand-feature p,.brand-intro h1{overflow-wrap:anywhere}
 .brand-feature>img{height:auto;aspect-ratio:1200/630;object-fit:contain}
 .content-card .image-link img{height:auto;aspect-ratio:1200/630;object-fit:contain}
+
+/* 1D accessibility: focus rings for every control, a visible target for #result, 24px targets for inline nav links */
+textarea:focus-visible,select:focus-visible,[tabindex="-1"]:focus-visible{outline:3px solid var(--plum);outline-offset:5px;border-radius:3px}
+.breadcrumbs a,.pager a{display:inline-flex;align-items:center;min-height:24px}.pager{display:flex;gap:24px;margin-top:30px}.crumb{display:inline-flex;gap:12px;align-items:center}

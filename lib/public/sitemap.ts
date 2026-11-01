@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const STATIC = ['/', '/quiz/', '/quiz/archive/', '/about/', '/privacy/', '/editorial-policy/', '/accessibility/', '/contact/'];
+const STATIC = ['/', '/quiz/archive/', '/about/', '/privacy/', '/editorial-policy/', '/accessibility/', '/contact/'];
 
 // Pure: turns what the read layer returned into sitemap entries. It trusts its input, since which items are public is
 // decided once, in lib/public/reads.ts. /search/ is deliberately absent (it is noindex).

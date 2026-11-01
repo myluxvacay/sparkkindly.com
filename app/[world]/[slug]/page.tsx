@@ -1,8 +1,8 @@
 import { cache } from 'react';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import ArticleBody from '@/components/item/ArticleBody';
+import Breadcrumb from '@/components/Breadcrumb';
 import ItemCard from '@/components/item/ItemCard';
 import PlayPanel from '@/components/item/PlayPanel';
 import Picture from '@/components/Picture';
@@ -60,13 +60,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
   return (
     <>
       <div className="container article-heading">
-        <nav aria-label="Breadcrumb" className="breadcrumbs">
-          <Link href="/">Home</Link>
-          <span aria-hidden="true">/</span>
-          <Link href={`/${item.world}/`}>{w?.name ?? item.world}</Link>
-          <span aria-hidden="true">/</span>
-          <span>{item.title}</span>
-        </nav>
+        <Breadcrumb trail={[{ name: 'Home', href: '/' }, { name: w?.name ?? item.world, href: `/${item.world}/` }, { name: item.title }]} />
         <p className="eyebrow">
           {(w?.name ?? item.world).toUpperCase()} · {article.fiction ? 'FICTION · ' : ''}
           {KIND_EYEBROW[item.kind] ?? 'ITEM'}

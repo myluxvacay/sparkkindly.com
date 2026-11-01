@@ -47,5 +47,5 @@ export async function POST(request: Request, { params }: { params: Promise<{ wor
   });
   if (result.status === 'not_found') return new Response('Not found', { status: 404 });
   const back = `/report/${encodeURIComponent(world)}/${encodeURIComponent(slug)}/`;
-  return see(303, `${back}?${result.status === 'stored' ? 'sent=1' : 'error=1'}`);
+  return see(303, `${back}?${result.status === 'stored' ? 'sent=1' : 'error=1'}#result`);
 }

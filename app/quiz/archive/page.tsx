@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ItemCard from '@/components/item/ItemCard';
+import Pager from '@/components/Pager';
 import { getDb } from '@/lib/db';
 import { PAGE_SIZE, parsePage } from '@/lib/public/paging';
 import { listQuizzes } from '@/lib/public/reads';
@@ -23,13 +24,15 @@ export default async function Archive({ searchParams }: { searchParams: Promise<
       <h1>The quiz archive</h1>
       <p className="intro-text">Explore our collection, newest first. There’s no clock to beat.</p>
       <div className="content-grid two-col">
-        {items.map((q) => <ItemCard item={q} world={worlds.get(q.world)} key={q.id} />)}
+        {items.map((q) => <ItemCard item={q} world={worlds.get(q.world)} key={q.id} headingLevel={2} />)}
       </div>
       {!items.length && <p>Our first questions are still being checked. Please visit again soon. <Link href="/quiz/">Back to today’s quiz</Link></p>}
-      <nav aria-label="Pages" className="pager">
-        {page > 1 && <Link rel="prev" href={page === 2 ? here : `${here}?page=${page - 1}`}>← Newer</Link>}
-        {rows.length > PAGE_SIZE && <Link rel="next" href={`${here}?page=${page + 1}`}>Older →</Link>}
-      </nav>
+      <Pager
+        prev={page > 1 ? (page === 2 ? here : `${here}?page=${page - 1}`) : undefined}
+        next={rows.length > PAGE_SIZE ? `${here}?page=${page + 1}` : undefined}
+        prevLabel="← Newer"
+        nextLabel="Older →"
+      />
     </div>
   );
 }

@@ -18,9 +18,10 @@ async function rowsWith(message: string): Promise<number> {
 test('the form submits, stores a row and confirms with a status message', async ({ page }) => {
   await page.setExtraHTTPHeaders({ 'x-forwarded-for': '10.0.0.1' });
   await page.goto(PAGE);
+  await page.getByRole('radio', { name: /wrong/ }).check();
   await page.getByLabel(/Anything else/).fill('e2e: the third paragraph is wrong');
   await page.getByRole('button', { name: 'Send report' }).click();
-  await expect(page).toHaveURL(/\?sent=1$/);
+  await expect(page).toHaveURL(/\?sent=1#result$/);
   await expect(page.getByRole('status')).toContainText('Thank you');
   expect(await rowsWith('e2e: the third paragraph is wrong')).toBe(1);
 });
@@ -30,7 +31,7 @@ test('the form is completable by keyboard and passes axe', async ({ page }) => {
   await page.goto(PAGE);
   const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
   expect(result.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical'), JSON.stringify(result.violations)).toEqual([]);
-  await page.getByRole('radio', { name: /unsafe/ }).focus();
+  await page.getByRole('radio', { name: /unsafe/ }).check();
   await page.keyboard.press('Tab');
   await expect(page.getByLabel(/Anything else/)).toBeFocused();
   await page.keyboard.type('e2e: keyboard only');
@@ -45,6 +46,7 @@ test('works without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false, extraHTTPHeaders: { 'x-forwarded-for': '10.0.0.3' } });
   const page = await context.newPage();
   await page.goto(`http://localhost:4173${PAGE}`);
+  await page.getByRole('radio', { name: /wrong/ }).check();
   await page.getByLabel(/Anything else/).fill('e2e: no javascript');
   await page.getByRole('button', { name: 'Send report' }).click();
   await expect(page.getByRole('status')).toBeVisible();
@@ -61,7 +63,7 @@ test('a POST with a foreign Origin is refused and stores nothing', async ({ requ
 test('a filled honeypot redirects as if stored but writes nothing', async ({ request }) => {
   const res = await request.post(POST, { headers: headers('10.0.0.5'), data: form('e2e: honeypot', { website: 'x' }), maxRedirects: 0 });
   expect(res.status()).toBe(303);
-  expect(res.headers().location).toBe(`${PAGE}?sent=1`);
+  expect(res.headers().location).toBe(`${PAGE}?sent=1#result`);
   expect(await rowsWith('e2e: honeypot')).toBe(0);
 });
 

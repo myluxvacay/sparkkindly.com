@@ -78,7 +78,7 @@ function Fields({ play, clues }: { play: PlayView; clues: number }) {
 export default function PlayForm({ action, play, clues }: Props) {
   const more = play.mechanic === 'clue_reveal' && clues < play.clues.length;
   return (
-    <form className="quiz-form" method="get" action={action}>
+    <form className="quiz-form" method="get" action={`${action}#result`}>
       <fieldset>
         <legend>{play.prompt}</legend>
         <Fields play={play} clues={clues} />

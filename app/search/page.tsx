@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ItemCard from '@/components/item/ItemCard';
+import Pager from '@/components/Pager';
 import { getDb } from '@/lib/db';
 import { PAGE_SIZE, parsePage } from '@/lib/public/paging';
 import { searchPublic } from '@/lib/public/reads';
@@ -38,12 +39,14 @@ export default async function SearchPage({ searchParams }: Props) {
       {!q && <p>Type a word or two to look through titles and summaries.</p>}
       {q && !items.length && <p>{page > 1 ? <>Nothing on this page. <Link href={href(1)}>Back to the first page</Link>.</> : 'Nothing matched. Try a simpler word.'}</p>}
       <div className="content-grid two-col">
-        {items.map((i) => <ItemCard item={i} world={worlds.get(i.world)} key={i.id} />)}
+        {items.map((i) => <ItemCard item={i} world={worlds.get(i.world)} key={i.id} headingLevel={2} />)}
       </div>
-      <nav aria-label="Pages" className="pager">
-        {page > 1 && <Link rel="prev" href={href(page - 1)}>← Previous</Link>}
-        {rows.length > PAGE_SIZE && <Link rel="next" href={href(page + 1)}>More →</Link>}
-      </nav>
+      <Pager
+        prev={page > 1 ? href(page - 1) : undefined}
+        next={rows.length > PAGE_SIZE ? href(page + 1) : undefined}
+        prevLabel="← Previous"
+        nextLabel="More →"
+      />
     </div>
   );
 }
