@@ -240,38 +240,18 @@ export async function transition(
   });
 }
 
-const PUBLIC_SELECT = `
+export const PUBLIC_SELECT = `
   SELECT i.id, w.slug AS world, i.kind, i.slug, i.title, i.summary, i.body, i.audience, i.evergreen, i.published_at,
          i.sources, i.image,
          COALESCE(ARRAY(SELECT t.slug FROM item_topics it JOIN topics t ON t.id = it.topic_id
                         WHERE it.item_id = i.id ORDER BY t.slug), '{}') AS topics
   FROM items i JOIN worlds w ON w.id = i.world_id`;
 
-const toPublic = (r: Row): PublicItem => ({
+export const toPublic = (r: Row): PublicItem => ({
   id: r.id as string, world: r.world as string, kind: r.kind as Kind, slug: r.slug as string, title: r.title as string,
   summary: r.summary as string, body: r.body, audience: r.audience as Audience, evergreen: r.evergreen as boolean,
   publishedAt: r.published_at as Date, sources: r.sources as unknown[], image: r.image, topics: r.topics as string[],
 });
-
-export async function getPublishedItem(db: Queryable, worldSlug: string, slug: string, locale = 'en'): Promise<PublicItem | null> {
-  const r = await db.query<Row>(
-    `${PUBLIC_SELECT} WHERE i.status = 'published' AND w.slug = $1 AND i.slug = $2 AND i.locale = $3`,
-    [worldSlug, slug, locale],
-  );
-  return r.rows[0] ? toPublic(r.rows[0]) : null;
-}
-
-export async function listPublished(
-  db: Queryable,
-  opts: { world?: string; limit: number; offset: number },
-): Promise<PublicItem[]> {
-  const r = await db.query<Row>(
-    `${PUBLIC_SELECT} WHERE i.status = 'published' AND ($1::text IS NULL OR w.slug = $1)
-     ORDER BY i.published_at DESC, i.id LIMIT $2 OFFSET $3`,
-    [opts.world ?? null, opts.limit, opts.offset],
-  );
-  return r.rows.map(toPublic);
-}
 
 // The only reader of answers. Used for server-side answer checking; never exposed by a public read.
 export async function getAnswer(db: Queryable, itemId: string): Promise<{ value: unknown; explanation: string } | null> {
