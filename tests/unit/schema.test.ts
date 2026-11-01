@@ -155,6 +155,34 @@ describe('the Kids world always stays in review mode', () => {
   });
 });
 
+describe('problem reports', () => {
+  const report = (id: string, reason = 'wrong', message = 'It is wrong.') =>
+    db.query('INSERT INTO problem_reports (item_id, reason, message) VALUES ($1, $2, $3)', [id, reason, message]);
+
+  it('stores a valid report as open', async () => {
+    const id = await item();
+    await report(id);
+    const r = await db.query<{ status: string }>('SELECT status FROM problem_reports WHERE item_id = $1', [id]);
+    expect(r.rows).toEqual([{ status: 'open' }]);
+  });
+
+  it('rejects an unknown reason and a message over 1000 characters', async () => {
+    const id = await item();
+    await expect(report(id, 'spam')).rejects.toThrow();
+    await expect(report(id, 'wrong', 'x'.repeat(1001))).rejects.toThrow();
+    await expect(report(id, 'wrong', 'x'.repeat(1000))).resolves.toBeTruthy();
+  });
+
+  it('is removed with its item and records nothing about the reporter', async () => {
+    const id = await item();
+    await report(id);
+    await db.query('DELETE FROM items WHERE id = $1', [id]);
+    expect((await db.query('SELECT 1 FROM problem_reports WHERE item_id = $1', [id])).rows).toHaveLength(0);
+    const cols = await db.query<{ column_name: string }>("SELECT column_name FROM information_schema.columns WHERE table_name = 'problem_reports'");
+    expect(cols.rows.map((c) => c.column_name).sort()).toEqual(['created_at', 'id', 'item_id', 'message', 'reason', 'status']);
+  });
+});
+
 describe('relations', () => {
   it('deleting an item removes its answers, topics and revisions', async () => {
     const id = await item();
