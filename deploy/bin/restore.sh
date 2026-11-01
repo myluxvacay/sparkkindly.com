@@ -36,9 +36,11 @@ DUMP="$WORK/restore-$$.dump"
 trap 'rm -f "$DUMP"' EXIT
 age -d -i "$AGE_KEY" -o "$DUMP" "$FILE"
 
-# The owner role is named after the database's service (sparkkindly or sparkkindly_staging).
-OWNER=sparkkindly
-[[ "$DB" == *staging* ]] && OWNER=sparkkindly_staging
+# The restored objects are owned by a low-privilege role, never a superuser. RESTORE_OWNER names it; by default it follows
+# the target (staging databases get the staging role). A scratch database must pass the role of the data it holds.
+OWNER=${RESTORE_OWNER:-sparkkindly}
+[ -n "${RESTORE_OWNER:-}" ] || [[ "$DB" != *staging* ]] || OWNER=sparkkindly_staging
+[[ "$OWNER" =~ ^[a-z0-9_]+$ ]] || { echo "Bad owner role" >&2; exit 2; }
 runuser -u postgres -- dropdb --if-exists "$DB"
 runuser -u postgres -- createdb -O "$OWNER" "$DB"
 runuser -u postgres -- pg_restore -d "$DB" --no-owner --role="$OWNER" "$DUMP"

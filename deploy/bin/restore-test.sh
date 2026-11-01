@@ -22,12 +22,20 @@ echo "Newest backup: $newest"
 cleanup() { runuser -u postgres -- dropdb --if-exists "$SCRATCH" > /dev/null 2>&1 || true; }
 trap cleanup EXIT
 
-"$HERE/restore.sh" "b2:$B2_BUCKET/db/$newest" "$SCRATCH"
+# The role that owns the live data owns the scratch copy too (role names match database names).
+RESTORE_OWNER=$SOURCE_DB "$HERE/restore.sh" "b2:$B2_BUCKET/db/$newest" "$SCRATCH"
 tables() { runuser -u postgres -- psql -d "$1" -tAc "select count(*) from pg_tables where schemaname='public'"; }
 restored=$(tables "$SCRATCH")
 live=$(tables "$SOURCE_DB")
 [ "$restored" = "$live" ] || { echo "Table count differs: restored $restored, live $live" >&2; exit 1; }
-rows=$(runuser -u postgres -- psql -d "$SCRATCH" -tAc "select count(*) from items")
+# Restored content is data, not trusted code: query it as the low-privilege owner with a fixed search_path and a
+# schema-qualified table, never as the superuser.
+rows=$(runuser -u postgres -- psql -d "$SCRATCH" -v ON_ERROR_STOP=1 -tA <<SQL | tail -n 1
+SET ROLE $SOURCE_DB;
+SET search_path = pg_catalog;
+SELECT count(*) FROM public.items;
+SQL
+)
 [ "$rows" -ge 1 ] || { echo "Restored items table is empty" >&2; exit 1; }
 echo "Table count matches: $restored; items: $rows"
 

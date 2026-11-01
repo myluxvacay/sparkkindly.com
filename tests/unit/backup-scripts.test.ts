@@ -51,6 +51,8 @@ beforeEach(() => {
   stub('age', 'out=""; while [ $# -gt 0 ]; do [ "$1" = -o ] && out=$2; shift; done; cat > "$out"');
   stub('rclone', 'echo "rclone $*" >> "$LOG"');
   stub('curl', 'echo "curl $*" >> "$LOG"');
+  stub('createdb', 'echo "createdb $*" >> "$LOG"');
+  stub('pg_restore', 'echo "pg_restore $*" >> "$LOG"');
   stub('dropdb', 'echo "dropdb $*" >> "$LOG"');
   stub('df', 'printf "Use%%\n %s%%\n" "${FAKE_DISK:-7}"');
 });
@@ -97,6 +99,16 @@ describe.skipIf(!hasBash)('restore.sh', () => {
       expect(r.out).toMatch(/Refusing to overwrite/);
     }
     expect(calls()).toBe('');
+  });
+
+  it('gives a scratch database a low-privilege owner, never the production role by default', () => {
+    fs.writeFileSync(path.join(dir, 'x.dump.age'), 'x');
+    stub('age', 'out=""; while [ $# -gt 0 ]; do [ "$1" = -o ] && out=$2; shift; done; : > "$out"');
+    const posixFile = posix(path.join(dir, 'x.dump.age'));
+    expect(run('restore.sh', [posixFile, 'scratchdb'], { RESTORE_OWNER: 'sparkkindly_staging' }).code).toBe(0);
+    expect(calls()).toMatch(/createdb -O sparkkindly_staging scratchdb/);
+    expect(calls()).toMatch(/--role=sparkkindly_staging/);
+    expect(run('restore.sh', [posixFile, 'scratchdb', ''], { RESTORE_OWNER: 'x; drop role y' }).code).toBe(2);
   });
 
   it('rejects an unsafe database name', () => {
