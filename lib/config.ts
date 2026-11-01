@@ -2,7 +2,8 @@ export const site = {
   name: 'SparkKindly', url: 'https://sparkkindly.com',
   // Explicit release switch. Production validation refuses incomplete approvals/assets.
   published: process.env.SITE_RELEASE !== 'false',
-  contactEmail: null as string | null,
+  // Shown on the Contact page only when the owner sets CONTACT_EMAIL to a mailbox they have confirmed they read.
+  contactEmail: (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(process.env.CONTACT_EMAIL ?? '') ? process.env.CONTACT_EMAIL : null) as string | null,
   socials: { youtube: null, instagram: null, facebook: null, tiktok: null } as Record<string, string | null>,
 };
 export const brands = {

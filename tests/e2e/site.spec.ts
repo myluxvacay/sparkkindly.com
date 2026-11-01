@@ -39,7 +39,7 @@ test('metadata, sitemap exclusions, local assets and screenshot evidence',async(
 });
 test('every generated editorial and support destination responds directly',async({request})=>{
  const snapshot=JSON.parse(await fs.readFile('content/mongodb.snapshot.json','utf8'));
- const routes=['/','/play/','/discover/','/together/','/grow/','/kids/','/quiz/','/quiz/archive/','/about/','/editorial-policy/','/privacy/','/accessibility/','/contact/',...snapshot.articles.map((a:{brand:string;slug:string})=>`/${a.brand}/${a.slug}/`),...snapshot.quizzes.map((q:{id:string})=>`/quiz/${q.id}/`)];
+ const routes=['/','/play/','/discover/','/together/','/grow/','/kids/','/quiz/','/quiz/archive/','/about/','/editorial-policy/','/privacy/','/terms/','/accessibility/','/contact/',...snapshot.articles.map((a:{brand:string;slug:string})=>`/${a.brand}/${a.slug}/`),...snapshot.quizzes.map((q:{id:string})=>`/quiz/${q.id}/`)];
  for(const route of routes){expect((await request.get(route)).status(),route).toBe(200);}
  const missing=await request.get('/unknown-world/no-such-story/');expect(missing.status()).toBe(404);expect(await missing.text()).toContain('This spark wandered off.');
 });

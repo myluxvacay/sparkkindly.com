@@ -1,5 +1,62 @@
 import Link from 'next/link';
-import {metadata as seo} from '@/lib/seo';
-export const metadata=seo("Accessibility","A place with room for you.",'/accessibility/');
-const sections=[["Our target", "SparkKindly is being built toward WCAG 2.2 AA. This is a target, not a conformance claim. Automated checks cannot establish conformance, and assistive technology testing by a human remains part of release review."], ["Using the site", "A skip link leads to the main content. Navigation and quizzes support keyboard use. Quiz results include text explanations, and selecting an option does not submit it. Mobile navigation supports Escape and returns focus to its disclosure button."], ["Reading and motion", "Text can be enlarged with browser zoom. Layouts are designed to reflow on narrow screens. Reduced-motion preferences disable decorative transitions. No timer, autoplay audio or flashing content is used."], ["Media and alternatives", "The Together pilot is a written storyboard with a descriptive transcript. A finished video will require native controls, reviewed captions, a transcript, and audio description or an equivalent descriptive alternative before it can be published."], ["Reporting a barrier", "A verified adult-facing contact channel has not yet been supplied. Once confirmed, it will be listed on the contact page. See the repository’s verification report for the checks actually performed and remaining manual tests."]];
-export default function Page(){return <div className="container trust-page"><nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>Accessibility</span></nav><p className="eyebrow">ACCESSIBILITY</p><h1>A place with room for you.</h1><div className="prose">{sections.map(([heading,text])=><section key={heading}><h2>{heading}</h2><p>{text}</p></section>)}</div></div>}
+import TrustPage from '@/components/TrustPage';
+import { site } from '@/lib/config';
+import { metadata as seo } from '@/lib/seo';
+
+export const dynamic = 'force-dynamic'; // CONTACT_EMAIL is read at run time, not baked in at build
+export const metadata =seo('Accessibility', 'A place with room for you.', '/accessibility/');
+
+export default function Page() {
+  return (
+    <TrustPage
+      crumb="Accessibility"
+      eyebrow="ACCESSIBILITY"
+      title="A place with room for you."
+      updated="1 November 2026"
+      sections={[
+        {
+          heading: 'Our target',
+          paragraphs: [
+            'SparkKindly is built to meet WCAG 2.2 level AA. That is a target, not a claim that every page conforms. Automatic tests and our own keyboard, zoom and narrow-screen checks cover the pages listed below; a check with a real screen reader and a review by an outside specialist have not yet been done.',
+          ],
+        },
+        {
+          heading: 'What we have built in',
+          paragraphs: [
+            'A skip link leads to the main content. Everything works with a keyboard, and the place you are is always visible. Quizzes and games are plain forms that work without a mouse and without JavaScript: you choose an answer, press the button, and the page tells you the result and moves your focus to it. Pages reflow to a 320 pixel wide screen without sideways scrolling, and text can be enlarged with your browser’s zoom.',
+            'Nothing is timed, nothing plays sound or video automatically, and nothing flashes. Decorative movement is switched off if your device asks for reduced motion.',
+          ],
+        },
+        {
+          heading: 'Images and media',
+          paragraphs: [
+            'Photographs have descriptions. The generated pictures that sit with articles are decoration and are hidden from screen readers. If we publish video, it will have captions and a transcript before it goes live; there is no video on the site today.',
+          ],
+        },
+        {
+          heading: 'Known limits',
+          paragraphs: [
+            'Some text, such as small labels in cards, is smaller than we would like and relies on browser zoom. Source links go to other websites whose accessibility we do not control.',
+          ],
+        },
+        {
+          heading: 'Telling us about a barrier',
+          paragraphs: [
+            <>
+              Use the “Report a problem” link on the page where you met the barrier and choose “Something is broken”.{' '}
+              {site.contactEmail ? (
+                <>
+                  You can also email <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
+                </>
+              ) : (
+                <>
+                  A general email address is not yet published; see <Link href="/contact/">Contact</Link>.
+                </>
+              )}
+            </>,
+          ],
+        },
+      ]}
+    />
+  );
+}

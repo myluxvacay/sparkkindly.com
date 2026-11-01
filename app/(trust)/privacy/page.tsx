@@ -1,5 +1,66 @@
 import Link from 'next/link';
-import {metadata as seo} from '@/lib/seo';
-export const metadata=seo("Privacy and the grown-up guide","Curiosity without a profile.",'/privacy/');
-const sections=[["What this MVP collects", "The application has no accounts, forms, uploads, comments, chats, ad pixels, optional analytics, tracking cookies, localStorage identifiers, fingerprinting or geolocation. It does not transmit or persist quiz choices. Those choices exist only in browser memory and disappear on reload."], ["Kids and shared pages", "Kids activities are intended for ages 6–9 alongside an adult. The same no-tracking approach applies throughout the site, including shared navigation and components. Kids images and fonts are served locally. No social widgets, remote video players or requests for personal information are embedded."], ["How editorial data is stored", "Articles and quizzes may be edited in the owner’s MongoDB database. A build tool validates and snapshots that editorial content before exporting the website. Database credentials stay in the build environment. Visitors do not connect to MongoDB and their quiz responses are not sent there."], ["Hosting and network processing", "The site is served from an owner-managed Hostinger VPS using Caddy. The host and server necessarily process network connection information, including IP addresses. This application does not add analytics or visitor response logs. Host-level retention, deletion controls and subprocessors have not been independently verified; we do not claim those details are finalized."], ["External sources", "Source links take you to other websites, which have their own privacy practices. Simply reading our pages does not load those sites. This notice describes the application’s current implementation; it does not claim that no-accounts alone establishes compliance with child-privacy law."], ["Scope of this notice", "The site owner has authorized publication while an independent jurisdiction-specific child-privacy review, detailed hosting-log review and verified adult contact address remain outstanding. No compliance certification is claimed. Optional analytics remains disabled."]];
-export default function Page(){return <div className="container trust-page"><nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>Privacy and the grown-up guide</span></nav><p className="eyebrow">PRIVACY AND THE GROWN-UP GUIDE</p><h1>Curiosity without a profile.</h1><div className="prose">{sections.map(([heading,text])=><section key={heading}><h2>{heading}</h2><p>{text}</p></section>)}</div></div>}
+import TrustPage from '@/components/TrustPage';
+import { metadata as seo } from '@/lib/seo';
+
+export const metadata = seo('Privacy and the grown-up guide', 'Curiosity without a profile.', '/privacy/');
+
+export default function Page() {
+  return (
+    <TrustPage
+      crumb="Privacy and the grown-up guide"
+      eyebrow="PRIVACY AND THE GROWN-UP GUIDE"
+      title="Curiosity without a profile."
+      updated="1 November 2026"
+      sections={[
+        {
+          heading: 'What we collect today',
+          paragraphs: [
+            'SparkKindly has no accounts, sign-in, comments, uploads, analytics, advertising, tracking cookies, local-storage identifiers, fingerprinting or location features. Your browser makes no requests to other companies’ servers while you read or play: fonts, images and scripts all come from SparkKindly itself.',
+            'The only thing a visitor can send us is a “Report a problem” form. It stores the kind of problem, the message you type (up to 1000 characters, optional), the page it is about and the time. It does not store your name, email address or any account, and we ask you not to type personal details into it.',
+          ],
+        },
+        {
+          heading: 'Your answers',
+          paragraphs: [
+            'When you check an answer to a quiz or puzzle, your answer is sent to our server inside the page address so the server can check it and show the explanation. Our application does not save it, and nothing links it to you. Like any web request, the address can appear in the web server’s ordinary technical logs; see the next section.',
+          ],
+        },
+        {
+          heading: 'Hosting and technical logs',
+          paragraphs: [
+            'The site runs on a server managed by the site owner at Hostinger, behind the Caddy web server. The server and its software necessarily handle connection details such as your IP address, and may write them to technical logs. To stop abuse, the problem form limits how many reports one connection can send; that count is held in memory only and is cleared when the site restarts.',
+            'We have not yet independently reviewed how long the host and server keep logs, or which services the host uses to run its systems. We do not claim those details are final.',
+          ],
+        },
+        {
+          heading: 'Kids and shared devices',
+          paragraphs: [
+            'Kids activities are meant for ages 6 to 9 with an adult beside them. The Kids pages follow the same rules as the rest of the site: no accounts, no stored answers, no tracking and no outside requests. Please do not type a child’s name, birthday, photo, location or other identifying detail into the problem form or anywhere else.',
+          ],
+        },
+        {
+          heading: 'Accounts are not available yet',
+          paragraphs: [
+            'We plan to offer optional accounts later. The plan is that people under 13 cannot have an account, that 13 to 15 year olds need a parent or guardian’s confirmation, and that a parent can withdraw it. None of this is built, and this notice will be rewritten, and independently reviewed, before any account is offered.',
+          ],
+        },
+        {
+          heading: 'Other websites',
+          paragraphs: [
+            'Source links lead to other websites with their own privacy practices. Reading our pages does not load them; only clicking a link does.',
+          ],
+        },
+        {
+          heading: 'What this notice is not',
+          paragraphs: [
+            <>
+              This describes how the site works now. It is not a compliance certification. A review of child privacy for the countries we serve by a
+              qualified person has not yet happened, and the owner has asked for it. Questions or requests about information we may hold:{' '}
+              <Link href="/contact/">Contact</Link>.
+            </>,
+          ],
+        },
+      ]}
+    />
+  );
+}
