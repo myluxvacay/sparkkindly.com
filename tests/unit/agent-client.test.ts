@@ -84,6 +84,24 @@ describe('createClient', () => {
     for (let i = 0; i < 3; i++) expect((fetch.mock.calls[i] as unknown as Call)[1].signal).toBeInstanceOf(AbortSignal);
   });
 
+  it('never follows redirects, so the key cannot be forwarded to another origin', async () => {
+    const fetch = stub(() => json(200, {}));
+    const c = createClient({ baseUrl: 'https://s', agentKey: KEY, fetch });
+    await c.brief();
+    await c.submit({ kind: 'quiz' });
+    await c.status('0a1b2c3d-0000-4000-8000-000000000000');
+    for (let i = 0; i < 3; i++) expect((fetch.mock.calls[i][1] as RequestInit).redirect).toBe('manual');
+  });
+
+  it('reports a redirect as a failure instead of following it', async () => {
+    const fetch = stub(() => new Response(null, { status: 308, headers: { location: 'https://elsewhere.example/api/agent/brief/' } }));
+    const r = await createClient({ baseUrl: 'https://s', agentKey: KEY, fetch }).brief();
+    expect(r).toMatchObject({ ok: false, status: 308 });
+    expect(r.error).toMatch(/redirect/i);
+    expect(JSON.stringify(r)).not.toContain('elsewhere.example');
+    expect(fetch).toHaveBeenCalledTimes(1);
+  });
+
   it('sends the item as JSON with the right method and content type', async () => {
     const fetch = stub(() => json(201, {}));
     await createClient({ baseUrl: 'https://s', agentKey: KEY, fetch }).submit({ kind: 'quiz', slug: 'abc' });

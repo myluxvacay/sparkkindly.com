@@ -37,7 +37,12 @@ export function createClient(opts: Options): AgentClient {
         headers,
         body: body === undefined ? undefined : JSON.stringify(body),
         signal: AbortSignal.timeout(TIMEOUT_MS),
+        // Never follow a redirect: it would carry the agent key (and staging password) to wherever it points.
+        redirect: 'manual',
       });
+      if (res.status >= 300 && res.status < 400) {
+        return { ok: false, status: res.status, data: null, error: 'The site answered with a redirect, which is not followed. Check the configured URL (it needs https and no stray path).' };
+      }
       const text = await res.text();
       let data: unknown;
       try {
