@@ -126,6 +126,19 @@ URL passed, and `localtest.me` (a public name that resolves to 127.0.0.1) was re
 published the one due item and left the Kids item, the future item and the draft alone. The test items were removed
 afterwards, leaving the 24 starter items and one agent, `staging-play`.
 
+## Claude Code connector (Project 1A, Task 11)
+
+`.mcp.json` registers two project MCP servers, `sparkkindly-staging` and `sparkkindly-prod`, started with
+`node --import tsx agents/mcp/server.ts --env <staging|prod>`. They give Claude Code four tools
+(`sparkkindly_item_format`, `sparkkindly_brief`, `sparkkindly_submit_item`, `sparkkindly_item_status`) over the agent API.
+Settings and keys are read from the owner's secrets file (default `~/sparkkindly-secrets.txt`), never from the repository.
+Setup and use are in `agents/README.md`. Check it with `npx tsx scripts/mcp-smoke.ts --env staging [--live]`.
+
+Verified 1 November 2026 (UTC): the smoke test listed the four tools and, live against staging, read the brief, submitted
+a quiz (201, scheduled), resubmitted it (200, replayed, same id), got 422 `invalid_item` for a bad item, and read the status.
+A headless `claude -p` session loaded `.mcp.json`, called `sparkkindly_brief` on staging and reported world `play` with 57
+topics. The test item was removed afterwards (staging holds the 24 starter items).
+
 ## Reboot (31 October 2026)
 
 Rebooted with the owner's permission to load the updated libraries. Back in about 40 seconds. Afterwards: all ten services active (Caddy, MongoDB, SSH socket, ufw, fail2ban, PostgreSQL, both MyLuxVacation apps, SparkKindly production and staging), 2 GB swap active, 6 firewall rules, both SparkKindly releases healthy (200), no failed units, no service listed as running old libraries, kernel current. myluxvacation.com 200, beta 401, sparkkindly.com 200.

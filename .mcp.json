@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "sparkkindly-staging": {
+      "command": "node",
+      "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "staging"]
+    },
+    "sparkkindly-prod": {
+      "command": "node",
+      "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "prod"]
+    }
+  }
+}
