@@ -10,7 +10,7 @@ import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { publishDue } from '@/lib/jobs/publish-due';
 import { runJob } from '@/lib/jobs/run-job';
-import { claimDigest, sendAll } from '@/lib/admin/digest';
+import { claimDigest, deliverDigest } from '@/lib/admin/digest';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
 
@@ -31,8 +31,8 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: { 
     return null;
   });
   if (claim?.status === 'claimed') {
-    await runJob(db, 'digest', () => sendAll(claim.messages, send), { delayMs: opts.delayMs });
-    log.push(`digest: attempted for ${claim.messages.length} address(es)`);
+    await runJob(db, 'digest', () => deliverDigest(db, now, claim.day, claim.to, send), { delayMs: opts.delayMs });
+    log.push(`digest: attempted for ${claim.to.length} address(es)`);
   } else if (claim) {
     log.push(`digest: ${claim.status}`);
   }

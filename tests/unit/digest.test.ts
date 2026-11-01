@@ -119,4 +119,32 @@ describe('worker tick', () => {
     expect(failing.mock.calls.length).toBe(calls);
     expect((await db.query("SELECT count(*)::int AS n FROM failed_jobs WHERE job = 'digest'")).rows[0]).toEqual({ n: 1 });
   });
+
+  it('when one recipient fails, the retries never send the others a second copy', async () => {
+    const to: string[] = [];
+    const send = vi.fn(async (m: EmailMessage) => {
+      if (m.to === 'second@example.test') throw new Error('MailerSend rejected the message with status 500');
+      to.push(m.to);
+    });
+    const before = Number((await db.query<{ n: string }>("SELECT count(*) n FROM failed_jobs WHERE job = 'digest'")).rows[0].n);
+    await tick(db, new Date('2026-11-21T08:00:00Z'), env, send, { delayMs: 0 });
+    expect(to).toEqual(['owner@example.test']);
+    expect(send.mock.calls.filter(([m]) => m.to === 'second@example.test').length).toBe(3);
+    expect(Number((await db.query<{ n: string }>("SELECT count(*) n FROM failed_jobs WHERE job = 'digest'")).rows[0].n)).toBe(before + 1);
+  });
+
+  it('a digest that cannot be built after its day is claimed is recorded as failed, not lost silently', async () => {
+    const send = vi.fn(async () => {});
+    const before = Number((await db.query<{ n: string }>("SELECT count(*) n FROM failed_jobs WHERE job = 'digest'")).rows[0].n);
+    await db.exec('ALTER TABLE problem_reports RENAME TO problem_reports_away');
+    try {
+      await tick(db, new Date('2026-11-22T08:00:00Z'), env, send, { delayMs: 0 });
+    } finally {
+      await db.exec('ALTER TABLE problem_reports_away RENAME TO problem_reports');
+    }
+    expect(send).not.toHaveBeenCalled();
+    const rows = (await db.query<{ error: string }>("SELECT error FROM failed_jobs WHERE job = 'digest' ORDER BY id")).rows;
+    expect(rows.length).toBe(before + 1);
+    expect(rows.at(-1)!.error).toMatch(/problem_reports/);
+  });
 });

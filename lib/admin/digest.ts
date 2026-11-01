@@ -99,26 +99,47 @@ export function renderDigest(d: Digest): { subject: string; text: string } {
 
 type Claim =
   | { status: 'not_due' | 'already_sent' | 'no_recipients' }
-  | { status: 'claimed'; messages: EmailMessage[] };
+  | { status: 'claimed'; day: string; to: string[] };
 
-// Claims today's digest (one row in job_runs) once the digest hour has come. A claimed digest is never claimed again
-// the same day, so a failed send is recorded once in failed_jobs instead of being retried every minute.
+// Claims today's digest (one row in job_runs) once the digest hour has come. A claimed day is never claimed again, so
+// a digest that keeps failing is recorded in failed_jobs (by the worker's runJob around deliverDigest) instead of being
+// retried every minute. Building and sending happen after the claim, in deliverDigest.
 export async function claimDigest(db: Queryable, now: Date, env: EnvLike): Promise<Claim> {
   const hour = Number(env.DIGEST_HOUR_UTC ?? 7);
   if (now.getUTCHours() < (Number.isInteger(hour) && hour >= 0 && hour < 24 ? hour : 7)) return { status: 'not_due' };
   const to = allowList(env);
   if (!to.length) return { status: 'no_recipients' };
-  const r = await db.query(
-    "INSERT INTO job_runs (job, run_key) VALUES ('digest', $1) ON CONFLICT DO NOTHING RETURNING run_key",
-    [now.toISOString().slice(0, 10)],
-  );
+  const day = now.toISOString().slice(0, 10);
+  const r = await db.query("INSERT INTO job_runs (job, run_key) VALUES ('digest', $1) ON CONFLICT DO NOTHING RETURNING run_key", [day]);
   if (!r.rows.length) return { status: 'already_sent' };
-  const { subject, text } = renderDigest(await buildDigest(db, now));
-  return { status: 'claimed', messages: to.map((address) => ({ to: address, subject, text })) };
+  return { status: 'claimed', day, to };
 }
 
-export async function sendAll(messages: EmailMessage[], send: (m: EmailMessage) => Promise<unknown>): Promise<void> {
-  for (const m of messages) await send(m);
+// Builds the digest and sends it to each address that has not had today's copy, recording each delivery as job_runs
+// ('digest', '<day>:<address>') once it succeeds. Safe to retry: after one recipient fails, a retry never sends the
+// others a second copy. Throws if building or any send fails, so runJob retries and then records it in failed_jobs.
+export async function deliverDigest(
+  db: Queryable,
+  now: Date,
+  day: string,
+  to: string[],
+  send: (m: EmailMessage) => Promise<unknown>,
+): Promise<void> {
+  const { subject, text } = renderDigest(await buildDigest(db, now));
+  const failures: string[] = [];
+  for (const address of to) {
+    const key = `${day}:${address}`;
+    const done = await db.query("SELECT 1 FROM job_runs WHERE job = 'digest' AND run_key = $1", [key]);
+    if (done.rows.length) continue;
+    try {
+      await send({ to: address, subject, text });
+    } catch (err) {
+      failures.push((err as Error).message);
+      continue;
+    }
+    await db.query("INSERT INTO job_runs (job, run_key) VALUES ('digest', $1) ON CONFLICT DO NOTHING", [key]);
+  }
+  if (failures.length) throw new Error(`digest not delivered to ${failures.length} address(es): ${failures[0]}`);
 }
 
 export async function sendDigestIfDue(
@@ -129,6 +150,6 @@ export async function sendDigestIfDue(
 ): Promise<'sent' | 'not_due' | 'already_sent' | 'no_recipients'> {
   const claim = await claimDigest(db, now, env);
   if (claim.status !== 'claimed') return claim.status;
-  await sendAll(claim.messages, send);
+  await deliverDigest(db, now, claim.day, claim.to, send);
   return 'sent';
 }
