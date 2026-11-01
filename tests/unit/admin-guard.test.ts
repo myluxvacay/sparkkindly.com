@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { sameOrigin, clientKey, safeReturn, createSignInLimits, createCodeLimits, readForm } from '@/lib/admin/guard';
+import { sameOrigin, clientKey, clientPrefix, safeReturn, createSignInLimits, createCodeLimits, readForm } from '@/lib/admin/guard';
 
 const req = (headers: Record<string, string>, body?: string) =>
   new Request('http://localhost:4173/admin/act/', { method: 'POST', headers, body });
@@ -12,6 +12,19 @@ describe('sameOrigin', () => {
     expect(sameOrigin(req({ host: 'sparkkindly.com', origin: 'https://evil.example' }))).toBe(false);
     expect(sameOrigin(req({ host: 'sparkkindly.com', origin: 'https://sparkkindly.com.evil.example' }))).toBe(false);
     expect(sameOrigin(req({ host: 'sparkkindly.com', origin: 'not a url' }))).toBe(false);
+  });
+});
+
+describe('clientPrefix', () => {
+  it('groups IPv4 by /24 and IPv6 by /64, and maps IPv4-in-IPv6 to IPv4', () => {
+    expect(clientPrefix('203.0.113.9')).toBe('203.0.113');
+    expect(clientPrefix('2001:db8:1:2:3:4:5:6')).toBe('2001:db8:1:2');
+    expect(clientPrefix('2001:DB8:1:2::7')).toBe('2001:db8:1:2');
+    expect(clientPrefix('2001:db8::1')).toBe('2001:db8:0:0');
+    expect(clientPrefix('::1')).toBe('0:0:0:0');
+    expect(clientPrefix('::ffff:203.0.113.9')).toBe('203.0.113');
+    expect(clientPrefix('unknown')).toBe('unknown');
+    expect(clientPrefix('not an ip')).toBe('not an ip');
   });
 });
 
@@ -52,6 +65,31 @@ describe('sign-in limits', () => {
       allow(`10.1.${c >> 8}.${c & 255}`, 'owner@example.test', c < 50);
     }
     for (let i = 0; i < 20; i++) allow('6.6.6.6', 'owner@example.test', true);
+    expect(allow('203.0.113.5', 'owner@example.test', true)).toBe(true);
+  });
+
+  it('treat one IPv4 /24 or one IPv6 /64 as one client', () => {
+    const allow = createSignInLimits(() => 0);
+    for (let i = 0; i < 10; i++) expect(allow(`198.51.100.${i}`, `u${i}@example.test`, false)).toBe(true);
+    expect(allow('198.51.100.200', 'v@example.test', false)).toBe(false);
+    for (let i = 0; i < 10; i++) expect(allow(`2001:db8:1:2::${i.toString(16)}`, `w${i}@example.test`, false)).toBe(true);
+    expect(allow('2001:db8:1:2:ffff:1:2:3', 'x@example.test', false)).toBe(false);
+    expect(allow('2001:db8:1:3::1', 'x@example.test', false)).toBe(true);
+  });
+
+  it('a client rotating addresses inside one /64 cannot block a legitimate sign-in from another network', () => {
+    const allow = createSignInLimits(() => 0);
+    for (let i = 0; i < 5000; i++) {
+      allow(`2001:db8:dead:beef:${(i >> 16).toString(16)}:${(i & 0xffff).toString(16)}::1`, i % 2 ? 'owner@example.test' : `j${i}@example.test`, i % 2 === 1);
+    }
+    expect(allow('203.0.113.5', 'owner@example.test', true)).toBe(true);
+  });
+
+  it("no site-wide ceiling: the owner's address flooded from 500 networks still works from another one", () => {
+    const allow = createSignInLimits(() => 0);
+    for (let c = 0; c < 500; c++) {
+      for (let k = 0; k < 4; k++) allow(`10.${c >> 8}.${c & 255}.1`, 'owner@example.test', true);
+    }
     expect(allow('203.0.113.5', 'owner@example.test', true)).toBe(true);
   });
 
