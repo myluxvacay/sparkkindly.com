@@ -79,6 +79,28 @@ describe('item actions', () => {
     expect(await auditCount()).toBe(before);
   });
 
+  it('never approves a draft (where failed gates wait) or an excluded-tier item, even one in review', async () => {
+    const draft = await make({ status: 'draft', qualityReport: { decision: 'quality gates failed; see the quality report' } });
+    const excludedDraft = await make({ status: 'draft', riskTier: 'excluded' });
+    const excludedInReview = await make({ status: 'in_review', riskTier: 'excluded' });
+    const before = await auditCount();
+    for (const item of [draft, excludedDraft, excludedInReview]) {
+      expect(await act('item.approve', { id: item.id })).toMatchObject({ ok: false, status: 409 });
+      expect((await getItem(db, item.id))?.status).toBe(item.status);
+    }
+    expect(await auditCount()).toBe(before);
+  });
+
+  it('unpublishes only published or scheduled items, and rejects only items in review', async () => {
+    const draft = await make({ status: 'draft' });
+    expect(await act('item.unpublish', { id: draft.id })).toMatchObject({ ok: false, status: 409 });
+    expect(await act('item.reject', { id: draft.id })).toMatchObject({ ok: false, status: 409 });
+    const live = await make({ status: 'published', publishAt: NOW, approvedBy: 'x' });
+    expect(await act('item.reject', { id: live.id })).toMatchObject({ ok: false, status: 409 });
+    expect((await getItem(db, draft.id))?.status).toBe('draft');
+    expect((await getItem(db, live.id))?.status).toBe('published');
+  });
+
   it('rejects an item in review', async () => {
     const r = await make({ status: 'in_review' });
     expect(await act('item.reject', { id: r.id, reason: 'Off topic' })).toMatchObject({ ok: true });

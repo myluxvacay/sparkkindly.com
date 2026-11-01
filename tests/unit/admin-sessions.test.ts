@@ -2,6 +2,7 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { newTotpSecret, totpAt } from '@/lib/admin/totp';
+import { sealSecret, TEST_SECRET_KEY } from '@/lib/admin/secret-box';
 import {
   allowList,
   isAllowed,
@@ -18,7 +19,7 @@ import {
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
 const OWNER = 'owner@example.test';
-const env = { ADMIN_EMAILS: ' Owner@Example.test , second@example.test,,' };
+const env = { ADMIN_EMAILS: ' Owner@Example.test , second@example.test,,', ADMIN_SECRET_KEY: TEST_SECRET_KEY };
 const T0 = new Date('2026-11-01T08:00:00Z');
 const plus = (d: Date, ms: number) => new Date(d.getTime() + ms);
 const MIN = 60_000;
@@ -28,7 +29,7 @@ let secret: string;
 beforeAll(async () => {
   db = await newTestDb();
   secret = newTotpSecret();
-  await db.query('INSERT INTO admin_users (email, totp_secret) VALUES ($1, $2)', [OWNER, secret]);
+  await db.query('INSERT INTO admin_users (email, totp_secret) VALUES ($1, $2)', [OWNER, sealSecret(secret, OWNER, env)]);
 });
 afterAll(async () => {
   await db.close();
@@ -38,8 +39,9 @@ afterAll(async () => {
 async function signIn(at: Date): Promise<string> {
   const link = (await requestLink(db, OWNER, env, at))!;
   const session = (await consumeLink(db, link, env, at))!;
-  expect(await submitCode(db, session, totpAt(secret, stepOf(at)), env, at)).toBe('ok');
-  return session;
+  const r = await submitCode(db, session, totpAt(secret, stepOf(at)), env, at);
+  expect(r.result).toBe('ok');
+  return r.session!;
 }
 
 describe('allow-list', () => {
@@ -100,16 +102,16 @@ describe('second factor', () => {
     expect(await pendingEmail(db, s, at)).toBeNull();
     const link = (await requestLink(db, OWNER, env, at))!;
     const other = (await consumeLink(db, link, env, at))!;
-    expect(await submitCode(db, other, totpAt(secret, stepOf(at)), env, at)).toBe('bad');
+    expect((await submitCode(db, other, totpAt(secret, stepOf(at)), env, at)).result).toBe('bad');
   });
 
   it('five wrong codes lock the session and delete it', async () => {
     const at = plus(T0, 20 * MIN);
     const link = (await requestLink(db, OWNER, env, at))!;
     const s = (await consumeLink(db, link, env, at))!;
-    for (let i = 0; i < 4; i++) expect(await submitCode(db, s, '000000', env, at)).toBe('bad');
-    expect(await submitCode(db, s, '000000', env, at)).toBe('locked');
-    expect(await submitCode(db, s, totpAt(secret, stepOf(at)), env, at)).toBe('none');
+    for (let i = 0; i < 4; i++) expect((await submitCode(db, s, '000000', env, at)).result).toBe('bad');
+    expect((await submitCode(db, s, '000000', env, at)).result).toBe('locked');
+    expect((await submitCode(db, s, totpAt(secret, stepOf(at)), env, at)).result).toBe('none');
   });
 
   it('a code after the pending session expired is refused', async () => {
@@ -117,13 +119,13 @@ describe('second factor', () => {
     const link = (await requestLink(db, OWNER, env, at))!;
     const s = (await consumeLink(db, link, env, at))!;
     const late = plus(at, 10 * MIN + 1000);
-    expect(await submitCode(db, s, totpAt(secret, stepOf(late)), env, late)).toBe('none');
+    expect((await submitCode(db, s, totpAt(secret, stepOf(late)), env, late)).result).toBe('none');
   });
 
   it('an allow-listed address with no enrolled authenticator cannot finish', async () => {
     const link = (await requestLink(db, 'second@example.test', env, T0))!;
     const s = (await consumeLink(db, link, env, T0))!;
-    expect(await submitCode(db, s, '123456', env, T0)).toBe('not_enrolled');
+    expect((await submitCode(db, s, '123456', env, T0)).result).toBe('not_enrolled');
     expect(await getAdmin(db, s, env, T0)).toBeNull();
   });
 
@@ -131,13 +133,45 @@ describe('second factor', () => {
     const at = plus(T0, 35 * MIN);
     const link = (await requestLink(db, OWNER, env, at))!;
     const s = (await consumeLink(db, link, env, at))!;
-    expect(await submitCode(db, s, totpAt(secret, stepOf(at)), { ADMIN_EMAILS: '' }, at)).toBe('none');
+    expect((await submitCode(db, s, totpAt(secret, stepOf(at)), { ADMIN_EMAILS: '' }, at)).result).toBe('none');
   });
 
   it('an active session cannot submit a code again', async () => {
     const at = plus(T0, 40 * MIN);
     const s = await signIn(at);
-    expect(await submitCode(db, s, totpAt(secret, stepOf(at) + 1), env, at)).toBe('none');
+    expect((await submitCode(db, s, totpAt(secret, stepOf(at) + 1), env, at)).result).toBe('none');
+  });
+});
+
+describe('second factor (1C review fixes)', () => {
+  it('issues a new session token when the code is accepted; the code-stage token is dead', async () => {
+    const at = plus(T0, 45 * MIN);
+    const link = (await requestLink(db, OWNER, env, at))!;
+    const pending = (await consumeLink(db, link, env, at))!;
+    const r = await submitCode(db, pending, totpAt(secret, stepOf(at)), env, at);
+    expect(r.result).toBe('ok');
+    expect(r.session).toMatch(/^[0-9a-f]{64}$/);
+    expect(r.session).not.toBe(pending);
+    expect(await getAdmin(db, pending, env, at)).toBeNull();
+    expect(await getAdmin(db, r.session!, env, at)).toEqual({ email: OWNER });
+  });
+
+  it('keeps the authenticator secret encrypted at rest and refuses to sign in without the key', async () => {
+    const stored = (await db.query<{ totp_secret: string }>('SELECT totp_secret FROM admin_users WHERE email = $1', [OWNER])).rows[0].totp_secret;
+    expect(stored.startsWith('v1:')).toBe(true);
+    expect(stored).not.toContain(secret);
+    const at = plus(T0, 50 * MIN);
+    const link = (await requestLink(db, OWNER, env, at))!;
+    const s = (await consumeLink(db, link, env, at))!;
+    const noKey = { ADMIN_EMAILS: env.ADMIN_EMAILS };
+    expect((await submitCode(db, s, totpAt(secret, stepOf(at)), noKey, at)).result).toBe('unavailable');
+    const wrongKey = { ...noKey, ADMIN_SECRET_KEY: Buffer.alloc(32, 7).toString('base64') };
+    expect((await submitCode(db, s, totpAt(secret, stepOf(at)), wrongKey, at)).result).toBe('unavailable');
+    expect(await getAdmin(db, s, env, at)).toBeNull();
+  });
+
+  it('the database refuses a plaintext secret', async () => {
+    await expect(db.query("INSERT INTO admin_users (email, totp_secret) VALUES ('plain@example.test', 'JBSWY3DPEHPK3PXP')")).rejects.toThrow();
   });
 });
 

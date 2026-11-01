@@ -2,6 +2,7 @@
 import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { newTotpSecret, totpAt } from '@/lib/admin/totp';
+import { sealSecret, TEST_SECRET_KEY } from '@/lib/admin/secret-box';
 import { createCodeLimits, createSignInLimits } from '@/lib/admin/guard';
 import { csrfToken, getAdmin } from '@/lib/admin/sessions';
 import { requestSignIn, confirmLink, submitSignInCode } from '@/lib/admin/sign-in';
@@ -11,7 +12,7 @@ type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
 let secret: string;
 const OWNER = 'owner@example.test';
-const env = { ADMIN_EMAILS: OWNER, ADMIN_LINK_BASE: 'https://staging.sparkkindly.com' };
+const env = { ADMIN_EMAILS: OWNER, ADMIN_LINK_BASE: 'https://staging.sparkkindly.com', ADMIN_SECRET_KEY: TEST_SECRET_KEY };
 const NOW = new Date('2026-11-01T09:00:00Z');
 const ORIGIN = { host: 'staging.sparkkindly.com', origin: 'https://staging.sparkkindly.com' };
 const FORM = { 'content-type': 'application/x-www-form-urlencoded' };
@@ -37,7 +38,7 @@ const auditCount = async (action: string) =>
 beforeAll(async () => {
   db = await newTestDb();
   secret = newTotpSecret();
-  await db.query('INSERT INTO admin_users (email, totp_secret) VALUES ($1, $2)', [OWNER, secret]);
+  await db.query('INSERT INTO admin_users (email, totp_secret) VALUES ($1, $2)', [OWNER, sealSecret(secret, OWNER, env)]);
 });
 afterAll(async () => {
   await db.close();
@@ -140,7 +141,10 @@ describe('confirmLink and submitSignInCode', () => {
     const r = await submitSignInCode(post('/admin/sign-in/code/submit/', { csrf: csrfToken(session), code }, { ...ORIGIN, cookie: `__Host-sk_admin=${session}` }), deps());
     expect(r.status).toBe(303);
     expect(r.headers.get('location')).toBe('/admin/');
-    expect(await getAdmin(db, session, env, NOW)).toEqual({ email: OWNER });
+    const active = cookieValue(r);
+    expect(active).not.toBe(session);
+    expect(await getAdmin(db, session, env, NOW)).toBeNull();
+    expect(await getAdmin(db, active, env, NOW)).toEqual({ email: OWNER });
     expect(await auditCount('sign_in_code_ok')).toBe(1);
   });
 

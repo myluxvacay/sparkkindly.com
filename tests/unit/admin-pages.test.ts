@@ -25,9 +25,10 @@ describe('admin pages', () => {
     expect(src).toMatch(/export default async function \w+\([^)]*\)[^{]*\{\s*const \w+ = await requireAdmin\(\);/);
   });
 
-  it('every admin POST target is a sign-in route or /admin/act/', () => {
+  it('every admin route is a sign-in route, /admin/act/ or its key page', () => {
     const routes = readdirSync('app/admin', { recursive: true }).map(String).filter((f) => f.endsWith('route.ts'));
     expect(routes.map((r) => r.split(path.sep).join('/')).sort()).toEqual([
+      'act/key/route.ts',
       'act/route.ts',
       'sign-in/code/submit/route.ts',
       'sign-in/link/confirm/route.ts',

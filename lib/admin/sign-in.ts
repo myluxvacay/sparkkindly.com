@@ -71,16 +71,17 @@ export async function submitSignInCode(request: Request, d: Deps): Promise<Respo
   const form = await readForm(request);
   if (!form || !checkCsrf(session, form.get('csrf'))) return forbidden();
   const email = (await pendingEmail(d.db, session, d.now)) ?? 'unknown';
-  const result = await submitCode(d.db, session, form.get('code')?.trim() ?? '', d.env, d.now);
-  if (result === 'ok') {
+  const { result, session: active } = await submitCode(d.db, session, form.get('code')?.trim() ?? '', d.env, d.now);
+  if (result === 'ok' && active) {
     await audit(d.db, email, 'sign_in_code_ok', null);
-    return seeOther('/admin/', sessionCookie(session, 12 * 60 * 60));
+    return seeOther('/admin/', sessionCookie(active, 12 * 60 * 60));
   }
   if (result === 'bad') {
     await audit(d.db, email, 'sign_in_code_bad', null);
     return seeOther('/admin/sign-in/code/?error=1');
   }
   if (result === 'locked') await audit(d.db, email, 'sign_in_locked', null);
+  if (result === 'unavailable') return seeOther(`${SIGN_IN}?unavailable=1`);
   const next = result === 'not_enrolled' ? `${SIGN_IN}?enrol=1` : `${SIGN_IN}?expired=1`;
   return seeOther(next, sessionCookie('', 0));
 }

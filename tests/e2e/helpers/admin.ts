@@ -5,6 +5,7 @@ import { createHash, randomBytes } from 'node:crypto';
 import type { BrowserContext } from '@playwright/test';
 import { sql } from './fixtures';
 import { newTotpSecret, totpAt } from '../../../lib/admin/totp';
+import { sealSecret, TEST_SECRET_KEY } from '../../../lib/admin/secret-box';
 
 export const OWNER = 'owner@example.test';
 export const BASE = 'http://localhost:4173';
@@ -17,7 +18,7 @@ export async function enrol(email = OWNER): Promise<string> {
   await sql(
     `INSERT INTO admin_users (email, totp_secret) VALUES ($1, $2)
      ON CONFLICT (email) DO UPDATE SET totp_secret = EXCLUDED.totp_secret, totp_last_step = 0`,
-    [email, secret],
+    [email, sealSecret(secret, email, { ADMIN_SECRET_KEY: TEST_SECRET_KEY })],
   );
   return secret;
 }

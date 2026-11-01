@@ -1,17 +1,21 @@
-// The result of the last admin action, carried in the URL by /admin/act/'s redirect. Rendered as text (React escapes
-// it) and cut to 200 characters, so a crafted link can at most show a short line of plain text.
+import { doneText, errorText } from '@/lib/admin/messages';
+
+// The result of the last admin action. The URL carries only a code; the text comes from the server's own table, so a
+// crafted link cannot make an admin page show text of its choosing. An unknown code shows nothing.
 export default function StatusNote({ done, error }: { done?: string; error?: string }) {
-  if (error) {
+  const failed = errorText(error);
+  if (failed) {
     return (
       <div role="alert" className="grown-ups">
-        <p>{error.slice(0, 200)}</p>
+        <p>{failed}</p>
       </div>
     );
   }
-  if (done) {
+  const ok = doneText(done);
+  if (ok) {
     return (
       <div role="status" className="takeaway">
-        <p>{done.slice(0, 200)}</p>
+        <p>{ok}</p>
       </div>
     );
   }

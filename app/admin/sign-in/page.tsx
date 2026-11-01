@@ -1,9 +1,9 @@
 export const dynamic = 'force-dynamic';
 
-type Props = { searchParams: Promise<{ sent?: string; expired?: string; enrol?: string }> };
+type Props = { searchParams: Promise<{ sent?: string; expired?: string; enrol?: string; unavailable?: string }> };
 
 export default async function SignInPage({ searchParams }: Props) {
-  const { sent, expired, enrol } = await searchParams;
+  const { sent, expired, enrol, unavailable } = await searchParams;
   return (
     <>
       <p className="eyebrow">ADMIN</p>
@@ -16,6 +16,11 @@ export default async function SignInPage({ searchParams }: Props) {
       {expired === '1' && (
         <div role="alert" className="grown-ups">
           <p>That link or session has expired or was already used. Ask for a new link.</p>
+        </div>
+      )}
+      {unavailable === '1' && (
+        <div role="alert" className="grown-ups">
+          <p>Sign-in is unavailable: the server cannot read authenticator settings. The operator must check its configuration.</p>
         </div>
       )}
       {enrol === '1' && (

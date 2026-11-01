@@ -3,9 +3,11 @@
 -- approver is a config change. Tokens are never stored: only their sha256 hashes.
 
 -- One row per enrolled authenticator, written by `npm run admin:totp`, never by a web page.
+-- Rollback (nothing else depends on these): DROP TABLE admin_users, admin_login_tokens, admin_sessions, job_runs;
+-- ALTER TABLE agents DROP COLUMN key_rotated_at; DELETE FROM schema_migrations WHERE name = '005_admin.sql'.
 CREATE TABLE admin_users (
   email          text PRIMARY KEY CHECK (email = lower(email)),
-  totp_secret    text NOT NULL,
+  totp_secret    text NOT NULL CHECK (totp_secret LIKE 'v1:%'),  -- AES-256-GCM sealed (lib/admin/secret-box.ts), never plaintext
   totp_last_step bigint NOT NULL DEFAULT 0,  -- the last accepted 30-second step, so a code cannot be replayed
   created_at     timestamptz NOT NULL DEFAULT now()
 );

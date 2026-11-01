@@ -1,6 +1,7 @@
 import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
 import type { Db, Queryable } from '@/lib/db';
 import type { EnvLike } from '@/lib/env';
+import { openSecret } from './secret-box';
 import { matchTotp } from './totp';
 
 // Admin sign-in: an emailed link for an allow-listed address, then an authenticator code. Only a session that has
@@ -19,7 +20,7 @@ const newToken = () => randomBytes(32).toString('hex');
 const later = (now: Date, ms: number) => new Date(now.getTime() + ms).toISOString();
 
 export type Admin = { email: string };
-export type CodeResult = 'ok' | 'bad' | 'locked' | 'not_enrolled' | 'none';
+export type CodeResult = 'ok' | 'bad' | 'locked' | 'not_enrolled' | 'unavailable' | 'none';
 
 // ADMIN_EMAILS from the server's env file, comma-separated. Unset or empty allows nobody (fails closed).
 export function allowList(env: EnvLike): string[] {
@@ -82,40 +83,53 @@ export async function pendingEmail(db: Queryable, sessionToken: string, now: Dat
 }
 
 // Checks the authenticator code for a code-stage session. Five wrong codes end the session. A right code is
-// remembered by its step, so it cannot be used again for any session.
-export async function submitCode(db: Db, sessionToken: string, code: string, env: EnvLike, now: Date): Promise<CodeResult> {
-  if (!sessionToken) return 'none';
+// remembered by its step, so it cannot be used again for any session. On success the session gets a NEW token (the
+// code-stage token dies), returned as `session`. Without ADMIN_SECRET_KEY, or with the wrong one, the stored secret
+// cannot be opened and nobody can finish signing in ('unavailable': fails closed).
+export async function submitCode(
+  db: Db,
+  sessionToken: string,
+  code: string,
+  env: EnvLike,
+  now: Date,
+): Promise<{ result: CodeResult; session?: string }> {
+  if (!sessionToken) return { result: 'none' };
   const h = hash(sessionToken);
-  return db.transaction(async (tx) => {
+  const result = await db.transaction(async (tx): Promise<{ result: CodeResult; session?: string }> => {
     const s = await tx.query<{ email: string; code_failures: number }>(
       `SELECT email, code_failures FROM admin_sessions
        WHERE token_hash = $1 AND stage = 'code' AND expires_at > $2::timestamptz FOR UPDATE`,
       [h, now.toISOString()],
     );
     const session = s.rows[0];
-    if (!session || !isAllowed(session.email, env)) return 'none';
+    if (!session || !isAllowed(session.email, env)) return { result: 'none' };
     const u = await tx.query<{ totp_secret: string; totp_last_step: string }>(
       'SELECT totp_secret, totp_last_step FROM admin_users WHERE email = $1 FOR UPDATE',
       [session.email],
     );
     const user = u.rows[0];
-    if (!user) return 'not_enrolled';
-    const step = matchTotp(user.totp_secret, code, now, Number(user.totp_last_step));
+    if (!user) return { result: 'not_enrolled' };
+    const secret = openSecret(user.totp_secret, session.email, env);
+    if (secret === null) return { result: 'unavailable' };
+    const step = matchTotp(secret, code, now, Number(user.totp_last_step));
     if (step === null) {
       if (session.code_failures + 1 >= MAX_CODE_FAILURES) {
         await tx.query('DELETE FROM admin_sessions WHERE token_hash = $1', [h]);
-        return 'locked';
+        return { result: 'locked' };
       }
       await tx.query('UPDATE admin_sessions SET code_failures = code_failures + 1 WHERE token_hash = $1', [h]);
-      return 'bad';
+      return { result: 'bad' };
     }
+    const fresh = newToken();
     await tx.query('UPDATE admin_users SET totp_last_step = $2 WHERE email = $1', [session.email, step]);
     await tx.query(
-      "UPDATE admin_sessions SET stage = 'active', expires_at = $2, last_seen_at = $3 WHERE token_hash = $1",
-      [h, later(now, ACTIVE_TTL), now.toISOString()],
+      "UPDATE admin_sessions SET token_hash = $4, stage = 'active', expires_at = $2, last_seen_at = $3 WHERE token_hash = $1",
+      [h, later(now, ACTIVE_TTL), now.toISOString(), hash(fresh)],
     );
-    return 'ok';
+    return { result: 'ok', session: fresh };
   });
+  if (result.result === 'unavailable') console.error('admin sign-in: authenticator secret could not be opened (ADMIN_SECRET_KEY missing or wrong)');
+  return result;
 }
 
 // The signed-in admin for this session token, or null. Checked on every admin request.
