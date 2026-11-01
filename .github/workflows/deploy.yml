@@ -41,6 +41,10 @@ jobs:
           mkdir -p release/.next
           cp -r .next/static release/.next/static
           cp -r public release/public
+          # Migrations ship with the release; the receiver runs migrate.sh before switching to it.
+          cp -r db release/db
+          cp deploy/migrate.sh release/migrate.sh
+          chmod +x release/migrate.sh
           printf '%s' "$GITHUB_SHA" > release/RELEASE
           tar -czf release.tgz -C release .
           ls -lh release.tgz

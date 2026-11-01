@@ -39,8 +39,9 @@ trap - EXIT
 
 # 2. Optional migration hook (Project 1). A failing migration leaves the old release running.
 #    The env file is readable only by this login's own user (root:<user> 640), so it never sees the other environment's secrets.
-if [ -x "$NEW/migrate.sh" ]; then
-  if ! (cd "$NEW" && set -a && . "/opt/sparkkindly/shared/$ENVFILE" && set +a && ./migrate.sh); then
+if [ -f "$NEW/migrate.sh" ]; then
+  # Run with bash rather than executing it, so the release does not depend on its file mode surviving the tarball.
+  if ! (cd "$NEW" && set -a && . "/opt/sparkkindly/shared/$ENVFILE" && set +a && bash ./migrate.sh); then
     echo "Migration failed; the previous release is still serving" >&2
     exit 1
   fi
