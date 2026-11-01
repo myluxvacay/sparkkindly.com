@@ -155,44 +155,48 @@ const snapshotOf = (i: StoredItem) => ({
   status: i.status, title: i.title, summary: i.summary, body: i.body, audience: i.audience, approvedBy: i.approvedBy,
 });
 
+// Inserts an item with its topics, answer and first revision. Call it inside a transaction so the pieces land together;
+// createItem is the standalone form.
+export async function insertItem(tx: Queryable, input: NewItem): Promise<StoredItem> {
+  const topics = input.topics ?? [];
+  let topicIds: number[] = [];
+  if (topics.length) {
+    const found = await tx.query<{ id: number; slug: string }>('SELECT id, slug FROM topics WHERE slug = ANY($1)', [topics]);
+    const missing = topics.filter((t) => !found.rows.some((r) => r.slug === t));
+    if (missing.length) throw new UnknownTopicError(missing);
+    topicIds = found.rows.map((r) => r.id);
+  }
+  let stored: StoredItem;
+  try {
+    const r = await tx.query<Row>(
+      `INSERT INTO items (world_id, kind, slug, locale, title, summary, body, audience, evergreen, status, publish_at,
+                          created_by, agent_id, risk_tier, sources, quality_report, image, idempotency_key, approved_by, approved_at)
+       VALUES ($1, $2, $3, COALESCE($4, 'en'), $5, $6, $7::jsonb, $8, COALESCE($9, false), COALESCE($10, 'draft'), $11,
+               $12, $13, $14, $15::jsonb, $16::jsonb, $17::jsonb, $18, $19, CASE WHEN $19::text IS NULL THEN NULL ELSE now() END)
+       RETURNING ${ITEM_COLUMNS}`,
+      [input.worldId, input.kind, input.slug, input.locale ?? null, input.title, input.summary, JSON.stringify(input.body),
+        input.audience, input.evergreen ?? null, input.status ?? null, input.publishAt ?? null, input.createdBy,
+        input.agentId ?? null, input.riskTier, JSON.stringify(input.sources ?? []), JSON.stringify(input.qualityReport ?? {}),
+        JSON.stringify(input.image ?? {}), input.idempotencyKey ?? null, input.approvedBy ?? null],
+    );
+    stored = toStored(r.rows[0]);
+  } catch (err) {
+    throw domainError(err);
+  }
+  for (const topicId of topicIds) {
+    await tx.query('INSERT INTO item_topics (item_id, topic_id) VALUES ($1, $2)', [stored.id, topicId]);
+  }
+  if (input.answer) {
+    await tx.query('INSERT INTO item_answers (item_id, answer, explanation) VALUES ($1, $2::jsonb, $3)', [
+      stored.id, JSON.stringify(input.answer.value), input.answer.explanation,
+    ]);
+  }
+  await writeRevision(tx, stored.id, snapshotOf(stored), input.createdBy, 'created');
+  return stored;
+}
+
 export async function createItem(db: Db, input: NewItem): Promise<StoredItem> {
-  return db.transaction(async (tx) => {
-    const topics = input.topics ?? [];
-    let topicIds: number[] = [];
-    if (topics.length) {
-      const found = await tx.query<{ id: number; slug: string }>('SELECT id, slug FROM topics WHERE slug = ANY($1)', [topics]);
-      const missing = topics.filter((t) => !found.rows.some((r) => r.slug === t));
-      if (missing.length) throw new UnknownTopicError(missing);
-      topicIds = found.rows.map((r) => r.id);
-    }
-    let stored: StoredItem;
-    try {
-      const r = await tx.query<Row>(
-        `INSERT INTO items (world_id, kind, slug, locale, title, summary, body, audience, evergreen, status, publish_at,
-                            created_by, agent_id, risk_tier, sources, quality_report, image, idempotency_key, approved_by, approved_at)
-         VALUES ($1, $2, $3, COALESCE($4, 'en'), $5, $6, $7::jsonb, $8, COALESCE($9, false), COALESCE($10, 'draft'), $11,
-                 $12, $13, $14, $15::jsonb, $16::jsonb, $17::jsonb, $18, $19, CASE WHEN $19::text IS NULL THEN NULL ELSE now() END)
-         RETURNING ${ITEM_COLUMNS}`,
-        [input.worldId, input.kind, input.slug, input.locale ?? null, input.title, input.summary, JSON.stringify(input.body),
-          input.audience, input.evergreen ?? null, input.status ?? null, input.publishAt ?? null, input.createdBy,
-          input.agentId ?? null, input.riskTier, JSON.stringify(input.sources ?? []), JSON.stringify(input.qualityReport ?? {}),
-          JSON.stringify(input.image ?? {}), input.idempotencyKey ?? null, input.approvedBy ?? null],
-      );
-      stored = toStored(r.rows[0]);
-    } catch (err) {
-      throw domainError(err);
-    }
-    for (const topicId of topicIds) {
-      await tx.query('INSERT INTO item_topics (item_id, topic_id) VALUES ($1, $2)', [stored.id, topicId]);
-    }
-    if (input.answer) {
-      await tx.query('INSERT INTO item_answers (item_id, answer, explanation) VALUES ($1, $2::jsonb, $3)', [
-        stored.id, JSON.stringify(input.answer.value), input.answer.explanation,
-      ]);
-    }
-    await writeRevision(tx, stored.id, snapshotOf(stored), input.createdBy, 'created');
-    return stored;
-  });
+  return db.transaction((tx) => insertItem(tx, input));
 }
 
 export async function getItem(db: Queryable, id: string): Promise<StoredItem | null> {

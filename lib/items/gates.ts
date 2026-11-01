@@ -10,7 +10,8 @@ export { isSafeSourceUrl, isPublicAddress };
 
 export type GateResult = { gate: string; ok: boolean; reason?: string };
 export type GateWorld = { id: number; slug: string };
-type Deps = { probe?: Probe; now?: Date; sourceBudgetMs?: number };
+// ignoreItemId: an earlier draft by the same agent that this submission is about to replace.
+type Deps = { probe?: Probe; now?: Date; sourceBudgetMs?: number; ignoreItemId?: string };
 
 const MAX_KIDS_GRADE = 6;
 const DUPLICATE_WINDOW_DAYS = 90;
@@ -130,10 +131,17 @@ export async function runGates(
 
   results.push(
     await run('duplicate', async () => {
-      const same = await db.query('SELECT 1 FROM items WHERE world_id = $1 AND locale = $2 AND slug = $3', [world.id, 'en', sub.slug]);
+      const ignore = deps.ignoreItemId ?? null;
+      const same = await db.query(
+        'SELECT 1 FROM items WHERE world_id = $1 AND locale = $2 AND slug = $3 AND ($4::uuid IS NULL OR id <> $4::uuid)',
+        [world.id, 'en', sub.slug, ignore],
+      );
       if (same.rows.length) return { ok: false, reason: `the slug "${sub.slug}" is already used in this world` };
       const since = new Date(now.getTime() - DUPLICATE_WINDOW_DAYS * 86_400_000).toISOString();
-      const recent = await db.query<{ title: string }>('SELECT title FROM items WHERE world_id = $1 AND created_at > $2::timestamptz', [world.id, since]);
+      const recent = await db.query<{ title: string }>(
+        'SELECT title FROM items WHERE world_id = $1 AND created_at > $2::timestamptz AND ($3::uuid IS NULL OR id <> $3::uuid)',
+        [world.id, since, ignore],
+      );
       const near = recent.rows.find((r) => jaccard(r.title, sub.title) >= SIMILARITY_LIMIT);
       return near ? { ok: false, reason: `the title is too similar to "${near.title}" (published in the last ${DUPLICATE_WINDOW_DAYS} days)` } : pass;
     }),
