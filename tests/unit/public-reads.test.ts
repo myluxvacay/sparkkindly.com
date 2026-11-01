@@ -69,7 +69,8 @@ describe('visibility applies to every read', () => {
   });
 
   it.each(['draft', 'scheduled', 'in_review', 'rejected', 'archived'])('a %s item is invisible everywhere', async (status) => {
-    const s = await put({ slug: `hide-${status.replace("_", "-")}`, status, title: 'Zorbax hidden', publishedAt: null, topics: ['physics'] });
+    const s = await put({ slug: `hide-${status.replace("_", "-")}`, status, title: 'Zorbax hidden', publishedAt: '2026-10-31T00:00:00Z', // past: only status may hide it
+      topics: ['physics'] });
     expect(await getPublicItem(db, anon, 'play', s)).toBeNull();
     expect(slugs(await listPublic(db, anon, page))).not.toContain(s);
     expect(slugs(await listPublic(db, anon, { topic: 'physics', ...page }))).not.toContain(s);

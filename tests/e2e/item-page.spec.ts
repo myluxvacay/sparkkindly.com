@@ -54,11 +54,12 @@ test('sources link to their https URL with a safe rel', async ({ page }) => {
   await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
 });
 
-test('a video_script, a draft and a future item are not found', async ({ page }) => {
+test('a video_script, a draft, a future item and a once-published archived item are not found', async ({ page }) => {
   await addItem({ world: 'discover', slug: 'fx-script', kind: 'video_script' });
   await addItem({ world: 'discover', slug: 'fx-draft', status: 'draft' });
   await addItem({ world: 'discover', slug: 'fx-future', status: 'scheduled', publishedAt: "now() + interval '1 day'" });
-  for (const slug of ['fx-script', 'fx-draft', 'fx-future', 'does-not-exist']) {
+  await addItem({ world: 'discover', slug: 'fx-archived', status: 'archived', publishedAt: "now() - interval '1 day'" });
+  for (const slug of ['fx-script', 'fx-draft', 'fx-future', 'fx-archived', 'does-not-exist']) {
     const res = await page.goto(`/discover/${slug}/`);
     expect(res?.status(), slug).toBe(404);
   }

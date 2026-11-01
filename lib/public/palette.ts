@@ -7,6 +7,17 @@ const HEX: Record<string, string> = { gold: '#f7c948', sage: '#6ea99f', coral: '
 
 export const worldHex = (colorKey: string): string => HEX[colorKey] ?? PLUM;
 
+// The title as the template image may draw it. The renderer fetches a font or emoji over the network for any
+// character the bundled font lacks, which would send the title to a third party, so only ASCII and Latin-1 survive:
+// typographic punctuation becomes its ASCII form, everything else is dropped and the gaps are collapsed.
+const ASCII_FOR: Record<string, string> = { '‘': "'", '’': "'", '“': '"', '”': '"', '–': '-', '—': '-', '…': '...' };
+export const plainTitle = (title: string): string =>
+  title
+    .replace(/[‘’“”–—…]/g, (c) => ASCII_FOR[c])
+    .replace(/[^\u0020-\u007E\u00A0-\u00FF]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
 // Breaks a title into at most maxLines lines of at most maxChars characters, on spaces. A word longer than a line is
 // hard-split; overflow ends the last line with an ellipsis.
 export function wrapTitle(title: string, maxChars: number, maxLines: number): string[] {
@@ -31,6 +42,6 @@ export function wrapTitle(title: string, maxChars: number, maxLines: number): st
   if (cur) lines.push(cur);
   if (lines.length <= maxLines) return lines;
   const kept = lines.slice(0, maxLines);
-  kept[maxLines - 1] = `${kept[maxLines - 1].slice(0, maxChars - 1).trimEnd()}…`;
+  kept[maxLines - 1] = `${kept[maxLines - 1].slice(0, maxChars - 3).trimEnd()}...`;
   return kept;
 }

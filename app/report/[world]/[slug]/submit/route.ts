@@ -1,3 +1,4 @@
+import { readCapped } from '@/lib/agents/http';
 import { getDb } from '@/lib/db';
 import { anonymousScope } from '@/lib/public/scope';
 import { submitReport, checkReportRate } from '@/lib/reports/submit';
@@ -5,6 +6,8 @@ import { submitReport, checkReportRate } from '@/lib/reports/submit';
 export const dynamic = 'force-dynamic';
 
 // The form page lives at /report/<world>/<slug>/ and posts here. (A route.ts cannot share a folder with a page.tsx.)
+// A report is a reason and up to 1000 characters; 8 KB leaves room for encoding and the honeypot field.
+const MAX_FORM_BYTES = 8 * 1024;
 const see = (status: number, location: string, extra: Record<string, string> = {}) =>
   new Response(null, { status, headers: { Location: location, ...extra } });
 
@@ -28,8 +31,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ wor
   const rate = checkReportRate(client);
   if (!rate.ok) return new Response('Too many reports. Please try again later.', { status: 429, headers: { 'Retry-After': String(rate.retryAfter) } });
 
+  const declared = Number(request.headers.get('content-length'));
+  if (Number.isFinite(declared) && declared > MAX_FORM_BYTES) return new Response('Payload too large', { status: 413 });
+  const bytes = await readCapped(request, MAX_FORM_BYTES);
+  if (!bytes) return new Response('Payload too large', { status: 413 });
+  const form = new URLSearchParams(new TextDecoder().decode(bytes));
+
   const { world, slug } = await params;
-  const form = await request.formData();
   const result = await submitReport(getDb(), anonymousScope(), {
     world,
     slug,

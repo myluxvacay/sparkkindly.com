@@ -1,12 +1,12 @@
 import { ImageResponse } from 'next/og';
 import type { PublicItem } from '@/lib/items/repo';
-import { CREAM, INK, PLUM, worldHex, wrapTitle } from './palette';
+import { CREAM, INK, PLUM, plainTitle, worldHex, wrapTitle } from './palette';
 
-// 1200x630 branded card. No external font or emoji (Satori would fetch them from a CDN): the bundled default font,
-// and the world name in a badge in place of the icon glyph.
+// 1200x630 branded card. No external font or emoji: Satori fetches them from a CDN for any character the bundled
+// font lacks, so the title goes through plainTitle first, and the world name is a badge in place of the icon glyph.
 export function templateImage(item: PublicItem, world: { name: string; color: string | null }): ImageResponse {
   const accent = worldHex(world.color ?? '');
-  const lines = wrapTitle(item.title, 28, 4);
+  const lines = wrapTitle(plainTitle(item.title), 28, 4);
   return new ImageResponse(
     (
       <div

@@ -32,7 +32,7 @@ export async function agentRoute(
 
 // Reads the body chunk by chunk and gives up the moment the running total passes the cap, so a client that streams
 // without a Content-Length cannot make the server buffer an unbounded body before the size check.
-async function readCapped(request: Request): Promise<Uint8Array | null> {
+export async function readCapped(request: Request, limit = MAX_BODY_BYTES): Promise<Uint8Array | null> {
   if (!request.body) return new Uint8Array(0);
   const reader = request.body.getReader();
   const chunks: Uint8Array[] = [];
@@ -41,7 +41,7 @@ async function readCapped(request: Request): Promise<Uint8Array | null> {
     const { done, value } = await reader.read();
     if (done) break;
     total += value.byteLength;
-    if (total > MAX_BODY_BYTES) {
+    if (total > limit) {
       await reader.cancel();
       return null;
     }
