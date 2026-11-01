@@ -256,3 +256,10 @@ schema_migrations WHERE name = '005_admin.sql';` after the data-correction backu
 
 **Before the production cut-over:** the production Caddy block must send `X-Frame-Options: DENY` (or
 `Content-Security-Policy: frame-ancestors 'none'`) so `/admin/` cannot be framed. Not set by this project.
+
+**Admin, trust pages and backups deployed to staging, 1 November 2026 (UTC).** Release `71fd30a` (CI and Deploy green). Verified with the
+staging login: the home page, a starter article, a play page, `/quiz/`, search, About, Privacy, Terms, Accessibility, Contact and
+Editorial policy answer 200; `/admin/` redirects (307) to `/admin/sign-in/`; the sitemap is empty and `robots.txt` disallows all;
+`/api/health/` is `{"ok":true}`; an unanswered quiz page carries no explanation text; sparkkindly.com (production) still answers 200.
+**Not yet done on staging:** `ADMIN_EMAILS`, `ADMIN_SECRET_KEY`, `ADMIN_LINK_BASE` are not set (sign-in is unavailable by design), the
+worker timers are not installed (`03-services.sh`), no authenticator is enrolled, and no real digest or sign-in email has been sent.
