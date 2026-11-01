@@ -53,27 +53,39 @@ export function clientPrefix(ip: string, v4Bits: 32 | 24 = 32): string {
   return groups.slice(0, 4).map((g) => g.replace(/^0+(?=.)/, '')).join(':');
 }
 
-export type SignInDecision = 'new' | 'resend' | 'skip';
-
-// What to do with a sign-in link request (ruling, 1 November 2026). The per-client limit (10 an hour) is the main
-// control; every request spends it and an unknown address spends nothing else. An allow-listed address gets at most
-// 3 NEW links an hour, whoever asks (no shared site-wide bucket); past that the still-valid pending link is re-sent,
-// at most once per 5 minutes, instead of minting another. The browser gets the identical answer in every case.
-// Residual risk: an attacker can delay a link by up to 5 minutes but never bypass anything (links only reach the
-// owner's inbox; the authenticator code and allow-list still gate access); at most 6 + 12 emails in any hour reach one
-// allowed address. Recovery path: edit ADMIN_EMAILS on the server and restart the service.
+// The limits behind a sign-in link request (ruling, 1 November 2026; requestSignIn applies them):
+// - client(ip): 10 requests an hour per client (full IPv4 address, IPv6 /64). The main control; every request spends
+//   it and an unknown address spends nothing else.
+// - While an allowed address has a still-valid pending link, a request re-sends that link, at most once per
+//   5 minutes (resend). Only when there is no valid pending link (none yet, used, or expired after 15 minutes) is a new
+//   one minted, under a hard cap of 6 per address in any hour, whoever asks (mint). No shared site-wide bucket.
+// The browser gets the identical answer whatever happens. Residual risk: a flood can make a request send nothing,
+// but only because a working link was emailed to that address within the last 5 minutes; it never blocks a link
+// and never bypasses anything (the code and the allow-list still gate access). At most 6 + 12 emails in any hour
+// reach one allowed address. Recovery path: edit ADMIN_EMAILS on the server and restart the service.
 export function createSignInLimits(clock: () => number = Date.now) {
   const perClient = hourly(10, clock);
-  const newLinks = hourly(3, clock);
+  const minted = new Map<string, number[]>();
   const lastResend = new Map<string, number>();
-  return (client: string, email: string, allowed: boolean): SignInDecision => {
-    if (!perClient(clientPrefix(client)) || !allowed) return 'skip';
-    const address = email.trim().toLowerCase();
-    if (newLinks(address)) return 'new';
-    const now = clock();
-    if (now - (lastResend.get(address) ?? -Infinity) < 5 * 60_000) return 'skip';
-    lastResend.set(address, now);
-    return 'resend';
+  const HOUR = 60 * 60_000;
+  return {
+    client: (ip: string): boolean => perClient(clientPrefix(ip)),
+    mint(address: string): boolean {
+      const now = clock();
+      const recent = (minted.get(address) ?? []).filter((t) => now - t < HOUR);
+      if (recent.length >= 6) {
+        minted.set(address, recent);
+        return false;
+      }
+      minted.set(address, [...recent, now]);
+      return true;
+    },
+    resend(address: string): boolean {
+      const now = clock();
+      if (now - (lastResend.get(address) ?? -Infinity) < 5 * 60_000) return false;
+      lastResend.set(address, now);
+      return true;
+    },
   };
 }
 

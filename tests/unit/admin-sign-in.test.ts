@@ -4,7 +4,7 @@ import { newTestDb } from '../helpers/test-db';
 import { newTotpSecret, totpAt } from '@/lib/admin/totp';
 import { sealSecret, TEST_SECRET_KEY } from '@/lib/admin/secret-box';
 import { createCodeLimits, createSignInLimits } from '@/lib/admin/guard';
-import { csrfToken, getAdmin } from '@/lib/admin/sessions';
+import { csrfToken, getAdmin, linkStillValid } from '@/lib/admin/sessions';
 import { requestSignIn, confirmLink, submitSignInCode } from '@/lib/admin/sign-in';
 import type { EmailMessage } from '@/lib/email';
 
@@ -96,22 +96,47 @@ describe('requestSignIn', () => {
     expect(sent).toHaveLength(0);
   });
 
-  it('over the new-link cap, the pending link is re-sent instead of minted, so a flood delays nothing and sends stay bounded', async () => {
+  it('a flood of the owner address re-sends the pending link instead of minting, and a flood delays nothing', async () => {
     const sent: EmailMessage[] = [];
     const d = deps(sent);
     for (let c = 0; c < 40; c++) {
       await requestSignIn(post('/admin/sign-in/request/', { email: `junk${c}@example.test` }, { ...ORIGIN, 'x-forwarded-for': `10.0.0.${c}` }), d);
       await requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, { ...ORIGIN, 'x-forwarded-for': `10.9.${c}.9` }), d);
     }
-    expect(sent.length).toBe(4); // three new links, then one re-send of the last pending link
+    expect(sent.length).toBe(2); // one new link, then one re-send of it (re-sends are at most every 5 minutes)
     const tokens = sent.map((m) => /token=([0-9a-f]{64})/.exec(m.text)![1]);
-    expect(new Set(tokens).size).toBe(3);
-    expect(tokens[3]).toBe(tokens[2]);
-    const r = await requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, { ...ORIGIN, 'x-forwarded-for': '203.0.113.5' }), d);
-    expect(r.status).toBe(303);
-    // The owner's inbox already holds a link that still works (the flood could only delay it, never block it).
-    const session = await confirmLink(post('/admin/sign-in/link/confirm/', { token: tokens[3] }), deps());
-    expect(session.headers.get('location')).toBe('/admin/sign-in/code/');
+    expect(tokens[1]).toBe(tokens[0]);
+    const r = await confirmLink(post('/admin/sign-in/link/confirm/', { token: tokens[1] }), deps());
+    expect(r.headers.get('location')).toBe('/admin/sign-in/code/');
+  });
+
+  it('once the pending link has expired, the next request mints a new one (the review probe)', async () => {
+    const sent: EmailMessage[] = [];
+    const d = deps(sent);
+    d.limits = createSignInLimits(() => d.now.getTime());
+    const ask = (ip: string) => requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, { ...ORIGIN, 'x-forwarded-for': ip }), d);
+    for (let i = 0; i < 5; i++) await ask(`10.8.0.${i}`);
+    d.now = new Date(NOW.getTime() + 16 * 60_000); // every link minted so far has expired
+    await ask('203.0.113.5');
+    const last = /token=([0-9a-f]{64})/.exec(sent.at(-1)!.text)![1];
+    const r = await confirmLink(post('/admin/sign-in/link/confirm/', { token: last }), deps(sent, d.now));
+    expect(r.headers.get('location')).toBe('/admin/sign-in/code/');
+  });
+
+  it('bounds the emails to one allowed address in an hour, and the owner always has a working link', async () => {
+    const sent: EmailMessage[] = [];
+    const d = deps(sent);
+    d.limits = createSignInLimits(() => d.now.getTime());
+    for (let minute = 0; minute < 60; minute++) {
+      d.now = new Date(NOW.getTime() + minute * 60_000);
+      for (let c = 0; c < 20; c++) {
+        await requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, { ...ORIGIN, 'x-forwarded-for': `10.${minute}.1.${c}` }), d);
+      }
+      // The newest link in the inbox still works (checked without using it up).
+      const newest = /token=([0-9a-f]{64})/.exec(sent.at(-1)!.text)![1];
+      expect(await linkStillValid(db, newest, d.now), `minute ${minute}`).toBe(true);
+    }
+    expect(sent.length).toBeLessThanOrEqual(6 + 12);
   });
 
   it('survives a failing mail send without leaking it', async () => {

@@ -25,18 +25,21 @@ export async function requestSignIn(request: Request, d: Deps): Promise<Response
   const done = seeOther(`${SIGN_IN}?sent=1`);
   if (!form || email.length > 254) return done;
   // Every outcome below gets the same answer; only what is sent differs (see createSignInLimits for the ruling).
-  const decision = (d.limits ?? signInLimits)(clientKey(request), email, isAllowed(email, d.env));
+  const limits = d.limits ?? signInLimits;
+  if (!limits.client(clientKey(request)) || !isAllowed(email, d.env)) return done;
   const pending = d.pending ?? pendingLinks;
+  const last = pending.get(email);
   let token: string | null = null;
-  if (decision === 'new') {
+  let fresh = false;
+  if (last && (await linkStillValid(d.db, last, d.now))) {
+    if (limits.resend(email)) token = last;
+  } else if (limits.mint(email)) {
     token = await requestLink(d.db, email, d.env, d.now);
+    fresh = token !== null;
     if (token) pending.set(email, token);
-  } else if (decision === 'resend') {
-    const last = pending.get(email);
-    if (last && (await linkStillValid(d.db, last, d.now))) token = last;
   }
   if (token) {
-    await audit(d.db, email, decision === 'new' ? 'sign_in_link_requested' : 'sign_in_link_resent', null);
+    await audit(d.db, email, fresh ? 'sign_in_link_requested' : 'sign_in_link_resent', null);
     const link = `${linkBase(d.env)}/admin/sign-in/link/?token=${token}`;
     // Not awaited: the answer is the same, and as fast, whether or not the address is allowed or MailerSend is slow.
     d.send({
@@ -49,7 +52,7 @@ export async function requestSignIn(request: Request, d: Deps): Promise<Response
 }
 
 // The newest link minted per allowed address, kept in this process only, so it can be re-sent (never shown). A
-// restart forgets it; the next request then waits for the hourly allowance like any other.
+// restart forgets it; the next request then mints a new link (within the hourly cap).
 const shared = globalThis as unknown as { __sparkPendingLinks?: Map<string, string> };
 const pendingLinks = (shared.__sparkPendingLinks ??= new Map<string, string>());
 
