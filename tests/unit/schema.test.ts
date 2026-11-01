@@ -221,8 +221,8 @@ describe('relations', () => {
 
 describe('admin tables (Project 1C)', () => {
   it('stores admin emails in lower case only', async () => {
-    await expect(db.query("INSERT INTO admin_users (email, totp_secret) VALUES ('Owner@Example.test', 'X')")).rejects.toThrow();
-    await db.query("INSERT INTO admin_users (email, totp_secret) VALUES ('owner@example.test', 'X')");
+    await expect(db.query("INSERT INTO admin_users (email, totp_secret) VALUES ('Owner@Example.test', 'v1:X')")).rejects.toThrow();
+    await db.query("INSERT INTO admin_users (email, totp_secret) VALUES ('owner@example.test', 'v1:X')");
   });
 
   it('allows only the code and active session stages', async () => {
