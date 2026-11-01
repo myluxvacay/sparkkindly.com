@@ -7,7 +7,7 @@ import path from 'node:path';
 
 // Runs the real deploy/bin scripts under bash with stub versions of pg_dump, age, rclone, runuser and curl, so the failure
 // paths (the ones that must upload nothing and ping nothing) are proven without a server. Skipped where bash is missing.
-const BASH = process.env.TEST_BASH ?? 'bash';
+const BASH = process.env.BACKUP_TEST_BASH ?? 'bash';
 const hasBash = spawnSync(BASH, ['-c', 'echo ok'], { encoding: 'utf8' }).stdout?.trim() === 'ok';
 const posix = (p: string) => {
   const q = p.split(path.sep).join('/');
