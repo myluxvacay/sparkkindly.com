@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { Client } from 'pg';
-import { E2E_DATABASE_URL } from '../../playwright.config';
+import { sql } from './helpers/fixtures';
 
 // The e2e database is shared by the suite, so each test uses its own client address (X-Forwarded-For) to keep its
 // rate-limit bucket separate, and counts rows by a unique message.
@@ -12,14 +11,8 @@ const form = (message: string, extra: Record<string, string> = {}) =>
 const headers = (ip: string) => ({ 'content-type': 'application/x-www-form-urlencoded', 'x-forwarded-for': ip });
 
 async function rowsWith(message: string): Promise<number> {
-  const client = new Client({ connectionString: E2E_DATABASE_URL });
-  await client.connect();
-  try {
-    const r = await client.query('SELECT count(*)::int AS n FROM problem_reports WHERE message = $1', [message]);
-    return r.rows[0].n;
-  } finally {
-    await client.end();
-  }
+  const r = await sql<{ n: number }>('SELECT count(*)::int AS n FROM problem_reports WHERE message = $1', [message]);
+  return r.rows[0].n;
 }
 
 test('the form submits, stores a row and confirms with a status message', async ({ page }) => {

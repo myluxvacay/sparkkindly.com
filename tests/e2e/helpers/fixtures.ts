@@ -27,15 +27,23 @@ const articleBody = {
   takeaway: 'A takeaway.',
 };
 
+// One connection for the whole worker, opened while the site is idle. The in-process test database resets a new
+// connection that arrives while another connection has a query in flight, and then stays broken, so a spec must never
+// open a fresh one mid-test.
+let shared: pg.Client | undefined;
+
 async function withClient<T>(fn: (c: pg.Client) => Promise<T>): Promise<T> {
-  const c = new pg.Client({ connectionString: URL });
-  await c.connect();
-  try {
-    return await fn(c);
-  } finally {
-    await c.end();
+  if (!shared) {
+    const c = new pg.Client({ connectionString: URL });
+    c.on('error', () => (shared = undefined));
+    await c.connect();
+    shared = c;
   }
+  return fn(shared);
 }
+
+export const sql = <T extends pg.QueryResultRow = pg.QueryResultRow>(text: string, params?: unknown[]) =>
+  withClient((c) => c.query<T>(text, params));
 
 export async function addItem(o: Over): Promise<string> {
   const kind = o.kind ?? 'article';
@@ -74,5 +82,18 @@ export async function resetExtras(): Promise<void> {
   await withClient(async (c) => {
     await c.query("DELETE FROM items WHERE created_by = 'e2e'");
     await c.query('UPDATE worlds SET enabled = true');
+    await c.query("DELETE FROM worlds WHERE goals = 'e2e-fixture'");
+    await c.query("DELETE FROM topics WHERE slug LIKE 'e2e-%'");
   });
+}
+
+// A world and a topic that only the e2e run creates; resetExtras() removes them (items first, so nothing blocks the delete).
+export async function addWorld(slug: string, name: string): Promise<void> {
+  await withClient((c) =>
+    c.query("INSERT INTO worlds (slug, name, promise, description, icon, color, sort, goals) VALUES ($1, $2, 'A fixture promise.', 'A fixture world.', '*', 'gold', 99, 'e2e-fixture')", [slug, name]),
+  );
+}
+
+export async function addTopic(slug: string, name: string): Promise<void> {
+  await withClient((c) => c.query('INSERT INTO topics (slug, name) VALUES ($1, $2)', [slug, name]));
 }

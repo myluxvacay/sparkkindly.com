@@ -17,3 +17,8 @@
 @media(max-width:800px){.wordmark .brand-badge{width:52px;height:52px}.wordmark{gap:9px}.header-inner{gap:16px}.brand-showcase{padding-top:45px}}
 @media(max-width:580px){.wordmark{font-size:25px;gap:8px}.wordmark .brand-badge{width:48px;height:48px}.brand-showcase figcaption{flex-direction:column;gap:0;font-size:11px}.brand-showcase figcaption>span{padding-top:0}.footer .wordmark .brand-badge{width:64px;height:64px}}
 @media(max-width:350px){.header-inner{gap:8px}.wordmark{font-size:22px;gap:6px}.wordmark .brand-badge{width:42px;height:42px}.menu-toggle{padding-inline:10px}}
+
+/* Long unbroken words in titles and summaries must wrap, not widen the page. */
+.content-card h3,.content-card p,.brand-feature h2,.brand-feature p,.brand-intro h1{overflow-wrap:anywhere}
+.brand-feature>img{height:auto;aspect-ratio:1200/630;object-fit:contain}
+.content-card .image-link img{height:auto;aspect-ratio:1200/630;object-fit:contain}

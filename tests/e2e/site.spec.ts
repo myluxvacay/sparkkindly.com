@@ -7,7 +7,7 @@ test('home to brand to article, direct refresh and useful 404',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/');await expect(page.getByRole('heading',{level:1})).toHaveText('Brighter minds.Kinder tomorrows.');
  await page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Discover',exact:true}).click();
- await page.getByRole('link',{name:'Take a closer look'}).click();await expect(page.getByRole('heading',{level:1})).toHaveText('A day in shadows');
+ await page.getByRole('link',{name:'A day in shadows'}).first().click();await expect(page.getByRole('heading',{level:1})).toHaveText('A day in shadows');
  await page.reload();await expect(page.getByRole('heading',{name:'Follow a changing angle'})).toBeVisible();expect(errors).toEqual([]);
  await page.goto('/404.html');await expect(page.getByRole('heading',{name:'This spark wandered off.'})).toBeVisible();
 });

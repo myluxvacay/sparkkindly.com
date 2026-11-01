@@ -14,6 +14,13 @@ export interface Db extends Queryable {
   transaction<T>(fn: (tx: Queryable) => Promise<T>): Promise<T>;
 }
 
+// Connections per process. DB_POOL_MAX lowers it for the in-process test database, which cannot serve several pooled
+// connections at once; production leaves it unset.
+export function poolSize(raw: string | undefined): number {
+  if (!raw || !/^\d+$/.test(raw) || Number(raw) < 1) return 5;
+  return Math.min(Number(raw), 20);
+}
+
 let pool: Pool | undefined;
 
 // One small shared pool for the process. Created lazily so importing this module never connects.
@@ -21,7 +28,7 @@ export function getPool(): Pool {
   if (!pool) {
     pool = new Pool({
       connectionString: process.env.DATABASE_URL,
-      max: 5,
+      max: poolSize(process.env.DB_POOL_MAX),
       connectionTimeoutMillis: 3000,
       statement_timeout: 3000,
       idleTimeoutMillis: 30_000,
