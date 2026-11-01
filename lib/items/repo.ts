@@ -9,7 +9,8 @@ export type RiskTier = 'excluded' | 'sourced' | 'computable' | 'reflective' | 'k
 export const allowedTransitions: Record<Status, Status[]> = {
   draft: ['in_review', 'scheduled', 'rejected', 'archived'],
   in_review: ['scheduled', 'rejected', 'draft'],
-  scheduled: ['published', 'draft', 'archived'],
+  // in_review: a scheduled item is pulled back for review, for example when its world is switched to review mode.
+  scheduled: ['published', 'draft', 'in_review', 'archived'],
   published: ['archived'],
   rejected: ['draft'],
   archived: ['draft'],
