@@ -146,3 +146,23 @@ Rebooted with the owner's permission to load the updated libraries. Back in abou
 ## Not yet done
 
 Backups, monitoring and email come in later tasks of the Project 0 plan.
+
+## Public site (Project 1B)
+
+The public pages (home, worlds, topics, items, play, quiz, search, report a problem, sitemap) read the database; nothing
+renders from `content/` any more except the import scripts and `validate-content`. Pages are `force-dynamic`.
+
+- **Play is server-checked.** Answers live only in `item_answers` and leave the server only after a response is submitted
+  (`lib/play/answer.ts`). The report POST accepts at most 8 KB.
+- **Template images** (`/api/template-image/<world>/<slug>/`) are drawn locally; titles are reduced to Latin text so the
+  renderer never fetches a font or emoji from a CDN.
+- **Local run** (throwaway database, starter content): `npx tsx scripts/e2e-db.ts`, then
+  `SITE_RELEASE=false DB_POOL_MAX=1 DATABASE_URL=postgres://postgres@127.0.0.1:54329/postgres?sslmode=disable npx next start -p 3000`.
+
+**Verified on staging, 1 November 2026 (UTC).** Release `468dd47`: CI and Deploy succeeded. With the basic-auth login from
+the owner's secrets file (not echoed): `/`, the five worlds, a starter article, a Kids article, `/quiz/`, `/quiz/archive/`,
+`/search/?q=shadow` and the sitemap answered 200; the template image is `image/png`; `/api/health/` is `{"ok":true}`;
+`/quiz/number-detective-001/` answers 308 to `/play/number-detective-001/`; an unanswered quiz page contains no
+explanation text and `?r=c` shows "Correct"; the sitemap has no entries and `robots.txt` is `Disallow: /`.
+**Not yet verified on staging:** a report submitted from an item landing in `problem_reports` (needs the SSH-tunnel row
+count), and that production, `ufw` and the Caddyfiles are unchanged (no change was made to any of them by this deploy).
