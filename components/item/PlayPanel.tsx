@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getDb } from '@/lib/db';
 import type { PublicItem } from '@/lib/items/repo';
 import { playResult } from '@/lib/play/answer';
@@ -14,13 +15,19 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
   const play = readPlay(item.body);
   const params = toParams(searchParams);
   const result = hasResponse(params) ? await playResult(getDb(), anonymousScope(), item.world, item.slug, params) : null;
-  const another = item.kind === 'quiz' ? '/quiz/archive/' : `/${item.world}/`;
+  const invalidHint =
+    play.mechanic === 'put_in_order'
+      ? `Please give each item a different position from 1 to ${play.items.length}, then check again.`
+      : undefined;
+  const another =item.kind === 'quiz' ? '/quiz/archive/' : `/${item.world}/`;
 
   return (
     <div className="quiz-panel">
-      {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} />}
+      {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} />}
       {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
-      <p className="quiz-note">No timer. No scores to share. Nothing is recorded.</p>
+      <p className="quiz-note">
+        No timer. No scores to share. SparkKindly does not save your answer; see the <Link href="/privacy/">privacy guide</Link>.
+      </p>
     </div>
   );
 }

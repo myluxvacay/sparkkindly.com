@@ -10,7 +10,7 @@ describe('buildSitemap', () => {
 
   it('lists static pages, worlds, topics and items with trailing slashes', () => {
     expect(urls).toEqual(expect.arrayContaining([
-      `${base}/`, `${base}/quiz/`, `${base}/quiz/archive/`, `${base}/about/`, `${base}/privacy/`,
+      `${base}/`, `${base}/quiz/archive/`, `${base}/about/`, `${base}/privacy/`, `${base}/terms/`,
       `${base}/play/`, `${base}/kids/`, `${base}/topics/owls/`, `${base}/play/a-quiz/`,
     ]));
     expect(urls.every((u) => u.endsWith('/'))).toBe(true);
@@ -19,6 +19,11 @@ describe('buildSitemap', () => {
   it('gives items their last-modified date and does not filter what it was given', () => {
     expect(map.find((m) => m.url === `${base}/play/a-quiz/`)?.lastModified).toEqual(at);
     expect(buildSitemap([{ world: 'x', slug: 'y', updatedAt: at }], [], base).map((m) => m.url)).toContain(`${base}/x/y/`);
+  });
+
+  it('does not list /quiz/, whose canonical points at the quiz page itself', () => {
+    expect(urls).not.toContain(`${base}/quiz/`);
+    expect(urls).toContain(`${base}/quiz/archive/`);
   });
 
   it('never lists the search page', () => {

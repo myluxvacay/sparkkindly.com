@@ -1,5 +1,64 @@
 import Link from 'next/link';
-import {metadata as seo} from '@/lib/seo';
-export const metadata=seo("About SparkKindly","A little curiosity. A little kindness.",'/about/');
-const sections=[["Why we’re here", "SparkKindly is a place to play, learn, connect, and grow. Our starting point is simple: a thoughtful question or a small act of attention can be worth making room for."], ["Five worlds to explore", "Play offers puzzles with explained answers. Discover follows questions about the world. Together shares fictional stories and everyday ideas for connection. Grow offers optional reflection. Kids is a distinct destination for ages 6–9 with an adult."], ["Our current stage", "Our initial collection was approved for publication by the SparkKindly site owner on 19 October 2026. The owner-supplied badge and banner are used throughout the site. Independent media-rights, hosting-privacy and child-privacy reviews remain incomplete; we do not claim those reviews or full accessibility conformance have been completed."], ["No pressure to keep up", "There are no accounts, public scores, streaks, ads, or newsletter forms. Explore what interests you, take an idea off-screen, and leave whenever you choose."]];
-export default function Page(){return <div className="container trust-page"><nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>About SparkKindly</span></nav><p className="eyebrow">ABOUT SPARKKINDLY</p><h1>A little curiosity. A little kindness.</h1><div className="prose">{sections.map(([heading,text])=><section key={heading}><h2>{heading}</h2><p>{text}</p></section>)}</div></div>}
+import TrustPage from '@/components/TrustPage';
+import { metadata as seo } from '@/lib/seo';
+
+export const metadata = seo('About SparkKindly', 'A little curiosity. A little kindness.', '/about/');
+
+export default function Page() {
+  return (
+    <TrustPage
+      crumb="About SparkKindly"
+      eyebrow="ABOUT SPARKKINDLY"
+      title="A little curiosity. A little kindness."
+      updated="1 November 2026"
+      sections={[
+        {
+          heading: 'Why we are here',
+          paragraphs: [
+            'SparkKindly is a place to play, learn, connect and grow. Our starting point is simple: a thoughtful question or a small act of attention can be worth making room for.',
+          ],
+        },
+        {
+          heading: 'Five worlds to explore',
+          paragraphs: [
+            'Play offers puzzles with explained answers. Discover follows questions about the world. Together shares fictional stories and everyday ideas for connection. Grow offers optional reflection. Kids is a separate destination for ages 6 to 9, to explore with an adult.',
+          ],
+        },
+        {
+          heading: 'What the site is today',
+          paragraphs: [
+            <>
+              Today SparkKindly is a reading and playing site. There are no accounts, comments, scores or public rankings, and nothing to
+              register for. You can answer a quiz or puzzle and see the explanation straight away. SparkKindly does not save your answer; the{' '}
+              <Link href="/privacy/">privacy guide</Link> explains what the web server can still see.
+            </>,
+            'We plan to add optional accounts for teenagers and adults later. Younger visitors (under 13) would not be able to have an account, and 13 to 15 year olds would need a parent or guardian to agree. None of that exists yet, and this page will change before it does.',
+          ],
+        },
+        {
+          heading: 'Who writes it, and how it is checked',
+          paragraphs: [
+            <>
+              Much of SparkKindly is written with the help of AI, and new items are checked by software before they are published. Our{' '}
+              <Link href="/editorial-policy/">editorial policy</Link> explains what is checked, what is not, and how Kids content is handled.
+            </>,
+          ],
+        },
+        {
+          heading: 'No pressure to keep up',
+          paragraphs: [
+            'There are no timers, streaks or ads, and we do not track what you do. Explore what interests you, take an idea off-screen, and leave whenever you choose.',
+          ],
+        },
+        {
+          heading: 'Something wrong?',
+          paragraphs: [
+            <>
+              Every article, quiz and game has a “Report a problem” link. You can also read how to <Link href="/contact/">get in touch</Link>.
+            </>,
+          ],
+        },
+      ]}
+    />
+  );
+}

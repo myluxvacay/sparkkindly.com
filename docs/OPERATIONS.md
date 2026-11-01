@@ -194,3 +194,9 @@ Scripts live in `deploy/bin/`, units in `deploy/systemd/`, installed by `deploy/
   (backup 1 day, restore test 7 days, disk 1 hour). Production gets its monitor at the cut-over.
 - **Backblaze key.** The application key is limited to the `sparkkindly-backups` bucket (read and write). Rotate it in Backblaze,
   then re-run the install script with the new values.
+
+## Trust pages, accessibility and cut-over preparation (Project 1D)
+
+The trust pages (About, Editorial policy, Privacy, Terms, Accessibility, Contact) are drafts written to match the running product; the owner decisions they still need are listed in `docs/CUTOVER.md`. `CONTACT_EMAIL` in the env file publishes a contact address on the Contact and Accessibility pages once the owner confirms a mailbox they read; unset, no address is shown. The accessibility record is `docs/ACCESSIBILITY-REVIEW-1D.md`. Support articles: `docs/kb/`.
+
+The cut-over is prepared and **not executed**: checklist, runbook, rollback and the owner authorizations are in `docs/CUTOVER.md`; the scripts are `deploy/cutover/switch-to-app.sh` and `rollback-to-static.sh` (tested against stub commands only), `scripts/url-inventory.ts` and `scripts/load-test.ts`. Pushing `main` updates the loopback app only; the public switch is the Caddy change.

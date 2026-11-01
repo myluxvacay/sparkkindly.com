@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ItemCard from '@/components/item/ItemCard';
+import Breadcrumb from '@/components/Breadcrumb';
+import Pager from '@/components/Pager';
 import { getDb } from '@/lib/db';
 import { anonymousScope } from '@/lib/public/scope';
 import { getTopic, listWorlds } from '@/lib/public/worlds';
@@ -33,21 +35,19 @@ export default async function TopicPage({ params, searchParams }: Props) {
 
   return (
     <div className="container section">
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link href="/">Home</Link>
-        <span aria-hidden="true">/</span>
-        <span>{topic.name}</span>
-      </nav>
+      <Breadcrumb trail={[{ name: 'Home', href: '/' }, { name: topic.name }]} />
       <p className="eyebrow">TOPIC</p>
       <h1>{topic.name}</h1>
       <div className="content-grid two-col">
-        {items.map((i) => <ItemCard item={i} world={byWorld.get(i.world)} key={i.id} />)}
+        {items.map((i) => <ItemCard item={i} world={byWorld.get(i.world)} key={i.id} headingLevel={2} />)}
       </div>
       {!items.length && <p>Nothing here yet. <Link href="/">Back to the beginning</Link>.</p>}
-      <nav aria-label="Pages" className="pager">
-        {page > 1 && <Link rel="prev" href={page === 2 ? here : `${here}?page=${page - 1}`}>← Newer</Link>}
-        {rows.length > PAGE_SIZE && <Link rel="next" href={`${here}?page=${page + 1}`}>Older →</Link>}
-      </nav>
+      <Pager
+        prev={page > 1 ? (page === 2 ? here : `${here}?page=${page - 1}`) : undefined}
+        next={rows.length > PAGE_SIZE ? `${here}?page=${page + 1}` : undefined}
+        prevLabel="← Newer"
+        nextLabel="Older →"
+      />
     </div>
   );
 }
