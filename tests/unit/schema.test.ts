@@ -218,3 +218,23 @@ describe('relations', () => {
     await expect(db.query("UPDATE worlds SET approval_mode='manual' WHERE id=$1", [w])).rejects.toThrow(/check constraint/);
   });
 });
+
+describe('admin tables (Project 1C)', () => {
+  it('stores admin emails in lower case only', async () => {
+    await expect(db.query("INSERT INTO admin_users (email, totp_secret) VALUES ('Owner@Example.test', 'X')")).rejects.toThrow();
+    await db.query("INSERT INTO admin_users (email, totp_secret) VALUES ('owner@example.test', 'X')");
+  });
+
+  it('allows only the code and active session stages', async () => {
+    await expect(
+      db.query(
+        "INSERT INTO admin_sessions (token_hash, email, stage, expires_at, last_seen_at) VALUES ('h1', 'a@example.test', 'root', now(), now())",
+      ),
+    ).rejects.toThrow();
+  });
+
+  it('records a job run once per key', async () => {
+    await db.query("INSERT INTO job_runs (job, run_key) VALUES ('digest', '2026-11-01')");
+    await expect(db.query("INSERT INTO job_runs (job, run_key) VALUES ('digest', '2026-11-01')")).rejects.toThrow();
+  });
+});

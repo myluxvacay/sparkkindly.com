@@ -20,7 +20,8 @@
     "preview": "next start -p 4173",
     "test:e2e": "playwright test",
     "content:approve": "tsx scripts/apply-editorial-approval.ts",
-    "build:preview": "SITE_RELEASE=false npm run build"
+    "build:preview": "SITE_RELEASE=false npm run build",
+    "admin:totp": "tsx scripts/admin-totp.ts"
   },
   "keywords": [],
   "author": "",
