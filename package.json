@@ -7,6 +7,7 @@
     "content:validate": "tsx scripts/validate-content.ts",
     "email:test": "tsx scripts/send-test-email.ts",
     "db:migrate": "node db/migrate.mjs",
+    "content:import": "tsx scripts/import-starter-content.ts",
     "content:pull": "tsx scripts/sync-mongodb.ts",
     "build": "npm run content:validate && next build",
     "build:release": "SITE_RELEASE=true npm run build",
