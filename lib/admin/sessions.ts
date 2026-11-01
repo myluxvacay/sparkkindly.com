@@ -63,6 +63,15 @@ export async function consumeLink(db: Queryable, token: string, env: EnvLike, no
   return session;
 }
 
+// Whether a link token can still be used (to re-send the pending link instead of minting a new one).
+export async function linkStillValid(db: Queryable, token: string, now: Date): Promise<boolean> {
+  const r = await db.query(
+    'SELECT 1 FROM admin_login_tokens WHERE token_hash = $1 AND used_at IS NULL AND expires_at > $2::timestamptz',
+    [hash(token), now.toISOString()],
+  );
+  return r.rows.length === 1;
+}
+
 export async function pendingEmail(db: Queryable, sessionToken: string, now: Date): Promise<string | null> {
   if (!sessionToken) return null;
   const r = await db.query<{ email: string }>(

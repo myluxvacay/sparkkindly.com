@@ -27,6 +27,7 @@ function deps(sent: EmailMessage[] = [], now = NOW) {
     send: vi.fn(async (m: EmailMessage) => { sent.push(m); return {}; }),
     limits: createSignInLimits(() => 0),
     codes: createCodeLimits(() => 0),
+    pending: new Map<string, string>(),
   };
 }
 const cookieValue = (r: Response) => /__Host-sk_admin=([^;]*)/.exec(r.headers.get('set-cookie') ?? '')?.[1] ?? '';
@@ -94,17 +95,22 @@ describe('requestSignIn', () => {
     expect(sent).toHaveLength(0);
   });
 
-  it("an allowed address over its limit is skipped quietly, and floods from other clients never block the owner's link", async () => {
+  it('over the new-link cap, the pending link is re-sent instead of minted, so a flood delays nothing and sends stay bounded', async () => {
     const sent: EmailMessage[] = [];
     const d = deps(sent);
     for (let c = 0; c < 40; c++) {
       await requestSignIn(post('/admin/sign-in/request/', { email: `junk${c}@example.test` }, { ...ORIGIN, 'x-forwarded-for': `10.0.0.${c}` }), d);
-      await requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, { ...ORIGIN, 'x-forwarded-for': '10.9.9.9' }), d);
+      await requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, { ...ORIGIN, 'x-forwarded-for': `10.9.${c}.9` }), d);
     }
-    expect(sent).toHaveLength(3); // the flooding client got its three, then nothing
+    expect(sent.length).toBe(4); // three new links, then one re-send of the last pending link
+    const tokens = sent.map((m) => /token=([0-9a-f]{64})/.exec(m.text)![1]);
+    expect(new Set(tokens).size).toBe(3);
+    expect(tokens[3]).toBe(tokens[2]);
     const r = await requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, { ...ORIGIN, 'x-forwarded-for': '203.0.113.5' }), d);
     expect(r.status).toBe(303);
-    expect(sent).toHaveLength(4);
+    // The owner's inbox already holds a link that still works (the flood could only delay it, never block it).
+    const session = await confirmLink(post('/admin/sign-in/link/confirm/', { token: tokens[3] }), deps());
+    expect(session.headers.get('location')).toBe('/admin/sign-in/code/');
   });
 
   it('survives a failing mail send without leaking it', async () => {

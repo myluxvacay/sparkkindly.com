@@ -30,11 +30,11 @@ export function safeReturn(raw: unknown): string {
 // createLimiter counts per minute; a clock running 60x slow turns "n per minute" into "n per hour".
 const hourly = (perHour: number, clock: () => number) => createLimiter({ perMinute: perHour, now: () => clock() / 60 });
 
-// The network a client address belongs to, for rate limiting: IPv4 by /24, IPv6 by /64 (one subscriber usually holds
-// a whole /64, so per-address keys would let one actor rotate freely). Anything unparseable is its own key.
+// The client key for rate limiting: a full IPv4 address, or an IPv6 /64 (one subscriber usually holds a whole /64, so
+// per-address keys would let one actor rotate freely). Anything unparseable is its own key.
 export function clientPrefix(ip: string): string {
-  const v4 = /^(?:::ffff:)?(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.\d{1,3}$/i.exec(ip);
-  if (v4) return `${v4[1]}.${v4[2]}.${v4[3]}`;
+  const v4 = /^(?:::ffff:)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/i.exec(ip);
+  if (v4) return v4[1];
   if (!/^[0-9a-f:]+$/i.test(ip) || !ip.includes(':')) return ip;
   const [head, tail = ''] = ip.toLowerCase().split('::');
   const left = head ? head.split(':') : [];
@@ -43,19 +43,27 @@ export function clientPrefix(ip: string): string {
   return groups.slice(0, 4).map((g) => g.replace(/^0+(?=.)/, '')).join(':');
 }
 
-// Sign-in link requests, keyed by client network (clientPrefix). The per-network limit (10 an hour) is the main
-// control and is spent by every request. An allow-listed address also spends 3 an hour per (network, address).
-// There is deliberately no shared site-wide ceiling: anything every client spends together can be drained by one
-// actor to lock the owner out. Unknown addresses touch only the per-network limit.
-// ponytail: the owner's inbox can receive at most 3 links an hour from each network an attacker controls; if that is
-// ever abused, add a per-address cap that re-sends the pending link instead of minting new ones.
+export type SignInDecision = 'new' | 'resend' | 'skip';
+
+// What to do with a sign-in link request (ruling, 1 November 2026). The per-client limit (10 an hour) is the main
+// control; every request spends it and an unknown address spends nothing else. An allow-listed address gets at most
+// 3 NEW links an hour, whoever asks (no shared site-wide bucket); past that the still-valid pending link is re-sent,
+// at most once per 5 minutes, instead of minting another. The browser gets the identical answer in every case.
+// Residual risk: an attacker can delay a link by up to 5 minutes but never bypass anything (links only reach the
+// owner's inbox; the authenticator code and allow-list still gate access); at most 6 + 12 emails in any hour reach one
+// allowed address. Recovery path: edit ADMIN_EMAILS on the server and restart the service.
 export function createSignInLimits(clock: () => number = Date.now) {
   const perClient = hourly(10, clock);
-  const perPair = hourly(3, clock);
-  return (client: string, email: string, allowed: boolean): boolean => {
-    const net = clientPrefix(client);
-    if (!perClient(net)) return false;
-    return !allowed || perPair(`${net}|${email.trim().toLowerCase()}`);
+  const newLinks = hourly(3, clock);
+  const lastResend = new Map<string, number>();
+  return (client: string, email: string, allowed: boolean): SignInDecision => {
+    if (!perClient(clientPrefix(client)) || !allowed) return 'skip';
+    const address = email.trim().toLowerCase();
+    if (newLinks(address)) return 'new';
+    const now = clock();
+    if (now - (lastResend.get(address) ?? -Infinity) < 5 * 60_000) return 'skip';
+    lastResend.set(address, now);
+    return 'resend';
   };
 }
 

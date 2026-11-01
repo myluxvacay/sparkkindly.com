@@ -16,13 +16,13 @@ describe('sameOrigin', () => {
 });
 
 describe('clientPrefix', () => {
-  it('groups IPv4 by /24 and IPv6 by /64, and maps IPv4-in-IPv6 to IPv4', () => {
-    expect(clientPrefix('203.0.113.9')).toBe('203.0.113');
+  it('keys IPv4 by the full address and IPv6 by its /64, mapping IPv4-in-IPv6 to IPv4', () => {
+    expect(clientPrefix('203.0.113.9')).toBe('203.0.113.9');
+    expect(clientPrefix('::ffff:203.0.113.9')).toBe('203.0.113.9');
     expect(clientPrefix('2001:db8:1:2:3:4:5:6')).toBe('2001:db8:1:2');
     expect(clientPrefix('2001:DB8:1:2::7')).toBe('2001:db8:1:2');
     expect(clientPrefix('2001:db8::1')).toBe('2001:db8:0:0');
     expect(clientPrefix('::1')).toBe('0:0:0:0');
-    expect(clientPrefix('::ffff:203.0.113.9')).toBe('203.0.113');
     expect(clientPrefix('unknown')).toBe('unknown');
     expect(clientPrefix('not an ip')).toBe('not an ip');
   });
@@ -46,51 +46,57 @@ describe('safeReturn', () => {
 });
 
 describe('sign-in limits', () => {
-  it('allow 10 requests an hour per client and 3 an hour per client for one allowed address', () => {
+  const MIN = 60_000;
+
+  it('spend only the per-client limit (10 an hour) for unknown addresses', () => {
     let t = 0;
-    const allow = createSignInLimits(() => t);
-    for (let i = 0; i < 3; i++) expect(allow('1.1.1.1', 'a@example.test', true)).toBe(true);
-    expect(allow('1.1.1.1', 'a@example.test', true)).toBe(false);
-    for (let i = 0; i < 6; i++) expect(allow('1.1.1.1', `x${i}@example.test`, false)).toBe(true);
-    expect(allow('1.1.1.1', 'y@example.test', false)).toBe(false);
-    expect(allow('2.2.2.2', 'a@example.test', true)).toBe(true);
-    t += 60 * 60_000;
-    expect(allow('1.1.1.1', 'z@example.test', false)).toBe(true);
+    const decide = createSignInLimits(() => t);
+    for (let i = 0; i < 10; i++) expect(decide('198.51.100.1', `u${i}@example.test`, false)).toBe('skip');
+    expect(decide('198.51.100.1', 'owner@example.test', true)).toBe('skip'); // that client is over its limit
+    expect(decide('198.51.100.2', 'owner@example.test', true)).toBe('new'); // the next IPv4 address is another client
+    t += 60 * MIN;
+    expect(decide('198.51.100.1', 'owner@example.test', true)).toBe('new');
   });
 
-  it("a flood of the owner's address or unknown addresses from other clients cannot block the owner's own client", () => {
-    const allow = createSignInLimits(() => 0);
-    for (let c = 0; c < 300; c++) {
-      allow(`10.0.${c >> 8}.${c & 255}`, `junk${c}@example.test`, false);
-      allow(`10.1.${c >> 8}.${c & 255}`, 'owner@example.test', c < 50);
+  it('treat one IPv6 /64 as one client', () => {
+    const decide = createSignInLimits(() => 0);
+    for (let i = 0; i < 10; i++) decide(`2001:db8:1:2::${i.toString(16)}`, `w${i}@example.test`, false);
+    expect(decide('2001:db8:1:2:ffff:1:2:3', 'owner@example.test', true)).toBe('skip');
+    expect(decide('2001:db8:1:3::1', 'owner@example.test', true)).toBe('new');
+  });
+
+  it('mint at most 3 new links an hour per allowed address, whoever asks, then re-send at most once per 5 minutes', () => {
+    let t = 0;
+    const decide = createSignInLimits(() => t);
+    const got = [0, 1, 2, 3, 4].map((i) => decide(`192.0.2.${i}`, 'owner@example.test', true));
+    expect(got).toEqual(['new', 'new', 'new', 'resend', 'skip']);
+    t += 5 * MIN;
+    expect(decide('192.0.2.9', 'owner@example.test', true)).toBe('resend');
+    expect(decide('192.0.2.10', 'second@example.test', true)).toBe('new'); // another address has its own allowance
+  });
+
+  it('bounds the sends to one allowed address in an hour, however many networks flood it', () => {
+    let t = 0;
+    const decide = createSignInLimits(() => t);
+    let sends = 0;
+    for (let minute = 0; minute < 60; minute++, t += MIN) {
+      for (let c = 0; c < 50; c++) {
+        if (decide(`10.${minute}.0.${c}`, 'owner@example.test', true) !== 'skip') sends++;
+      }
     }
-    for (let i = 0; i < 20; i++) allow('6.6.6.6', 'owner@example.test', true);
-    expect(allow('203.0.113.5', 'owner@example.test', true)).toBe(true);
+    // The new-link bucket bursts 3 and refills 3 an hour (at most 6 in a 60-minute window); re-sends add at most 12.
+    expect(sends).toBeLessThanOrEqual(6 + 12);
   });
 
-  it('treat one IPv4 /24 or one IPv6 /64 as one client', () => {
-    const allow = createSignInLimits(() => 0);
-    for (let i = 0; i < 10; i++) expect(allow(`198.51.100.${i}`, `u${i}@example.test`, false)).toBe(true);
-    expect(allow('198.51.100.200', 'v@example.test', false)).toBe(false);
-    for (let i = 0; i < 10; i++) expect(allow(`2001:db8:1:2::${i.toString(16)}`, `w${i}@example.test`, false)).toBe(true);
-    expect(allow('2001:db8:1:2:ffff:1:2:3', 'x@example.test', false)).toBe(false);
-    expect(allow('2001:db8:1:3::1', 'x@example.test', false)).toBe(true);
-  });
-
-  it('a client rotating addresses inside one /64 cannot block a legitimate sign-in from another network', () => {
-    const allow = createSignInLimits(() => 0);
+  it('a flood from unknown addresses and from one /64 cannot stop a legitimate sign-in from another network', () => {
+    let t = 0;
+    const decide = createSignInLimits(() => t);
     for (let i = 0; i < 5000; i++) {
-      allow(`2001:db8:dead:beef:${(i >> 16).toString(16)}:${(i & 0xffff).toString(16)}::1`, i % 2 ? 'owner@example.test' : `j${i}@example.test`, i % 2 === 1);
+      decide(`2001:db8:dead:beef:${(i >> 16).toString(16)}:${(i & 0xffff).toString(16)}::1`, `j${i}@example.test`, false);
+      decide(`198.18.${i >> 8}.${i & 255}`, `k${i}@example.test`, false);
     }
-    expect(allow('203.0.113.5', 'owner@example.test', true)).toBe(true);
-  });
-
-  it("no site-wide ceiling: the owner's address flooded from 500 networks still works from another one", () => {
-    const allow = createSignInLimits(() => 0);
-    for (let c = 0; c < 500; c++) {
-      for (let k = 0; k < 4; k++) allow(`10.${c >> 8}.${c & 255}.1`, 'owner@example.test', true);
-    }
-    expect(allow('203.0.113.5', 'owner@example.test', true)).toBe(true);
+    for (let i = 0; i < 100; i++) decide(`2001:db8:dead:beef::${i.toString(16)}`, 'owner@example.test', true);
+    expect(decide('203.0.113.5', 'owner@example.test', true)).toBe('new');
   });
 
   it('allow 20 code attempts an hour per client', () => {
