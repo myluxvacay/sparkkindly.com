@@ -24,7 +24,19 @@ describe('clientPrefix', () => {
     expect(clientPrefix('2001:db8::1')).toBe('2001:db8:0:0');
     expect(clientPrefix('::1')).toBe('0:0:0:0');
     expect(clientPrefix('unknown')).toBe('unknown');
-    expect(clientPrefix('not an ip')).toBe('not an ip');
+  });
+
+  it('keys IPv4 by /24 when asked (the code limiter)', () => {
+    expect(clientPrefix('203.0.113.9', 24)).toBe('203.0.113');
+    expect(clientPrefix('::ffff:203.0.113.9', 24)).toBe('203.0.113');
+    expect(clientPrefix('2001:db8:1:2::7', 24)).toBe('2001:db8:1:2');
+  });
+
+  it('puts every malformed address in one shared unknown bucket', () => {
+    for (const bad of ['not an ip', '999.1.1.1', '1.2.3.256', '1.2.3', '1.2.3.4.5', '01:02:03', 'gggg::1', '1::2::3', '1:2:3:4:5:6:7:8:9', '12345::1', '', 'a'.repeat(500)]) {
+      expect(clientPrefix(bad), bad).toBe('unknown');
+      expect(clientPrefix(bad, 24), bad).toBe('unknown');
+    }
   });
 });
 
@@ -99,11 +111,17 @@ describe('sign-in limits', () => {
     expect(decide('203.0.113.5', 'owner@example.test', true)).toBe('new');
   });
 
-  it('allow 20 code attempts an hour per client', () => {
+  it('allow 20 code attempts an hour per client, where a client is an IPv4 /24 or IPv6 /64', () => {
     const allow = createCodeLimits(() => 0);
-    for (let i = 0; i < 20; i++) expect(allow('1.1.1.1')).toBe(true);
-    expect(allow('1.1.1.1')).toBe(false);
-    expect(allow('2.2.2.2')).toBe(true);
+    for (let i = 0; i < 20; i++) expect(allow(`1.1.1.${i}`)).toBe(true);
+    expect(allow('1.1.1.250')).toBe(false);
+    expect(allow('1.1.2.1')).toBe(true);
+  });
+
+  it('malformed client addresses cannot mint extra code buckets', () => {
+    const allow = createCodeLimits(() => 0);
+    for (let i = 0; i < 20; i++) expect(allow(`junk-${i}`)).toBe(true);
+    expect(allow('300.1.1.1')).toBe(false);
   });
 });
 

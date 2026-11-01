@@ -161,6 +161,23 @@ describe('confirmLink and submitSignInCode', () => {
     expect((await submitSignInCode(post('/admin/sign-in/code/submit/', { csrf: csrfToken(session), code: '123456' }, { host: 'a', origin: 'https://b', cookie }), deps())).status).toBe(403);
   });
 
+  it('rotating client addresses cannot add guesses: the challenge locks after five wrong codes from anywhere', async () => {
+    const token = await linkToken();
+    const session = cookieValue(await confirmLink(post('/admin/sign-in/link/confirm/', { token }), deps()));
+    const statuses: (string | null)[] = [];
+    for (let i = 0; i < 6; i++) {
+      const headers = { ...ORIGIN, cookie: `__Host-sk_admin=${session}`, 'x-forwarded-for': `198.51.${i}.${i}` };
+      const r = await submitSignInCode(post('/admin/sign-in/code/submit/', { csrf: csrfToken(session), code: '000000' }, headers), deps());
+      statuses.push(r.headers.get('location'));
+    }
+    expect(statuses.slice(0, 4)).toEqual(Array(4).fill('/admin/sign-in/code/?error=1'));
+    expect(statuses[4]).toBe('/admin/sign-in/?expired=1');
+    const right = totpAt(secret, Math.floor(NOW.getTime() / 30_000) + 1);
+    const after = await submitSignInCode(post('/admin/sign-in/code/submit/', { csrf: csrfToken(session), code: right }, { ...ORIGIN, cookie: `__Host-sk_admin=${session}` }), deps());
+    expect(after.headers.get('location')).toBe('/admin/sign-in/?expired=1');
+    expect(await getAdmin(db, session, env, NOW)).toBeNull();
+  });
+
   it('a wrong code is audited and sent back to the code page; five end the session and clear the cookie', async () => {
     const token = await linkToken();
     const session = cookieValue(await confirmLink(post('/admin/sign-in/link/confirm/', { token }), deps()));
@@ -170,6 +187,6 @@ describe('confirmLink and submitSignInCode', () => {
     expect(r!.headers.get('location')).toBe('/admin/sign-in/?expired=1');
     expect(r!.headers.get('set-cookie')).toContain('Max-Age=0');
     expect(await auditCount('sign_in_code_bad')).toBeGreaterThanOrEqual(4);
-    expect(await auditCount('sign_in_locked')).toBe(1);
+    expect(await auditCount('sign_in_locked')).toBeGreaterThanOrEqual(1);
   });
 });

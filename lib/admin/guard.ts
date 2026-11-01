@@ -30,16 +30,26 @@ export function safeReturn(raw: unknown): string {
 // createLimiter counts per minute; a clock running 60x slow turns "n per minute" into "n per hour".
 const hourly = (perHour: number, clock: () => number) => createLimiter({ perMinute: perHour, now: () => clock() / 60 });
 
-// The client key for rate limiting: a full IPv4 address, or an IPv6 /64 (one subscriber usually holds a whole /64, so
-// per-address keys would let one actor rotate freely). Anything unparseable is its own key.
-export function clientPrefix(ip: string): string {
-  const v4 = /^(?:::ffff:)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/i.exec(ip);
-  if (v4) return v4[1];
-  if (!/^[0-9a-f:]+$/i.test(ip) || !ip.includes(':')) return ip;
-  const [head, tail = ''] = ip.toLowerCase().split('::');
-  const left = head ? head.split(':') : [];
-  const right = ip.includes('::') ? (tail ? tail.split(':') : []) : [];
-  const groups = ip.includes('::') ? [...left, ...Array(Math.max(0, 8 - left.length - right.length)).fill('0'), ...right] : left;
+// The client key for rate limiting. IPv6 is always keyed by its /64 (one subscriber usually holds a whole /64, so
+// per-address keys would let one actor rotate freely). IPv4 is the full address for sign-in links, or its /24 for the
+// code limiter (v4Bits 24), where rotating neighbouring addresses must not add guesses. Anything malformed shares the
+// single 'unknown' bucket, so junk cannot mint extra buckets.
+export function clientPrefix(ip: string, v4Bits: 32 | 24 = 32): string {
+  const v4 = /^(?:::ffff:)?(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/i.exec(ip);
+  if (v4) {
+    const octets = v4.slice(1).map(Number);
+    if (octets.some((o) => o > 255)) return 'unknown';
+    return octets.slice(0, v4Bits === 24 ? 3 : 4).join('.');
+  }
+  if (!/^[0-9a-f:]{2,39}$/i.test(ip)) return 'unknown';
+  const halves = ip.toLowerCase().split('::');
+  if (halves.length > 2) return 'unknown';
+  const left = halves[0] ? halves[0].split(':') : [];
+  const right = halves.length === 2 && halves[1] ? halves[1].split(':') : [];
+  if ([...left, ...right].some((g) => !/^[0-9a-f]{1,4}$/.test(g))) return 'unknown';
+  const missing = 8 - left.length - right.length;
+  if (halves.length === 2 ? missing < 1 : missing !== 0) return 'unknown';
+  const groups = [...left, ...Array(halves.length === 2 ? missing : 0).fill('0'), ...right];
   return groups.slice(0, 4).map((g) => g.replace(/^0+(?=.)/, '')).join(':');
 }
 
@@ -67,11 +77,11 @@ export function createSignInLimits(clock: () => number = Date.now) {
   };
 }
 
-// Link confirmations and authenticator codes: 20 an hour per client network (each session also dies after 5 wrong
-// codes, and a session needs a fresh emailed link).
+// Link confirmations and authenticator codes: 20 an hour per IPv4 /24 or IPv6 /64. Each challenge (code-stage session)
+// also dies after 5 wrong codes from any source (submitCode), and a new one needs a fresh emailed link.
 export function createCodeLimits(clock: () => number = Date.now) {
   const perClient = hourly(20, clock);
-  return (client: string): boolean => perClient(clientPrefix(client));
+  return (client: string): boolean => perClient(clientPrefix(client, 24));
 }
 
 // One instance of each per process, shared across route modules.
