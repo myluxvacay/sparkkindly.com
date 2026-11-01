@@ -1,0 +1,11 @@
+[Unit]
+Description=SparkKindly disk usage check
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/sparkkindly/bin/check-disk.sh
+TimeoutStartSec=60
+Nice=10
+IOSchedulingClass=idle

@@ -1,0 +1,11 @@
+[Unit]
+Description=SparkKindly nightly encrypted database backup to Backblaze B2
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/sparkkindly/bin/backup.sh
+TimeoutStartSec=1800
+Nice=10
+IOSchedulingClass=idle

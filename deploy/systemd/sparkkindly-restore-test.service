@@ -1,0 +1,11 @@
+[Unit]
+Description=SparkKindly monthly backup restore test
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/sparkkindly/bin/restore-test.sh
+TimeoutStartSec=1800
+Nice=10
+IOSchedulingClass=idle

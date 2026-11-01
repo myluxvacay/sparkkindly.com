@@ -166,3 +166,29 @@ the owner's secrets file (not echoed): `/`, the five worlds, a starter article, 
 explanation text and `?r=c` shows "Correct"; the sitemap has no entries and `robots.txt` is `Disallow: /`.
 **Not yet verified on staging:** a report submitted from an item landing in `problem_reports` (needs the SSH-tunnel row
 count), and that production, `ufw` and the Caddyfiles are unchanged (no change was made to any of them by this deploy).
+
+## Backups, restore and monitoring (Project 0, tasks 0.9 to 0.12)
+
+Scripts live in `deploy/bin/`, units in `deploy/systemd/`, installed by `deploy/provision/05-backups-and-monitoring.sh`
+(run as root on the VM; secrets are prompted with hidden input or read from the environment, never passed as arguments).
+
+- **Backups.** `sparkkindly-backup.timer`, daily 03:15 UTC: for each database in `BACKUP_DATABASES`
+  (`/opt/sparkkindly/shared/backup.env`, mode 600) `pg_dump -Fc`, encrypted with `age` to `AGE_RECIPIENT`, minimum 10 KB,
+  uploaded to B2 `sparkkindly-backups/db/<database>-<UTC stamp>.dump.age`, objects older than 30 days hard-deleted, local copies
+  kept two days. The `sparkkindly-backup` heartbeat is pinged only after everything succeeded. A failed or truncated dump
+  uploads nothing and pings nothing (tested, including a dump that dies midway: `tests/unit/backup-scripts.test.ts`).
+  List: `rclone ls b2:sparkkindly-backups/db/`. **At the production cut-over add `sparkkindly` to `BACKUP_DATABASES`.**
+- **Encryption key.** The age private key is created once on the server at `/root/.config/sparkkindly/age.key` (mode 600). The
+  owner copies it into their password manager from their own terminal; it is never sent through chat or committed. Without
+  it, backups cannot be restored if the server is lost.
+- **Restore.** `restore.sh <file | b2:sparkkindly-backups/db/<name>> <target-db> [--force]` decrypts, drops and recreates the
+  target and runs `pg_restore`. It refuses `sparkkindly` and `sparkkindly_staging` without `--force` (exit 3). For a real
+  restore stop the matching web service first. Recovery targets from the spec: lose at most 24 hours of data, be back within 4.
+- **Restore test.** `sparkkindly-restore-test.timer`, monthly: restores the newest staging backup into
+  `sparkkindly_restoretest`, requires the same public table count as live staging and at least one `items` row, drops it,
+  then pings `sparkkindly-restore-test`.
+- **Disk.** `sparkkindly-disk.timer`, hourly at :05: no ping (so Better Stack emails) at 80 percent or more; `sparkkindly-disk` heartbeat.
+- **Better Stack.** Uptime monitor on `https://staging.sparkkindly.com/api/health/` (basic auth) plus the three heartbeats
+  (backup 1 day, restore test 7 days, disk 1 hour). Production gets its monitor at the cut-over.
+- **Backblaze key.** The application key is limited to the `sparkkindly-backups` bucket (read and write). Rotate it in Backblaze,
+  then re-run the install script with the new values.

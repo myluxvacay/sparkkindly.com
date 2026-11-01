@@ -1,0 +1,10 @@
+[Unit]
+Description=Schedule: SparkKindly monthly backup restore test
+
+[Timer]
+OnCalendar=*-*-01 04:00:00 UTC
+Persistent=true
+RandomizedDelaySec=0
+
+[Install]
+WantedBy=timers.target

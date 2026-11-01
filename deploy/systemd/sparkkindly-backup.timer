@@ -1,0 +1,10 @@
+[Unit]
+Description=Schedule: SparkKindly nightly encrypted database backup to Backblaze B2
+
+[Timer]
+OnCalendar=*-*-* 03:15:00 UTC
+Persistent=true
+RandomizedDelaySec=0
+
+[Install]
+WantedBy=timers.target

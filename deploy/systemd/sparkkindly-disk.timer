@@ -1,0 +1,10 @@
+[Unit]
+Description=Schedule: SparkKindly disk usage check
+
+[Timer]
+OnCalendar=*-*-* *:05:00 UTC
+Persistent=true
+RandomizedDelaySec=0
+
+[Install]
+WantedBy=timers.target
