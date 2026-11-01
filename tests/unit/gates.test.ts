@@ -4,7 +4,16 @@ import { newTestDb } from '../helpers/test-db';
 import { seedReference } from '@/db/seed';
 import { createItem } from '@/lib/items/repo';
 import { itemSubmissionSchema, type ItemSubmission } from '@/lib/items/format';
-import { runGates, riskTierFor } from '@/lib/items/gates';
+import { runGates, riskTierFor, isSafeSourceUrl, isPublicAddress } from '@/lib/items/gates';
+
+// No real DNS in tests: any name resolves to a public address unless it starts with "private" or "mixed".
+vi.mock('node:dns/promises', () => ({
+  lookup: vi.fn(async (host: string) => {
+    if (host.startsWith('private')) return [{ address: '10.0.0.5', family: 4 }];
+    if (host.startsWith('mixed')) return [{ address: '93.184.216.34', family: 4 }, { address: '127.0.0.1', family: 4 }];
+    return [{ address: '93.184.216.34', family: 4 }];
+  }),
+}));
 import { fleschKincaidGrade } from '@/lib/items/readability';
 import { blockedWords } from '@/lib/items/blocked';
 
@@ -159,6 +168,77 @@ describe('sources gate', () => {
   it('passes with no sources for a reflective item', async () => {
     const r = await runGates(db, article({ sources: [] }), play, { fetch: okFetch(), now: NOW });
     expect(gate(r, 'sources').ok).toBe(true);
+  });
+});
+
+describe('source address safety (SSRF)', () => {
+  it('refuses a trailing-dot or numeric-suffix hostname that dodges the plain checks', () => {
+    for (const bad of ['https://localhost./x', 'https://LOCALHOST/x', 'https://127.0.0.1./x', 'https://example.123/x', 'https://intranet/x', 'https://[::1]/x', 'https://2130706433/x', 'https://user@169.254.169.254/x']) {
+      expect(isSafeSourceUrl(bad), bad).toBe(false);
+    }
+    expect(isSafeSourceUrl('https://www.nasa.gov/a')).toBe(true);
+    expect(isSafeSourceUrl('https://sub.example.org./a')).toBe(true);
+  });
+
+  it('classifies addresses: public ones pass, private, loopback, link-local, CGNAT, metadata and mapped ones fail', () => {
+    for (const ok of ['93.184.216.34', '8.8.8.8', '2606:4700:4700::1111']) expect(isPublicAddress(ok), ok).toBe(true);
+    for (const bad of ['0.0.0.0', '10.1.2.3', '100.64.0.1', '127.0.0.1', '169.254.169.254', '172.16.0.1', '172.31.255.255', '192.168.0.1',
+      '198.18.0.1', '224.0.0.1', '::1', '::', 'fc00::1', 'fd12::1', 'fe80::1', 'ff02::1', '::ffff:127.0.0.1', '::ffff:10.0.0.1']) {
+      expect(isPublicAddress(bad), bad).toBe(false);
+    }
+  });
+
+  it('rejects a source whose name resolves to a private address, without fetching it', async () => {
+    const fetch = okFetch();
+    const r = await runGates(db, article({ sources: [{ title: 'p', url: 'https://private.example.org/x', accessedAt: '2026-10-30' }] }), play, { fetch, now: NOW });
+    expect(gate(r, 'sources').ok).toBe(false);
+    expect(gate(r, 'sources').reason).toMatch(/private|allowed/i);
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
+  it('rejects a name with any private address among its answers', async () => {
+    const fetch = okFetch();
+    const r = await runGates(db, article({ sources: [{ title: 'm', url: 'https://mixed.example.org/x', accessedAt: '2026-10-30' }] }), play, { fetch, now: NOW });
+    expect(gate(r, 'sources').ok).toBe(false);
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
+  it('checks the address of every redirect hop', async () => {
+    const fetch = vi.fn(async () => new Response(null, { status: 302, headers: { location: 'https://private.example.org/inside' } }));
+    const r = await runGates(db, article(), play, { fetch, now: NOW });
+    expect(gate(r, 'sources').ok).toBe(false);
+    expect(fetch).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('source request limits', () => {
+  it('the schema allows at most 10 sources', () => {
+    const many = Array.from({ length: 11 }, (_, i) => ({ title: `s${i}`, url: `https://example.org/${i}`, accessedAt: '2026-10-30' }));
+    expect(itemSubmissionSchema.safeParse({ ...JSON.parse(JSON.stringify(article())), sources: many }).success).toBe(false);
+  });
+
+  it('stops checking sources when the overall time budget is spent', async () => {
+    const slow = vi.fn(async () => { await new Promise((r) => setTimeout(r, 60)); return new Response(null, { status: 200 }); });
+    const three = Array.from({ length: 3 }, (_, i) => ({ title: `s${i}`, url: `https://example.org/${i}`, accessedAt: '2026-10-30' }));
+    const r = await runGates(db, article({ sources: three }), play, { fetch: slow, now: NOW, sourceBudgetMs: 100 });
+    expect(gate(r, 'sources').ok).toBe(false);
+    expect(gate(r, 'sources').reason).toMatch(/time/i);
+    expect(slow.mock.calls.length).toBeLessThan(3);
+  });
+});
+
+describe('blocked checks cover every submitted text field', () => {
+  it('a blocked word in the image alt text fails', async () => {
+    const r = await runGates(db, article({ image: { origin: 'template', licence: 'own', alt: `a ${blockedWords[0]} picture` } }), play, { fetch: okFetch(), now: NOW });
+    expect(gate(r, 'blocked-words').ok).toBe(false);
+  });
+  it('a blocked word in a source title fails', async () => {
+    const r = await runGates(db, article({ sources: [{ title: `${blockedWords[0]} article`, url: 'https://example.org/s', accessedAt: '2026-10-30' }] }), play, { fetch: okFetch(), now: NOW });
+    expect(gate(r, 'blocked-words').ok).toBe(false);
+  });
+  it('an excluded topic in the image alt text fails', async () => {
+    const r = await runGates(db, article({ image: { origin: 'template', licence: 'own', alt: 'how to make a bomb' } }), play, { fetch: okFetch(), now: NOW });
+    expect(gate(r, 'blocked-topics').ok).toBe(false);
   });
 });
 

@@ -27,7 +27,7 @@ const common = {
   audience: z.enum(['kids', 'all', 'adults']),
   evergreen: z.boolean().default(false),
   topics: z.array(slug).max(8).default([]),
-  sources: z.array(source).default([]),
+  sources: z.array(source).max(10).default([]), // each source is fetched by the server, so the count is capped
   image: z
     .object({
       origin: z.enum(['template', 'stock', 'generated', 'owner-supplied']),

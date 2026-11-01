@@ -1,3 +1,4 @@
+import { lookup } from 'node:dns/promises';
 import type { Queryable } from '@/lib/db';
 import { itemSubmissionSchema, type ItemSubmission } from './format';
 import { findBlockedWord, findBlockedTopic } from './blocked';
@@ -6,13 +7,15 @@ import type { RiskTier } from './repo';
 
 export type GateResult = { gate: string; ok: boolean; reason?: string };
 export type GateWorld = { id: number; slug: string };
-type Deps = { fetch?: typeof fetch; now?: Date };
+type Deps = { fetch?: typeof fetch; now?: Date; sourceBudgetMs?: number };
 
 const MAX_KIDS_GRADE = 6;
 const DUPLICATE_WINDOW_DAYS = 90;
 const SIMILARITY_LIMIT = 0.8;
 const MAX_REDIRECTS = 3;
 const SOURCE_TIMEOUT_MS = 5000;
+const MAX_SOURCES = 10;
+const SOURCE_BUDGET_MS = 20_000; // one limit across the whole sources gate, so many slow sources cannot tie up a request
 
 const isKids = (sub: ItemSubmission, world: GateWorld) => sub.audience === 'kids' || world.slug === 'kids';
 
@@ -33,7 +36,14 @@ function collectStrings(value: unknown, out: string[] = []): string[] {
   return out;
 }
 
-const allText = (sub: ItemSubmission) => collectStrings([sub.title, sub.summary, sub.body, 'answer' in sub ? sub.answer : null]).join('\n');
+// Every text field of the submission (title, summary, body, answer, image text, source titles, topics, slug...), so a
+// field added to the format later is covered by default. Only the idempotency key and publish time are skipped.
+function allText(sub: ItemSubmission): string {
+  const copy: Record<string, unknown> = { ...sub };
+  delete copy.idempotencyKey;
+  delete copy.publishAt;
+  return collectStrings(copy).join('\n');
+}
 
 // The prose a child would read, one sentence per piece.
 function kidsProse(sub: ItemSubmission): string {
@@ -58,9 +68,31 @@ function jaccard(a: string, b: string): number {
   return shared / (x.size + y.size - shared);
 }
 
+// True for an address on the public internet. Everything private, loopback, link-local (including the cloud metadata
+// address), CGNAT, multicast or reserved is refused, and an IPv4-mapped IPv6 address is judged as the IPv4 it wraps.
+export function isPublicAddress(ip: string): boolean {
+  const addr = ip.toLowerCase();
+  const mapped = addr.match(/^::ffff:(\d+\.\d+\.\d+\.\d+)$/);
+  if (mapped) return isPublicAddress(mapped[1]);
+  if (addr.includes(':')) {
+    if (addr === '::' || addr === '::1') return false;
+    if (/^f[cd]/.test(addr) || /^fe[89ab]/.test(addr) || addr.startsWith('ff')) return false; // unique-local, link-local, multicast
+    return true;
+  }
+  const p = addr.split('.').map(Number);
+  if (p.length !== 4 || p.some((n) => !Number.isInteger(n) || n < 0 || n > 255)) return false;
+  const [a, b, c] = p;
+  if (a === 0 || a === 10 || a === 127 || a >= 224) return false;
+  if (a === 100 && b >= 64 && b <= 127) return false; // CGNAT
+  if (a === 169 && b === 254) return false; // link-local, cloud metadata
+  if (a === 172 && b >= 16 && b <= 31) return false;
+  if (a === 192 && (b === 168 || (b === 0 && c === 0))) return false;
+  if (a === 198 && (b === 18 || b === 19)) return false;
+  return true;
+}
+
 // Source URLs are untrusted input and we fetch them from the server, so refuse anything that is not a named public
-// https site. ponytail: this checks the hostname text only; DNS that resolves to a private address is not caught
-// (add a resolve-then-check step before sources ever come from untrusted contributors).
+// https site: no credentials in the URL, no IP literals, no single-label or internal names, no numeric top level.
 export function isSafeSourceUrl(raw: string): boolean {
   let u: URL;
   try {
@@ -68,20 +100,32 @@ export function isSafeSourceUrl(raw: string): boolean {
   } catch {
     return false;
   }
-  const host = u.hostname.toLowerCase();
-  if (u.protocol !== 'https:') return false;
-  if (host === 'localhost' || /\.(localhost|local|internal|lan)$/.test(host)) return false;
+  if (u.protocol !== 'https:' || u.username || u.password) return false;
+  const host = u.hostname.toLowerCase().replace(/\.+$/, ''); // "localhost." is localhost
+  if (!host || host === 'localhost' || /\.(localhost|local|internal|lan)$/.test(host)) return false;
   if (/^\d{1,3}(\.\d{1,3}){3}$/.test(host) || host.includes(':') || host.startsWith('[')) return false; // IP literals
-  return host.includes('.');
+  const labels = host.split('.');
+  return labels.length >= 2 && !/^\d+$/.test(labels[labels.length - 1]);
 }
 
-async function reachable(url: string, doFetch: typeof fetch): Promise<string | null> {
+// ponytail: the address is checked before the fetch, but the fetch resolves the name again, so DNS rebinding between
+// the two is not closed. Pin the checked address with a custom dispatcher before sources can come from contributors.
+async function resolvesPublicly(host: string): Promise<boolean> {
+  const addresses = await lookup(host.replace(/\.+$/, ''), { all: true });
+  return addresses.length > 0 && addresses.every((a) => isPublicAddress(a.address));
+}
+
+async function reachable(url: string, doFetch: typeof fetch, deadline: number): Promise<string | null> {
   let current = url;
   for (let hop = 0; hop <= MAX_REDIRECTS; hop++) {
     if (!isSafeSourceUrl(current)) return `not an allowed source address: ${current}`;
-    let res = await doFetch(current, { method: 'HEAD', redirect: 'manual', signal: AbortSignal.timeout(SOURCE_TIMEOUT_MS) });
+    if (!(await resolvesPublicly(new URL(current).hostname))) return `source resolves to a private address: ${current}`;
+    const remaining = deadline - Date.now();
+    if (remaining <= 0) return 'source checks ran out of time';
+    const signal = () => AbortSignal.timeout(Math.max(1, Math.min(SOURCE_TIMEOUT_MS, deadline - Date.now())));
+    let res = await doFetch(current, { method: 'HEAD', redirect: 'manual', signal: signal() });
     if (res.status >= 400) {
-      res = await doFetch(current, { method: 'GET', redirect: 'manual', signal: AbortSignal.timeout(SOURCE_TIMEOUT_MS) });
+      res = await doFetch(current, { method: 'GET', redirect: 'manual', signal: signal() });
       await res.body?.cancel();
     }
     if (res.status >= 200 && res.status < 300) return null;
@@ -152,10 +196,12 @@ export async function runGates(
   results.push(
     await run('sources', async () => {
       if (tier === 'sourced' && sub.sources.length === 0) return { ok: false, reason: 'factual content needs at least one source' };
+      if (sub.sources.length > MAX_SOURCES) return { ok: false, reason: `at most ${MAX_SOURCES} sources are allowed` };
+      const deadline = Date.now() + (deps.sourceBudgetMs ?? SOURCE_BUDGET_MS);
       for (const s of sub.sources) {
         let problem: string | null;
         try {
-          problem = await reachable(s.url, doFetch);
+          problem = await reachable(s.url, doFetch, deadline);
         } catch (err) {
           problem = `could not reach ${s.url}: ${(err as Error).message}`;
         }
