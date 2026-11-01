@@ -79,14 +79,32 @@ describe('requestSignIn', () => {
     expect(sent).toHaveLength(0);
   });
 
-  it('is rate limited per client', async () => {
-    const d = deps();
-    const statuses = [];
-    for (let i = 0; i < 11; i++) {
-      statuses.push((await requestSignIn(post('/admin/sign-in/request/', { email: `x${i}@example.test` }, { ...ORIGIN, 'x-forwarded-for': '9.9.9.9' }), d)).status);
+  it('a limited request gets the same answer as any other but sends nothing', async () => {
+    const sent: EmailMessage[] = [];
+    const d = deps(sent);
+    const from = { ...ORIGIN, 'x-forwarded-for': '9.9.9.9' };
+    const answers = new Set<string>();
+    for (let i = 0; i < 10; i++) {
+      const r = await requestSignIn(post('/admin/sign-in/request/', { email: `x${i}@example.test` }, from), d);
+      answers.add(`${r.status} ${r.headers.get('location')}`);
     }
-    expect(statuses.slice(0, 10).every((s) => s === 303)).toBe(true);
-    expect(statuses[10]).toBe(429);
+    const limited = await requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, from), d);
+    answers.add(`${limited.status} ${limited.headers.get('location')}`);
+    expect([...answers]).toEqual(['303 /admin/sign-in/?sent=1']);
+    expect(sent).toHaveLength(0);
+  });
+
+  it("an allowed address over its limit is skipped quietly, and floods from other clients never block the owner's link", async () => {
+    const sent: EmailMessage[] = [];
+    const d = deps(sent);
+    for (let c = 0; c < 40; c++) {
+      await requestSignIn(post('/admin/sign-in/request/', { email: `junk${c}@example.test` }, { ...ORIGIN, 'x-forwarded-for': `10.0.0.${c}` }), d);
+      await requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, { ...ORIGIN, 'x-forwarded-for': '10.9.9.9' }), d);
+    }
+    expect(sent).toHaveLength(3); // the flooding client got its three, then nothing
+    const r = await requestSignIn(post('/admin/sign-in/request/', { email: OWNER }, { ...ORIGIN, 'x-forwarded-for': '203.0.113.5' }), d);
+    expect(r.status).toBe(303);
+    expect(sent).toHaveLength(4);
   });
 
   it('survives a failing mail send without leaking it', async () => {

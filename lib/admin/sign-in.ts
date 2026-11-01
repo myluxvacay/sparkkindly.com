@@ -3,7 +3,7 @@ import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { audit } from './audit';
 import { clientKey, codeLimits, readCookie, readForm, sameOrigin, seeOther, sessionCookie, signInLimits } from './guard';
-import { checkCsrf, consumeLink, pendingEmail, requestLink, submitCode } from './sessions';
+import { checkCsrf, consumeLink, isAllowed, pendingEmail, requestLink, submitCode } from './sessions';
 
 // The three sign-in POSTs, as plain functions of a Request so they test without Next. Each checks Origin first.
 // None of them ever puts a token in a response body, a log line or an audit row.
@@ -22,8 +22,10 @@ export async function requestSignIn(request: Request, d: Deps): Promise<Response
   if (!sameOrigin(request)) return forbidden();
   const form = await readForm(request);
   const email = form?.get('email')?.trim().toLowerCase() ?? '';
-  if (!form || email.length > 254) return seeOther(`${SIGN_IN}?sent=1`);
-  if (!(d.limits ?? signInLimits)(clientKey(request), email)) return tooMany();
+  const done = seeOther(`${SIGN_IN}?sent=1`);
+  if (!form || email.length > 254) return done;
+  // A limited request gets the same answer as every other one: it just sends nothing.
+  if (!(d.limits ?? signInLimits)(clientKey(request), email, isAllowed(email, d.env))) return done;
   const token = await requestLink(d.db, email, d.env, d.now);
   if (token) {
     await audit(d.db, email, 'sign_in_link_requested', null);

@@ -33,16 +33,26 @@ describe('safeReturn', () => {
 });
 
 describe('sign-in limits', () => {
-  it('allow 10 requests an hour per client and 3 per address', () => {
+  it('allow 10 requests an hour per client and 3 an hour per client for one allowed address', () => {
     let t = 0;
     const allow = createSignInLimits(() => t);
-    for (let i = 0; i < 3; i++) expect(allow('1.1.1.1', 'a@example.test')).toBe(true);
-    expect(allow('1.1.1.1', 'a@example.test')).toBe(false);
-    for (let i = 0; i < 6; i++) expect(allow('1.1.1.1', `x${i}@example.test`)).toBe(true);
-    expect(allow('1.1.1.1', 'y@example.test')).toBe(false);
-    expect(allow('2.2.2.2', 'b@example.test')).toBe(true);
+    for (let i = 0; i < 3; i++) expect(allow('1.1.1.1', 'a@example.test', true)).toBe(true);
+    expect(allow('1.1.1.1', 'a@example.test', true)).toBe(false);
+    for (let i = 0; i < 6; i++) expect(allow('1.1.1.1', `x${i}@example.test`, false)).toBe(true);
+    expect(allow('1.1.1.1', 'y@example.test', false)).toBe(false);
+    expect(allow('2.2.2.2', 'a@example.test', true)).toBe(true);
     t += 60 * 60_000;
-    expect(allow('1.1.1.1', 'z@example.test')).toBe(true);
+    expect(allow('1.1.1.1', 'z@example.test', false)).toBe(true);
+  });
+
+  it("a flood of the owner's address or unknown addresses from other clients cannot block the owner's own client", () => {
+    const allow = createSignInLimits(() => 0);
+    for (let c = 0; c < 300; c++) {
+      allow(`10.0.${c >> 8}.${c & 255}`, `junk${c}@example.test`, false);
+      allow(`10.1.${c >> 8}.${c & 255}`, 'owner@example.test', c < 50);
+    }
+    for (let i = 0; i < 20; i++) allow('6.6.6.6', 'owner@example.test', true);
+    expect(allow('203.0.113.5', 'owner@example.test', true)).toBe(true);
   });
 
   it('allow 20 code attempts an hour per client', () => {

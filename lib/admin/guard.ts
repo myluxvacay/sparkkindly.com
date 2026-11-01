@@ -30,13 +30,21 @@ export function safeReturn(raw: unknown): string {
 // createLimiter counts per minute; a clock running 60x slow turns "n per minute" into "n per hour".
 const hourly = (perHour: number, clock: () => number) => createLimiter({ perMinute: perHour, now: () => clock() / 60 });
 
-// Sign-in link requests: 10 an hour per client, 3 an hour per address, 100 an hour overall.
+// Sign-in link requests. The per-client limit (10 an hour) is the main control and is spent by every request.
+// Only an allow-listed address spends more: 3 an hour per (client, address), then a site-wide ceiling of 100 links an
+// hour that caps mail volume. Unknown addresses never touch those, and one client's flood never spends another
+// client's (client, address) allowance, so nobody can lock the owner out by submitting the owner's address.
+// ponytail: a distributed attacker with 100+ addresses could still spend the site-wide ceiling for an hour; the
+// trade is a bounded inbox and MailerSend quota. Raise or drop the ceiling if that ever happens.
 export function createSignInLimits(clock: () => number = Date.now) {
   const perClient = hourly(10, clock);
-  const perEmail = hourly(3, clock);
+  const perPair = hourly(3, clock);
   const overall = hourly(100, clock);
-  return (client: string, email: string): boolean =>
-    perClient(client) && perEmail(email.trim().toLowerCase()) && overall('all');
+  return (client: string, email: string, allowed: boolean): boolean => {
+    if (!perClient(client)) return false;
+    if (!allowed) return true;
+    return perPair(`${client}\n${email.trim().toLowerCase()}`) && overall('all');
+  };
 }
 
 // Link confirmations and authenticator codes: 20 an hour per client (each session also dies after 5 wrong codes).
