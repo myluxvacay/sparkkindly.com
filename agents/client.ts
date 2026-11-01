@@ -15,7 +15,8 @@ type Options = {
   fetch?: typeof fetch;
 };
 
-const TIMEOUT_MS = 15_000;
+// Longer than the server's 20s source-check budget plus database time, so a slow submit is not reported as unreachable.
+export const CLIENT_TIMEOUT_MS = 45_000;
 
 // A small client for the SparkKindly agent API. HTTP failures come back as { ok: false } rather than being thrown,
 // so a caller (Claude, through the MCP server) can read why an item was refused and fix it. The agent key is sent only
@@ -36,7 +37,7 @@ export function createClient(opts: Options): AgentClient {
         method,
         headers,
         body: body === undefined ? undefined : JSON.stringify(body),
-        signal: AbortSignal.timeout(TIMEOUT_MS),
+        signal: AbortSignal.timeout(CLIENT_TIMEOUT_MS),
         // Never follow a redirect: it would carry the agent key (and staging password) to wherever it points.
         redirect: 'manual',
       });
@@ -54,7 +55,9 @@ export function createClient(opts: Options): AgentClient {
       const apiError = typeof data === 'object' && data !== null && 'error' in data ? String((data as { error: unknown }).error) : undefined;
       return scrub({ ok, status: res.status, data, error: ok ? undefined : (apiError ?? `HTTP ${res.status}`) });
     } catch (err) {
-      return scrub({ ok: false, status: 0, data: null, error: `Could not reach the site: ${(err as Error).message}` });
+      const timedOut = (err as Error).name === 'TimeoutError';
+      const detail = timedOut ? 'the request timed out; a submitted item may have been stored, so check its status before resubmitting' : (err as Error).message;
+      return scrub({ ok: false, status: 0, data: null, error: `Could not reach the site: ${detail}` });
     }
   }
 

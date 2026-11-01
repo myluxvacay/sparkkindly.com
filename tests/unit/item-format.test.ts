@@ -164,3 +164,16 @@ describe('splitAnswer', () => {
     expect(splitAnswer(itemSubmissionSchema.parse(article())).answer).toBeNull();
   });
 });
+
+describe('image.src stays on our own site', () => {
+  const withSrc = (src: string) => article({ image: { origin: 'stock', licence: 'cc0', alt: 'A picture', src } });
+  it('refuses any absolute, protocol-relative or odd URL, so visitors never fetch a third-party image', () => {
+    for (const src of ['http://tracker.example/p.gif?u=1', 'https://cdn.example/p.png', '//cdn.example/p.png', 'javascript:alert(1)', '/a b']) {
+      expect(ok(withSrc(src)), src).toBe(false);
+    }
+  });
+  it('accepts a site-relative path or no src', () => {
+    expect(ok(withSrc('/media/stock/a-photo.jpg'))).toBe(true);
+    expect(ok(article({ image: { origin: 'template', licence: 'own', alt: 'A picture' } }))).toBe(true);
+  });
+});

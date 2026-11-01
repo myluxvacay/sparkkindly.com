@@ -32,7 +32,7 @@ const common = {
     .object({
       origin: z.enum(['template', 'stock', 'generated', 'owner-supplied']),
       licence: z.string().min(1),
-      src: z.string().optional(),
+      src: z.string().regex(/^\/(?!\/)[\w./-]+$/, 'must be a path on this site').optional(), // never a third-party URL
       alt: z.string(),
     })
     .optional(),

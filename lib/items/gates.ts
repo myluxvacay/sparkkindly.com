@@ -19,7 +19,7 @@ const SIMILARITY_LIMIT = 0.8;
 const MAX_REDIRECTS = 3;
 const SOURCE_TIMEOUT_MS = 5000;
 const MAX_SOURCES = 10;
-const SOURCE_BUDGET_MS = 20_000; // one limit across the whole sources gate, so many slow sources cannot tie up a request
+export const SOURCE_BUDGET_MS = 20_000; // one limit across the whole sources gate, so many slow sources cannot tie up a request
 
 const isKids = (sub: ItemSubmission, world: GateWorld) => sub.audience === 'kids' || world.slug === 'kids';
 

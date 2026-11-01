@@ -147,6 +147,14 @@ describe('review-mode worlds need approval whatever the item says about itself',
   });
 });
 
+describe('the Kids world always stays in review mode', () => {
+  it('cannot be created or switched to auto', async () => {
+    await expect(db.query("INSERT INTO worlds (slug, name, approval_mode) VALUES ('kids', 'Kids', 'auto')")).rejects.toThrow(/kids_world_reviews/);
+    await db.query("INSERT INTO worlds (slug, name, approval_mode) VALUES ('kids', 'Kids', 'review') ON CONFLICT (slug) DO NOTHING");
+    await expect(db.query("UPDATE worlds SET approval_mode='auto' WHERE slug='kids'")).rejects.toThrow(/kids_world_reviews/);
+  });
+});
+
 describe('relations', () => {
   it('deleting an item removes its answers, topics and revisions', async () => {
     const id = await item();

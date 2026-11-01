@@ -144,3 +144,16 @@ describe('submit idempotency key', () => {
     expect((fetch.mock.calls[0][1] as RequestInit).body).toBe('"not an object"');
   });
 });
+
+describe('timeout', () => {
+  it('outlasts the server source-check budget, so a slow but successful submit is not reported as unreachable', async () => {
+    const { SOURCE_BUDGET_MS } = await import('@/lib/items/gates');
+    const { CLIENT_TIMEOUT_MS } = await import('@/agents/client');
+    expect(CLIENT_TIMEOUT_MS).toBeGreaterThanOrEqual(SOURCE_BUDGET_MS + 15_000);
+  });
+
+  it('says the item may have been stored when the request times out', async () => {
+    const r = await createClient({ baseUrl: 'https://s', agentKey: KEY, fetch: stub(() => { throw new DOMException('timed out', 'TimeoutError'); }) }).submit({ kind: 'quiz' });
+    expect(r.error).toMatch(/may have been (stored|saved)/i);
+  });
+});
