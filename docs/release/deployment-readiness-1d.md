@@ -18,8 +18,8 @@ Assessed 1 November 2026 from the repository and local runs only. No server, sta
 
 ## Build / Runtime
 
-- `npm run typecheck`: exit 0. `npm run lint`: 0 errors, 6 warnings (pre-existing, none in 1D files). Vitest: 369 passed, 1 failed (`item-format-docs` "has an example for each kind"; fails identically on the 1B base commit, probably line endings of `docs/item-format.md` on Windows; not changed by 1D). Build succeeds with `SITE_RELEASE=false` and with the release default.
-- Playwright: 71 passed with the preview build and 71 passed with the release build (baseline before 1D was 51), including the privacy gate (no third-party requests, no storage identifiers) and the existing axe test.
+- `npm run typecheck`: exit 0. `npm run lint`: 0 errors, 6 warnings (pre-existing, none in 1D files). Vitest (after the review-fix pass): 392 passed, 1 failed (`item-format-docs` "has an example for each kind"; fails identically on the 1B base commit, probably line endings of `docs/item-format.md` on Windows; not changed by 1D). Build succeeds with `SITE_RELEASE=false` and with the release default.
+- Playwright: 72 passed with the preview build (71 before the review-fix pass, which also passed with the release build; baseline before 1D was 51), including the privacy gate (no third-party requests, no storage identifiers) and the existing axe test.
 
 ## Server / Infrastructure
 

@@ -27,7 +27,11 @@ export default function Page() {
         {
           heading: 'What the site is today',
           paragraphs: [
-            'Today SparkKindly is a reading and playing site. There are no accounts, comments, scores or public rankings, and nothing to register for. You can answer a quiz or puzzle and see the explanation straight away, and nothing about your answer is kept.',
+            <>
+              Today SparkKindly is a reading and playing site. There are no accounts, comments, scores or public rankings, and nothing to
+              register for. You can answer a quiz or puzzle and see the explanation straight away. SparkKindly does not save your answer; the{' '}
+              <Link href="/privacy/">privacy guide</Link> explains what the web server can still see.
+            </>,
             'We plan to add optional accounts for teenagers and adults later. Younger visitors (under 13) would not be able to have an account, and 13 to 15 year olds would need a parent or guardian to agree. None of that exists yet, and this page will change before it does.',
           ],
         },

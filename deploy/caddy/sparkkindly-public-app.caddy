@@ -10,6 +10,16 @@ sparkkindly.com {
         X-Frame-Options "DENY"
         -Server
     }
+    # If the app is down or restarting, show a plain page instead of Caddy's bare 502. Not verified with a real
+    # `caddy validate` yet: switch-to-app.sh validates it on the VM before anything goes live.
+    handle_errors {
+        @unavailable expression {http.error.status_code} in [502, 503, 504]
+        handle @unavailable {
+            header Cache-Control "no-store"
+            header Content-Type "text/plain; charset=utf-8"
+            respond "SparkKindly is briefly unavailable. Please try again in a few minutes." 503
+        }
+    }
     reverse_proxy 127.0.0.1:3100 {
         # The app and its report limiter read the client address from X-Forwarded-For; Caddy sets it.
         transport http {

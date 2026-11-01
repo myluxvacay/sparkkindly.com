@@ -41,7 +41,7 @@ Decisions the builder must not make (the trust pages are drafts until you decide
 - [ ] Backups running; **one restore test passed by hand** (tracker 0.9, 0.10).
 - [ ] `docs/ACCESSIBILITY-REVIEW-1D.md` unverified items (screen-reader pass, real devices) done or accepted by the owner.
 - [ ] Independent review of `deploy/cutover/*` and `deploy/caddy/sparkkindly-public-app.caddy` (High-risk tier: deploy pipeline) completed. **PENDING**; this branch has only the author's tests.
-- [ ] Staging comparison page by page: `STAGING_USER=... STAGING_PASS=... npx tsx scripts/url-inventory.ts --base https://staging.sparkkindly.com` prints `41 of 41 URLs as expected`.
+- [ ] Staging comparison page by page (credentials typed into the shell, never into a command line or file: `read -r -p 'user: ' STAGING_USER; read -r -s -p 'password: ' STAGING_PASS; export STAGING_USER STAGING_PASS`, then `unset STAGING_USER STAGING_PASS` afterwards): `npx tsx scripts/url-inventory.ts --base https://staging.sparkkindly.com` prints `41 of 41 URLs as expected`.
 - [ ] Image licences recorded in the image-origin field for every imported item (owner-supplied brand assets and the Unsplash photos). Check: `SELECT slug, image->>'rights' FROM items WHERE image IS NOT NULL;` on staging.
 - [ ] Load test passed on staging at twice the expected launch traffic (see below), MyLuxVacation unaffected.
 - [ ] Production `prod.env`: `SITE_RELEASE=true`, real `MAILERSEND_API_TOKEN`; `/api/health/` on loopback returns 200.
@@ -53,8 +53,12 @@ Expected launch traffic is not yet measured; pick a figure with the owner (sugge
 
 1. Tell the tracker staging is in use for a load test.
 2. In one terminal on the VM, watch MyLuxVacation and the box: `watch -n 5 'free -m; systemctl is-active myluxvacation* sparkkindly-web-staging; uptime'` and time `curl -o /dev/null -s -w "%{time_total}\n" https://myluxvacation.com/` every 10 seconds.
-3. From the owner's machine: `STAGING_USER=... STAGING_PASS=... npx tsx scripts/load-test.ts --base https://staging.sparkkindly.com --concurrency 10 --seconds 120`. Pass: exit 0 (errors at most 1%, p95 at most 1500 ms) and MyLuxVacation response times and the 2 GB swap unchanged. Record the output and the watch notes in `docs/release/load-test-<date>.md`.
-4. The script refuses `sparkkindly.com` unless `--allow-production`; do not use that.
+3. From the owner's machine, with credentials entered through `read -s` as above: `npx tsx scripts/load-test.ts --base https://staging.sparkkindly.com --concurrency 10 --seconds 120`. Pass: exit 0 (errors at most 1%, p95 at most 1500 ms) and MyLuxVacation response times and the 2 GB swap unchanged. Record the output and the watch notes in `docs/release/load-test-<date>.md`.
+4. Both scripts accept only an allow-list of hosts (`localhost`, `127.0.0.1`, `staging.sparkkindly.com`; the inventory also `sparkkindly.com` for the post-cut-over check, and the load test only with `--allow-production`, which you must not use). A trailing dot, capitals, other IP addresses and lookalike names are refused; credentials are sent only over https or to loopback; non-numeric `--concurrency`, `--seconds` or `--max-p95-ms` exit 2; a run that made no request exits 1.
+
+## Getting the scripts onto the VM
+
+`deploy/` is not part of the release tarball. On the owner's machine, from a clean checkout of the exact commit that passed review (`git rev-parse HEAD`, `git status` clean), run `sha256sum deploy/cutover/*.sh deploy/caddy/sparkkindly-public-app.caddy`, copy those four files to the VM under `/root/cutover-<commit>/cutover/` and `/root/cutover-<commit>/caddy/` with `scp`, run `sha256sum` there and compare line by line. `switch-to-app.sh` also pins the snippet's SHA-256 in its own text and refuses a different snippet. Never run scripts pulled from a branch on the VM.
 
 ## Runbook (cut-over day)
 
@@ -77,13 +81,14 @@ Expected launch traffic is not yet measured; pick a figure with the owner (sugge
 
 Triggers: health or the inventory check fails after step 7 and is not understood within 10 minutes; MyLuxVacation is affected; a privacy or child-safety problem is found on the live pages.
 
-1. `sudo deploy/cutover/rollback-to-static.sh /etc/caddy/sparkkindly-backups/cutover-<stamp>` (the directory step 7 printed). It validates the saved Caddyfile, restores both Caddyfiles, reloads Caddy and removes the app snippet. The static export is served again within seconds.
+1. `sudo deploy/cutover/rollback-to-static.sh [/etc/caddy/sparkkindly-backups/cutover-<stamp>]` (the directory step 7 printed is optional; if given it must be a `cutover-*` snapshot whose candidate equals the live Caddyfile). It reverses only the single import line in the **current** Caddyfiles (never an old snapshot, so newer MyLuxVacation edits survive), validates, reloads, removes the app snippet, then checks that `https://sparkkindly.com/` serves the static site (`/api/health/` 404, `/` 200) and `https://myluxvacation.com/` answers. It prints "rolled back." only after those checks. Exit codes: 1 refused or failed with the old state intact, 2 bad usage, 3 the Caddy reload itself failed (act now: `systemctl status caddy`), 4 reloaded but the live checks did not confirm.
+   The switch script has the same behaviour on failure: from the first live write until its public checks pass, an error, Ctrl-C or TERM restores both files, reloads and verifies.
 2. Verify: `curl -sI https://sparkkindly.com/` is 200 and serves the static site (`curl -s https://sparkkindly.com/ | grep -c _next/static` is non-zero and `/api/health/` is 404).
 3. The app keeps running on loopback; its database and the imported rows are untouched. To roll the **app** back instead, use "Manual rollback" in `docs/OPERATIONS.md`.
 4. Record what happened in the tracker; do not retry until the cause is fixed and the dry run is clean again.
 
-If Caddy itself will not reload: restore `/etc/caddy/Caddyfile` from the same backup directory by hand (`cp -p <dir>/Caddyfile /etc/caddy/Caddyfile; systemctl reload caddy`) and stop; MyLuxVacation shares that Caddy, so do not experiment.
+If Caddy itself will not reload: on the VM swap the one `import` line back by hand in both Caddyfiles (`sparkkindly-public-app.caddy` to `sparkkindly-public.caddy`; do not copy an old snapshot over them, it may drop newer MyLuxVacation edits), `caddy validate`, `systemctl reload caddy`, and stop; MyLuxVacation shares that Caddy, so do not experiment.
 
 ## How this was verified
 
-`tests/unit/cutover-scripts.test.ts` runs both scripts against a temporary directory with stub Caddy commands (refusals, dry run, line-only swap in both files, rollback restoring byte for byte, automatic restore on failed reload, failed public check or failed validation). `tests/unit/url-inventory.test.ts` covers the inventory. `scripts/url-inventory.ts` ran against the local test server (41 of 41) and `scripts/load-test.ts` ran for 10 seconds against it (614 requests, 0 errors; the local database is not the VM). **Not verified:** a real `caddy validate` of the app snippet (no Caddy on the build machine; step 6 does it on the VM), anything on the VM, the production load figure.
+`tests/unit/cutover-scripts.test.ts` runs both scripts against a temporary directory with stub Caddy commands (refusals including preview builds and a tampered snippet, dry run, line-only swap in both files, rollback that keeps newer Caddyfile edits and refuses a non-matching backup, restore on failed public check, failed validation or an interrupt, exit codes 3 and 4). `tests/unit/cutover-guard.test.ts` covers the host allow-list and numeric option checks, `tests/unit/url-inventory.test.ts` the inventory. The production Caddy snippet's `handle_errors` maintenance reply (502/503/504) is unvalidated until the VM dry run. `scripts/url-inventory.ts` ran against the local test server (41 of 41) and `scripts/load-test.ts` ran for 10 seconds against it (614 requests, 0 errors; the local database is not the VM). **Not verified:** a real `caddy validate` of the app snippet (no Caddy on the build machine; step 6 does it on the VM), anything on the VM, the production load figure.

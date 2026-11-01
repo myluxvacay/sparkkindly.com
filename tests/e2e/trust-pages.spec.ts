@@ -46,6 +46,21 @@ test('the privacy page states what is true: no accounts, no outside requests, an
   expect(text).toMatch(/Report a problem/);
 });
 
+test('no page claims an answer is wholly unrecorded; each says it is not saved and points to the privacy guide', async ({ page }) => {
+  await page.goto('/about/');
+  const about = page.locator('main');
+  await expect(about).toContainText('SparkKindly does not save your answer');
+  await expect(about).not.toContainText(/nothing about your answer is kept/i);
+  await expect(about.getByRole('link', { name: /privacy/i }).first()).toHaveAttribute('href', '/privacy/');
+  await page.goto('/play/number-detective-001/');
+  const note = page.locator('.quiz-note');
+  await expect(note).toContainText('does not save your answer');
+  await expect(note).not.toContainText(/nothing is recorded/i);
+  await expect(note.getByRole('link', { name: /privacy/i })).toHaveAttribute('href', '/privacy/');
+  await page.goto('/privacy/');
+  await expect(page.locator('main')).toContainText(/can appear in the web server’s ordinary technical logs/);
+});
+
 test('the editorial policy discloses AI assistance and that Kids content waits for the owner', async ({ page }) => {
   await page.goto('/editorial-policy/');
   const text = await page.locator('main').innerText();
