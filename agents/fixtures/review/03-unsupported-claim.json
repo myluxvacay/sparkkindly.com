@@ -1,0 +1,44 @@
+{
+  "expect": "fail",
+  "tier": "sourced",
+  "world": "discover",
+  "recentTitles": [
+    "Why the sky is blue"
+  ],
+  "item": {
+    "kind": "article",
+    "slug": "great-wall-from-the-moon",
+    "title": "The wall you can see from the Moon",
+    "summary": "Why the Great Wall of China is the one human structure visible from the Moon.",
+    "audience": "all",
+    "topics": [
+      "ancient-history"
+    ],
+    "idempotencyKey": "discover-great-wall-moon",
+    "sources": [
+      {
+        "title": "Great Wall of China",
+        "url": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
+        "accessedAt": "2026-11-03"
+      }
+    ],
+    "body": {
+      "sections": [
+        {
+          "heading": "A wall to see from space",
+          "paragraphs": [
+            "The Great Wall of China is so long that astronauts standing on the Moon can see it with their own eyes.",
+            "It is the only human-made structure visible from that far away."
+          ]
+        },
+        {
+          "heading": "Why it stands out",
+          "paragraphs": [
+            "Its winding line is easy to pick out against the land."
+          ]
+        }
+      ],
+      "takeaway": "The Great Wall is visible from the Moon."
+    }
+  }
+}

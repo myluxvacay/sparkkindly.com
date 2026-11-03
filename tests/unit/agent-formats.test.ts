@@ -4,7 +4,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { parseGoals } from '@/lib/agents/goals';
 import { parseVerdict } from '@/lib/agents/verdict';
-import { supportedKinds } from '@/lib/items/format';
+import { itemSubmissionSchema, supportedKinds } from '@/lib/items/format';
 import { topicChildren, topicParents, topicRoots } from '@/db/seed/topics';
 
 const good = `---
@@ -91,5 +91,22 @@ describe('parseVerdict', () => {
 
   it('allows a Reflective pass with no sources', () => {
     expect(parseVerdict({ pass: true, reasons: ['Tone is fine'], sourcesChecked: [] }, { tier: 'reflective' }).pass).toBe(true);
+  });
+});
+
+describe('the reviewer evaluation fixtures', () => {
+  const dir = path.join(__dirname, '../../agents/fixtures/review');
+  const files = readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
+
+  it('covers a clean pass, a wrong answer, an unsupported claim, a duplicate and an injected instruction', () => {
+    expect(files).toHaveLength(5);
+  });
+
+  it.each(files)('%s is a valid submission with a label and a tier', (file) => {
+    const f = JSON.parse(readFileSync(path.join(dir, file), 'utf8'));
+    expect(['pass', 'fail']).toContain(f.expect);
+    expect(['sourced', 'computable', 'reflective', 'kids']).toContain(f.tier);
+    expect(itemSubmissionSchema.safeParse(f.item).success, file).toBe(true);
+    expect(Array.isArray(f.recentTitles)).toBe(true);
   });
 });

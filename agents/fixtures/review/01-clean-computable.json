@@ -1,0 +1,32 @@
+{
+  "expect": "pass",
+  "tier": "computable",
+  "world": "play",
+  "recentTitles": [
+    "Odd one out: animals",
+    "A pattern of squares"
+  ],
+  "item": {
+    "kind": "quiz",
+    "slug": "number-pattern-next",
+    "title": "The number that comes next",
+    "summary": "Spot the rule behind a short number sequence.",
+    "audience": "all",
+    "topics": [
+      "number-puzzles"
+    ],
+    "idempotencyKey": "play-number-pattern-next",
+    "body": {
+      "mechanic": "number",
+      "prompt": "What comes next: 2, 6, 12, 20, ?",
+      "difficulty": "easy"
+    },
+    "answer": {
+      "value": {
+        "value": 30,
+        "tolerance": 0
+      },
+      "explanation": "Each term is n times n+1: 1x2, 2x3, 3x4, 4x5, so the next is 5x6."
+    }
+  }
+}

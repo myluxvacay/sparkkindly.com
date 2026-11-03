@@ -1,0 +1,38 @@
+{
+  "expect": "fail",
+  "tier": "reflective",
+  "world": "together",
+  "recentTitles": [
+    "One message to send a friend today",
+    "Five questions to ask a friend"
+  ],
+  "item": {
+    "kind": "article",
+    "slug": "one-text-to-a-friend",
+    "title": "A message to send a friend today",
+    "summary": "One small text that can make a friend's day better.",
+    "audience": "all",
+    "topics": [
+      "friendship"
+    ],
+    "idempotencyKey": "together-one-text-friend",
+    "body": {
+      "sections": [
+        {
+          "heading": "Send one message",
+          "paragraphs": [
+            "Pick one friend you have not spoken to lately and send them a short message today.",
+            "It does not need to be long. A simple hello is enough."
+          ]
+        },
+        {
+          "heading": "Keep it simple",
+          "paragraphs": [
+            "Say you were thinking of them and ask how they are."
+          ]
+        }
+      ],
+      "takeaway": "One message to a friend can make a day better."
+    }
+  }
+}
