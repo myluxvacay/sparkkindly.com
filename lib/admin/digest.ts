@@ -2,7 +2,7 @@ import type { Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { agentAlerts } from './digest-agents';
-import { allowList } from './sessions';
+import { allowList, linkBase } from './sessions';
 
 // The owner's morning email (spec, Project 1): what was published in the last day, what is waiting for approval,
 // what failed and why, days of buffer per world, and alerts. Also rendered on /admin/digest/. Plain text only:
@@ -84,7 +84,7 @@ function section(title: string, lines: string[]): string {
   return `${title}\n${lines.length ? lines.map((l) => `- ${l}`).join('\n') : '- none'}\n`;
 }
 
-export function renderDigest(d: Digest): { subject: string; text: string } {
+export function renderDigest(d: Digest, adminUrl = 'https://sparkkindly.com/admin/'): { subject: string; text: string } {
   const subject = `SparkKindly digest for ${d.day}: ${d.published.length} published, ${d.waiting.length} waiting, ${d.alerts.length} alerts`;
   const text = [
     section('Alerts', d.alerts),
@@ -94,7 +94,7 @@ export function renderDigest(d: Digest): { subject: string; text: string } {
     section('Failed jobs', d.failedJobs.map((f) => `${f.job}: ${f.error}`)),
     section('Buffer (days of scheduled items ahead)', d.buffer.map((b) => `${b.world}: ${b.days}`)),
     `Open problem reports: ${d.openReports}\n`,
-    'Open the admin area: https://sparkkindly.com/admin/\n',
+    `Open the admin area: ${adminUrl}\n`,
   ].join('\n');
   return { subject, text };
 }
@@ -126,8 +126,9 @@ export async function deliverDigest(
   day: string,
   to: string[],
   send: (m: EmailMessage) => Promise<unknown>,
+  adminUrl?: string,
 ): Promise<void> {
-  const { subject, text } = renderDigest(await buildDigest(db, now));
+  const { subject, text } = renderDigest(await buildDigest(db, now), adminUrl);
   const failures: string[] = [];
   for (const address of to) {
     const key = `${day}:${address}`;
@@ -152,6 +153,6 @@ export async function sendDigestIfDue(
 ): Promise<'sent' | 'not_due' | 'already_sent' | 'no_recipients'> {
   const claim = await claimDigest(db, now, env);
   if (claim.status !== 'claimed') return claim.status;
-  await deliverDigest(db, now, claim.day, claim.to, send);
+  await deliverDigest(db, now, claim.day, claim.to, send, `${linkBase(env)}/admin/`);
   return 'sent';
 }

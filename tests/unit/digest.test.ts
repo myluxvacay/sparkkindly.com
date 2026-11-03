@@ -90,6 +90,22 @@ describe('renderDigest', () => {
   });
 });
 
+describe('the admin link in the digest', () => {
+  it('points at ADMIN_LINK_BASE (staging) and defaults to the production site', async () => {
+    const d = await buildDigest(db, NOW);
+    expect(renderDigest(d).text).toContain('https://sparkkindly.com/admin/');
+    expect(renderDigest(d, 'https://staging.example.test/admin/').text).toContain('Open the admin area: https://staging.example.test/admin/');
+    const sent: EmailMessage[] = [];
+    const stagingEnv = { ...env, ADMIN_LINK_BASE: 'https://staging.example.test/' };
+    await sendDigestIfDue(db, new Date('2026-12-01T09:00:00Z'), stagingEnv, async (m) => { sent.push(m); });
+    expect(sent.length).toBeGreaterThan(0);
+    for (const m of sent) {
+      expect(m.text).toContain('https://staging.example.test/admin/');
+      expect(m.text).not.toContain('https://sparkkindly.com/admin/');
+    }
+  });
+});
+
 describe('sendDigestIfDue', () => {
   it('waits for the digest hour, sends once a day to every admin address, and needs recipients', async () => {
     const sent: EmailMessage[] = [];

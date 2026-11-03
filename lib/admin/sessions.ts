@@ -30,6 +30,10 @@ export function allowList(env: EnvLike): string[] {
     .filter(Boolean);
 }
 
+// Where emailed links point: ADMIN_LINK_BASE (staging sets its own), else the production site. Never the request's Host,
+// so a forged Host header cannot make an email carry a token to another site.
+export const linkBase = (env: EnvLike) => (env.ADMIN_LINK_BASE || 'https://sparkkindly.com').replace(/\/+$/, '');
+
 export const isAllowed = (email: string, env: EnvLike): boolean =>
   typeof email === 'string' && email !== '' && allowList(env).includes(email.trim().toLowerCase());
 

@@ -3,7 +3,7 @@ import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { audit } from './audit';
 import { clientKey, codeLimits, readCookie, readForm, sameOrigin, seeOther, sessionCookie, signInLimits } from './guard';
-import { checkCsrf, consumeLink, isAllowed, linkStillValid, pendingEmail, requestLink, submitCode } from './sessions';
+import { checkCsrf, consumeLink, isAllowed, linkBase, linkStillValid, pendingEmail, requestLink, submitCode } from './sessions';
 
 // The three sign-in POSTs, as plain functions of a Request so they test without Next. Each checks Origin first.
 // None of them ever puts a token in a response body, a log line or an audit row.
@@ -13,10 +13,6 @@ type Deps = { db: Db; env: EnvLike; now: Date; send: (m: EmailMessage) => Promis
 const forbidden = () => new Response('Forbidden', { status: 403 });
 const tooMany = () => new Response('Too many attempts. Please try again later.', { status: 429, headers: { 'Retry-After': '3600' } });
 const SIGN_IN = '/admin/sign-in/';
-
-// Where links point: ADMIN_LINK_BASE (staging sets its own), else the production site. Never the request's Host,
-// so a forged Host header cannot make the email carry a token to another site.
-const linkBase = (env: EnvLike) => (env.ADMIN_LINK_BASE || 'https://sparkkindly.com').replace(/\/+$/, '');
 
 export async function requestSignIn(request: Request, d: Deps): Promise<Response> {
   if (!sameOrigin(request)) return forbidden();

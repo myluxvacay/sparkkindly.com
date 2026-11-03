@@ -12,6 +12,7 @@ import { publishDue } from '@/lib/jobs/publish-due';
 import { claimHeartbeat, deliverHeartbeat } from '@/lib/jobs/heartbeat';
 import { runJob } from '@/lib/jobs/run-job';
 import { claimDigest, deliverDigest } from '@/lib/admin/digest';
+import { linkBase } from '@/lib/admin/sessions';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
 
@@ -32,7 +33,7 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: { 
     return null;
   });
   if (claim?.status === 'claimed') {
-    await runJob(db, 'digest', () => deliverDigest(db, now, claim.day, claim.to, send), { delayMs: opts.delayMs });
+    await runJob(db, 'digest', () => deliverDigest(db, now, claim.day, claim.to, send, `${linkBase(env)}/admin/`), { delayMs: opts.delayMs });
     log.push(`digest: attempted for ${claim.to.length} address(es)`);
   } else if (claim) {
     log.push(`digest: ${claim.status}`);

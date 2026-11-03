@@ -1,4 +1,5 @@
 import { buildDigest, renderDigest } from '@/lib/admin/digest';
+import { linkBase } from '@/lib/admin/sessions';
 import { requireAdmin } from '@/lib/admin/next';
 import { getDb } from '@/lib/db';
 
@@ -7,7 +8,7 @@ export const dynamic = 'force-dynamic';
 // The same digest the worker emails each morning, built for this moment.
 export default async function AdminDigestPage() {
   const admin = await requireAdmin();
-  const { subject, text } = renderDigest(await buildDigest(getDb(), new Date()));
+  const { subject, text } = renderDigest(await buildDigest(getDb(), new Date()), `${linkBase(process.env)}/admin/`);
   return (
     <>
       <h1>Daily digest</h1>
