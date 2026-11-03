@@ -197,7 +197,7 @@ Scripts live in `deploy/bin/`, units in `deploy/systemd/`, installed by `deploy/
 
 ## Trust pages, accessibility and cut-over preparation (Project 1D)
 
-The trust pages (About, Editorial policy, Privacy, Terms, Accessibility, Contact) are drafts written to match the running product; the owner decisions they still need are listed in `docs/CUTOVER.md`. `CONTACT_EMAIL` in the env file publishes a contact address on the Contact and Accessibility pages once the owner confirms a mailbox they read; unset, no address is shown. The accessibility record is `docs/ACCESSIBILITY-REVIEW-1D.md`. Support articles: `docs/kb/`.
+The trust pages (About, Editorial policy, Privacy, Terms, Accessibility, Contact) are drafts written to match the running product; the owner decisions they still need are listed in `docs/CUTOVER.md`. `CONTACT_EMAIL` in the env file publishes a contact address on the Contact and Accessibility pages once the owner confirms a mailbox they read; unset, no address is shown. `CONTACT_ADDRESS` (one line) likewise adds a postal address to the Contact page; keep it in the env file only. The accessibility record is `docs/ACCESSIBILITY-REVIEW-1D.md`. Support articles: `docs/kb/`.
 
 The cut-over is prepared and **not executed**: checklist, runbook, rollback and the owner authorizations are in `docs/CUTOVER.md`; the scripts are `deploy/cutover/switch-to-app.sh` and `rollback-to-static.sh` (tested against stub commands only), `scripts/url-inventory.ts` and `scripts/load-test.ts`. Pushing `main` updates the loopback app only; the public switch is the Caddy change.
 

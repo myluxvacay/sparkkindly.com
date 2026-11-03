@@ -34,6 +34,7 @@ export default function Page() {
             ),
           ],
         },
+        ...(site.postalAddress ? [{ heading: 'Postal address', paragraphs: [site.postalAddress] }] : []),
         {
           heading: 'For grown-ups',
           paragraphs: [

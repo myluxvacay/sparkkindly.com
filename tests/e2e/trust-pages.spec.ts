@@ -77,4 +77,5 @@ test('with no CONTACT_EMAIL configured the contact and accessibility pages publi
   }
   await page.goto('/contact/');
   await expect(page.getByText(/has not been published yet/)).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Postal address' })).toHaveCount(0);
 });

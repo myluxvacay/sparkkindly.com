@@ -4,6 +4,8 @@ export const site = {
   published: process.env.SITE_RELEASE !== 'false',
   // Shown on the Contact page only when the owner sets CONTACT_EMAIL to a mailbox they have confirmed they read.
   contactEmail: (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(process.env.CONTACT_EMAIL ?? '') ? process.env.CONTACT_EMAIL : null) as string | null,
+  // Optional postal address for the Contact page, one line, set only in the server env (this repo is public).
+  postalAddress: ((v) => (v && v.length <= 200 ? v : null))((process.env.CONTACT_ADDRESS ?? '').replace(/\s+/g, ' ').trim()) as string | null,
   socials: { youtube: null, instagram: null, facebook: null, tiktok: null } as Record<string, string | null>,
 };
 export const brands = {
