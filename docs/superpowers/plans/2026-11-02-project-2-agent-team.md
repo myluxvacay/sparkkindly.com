@@ -17,6 +17,8 @@
 - **Ruling: prompts are not unit-testable.** The reviewer and master behaviour depends on a live Claude run. What CI can pin is the contract around them: goals-file parsing, verdict parsing, run recording, heartbeat, digest. The reviewer's quality is shown by `scripts/review-eval.ts`, which runs `claude -p` over fixtures (a wrong answer, an unsupported claim, a rephrased duplicate, a clean item). It is run by the owner or me on demand, never in CI, and its result is recorded in `docs/OPERATIONS.md` as evaluation evidence (ai-governance rule).
 - **Ruling: topic proposals stay out.** The 1C plan left "agent topic proposals" to this project. Topics remain created in `/admin` until the first-week measurement shows agents are blocked by the topic list; adding it then is a small API addition. Cost if wrong: the owner adds topics by hand.
 - **Ruling: the goals file is the source.** `agents/worlds/<slug>.md` is read by the runner. The `worlds.goals` text shown in the brief stays editable in `/admin`; the two are not synced.
+- **Ruling: the runner and reviewer prompts live in `.claude/agents/sparkkindly-{world-agent,reviewer}.md`, not `agents/*.md`.** Only a subagent definition can restrict tools: the reviewer gets `WebFetch, WebSearch` and nothing that can submit; the world agent can read the brief but not submit. Cost if wrong: none for behaviour; the project agent folder now holds two task agents beside the review-tier ones.
+- **Ruling: `sparkkindly_record_run` MCP tool added** (the master needs a way to call `/api/agent/runs/`); the connector now has five tools.
 - **No push, deploy or server change**; commits carry no AI co-author trailers.
 
 ## Global Constraints
@@ -49,7 +51,7 @@
 | `lib/agents/goals.ts` | parse and validate a goals file |
 | `lib/agents/verdict.ts` | parse and validate the reviewer's verdict |
 | `agents/worlds/{play,discover,together,grow,kids}.md` | goals files (drafts for owner approval) |
-| `agents/runner.md`, `agents/reviewer.md` | generic world-agent and reviewer instructions |
+| `.claude/agents/sparkkindly-world-agent.md`, `.claude/agents/sparkkindly-reviewer.md` | generic world-agent and reviewer instructions (tool-restricted) |
 | `.claude/commands/daily-run.md` | the master command, takes `worlds=` |
 | `scripts/review-eval.ts`, `agents/fixtures/review/*.json` | reviewer evaluation (manual) |
 | `scripts/scheduler/{run-daily,register-tasks}.ps1` | Task Scheduler entry points |
