@@ -28,16 +28,21 @@ let bad = 0;
 for (const name of readdirSync(dir).filter((n) => n.endsWith('.json')).sort()) {
   const f = JSON.parse(readFileSync(path.join(dir, name), 'utf8')) as Fixture;
   let got: string;
+  let why = '';
   try {
     const out = review(f);
     const json = JSON.parse(out.slice(out.indexOf('{'), out.lastIndexOf('}') + 1));
-    got = parseVerdict(json, { tier: f.tier }).pass ? 'pass' : 'fail';
-  } catch {
+    const v = parseVerdict(json, { tier: f.tier });
+    got = v.pass ? 'pass' : 'fail';
+    why = v.reasons.join(' | ').slice(0, 300);
+  } catch (err) {
     got = 'fail'; // an unusable answer counts as a fail, exactly as the master treats it
+    why = `UNUSABLE ANSWER (${(err as Error).message.slice(0, 120)}): this is not a real judgement`;
   }
-  const ok = got === f.expect;
+  const ok = got === f.expect && !why.startsWith('UNUSABLE');
   if (!ok) bad++;
-  console.log(`${ok ? 'OK  ' : 'MISS'} ${name}: expected ${f.expect}, got ${got}`);
+  console.log(`${ok ? 'OK  ' : 'MISS'} ${name}: expected ${f.expect}, got ${got}${why ? `
+       ${why}` : ''}`);
 }
 console.log(bad ? `${bad} fixture(s) not judged as labelled: fix the reviewer prompt before relying on it.` : 'All fixtures judged as labelled.');
 process.exit(bad ? 1 : 0);
