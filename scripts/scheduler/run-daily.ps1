@@ -26,19 +26,24 @@ if ($worldList -notmatch '^[a-z0-9-]+(,[a-z0-9-]+)*$') { throw "Worlds must be l
 $stamp = Get-Date -Format 'yyyy-MM-dd-HHmm'
 $log = Join-Path $LogDir "$stamp-$Env-$($worldList -replace ',', '+').log"
 $prompt = "/daily-run env=$Env worlds=$worldList"
-$tools = @('Agent', 'Read', 'WebFetch', 'WebSearch', "mcp__sparkkindly-$Env")
+# A fetched page can try to steer an agent (prompt injection). So the run loads only the project's settings, never the
+# owner's user settings (their broad allow rules would make this list meaningless), reads only the goals files, and
+# has no shell or file-writing tools. Web tools stay open because sources are arbitrary sites.
+# Checked 3 Nov 2026: a file in the home folder is denied, a goals file reads, the MCP connector still works.
+$tools = @('Agent', 'Read(./agents/worlds/**)', 'WebFetch', 'WebSearch', "mcp__sparkkindly-$Env")
+$denied = @('Bash', 'PowerShell', 'Edit', 'Write', 'NotebookEdit')
 
 if ($DryRun) {
   Write-Output "repo:   $Repo"
   Write-Output "log:    $log"
-  Write-Output "claude -p `"$prompt`" --allowedTools $($tools -join ' ')"
+  Write-Output "claude -p `"$prompt`" --setting-sources project --allowedTools $($tools -join ' ') --disallowedTools $($denied -join ' ')"
   exit 0
 }
 
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 Set-Location $Repo
 "[$(Get-Date -Format o)] start: $prompt" | Out-File -FilePath $log -Encoding utf8
-& claude -p $prompt --allowedTools @tools 2>&1 | Out-File -FilePath $log -Append -Encoding utf8
+& claude -p $prompt --setting-sources project --allowedTools @tools --disallowedTools @denied 2>&1 | Out-File -FilePath $log -Append -Encoding utf8
 $code = $LASTEXITCODE
 "[$(Get-Date -Format o)] exit code $code" | Out-File -FilePath $log -Append -Encoding utf8
 exit $code

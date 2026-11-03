@@ -278,8 +278,9 @@ Set up (owner, once), staging first:
 1. The staging agent key and secrets file entries from `agents/README.md` must exist, and `/mcp` must show `sparkkindly-staging` connected.
 2. `scripts\scheduler\register-tasks.ps1 -WhatIf` shows what would be created; run it without `-WhatIf` to register. Check with
    `Get-ScheduledTask 'SparkKindly*'`. Remove with `register-tasks.ps1 -Unregister`. Use `-Env prod` only after staging has run cleanly.
-3. Logs are written to `%USERPROFILE%\sparkkindly-runs\` (outside the repository; they can hold item text; never commit them).
-4. A test run by hand: `scripts\scheduler\run-daily.ps1 -Worlds play -Env staging`, then check the new items in `/admin` and the run on the runs page.
+3. The run is isolated on purpose (automated review finding, 3 Nov 2026): `--setting-sources project` skips the owner's user settings, `Read` is limited to `agents/worlds/`, and Bash, file-writing tools are denied, so a web page that tries to steer an agent cannot read the secrets file or run commands. Checked: a file in the home folder is denied, a goals file reads, the connector works. Do not add `Read` or other tools back without the same check.
+4. Logs are written to `%USERPROFILE%\sparkkindly-runs\` (outside the repository; they can hold item text; never commit them).
+5. A test run by hand: `scripts\scheduler\run-daily.ps1 -Worlds play -Env staging`, then check the new items in `/admin` and the run on the runs page.
 
 Reviewer evaluation (manual, uses plan usage; never in CI): `npx tsx scripts/review-eval.ts` runs the real reviewer over the five
 fixtures in `agents/fixtures/review/` (a clean pass, a wrong answer, an unsupported claim, a duplicate, an injected instruction). All
