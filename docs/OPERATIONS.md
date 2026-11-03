@@ -263,3 +263,30 @@ Editorial policy answer 200; `/admin/` redirects (307) to `/admin/sign-in/`; the
 `/api/health/` is `{"ok":true}`; an unanswered quiz page carries no explanation text; sparkkindly.com (production) still answers 200.
 **Not yet done on staging:** `ADMIN_EMAILS`, `ADMIN_SECRET_KEY`, `ADMIN_LINK_BASE` are not set (sign-in is unavailable by design), the
 worker timers are not installed (`03-services.sh`), no authenticator is enrolled, and no real digest or sign-in email has been sent.
+
+## Content agents (Project 2)
+
+What runs: Windows Task Scheduler on the owner's machine starts `scripts/scheduler/run-daily.ps1` three times a day
+(play and discover 08:00, together and grow 13:00, kids 18:00, local time). Each run calls `claude -p "/daily-run env=<env>
+worlds=<list>"`. The master command (`.claude/commands/daily-run.md`) reads each world's brief, starts a world agent
+(`.claude/agents/sparkkindly-world-agent.md`, goals in `agents/worlds/<slug>.md`), sends **every** draft to the reviewer
+(`.claude/agents/sparkkindly-reviewer.md`, web tools only, cannot submit), submits passes, and records the run with
+`sparkkindly_record_run`. The machine must be on and signed in; the content buffer covers days it is not.
+
+Set up (owner, once), staging first:
+
+1. The staging agent key and secrets file entries from `agents/README.md` must exist, and `/mcp` must show `sparkkindly-staging` connected.
+2. `scripts\scheduler\register-tasks.ps1 -WhatIf` shows what would be created; run it without `-WhatIf` to register. Check with
+   `Get-ScheduledTask 'SparkKindly*'`. Remove with `register-tasks.ps1 -Unregister`. Use `-Env prod` only after staging has run cleanly.
+3. Logs are written to `%USERPROFILE%\sparkkindly-runs\` (outside the repository; they can hold item text; never commit them).
+4. A test run by hand: `scripts\scheduler\run-daily.ps1 -Worlds play -Env staging`, then check the new items in `/admin` and the run on the runs page.
+
+Reviewer evaluation (manual, uses plan usage; never in CI): `npx tsx scripts/review-eval.ts` runs the real reviewer over the five
+fixtures in `agents/fixtures/review/` (a clean pass, a wrong answer, an unsupported claim, a duplicate, an injected instruction). All
+five must be judged as labelled before the reviewer is relied on. Record the date, model and result here.
+Evaluation record: _not run yet._
+
+First-week measurement (tracker 2.7): for the first week run on this reduced schedule and note each day the number of items per run,
+run time, and whether the plan's limit was hit (the digest shows plan-limit hits and recommends a higher plan when a world misses its
+buffer target on 3 of the last 7 days). Also confirm the Claude subscription terms permit scheduled, unattended use, and record the decision here.
+If no run is recorded for 36 hours the worker emails the admin list.
