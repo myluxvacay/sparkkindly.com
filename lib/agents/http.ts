@@ -56,10 +56,10 @@ export async function readCapped(request: Request, limit = MAX_BODY_BYTES): Prom
   return all;
 }
 
-export async function readJson(request: Request): Promise<{ ok: true; value: unknown } | { ok: false; response: Response }> {
+export async function readJson(request: Request, limit = MAX_BODY_BYTES): Promise<{ ok: true; value: unknown } | { ok: false; response: Response }> {
   const declared = Number(request.headers.get('content-length'));
-  if (Number.isFinite(declared) && declared > MAX_BODY_BYTES) return { ok: false, response: reply(413, { error: 'body_too_large' }) };
-  const bytes = await readCapped(request);
+  if (Number.isFinite(declared) && declared > limit) return { ok: false, response: reply(413, { error: 'body_too_large' }) };
+  const bytes = await readCapped(request, limit);
   if (!bytes) return { ok: false, response: reply(413, { error: 'body_too_large' }) };
   try {
     return { ok: true, value: JSON.parse(new TextDecoder().decode(bytes)) };

@@ -9,6 +9,7 @@ import type { Db } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { publishDue } from '@/lib/jobs/publish-due';
+import { claimHeartbeat, deliverHeartbeat } from '@/lib/jobs/heartbeat';
 import { runJob } from '@/lib/jobs/run-job';
 import { claimDigest, deliverDigest } from '@/lib/admin/digest';
 
@@ -35,6 +36,16 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: { 
     log.push(`digest: attempted for ${claim.to.length} address(es)`);
   } else if (claim) {
     log.push(`digest: ${claim.status}`);
+  }
+  const beat = await claimHeartbeat(db, now, env).catch((err: Error) => {
+    log.push(`heartbeat: could not check (${err.message})`);
+    return null;
+  });
+  if (beat?.status === 'claimed') {
+    await runJob(db, 'heartbeat', () => deliverHeartbeat(db, now, beat.day, beat.to, beat.lastRunAt, send), { delayMs: opts.delayMs });
+    log.push(`heartbeat: attempted for ${beat.to.length} address(es)`);
+  } else if (beat) {
+    log.push(`heartbeat: ${beat.status}`);
   }
   return log;
 }
