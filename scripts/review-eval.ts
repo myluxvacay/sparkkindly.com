@@ -7,7 +7,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseVerdict, type Tier } from '@/lib/agents/verdict';
+import { parseVerdict, type Tier } from '../lib/agents/verdict';
 
 type Fixture = { expect: 'pass' | 'fail'; tier: Tier; world: string; recentTitles: string[]; item: unknown };
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
