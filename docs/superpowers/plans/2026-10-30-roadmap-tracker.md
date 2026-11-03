@@ -55,16 +55,16 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 
 ## Project 2: The agent team
 
-- [ ] 2.1 `agents/` layout, shared runner, goals-file format, and `/daily-run` command — *runner loads a goals file and the brief.*
-- [ ] 2.2 Goals files for Play, Discover, Together, Grow, Kids, written for the 13–25 first audience; Kids for 6–9 — *owner reads and approves each.*
-- [ ] 2.3 Master agent: reads brief and buffers, picks worlds, runs world agents, runs reviewer, submits, retries, logs, posts heartbeat — *dry run against staging produces items in `in_review`/`scheduled`.*
-- [ ] 2.4 Reviewer agent: facts and sources (opens each URL), tone, age, originality, independent solve for Computable items — *fixtures: a wrong answer and an unsupported claim are rejected.*
-- [ ] 2.5 Quality-over-quota and buffer rules (3 days; per-world caps) — *a world with no passing item submits nothing and the digest says so.*
-- [ ] 2.6 Windows Task Scheduler entries: several small runs a day; `claude -p` invocation; run log location — *tasks fire on schedule unattended.*
+- [x] 2.1 `agents/` layout, shared runner, goals-file format, and `/daily-run` command — *runner loads a goals file and the brief.* **[built; plan 2026-11-02-project-2-agent-team.md]**
+- [x] 2.2 Goals files for Play, Discover, Together, Grow, Kids, written for the 13–25 first audience; Kids for 6–9 — *owner reads and approves each.* **[owner approved 3 Nov 2026]**
+- [~] 2.3 Master agent: reads brief and buffers, picks worlds, runs world agents, runs reviewer, submits, retries, logs, posts heartbeat — *dry run against staging produces items in `in_review`/`scheduled`.* **[prompts written; dry run against staging not yet done]**
+- [~] 2.4 Reviewer agent: facts and sources (opens each URL), tone, age, originality, independent solve for Computable items — *fixtures: a wrong answer and an unsupported claim are rejected.* **[prompt and 5 fixtures written; evaluation not yet run]**
+- [~] 2.5 Quality-over-quota and buffer rules (3 days; per-world caps) — *a world with no passing item submits nothing and the digest says so.* **[digest shortfall lines built; end-to-end not yet seen]**
+- [~] 2.6 Windows Task Scheduler entries: several small runs a day; `claude -p` invocation; run log location — *tasks fire on schedule unattended.* **[scripts written and dry-run verified; owner registers them]**
 - [ ] 2.7 First-week measurement on a reduced schedule: Claude Pro usage, items per run, time; confirm terms for scheduled use — *report in the digest; decision recorded.*
-- [ ] 2.8 Usage budget and limit handling: clean stop on rate limit; digest recommends upgrade when buffer missed 3 of 7 days — *simulated limit stops cleanly.*
-- [ ] 2.9 Heartbeat alert: worker alerts if no master heartbeat in 36 hours — *alert fires when the task is disabled for a test.*
-- [ ] 2.10 `video_script` items produced from day one (not shown on site) — *scripts accumulate in the database.*
+- [~] 2.8 Usage budget and limit handling: clean stop on rate limit; digest recommends upgrade when buffer missed 3 of 7 days — *simulated limit stops cleanly.* **[plan-limit stop in /daily-run, digest advice built; simulated limit not yet run]**
+- [x] 2.9 Heartbeat alert: worker alerts if no master heartbeat in 36 hours — *alert fires when the task is disabled for a test.* **[worker alert built and tested]**
+- [~] 2.10 `video_script` items produced from day one (not shown on site) — *scripts accumulate in the database.* **[video_script accepted by the API; Play goals ask for one a week; not yet produced]**
 - [x] 2.11 (named by the owner on 1 Nov 2026; the address is held in the server's `ADMIN_EMAILS` config, not in this public repo) **[owner]** Name the backup approver for Kids items and contributor submissions — *name recorded in 4a.6.*
 - [ ] 2.12 **[owner]** Name the first new world and what it covers — *goals file written.*
 - [ ] 2.13 Add the new world with no code change (row, goals file, key) — *its agent publishes on the next run.*
