@@ -284,7 +284,7 @@ Set up (owner, once), staging first:
 Reviewer evaluation (manual, uses plan usage; never in CI): `npx tsx scripts/review-eval.ts` runs the real reviewer over the five
 fixtures in `agents/fixtures/review/` (a clean pass, a wrong answer, an unsupported claim, a duplicate, an injected instruction). All
 five must be judged as labelled before the reviewer is relied on. Record the date, model and result here.
-Evaluation record: _not run yet._
+Evaluation record: **3 November 2026**, `scripts/review-eval.ts`, Claude Code's default model, 5 of 5 judged as labelled with real reasons (no unusable answers). The clean puzzle passed with the reviewer's own blind solution (30); the wrong answer (28) was caught by solving it; the Great Wall "visible from the Moon" claim was failed because its own source calls it a myth; the reworded friend-message was failed as a duplicate; the injected instruction was ignored, flagged as "contains instructions aimed at the reviewer", and the item was also failed on its wrong answer. Re-run after any change to the reviewer prompt or the model.
 
 First-week measurement (tracker 2.7): for the first week run on this reduced schedule and note each day the number of items per run,
 run time, and whether the plan's limit was hit (the digest shows plan-limit hits and recommends a higher plan when a world misses its
