@@ -31,11 +31,13 @@ describe('createClient', () => {
     await c.brief('play');
     await c.submit({ kind: 'quiz', slug: 's', world: 'play' });
     await c.status('0a1b2c3d-0000-4000-8000-000000000000');
+    await c.recordRun({ worlds: ['play'] });
     expect(fetch.mock.calls.map((c2) => String(c2[0]))).toEqual([
       'https://sparkkindly.com/api/agent/brief/',
       'https://sparkkindly.com/api/agent/brief/?world=play',
       'https://sparkkindly.com/api/agent/items/',
       'https://sparkkindly.com/api/agent/items/0a1b2c3d-0000-4000-8000-000000000000/',
+      'https://sparkkindly.com/api/agent/runs/',
     ]);
   });
 

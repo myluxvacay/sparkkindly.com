@@ -12,13 +12,14 @@ afterEach(async () => {
 });
 
 function fakeClient(over: Partial<AgentClient> = {}): AgentClient & { calls: Record<string, unknown[][]> } {
-  const calls: Record<string, unknown[][]> = { brief: [], submit: [], status: [] };
+  const calls: Record<string, unknown[][]> = { brief: [], submit: [], status: [], recordRun: [] };
   const ok = (data: unknown, status = 200): Result => ({ ok: true, status, data });
   return {
     calls,
     brief: vi.fn(async (...a: unknown[]) => { calls.brief.push(a); return ok({ world: { slug: 'play' } }); }),
     submit: vi.fn(async (...a: unknown[]) => { calls.submit.push(a); return ok({ id: 'item-1', status: 'scheduled' }, 201); }),
     status: vi.fn(async (...a: unknown[]) => { calls.status.push(a); return ok({ id: a[0], status: 'published' }); }),
+    recordRun: vi.fn(async (...a: unknown[]) => { calls.recordRun.push(a); return ok({ ok: true }); }),
     ...over,
   } as never;
 }
@@ -35,10 +36,10 @@ async function connect(deps: Parameters<typeof buildServer>[0]) {
 const textOf = (r: unknown) => (r as { content: { type: string; text: string }[] }).content[0].text;
 
 describe('SparkKindly MCP server', () => {
-  it('lists exactly the four tools', async () => {
+  it('lists exactly the five tools', async () => {
     const c = await connect({ client: fakeClient(), formatDoc: FORMAT_DOC });
     const tools = (await c.listTools()).tools.map((t) => t.name).sort();
-    expect(tools).toEqual(['sparkkindly_brief', 'sparkkindly_item_format', 'sparkkindly_item_status', 'sparkkindly_submit_item']);
+    expect(tools).toEqual(['sparkkindly_brief', 'sparkkindly_item_format', 'sparkkindly_item_status', 'sparkkindly_record_run', 'sparkkindly_submit_item']);
   });
 
   it('every tool has a description that tells Claude when to use it', async () => {
@@ -84,6 +85,17 @@ describe('SparkKindly MCP server', () => {
     expect(JSON.parse(textOf(r)).data.status).toBe('published');
   });
 
+  it('sparkkindly_record_run passes the run counts and refuses a malformed run before touching the API', async () => {
+    const fake = fakeClient();
+    const c = await connect({ client: fake, formatDoc: FORMAT_DOC });
+    const run = { worlds: ['play'], startedAt: '2026-11-03T10:00:00Z', endedAt: '2026-11-03T10:20:00Z', itemsSubmitted: 2, itemsScheduled: 2, itemsInReview: 0, itemsRejected: 0, rateLimited: false };
+    await c.callTool({ name: 'sparkkindly_record_run', arguments: run });
+    expect(fake.calls.recordRun[0]).toEqual([run]);
+    const bad = await c.callTool({ name: 'sparkkindly_record_run', arguments: { ...run, itemsSubmitted: -1 } }).catch((e: Error) => ({ isError: true, content: [{ type: 'text', text: e.message }] }));
+    expect(bad.isError).toBe(true);
+    expect(fake.calls.recordRun).toHaveLength(1);
+  });
+
   it('rejects a submit with no item or a non-object item before touching the API', async () => {
     const fake = fakeClient();
     const c = await connect({ client: fake, formatDoc: FORMAT_DOC });
@@ -96,7 +108,7 @@ describe('SparkKindly MCP server', () => {
 
   it('an unconfigured server names the missing settings and nothing else, and still lists its tools', async () => {
     const c = await connect({ client: null, missing: ['SPARKKINDLY_STAGING_URL', 'SPARKKINDLY_STAGING_AGENT_KEY'], secretsHint: 'your secrets file', formatDoc: FORMAT_DOC });
-    expect((await c.listTools()).tools).toHaveLength(4);
+    expect((await c.listTools()).tools).toHaveLength(5);
     const r = await c.callTool({ name: 'sparkkindly_brief', arguments: {} });
     const out = JSON.parse(textOf(r));
     expect(out).toMatchObject({ ok: false, status: 0 });

@@ -6,6 +6,7 @@ export interface AgentClient {
   brief(world?: string): Promise<Result>;
   submit(item: unknown): Promise<Result>;
   status(id: string): Promise<Result>;
+  recordRun(run: unknown): Promise<Result>;
 }
 
 type Options = {
@@ -76,5 +77,6 @@ export function createClient(opts: Options): AgentClient {
       return request('POST', '/api/agent/items/', item);
     },
     status: (id) => request('GET', `/api/agent/items/${encodeURIComponent(id)}/`),
+    recordRun: (run) => request('POST', '/api/agent/runs/', run),
   };
 }

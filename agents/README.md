@@ -1,9 +1,9 @@
 # SparkKindly connector for Claude Code
 
 This lets Claude Code create SparkKindly content on demand (a game, a quiz, a post, a video script) by calling the site's
-agent API through four tools. It also works from scheduled, unattended Claude Code runs, with no AI API account.
+agent API through five tools. It also works from scheduled, unattended Claude Code runs, with no AI API account.
 
-## The four tools
+## The five tools
 
 | Tool | What it does |
 |---|---|
@@ -11,6 +11,7 @@ agent API through four tools. It also works from scheduled, unattended Claude Co
 | `sparkkindly_brief` | What a world needs today: goals, topics with counts, the last 30 titles, days of buffer, supported kinds and mechanics. |
 | `sparkkindly_submit_item` | Submit an item. The site decides its status: scheduled, waiting for owner approval (Kids), or draft with the failing check named. |
 | `sparkkindly_item_status` | What happened to an item, including its quality report. |
+| `sparkkindly_record_run` | Master agent only: report a finished run (worlds, counts, whether the plan's limit was hit). This is the heartbeat the site watches. |
 
 A refusal is an ordinary answer (`"ok": false` with the reason), so Claude can read it, fix the item and resubmit. To fix
 a draft, resubmit the same slug; a draft you submitted is replaced. Content that is scheduled or published cannot be

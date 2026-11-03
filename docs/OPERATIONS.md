@@ -129,7 +129,7 @@ afterwards, leaving the 24 starter items and one agent, `staging-play`.
 ## Claude Code connector (Project 1A, Task 11)
 
 `.mcp.json` registers two project MCP servers, `sparkkindly-staging` and `sparkkindly-prod`, started with
-`node --import tsx agents/mcp/server.ts --env <staging|prod>`. They give Claude Code four tools
+`node --import tsx agents/mcp/server.ts --env <staging|prod>`. They give Claude Code five tools
 (`sparkkindly_item_format`, `sparkkindly_brief`, `sparkkindly_submit_item`, `sparkkindly_item_status`) over the agent API.
 Settings and keys are read from the owner's secrets file (default `~/sparkkindly-secrets.txt`), never from the repository.
 Setup and use are in `agents/README.md`. Check it with `npx tsx scripts/mcp-smoke.ts --env staging [--live]`.

@@ -77,6 +77,27 @@ export function buildServer(deps: Deps): McpServer {
     ({ id }) => run((c) => c.status(id)),
   );
 
+  server.registerTool(
+    'sparkkindly_record_run',
+    {
+      title: 'Record a finished SparkKindly run',
+      description:
+        "Master agent only. Report one finished run: the worlds it covered, when it started and ended, how many items were submitted, scheduled, sent to owner review and rejected, and whether it stopped on the Claude plan's limit. This is the heartbeat the site watches: if no run is recorded for 36 hours the owner is emailed. Counts and a short note only, never item text.",
+      inputSchema: {
+        worlds: z.array(z.string().regex(/^[a-z0-9-]+$/)).min(1).max(20),
+        startedAt: z.iso.datetime(),
+        endedAt: z.iso.datetime(),
+        itemsSubmitted: z.number().int().min(0).max(1000),
+        itemsScheduled: z.number().int().min(0).max(1000),
+        itemsInReview: z.number().int().min(0).max(1000),
+        itemsRejected: z.number().int().min(0).max(1000),
+        rateLimited: z.boolean(),
+        note: z.string().max(300).optional(),
+      },
+    },
+    (args) => run((c) => c.recordRun(args)),
+  );
+
   return server;
 }
 
