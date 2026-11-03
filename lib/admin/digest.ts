@@ -1,6 +1,7 @@
 import type { Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
+import { agentAlerts } from './digest-agents';
 import { allowList } from './sessions';
 
 // The owner's morning email (spec, Project 1): what was published in the last day, what is waiting for approval,
@@ -75,6 +76,7 @@ export async function buildDigest(db: Queryable, now: Date): Promise<Digest> {
   );
   const stale = Number(oldKeys.rows[0].n);
   if (stale) d.alerts.push(`${stale} agent key is over 90 days old: rotate it in /admin/agents/.`);
+  d.alerts.push(...(await agentAlerts(db, now)));
   return d;
 }
 
