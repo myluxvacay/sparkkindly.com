@@ -14,6 +14,7 @@ import { runJob } from '@/lib/jobs/run-job';
 import { claimDigest, deliverDigest } from '@/lib/admin/digest';
 import { linkBase } from '@/lib/admin/sessions';
 import { claimAccountPurge, purgeAccountData } from '@/lib/accounts/retention';
+import { claimConsentSweep, runConsentSweep } from '@/lib/accounts/consent-sweep';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
 
@@ -50,6 +51,7 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: { 
     log.push(`heartbeat: ${beat.status}`);
   }
   await accountPurge(db, now, log, opts.delayMs);
+  await consentSweep(db, now, env, send, log, opts.delayMs);
   return log;
 }
 
@@ -67,6 +69,25 @@ async function accountPurge(db: Db, now: Date, log: string[], delayMs?: number):
     async () => {
       const r = await purgeAccountData(db, now);
       log.push(`account purge: ${r.accounts} account(s), ${r.tokens} token(s), ${r.sessions} session(s)`);
+    },
+    { delayMs },
+  );
+}
+
+// Once per UTC day: parental-consent reminders, 30-day deletions and cleared parent addresses (lib/accounts/consent-sweep.ts).
+async function consentSweep(db: Db, now: Date, env: EnvLike, send: Send, log: string[], delayMs?: number): Promise<void> {
+  const claimed = await claimConsentSweep(db, now).catch((err: Error) => {
+    log.push(`consent sweep: could not check (${err.message})`);
+    return null;
+  });
+  if (claimed === false) log.push('consent sweep: done today');
+  if (!claimed) return;
+  await runJob(
+    db,
+    'consent-sweep',
+    async () => {
+      const r = await runConsentSweep(db, now, send, { base: linkBase(env) });
+      log.push(`consent sweep: ${r.reminded} reminded, ${r.deleted} deleted, ${r.cleared} cleared`);
     },
     { delayMs },
   );

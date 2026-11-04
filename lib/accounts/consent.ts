@@ -4,7 +4,7 @@
 // Verified by tests/unit/account-consent.test.ts.
 import type { Db, Queryable } from '@/lib/db';
 import { hash, newToken } from '@/lib/tokens';
-import { deleteAccount } from './delete';
+import { deleteAccountIn } from './delete';
 import { maskEmail } from './wording';
 
 const DAY = 24 * 60 * 60_000;
@@ -128,6 +128,10 @@ export async function confirmConsent(db: Db, token: string, now: Date): Promise<
 }
 
 export async function withdrawConsent(db: Db, token: string, now: Date): Promise<'withdrawn' | 'invalid'> {
-  const row = await find(db, token, 'withdraw', now);
-  return row && (await deleteAccount(db, row.account_id)) ? 'withdrawn' : 'invalid';
+  // Token check and deletion share one transaction holding the account row lock, so a parent_email cleared by the
+  // sweep (or changed) between the two cannot let a stale token delete the account.
+  return db.transaction(async (tx) => {
+    const row = await find(tx, token, 'withdraw', now, true);
+    return row && (await deleteAccountIn(tx, row.account_id)) ? 'withdrawn' : 'invalid';
+  });
 }

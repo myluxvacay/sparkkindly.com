@@ -182,6 +182,14 @@ describe('withdrawConsent and deleteAccount', () => {
     expect(await withdrawConsent(db, ta.withdraw, T0)).toBe('invalid');
   });
 
+  it('a withdraw after the parent address was cleared is invalid and leaves the account', async () => {
+    const u = await teen();
+    const t = (await issueConsentTokens(db, u.id, T0))!;
+    await db.query('UPDATE accounts SET parent_email = NULL WHERE id = $1', [u.id]);
+    expect(await withdrawConsent(db, t.withdraw, T0)).toBe('invalid');
+    expect(await count('SELECT count(*)::int AS n FROM accounts WHERE id = $1', [u.id])).toBe(1);
+  });
+
   it('deleteAccount is false for an unknown account', async () => {
     expect(await deleteAccount(db, '00000000-0000-0000-0000-000000000000')).toBe(false);
   });
