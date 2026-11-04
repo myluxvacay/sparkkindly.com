@@ -1,0 +1,151 @@
+# SparkKindly data inventory (draft)
+
+> **Status: Draft for professional review. Not legal advice. Not published.**
+> Prepared 4 November 2026 by the builder from the repository only (migrations, code and `docs/OPERATIONS.md`).
+> Every row names its source so it can be checked. Accounts are built but switched off in production
+> (`ACCOUNTS_ENABLED` is not set there); this inventory describes what the code stores once they are switched on.
+> Placeholders: `[company name and address]`, `[owner contact address]`, `[jurisdiction]`.
+
+Related drafts: [privacy policy](privacy-policy.md), [terms](terms.md),
+[community guidelines](community-guidelines.md), [professional review checklist](professional-review-checklist.md).
+Requirements: design spec section 4a.5 and Project 3
+([spec](../superpowers/specs/2026-10-30-sparkkindly-platform-design.md)); runbook:
+[OPERATIONS](../OPERATIONS.md), sections "Accounts (Project 3A)" to "Settings, export, deletion and inactivity (Project 3E)".
+
+## Who is who
+
+- **Account holder:** a person aged 13 or over with their own account. Age groups come from the date of birth
+  (`lib/accounts/policy.ts`, `POLICY = { minAge: 13, consentAge: 16, adultAge: 18 }`): 13 to 15, 16 to 17, 18 and over.
+- **Child profile:** a child under 13. Never an account; only a profile inside an 18+ adult's account.
+- **Parent or guardian of a 13 to 15 account holder:** gives or withdraws consent by email; has no account.
+- **Anonymous visitor:** reads and plays without an account. Nothing about them is stored by the application
+  except an optional problem report.
+- **Site operators:** the owner (and an optional second approver) who use `/admin/`.
+
+## 1. Database tables that hold personal data
+
+All account tables live in the one PostgreSQL database per environment. "Account deletion" means
+`lib/accounts/delete.ts`: it deletes the address's sign-in links, then the `accounts` row, which cascades every
+other account table. It is used by self-service deletion, parental withdrawal, the consent sweep and the
+inactivity sweep. A deleted account can survive in an encrypted backup for up to 30 days (section 3).
+
+### `accounts` (one row per account holder)
+
+| Column | What it holds | Why | Who can see it | Retention and deletion | Source |
+| --- | --- | --- | --- | --- | --- |
+| `id` | random identifier | links the account's rows | not shown to anyone; appears inside unsubscribe links | account deletion | `007_accounts.sql`, `lib/accounts/unsubscribe.ts` |
+| `email` | the holder's email address | sign-in links, essential emails | the holder (export); the site operators can query the database | account deletion | `007_accounts.sql` |
+| `date_of_birth` | self-declared date of birth | sets the age group and what the account may do; the age group is derived, never stored | the holder (export) | account deletion | `007_accounts.sql`, `lib/accounts/policy.ts` |
+| `time_zone` | browser-reported time zone, editable; UTC if unknown | "today" means the holder's day | the holder (settings, export) | until changed, or account deletion | `007_accounts.sql`, OPERATIONS 3D/3E |
+| `consent_state` | `none`, `pending` or `confirmed` | parental consent for 13 to 15 | the holder (export) | account deletion; a pending account becomes `none` when the holder is no longer 13 to 15 | `007_accounts.sql`, `lib/accounts/consent-sweep.ts` |
+| `parent_email` | the parent or guardian's email (13 to 15 only) | consent record and withdrawal | the holder sees it masked (export) | cleared when the holder is no longer 13 to 15; account deletion | `007_accounts.sql`, `lib/accounts/consent-sweep.ts`, `lib/accounts/export.ts` |
+| `consent_at`, `consent_reminded_at` | when the parent confirmed; when the 7-day reminder went | consent record; one reminder only | the holder (export) | account deletion (`consent_at` is kept after the parent email is cleared at 16) | `008_parental_consent.sql` |
+| `verified_at`, `created_at` | when the holder first used a sign-in link; when the row was made | an unverified sign-up is deleted after 48 hours | the holder (`verified_at` in export) | account deletion | `007_accounts.sql`, `lib/accounts/retention.ts` |
+| `guardian_confirmed_at` | when the adult ticked "I am this child's parent or guardian" (stamped once, at the first child profile) | record of the guardian confirmation | the holder (export) | account deletion | `009_child_profiles.sql`, OPERATIONS 3C |
+| `pin_hash`, `pin_failures`, `pin_lock_count`, `pin_locked_until` | a salted scrypt hash of the 4-digit PIN and lockout counters; never the PIN | stops a child leaving their profile on a shared device | nobody (not exported, never logged) | account deletion; a PIN reset clears the counters | `009_child_profiles.sql`, `lib/accounts/pin.ts` |
+| `notify_daily_set`, `notify_weekly_circle`, `notify_invites` | email preferences, all off by default | future optional emails (none are sent yet) | the holder (settings, export) | until changed, or account deletion | `011_settings.sql` |
+| `inactivity_notice_at` | when the 24-month idle notice was sent | inactivity deletion | the holder (export) | cleared on sign-in; account deletion | `011_settings.sql`, `lib/accounts/inactivity.ts` |
+| `last_sign_in_at`, `last_seen_at` | last email-link sign-in; when a session was last used, kept to the hour | inactivity deletion never removes an active account | the holder (export) | account deletion | `012_last_sign_in.sql`, `lib/accounts/sessions.ts` |
+
+### Other account tables
+
+| Table | What it holds | Why | Who can see it | Retention and deletion | Source |
+| --- | --- | --- | --- | --- | --- |
+| `account_login_tokens` | an email address, a sha256 hash of the sign-in token, expiry and use time | passwordless sign-in | nobody (not exported) | link valid 15 minutes, single use; expired tokens deleted daily, used tokens after 24 hours; deleted with the account (by address) | `007_accounts.sql`, `lib/accounts/sessions.ts`, `lib/accounts/retention.ts`, `lib/accounts/delete.ts` |
+| `account_sessions` | session token hash, account id, created, expiry, last used, active child profile id (`active_profile_id`) | keeps a person signed in; records which profile is active on a shared device | nobody (not exported) | 30 days idle, never past 90 days on the server; the browser cookie lasts 30 days from sign-in; expired sessions deleted daily; cascades with the account | `007_accounts.sql`, `009_child_profiles.sql`, `lib/accounts/sessions.ts`, `lib/accounts/web.ts` |
+| `account_consent_tokens` | account id, the parent email it was sent to, sha256 token hash, purpose (`confirm` or `withdraw`), expiry and use time | the parent's confirm and withdraw links | nobody (not exported) | confirm link works 30 days; withdraw link has no expiry until cleared when the holder is no longer 13 to 15, on withdrawal, or with the account | `008_parental_consent.sql`, `lib/accounts/consent.ts`, `lib/accounts/consent-sweep.ts` |
+| `child_profiles` | display name (1 to 30 characters), age band (`6-9` or `10-12`), owning account id, created time | lets a child under 13 take part inside the adult's account | the adult account holder (pages and export); nobody else today | the adult deletes it at any time (instant, sessions on it end); closed the same way when the child turns 13; cascades with the account | `009_child_profiles.sql`, `lib/accounts/children.ts` |
+| `profile_interests` | account id, profile id (empty for the holder, else one child profile), a topic id or a world id; at most 30 per profile | the personal dashboard | the holder, and the child while their profile is active (export covers both) | until changed; cascades with the profile or the account | `010_interests_responses.sql`, `lib/accounts/interests.ts` |
+| `item_responses` | account id, profile id, item id, whether the first answer was correct, when | the dashboard and progress counts | the holder, and the child while their profile is active (export covers both) | first answer only; cascades with the profile, the account or the item | `010_interests_responses.sql`, `lib/accounts/record-play.ts` |
+
+Not stored in `item_responses`: the answer itself, free text, page views, device details. A consent-pending
+13 to 15 account may save interests, but its answers are not stored (OPERATIONS 3D; `lib/accounts/policy.ts`).
+
+### Tables outside accounts that hold or could hold personal data
+
+| Table | What it holds | Who can see it | Retention | Source |
+| --- | --- | --- | --- | --- |
+| `problem_reports` | item, reason, up to 1000 characters of optional free text, status, time. Nothing about the sender | site operators | no automatic deletion in the code | `004_problem_reports.sql` |
+| `events` | the site's own server-side counts. Has a `profile_id` column, but today the only writer records `item_published` with no profile id | site operators | no automatic deletion in the code; **not** covered by account deletion | `001_core.sql`, `lib/jobs/publish-due.ts` |
+| `admin_users`, `admin_login_tokens`, `admin_sessions`, `audit_log` | operator email addresses, sealed authenticator secrets, token hashes, admin actions | site operators | admin sessions at most 12 hours; others until removed | `005_admin.sql`, `001_core.sql`, OPERATIONS 1C |
+| `failed_jobs`, `job_runs` | job names, counts and error names. The account jobs write counts only, never an address | site operators | no automatic deletion in the code | `001_core.sql`, `005_admin.sql`, `lib/accounts/inactivity.ts` |
+
+Unused tables from migration 001 (`sponsors`, `sponsorships`) hold no personal data. Items, topics, worlds,
+answers and agent tables hold content, not personal data.
+
+## 2. Outside the database
+
+| Where | What | Retention | Source |
+| --- | --- | --- | --- |
+| Session cookie `__Host-sk_account` | the session token (HttpOnly, Secure, SameSite=Lax), sent on every page including Kids pages | `Max-Age` 30 days from sign-in; cleared on sign-out and deletion | `lib/accounts/web.ts`, OPERATIONS 3A |
+| In-memory rate limiters | email addresses, IP addresses or network prefixes, counts | gone when the process restarts; windows of one hour | `lib/accounts/limits.ts`, OPERATIONS 3A |
+| MailerSend (email provider) | recipient address and the content of each email sent: sign-in links, the parent's consent email and reminder, the inactivity notice | set by MailerSend, not by SparkKindly (open question) | OPERATIONS 3A and 3B |
+| Application logs (systemd journal on the server) | error names only, and one hourly "email budget reached" line; addresses, IPs, PINs and parent emails are never logged | the server's journal settings (not set in this repository) | `lib/accounts/*.ts` (`console.error(... err.name)`), `lib/accounts/limits.ts` |
+| Web server (Caddy) | connection details (IP address, request address) while serving each request. The SparkKindly site blocks in `deploy/sparkkindly-public.caddy`, `deploy/caddy/sparkkindly-public-app.caddy` and `deploy/caddy/sparkkindly-staging.caddy` contain no `log` directive. The server's main Caddyfile is not in this repository | see open question 1 | `deploy/` |
+| Encrypted database backups (Backblaze B2) | the full database, encrypted with `age` before upload | B2 lifecycle rule: hidden after 30 days, deleted 1 day after hiding; local copies on the server kept 2 days; never restored selectively | OPERATIONS "Backups, restore and monitoring" |
+| Uptime monitoring (Better Stack) | pings the health endpoint and receives job heartbeats; no visitor data | n/a | OPERATIONS "Backups, restore and monitoring" |
+| Hosting provider | the server that runs everything above; the live privacy page names Hostinger | n/a | `app/(trust)/privacy/page.tsx` |
+
+## 3. Deletion paths
+
+| Path | What it removes | Source |
+| --- | --- | --- |
+| Self-service deletion (`/account/settings/delete/`, typed email, adult context) | all seven account tables in one transaction | OPERATIONS 3E, `lib/accounts/delete.ts` |
+| Child profile deletion (`/account/children/`) | the profile, its interests and answers; sessions on it end | OPERATIONS 3C |
+| Parental withdrawal (link in the parent's email, POST on the page) | the whole account | OPERATIONS 3B |
+| Consent sweep (daily) | a 13 to 15 account still pending 30 days after the holder verified; reminder at 7 days | `lib/accounts/consent-sweep.ts` |
+| Unverified purge (daily) | accounts never verified within 48 hours; expired tokens; used tokens after 24 hours; expired sessions | `lib/accounts/retention.ts` |
+| Inactivity sweep (daily) | after 730 days idle a notice; 30 days later the account if still idle; at most 50 notices and 20 deletions a run | `lib/accounts/inactivity.ts` |
+| Backups | age out as above (up to 31 days counting the hide-then-delete rule) | OPERATIONS "Backups, restore and monitoring" |
+
+The export (`/account/settings/export/`) returns everything above that belongs to the account except the PIN hash
+and counters, tokens, sessions and internal ids; the parent address is masked (`lib/accounts/export.ts`).
+
+## 4. What is never collected
+
+From spec 4a.5 and the code:
+
+- **About a child:** email, date of birth, surname, photo, location, free text written by the child (children cannot
+  comment), device identifiers beyond the adult's session. A display name that looks like an email address, is all
+  digits or has control characters is refused (`lib/accounts/children.ts`).
+- **About anyone:** passwords (sign-in is by emailed link only), the answer text itself, page views or browsing
+  history, analytics or advertising identifiers, third-party cookies, local-storage identifiers, location.
+- **From a sign-up under 13:** nothing is stored; the sign-up is refused before any row is written and the page
+  address carries a neutral code, not the age (`lib/accounts/signup.ts`, `lib/accounts/web.ts`). The in-memory
+  rate limiter still counts the request.
+
+## 5. Planned, not yet available
+
+Circles and scores (Project 4), comments and communities (Project 4 onward), contributions (Project 8),
+sponsorship (Project 6) and social sharing do not exist and store nothing today. Each will need rows added
+here before it launches.
+
+## Open questions for the professional
+
+1. **Web server access logs.** OPERATIONS says the sign-in token "appears in Caddy access logs", but the SparkKindly
+   site blocks in `deploy/` set no `log` directive, and the server's main Caddyfile is not in this repository. Confirm on
+   the server whether access logs are written, for how long, and whether they need to be stated (they would hold IP
+   addresses, the sign-in token and the parent's consent token in the URL).
+2. **Parent email retention.** The parent address is kept while the holder is 13 to 15 and cleared after that, while
+   `consent_at` stays. On any account deletion the whole consent record goes too. Is that the right balance between
+   minimisation and keeping evidence of consent?
+3. **Per-child guardian confirmation.** `guardian_confirmed_at` is stamped once, at the first child profile, not per
+   child. Spec 4a.5 says the adult "confirms at creation". Is one confirmation per account enough?
+4. **Self-declared date of birth.** There is no neutral age screen and nothing stops a refused under-13 from retrying
+   with a different date (deferred to this review, tracker 3.2). No tool exists for the owner to close an account
+   found to belong to someone under 13 other than deleting it in the database.
+5. **Processors.** MailerSend (email), Backblaze (encrypted backups), Better Stack (monitoring, no personal data) and
+   the hosting provider: which need processor agreements, and where each stores data.
+6. **Hosting jurisdiction and transfers.** Where the server and backups are located is not recorded in this repository:
+   `[jurisdiction]`.
+7. **Backup ageing.** The spec and OPERATIONS say "within 30 days"; the B2 rule hides at 30 days and deletes 1 day later.
+   Choose the wording for the policy (for example "about 31 days").
+8. **Session length.** The server allows 30 days idle up to 90 days, but the cookie expires 30 days after sign-in, so a
+   sign-in lasts at most 30 days in practice. The policy should state one number.
+9. **`events.profile_id`.** Not used today, and not covered by account deletion. If a later project writes it,
+   deletion and export must cover it first.
+10. **Account-level activity time while a child plays.** `accounts.last_seen_at` is refreshed (to the hour) by any use
+    of the session, including while a child profile is active. It exists only for the inactivity rule. Confirm this is
+    compatible with "no browsing or behavioural tracking of child profiles" (spec 4a.5).
+11. **Problem reports.** No retention period is set in the code for problem reports or failed-job rows.
+12. **Google sign-in.** The spec lists Google sign-in; it is not built. If added, its data must be added here.
