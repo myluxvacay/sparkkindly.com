@@ -65,10 +65,10 @@ test('an unconfirmed account shows its age group and a masked parent email on th
 });
 
 test('with the flag off every account page and route is a 404 (server without ACCOUNTS_ENABLED)', async ({ request }) => {
-  for (const path of ['/account/', '/account/sign-up/', '/account/sign-in/', '/account/sign-in/link/?token=x']) {
+  for (const path of ['/account/', '/account/sign-up/', '/account/sign-in/', '/account/sign-in/link/?token=x', '/account/consent/?token=x', '/account/consent/withdraw/?token=x']) {
     expect((await request.get(OFF + path)).status(), path).toBe(404);
   }
-  for (const path of ['/account/sign-up/submit/', '/account/sign-in/request/', '/account/sign-in/link/confirm/', '/account/sign-out/']) {
+  for (const path of ['/account/sign-up/submit/', '/account/sign-in/request/', '/account/sign-in/link/confirm/', '/account/sign-out/', '/account/consent/confirm/', '/account/consent/withdraw/confirm/', '/account/consent/resend/']) {
     const r = await request.post(OFF + path, { headers: { ...FORM, origin: OFF }, data: form({ email: 'a@example.test' }), maxRedirects: 0 });
     expect(r.status(), path).toBe(404);
   }
@@ -222,4 +222,105 @@ test('the sign-up and sign-in pages pass axe and sign-in works from the keyboard
   await expect(page.getByRole('button', { name: 'Email me a sign-in link' })).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(page.getByRole('status')).toContainText('If that address has an account');
+});
+
+// Parent consent (Project 3B, Task 3). With no mail sink, the parent's email is the consent-token row: the spec waits for
+// the rows the sign-in issued (proof the email was attempted), then mints its own token the same way issueConsentTokens does.
+const consentRows = async (id: string) =>
+  Number((await sql('SELECT count(*) AS n FROM account_consent_tokens WHERE account_id = $1', [id])).rows[0].n);
+const mintConsent = async (email: string, purpose: 'confirm' | 'withdraw') => {
+  const token = randomBytes(32).toString('hex');
+  await sql(
+    `INSERT INTO account_consent_tokens (token_hash, account_id, parent_email, purpose, expires_at)
+     SELECT $1, id, parent_email, $2, CASE WHEN $2 = 'confirm' THEN now() + interval '30 days' END FROM accounts WHERE email = $3`,
+    [hash(token), purpose, email],
+  );
+  return token;
+};
+// A 14-year-old who has used their own link; returns the account id once the parent's email has been issued.
+async function pendingTeen(page: Page, email: string, parent: string) {
+  await signUp(page, email, dobYearsAgo(14), parent);
+  await signInWithLink(page, email);
+  await expect(page.getByRole('heading', { level: 1, name: 'Your account' })).toBeVisible();
+  const id = (await sql('SELECT id FROM accounts WHERE email = $1', [email])).rows[0].id as string;
+  await expect.poll(() => consentRows(id)).toBe(2);
+  return id;
+}
+// axe at desktop and at 320px, with no horizontal scrolling at 320px (WCAG 1.4.10).
+async function axeBothWidths(page: Page) {
+  expect(await axe(page)).toEqual([]);
+  await page.setViewportSize({ width: 320, height: 800 });
+  expect(await axe(page)).toEqual([]);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+  await page.setViewportSize({ width: 1280, height: 720 });
+}
+
+test('a 14-year-old confirms their link, the parent confirms consent, and the account shows it recorded', async ({ page }) => {
+  const email = fresh();
+  const parent = `guardian-${Date.now()}@example.test`;
+  const id = await pendingTeen(page, email, parent);
+  await expect(page.getByRole('status')).toContainText('Waiting for your parent or guardian to confirm');
+  await page.getByRole('button', { name: 'Email my parent or guardian again' }).click();
+  await expect(page).toHaveURL(/\/account\/\?consent=resent#result$/);
+  await expect(page.locator('#result')).toBeFocused();
+  // the resend issued fresh links (old withdraw kept); wait for it so it cannot revoke the token minted next
+  await expect.poll(() => consentRows(id)).toBe(3);
+
+  const token = await mintConsent(email, 'confirm');
+  await page.goto(`/account/consent/?token=${token}`);
+  await expect(page.getByRole('heading', { level: 1, name: /Confirm your child/ })).toBeVisible();
+  for (const held of ['their email address', 'their date of birth', 'the interests they choose', 'their quiz answers and scores']) {
+    await expect(page.getByRole('listitem').filter({ hasText: held })).toBeVisible();
+  }
+  await expect(page.getByText(`g•••@example.test`)).toBeVisible();
+  await expect(page.getByText(parent)).toHaveCount(0);
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+  expect((await sql('SELECT consent_state FROM accounts WHERE id = $1', [id])).rows[0].consent_state).toBe('pending');
+  await axeBothWidths(page);
+
+  await page.getByRole('button', { name: 'Confirm and keep the account' }).click();
+  await expect(page).toHaveURL(/\/account\/consent\/\?done=confirmed#result$/);
+  await expect(page.getByRole('heading', { level: 1, name: 'Thank you, consent is recorded' })).toBeFocused();
+  await axeBothWidths(page);
+
+  await page.goto('/account/');
+  await expect(page.getByText('Age 13 to 15', { exact: true })).toBeVisible();
+  await expect(page.getByText(/^Recorded on \d{1,2} [A-Z][a-z]+ \d{4}$/)).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Email my parent or guardian again' })).toHaveCount(0);
+
+  await page.goto(`/account/consent/?token=${token}`);
+  await expect(page.getByRole('heading', { level: 1, name: 'This link is not valid' })).toBeVisible();
+  await axeBothWidths(page);
+});
+
+test('the parent withdraw link deletes the account; signing in again finds no account', async ({ page, request }) => {
+  const email = fresh();
+  const id = await pendingTeen(page, email, `guardian-${Date.now()}@example.test`);
+  const token = await mintConsent(email, 'withdraw');
+  await page.goto(`/account/consent/withdraw/?token=${token}`);
+  await expect(page.getByRole('heading', { level: 1, name: /Delete your child/ })).toBeVisible();
+  await expect(page.getByText('This cannot be undone', { exact: false })).toBeVisible();
+  expect(await accountRows(email)).toBe(1);
+  await axeBothWidths(page);
+
+  const scanner = await request.post('/account/consent/withdraw/confirm/', {
+    headers: { ...FORM, origin: 'https://evil.example' }, data: form({ token }), maxRedirects: 0,
+  });
+  expect(scanner.status()).toBe(403);
+  expect(await accountRows(email)).toBe(1);
+
+  await page.getByRole('button', { name: 'Delete the account' }).click();
+  await expect(page).toHaveURL(/\/account\/consent\/\?done=withdrawn#result$/);
+  await expect(page.getByRole('heading', { level: 1, name: 'The account has been deleted' })).toBeFocused();
+  expect(await accountRows(email)).toBe(0);
+  expect(await consentRows(id)).toBe(0);
+  expect((await sql('SELECT 1 FROM account_login_tokens WHERE email = $1', [email])).rows).toHaveLength(0);
+
+  await page.goto('/account/');
+  await expect(page).toHaveURL(/\/account\/sign-in\/$/);
+  await page.goto(`/account/sign-in/link/?token=${await mintLink(email)}`);
+  await expect(page.getByRole('alert').filter({ hasText: 'not valid' })).toBeVisible();
+  await page.goto(`/account/consent/withdraw/?token=${token}`);
+  await expect(page.getByRole('heading', { level: 1, name: 'This link is not valid' })).toBeVisible();
+  await axeBothWidths(page);
 });

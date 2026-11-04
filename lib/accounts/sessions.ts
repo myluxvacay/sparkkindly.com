@@ -15,7 +15,7 @@ const MAX_TTL = 90 * DAY;
 
 const later = (now: Date, ms: number) => new Date(now.getTime() + ms).toISOString();
 
-export type AccountView = { id: string; email: string; ageGroup: AgeGroup; consent: Consent };
+export type AccountView = { id: string; email: string; ageGroup: AgeGroup; consent: Consent; consentAt: Date | null };
 
 // Whether an address has an account, and whether it has ever signed in (verified), or null for no account.
 export async function accountStatus(db: Queryable, email: string): Promise<'verified' | 'unverified' | null> {
@@ -147,10 +147,11 @@ export async function getAccount(db: Queryable, sessionToken: string, now: Date)
     email: string;
     dob: string;
     consent_state: Consent;
+    consent_at: Date | null;
     created_at: Date;
     last_seen_at: Date;
   }>(
-    `SELECT a.id, a.email, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob, a.consent_state, s.created_at, s.last_seen_at
+    `SELECT a.id, a.email, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob, a.consent_state, a.consent_at, s.created_at, s.last_seen_at
      FROM account_sessions s JOIN accounts a ON a.id = s.account_id
      WHERE s.token_hash = $1 AND s.expires_at > $2::timestamptz`,
     [h, now.toISOString()],
@@ -171,7 +172,13 @@ export async function getAccount(db: Queryable, sessionToken: string, now: Date)
       new Date(Math.min(now.getTime() + IDLE_TTL, cap)).toISOString(),
     ]);
   }
-  return { id: row.id, email: row.email, ageGroup, consent: row.consent_state };
+  return {
+    id: row.id,
+    email: row.email,
+    ageGroup,
+    consent: row.consent_state,
+    consentAt: row.consent_at ? new Date(row.consent_at) : null,
+  };
 }
 
 export async function endAccountSession(db: Queryable, sessionToken: string): Promise<void> {

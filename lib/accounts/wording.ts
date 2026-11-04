@@ -14,6 +14,10 @@ export function ageWording(ageGroup: AgeGroup | null, consent: Consent): string 
   }
 }
 
+// The day parental consent was recorded, as /account shows it ("3 November 2026", UTC).
+export const consentDay = (at: Date): string =>
+  at.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+
 // A parent or guardian address shown on the link confirm page: first character, a fixed run of bullets, the domain.
 // Anyone holding the link sees it, so it must not hand out a third party's full address.
 export function maskEmail(email: string): string {

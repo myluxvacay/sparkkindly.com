@@ -2,14 +2,17 @@
 // Sign-in answers are identical for a known and an unknown address: the response is decided from the form alone, and
 // every database read, limit check and email send runs afterwards through `defer` (Next's after()), so neither the
 // body nor the timing says whether an account exists. A token is never put in a response body or a log line.
-// Parent consent for 13-15 sign-ups is a later plan: nothing is emailed to the parent here.
+// The parent of a 13-15 account is emailed only after the holder has used their own link (never on sign-up or on a
+// link request), once, and never with the parent address or a token in a log line.
 import { clientKey, readCookie, readForm, sameOrigin, seeOther } from '@/lib/admin/guard';
 import { linkBase } from '@/lib/admin/sessions';
 import type { Db } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
+import { issueConsentTokens } from './consent';
+import { consentEmail } from './consent-email';
 import { accountLinkLimits, accountSendBudget, confirmLimits, signUpLimits } from './limits';
-import { accountStatus, consumeAccountLink, endAccountSession, hasFreshLink, requestAccountLink } from './sessions';
+import { accountStatus, consumeAccountLink, endAccountSession, getAccount, hasFreshLink, requestAccountLink } from './sessions';
 import { normalizeEmail, signUp } from './signup';
 
 export const ACCOUNT_COOKIE = '__Host-sk_account';
@@ -18,7 +21,7 @@ const SESSION_SECONDS = 30 * 24 * 60 * 60;
 export const accountCookie = (value: string, maxAgeSeconds: number): string =>
   `${ACCOUNT_COOKIE}=${value}; Path=/; Max-Age=${maxAgeSeconds}; HttpOnly; Secure; SameSite=Lax`;
 
-type Deps = {
+export type Deps = {
   db: Db;
   env: EnvLike;
   now: Date;
@@ -30,8 +33,8 @@ type Deps = {
   budget?: () => boolean;
 };
 
-const forbidden = () => new Response('Forbidden', { status: 403 });
-const tooMany = () => new Response('Too many attempts. Please try again later.', { status: 429, headers: { 'Retry-After': '3600' } });
+export const forbidden = () => new Response('Forbidden', { status: 403 });
+export const tooMany = () => new Response('Too many attempts. Please try again later.', { status: 429, headers: { 'Retry-After': '3600' } });
 
 // Mints and emails a sign-in link to a known address; does nothing for an unknown one. Runs after the response.
 // The per-address allowance is spent only for a real account without a link from the last minute, so unknown
@@ -54,6 +57,33 @@ async function emailLink(d: Deps, email: string, ip: string, links: typeof accou
     });
   } catch (err) {
     console.error('account sign-in email not sent:', (err as Error).message);
+  }
+}
+
+// Emails the parent of a verified, pending account fresh confirm and withdraw links. With `first`, only when the
+// account has never been sent any (its first sign-in); later sign-ins send nothing and the account page's resend button
+// covers a lost email. The budget is checked before tokens are issued, so a blocked send leaves earlier links working.
+export async function emailConsentRequest(d: Deps, accountId: string, first = false): Promise<void> {
+  try {
+    const due = await d.db.query(
+      `SELECT 1 FROM accounts a
+       WHERE a.id = $1 AND a.consent_state = 'pending' AND a.verified_at IS NOT NULL AND a.parent_email IS NOT NULL
+       ${first ? 'AND NOT EXISTS (SELECT 1 FROM account_consent_tokens t WHERE t.account_id = a.id)' : ''}`,
+      [accountId],
+    );
+    if (due.rows.length === 0 || !(d.budget ?? accountSendBudget)()) return;
+    const t = await issueConsentTokens(d.db, accountId, d.now);
+    if (!t) return;
+    const base = linkBase(d.env);
+    const m = consentEmail('request', {
+      confirmUrl: `${base}/account/consent/?token=${t.confirm}`,
+      withdrawUrl: `${base}/account/consent/withdraw/?token=${t.withdraw}`,
+      privacyUrl: `${base}/privacy/`,
+    });
+    await d.send({ to: t.parentEmail, ...m });
+  } catch (err) {
+    // The error name only: a message can carry the parent's address.
+    console.error('parent consent email not sent:', (err as Error).name);
   }
 }
 
@@ -111,6 +141,10 @@ export async function confirmAccountLink(request: Request, d: Deps): Promise<Res
   if (!session) return seeOther('/account/sign-in/?expired=1');
   // Switching accounts: the session this browser held so far ends now, not when it would have expired.
   await endAccountSession(d.db, readCookie(request, ACCOUNT_COOKIE));
+  d.defer(async () => {
+    const account = await getAccount(d.db, session, d.now).catch(() => null);
+    if (account?.consent === 'pending') await emailConsentRequest(d, account.id, true);
+  });
   return seeOther('/account/', accountCookie(session, SESSION_SECONDS));
 }
 
