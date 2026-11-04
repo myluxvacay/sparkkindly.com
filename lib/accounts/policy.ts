@@ -104,6 +104,9 @@ export function can(group: AgeGroup, consent: Consent, cap: Capability): boolean
   }
 }
 
+// A child profile (plan 3C, spec 4a.5) only reads, plays and answers; of the capabilities, only picking interests.
+export const childCan = (cap: Capability): boolean => cap === 'save_interests';
+
 // A 13-15 account whose parent or guardian has not confirmed yet (it can save interests only). Shared by the pages so
 // none of them re-derives the rule.
 export const consentPending = (group: AgeGroup, consent: Consent): boolean =>

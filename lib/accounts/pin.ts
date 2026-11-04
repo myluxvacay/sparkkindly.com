@@ -45,6 +45,25 @@ export async function setPin(db: Db, accountId: string, pin: unknown): Promise<'
   return r.rowCount ? 'set' : 'invalid';
 }
 
+// The only way to change an existing PIN: the current one must check out first (a wrong one counts toward the lock, and
+// a locked account cannot change, so this never clears a lockout). Callers reach it only through requireAdultContext.
+export async function changePin(
+  db: Db,
+  accountId: string,
+  currentPin: unknown,
+  newPin: unknown,
+  now: Date,
+): Promise<'ok' | 'wrong' | 'locked' | 'invalid'> {
+  if (!isPin(newPin) || !isUuid(accountId)) {
+    return 'invalid';
+  }
+  const checked = await checkPin(db, accountId, currentPin, now);
+  if (checked !== 'ok') {
+    return checked;
+  }
+  return (await setPin(db, accountId, newPin)) === 'set' ? 'ok' : 'invalid';
+}
+
 // Checks a PIN under the account row lock so concurrent guesses cannot skip the counter.
 export async function checkPin(db: Db, accountId: string, pin: unknown, now: Date): Promise<'ok' | 'wrong' | 'locked'> {
   if (!isUuid(accountId)) {

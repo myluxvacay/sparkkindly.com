@@ -5,6 +5,7 @@
 import type { Db, Queryable } from '@/lib/db';
 import type { EnvLike } from '@/lib/env';
 import { hash, newToken } from '@/lib/tokens';
+import type { AgeBand } from './children';
 import { ageGroupFor, type AgeGroup, type Consent } from './policy';
 
 const MIN = 60_000;
@@ -134,10 +135,21 @@ export async function consumeAccountLink(db: Db, token: string, now: Date): Prom
   });
 }
 
-// The signed-in account for this session token, or null. The age group is re-derived from the date of birth on every
-// call, and an unknown or under-13 result fails closed. Using a session pushes its expiry out 30 days, never past 90
-// days from creation.
+export type ActiveProfile = { id: string; displayName: string; ageBand: AgeBand };
+export type SessionView = { account: AccountView; profile: ActiveProfile | null };
+
+// The adult account behind this session token, or null. Null too while a child profile is active: every existing
+// settings page and route goes through here, so a child context fails closed on all of them (lib/accounts/context.ts
+// is the child-aware entry point).
 export async function getAccount(db: Queryable, sessionToken: string, now: Date): Promise<AccountView | null> {
+  const s = await sessionView(db, sessionToken, now);
+  return s && !s.profile ? s.account : null;
+}
+
+// The signed-in account and its active child profile (read from the session row, joined on the session's own account)
+// for this session token, or null. The age group is re-derived from the date of birth on every call, and an unknown or
+// under-13 result fails closed. Using a session pushes its expiry out 30 days, never past 90 days from creation.
+export async function sessionView(db: Queryable, sessionToken: string, now: Date): Promise<SessionView | null> {
   if (typeof sessionToken !== 'string' || !/^[0-9a-f]{64}$/.test(sessionToken)) {
     return null;
   }
@@ -150,9 +162,14 @@ export async function getAccount(db: Queryable, sessionToken: string, now: Date)
     consent_at: Date | null;
     created_at: Date;
     last_seen_at: Date;
+    profile_id: string | null;
+    display_name: string | null;
+    age_band: AgeBand | null;
   }>(
-    `SELECT a.id, a.email, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob, a.consent_state, a.consent_at, s.created_at, s.last_seen_at
+    `SELECT a.id, a.email, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob, a.consent_state, a.consent_at, s.created_at, s.last_seen_at,
+            p.id AS profile_id, p.display_name, p.age_band
      FROM account_sessions s JOIN accounts a ON a.id = s.account_id
+     LEFT JOIN child_profiles p ON p.id = s.active_profile_id AND p.account_id = s.account_id
      WHERE s.token_hash = $1 AND s.expires_at > $2::timestamptz`,
     [h, now.toISOString()],
   );
@@ -173,11 +190,14 @@ export async function getAccount(db: Queryable, sessionToken: string, now: Date)
     ]);
   }
   return {
-    id: row.id,
-    email: row.email,
-    ageGroup,
-    consent: row.consent_state,
-    consentAt: row.consent_at ? new Date(row.consent_at) : null,
+    account: {
+      id: row.id,
+      email: row.email,
+      ageGroup,
+      consent: row.consent_state,
+      consentAt: row.consent_at ? new Date(row.consent_at) : null,
+    },
+    profile: row.profile_id ? { id: row.profile_id, displayName: row.display_name!, ageBand: row.age_band! } : null,
   };
 }
 
