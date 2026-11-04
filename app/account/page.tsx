@@ -50,7 +50,8 @@ export default async function AccountPage({ searchParams }: Props) {
         </form>
       )}
       <p>
-        <Link href="/me/">Your page</Link> · <Link href="/me/interests/">Choose your interests</Link>
+        <Link href="/me/">Your page</Link> · <Link href="/me/interests/">Choose your interests</Link> ·{' '}
+        <Link href="/account/settings/">Settings</Link>
       </p>
       {can(account.ageGroup, account.consent, 'create_child_profile') && (
         <p>

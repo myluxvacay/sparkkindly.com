@@ -3,17 +3,22 @@ import { requireAccounts } from '@/lib/accounts/next';
 
 export const dynamic = 'force-dynamic';
 
-type Props = { searchParams: Promise<{ sent?: string; expired?: string }> };
+type Props = { searchParams: Promise<{ sent?: string; expired?: string; r?: string }> };
 
 export default async function AccountSignInPage({ searchParams }: Props) {
   requireAccounts();
-  const { sent, expired } = await searchParams;
+  const { sent, expired, r } = await searchParams;
   return (
     <>
       <h1>Sign in</h1>
       {sent === '1' && (
         <div role="status" className="takeaway">
           <p>If that address has an account, a link is on its way. It works once, for 15 minutes.</p>
+        </div>
+      )}
+      {r === 'deleted' && (
+        <div role="status" className="takeaway">
+          <p>Your account and everything in it are deleted.</p>
         </div>
       )}
       {expired === '1' && (

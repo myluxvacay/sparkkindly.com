@@ -1,4 +1,5 @@
-import { createHash, randomBytes } from 'node:crypto';
+import { createHash, createHmac, randomBytes } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { addItem, sql } from './helpers/fixtures';
@@ -65,10 +66,10 @@ test('an unconfirmed account shows its age group and a masked parent email on th
 });
 
 test('with the flag off every account page and route is a 404 (server without ACCOUNTS_ENABLED)', async ({ request }) => {
-  for (const path of ['/account/', '/account/sign-up/', '/account/sign-in/', '/account/sign-in/link/?token=x', '/account/consent/?token=x', '/account/consent/withdraw/?token=x', '/account/children/', '/account/children/playing/', '/account/children/delete/?profile=x', '/me/', '/me/interests/']) {
+  for (const path of ['/account/', '/account/sign-up/', '/account/sign-in/', '/account/sign-in/link/?token=x', '/account/consent/?token=x', '/account/consent/withdraw/?token=x', '/account/children/', '/account/children/playing/', '/account/children/delete/?profile=x', '/me/', '/me/interests/', '/account/settings/', '/account/settings/delete/', '/account/unsubscribe/?t=x']) {
     expect((await request.get(OFF + path)).status(), path).toBe(404);
   }
-  for (const path of ['/account/sign-up/submit/', '/account/sign-in/request/', '/account/sign-in/link/confirm/', '/account/sign-out/', '/account/consent/confirm/', '/account/consent/withdraw/confirm/', '/account/consent/resend/', '/account/children/create/', '/account/children/switch/', '/account/children/switch-back/', '/account/children/pin/', '/account/children/delete/confirm/', '/me/interests/save/']) {
+  for (const path of ['/account/sign-up/submit/', '/account/sign-in/request/', '/account/sign-in/link/confirm/', '/account/sign-out/', '/account/consent/confirm/', '/account/consent/withdraw/confirm/', '/account/consent/resend/', '/account/children/create/', '/account/children/switch/', '/account/children/switch-back/', '/account/children/pin/', '/account/children/delete/confirm/', '/me/interests/save/', '/account/settings/save/', '/account/settings/export/', '/account/settings/delete/confirm/', '/account/settings/pin/', '/account/unsubscribe/confirm/']) {
     const r = await request.post(OFF + path, { headers: { ...FORM, origin: OFF }, data: form({ email: 'a@example.test' }), maxRedirects: 0 });
     expect(r.status(), path).toBe(404);
   }
@@ -759,4 +760,150 @@ test("a child profile's /me lists no adults item, even one it has an answer for,
   } finally {
     await sql('DELETE FROM items WHERE id = ANY($1::uuid[])', [ids]);
   }
+});
+
+// Settings, export, deletion, PIN reset and unsubscribe (Project 3E, Task 3).
+const E2E_UNSUBSCRIBE_SECRET = 'e2e-test-only-unsubscribe-secret-not-real-0001'; // playwright.config.ts, test-only
+const unsubscribeFor = (accountId: string, kind: string) =>
+  `${accountId}.${kind}.${createHmac('sha256', E2E_UNSUBSCRIBE_SECRET).update(`unsubscribe:v1:${accountId}:${kind}`).digest('base64url')}`;
+const prefs = async (email: string) =>
+  (await sql('SELECT id, time_zone, notify_daily_set AS d, notify_weekly_circle AS w, notify_invites AS i FROM accounts WHERE email = $1', [email])).rows[0];
+
+test('an adult changes email choices and time zone, downloads their data, and the page passes axe', async ({ page }) => {
+  const thirdParty = watchThirdParty(page);
+  const email = await signedInAdult(page);
+  await page.getByRole('link', { name: 'Settings' }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'Settings' })).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+  await expect(page.getByRole('group', { name: 'Email me when' })).toContainText('Only sign-in and consent emails are sent right now');
+  await expect(page.getByRole('heading', { name: 'Forgotten your PIN?' })).toHaveCount(0);
+  await axeBothWidths(page);
+
+  await page.getByRole('checkbox', { name: 'Daily set ready' }).check();
+  await page.getByRole('checkbox', { name: 'Invites' }).check();
+  await page.getByLabel('Time zone').selectOption('Asia/Tokyo');
+  await page.getByRole('button', { name: 'Save settings' }).click();
+  await expect(page).toHaveURL(/\/account\/settings\/\?r=saved#result$/);
+  await expect(page.locator('#result')).toBeFocused();
+  await expect(page.getByRole('status')).toContainText('Your settings are saved');
+  await page.reload();
+  await expect(page.getByRole('checkbox', { name: 'Daily set ready' })).toBeChecked();
+  await expect(page.getByRole('checkbox', { name: 'Weekly circle summary' })).not.toBeChecked();
+  await expect(page.getByRole('checkbox', { name: 'Invites' })).toBeChecked();
+  await expect(page.getByLabel('Time zone')).toHaveValue('Asia/Tokyo');
+  expect(await prefs(email)).toMatchObject({ time_zone: 'Asia/Tokyo', d: true, w: false, i: true });
+  await axeBothWidths(page);
+
+  const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Download my data' }).click()]);
+  expect(download.suggestedFilename()).toBe('sparkkindly-export.json');
+  const text = readFileSync(await download.path(), 'utf8');
+  const data = JSON.parse(text);
+  expect(Object.keys(data).sort()).toEqual(['account', 'answers', 'childProfiles', 'exportedAt', 'interests']);
+  expect(data.account).toMatchObject({ email, timeZone: 'Asia/Tokyo', notify: { dailySet: true, weeklyCircle: false, invites: true } });
+  const session = (await page.context().cookies(BASE)).find((x) => x.name === '__Host-sk_account')!.value;
+  expect(text).not.toContain(session);
+  expect(text).not.toMatch(/pin_hash|pinHash|token|"id"/i);
+  expect(thirdParty).toEqual([]);
+});
+
+test('deleting the account needs the typed email; afterwards the account is gone and cannot sign in', async ({ page }) => {
+  const email = await signedInAdult(page);
+  await page.goto('/account/settings/');
+  await page.getByRole('link', { name: /Delete your account/ }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'Delete your account' })).toBeVisible();
+  for (const held of ['sign-in links', 'consent records', 'Every child profile', 'The interests', 'quiz answer']) {
+    await expect(page.getByRole('listitem').filter({ hasText: held })).toBeVisible();
+  }
+  await expect(page.getByText('age out within 30 days', { exact: false })).toBeVisible();
+  await axeBothWidths(page);
+
+  const typed = page.getByLabel('Type your account email address to confirm');
+  await typed.fill('not-mine@example.test');
+  await page.getByRole('button', { name: 'Delete my account' }).click();
+  await expect(page).toHaveURL(/\/account\/settings\/delete\/\?r=mismatch#result$/);
+  await expect(page.locator('#result')).toBeFocused();
+  await expect(page.getByText('not-mine@example.test')).toHaveCount(0);
+  await expect(typed).toHaveAttribute('aria-describedby', 'result');
+  expect(await accountRows(email)).toBe(1);
+  await axeBothWidths(page);
+
+  await typed.fill(email.toUpperCase());
+  await page.getByRole('button', { name: 'Delete my account' }).click();
+  await expect(page).toHaveURL(/\/account\/sign-in\/\?r=deleted$/);
+  await expect(page.getByRole('status')).toContainText('deleted');
+  expect(await accountRows(email)).toBe(0);
+  expect((await sql('SELECT 1 FROM account_login_tokens WHERE email = $1', [email])).rows).toHaveLength(0);
+  expect((await page.context().cookies(BASE)).find((x) => x.name === '__Host-sk_account')).toBeUndefined();
+  await page.goto(`/account/sign-in/link/?token=${await mintLink(email)}`);
+  await expect(page.getByRole('alert').filter({ hasText: 'not valid' })).toBeVisible();
+});
+
+test('a child profile context reaches no settings route; the adult resets the PIN after a fresh sign-in', async ({ page, request }) => {
+  await signedInAdult(page);
+  await page.goto('/account/children/');
+  await addProfile(page, 'Ivo', true);
+  await page.goto('/account/settings/');
+  await page.getByLabel('New PIN (4 digits)').fill('1357');
+  await page.getByLabel('New PIN again').fill('1357');
+  await axeBothWidths(page);
+  await page.getByRole('button', { name: 'Set the new PIN' }).click();
+  await expect(page).toHaveURL(/\/account\/settings\/\?r=pin-reset#result$/);
+  await expect(page.locator('#result')).toBeFocused();
+  expect(page.url()).not.toContain('1357');
+
+  await page.goto('/account/children/');
+  await page.getByRole('button', { name: 'Play as Ivo' }).click();
+  await expect(page).toHaveURL(/\/account\/children\/playing\/$/);
+  for (const path of ['/account/settings/', '/account/settings/delete/']) {
+    await page.goto(path);
+    await expect(page).toHaveURL(/\/account\/children\/playing\/$/);
+  }
+  const auth = await sessionCookie(page);
+  for (const path of ['/account/settings/save/', '/account/settings/export/', '/account/settings/delete/confirm/', '/account/settings/pin/']) {
+    const r = await request.post(path, {
+      headers: { ...FORM, ...ORIGIN, ...auth },
+      data: form({ time_zone: 'UTC', daily_set: 'on', email: 'x@example.test', new_pin: '1111', new_pin_confirm: '1111' }),
+      maxRedirects: 0,
+    });
+    expect(r.status(), path).toBe(403);
+  }
+  // the new PIN (not the old one) switches back
+  await page.getByLabel('Adult PIN').fill('1357');
+  await page.getByRole('button', { name: 'Switch back' }).click();
+  await expect(page).toHaveURL(/\/account\/children\/$/);
+});
+
+test('an unsubscribe link page changes nothing; its button and a one-click POST turn off only that email', async ({ page, request }) => {
+  const thirdParty = watchThirdParty(page);
+  const email = await signedInAdult(page);
+  await page.goto('/account/settings/');
+  for (const name of ['Daily set ready', 'Weekly circle summary', 'Invites']) await page.getByRole('checkbox', { name }).check();
+  await page.getByRole('button', { name: 'Save settings' }).click();
+  await expect(page.locator('#result')).toBeFocused();
+  const { id } = await prefs(email);
+  await page.context().clearCookies();
+
+  await page.goto(`/account/unsubscribe/?t=${unsubscribeFor(id, 'daily_set')}`);
+  await expect(page.getByRole('heading', { level: 1, name: 'Unsubscribe' })).toBeVisible();
+  expect(await prefs(email)).toMatchObject({ d: true, w: true, i: true });
+  await axeBothWidths(page);
+  await page.getByRole('button', { name: 'Turn off this email' }).click();
+  await expect(page).toHaveURL(/\/account\/unsubscribe\/\?r=done#result$/);
+  await expect(page.locator('#result')).toBeFocused();
+  expect(await prefs(email)).toMatchObject({ d: false, w: true, i: true });
+  await axeBothWidths(page);
+
+  // One-click (RFC 8058) as a mail client sends it: no Origin, no cookie; a bad token gets the identical answer.
+  const oneClick = (t: string) =>
+    request.post(`/account/unsubscribe/confirm/?t=${encodeURIComponent(t)}`, {
+      headers: FORM,
+      data: form({ 'List-Unsubscribe': 'One-Click' }),
+      maxRedirects: 0,
+    });
+  const good = await oneClick(unsubscribeFor(id, 'invites'));
+  const bad = await oneClick(`${id}.weekly_circle.${'A'.repeat(43)}`);
+  expect([good.status(), await good.text()]).toEqual([bad.status(), await bad.text()]);
+  expect(good.status()).toBe(200);
+  expect(await prefs(email)).toMatchObject({ d: false, w: true, i: false });
+  expect(thirdParty).toEqual([]);
 });

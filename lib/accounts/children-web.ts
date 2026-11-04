@@ -19,7 +19,7 @@ const PLAYING = '/account/children/playing/';
 const result = (code: string, page = LIST) => seeOther(`${page}?r=${code}#result`);
 
 // Runs `act` for a signed-in adult context; no session goes to sign-in, a child context is refused.
-async function asAdult(
+export async function asAdult(
   request: Request,
   d: ChildDeps,
   act: (ctx: AdultContext, form: URLSearchParams) => Promise<Response>,
