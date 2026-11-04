@@ -10,7 +10,7 @@ import { consumeAccountLink, requestAccountLink } from '@/lib/accounts/sessions'
 import { createChildProfile, listChildProfiles } from '@/lib/accounts/children';
 import { checkPin } from '@/lib/accounts/pin';
 import { switchToProfile } from '@/lib/accounts/context';
-import { getSettings } from '@/lib/accounts/settings';
+import { getSettings, TIME_ZONES } from '@/lib/accounts/settings';
 import { unsubscribeToken } from '@/lib/accounts/unsubscribe';
 import { createUnsubscribeLimits } from '@/lib/accounts/limits';
 import {
@@ -133,6 +133,10 @@ describe('save', () => {
     expect((await getSettings(db, a.accountId))?.notify).toEqual({ dailySet: false, weeklyCircle: false, invites: false });
   });
 
+  it('the page offers exactly the zones a save accepts', () => {
+    expect(TIME_ZONES).toEqual([...Intl.supportedValuesOf('timeZone'), 'UTC']);
+  });
+
   it('an unknown time zone changes nothing and says so', async () => {
     const a = await account();
     const before = await getSettings(db, a.accountId);
@@ -178,7 +182,7 @@ describe('delete', () => {
     const b = await account();
     const r = await deleteAccountRequest(post({ email: ` ${f.email.toUpperCase()} `, account_id: b.accountId }, { cookie: f.session }), deps());
     expect(where(r)).toEqual([303, '/account/sign-in/?r=deleted']);
-    expect(r.headers.get('set-cookie')).toMatch(/^__Host-sk_account=; Path=\/; Max-Age=0;/);
+    expect(r.headers.get('set-cookie')).toBe('__Host-sk_account=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax');
     expect(await exists(f.accountId)).toBe(false);
     expect(await exists(b.accountId)).toBe(true);
     expect(await listChildProfiles(db, f.accountId)).toHaveLength(0);
@@ -209,6 +213,16 @@ describe('PIN reset', () => {
     const later = new Date(NOW.getTime() + 11 * 60_000);
     const r = await resetPinRequest(post({ new_pin: '1357', new_pin_confirm: '1357' }, { cookie: f.session }), deps(later));
     expect(where(r)).toEqual([303, '/account/settings/?r=pin-stale#result']);
+    expect(await checkPin(db, f.accountId, PIN, later)).toBe('ok');
+  });
+
+  it('a stale session says so first, even with mismatched or bad PINs', async () => {
+    const f = await family();
+    const later = new Date(NOW.getTime() + 11 * 60_000);
+    for (const body of [{ new_pin: '1357', new_pin_confirm: '1358' }, { new_pin: '12a4', new_pin_confirm: '12a4' }]) {
+      const r = await resetPinRequest(post(body, { cookie: f.session }), deps(later));
+      expect(where(r)).toEqual([303, '/account/settings/?r=pin-stale#result']);
+    }
     expect(await checkPin(db, f.accountId, PIN, later)).toBe('ok');
   });
 
@@ -265,7 +279,7 @@ describe('unsubscribe', () => {
     expect((await getSettings(db, a.accountId))?.notify.dailySet).toBe(false);
   });
 
-  it('is rate limited per network', async () => {
+  it('invalid or absent tokens are rate limited per network', async () => {
     const limits = createUnsubscribeLimits();
     let last = 0;
     for (let i = 0; i < 61; i++) {
@@ -273,5 +287,46 @@ describe('unsubscribe', () => {
       last = r.status;
     }
     expect(last).toBe(429);
+    expect((await unsubscribeRequest(post({}), { db, env, limits })).status).toBe(429);
+  });
+
+  it('valid tokens skip the limiter, so a shared mail-provider address is never throttled', async () => {
+    const a = await account();
+    await saveSettingsRequest(post({ time_zone: 'UTC', daily_set: 'on' }, { cookie: a.session }), deps());
+    const limits = createUnsubscribeLimits();
+    for (let i = 0; i < 60; i++) await unsubscribeRequest(oneClick('x'), { db, env, limits });
+    const r = await unsubscribeRequest(oneClick(unsubscribeToken(SECRET, a.accountId, 'daily_set')!), { db, env, limits });
+    expect(r.status).toBe(200);
+    expect((await getSettings(db, a.accountId))?.notify.dailySet).toBe(false);
+  });
+
+  const queryUrl = (t: string) => `https://staging.sparkkindly.com/account/unsubscribe/confirm/?t=${encodeURIComponent(t)}`;
+  const multipart = (t: string) => {
+    const body = new FormData();
+    body.set('List-Unsubscribe', 'One-Click');
+    return new Request(queryUrl(t), { method: 'POST', body });
+  };
+  const bare = (t: string) => new Request(queryUrl(t), { method: 'POST' });
+
+  it('a one-click POST with the token in the URL gets a 200, never a redirect, whatever the body encoding', async () => {
+    for (const shape of [multipart, bare, (t: string) => post({ 'List-Unsubscribe': 'One-Click' }, { url: queryUrl(t), origin: null }), (t: string) => post({}, { url: queryUrl(t) })]) {
+      const a = await account();
+      await saveSettingsRequest(post({ time_zone: 'UTC', daily_set: 'on' }, { cookie: a.session }), deps());
+      const good = await unsubscribeRequest(shape(unsubscribeToken(SECRET, a.accountId, 'daily_set')!), udeps());
+      const bad = await unsubscribeRequest(shape('nope'), udeps());
+      expect(good.status).toBe(200);
+      expect(good.headers.get('location')).toBeNull();
+      expect(good.headers.get('content-type')).toMatch(/^text\/plain/);
+      expect([bad.status, await bad.text()]).toEqual([good.status, await good.text()]);
+      expect((await getSettings(db, a.accountId))?.notify.dailySet).toBe(false);
+    }
+  });
+
+  it('a database error while applying a valid token answers 503, not success', async () => {
+    const a = await account();
+    const broken = { query: async () => { throw new Error('connection lost'); } } as unknown as TestDb;
+    const r = await unsubscribeRequest(oneClick(unsubscribeToken(SECRET, a.accountId, 'daily_set')!), { db: broken, env, limits: createUnsubscribeLimits() });
+    expect(r.status).toBe(503);
+    expect(await r.text()).toBe('Please try again later.');
   });
 });

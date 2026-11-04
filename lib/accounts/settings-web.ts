@@ -53,31 +53,34 @@ export const deleteAccountRequest = (request: Request, d: SettingsDeps) =>
 
 export const resetPinRequest = (request: Request, d: SettingsDeps) =>
   asAdult(request, d, async (_ctx, form) => {
-    const pin = form.get('new_pin') ?? '';
-    if (pin !== form.get('new_pin_confirm')) return result('pin-invalid');
-    const r = await resetPin(d.db, readCookie(request, ACCOUNT_COOKIE), pin, d.now);
+    // Two different PINs go through as no PIN at all, so resetPin still reports a stale session first.
+    const pin = form.get('new_pin');
+    const r = await resetPin(d.db, readCookie(request, ACCOUNT_COOKIE), pin === form.get('new_pin_confirm') ? pin : null, d.now);
     if (r === 'not_allowed') return forbidden();
     return result(r === 'ok' ? 'pin-reset' : r === 'stale' ? 'pin-stale' : 'pin-invalid');
   });
 
 type UnsubscribeDeps = { db: Db; env: EnvLike; limits?: typeof unsubscribeLimits };
 
-// A mail client's one-click POST (body List-Unsubscribe=One-Click, token in the URL) gets a plain 200; the page's
-// confirm form (token in the body) goes back to the page. Neither answer depends on the token.
+const plain = (text: string, status = 200) =>
+  new Response(text, { status, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' } });
+
+// The answer depends only on where the token came from, never on whether it is valid. Token in the URL is the RFC 8058
+// one-click shape (a mail client; the body may be urlencoded, multipart or empty and is never read): a plain 200, never
+// a redirect. Token in a form body is the page's own button: back to the page. The per-network limiter counts only
+// invalid or absent tokens (a valid one cannot be forged), so a mail provider's shared egress address is never throttled.
 export async function unsubscribeRequest(request: Request, d: UnsubscribeDeps): Promise<Response> {
-  if (!(d.limits ?? unsubscribeLimits)(clientKey(request))) return tooMany();
-  const form = (await readForm(request)) ?? new URLSearchParams();
-  const token = new URL(request.url).searchParams.get('t') ?? form.get('t') ?? '';
+  const fromUrl = new URL(request.url).searchParams.get('t');
+  const token = fromUrl ?? (await readForm(request))?.get('t') ?? '';
   const target = readUnsubscribeToken(unsubscribeSecret(d.env), token);
+  if (!target && !(d.limits ?? unsubscribeLimits)(clientKey(request))) return tooMany();
   if (target) {
-    await applyUnsubscribe(d.db, target.accountId, target.kind).catch((err: Error) => {
-      console.error('unsubscribe not applied:', err.name);
-    });
+    try {
+      await applyUnsubscribe(d.db, target.accountId, target.kind);
+    } catch (err) {
+      console.error('unsubscribe not applied:', (err as Error).name);
+      return plain('Please try again later.', 503);
+    }
   }
-  if (form.get('List-Unsubscribe') === 'One-Click') {
-    return new Response('If this link was valid, that email is now turned off.', {
-      headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' },
-    });
-  }
-  return result('done', '/account/unsubscribe/');
+  return fromUrl !== null ? plain('If this link was valid, that email is now turned off.') : result('done', '/account/unsubscribe/');
 }

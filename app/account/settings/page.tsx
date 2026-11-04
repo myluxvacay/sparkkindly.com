@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { requireAdult } from '@/lib/accounts/next';
 import { hasPin } from '@/lib/accounts/pin';
-import { getSettings } from '@/lib/accounts/settings';
+import { getSettings, TIME_ZONES } from '@/lib/accounts/settings';
 import { getDb } from '@/lib/db';
 import { PinInput } from '@/components/PinInput';
 
@@ -24,8 +24,6 @@ const RESULTS: Record<string, { text: string; ok: boolean; form?: 'prefs' | 'pin
   'pin-invalid': { text: 'The new PIN must be 4 digits, entered the same twice.', ok: false, form: 'pin' },
 };
 
-const ZONES = [...Intl.supportedValuesOf('timeZone'), 'UTC'];
-
 function Result({ code }: { code?: string }) {
   const r = code ? RESULTS[code] : undefined;
   if (!r) return null;
@@ -39,7 +37,7 @@ function Result({ code }: { code?: string }) {
 type Prefs = NonNullable<Awaited<ReturnType<typeof getSettings>>>;
 
 function PrefsForm({ settings, error }: { settings: Prefs; error: boolean }) {
-  const zones = ZONES.includes(settings.timeZone) ? ZONES : [settings.timeZone, ...ZONES];
+  const zones = TIME_ZONES.includes(settings.timeZone) ? TIME_ZONES : [settings.timeZone, ...TIME_ZONES];
   return (
     <form method="post" action="/account/settings/save/" className="prose admin-form">
       <h2>Emails and time zone</h2>

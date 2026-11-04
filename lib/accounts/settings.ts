@@ -14,7 +14,9 @@ export const NOTIFY_COLUMNS: Record<keyof Notify, string> = {
   invites: 'notify_invites',
 };
 
-const ZONES = new Set<string>([...Intl.supportedValuesOf('timeZone'), 'UTC']);
+// The zones a save accepts, in the order the settings page lists them.
+export const TIME_ZONES: readonly string[] = [...Intl.supportedValuesOf('timeZone'), 'UTC'];
+const ZONES = new Set<string>(TIME_ZONES);
 
 const isPlainObject = (v: unknown): v is Record<string, unknown> =>
   typeof v === 'object' && v !== null && !Array.isArray(v);
