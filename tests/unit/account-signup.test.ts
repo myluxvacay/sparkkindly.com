@@ -90,6 +90,7 @@ describe('signUp', () => {
     expect(a.status).toBe('created');
     expect((await rows()).some((x) => x.email === 'dupe@example.test')).toBe(true);
     const n = (await rows()).length;
+    await db.query("UPDATE accounts SET verified_at = now() WHERE email = 'dupe@example.test'");
     expect(await signUp(db, { email: 'DUPE@example.test', dateOfBirth: ADULT }, NOW)).toEqual({ status: 'exists' });
     expect((await rows()).length).toBe(n);
   });

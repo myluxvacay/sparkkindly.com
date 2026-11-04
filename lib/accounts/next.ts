@@ -12,10 +12,13 @@ export function requireAccounts(): void {
   }
 }
 
+export async function currentAccount(jar: Awaited<ReturnType<typeof cookies>>): Promise<AccountView | null> {
+  return getAccount(getDb(), jar.get(ACCOUNT_COOKIE)?.value ?? '', new Date());
+}
+
 export async function requireAccount(): Promise<AccountView> {
   requireAccounts();
-  const token = (await cookies()).get(ACCOUNT_COOKIE)?.value ?? '';
-  const account = await getAccount(getDb(), token, new Date());
+  const account = await currentAccount(await cookies());
   if (!account) {
     redirect('/account/sign-in/');
   }

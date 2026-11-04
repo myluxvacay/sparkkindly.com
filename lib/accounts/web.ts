@@ -3,13 +3,13 @@
 // every database read, limit check and email send runs afterwards through `defer` (Next's after()), so neither the
 // body nor the timing says whether an account exists. A token is never put in a response body or a log line.
 // Parent consent for 13-15 sign-ups is a later plan: nothing is emailed to the parent here.
-import { clientKey, readCookie, readForm, sameOrigin, seeOther, signInLimits } from '@/lib/admin/guard';
+import { clientKey, readCookie, readForm, sameOrigin, seeOther } from '@/lib/admin/guard';
 import { linkBase } from '@/lib/admin/sessions';
 import type { Db } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
-import { confirmLimits, signUpLimits } from './limits';
-import { consumeAccountLink, endAccountSession, requestAccountLink } from './sessions';
+import { accountLinkLimits, confirmLimits, signUpLimits } from './limits';
+import { accountExists, consumeAccountLink, endAccountSession, requestAccountLink } from './sessions';
 import { signUp } from './signup';
 
 export const ACCOUNT_COOKIE = '__Host-sk_account';
@@ -25,7 +25,7 @@ type Deps = {
   send: (m: EmailMessage) => Promise<unknown>;
   defer: (work: () => Promise<void>) => void;
   signUps?: typeof signUpLimits;
-  links?: typeof signInLimits;
+  links?: typeof accountLinkLimits;
   confirms?: typeof confirmLimits;
 };
 
@@ -33,9 +33,10 @@ const forbidden = () => new Response('Forbidden', { status: 403 });
 const tooMany = () => new Response('Too many attempts. Please try again later.', { status: 429, headers: { 'Retry-After': '3600' } });
 
 // Mints and emails a sign-in link to a known address; does nothing for an unknown one. Runs after the response.
-async function emailLink(d: Deps, email: string, ip: string, links: typeof signInLimits): Promise<void> {
+async function emailLink(d: Deps, email: string, ip: string, links: typeof accountLinkLimits): Promise<void> {
   try {
-    if (!links.client(ip) || !links.mint(email)) return;
+    // The per-address allowance is spent only for a real account, so unknown addresses use (and grow) nothing.
+    if (!links.client(ip) || !(await accountExists(d.db, email)) || !links.mint(email)) return;
     const token = await requestAccountLink(d.db, email, d.env, d.now);
     if (!token) return;
     await d.send({
@@ -55,7 +56,7 @@ export async function requestAccountSignIn(request: Request, d: Deps): Promise<R
   const done = seeOther('/account/sign-in/?sent=1');
   if (!form || email.length > 254) return done;
   const ip = clientKey(request);
-  d.defer(() => emailLink(d, email, ip, d.links ?? signInLimits));
+  d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits));
   return done;
 }
 
@@ -79,7 +80,7 @@ export async function submitSignUp(request: Request, d: Deps): Promise<Response>
     case 'invalid':
       return seeOther('/account/sign-up/?invalid=1');
     default: // created and exists look the same, and both send a sign-in link
-      d.defer(() => emailLink(d, email, ip, d.links ?? signInLimits));
+      d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits));
       return seeOther('/account/sign-up/?sent=1');
   }
 }

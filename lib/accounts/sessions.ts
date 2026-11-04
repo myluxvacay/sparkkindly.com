@@ -17,6 +17,11 @@ const later = (now: Date, ms: number) => new Date(now.getTime() + ms).toISOStrin
 
 export type AccountView = { id: string; email: string; ageGroup: AgeGroup; consent: Consent };
 
+export async function accountExists(db: Queryable, email: string): Promise<boolean> {
+  const r = await db.query('SELECT 1 FROM accounts WHERE email = $1', [email]);
+  return r.rows.length === 1;
+}
+
 // A single-use link token for a known address, or null (and nothing written) for an unknown one. The route answers
 // identically either way. `env` is accepted for symmetry with admin sign-in; the link host is applied by the caller.
 export async function requestAccountLink(db: Queryable, email: string, _env: EnvLike, now: Date): Promise<string | null> {
@@ -37,6 +42,18 @@ export async function requestAccountLink(db: Queryable, email: string, _env: Env
   return token;
 }
 
+// The address a still-valid, unused link would sign in, without using it up (the confirm page shows it), or null.
+export async function linkTarget(db: Queryable, token: string, now: Date): Promise<string | null> {
+  if (typeof token !== 'string' || !/^[0-9a-f]{64}$/.test(token)) {
+    return null;
+  }
+  const r = await db.query<{ email: string }>(
+    'SELECT email FROM account_login_tokens WHERE token_hash = $1 AND used_at IS NULL AND expires_at > $2::timestamptz',
+    [hash(token), now.toISOString()],
+  );
+  return r.rows[0]?.email ?? null;
+}
+
 // Uses up a link and starts a session. Returns the session token, or null.
 export async function consumeAccountLink(db: Queryable, token: string, now: Date): Promise<string | null> {
   if (typeof token !== 'string' || !/^[0-9a-f]{64}$/.test(token)) {
@@ -52,6 +69,7 @@ export async function consumeAccountLink(db: Queryable, token: string, now: Date
     return null;
   }
   const session = newToken();
+  await db.query('UPDATE accounts SET verified_at = $2 WHERE email = $1 AND verified_at IS NULL', [email, now.toISOString()]);
   const r = await db.query(
     `INSERT INTO account_sessions (token_hash, account_id, created_at, expires_at, last_seen_at)
      SELECT $1, id, $2, $3, $2 FROM accounts WHERE email = $4`,

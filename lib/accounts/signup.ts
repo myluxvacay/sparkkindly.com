@@ -1,4 +1,6 @@
 // Account sign-up with age gating (design spec 4a.5). No Next.js imports; verified by tests/unit/account-signup.test.ts.
+// A sign-up for an address nobody has signed in to yet replaces that row (latest wins); a verified account is never
+// changed (status 'exists'). One atomic statement, so two racing sign-ups cannot interleave.
 // An under-13 date of birth writes nothing and logs nothing.
 import type { Db } from '@/lib/db';
 import { ageGroupFor } from './policy';
@@ -42,7 +44,11 @@ export async function signUp(db: Db, input: SignUpInput, now: Date): Promise<Sig
   return db.transaction(async (tx) => {
     const r = await tx.query<{ id: string }>(
       `INSERT INTO accounts (email, date_of_birth, time_zone, consent_state, parent_email)
-       VALUES ($1, $2, $3, $4, $5) ON CONFLICT (email) DO NOTHING RETURNING id`,
+       VALUES ($1, $2, $3, $4, $5)
+       ON CONFLICT (email) DO UPDATE SET date_of_birth = EXCLUDED.date_of_birth, time_zone = EXCLUDED.time_zone,
+         consent_state = EXCLUDED.consent_state, parent_email = EXCLUDED.parent_email
+       WHERE accounts.verified_at IS NULL
+       RETURNING id`,
       [email, input.dateOfBirth, cleanZone(input.timeZone), parent ? 'pending' : 'none', parent],
     );
     return r.rows[0] ? ({ status: 'created', accountId: r.rows[0].id } as const) : ({ status: 'exists' } as const);

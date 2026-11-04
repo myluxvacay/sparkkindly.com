@@ -5,12 +5,17 @@
 -- DELETE FROM schema_migrations WHERE name = '007_accounts.sql'.
 CREATE TABLE accounts (
   id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  email         text NOT NULL UNIQUE CHECK (email = lower(email)),
+  email         text NOT NULL UNIQUE CHECK (email = lower(email) AND email = btrim(email)),
   date_of_birth date NOT NULL,
   time_zone     text NOT NULL DEFAULT 'UTC',
   consent_state text NOT NULL DEFAULT 'none' CHECK (consent_state IN ('none', 'pending', 'confirmed')),
   parent_email  text CHECK (parent_email IS NULL OR parent_email = lower(parent_email)),
-  created_at    timestamptz NOT NULL DEFAULT now()
+  -- Set once, when the first sign-in link for the address is used. Until then a sign-up for the same address replaces
+  -- the row (stops someone registering a victim's address first); after it, a sign-up never changes the account.
+  verified_at   timestamptz,
+  created_at    timestamptz NOT NULL DEFAULT now(),
+  CHECK (consent_state <> 'none' OR parent_email IS NULL),
+  CHECK (parent_email IS NULL OR parent_email <> email)
 );
 
 CREATE TABLE account_login_tokens (

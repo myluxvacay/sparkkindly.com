@@ -44,7 +44,7 @@ export default async function AccountSignUpPage({ searchParams }: Props) {
         </p>
         <p>
           <label htmlFor="dob">Date of birth</label>
-          <input id="dob" name="dob" type="date" required autoComplete="off" min="1900-01-01" />
+          <input id="dob" name="dob" type="date" required autoComplete="bday" min="1900-01-01" />
         </p>
         <p>
           <label htmlFor="parent_email">Parent or guardian email (only if you are 13 to 15)</label>

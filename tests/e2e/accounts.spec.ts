@@ -45,6 +45,7 @@ async function signUp(page: Page, email: string, dob: string, parent?: string) {
 async function signInWithLink(page: Page, email: string) {
   const token = await mintLink(email);
   await page.goto(`/account/sign-in/link/?token=${token}`);
+  await expect(page.getByText(`Sign in as ${email}`)).toBeVisible();
   await page.getByRole('button', { name: 'Continue' }).click();
 }
 
@@ -93,8 +94,8 @@ test('a used link cannot start a second session, and a signed-out cookie stays d
   const session = (await page.context().cookies(BASE)).find((x) => x.name === '__Host-sk_account')!.value;
   await page.getByRole('button', { name: 'Sign out' }).click();
   await page.goto(`/account/sign-in/link/?token=${token}`);
-  await page.getByRole('button', { name: 'Continue' }).click();
-  await expect(page).toHaveURL(/\?expired=1$/);
+  await expect(page.getByRole('alert').filter({ hasText: 'not valid' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Continue' })).toHaveCount(0);
   const r = await request.get('/account/', { headers: { cookie: `__Host-sk_account=${session}` }, maxRedirects: 0 });
   expect(r.status()).toBeGreaterThanOrEqual(300);
   expect(r.status()).toBeLessThan(400);
@@ -169,6 +170,27 @@ test('sign-out and sign-up POSTs from another origin are refused', async ({ requ
     const r = await request.post(path, { headers: { ...FORM, origin: 'https://evil.example' }, data: form({ email: 'a@example.test' }), maxRedirects: 0 });
     expect(r.status(), path).toBe(403);
   }
+});
+
+test('the date of birth field asks the browser for a birthday (WCAG 1.3.5)', async ({ page }) => {
+  await page.goto('/account/sign-up/');
+  await expect(page.getByLabel('Date of birth')).toHaveAttribute('autocomplete', 'bday');
+});
+
+test('the link page names the account, warns when it would switch accounts, and is generic for a bad link', async ({ page }) => {
+  const a = fresh();
+  const b = fresh();
+  await signUp(page, a, dobYearsAgo(30));
+  await signUp(page, b, dobYearsAgo(30));
+  await signInWithLink(page, a);
+  await expect(page.getByText(a)).toBeVisible();
+  await page.goto(`/account/sign-in/link/?token=${await mintLink(b)}`);
+  await expect(page.getByText(`Sign in as ${b}`)).toBeVisible();
+  await expect(page.getByRole('status')).toContainText(`signed in as ${a}`);
+  await expect(page.getByRole('status')).toContainText('switch accounts');
+  await page.goto(`/account/sign-in/link/?token=${'0'.repeat(64)}`);
+  await expect(page.getByRole('alert').filter({ hasText: 'not valid' })).toBeVisible();
+  await expect(page.getByText('Sign in as')).toHaveCount(0);
 });
 
 test('the sign-up and sign-in pages pass axe and sign-in works from the keyboard', async ({ page }) => {
