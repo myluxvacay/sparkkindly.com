@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers';
 import { currentAccount, requireAccounts } from '@/lib/accounts/next';
 import { linkTarget } from '@/lib/accounts/sessions';
-import { ageWording } from '@/lib/accounts/wording';
+import { ageWording, maskEmail } from '@/lib/accounts/wording';
 import { getDb } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -29,7 +29,7 @@ export default async function AccountLinkPage({ searchParams }: Props) {
           {!target.verified && (
             <p>
               This account is not confirmed yet: {ageWording(target.ageGroup, target.consent)}
-              {target.parentEmail ? `, parent or guardian email ${target.parentEmail}` : ''}. If you did not ask for
+              {target.parentEmail ? `, parent or guardian email ${maskEmail(target.parentEmail)}` : ''}. If you did not ask for
               this account, close this page.
             </p>
           )}

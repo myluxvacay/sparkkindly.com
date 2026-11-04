@@ -13,3 +13,10 @@ export function ageWording(ageGroup: AgeGroup | null, consent: Consent): string 
       return 'Account';
   }
 }
+
+// A parent or guardian address shown on the link confirm page: first character, a fixed run of bullets, the domain.
+// Anyone holding the link sees it, so it must not hand out a third party's full address.
+export function maskEmail(email: string): string {
+  const at = email.lastIndexOf('@');
+  return at > 0 ? `${email[0]}•••${email.slice(at)}` : '•••';
+}
