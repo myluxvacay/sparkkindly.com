@@ -74,3 +74,16 @@ describe('createSendBudget', () => {
     expect(budget()).toBe(false);
   });
 });
+
+describe('consent limits', () => {
+  it('are their own instance and ceiling, separate from sign-in link confirmations', async () => {
+    const { createConsentLimits, consentLimits } = await import('@/lib/accounts/limits');
+    expect((globalThis as Record<string, unknown>).__sparkConsentLimits).toBe(consentLimits);
+    expect(consentLimits).not.toBe(confirmLimits);
+    const consent = createConsentLimits(() => 0);
+    const confirm = createConfirmLimits(() => 0);
+    for (let i = 0; i < 60; i++) expect(consent('192.0.2.1')).toBe(true);
+    expect(consent('192.0.2.1')).toBe(false);
+    expect(confirm('192.0.2.1')).toBe(true);
+  });
+});

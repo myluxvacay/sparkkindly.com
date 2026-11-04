@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { consentTarget } from '@/lib/accounts/consent';
+import { CONSENT_HOLDS } from '@/lib/accounts/consent-email';
 import { requireAccounts } from '@/lib/accounts/next';
 import { getDb } from '@/lib/db';
 
@@ -62,10 +63,9 @@ export default async function ConsentPage({ searchParams }: Props) {
         <p>This link was sent to {target.maskedParent}, given as the parent or guardian of a young person aged 13 to 15.</p>
         <h2>What the account holds</h2>
         <ul>
-          <li>their email address</li>
-          <li>their date of birth</li>
-          <li>the interests they choose</li>
-          <li>their quiz answers and scores</li>
+          {CONSENT_HOLDS.map((h) => (
+            <li key={h}>{h}</li>
+          ))}
         </ul>
         <h2>What the account cannot do</h2>
         <p>

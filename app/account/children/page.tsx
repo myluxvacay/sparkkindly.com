@@ -22,6 +22,7 @@ const RESULTS: Record<string, { text: string; form?: 'create' | 'pin' }> = {
   gone: { text: 'That profile is not available. It may already be deleted.' },
   no: { text: 'Only an adult account can create child profiles.' },
   invalid: { text: 'Please check the name, the age band and the parent or guardian box, then try again.', form: 'create' },
+  limit: { text: 'An account can hold up to 10 profiles. Delete one to add another.', form: 'create' },
   pin: { text: 'Please choose a 4-digit PIN for switching back.', form: 'create' },
   mismatch: { text: 'The two PINs did not match. Please enter them again.', form: 'create' },
   wrong: { text: 'That PIN was not right. Please try again.', form: 'pin' },

@@ -57,7 +57,7 @@ async function emailLink(d: Deps, email: string, ip: string, links: typeof accou
       text: `Use this link within 15 minutes to sign in to SparkKindly:\n\n${linkBase(d.env)}/account/sign-in/link/?token=${token}\n\nIf you did not ask for it, ignore this email.`,
     });
   } catch (err) {
-    console.error('account sign-in email not sent:', (err as Error).message);
+    console.error('account sign-in email not sent:', (err as Error).name);
   }
 }
 
@@ -137,7 +137,7 @@ export async function confirmAccountLink(request: Request, d: Deps): Promise<Res
   const form = await readForm(request);
   // A database error (e.g. the row lock waited past statement_timeout) gets the generic invalid-link page, not a 500.
   const session = await consumeAccountLink(d.db, form?.get('token') ?? '', d.now).catch((err: Error) => {
-    console.error('account link not confirmed:', err.message);
+    console.error('account link not confirmed:', err.name);
     return null;
   });
   if (!session) return seeOther('/account/sign-in/?expired=1');

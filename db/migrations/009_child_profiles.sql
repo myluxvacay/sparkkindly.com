@@ -4,7 +4,9 @@
 -- Held about a child: display name, age band, owner and created_at. Never an email, date of birth or free text.
 -- Deleting an account cascades its profiles; deleting a profile sets any session's active_profile_id to NULL.
 -- A session's active profile must belong to the session's account: composite foreign key (active_profile_id, account_id).
--- Rollback: ALTER TABLE account_sessions DROP COLUMN active_profile_id; DROP TABLE child_profiles (its UNIQUE (id, account_id) goes with it);
+-- Release rollback: BEFORE switching back to a release that predates this migration, run
+-- DELETE FROM account_sessions WHERE active_profile_id IS NOT NULL; (otherwise each child-profile session becomes a full adult session in the old code).
+-- Schema rollback: ALTER TABLE account_sessions DROP COLUMN active_profile_id; DROP TABLE child_profiles (its UNIQUE (id, account_id) goes with it);
 -- ALTER TABLE accounts DROP COLUMN guardian_confirmed_at, DROP COLUMN pin_hash, DROP COLUMN pin_failures, DROP COLUMN pin_lock_count,
 -- DROP COLUMN pin_locked_until; DELETE FROM schema_migrations WHERE name = '009_child_profiles.sql'.
 CREATE TABLE child_profiles (

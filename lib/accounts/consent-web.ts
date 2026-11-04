@@ -4,7 +4,7 @@
 // Verified by tests/unit/account-consent-web.test.ts.
 import { clientKey, readCookie, readForm, sameOrigin, seeOther } from '@/lib/admin/guard';
 import { confirmConsent, withdrawConsent } from './consent';
-import { confirmLimits, consentResendLimits } from './limits';
+import { consentLimits, consentResendLimits } from './limits';
 import { consentPending } from './policy';
 import { getContext, requireAdultContext } from './context';
 import { ACCOUNT_COOKIE, emailConsentRequest, forbidden, tooMany, type Deps } from './web';
@@ -21,7 +21,7 @@ async function consentPost(
   ok: string,
 ): Promise<Response> {
   if (!sameOrigin(request)) return forbidden();
-  if (!(d.confirms ?? confirmLimits)(clientKey(request))) return tooMany();
+  if (!(d.confirms ?? consentLimits)(clientKey(request))) return tooMany();
   const form = await readForm(request);
   // A database error gets the generic invalid page; the message names no token or address.
   const outcome = await act(form?.get('token') ?? '').catch((err: Error) => {

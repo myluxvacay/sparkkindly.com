@@ -20,9 +20,10 @@ export type CreateInput = {
   pin?: unknown;
 };
 export type CreateResult =
-  { status: 'created'; profileId: string } | { status: 'invalid' | 'not_allowed' | 'pin_required' };
+  { status: 'created'; profileId: string } | { status: 'invalid' | 'limit' | 'not_allowed' | 'pin_required' };
 
 const NAME_MAX = 30;
+const PROFILE_MAX = 10;
 
 const guardianChecked = (v: unknown): boolean => v === true || v === 'on' || v === 'true';
 
@@ -74,6 +75,12 @@ export async function createChildProfile(
     const band = cleanBand(input.ageBand);
     if (!name || !band || !guardianChecked(input.guardianConfirmed)) {
       return { status: 'invalid' };
+    }
+    const count = await tx.query<{ n: number }>('SELECT count(*)::int AS n FROM child_profiles WHERE account_id = $1', [
+      accountId,
+    ]);
+    if (count.rows[0].n >= PROFILE_MAX) {
+      return { status: 'limit' };
     }
     if (!a.pin_hash) {
       if (input.pin === undefined || input.pin === null || input.pin === '') {

@@ -244,6 +244,26 @@ describe('confirmAccountLink', () => {
     error.mockRestore();
   });
 
+  it('a failed sign-in email logs the error name only, never an address in its message', async () => {
+    const error = vi.spyOn(console, 'error').mockImplementation(() => {});
+    await signUp(db, { email: 'logleak@example.test', dateOfBirth: '1990-05-05' }, NOW);
+    await db.query('UPDATE accounts SET verified_at = $2 WHERE email = $1', ['logleak@example.test', NOW.toISOString()]);
+    const jobs: Promise<void>[] = [];
+    await requestAccountSignIn(post({ email: 'logleak@example.test' }), {
+      db,
+      env,
+      now: NOW,
+      send: async () => Promise.reject(new Error('rejected logleak@example.test')),
+      defer: (w) => void jobs.push(w()),
+      links: createAccountLinkLimits(() => 0),
+      budget: () => true,
+    });
+    await Promise.all(jobs);
+    expect(error).toHaveBeenCalled();
+    expect(error.mock.calls.flat().join(' ')).not.toContain('logleak@example.test');
+    error.mockRestore();
+  });
+
   it('a failed confirm leaves the current session alone', async () => {
     await signUp(db, { email: 'stay@example.test', dateOfBirth: '1990-05-05' }, NOW);
     const s = (await consumeAccountLink(db, (await requestAccountLink(db, 'stay@example.test', env, NOW))!, NOW))!;

@@ -21,6 +21,9 @@ export const createAccountLinkLimits = (clock: () => number = Date.now) => creat
 // Link confirmations: 60 per IPv4 /24 or IPv6 /64 per hour.
 export const createConfirmLimits = (clock: () => number = Date.now) => createCodeLimits(clock, 60);
 
+// Parent consent confirm and withdraw: 60 per network per hour, its own counter so sign-in link traffic never spends it.
+export const createConsentLimits = (clock: () => number = Date.now) => createCodeLimits(clock, 60);
+
 // Parent consent email resends: one per account per hour (the account page's button).
 export function createConsentResendLimits(clock: () => number = Date.now) {
   const perAccount = createLimiter({ perMinute: 1, now: () => clock() / 60 });
@@ -61,10 +64,12 @@ const shared = globalThis as unknown as {
   __sparkAccountLinkLimits?: ReturnType<typeof createAccountLinkLimits>;
   __sparkAccountConfirmLimits?: ReturnType<typeof createConfirmLimits>;
   __sparkAccountSendBudget?: ReturnType<typeof createSendBudget>;
+  __sparkConsentLimits?: ReturnType<typeof createConsentLimits>;
   __sparkConsentResendLimits?: ReturnType<typeof createConsentResendLimits>;
 };
 export const signUpLimits = (shared.__sparkSignUpLimits ??= createSignUpLimits());
 export const accountLinkLimits = (shared.__sparkAccountLinkLimits ??= createAccountLinkLimits());
 export const confirmLimits = (shared.__sparkAccountConfirmLimits ??= createConfirmLimits());
+export const consentLimits = (shared.__sparkConsentLimits ??= createConsentLimits());
 export const accountSendBudget = (shared.__sparkAccountSendBudget ??= createSendBudget());
 export const consentResendLimits = (shared.__sparkConsentResendLimits ??= createConsentResendLimits());

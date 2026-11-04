@@ -45,7 +45,7 @@ export const createChildRequest = (request: Request, d: ChildDeps) =>
       { displayName: form.get('display_name'), ageBand: form.get('age_band'), guardianConfirmed: form.get('guardian'), pin },
       d.now,
     );
-    const codes = { created: 'created', invalid: 'invalid', not_allowed: 'no', pin_required: 'pin' } as const;
+    const codes = { created: 'created', invalid: 'invalid', limit: 'limit', not_allowed: 'no', pin_required: 'pin' } as const;
     return result(codes[r.status]);
   });
 

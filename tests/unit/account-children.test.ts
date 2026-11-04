@@ -72,6 +72,15 @@ describe('createChildProfile', () => {
     );
   });
 
+  it('caps profiles at 10 per account: the 11th is refused with status limit', async () => {
+    const id = await adult();
+    for (let i = 0; i < 10; i++) {
+      expect((await createChildProfile(db, id, { ...ok, displayName: `Kid ${i}` }, T0)).status).toBe('created');
+    }
+    expect(await createChildProfile(db, id, ok, T0)).toEqual({ status: 'limit' });
+    expect(await listChildProfiles(db, id)).toHaveLength(10);
+  });
+
   it('16-17, 13-15 (pending and confirmed) and unknown accounts are not allowed', async () => {
     const teen = await account('2009-06-01');
     const young = await account('2011-12-01', 'parent@example.test');
