@@ -10,7 +10,7 @@ import { deleteAccountIn } from './delete';
 import { ageGroupFor } from './policy';
 
 const DAY = 24 * 60 * 60_000;
-export type SweepResult = { reminded: number; deleted: number; cleared: number };
+export type SweepResult = { reminded: number; deleted: number; cleared: number; failed: number };
 
 // True once per UTC day: the first caller records the day in job_runs.
 export async function claimConsentSweep(db: Queryable, now: Date): Promise<boolean> {
@@ -34,7 +34,11 @@ async function clearOutgrown(db: Db, now: Date): Promise<number> {
       continue;
     }
     await db.transaction(async (tx) => {
-      await tx.query('UPDATE accounts SET parent_email = NULL WHERE id = $1', [id]);
+      // A pending account that outgrew the consent age no longer waits on anyone: 'none', not a lingering 'pending'.
+      await tx.query(
+        "UPDATE accounts SET parent_email = NULL, consent_state = CASE WHEN consent_state = 'pending' THEN 'none' ELSE consent_state END WHERE id = $1",
+        [id],
+      );
       await tx.query('DELETE FROM account_consent_tokens WHERE account_id = $1', [id]);
     });
     cleared++;
@@ -73,14 +77,16 @@ export async function runConsentSweep(
     }
   }
   let reminded = 0;
-  const due = await ids(
-    db,
-    `SELECT id FROM accounts WHERE ${pending} AND consent_reminded_at IS NULL AND verified_at <= $1::timestamptz`,
+  let failed = 0;
+  const due = await db.query<{ id: string; verified_at: Date }>(
+    `SELECT id, verified_at FROM accounts WHERE ${pending} AND consent_reminded_at IS NULL AND verified_at <= $1::timestamptz`,
     [at(7)],
   );
-  for (const id of due) {
+  // Reminders are capped at one per account, so they do not go through accountSendBudget (per-process memory, and the
+  // worker is a one-shot process).
+  for (const { id, verified_at: verifiedAt } of due.rows) {
     try {
-      const t = await issueConsentTokens(db, id, now);
+      const t = await issueConsentTokens(db, id, now, { revokeOldConfirm: false });
       if (!t) {
         continue;
       }
@@ -89,13 +95,15 @@ export async function runConsentSweep(
         confirmUrl: `${base}/account/consent/?token=${t.confirm}`,
         withdrawUrl: `${base}/account/consent/withdraw/?token=${t.withdraw}`,
         privacyUrl: `${base}/privacy/`,
+        deletionDate: new Date(new Date(verifiedAt).getTime() + 30 * DAY),
       });
       await send({ to: t.parentEmail, ...m });
       await db.query('UPDATE accounts SET consent_reminded_at = $2 WHERE id = $1', [id, now.toISOString()]);
       reminded++;
     } catch {
       // Left unset: tomorrow's sweep retries. The error is dropped on purpose (it can carry the parent's address).
+      failed++;
     }
   }
-  return { reminded, deleted, cleared };
+  return { reminded, deleted, cleared, failed };
 }

@@ -1,6 +1,6 @@
 // The parent's consent email (first request and the 7-day reminder), plain text. One function so the sign-up flow and the
 // sweep say exactly the same things. No Next.js imports; verified by tests/unit/account-consent-sweep.test.ts.
-export type ConsentEmailLinks = { confirmUrl: string; withdrawUrl: string; privacyUrl: string };
+export type ConsentEmailLinks = { confirmUrl: string; withdrawUrl: string; privacyUrl: string; deletionDate?: Date };
 
 export function consentEmail(kind: 'request' | 'reminder', links: ConsentEmailLinks): { subject: string; text: string } {
   const reminder = kind === 'reminder';
@@ -15,15 +15,19 @@ export function consentEmail(kind: 'request' | 'reminder', links: ConsentEmailLi
       '',
       'What the account holds:',
       '- their email address',
+      '- your email address, kept only as the record of your consent and so you can withdraw it',
       '- their date of birth',
       '- the interests they choose',
       '- their quiz answers and scores',
+      '- the friend circles they join or create (once you confirm) and their scores within them',
       '',
       'What this account cannot do: post public comments, join communities, contribute content, create child profiles or have a profile page.',
       '',
-      'If you do nothing, the account and everything in it is deleted 30 days after the child confirmed their own email.',
+      links.deletionDate
+        ? `If you do nothing, the account and everything in it is deleted on ${links.deletionDate.toISOString().slice(0, 10)}.`
+        : 'If you do nothing, the account and everything in it is deleted 30 days after the child confirmed their own email.',
       '',
-      'To let the account stay, open this link and press the confirm button (it expires after 30 days):',
+      'To let the account stay, open this link and press the confirm button :',
       links.confirmUrl,
       '',
       'To delete the account and everything held, open this link and press the delete button:',

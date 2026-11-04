@@ -87,7 +87,7 @@ async function consentSweep(db: Db, now: Date, env: EnvLike, send: Send, log: st
     'consent-sweep',
     async () => {
       const r = await runConsentSweep(db, now, send, { base: linkBase(env) });
-      log.push(`consent sweep: ${r.reminded} reminded, ${r.deleted} deleted, ${r.cleared} cleared`);
+      log.push(`consent sweep: ${r.reminded} reminded, ${r.deleted} deleted, ${r.cleared} cleared, ${r.failed} failed`);
     },
     { delayMs },
   );

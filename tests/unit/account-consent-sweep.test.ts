@@ -49,7 +49,7 @@ describe('runConsentSweep', () => {
   it('does nothing on day 6', async () => {
     await teen();
     const send = okSend();
-    expect(await runConsentSweep(db, day(6), send, links)).toEqual({ reminded: 0, deleted: 0, cleared: 0 });
+    expect(await runConsentSweep(db, day(6), send, links)).toEqual({ reminded: 0, deleted: 0, cleared: 0, failed: 0 });
     expect(send).not.toHaveBeenCalled();
   });
 
@@ -95,7 +95,7 @@ describe('runConsentSweep', () => {
     const t = (await issueConsentTokens(db, c.id, V))!;
     await confirmConsent(db, t.confirm, V);
     await teen({ verified: false });
-    expect(await runConsentSweep(db, day(40), okSend(), links)).toEqual({ reminded: 0, deleted: 0, cleared: 0 });
+    expect(await runConsentSweep(db, day(40), okSend(), links)).toEqual({ reminded: 0, deleted: 0, cleared: 0, failed: 0 });
     expect(await accounts()).toBe(2);
   });
 
@@ -120,6 +120,32 @@ describe('runConsentSweep', () => {
     await teen({ dob: '2010-11-01' });
     await runConsentSweep(db, day(30), okSend(), links);
     expect(await accounts()).toBe(1);
+  });
+});
+
+describe('review fixes', () => {
+  it('a failed reminder send leaves the first confirm link working and is counted', async () => {
+    const a = await teen();
+    const first = await issueConsentTokens(db, a.id, V);
+    const failing = vi.fn(async () => {
+      throw new Error('mail down');
+    });
+    const r = await runConsentSweep(db, day(7), failing, links);
+    expect(r.failed).toBe(1);
+    expect(await confirmConsent(db, first!.confirm, day(8))).toBe('confirmed');
+  });
+
+  it('a pending account that turned 16 becomes none, and the reminder names the deletion date', async () => {
+    const old = await teen({ dob: '2010-10-01' });
+    await runConsentSweep(db, day(1), okSend(), links);
+    const row = await db.query<{ consent_state: string; parent_email: string | null }>(
+      'SELECT consent_state, parent_email FROM accounts WHERE id = $1',
+      [old.id],
+    );
+    expect(row.rows[0]).toEqual({ consent_state: 'none', parent_email: null });
+    const mail = consentEmail('request', { confirmUrl: 'c', withdrawUrl: 'w', privacyUrl: 'p', deletionDate: new Date('2026-12-01T00:00:00Z') });
+    expect(mail.text).toContain('deleted on 2026-12-01');
+    expect(mail.text).toContain('your email address');
   });
 });
 

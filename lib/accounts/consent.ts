@@ -30,6 +30,8 @@ export async function issueConsentTokens(
   db: Db,
   accountId: string,
   now: Date,
+  // A reminder keeps the first email's confirm link alive: if the reminder send fails the parent still has a working one.
+  opts: { revokeOldConfirm?: boolean } = {},
 ): Promise<{ confirm: string; withdraw: string; parentEmail: string } | null> {
   return db.transaction(async (tx) => {
     const a = await tx.query<{ parent_email: string | null }>(
@@ -41,10 +43,12 @@ export async function issueConsentTokens(
     if (!parentEmail) {
       return null;
     }
-    await tx.query(
-      "DELETE FROM account_consent_tokens WHERE account_id = $1 AND purpose = 'confirm' AND used_at IS NULL",
-      [accountId],
-    );
+    if (opts.revokeOldConfirm !== false) {
+      await tx.query(
+        "DELETE FROM account_consent_tokens WHERE account_id = $1 AND purpose = 'confirm' AND used_at IS NULL",
+        [accountId],
+      );
+    }
     const confirm = newToken();
     const withdraw = newToken();
     const sql =
