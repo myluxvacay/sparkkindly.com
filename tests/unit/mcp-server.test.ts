@@ -88,7 +88,7 @@ describe('SparkKindly MCP server', () => {
   it('sparkkindly_record_run passes the run counts and refuses a malformed run before touching the API', async () => {
     const fake = fakeClient();
     const c = await connect({ client: fake, formatDoc: FORMAT_DOC });
-    const run = { worlds: ['play'], startedAt: '2026-11-03T10:00:00Z', endedAt: '2026-11-03T10:20:00Z', itemsSubmitted: 2, itemsScheduled: 2, itemsInReview: 0, itemsRejected: 0, rateLimited: false };
+    const run = { worlds: ['play'], itemsSubmitted: 2, itemsScheduled: 2, itemsInReview: 0, itemsRejected: 0, rateLimited: false };
     await c.callTool({ name: 'sparkkindly_record_run', arguments: run });
     expect(fake.calls.recordRun[0]).toEqual([run]);
     const bad = await c.callTool({ name: 'sparkkindly_record_run', arguments: { ...run, itemsSubmitted: -1 } }).catch((e: Error) => ({ isError: true, content: [{ type: 'text', text: e.message }] }));

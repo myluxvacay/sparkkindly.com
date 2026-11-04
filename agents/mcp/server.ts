@@ -82,11 +82,9 @@ export function buildServer(deps: Deps): McpServer {
     {
       title: 'Record a finished SparkKindly run',
       description:
-        "Master agent only. Report one finished run: the worlds it covered, when it started and ended, how many items were submitted, scheduled, sent to owner review and rejected, and whether it stopped on the Claude plan's limit. This is the heartbeat the site watches: if no run is recorded for 36 hours the owner is emailed. Counts and a short note only, never item text.",
+        "Master agent only. Report one finished run: the worlds it covered (the site stamps the time itself, so send none), how many items were submitted, scheduled, sent to owner review and rejected, and whether it stopped on the Claude plan's limit. This is the heartbeat the site watches: if no run is recorded for 36 hours the owner is emailed. Counts and a short note only, never item text.",
       inputSchema: {
         worlds: z.array(z.string().regex(/^[a-z0-9-]+$/)).min(1).max(20),
-        startedAt: z.iso.datetime(),
-        endedAt: z.iso.datetime(),
         itemsSubmitted: z.number().int().min(0).max(1000),
         itemsScheduled: z.number().int().min(0).max(1000),
         itemsInReview: z.number().int().min(0).max(1000),

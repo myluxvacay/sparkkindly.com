@@ -19,8 +19,6 @@ async function agentFor(name: string, world: string | null): Promise<Agent> {
 
 const run = (over: Record<string, unknown> = {}) => ({
   worlds: ['play', 'discover'],
-  startedAt: '2026-11-02T11:00:00Z',
-  endedAt: '2026-11-02T11:20:00Z',
   itemsSubmitted: 3,
   itemsScheduled: 2,
   itemsInReview: 1,
@@ -47,7 +45,13 @@ describe('recordRun', () => {
     const stored = await db.query<{ n: string; rate_limited: boolean }>('SELECT count(*) AS n, bool_or(rate_limited) AS rate_limited FROM agent_runs');
     expect(Number(stored.rows[0].n)).toBe(1);
     expect(stored.rows[0].rate_limited).toBe(false);
-    expect((await latestRun(db))!.endedAt.toISOString()).toBe('2026-11-02T11:20:00.000Z');
+    expect((await latestRun(db))!.endedAt.toISOString()).toBe(NOW.toISOString());
+  });
+
+  it("stamps the time itself: an agent has no clock, so a time it sends is ignored", async () => {
+    const later = new Date('2026-11-02T13:00:00Z');
+    await recordRun(db, master, run({ startedAt: '2020-01-01T00:00:00Z', endedAt: '2030-01-01T00:00:00Z' }), later);
+    expect((await latestRun(db))!.endedAt.toISOString()).toBe(later.toISOString());
   });
 
   it('keeps the rate-limited flag', async () => {
@@ -65,9 +69,7 @@ describe('recordRun', () => {
     ['an unknown world', { worlds: ['no-such-world'] }],
     ['no worlds', { worlds: [] }],
     ['a negative count', { itemsRejected: -1 }],
-    ['an end before the start', { endedAt: '2026-11-02T10:00:00Z' }],
     ['a note over 300 characters', { note: 'x'.repeat(301) }],
-    ['a start in the future', { startedAt: '2026-11-03T11:00:00Z', endedAt: '2026-11-03T11:10:00Z' }],
   ])('refuses %s', async (_name, over) => {
     const before = await db.query<{ n: string }>('SELECT count(*) AS n FROM agent_runs');
     const r = await recordRun(db, master, run(over), NOW);
