@@ -1,7 +1,7 @@
 // The SparkKindly worker: one tick per run. A systemd timer starts it once a minute as a oneshot service (systemd never
 // overlaps two runs of one unit), from the live release's directory, so a deploy needs no worker restart.
 // Each job goes through runJob: three tries with growing waits, then one failed_jobs row; the tick itself never throws.
-// Built into the release as worker.mjs by `npm run worker:build`. Verified by: tests/unit/digest.test.ts (tick) and the
+// Built into the release as worker.mjs by `npm run worker:build`. Verified by: tests/unit/digest.test.ts and account-retention.test.ts (tick) and the
 // manual run in docs/OPERATIONS.md.
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
@@ -13,6 +13,7 @@ import { claimHeartbeat, deliverHeartbeat } from '@/lib/jobs/heartbeat';
 import { runJob } from '@/lib/jobs/run-job';
 import { claimDigest, deliverDigest } from '@/lib/admin/digest';
 import { linkBase } from '@/lib/admin/sessions';
+import { claimAccountPurge, purgeAccountData } from '@/lib/accounts/retention';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
 
@@ -48,7 +49,27 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: { 
   } else if (beat) {
     log.push(`heartbeat: ${beat.status}`);
   }
+  await accountPurge(db, now, log, opts.delayMs);
   return log;
+}
+
+// Once per UTC day: purge unconfirmed sign-ups and spent credentials (lib/accounts/retention.ts).
+async function accountPurge(db: Db, now: Date, log: string[], delayMs?: number): Promise<void> {
+  const claimed = await claimAccountPurge(db, now).catch((err: Error) => {
+    log.push(`account purge: could not check (${err.message})`);
+    return null;
+  });
+  if (claimed === false) log.push('account purge: done today');
+  if (!claimed) return;
+  await runJob(
+    db,
+    'account-purge',
+    async () => {
+      const r = await purgeAccountData(db, now);
+      log.push(`account purge: ${r.accounts} account(s), ${r.tokens} token(s), ${r.sessions} session(s)`);
+    },
+    { delayMs },
+  );
 }
 
 async function main() {
