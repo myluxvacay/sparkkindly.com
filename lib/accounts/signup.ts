@@ -10,16 +10,21 @@ export type SignUpResult =
   | { status: 'created'; accountId: string }
   | { status: 'under_13' | 'invalid' | 'parent_required' | 'exists' };
 
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Printable ASCII only (no space, one @, a dot in the domain), tested BEFORE lower-casing: JS toLowerCase and Postgres
+// lower() agree on ASCII but not on every Unicode letter (final sigma, the Kelvin sign), and lookalikes stay out.
+const PART = '[\\x21-\\x3f\\x41-\\x7e]+';
+const EMAIL = new RegExp(`^${PART}@${PART}\\.${PART}$`);
 const ZONES = new Set<string>(Intl.supportedValuesOf('timeZone'));
 
 function cleanEmail(v: unknown): string | null {
   if (typeof v !== 'string') {
     return null;
   }
-  const e = v.trim().toLowerCase();
-  return e.length <= 254 && EMAIL.test(e) ? e : null;
+  const e = v.trim();
+  return e.length <= 254 && EMAIL.test(e) ? e.toLowerCase() : null;
 }
+
+const CHECK_VIOLATION = '23514';
 
 function cleanZone(v: unknown): string {
   return typeof v === 'string' && (v === 'UTC' || ZONES.has(v)) ? v : 'UTC';
@@ -41,6 +46,18 @@ export async function signUp(db: Db, input: SignUpInput, now: Date): Promise<Sig
       return { status: 'parent_required' };
     }
   }
+  try {
+    return await upsert(db, email, input, parent);
+  } catch (err) {
+    // A CHECK the validation above did not foresee (e.g. a case-folding disagreement) is bad input, not a crash.
+    if ((err as { code?: unknown }).code === CHECK_VIOLATION) {
+      return { status: 'invalid' };
+    }
+    throw err;
+  }
+}
+
+function upsert(db: Db, email: string, input: SignUpInput, parent: string | null): Promise<SignUpResult> {
   return db.transaction(async (tx) => {
     const r = await tx.query<{ id: string; replaced: boolean }>(
       `INSERT INTO accounts (email, date_of_birth, time_zone, consent_state, parent_email)

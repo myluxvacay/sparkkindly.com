@@ -61,6 +61,35 @@ describe('signUp', () => {
     expect((await rows()).filter((r) => r.email === 'ok@example.test')).toHaveLength(0);
   });
 
+  it('accepts only ASCII addresses: non-ASCII, final sigma and Unicode lookalikes are invalid, write nothing, never throw', async () => {
+    const before = (await rows()).length;
+    for (const email of [
+      'josé@example.test',
+      'ΟΔΟΣ@example.test', // final sigma: JS and Postgres lower-casing can disagree
+      'ὈΔΥΣΣΕΎΣ@example.test',
+      'adminK@example.test', // Kelvin sign, lower-cases to an ASCII k in JS
+      'user@exаmple.test', // Cyrillic a
+      'a b@example.test',
+      'a@b@example.test',
+      `${'a'.repeat(250)}@x.test`,
+    ]) {
+      await expect(signUp(db, { email, dateOfBirth: ADULT }, NOW), email).resolves.toEqual({ status: 'invalid' });
+    }
+    await expect(
+      signUp(db, { email: 'ascii@example.test', dateOfBirth: TEEN14, parentEmail: 'pärent@example.test' }, NOW),
+    ).resolves.toEqual({ status: 'parent_required' });
+    expect((await rows()).length).toBe(before);
+  });
+
+  it('a database CHECK violation is invalid, not a thrown error; other errors still throw', async () => {
+    const failing = (code: string) =>
+      ({ ...db, transaction: async () => Promise.reject(Object.assign(new Error('violates check'), { code })) }) as typeof db;
+    await expect(signUp(failing('23514'), { email: 'c@example.test', dateOfBirth: ADULT }, NOW)).resolves.toEqual({
+      status: 'invalid',
+    });
+    await expect(signUp(failing('57P01'), { email: 'c@example.test', dateOfBirth: ADULT }, NOW)).rejects.toThrow();
+  });
+
   it('13 to 15 needs a parent email different from their own', async () => {
     const own = 'teen@example.test';
     expect(await signUp(db, { email: own, dateOfBirth: TEEN14 }, NOW)).toEqual({ status: 'parent_required' });
