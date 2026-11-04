@@ -112,7 +112,7 @@ Today every public page and route uses `anonymousScope()`, which includes `adult
 
 ### Task 5: Isolation tests, docs and tracker
 
-- [ ] **Step 1:** Add to `account-isolation.test.ts`: profile A's interests/answers via account B denied; child context `/me` data has no `adults` item; pending 13-15 stores no answers; tampered profile id ignored.
-- [ ] **Step 2:** `docs/OPERATIONS.md`: what interests and answers hold, first-answer-only rule, time-zone handling, deletion coverage (cascades), data-inventory rows (`profile_interests`, `item_responses`), migration 010 rollback pointer, reminder that the privacy page copy ("answers are not saved") is rewritten before go-live. Tracker item for 3.5/3.6.
-- [ ] **Step 3: Run** the full unit suite, `rm -rf .next/types; npx tsc --noEmit`, eslint on touched files.
-- [ ] **Step 4: Commit** `docs: interests and dashboard operations and isolation rows`.
+- [x] **Step 1:** Add to `account-isolation.test.ts`: profile A's interests/answers via account B denied; child context `/me` data has no `adults` item; pending 13-15 stores no answers; tampered profile id ignored.
+- [x] **Step 2:** `docs/OPERATIONS.md`: what interests and answers hold, first-answer-only rule, time-zone handling, deletion coverage (cascades), data-inventory rows (`profile_interests`, `item_responses`), migration 010 rollback pointer, reminder that the privacy page copy ("answers are not saved") is rewritten before go-live. Tracker item for 3.5/3.6.
+- [x] **Step 3: Run** the full unit suite, `rm -rf .next/types; npx tsc --noEmit`, eslint on touched files.
+- [x] **Step 4: Commit** `docs: interests and dashboard operations and isolation rows`.

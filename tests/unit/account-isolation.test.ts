@@ -15,6 +15,11 @@ import { changePinRequest, createChildRequest, deleteChildRequest, switchToChild
 import { issueConsentTokens, consentTarget, confirmConsent, withdrawConsent } from '@/lib/accounts/consent';
 import { scopeForSession } from '@/lib/accounts/scope';
 import { seedReference } from '@/db/seed';
+import { dashboardFor } from '@/lib/accounts/dashboard';
+import { getInterests, setInterests } from '@/lib/accounts/interests';
+import { countAnswered, listAnswered, recordAnswer } from '@/lib/accounts/responses';
+import { saveInterestsRequest } from '@/lib/accounts/interests-web';
+import { viewerForSession } from '@/lib/accounts/scope';
 import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, searchPublic } from '@/lib/public/reads';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -459,12 +464,123 @@ describe('child profile -> adults item denied on the public reads, through the s
   });
 });
 
+describe('interests, saved answers and /me (plan 3D, Task 5)', () => {
+  const NOW = new Date('2026-11-04T12:00:00Z');
+  let k = 0;
+  const own = (ctx: { account: { id: string }; profile: { id: string } | null }) => ({ accountId: ctx.account.id, profileId: ctx.profile?.id ?? null });
+  async function item(audience: string): Promise<string> {
+    const r = await db.query<{ id: string }>(
+      `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, published_at, created_by, risk_tier, approved_by)
+       SELECT id, 'quiz', $1, 'T', 'S', '{}'::jsonb, $2, 'published', '2026-11-04T09:00:00Z', 'test', 'computable', 'test'
+       FROM worlds WHERE slug = 'play' RETURNING id`,
+      [`me-iso-${k++}`, audience],
+    );
+    return r.rows[0].id;
+  }
+  async function holder(dob = '1988-01-01', parent?: string) {
+    const email = `me-iso${k++}@example.test`;
+    const r = await signUp(db, { email, dateOfBirth: dob, parentEmail: parent }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    return { accountId: r.accountId, session: await signIn(email) };
+  }
+  const topicId = async () => (await db.query<{ id: number }>('SELECT id FROM topics ORDER BY id LIMIT 1')).rows[0].id;
+  const form = (body: Record<string, string>, cookie: string) =>
+    new Request('http://localhost/x', {
+      method: 'POST',
+      headers: {
+        host: 'staging.sparkkindly.com',
+        origin: 'https://staging.sparkkindly.com',
+        'content-type': 'application/x-www-form-urlencoded',
+        cookie: `__Host-sk_account=${cookie}`,
+      },
+      body: new URLSearchParams(body).toString(),
+    });
+  const everyone = { audiences: ['kids', 'all', 'adults'] as ('kids' | 'all' | 'adults')[], now: NOW };
+
+  beforeAll(async () => {
+    await seedReference(db);
+  });
+
+  it('child profile: /me data (today, recent, answered, count) holds no adults item', async () => {
+    const a = await holder();
+    const p = await createChildProfile(db, a.accountId, { displayName: 'Kit', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (p.status !== 'created') throw new Error('profile not created');
+    await switchToProfile(db, a.session, p.profileId, NOW);
+    const ctx = (await getContext(db, a.session, NOW))!;
+    const adults = await item('adults');
+    const kids = await item('kids');
+    const play = (await db.query<{ id: number }>("SELECT id FROM worlds WHERE slug = 'play'")).rows[0].id;
+    await setInterests(db, own(ctx), { topicIds: [], worldIds: [play] });
+    await recordAnswer(db, own(ctx), adults, true, NOW);
+    await recordAnswer(db, own(ctx), kids, true, NOW);
+    const d = await dashboardFor(db, ctx, NOW);
+    const shown = [...d.today, ...d.recent, ...d.answered.map((x) => x.item)];
+    expect(shown.map((i) => i.id)).toContain(kids);
+    expect(shown.some((i) => i.id === adults || i.audience === 'adults')).toBe(false);
+    expect(d.progress).toEqual({ total: 1, correct: 1 }); // the adults answer row exists but is not counted
+  });
+
+  it("account A's interests and answers are not reachable through account B, even with A's profile id", async () => {
+    const a = await holder();
+    const b = await holder();
+    const pa = await createChildProfile(db, a.accountId, { displayName: 'Ann', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (pa.status !== 'created') throw new Error('profile not created');
+    const t = await topicId();
+    const it1 = await item('all');
+    expect(await setInterests(db, { accountId: a.accountId, profileId: null }, { topicIds: [t], worldIds: [] })).toBe('ok');
+    expect(await recordAnswer(db, { accountId: a.accountId, profileId: pa.profileId }, it1, true, NOW)).toBe(true);
+    const asB = { accountId: b.accountId, profileId: null };
+    expect(await getInterests(db, asB)).toEqual({ topicIds: [], worldIds: [] });
+    expect(await countAnswered(db, asB, everyone)).toEqual({ total: 0, correct: 0 });
+    // B naming A's profile id writes nothing and reads nothing
+    const forged = { accountId: b.accountId, profileId: pa.profileId };
+    expect(await setInterests(db, forged, { topicIds: [t], worldIds: [] })).toBe('invalid');
+    expect(await recordAnswer(db, forged, it1, true, NOW)).toBe(false);
+    expect(await listAnswered(db, forged, everyone, { limit: 10, offset: 0 })).toEqual([]);
+    expect((await db.query('SELECT 1 FROM profile_interests WHERE account_id = $1', [b.accountId])).rows).toHaveLength(0);
+    expect((await db.query('SELECT 1 FROM item_responses WHERE account_id = $1', [b.accountId])).rows).toHaveLength(0);
+  });
+
+  it('13-15 consent-pending: may save interests, but no answer is stored', async () => {
+    const t = await holder('2011-12-01', 'parent-me@example.test');
+    const ctx = (await getContext(db, t.session, T0))!;
+    expect(ctx.account.consent).toBe('pending');
+    expect((await viewerForSession(db, t.session, T0)).owner).toBeNull(); // no owner: the play panel never writes
+    const r = await saveInterestsRequest(form({ topic: String(await topicId()) }, t.session), { db, now: T0 });
+    expect(r.headers.get('location')).toContain('r=saved');
+    expect((await getInterests(db, own(ctx))).topicIds).toHaveLength(1);
+    expect((await db.query('SELECT 1 FROM item_responses WHERE account_id = $1', [t.accountId])).rows).toHaveLength(0);
+  });
+
+  it('tampered profile id / account id in the interests form is ignored; the session decides the owner', async () => {
+    const a = await holder();
+    const b = await holder();
+    const pb = await createChildProfile(db, b.accountId, { displayName: 'Bea', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (pb.status !== 'created') throw new Error('profile not created');
+    const t = await topicId();
+    const r = await saveInterestsRequest(
+      form({ topic: String(t), profile_id: pb.profileId, account_id: b.accountId, profileId: pb.profileId }, a.session),
+      { db, now: T0 },
+    );
+    expect(r.headers.get('location')).toContain('r=saved');
+    expect((await getInterests(db, { accountId: a.accountId, profileId: null })).topicIds).toEqual([t]);
+    expect((await db.query('SELECT 1 FROM profile_interests WHERE account_id = $1', [b.accountId])).rows).toHaveLength(0);
+  });
+
+  it('anonymous: /me has no context (the page redirects to sign-in) and an interests POST goes to sign-in and saves nothing', async () => {
+    expect(await getContext(db, '', T0)).toBeNull();
+    expect(await getContext(db, newToken(), T0)).toBeNull();
+    const r = await saveInterestsRequest(form({ topic: String(await topicId()) }, ''), { db, now: T0 });
+    expect([r.status, r.headers.get('location')]).toEqual([303, '/account/sign-in/']);
+  });
+});
+
 describe('arrives with later features', () => {
-  // The public reads take the session scope (tested above); later content routes add their own row when they adopt it.
-  it.todo('child profile -> adults item denied at each later content route that takes the context audiences (dashboard, daily set, email)');
+  // The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
+  it.todo('child profile -> adults item denied at the daily set and email routes (these routes do not exist yet)');
   it.todo('child profile -> invites, comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
   it.todo('13-15 account -> public comment, community join, contribute denied (route level; the capability rows above are covered through can())');
   it.todo('non-member -> circle denied');
-  it.todo('tampered profile id / circle id / item id in payload denied');
+  it.todo('tampered circle id / item id in payload denied (circles and the daily set do not exist yet; profile id tampering is covered above)');
   // agent key A -> agent B's items denied: covered in tests/unit/agent-api.test.ts and agent-keys.test.ts, not duplicated here.
 });
