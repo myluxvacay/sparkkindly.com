@@ -54,14 +54,34 @@
 
 ---
 
-### Task 2: Record answers from the play route
+### Task 2: Session-derived scope on every public route (closes a 3C gap)
+
+Today every public page and route uses `anonymousScope()`, which includes `adults`. A signed-in child context that opens an `adults` item by URL, or lists a world, topic, search or the home page, would therefore see `adults` items: that breaks `.claude/rules/data-isolation.md` ("a child profile never receives `adults` items on any route"). This task fixes it before any new feature relies on the scope.
 
 **Files:**
-- Modify: the route that calls `playResult` (find with `grep -rn playResult app lib`), `lib/play/answer.ts` only if a return value is needed (the item id)
+- Create: `lib/accounts/scope.ts` (no Next imports: `scopeForSession(db, sessionToken: string | undefined, now: Date): Promise<Scope>`), `lib/accounts/scope-next.ts` (reads the account cookie via `next/headers` and calls it: `currentScope(): Promise<Scope>`)
+- Modify: every caller of `anonymousScope()` that serves a person: `app/page.tsx`, `app/[world]/page.tsx`, `app/[world]/[slug]/page.tsx`, `app/topics/[slug]/page.tsx`, `app/quiz/page.tsx`, `app/quiz/archive/page.tsx`, `app/quiz/[id]/route.ts`, `app/search/page.tsx`, `app/api/template-image/[world]/[slug]/route.tsx`, `components/item/PlayPanel.tsx`, `app/report/[world]/[slug]/page.tsx` and its submit route. `app/sitemap.ts` stays anonymous (it is public indexing, never per person).
+- Test: `tests/unit/account-scope.test.ts`, extend the existing public-reads test or add `tests/unit/public-scope-routes.test.ts`, extend `tests/e2e/accounts.spec.ts`
+
+**Interfaces:**
+- `scopeForSession`: no cookie, an invalid or expired session, or any error -> `anonymousScope(now)` (today's behaviour, fails to the anonymous scope, which is what a signed-out visitor has); a valid adult/teen session -> `anonymousScope`-equivalent `['kids','all','adults']` (from `getContext(...).audiences`); a child context -> `['kids','all']`.
+- Behaviour must be identical for visitors with no account cookie: no new cookies or headers, same output (existing site, trust-pages and privacy e2e tests stay green). Pages that become cookie-aware must stay `force-dynamic` or become so, and none may be cached across users (check each page's `revalidate`/`dynamic` and any `unstable_cache`/ISR; the shared HTTP caching headers for these routes must be `private`/no-store when the account cookie is present).
+- [ ] **Step 1: Failing tests:** `scopeForSession` for no cookie, garbage cookie, expired session, adult, teen, child (`['kids','all']` exactly); a child context requesting an `adults` item through `getPublicItem` with the session scope gets null; the list, topic, search, quiz and template-image reads with a child scope exclude `adults`; e2e: a child profile gets a 404 (not the item) for an `adults` item URL, its world page and search list no `adults` item, and the same URL works for an anonymous visitor.
+- [ ] **Step 2: Run, watch fail.**
+- [ ] **Step 3: Implement** and replace the listed `anonymousScope()` calls with `await currentScope()` (route handlers use the request's cookies the same way).
+- [ ] **Step 4: Run** unit suite, tsc, eslint, then after `npm run build` the combined e2e (`SITE_RELEASE=false npx playwright test tests/e2e/accounts.spec.ts tests/e2e/admin-auth.spec.ts tests/e2e/site.spec.ts tests/e2e/trust-pages.spec.ts --workers=1`, then `git checkout docs/screenshots`). Expected: PASS.
+- [ ] **Step 5: Commit** `fix: public pages use the signed-in context's audiences, so a child profile never sees adults items`.
+
+---
+
+### Task 3: Record answers from the play panel
+
+**Files:**
+- Modify: `components/item/PlayPanel.tsx` (the only caller of `playResult`; it renders the result on a GET with the answer in the query string), `lib/play/answer.ts` only if a return value is needed (the item id)
 - Test: `tests/unit/play-record.test.ts` (or extend the existing play tests), extend `tests/e2e/accounts.spec.ts`
 
 **Interfaces:**
-- Consumes: `getContext` (`lib/accounts/context.ts`), `can`/`childCan`, `recordAnswer` (Task 1), `playResult`.
+- Consumes: `getContext` (`lib/accounts/context.ts`), `currentScope` (Task 2), `can`/`childCan`, `recordAnswer` (Task 1), `playResult`.
 - Behaviour: after a valid `ok` result, if the request carries an account session whose context allows `save_answers`, call `recordAnswer` for that context's owner (`profile?.id ?? null`). The scope given to `playResult` stays the context's audiences (child: `['kids','all']`); anonymous behaviour is byte-for-byte unchanged (no cookie read when the account cookie is absent; no new headers). A recording failure never changes the answer the visitor sees (log the error name only, no ids).
 - [ ] **Step 1: Failing tests:** anonymous answer stores nothing and the response equals today's; a confirmed adult's answer stores one row for the account (profile NULL); a child context's answer stores for the profile id; a consent-pending 13-15 account's answer stores nothing; a recording error still returns the normal result; an `adults` item answered from a child context is not found and stores nothing.
 - [ ] **Step 2: Run, watch fail.**
@@ -71,7 +91,7 @@
 
 ---
 
-### Task 3: Interests page and the `/me` dashboard
+### Task 4: Interests page and the `/me` dashboard
 
 **Files:**
 - Create: `app/me/page.tsx`, `app/me/interests/page.tsx`, `app/me/interests/save/route.ts`, `lib/accounts/dashboard.ts`
@@ -90,7 +110,7 @@
 
 ---
 
-### Task 4: Isolation tests, docs and tracker
+### Task 5: Isolation tests, docs and tracker
 
 - [ ] **Step 1:** Add to `account-isolation.test.ts`: profile A's interests/answers via account B denied; child context `/me` data has no `adults` item; pending 13-15 stores no answers; tampered profile id ignored.
 - [ ] **Step 2:** `docs/OPERATIONS.md`: what interests and answers hold, first-answer-only rule, time-zone handling, deletion coverage (cascades), data-inventory rows (`profile_interests`, `item_responses`), migration 010 rollback pointer, reminder that the privacy page copy ("answers are not saved") is rewritten before go-live. Tracker item for 3.5/3.6.
