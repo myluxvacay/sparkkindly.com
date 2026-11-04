@@ -124,7 +124,11 @@ export async function consumeAccountLink(db: Db, token: string, now: Date): Prom
     if (used.rowCount !== 1) {
       return null;
     }
-    await tx.query('UPDATE accounts SET verified_at = $2 WHERE id = $1 AND verified_at IS NULL', [id, at]);
+    // A sign-in also clears any inactivity notice (lib/accounts/inactivity.ts), so the account is kept.
+    await tx.query(
+      'UPDATE accounts SET verified_at = COALESCE(verified_at, $2::timestamptz), inactivity_notice_at = NULL WHERE id = $1',
+      [id, at],
+    );
     const session = newToken();
     await tx.query(
       `INSERT INTO account_sessions (token_hash, account_id, created_at, expires_at, last_seen_at)

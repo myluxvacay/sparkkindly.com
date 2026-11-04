@@ -15,6 +15,7 @@ import { claimDigest, deliverDigest } from '@/lib/admin/digest';
 import { linkBase } from '@/lib/admin/sessions';
 import { claimAccountPurge, purgeAccountData } from '@/lib/accounts/retention';
 import { claimConsentSweep, runConsentSweep } from '@/lib/accounts/consent-sweep';
+import { claimInactivitySweep, runInactivitySweep } from '@/lib/accounts/inactivity';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
 
@@ -52,6 +53,7 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: { 
   }
   await accountPurge(db, now, log, opts.delayMs);
   await consentSweep(db, now, env, send, log, opts.delayMs);
+  await inactivitySweep(db, now, env, send, log, opts.delayMs);
   return log;
 }
 
@@ -88,6 +90,25 @@ async function consentSweep(db: Db, now: Date, env: EnvLike, send: Send, log: st
     async () => {
       const r = await runConsentSweep(db, now, send, { base: linkBase(env) });
       log.push(`consent sweep: ${r.reminded} reminded, ${r.deleted} deleted, ${r.cleared} cleared, ${r.failed} failed`);
+    },
+    { delayMs },
+  );
+}
+
+// Once per UTC day: 24-month inactivity notices and deletions 30 days later (lib/accounts/inactivity.ts).
+async function inactivitySweep(db: Db, now: Date, env: EnvLike, send: Send, log: string[], delayMs?: number): Promise<void> {
+  const claimed = await claimInactivitySweep(db, now).catch((err: Error) => {
+    log.push(`inactivity sweep: could not check (${err.message})`);
+    return null;
+  });
+  if (claimed === false) log.push('inactivity sweep: done today');
+  if (!claimed) return;
+  await runJob(
+    db,
+    'inactivity-sweep',
+    async () => {
+      const r = await runInactivitySweep(db, now, send, { base: linkBase(env) });
+      log.push(`inactivity sweep: ${r.noticed} noticed, ${r.deleted} deleted, ${r.failed} failed`);
     },
     { delayMs },
   );
