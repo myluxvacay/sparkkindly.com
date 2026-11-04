@@ -19,6 +19,16 @@ export async function currentContext(): Promise<AccountContext | null> {
   return getContext(getDb(), (await cookies()).get(ACCOUNT_COOKIE)?.value ?? '', new Date());
 }
 
+// Pages for any signed-in context, adult or child (/me): no session goes to sign-in.
+export async function requireContext(): Promise<AccountContext> {
+  requireAccounts();
+  const ctx = await currentContext();
+  if (!ctx) {
+    redirect('/account/sign-in/');
+  }
+  return ctx;
+}
+
 // Adult-only pages. No session goes to sign-in; a child context goes to the "Playing as" page with the PIN form (it is
 // signed in, just not as the adult), and never gets the page itself.
 export async function requireAdult(): Promise<AdultContext> {

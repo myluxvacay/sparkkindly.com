@@ -65,10 +65,10 @@ test('an unconfirmed account shows its age group and a masked parent email on th
 });
 
 test('with the flag off every account page and route is a 404 (server without ACCOUNTS_ENABLED)', async ({ request }) => {
-  for (const path of ['/account/', '/account/sign-up/', '/account/sign-in/', '/account/sign-in/link/?token=x', '/account/consent/?token=x', '/account/consent/withdraw/?token=x', '/account/children/', '/account/children/playing/', '/account/children/delete/?profile=x']) {
+  for (const path of ['/account/', '/account/sign-up/', '/account/sign-in/', '/account/sign-in/link/?token=x', '/account/consent/?token=x', '/account/consent/withdraw/?token=x', '/account/children/', '/account/children/playing/', '/account/children/delete/?profile=x', '/me/', '/me/interests/']) {
     expect((await request.get(OFF + path)).status(), path).toBe(404);
   }
-  for (const path of ['/account/sign-up/submit/', '/account/sign-in/request/', '/account/sign-in/link/confirm/', '/account/sign-out/', '/account/consent/confirm/', '/account/consent/withdraw/confirm/', '/account/consent/resend/', '/account/children/create/', '/account/children/switch/', '/account/children/switch-back/', '/account/children/pin/', '/account/children/delete/confirm/']) {
+  for (const path of ['/account/sign-up/submit/', '/account/sign-in/request/', '/account/sign-in/link/confirm/', '/account/sign-out/', '/account/consent/confirm/', '/account/consent/withdraw/confirm/', '/account/consent/resend/', '/account/children/create/', '/account/children/switch/', '/account/children/switch-back/', '/account/children/pin/', '/account/children/delete/confirm/', '/me/interests/save/']) {
     const r = await request.post(OFF + path, { headers: { ...FORM, origin: OFF }, data: form({ email: 'a@example.test' }), maxRedirects: 0 });
     expect(r.status(), path).toBe(404);
   }
@@ -617,5 +617,115 @@ test('an anonymous visitor answering a Kids quiz stores nothing, gets no cookie 
   } finally {
     await context.close();
     await sql('DELETE FROM items WHERE id = $1', [id]);
+  }
+});
+
+// Interests and the /me dashboard (Project 3D, Task 4).
+async function tabTo(page: Page, target: ReturnType<Page['locator']>) {
+  for (let i = 0; i < 150; i++) {
+    if (await target.evaluate((el) => el === document.activeElement)) return;
+    await page.keyboard.press('Tab');
+  }
+  throw new Error('target never received focus');
+}
+const watchThirdParty = (page: Page) => {
+  const seen: string[] = [];
+  page.on('request', (r) => {
+    if (!r.url().startsWith(`${BASE}/`)) seen.push(r.url());
+  });
+  return seen;
+};
+
+test('an adult picks interests from the keyboard; /me lists matching items and answered history, privately', async ({ page }) => {
+  const stamp = Date.now();
+  const inWorld = `e2e-me-world-${stamp}`;
+  const inTopic = `e2e-me-topic-${stamp}`;
+  const answered = `e2e-me-answered-${stamp}`;
+  const ids = [
+    await addItem({ world: 'grow', slug: inWorld, title: `Quillfeather world fixture ${stamp}` }),
+    await addItem({ world: 'play', slug: inTopic, title: `Quillfeather topic fixture ${stamp}`, topics: ['oceans'] }),
+    await addItem({ world: 'discover', slug: answered, title: `Quillfeather answered fixture ${stamp}` }),
+  ];
+  try {
+    const thirdParty = watchThirdParty(page);
+    const email = await signedInAdult(page);
+    await page.getByRole('link', { name: 'Choose your interests' }).click();
+    await expect(page.getByRole('heading', { level: 1, name: 'Your interests' })).toBeVisible();
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+    await expect(page.getByRole('group', { name: 'Worlds' })).toBeVisible();
+    await expect(page.getByRole('group', { name: 'Topics' })).toBeVisible();
+    await axeBothWidths(page);
+
+    // Keyboard only: Tab to each box, Space to tick it, Tab to the button, Enter to save.
+    await tabTo(page, page.getByRole('checkbox', { name: 'Grow' }));
+    await page.keyboard.press('Space');
+    await tabTo(page, page.getByRole('checkbox', { name: 'Oceans' }));
+    await page.keyboard.press('Space');
+    await tabTo(page, page.getByRole('button', { name: 'Save my interests' }));
+    await page.keyboard.press('Enter');
+    await expect(page).toHaveURL(/\/me\/interests\/\?r=saved#result$/);
+    await expect(page.locator('#result')).toBeFocused();
+    await expect(page.getByRole('status')).toContainText('Your interests are saved');
+    await expect(page.getByRole('checkbox', { name: 'Grow' })).toBeChecked();
+    await expect(page.getByRole('checkbox', { name: 'Oceans' })).toBeChecked();
+    await axeBothWidths(page);
+
+    const accountId = (await sql('SELECT id FROM accounts WHERE email = $1', [email])).rows[0].id as string;
+    await sql('INSERT INTO item_responses (account_id, item_id, correct, answered_at) VALUES ($1, $2, true, now())', [accountId, ids[2]]);
+    await page.getByRole('link', { name: 'See items that match' }).click();
+    await expect(page.getByRole('heading', { level: 1, name: 'Your SparkKindly' })).toBeVisible();
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+    for (const title of [`Quillfeather world fixture ${stamp}`, `Quillfeather topic fixture ${stamp}`]) {
+      await expect(page.getByRole('heading', { level: 3, name: title })).toBeVisible();
+    }
+    await expect(page.getByRole('listitem').filter({ hasText: `Quillfeather answered fixture ${stamp}` })).toContainText('correct');
+    await expect(page.getByText('You have answered 1 item, 1 correct.')).toBeVisible();
+    await expect(page.getByText(/streak|missed|target/i)).toHaveCount(0);
+    await expect(page.getByRole('link', { name: 'Your account' })).toBeVisible();
+    await axeBothWidths(page);
+    expect((await page.context().cookies(BASE)).map((c) => c.name)).toEqual(['__Host-sk_account']);
+    expect(thirdParty).toEqual([]);
+  } finally {
+    await sql('DELETE FROM items WHERE id = ANY($1::uuid[])', [ids]);
+  }
+});
+
+test("a child profile's /me lists no adults item, even one it has an answer for, and offers no adult pages", async ({ page }) => {
+  const stamp = Date.now();
+  const kidsTitle = `Brambleglow kids fixture ${stamp}`;
+  const adultsTitle = `Brambleglow adults fixture ${stamp}`;
+  const ids = [
+    await addItem({ world: 'grow', slug: `e2e-me-kids-${stamp}`, audience: 'kids', title: kidsTitle }),
+    await addItem({ world: 'grow', slug: `e2e-me-adults-${stamp}`, audience: 'adults', title: adultsTitle }),
+  ];
+  try {
+    const thirdParty = watchThirdParty(page);
+    const email = await signedInAdult(page);
+    await page.goto('/account/children/');
+    await addProfile(page, 'Rue', true);
+    await page.getByRole('button', { name: 'Play as Rue' }).click();
+    await page.getByRole('link', { name: 'Choose your interests' }).click();
+    await expect(page.getByRole('link', { name: 'Your account' })).toHaveCount(0);
+    await page.getByRole('checkbox', { name: 'Grow' }).check();
+    await page.getByRole('button', { name: 'Save my interests' }).click();
+    await expect(page.locator('#result')).toBeFocused();
+    // An answer row for the adults item (as if stored before a rule changed): it must still never be shown or counted.
+    await sql(
+      `INSERT INTO item_responses (account_id, profile_id, item_id, correct, answered_at)
+       SELECT p.account_id, p.id, $2, true, now() FROM child_profiles p JOIN accounts a ON a.id = p.account_id WHERE a.email = $1`,
+      [email, ids[1]],
+    );
+
+    await page.goto('/me/');
+    await expect(page.getByRole('heading', { level: 1, name: 'Hello, Rue' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 3, name: kidsTitle })).toBeVisible();
+    await expect(page.getByText(adultsTitle)).toHaveCount(0);
+    await expect(page.getByText('You have answered')).toHaveCount(0);
+    await expect(page.getByRole('link', { name: 'Your account' })).toHaveCount(0);
+    await expect(page.getByRole('link', { name: 'Playing as Rue' })).toBeVisible();
+    await axeBothWidths(page);
+    expect(thirdParty).toEqual([]);
+  } finally {
+    await sql('DELETE FROM items WHERE id = ANY($1::uuid[])', [ids]);
   }
 });

@@ -23,7 +23,8 @@ export default async function PlayingPage({ searchParams }: Props) {
     <>
       <h1>Playing as {profile.displayName}</h1>
       <p>
-        <Link href="/kids/">Go to the Kids world</Link>
+        <Link href="/kids/">Go to the Kids world</Link> · <Link href="/me/">Your page</Link> ·{' '}
+        <Link href="/me/interests/">Choose your interests</Link>
       </p>
       {error && (
         <div role="alert" id="result" tabIndex={-1} className="grown-ups">

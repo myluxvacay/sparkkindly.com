@@ -47,7 +47,33 @@ export async function listPublic(
   return r.rows.map(toPublic);
 }
 
-export const listQuizzes = (db: Queryable, scope: Scope, page: Page) => listPublic(db, scope, { kind: 'quiz', ...page });
+// Items in a picked world or carrying a picked topic, published in [from, to), newest first (the /me dashboard).
+// No picks match nothing.
+export async function listByInterests(
+  db: Queryable,
+  scope: Scope,
+  o: { worldIds: number[]; topicIds: number[]; from: Date; to: Date; limit: number },
+): Promise<PublicItem[]> {
+  if (o.worldIds.length + o.topicIds.length === 0) return [];
+  const { limit } = clampPage({ limit: o.limit, offset: 0 });
+  const r = await db.query<Row>(
+    `${PUBLIC_SELECT} WHERE ${VISIBLE} AND i.published_at >= $5 AND i.published_at < $6
+       AND (i.world_id = ANY($3::int[])
+            OR EXISTS (SELECT 1 FROM item_topics it WHERE it.item_id = i.id AND it.topic_id = ANY($4::int[])))
+     ORDER BY i.published_at DESC, i.id LIMIT $7`,
+    [...base(scope), o.worldIds, o.topicIds, o.from, o.to, limit],
+  );
+  return r.rows.map(toPublic);
+}
+
+// The visible items among these ids (any order); an id the scope may not see is simply absent.
+export async function listPublicByIds(db: Queryable, scope: Scope, ids: string[]): Promise<PublicItem[]> {
+  if (ids.length === 0) return [];
+  const r = await db.query<Row>(`${PUBLIC_SELECT} WHERE ${VISIBLE} AND i.id = ANY($3::uuid[])`, [...base(scope), ids]);
+  return r.rows.map(toPublic);
+}
+
+export const listQuizzes =(db: Queryable, scope: Scope, page: Page) => listPublic(db, scope, { kind: 'quiz', ...page });
 
 // Old /quiz/<id>/ links carry only a slug, so find the published quiz with that slug in any world (the newest if several).
 export async function findQuizBySlug(db: Queryable, scope: Scope, slug: string): Promise<PublicItem | null> {

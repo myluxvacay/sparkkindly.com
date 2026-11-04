@@ -4,7 +4,9 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { seedReference } from '@/db/seed';
 import { worldSeeds } from '@/db/seed/worlds';
-import { getPublicItem, listPublic, searchPublic, listQuizzes, latestQuiz, findQuizBySlug, sitemapRows } from '@/lib/public/reads';
+import {
+  getPublicItem, listPublic, searchPublic, listQuizzes, latestQuiz, findQuizBySlug, sitemapRows, listByInterests, listPublicByIds,
+} from '@/lib/public/reads';
 import { listWorlds, getWorld, getTopic } from '@/lib/public/worlds';
 import { anonymousScope, RESERVED_WORLD_SLUGS, type Scope } from '@/lib/public/scope';
 
@@ -235,5 +237,40 @@ describe('reserved world slugs', () => {
     const top = dirs('app');
     const grouped = top.filter((d) => d.startsWith('(')).flatMap((g) => dirs(`app/${g}`));
     for (const name of plain([...top, ...grouped])) expect(RESERVED_WORLD_SLUGS, name).toContain(name);
+  });
+});
+
+// Interest-matched and by-id reads for the /me dashboard (Project 3D, Task 4): the same VISIBLE predicate and scope.
+describe('listByInterests and listPublicByIds', () => {
+  const ids = async (table: 'worlds' | 'topics', slug: string) =>
+    (await db.query<{ id: number }>(`SELECT id FROM ${table} WHERE slug = $1`, [slug])).rows[0].id;
+  const idOf = async (slug: string) => (await db.query<{ id: string }>('SELECT id FROM items WHERE slug = $1', [slug])).rows[0].id;
+  const from = new Date('2026-10-20T00:00:00Z');
+  const to = new Date('2026-10-21T00:00:00Z');
+
+  it('matches a picked world or a picked topic inside the window, under the scope', async () => {
+    const inWorld = await put({ slug: 'int-world', world: 'grow', publishedAt: '2026-10-20T05:00:00Z' });
+    const inTopic = await put({ slug: 'int-topic', world: 'play', topics: ['oceans'], publishedAt: '2026-10-20T06:00:00Z' });
+    const adults = await put({ slug: 'int-adults', world: 'grow', audience: 'adults', publishedAt: '2026-10-20T07:00:00Z' });
+    const outside = await put({ slug: 'int-outside', world: 'grow', publishedAt: '2026-10-21T00:00:00Z' });
+    const other = await put({ slug: 'int-other', world: 'play', publishedAt: '2026-10-20T08:00:00Z' });
+    const draft = await put({ slug: 'int-draft', world: 'grow', status: 'draft', publishedAt: '2026-10-20T09:00:00Z' });
+    const o = { worldIds: [await ids('worlds', 'grow')], topicIds: [await ids('topics', 'oceans')], from, to, limit: 20 };
+    expect(slugs(await listByInterests(db, anon, o))).toEqual([adults, inTopic, inWorld].sort());
+    const forChild = slugs(await listByInterests(db, child, o));
+    expect(forChild).toEqual([inTopic, inWorld].sort());
+    for (const s of [outside, other, draft]) expect(forChild).not.toContain(s);
+    expect(await listByInterests(db, child, { ...o, worldIds: [], topicIds: [] })).toEqual([]);
+    expect(await listByInterests(db, none, o)).toEqual([]);
+    expect(await listByInterests(db, anon, { ...o, limit: 1 })).toHaveLength(1);
+  });
+
+  it('listPublicByIds returns only visible items the scope allows', async () => {
+    const ok = await idOf('int-world');
+    const adults = await idOf('int-adults');
+    const draft = await idOf('int-draft');
+    expect((await listPublicByIds(db, child, [ok, adults, draft])).map((i) => i.id)).toEqual([ok]);
+    expect((await listPublicByIds(db, anon, [ok, adults])).map((i) => i.id).sort()).toEqual([ok, adults].sort());
+    expect(await listPublicByIds(db, anon, [])).toEqual([]);
   });
 });

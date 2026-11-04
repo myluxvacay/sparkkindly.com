@@ -74,6 +74,28 @@ export async function setInterests(
   });
 }
 
+export type Choice = { id: number; name: string };
+export type TopicGroup = { name: string; topics: Choice[] };
+
+// What the interests page offers: enabled worlds, and topics grouped under their parent (a parent comes first in its
+// own group; a top-level topic with no children is grouped under "Other").
+export async function interestChoices(db: Queryable): Promise<{ worlds: Choice[]; topicGroups: TopicGroup[] }> {
+  const w = await db.query<Choice>('SELECT id, name FROM worlds WHERE enabled ORDER BY sort, slug');
+  const t = await db.query<Choice & { parent_id: number | null }>('SELECT id, name, parent_id FROM topics ORDER BY name');
+  const parents = new Set(t.rows.flatMap((x) => (x.parent_id === null ? [] : [x.parent_id])));
+  const groups = new Map<number | 'other', TopicGroup>();
+  for (const x of t.rows.filter((r) => r.parent_id === null)) {
+    if (parents.has(x.id)) groups.set(x.id, { name: x.name, topics: [{ id: x.id, name: `${x.name} in general` }] });
+  }
+  const other: TopicGroup = { name: 'Other', topics: [] };
+  for (const x of t.rows) {
+    if (x.parent_id !== null) (groups.get(x.parent_id) ?? other).topics.push({ id: x.id, name: x.name });
+    else if (!parents.has(x.id)) other.topics.push({ id: x.id, name: x.name });
+  }
+  const topicGroups = [...groups.values()];
+  return { worlds: w.rows, topicGroups: other.topics.length ? [...topicGroups, other] : topicGroups };
+}
+
 export async function getInterests(db: Db, owner: Owner): Promise<Interests> {
   if (!validOwner(owner)) {
     return { topicIds: [], worldIds: [] };
