@@ -57,7 +57,7 @@ describe('purgeAccountData', () => {
     expect(await consumeAccountLink(db, live, NOW)).not.toBeNull();
   });
 
-  it('deletes expired sessions and keeps live ones; an old unverified account takes its sessions with it', async () => {
+  it('deletes expired sessions and keeps live ones', async () => {
     await account('s@example.test', 10 * 24 * HOUR, true);
     const stale = (await consumeAccountLink(db, (await requestAccountLink(db, 's@example.test', {}, ago(40 * 24 * HOUR)))!, ago(40 * 24 * HOUR)))!;
     const live = (await consumeAccountLink(db, (await requestAccountLink(db, 's@example.test', {}, ago(HOUR)))!, ago(HOUR)))!;
@@ -65,6 +65,27 @@ describe('purgeAccountData', () => {
     const r = await purgeAccountData(db, NOW);
     expect(r.sessions).toBe(1);
     expect(await n('account_sessions')).toBe(1);
+  });
+
+  it('an old unverified account takes its sessions with it (cascade)', async () => {
+    await account('ghost@example.test', 72 * HOUR, false);
+    const id = (await db.query<{ id: string }>("SELECT id FROM accounts WHERE email = 'ghost@example.test'")).rows[0].id;
+    await db.query(
+      'INSERT INTO account_sessions (token_hash, account_id, created_at, expires_at, last_seen_at) VALUES ($1, $2, $3, $4, $3)',
+      ['f'.repeat(64), id, ago(HOUR).toISOString(), new Date(NOW.getTime() + 24 * HOUR).toISOString()],
+    );
+    const r = await purgeAccountData(db, NOW);
+    expect(r).toMatchObject({ accounts: 1, sessions: 0 });
+    expect(await n('account_sessions')).toBe(0);
+  });
+
+  it('a sign-up that replaces an old unverified row restarts its 48 hours, so its new link survives the purge', async () => {
+    await account('again@example.test', 50 * HOUR, false);
+    await signUp(db, { email: 'again@example.test', dateOfBirth: '1985-01-01' }, NOW);
+    const link = (await requestAccountLink(db, 'again@example.test', {}, NOW))!;
+    await purgeAccountData(db, NOW);
+    expect(await emails()).toEqual(['again@example.test']);
+    expect(await consumeAccountLink(db, link, NOW)).not.toBeNull();
   });
 
   it('is idempotent: a second run deletes nothing more', async () => {

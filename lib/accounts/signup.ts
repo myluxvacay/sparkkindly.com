@@ -48,7 +48,7 @@ export async function signUp(db: Db, input: SignUpInput, now: Date): Promise<Sig
     }
   }
   try {
-    return await upsert(db, email, input, parent);
+    return await upsert(db, email, input, parent, now);
   } catch (err) {
     // A CHECK the validation above did not foresee (e.g. a case-folding disagreement) is bad input, not a crash.
     if ((err as { code?: unknown }).code === CHECK_VIOLATION) {
@@ -58,16 +58,17 @@ export async function signUp(db: Db, input: SignUpInput, now: Date): Promise<Sig
   }
 }
 
-function upsert(db: Db, email: string, input: SignUpInput, parent: string | null): Promise<SignUpResult> {
+function upsert(db: Db, email: string, input: SignUpInput, parent: string | null, now: Date): Promise<SignUpResult> {
   return db.transaction(async (tx) => {
     const r = await tx.query<{ id: string; replaced: boolean }>(
       `INSERT INTO accounts (email, date_of_birth, time_zone, consent_state, parent_email)
        VALUES ($1, $2, $3, $4, $5)
        ON CONFLICT (email) DO UPDATE SET date_of_birth = EXCLUDED.date_of_birth, time_zone = EXCLUDED.time_zone,
-         consent_state = EXCLUDED.consent_state, parent_email = EXCLUDED.parent_email
+         consent_state = EXCLUDED.consent_state, parent_email = EXCLUDED.parent_email,
+         created_at = $6 -- a replaced row starts its 48 hours again (lib/accounts/retention.ts), so its new link stays live
        WHERE accounts.verified_at IS NULL
        RETURNING id, (xmax <> 0) AS replaced`,
-      [email, input.dateOfBirth, cleanZone(input.timeZone), parent ? 'pending' : 'none', parent],
+      [email, input.dateOfBirth, cleanZone(input.timeZone), parent ? 'pending' : 'none', parent, now.toISOString()],
     );
     // A replaced row means earlier links were requested against the old details: none may be redeemed now.
     if (r.rows[0]?.replaced) {
