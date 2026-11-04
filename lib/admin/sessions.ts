@@ -1,6 +1,7 @@
-import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
+import { timingSafeEqual } from 'node:crypto';
 import type { Db, Queryable } from '@/lib/db';
 import type { EnvLike } from '@/lib/env';
+import { hash, newToken } from '@/lib/tokens';
 import { openSecret } from './secret-box';
 import { matchTotp } from './totp';
 
@@ -15,8 +16,6 @@ const ACTIVE_TTL = 12 * 60 * MIN;
 const IDLE_LIMIT = 60 * MIN;
 const MAX_CODE_FAILURES = 5;
 
-const hash = (token: string) => createHash('sha256').update(token).digest('hex');
-const newToken = () => randomBytes(32).toString('hex');
 const later = (now: Date, ms: number) => new Date(now.getTime() + ms).toISOString();
 
 export type Admin = { email: string };
