@@ -253,6 +253,27 @@ describe('resendConsentRequest', () => {
     expect(sent).toHaveLength(2);
   });
 
+  it('a failed resend send leaves the earlier confirm link working', async () => {
+    const t = await teen();
+    const s = await session(t.email);
+    const first = await issueConsentTokens(db, t.id, NOW);
+    const failing = async () => {
+      throw new Error('mail down');
+    };
+    await resend(s, [], { send: failing });
+    expect(await consentTarget(db, first!.confirm, 'confirm', NOW)).not.toBeNull();
+  });
+
+  it('refused once the holder has turned 16, even while consent_state is still pending', async () => {
+    const t = await teen();
+    const s = await session(t.email);
+    await db.query("UPDATE accounts SET date_of_birth = '2005-01-01' WHERE id = $1", [t.id]);
+    const sent: EmailMessage[] = [];
+    const r = await resend(s, sent);
+    expect(r.headers.get('location')).toBe('/account/');
+    expect(sent).toHaveLength(0);
+  });
+
   it('a POST without a same-origin Origin is 403', async () => {
     const t = await teen();
     const sent: EmailMessage[] = [];

@@ -13,6 +13,7 @@ import { issueConsentTokens } from './consent';
 import { consentEmail } from './consent-email';
 import { accountLinkLimits, accountSendBudget, confirmLimits, signUpLimits } from './limits';
 import { accountStatus, consumeAccountLink, endAccountSession, getAccount, hasFreshLink, requestAccountLink } from './sessions';
+import { consentPending } from './policy';
 import { normalizeEmail, signUp } from './signup';
 
 export const ACCOUNT_COOKIE = '__Host-sk_account';
@@ -72,7 +73,8 @@ export async function emailConsentRequest(d: Deps, accountId: string, first = fa
       [accountId],
     );
     if (due.rows.length === 0 || !(d.budget ?? accountSendBudget)()) return;
-    const t = await issueConsentTokens(d.db, accountId, d.now);
+    // The earlier confirm link stays valid: if this send fails the parent still has a working one.
+    const t = await issueConsentTokens(d.db, accountId, d.now, { revokeOldConfirm: false });
     if (!t) return;
     const base = linkBase(d.env);
     const m = consentEmail('request', {
@@ -143,7 +145,7 @@ export async function confirmAccountLink(request: Request, d: Deps): Promise<Res
   await endAccountSession(d.db, readCookie(request, ACCOUNT_COOKIE));
   d.defer(async () => {
     const account = await getAccount(d.db, session, d.now).catch(() => null);
-    if (account?.consent === 'pending') await emailConsentRequest(d, account.id, true);
+    if (account && consentPending(account.ageGroup, account.consent)) await emailConsentRequest(d, account.id, true);
   });
   return seeOther('/account/', accountCookie(session, SESSION_SECONDS));
 }

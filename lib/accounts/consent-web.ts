@@ -5,6 +5,7 @@
 import { clientKey, readCookie, readForm, sameOrigin, seeOther } from '@/lib/admin/guard';
 import { confirmConsent, withdrawConsent } from './consent';
 import { confirmLimits, consentResendLimits } from './limits';
+import { consentPending } from './policy';
 import { getAccount } from './sessions';
 import { ACCOUNT_COOKIE, emailConsentRequest, forbidden, tooMany, type Deps } from './web';
 
@@ -41,7 +42,7 @@ export async function resendConsentRequest(request: Request, d: ConsentDeps): Pr
   if (!sameOrigin(request)) return forbidden();
   const account = await getAccount(d.db, readCookie(request, ACCOUNT_COOKIE), d.now);
   if (!account) return seeOther('/account/sign-in/');
-  if (account.consent !== 'pending') return seeOther('/account/');
+  if (!consentPending(account.ageGroup, account.consent)) return seeOther('/account/');
   if (!(d.resends ?? consentResendLimits)(account.id)) return seeOther('/account/?consent=wait#result');
   d.defer(() => emailConsentRequest(d, account.id));
   return seeOther('/account/?consent=resent#result');
