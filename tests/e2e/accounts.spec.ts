@@ -49,6 +49,20 @@ async function signInWithLink(page: Page, email: string) {
   await page.getByRole('button', { name: 'Continue' }).click();
 }
 
+test('an unconfirmed account shows its age group and parent email on the link page; a confirmed one does not', async ({ page }) => {
+  const email = fresh();
+  await signUp(page, email, dobYearsAgo(14), 'guardian@example.test');
+  await page.goto(`/account/sign-in/link/?token=${await mintLink(email)}`);
+  await expect(page.getByText('Age 13 to 15, consent pending')).toBeVisible();
+  await expect(page.getByText('guardian@example.test')).toBeVisible();
+  await expect(page.getByText('close this page')).toBeVisible();
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await page.getByRole('button', { name: 'Sign out' }).click();
+  await page.goto(`/account/sign-in/link/?token=${await mintLink(email)}`);
+  await expect(page.getByText(`Sign in as ${email}`)).toBeVisible();
+  await expect(page.getByText('close this page')).toHaveCount(0);
+});
+
 test('with the flag off every account page and route is a 404 (server without ACCOUNTS_ENABLED)', async ({ request }) => {
   for (const path of ['/account/', '/account/sign-up/', '/account/sign-in/', '/account/sign-in/link/?token=x']) {
     expect((await request.get(OFF + path)).status(), path).toBe(404);

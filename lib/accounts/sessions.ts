@@ -42,16 +42,43 @@ export async function requestAccountLink(db: Queryable, email: string, _env: Env
   return token;
 }
 
-// The address a still-valid, unused link would sign in, without using it up (the confirm page shows it), or null.
-export async function linkTarget(db: Queryable, token: string, now: Date): Promise<string | null> {
+export type LinkTarget = {
+  email: string;
+  verified: boolean;
+  ageGroup: AgeGroup | null;
+  consent: Consent;
+  parentEmail: string | null;
+};
+
+// What a still-valid, unused link would sign in, without using it up (the confirm page shows it), or null.
+export async function linkTarget(db: Queryable, token: string, now: Date): Promise<LinkTarget | null> {
   if (typeof token !== 'string' || !/^[0-9a-f]{64}$/.test(token)) {
     return null;
   }
-  const r = await db.query<{ email: string }>(
-    'SELECT email FROM account_login_tokens WHERE token_hash = $1 AND used_at IS NULL AND expires_at > $2::timestamptz',
+  const r = await db.query<{
+    email: string;
+    verified: boolean;
+    dob: string;
+    consent_state: Consent;
+    parent_email: string | null;
+  }>(
+    `SELECT a.email, a.verified_at IS NOT NULL AS verified, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob,
+            a.consent_state, a.parent_email
+     FROM account_login_tokens t JOIN accounts a ON a.email = t.email
+     WHERE t.token_hash = $1 AND t.used_at IS NULL AND t.expires_at > $2::timestamptz`,
     [hash(token), now.toISOString()],
   );
-  return r.rows[0]?.email ?? null;
+  const row = r.rows[0];
+  if (!row) {
+    return null;
+  }
+  return {
+    email: row.email,
+    verified: row.verified,
+    ageGroup: ageGroupFor(row.dob, now),
+    consent: row.consent_state,
+    parentEmail: row.parent_email,
+  };
 }
 
 // Uses up a link and starts a session. Returns the session token, or null.

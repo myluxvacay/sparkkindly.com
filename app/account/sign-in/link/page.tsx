@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers';
 import { currentAccount, requireAccounts } from '@/lib/accounts/next';
 import { linkTarget } from '@/lib/accounts/sessions';
+import { ageWording } from '@/lib/accounts/wording';
 import { getDb } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -23,9 +24,16 @@ export default async function AccountLinkPage({ searchParams }: Props) {
         <form method="post" action="/account/sign-in/link/confirm/" className="prose admin-form">
           <input type="hidden" name="token" value={token} />
           <p>
-            Sign in as <strong>{target}</strong>
+            Sign in as <strong>{target.email}</strong>
           </p>
-          {current && current.email !== target && (
+          {!target.verified && (
+            <p>
+              This account is not confirmed yet: {ageWording(target.ageGroup, target.consent)}
+              {target.parentEmail ? `, parent or guardian email ${target.parentEmail}` : ''}. If you did not ask for
+              this account, close this page.
+            </p>
+          )}
+          {current && current.email !== target.email && (
             <p role="status">You are signed in as {current.email}. Continuing will switch accounts.</p>
           )}
           <button type="submit" className="button">

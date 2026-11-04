@@ -42,15 +42,19 @@ export async function signUp(db: Db, input: SignUpInput, now: Date): Promise<Sig
     }
   }
   return db.transaction(async (tx) => {
-    const r = await tx.query<{ id: string }>(
+    const r = await tx.query<{ id: string; replaced: boolean }>(
       `INSERT INTO accounts (email, date_of_birth, time_zone, consent_state, parent_email)
        VALUES ($1, $2, $3, $4, $5)
        ON CONFLICT (email) DO UPDATE SET date_of_birth = EXCLUDED.date_of_birth, time_zone = EXCLUDED.time_zone,
          consent_state = EXCLUDED.consent_state, parent_email = EXCLUDED.parent_email
        WHERE accounts.verified_at IS NULL
-       RETURNING id`,
+       RETURNING id, (xmax <> 0) AS replaced`,
       [email, input.dateOfBirth, cleanZone(input.timeZone), parent ? 'pending' : 'none', parent],
     );
+    // A replaced row means earlier links were requested against the old details: none may be redeemed now.
+    if (r.rows[0]?.replaced) {
+      await tx.query('DELETE FROM account_login_tokens WHERE email = $1 AND used_at IS NULL', [email]);
+    }
     return r.rows[0] ? ({ status: 'created', accountId: r.rows[0].id } as const) : ({ status: 'exists' } as const);
   });
 }

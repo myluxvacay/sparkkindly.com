@@ -77,13 +77,59 @@ describe('sign-up squatting', () => {
   });
 });
 
+describe('overwriting an unverified sign-up revokes earlier links', () => {
+  it('a link requested before the overwrite no longer consumes; a fresh sign-up and a verified account are unaffected', async () => {
+    const e = 'swap@example.test';
+    await signUp(db, { email: e, dateOfBirth: '1990-05-05' }, NOW);
+    const early = (await requestAccountLink(db, e, {}, NOW))!;
+    await signUp(db, { email: e, dateOfBirth: '1985-01-01' }, NOW);
+    expect(await linkTarget(db, early, NOW)).toBeNull();
+    expect(await consumeAccountLink(db, early, NOW)).toBeNull();
+    const late = (await requestAccountLink(db, e, {}, NOW))!;
+    expect(await consumeAccountLink(db, late, NOW)).not.toBeNull();
+    // verified now: its outstanding link survives a sign-up attempt, which changes nothing
+    const kept = (await requestAccountLink(db, e, {}, NOW))!;
+    expect(await signUp(db, { email: e, dateOfBirth: '1970-01-01' }, NOW)).toEqual({ status: 'exists' });
+    expect((await linkTarget(db, kept, NOW))?.email).toBe(e);
+  });
+
+  it('under 13 revokes nothing', async () => {
+    const e = 'keep@example.test';
+    await signUp(db, { email: e, dateOfBirth: '1990-05-05' }, NOW);
+    const t = (await requestAccountLink(db, e, {}, NOW))!;
+    await signUp(db, { email: e, dateOfBirth: '2020-01-01' }, NOW);
+    expect((await linkTarget(db, t, NOW))?.email).toBe(e);
+  });
+
+  it('a fresh sign-up leaves other addresses links alone', async () => {
+    await signUp(db, { email: 'a1@example.test', dateOfBirth: '1990-05-05' }, NOW);
+    const t = (await requestAccountLink(db, 'a1@example.test', {}, NOW))!;
+    await signUp(db, { email: 'a2@example.test', dateOfBirth: '1990-05-05' }, NOW);
+    expect((await linkTarget(db, t, NOW))?.email).toBe('a1@example.test');
+  });
+});
+
+describe('linkTarget details', () => {
+  it('reports verified flag, age group, consent and parent email for the confirm page', async () => {
+    const e = 'teen-t@example.test';
+    await signUp(db, { email: e, dateOfBirth: '2011-12-01', parentEmail: 'par@example.test' }, NOW);
+    const t = (await requestAccountLink(db, e, {}, NOW))!;
+    expect(await linkTarget(db, t, NOW)).toEqual({
+      email: e, verified: false, ageGroup: 'teen_13_15', consent: 'pending', parentEmail: 'par@example.test',
+    });
+    await consumeAccountLink(db, t, NOW);
+    const t2 = (await requestAccountLink(db, e, {}, NOW))!;
+    expect((await linkTarget(db, t2, NOW))?.verified).toBe(true);
+  });
+});
+
 describe('linkTarget', () => {
   it('shows the address for a valid unused link without using it; nothing for used, expired or junk', async () => {
     const e = 'target@example.test';
     await signUp(db, { email: e, dateOfBirth: '1990-05-05' }, NOW);
     const t = (await requestAccountLink(db, e, {}, NOW))!;
-    expect(await linkTarget(db, t, NOW)).toBe(e);
-    expect(await linkTarget(db, t, NOW)).toBe(e);
+    expect((await linkTarget(db, t, NOW))?.email).toBe(e);
+    expect((await linkTarget(db, t, NOW))?.email).toBe(e);
     expect(await linkTarget(db, t, new Date(NOW.getTime() + 16 * 60_000))).toBeNull();
     await consumeAccountLink(db, t, NOW);
     expect(await linkTarget(db, t, NOW)).toBeNull();
