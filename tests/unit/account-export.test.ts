@@ -231,6 +231,7 @@ describe('exportAccount', () => {
       parentEmail: null,
       verifiedAt: T0.toISOString(),
       lastSignInAt: T0.toISOString(),
+      lastSeenAt: T0.toISOString(),
       guardianConfirmedAt: T0.toISOString(),
       notify: { dailySet: true, weeklyCircle: false, invites: false },
     });

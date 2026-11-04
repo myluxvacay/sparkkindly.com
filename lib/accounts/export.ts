@@ -31,6 +31,7 @@ export const EXPORTED_COLUMNS = {
     'parent_email',
     'verified_at',
     'last_sign_in_at',
+    'last_seen_at',
     'created_at',
     'consent_at',
     'consent_reminded_at',
@@ -82,6 +83,7 @@ export type AccountExport = {
     createdAt: string;
     verifiedAt: string | null;
     lastSignInAt: string | null;
+    lastSeenAt: string | null;
     notify: { dailySet: boolean; weeklyCircle: boolean; invites: boolean };
   };
   interests: ExportInterests;
@@ -102,6 +104,7 @@ type AccountRow = {
   created_at: Date;
   verified_at: Date | null;
   last_sign_in_at: Date | null;
+  last_seen_at: Date | null;
   d: boolean;
   w: boolean;
   i: boolean;
@@ -125,6 +128,7 @@ function accountSection(a: AccountRow): AccountExport['account'] {
     createdAt: iso(a.created_at) as string,
     verifiedAt: iso(a.verified_at),
     lastSignInAt: iso(a.last_sign_in_at),
+    lastSeenAt: iso(a.last_seen_at),
     notify: { dailySet: a.d, weeklyCircle: a.w, invites: a.i },
   };
 }
@@ -169,7 +173,7 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
   const a = await tx.query<AccountRow>(
     `SELECT email, to_char(date_of_birth, 'YYYY-MM-DD') AS dob, time_zone, consent_state, consent_at,
             consent_reminded_at, parent_email, guardian_confirmed_at, inactivity_notice_at, created_at, verified_at,
-            last_sign_in_at, notify_daily_set AS d, notify_weekly_circle AS w, notify_invites AS i
+            last_sign_in_at, last_seen_at, notify_daily_set AS d, notify_weekly_circle AS w, notify_invites AS i
      FROM accounts WHERE id = $1`,
     [accountId],
   );

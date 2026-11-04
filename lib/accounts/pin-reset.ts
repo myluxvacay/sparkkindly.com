@@ -31,7 +31,8 @@ export async function resetPin(
     if (!session) {
       return 'not_allowed';
     }
-    if (now.getTime() - new Date(session.created_at).getTime() > FRESH_MS) {
+    // Either direction: a session dated in the future (clock skew) must not stay "fresh" for its whole life.
+    if (Math.abs(now.getTime() - new Date(session.created_at).getTime()) > FRESH_MS) {
       return 'stale';
     }
     if (!isPin(newPin)) {

@@ -9,6 +9,7 @@ import type { AgeBand } from './children';
 import { ageGroupFor, type AgeGroup, type Consent } from './policy';
 
 const MIN = 60_000;
+const HOUR = 60 * MIN;
 const DAY = 24 * 60 * MIN;
 const LINK_TTL = 15 * MIN;
 const IDLE_TTL = 30 * DAY;
@@ -128,7 +129,7 @@ export async function consumeAccountLink(db: Db, token: string, now: Date): Prom
     // (lib/accounts/inactivity.ts), so the account is kept.
     await tx.query(
       `UPDATE accounts SET verified_at = COALESCE(verified_at, $2::timestamptz), last_sign_in_at = $2::timestamptz,
-         inactivity_notice_at = NULL
+         last_seen_at = $2::timestamptz, inactivity_notice_at = NULL
        WHERE id = $1`,
       [id, at],
     );
@@ -169,12 +170,13 @@ export async function sessionView(db: Queryable, sessionToken: string, now: Date
     consent_at: Date | null;
     created_at: Date;
     last_seen_at: Date;
+    account_seen_at: Date | null;
     profile_id: string | null;
     display_name: string | null;
     age_band: AgeBand | null;
   }>(
-    `SELECT a.id, a.email, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob, a.consent_state, a.consent_at, s.created_at, s.last_seen_at,
-            p.id AS profile_id, p.display_name, p.age_band
+    `SELECT a.id, a.email, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob, a.consent_state, a.consent_at, s.created_at,
+            s.last_seen_at, a.last_seen_at AS account_seen_at, p.id AS profile_id, p.display_name, p.age_band
      FROM account_sessions s JOIN accounts a ON a.id = s.account_id
      LEFT JOIN child_profiles p ON p.id = s.active_profile_id AND p.account_id = s.account_id
      WHERE s.token_hash = $1 AND s.expires_at > $2::timestamptz`,
@@ -196,6 +198,7 @@ export async function sessionView(db: Queryable, sessionToken: string, now: Date
       new Date(Math.min(now.getTime() + IDLE_TTL, cap)).toISOString(),
     ]);
   }
+  await touchAccount(db, row.id, row.account_seen_at, now);
   return {
     account: {
       id: row.id,
@@ -206,6 +209,18 @@ export async function sessionView(db: Queryable, sessionToken: string, now: Date
     },
     profile: row.profile_id ? { id: row.profile_id, displayName: row.display_name!, ageBand: row.age_band! } : null,
   };
+}
+
+// Keeps accounts.last_seen_at to the hour (sessions are purged once expired, and the inactivity job reads this): a
+// write only when it is unset or more than an hour old, guarded in SQL so concurrent requests never move it backwards.
+async function touchAccount(db: Queryable, id: string, seen: Date | null, now: Date): Promise<void> {
+  if (seen && now.getTime() - new Date(seen).getTime() <= HOUR) {
+    return;
+  }
+  await db.query(
+    'UPDATE accounts SET last_seen_at = $2 WHERE id = $1 AND (last_seen_at IS NULL OR last_seen_at < $3::timestamptz)',
+    [id, now.toISOString(), new Date(now.getTime() - HOUR).toISOString()],
+  );
 }
 
 export async function endAccountSession(db: Queryable, sessionToken: string): Promise<void> {

@@ -75,6 +75,16 @@ describe('resetPin', () => {
     expect(await checkPin(db, f.accountId, '1234', plus(T0, MIN))).toBe('ok');
   });
 
+  it('is stale for a session dated over 10 minutes in the future (clock skew never widens it)', async () => {
+    const f = await family();
+    await db.query('UPDATE account_sessions SET created_at = $2 WHERE account_id = $1', [
+      f.accountId,
+      plus(T0, 60 * MIN).toISOString(),
+    ]);
+    expect(await resetPin(db, f.session, '5678', plus(T0, MIN))).toBe('stale');
+    expect(await checkPin(db, f.accountId, '1234', plus(T0, MIN))).toBe('ok');
+  });
+
   it('is not allowed without a session or with a bad token', async () => {
     for (const bad of ['', 'nope', 'a'.repeat(64), undefined as unknown as string]) {
       expect(await resetPin(db, bad, '5678', T0)).toBe('not_allowed');
