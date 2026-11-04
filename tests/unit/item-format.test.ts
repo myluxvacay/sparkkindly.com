@@ -140,6 +140,23 @@ describe('shared fields', () => {
   it('rejects a non-https source url', () => {
     expect(ok(article({ sources: [{ title: 's', url: 'http://example.org', accessedAt: '2026-10-30' }] }))).toBe(false);
   });
+  it('rejects a source on sparkkindly.com or any subdomain, whatever the case, so a source cannot open our answer URLs', () => {
+    const src = (url: string) => article({ sources: [{ title: 's', url, accessedAt: '2026-10-30' }] });
+    for (const url of [
+      'https://sparkkindly.com/x',
+      'https://SparkKindly.com/x',
+      'https://staging.sparkkindly.com/x',
+      'https://www.SPARKKINDLY.COM/play/a/?r=b',
+      'https://sparkkindly.com./x',
+    ]) {
+      expect(ok(src(url)), url).toBe(false);
+    }
+    for (const url of ['https://notsparkkindly.com/x', 'https://sparkkindly.com.example.org/x', 'https://example.org/?u=sparkkindly.com']) {
+      expect(ok(src(url)), url).toBe(true);
+    }
+    // A malformed url is a plain validation failure, never a thrown error.
+    expect(itemSubmissionSchema.safeParse(src('not a url')).success).toBe(false);
+  });
   it('rejects an unknown audience', () => {
     expect(ok(article({ audience: 'teens' }))).toBe(false);
   });

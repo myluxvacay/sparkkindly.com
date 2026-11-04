@@ -16,7 +16,16 @@ export type Mechanic = (typeof mechanics)[number];
 export const supportedKinds = ['article', 'game', 'quiz', 'video_script'] as const;
 
 const slug = z.string().regex(/^[a-z0-9-]+$/, 'lowercase letters, digits and hyphens only');
-const source = z.object({ title: z.string().min(1), url: z.url().startsWith('https://'), accessedAt: dateSchema });
+// A source never points at our own site: a reader opening it could otherwise land on an answer URL.
+const ownSite = (url: string) => URL.canParse(url) && /(^|\.)sparkkindly\.com\.?$/i.test(new URL(url).hostname);
+const source = z.object({
+  title: z.string().min(1),
+  url: z
+    .url()
+    .startsWith('https://')
+    .refine((u) => !ownSite(u), 'Sources cannot be on sparkkindly.com'),
+  accessedAt: dateSchema,
+});
 const choice = z.object({ id: z.string().min(1), text: z.string().min(1) });
 
 const common = {

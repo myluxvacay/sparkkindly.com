@@ -15,8 +15,8 @@ and you can fix it and send it again. The authoritative definition is `lib/items
 - **`slug`**: lowercase letters, digits and hyphens, 3 to 80 characters, unique within the world.
 - **`audience`**: `kids`, `all` or `adults`. `adults` means "aimed at adults", not an age gate. Everything is family-safe.
 - **`topics`**: slugs from the curated list (see the brief). An unknown topic is rejected; ask for it to be added.
-- **`sources`**: `{ title, url (https only), accessedAt (YYYY-MM-DD) }`. Factual content needs at least one, and each URL
-  must open.
+- **`sources`**: `{ title, url (https only, never on sparkkindly.com or a subdomain), accessedAt (YYYY-MM-DD) }`.
+  Factual content needs at least one, and each URL must open.
 - **`image`** is optional. Without one the site makes a branded template image. If you give one, say where it came from:
   `origin` is `template`, `stock`, `generated` or `owner-supplied`, with its `licence`.
 - **`publishAt`** (ISO date-time) is optional; the server uses the next free slot if it is missing or in the past.

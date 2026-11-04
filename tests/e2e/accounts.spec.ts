@@ -551,7 +551,7 @@ test("account A cannot open the delete page for account B's profile", async ({ p
 
 // Saved answers (Project 3D, Task 3). The play panel answers on a GET, so only our own form's same-origin submit is
 // recorded; a direct navigation (Sec-Fetch-Site: none), a cross-site request or a prefetch stores nothing.
-const tfQuiz = (world: string, slug: string, audience: 'kids' | 'all') =>
+const tfQuiz = (world: string, slug: string, audience: 'kids' | 'all' | 'adults') =>
   addItem({
     world,
     slug,
@@ -575,18 +575,21 @@ test('a signed-in adult answer is saved once, from the real form only; links and
     // A link opened directly (Sec-Fetch-Site: none) shows the verdict but stores nothing.
     await page.goto(answerUrl);
     await expect(page.getByRole('status')).toContainText('Correct');
+    await expect(page.getByText('Your answer is not saved this time. Use the answer form on this page')).toBeVisible();
+    await expect(page.getByText('Your answer is saved to your profile')).toHaveCount(0);
     // A cross-site request and a same-origin prefetch with the session cookie store nothing either.
     const cookie = await sessionCookie(page);
     await request.get(answerUrl, { headers: { ...cookie, 'sec-fetch-site': 'cross-site' } });
     await request.get(answerUrl, { headers: { ...cookie, 'sec-fetch-site': 'same-origin', 'sec-purpose': 'prefetch' } });
     expect(await responses(id)).toEqual([]);
 
-    // The real form: one row for the account holder (profile NULL), and the note says it is saved.
+    // The real form: one row for the account holder (profile NULL), and only then the note says it is saved.
     await page.goto(url);
-    await expect(page.getByText('Your answer is saved to your profile; see the')).toBeVisible();
+    await expect(page.getByText('An answer you check with this form is saved to your profile')).toBeVisible();
     await page.getByRole('radio', { name: 'False' }).check();
     await page.getByRole('button', { name: /Check answer/ }).click();
     await expect(page.getByRole('status')).toContainText('Not quite');
+    await expect(page.getByText('Your answer is saved to your profile; see the')).toBeVisible();
     expect(await responses(id)).toEqual([{ profile_id: null, correct: false }]);
 
     // A second answer is ignored: correctness stays as first answered.
@@ -617,6 +620,34 @@ test('an anonymous visitor answering a Kids quiz stores nothing, gets no cookie 
   } finally {
     await context.close();
     await sql('DELETE FROM items WHERE id = $1', [id]);
+  }
+});
+
+test('a child profile answer through the real form is saved for that profile; an adults quiz is not found for it', async ({ page }) => {
+  const stamp = Date.now();
+  const id = await tfQuiz('play', `e2e-saved-child-${stamp}`, 'all');
+  const adultsId = await tfQuiz('play', `e2e-saved-child-adults-${stamp}`, 'adults');
+  try {
+    const email = await signedInAdult(page);
+    await page.goto('/account/children/');
+    await addProfile(page, 'Noa', true);
+    await page.getByRole('button', { name: 'Play as Noa' }).click();
+    await expect(page.getByRole('heading', { level: 1, name: 'Playing as Noa' })).toBeVisible();
+    const profileId = (
+      await sql('SELECT p.id FROM child_profiles p JOIN accounts a ON a.id = p.account_id WHERE a.email = $1', [email])
+    ).rows[0].id as string;
+
+    await page.goto(`/play/e2e-saved-child-${stamp}/`);
+    await page.getByRole('radio', { name: 'True' }).check();
+    await page.getByRole('button', { name: /Check answer/ }).click();
+    await expect(page.getByRole('status')).toContainText('Correct');
+    await expect(page.getByText('Your answer is saved to your profile; see the')).toBeVisible();
+    expect(await responses(id)).toEqual([{ profile_id: profileId, correct: true }]);
+
+    expect((await page.goto(`/play/e2e-saved-child-adults-${stamp}/?r=true`))?.status()).toBe(404);
+    expect(await responses(adultsId)).toEqual([]);
+  } finally {
+    await sql('DELETE FROM items WHERE id = ANY($1::uuid[])', [[id, adultsId]]);
   }
 });
 

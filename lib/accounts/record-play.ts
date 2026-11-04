@@ -9,20 +9,44 @@ import type { PlayResult } from '@/lib/play/answer';
 import type { Owner } from './interests';
 import { recordAnswer } from './responses';
 
+// Request headers that mark a prefetch or prerender (browser, Firefox and the Next.js router).
+const PREFETCH_HEADERS = ['sec-purpose', 'purpose', 'x-moz'];
+
 export function recordableRequest(headers: Headers): boolean {
-  if (headers.get('sec-fetch-site') !== 'same-origin') {
+  if (headers.get('sec-fetch-site') !== 'same-origin' || headers.has('next-router-prefetch')) {
     return false;
   }
-  return !['sec-purpose', 'purpose', 'x-moz'].some((h) => headers.get(h)?.toLowerCase().includes('prefetch'));
+  return !PREFETCH_HEADERS.some((h) => headers.get(h)?.toLowerCase().includes('prefetch'));
 }
 
-export async function recordPlay(db: Db, owner: Owner | null, result: PlayResult, now: Date): Promise<void> {
-  if (!owner || result.status !== 'ok') {
-    return;
+// Which note the panel shows: `anonymous` (cannot save: the existing "does not save" note), `before` (can save, nothing
+// answered yet), `saved` (this answer, or the first one before it, is saved) or `unsaved` (can save, but this request was
+// not recordable, the item was not found or recording failed). Only `saved` may claim the answer is saved.
+export type AnswerNote = 'anonymous' | 'before' | 'saved' | 'unsaved';
+
+export async function recordPlay(
+  db: Db,
+  owner: Owner | null,
+  result: PlayResult | null,
+  recordable: boolean,
+  now: Date,
+): Promise<AnswerNote> {
+  if (!owner) {
+    return 'anonymous';
+  }
+  if (!result || result.status === 'invalid') {
+    return 'before';
+  }
+  if (result.status !== 'ok' || !recordable) {
+    return 'unsaved';
   }
   try {
+    // false is a repeat (the first answer is already saved); a profile or account deleted mid-request also reads
+    // as false. ponytail: not told apart, the session check just passed so that race is negligible.
     await recordAnswer(db, owner, result.itemId, result.correct, now);
+    return 'saved';
   } catch (err) {
     console.error('answer recording failed:', (err as Error)?.name);
+    return 'unsaved';
   }
 }

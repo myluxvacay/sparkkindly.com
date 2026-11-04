@@ -59,11 +59,11 @@ const rowsFor = async (accountId: string) =>
   ).rows;
 
 // What the play panel does: the scope and the owner from one session lookup, then check, then record.
-async function answer(session: string | undefined, slug: string, r: string) {
+async function answer(session: string | undefined, slug: string, r: string, recordable = true) {
   const viewer = await viewerForSession(db, session, T0);
   const result = await playResult(db, viewer.scope, 'play', slug, new URLSearchParams({ r }));
-  await recordPlay(db, viewer.owner, result, T0);
-  return result;
+  const note = await recordPlay(db, viewer.owner, result, recordable, T0);
+  return { ...result, note };
 }
 
 let allItem: string;
@@ -96,6 +96,7 @@ describe('recordableRequest', () => {
       ['purpose', 'prefetch'],
       ['purpose', 'Prefetch'],
       ['x-moz', 'prefetch'],
+      ['next-router-prefetch', '1'],
     ]) {
       expect(recordableRequest(h({ 'sec-fetch-site': 'same-origin', [k]: v })), `${k}: ${v}`).toBe(false);
     }
@@ -153,45 +154,54 @@ describe('viewerForSession', () => {
 describe('recordPlay', () => {
   it('an adult answer stores one row for the account, profile null; a second answer is ignored', async () => {
     const { accountId, session } = await signIn('1990-01-01');
-    expect(await answer(session, 'for-all', 'b')).toMatchObject({ status: 'ok', correct: true, itemId: allItem });
-    expect(await answer(session, 'for-all', 'a')).toMatchObject({ status: 'ok', correct: false });
+    expect(await answer(session, 'for-all', 'b')).toMatchObject({ status: 'ok', correct: true, itemId: allItem, note: 'saved' });
+    // The first answer is saved, so a repeat may say so too; it cannot change correctness.
+    expect(await answer(session, 'for-all', 'a')).toMatchObject({ status: 'ok', correct: false, note: 'saved' });
     expect(await rowsFor(accountId)).toEqual([{ profile_id: null, item_id: allItem, correct: true }]);
   });
 
   it('a child context answer stores for its profile id', async () => {
     const { accountId, profileId, session } = await childSession();
-    await answer(session, 'for-all', 'a');
+    expect((await answer(session, 'for-all', 'a')).note).toBe('saved');
     expect(await rowsFor(accountId)).toEqual([{ profile_id: profileId, item_id: allItem, correct: false }]);
   });
 
   it('an adults item answered from a child context is not found and stores nothing', async () => {
     const { accountId, session } = await childSession();
-    expect(await answer(session, 'for-adults', 'b')).toEqual({ status: 'not_found' });
+    expect(await answer(session, 'for-adults', 'b')).toEqual({ status: 'not_found', note: 'unsaved' });
     expect(await rowsFor(accountId)).toEqual([]);
   });
 
   it('a consent-pending 13-15 account stores nothing but still sees the verdict', async () => {
     const { accountId, session } = await signIn('2012-01-01', 'parent@example.test');
-    expect(await answer(session, 'for-all', 'b')).toMatchObject({ status: 'ok', correct: true });
+    expect(await answer(session, 'for-all', 'b')).toMatchObject({ status: 'ok', correct: true, note: 'anonymous' });
+    expect(await rowsFor(accountId)).toEqual([]);
+  });
+
+  it('a request that is not recordable (a link, a prefetch) stores nothing and says it was not saved this time', async () => {
+    const { accountId, session } = await signIn('1990-01-01');
+    expect(await answer(session, 'for-all', 'b', false)).toMatchObject({ status: 'ok', correct: true, note: 'unsaved' });
     expect(await rowsFor(accountId)).toEqual([]);
   });
 
   it('anonymous stores nothing and never touches the database for recording', async () => {
     const query = vi.fn();
     const result = await playResult(db, (await viewerForSession(db, undefined, T0)).scope, 'play', 'for-all', new URLSearchParams({ r: 'b' }));
-    await recordPlay({ query } as unknown as Db, null, result, T0);
+    expect(await recordPlay({ query } as unknown as Db, null, result, true, T0)).toBe('anonymous');
+    expect(await recordPlay({ query } as unknown as Db, null, null, true, T0)).toBe('anonymous');
     expect(query).not.toHaveBeenCalled();
   });
 
-  it('invalid and not-found results store nothing', async () => {
+  it('before an answer, an invalid answer or a not-found result store nothing', async () => {
     const query = vi.fn();
     const owner = { accountId: crypto.randomUUID(), profileId: null };
-    await recordPlay({ query } as unknown as Db, owner, { status: 'invalid' }, T0);
-    await recordPlay({ query } as unknown as Db, owner, { status: 'not_found' }, T0);
+    expect(await recordPlay({ query } as unknown as Db, owner, null, true, T0)).toBe('before');
+    expect(await recordPlay({ query } as unknown as Db, owner, { status: 'invalid' }, true, T0)).toBe('before');
+    expect(await recordPlay({ query } as unknown as Db, owner, { status: 'not_found' }, true, T0)).toBe('unsaved');
     expect(query).not.toHaveBeenCalled();
   });
 
-  it('a recording error is swallowed, logs the error name only, and leaves the result unchanged', async () => {
+  it('a recording error is swallowed, logs the error name only, leaves the result unchanged and never claims saved', async () => {
     const { accountId, session } = await signIn('1990-01-01');
     const viewer = await viewerForSession(db, session, T0);
     const result = await playResult(db, viewer.scope, 'play', 'for-all', new URLSearchParams({ r: 'b' }));
@@ -200,7 +210,7 @@ describe('recordPlay', () => {
     const broken = { query: async () => Promise.reject(err) } as unknown as Db;
     const log = vi.spyOn(console, 'error').mockImplementation(() => {});
     try {
-      await expect(recordPlay(broken, viewer.owner, result, T0)).resolves.toBeUndefined();
+      await expect(recordPlay(broken, viewer.owner, result, true, T0)).resolves.toBe('unsaved');
       expect(result).toEqual(before);
       expect(log).toHaveBeenCalledTimes(1);
       expect(log.mock.calls[0]).toEqual(['answer recording failed:', 'DbDownError']);
