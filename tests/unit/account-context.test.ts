@@ -217,6 +217,7 @@ describe('changePin', () => {
 describe('childCan', () => {
   const table: Record<Capability, boolean> = {
     save_interests: true,
+    save_answers: true,
     join_circle: false,
     create_circle: false,
     public_comment: false,

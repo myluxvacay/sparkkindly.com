@@ -53,6 +53,7 @@ describe('ageGroupFor', () => {
 
 const ALL: Capability[] = [
   'save_interests',
+  'save_answers',
   'join_circle',
   'create_circle',
   'public_comment',
@@ -73,7 +74,11 @@ describe('can', () => {
     ['under_13', 'confirmed', []],
     ['teen_13_15', 'none', []],
     ['teen_13_15', 'pending', ['save_interests', 'essential_email']],
-    ['teen_13_15', 'confirmed', ['save_interests', 'essential_email', 'join_circle', 'create_circle', 'invite']],
+    [
+      'teen_13_15',
+      'confirmed',
+      ['save_interests', 'save_answers', 'essential_email', 'join_circle', 'create_circle', 'invite'],
+    ],
     ['under_13', 'pending', []],
     ['teen_16_17', 'none', without('create_child_profile', 'see_sponsorship')],
     ['teen_16_17', 'confirmed', without('create_child_profile', 'see_sponsorship')],

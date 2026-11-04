@@ -100,6 +100,7 @@ describe('no session fails closed', () => {
 describe('permission matrix through can()', () => {
   const caps: Capability[] = [
     'save_interests',
+    'save_answers',
     'join_circle',
     'create_circle',
     'public_comment',
@@ -121,6 +122,7 @@ describe('permission matrix through can()', () => {
 
   it('13-15 pending: no circles, comments, community, contribute, child profiles, sponsorship', () => {
     denied('teen_13_15', 'pending', [
+      'save_answers',
       'join_circle',
       'create_circle',
       'public_comment',
@@ -133,7 +135,7 @@ describe('permission matrix through can()', () => {
     ]);
   });
   it('13-15 confirmed: circles yes; comments, community, contribute, child profiles, sponsorship no', () => {
-    allowed('teen_13_15', 'confirmed', ['join_circle', 'create_circle', 'invite']);
+    allowed('teen_13_15', 'confirmed', ['save_answers', 'join_circle', 'create_circle', 'invite']);
     denied('teen_13_15', 'confirmed', ['public_comment', 'join_community', 'contribute', 'create_child_profile', 'see_sponsorship', 'profile_page']);
   });
   it('13-15 with no consent state gets nothing', () => {
@@ -141,7 +143,7 @@ describe('permission matrix through can()', () => {
   });
   it('16-17: no child profiles or sponsorship', () => {
     denied('teen_16_17', 'none', ['create_child_profile', 'see_sponsorship']);
-    allowed('teen_16_17', 'none', ['public_comment', 'contribute', 'join_circle', 'invite', 'profile_page']);
+    allowed('teen_16_17', 'none', ['save_answers', 'public_comment', 'contribute', 'join_circle', 'invite', 'profile_page']);
   });
   it('under 13 is denied everything, whatever the consent state', () => {
     for (const c of ['none', 'pending', 'confirmed'] as Consent[]) denied('under_13', c, caps);

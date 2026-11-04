@@ -5,6 +5,7 @@ export type AgeGroup = 'under_13' | 'teen_13_15' | 'teen_16_17' | 'adult';
 
 export type Capability =
   | 'save_interests'
+  | 'save_answers'
   | 'join_circle'
   | 'create_circle'
   | 'public_comment'
@@ -72,8 +73,9 @@ export function ageGroupFor(dob: string, now: Date): AgeGroup | null {
 }
 
 const TEEN_PENDING: readonly Capability[] = ['save_interests', 'essential_email'];
-// 13-15 with consent: circles and invites, but no profile page (spec 4a.5).
-const TEEN_CONFIRMED: readonly Capability[] = [...TEEN_PENDING, 'join_circle', 'create_circle', 'invite'];
+// 13-15 with consent: stored answers, circles and invites, but no profile page (spec 4a.5). A consent-pending teen
+// saves interests only; answers are not stored.
+const TEEN_CONFIRMED: readonly Capability[] = [...TEEN_PENDING, 'save_answers', 'join_circle', 'create_circle', 'invite'];
 const ALL: readonly Capability[] = [
   ...TEEN_CONFIRMED,
   'public_comment',
@@ -104,8 +106,9 @@ export function can(group: AgeGroup, consent: Consent, cap: Capability): boolean
   }
 }
 
-// A child profile (plan 3C, spec 4a.5) only reads, plays and answers; of the capabilities, only picking interests.
-export const childCan = (cap: Capability): boolean => cap === 'save_interests';
+// A child profile (plan 3C, spec 4a.5) only reads, plays and answers; of the capabilities, only picking interests and
+// saving its own answers (correctness and time, nothing else).
+export const childCan = (cap: Capability): boolean => cap === 'save_interests' || cap === 'save_answers';
 
 // A 13-15 account whose parent or guardian has not confirmed yet (it can save interests only). Shared by the pages so
 // none of them re-derives the rule.
