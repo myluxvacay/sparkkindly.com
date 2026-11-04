@@ -8,8 +8,8 @@ import { linkBase } from '@/lib/admin/sessions';
 import type { Db } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
-import { accountLinkLimits, confirmLimits, signUpLimits } from './limits';
-import { accountExists, consumeAccountLink, endAccountSession, requestAccountLink } from './sessions';
+import { accountLinkLimits, accountSendBudget, confirmLimits, signUpLimits } from './limits';
+import { accountExists, consumeAccountLink, endAccountSession, hasFreshLink, requestAccountLink } from './sessions';
 import { signUp } from './signup';
 
 export const ACCOUNT_COOKIE = '__Host-sk_account';
@@ -27,6 +27,7 @@ type Deps = {
   signUps?: typeof signUpLimits;
   links?: typeof accountLinkLimits;
   confirms?: typeof confirmLimits;
+  budget?: () => boolean;
 };
 
 const forbidden = () => new Response('Forbidden', { status: 403 });
@@ -35,8 +36,10 @@ const tooMany = () => new Response('Too many attempts. Please try again later.',
 // Mints and emails a sign-in link to a known address; does nothing for an unknown one. Runs after the response.
 async function emailLink(d: Deps, email: string, ip: string, links: typeof accountLinkLimits): Promise<void> {
   try {
-    // The per-address allowance is spent only for a real account, so unknown addresses use (and grow) nothing.
-    if (!links.client(ip) || !(await accountExists(d.db, email)) || !links.mint(email)) return;
+    // The per-address allowance is spent only for a real account without a link from the last minute, so unknown
+    // addresses use (and grow) nothing and a burst for one address mints once. The site-wide budget is spent last.
+    if (!links.client(ip) || !(await accountExists(d.db, email))) return;
+    if ((await hasFreshLink(d.db, email, d.now)) || !links.mint(email) || !(d.budget ?? accountSendBudget)()) return;
     const token = await requestAccountLink(d.db, email, d.env, d.now);
     if (!token) return;
     await d.send({

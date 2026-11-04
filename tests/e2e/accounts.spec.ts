@@ -30,7 +30,7 @@ let n = 0;
 const fresh = () => `e2e-acct-${Date.now()}-${n++}@example.test`;
 
 test.beforeEach(async ({ page }) => {
-  // Each test is its own network, so the five-sign-ups-an-hour limit never trips across tests.
+  // Each test is its own network, so the per-network sign-up limit (30 an hour) never trips across tests.
   await page.context().setExtraHTTPHeaders({ 'x-forwarded-for': `198.51.100.${(n = n + 1) % 250}` });
 });
 
@@ -167,17 +167,20 @@ test('a link request answers a known and an unknown address identically', async 
   expect((await request.post('/account/sign-in/request/', { headers: FORM, data: form({ email: known }), maxRedirects: 0 })).status()).toBe(403);
 });
 
-test('the sixth sign-up from one network in an hour is refused with 429', async ({ request }) => {
+test('the 31st sign-up from one network in an hour is refused with 429', async ({ request }) => {
+  // A network unique to this run, so a local re-run within the hour does not start out limited.
+  const [x, y] = randomBytes(2);
+  const ip = `198.18.${x}.${y}`;
   const codes: number[] = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 31; i++) {
     const r = await request.post('/account/sign-up/submit/', {
-      headers: { ...FORM, ...ORIGIN, 'x-forwarded-for': '203.0.113.99' },
+      headers: { ...FORM, ...ORIGIN, 'x-forwarded-for': ip },
       data: form({ email: 'not-an-email', dob: dobYearsAgo(30) }),
       maxRedirects: 0,
     });
     codes.push(r.status());
   }
-  expect(codes).toEqual([303, 303, 303, 303, 303, 429]);
+  expect(codes).toEqual([...Array(30).fill(303), 429]);
 });
 
 test('sign-out and sign-up POSTs from another origin are refused', async ({ request }) => {

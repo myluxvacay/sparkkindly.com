@@ -2,7 +2,7 @@
 import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { createSignInLimits, signInLimits } from '@/lib/admin/guard';
-import { accountLinkLimits, createSignUpLimits } from '@/lib/accounts/limits';
+import { accountLinkLimits, createAccountLinkLimits, createSendBudget, createSignUpLimits } from '@/lib/accounts/limits';
 import { requestAccountSignIn, submitSignUp } from '@/lib/accounts/web';
 import { signUp } from '@/lib/accounts/signup';
 import type { EmailMessage } from '@/lib/email';
@@ -23,7 +23,12 @@ const post = (body: Record<string, string>, ip = '192.0.2.1') =>
     body: new URLSearchParams(body).toString(),
   });
 
-type Overrides = { links?: ReturnType<typeof createSignInLimits>; signUps?: ReturnType<typeof createSignUpLimits> };
+type Overrides = {
+  links?: ReturnType<typeof createSignInLimits>;
+  signUps?: ReturnType<typeof createSignUpLimits>;
+  budget?: () => boolean;
+  now?: Date;
+};
 
 // Runs a handler with a defer that collects the deferred work, then awaits it, so assertions see the send.
 async function run(
@@ -43,6 +48,7 @@ async function run(
     defer: (w: () => Promise<void>) => void jobs.push(w()),
     links: createSignInLimits(() => 0),
     signUps: createSignUpLimits(() => 0),
+    budget: createSendBudget({ clock: () => 0, warn: () => {} }),
     ...over,
   });
   await Promise.all(jobs);
@@ -124,7 +130,8 @@ describe('submitSignUp', () => {
     const sentOld: EmailMessage[] = [];
     const a = await signUpPost('fresh@example.test', sentNew);
     await db.query("UPDATE accounts SET verified_at = now() WHERE email = 'fresh@example.test'");
-    const b = await signUpPost('fresh@example.test', sentOld);
+    // a minute later, past the fresh-link window (a second request within 60 seconds sends nothing by design)
+    const b = await signUpPost('fresh@example.test', sentOld, { now: new Date(NOW.getTime() + 61_000) });
     expect(sentNew).toHaveLength(1);
     expect(sentOld).toHaveLength(1);
     expect(sentOld[0].text).toMatch(/\/account\/sign-in\/link\/\?token=[0-9a-f]{64}/);
@@ -141,10 +148,60 @@ describe('submitSignUp', () => {
 
   it('the 429 does not depend on the address', async () => {
     const signUps = createSignUpLimits(() => 0);
-    for (let i = 0; i < 5; i++) await signUpPost(`rl${i}@example.test`, [], { signUps }, '192.0.2.50');
+    for (let i = 0; i < 30; i++) await signUpPost(`rl${i}@example.test`, [], { signUps }, '192.0.2.50');
     const known = await signUpPost('known@example.test', [], { signUps }, '192.0.2.50');
     const unknown = await signUpPost('never-seen@example.test', [], { signUps }, '192.0.2.50');
     expect([known.status, unknown.status]).toEqual([429, 429]);
     expect(await known.text()).toBe(await unknown.text());
+  });
+});
+
+describe('link email limits', () => {
+  const at = (ms: number) => new Date(NOW.getTime() + ms);
+  const known = async (prefix: string, n: number) => {
+    const list = Array.from({ length: n }, (_, i) => `${prefix}${i}@example.test`);
+    for (const e of list) await signUp(db, { email: e, dateOfBirth: '1990-05-05' }, NOW);
+    return list;
+  };
+
+  it('30 different known addresses from one network within an hour each get a link', async () => {
+    const links = createAccountLinkLimits(() => 0);
+    const sent: EmailMessage[] = [];
+    for (const e of await known('school', 30)) await signIn(e, sent, { links }, '192.0.2.120');
+    expect(new Set(sent.map((m) => m.to)).size).toBe(30);
+  });
+
+  it('one address is still capped at 6 links an hour, however it is asked', async () => {
+    const links = createAccountLinkLimits(() => 0);
+    const [e] = await known('capped', 1);
+    const sent: EmailMessage[] = [];
+    for (let i = 0; i < 10; i++) await signIn(e, sent, { links, now: at(i * 61_000) }, `192.0.2.${130 + i}`);
+    expect(sent).toHaveLength(6);
+  });
+
+  it('a burst of 10 requests for one address sends one email and spends one mint; 10 over 5 minutes stay within 5', async () => {
+    const links = createAccountLinkLimits(() => 0);
+    const mint = vi.spyOn(links, 'mint');
+    const [burst, spread] = await known('bomb', 2);
+    const sentBurst: EmailMessage[] = [];
+    for (let i = 0; i < 10; i++) await signIn(burst, sentBurst, { links, now: at(i * 5_000) }, `192.0.2.${150 + i}`);
+    expect(sentBurst).toHaveLength(1);
+    expect(mint).toHaveBeenCalledTimes(1);
+    const sentSpread: EmailMessage[] = [];
+    for (let i = 0; i < 10; i++) await signIn(spread, sentSpread, { links, now: at(i * 30_000) }, `192.0.2.${170 + i}`);
+    expect(sentSpread.length).toBeLessThanOrEqual(5);
+  });
+
+  it('past the site-wide send budget a request sends nothing and answers the same', async () => {
+    const warn = vi.fn();
+    const budget = createSendBudget({ perHour: 2, clock: () => 0, warn });
+    const sent: EmailMessage[] = [];
+    const answers = [];
+    for (const [i, e] of (await known('budget', 3)).entries()) {
+      answers.push(await snapshot(await signIn(e, sent, { budget }, `192.0.2.${190 + i}`)));
+    }
+    expect(sent).toHaveLength(2);
+    expect(answers[2]).toEqual(answers[0]);
+    expect(warn).toHaveBeenCalledTimes(1);
   });
 });

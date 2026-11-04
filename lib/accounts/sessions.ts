@@ -42,6 +42,17 @@ export async function requestAccountLink(db: Queryable, email: string, _env: Env
   return token;
 }
 
+// True when the address already has an unused, unexpired link minted in the last 60 seconds (a link lives 15 minutes,
+// so its expiry is still more than 14 minutes away). The caller then sends nothing: one person cannot have a victim's
+// inbox flooded, and the response is the same either way.
+export async function hasFreshLink(db: Queryable, email: string, now: Date): Promise<boolean> {
+  const r = await db.query(
+    'SELECT 1 FROM account_login_tokens WHERE email = $1 AND used_at IS NULL AND expires_at > $2::timestamptz LIMIT 1',
+    [email, later(now, LINK_TTL - MIN)],
+  );
+  return r.rows.length > 0;
+}
+
 export type LinkTarget = {
   email: string;
   verified: boolean;

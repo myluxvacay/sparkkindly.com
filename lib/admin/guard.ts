@@ -63,8 +63,9 @@ export function clientPrefix(ip: string, v4Bits: 32 | 24 = 32): string {
 // but only because a working link was emailed to that address within the last 5 minutes; it never blocks a link
 // and never bypasses anything (the code and the allow-list still gate access). At most 6 + 12 emails in any hour
 // reach one allowed address. Recovery path: edit ADMIN_EMAILS on the server and restart the service.
-export function createSignInLimits(clock: () => number = Date.now) {
-  const perClient = hourly(10, clock);
+// `clientPerHour` exists for the account limits (lib/accounts/limits.ts); admin always uses the default 10.
+export function createSignInLimits(clock: () => number = Date.now, clientPerHour = 10) {
+  const perClient = hourly(clientPerHour, clock);
   const minted = new Map<string, number[]>();
   const lastResend = new Map<string, number>();
   const HOUR = 60 * 60_000;
@@ -91,8 +92,9 @@ export function createSignInLimits(clock: () => number = Date.now) {
 
 // Link confirmations and authenticator codes: 20 an hour per IPv4 /24 or IPv6 /64. Each challenge (code-stage session)
 // also dies after 5 wrong codes from any source (submitCode), and a new one needs a fresh emailed link.
-export function createCodeLimits(clock: () => number = Date.now) {
-  const perClient = hourly(20, clock);
+// `perHour` exists for the account confirm limits; admin always uses the default 20.
+export function createCodeLimits(clock: () => number = Date.now, perHour = 20) {
+  const perClient = hourly(perHour, clock);
   return (client: string): boolean => perClient(clientPrefix(client, 24));
 }
 
