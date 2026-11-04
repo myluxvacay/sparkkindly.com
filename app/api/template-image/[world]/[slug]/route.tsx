@@ -13,7 +13,9 @@ export async function GET(_req: Request, ctx: { params: Promise<{ world: string;
   const [item, w] = await Promise.all([getPublicItem(db, await currentScope(), world, slug), getWorld(db, world)]);
   if (!item || !w) return new Response('Not found', { status: 404 });
   const image = templateImage(item, w);
-  // What a signed-in context may see differs per person, so its copy never goes into a shared cache.
+  // What a signed-in context may see differs per person, so its copy never goes into a shared cache, and the public
+  // copy is keyed on the cookie so no cache reuses it across a sign-in.
   if (signedIn) image.headers.set('cache-control', 'private, no-store');
+  image.headers.append('vary', 'Cookie');
   return image;
 }

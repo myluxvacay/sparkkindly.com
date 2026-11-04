@@ -45,9 +45,29 @@ describe('scopeForSession', () => {
     expect([...(await scopeForSession(db, session, new Date(T0.getTime() + 31 * DAY))).audiences]).toEqual(ANON);
   });
 
-  it('any database error fails to the anonymous scope', async () => {
-    const broken = { query: async () => Promise.reject(new Error('down')) } as unknown as Db;
-    expect([...(await scopeForSession(broken, newToken(), T0)).audiences]).toEqual(ANON);
+  it('a session lookup that throws fails closed to kids and all, logging the error name only', async () => {
+    const err = Object.assign(new Error('connect ECONNREFUSED 10.0.0.5:5432 password=hunter2'), { name: 'DbDownError' });
+    const broken = { query: async () => Promise.reject(err) } as unknown as Db;
+    const log = vi.spyOn(console, 'error').mockImplementation(() => {});
+    try {
+      const s = await scopeForSession(broken, newToken(), T0);
+      expect([...s.audiences]).toEqual(['kids', 'all']);
+      expect(s.now).toBe(T0);
+      expect(log).toHaveBeenCalledTimes(1);
+      expect(log.mock.calls[0]).toEqual(['public scope lookup failed:', 'DbDownError']);
+      expect(JSON.stringify(log.mock.calls)).not.toMatch(/ECONNREFUSED|hunter2/);
+    } finally {
+      log.mockRestore();
+    }
+  });
+
+  it('without a cookie (or with a malformed one) the database is not asked and nothing throws', async () => {
+    const query = vi.fn(async () => Promise.reject(new Error('down')));
+    const broken = { query } as unknown as Db;
+    for (const t of [undefined, '', 'nope']) {
+      expect([...(await scopeForSession(broken, t, T0)).audiences]).toEqual(ANON);
+    }
+    expect(query).not.toHaveBeenCalled();
   });
 
   it('an adult or teen session sees all three audiences', async () => {

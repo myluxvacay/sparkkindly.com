@@ -496,6 +496,8 @@ test('a child profile gets a 404 for an adults item, its world page and search o
     const anonImage = await request.get(imageUrl);
     expect(anonImage.status()).toBe(200);
     expect(anonImage.headers()['cache-control']).toBe('public, max-age=86400');
+    // A cache must key the public copy on the cookie, so it is never reused across a sign-in.
+    expect(anonImage.headers()['vary']?.toLowerCase().split(/,\s*/)).toContain('cookie');
 
     // An adult session sees it too, but the share image is never stored in a shared cache.
     await signedInAdult(page);
@@ -503,6 +505,7 @@ test('a child profile gets a 404 for an adults item, its world page and search o
     const adultImage = await request.get(imageUrl, { headers: adult });
     expect(adultImage.status()).toBe(200);
     expect(adultImage.headers()['cache-control']).toBe('private, no-store');
+    expect(adultImage.headers()['vary']?.toLowerCase().split(/,\s*/)).toContain('cookie');
 
     await page.goto('/account/children/');
     await addProfile(page, 'Tia', true);

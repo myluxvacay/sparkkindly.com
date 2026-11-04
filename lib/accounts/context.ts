@@ -12,7 +12,7 @@ import { sessionView, type AccountView, type ActiveProfile } from './sessions';
 export type AccountContext = { account: AccountView; profile: ActiveProfile | null; audiences: readonly Audience[] };
 export type AdultContext = AccountContext & { profile: null };
 
-const CHILD: readonly Audience[] = ['kids', 'all'];
+export const CHILD_AUDIENCES: readonly Audience[] = ['kids', 'all'];
 // `adults` means "aimed at adults", not an age gate (spec, Project 1): an account sees what an anonymous visitor sees.
 const MEMBER: readonly Audience[] = ['kids', 'all', 'adults'];
 
@@ -21,7 +21,7 @@ export async function getContext(db: Db, sessionToken: string, now: Date): Promi
   if (!s) {
     return null;
   }
-  return { ...s, audiences: s.profile ? CHILD : MEMBER };
+  return { ...s, audiences: s.profile ? CHILD_AUDIENCES : MEMBER };
 }
 
 // The gate for settings, invites, comments, contribute and PIN change: null (deny) for a child context or no context.
