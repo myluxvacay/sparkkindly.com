@@ -4,7 +4,7 @@ import { newTestDb } from '../helpers/test-db';
 import { signUp } from '@/lib/accounts/signup';
 import { requestAccountLink } from '@/lib/accounts/sessions';
 import { issueConsentTokens, confirmConsent } from '@/lib/accounts/consent';
-import { claimConsentSweep, runConsentSweep } from '@/lib/accounts/consent-sweep';
+import { claimConsentSweep, deleteIfStillPending, runConsentSweep } from '@/lib/accounts/consent-sweep';
 import { consentEmail } from '@/lib/accounts/consent-email';
 import { tick } from '@/worker/main';
 
@@ -120,6 +120,20 @@ describe('runConsentSweep', () => {
     await teen({ dob: '2010-11-01' });
     await runConsentSweep(db, day(30), okSend(), links);
     expect(await accounts()).toBe(1);
+  });
+});
+
+describe('deleteIfStillPending', () => {
+  it('spares an account whose parent confirmed after it was listed, deletes one still pending', async () => {
+    const a = await teen();
+    const b = await teen();
+    const t = await issueConsentTokens(db, a.id, V);
+    expect(await confirmConsent(db, t!.confirm, day(29))).toBe('confirmed');
+    const cutoff = day(0).toISOString();
+    expect(await deleteIfStillPending(db, a.id, cutoff)).toBe(false);
+    expect(await count('SELECT count(*)::int AS n FROM accounts WHERE id = $1', [a.id])).toBe(1);
+    expect(await deleteIfStillPending(db, b.id, cutoff)).toBe(true);
+    expect(await count('SELECT count(*)::int AS n FROM accounts WHERE id = $1', [b.id])).toBe(0);
   });
 });
 

@@ -6,7 +6,7 @@ import type { Db, Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import { issueConsentTokens } from './consent';
 import { consentEmail } from './consent-email';
-import { deleteAccount } from './delete';
+import { deleteAccountIn } from './delete';
 import { ageGroupFor } from './policy';
 
 const DAY = 24 * 60 * 60_000;
@@ -42,6 +42,19 @@ async function clearOutgrown(db: Db, now: Date): Promise<number> {
   return cleared;
 }
 
+// Deletes the account only if, under its row lock, it is still pending, has a parent address and was verified at or
+// before the cutoff: a parent who confirms (or an account that changes) after the listing is not deleted.
+export async function deleteIfStillPending(db: Db, id: string, cutoffIso: string): Promise<boolean> {
+  return db.transaction(async (tx) => {
+    const still = await tx.query(
+      `SELECT 1 FROM accounts WHERE id = $1 AND consent_state = 'pending' AND parent_email IS NOT NULL
+         AND verified_at <= $2::timestamptz FOR UPDATE`,
+      [id, cutoffIso],
+    );
+    return still.rows.length === 1 && (await deleteAccountIn(tx, id));
+  });
+}
+
 export async function runConsentSweep(
   db: Db,
   now: Date,
@@ -53,8 +66,9 @@ export async function runConsentSweep(
   // Clear first: an account that turned 16 is no longer waiting on a parent, so it is neither deleted nor reminded.
   const cleared = await clearOutgrown(db, now);
   let deleted = 0;
-  for (const id of await ids(db, `SELECT id FROM accounts WHERE ${pending} AND verified_at <= $1::timestamptz`, [at(30)])) {
-    if (await deleteAccount(db, id)) {
+  const cutoff = at(30);
+  for (const id of await ids(db, `SELECT id FROM accounts WHERE ${pending} AND verified_at <= $1::timestamptz`, [cutoff])) {
+    if (await deleteIfStillPending(db, id, cutoff)) {
       deleted++;
     }
   }
