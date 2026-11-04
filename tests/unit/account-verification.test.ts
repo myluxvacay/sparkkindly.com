@@ -3,6 +3,7 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { signUp } from '@/lib/accounts/signup';
 import { consumeAccountLink, linkTarget, requestAccountLink } from '@/lib/accounts/sessions';
+import type { Db, Queryable } from '@/lib/db';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -106,6 +107,69 @@ describe('overwriting an unverified sign-up revokes earlier links', () => {
     const t = (await requestAccountLink(db, 'a1@example.test', {}, NOW))!;
     await signUp(db, { email: 'a2@example.test', dateOfBirth: '1990-05-05' }, NOW);
     expect((await linkTarget(db, t, NOW))?.email).toBe('a1@example.test');
+  });
+});
+
+describe('consuming a link is one locked transaction', () => {
+  // PGlite is one connection, so two transactions cannot truly interleave here. The test records where each statement
+  // runs: the account row lock comes first, and every write happens inside that same transaction.
+  it('locks the account row FOR UPDATE first, then marks the link, verifies and starts the session inside it', async () => {
+    const e = 'atomic@example.test';
+    await signUp(db, { email: e, dateOfBirth: '1990-05-05' }, NOW);
+    const t = (await requestAccountLink(db, e, {}, NOW))!;
+    const log: string[] = [];
+    const rec = (where: string, q: Queryable): Queryable => ({
+      query: (text, params) => {
+        log.push(`${where}: ${text.replace(/\s+/g, ' ').trim()}`);
+        return q.query(text, params);
+      },
+      exec: (sql) => q.exec(sql),
+    });
+    const spy: Db = { ...rec('outer', db), transaction: (fn) => db.transaction((tx) => fn(rec('tx', tx))) };
+    expect(await consumeAccountLink(spy, t, NOW)).not.toBeNull();
+    expect(log.every((l) => l.startsWith('tx: '))).toBe(true);
+    expect(log[0]).toMatch(/^tx: SELECT .*FROM accounts .*FOR UPDATE/);
+    expect(log.slice(1).map((l) => l.split(' ').slice(1, 3).join(' '))).toEqual([
+      'UPDATE account_login_tokens',
+      'UPDATE accounts',
+      'INSERT INTO',
+    ]);
+  });
+
+  it('a replacing sign-up fired while the confirm holds the lock waits for it, then changes nothing', async () => {
+    const e = 'race@example.test';
+    await signUp(db, { email: e, dateOfBirth: '1990-05-05' }, NOW);
+    const t = (await requestAccountLink(db, e, {}, NOW))!;
+    let racer: Promise<unknown> | undefined;
+    const hooked: Db = {
+      ...db,
+      transaction: (fn) =>
+        db.transaction((tx) =>
+          fn({
+            ...tx,
+            query: async (text, params) => {
+              const r = await tx.query(text, params);
+              if (!racer && /FOR UPDATE/.test(text)) {
+                racer = signUp(db, { email: e, dateOfBirth: '2012-01-01', parentEmail: 'evil@example.test' }, NOW);
+              }
+              return r;
+            },
+          }),
+        ),
+    };
+    expect(await consumeAccountLink(hooked, t, NOW)).not.toBeNull();
+    expect(await racer).toEqual({ status: 'exists' });
+    const r = await row(e);
+    expect([r.dob, r.parent_email]).toEqual(['1990-05-05', null]);
+  });
+
+  it('returns null and writes nothing when the link was revoked before the lock', async () => {
+    const e = 'late@example.test';
+    await signUp(db, { email: e, dateOfBirth: '1990-05-05' }, NOW);
+    const t = (await requestAccountLink(db, e, {}, NOW))!;
+    await signUp(db, { email: e, dateOfBirth: '1985-01-01' }, NOW);
+    expect(await consumeAccountLink(db, t, NOW)).toBeNull();
+    expect((await row(e)).verified_at).toBeNull();
   });
 });
 

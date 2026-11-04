@@ -2,7 +2,7 @@
 // kind of session is ever valid for the other. Tokens are random, sent to the client once, stored only as sha256 hashes.
 // The link host comes from config (linkBase in lib/admin/sessions.ts), never the request. No Next.js imports.
 // Verified by tests/unit/account-sessions.test.ts.
-import type { Queryable } from '@/lib/db';
+import type { Db, Queryable } from '@/lib/db';
 import type { EnvLike } from '@/lib/env';
 import { hash, newToken } from '@/lib/tokens';
 import { ageGroupFor, type AgeGroup, type Consent } from './policy';
@@ -81,28 +81,42 @@ export async function linkTarget(db: Queryable, token: string, now: Date): Promi
   };
 }
 
-// Uses up a link and starts a session. Returns the session token, or null.
-export async function consumeAccountLink(db: Queryable, token: string, now: Date): Promise<string | null> {
+// Uses up a link and starts a session. Returns the session token, or null. One transaction that first locks the
+// account row (FOR UPDATE): a replacing sign-up (signUp's upsert also takes that row lock and revokes the address's
+// unused links) runs wholly before it, so the link is gone and this returns null, or wholly after it, when the account
+// is verified and the sign-up changes nothing. The link check runs after the lock, on a fresh snapshot.
+export async function consumeAccountLink(db: Db, token: string, now: Date): Promise<string | null> {
   if (typeof token !== 'string' || !/^[0-9a-f]{64}$/.test(token)) {
     return null;
   }
-  const used = await db.query<{ email: string }>(
-    `UPDATE account_login_tokens SET used_at = $2
-     WHERE token_hash = $1 AND used_at IS NULL AND expires_at > $2::timestamptz RETURNING email`,
-    [hash(token), now.toISOString()],
-  );
-  const email = used.rows[0]?.email;
-  if (!email) {
-    return null;
-  }
-  const session = newToken();
-  await db.query('UPDATE accounts SET verified_at = $2 WHERE email = $1 AND verified_at IS NULL', [email, now.toISOString()]);
-  const r = await db.query(
-    `INSERT INTO account_sessions (token_hash, account_id, created_at, expires_at, last_seen_at)
-     SELECT $1, id, $2, $3, $2 FROM accounts WHERE email = $4`,
-    [hash(session), now.toISOString(), later(now, IDLE_TTL), email],
-  );
-  return r.rowCount === 1 ? session : null;
+  const h = hash(token);
+  const at = now.toISOString();
+  return db.transaction(async (tx) => {
+    const account = await tx.query<{ id: string }>(
+      'SELECT id FROM accounts WHERE email = (SELECT email FROM account_login_tokens WHERE token_hash = $1) FOR UPDATE',
+      [h],
+    );
+    const id = account.rows[0]?.id;
+    if (!id) {
+      return null;
+    }
+    const used = await tx.query(
+      `UPDATE account_login_tokens SET used_at = $2
+       WHERE token_hash = $1 AND used_at IS NULL AND expires_at > $2::timestamptz`,
+      [h, at],
+    );
+    if (used.rowCount !== 1) {
+      return null;
+    }
+    await tx.query('UPDATE accounts SET verified_at = $2 WHERE id = $1 AND verified_at IS NULL', [id, at]);
+    const session = newToken();
+    await tx.query(
+      `INSERT INTO account_sessions (token_hash, account_id, created_at, expires_at, last_seen_at)
+       VALUES ($1, $2, $3, $4, $3)`,
+      [hash(session), id, at, later(now, IDLE_TTL)],
+    );
+    return session;
+  });
 }
 
 // The signed-in account for this session token, or null. The age group is re-derived from the date of birth on every
