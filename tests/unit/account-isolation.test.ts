@@ -20,6 +20,12 @@ import { getInterests, setInterests } from '@/lib/accounts/interests';
 import { countAnswered, listAnswered, recordAnswer } from '@/lib/accounts/responses';
 import { saveInterestsRequest } from '@/lib/accounts/interests-web';
 import { viewerForSession } from '@/lib/accounts/scope';
+import { exportRequest, deleteAccountRequest, resetPinRequest, saveSettingsRequest } from '@/lib/accounts/settings-web';
+import { deleteOwnAccount } from '@/lib/accounts/self-delete';
+import { resetPin } from '@/lib/accounts/pin-reset';
+import { getSettings, saveSettings } from '@/lib/accounts/settings';
+import { runInactivitySweep } from '@/lib/accounts/inactivity';
+import { applyUnsubscribe, readUnsubscribeToken, unsubscribeToken } from '@/lib/accounts/unsubscribe';
 import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, searchPublic } from '@/lib/public/reads';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -575,9 +581,177 @@ describe('interests, saved answers and /me (plan 3D, Task 5)', () => {
   });
 });
 
+describe('settings, export, deletion, inactivity and unsubscribe (plan 3E, Task 4)', () => {
+  const NOW = new Date('2026-11-04T12:00:00Z');
+  const PIN = '4826';
+  let k = 0;
+  const form = (body: Record<string, string>, cookie: string) =>
+    new Request('http://localhost/x', {
+      method: 'POST',
+      headers: {
+        host: 'staging.sparkkindly.com',
+        origin: 'https://staging.sparkkindly.com',
+        'content-type': 'application/x-www-form-urlencoded',
+        cookie: `__Host-sk_account=${cookie}`,
+      },
+      body: new URLSearchParams(body).toString(),
+    });
+  async function item(slug: string): Promise<string> {
+    const r = await db.query<{ id: string }>(
+      `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, published_at, created_by, risk_tier, approved_by)
+       SELECT id, 'quiz', $1, 'T', 'S', '{}'::jsonb, 'all', 'published', '2026-11-04T09:00:00Z', 'test', 'computable', 'test'
+       FROM worlds WHERE slug = 'play' RETURNING id`,
+      [slug],
+    );
+    return r.rows[0].id;
+  }
+  // A verified adult with a child profile, interests and answers (own and the child's), and a live session.
+  async function holder(tag: string) {
+    const email = `p3e-${tag}-${k++}@example.test`;
+    const r = await signUp(db, { email, dateOfBirth: '1985-03-03' }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    const c = await createChildProfile(db, r.accountId, { displayName: `Kid${tag}`, ageBand: '6-9', guardianConfirmed: 'on', pin: PIN }, T0);
+    if (c.status !== 'created') throw new Error('profile not created');
+    const topic = (await db.query<{ id: number }>('SELECT id FROM topics ORDER BY id LIMIT 1')).rows[0].id;
+    const slug = `p3e-item-${tag}-${k}`;
+    const itemId = await item(slug);
+    await setInterests(db, { accountId: r.accountId, profileId: null }, { topicIds: [topic], worldIds: [] });
+    await recordAnswer(db, { accountId: r.accountId, profileId: null }, itemId, true, NOW);
+    await recordAnswer(db, { accountId: r.accountId, profileId: c.profileId }, itemId, false, NOW);
+    return { accountId: r.accountId, email, profileId: c.profileId, slug, session: await signIn(email) };
+  }
+  const count = async (sql: string, p: unknown[]) => (await db.query<{ n: number }>(sql, p)).rows[0].n;
+
+  beforeAll(async () => {
+    await seedReference(db);
+  });
+
+  it("account A's export holds none of account B's data", async () => {
+    const a = await holder('xa');
+    const b = await holder('xb');
+    const res = await exportRequest(form({ account_id: b.accountId, profile_id: b.profileId, email: b.email }, a.session), { db, now: NOW });
+    expect(res.status).toBe(200);
+    expect(res.headers.get('content-disposition')).toContain('attachment');
+    expect(res.headers.get('cache-control')).toBe('no-store');
+    const text = await res.text();
+    const x = JSON.parse(text);
+    expect(x.account.email).toBe(a.email);
+    expect(x.childProfiles.map((c: { displayName: string }) => c.displayName)).toEqual(['Kidxa']);
+    for (const foreign of [b.email, b.accountId, b.profileId, b.slug, 'Kidxb']) {
+      expect(text, foreign).not.toContain(foreign);
+    }
+    for (const mine of [a.slug, 'Kidxa']) expect(text).toContain(mine);
+    expect(text).not.toMatch(/pin_hash|pinHash|token/i);
+  });
+
+  it('child context: settings save, export, delete and PIN reset are denied and change nothing', async () => {
+    const f = await holder('ch');
+    await switchToProfile(db, f.session, f.profileId, NOW);
+    expect(requireAdultContext(await getContext(db, f.session, NOW))).toBeNull();
+    const before = await getSettings(db, f.accountId);
+    const pinOf = async () => (await db.query<{ pin_hash: string }>('SELECT pin_hash FROM accounts WHERE id = $1', [f.accountId])).rows[0].pin_hash;
+    const pinBefore = await pinOf();
+    const d = { db, now: NOW };
+    const refused = [
+      await saveSettingsRequest(form({ time_zone: 'Europe/London', daily_set: 'on' }, f.session), d),
+      await exportRequest(form({}, f.session), d),
+      await deleteAccountRequest(form({ email: f.email }, f.session), d),
+      await resetPinRequest(form({ new_pin: '1111', new_pin_confirm: '1111' }, f.session), d),
+    ];
+    for (const r of refused) expect(r.status).toBe(403);
+    expect(await resetPin(db, f.session, '1111', NOW)).toBe('not_allowed');
+    expect(await getSettings(db, f.accountId)).toEqual(before);
+    expect(await pinOf()).toBe(pinBefore);
+    expect(await count('SELECT count(*)::int AS n FROM accounts WHERE id = $1', [f.accountId])).toBe(1);
+  });
+
+  it('anonymous: settings, export, delete and PIN reset go to sign-in and change nothing', async () => {
+    const d = { db, now: NOW };
+    for (const r of [
+      await saveSettingsRequest(form({ time_zone: 'Europe/London' }, ''), d),
+      await exportRequest(form({}, ''), d),
+      await deleteAccountRequest(form({ email: A }, ''), d),
+      await resetPinRequest(form({ new_pin: '1111', new_pin_confirm: '1111' }, ''), d),
+    ]) {
+      expect([r.status, r.headers.get('location')]).toEqual([303, '/account/sign-in/']);
+    }
+    expect(await count('SELECT count(*)::int AS n FROM accounts WHERE email = $1', [A])).toBe(1);
+  });
+
+  it('deleting an account leaves no row in any of the seven personal-data tables, and none of B is touched', async () => {
+    const a = await holder('da');
+    const b = await holder('db');
+    await link(a.email); // an unused sign-in link (no foreign key: removed by address)
+    const teen = await signUp(db, { email: `p3e-teen-${k++}@example.test`, dateOfBirth: '2011-12-01', parentEmail: 'p3e-parent@example.test' }, T0);
+    if (teen.status !== 'created') throw new Error('sign-up failed');
+    await db.query('UPDATE accounts SET verified_at = $2 WHERE id = $1', [teen.accountId, T0.toISOString()]);
+    expect(await issueConsentTokens(db, teen.accountId, T0)).not.toBeNull();
+    const teenEmail = (await db.query<{ email: string }>('SELECT email FROM accounts WHERE id = $1', [teen.accountId])).rows[0].email;
+    await link(teenEmail);
+    const owned = ['accounts WHERE id', 'account_sessions WHERE account_id', 'account_consent_tokens WHERE account_id', 'child_profiles WHERE account_id', 'profile_interests WHERE account_id', 'item_responses WHERE account_id'];
+    const rows = (t: string, id: string) => count(`SELECT count(*)::int AS n FROM ${t} = $1`, [id]);
+    expect(await rows(owned[2], teen.accountId)).toBeGreaterThan(0);
+
+    expect(await deleteOwnAccount(db, a.accountId, a.email)).toBe('deleted');
+    expect(await deleteOwnAccount(db, teen.accountId, teenEmail)).toBe('deleted');
+    for (const id of [a.accountId, teen.accountId]) {
+      for (const t of owned) expect(await rows(t, id), `${t} ${id}`).toBe(0);
+    }
+    for (const e of [a.email, teenEmail]) {
+      expect(await count('SELECT count(*)::int AS n FROM account_login_tokens WHERE email = $1', [e])).toBe(0);
+    }
+    for (const t of owned.filter((t) => !t.includes('consent'))) expect(await rows(t, b.accountId), `B ${t}`).toBeGreaterThan(0);
+  });
+
+  it('the inactivity sweep spares accounts with a recent sign-in, a recent answer, or a stale notice and recent activity', async () => {
+    const later = new Date(NOW.getTime() + 731 * DAY); // answers in holder() are dated NOW
+    const recent = new Date(later.getTime() - 10 * DAY);
+    const bySignIn = await holder('ia');
+    const byAnswer = await holder('ib');
+    const staleNotice = await holder('ic');
+    const idle = await holder('id');
+    // everyone last signed in at T0; one signed in again recently, one answered recently, one has a 31-day-old notice
+    await consumeAccountLink(db, (await requestAccountLink(db, bySignIn.email, env, recent))!, recent);
+    await recordAnswer(db, { accountId: byAnswer.accountId, profileId: null }, await item(`p3e-late-${k++}`), true, recent);
+    await consumeAccountLink(db, (await requestAccountLink(db, staleNotice.email, env, recent))!, recent);
+    await db.query('UPDATE accounts SET inactivity_notice_at = $2 WHERE id = $1', [staleNotice.accountId, new Date(later.getTime() - 31 * DAY).toISOString()]);
+    const sent: string[] = [];
+    const r = await runInactivitySweep(db, later, async (m) => void sent.push(m.to), { base: 'https://example.test' }, { dbNow: async () => later });
+    expect(r.failed).toBe(0);
+    for (const a of [bySignIn, byAnswer, staleNotice]) {
+      expect(sent, a.email).not.toContain(a.email);
+      expect(await count('SELECT count(*)::int AS n FROM accounts WHERE id = $1 AND inactivity_notice_at IS NULL', [a.accountId])).toBe(1);
+    }
+    // control: the idle account is noticed, and not deleted the same day
+    expect(sent).toContain(idle.email);
+    expect(await count('SELECT count(*)::int AS n FROM accounts WHERE id = $1', [idle.accountId])).toBe(1);
+  });
+
+  it('an unsubscribe token for one kind cannot change another kind, or another account', async () => {
+    const SECRET = 'p3e-isolation-secret-0123456789abcdef-not-real';
+    const a = await holder('ua');
+    const b = await holder('ub');
+    const all = { timeZone: 'UTC', notify: { dailySet: true, weeklyCircle: true, invites: true } };
+    expect(await saveSettings(db, a.accountId, all)).toBe('ok');
+    expect(await saveSettings(db, b.accountId, all)).toBe('ok');
+    const tok = unsubscribeToken(SECRET, a.accountId, 'daily_set')!;
+    const [id, , sig] = tok.split('.');
+    for (const forged of [`${id}.invites.${sig}`, `${id}.weekly_circle.${sig}`, `${b.accountId}.daily_set.${sig}`, `${tok}.x`, tok.toUpperCase()]) {
+      expect(readUnsubscribeToken(SECRET, forged), forged).toBeNull();
+    }
+    expect(readUnsubscribeToken('p3e-another-secret-0123456789abcdef-xx', tok)).toBeNull();
+    const read = readUnsubscribeToken(SECRET, tok)!;
+    expect(read).toEqual({ accountId: a.accountId, kind: 'daily_set' });
+    expect(await applyUnsubscribe(db, read.accountId, read.kind)).toBe(true);
+    expect((await getSettings(db, a.accountId))?.notify).toEqual({ dailySet: false, weeklyCircle: true, invites: true });
+    expect((await getSettings(db, b.accountId))?.notify).toEqual({ dailySet: true, weeklyCircle: true, invites: true });
+  });
+});
+
 describe('arrives with later features', () => {
   // The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
   it.todo('child profile -> adults item denied at the daily set and email routes (these routes do not exist yet)');
+  // child profile -> settings, export, delete and PIN reset denied: covered above (plan 3E, Task 4).
   it.todo('child profile -> invites, comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
   it.todo('13-15 account -> public comment, community join, contribute denied (route level; the capability rows above are covered through can())');
   it.todo('non-member -> circle denied');

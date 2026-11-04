@@ -120,6 +120,6 @@ Notes from the final reviews (3 November 2026). Not built in 3A.
 - **Owner to reconcile before Project 4:** the spec's risk table says no profile pages exist for anyone, while 4a.5 and `lib/accounts/policy.ts` give `profile_page` to 16 and over.
 - Done in 3A (final residuals): a database error on link confirm (e.g. a lock wait past the 3 s `statement_timeout`) now returns the generic invalid-link page instead of a 500.
 - **3C (child profiles), done in 3C:** an adult's `create_child_profile` needs a recorded guardian confirmation, not `can` alone; a child profile's audience scope passes `['kids', 'all']`.
-- **3D (interests, dashboard, stored answers), done in 3D:** interests, `/me`, first-answer storage and the session-derived scope (isolation rows in `account-isolation.test.ts`). **Remaining for 3E:** export `profile_interests` and `item_responses`; deletion already cascades.
-- **3E (export and deletion):** delete `account_login_tokens` by email on account deletion (there is no foreign key); list every personal-data table in `docs/OPERATIONS.md` (Accounts, "Personal data held") in the export test.
+- **3D (interests, dashboard, stored answers), done in 3D:** interests, `/me`, first-answer storage and the session-derived scope (isolation rows in `account-isolation.test.ts`). **Done in 3E:** both tables are in the export; deletion cascades.
+- **3E (export and deletion), done in 3E:** delete `account_login_tokens` by email on account deletion (there is no foreign key); list every personal-data table in `docs/OPERATIONS.md` (Accounts, "Personal data held") in the export test.
 - **Go-live gates:** professional privacy review, the 3B consent flow, a 320px and screen-reader pass.
