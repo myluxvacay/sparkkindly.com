@@ -235,3 +235,53 @@ describe('confirmAccountLink', () => {
     expect((await getAccount(db, s, NOW))?.email).toBe('stay@example.test');
   });
 });
+
+describe('residuals: budget scope, mint order, raw email', () => {
+  const verified = async (e: string) => {
+    await signUp(db, { email: e, dateOfBirth: '1990-05-05' }, NOW);
+    await db.query('UPDATE accounts SET verified_at = $2 WHERE email = $1', [e, NOW.toISOString()]);
+  };
+
+  it('sign-up traffic exhausting the budget never blocks a verified member, but blocks an unverified address; same answer', async () => {
+    const budget = createSendBudget({ perHour: 3, clock: () => 0, warn: () => {} });
+    for (let i = 0; i < 5; i++) await signUpPost(`flood${i}@example.test`, [], { budget }, `198.51.${i}.1`);
+    await verified('member@example.test');
+    await signUp(db, { email: 'pending@example.test', dateOfBirth: '1990-05-05' }, NOW);
+    const sentM: EmailMessage[] = [];
+    const sentP: EmailMessage[] = [];
+    const m = await signIn('member@example.test', sentM, { budget }, '198.51.100.7');
+    const p = await signIn('pending@example.test', sentP, { budget }, '198.51.100.8');
+    const u = await signIn('nobody-here@example.test', [], { budget }, '198.51.100.9');
+    expect(sentM).toHaveLength(1);
+    expect(sentP).toHaveLength(0);
+    expect(await snapshot(m)).toEqual(await snapshot(p));
+    expect(await snapshot(p)).toEqual(await snapshot(u));
+  });
+
+  it('a budget-blocked request does not spend the address hourly mint allowance', async () => {
+    const links = createAccountLinkLimits(() => 0);
+    const mint = vi.spyOn(links, 'mint');
+    const budget = createSendBudget({ perHour: 0, clock: () => 0, warn: () => {} });
+    await signUp(db, { email: 'nomint@example.test', dateOfBirth: '1990-05-05' }, NOW);
+    await signIn('nomint@example.test', [], { links, budget }, '198.51.100.20');
+    expect(mint).not.toHaveBeenCalled();
+  });
+
+  it('a Kelvin-sign address is invalid at the sign-up route and writes no row', async () => {
+    const before = await count('accounts');
+    const r = await signUpPost('admin\u212A@example.test');
+    expect(r.headers.get('location')).toBe('/account/sign-up/?invalid=1');
+    expect(await count('accounts')).toBe(before);
+  });
+
+  it('a Kelvin-sign variant of a known address gets no link at the sign-in route, and the same answer', async () => {
+    await verified('admink@example.test');
+    const sent: EmailMessage[] = [];
+    const tokens = await count('account_login_tokens');
+    const k = await signIn('admin\u212A@example.test', sent, {}, '198.51.100.30');
+    const u = await signIn('nobody2@example.test', [], {}, '198.51.100.31');
+    expect(sent).toHaveLength(0);
+    expect(await count('account_login_tokens')).toBe(tokens);
+    expect(await snapshot(k)).toEqual(await snapshot(u));
+  });
+});

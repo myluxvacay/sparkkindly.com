@@ -9,8 +9,8 @@ import type { Db } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { accountLinkLimits, accountSendBudget, confirmLimits, signUpLimits } from './limits';
-import { accountExists, consumeAccountLink, endAccountSession, hasFreshLink, requestAccountLink } from './sessions';
-import { signUp } from './signup';
+import { accountStatus, consumeAccountLink, endAccountSession, hasFreshLink, requestAccountLink } from './sessions';
+import { normalizeEmail, signUp } from './signup';
 
 export const ACCOUNT_COOKIE = '__Host-sk_account';
 const SESSION_SECONDS = 30 * 24 * 60 * 60;
@@ -34,12 +34,17 @@ const forbidden = () => new Response('Forbidden', { status: 403 });
 const tooMany = () => new Response('Too many attempts. Please try again later.', { status: 429, headers: { 'Retry-After': '3600' } });
 
 // Mints and emails a sign-in link to a known address; does nothing for an unknown one. Runs after the response.
-async function emailLink(d: Deps, email: string, ip: string, links: typeof accountLinkLimits): Promise<void> {
+// The per-address allowance is spent only for a real account without a link from the last minute, so unknown
+// addresses use (and grow) nothing and a burst for one address mints once. The site-wide budget is checked before the
+// mint (a budget-blocked request spends no mint) and applies to sign-up sends and to unverified addresses only, so
+// anonymous sign-up traffic can never starve a verified member's sign-in link.
+async function emailLink(d: Deps, email: string, ip: string, links: typeof accountLinkLimits, fromSignUp: boolean): Promise<void> {
   try {
-    // The per-address allowance is spent only for a real account without a link from the last minute, so unknown
-    // addresses use (and grow) nothing and a burst for one address mints once. The site-wide budget is spent last.
-    if (!links.client(ip) || !(await accountExists(d.db, email))) return;
-    if ((await hasFreshLink(d.db, email, d.now)) || !links.mint(email) || !(d.budget ?? accountSendBudget)()) return;
+    if (!links.client(ip)) return;
+    const status = await accountStatus(d.db, email);
+    if (!status || (await hasFreshLink(d.db, email, d.now))) return;
+    if ((fromSignUp || status === 'unverified') && !(d.budget ?? accountSendBudget)()) return;
+    if (!links.mint(email)) return;
     const token = await requestAccountLink(d.db, email, d.env, d.now);
     if (!token) return;
     await d.send({
@@ -55,11 +60,13 @@ async function emailLink(d: Deps, email: string, ip: string, links: typeof accou
 export async function requestAccountSignIn(request: Request, d: Deps): Promise<Response> {
   if (!sameOrigin(request)) return forbidden();
   const form = await readForm(request);
-  const email = form?.get('email')?.trim().toLowerCase() ?? '';
+  // The same ASCII-only rule as sign-up, on the raw value, so a lookalike (Kelvin sign) never lower-cases into a
+  // real address. Anything else gets the same answer and nothing runs.
+  const email = normalizeEmail(form?.get('email'));
   const done = seeOther('/account/sign-in/?sent=1');
-  if (!form || email.length > 254) return done;
+  if (!email) return done;
   const ip = clientKey(request);
-  d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits));
+  d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits, false));
   return done;
 }
 
@@ -69,10 +76,10 @@ export async function submitSignUp(request: Request, d: Deps): Promise<Response>
   if (!form) return seeOther('/account/sign-up/?invalid=1');
   const ip = clientKey(request);
   if (!(d.signUps ?? signUpLimits).signUp(ip)) return tooMany();
-  const email = form.get('email')?.trim().toLowerCase() ?? '';
+  // Raw values: signUp validates (ASCII only) before it lower-cases.
   const result = await signUp(
     d.db,
-    { email, dateOfBirth: form.get('dob'), parentEmail: form.get('parent_email'), timeZone: form.get('time_zone') },
+    { email: form.get('email'), dateOfBirth: form.get('dob'), parentEmail: form.get('parent_email'), timeZone: form.get('time_zone') },
     d.now,
   );
   switch (result.status) {
@@ -83,9 +90,12 @@ export async function submitSignUp(request: Request, d: Deps): Promise<Response>
       return seeOther('/account/sign-up/?r=b');
     case 'invalid':
       return seeOther('/account/sign-up/?invalid=1');
-    default: // created and exists look the same, and both send a sign-in link
-      d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits));
+    default: {
+      // created and exists look the same, and both send a sign-in link (signUp accepted the address, so it normalizes)
+      const email = normalizeEmail(form.get('email'))!;
+      d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits, true));
       return seeOther('/account/sign-up/?sent=1');
+    }
   }
 }
 

@@ -17,9 +17,13 @@ const later = (now: Date, ms: number) => new Date(now.getTime() + ms).toISOStrin
 
 export type AccountView = { id: string; email: string; ageGroup: AgeGroup; consent: Consent };
 
-export async function accountExists(db: Queryable, email: string): Promise<boolean> {
-  const r = await db.query('SELECT 1 FROM accounts WHERE email = $1', [email]);
-  return r.rows.length === 1;
+// Whether an address has an account, and whether it has ever signed in (verified), or null for no account.
+export async function accountStatus(db: Queryable, email: string): Promise<'verified' | 'unverified' | null> {
+  const r = await db.query<{ verified: boolean }>('SELECT verified_at IS NOT NULL AS verified FROM accounts WHERE email = $1', [
+    email,
+  ]);
+  const row = r.rows[0];
+  return row ? (row.verified ? 'verified' : 'unverified') : null;
 }
 
 // A single-use link token for a known address, or null (and nothing written) for an unknown one. The route answers

@@ -16,7 +16,8 @@ const PART = '[\\x21-\\x3f\\x41-\\x7e]+';
 const EMAIL = new RegExp(`^${PART}@${PART}\\.${PART}$`);
 const ZONES = new Set<string>(Intl.supportedValuesOf('timeZone'));
 
-function cleanEmail(v: unknown): string | null {
+// The stored form of an address (trimmed, ASCII-checked, lower-cased), or null. Shared with the sign-in route.
+export function normalizeEmail(v: unknown): string | null {
   if (typeof v !== 'string') {
     return null;
   }
@@ -31,7 +32,7 @@ function cleanZone(v: unknown): string {
 }
 
 export async function signUp(db: Db, input: SignUpInput, now: Date): Promise<SignUpResult> {
-  const email = cleanEmail(input.email);
+  const email = normalizeEmail(input.email);
   const group = typeof input.dateOfBirth === 'string' ? ageGroupFor(input.dateOfBirth, now) : null;
   if (!email || !group) {
     return { status: 'invalid' };
@@ -41,7 +42,7 @@ export async function signUp(db: Db, input: SignUpInput, now: Date): Promise<Sig
   }
   let parent: string | null = null;
   if (group === 'teen_13_15') {
-    parent = cleanEmail(input.parentEmail);
+    parent = normalizeEmail(input.parentEmail);
     if (!parent || parent === email) {
       return { status: 'parent_required' };
     }
