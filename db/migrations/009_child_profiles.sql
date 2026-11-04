@@ -4,7 +4,7 @@
 -- Held about a child: display name, age band, owner and created_at. Never an email, date of birth or free text.
 -- Deleting an account cascades its profiles; deleting a profile sets any session's active_profile_id to NULL.
 -- Rollback: ALTER TABLE account_sessions DROP COLUMN active_profile_id; DROP TABLE child_profiles;
--- ALTER TABLE accounts DROP COLUMN guardian_confirmed_at, DROP COLUMN pin_hash, DROP COLUMN pin_failures,
+-- ALTER TABLE accounts DROP COLUMN guardian_confirmed_at, DROP COLUMN pin_hash, DROP COLUMN pin_failures, DROP COLUMN pin_lock_count,
 -- DROP COLUMN pin_locked_until; DELETE FROM schema_migrations WHERE name = '009_child_profiles.sql'.
 CREATE TABLE child_profiles (
   id           uuid PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -20,6 +20,7 @@ ALTER TABLE accounts
   ADD COLUMN guardian_confirmed_at timestamptz,
   ADD COLUMN pin_hash text,
   ADD COLUMN pin_failures int NOT NULL DEFAULT 0,
+  ADD COLUMN pin_lock_count int NOT NULL DEFAULT 0,
   ADD COLUMN pin_locked_until timestamptz;
 
 ALTER TABLE account_sessions ADD COLUMN active_profile_id uuid REFERENCES child_profiles (id) ON DELETE SET NULL;

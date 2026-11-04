@@ -112,3 +112,45 @@ describe('checkPin', () => {
     expect(await checkPin(db, b, '1234', T0)).toBe('ok');
   });
 });
+
+describe('escalating lock', () => {
+  const lockOut = async (id: string, at: Date) => {
+    for (let i = 0; i < 5; i++) {
+      await checkPin(db, id, '0000', at);
+    }
+  };
+  const HOUR = 60 * MIN;
+
+  it('doubles each lock: 15 min, 30, 60, and a correct PIN while locked is still refused', async () => {
+    const id = await adult();
+    await setPin(db, id, '1234');
+    await lockOut(id, T0);
+    expect(await checkPin(db, id, '1234', plus(T0, 14 * MIN))).toBe('locked');
+    const t1 = plus(T0, 15 * MIN);
+    await lockOut(id, t1);
+    expect(await checkPin(db, id, '1234', plus(t1, 29 * MIN))).toBe('locked');
+    const t2 = plus(t1, 30 * MIN);
+    await lockOut(id, t2);
+    expect(await checkPin(db, id, '1234', plus(t2, 59 * MIN))).toBe('locked');
+    expect(await checkPin(db, id, '1234', plus(t2, 60 * MIN))).toBe('ok');
+  });
+
+  it('is capped at 24 hours', async () => {
+    const id = await adult();
+    await setPin(db, id, '1234');
+    await db.query('UPDATE accounts SET pin_lock_count = 30 WHERE id = $1', [id]);
+    await lockOut(id, T0);
+    expect(await checkPin(db, id, '1234', plus(T0, 24 * HOUR - MIN))).toBe('locked');
+    expect(await checkPin(db, id, '1234', plus(T0, 24 * HOUR))).toBe('ok');
+  });
+
+  it('a correct PIN resets the lock count so the next lock is 15 minutes again', async () => {
+    const id = await adult();
+    await setPin(db, id, '1234');
+    await lockOut(id, T0);
+    const t1 = plus(T0, 15 * MIN);
+    expect(await checkPin(db, id, '1234', t1)).toBe('ok');
+    await lockOut(id, t1);
+    expect(await checkPin(db, id, '1234', plus(t1, 15 * MIN))).toBe('ok');
+  });
+});
