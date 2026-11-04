@@ -1,6 +1,6 @@
 import { readCapped } from '@/lib/agents/http';
 import { getDb } from '@/lib/db';
-import { anonymousScope } from '@/lib/public/scope';
+import { currentScope } from '@/lib/accounts/scope-next';
 import { submitReport, checkReportRate } from '@/lib/reports/submit';
 
 export const dynamic = 'force-dynamic';
@@ -38,7 +38,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ wor
   const form = new URLSearchParams(new TextDecoder().decode(bytes));
 
   const { world, slug } = await params;
-  const result = await submitReport(getDb(), anonymousScope(), {
+  const result = await submitReport(getDb(), await currentScope(), {
     world,
     slug,
     reason: form.get('reason'),

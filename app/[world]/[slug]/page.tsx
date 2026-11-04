@@ -16,7 +16,7 @@ import { formatDay } from '@/lib/public/dates';
 import { articleLd, breadcrumbLd } from '@/lib/public/jsonld';
 import type { SearchParams } from '@/lib/public/play-params';
 import { getPublicItem, listPublic } from '@/lib/public/reads';
-import { anonymousScope } from '@/lib/public/scope';
+import { currentScope } from '@/lib/accounts/scope-next';
 import { getWorld } from '@/lib/public/worlds';
 import { JsonLd, metadata as seo } from '@/lib/seo';
 
@@ -25,7 +25,7 @@ export const dynamic = 'force-dynamic';
 type Props = { params: Promise<{ world: string; slug: string }>; searchParams: Promise<SearchParams> };
 
 // One database read per request, shared by the metadata and the page.
-const loadItem = cache((world: string, slug: string) => getPublicItem(getDb(), anonymousScope(), world, slug));
+const loadItem = cache(async (world: string, slug: string) => getPublicItem(getDb(), await currentScope(), world, slug));
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { world, slug } = await params;
@@ -45,7 +45,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
   if (!item) notFound();
   const db = getDb();
   const w = await getWorld(db, item.world);
-  const related = (await listPublic(db, anonymousScope(), { world: item.world, limit: 4, offset: 0 })).filter((i) => i.id !== item.id).slice(0, 3);
+  const related = (await listPublic(db, await currentScope(), { world: item.world, limit: 4, offset: 0 })).filter((i) => i.id !== item.id).slice(0, 3);
 
   const isArticle = item.kind === 'article';
   const article = readArticle(item.body);

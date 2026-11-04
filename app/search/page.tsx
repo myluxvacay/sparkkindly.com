@@ -4,7 +4,7 @@ import Pager from '@/components/Pager';
 import { getDb } from '@/lib/db';
 import { PAGE_SIZE, parsePage } from '@/lib/public/paging';
 import { searchPublic } from '@/lib/public/reads';
-import { anonymousScope } from '@/lib/public/scope';
+import { currentScope } from '@/lib/accounts/scope-next';
 import { listWorlds } from '@/lib/public/worlds';
 
 export const dynamic = 'force-dynamic';
@@ -21,7 +21,7 @@ export default async function SearchPage({ searchParams }: Props) {
   const q = trimmed.slice(0, MAX_Q);
   const page = parsePage(sp.page);
   const db = getDb();
-  const rows = q ? await searchPublic(db, anonymousScope(), q, { limit: PAGE_SIZE + 1, offset: (page - 1) * PAGE_SIZE }) : [];
+  const rows = q ? await searchPublic(db, await currentScope(), q, { limit: PAGE_SIZE + 1, offset: (page - 1) * PAGE_SIZE }) : [];
   const items = rows.slice(0, PAGE_SIZE);
   const worlds = new Map((await listWorlds(db)).map((w) => [w.slug, w]));
   const href = (p: number) => `/search/?q=${encodeURIComponent(q)}${p > 1 ? `&page=${p}` : ''}`;

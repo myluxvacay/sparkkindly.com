@@ -3,7 +3,7 @@ import { getDb } from '@/lib/db';
 import type { PublicItem } from '@/lib/items/repo';
 import { playResult } from '@/lib/play/answer';
 import { readPlay } from '@/lib/public/body';
-import { anonymousScope } from '@/lib/public/scope';
+import { currentScope } from '@/lib/accounts/scope-next';
 import { clueCount, hasResponse, toParams, type SearchParams } from '@/lib/public/play-params';
 import PlayForm from './PlayForm';
 import PlayResult from './PlayResult';
@@ -14,7 +14,7 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
   const action = `/${item.world}/${item.slug}/`;
   const play = readPlay(item.body);
   const params = toParams(searchParams);
-  const result = hasResponse(params) ? await playResult(getDb(), anonymousScope(), item.world, item.slug, params) : null;
+  const result = hasResponse(params) ? await playResult(getDb(), await currentScope(), item.world, item.slug, params) : null;
   const invalidHint =
     play.mechanic === 'put_in_order'
       ? `Please give each item a different position from 1 to ${play.items.length}, then check again.`

@@ -4,7 +4,7 @@ import ItemCard from '@/components/item/ItemCard';
 import Breadcrumb from '@/components/Breadcrumb';
 import Pager from '@/components/Pager';
 import { getDb } from '@/lib/db';
-import { anonymousScope } from '@/lib/public/scope';
+import { currentScope } from '@/lib/accounts/scope-next';
 import { getWorld } from '@/lib/public/worlds';
 import { listPublic } from '@/lib/public/reads';
 import { PAGE_SIZE, parsePage } from '@/lib/public/paging';
@@ -27,7 +27,7 @@ export default async function WorldPage({ params, searchParams }: Props) {
   const w = await getWorld(db, world);
   if (!w) notFound();
   // One extra row tells us whether a next page exists without a count query.
-  const rows = await listPublic(db, anonymousScope(), { world: w.slug, limit: PAGE_SIZE + 1, offset: (page - 1) * PAGE_SIZE });
+  const rows = await listPublic(db, await currentScope(), { world: w.slug, limit: PAGE_SIZE + 1, offset: (page - 1) * PAGE_SIZE });
   const items = rows.slice(0, PAGE_SIZE);
   const hasNext = rows.length > PAGE_SIZE;
   const feature = page === 1 ? items[0] : undefined;

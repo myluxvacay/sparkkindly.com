@@ -4,7 +4,7 @@ import Pager from '@/components/Pager';
 import { getDb } from '@/lib/db';
 import { PAGE_SIZE, parsePage } from '@/lib/public/paging';
 import { listQuizzes } from '@/lib/public/reads';
-import { anonymousScope } from '@/lib/public/scope';
+import { currentScope } from '@/lib/accounts/scope-next';
 import { listWorlds } from '@/lib/public/worlds';
 import { metadata as seo } from '@/lib/seo';
 
@@ -14,7 +14,7 @@ export const metadata = seo('Quiz archive', 'Every published SparkKindly quiz, n
 export default async function Archive({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
   const page = parsePage((await searchParams).page);
   const db = getDb();
-  const rows = await listQuizzes(db, anonymousScope(), { limit: PAGE_SIZE + 1, offset: (page - 1) * PAGE_SIZE });
+  const rows = await listQuizzes(db, await currentScope(), { limit: PAGE_SIZE + 1, offset: (page - 1) * PAGE_SIZE });
   const items = rows.slice(0, PAGE_SIZE);
   const worlds = new Map((await listWorlds(db)).map((w) => [w.slug, w]));
   const here = '/quiz/archive/';

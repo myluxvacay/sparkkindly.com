@@ -13,6 +13,9 @@ import { getContext, requireAdultContext, switchToAdult, switchToProfile } from 
 import { checkPin } from '@/lib/accounts/pin';
 import { changePinRequest, createChildRequest, deleteChildRequest, switchToChildRequest } from '@/lib/accounts/children-web';
 import { issueConsentTokens, consentTarget, confirmConsent, withdrawConsent } from '@/lib/accounts/consent';
+import { scopeForSession } from '@/lib/accounts/scope';
+import { seedReference } from '@/db/seed';
+import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, searchPublic } from '@/lib/public/reads';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -391,10 +394,74 @@ describe('child profiles (plan 3C): the child context is a security boundary', (
   });
 });
 
+describe('child profile -> adults item denied on the public reads, through the session scope (plan 3D, Task 2)', () => {
+  // Every public page and route reads with currentScope() (lib/accounts/scope-next.ts) -> scopeForSession; the share
+  // image route reads through getPublicItem, so the detail row covers it.
+  const page = { limit: 50, offset: 0 };
+  let child = '';
+  let adult = '';
+  const slugs = (items: { slug: string }[]) => items.map((i) => i.slug);
+  async function put(slug: string, kind: string, audience: string) {
+    const r = await db.query<{ id: string }>(
+      `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, published_at, created_by, risk_tier, approved_by)
+       SELECT id, $2, $1, 'Quokkaline ' || $1, 'A quokkaline summary.', '{}'::jsonb, $3, 'published', '2026-10-31T00:00:00Z', 'test', 'computable', 'test'
+       FROM worlds WHERE slug = 'grow' RETURNING id`,
+      [slug, kind, audience],
+    );
+    await db.query("INSERT INTO item_topics (item_id, topic_id) SELECT $1, id FROM topics WHERE slug = 'physics'", [r.rows[0].id]);
+  }
+
+  beforeAll(async () => {
+    await seedReference(db);
+    await put('iso-adults-article', 'article', 'adults');
+    await put('iso-adults-quiz', 'quiz', 'adults');
+    await put('iso-all-article', 'article', 'all');
+    const email = 'scope-family@example.test';
+    const r = await signUp(db, { email, dateOfBirth: '1984-04-04' }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    const p = await createChildProfile(db, r.accountId, { displayName: 'Ivy', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (p.status !== 'created') throw new Error('profile not created');
+    child = await signIn(email);
+    adult = await signIn(email);
+    expect(await switchToProfile(db, child, p.profileId, T0)).toBe(true);
+  });
+
+  it('detail (item page, report page, share image): null for the child, the item for the adult and anonymous', async () => {
+    const asChild = await scopeForSession(db, child, T0);
+    expect(await getPublicItem(db, asChild, 'grow', 'iso-adults-article')).toBeNull();
+    expect((await getPublicItem(db, asChild, 'grow', 'iso-all-article'))?.slug).toBe('iso-all-article');
+    for (const token of [adult, undefined]) {
+      expect((await getPublicItem(db, await scopeForSession(db, token, T0), 'grow', 'iso-adults-article'))?.slug).toBe('iso-adults-article');
+    }
+  });
+
+  it('world list, topic list, search and every quiz read exclude adults items for the child only', async () => {
+    const reads = async (token: string | undefined) => {
+      const s = await scopeForSession(db, token, T0);
+      return [
+        ...slugs(await listPublic(db, s, { world: 'grow', ...page })),
+        ...slugs(await listPublic(db, s, { topic: 'physics', ...page })),
+        ...slugs(await searchPublic(db, s, 'quokkaline', page)),
+        ...slugs(await listQuizzes(db, s, page)),
+        (await latestQuiz(db, s))?.slug,
+        (await findQuizBySlug(db, s, 'iso-adults-quiz'))?.slug,
+      ];
+    };
+    const asChild = await reads(child);
+    expect(asChild).not.toContain('iso-adults-article');
+    expect(asChild).not.toContain('iso-adults-quiz');
+    expect(asChild).toContain('iso-all-article');
+    for (const token of [adult, undefined]) {
+      const seen = await reads(token);
+      expect(seen).toContain('iso-adults-article');
+      expect(seen).toContain('iso-adults-quiz');
+    }
+  });
+});
+
 describe('arrives with later features', () => {
-  // The content routes that would carry an `adults` item to a child (list, detail, search, dashboard, daily set, email)
-  // take the audience list from getContext (tested above); each route adds its own row when it adopts it (3D, 3E, Project 4).
-  it.todo('child profile -> adults item denied at each content route that takes the context audiences (dashboard, daily set, email)');
+  // The public reads take the session scope (tested above); later content routes add their own row when they adopt it.
+  it.todo('child profile -> adults item denied at each later content route that takes the context audiences (dashboard, daily set, email)');
   it.todo('child profile -> invites, comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
   it.todo('13-15 account -> public comment, community join, contribute denied (route level; the capability rows above are covered through can())');
   it.todo('non-member -> circle denied');

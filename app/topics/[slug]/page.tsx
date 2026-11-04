@@ -4,7 +4,7 @@ import ItemCard from '@/components/item/ItemCard';
 import Breadcrumb from '@/components/Breadcrumb';
 import Pager from '@/components/Pager';
 import { getDb } from '@/lib/db';
-import { anonymousScope } from '@/lib/public/scope';
+import { currentScope } from '@/lib/accounts/scope-next';
 import { getTopic, listWorlds } from '@/lib/public/worlds';
 import { listPublic } from '@/lib/public/reads';
 import { PAGE_SIZE, parsePage } from '@/lib/public/paging';
@@ -26,7 +26,7 @@ export default async function TopicPage({ params, searchParams }: Props) {
   const topic = await getTopic(db, slug);
   if (!topic) notFound();
   const [rows, worlds] = await Promise.all([
-    listPublic(db, anonymousScope(), { topic: topic.slug, limit: PAGE_SIZE + 1, offset: (page - 1) * PAGE_SIZE }),
+    listPublic(db, await currentScope(), { topic: topic.slug, limit: PAGE_SIZE + 1, offset: (page - 1) * PAGE_SIZE }),
     listWorlds(db),
   ]);
   const byWorld = new Map(worlds.map((w) => [w.slug, w]));

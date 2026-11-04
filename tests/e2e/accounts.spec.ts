@@ -1,7 +1,7 @@
 import { createHash, randomBytes } from 'node:crypto';
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { sql } from './helpers/fixtures';
+import { addItem, sql } from './helpers/fixtures';
 import { BASE, FORM, ORIGIN, form } from './helpers/admin';
 
 // Member accounts (Project 3A, Task 4). The preview server on 4173 runs with ACCOUNTS_ENABLED=true; the server on
@@ -472,6 +472,61 @@ test('after five wrong PINs the switch-back page says to try later, with no coun
   await expect(page.locator('#result')).toHaveText(
     'Too many tries. Please try again later, or ask an adult to sign in again with an email link.',
   );
+});
+
+// Session-derived scope on the public pages (Project 3D, Task 2): a child profile never receives an `adults` item.
+test('a child profile gets a 404 for an adults item, its world page and search omit it, anonymous visitors still see it', async ({ page, request, browser }) => {
+  const slug = `e2e-scope-adults-${Date.now()}`;
+  const title = 'Zephyrion grown-up scope fixture';
+  await addItem({ world: 'grow', slug, audience: 'adults', title });
+  try {
+    const itemUrl = `/grow/${slug}/`;
+    const imageUrl = `/api/template-image/grow/${slug}/`;
+    const listed = (p: Page) => p.getByRole('link', { name: title });
+
+    // Anonymous: unchanged, item page, world list, search and a publicly cacheable share image.
+    const anon = await browser.newContext();
+    const anonPage = await anon.newPage();
+    expect((await anonPage.goto(itemUrl))?.status()).toBe(200);
+    await anonPage.goto('/grow/');
+    await expect(listed(anonPage).first()).toBeVisible();
+    await anonPage.goto('/search/?q=Zephyrion');
+    await expect(listed(anonPage).first()).toBeVisible();
+    await anon.close();
+    const anonImage = await request.get(imageUrl);
+    expect(anonImage.status()).toBe(200);
+    expect(anonImage.headers()['cache-control']).toBe('public, max-age=86400');
+
+    // An adult session sees it too, but the share image is never stored in a shared cache.
+    await signedInAdult(page);
+    const adult = await sessionCookie(page);
+    const adultImage = await request.get(imageUrl, { headers: adult });
+    expect(adultImage.status()).toBe(200);
+    expect(adultImage.headers()['cache-control']).toBe('private, no-store');
+
+    await page.goto('/account/children/');
+    await addProfile(page, 'Tia', true);
+    await page.getByRole('button', { name: 'Play as Tia' }).click();
+    await expect(page.getByRole('heading', { level: 1, name: 'Playing as Tia' })).toBeVisible();
+    const child = await sessionCookie(page);
+
+    expect((await page.goto(itemUrl))?.status()).toBe(404);
+    await expect(page.getByRole('heading', { level: 1, name: title })).toHaveCount(0);
+    await page.goto('/grow/');
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(listed(page)).toHaveCount(0);
+    await page.goto('/search/?q=Zephyrion');
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(listed(page)).toHaveCount(0);
+    const childImage = await request.get(imageUrl, { headers: child });
+    expect(childImage.status()).toBe(404);
+    expect((await request.get(`/report/grow/${slug}/`, { headers: child })).status()).toBe(404);
+
+    // The same URL still works for a visitor with no account cookie.
+    expect((await request.get(itemUrl)).status()).toBe(200);
+  } finally {
+    await sql('DELETE FROM items WHERE slug = $1', [slug]);
+  }
 });
 
 test("account A cannot open the delete page for account B's profile", async ({ page }) => {

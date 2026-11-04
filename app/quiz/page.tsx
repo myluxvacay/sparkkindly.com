@@ -3,7 +3,7 @@ import PlayPanel from '@/components/item/PlayPanel';
 import { getDb } from '@/lib/db';
 import type { SearchParams } from '@/lib/public/play-params';
 import { latestQuiz } from '@/lib/public/reads';
-import { anonymousScope } from '@/lib/public/scope';
+import { currentScope } from '@/lib/accounts/scope-next';
 import { metadata as seo } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -12,13 +12,13 @@ const TITLE = 'Today’s quiz';
 const BLURB = 'One thoughtful daily question. No timers, accounts, or public scores.';
 
 export async function generateMetadata() {
-  const quiz = await latestQuiz(getDb(), anonymousScope());
+  const quiz = await latestQuiz(getDb(), await currentScope());
   // The quiz's own page is the canonical home of the question, so /quiz/ never competes with it.
   return seo(TITLE, BLURB, quiz ? `/${quiz.world}/${quiz.slug}/` : '/quiz/');
 }
 
 export default async function QuizPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
-  const quiz = await latestQuiz(getDb(), anonymousScope());
+  const quiz = await latestQuiz(getDb(), await currentScope());
   return (
     <div className="container section quiz-page">
       <p className="eyebrow">THE DAILY SPARK</p>

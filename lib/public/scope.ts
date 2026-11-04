@@ -7,7 +7,8 @@ export type { Audience };
 export type Scope = { audiences: readonly Audience[]; now: Date };
 
 // Anonymous visitors see every audience: `adults` means "aimed at adults", not an age gate (spec, Project 1).
-// A child profile (Project 3) will pass ['kids', 'all'].
+// Pages and routes read with currentScope() (lib/accounts/scope-next.ts), which gives a child profile ['kids', 'all'];
+// only the sitemap (public indexing, never per person) uses this directly.
 export function anonymousScope(now: Date = new Date()): Scope {
   return { audiences: ['kids', 'all', 'adults'], now };
 }

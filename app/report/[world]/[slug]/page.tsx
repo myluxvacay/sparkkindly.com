@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getDb } from '@/lib/db';
-import { anonymousScope } from '@/lib/public/scope';
+import { currentScope } from '@/lib/accounts/scope-next';
 import { getPublicItem } from '@/lib/public/reads';
 
 export const dynamic = 'force-dynamic';
@@ -19,7 +19,7 @@ type Props = { params: Promise<{ world: string; slug: string }>; searchParams: P
 export default async function ReportPage({ params, searchParams }: Props) {
   const { world, slug } = await params;
   const { sent, error } = await searchParams;
-  const item = await getPublicItem(getDb(), anonymousScope(), world, slug);
+  const item = await getPublicItem(getDb(), await currentScope(), world, slug);
   if (!item) notFound();
   const itemPath = `/${encodeURIComponent(world)}/${encodeURIComponent(slug)}/`;
   const action = `/report/${encodeURIComponent(world)}/${encodeURIComponent(slug)}/submit/`;
