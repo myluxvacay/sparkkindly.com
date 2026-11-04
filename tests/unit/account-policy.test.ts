@@ -51,21 +51,22 @@ describe('ageGroupFor', () => {
   });
 });
 
-const ALL: Capability[] = [
-  'save_interests',
-  'save_answers',
-  'join_circle',
-  'create_circle',
-  'public_comment',
-  'join_community',
-  'contribute',
-  'create_child_profile',
-  'see_sponsorship',
-  'essential_email',
-  'marketing_email',
-  'invite',
-  'profile_page',
-];
+const CAPS: Record<Capability, true> = {
+  save_interests: true,
+  save_answers: true,
+  join_circle: true,
+  create_circle: true,
+  public_comment: true,
+  join_community: true,
+  contribute: true,
+  create_child_profile: true,
+  see_sponsorship: true,
+  essential_email: true,
+  marketing_email: true,
+  invite: true,
+  profile_page: true,
+};
+const ALL = Object.keys(CAPS) as Capability[];
 const without = (...no: Capability[]) => ALL.filter((c) => !no.includes(c));
 
 describe('can', () => {
@@ -80,6 +81,9 @@ describe('can', () => {
       ['save_interests', 'save_answers', 'essential_email', 'join_circle', 'create_circle', 'invite'],
     ],
     ['under_13', 'pending', []],
+    ['teen_16_17', 'pending', without('create_child_profile', 'see_sponsorship')],
+    ['adult', 'pending', ALL],
+    ['adult', 'confirmed', ALL],
     ['teen_16_17', 'none', without('create_child_profile', 'see_sponsorship')],
     ['teen_16_17', 'confirmed', without('create_child_profile', 'see_sponsorship')],
     ['adult', 'none', ALL],

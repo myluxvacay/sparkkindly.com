@@ -51,6 +51,8 @@ export async function setInterests(
     return 'invalid';
   }
   return db.transaction(async (tx) => {
+    // Serialise saves for one account (two tabs saving at once) so the delete-then-insert cannot collide.
+    await tx.query('SELECT 1 FROM accounts WHERE id = $1 FOR UPDATE', [owner.accountId]);
     if (!(await ownsProfile(tx, owner))) {
       return 'invalid';
     }

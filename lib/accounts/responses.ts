@@ -4,7 +4,17 @@
 // tests/unit/account-responses.test.ts.
 import type { Db } from '@/lib/db';
 import { isUuid } from './pin';
+import type { Audience } from '@/lib/public/scope';
 import { SAME_OWNER, validOwner, type Owner } from './interests';
+
+const OWNER = (a: string) => SAME_OWNER.replaceAll(/(account_id|profile_id)/g, `${a}.$1`);
+
+const FK_VIOLATION = '23503';
+const whole = (n: number, fallback: number) => (Number.isFinite(n) ? Math.floor(n) : fallback);
+
+// Answered items are shown only while the item is still published, in an enabled world and in an allowed audience.
+const SHOWN = `i.status = 'published' AND w.enabled AND i.audience = ANY($3::text[])`;
+const FROM_SHOWN = `FROM item_responses r JOIN items i ON i.id = r.item_id JOIN worlds w ON w.id = i.world_id`;
 
 export type Answered = { itemId: string; correct: boolean; answeredAt: Date };
 
@@ -29,39 +39,48 @@ export async function recordAnswer(
       [owner.accountId, owner.profileId, itemId, correct, now.toISOString()],
     );
     return (r.rowCount ?? 0) > 0;
-  } catch {
-    return false; // e.g. the account was deleted between the session check and this write
+  } catch (e) {
+    // Only a foreign-key violation (the account or profile was deleted between the session check and this write) is a
+    // plain "not stored"; anything else is a real fault the caller should log.
+    if ((e as { code?: string }).code === FK_VIOLATION) {
+      return false;
+    }
+    throw e;
   }
 }
 
-export async function listAnswered(db: Db, owner: Owner, page: { limit: number; offset: number }): Promise<Answered[]> {
-  if (!validOwner(owner)) {
+export async function listAnswered(
+  db: Db,
+  owner: Owner,
+  audiences: readonly Audience[],
+  page: { limit: number; offset: number },
+): Promise<Answered[]> {
+  if (!validOwner(owner) || audiences.length === 0) {
     return [];
   }
-  const r = await db.query<{
-    item_id: string;
-    correct: boolean;
-    answered_at: Date;
-  }>(
-    `SELECT item_id, correct, answered_at FROM item_responses WHERE ${SAME_OWNER}
-     ORDER BY answered_at DESC, item_id LIMIT $3 OFFSET $4`,
-    [owner.accountId, owner.profileId, page.limit, page.offset],
+  const limit = Math.min(100, Math.max(1, whole(page.limit, 20)));
+  const offset = Math.max(0, whole(page.offset, 0));
+  const r = await db.query<{ item_id: string; correct: boolean; answered_at: Date }>(
+    `SELECT r.item_id, r.correct, r.answered_at ${FROM_SHOWN}
+     WHERE ${OWNER('r')} AND ${SHOWN}
+     ORDER BY r.answered_at DESC, r.item_id LIMIT $4 OFFSET $5`,
+    [owner.accountId, owner.profileId, [...audiences], limit, offset],
   );
-  return r.rows.map((x) => ({
-    itemId: x.item_id,
-    correct: x.correct,
-    answeredAt: x.answered_at,
-  }));
+  return r.rows.map((x) => ({ itemId: x.item_id, correct: x.correct, answeredAt: x.answered_at }));
 }
 
-export async function countAnswered(db: Db, owner: Owner): Promise<{ total: number; correct: number }> {
-  if (!validOwner(owner)) {
+export async function countAnswered(
+  db: Db,
+  owner: Owner,
+  audiences: readonly Audience[],
+): Promise<{ total: number; correct: number }> {
+  if (!validOwner(owner) || audiences.length === 0) {
     return { total: 0, correct: 0 };
   }
   const r = await db.query<{ total: number; correct: number }>(
-    `SELECT count(*)::int AS total, (count(*) FILTER (WHERE correct))::int AS correct
-     FROM item_responses WHERE ${SAME_OWNER}`,
-    [owner.accountId, owner.profileId],
+    `SELECT count(*)::int AS total, (count(*) FILTER (WHERE r.correct))::int AS correct ${FROM_SHOWN}
+     WHERE ${OWNER('r')} AND ${SHOWN}`,
+    [owner.accountId, owner.profileId, [...audiences]],
   );
   return { total: r.rows[0].total, correct: r.rows[0].correct };
 }

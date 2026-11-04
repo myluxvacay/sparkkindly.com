@@ -79,6 +79,16 @@ describe('setInterests / getInterests', () => {
     expect(await rows()).toBe(0);
   });
 
+  it('two concurrent saves for the same owner do not throw and leave one consistent set', async () => {
+    const o: Owner = { accountId: await adult(), profileId: null };
+    const [x, y] = await Promise.all([
+      setInterests(db, o, { topicIds: [topics[0]], worldIds: [worlds[0]] }),
+      setInterests(db, o, { topicIds: [topics[1]], worldIds: [worlds[0]] }),
+    ]);
+    expect([x, y]).toEqual(['ok', 'ok']);
+    expect(await rows()).toBe(2);
+  });
+
   it('keeps the holder and each child profile separate', async () => {
     const acc = await adult();
     const kid = await child(acc);

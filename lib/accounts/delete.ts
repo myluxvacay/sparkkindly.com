@@ -1,5 +1,5 @@
 // Deletes an account and everything tied to it, in one transaction: the address's sign-in links (they have no foreign
-// key), then the row, which cascades sessions and consent tokens. No Next.js imports; tests/unit/account-consent.test.ts.
+// key), then the row, which cascades sessions, consent tokens, child profiles, interests and saved answers. No Next.js imports; tests/unit/account-consent.test.ts.
 import type { Db, Queryable } from '@/lib/db';
 
 export async function deleteAccount(db: Db, accountId: string): Promise<boolean> {

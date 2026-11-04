@@ -61,13 +61,15 @@ async function child(accountId: string): Promise<string> {
 }
 const rows = async () => (await db.query<{ n: number }>('SELECT count(*)::int AS n FROM item_responses')).rows[0].n;
 const page = { limit: 10, offset: 0 };
+const ALLOWED = ['kids', 'all', 'adults'] as const;
+const CHILD = ['kids', 'all'] as const;
 
 describe('recordAnswer', () => {
   it('stores the first answer and ignores the second, correctness unchanged', async () => {
     const o: Owner = { accountId: await adult(), profileId: null };
     expect(await recordAnswer(db, o, items[0], false, T0)).toBe(true);
     expect(await recordAnswer(db, o, items[0], true, T1)).toBe(false);
-    expect(await listAnswered(db, o, page)).toEqual([{ itemId: items[0], correct: false, answeredAt: T0 }]);
+    expect(await listAnswered(db, o, ALLOWED, page)).toEqual([{ itemId: items[0], correct: false, answeredAt: T0 }]);
     expect(await rows()).toBe(1);
   });
 
@@ -76,8 +78,8 @@ describe('recordAnswer', () => {
     const kid = await child(acc);
     expect(await recordAnswer(db, { accountId: acc, profileId: null }, items[0], true, T0)).toBe(true);
     expect(await recordAnswer(db, { accountId: acc, profileId: kid }, items[0], false, T0)).toBe(true);
-    expect(await countAnswered(db, { accountId: acc, profileId: null })).toEqual({ total: 1, correct: 1 });
-    expect(await countAnswered(db, { accountId: acc, profileId: kid })).toEqual({ total: 1, correct: 0 });
+    expect(await countAnswered(db, { accountId: acc, profileId: null }, ALLOWED)).toEqual({ total: 1, correct: 1 });
+    expect(await countAnswered(db, { accountId: acc, profileId: kid }, ALLOWED)).toEqual({ total: 1, correct: 0 });
   });
 
   it('refuses a foreign profile id, a bad id and an unknown item without writing', async () => {
@@ -112,18 +114,79 @@ describe('listAnswered / countAnswered', () => {
     await recordAnswer(db, o, items[1], false, new Date('2026-11-01T03:00:00Z'));
     await recordAnswer(db, o, items[2], true, new Date('2026-11-01T02:00:00Z'));
     await recordAnswer(db, { accountId: acc, profileId: kid }, items[0], true, T0);
-    expect((await listAnswered(db, o, page)).map((r) => r.itemId)).toEqual([items[1], items[2], items[0]]);
-    expect((await listAnswered(db, o, { limit: 1, offset: 1 })).map((r) => r.itemId)).toEqual([items[2]]);
-    expect(await countAnswered(db, o)).toEqual({ total: 3, correct: 2 });
-    expect(await listAnswered(db, { accountId: acc, profileId: 'nope' }, page)).toEqual([]);
-    expect(await countAnswered(db, { accountId: acc, profileId: 'nope' })).toEqual({ total: 0, correct: 0 });
+    expect((await listAnswered(db, o, ALLOWED, page)).map((r) => r.itemId)).toEqual([items[1], items[2], items[0]]);
+    expect((await listAnswered(db, o, ALLOWED, { limit: 1, offset: 1 })).map((r) => r.itemId)).toEqual([items[2]]);
+    expect(await countAnswered(db, o, ALLOWED)).toEqual({ total: 3, correct: 2 });
+    expect(await listAnswered(db, { accountId: acc, profileId: 'nope' }, ALLOWED, page)).toEqual([]);
+    expect(await countAnswered(db, { accountId: acc, profileId: 'nope' }, ALLOWED)).toEqual({ total: 0, correct: 0 });
   });
 
   it('never shows another account its rows', async () => {
     const a = await adult();
     const b = await adult();
     await recordAnswer(db, { accountId: a, profileId: null }, items[0], true, T0);
-    expect(await listAnswered(db, { accountId: b, profileId: null }, page)).toEqual([]);
+    expect(await listAnswered(db, { accountId: b, profileId: null }, ALLOWED, page)).toEqual([]);
+  });
+});
+
+describe('visibility and paging', () => {
+  const setItem = (id: string, sql: string) => db.query(`UPDATE items SET ${sql} WHERE id = $1`, [id]);
+
+  it('hides an item re-rated for adults from a child list and count, and an archived one from all', async () => {
+    const o: Owner = { accountId: await adult(), profileId: null };
+    await recordAnswer(db, o, items[0], true, T0);
+    await recordAnswer(db, o, items[1], true, T1);
+    await setItem(items[0], "audience = 'adults'");
+    expect((await listAnswered(db, o, CHILD, page)).map((r) => r.itemId)).toEqual([items[1]]);
+    expect(await countAnswered(db, o, CHILD)).toEqual({ total: 1, correct: 1 });
+    expect(await countAnswered(db, o, ALLOWED)).toEqual({ total: 2, correct: 2 });
+    await setItem(items[0], "audience = 'all'");
+    await setItem(items[1], "status = 'archived'");
+    expect((await listAnswered(db, o, ALLOWED, page)).map((r) => r.itemId)).toEqual([items[0]]);
+    expect(await countAnswered(db, o, ALLOWED)).toEqual({ total: 1, correct: 1 });
+    await setItem(items[1], "status = 'published'");
+  });
+
+  it('an empty audience list returns nothing', async () => {
+    const o: Owner = { accountId: await adult(), profileId: null };
+    await recordAnswer(db, o, items[0], true, T0);
+    expect(await listAnswered(db, o, [], page)).toEqual([]);
+    expect(await countAnswered(db, o, [])).toEqual({ total: 0, correct: 0 });
+  });
+
+  it('clamps the limit to 1..100 and the offset to >= 0, with defaults for NaN and non-integers', async () => {
+    const o: Owner = { accountId: await adult(), profileId: null };
+    await recordAnswer(db, o, items[0], true, T0);
+    await recordAnswer(db, o, items[1], true, T1);
+    const ids = async (limit: number, offset: number) => (await listAnswered(db, o, ALLOWED, { limit, offset })).length;
+    expect(await ids(0, 0)).toBe(1);
+    expect(await ids(-5, -3)).toBe(1);
+    expect(await ids(1e9, 0)).toBe(2);
+    expect(await ids(Number.NaN, Number.NaN)).toBe(2);
+    expect(await ids(1.5, 0.5)).toBe(1);
+  });
+});
+
+describe('errors', () => {
+  it('a foreign profile and an unknown item are false independently; other database errors propagate', async () => {
+    const a = await adult();
+    const kidOfB = await child(await adult());
+    expect(await recordAnswer(db, { accountId: a, profileId: kidOfB }, items[0], true, T0)).toBe(false);
+    expect(await recordAnswer(db, { accountId: a, profileId: null }, crypto.randomUUID(), true, T0)).toBe(false);
+    const broken = { ...db, query: () => Promise.reject(new Error('connection lost')) } as unknown as typeof db;
+    await expect(recordAnswer(broken, { accountId: a, profileId: null }, items[0], true, T0)).rejects.toThrow(
+      'connection lost',
+    );
+  });
+
+  it('a foreign-key violation (account deleted mid-request) is false', async () => {
+    const gone = {
+      ...db,
+      query: () => Promise.reject(Object.assign(new Error('fk'), { code: '23503' })),
+    } as unknown as typeof db;
+    expect(await recordAnswer(gone, { accountId: crypto.randomUUID(), profileId: null }, items[0], true, T0)).toBe(
+      false,
+    );
   });
 });
 
