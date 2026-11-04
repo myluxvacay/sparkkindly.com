@@ -8,6 +8,7 @@ import { requestAccountLink, consumeAccountLink, getAccount, endAccountSession }
 import { can, type AgeGroup, type Capability, type Consent } from '@/lib/accounts/policy';
 import { requestLink, consumeLink, getAdmin } from '@/lib/admin/sessions';
 import { newToken } from '@/lib/tokens';
+import { issueConsentTokens, consentTarget, confirmConsent, withdrawConsent } from '@/lib/accounts/consent';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -185,10 +186,109 @@ describe('scope comes from the session, never a client id', () => {
   });
 });
 
+describe('parental consent: capabilities follow the stored state, tokens reach only their own account', () => {
+  const PARENT = 'parent@example.test';
+  const capsOf = async (session: string) => {
+    const a = (await getAccount(db, session, T0))!;
+    return (['join_circle', 'invite', 'public_comment', 'join_community', 'contribute', 'profile_page', 'create_child_profile'] as Capability[]).filter(
+      (c) => can(a.ageGroup, a.consent, c),
+    );
+  };
+  async function teen(email: string, dob = '2011-12-01') {
+    const r = await signUp(db, { email, dateOfBirth: dob, parentEmail: PARENT }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    await db.query('UPDATE accounts SET verified_at = $2 WHERE id = $1', [r.accountId, T0.toISOString()]);
+    return r.accountId;
+  }
+  const exists = async (id: string) => (await db.query('SELECT 1 FROM accounts WHERE id = $1', [id])).rows.length === 1;
+
+  it('a real 13-15 account is pending (nothing) until the parent confirms, then gets circles and invites only', async () => {
+    const id = await teen('t1@example.test');
+    const s = await signIn('t1@example.test');
+    expect((await getAccount(db, s, T0))?.consent).toBe('pending');
+    expect(await capsOf(s)).toEqual([]);
+    const t = (await issueConsentTokens(db, id, T0))!;
+    expect(await confirmConsent(db, t.confirm, T0)).toBe('confirmed');
+    expect(await capsOf(s)).toEqual(['join_circle', 'invite']);
+  });
+
+  it('tampered, malformed, wrong-purpose and swapped tokens are refused and change nothing', async () => {
+    const id = await teen('t2@example.test');
+    const t = (await issueConsentTokens(db, id, T0))!;
+    const flipped = (t.confirm[0] === '0' ? '1' : '0') + t.confirm.slice(1);
+    for (const bad of [flipped, newToken(), '', "' OR 1=1 --", t.confirm.toUpperCase(), ` ${t.confirm}`, t.confirm + 'x']) {
+      expect(await consentTarget(db, bad, 'confirm', T0)).toBeNull();
+      expect(await confirmConsent(db, bad, T0)).toBe('invalid');
+      expect(await withdrawConsent(db, bad, T0)).toBe('invalid');
+    }
+    // a confirm token cannot withdraw and a withdraw token cannot confirm
+    expect(await withdrawConsent(db, t.confirm, T0)).toBe('invalid');
+    expect(await confirmConsent(db, t.withdraw, T0)).toBe('invalid');
+    expect(await exists(id)).toBe(true);
+    expect((await getAccount(db, await signIn('t2@example.test'), T0))?.consent).toBe('pending');
+  });
+
+  it("another account's token acts only on its own account", async () => {
+    const x = await teen('t3@example.test');
+    const y = await teen('t4@example.test');
+    const tx = (await issueConsentTokens(db, x, T0))!;
+    const ty = (await issueConsentTokens(db, y, T0))!;
+    expect((await consentTarget(db, tx.confirm, 'confirm', T0))?.accountId).toBe(x);
+    expect(await confirmConsent(db, tx.confirm, T0)).toBe('confirmed');
+    const state = async (id: string) => (await db.query<{ consent_state: string }>('SELECT consent_state FROM accounts WHERE id = $1', [id])).rows[0].consent_state;
+    expect(await state(x)).toBe('confirmed');
+    expect(await state(y)).toBe('pending');
+    expect(await withdrawConsent(db, ty.withdraw, T0)).toBe('withdrawn');
+    expect(await exists(y)).toBe(false);
+    expect(await exists(x)).toBe(true);
+    expect(await exists(await accountIdOf(A))).toBe(true);
+  });
+
+  it('a token whose parent address no longer matches the account is dead', async () => {
+    const id = await teen('t5@example.test');
+    const t = (await issueConsentTokens(db, id, T0))!;
+    await db.query('UPDATE accounts SET parent_email = $2 WHERE id = $1', [id, 'other@example.test']);
+    expect(await confirmConsent(db, t.confirm, T0)).toBe('invalid');
+    expect(await withdrawConsent(db, t.withdraw, T0)).toBe('invalid');
+    expect(await exists(id)).toBe(true);
+  });
+
+  it('a parent token signs nobody in and reads no account data', async () => {
+    const id = await teen('t6@example.test');
+    const t = (await issueConsentTokens(db, id, T0))!;
+    for (const tok of [t.confirm, t.withdraw]) {
+      expect(await getAccount(db, tok, T0)).toBeNull();
+      expect(await consumeAccountLink(db, tok, T0)).toBeNull();
+      expect(await getAdmin(db, tok, env, T0)).toBeNull();
+    }
+    // the only view a token gives is the masked parent address and the state, never the child's address or birth date
+    const view = await consentTarget(db, t.confirm, 'confirm', T0);
+    expect(Object.keys(view!).sort()).toEqual(['accountId', 'maskedParent', 'state']);
+    expect(view!.maskedParent).not.toBe(PARENT);
+    expect(JSON.stringify(view)).not.toContain('t6@example.test');
+    // and a session or sign-in token is not a consent token
+    const s = await signIn('t6@example.test');
+    expect(await consentTarget(db, s, 'confirm', T0)).toBeNull();
+    expect(await consentTarget(db, await link('t6@example.test'), 'withdraw', T0)).toBeNull();
+  });
+
+  it('tokens cleared at 16 can no longer confirm or withdraw', async () => {
+    const id = await teen('t7@example.test', '2010-11-01'); // turns 16 on 1 Nov 2026
+    const t = (await issueConsentTokens(db, id, T0))!;
+    await db.query('DELETE FROM account_consent_tokens WHERE account_id = $1', [id]); // what the sweep does at 16
+    expect(await confirmConsent(db, t.confirm, T0)).toBe('invalid');
+    expect(await withdrawConsent(db, t.withdraw, T0)).toBe('invalid');
+  });
+});
+
+async function accountIdOf(email: string) {
+  return (await db.query<{ id: string }>('SELECT id FROM accounts WHERE email = $1', [email])).rows[0].id;
+}
+
 describe('arrives with later features', () => {
   it.todo('child profile -> adults item denied (list, detail, search, dashboard, daily set, email)');
   it.todo('child profile -> settings, invites, comments, contribute, admin denied');
-  it.todo('13-15 account -> public comment, community join, contribute denied (route level)');
+  it.todo('13-15 account -> public comment, community join, contribute denied (route level; the capability rows above are covered through can())');
   it.todo('non-member -> circle denied');
   it.todo('tampered profile id / circle id / item id in payload denied');
   // agent key A -> agent B's items denied: covered in tests/unit/agent-api.test.ts and agent-keys.test.ts, not duplicated here.

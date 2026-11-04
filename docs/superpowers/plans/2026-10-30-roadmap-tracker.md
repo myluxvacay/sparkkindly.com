@@ -73,8 +73,8 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 ## Project 3: Accounts and personal dashboards
 
 - [~] 3.1 Account model with age groups (under 13 none; 13–15 consent pending/confirmed; 16–17; 18+) as settings; passwordless email link and Google sign-in — *sign-in tests; age group derived from date of birth.* In progress: email-link half built behind ACCOUNTS_ENABLED; Google sign-in deferred. See `docs/superpowers/plans/2026-11-03-project-3a-accounts-core.md`.
-- [ ] 3.2 Parental consent flow for 13–15: parent email, confirmation link, 7-day reminder, 30-day deletion, withdrawal link that deletes the account — *each path tested.*
-- [~] 3.3 Permissions by age group (circles, comments, communities, contributing, child profiles, sponsorship visibility) in one place — *permission matrix tests.* In progress: policy table and isolation matrix done; enforced per feature as features arrive. See `docs/superpowers/plans/2026-11-03-project-3a-accounts-core.md`.
+- [x] 3.2 Parental consent flow for 13–15: parent email, confirmation link, 7-day reminder, 30-day deletion, withdrawal link that deletes the account — *each path tested.* Built behind ACCOUNTS_ENABLED (Project 3B, `docs/OPERATIONS.md` Accounts); neutral age screen and retry block deferred to the privacy review (3.11).
+- [~] 3.3 Permissions by age group (circles, comments, communities, contributing, child profiles, sponsorship visibility) in one place — *permission matrix tests.* In progress: policy table and isolation matrix done (consent token rows included); enforced per feature as features arrive. See `docs/superpowers/plans/2026-11-03-project-3a-accounts-core.md`.
 - [ ] 3.4 Child profiles (6–9, 10–12): display name and band only; 18+ parent/guardian confirmation; 4-digit PIN; profile switching; close at 13 — *e2e on a shared-device flow.*
 - [ ] 3.5 Interests and the `/me` dashboard across worlds; audience filtering by profile — *a child profile never receives an `adults` item; test fixtures.*
 - [ ] 3.6 Stored answers per profile with correctness and time — *answer rows written; anonymous play unchanged.*
