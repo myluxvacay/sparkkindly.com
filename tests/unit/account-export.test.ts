@@ -2,7 +2,7 @@
 import { describe, it, expect, beforeEach, afterAll, beforeAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { seedReference } from '@/db/seed';
-import type { Queryable } from '@/lib/db';
+import type { Db, Queryable } from '@/lib/db';
 import { signUp } from '@/lib/accounts/signup';
 import { consumeAccountLink, requestAccountLink } from '@/lib/accounts/sessions';
 import { confirmConsent, issueConsentTokens } from '@/lib/accounts/consent';
@@ -10,7 +10,13 @@ import { createChildProfile } from '@/lib/accounts/children';
 import { setInterests } from '@/lib/accounts/interests';
 import { recordAnswer } from '@/lib/accounts/responses';
 import { saveSettings } from '@/lib/accounts/settings';
-import { EXCLUDED_TABLES, EXPORTED_TABLES, exportAccount } from '@/lib/accounts/export';
+import {
+  EXCLUDED_COLUMNS,
+  EXCLUDED_TABLES,
+  EXPORTED_COLUMNS,
+  EXPORTED_TABLES,
+  exportAccount,
+} from '@/lib/accounts/export';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -73,21 +79,44 @@ async function family(email: string) {
   return { id, mia, leo };
 }
 
-// Personal-data tables as the database sees them: accounts, every account_* table, and every table with a foreign key
-// to accounts. A new table in any of these shapes must be added to EXPORTED_TABLES or EXCLUDED_TABLES.
+// Personal-data tables as the database sees them: accounts and every table reaching it through foreign keys
+// (followed transitively, so a table referencing child_profiles counts), every account_* table, and every table with a
+// column named email, *_email, account_id or profile_id. Each must be in EXPORTED_TABLES or EXCLUDED_TABLES.
 async function personalDataTables(q: Queryable): Promise<string[]> {
   const r = await q.query<{ t: string }>(
-    `SELECT table_name AS t FROM information_schema.tables
-     WHERE table_schema = 'public' AND (table_name = 'accounts' OR table_name LIKE 'account\\_%')
+    `WITH RECURSIVE fk AS (
+       SELECT tc.table_name::text COLLATE "default" AS child, ccu.table_name::text COLLATE "default" AS parent
+       FROM information_schema.table_constraints tc
+       JOIN information_schema.constraint_column_usage ccu ON ccu.constraint_name = tc.constraint_name
+         AND ccu.constraint_schema = tc.constraint_schema
+       WHERE tc.constraint_type = 'FOREIGN KEY' AND tc.table_schema = 'public'
+     ), reach(t) AS (
+       SELECT 'accounts'::text
+       UNION
+       SELECT fk.child FROM fk JOIN reach ON fk.parent = reach.t
+     )
+     SELECT t FROM reach
      UNION
-     SELECT tc.table_name FROM information_schema.table_constraints tc
-     JOIN information_schema.constraint_column_usage ccu ON ccu.constraint_name = tc.constraint_name
-       AND ccu.constraint_schema = tc.constraint_schema
-     WHERE tc.constraint_type = 'FOREIGN KEY' AND tc.table_schema = 'public' AND ccu.table_name = 'accounts'`,
+     SELECT table_name::text FROM information_schema.tables
+     WHERE table_schema = 'public' AND table_name LIKE 'account\\_%'
+     UNION
+     SELECT table_name::text FROM information_schema.columns
+     WHERE table_schema = 'public'
+       AND (column_name IN ('email', 'account_id', 'profile_id') OR column_name LIKE '%\\_email')`,
   );
   return r.rows.map((x) => x.t).sort();
 }
 const decided = () => [...EXPORTED_TABLES, ...Object.keys(EXCLUDED_TABLES)].sort();
+
+async function columnsOf(q: Queryable, table: string): Promise<string[]> {
+  const r = await q.query<{ c: string }>(
+    `SELECT column_name::text AS c FROM information_schema.columns WHERE table_schema = 'public' AND table_name = $1`,
+    [table],
+  );
+  return r.rows.map((x) => x.c).sort();
+}
+const decidedColumns = (table: keyof typeof EXPORTED_COLUMNS) =>
+  [...EXPORTED_COLUMNS[table], ...Object.keys(EXCLUDED_COLUMNS[table])].sort();
 
 describe('export inventory', () => {
   it('every personal-data table in the schema is either exported or excluded with a reason', async () => {
@@ -114,16 +143,74 @@ describe('export inventory', () => {
     await db.transaction(async (tx) => {
       await tx.query('CREATE TABLE account_probe (id int)');
       await tx.query('CREATE TABLE probe_notes (account_id uuid REFERENCES accounts (id))');
+      await tx.query('CREATE TABLE probe_kid_badges (kid uuid UNIQUE REFERENCES child_profiles (id))');
+      await tx.query('CREATE TABLE probe_badge_awards (badge int, kid uuid REFERENCES probe_kid_badges (kid))');
+      await tx.query('CREATE TABLE probe_mail (email text)');
+      await tx.query('CREATE TABLE probe_contact (backup_email text)');
       const found = await personalDataTables(tx);
-      expect(found).toContain('account_probe');
-      expect(found).toContain('probe_notes');
+      const probes = [
+        'account_probe',
+        'probe_notes',
+        'probe_kid_badges',
+        'probe_badge_awards',
+        'probe_mail',
+        'probe_contact',
+      ];
+      for (const t of probes) {
+        expect(found, t).toContain(t);
+        expect(decided()).not.toContain(t);
+      }
       expect(decided()).not.toEqual(found);
-      await tx.query('DROP TABLE account_probe, probe_notes');
+      await tx.query('DROP TABLE account_probe, probe_notes, probe_mail, probe_contact');
+      await tx.query('DROP TABLE probe_badge_awards, probe_kid_badges');
+    });
+  });
+
+  it('every accounts and child_profiles column is exported or excluded with a reason; no PIN fields', async () => {
+    for (const table of ['accounts', 'child_profiles'] as const) {
+      expect(decidedColumns(table), table).toEqual(await columnsOf(db, table));
+      for (const reason of Object.values(EXCLUDED_COLUMNS[table])) expect(reason.length).toBeGreaterThan(10);
+    }
+    for (const c of ['pin_hash', 'pin_failures', 'pin_lock_count', 'pin_locked_until']) {
+      expect(Object.keys(EXCLUDED_COLUMNS.accounts)).toContain(c);
+      expect(EXPORTED_COLUMNS.accounts).not.toContain(c);
+    }
+  });
+
+  it('a new undecided column on accounts or child_profiles makes the comparison fail', async () => {
+    await db.transaction(async (tx) => {
+      await tx.query('ALTER TABLE accounts ADD COLUMN probe_nickname text');
+      await tx.query('ALTER TABLE child_profiles ADD COLUMN probe_school text');
+      expect(decidedColumns('accounts')).not.toEqual(await columnsOf(tx, 'accounts'));
+      expect(decidedColumns('child_profiles')).not.toEqual(await columnsOf(tx, 'child_profiles'));
+      await tx.query('ALTER TABLE accounts DROP COLUMN probe_nickname');
+      await tx.query('ALTER TABLE child_profiles DROP COLUMN probe_school');
     });
   });
 });
 
 describe('exportAccount', () => {
+  it('reads in one repeatable-read, read-only transaction, set before any other statement', async () => {
+    const id = await signedIn(`rr${n++}@example.test`, '1990-01-01');
+    const seen: string[] = [];
+    const spy: Db = {
+      ...db,
+      transaction: (fn) =>
+        db.transaction((tx) =>
+          fn({
+            query: (text: string, params?: unknown[]) => {
+              seen.push(text.replace(/\s+/g, ' ').trim());
+              return tx.query(text, params);
+            },
+            exec: tx.exec,
+          } as Queryable),
+        ),
+    };
+    expect(await exportAccount(spy, id, NOW)).not.toBeNull();
+    expect(seen[0]).toBe('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ, READ ONLY');
+    expect(seen.length).toBeGreaterThan(1);
+  });
+
   it('returns null for an unknown or malformed account', async () => {
     expect(await exportAccount(db, '00000000-0000-0000-0000-000000000001', NOW)).toBeNull();
     expect(await exportAccount(db, 'nope', NOW)).toBeNull();

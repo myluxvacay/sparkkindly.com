@@ -39,11 +39,13 @@ export function readUnsubscribeToken(
     return null;
   }
   const [accountId, kind, sig, ...rest] = token.split('.');
-  if (rest.length || !isUuid(accountId) || !isKind(kind) || !sig) {
+  if (rest.length || !isUuid(accountId) || !isKind(kind) || !/^[A-Za-z0-9_-]{43}$/.test(sig ?? '')) {
     return null;
   }
-  const given = Buffer.from(sig, 'base64url');
-  const expected = sign(secret, accountId, kind);
+  // Compare the canonical text, not decoded bytes: the decoder ignores the last character's spare bits, so several
+  // spellings decode to one MAC. Exactly one spelling is accepted.
+  const given = Buffer.from(sig);
+  const expected = Buffer.from(sign(secret, accountId, kind).toString('base64url'));
   return given.length === expected.length && timingSafeEqual(given, expected) ? { accountId, kind } : null;
 }
 

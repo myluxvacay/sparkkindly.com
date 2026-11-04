@@ -1,7 +1,8 @@
 // Data export: everything held about an account and its child profiles, as one JSON-ready object. Ids, PIN fields,
 // tokens and sessions are never included; the parent address only masked. Reads are scoped to the one account id from
-// the server-side context and run in one transaction so the sections agree. No Next.js imports;
-// tests/unit/account-export.test.ts (which checks EXPORTED_TABLES + EXCLUDED_TABLES against the live schema).
+// the server-side context and run in one REPEATABLE READ, READ ONLY transaction, so every section sees one snapshot.
+// No Next.js imports; tests/unit/account-export.test.ts (which checks the table and column lists below against the
+// live schema, so a new personal-data table or column fails until it is exported or excluded here).
 import type { Db, Queryable } from '@/lib/db';
 import { isUuid } from './pin';
 import { maskEmail } from './wording';
@@ -14,6 +15,45 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   account_login_tokens: 'sign-in credentials (token hashes); short-lived and purged, never handed out',
   account_sessions: 'session credentials (token hashes) and device state; handing them out would weaken the account',
   account_consent_tokens: 'parental consent credentials (token hashes) bound to the parent address, not the holder',
+  admin_users: 'site administrators (allow-listed staff), not member accounts; outside the member export',
+  admin_login_tokens: 'administrator sign-in credentials (token hashes), not member accounts',
+  admin_sessions: 'administrator session credentials (token hashes), not member accounts',
+  events: 'site event log; profile_id is never written today (only item_published events). Revisit if that changes',
+};
+
+// Columns of the two tables exported row by row: each is exported or deliberately excluded with its reason.
+export const EXPORTED_COLUMNS = {
+  accounts: [
+    'email',
+    'date_of_birth',
+    'time_zone',
+    'consent_state',
+    'parent_email',
+    'verified_at',
+    'created_at',
+    'consent_at',
+    'consent_reminded_at',
+    'guardian_confirmed_at',
+    'notify_daily_set',
+    'notify_weekly_circle',
+    'notify_invites',
+    'inactivity_notice_at',
+  ],
+  child_profiles: ['display_name', 'age_band', 'created_at'],
+} as const;
+
+export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Readonly<Record<string, string>>>> = {
+  accounts: {
+    id: 'internal identifier; meaningless outside the service and not needed to read the export',
+    pin_hash: 'credential: salted scrypt hash of the adult PIN',
+    pin_failures: 'security counter for PIN lockout; exposing it helps guessing',
+    pin_lock_count: 'security counter for PIN lockout escalation',
+    pin_locked_until: 'security lockout state for the PIN',
+  },
+  child_profiles: {
+    id: 'internal identifier; meaningless outside the service',
+    account_id: 'internal identifier of the owning account (the export is already that account)',
+  },
 };
 
 type ExportInterests = { topics: string[]; worlds: string[] };
@@ -158,5 +198,9 @@ export async function exportAccount(db: Db, accountId: string, now: Date): Promi
   if (!isUuid(accountId)) {
     return null;
   }
-  return db.transaction((tx) => readExport(tx, accountId, now));
+  return db.transaction(async (tx) => {
+    // Must be the transaction's first statement.
+    await tx.query('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ, READ ONLY');
+    return readExport(tx, accountId, now);
+  });
 }

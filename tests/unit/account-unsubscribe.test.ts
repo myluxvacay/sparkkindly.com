@@ -77,6 +77,20 @@ describe('unsubscribe tokens', () => {
     expect(readUnsubscribeToken(SECRET, 42 as unknown as string)).toBeNull();
   });
 
+  it('refuses a non-canonical signature that decodes to the same bytes', () => {
+    const t = unsubscribeToken(SECRET, ID, 'invites') as string;
+    const sig = t.split('.')[2];
+    expect(sig).toMatch(/^[A-Za-z0-9_-]{43}$/);
+    // 43 characters carry 258 bits for a 256-bit MAC: the last character's 2 low bits are ignored by the decoder.
+    const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+    const flipped = sig.slice(0, -1) + ALPHABET[ALPHABET.indexOf(sig.at(-1) as string) ^ 1];
+    expect(Buffer.from(flipped, 'base64url')).toEqual(Buffer.from(sig, 'base64url'));
+    for (const bad of [flipped, `${sig}=`, sig.replaceAll('-', '+').replaceAll('_', '/'), ` ${sig}`]) {
+      if (bad === sig) continue;
+      expect(readUnsubscribeToken(SECRET, `${ID}.invites.${bad}`), bad).toBeNull();
+    }
+  });
+
   it('a token for a kind outside the list is refused', () => {
     expect(unsubscribeToken(SECRET, ID, 'marketing' as 'invites')).toBeNull();
     expect(unsubscribeToken(SECRET, 'not-a-uuid', 'invites')).toBeNull();
