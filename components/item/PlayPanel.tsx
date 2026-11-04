@@ -1,32 +1,47 @@
 import Link from 'next/link';
+import { headers } from 'next/headers';
 import { getDb } from '@/lib/db';
 import type { PublicItem } from '@/lib/items/repo';
 import { playResult } from '@/lib/play/answer';
 import { readPlay } from '@/lib/public/body';
-import { currentScope } from '@/lib/accounts/scope-next';
+import { currentViewer } from '@/lib/accounts/scope-next';
+import { recordableRequest, recordPlay } from '@/lib/accounts/record-play';
 import { clueCount, hasResponse, toParams, type SearchParams } from '@/lib/public/play-params';
 import PlayForm from './PlayForm';
 import PlayResult from './PlayResult';
 
 // One playable item: the answer form until a response arrives, then the server's verdict. Shared by the item page and
-// /quiz/, so both behave the same.
+// /quiz/, so both behave the same. A signed-in context allowed to save answers gets its first answer recorded, only for
+// our own form's same-origin submit (lib/accounts/record-play.ts); nobody else's page changes.
 export default async function PlayPanel({ item, searchParams }: { item: PublicItem; searchParams: SearchParams }) {
   const action = `/${item.world}/${item.slug}/`;
   const play = readPlay(item.body);
   const params = toParams(searchParams);
-  const result = hasResponse(params) ? await playResult(getDb(), await currentScope(), item.world, item.slug, params) : null;
+  const viewer = await currentViewer();
+  const result = hasResponse(params) ? await playResult(getDb(), viewer.scope, item.world, item.slug, params) : null;
+  if (result && viewer.owner && recordableRequest(await headers())) {
+    await recordPlay(getDb(), viewer.owner, result, new Date());
+  }
   const invalidHint =
     play.mechanic === 'put_in_order'
       ? `Please give each item a different position from 1 to ${play.items.length}, then check again.`
       : undefined;
-  const another =item.kind === 'quiz' ? '/quiz/archive/' : `/${item.world}/`;
+  const another = item.kind === 'quiz' ? '/quiz/archive/' : `/${item.world}/`;
 
   return (
     <div className="quiz-panel">
       {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} />}
       {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
       <p className="quiz-note">
-        No timer. No scores to share. SparkKindly does not save your answer; see the <Link href="/privacy/">privacy guide</Link>.
+        {viewer.owner ? (
+          <>
+            No timer. No scores to share. Your answer is saved to your profile; see the <Link href="/privacy/">privacy guide</Link>.
+          </>
+        ) : (
+          <>
+            No timer. No scores to share. SparkKindly does not save your answer; see the <Link href="/privacy/">privacy guide</Link>.
+          </>
+        )}
       </p>
     </div>
   );

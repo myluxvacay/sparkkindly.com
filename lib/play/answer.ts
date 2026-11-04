@@ -6,7 +6,7 @@ import type { Scope } from '@/lib/public/scope';
 import { checkAnswer, describeAnswer, parseGiven } from './check';
 
 export type PlayResult =
-  | { status: 'ok'; correct: boolean; answerText: string; explanation: string }
+  | { status: 'ok'; itemId: string; correct: boolean; answerText: string; explanation: string }
   | { status: 'invalid' }
   | { status: 'not_found' };
 
@@ -28,6 +28,7 @@ export async function playResult(db: Queryable, scope: Scope, world: string, slu
   if (!answer) return { status: 'not_found' };
   return {
     status: 'ok',
+    itemId: item.id,
     correct: checkAnswer(body.mechanic, answer.value, given),
     answerText: describeAnswer(item.body, answer.value),
     explanation: answer.explanation,

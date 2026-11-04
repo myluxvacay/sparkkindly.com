@@ -6,7 +6,7 @@ import { cookies } from 'next/headers';
 import { accountsEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
 import { anonymousScope, type Scope } from '@/lib/public/scope';
-import { scopeForSession } from './scope';
+import { viewerForSession, type Viewer } from './scope';
 import { ACCOUNT_COOKIE } from './web';
 
 // The account cookie's value, or undefined (always undefined with the flag off).
@@ -14,8 +14,11 @@ export async function accountSessionToken(): Promise<string | undefined> {
   return accountsEnabled() ? (await cookies()).get(ACCOUNT_COOKIE)?.value : undefined;
 }
 
-// Memoized per request (React cache), so a page and its components share one session lookup.
-export const currentScope = cache(async (): Promise<Scope> => {
+// Memoized per request (React cache), so a page and its components share one session lookup. The viewer carries the
+// scope and the owner answers are saved for (null when signed out or not allowed), from that one lookup.
+export const currentViewer = cache(async (): Promise<Viewer> => {
   const token = await accountSessionToken();
-  return token ? scopeForSession(getDb(), token, new Date()) : anonymousScope();
+  return token ? viewerForSession(getDb(), token, new Date()) : { scope: anonymousScope(), owner: null };
 });
+
+export const currentScope = async (): Promise<Scope> => (await currentViewer()).scope;

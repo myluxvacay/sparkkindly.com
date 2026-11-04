@@ -66,8 +66,10 @@ afterAll(async () => {
 
 describe('playResult', () => {
   it('right and wrong answers return ok with the explanation', async () => {
+    const id = (await db.query<{ id: string }>("SELECT id FROM items WHERE slug = 'good'")).rows[0].id;
     expect(await playResult(db, anon, 'play', 'good', p({ r: 'b' }))).toEqual({
       status: 'ok',
+      itemId: id,
       correct: true,
       answerText: 'Beta',
       explanation: EXPL,
