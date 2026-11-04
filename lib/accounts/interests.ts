@@ -1,6 +1,7 @@
 // Interests: the topics and worlds a profile (the account holder's own, or one child profile) cares about. References
-// existing topics and worlds by integer id; at most 30 in total; a save replaces the whole set in one transaction. The
-// owner comes from the server-side context; a profile id that is not the account's is refused. No Next.js imports.
+// existing topics and enabled worlds by integer id; at most 30 in total; a save replaces the whole set in one
+// transaction. The owner comes from the server-side context; a profile id that is not the account's is refused.
+// No Next.js imports.
 // Verified by tests/unit/account-interests.test.ts.
 import type { Db, Queryable } from '@/lib/db';
 import { isUuid } from './pin';
@@ -57,7 +58,7 @@ export async function setInterests(
       return 'invalid';
     }
     const t = await tx.query('SELECT id FROM topics WHERE id = ANY($1::int[])', [topicIds]);
-    const w = await tx.query('SELECT id FROM worlds WHERE id = ANY($1::int[])', [worldIds]);
+    const w = await tx.query('SELECT id FROM worlds WHERE enabled AND id = ANY($1::int[])', [worldIds]);
     if (t.rows.length !== topicIds.length || w.rows.length !== worldIds.length) {
       return 'invalid';
     }

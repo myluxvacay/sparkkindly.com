@@ -4,7 +4,8 @@
 // tests/unit/account-responses.test.ts.
 import type { Db } from '@/lib/db';
 import { isUuid } from './pin';
-import type { Audience } from '@/lib/public/scope';
+import { visibleWhere } from '@/lib/public/reads';
+import type { Scope } from '@/lib/public/scope';
 import { SAME_OWNER, validOwner, type Owner } from './interests';
 
 const OWNER = (a: string) => SAME_OWNER.replaceAll(/(account_id|profile_id)/g, `${a}.$1`);
@@ -12,8 +13,9 @@ const OWNER = (a: string) => SAME_OWNER.replaceAll(/(account_id|profile_id)/g,
 const FK_VIOLATION = '23503';
 const whole = (n: number, fallback: number) => (Number.isFinite(n) ? Math.floor(n) : fallback);
 
-// Answered items are shown only while the item is still published, in an enabled world and in an allowed audience.
-const SHOWN = `i.status = 'published' AND w.enabled AND i.audience = ANY($3::text[])`;
+// Answered items are listed and counted only while the public reads would show them (the same predicate): $3 is the
+// clock, $4 the allowed audiences. A hidden item never takes a place in a page or the count.
+const SHOWN = visibleWhere('$3', '$4');
 const FROM_SHOWN = `FROM item_responses r JOIN items i ON i.id = r.item_id JOIN worlds w ON w.id = i.world_id`;
 
 export type Answered = { itemId: string; correct: boolean; answeredAt: Date };
@@ -52,10 +54,10 @@ export async function recordAnswer(
 export async function listAnswered(
   db: Db,
   owner: Owner,
-  audiences: readonly Audience[],
+  scope: Scope,
   page: { limit: number; offset: number },
 ): Promise<Answered[]> {
-  if (!validOwner(owner) || audiences.length === 0) {
+  if (!validOwner(owner) || scope.audiences.length === 0) {
     return [];
   }
   const limit = Math.min(100, Math.max(1, whole(page.limit, 20)));
@@ -63,8 +65,8 @@ export async function listAnswered(
   const r = await db.query<{ item_id: string; correct: boolean; answered_at: Date }>(
     `SELECT r.item_id, r.correct, r.answered_at ${FROM_SHOWN}
      WHERE ${OWNER('r')} AND ${SHOWN}
-     ORDER BY r.answered_at DESC, r.item_id LIMIT $4 OFFSET $5`,
-    [owner.accountId, owner.profileId, [...audiences], limit, offset],
+     ORDER BY r.answered_at DESC, r.item_id LIMIT $5 OFFSET $6`,
+    [owner.accountId, owner.profileId, scope.now, [...scope.audiences], limit, offset],
   );
   return r.rows.map((x) => ({ itemId: x.item_id, correct: x.correct, answeredAt: x.answered_at }));
 }
@@ -72,15 +74,15 @@ export async function listAnswered(
 export async function countAnswered(
   db: Db,
   owner: Owner,
-  audiences: readonly Audience[],
+  scope: Scope,
 ): Promise<{ total: number; correct: number }> {
-  if (!validOwner(owner) || audiences.length === 0) {
+  if (!validOwner(owner) || scope.audiences.length === 0) {
     return { total: 0, correct: 0 };
   }
   const r = await db.query<{ total: number; correct: number }>(
     `SELECT count(*)::int AS total, (count(*) FILTER (WHERE r.correct))::int AS correct ${FROM_SHOWN}
      WHERE ${OWNER('r')} AND ${SHOWN}`,
-    [owner.accountId, owner.profileId, [...audiences]],
+    [owner.accountId, owner.profileId, scope.now, [...scope.audiences]],
   );
   return { total: r.rows[0].total, correct: r.rows[0].correct };
 }

@@ -55,8 +55,16 @@ export function localDayStart(now: Date, timeZone: string, days: number): Date {
   }
   const w = wallClock(now, zone);
   const midnightAsUtc = Date.UTC(w.y, w.m - 1, w.d + days);
-  const guess = midnightAsUtc - offsetAt(new Date(midnightAsUtc), zone);
-  return new Date(midnightAsUtc - offsetAt(new Date(guess), zone));
+  const first = midnightAsUtc - offsetAt(new Date(midnightAsUtc), zone);
+  const second = midnightAsUtc - offsetAt(new Date(first), zone);
+  // Normally `second` is the answer. When local midnight falls in a clock gap (America/Santiago in September), one
+  // candidate lands in the previous local day and the other is the gap's end, which is where the day starts.
+  const onDay = (t: number) => {
+    const x = wallClock(new Date(t), zone);
+    return Date.UTC(x.y, x.m - 1, x.d) === midnightAsUtc;
+  };
+  const candidates = [first, second].filter(onDay).sort((a, b) => a - b);
+  return new Date(candidates[0] ?? second);
 }
 
 async function timeZoneOf(db: Db, accountId: string): Promise<string> {
@@ -65,7 +73,7 @@ async function timeZoneOf(db: Db, accountId: string): Promise<string> {
 }
 
 async function answeredItems(db: Db, owner: Owner, scope: Scope): Promise<Dashboard['answered']> {
-  const rows = await listAnswered(db, owner, scope.audiences, { limit: MAX_ITEMS, offset: 0 });
+  const rows = await listAnswered(db, owner, scope, { limit: MAX_ITEMS, offset: 0 });
   const visible = new Map((await listPublicByIds(db, scope, rows.map((r) => r.itemId))).map((i) => [i.id, i]));
   return rows.flatMap((r) => {
     const item = visible.get(r.itemId);
@@ -80,7 +88,7 @@ export async function dashboardFor(db: Db, ctx: AccountContext, now: Date): Prom
     getInterests(db, owner),
     timeZoneOf(db, owner.accountId),
     answeredItems(db, owner, scope),
-    countAnswered(db, owner, scope.audiences),
+    countAnswered(db, owner, scope),
   ]);
   const picks = { ...interests, limit: MAX_ITEMS };
   const start = localDayStart(now, zone, 0);

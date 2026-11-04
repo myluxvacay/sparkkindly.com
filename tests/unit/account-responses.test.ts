@@ -7,6 +7,7 @@ import { deleteAccount } from '@/lib/accounts/delete';
 import { createChildProfile, deleteChildProfile } from '@/lib/accounts/children';
 import { countAnswered, listAnswered, recordAnswer } from '@/lib/accounts/responses';
 import type { Owner } from '@/lib/accounts/interests';
+import type { Scope } from '@/lib/public/scope';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -61,8 +62,11 @@ async function child(accountId: string): Promise<string> {
 }
 const rows = async () => (await db.query<{ n: number }>('SELECT count(*)::int AS n FROM item_responses')).rows[0].n;
 const page = { limit: 10, offset: 0 };
-const ALLOWED = ['kids', 'all', 'adults'] as const;
-const CHILD = ['kids', 'all'] as const;
+// The reads take a public Scope (the same visibility rule as lib/public/reads.ts); the fixtures are published 31 Oct.
+const SEEN_AT = new Date('2026-11-04T12:00:00Z');
+const ALLOWED: Scope = { audiences: ['kids', 'all', 'adults'], now: SEEN_AT };
+const CHILD: Scope = { audiences: ['kids', 'all'], now: SEEN_AT };
+const NONE: Scope = { audiences: [], now: SEEN_AT };
 
 describe('recordAnswer', () => {
   it('stores the first answer and ignores the second, correctness unchanged', async () => {
@@ -150,8 +154,8 @@ describe('visibility and paging', () => {
   it('an empty audience list returns nothing', async () => {
     const o: Owner = { accountId: await adult(), profileId: null };
     await recordAnswer(db, o, items[0], true, T0);
-    expect(await listAnswered(db, o, [], page)).toEqual([]);
-    expect(await countAnswered(db, o, [])).toEqual({ total: 0, correct: 0 });
+    expect(await listAnswered(db, o, NONE, page)).toEqual([]);
+    expect(await countAnswered(db, o, NONE)).toEqual({ total: 0, correct: 0 });
   });
 
   it('clamps the limit to 1..100 and the offset to >= 0, with defaults for NaN and non-integers', async () => {

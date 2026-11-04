@@ -58,6 +58,15 @@ const rows = async () => (await db.query<{ n: number }>('SELECT count(*)::int AS
 const sorted = (v: number[]) => [...v].sort((a, b) => a - b);
 
 describe('setInterests / getInterests', () => {
+  it('refuses a disabled world, as the interests page never offers one', async () => {
+    const o: Owner = { accountId: await adult(), profileId: null };
+    const off = (
+      await db.query<{ id: number }>("INSERT INTO worlds (slug, name, enabled) VALUES ($1, 'Off', false) RETURNING id", [`off-${n++}`])
+    ).rows[0].id;
+    expect(await setInterests(db, o, { topicIds: [], worldIds: [off] })).toBe('invalid');
+    expect(await rows()).toBe(0);
+  });
+
   it('starts empty and replaces everything on each save', async () => {
     const o: Owner = { accountId: await adult(), profileId: null };
     expect(await getInterests(db, o)).toEqual({ topicIds: [], worldIds: [] });

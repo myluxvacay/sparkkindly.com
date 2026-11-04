@@ -9,10 +9,13 @@ const MAX_LIMIT = 50;
 const MAX_QUERY_CHARS = 100;
 
 // What may be shown to anyone: published and due, in an enabled world, a kind the site renders (never a
-// video_script), and an audience the scope allows. $1 is the clock, $2 the allowed audiences. Every read below
-// starts from this one predicate so no read can forget a rule.
-const VISIBLE = `i.status = 'published' AND i.published_at <= $1 AND w.enabled AND i.locale = 'en'
-  AND i.kind IN ('article', 'quiz', 'game') AND i.audience = ANY($2::text[])`;
+// video_script), and an audience the scope allows, over `items i JOIN worlds w`. `now` and `audiences` name the query
+// parameters holding the clock and the allowed audiences. Every read below, and the saved-answer reads in
+// lib/accounts/responses.ts, start from this one predicate so no read can forget a rule.
+export const visibleWhere = (now: string, audiences: string) =>
+  `i.status = 'published' AND i.published_at <= ${now} AND w.enabled AND i.locale = 'en'
+  AND i.kind IN ('article', 'quiz', 'game') AND i.audience = ANY(${audiences}::text[])`;
+const VISIBLE = visibleWhere('$1', '$2');
 
 const base = (scope: Scope): unknown[] => [scope.now, [...scope.audiences]];
 const whole = (n: number, fallback: number) => (Number.isFinite(n) ? Math.floor(n) : fallback);
@@ -73,7 +76,7 @@ export async function listPublicByIds(db: Queryable, scope: Scope, ids: string[]
   return r.rows.map(toPublic);
 }
 
-export const listQuizzes =(db: Queryable, scope: Scope, page: Page) => listPublic(db, scope, { kind: 'quiz', ...page });
+export const listQuizzes = (db: Queryable, scope: Scope, page: Page) => listPublic(db, scope, { kind: 'quiz', ...page });
 
 // Old /quiz/<id>/ links carry only a slug, so find the published quiz with that slug in any world (the newest if several).
 export async function findQuizBySlug(db: Queryable, scope: Scope, slug: string): Promise<PublicItem | null> {
