@@ -109,7 +109,7 @@ function ChangePinForm({ error }: { error: boolean }) {
   return (
     <form method="post" action="/account/children/pin/" className="prose admin-form">
       <h2>Change your PIN</h2>
-      <PinInput id="current_pin" label="Current PIN" describedBy={[described]} />
+      <PinInput id="current_pin" label="Current PIN" entry describedBy={[described]} />
       <PinInput id="new_pin" label="New PIN (4 digits)" describedBy={[described]} />
       <PinInput id="new_pin_confirm" label="New PIN again" describedBy={[described]} />
       <button type="submit" className="button">

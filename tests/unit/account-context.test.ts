@@ -141,11 +141,13 @@ describe('switchToAdult', () => {
 });
 
 describe('deleting the active profile', () => {
-  it('returns the session to the adult context', async () => {
+  it('ends a session still on it (no context at all, fail closed); the adult session stays', async () => {
     const f = await family();
+    const adult = (await consumeAccountLink(db, (await requestAccountLink(db, (await getAccount(db, f.session, T0))!.email, env, T0))!, T0))!;
     await switchToProfile(db, f.session, f.profileId, T0);
     expect(await deleteChildProfile(db, f.accountId, f.profileId)).toBe(true);
-    const ctx = await getContext(db, f.session, T0);
+    expect(await getContext(db, f.session, T0)).toBeNull();
+    const ctx = await getContext(db, adult, T0);
     expect(ctx?.account.id).toBe(f.accountId);
     expect(ctx?.profile).toBeNull();
   });

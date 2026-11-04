@@ -12,7 +12,7 @@ import type { EnvLike } from '@/lib/env';
 import { issueConsentTokens } from './consent';
 import { consentEmail } from './consent-email';
 import { accountLinkLimits, accountSendBudget, confirmLimits, signUpLimits } from './limits';
-import { accountStatus, consumeAccountLink, endAccountSession, getAccount, hasFreshLink, requestAccountLink } from './sessions';
+import { accountStatus, consumeAccountLink, endAccountSession, getAccount, hasFreshLink, requestAccountLink, sessionView } from './sessions';
 import { consentPending } from './policy';
 import { normalizeEmail, signUp } from './signup';
 
@@ -150,8 +150,11 @@ export async function confirmAccountLink(request: Request, d: Deps): Promise<Res
   return seeOther('/account/', accountCookie(session, SESSION_SECONDS));
 }
 
+// Refused in a child context (ruling, 3C Task 3 review): a crafted POST must not drop a child to anonymous.
 export async function signOut(request: Request, d: Deps): Promise<Response> {
   if (!sameOrigin(request)) return forbidden();
-  await endAccountSession(d.db, readCookie(request, ACCOUNT_COOKIE));
+  const token = readCookie(request, ACCOUNT_COOKIE);
+  if ((await sessionView(d.db, token, d.now))?.profile) return forbidden();
+  await endAccountSession(d.db, token);
   return seeOther('/account/sign-in/', accountCookie('', 0));
 }

@@ -17,6 +17,7 @@ import {
   switchToChildRequest,
 } from '@/lib/accounts/children-web';
 import { resendConsentRequest } from '@/lib/accounts/consent-web';
+import { signOut } from '@/lib/accounts/web';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -112,6 +113,9 @@ describe('a child context', () => {
     }
     const resend = await resendConsentRequest(post({}, { cookie: f.session }), { ...deps(), env: {}, send: async () => ({}), defer: () => {} });
     expect(resend.status).toBe(403);
+    const out = await signOut(post({}, { cookie: f.session }), { ...deps(), env: {}, send: async () => ({}), defer: () => {} });
+    expect(out.status).toBe(403);
+    expect(out.headers.get('set-cookie')).toBeNull();
     expect(await listChildProfiles(db, f.accountId)).toHaveLength(1);
     expect(await pinState(f.accountId)).toEqual(before);
     expect((await getContext(db, f.session, NOW))?.profile?.id).toBe(f.profileId);
@@ -223,6 +227,13 @@ describe('switchBackRequest', () => {
     expect(where(r)).toEqual([303, '/account/children/playing/?r=locked#result']);
     expect(await r.text()).toBe('');
     expect((await getContext(db, f.session, NOW))?.profile?.id).toBe(f.profileId);
+  });
+
+  it('the adult context can still sign out', async () => {
+    const f = await family();
+    const r = await signOut(post({}, { cookie: f.session }), { ...deps(), env: {}, send: async () => ({}), defer: () => {} });
+    expect(where(r)).toEqual([303, '/account/sign-in/']);
+    expect(await getContext(db, f.session, NOW)).toBeNull();
   });
 
   it('from an adult context it only goes back to the list: no PIN is checked, nothing counts', async () => {

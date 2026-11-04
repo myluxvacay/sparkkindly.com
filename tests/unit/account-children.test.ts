@@ -162,7 +162,7 @@ describe('deleteChildProfile', () => {
     expect(await deleteChildProfile(db, a, r.profileId)).toBe(false);
   });
 
-  it('clears a session that had the profile active', async () => {
+  it('ends a session that had the profile active (it does not become an adult session)', async () => {
     const a = await adult();
     const r = await createChildProfile(db, a, ok, T0);
     if (r.status !== 'created') {
@@ -173,9 +173,7 @@ describe('deleteChildProfile', () => {
       [a, r.profileId],
     );
     await deleteChildProfile(db, a, r.profileId);
-    expect((await db.query('SELECT active_profile_id FROM account_sessions')).rows[0]).toEqual({
-      active_profile_id: null,
-    });
+    expect((await db.query('SELECT active_profile_id FROM account_sessions')).rows).toEqual([]);
   });
 });
 
@@ -245,14 +243,28 @@ describe('session active profile', () => {
     await session(a, r.profileId);
   });
 
-  it('deleting the active profile nulls only active_profile_id', async () => {
+  it('defence in depth: a profile row removed outside deleteChildProfile nulls only active_profile_id (FK)', async () => {
     const a = await adult();
     const r = await createChildProfile(db, a, ok, T0);
     if (r.status !== 'created') {
       throw new Error('create failed');
     }
     await session(a, r.profileId);
-    await deleteChildProfile(db, a, r.profileId);
+    await db.query('DELETE FROM child_profiles WHERE id = $1', [r.profileId]);
+    expect((await db.query('SELECT account_id, active_profile_id FROM account_sessions')).rows).toEqual([
+      { account_id: a, active_profile_id: null },
+    ]);
+  });
+
+  it('deleteChildProfile ends the sessions still on that profile and keeps the adult sessions', async () => {
+    const a = await adult();
+    const r = await createChildProfile(db, a, ok, T0);
+    if (r.status !== 'created') {
+      throw new Error('create failed');
+    }
+    await session(a, r.profileId);
+    await session(a, null);
+    expect(await deleteChildProfile(db, a, r.profileId)).toBe(true);
     expect((await db.query('SELECT account_id, active_profile_id FROM account_sessions')).rows).toEqual([
       { account_id: a, active_profile_id: null },
     ]);

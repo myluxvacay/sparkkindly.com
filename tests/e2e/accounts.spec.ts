@@ -354,23 +354,36 @@ test('an adult creates a child profile with a PIN, plays as the child, and only 
   await page.getByRole('link', { name: 'Child profiles' }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'Child profiles' })).toBeVisible();
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
-  const pin = page.getByLabel('PIN', { exact: true });
-  for (const [k, v] of [['type', 'password'], ['inputmode', 'numeric'], ['autocomplete', 'off'], ['pattern', '[0-9]{4}']]) {
-    await expect(pin).toHaveAttribute(k, v);
+  for (const label of ['PIN', 'PIN again']) {
+    const pin = page.getByLabel(label, { exact: true });
+    for (const [k, v] of [['type', 'password'], ['inputmode', 'numeric'], ['autocomplete', 'new-password'], ['pattern', '[0-9]{4}']]) {
+      await expect(pin).toHaveAttribute(k, v);
+    }
   }
   await axeBothWidths(page);
 
   await addProfile(page, 'Mia', true);
   await expect(page).toHaveURL(/\/account\/children\/\?r=created#result$/);
+  await expect(page.locator('#result')).toBeFocused();
   await expect(page.getByRole('status')).toContainText('The profile is ready');
   await expect(page.getByText('Mia', { exact: true })).toBeVisible();
   await expect(page.getByText('age 6 to 9')).toBeVisible();
-  await expect(page.getByLabel('Current PIN')).toBeVisible();
+  const current = page.getByLabel('Current PIN');
+  await expect(current).toHaveAttribute('autocomplete', 'one-time-code');
+  await expect(current).toHaveAttribute('title', /4 digits/);
+  await expect(current).toHaveAccessibleDescription(/4 digits/);
+  for (const label of ['New PIN (4 digits)', 'New PIN again']) {
+    await expect(page.getByLabel(label)).toHaveAttribute('autocomplete', 'new-password');
+  }
   await axeBothWidths(page);
 
   await page.getByRole('button', { name: 'Play as Mia' }).click();
   await expect(page).toHaveURL(/\/account\/children\/playing\/$/);
   await expect(page.getByRole('heading', { level: 1, name: 'Playing as Mia' })).toBeVisible();
+  const adultPin = page.getByLabel('Adult PIN');
+  await expect(adultPin).toHaveAttribute('autocomplete', 'one-time-code');
+  await expect(adultPin).toHaveAttribute('title', /4 digits/);
+  await expect(adultPin).toHaveAccessibleDescription(/4 digits/);
   await axeBothWidths(page);
 
   // Settings are not reachable: adult pages land on the "Playing as" page, adult POSTs are refused server-side.
@@ -380,7 +393,7 @@ test('an adult creates a child profile with a PIN, plays as the child, and only 
   }
   await expect(page.getByRole('button', { name: 'Sign out' })).toHaveCount(0);
   const auth = await sessionCookie(page);
-  for (const path of ['/account/children/create/', '/account/children/delete/confirm/', '/account/children/switch/', '/account/children/pin/', '/account/consent/resend/']) {
+  for (const path of ['/account/children/create/', '/account/children/delete/confirm/', '/account/children/switch/', '/account/children/pin/', '/account/consent/resend/', '/account/sign-out/']) {
     const r = await request.post(path, {
       headers: { ...FORM, ...ORIGIN, ...auth },
       data: form({ display_name: 'Leo', age_band: '6-9', guardian: 'on', current_pin: PIN, new_pin: '1111', new_pin_confirm: '1111' }),
@@ -392,6 +405,7 @@ test('an adult creates a child profile with a PIN, plays as the child, and only 
   await page.getByLabel('Adult PIN').fill('0000');
   await page.getByRole('button', { name: 'Switch back' }).click();
   await expect(page).toHaveURL(/\/account\/children\/playing\/\?r=wrong#result$/);
+  await expect(page.locator('#result')).toBeFocused();
   await expect(page.locator('#result')).toContainText('not right');
   await expect(page.locator('#result')).not.toContainText(/\d/);
   await expect(page.getByLabel('Adult PIN')).toHaveAttribute('aria-describedby', /result/);
@@ -407,6 +421,7 @@ test('an adult creates a child profile with a PIN, plays as the child, and only 
   await page.getByLabel('New PIN (4 digits)').fill('1357');
   await page.getByLabel('New PIN again').fill('1357');
   await page.getByRole('button', { name: 'Change PIN' }).click();
+  await expect(page.locator('#result')).toBeFocused();
   await expect(page.getByRole('status')).toContainText('Your PIN is changed');
   expect(page.url()).not.toMatch(/1357|4826/);
 
@@ -414,6 +429,7 @@ test('an adult creates a child profile with a PIN, plays as the child, and only 
   await expect(page.getByRole('heading', { level: 1, name: "Delete Mia's profile?" })).toBeVisible();
   await axeBothWidths(page);
   await page.getByRole('button', { name: 'Delete the profile' }).click();
+  await expect(page.locator('#result')).toBeFocused();
   await expect(page.getByRole('status')).toContainText('deleted');
   await expect(page.getByText('No child profiles yet.')).toBeVisible();
 });
@@ -439,4 +455,38 @@ test('the link page warns about switching accounts in a child profile too', asyn
   await page.goto(`/account/sign-in/link/?token=${await mintLink(other)}`);
   await expect(page.getByRole('status')).toContainText(`signed in as ${email}`);
   await expect(page.getByRole('status')).toContainText('switch accounts');
+});
+
+test('after five wrong PINs the switch-back page says to try later, with no counts', async ({ page }) => {
+  await signedInAdult(page);
+  await page.goto('/account/children/');
+  await addProfile(page, 'Ada', true);
+  await page.getByRole('button', { name: 'Play as Ada' }).click();
+  for (let i = 0; i < 6; i++) {
+    await page.getByLabel('Adult PIN').fill(i === 5 ? PIN : '0000');
+    await page.getByRole('button', { name: 'Switch back' }).click();
+    await expect(page).toHaveURL(/\/account\/children\/playing\/\?r=(wrong|locked)#result$/);
+  }
+  await expect(page).toHaveURL(/\?r=locked#result$/);
+  await expect(page.locator('#result')).toBeFocused();
+  await expect(page.locator('#result')).toHaveText(
+    'Too many tries. Please try again later, or ask an adult to sign in again with an email link.',
+  );
+});
+
+test("account A cannot open the delete page for account B's profile", async ({ page }) => {
+  const b = fresh();
+  await sql("INSERT INTO accounts (email, date_of_birth) VALUES ($1, '1985-01-01')", [b]);
+  const id = (
+    await sql(
+      "INSERT INTO child_profiles (account_id, display_name, age_band) SELECT id, 'Bea', '6-9' FROM accounts WHERE email = $1 RETURNING id",
+      [b],
+    )
+  ).rows[0].id as string;
+  await signedInAdult(page);
+  await page.goto(`/account/children/delete/?profile=${id}`);
+  await expect(page.getByRole('heading', { level: 1, name: 'This profile is not available' })).toBeVisible();
+  await expect(page.getByText('Bea')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Delete the profile' })).toHaveCount(0);
+  expect((await sql('SELECT 1 FROM child_profiles WHERE id = $1', [id])).rows).toHaveLength(1);
 });

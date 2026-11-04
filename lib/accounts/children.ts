@@ -119,12 +119,17 @@ export async function listChildProfiles(db: Db, accountId: string): Promise<Chil
   }));
 }
 
-// False when the profile is not this account's (or does not exist); sessions on it fall back to the adult (SET NULL).
-// Also how a profile is closed when the child turns 13: the teen may open their own account.
+// False when the profile is not this account's (or does not exist). Ruling (3C Task 3 review): a session still on the
+// profile is ended in the same transaction, so that device falls back to anonymous (fail closed), never to the adult
+// context; the composite FK's SET NULL stays only as defence in depth. Also how a profile is closed when the child
+// turns 13: the teen may open their own account.
 export async function deleteChildProfile(db: Db, accountId: string, profileId: string): Promise<boolean> {
   if (!isUuid(profileId) || !isUuid(accountId)) {
     return false;
   }
-  const r = await db.query('DELETE FROM child_profiles WHERE id = $1 AND account_id = $2', [profileId, accountId]);
-  return (r.rowCount ?? 0) > 0;
+  return db.transaction(async (tx) => {
+    await tx.query('DELETE FROM account_sessions WHERE active_profile_id = $1 AND account_id = $2', [profileId, accountId]);
+    const r = await tx.query('DELETE FROM child_profiles WHERE id = $1 AND account_id = $2', [profileId, accountId]);
+    return (r.rowCount ?? 0) > 0;
+  });
 }
