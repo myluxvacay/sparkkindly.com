@@ -3,7 +3,9 @@ import { describe, it, expect, beforeAll, afterAll, vi } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { createSignInLimits, signInLimits } from '@/lib/admin/guard';
 import { accountLinkLimits, createAccountLinkLimits, createSendBudget, createSignUpLimits } from '@/lib/accounts/limits';
-import { requestAccountSignIn, submitSignUp } from '@/lib/accounts/web';
+import { confirmAccountLink, requestAccountSignIn, submitSignUp } from '@/lib/accounts/web';
+import { consumeAccountLink, getAccount, requestAccountLink } from '@/lib/accounts/sessions';
+import { createConfirmLimits } from '@/lib/accounts/limits';
 import { signUp } from '@/lib/accounts/signup';
 import type { EmailMessage } from '@/lib/email';
 
@@ -203,5 +205,33 @@ describe('link email limits', () => {
     expect(sent).toHaveLength(2);
     expect(answers[2]).toEqual(answers[0]);
     expect(warn).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('confirmAccountLink', () => {
+  const confirm = (token: string, cookie?: string) =>
+    run((d) => {
+      const req = post({ token });
+      if (cookie) req.headers.set('cookie', `__Host-sk_account=${cookie}`);
+      return confirmAccountLink(req, { ...(d as never), confirms: createConfirmLimits(() => 0) });
+    });
+  const cookieValue = (r: Response) => /__Host-sk_account=([0-9a-f]{64})/.exec(r.headers.get('set-cookie') ?? '')?.[1];
+
+  it('switching accounts ends the session the browser already held', async () => {
+    await signUp(db, { email: 'switch-a@example.test', dateOfBirth: '1990-05-05' }, NOW);
+    await signUp(db, { email: 'switch-b@example.test', dateOfBirth: '1990-05-05' }, NOW);
+    const old = (await consumeAccountLink(db, (await requestAccountLink(db, 'switch-a@example.test', env, NOW))!, NOW))!;
+    const res = await confirm((await requestAccountLink(db, 'switch-b@example.test', env, NOW))!, old);
+    expect(res.status).toBe(303);
+    expect(await getAccount(db, old, NOW)).toBeNull();
+    expect((await getAccount(db, cookieValue(res)!, NOW))?.email).toBe('switch-b@example.test');
+  });
+
+  it('a failed confirm leaves the current session alone', async () => {
+    await signUp(db, { email: 'stay@example.test', dateOfBirth: '1990-05-05' }, NOW);
+    const s = (await consumeAccountLink(db, (await requestAccountLink(db, 'stay@example.test', env, NOW))!, NOW))!;
+    const res = await confirm('0'.repeat(64), s);
+    expect(res.headers.get('location')).toBe('/account/sign-in/?expired=1');
+    expect((await getAccount(db, s, NOW))?.email).toBe('stay@example.test');
   });
 });
