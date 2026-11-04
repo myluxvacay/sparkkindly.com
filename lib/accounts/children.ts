@@ -4,7 +4,7 @@
 // open their own account). No Next.js imports. Verified by tests/unit/account-children.test.ts.
 import type { Db } from '@/lib/db';
 import { ageGroupFor, can, type Consent } from './policy';
-import { hashPin, isPin } from './pin';
+import { hashPin, isPin, isUuid } from './pin';
 
 export type AgeBand = '6-9' | '10-12';
 export type ChildProfile = {
@@ -22,7 +22,6 @@ export type CreateInput = {
 export type CreateResult =
   { status: 'created'; profileId: string } | { status: 'invalid' | 'not_allowed' | 'pin_required' };
 
-const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const NAME_MAX = 30;
 
 const guardianChecked = (v: unknown): boolean => v === true || v === 'on' || v === 'true';
@@ -31,13 +30,13 @@ function cleanName(v: unknown): string | null {
   if (typeof v !== 'string') {
     return null;
   }
-  const name = v.trim();
+  const name = v.normalize('NFKC').trim();
   if (
-    name.length < 1 ||
-    name.length > NAME_MAX ||
+    [...name].length < 1 ||
+    [...name].length > NAME_MAX ||
     name.includes('@') ||
-    /^\d+$/.test(name) ||
-    /[\u0000-\u001f\u007f-\u009f]/.test(name)
+    /^\p{Nd}+$/u.test(name) ||
+    /[\p{Cc}\p{Cf}]/u.test(name)
   ) {
     return null;
   }
@@ -52,6 +51,9 @@ export async function createChildProfile(
   input: CreateInput,
   now: Date,
 ): Promise<CreateResult> {
+  if (!isUuid(accountId)) {
+    return { status: 'not_allowed' };
+  }
   return db.transaction(async (tx) => {
     const found = await tx.query<{
       date_of_birth: Date | string;
@@ -97,6 +99,9 @@ export async function createChildProfile(
 }
 
 export async function listChildProfiles(db: Db, accountId: string): Promise<ChildProfile[]> {
+  if (!isUuid(accountId)) {
+    return [];
+  }
   const r = await db.query<{
     id: string;
     display_name: string;
@@ -117,7 +122,7 @@ export async function listChildProfiles(db: Db, accountId: string): Promise<Chil
 // False when the profile is not this account's (or does not exist); sessions on it fall back to the adult (SET NULL).
 // Also how a profile is closed when the child turns 13: the teen may open their own account.
 export async function deleteChildProfile(db: Db, accountId: string, profileId: string): Promise<boolean> {
-  if (typeof profileId !== 'string' || !UUID.test(profileId)) {
+  if (!isUuid(profileId) || !isUuid(accountId)) {
     return false;
   }
   const r = await db.query('DELETE FROM child_profiles WHERE id = $1 AND account_id = $2', [profileId, accountId]);

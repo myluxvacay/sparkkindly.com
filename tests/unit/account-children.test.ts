@@ -2,7 +2,7 @@
 import { describe, it, expect, beforeEach, afterAll, beforeAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { signUp } from '@/lib/accounts/signup';
-import { checkPin } from '@/lib/accounts/pin';
+import { checkPin, setPin } from '@/lib/accounts/pin';
 import { deleteAccount } from '@/lib/accounts/delete';
 import { createChildProfile, listChildProfiles, deleteChildProfile } from '@/lib/accounts/children';
 
@@ -195,5 +195,66 @@ describe('account deletion', () => {
     await createChildProfile(db, a, ok, T0);
     expect(await deleteAccount(db, a)).toBe(true);
     expect(await count('SELECT count(*)::int AS n FROM child_profiles')).toBe(0);
+  });
+});
+
+describe('name normalisation and malformed ids', () => {
+  it('rejects invisible, direction, fullwidth @ and fullwidth-digit names; accepts 16 emoji', async () => {
+    const id = await adult();
+    const bad = ['Mi\u200Ba', 'Mia\u202E', 'a\uFF20b', '\uFF11\uFF12\uFF13\uFF14', '\u0661\u0662\u0663'];
+    for (const displayName of bad) {
+      expect(await createChildProfile(db, id, { ...ok, displayName }, T0), displayName).toEqual({ status: 'invalid' });
+    }
+    const emoji = '\u{1F600}'.repeat(16);
+    expect((await createChildProfile(db, id, { ...ok, displayName: emoji }, T0)).status).toBe('created');
+    expect((await createChildProfile(db, id, { ...ok, displayName: '\u{1F600}'.repeat(31) }, T0)).status).toBe(
+      'invalid',
+    );
+  });
+
+  it('stores the NFKC-normalised name', async () => {
+    const id = await adult();
+    await createChildProfile(db, id, { ...ok, displayName: '\uFF2D\uFF49\uFF41' }, T0);
+    expect((await listChildProfiles(db, id))[0].displayName).toBe('Mia');
+  });
+
+  it('a non-UUID account or profile id gets the neutral result instead of throwing', async () => {
+    expect(await createChildProfile(db, 'nope', ok, T0)).toEqual({ status: 'not_allowed' });
+    expect(await deleteChildProfile(db, 'nope', '00000000-0000-0000-0000-000000000000')).toBe(false);
+    expect(await listChildProfiles(db, 'nope')).toEqual([]);
+    expect(await setPin(db, 'nope', '1234')).toBe('invalid');
+    expect(await checkPin(db, 'nope', '1234', T0)).toBe('wrong');
+  });
+});
+
+describe('session active profile', () => {
+  const session = (account: string, profile: string | null) =>
+    db.query(
+      "INSERT INTO account_sessions (token_hash, account_id, expires_at, last_seen_at, active_profile_id) VALUES ($3, $1, now() + interval '1 day', now(), $2)",
+      [account, profile, `h${n++}`],
+    );
+
+  it("a session cannot point at another account's profile", async () => {
+    const a = await adult();
+    const b = await adult();
+    const r = await createChildProfile(db, a, ok, T0);
+    if (r.status !== 'created') {
+      throw new Error('create failed');
+    }
+    await expect(session(b, r.profileId)).rejects.toThrow();
+    await session(a, r.profileId);
+  });
+
+  it('deleting the active profile nulls only active_profile_id', async () => {
+    const a = await adult();
+    const r = await createChildProfile(db, a, ok, T0);
+    if (r.status !== 'created') {
+      throw new Error('create failed');
+    }
+    await session(a, r.profileId);
+    await deleteChildProfile(db, a, r.profileId);
+    expect((await db.query('SELECT account_id, active_profile_id FROM account_sessions')).rows).toEqual([
+      { account_id: a, active_profile_id: null },
+    ]);
   });
 });

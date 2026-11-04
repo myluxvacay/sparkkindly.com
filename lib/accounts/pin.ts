@@ -14,6 +14,9 @@ const KEY_LEN = 32;
 const derive = (pin: string, salt: Buffer): Promise<Buffer> =>
   new Promise((resolve, reject) => scrypt(pin, salt, KEY_LEN, (err, key) => (err ? reject(err) : resolve(key))));
 
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+export const isUuid = (v: unknown): v is string => typeof v === 'string' && UUID.test(v);
+
 export const isPin = (v: unknown): v is string => typeof v === 'string' && PIN.test(v);
 
 export async function hashPin(pin: string): Promise<string> {
@@ -32,7 +35,7 @@ async function matches(pin: string, stored: string): Promise<boolean> {
 
 // Sets (or changes) the PIN and clears any lockout. 'invalid' when the PIN is not 4 digits or the account is unknown.
 export async function setPin(db: Db, accountId: string, pin: unknown): Promise<'set' | 'invalid'> {
-  if (!isPin(pin)) {
+  if (!isPin(pin) || !isUuid(accountId)) {
     return 'invalid';
   }
   const r = await db.query(
@@ -44,6 +47,9 @@ export async function setPin(db: Db, accountId: string, pin: unknown): Promise<'
 
 // Checks a PIN under the account row lock so concurrent guesses cannot skip the counter.
 export async function checkPin(db: Db, accountId: string, pin: unknown, now: Date): Promise<'ok' | 'wrong' | 'locked'> {
+  if (!isUuid(accountId)) {
+    return 'wrong';
+  }
   return db.transaction(async (tx) => {
     const found = await tx.query<{
       pin_hash: string | null;
