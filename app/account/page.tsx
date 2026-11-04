@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import { requireAccount } from '@/lib/accounts/next';
-import { consentPending } from '@/lib/accounts/policy';
+import { can, consentPending } from '@/lib/accounts/policy';
 import { ageWording, consentDay } from '@/lib/accounts/wording';
 
 export const dynamic = 'force-dynamic';
@@ -47,6 +48,11 @@ export default async function AccountPage({ searchParams }: Props) {
             Email my parent or guardian again
           </button>
         </form>
+      )}
+      {can(account.ageGroup, account.consent, 'create_child_profile') && (
+        <p>
+          <Link href="/account/children/">Child profiles</Link>
+        </p>
       )}
       <form method="post" action="/account/sign-out/">
         <button type="submit" className="button">

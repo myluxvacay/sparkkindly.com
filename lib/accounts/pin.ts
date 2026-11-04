@@ -33,6 +33,15 @@ async function matches(pin: string, stored: string): Promise<boolean> {
   return timingSafeEqual(await derive(pin, Buffer.from(saltHex, 'hex')), expected);
 }
 
+// Whether the account has set its PIN (the pages ask for one on the first profile, and offer a change after).
+export async function hasPin(db: Db, accountId: string): Promise<boolean> {
+  if (!isUuid(accountId)) {
+    return false;
+  }
+  const r = await db.query('SELECT 1 FROM accounts WHERE id = $1 AND pin_hash IS NOT NULL', [accountId]);
+  return r.rows.length === 1;
+}
+
 // Sets (or changes) the PIN and clears any lockout. 'invalid' when the PIN is not 4 digits or the account is unknown.
 export async function setPin(db: Db, accountId: string, pin: unknown): Promise<'set' | 'invalid'> {
   if (!isPin(pin) || !isUuid(accountId)) {

@@ -6,7 +6,7 @@ import { clientKey, readCookie, readForm, sameOrigin, seeOther } from '@/lib/adm
 import { confirmConsent, withdrawConsent } from './consent';
 import { confirmLimits, consentResendLimits } from './limits';
 import { consentPending } from './policy';
-import { getAccount } from './sessions';
+import { getContext, requireAdultContext } from './context';
 import { ACCOUNT_COOKIE, emailConsentRequest, forbidden, tooMany, type Deps } from './web';
 
 type ConsentDeps = Deps & { resends?: typeof consentResendLimits };
@@ -40,8 +40,11 @@ export const withdrawConsentRequest = (request: Request, d: ConsentDeps) =>
 // One resend an hour per account; refused (nothing sent) unless the signed-in account is waiting for consent.
 export async function resendConsentRequest(request: Request, d: ConsentDeps): Promise<Response> {
   if (!sameOrigin(request)) return forbidden();
-  const account = await getAccount(d.db, readCookie(request, ACCOUNT_COOKIE), d.now);
-  if (!account) return seeOther('/account/sign-in/');
+  const ctx = await getContext(d.db, readCookie(request, ACCOUNT_COOKIE), d.now);
+  if (!ctx) return seeOther('/account/sign-in/');
+  // A child context never reaches account settings (plan 3C).
+  const account = requireAdultContext(ctx)?.account;
+  if (!account) return forbidden();
   if (!consentPending(account.ageGroup, account.consent)) return seeOther('/account/');
   if (!(d.resends ?? consentResendLimits)(account.id)) return seeOther('/account/?consent=wait#result');
   d.defer(() => emailConsentRequest(d, account.id));

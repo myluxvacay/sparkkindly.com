@@ -65,10 +65,10 @@ test('an unconfirmed account shows its age group and a masked parent email on th
 });
 
 test('with the flag off every account page and route is a 404 (server without ACCOUNTS_ENABLED)', async ({ request }) => {
-  for (const path of ['/account/', '/account/sign-up/', '/account/sign-in/', '/account/sign-in/link/?token=x', '/account/consent/?token=x', '/account/consent/withdraw/?token=x']) {
+  for (const path of ['/account/', '/account/sign-up/', '/account/sign-in/', '/account/sign-in/link/?token=x', '/account/consent/?token=x', '/account/consent/withdraw/?token=x', '/account/children/', '/account/children/playing/', '/account/children/delete/?profile=x']) {
     expect((await request.get(OFF + path)).status(), path).toBe(404);
   }
-  for (const path of ['/account/sign-up/submit/', '/account/sign-in/request/', '/account/sign-in/link/confirm/', '/account/sign-out/', '/account/consent/confirm/', '/account/consent/withdraw/confirm/', '/account/consent/resend/']) {
+  for (const path of ['/account/sign-up/submit/', '/account/sign-in/request/', '/account/sign-in/link/confirm/', '/account/sign-out/', '/account/consent/confirm/', '/account/consent/withdraw/confirm/', '/account/consent/resend/', '/account/children/create/', '/account/children/switch/', '/account/children/switch-back/', '/account/children/pin/', '/account/children/delete/confirm/']) {
     const r = await request.post(OFF + path, { headers: { ...FORM, origin: OFF }, data: form({ email: 'a@example.test' }), maxRedirects: 0 });
     expect(r.status(), path).toBe(404);
   }
@@ -263,8 +263,8 @@ test('a 14-year-old confirms their link, the parent confirms consent, and the ac
   await page.getByRole('button', { name: 'Email my parent or guardian again' }).click();
   await expect(page).toHaveURL(/\/account\/\?consent=resent#result$/);
   await expect(page.locator('#result')).toBeFocused();
-  // the resend issued fresh links (old withdraw kept); wait for it so it cannot revoke the token minted next
-  await expect.poll(() => consentRows(id)).toBe(3);
+  // the resend issued a fresh confirm and withdraw pair (the earlier links stay valid); wait for it before minting next
+  await expect.poll(() => consentRows(id)).toBe(4);
 
   const token = await mintConsent(email, 'confirm');
   await page.goto(`/account/consent/?token=${token}`);
@@ -323,4 +323,120 @@ test('the parent withdraw link deletes the account; signing in again finds no ac
   await page.goto(`/account/consent/withdraw/?token=${token}`);
   await expect(page.getByRole('heading', { level: 1, name: 'This link is not valid' })).toBeVisible();
   await axeBothWidths(page);
+});
+
+// Child profiles (Project 3C, Task 3). The adult PIN is typed into the page; nothing about it may reach a URL.
+const PIN = '4826';
+const sessionCookie = async (page: Page) => {
+  const value = (await page.context().cookies(BASE)).find((x) => x.name === '__Host-sk_account')!.value;
+  return { cookie: `__Host-sk_account=${value}` };
+};
+async function signedInAdult(page: Page) {
+  const email = fresh();
+  await signUp(page, email, dobYearsAgo(30));
+  await signInWithLink(page, email);
+  await expect(page.getByRole('heading', { level: 1, name: 'Your account' })).toBeVisible();
+  return email;
+}
+async function addProfile(page: Page, name: string, firstPin: boolean) {
+  await page.getByLabel('First name or nickname').fill(name);
+  await page.getByRole('radio', { name: '6 to 9' }).check();
+  await page.getByRole('checkbox', { name: /parent or guardian/ }).check();
+  if (firstPin) {
+    await page.getByLabel('PIN', { exact: true }).fill(PIN);
+    await page.getByLabel('PIN again', { exact: true }).fill(PIN);
+  }
+  await page.getByRole('button', { name: 'Add the profile' }).click();
+}
+
+test('an adult creates a child profile with a PIN, plays as the child, and only the PIN switches back', async ({ page, request }) => {
+  await signedInAdult(page);
+  await page.getByRole('link', { name: 'Child profiles' }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'Child profiles' })).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+  const pin = page.getByLabel('PIN', { exact: true });
+  for (const [k, v] of [['type', 'password'], ['inputmode', 'numeric'], ['autocomplete', 'off'], ['pattern', '[0-9]{4}']]) {
+    await expect(pin).toHaveAttribute(k, v);
+  }
+  await axeBothWidths(page);
+
+  await addProfile(page, 'Mia', true);
+  await expect(page).toHaveURL(/\/account\/children\/\?r=created#result$/);
+  await expect(page.getByRole('status')).toContainText('The profile is ready');
+  await expect(page.getByText('Mia', { exact: true })).toBeVisible();
+  await expect(page.getByText('age 6 to 9')).toBeVisible();
+  await expect(page.getByLabel('Current PIN')).toBeVisible();
+  await axeBothWidths(page);
+
+  await page.getByRole('button', { name: 'Play as Mia' }).click();
+  await expect(page).toHaveURL(/\/account\/children\/playing\/$/);
+  await expect(page.getByRole('heading', { level: 1, name: 'Playing as Mia' })).toBeVisible();
+  await axeBothWidths(page);
+
+  // Settings are not reachable: adult pages land on the "Playing as" page, adult POSTs are refused server-side.
+  for (const path of ['/account/', '/account/children/', '/account/children/delete/?profile=x']) {
+    await page.goto(path);
+    await expect(page).toHaveURL(/\/account\/children\/playing\/$/);
+  }
+  await expect(page.getByRole('button', { name: 'Sign out' })).toHaveCount(0);
+  const auth = await sessionCookie(page);
+  for (const path of ['/account/children/create/', '/account/children/delete/confirm/', '/account/children/switch/', '/account/children/pin/', '/account/consent/resend/']) {
+    const r = await request.post(path, {
+      headers: { ...FORM, ...ORIGIN, ...auth },
+      data: form({ display_name: 'Leo', age_band: '6-9', guardian: 'on', current_pin: PIN, new_pin: '1111', new_pin_confirm: '1111' }),
+      maxRedirects: 0,
+    });
+    expect(r.status(), path).toBe(403);
+  }
+
+  await page.getByLabel('Adult PIN').fill('0000');
+  await page.getByRole('button', { name: 'Switch back' }).click();
+  await expect(page).toHaveURL(/\/account\/children\/playing\/\?r=wrong#result$/);
+  await expect(page.locator('#result')).toContainText('not right');
+  await expect(page.locator('#result')).not.toContainText(/\d/);
+  await expect(page.getByLabel('Adult PIN')).toHaveAttribute('aria-describedby', /result/);
+  await axeBothWidths(page);
+
+  await page.getByLabel('Adult PIN').fill(PIN);
+  await page.getByRole('button', { name: 'Switch back' }).click();
+  await expect(page).toHaveURL(/\/account\/children\/$/);
+  expect(page.url()).not.toContain(PIN);
+  expect((await page.context().cookies(BASE)).map((c) => c.name)).toEqual(['__Host-sk_account']);
+
+  await page.getByLabel('Current PIN').fill(PIN);
+  await page.getByLabel('New PIN (4 digits)').fill('1357');
+  await page.getByLabel('New PIN again').fill('1357');
+  await page.getByRole('button', { name: 'Change PIN' }).click();
+  await expect(page.getByRole('status')).toContainText('Your PIN is changed');
+  expect(page.url()).not.toMatch(/1357|4826/);
+
+  await page.getByRole('link', { name: "Delete Mia's profile" }).click();
+  await expect(page.getByRole('heading', { level: 1, name: "Delete Mia's profile?" })).toBeVisible();
+  await axeBothWidths(page);
+  await page.getByRole('button', { name: 'Delete the profile' }).click();
+  await expect(page.getByRole('status')).toContainText('deleted');
+  await expect(page.getByText('No child profiles yet.')).toBeVisible();
+});
+
+test('a 16-year-old sees no child profile option and cannot open the page', async ({ page }) => {
+  const email = fresh();
+  await signUp(page, email, dobYearsAgo(16));
+  await signInWithLink(page, email);
+  await expect(page.getByRole('heading', { level: 1, name: 'Your account' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Child profiles' })).toHaveCount(0);
+  await page.goto('/account/children/');
+  await expect(page).toHaveURL(/\/account\/$/);
+});
+
+test('the link page warns about switching accounts in a child profile too', async ({ page }) => {
+  const other = fresh();
+  await signUp(page, other, dobYearsAgo(30));
+  const email = await signedInAdult(page);
+  await page.goto('/account/children/');
+  await addProfile(page, 'Leo', true);
+  await page.getByRole('button', { name: 'Play as Leo' }).click();
+  await expect(page.getByRole('heading', { level: 1, name: 'Playing as Leo' })).toBeVisible();
+  await page.goto(`/account/sign-in/link/?token=${await mintLink(other)}`);
+  await expect(page.getByRole('status')).toContainText(`signed in as ${email}`);
+  await expect(page.getByRole('status')).toContainText('switch accounts');
 });

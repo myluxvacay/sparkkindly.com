@@ -2,7 +2,7 @@
 import { describe, it, expect, beforeEach, afterAll, beforeAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { signUp } from '@/lib/accounts/signup';
-import { setPin, checkPin } from '@/lib/accounts/pin';
+import { setPin, checkPin, hasPin } from '@/lib/accounts/pin';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -30,6 +30,15 @@ async function adult(): Promise<string> {
 }
 
 describe('setPin', () => {
+  it('hasPin is false until a PIN is set, and false for an unknown or malformed id', async () => {
+    const id = await adult();
+    expect(await hasPin(db, id)).toBe(false);
+    await setPin(db, id, '1234');
+    expect(await hasPin(db, id)).toBe(true);
+    expect(await hasPin(db, '00000000-0000-0000-0000-000000000000')).toBe(false);
+    expect(await hasPin(db, 'nope')).toBe(false);
+  });
+
   it('accepts exactly 4 digits and rejects everything else', async () => {
     const id = await adult();
     for (const bad of ['123', '12345', 'abcd', '12 4', '', null, undefined, 1234, ['1234'], '１２３４']) {

@@ -1,5 +1,4 @@
-import { cookies } from 'next/headers';
-import { currentAccount, requireAccounts } from '@/lib/accounts/next';
+import { currentContext, requireAccounts } from '@/lib/accounts/next';
 import { linkTarget } from '@/lib/accounts/sessions';
 import { ageWording, maskEmail } from '@/lib/accounts/wording';
 import { getDb } from '@/lib/db';
@@ -16,7 +15,8 @@ export default async function AccountLinkPage({ searchParams }: Props) {
   requireAccounts();
   const { token } = await searchParams;
   const target = typeof token === 'string' ? await linkTarget(getDb(), token, new Date()) : null;
-  const current = target ? await currentAccount(await cookies()) : null;
+  // The whole context, so the warning shows in a child profile too (the account behind it is still signed in here).
+  const current = target ? (await currentContext())?.account : null;
   return (
     <>
       <h1>Continue signing in</h1>

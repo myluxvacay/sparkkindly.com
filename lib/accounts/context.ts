@@ -47,7 +47,9 @@ export async function switchToProfile(db: Db, sessionToken: string, profileId: s
   return r.rowCount === 1;
 }
 
-// Back to the adult context with the account's PIN (5 wrong entries lock it, see pin.ts). Already adult: nothing to do.
+// Back to the adult context with the account's PIN (5 wrong entries lock it, see pin.ts). Already adult: nothing to do,
+// and 'ok' then means only "the context is adult", NOT "the PIN was checked" (no PIN is read). Never use this as a PIN
+// verification step; changePin and checkPin in pin.ts are the only PIN checks.
 export async function switchToAdult(db: Db, sessionToken: string, pin: unknown, now: Date): Promise<'ok' | 'wrong' | 'locked'> {
   const ctx = await getContext(db, sessionToken, now);
   if (!ctx) {
