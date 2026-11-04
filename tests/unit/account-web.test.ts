@@ -227,6 +227,23 @@ describe('confirmAccountLink', () => {
     expect((await getAccount(db, cookieValue(res)!, NOW))?.email).toBe('switch-b@example.test');
   });
 
+  it('a database error (e.g. a lock wait past statement_timeout) gives the generic invalid-link page, not a 500', async () => {
+    const error = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const timeout = Object.assign(new Error('canceling statement due to statement timeout'), { code: '57014' });
+    const jobs: Promise<void>[] = [];
+    const res = await confirmAccountLink(post({ token: 'a'.repeat(64) }), {
+      db: { ...db, transaction: async () => Promise.reject(timeout) },
+      env,
+      now: NOW,
+      send: async () => ({}),
+      defer: (w) => void jobs.push(w()),
+      confirms: createConfirmLimits(() => 0),
+    });
+    expect(res.headers.get('location')).toBe('/account/sign-in/?expired=1');
+    expect(error.mock.calls.flat().join(' ')).not.toMatch(/a{64}/);
+    error.mockRestore();
+  });
+
   it('a failed confirm leaves the current session alone', async () => {
     await signUp(db, { email: 'stay@example.test', dateOfBirth: '1990-05-05' }, NOW);
     const s = (await consumeAccountLink(db, (await requestAccountLink(db, 'stay@example.test', env, NOW))!, NOW))!;

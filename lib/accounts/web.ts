@@ -103,7 +103,11 @@ export async function confirmAccountLink(request: Request, d: Deps): Promise<Res
   if (!sameOrigin(request)) return forbidden();
   if (!(d.confirms ?? confirmLimits)(clientKey(request))) return tooMany();
   const form = await readForm(request);
-  const session = await consumeAccountLink(d.db, form?.get('token') ?? '', d.now);
+  // A database error (e.g. the row lock waited past statement_timeout) gets the generic invalid-link page, not a 500.
+  const session = await consumeAccountLink(d.db, form?.get('token') ?? '', d.now).catch((err: Error) => {
+    console.error('account link not confirmed:', err.message);
+    return null;
+  });
   if (!session) return seeOther('/account/sign-in/?expired=1');
   // Switching accounts: the session this browser held so far ends now, not when it would have expired.
   await endAccountSession(d.db, readCookie(request, ACCOUNT_COOKIE));
