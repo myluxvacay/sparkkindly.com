@@ -13,7 +13,9 @@ export type Capability =
   | 'create_child_profile'
   | 'see_sponsorship'
   | 'essential_email'
-  | 'marketing_email';
+  | 'marketing_email'
+  | 'invite'
+  | 'profile_page';
 
 export type Consent = 'none' | 'pending' | 'confirmed';
 
@@ -70,7 +72,8 @@ export function ageGroupFor(dob: string, now: Date): AgeGroup | null {
 }
 
 const TEEN_PENDING: readonly Capability[] = ['save_interests', 'essential_email'];
-const TEEN_CONFIRMED: readonly Capability[] = [...TEEN_PENDING, 'join_circle', 'create_circle'];
+// 13-15 with consent: circles and invites, but no profile page (spec 4a.5).
+const TEEN_CONFIRMED: readonly Capability[] = [...TEEN_PENDING, 'join_circle', 'create_circle', 'invite'];
 const ALL: readonly Capability[] = [
   ...TEEN_CONFIRMED,
   'public_comment',
@@ -79,9 +82,12 @@ const ALL: readonly Capability[] = [
   'create_child_profile',
   'see_sponsorship',
   'marketing_email',
+  'profile_page',
 ];
 const OLDER_TEEN: readonly Capability[] = ALL.filter((c) => c !== 'create_child_profile' && c !== 'see_sponsorship');
 
+// `can` is necessary, not sufficient: for an adult, create_child_profile ALSO requires a recorded guardian confirmation
+// (plan 3C). Never gate child-profile creation on `can` alone.
 export function can(group: AgeGroup, consent: Consent, cap: Capability): boolean {
   switch (group) {
     case 'under_13':
@@ -97,3 +103,8 @@ export function can(group: AgeGroup, consent: Consent, cap: Capability): boolean
       return ALL.includes(cap);
   }
 }
+
+// A 13-15 account whose parent or guardian has not confirmed yet (it can save interests only). Shared by the pages so
+// none of them re-derives the rule.
+export const consentPending = (group: AgeGroup, consent: Consent): boolean =>
+  group === 'teen_13_15' && consent !== 'confirmed';

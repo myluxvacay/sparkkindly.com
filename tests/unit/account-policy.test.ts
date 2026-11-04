@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from 'vitest';
-import { ageGroupFor, can, POLICY, type AgeGroup, type Capability } from '@/lib/accounts/policy';
+import { ageGroupFor, can, consentPending, POLICY, type AgeGroup, type Capability } from '@/lib/accounts/policy';
 
 const NOW = (iso: string) => new Date(`${iso}T12:00:00Z`);
 
@@ -62,6 +62,8 @@ const ALL: Capability[] = [
   'see_sponsorship',
   'essential_email',
   'marketing_email',
+  'invite',
+  'profile_page',
 ];
 const without = (...no: Capability[]) => ALL.filter((c) => !no.includes(c));
 
@@ -71,13 +73,25 @@ describe('can', () => {
     ['under_13', 'confirmed', []],
     ['teen_13_15', 'none', []],
     ['teen_13_15', 'pending', ['save_interests', 'essential_email']],
-    ['teen_13_15', 'confirmed', ['save_interests', 'essential_email', 'join_circle', 'create_circle']],
+    ['teen_13_15', 'confirmed', ['save_interests', 'essential_email', 'join_circle', 'create_circle', 'invite']],
+    ['under_13', 'pending', []],
     ['teen_16_17', 'none', without('create_child_profile', 'see_sponsorship')],
+    ['teen_16_17', 'confirmed', without('create_child_profile', 'see_sponsorship')],
     ['adult', 'none', ALL],
   ];
   it.each(rows)('%s / %s', (group, consent, allowed) => {
     for (const cap of ALL) {
       expect(can(group, consent, cap), `${group}/${consent}/${cap}`).toBe(allowed.includes(cap));
     }
+  });
+});
+
+describe('consentPending', () => {
+  it('is true only for 13-15 without confirmed consent', () => {
+    expect(consentPending('teen_13_15', 'pending')).toBe(true);
+    expect(consentPending('teen_13_15', 'none')).toBe(true);
+    expect(consentPending('teen_13_15', 'confirmed')).toBe(false);
+    expect(consentPending('teen_16_17', 'none')).toBe(false);
+    expect(consentPending('adult', 'none')).toBe(false);
   });
 });

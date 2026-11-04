@@ -104,6 +104,8 @@ describe('permission matrix through can()', () => {
     'see_sponsorship',
     'essential_email',
     'marketing_email',
+    'invite',
+    'profile_page',
   ];
   const denied = (g: AgeGroup, c: Consent, list: Capability[]) => {
     for (const cap of list) expect(can(g, c, cap), `${g}/${c}/${cap}`).toBe(false);
@@ -121,18 +123,20 @@ describe('permission matrix through can()', () => {
       'contribute',
       'create_child_profile',
       'see_sponsorship',
+      'invite',
+      'profile_page',
     ]);
   });
   it('13-15 confirmed: circles yes; comments, community, contribute, child profiles, sponsorship no', () => {
-    allowed('teen_13_15', 'confirmed', ['join_circle', 'create_circle']);
-    denied('teen_13_15', 'confirmed', ['public_comment', 'join_community', 'contribute', 'create_child_profile', 'see_sponsorship']);
+    allowed('teen_13_15', 'confirmed', ['join_circle', 'create_circle', 'invite']);
+    denied('teen_13_15', 'confirmed', ['public_comment', 'join_community', 'contribute', 'create_child_profile', 'see_sponsorship', 'profile_page']);
   });
   it('13-15 with no consent state gets nothing', () => {
     denied('teen_13_15', 'none', caps);
   });
   it('16-17: no child profiles or sponsorship', () => {
     denied('teen_16_17', 'none', ['create_child_profile', 'see_sponsorship']);
-    allowed('teen_16_17', 'none', ['public_comment', 'contribute', 'join_circle']);
+    allowed('teen_16_17', 'none', ['public_comment', 'contribute', 'join_circle', 'invite', 'profile_page']);
   });
   it('under 13 is denied everything, whatever the consent state', () => {
     for (const c of ['none', 'pending', 'confirmed'] as Consent[]) denied('under_13', c, caps);

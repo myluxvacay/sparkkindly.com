@@ -1,11 +1,12 @@
 import { requireAccount } from '@/lib/accounts/next';
+import { consentPending } from '@/lib/accounts/policy';
 import { ageWording } from '@/lib/accounts/wording';
 
 export const dynamic = 'force-dynamic';
 
 export default async function AccountPage() {
   const account = await requireAccount();
-  const pending = account.ageGroup === 'teen_13_15' && account.consent !== 'confirmed';
+  const pending = consentPending(account.ageGroup, account.consent);
   return (
     <>
       <h1>Your account</h1>
