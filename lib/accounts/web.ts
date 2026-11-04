@@ -73,10 +73,11 @@ export async function submitSignUp(request: Request, d: Deps): Promise<Response>
     d.now,
   );
   switch (result.status) {
+    // Neutral codes (a: under 13, b: parent email needed), so URLs and access logs do not record an age declaration.
     case 'under_13':
-      return seeOther('/account/sign-up/?under13=1');
+      return seeOther('/account/sign-up/?r=a');
     case 'parent_required':
-      return seeOther('/account/sign-up/?parent=1');
+      return seeOther('/account/sign-up/?r=b');
     case 'invalid':
       return seeOther('/account/sign-up/?invalid=1');
     default: // created and exists look the same, and both send a sign-in link

@@ -3,11 +3,14 @@ import { requireAccounts } from '@/lib/accounts/next';
 
 export const dynamic = 'force-dynamic';
 
-type Props = { searchParams: Promise<{ sent?: string; under13?: string; parent?: string; invalid?: string }> };
+type Props = { searchParams: Promise<{ sent?: string; r?: string; invalid?: string }> };
 
 export default async function AccountSignUpPage({ searchParams }: Props) {
   requireAccounts();
   const q = await searchParams;
+  // r=a: under 13 (nothing stored); r=b: a 13-15 sign-up without a usable parent email. Neutral on purpose.
+  const under13 = q.r === 'a';
+  const parentError = q.r === 'b';
   return (
     <>
       <h1>Create an account</h1>
@@ -16,7 +19,7 @@ export default async function AccountSignUpPage({ searchParams }: Props) {
           <p>Check your email to continue.</p>
         </div>
       )}
-      {q.under13 === '1' && (
+      {under13 && (
         <div role="status" className="takeaway">
           <p>
             Accounts start at 13, so we have not created one and we kept nothing you entered. Younger children can
@@ -24,7 +27,7 @@ export default async function AccountSignUpPage({ searchParams }: Props) {
           </p>
         </div>
       )}
-      {q.parent === '1' && (
+      {parentError && (
         <div role="alert" className="grown-ups" id="parent-error">
           <p>
             At 13 to 15 we need a parent or guardian&apos;s email address, and it must be different from yours. Please
@@ -54,8 +57,8 @@ export default async function AccountSignUpPage({ searchParams }: Props) {
             type="email"
             autoComplete="off"
             maxLength={254}
-            aria-describedby={q.parent === '1' ? 'parent-error' : undefined}
-            aria-invalid={q.parent === '1' ? true : undefined}
+            aria-describedby={parentError ? 'parent-error' : undefined}
+            aria-invalid={parentError ? true : undefined}
           />
         </p>
         <button type="submit" className="button">

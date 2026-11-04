@@ -131,6 +131,14 @@ describe('submitSignUp', () => {
     expect(await snapshot(a)).toEqual(await snapshot(b));
   });
 
+  it('the under-13 and parent-required redirects use neutral codes that do not reveal an age in the URL', async () => {
+    const dob = (years: number) => `${2026 - years}-01-01`;
+    const kid = await run((d) => submitSignUp(post({ email: 'kid@example.test', dob: dob(10) }), d as never));
+    const teen = await run((d) => submitSignUp(post({ email: 'teen@example.test', dob: dob(14) }), d as never));
+    expect(kid.headers.get('location')).toBe('/account/sign-up/?r=a');
+    expect(teen.headers.get('location')).toBe('/account/sign-up/?r=b');
+  });
+
   it('the 429 does not depend on the address', async () => {
     const signUps = createSignUpLimits(() => 0);
     for (let i = 0; i < 5; i++) await signUpPost(`rl${i}@example.test`, [], { signUps }, '192.0.2.50');
