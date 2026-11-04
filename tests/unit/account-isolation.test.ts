@@ -8,6 +8,10 @@ import { requestAccountLink, consumeAccountLink, getAccount, endAccountSession }
 import { can, type AgeGroup, type Capability, type Consent } from '@/lib/accounts/policy';
 import { requestLink, consumeLink, getAdmin } from '@/lib/admin/sessions';
 import { newToken } from '@/lib/tokens';
+import { createChildProfile, deleteChildProfile, listChildProfiles } from '@/lib/accounts/children';
+import { getContext, requireAdultContext, switchToAdult, switchToProfile } from '@/lib/accounts/context';
+import { checkPin } from '@/lib/accounts/pin';
+import { changePinRequest, createChildRequest, deleteChildRequest, switchToChildRequest } from '@/lib/accounts/children-web';
 import { issueConsentTokens, consentTarget, confirmConsent, withdrawConsent } from '@/lib/accounts/consent';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -285,9 +289,111 @@ async function accountIdOf(email: string) {
   return (await db.query<{ id: string }>('SELECT id FROM accounts WHERE email = $1', [email])).rows[0].id;
 }
 
+describe('child profiles (plan 3C): the child context is a security boundary', () => {
+  const PIN = '4826';
+  let n = 0;
+  async function family() {
+    const email = `fam${n++}@example.test`;
+    const r = await signUp(db, { email, dateOfBirth: '1985-03-03' }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    const p = await createChildProfile(db, r.accountId, { displayName: 'Mia', ageBand: '6-9', guardianConfirmed: 'on', pin: PIN }, T0);
+    if (p.status !== 'created') throw new Error('profile not created');
+    return { accountId: r.accountId, profileId: p.profileId, session: await signIn(email) };
+  }
+  const post = (body: Record<string, string>, cookie: string) =>
+    new Request('http://localhost/x', {
+      method: 'POST',
+      headers: {
+        host: 'staging.sparkkindly.com',
+        origin: 'https://staging.sparkkindly.com',
+        'content-type': 'application/x-www-form-urlencoded',
+        cookie: `__Host-sk_account=${cookie}`,
+      },
+      body: new URLSearchParams(body).toString(),
+    });
+
+  it('own account: adult context sees kids, all and adults; the child context only kids and all', async () => {
+    const f = await family();
+    expect([...(await getContext(db, f.session, T0))!.audiences].sort()).toEqual(['adults', 'all', 'kids']);
+    expect(await switchToProfile(db, f.session, f.profileId, T0)).toBe(true);
+    const ctx = (await getContext(db, f.session, T0))!;
+    expect([...ctx.audiences].sort()).toEqual(['all', 'kids']);
+    expect(ctx.audiences).not.toContain('adults');
+  });
+
+  it('child context: no account (settings, invites, comments, contribute, admin all fail closed)', async () => {
+    const f = await family();
+    await switchToProfile(db, f.session, f.profileId, T0);
+    expect(await getAccount(db, f.session, T0)).toBeNull();
+    expect(requireAdultContext(await getContext(db, f.session, T0))).toBeNull();
+    expect(await getAdmin(db, f.session, env, T0)).toBeNull();
+    // the same session is the adult again once the PIN is given
+    expect(await switchToAdult(db, f.session, PIN, T0)).toBe('ok');
+    expect(await getAccount(db, f.session, T0)).not.toBeNull();
+  });
+
+  it("another account's profile id is denied for switch and delete, even though it is valid", async () => {
+    const a = await family();
+    const b = await family();
+    expect(await switchToProfile(db, a.session, b.profileId, T0)).toBe(false);
+    expect((await getContext(db, a.session, T0))?.profile).toBeNull();
+    expect(await deleteChildProfile(db, a.accountId, b.profileId)).toBe(false);
+    expect(await listChildProfiles(db, b.accountId)).toHaveLength(1);
+    for (const bad of ['', 'nope', "' OR 1=1 --", '00000000-0000-0000-0000-000000000000']) {
+      expect(await switchToProfile(db, a.session, bad, T0)).toBe(false);
+      expect(await deleteChildProfile(db, a.accountId, bad)).toBe(false);
+    }
+  });
+
+  it('a child cannot change the PIN, create or delete a profile, or switch to a sibling', async () => {
+    const f = await family();
+    await switchToProfile(db, f.session, f.profileId, T0);
+    const d = { db, now: T0 };
+    const refused = [
+      await changePinRequest(post({ current_pin: PIN, new_pin: '1111', new_pin_confirm: '1111' }, f.session), d),
+      await createChildRequest(post({ display_name: 'Sib', age_band: '6-9', guardian: 'on' }, f.session), d),
+      await deleteChildRequest(post({ profile_id: f.profileId }, f.session), d),
+      await switchToChildRequest(post({ profile_id: f.profileId }, f.session), d),
+    ];
+    for (const r of refused) expect(r.status).toBe(403);
+    expect(await checkPin(db, f.accountId, PIN, T0)).toBe('ok');
+    expect(await listChildProfiles(db, f.accountId)).toHaveLength(1);
+  });
+
+  it('deleting a profile ends the sessions on it (that device is signed out, never the adult)', async () => {
+    const f = await family();
+    await switchToProfile(db, f.session, f.profileId, T0);
+    expect(await deleteChildProfile(db, f.accountId, f.profileId)).toBe(true);
+    expect(await getContext(db, f.session, T0)).toBeNull();
+  });
+
+  it('deleting an account removes its child profiles (and sessions), and no other family loses any', async () => {
+    const a = await family();
+    const b = await family();
+    await db.query('DELETE FROM accounts WHERE id = $1', [a.accountId]);
+    expect(await listChildProfiles(db, a.accountId)).toEqual([]);
+    expect((await db.query('SELECT 1 FROM account_sessions WHERE account_id = $1', [a.accountId])).rows).toHaveLength(0);
+    expect(await listChildProfiles(db, b.accountId)).toHaveLength(1);
+  });
+
+  it('anonymous: the adult POSTs go to sign-in and change nothing', async () => {
+    const r = await createChildRequest(
+      new Request('http://localhost/x', {
+        method: 'POST',
+        headers: { host: 'staging.sparkkindly.com', origin: 'https://staging.sparkkindly.com', 'content-type': 'application/x-www-form-urlencoded' },
+        body: 'display_name=Mia&age_band=6-9&guardian=on&pin=1234&pin_confirm=1234',
+      }),
+      { db, now: T0 },
+    );
+    expect([r.status, r.headers.get('location')]).toEqual([303, '/account/sign-in/']);
+  });
+});
+
 describe('arrives with later features', () => {
-  it.todo('child profile -> adults item denied (list, detail, search, dashboard, daily set, email)');
-  it.todo('child profile -> settings, invites, comments, contribute, admin denied');
+  // The content routes that would carry an `adults` item to a child (list, detail, search, dashboard, daily set, email)
+  // take the audience list from getContext (tested above); each route adds its own row when it adopts it (3D, 3E, Project 4).
+  it.todo('child profile -> adults item denied at each content route that takes the context audiences (dashboard, daily set, email)');
+  it.todo('child profile -> invites, comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
   it.todo('13-15 account -> public comment, community join, contribute denied (route level; the capability rows above are covered through can())');
   it.todo('non-member -> circle denied');
   it.todo('tampered profile id / circle id / item id in payload denied');
