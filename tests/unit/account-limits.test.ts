@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import {
   confirmLimits,
+  createAccountActionLimits,
   createAccountLinkLimits,
   createConfirmLimits,
   createSendBudget,
@@ -85,5 +86,17 @@ describe('consent limits', () => {
     for (let i = 0; i < 60; i++) expect(consent('192.0.2.1')).toBe(true);
     expect(consent('192.0.2.1')).toBe(false);
     expect(confirm('192.0.2.1')).toBe(true);
+  });
+});
+
+describe('createAccountActionLimits', () => {
+  it('allows 30 actions per account an hour, refuses the 31st, keeps accounts apart and refills', () => {
+    let t = 0;
+    const limit = createAccountActionLimits(() => t);
+    for (let i = 0; i < 30; i++) expect(limit('account-a')).toBe(true);
+    expect(limit('account-a')).toBe(false);
+    expect(limit('account-b')).toBe(true);
+    t += HOUR;
+    expect(limit('account-a')).toBe(true);
   });
 });

@@ -2,10 +2,13 @@
 // party's address or a parent's email) and for spent credentials. Run once per UTC day by the worker (worker/main.ts).
 // Never touches a verified account. No Next.js imports; verified by tests/unit/account-retention.test.ts.
 import type { Queryable } from '@/lib/db';
+import { alert, clockSkewed, type DbNow } from '@/lib/jobs/guards';
 
 const HOUR = 3_600_000;
 export const UNVERIFIED_MAX_HOURS = 48;
 export const USED_TOKEN_MAX_HOURS = 24;
+// Per-run cap on deleted accounts against a bug or bad data acting on many at once.
+const ACCOUNT_CAP = 500;
 
 export type PurgeResult = { accounts: number; tokens: number; sessions: number };
 
@@ -20,12 +23,24 @@ export async function claimAccountPurge(db: Queryable, now: Date): Promise<boole
 }
 
 // Deletes unverified accounts older than 48 hours (their sessions cascade), every expired login token and used tokens
-// older than a day, and expired sessions. Idempotent.
-export async function purgeAccountData(db: Queryable, now: Date): Promise<PurgeResult> {
+// older than a day, and expired sessions. Idempotent. At most 500 accounts per run: past that it alerts and the rest wait
+// for tomorrow. Refuses to do anything when its clock and the database's differ by more than 10 minutes.
+export async function purgeAccountData(db: Queryable, now: Date, opts: { dbNow?: DbNow } = {}): Promise<PurgeResult> {
+  if (await clockSkewed(db, 'account-purge', now, opts.dbNow)) {
+    return { accounts: 0, tokens: 0, sessions: 0 };
+  }
   const at = (ms: number) => new Date(now.getTime() - ms).toISOString();
-  const accounts = await db.query('DELETE FROM accounts WHERE verified_at IS NULL AND created_at < $1::timestamptz', [
-    at(UNVERIFIED_MAX_HOURS * HOUR),
+  const due = await db.query<{ id: string }>(
+    'SELECT id FROM accounts WHERE verified_at IS NULL AND created_at < $1::timestamptz ORDER BY created_at LIMIT $2',
+    [at(UNVERIFIED_MAX_HOURS * HOUR), ACCOUNT_CAP + 1],
+  );
+  const accounts = await db.query('DELETE FROM accounts WHERE id = ANY($1::uuid[]) AND verified_at IS NULL', [
+    due.rows.slice(0, ACCOUNT_CAP).map((r) => r.id),
   ]);
+  if (due.rows.length > ACCOUNT_CAP) {
+    const message = `account purge stopped at the cap: ${accounts.rowCount ?? 0} accounts deleted, more due`;
+    await alert(db, 'account-purge', message);
+  }
   const tokens = await db.query(
     'DELETE FROM account_login_tokens WHERE expires_at < $1::timestamptz OR used_at < $2::timestamptz',
     [at(0), at(USED_TOKEN_MAX_HOURS * HOUR)],

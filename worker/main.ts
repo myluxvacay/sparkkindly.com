@@ -11,6 +11,7 @@ import type { EnvLike } from '@/lib/env';
 import { publishDue } from '@/lib/jobs/publish-due';
 import { claimHeartbeat, deliverHeartbeat } from '@/lib/jobs/heartbeat';
 import { runJob } from '@/lib/jobs/run-job';
+import type { DbNow } from '@/lib/jobs/guards';
 import { claimDigest, deliverDigest } from '@/lib/admin/digest';
 import { linkBase } from '@/lib/admin/sessions';
 import { claimAccountPurge, purgeAccountData } from '@/lib/accounts/retention';
@@ -18,8 +19,10 @@ import { claimConsentSweep, runConsentSweep } from '@/lib/accounts/consent-sweep
 import { claimInactivitySweep, runInactivitySweep } from '@/lib/accounts/inactivity';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
+// `dbNow` replaces the database clock the account jobs compare with `now` (lib/jobs/guards.ts); for tests only.
+type TickOpts = { delayMs?: number; dbNow?: DbNow };
 
-export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: { delayMs?: number } = {}): Promise<string[]> {
+export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: TickOpts = {}): Promise<string[]> {
   const log: string[] = [];
   await runJob(
     db,
@@ -51,14 +54,14 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: { 
   } else if (beat) {
     log.push(`heartbeat: ${beat.status}`);
   }
-  await accountPurge(db, now, log, opts.delayMs);
-  await consentSweep(db, now, env, send, log, opts.delayMs);
-  await inactivitySweep(db, now, env, send, log, opts.delayMs);
+  await accountPurge(db, now, log, opts);
+  await consentSweep(db, now, env, send, log, opts);
+  await inactivitySweep(db, now, env, send, log, opts);
   return log;
 }
 
 // Once per UTC day: purge unconfirmed sign-ups and spent credentials (lib/accounts/retention.ts).
-async function accountPurge(db: Db, now: Date, log: string[], delayMs?: number): Promise<void> {
+async function accountPurge(db: Db, now: Date, log: string[], { delayMs, dbNow }: TickOpts): Promise<void> {
   const claimed = await claimAccountPurge(db, now).catch((err: Error) => {
     log.push(`account purge: could not check (${err.message})`);
     return null;
@@ -69,7 +72,7 @@ async function accountPurge(db: Db, now: Date, log: string[], delayMs?: number):
     db,
     'account-purge',
     async () => {
-      const r = await purgeAccountData(db, now);
+      const r = await purgeAccountData(db, now, { dbNow });
       log.push(`account purge: ${r.accounts} account(s), ${r.tokens} token(s), ${r.sessions} session(s)`);
     },
     { delayMs },
@@ -77,7 +80,7 @@ async function accountPurge(db: Db, now: Date, log: string[], delayMs?: number):
 }
 
 // Once per UTC day: parental-consent reminders, 30-day deletions and cleared parent addresses (lib/accounts/consent-sweep.ts).
-async function consentSweep(db: Db, now: Date, env: EnvLike, send: Send, log: string[], delayMs?: number): Promise<void> {
+async function consentSweep(db: Db, now: Date, env: EnvLike, send: Send, log: string[], { delayMs, dbNow }: TickOpts): Promise<void> {
   const claimed = await claimConsentSweep(db, now).catch((err: Error) => {
     log.push(`consent sweep: could not check (${err.message})`);
     return null;
@@ -88,7 +91,7 @@ async function consentSweep(db: Db, now: Date, env: EnvLike, send: Send, log: st
     db,
     'consent-sweep',
     async () => {
-      const r = await runConsentSweep(db, now, send, { base: linkBase(env) });
+      const r = await runConsentSweep(db, now, send, { base: linkBase(env) }, { dbNow });
       log.push(`consent sweep: ${r.reminded} reminded, ${r.deleted} deleted, ${r.cleared} cleared, ${r.failed} failed`);
     },
     { delayMs },
@@ -96,7 +99,7 @@ async function consentSweep(db: Db, now: Date, env: EnvLike, send: Send, log: st
 }
 
 // Once per UTC day: 24-month inactivity notices and deletions 30 days later (lib/accounts/inactivity.ts).
-async function inactivitySweep(db: Db, now: Date, env: EnvLike, send: Send, log: string[], delayMs?: number): Promise<void> {
+async function inactivitySweep(db: Db, now: Date, env: EnvLike, send: Send, log: string[], { delayMs, dbNow }: TickOpts): Promise<void> {
   const claimed = await claimInactivitySweep(db, now).catch((err: Error) => {
     log.push(`inactivity sweep: could not check (${err.message})`);
     return null;
@@ -107,7 +110,7 @@ async function inactivitySweep(db: Db, now: Date, env: EnvLike, send: Send, log:
     db,
     'inactivity-sweep',
     async () => {
-      const r = await runInactivitySweep(db, now, send, { base: linkBase(env) });
+      const r = await runInactivitySweep(db, now, send, { base: linkBase(env) }, { dbNow });
       log.push(`inactivity sweep: ${r.noticed} noticed, ${r.deleted} deleted, ${r.failed} failed`);
     },
     { delayMs },

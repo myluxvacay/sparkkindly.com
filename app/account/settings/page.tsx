@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { requireAdult } from '@/lib/accounts/next';
 import { hasPin } from '@/lib/accounts/pin';
+import { consentPending } from '@/lib/accounts/policy';
 import { getSettings, TIME_ZONES } from '@/lib/accounts/settings';
 import { getDb } from '@/lib/db';
 import { PinInput } from '@/components/PinInput';
@@ -14,6 +15,7 @@ type Props = { searchParams: Promise<{ r?: string }> };
 // Outcome codes from the POSTs, and which form an error belongs to.
 const RESULTS: Record<string, { text: string; ok: boolean; form?: 'prefs' | 'pin' }> = {
   saved: { text: 'Your settings are saved.', ok: true },
+  pending: { text: 'These settings are available after your parent or guardian confirms.', ok: false, form: 'prefs' },
   invalid: { text: 'Please choose a time zone from the list, then save again.', ok: false, form: 'prefs' },
   'pin-reset': { text: 'Your new PIN is set.', ok: true },
   'pin-stale': {
@@ -36,12 +38,14 @@ function Result({ code }: { code?: string }) {
 
 type Prefs = NonNullable<Awaited<ReturnType<typeof getSettings>>>;
 
-function PrefsForm({ settings, error }: { settings: Prefs; error: boolean }) {
+// A consent-pending 13-15 account saves interests only (spec 4a.5): the form shows, disabled, with the reason.
+function PrefsForm({ settings, error, pending }: { settings: Prefs; error: boolean; pending: boolean }) {
   const zones = TIME_ZONES.includes(settings.timeZone) ? TIME_ZONES : [settings.timeZone, ...TIME_ZONES];
   return (
     <form method="post" action="/account/settings/save/" className="prose admin-form">
       <h2>Emails and time zone</h2>
-      <fieldset aria-describedby="notify-hint">
+      {pending && <p id="pending-hint">These settings are available after your parent or guardian confirms.</p>}
+      <fieldset aria-describedby="notify-hint" disabled={pending}>
         <legend>Email me when</legend>
         <p id="notify-hint">Only sign-in and consent emails are sent right now. These choices apply when the others start.</p>
         <label className="admin-radio">
@@ -60,6 +64,7 @@ function PrefsForm({ settings, error }: { settings: Prefs; error: boolean }) {
           id="time_zone"
           name="time_zone"
           defaultValue={settings.timeZone}
+          disabled={pending}
           aria-describedby={error ? 'result' : undefined}
           aria-invalid={error || undefined}
         >
@@ -70,7 +75,7 @@ function PrefsForm({ settings, error }: { settings: Prefs; error: boolean }) {
           ))}
         </select>
       </p>
-      <button type="submit" className="button">
+      <button type="submit" className="button" disabled={pending} aria-describedby={pending ? 'pending-hint' : undefined}>
         Save settings
       </button>
     </form>
@@ -105,7 +110,13 @@ export default async function SettingsPage({ searchParams }: Props) {
     <>
       <h1>Settings</h1>
       <Result code={r} />
-      {settings && <PrefsForm settings={settings} error={errorFor === 'prefs'} />}
+      {settings && (
+        <PrefsForm
+          settings={settings}
+          error={errorFor === 'prefs'}
+          pending={consentPending(account.ageGroup, account.consent)}
+        />
+      )}
       <form method="post" action="/account/settings/export/" className="prose admin-form">
         <h2>Your data</h2>
         <p>Download everything we hold about your account and its child profiles, as one JSON file.</p>

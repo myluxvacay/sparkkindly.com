@@ -33,6 +33,12 @@ export function createConsentResendLimits(clock: () => number = Date.now) {
   return (accountId: string): boolean => perAccount(accountId);
 }
 
+// Signed-in account POSTs (export, PIN reset, interests save): 30 per account per hour, one instance per route.
+export function createAccountActionLimits(clock: () => number = Date.now) {
+  const perAccount = createLimiter({ perMinute: 30, now: () => clock() / 60 });
+  return (accountId: string): boolean => perAccount(accountId);
+}
+
 // Site-wide budget of account emails per clock hour. Past it a send is skipped (the caller's response is unchanged) and
 // one warning line per hour gives the budget, never an address or IP.
 // ponytail: a fixed per-process window; move to the database if the app ever runs as more than one instance.
@@ -70,6 +76,9 @@ const shared = globalThis as unknown as {
   __sparkConsentLimits?: ReturnType<typeof createConsentLimits>;
   __sparkConsentResendLimits?: ReturnType<typeof createConsentResendLimits>;
   __sparkUnsubscribeLimits?: ReturnType<typeof createUnsubscribeLimits>;
+  __sparkExportLimits?: ReturnType<typeof createAccountActionLimits>;
+  __sparkPinResetLimits?: ReturnType<typeof createAccountActionLimits>;
+  __sparkInterestsLimits?: ReturnType<typeof createAccountActionLimits>;
 };
 export const signUpLimits = (shared.__sparkSignUpLimits ??= createSignUpLimits());
 export const accountLinkLimits = (shared.__sparkAccountLinkLimits ??= createAccountLinkLimits());
@@ -78,3 +87,6 @@ export const consentLimits = (shared.__sparkConsentLimits ??= createConsentLimit
 export const accountSendBudget = (shared.__sparkAccountSendBudget ??= createSendBudget());
 export const consentResendLimits = (shared.__sparkConsentResendLimits ??= createConsentResendLimits());
 export const unsubscribeLimits = (shared.__sparkUnsubscribeLimits ??= createUnsubscribeLimits());
+export const exportLimits = (shared.__sparkExportLimits ??= createAccountActionLimits());
+export const pinResetLimits = (shared.__sparkPinResetLimits ??= createAccountActionLimits());
+export const interestsLimits = (shared.__sparkInterestsLimits ??= createAccountActionLimits());

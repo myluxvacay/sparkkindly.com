@@ -2,7 +2,7 @@ import { createHash, createHmac, randomBytes } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { addItem, sql } from './helpers/fixtures';
+import { addItem, addTopic, sql } from './helpers/fixtures';
 import { BASE, FORM, ORIGIN, form } from './helpers/admin';
 
 // Member accounts (Project 3A, Task 4). The preview server on 4173 runs with ACCOUNTS_ENABLED=true; the server on
@@ -533,6 +533,63 @@ test('a child profile gets a 404 for an adults item, its world page and search o
   }
 });
 
+// The other session-scoped public pages: home, a topic page, today's quiz, the archive and the old quiz redirect.
+test('a child profile never sees an adults item on home, a topic page, /quiz/, the archive or /quiz/<slug>/', async ({ page, browser }) => {
+  const stamp = Date.now();
+  const topic = `e2e-child-scope-${stamp}`;
+  const article = { slug: `e2e-scope-child-article-${stamp}`, title: `Quillmarrow adults article ${stamp}` };
+  const quiz = { slug: `e2e-scope-child-quiz-${stamp}`, title: `Quillmarrow adults quiz ${stamp}` };
+  const prompt = `Is the Quillmarrow adults prompt ${stamp} true?`;
+  await addTopic(topic, 'E2E child scope');
+  await addItem({ world: 'grow', ...article, audience: 'adults', publishedAt: 'now()', topics: [topic] });
+  await addItem({
+    world: 'play',
+    ...quiz,
+    kind: 'quiz',
+    audience: 'adults',
+    publishedAt: 'now()',
+    topics: [topic],
+    body: { mechanic: 'true_false', prompt, difficulty: 'easy' },
+    answer: { value: true, explanation: 'An explanation that is long enough.' },
+  });
+  try {
+    const seen = async (p: Page, path: string, text: string) => {
+      await p.goto(path);
+      await expect(p.getByRole('heading', { level: 1 })).toBeVisible();
+      return p.getByText(text);
+    };
+    const anon = await browser.newContext();
+    const anonPage = await anon.newPage();
+    await expect((await seen(anonPage, '/', quiz.title)).first()).toBeVisible();
+    await expect((await seen(anonPage, '/', article.title)).first()).toBeVisible();
+    await expect((await seen(anonPage, `/topics/${topic}/`, article.title)).first()).toBeVisible();
+    await expect((await seen(anonPage, '/quiz/', prompt)).first()).toBeVisible();
+    await expect((await seen(anonPage, '/quiz/archive/', quiz.title)).first()).toBeVisible();
+    expect((await anonPage.request.get(`/quiz/${quiz.slug}/`, { maxRedirects: 0 })).status()).toBe(308);
+    await anon.close();
+
+    await signedInAdult(page);
+    await page.goto('/account/children/');
+    await addProfile(page, 'Tia', true);
+    await page.getByRole('button', { name: 'Play as Tia' }).click();
+    await expect(page.getByRole('heading', { level: 1, name: 'Playing as Tia' })).toBeVisible();
+    for (const [path, text] of [
+      ['/', quiz.title],
+      ['/', article.title],
+      [`/topics/${topic}/`, article.title],
+      [`/topics/${topic}/`, quiz.title],
+      ['/quiz/', prompt],
+      ['/quiz/archive/', quiz.title],
+    ]) {
+      await expect(await seen(page, path, text), `${path} ${text}`).toHaveCount(0);
+    }
+    expect((await page.request.get(`/quiz/${quiz.slug}/`, { maxRedirects: 0 })).status()).toBe(404);
+  } finally {
+    await sql('DELETE FROM items WHERE slug = ANY($1::text[])', [[article.slug, quiz.slug]]);
+    await sql('DELETE FROM topics WHERE slug = $1', [topic]);
+  }
+});
+
 test("account A cannot open the delete page for account B's profile", async ({ page }) => {
   const b = fresh();
   await sql("INSERT INTO accounts (email, date_of_birth) VALUES ($1, '1985-01-01')", [b]);
@@ -804,6 +861,26 @@ test('an adult changes email choices and time zone, downloads their data, and th
   expect(text).not.toContain(session);
   expect(text).not.toMatch(/pin_hash|pinHash|token|"id"/i);
   expect(thirdParty).toEqual([]);
+});
+
+test('a consent-pending 13-15 account sees its settings disabled with the reason and cannot save them', async ({ page, request }) => {
+  const email = fresh();
+  await signUp(page, email, dobYearsAgo(14), 'guardian@example.test');
+  await signInWithLink(page, email);
+  await page.goto('/account/settings/');
+  await expect(page.getByText('available after your parent or guardian confirms')).toBeVisible();
+  await expect(page.getByRole('checkbox', { name: 'Daily set ready' })).toBeDisabled();
+  await expect(page.getByLabel('Time zone')).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Save settings' })).toBeDisabled();
+  await axeBothWidths(page);
+  const before = await prefs(email);
+  const r = await request.post('/account/settings/save/', {
+    headers: { ...FORM, ...ORIGIN, ...(await sessionCookie(page)) },
+    data: form({ time_zone: 'Asia/Tokyo', daily_set: 'on' }),
+    maxRedirects: 0,
+  });
+  expect(r.headers()['location']).toBe('/account/settings/?r=pending#result');
+  expect(await prefs(email)).toEqual(before);
 });
 
 test('deleting the account needs the typed email; afterwards the account is gone and cannot sign in', async ({ page }) => {

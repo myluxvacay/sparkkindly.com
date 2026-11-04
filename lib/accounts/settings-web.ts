@@ -1,7 +1,8 @@
 // The settings POSTs (plan 3E Task 3) as plain functions of a Request, in the style of children-web.ts. Save, export,
 // delete and PIN reset check Origin first and take the account only from requireAdultContext(getContext) via asAdult:
 // any account or profile id in the form is never read, and a child context gets 403. Redirects carry an outcome code
-// only: never the typed email, a PIN or an id.
+// only: never the typed email, a PIN or an id. A consent-pending 13 to 15 account saves interests only (spec 4a.5), so
+// its settings save is refused with a neutral code. Export and PIN reset allow 30 per account per hour (limits.ts).
 // The unsubscribe POST is the exception: mail clients post it (RFC 8058 one-click) from no origin and with no session,
 // so it needs neither; the token alone names the account and kind, and every answer is the same whatever the token.
 // Verified by tests/unit/account-settings-web.test.ts.
@@ -10,19 +11,22 @@ import type { Db } from '@/lib/db';
 import type { EnvLike } from '@/lib/env';
 import { asAdult } from './children-web';
 import { exportAccount } from './export';
-import { unsubscribeLimits } from './limits';
+import { exportLimits, pinResetLimits, unsubscribeLimits } from './limits';
+import { consentPending } from './policy';
 import { resetPin } from './pin-reset';
 import { deleteOwnAccount } from './self-delete';
 import { saveSettings } from './settings';
 import { applyUnsubscribe, readUnsubscribeToken, unsubscribeSecret } from './unsubscribe';
 import { ACCOUNT_COOKIE, accountCookie, forbidden, tooMany } from './web';
 
-type SettingsDeps = { db: Db; now: Date };
+// `limit` replaces the route's per-account limiter; for tests only.
+type SettingsDeps = { db: Db; now: Date; limit?: (accountId: string) => boolean };
 
 const result = (code: string, page = '/account/settings/') => seeOther(`${page}?r=${code}#result`);
 
 export const saveSettingsRequest = (request: Request, d: SettingsDeps) =>
   asAdult(request, d, async (ctx, form) => {
+    if (consentPending(ctx.account.ageGroup, ctx.account.consent)) return result('pending');
     const r = await saveSettings(d.db, ctx.account.id, {
       timeZone: form.get('time_zone') ?? undefined,
       notify: { dailySet: form.has('daily_set'), weeklyCircle: form.has('weekly'), invites: form.has('invites') },
@@ -32,6 +36,7 @@ export const saveSettingsRequest = (request: Request, d: SettingsDeps) =>
 
 export const exportRequest = (request: Request, d: SettingsDeps) =>
   asAdult(request, d, async (ctx) => {
+    if (!(d.limit ?? exportLimits)(ctx.account.id)) return tooMany();
     const data = await exportAccount(d.db, ctx.account.id, d.now);
     if (!data) return seeOther('/account/sign-in/');
     return new Response(JSON.stringify(data, null, 2), {
@@ -52,7 +57,8 @@ export const deleteAccountRequest = (request: Request, d: SettingsDeps) =>
   });
 
 export const resetPinRequest = (request: Request, d: SettingsDeps) =>
-  asAdult(request, d, async (_ctx, form) => {
+  asAdult(request, d, async (ctx, form) => {
+    if (!(d.limit ?? pinResetLimits)(ctx.account.id)) return tooMany();
     // Two different PINs go through as no PIN at all, so resetPin still reports a stale session first.
     const pin = form.get('new_pin');
     const r = await resetPin(d.db, readCookie(request, ACCOUNT_COOKIE), pin === form.get('new_pin_confirm') ? pin : null, d.now);

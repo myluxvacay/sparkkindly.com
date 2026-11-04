@@ -8,6 +8,7 @@
 // the 30-day grace and the sign-in link in the notice cover that.
 import type { Db, Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
+import { alert as alertJob, clockSkewed, type DbNow } from '@/lib/jobs/guards';
 import { deleteAccountIn } from './delete';
 
 const DAY = 24 * 60 * 60_000;
@@ -16,7 +17,6 @@ const GRACE_DAYS = 30;
 // Per-run caps against a bug or bad data acting on many accounts at once; over a cap the run stops and alerts.
 const NOTICE_CAP = 50;
 const DELETE_CAP = 20;
-const MAX_SKEW_MS = 10 * 60_000;
 
 export type InactivityResult = { noticed: number; deleted: number; failed: number };
 
@@ -84,16 +84,7 @@ export async function deleteIfStillInactive(db: Db, id: string, now: Date): Prom
   });
 }
 
-// Records an alert the owner sees with the other failed jobs (counts only, never an address).
-async function alert(db: Queryable, message: string): Promise<void> {
-  await db.query(
-    "INSERT INTO failed_jobs (job, payload, error, attempts) VALUES ('inactivity-sweep', '{}'::jsonb, $1, 1)",
-    [message],
-  );
-}
-
-const dbClock = async (db: Queryable): Promise<Date> =>
-  new Date((await db.query<{ t: Date }>('SELECT now() AS t')).rows[0].t);
+const alert = (db: Queryable, message: string) => alertJob(db, 'inactivity-sweep', message);
 
 async function deleteDue(db: Db, now: Date): Promise<number> {
   const due = await db.query<{ id: string }>(
@@ -163,11 +154,9 @@ export async function runInactivitySweep(
   now: Date,
   send: (m: EmailMessage) => Promise<unknown>,
   links: { base: string },
-  opts: { dbNow?: () => Promise<Date> } = {},
+  opts: { dbNow?: DbNow } = {},
 ): Promise<InactivityResult> {
-  const dbNow = await (opts.dbNow ?? (() => dbClock(db)))();
-  if (Math.abs(dbNow.getTime() - now.getTime()) > MAX_SKEW_MS) {
-    await alert(db, 'inactivity sweep refused: the worker clock and the database clock differ by more than 10 minutes');
+  if (await clockSkewed(db, 'inactivity-sweep', now, opts.dbNow)) {
     return { noticed: 0, deleted: 0, failed: 0 };
   }
   const deleted = await deleteDue(db, now);

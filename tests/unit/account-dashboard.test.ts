@@ -13,6 +13,7 @@ import { getInterests, interestChoices, setInterests } from '@/lib/accounts/inte
 import { recordAnswer } from '@/lib/accounts/responses';
 import { dashboardFor, localDayStart } from '@/lib/accounts/dashboard';
 import { saveInterestsRequest } from '@/lib/accounts/interests-web';
+import { createAccountActionLimits } from '@/lib/accounts/limits';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -287,6 +288,17 @@ describe('saveInterestsRequest', () => {
     expect((await getInterests(db, { accountId: a.accountId, profileId: null })).topicIds).toEqual([t]);
     expect(where(await saveInterestsRequest(post('', { cookie: a.session }), deps()))[1]).toBe('/me/interests/?r=saved#result');
     expect(await getInterests(db, { accountId: a.accountId, profileId: null })).toEqual({ topicIds: [], worldIds: [] });
+  });
+
+  it('the 31st save in an hour for one account gets 429 and writes nothing', async () => {
+    const a = await account();
+    const t = await topic();
+    const limit = createAccountActionLimits(() => 0);
+    for (let i = 0; i < 30; i++) await saveInterestsRequest(post('', { cookie: a.session }), { ...deps(), limit });
+    const r = await saveInterestsRequest(post(`topic=${t}`, { cookie: a.session }), { ...deps(), limit });
+    expect(r.status).toBe(429);
+    expect(await r.text()).toBe('Too many attempts. Please try again later.');
+    expect((await getInterests(db, { accountId: a.accountId, profileId: null })).topicIds).toEqual([]);
   });
 
   it('is same-origin only: another or a missing Origin is refused and nothing is written', async () => {

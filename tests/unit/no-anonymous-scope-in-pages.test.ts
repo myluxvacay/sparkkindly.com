@@ -25,4 +25,17 @@ describe('public pages use the session scope', () => {
       .filter((rel) => readFileSync(path.join(ROOT, rel), 'utf8').includes('anonymousScope('));
     expect(offenders).toEqual([]);
   });
+
+  // A hard-coded audience list containing 'adults' (say `audiences: ['kids', 'all', 'adults']`) would bypass the session
+  // scope just as anonymousScope( does. The only allowed literal is the admin new-item form's audience choice (admin
+  // routes check the allow-list and second factor; it labels an option and reads nothing).
+  const ADULTS_ALLOWED = new Set(['app/admin/items/new/page.tsx']);
+  it("no file under app/ or components/ spells the 'adults' audience except the admin item form", () => {
+    const offenders = ['app', 'components']
+      .flatMap((d) => files(path.join(ROOT, d)))
+      .map((f) => path.relative(ROOT, f).split(path.sep).join('/'))
+      .filter((rel) => !ADULTS_ALLOWED.has(rel))
+      .filter((rel) => /(['"`])adults\1/.test(readFileSync(path.join(ROOT, rel), 'utf8')));
+    expect(offenders).toEqual([]);
+  });
 });

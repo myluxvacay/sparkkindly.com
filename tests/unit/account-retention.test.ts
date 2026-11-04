@@ -13,6 +13,11 @@ const HOUR = 3_600_000;
 const ago = (ms: number) => new Date(NOW.getTime() - ms);
 const emails = async () => (await db.query<{ email: string }>('SELECT email FROM accounts ORDER BY email')).rows.map((r) => r.email);
 const n = async (t: string) => Number((await db.query<{ n: string }>(`SELECT count(*) n FROM ${t}`)).rows[0].n);
+// The purge refuses to run when its clock and the database's disagree; these tests simulate time, so the database clock
+// is given as the same simulated instant.
+const purge = (t: Date) => purgeAccountData(db, t, { dbNow: async () => t });
+const alerts = async () =>
+  (await db.query<{ error: string }>("SELECT error FROM failed_jobs WHERE job = 'account-purge'")).rows.map((r) => r.error);
 
 async function account(email: string, createdAgoMs: number, verified: boolean) {
   await signUp(db, { email, dateOfBirth: '1990-05-05', parentEmail: undefined }, NOW);
@@ -32,6 +37,7 @@ beforeEach(async () => {
   await db.query('DELETE FROM accounts');
   await db.query('DELETE FROM account_login_tokens');
   await db.query('DELETE FROM job_runs');
+  await db.query('DELETE FROM failed_jobs');
 });
 
 describe('purgeAccountData', () => {
@@ -39,7 +45,7 @@ describe('purgeAccountData', () => {
     await account('old-unverified@example.test', 49 * HOUR, false);
     await account('fresh-unverified@example.test', 47 * HOUR, false);
     await account('old-verified@example.test', 400 * 24 * HOUR, true);
-    const r = await purgeAccountData(db, NOW);
+    const r = await purge(NOW);
     expect(await emails()).toEqual(['fresh-unverified@example.test', 'old-verified@example.test']);
     expect(r.accounts).toBe(1);
   });
@@ -51,7 +57,7 @@ describe('purgeAccountData', () => {
     const used = (await requestAccountLink(db, 't@example.test', {}, ago(30 * HOUR)))!;
     await consumeAccountLink(db, used, ago(30 * HOUR));
     expect(await n('account_login_tokens')).toBe(3);
-    const r = await purgeAccountData(db, NOW);
+    const r = await purge(NOW);
     expect(r.tokens).toBe(2);
     expect(await n('account_login_tokens')).toBe(1);
     expect(await consumeAccountLink(db, live, NOW)).not.toBeNull();
@@ -62,7 +68,7 @@ describe('purgeAccountData', () => {
     const stale = (await consumeAccountLink(db, (await requestAccountLink(db, 's@example.test', {}, ago(40 * 24 * HOUR)))!, ago(40 * 24 * HOUR)))!;
     const live = (await consumeAccountLink(db, (await requestAccountLink(db, 's@example.test', {}, ago(HOUR)))!, ago(HOUR)))!;
     expect(stale && live).toBeTruthy();
-    const r = await purgeAccountData(db, NOW);
+    const r = await purge(NOW);
     expect(r.sessions).toBe(1);
     expect(await n('account_sessions')).toBe(1);
   });
@@ -74,7 +80,7 @@ describe('purgeAccountData', () => {
       'INSERT INTO account_sessions (token_hash, account_id, created_at, expires_at, last_seen_at) VALUES ($1, $2, $3, $4, $3)',
       ['f'.repeat(64), id, ago(HOUR).toISOString(), new Date(NOW.getTime() + 24 * HOUR).toISOString()],
     );
-    const r = await purgeAccountData(db, NOW);
+    const r = await purge(NOW);
     expect(r).toMatchObject({ accounts: 1, sessions: 0 });
     expect(await n('account_sessions')).toBe(0);
   });
@@ -83,7 +89,7 @@ describe('purgeAccountData', () => {
     await account('again@example.test', 50 * HOUR, false);
     await signUp(db, { email: 'again@example.test', dateOfBirth: '1985-01-01' }, NOW);
     const link = (await requestAccountLink(db, 'again@example.test', {}, NOW))!;
-    await purgeAccountData(db, NOW);
+    await purge(NOW);
     expect(await emails()).toEqual(['again@example.test']);
     expect(await consumeAccountLink(db, link, NOW)).not.toBeNull();
   });
@@ -91,9 +97,47 @@ describe('purgeAccountData', () => {
   it('is idempotent: a second run deletes nothing more', async () => {
     await account('old-unverified@example.test', 72 * HOUR, false);
     await account('kept@example.test', 72 * HOUR, true);
-    await purgeAccountData(db, NOW);
-    expect(await purgeAccountData(db, NOW)).toEqual({ accounts: 0, tokens: 0, sessions: 0 });
+    await purge(NOW);
+    expect(await purge(NOW)).toEqual({ accounts: 0, tokens: 0, sessions: 0 });
     expect(await emails()).toEqual(['kept@example.test']);
+  });
+});
+
+describe('mass-deletion guards', () => {
+  const unverified = (k: number) =>
+    db.query(
+      `INSERT INTO accounts (email, date_of_birth, created_at)
+       SELECT 'bulk' || g || '@example.test', '1990-05-05', $1 FROM generate_series(1, $2::int) g`,
+      [ago(72 * HOUR).toISOString(), k],
+    );
+
+  it('deletes at most 500 unverified accounts per run and raises one alert with counts only', async () => {
+    await unverified(505);
+    expect((await purge(NOW)).accounts).toBe(500);
+    expect(await n('accounts')).toBe(5);
+    const a = await alerts();
+    expect(a).toHaveLength(1);
+    expect(a[0]).not.toContain('@');
+    expect((await purge(NOW)).accounts).toBe(5);
+    expect(await alerts()).toHaveLength(1);
+  });
+
+  it('exactly 500 due raises no alert', async () => {
+    await unverified(500);
+    expect((await purge(NOW)).accounts).toBe(500);
+    expect(await alerts()).toEqual([]);
+  });
+
+  it('refuses to run when the worker clock and the database clock differ by more than 10 minutes', async () => {
+    await account('old-unverified@example.test', 72 * HOUR, false);
+    const skewed = (ms: number) => purgeAccountData(db, NOW, { dbNow: async () => new Date(NOW.getTime() + ms) });
+    expect(await skewed(11 * 60_000)).toEqual({ accounts: 0, tokens: 0, sessions: 0 });
+    expect(await skewed(-11 * 60_000)).toEqual({ accounts: 0, tokens: 0, sessions: 0 });
+    // The default reads the real database clock, days away from the simulated NOW.
+    expect(await purgeAccountData(db, NOW)).toEqual({ accounts: 0, tokens: 0, sessions: 0 });
+    expect(await emails()).toEqual(['old-unverified@example.test']);
+    expect(await alerts()).toHaveLength(3);
+    expect((await skewed(9 * 60_000)).accounts).toBe(1);
   });
 });
 
@@ -102,15 +146,15 @@ describe('worker tick', () => {
     const env = { DIGEST_HOUR_UTC: '23' };
     const send = vi.fn(async () => undefined);
     await account('gone@example.test', 72 * HOUR, false);
-    expect((await tick(db, NOW, env, send, { delayMs: 0 })).join(';')).toMatch(/account purge: 1 account/);
+    expect((await tick(db, NOW, env, send, { delayMs: 0, dbNow: async () => NOW })).join(';')).toMatch(/account purge: 1 account/);
     expect(await emails()).toEqual([]);
     await account('later@example.test', 72 * HOUR, false);
-    expect((await tick(db, new Date(NOW.getTime() + 60_000), env, send, { delayMs: 0 })).join(';')).toMatch(
+    expect((await tick(db, new Date(NOW.getTime() + 60_000), env, send, { delayMs: 0, dbNow: async () => NOW })).join(';')).toMatch(
       /account purge: done today/,
     );
     expect(await emails()).toEqual(['later@example.test']);
     const tomorrow = new Date(NOW.getTime() + 24 * HOUR);
-    expect((await tick(db, tomorrow, env, send, { delayMs: 0 })).join(';')).toMatch(/account purge: 1 account/);
+    expect((await tick(db, tomorrow, env, send, { delayMs: 0, dbNow: async () => tomorrow })).join(';')).toMatch(/account purge: 1 account/);
     expect(await emails()).toEqual([]);
   });
 });

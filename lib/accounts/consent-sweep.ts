@@ -4,12 +4,15 @@
 // deletion and reminder. Parent addresses are never logged. No Next.js imports; tests/unit/account-consent-sweep.test.ts.
 import type { Db, Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
+import { alert, clockSkewed, type DbNow } from '@/lib/jobs/guards';
 import { issueConsentTokens } from './consent';
 import { consentEmail } from './consent-email';
 import { deleteAccountIn } from './delete';
 import { ageGroupFor } from './policy';
 
 const DAY = 24 * 60 * 60_000;
+// Per-run cap against a bug or bad data deleting many accounts at once; over it the run stops deleting and alerts.
+const DELETE_CAP = 20;
 export type SweepResult = { reminded: number; deleted: number; cleared: number; failed: number };
 
 // True once per UTC day: the first caller records the day in job_runs.
@@ -59,32 +62,46 @@ export async function deleteIfStillPending(db: Db, id: string, cutoffIso: string
   });
 }
 
+// Refuses to do anything when its clock and the database's differ by more than 10 minutes (lib/jobs/guards.ts).
 export async function runConsentSweep(
   db: Db,
   now: Date,
   send: (m: EmailMessage) => Promise<unknown>,
   links: { base: string },
+  opts: { dbNow?: DbNow } = {},
 ): Promise<SweepResult> {
+  if (await clockSkewed(db, 'consent-sweep', now, opts.dbNow)) {
+    return { reminded: 0, deleted: 0, cleared: 0, failed: 0 };
+  }
   const at = (days: number) => new Date(now.getTime() - days * DAY).toISOString();
   const pending = "consent_state = 'pending' AND parent_email IS NOT NULL AND verified_at IS NOT NULL";
   // Clear first: an account that turned 16 is no longer waiting on a parent, so it is neither deleted nor reminded.
   const cleared = await clearOutgrown(db, now);
   let deleted = 0;
   const cutoff = at(30);
-  for (const id of await ids(db, `SELECT id FROM accounts WHERE ${pending} AND verified_at <= $1::timestamptz`, [cutoff])) {
+  const due = await ids(
+    db,
+    `SELECT id FROM accounts WHERE ${pending} AND verified_at <= $1::timestamptz ORDER BY verified_at LIMIT $2`,
+    [cutoff, DELETE_CAP + 1],
+  );
+  for (const id of due.slice(0, DELETE_CAP)) {
     if (await deleteIfStillPending(db, id, cutoff)) {
       deleted++;
     }
   }
+  if (due.length > DELETE_CAP) {
+    const message = `consent sweep stopped at the deletion cap: ${deleted} deleted of ${DELETE_CAP} checked, more due`;
+    await alert(db, 'consent-sweep', message);
+  }
   let reminded = 0;
   let failed = 0;
-  const due = await db.query<{ id: string; verified_at: Date }>(
+  const remind = await db.query<{ id: string; verified_at: Date }>(
     `SELECT id, verified_at FROM accounts WHERE ${pending} AND consent_reminded_at IS NULL AND verified_at <= $1::timestamptz`,
     [at(7)],
   );
   // Reminders are capped at one per account, so they do not go through accountSendBudget (per-process memory, and the
   // worker is a one-shot process).
-  for (const { id, verified_at: verifiedAt } of due.rows) {
+  for (const { id, verified_at: verifiedAt } of remind.rows) {
     try {
       const t = await issueConsentTokens(db, id, now, { revokeOldConfirm: false });
       if (!t) {

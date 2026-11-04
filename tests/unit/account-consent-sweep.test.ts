@@ -20,6 +20,11 @@ let n = 0;
 const count = async (sql: string, p: unknown[] = []) => (await db.query<{ n: number }>(sql, p)).rows[0].n;
 const accounts = () => count('SELECT count(*)::int AS n FROM accounts');
 const okSend = () => vi.fn(async (m: Sent) => void m);
+// The sweep refuses to run when its clock and the database's disagree; these tests simulate time, so the database
+// clock is given as the same simulated instant.
+const sweep = (t: Date, send: (m: Sent) => Promise<unknown>, l = links) => runConsentSweep(db, t, send, l, { dbNow: async () => t });
+const alerts = async () =>
+  (await db.query<{ error: string }>("SELECT error FROM failed_jobs WHERE job = 'consent-sweep'")).rows.map((r) => r.error);
 
 async function teen(opts: { dob?: string; verified?: boolean } = {}): Promise<{ id: string; email: string }> {
   const email = `teen${n++}@example.test`;
@@ -43,22 +48,23 @@ beforeEach(async () => {
   await db.query('DELETE FROM accounts');
   await db.query('DELETE FROM account_login_tokens');
   await db.query('DELETE FROM job_runs');
+  await db.query('DELETE FROM failed_jobs');
 });
 
 describe('runConsentSweep', () => {
   it('does nothing on day 6', async () => {
     await teen();
     const send = okSend();
-    expect(await runConsentSweep(db, day(6), send, links)).toEqual({ reminded: 0, deleted: 0, cleared: 0, failed: 0 });
+    expect(await sweep(day(6), send, links)).toEqual({ reminded: 0, deleted: 0, cleared: 0, failed: 0 });
     expect(send).not.toHaveBeenCalled();
   });
 
   it('sends one reminder at day 7, not again the same or next day, with working links', async () => {
     await teen();
     const send = okSend();
-    expect((await runConsentSweep(db, day(7), send, links)).reminded).toBe(1);
-    expect((await runConsentSweep(db, day(7), send, links)).reminded).toBe(0);
-    expect((await runConsentSweep(db, day(8), send, links)).reminded).toBe(0);
+    expect((await sweep(day(7), send, links)).reminded).toBe(1);
+    expect((await sweep(day(7), send, links)).reminded).toBe(0);
+    expect((await sweep(day(8), send, links)).reminded).toBe(0);
     expect(send).toHaveBeenCalledTimes(1);
     const m = send.mock.calls[0][0];
     expect(m.to).toBe(PARENT);
@@ -74,8 +80,8 @@ describe('runConsentSweep', () => {
       void m;
       throw new Error('mail down');
     });
-    expect((await runConsentSweep(db, day(7), bad, links)).reminded).toBe(0);
-    expect((await runConsentSweep(db, day(8), okSend(), links)).reminded).toBe(1);
+    expect((await sweep(day(7), bad, links)).reminded).toBe(0);
+    expect((await sweep(day(8), okSend(), links)).reminded).toBe(1);
   });
 
   it('deletes a pending verified account at day 30 with all its rows', async () => {
@@ -83,8 +89,8 @@ describe('runConsentSweep', () => {
     await requestAccountLink(db, u.email, {}, V);
     await issueConsentTokens(db, u.id, V);
     const send = okSend();
-    expect((await runConsentSweep(db, day(29), send, links)).deleted).toBe(0);
-    expect((await runConsentSweep(db, day(30), send, links)).deleted).toBe(1);
+    expect((await sweep(day(29), send, links)).deleted).toBe(0);
+    expect((await sweep(day(30), send, links)).deleted).toBe(1);
     expect(await accounts()).toBe(0);
     expect(await count('SELECT count(*)::int AS n FROM account_consent_tokens')).toBe(0);
     expect(await count('SELECT count(*)::int AS n FROM account_login_tokens')).toBe(0);
@@ -95,7 +101,7 @@ describe('runConsentSweep', () => {
     const t = (await issueConsentTokens(db, c.id, V))!;
     await confirmConsent(db, t.confirm, V);
     await teen({ verified: false });
-    expect(await runConsentSweep(db, day(40), okSend(), links)).toEqual({ reminded: 0, deleted: 0, cleared: 0, failed: 0 });
+    expect(await sweep(day(40), okSend(), links)).toEqual({ reminded: 0, deleted: 0, cleared: 0, failed: 0 });
     expect(await accounts()).toBe(2);
   });
 
@@ -104,7 +110,7 @@ describe('runConsentSweep', () => {
     const fifteen = await teen({ dob: '2011-01-01' });
     await issueConsentTokens(db, sixteen.id, V);
     await issueConsentTokens(db, fifteen.id, V);
-    const r = await runConsentSweep(db, day(3), okSend(), links);
+    const r = await sweep(day(3), okSend(), links);
     expect(r).toMatchObject({ cleared: 1, deleted: 0 });
     const pe = async (id: string) =>
       (await db.query<{ parent_email: string | null }>('SELECT parent_email FROM accounts WHERE id = $1', [id])).rows[0]
@@ -118,7 +124,7 @@ describe('runConsentSweep', () => {
 
   it('an account that turned 16 is not deleted at day 30', async () => {
     await teen({ dob: '2010-11-01' });
-    await runConsentSweep(db, day(30), okSend(), links);
+    await sweep(day(30), okSend(), links);
     expect(await accounts()).toBe(1);
   });
 });
@@ -130,14 +136,14 @@ describe('review fixes', () => {
     const failing = vi.fn(async () => {
       throw new Error('mail down');
     });
-    const r = await runConsentSweep(db, day(7), failing, links);
+    const r = await sweep(day(7), failing, links);
     expect(r.failed).toBe(1);
     expect(await confirmConsent(db, first!.confirm, day(8))).toBe('confirmed');
   });
 
   it('a pending account that turned 16 becomes none, and the reminder names the deletion date', async () => {
     const old = await teen({ dob: '2010-10-01' });
-    await runConsentSweep(db, day(1), okSend(), links);
+    await sweep(day(1), okSend(), links);
     const row = await db.query<{ consent_state: string; parent_email: string | null }>(
       'SELECT consent_state, parent_email FROM accounts WHERE id = $1',
       [old.id],
@@ -146,6 +152,36 @@ describe('review fixes', () => {
     const mail = consentEmail('request', { confirmUrl: 'c', withdrawUrl: 'w', privacyUrl: 'p', deletionDate: new Date('2026-12-01T00:00:00Z') });
     expect(mail.text).toContain('deleted on 2026-12-01');
     expect(mail.text).toContain('your email address');
+  });
+});
+
+describe('mass-deletion guards', () => {
+  it('deletes at most 20 per run and raises one alert with counts only', async () => {
+    for (let i = 0; i < 25; i++) await teen();
+    expect((await sweep(day(30), okSend())).deleted).toBe(20);
+    expect(await accounts()).toBe(5);
+    const a = await alerts();
+    expect(a).toHaveLength(1);
+    expect(a[0]).not.toContain('@');
+    expect((await sweep(day(31), okSend())).deleted).toBe(5);
+    expect(await alerts()).toHaveLength(1);
+  });
+
+  it('refuses to run when the worker clock and the database clock differ by more than 10 minutes', async () => {
+    await teen();
+    await teen({ dob: '2010-11-01' }); // 16 by day 30: would be cleared
+    const send = okSend();
+    const zero = { reminded: 0, deleted: 0, cleared: 0, failed: 0 };
+    const skewed = (ms: number) => runConsentSweep(db, day(30), send, links, { dbNow: async () => new Date(day(30).getTime() + ms) });
+    expect(await skewed(11 * 60_000)).toEqual(zero);
+    expect(await skewed(-11 * 60_000)).toEqual(zero);
+    // The default reads the real database clock, weeks away from the simulated day 30.
+    expect(await runConsentSweep(db, day(30), send, links)).toEqual(zero);
+    expect(send).not.toHaveBeenCalled();
+    expect(await accounts()).toBe(2);
+    expect(await count('SELECT count(*)::int AS n FROM accounts WHERE parent_email IS NOT NULL')).toBe(2);
+    expect(await alerts()).toHaveLength(3);
+    expect(await skewed(9 * 60_000)).toMatchObject({ deleted: 1, cleared: 1 });
   });
 });
 
@@ -175,10 +211,10 @@ describe('claimConsentSweep and tick', () => {
     const env = { DIGEST_HOUR_UTC: '23' };
     const send = okSend();
     const t = day(7);
-    expect((await tick(db, t, env, send, { delayMs: 0 })).join(';')).toMatch(
+    expect((await tick(db, t, env, send, { delayMs: 0, dbNow: async () => t })).join(';')).toMatch(
       /consent sweep: 1 reminded, 0 deleted, 0 cleared/,
     );
-    expect((await tick(db, new Date(t.getTime() + 60_000), env, send, { delayMs: 0 })).join(';')).toMatch(
+    expect((await tick(db, new Date(t.getTime() + 60_000), env, send, { delayMs: 0, dbNow: async () => t })).join(';')).toMatch(
       /consent sweep: done today/,
     );
   });

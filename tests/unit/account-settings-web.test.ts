@@ -12,7 +12,7 @@ import { checkPin } from '@/lib/accounts/pin';
 import { switchToProfile } from '@/lib/accounts/context';
 import { getSettings, TIME_ZONES } from '@/lib/accounts/settings';
 import { unsubscribeToken } from '@/lib/accounts/unsubscribe';
-import { createUnsubscribeLimits } from '@/lib/accounts/limits';
+import { createAccountActionLimits, createUnsubscribeLimits } from '@/lib/accounts/limits';
 import {
   deleteAccountRequest,
   exportRequest,
@@ -45,9 +45,9 @@ const post = (body: Record<string, string | string[]>, opts: { cookie?: string; 
 const deps = (now = NOW) => ({ db, now });
 const where = (r: Response) => [r.status, r.headers.get('location')];
 
-async function account(dateOfBirth = '1990-05-05') {
+async function account(dateOfBirth = '1990-05-05', parentEmail?: string) {
   const email = `sw${n++}@example.test`;
-  const r = await signUp(db, { email, dateOfBirth }, NOW);
+  const r = await signUp(db, { email, dateOfBirth, parentEmail }, NOW);
   if (r.status !== 'created') throw new Error('sign-up failed');
   const session = (await consumeAccountLink(db, (await requestAccountLink(db, email, {}, NOW))!, NOW))!;
   return { accountId: r.accountId, email, session };
@@ -143,6 +143,53 @@ describe('save', () => {
     const r = await saveSettingsRequest(post({ time_zone: 'Mars/Olympus', daily_set: 'on' }, { cookie: a.session }), deps());
     expect(where(r)).toEqual([303, '/account/settings/?r=invalid#result']);
     expect(await getSettings(db, a.accountId)).toEqual(before);
+  });
+});
+
+describe('a consent-pending 13-15 account', () => {
+  const teen = () => account(`${NOW.getUTCFullYear() - 14}-01-01`, 'parent@example.test');
+
+  it('cannot save settings (interests only until a parent or guardian confirms): a neutral code, nothing saved', async () => {
+    const t = await teen();
+    const before = await getSettings(db, t.accountId);
+    const r = await saveSettingsRequest(post(SAVE_BODY, { cookie: t.session }), deps());
+    expect(where(r)).toEqual([303, '/account/settings/?r=pending#result']);
+    expect(await getSettings(db, t.accountId)).toEqual(before);
+  });
+
+  it('saves once consent is confirmed', async () => {
+    const t = await teen();
+    await db.query("UPDATE accounts SET consent_state = 'confirmed' WHERE id = $1", [t.accountId]);
+    expect(where(await saveSettingsRequest(post(SAVE_BODY, { cookie: t.session }), deps()))).toEqual([
+      303,
+      '/account/settings/?r=saved#result',
+    ]);
+    expect((await getSettings(db, t.accountId))?.timeZone).toBe('Europe/London');
+  });
+});
+
+describe('per-account limits on export and PIN reset', () => {
+  it('the 31st export in an hour gets 429 with nothing exported; another account is unaffected', async () => {
+    const a = await account();
+    const b = await account();
+    const limit = createAccountActionLimits(() => 0);
+    for (let i = 0; i < 30; i++) expect((await exportRequest(post({}, { cookie: a.session }), { ...deps(), limit })).status).toBe(200);
+    const r = await exportRequest(post({}, { cookie: a.session }), { ...deps(), limit });
+    expect(r.status).toBe(429);
+    expect(await r.text()).toBe('Too many attempts. Please try again later.');
+    expect((await exportRequest(post({}, { cookie: b.session }), { ...deps(), limit })).status).toBe(200);
+  });
+
+  it('the 31st PIN reset in an hour gets 429 and changes nothing', async () => {
+    const f = await family();
+    const limit = createAccountActionLimits(() => 0);
+    const bad = { new_pin: '1357', new_pin_confirm: '1358' };
+    for (let i = 0; i < 30; i++) await resetPinRequest(post(bad, { cookie: f.session }), { ...deps(), limit });
+    const good = { new_pin: '1357', new_pin_confirm: '1357' };
+    const r = await resetPinRequest(post(good, { cookie: f.session }), { ...deps(), limit });
+    expect(r.status).toBe(429);
+    expect(await r.text()).toBe('Too many attempts. Please try again later.');
+    expect(await checkPin(db, f.accountId, PIN, NOW)).toBe('ok');
   });
 });
 

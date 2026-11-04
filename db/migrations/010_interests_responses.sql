@@ -6,6 +6,9 @@
 -- Deleting an account or a child profile cascades its rows. NULL profile_id (the holder) is made unique with COALESCE in
 -- the indexes (NULLS NOT DISTINCT is not available on every supported PostgreSQL version).
 -- Rollback: DROP TABLE item_responses; DROP TABLE profile_interests; DELETE FROM schema_migrations WHERE name = '010_interests_responses.sql'.
+-- Before rolling back to any release older than the 3D Task 2 scope fix (public pages derive scope from the session),
+-- run DELETE FROM account_sessions WHERE active_profile_id IS NOT NULL; or turn ACCOUNTS_ENABLED off: that code shows
+-- `adults` items to a child session.
 CREATE TABLE profile_interests (
   account_id uuid NOT NULL REFERENCES accounts (id) ON DELETE CASCADE,
   profile_id uuid,
