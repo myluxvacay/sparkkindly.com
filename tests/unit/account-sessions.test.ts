@@ -105,7 +105,10 @@ describe('account sessions', () => {
     expect(await getAccount(db, s, T0)).toMatchObject({ ageGroup: 'teen_13_15', consent: 'pending' });
     // 2011-12-01 + 16 years: the same session now reads as 16-17 (session is within its 90-day cap only if
     // refreshed, so use a fresh sign-in at that clock)
-    const later = new Date('2027-12-02T00:00:00Z');
+    // the 16th birthday counts from 12:00 UTC on 2027-12-01 (fail closed for under-age)
+    const early = new Date('2027-12-01T11:59:00Z');
+    expect(await getAccount(db, await signIn(TEEN, early), early)).toMatchObject({ ageGroup: 'teen_13_15' });
+    const later = new Date('2027-12-01T12:00:00Z');
     const s2 = await signIn(TEEN, later);
     expect(await getAccount(db, s2, later)).toMatchObject({ ageGroup: 'teen_16_17' });
   });

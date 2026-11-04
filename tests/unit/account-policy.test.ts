@@ -20,6 +20,24 @@ describe('ageGroupFor', () => {
     expect(ageGroupFor(dob, NOW(today))).toBe(group);
   });
 
+  // Fail closed: the birthday only counts once it has begun everywhere on Earth (UTC-12), i.e. at 12:00 UTC.
+  it.each([
+    ['2013-06-15', '2026-06-15T11:59:59Z', 'under_13'],
+    ['2013-06-15', '2026-06-15T12:00:00Z', 'teen_13_15'],
+    ['2010-06-15', '2026-06-15T11:59:59Z', 'teen_13_15'],
+    ['2010-06-15', '2026-06-15T12:00:00Z', 'teen_16_17'],
+    ['2008-06-15', '2026-06-15T11:59:59Z', 'teen_16_17'],
+    ['2008-06-15', '2026-06-15T12:00:00Z', 'adult'],
+    ['2013-06-15', '2026-06-15T00:00:00Z', 'under_13'],
+  ])('dob %s at %s is %s', (dob, at, group) => {
+    expect(ageGroupFor(dob, new Date(at))).toBe(group);
+  });
+
+  it('a date of birth equal to the UTC date is valid (not future), even before 12:00 UTC', () => {
+    expect(ageGroupFor('2026-11-03', new Date('2026-11-03T01:00:00Z'))).toBe('under_13');
+    expect(ageGroupFor('2026-11-04', new Date('2026-11-03T23:00:00Z'))).toBeNull();
+  });
+
   it('counts a 29 February birth from 1 March in a non-leap year', () => {
     expect(ageGroupFor('2012-02-29', NOW('2025-02-28'))).toBe('under_13');
     expect(ageGroupFor('2012-02-29', NOW('2025-03-01'))).toBe('teen_13_15');

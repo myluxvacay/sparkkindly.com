@@ -21,7 +21,12 @@ export const POLICY = { minAge: 13, consentAge: 16, adultAge: 18 } as const;
 
 const ISO_DATE = /^(\d{4})-(\d{2})-(\d{2})$/;
 
-// Whole years between a YYYY-MM-DD birth date and now, on UTC calendar dates.
+const HOURS_12 = 12 * 3_600_000;
+
+// Whole years between a YYYY-MM-DD birth date and now. Fail closed for under-age: the age is taken on the westernmost
+// calendar date on Earth (UTC-12, i.e. now minus 12 hours), so nobody passes 13, 16 or 18 before their birthday has
+// begun where they live; the birthday counts from 12:00 UTC. A date is "future" only after the UTC date (a dob equal to
+// the UTC date is valid; before 12:00 UTC it simply reads as under 13).
 // A 29 February birthday falls on 1 March in non-leap years (tuple comparison handles it).
 function ageInYears(dob: string, now: Date): number | null {
   const m = ISO_DATE.exec(dob);
@@ -36,12 +41,13 @@ function ageInYears(dob: string, now: Date): number | null {
   if (y < 1900) {
     return null;
   }
-  const ny = now.getUTCFullYear();
-  const nm = now.getUTCMonth() + 1;
-  const nd = now.getUTCDate();
-  if (y > ny || (y === ny && (mo > nm || (mo === nm && d > nd)))) {
+  if (dob > now.toISOString().slice(0, 10)) {
     return null;
   }
+  const today = new Date(now.getTime() - HOURS_12);
+  const ny = today.getUTCFullYear();
+  const nm = today.getUTCMonth() + 1;
+  const nd = today.getUTCDate();
   const birthdayPassed = nm > mo || (nm === mo && nd >= d);
   return ny - y - (birthdayPassed ? 0 : 1);
 }
