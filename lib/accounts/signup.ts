@@ -73,6 +73,7 @@ function upsert(db: Db, email: string, input: SignUpInput, parent: string | null
     // A replaced row means earlier links were requested against the old details: none may be redeemed now.
     if (r.rows[0]?.replaced) {
       await tx.query('DELETE FROM account_login_tokens WHERE email = $1 AND used_at IS NULL', [email]);
+      await tx.query('DELETE FROM account_consent_tokens WHERE account_id = $1', [r.rows[0].id]);
     }
     return r.rows[0] ? ({ status: 'created', accountId: r.rows[0].id } as const) : ({ status: 'exists' } as const);
   });
