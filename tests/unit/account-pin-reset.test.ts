@@ -1,6 +1,6 @@
 // @vitest-environment node
-// PIN reset after a fresh email sign-in (plan 3E Task 2): adult context only, session created within 10 minutes, a valid
-// 4-digit PIN; it clears the lock fields and nothing else.
+// PIN reset after a fresh email sign-in (plan 3E Task 2): adult context only, session created within 10 minutes, a
+// valid 4-digit PIN; it clears the lock fields and nothing else.
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { signUp } from '@/lib/accounts/signup';
@@ -91,7 +91,11 @@ describe('resetPin', () => {
 
   it('clears a lock, the failure count and the lock count, and leaves sessions alone', async () => {
     const f = await family();
-    const other = (await consumeAccountLink(db, (await requestAccountLink(db, `reset${n - 1}@example.test`, {}, T0))!, T0))!;
+    const other = (await consumeAccountLink(
+      db,
+      (await requestAccountLink(db, `reset${n - 1}@example.test`, {}, T0))!,
+      T0,
+    ))!;
     await db.query('UPDATE accounts SET pin_lock_count = 3 WHERE id = $1', [f.accountId]);
     for (let i = 0; i < 5; i++) {
       await checkPin(db, f.accountId, '0000', T0);

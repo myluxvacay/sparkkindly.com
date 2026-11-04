@@ -1,9 +1,9 @@
-// Daily retention job for idle accounts, run by the worker once per UTC day: an account nobody has signed in to (no
-// session seen) and answered with (no item_responses, any profile) for 24 months (730 days; with no such activity the
-// clock is verified_at) gets one notice at its own address, and is deleted 30 days after the notice if still inactive,
-// rechecked under the account row lock. Signing in clears the notice (consumeAccountLink in sessions.ts). Never touches
-// unverified accounts (the 48 hour purge owns them) or consent-pending teens (the consent sweep owns them). Addresses are
-// never logged. No Next.js imports; verified by tests/unit/account-inactivity.test.ts.
+// Daily retention job for idle accounts, run by the worker once per UTC day: an account with no activity (sign-in,
+// verification, session seen, answer by any profile) for 24 months (730 days) gets one notice at its own address,
+// and is deleted 30 days after the notice if still inactive, rechecked under the account row lock. Signing in clears
+// the notice (consumeAccountLink in sessions.ts). Never touches unverified accounts (the 48 hour purge owns them) or
+// consent-pending teens (the consent sweep owns them). Addresses are never logged. No Next.js imports; verified by
+// tests/unit/account-inactivity.test.ts.
 import type { Db, Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import { deleteAccountIn } from './delete';
@@ -14,10 +14,16 @@ const GRACE_DAYS = 30;
 
 export type InactivityResult = { noticed: number; deleted: number; failed: number };
 
-// $1 is the activity cutoff (now - 730 days); `a` is the accounts row.
-const INACTIVE = `a.verified_at IS NOT NULL AND a.verified_at <= $1::timestamptz AND a.consent_state <> 'pending'
-  AND NOT EXISTS (SELECT 1 FROM account_sessions s WHERE s.account_id = a.id AND s.last_seen_at > $1::timestamptz)
-  AND NOT EXISTS (SELECT 1 FROM item_responses r WHERE r.account_id = a.id AND r.answered_at > $1::timestamptz)`;
+// The one inactivity test used by the listing, the notice and the deletion recheck. Last activity is the greatest of
+// the last sign-in, verified_at, any session's last_seen_at and any answer (GREATEST skips NULLs). $1 is the cutoff
+// (now - 730 days); `a` is the accounts row.
+const INACTIVE = `a.verified_at IS NOT NULL AND a.consent_state <> 'pending'
+  AND GREATEST(
+    a.last_sign_in_at,
+    a.verified_at,
+    (SELECT max(s.last_seen_at) FROM account_sessions s WHERE s.account_id = a.id),
+    (SELECT max(r.answered_at) FROM item_responses r WHERE r.account_id = a.id)
+  ) <= $1::timestamptz`;
 
 const before = (now: Date, days: number) => new Date(now.getTime() - days * DAY).toISOString();
 
@@ -36,7 +42,8 @@ export function inactivityEmail(deletionDate: Date, signInUrl: string): { subjec
     text: [
       'Nobody has signed in to your SparkKindly account, or answered anything with it, for two years.',
       '',
-      `On ${deletionDate.toISOString().slice(0, 10)} the account and everything in it is deleted: its child profiles, interests and answers.`,
+      `On ${deletionDate.toISOString().slice(0, 10)} the account and everything in it is deleted: ` +
+        'its child profiles, interests and answers.',
       '',
       'To keep the account, sign in before then:',
       signInUrl,
@@ -51,14 +58,17 @@ export function inactivityEmail(deletionDate: Date, signInUrl: string): { subjec
 // spared and its notice cleared.
 export async function deleteIfStillInactive(db: Db, id: string, now: Date): Promise<boolean> {
   return db.transaction(async (tx) => {
-    const due = await tx.query('SELECT 1 FROM accounts WHERE id = $1 AND inactivity_notice_at <= $2::timestamptz FOR UPDATE', [
-      id,
-      before(now, GRACE_DAYS),
-    ]);
+    const due = await tx.query(
+      'SELECT 1 FROM accounts WHERE id = $1 AND inactivity_notice_at <= $2::timestamptz FOR UPDATE',
+      [id, before(now, GRACE_DAYS)],
+    );
     if (due.rows.length !== 1) {
       return false;
     }
-    const still = await tx.query(`SELECT 1 FROM accounts a WHERE a.id = $2 AND ${INACTIVE}`, [before(now, IDLE_DAYS), id]);
+    const still = await tx.query(`SELECT 1 FROM accounts a WHERE a.id = $2 AND ${INACTIVE}`, [
+      before(now, IDLE_DAYS),
+      id,
+    ]);
     if (still.rows.length === 1) {
       return deleteAccountIn(tx, id);
     }
@@ -89,13 +99,17 @@ export async function runInactivitySweep(
     `SELECT a.id, a.email FROM accounts a WHERE a.inactivity_notice_at IS NULL AND ${INACTIVE}`,
     [cutoff],
   );
-  const m = inactivityEmail(new Date(now.getTime() + GRACE_DAYS * DAY), `${links.base.replace(/\/+$/, '')}/account/sign-in/`);
+  const m = inactivityEmail(
+    new Date(now.getTime() + GRACE_DAYS * DAY),
+    `${links.base.replace(/\/+$/, '')}/account/sign-in/`,
+  );
   // One notice per account, so no accountSendBudget (per-process memory, and the worker is a one-shot process).
   for (const { id, email } of idle.rows) {
     try {
       await send({ to: email, ...m });
       await db.query(
-        `UPDATE accounts a SET inactivity_notice_at = $3 WHERE a.id = $2 AND a.inactivity_notice_at IS NULL AND ${INACTIVE}`,
+        `UPDATE accounts a SET inactivity_notice_at = $3
+         WHERE a.id = $2 AND a.inactivity_notice_at IS NULL AND ${INACTIVE}`,
         [cutoff, id, now.toISOString()],
       );
       noticed++;

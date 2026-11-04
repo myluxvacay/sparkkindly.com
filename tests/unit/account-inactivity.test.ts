@@ -1,7 +1,7 @@
 // @vitest-environment node
-// The 24-month inactivity job (plan 3E Task 2): one notice to the account's own address, deletion 30 days later only if
-// still inactive (rechecked under the account row lock), a sign-in clears the notice. Unverified accounts (48 hour purge)
-// and consent-pending teens (consent sweep) are never touched here.
+// The 24-month inactivity job (plan 3E Task 2): one notice to the account's own address, deletion 30 days later only
+// if still inactive (rechecked under the account row lock), a sign-in clears the notice. Unverified accounts (48 hour
+// purge) and consent-pending teens (consent sweep) are never touched here.
 import { describe, it, expect, beforeAll, afterAll, beforeEach, vi } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { seedReference } from '@/db/seed';
@@ -49,12 +49,10 @@ async function member(): Promise<{ id: string; email: string }> {
   return a;
 }
 const answer = (accountId: string, profileId: string | null, when: Date) =>
-  db.query('INSERT INTO item_responses (account_id, profile_id, item_id, correct, answered_at) VALUES ($1,$2,$3,true,$4)', [
-    accountId,
-    profileId,
-    item,
-    when.toISOString(),
-  ]);
+  db.query(
+    'INSERT INTO item_responses (account_id, profile_id, item_id, correct, answered_at) VALUES ($1,$2,$3,true,$4)',
+    [accountId, profileId, item, when.toISOString()],
+  );
 
 beforeAll(async () => {
   db = await newTestDb();
@@ -190,6 +188,58 @@ describe('runInactivitySweep deletion', () => {
   });
 });
 
+// Expired sessions are purged daily (lib/accounts/retention.ts), so a sign-in must be remembered on the account itself.
+describe('last sign-in (sessions purged)', () => {
+  const purgeSessions = () => db.query('DELETE FROM account_sessions');
+
+  it('a sign-in records last_sign_in_at', async () => {
+    const a = await member();
+    await signIn(a.email, at(305));
+    const r = await db.query<{ t: Date }>('SELECT last_sign_in_at AS t FROM accounts WHERE id = $1', [a.id]);
+    expect(new Date(r.rows[0].t).toISOString()).toBe(at(305).toISOString());
+  });
+
+  it('a holder who signed in 14 months ago, with no live session and no answers, is not noticed', async () => {
+    const a = await member();
+    await signIn(a.email, at(305));
+    await purgeSessions();
+    const send = okSend();
+    expect(await runInactivitySweep(db, NOW, send, links)).toEqual({ noticed: 0, deleted: 0, failed: 0 });
+    expect(send).not.toHaveBeenCalled();
+  });
+
+  it('a holder whose last sign-in was 25 months ago is noticed', async () => {
+    const a = await account();
+    await signIn(a.email, at(-30));
+    await purgeSessions();
+    const send = okSend();
+    expect((await runInactivitySweep(db, NOW, send, links)).noticed).toBe(1);
+    expect(send.mock.calls[0][0].to).toBe(a.email);
+  });
+
+  it('a sign-in after the notice clears it and spares the account at day 30, sessions purged or not', async () => {
+    const a = await member();
+    await runInactivitySweep(db, NOW, okSend(), links);
+    await signIn(a.email, at(740));
+    await purgeSessions();
+    expect(await noticeAt(a.id)).toBeNull();
+    const send = okSend();
+    expect(await runInactivitySweep(db, at(760), send, links)).toEqual({ noticed: 0, deleted: 0, failed: 0 });
+    expect(await exists(a.id)).toBe(true);
+    expect(send).not.toHaveBeenCalled();
+  });
+
+  it('the deletion recheck under the lock counts a sign-in whose session is already gone', async () => {
+    const a = await member();
+    await runInactivitySweep(db, NOW, okSend(), links);
+    await db.query('UPDATE accounts SET last_sign_in_at = $2 WHERE id = $1', [a.id, at(750).toISOString()]);
+    await purgeSessions();
+    expect(await deleteIfStillInactive(db, a.id, at(760))).toBe(false);
+    expect(await exists(a.id)).toBe(true);
+    expect(await noticeAt(a.id)).toBeNull();
+  });
+});
+
 describe('deleteIfStillInactive', () => {
   it('rechecks under the lock: an account active again after the listing is spared, a still-idle one deleted', async () => {
     const active = await member();
@@ -226,7 +276,9 @@ describe('claimInactivitySweep and tick', () => {
     await member();
     const env = { DIGEST_HOUR_UTC: '23' };
     const send = okSend();
-    expect((await tick(db, NOW, env, send, { delayMs: 0 })).join(';')).toMatch(/inactivity sweep: 1 noticed, 0 deleted/);
+    expect((await tick(db, NOW, env, send, { delayMs: 0 })).join(';')).toMatch(
+      /inactivity sweep: 1 noticed, 0 deleted/,
+    );
     expect((await tick(db, new Date(NOW.getTime() + 60_000), env, send, { delayMs: 0 })).join(';')).toMatch(
       /inactivity sweep: done today/,
     );
@@ -234,7 +286,9 @@ describe('claimInactivitySweep and tick', () => {
 
   it('a failed send logs no address anywhere', async () => {
     const a = await member();
-    const spies = (['log', 'error', 'warn', 'info'] as const).map((k) => vi.spyOn(console, k).mockImplementation(() => {}));
+    const spies = (['log', 'error', 'warn', 'info'] as const).map((k) =>
+      vi.spyOn(console, k).mockImplementation(() => {}),
+    );
     try {
       const bad = vi.fn(async (m: Sent) => {
         throw new Error(`550 rejected ${m.to}`);

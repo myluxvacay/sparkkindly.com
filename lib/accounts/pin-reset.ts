@@ -1,6 +1,6 @@
-// Resetting a forgotten adult PIN without the old one, allowed only from an adult context whose session was created by
-// an email sign-in in the last 10 minutes (proof of the inbox stands in for the PIN). Same 4-digit rule as setPin; clears
-// the failure count, the lock and the lock count, and changes nothing else. A PIN is never logged. No Next.js imports.
+// Resetting a forgotten adult PIN without the old one, allowed only from an adult context whose session was created
+// by an email sign-in in the last 10 minutes (proof of the inbox stands in for the PIN). Same 4-digit rule as setPin;
+// clears the failure count, the lock and the lock count, and changes nothing else. A PIN is never logged. No Next.js imports.
 // Verified by tests/unit/account-pin-reset.test.ts.
 import type { Db } from '@/lib/db';
 import { hash } from '@/lib/tokens';

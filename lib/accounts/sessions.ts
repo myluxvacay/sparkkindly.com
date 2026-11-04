@@ -124,9 +124,12 @@ export async function consumeAccountLink(db: Db, token: string, now: Date): Prom
     if (used.rowCount !== 1) {
       return null;
     }
-    // A sign-in also clears any inactivity notice (lib/accounts/inactivity.ts), so the account is kept.
+    // A sign-in is recorded on the account (sessions are purged once expired) and clears any inactivity notice
+    // (lib/accounts/inactivity.ts), so the account is kept.
     await tx.query(
-      'UPDATE accounts SET verified_at = COALESCE(verified_at, $2::timestamptz), inactivity_notice_at = NULL WHERE id = $1',
+      `UPDATE accounts SET verified_at = COALESCE(verified_at, $2::timestamptz), last_sign_in_at = $2::timestamptz,
+         inactivity_notice_at = NULL
+       WHERE id = $1`,
       [id, at],
     );
     const session = newToken();
