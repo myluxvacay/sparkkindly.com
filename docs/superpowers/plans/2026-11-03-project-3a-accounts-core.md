@@ -111,3 +111,12 @@
 - [ ] **Step 2: Run, fix any gap found in Tasks 1 to 4 with its own failing test first, run the full unit suite, `tsc` and eslint.** Expected: all green, results recorded.
 - [ ] **Step 3: Independent review:** this is High-risk (children's age data, consent). Dispatch `data-isolation-reviewer` and `security-auditor`; resolve findings before any merge.
 - [ ] **Step 4: Commit** `docs: account flag and tracker progress`.
+
+## Carried to later plans
+
+Notes from the final reviews (3 November 2026). Not built in 3A.
+
+- **3B (consent):** send the parent consent email only after `verified_at` is set; bind the consent token to the account id and the exact parent email it was sent to; revoke consent tokens on any overwrite or parent change; decide whether a `confirmed` row is locked against overwrite; decide whether `parent_email` is cleared at 16; a neutral age screen and a same-browser retry block (privacy review).
+- **3C (child profiles):** an adult's `create_child_profile` needs a recorded guardian confirmation, not `can` alone; a child profile's audience scope passes `['kids', 'all']`.
+- **3E (export and deletion):** delete `account_login_tokens` by email on account deletion (there is no foreign key); list every personal-data table in `docs/OPERATIONS.md` (Accounts, "Personal data held") in the export test.
+- **Go-live gates:** professional privacy review, the 3B consent flow, a 320px and screen-reader pass.
