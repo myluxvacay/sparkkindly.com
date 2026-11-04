@@ -116,7 +116,9 @@
 
 Notes from the final reviews (3 November 2026). Not built in 3A.
 
-- **3B (consent):** send the parent consent email only after `verified_at` is set; bind the consent token to the account id and the exact parent email it was sent to; revoke consent tokens on any overwrite or parent change; decide whether a `confirmed` row is locked against overwrite; decide whether `parent_email` is cleared at 16; a neutral age screen and a same-browser retry block (privacy review).
+- **3B (consent):** send the parent consent email only after `verified_at` is set; bind the consent token to the account id and the exact parent email it was sent to; revoke consent tokens on any overwrite or parent change; decide whether a `confirmed` row is locked against overwrite; decide whether `parent_email` is cleared at 16; a neutral age screen and a same-browser retry block (privacy review). Spec 4a.5 also says an unconfirmed (consent-pending) 13-15 account gets a reminder at 7 days and is deleted after 30 days: 3B must implement that; the 3A 48-hour purge covers only email-unverified rows.
+- **Owner to reconcile before Project 4:** the spec's risk table says no profile pages exist for anyone, while 4a.5 and `lib/accounts/policy.ts` give `profile_page` to 16 and over.
+- Done in 3A (final residuals): a database error on link confirm (e.g. a lock wait past the 3 s `statement_timeout`) now returns the generic invalid-link page instead of a 500.
 - **3C (child profiles):** an adult's `create_child_profile` needs a recorded guardian confirmation, not `can` alone; a child profile's audience scope passes `['kids', 'all']`.
 - **3E (export and deletion):** delete `account_login_tokens` by email on account deletion (there is no foreign key); list every personal-data table in `docs/OPERATIONS.md` (Accounts, "Personal data held") in the export test.
 - **Go-live gates:** professional privacy review, the 3B consent flow, a 320px and screen-reader pass.
