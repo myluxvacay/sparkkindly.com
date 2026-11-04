@@ -31,6 +31,11 @@ describe('migration 007', () => {
       expect(r.rows[0]).toEqual({ t });
     }
   });
+
+  it('indexes account_login_tokens by email (sign-up revoke and purge filter on it)', async () => {
+    const r = await db.query("SELECT indexdef FROM pg_indexes WHERE indexname = 'account_login_tokens_email_idx'");
+    expect(r.rows).toEqual([{ indexdef: expect.stringMatching(/ON public\.account_login_tokens USING btree \(email\)/) }]);
+  });
 });
 
 describe('signUp', () => {

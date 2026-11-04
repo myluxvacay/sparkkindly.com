@@ -1,7 +1,7 @@
 -- Accounts (Project 3A): member accounts, sign-in links and sessions. Additive: new tables only.
 -- Only the date of birth is stored, never the age group (it is derived by lib/accounts/policy.ts).
 -- Tokens are never stored: only their sha256 hashes (same shape as the admin_* tables, without a stage).
--- Rollback (nothing else depends on these): DROP TABLE account_sessions, account_login_tokens, accounts;
+-- Rollback (nothing else depends on these; dropping the tables drops their indexes): DROP TABLE account_sessions, account_login_tokens, accounts;
 -- DELETE FROM schema_migrations WHERE name = '007_accounts.sql'.
 CREATE TABLE accounts (
   id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -34,3 +34,5 @@ CREATE TABLE account_sessions (
 );
 
 CREATE INDEX account_sessions_account_idx ON account_sessions (account_id);
+-- Sign-up revokes a replaced row's links by email, and the retention purge (lib/accounts/retention.ts) filters on it.
+CREATE INDEX account_login_tokens_email_idx ON account_login_tokens (email);
