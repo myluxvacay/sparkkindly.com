@@ -291,3 +291,10 @@ First-week measurement (tracker 2.7): for the first week run on this reduced sch
 run time, and whether the plan's limit was hit (the digest shows plan-limit hits and recommends a higher plan when a world misses its
 buffer target on 3 of the last 7 days). Also confirm the Claude subscription terms permit scheduled, unattended use, and record the decision here.
 If no run is recorded for 36 hours the worker emails the admin list.
+
+## Accounts (Project 3A)
+
+- **Flag.** `ACCOUNTS_ENABLED` (`true` or `1`) switches on `/account/*` (sign-up, email sign-in link, sign-out). Anything else, or unset, makes every `/account/*` URL a 404. Staging may set it in `/opt/sparkkindly/shared/staging.env`. **Production must not set it** until the professional privacy review (spec Project 3) and the parental consent flow exist.
+- **Migration.** `007_accounts.sql` (accounts, sign-in tokens, sessions) is applied on staging by the normal deploy. It is expand-only; the rollback is in the migration header.
+- **Sign-in token.** It travels in the emailed URL query (`/account/sign-in/link/?token=...`), so it appears in Caddy access logs; it is single-use, expires in 15 minutes, and only a POST on the confirm page redeems it.
+- **Session cookie.** `__Host-sk_account` (HttpOnly, Secure, SameSite=Lax, 30 days idle, 90 days at most) is sent with every request on the site, Kids pages included. It is a strictly necessary session cookie, but it is the one storage identifier a signed-in person carries onto Kids pages; check the privacy review covers that before production.

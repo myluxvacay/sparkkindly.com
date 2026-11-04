@@ -72,15 +72,15 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 
 ## Project 3: Accounts and personal dashboards
 
-- [ ] 3.1 Account model with age groups (under 13 none; 13–15 consent pending/confirmed; 16–17; 18+) as settings; passwordless email link and Google sign-in — *sign-in tests; age group derived from date of birth.*
+- [~] 3.1 Account model with age groups (under 13 none; 13–15 consent pending/confirmed; 16–17; 18+) as settings; passwordless email link and Google sign-in — *sign-in tests; age group derived from date of birth.* In progress: email-link half built behind ACCOUNTS_ENABLED; Google sign-in deferred. See `docs/superpowers/plans/2026-11-03-project-3a-accounts-core.md`.
 - [ ] 3.2 Parental consent flow for 13–15: parent email, confirmation link, 7-day reminder, 30-day deletion, withdrawal link that deletes the account — *each path tested.*
-- [ ] 3.3 Permissions by age group (circles, comments, communities, contributing, child profiles, sponsorship visibility) in one place — *permission matrix tests.*
+- [~] 3.3 Permissions by age group (circles, comments, communities, contributing, child profiles, sponsorship visibility) in one place — *permission matrix tests.* In progress: policy table and isolation matrix done; enforced per feature as features arrive. See `docs/superpowers/plans/2026-11-03-project-3a-accounts-core.md`.
 - [ ] 3.4 Child profiles (6–9, 10–12): display name and band only; 18+ parent/guardian confirmation; 4-digit PIN; profile switching; close at 13 — *e2e on a shared-device flow.*
 - [ ] 3.5 Interests and the `/me` dashboard across worlds; audience filtering by profile — *a child profile never receives an `adults` item; test fixtures.*
 - [ ] 3.6 Stored answers per profile with correctness and time — *answer rows written; anonymous play unchanged.*
 - [ ] 3.7 Notification preferences and time zone per account; one-click unsubscribe on every email — *unsubscribe link works without sign-in.*
 - [ ] 3.8 Data export and account deletion from settings; child profile deletion; 24-month inactivity deletion job — *export contains everything held; deletion removes all rows.*
-- [ ] 3.9 Rate limits on sign-up, sign-in links and invites — *limits enforced in tests.*
+- [~] 3.9 Rate limits on sign-up, sign-in links and invites — *limits enforced in tests.* In progress: sign-up and sign-in limits done; invites pending. See `docs/superpowers/plans/2026-11-03-project-3a-accounts-core.md`.
 - [ ] 3.10 Draft privacy policy, terms, community guidelines and data inventory — *documents in `docs/legal/` and on the site as drafts.*
 - [ ] 3.11 **[owner]** Arrange the professional privacy review (consent method, age-appropriate design, jurisdictions) — *review findings recorded; changes applied.*
 - [ ] 3.12 Done-when: adult signs up, picks interests, sees dashboard, creates a child profile, deletes account; 14-year-old held at consent pending then joins a circle but cannot comment; parent withdrawal deletes the account.
