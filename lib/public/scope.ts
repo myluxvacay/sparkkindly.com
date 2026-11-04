@@ -15,6 +15,6 @@ export function anonymousScope(now: Date = new Date()): Scope {
 // Top-level route names. A world whose slug equals one of these would shadow a page (or be shadowed by it), so /admin
 // refuses them (Project 1C); a test keeps this list in step with the app directory.
 export const RESERVED_WORLD_SLUGS: readonly string[] = [
-  'admin', 'api', 'about', 'privacy', 'terms', 'accessibility', 'contact', 'editorial-policy',
+  'admin', 'account', 'api', 'about', 'privacy', 'terms', 'accessibility', 'contact', 'editorial-policy',
   'quiz', 'search', 'topics', 'me', 'circles', 'report', 'community',
 ];

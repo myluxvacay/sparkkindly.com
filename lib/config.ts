@@ -8,6 +8,8 @@ export const site = {
   postalAddress: ((v) => (v && v.length <= 200 ? v : null))((process.env.CONTACT_ADDRESS ?? '').replace(/\s+/g, ' ').trim()) as string | null,
   socials: { youtube: null, instagram: null, facebook: null, tiktok: null } as Record<string, string | null>,
 };
+// Member accounts are off until the owner turns them on: with this unset every /account route and page is a 404.
+export const accountsEnabled = (): boolean => ['true', '1'].includes(process.env.ACCOUNTS_ENABLED ?? '');
 export const brands = {
   play: { name: 'Play', promise: 'Play. Imagine. Explore.', description: 'A little challenge. A fresh perspective. Make room for the joy of figuring things out.', short: 'Give your curiosity a little room to play.', icon: '✳', color: 'gold' },
   discover: { name: 'Discover', promise: 'Explore the world with wonder.', description: 'Follow a question somewhere unexpected. Look a little closer at the extraordinary in the everyday.', short: 'Big wonders, hiding in plain sight.', icon: '◎', color: 'sage' },

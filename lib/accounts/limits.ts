@@ -1,0 +1,17 @@
+// Rate limit for account sign-up: 5 per network per hour (IPv4 address, IPv6 /64). Sign-in link requests reuse
+// createSignInLimits from lib/admin/guard.ts. In memory, one process, like the admin limits.
+// Verified by tests/unit/account-limits.test.ts.
+import { clientPrefix, createCodeLimits } from '@/lib/admin/guard';
+import { createLimiter } from '@/lib/agents/rate-limit';
+
+export function createSignUpLimits(clock: () => number = Date.now) {
+  // createLimiter counts per minute; a clock running 60x slow turns "n per minute" into "n per hour".
+  const perNetwork = createLimiter({ perMinute: 5, now: () => clock() / 60 });
+  return { signUp: (ip: string): boolean => perNetwork(clientPrefix(ip)) };
+}
+
+const shared = globalThis as unknown as { __sparkSignUpLimits?: ReturnType<typeof createSignUpLimits> };
+export const signUpLimits = (shared.__sparkSignUpLimits ??= createSignUpLimits());
+
+// Link confirmations: 20 an hour per network, a separate bucket from admin's.
+export const confirmLimits = createCodeLimits();
