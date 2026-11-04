@@ -147,8 +147,8 @@ describe('consuming a link is one locked transaction', () => {
         db.transaction((tx) =>
           fn({
             ...tx,
-            query: async (text, params) => {
-              const r = await tx.query(text, params);
+            query: async <T,>(text: string, params?: unknown[]) => {
+              const r = await tx.query<T>(text, params);
               if (!racer && /FOR UPDATE/.test(text)) {
                 racer = signUp(db, { email: e, dateOfBirth: '2012-01-01', parentEmail: 'evil@example.test' }, NOW);
               }

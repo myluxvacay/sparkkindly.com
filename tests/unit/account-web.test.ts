@@ -213,7 +213,7 @@ describe('confirmAccountLink', () => {
     run((d) => {
       const req = post({ token });
       if (cookie) req.headers.set('cookie', `__Host-sk_account=${cookie}`);
-      return confirmAccountLink(req, { ...(d as never), confirms: createConfirmLimits(() => 0) });
+      return confirmAccountLink(req, { ...d, confirms: createConfirmLimits(() => 0) } as never);
     });
   const cookieValue = (r: Response) => /__Host-sk_account=([0-9a-f]{64})/.exec(r.headers.get('set-cookie') ?? '')?.[1];
 
