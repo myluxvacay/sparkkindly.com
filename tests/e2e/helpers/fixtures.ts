@@ -80,7 +80,7 @@ export async function setWorldEnabled(slug: string, enabled: boolean): Promise<v
 
 export async function resetExtras(): Promise<void> {
   await withClient(async (c) => {
-    await c.query("DELETE FROM items WHERE created_by = 'e2e'");
+    await c.query("DELETE FROM items WHERE created_by = 'e2e' OR slug LIKE 'e2e-scope-%'");
     await c.query('UPDATE worlds SET enabled = true');
     await c.query("DELETE FROM worlds WHERE goals = 'e2e-fixture'");
     await c.query("DELETE FROM topics WHERE slug LIKE 'e2e-%'");
