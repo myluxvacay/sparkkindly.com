@@ -7,8 +7,8 @@ import { topicParents, topicChildren, topicRoots } from './topics';
 export async function seedReference(db: Queryable): Promise<void> {
   for (const w of worldSeeds) {
     await db.query(
-      `INSERT INTO worlds (slug, name, promise, description, icon, color, sort, approval_mode)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      `INSERT INTO worlds (slug, name, promise, description, icon, color, sort, approval_mode, comments_enabled)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $1 <> 'kids')
        ON CONFLICT (slug) DO NOTHING`,
       [w.slug, w.name, w.promise, w.description, w.icon, w.color, w.sort, w.approvalMode],
     );

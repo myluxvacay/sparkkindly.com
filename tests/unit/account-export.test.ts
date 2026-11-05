@@ -125,11 +125,13 @@ describe('export inventory', () => {
   it('every personal-data table in the schema is either exported or excluded with a reason', async () => {
     expect(decided()).toEqual(await personalDataTables(db));
     expect([...EXPORTED_TABLES].sort()).toEqual([
+      'account_trust',
       'accounts',
       'child_profiles',
       'circle_invites',
       'circle_members',
       'circle_reports',
+      'comments',
       'item_responses',
       'profile_interests',
       'referrals',
@@ -212,8 +214,9 @@ describe('export inventory', () => {
     });
   });
 
-  it('every accounts and child_profiles column is exported or excluded with a reason; no PIN fields', async () => {
-    for (const table of ['accounts', 'child_profiles'] as const) {
+  it('every column of the row-by-row tables (accounts, child_profiles, comments, account_trust) is decided; no PIN fields', async () => {
+    expect(Object.keys(EXPORTED_COLUMNS).sort()).toEqual(['account_trust', 'accounts', 'child_profiles', 'comments']);
+    for (const table of Object.keys(EXPORTED_COLUMNS) as (keyof typeof EXPORTED_COLUMNS)[]) {
       expect(decidedColumns(table), table).toEqual(await columnsOf(db, table));
       for (const reason of Object.values(EXCLUDED_COLUMNS[table])) expect(reason.length).toBeGreaterThan(10);
     }
@@ -221,6 +224,11 @@ describe('export inventory', () => {
       expect(Object.keys(EXCLUDED_COLUMNS.accounts)).toContain(c);
       expect(EXPORTED_COLUMNS.accounts).not.toContain(c);
     }
+  });
+
+  it('the moderation reason is never exported (plan 7A): excluded with its reason', () => {
+    expect(EXPORTED_COLUMNS.comments).not.toContain('moderation_reason');
+    expect(EXCLUDED_COLUMNS.comments.moderation_reason).toMatch(/moderation/);
   });
 
   it('a new undecided column on accounts or child_profiles makes the comparison fail', async () => {
@@ -407,5 +415,47 @@ describe('exportAccount: circle memberships', () => {
     const y = await exportAccount(db, other, NOW);
     expect(JSON.stringify(y)).not.toContain('Mum');
     expect(y!.circles.map((c) => c.yourName)).toEqual(['Joe', 'Grandpa Joe']);
+  });
+});
+
+describe('exportAccount: comments and trust (plan 7A)', () => {
+  const comment = (itemId: string, accountId: string, body: string, status: string, parentId: string | null = null) =>
+    db
+      .query<{ id: string }>(
+        `INSERT INTO comments (item_id, account_id, parent_id, body, status, created_at, updated_at, moderation_reason)
+         VALUES ($1, $2, $3, $4, $5, $6, $6, 'private agent note') RETURNING id`,
+        [itemId, accountId, parentId, body, status, T1.toISOString()],
+      )
+      .then((r) => r.rows[0].id);
+
+  it("lists the account's own comments (any status) and trust; never another's, ids or the moderation reason", async () => {
+    const id = await signedIn(`com${n++}@example.test`, '1985-03-04');
+    const otherEmail = `com${n++}@example.test`;
+    const other = await signedIn(otherEmail, '1985-03-04');
+    await db.query(
+      "INSERT INTO account_trust (account_id, level, approved, display_name, guidelines_accepted_at, updated_at) VALUES ($1, 1, 5, 'Sam', $2, $2), ($3, 0, 0, 'Otto', $2, $2)",
+      [id, T1.toISOString(), other],
+    );
+    const top = await comment(items[0].id, other, 'their words', 'published');
+    await comment(items[0].id, id, 'my reply', 'published', top);
+    await comment(items[1].id, id, 'my held words', 'held');
+    const x = await exportAccount(db, id, NOW);
+    expect(x!.comments).toEqual([
+      { item: items[0].slug, world: worlds[0].slug, reply: true, body: 'my reply', status: 'published', createdAt: T1.toISOString(), updatedAt: T1.toISOString() },
+      { item: items[1].slug, world: worlds[1].slug, reply: false, body: 'my held words', status: 'held', createdAt: T1.toISOString(), updatedAt: T1.toISOString() },
+    ]);
+    expect(x!.commentTrust).toEqual({
+      level: 1,
+      approved: 5,
+      rejected: 0,
+      banned: false,
+      displayName: 'Sam',
+      guidelinesAcceptedAt: T1.toISOString(),
+      updatedAt: T1.toISOString(),
+    });
+    const text = JSON.stringify(x);
+    for (const s of ['their words', 'Otto', otherEmail, 'private agent note', top, other]) expect(text).not.toContain(s);
+    const fresh = await exportAccount(db, await signedIn(`com${n++}@example.test`, '1985-03-04'), NOW);
+    expect([fresh!.comments, fresh!.commentTrust]).toEqual([[], null]);
   });
 });

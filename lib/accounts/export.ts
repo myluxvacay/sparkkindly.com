@@ -17,6 +17,8 @@ export const EXPORTED_TABLES = [
   'circle_invites',
   'circle_reports',
   'referrals',
+  'comments',
+  'account_trust',
 ] as const;
 
 // Personal-data tables deliberately left out, each with its reason.
@@ -59,6 +61,8 @@ export const EXPORTED_COLUMNS = {
     'inactivity_notice_at',
   ],
   child_profiles: ['display_name', 'age_band', 'created_at'],
+  comments: ['body', 'status', 'created_at', 'updated_at'],
+  account_trust: ['level', 'approved', 'rejected', 'banned', 'display_name', 'guidelines_accepted_at', 'updated_at'],
 } as const;
 
 export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Readonly<Record<string, string>>>> = {
@@ -72,6 +76,16 @@ export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Re
   child_profiles: {
     id: 'internal identifier; meaningless outside the service',
     account_id: 'internal identifier of the owning account (the export is already that account)',
+  },
+  comments: {
+    id: 'internal identifier; meaningless outside the service',
+    item_id: 'internal identifier; exported as the item slug and world',
+    account_id: 'internal identifier of the author (the export is already that account)',
+    parent_id: "internal identifier of another (possibly someone else's) comment; exported as reply: true/false",
+    moderation_reason: "the moderation agent's private reason; it reaches the author in the rejection email (7B), not here",
+  },
+  account_trust: {
+    account_id: 'internal identifier of the account (the export is already that account)',
   },
 };
 
@@ -98,6 +112,25 @@ type ExportInvite = {
 };
 // A report the account made about a circle (plan 4D): its own words only.
 type ExportReport = { circle: string; reason: string; note: string | null; createdAt: string };
+// One of the account's own comments (plan 7A), any status; a deleted one has an empty body.
+type ExportComment = {
+  item: string;
+  world: string;
+  reply: boolean;
+  body: string;
+  status: string;
+  createdAt: string;
+  updatedAt: string;
+};
+type ExportTrust = {
+  level: number;
+  approved: number;
+  rejected: number;
+  banned: boolean;
+  displayName: string | null;
+  guidelinesAcceptedAt: string | null;
+  updatedAt: string;
+};
 type ExportChild = {
   displayName: string;
   ageBand: string;
@@ -131,6 +164,8 @@ export type AccountExport = {
   invites: ExportInvite[];
   reports: ExportReport[];
   joinedThroughInviteAt: string | null;
+  comments: ExportComment[];
+  commentTrust: ExportTrust | null;
   childProfiles: ExportChild[];
 };
 
@@ -260,6 +295,45 @@ async function referredAt(tx: Queryable, accountId: string): Promise<string | nu
   return r.rows[0] ? iso(r.rows[0].j) : null;
 }
 
+async function commentsOf(tx: Queryable, accountId: string): Promise<ExportComment[]> {
+  const r = await tx.query<{ item: string; world: string; reply: boolean; body: string; status: string; c: Date; u: Date }>(
+    `SELECT i.slug AS item, w.slug AS world, c.parent_id IS NOT NULL AS reply, c.body, c.status, c.created_at AS c,
+            c.updated_at AS u
+     FROM comments c JOIN items i ON i.id = c.item_id JOIN worlds w ON w.id = i.world_id
+     WHERE c.account_id = $1 ORDER BY c.created_at, i.slug, c.id`,
+    [accountId],
+  );
+  return r.rows.map((x) => ({
+    item: x.item,
+    world: x.world,
+    reply: x.reply,
+    body: x.body,
+    status: x.status,
+    createdAt: iso(x.c) as string,
+    updatedAt: iso(x.u) as string,
+  }));
+}
+
+async function trustOf(tx: Queryable, accountId: string): Promise<ExportTrust | null> {
+  const r = await tx.query<{ level: number; approved: number; rejected: number; banned: boolean; dn: string | null; g: Date | null; u: Date }>(
+    `SELECT level, approved, rejected, banned, display_name AS dn, guidelines_accepted_at AS g, updated_at AS u
+     FROM account_trust WHERE account_id = $1`,
+    [accountId],
+  );
+  const t = r.rows[0];
+  return t
+    ? {
+        level: t.level,
+        approved: t.approved,
+        rejected: t.rejected,
+        banned: t.banned,
+        displayName: t.dn,
+        guidelinesAcceptedAt: iso(t.g),
+        updatedAt: iso(t.u) as string,
+      }
+    : null;
+}
+
 async function readExport(tx: Queryable, accountId: string, now: Date): Promise<AccountExport | null> {
   const a = await tx.query<AccountRow>(
     `SELECT email, to_char(date_of_birth, 'YYYY-MM-DD') AS dob, time_zone, consent_state, consent_at,
@@ -288,6 +362,8 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
     invites: await invitesOf(tx, accountId),
     reports: await reportsOf(tx, accountId),
     joinedThroughInviteAt: await referredAt(tx, accountId),
+    comments: await commentsOf(tx, accountId),
+    commentTrust: await trustOf(tx, accountId),
     childProfiles: children.rows.map((c) => ({
       displayName: c.display_name,
       ageBand: c.age_band,

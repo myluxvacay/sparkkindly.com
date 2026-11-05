@@ -1,7 +1,8 @@
 // Deletes an account and everything tied to it, in one transaction: the address's sign-in links (they have no foreign
 // key), then the circles it owns are handed over or closed (lib/circles/owner.ts), then the row, which cascades sessions,
-// consent tokens, child profiles, interests, saved answers, circle memberships, the circle invites it created and its
-// referral row. Pending invites to its address are deleted first. No Next.js imports;
+// consent tokens, child profiles, interests, saved answers, circle memberships, the circle invites it created, its
+// referral row, its comment trust row and its comments (with every reply under them). Pending invites to its address are
+// deleted first. No Next.js imports;
 // tests/unit/account-consent.test.ts and tests/unit/circles-owner.test.ts.
 import type { Db, Queryable } from '@/lib/db';
 import { handOverOwnedCircles } from '@/lib/circles/owner';
