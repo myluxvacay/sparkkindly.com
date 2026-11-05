@@ -17,6 +17,7 @@ import { linkBase } from '@/lib/admin/sessions';
 import { claimAccountPurge, purgeAccountData } from '@/lib/accounts/retention';
 import { claimConsentSweep, runConsentSweep } from '@/lib/accounts/consent-sweep';
 import { claimInactivitySweep, runInactivitySweep } from '@/lib/accounts/inactivity';
+import { claimCirclesPurge, purgeClosedCircles } from '@/lib/jobs/circles-purge';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
 // `dbNow` replaces the database clock the account jobs compare with `now` (lib/jobs/guards.ts); for tests only.
@@ -57,6 +58,7 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: Ti
   await accountPurge(db, now, log, opts);
   await consentSweep(db, now, env, send, log, opts);
   await inactivitySweep(db, now, env, send, log, opts);
+  await circlesPurge(db, now, log, opts);
   return log;
 }
 
@@ -112,6 +114,24 @@ async function inactivitySweep(db: Db, now: Date, env: EnvLike, send: Send, log:
     async () => {
       const r = await runInactivitySweep(db, now, send, { base: linkBase(env) }, { dbNow });
       log.push(`inactivity sweep: ${r.noticed} noticed, ${r.deleted} deleted, ${r.failed} failed`);
+    },
+    { delayMs },
+  );
+}
+
+// Once per UTC day: delete circles closed more than 30 days ago (lib/jobs/circles-purge.ts).
+async function circlesPurge(db: Db, now: Date, log: string[], { delayMs, dbNow }: TickOpts): Promise<void> {
+  const claimed = await claimCirclesPurge(db, now).catch((err: Error) => {
+    log.push(`circles purge: could not check (${err.message})`);
+    return null;
+  });
+  if (claimed === false) log.push('circles purge: done today');
+  if (!claimed) return;
+  await runJob(
+    db,
+    'circles-purge',
+    async () => {
+      log.push(`circles purge: ${await purgeClosedCircles(db, now, 100, { dbNow })} deleted`);
     },
     { delayMs },
   );

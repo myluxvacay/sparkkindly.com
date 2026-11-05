@@ -26,6 +26,8 @@ import { resetPin } from '@/lib/accounts/pin-reset';
 import { getSettings, saveSettings } from '@/lib/accounts/settings';
 import { runInactivitySweep } from '@/lib/accounts/inactivity';
 import { applyUnsubscribe, readUnsubscribeToken, unsubscribeToken } from '@/lib/accounts/unsubscribe';
+import { createCircle, getCircleForMember } from '@/lib/circles/repo';
+import { addChildToCircle } from '@/lib/circles/children';
 import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, searchPublic } from '@/lib/public/reads';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -678,7 +680,7 @@ describe('settings, export, deletion, inactivity and unsubscribe (plan 3E, Task 
     expect(await count('SELECT count(*)::int AS n FROM accounts WHERE email = $1', [A])).toBe(1);
   });
 
-  it('deleting an account leaves no row in any of the seven personal-data tables, and none of B is touched', async () => {
+  it('deleting an account leaves no row in any personal-data table (circles included), and B keeps every row of theirs', async () => {
     const a = await holder('da');
     const b = await holder('db');
     await link(a.email); // an unused sign-in link (no foreign key: removed by address)
@@ -688,7 +690,17 @@ describe('settings, export, deletion, inactivity and unsubscribe (plan 3E, Task 
     expect(await issueConsentTokens(db, teen.accountId, T0)).not.toBeNull();
     const teenEmail = (await db.query<{ email: string }>('SELECT email FROM accounts WHERE id = $1', [teen.accountId])).rows[0].email;
     await link(teenEmail);
-    const owned = ['accounts WHERE id', 'account_sessions WHERE account_id', 'account_consent_tokens WHERE account_id', 'child_profiles WHERE account_id', 'profile_interests WHERE account_id', 'item_responses WHERE account_id'];
+    // Circles (plan 4A): A owns a family circle holding A's child and B; B owns one A belongs to.
+    const mine = await createCircle(db, a.accountId, { name: 'A home', kind: 'family', yourName: 'A' }, T0);
+    const theirs = await createCircle(db, b.accountId, { name: 'B quiz', kind: 'friends', yourName: 'B' }, T0);
+    if (mine.status !== 'created' || theirs.status !== 'created') throw new Error('circle failed');
+    await db.query(
+      `INSERT INTO circle_members (circle_id, account_id, display_name) SELECT id, $2::uuid, 'B' FROM circles WHERE slug = $1
+       UNION ALL SELECT id, $3::uuid, 'A' FROM circles WHERE slug = $4`,
+      [mine.slug, b.accountId, a.accountId, theirs.slug],
+    );
+    expect(await addChildToCircle(db, a.accountId, mine.slug, a.profileId, 'on', T0)).toBe('added');
+    const owned = ['accounts WHERE id', 'account_sessions WHERE account_id', 'account_consent_tokens WHERE account_id', 'child_profiles WHERE account_id', 'profile_interests WHERE account_id', 'item_responses WHERE account_id', 'circle_members WHERE account_id', 'circles WHERE owner_account_id'];
     const rows = (t: string, id: string) => count(`SELECT count(*)::int AS n FROM ${t} = $1`, [id]);
     expect(await rows(owned[2], teen.accountId)).toBeGreaterThan(0);
 
@@ -701,6 +713,8 @@ describe('settings, export, deletion, inactivity and unsubscribe (plan 3E, Task 
       expect(await count('SELECT count(*)::int AS n FROM account_login_tokens WHERE email = $1', [e])).toBe(0);
     }
     for (const t of owned.filter((t) => !t.includes('consent'))) expect(await rows(t, b.accountId), `B ${t}`).toBeGreaterThan(0);
+    // A's family circle passed to B, its only other adult member.
+    expect((await getCircleForMember(db, b.accountId, mine.slug))!.myRole).toBe('owner');
   });
 
   it('the inactivity sweep spares accounts with a recent sign-in, a recent answer, or a stale notice and recent activity', async () => {
