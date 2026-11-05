@@ -112,6 +112,9 @@ function Row({ csrf, d }: { csrf: string; d: DistributionRow }) {
         {d.status === 'failed' && (
           <ActionForm csrf={csrf} action="social.retry" returnTo={RETURN} label="Retry" plain fields={{ id: String(d.id) }} ariaLabel={`Retry: ${label}`} />
         )}
+        {d.status === 'flagged' && (
+          <ActionForm csrf={csrf} action="social.mark_posted" returnTo={RETURN} label="Keep as posted" plain fields={{ id: String(d.id) }} ariaLabel={`Keep as posted: ${label}`} />
+        )}
         {CANCELLABLE.has(d.status) && (
           <ActionForm csrf={csrf} action="social.cancel" returnTo={RETURN} label="Cancel" plain fields={{ id: String(d.id) }} ariaLabel={`Cancel: ${label}`} />
         )}
@@ -127,7 +130,10 @@ export default function SocialAdmin({ csrf, overview }: { csrf: string; overview
       <Banner platforms={platforms} />
       <section aria-labelledby="social-posts">
         <h2 id="social-posts">Posts, last 7 days ({distributions.length})</h2>
-        <p className="muted">Failed, flagged and in-flight posts stay listed until handled. Flagged means: check the platform yourself.</p>
+        <p className="muted">
+          Failed, flagged and in-flight posts stay listed until handled. Flagged means: check the platform yourself, then keep it
+          as posted (it is there) or cancel it (it is not).
+        </p>
         <ul className="admin-list">
           {distributions.map((d) => (
             <Row key={d.id} csrf={csrf} d={d} />

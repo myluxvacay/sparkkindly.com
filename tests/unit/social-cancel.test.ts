@@ -46,6 +46,14 @@ describe('archiving an item', () => {
     expect(alerts).toEqual([{ job: 'social-post' }]);
   });
 
+  it('5A review L2: a row in posting is flagged with an alert (the platform may be publishing it)', async () => {
+    const item = await socialItem(db);
+    const id = await distribution(db, item, 'instagram', { status: 'posting', caption: 'x' });
+    await transition(db, item, 'archived', 'owner@example.test', 'unpublished');
+    expect(await statusOf(db, id)).toBe('flagged');
+    expect((await db.query<{ job: string }>('SELECT job FROM failed_jobs')).rows).toEqual([{ job: 'social-post' }]);
+  });
+
   it('is part of the item transaction: a failed transition changes no distribution', async () => {
     const item = await socialItem(db, { status: 'draft' });
     const id = await distribution(db, item, 'instagram', { status: 'selected' });

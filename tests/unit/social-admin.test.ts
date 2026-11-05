@@ -108,6 +108,17 @@ describe('social.retry and social.cancel', () => {
     expect(await act('social.cancel', { id: '999999' })).toMatchObject({ ok: false, status: 404 });
     expect(await act('social.cancel', { id: 'x' })).toMatchObject({ ok: false, status: 400 });
   });
+
+  it('5A review M1: "keep as posted" resolves a flagged row as posted, audited; only from flagged', async () => {
+    const id = await distribution(db, await socialItem(db), 'instagram', { status: 'flagged', caption: 'x' });
+    expect(await act('social.mark_posted', { id: String(id) })).toMatchObject({ ok: true, code: 'social_kept' });
+    expect(await statusOf(db, id)).toBe('posted');
+    expect((await db.query('SELECT 1 FROM audit_log WHERE action = $1 AND target = $2', ['social.mark_posted', `distribution:${id}`])).rows).toHaveLength(1);
+    for (const s of ['posted', 'failed', 'scheduled']) {
+      const other = await distribution(db, await socialItem(db), 'instagram', { status: s, caption: 'x' });
+      expect(await act('social.mark_posted', { id: String(other) }), s).toMatchObject({ ok: false, code: 'wrong_status' });
+    }
+  });
 });
 
 describe('flag off', () => {

@@ -183,6 +183,47 @@ describe('runPoster', () => {
     expect(nextStatus('flagged', 'retry')).toBeNull();
   });
 
+  it('5A review L2: a row flagged by an unpublish while the call was in flight keeps the post id and URL', async () => {
+    const id = await due();
+    const adapter: PlatformAdapter = {
+      post: vi.fn(async () => {
+        await db.query("UPDATE distributions SET status = 'flagged' WHERE id = $1", [id]);
+        return { externalId: 'X9', url: 'https://social.example/p/9' };
+      }),
+      metrics: vi.fn(),
+    };
+    await runPoster(db, NOW, deps(adapter));
+    expect(await row(id)).toMatchObject({ status: 'flagged', external_id: 'X9', post_url: 'https://social.example/p/9' });
+  });
+
+  it('5A review L3: a database error in the check before posting defers the row; nothing is sent or flagged', async () => {
+    const id = await due();
+    const { adapter } = fakeAdapter();
+    let failed = false;
+    const flaky = {
+      ...db,
+      query: (text: string, params?: unknown[]) => {
+        if (!failed && /FROM items i JOIN worlds/.test(text)) {
+          failed = true;
+          return Promise.reject(new Error('timeout'));
+        }
+        return db.query(text, params as unknown[]);
+      },
+    } as typeof db;
+    expect(await runPoster(flaky, NOW, deps(adapter))).toMatchObject({ deferred: 1, flagged: 0 });
+    expect(adapter.post).not.toHaveBeenCalled();
+    expect(await row(id)).toMatchObject({ status: 'scheduled', attempts: 0 });
+    expect(await alerts()).toEqual([]);
+  });
+
+  it('5A review L5: a row scheduled more than 24 hours ago is cancelled as late, never posted', async () => {
+    const id = await due('instagram', {}, '2026-11-04T11:00:00Z');
+    const { adapter } = fakeAdapter();
+    expect(await runPoster(db, NOW, deps(adapter))).toMatchObject({ cancelled: 1 });
+    expect(adapter.post).not.toHaveBeenCalled();
+    expect(await row(id)).toMatchObject({ status: 'cancelled', last_error: expect.stringMatching(/^late/) });
+  });
+
   it('two concurrent ticks post a row once', async () => {
     const id = await due();
     const { adapter } = fakeAdapter();
@@ -269,6 +310,18 @@ describe('collectMetrics', () => {
     expect(await m(recent)).toEqual({ reach: 42, likes: 3 });
     expect(await m(broken)).toBeNull();
     expect(await m(old)).toBeNull();
+  });
+
+  it('5A review L8: a metrics failure logs a SocialPostError message, or only the error name for anything else', async () => {
+    await distribution(db, await socialItem(db), 'instagram', { status: 'posted', postedAt: '2026-11-03T12:00:00Z', caption: 'x' });
+    await db.query("UPDATE distributions SET external_id = 'E' || id");
+    const leaky: PlatformAdapter = { post: vi.fn(), metrics: vi.fn(async () => { throw new TypeError('fetch https://graph.example/?access_token=SECRET failed'); }) };
+    const spy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    await collectMetrics(db, NOW, { env, fetch: vi.fn() as never, adapters: { instagram: leaky } });
+    const logged = JSON.stringify(spy.mock.calls);
+    spy.mockRestore();
+    expect(logged).toContain('TypeError');
+    expect(logged).not.toContain('SECRET');
   });
 });
 

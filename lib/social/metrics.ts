@@ -3,7 +3,7 @@
 // stops the others or blocks posting. Platforms without credentials are skipped. No Next.js imports.
 // Verified by tests/unit/social-poster.test.ts.
 import type { Queryable } from '@/lib/db';
-import { ADAPTERS, hasCredentials } from './adapters/meta';
+import { ADAPTERS, hasCredentials, SocialPostError } from './adapters/meta';
 import type { PosterDeps } from './poster';
 import type { Platform } from './states';
 
@@ -26,7 +26,8 @@ export async function collectMetrics(db: Queryable, now: Date, deps: PosterDeps)
       await db.query('UPDATE distributions SET metrics = $2::jsonb, metrics_at = $3 WHERE id = $1', [d.id, JSON.stringify(m), now.toISOString()]);
       out.updated++;
     } catch (err) {
-      console.error(`social metrics: post ${d.id} on ${d.platform} failed:`, (err as Error)?.message);
+      // A SocialPostError message is built to be safe; anything else may carry a URL or token, so only its name.
+      console.error(`social metrics: post ${d.id} on ${d.platform} failed:`, err instanceof SocialPostError ? err.message : (err as Error)?.name);
       out.failed++;
     }
   }

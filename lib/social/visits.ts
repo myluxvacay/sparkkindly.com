@@ -9,8 +9,10 @@ import { isPlatform } from './states';
 export async function recordSocialVisit(db: Queryable, itemId: string, utmSource: unknown, now: Date): Promise<void> {
   if (!socialEnabled() || !isPlatform(utmSource)) return;
   try {
+    // Only items posted on that platform count (5A review L7), so a hand-typed utm_source cannot fill the table.
     await db.query(
-      `INSERT INTO social_visits (day, platform, item_id, visits) VALUES ($1, $2, $3, 1)
+      `INSERT INTO social_visits (day, platform, item_id, visits)
+       SELECT $1::date, $2::text, $3::uuid, 1 WHERE EXISTS (SELECT 1 FROM distributions WHERE item_id = $3::uuid AND platform = $2::text AND posted_at IS NOT NULL)
        ON CONFLICT (day, platform, item_id) DO UPDATE SET visits = social_visits.visits + 1`,
       [now.toISOString().slice(0, 10), utmSource, itemId],
     );

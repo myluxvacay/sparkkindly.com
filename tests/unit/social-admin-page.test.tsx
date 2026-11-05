@@ -58,6 +58,12 @@ describe('SocialAdmin view', () => {
     expect(html).not.toContain('Cancel: Odd one out');
   });
 
+  it('5A review M1: a flagged row offers "Keep as posted" and Cancel, never Retry', () => {
+    expect(html).toContain('aria-label="Keep as posted: Fourth on facebook"');
+    expect(html).toContain('aria-label="Cancel: Fourth on facebook"');
+    expect(html).not.toContain('Retry: Fourth');
+  });
+
   it('plan 5B: a video platform waiting for re-authorisation says so', () => {
     const tiktok = { platform: 'tiktok' as const, enabled: true, dailyCap: 1, postTime: '15:00', supported: true, credentials: false, reauth: true };
     const out = renderToStaticMarkup(<SocialAdmin csrf="CSRF" overview={{ ...overview, platforms: [tiktok] }} />);

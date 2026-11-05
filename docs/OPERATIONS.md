@@ -878,15 +878,29 @@ TikTok and YouTube take video only, through the video jobs queue (see Video jobs
   digest). "Retry" in `/admin/social/` gives a failed row one more attempt now; "Cancel" stops a pending or failed one.
 - **Flagged rows** need the owner: (a) the final publishing call failed in a way Meta may still have acted on, or (b) a
   row stayed in `posting` for 30 minutes (the worker stopped mid-post), or (c) the item was unpublished after posting.
-  Look on the platform. For (a) and (b): if the post exists, leave the row flagged (it is never retried); if it does not,
-  "Cancel" the row, and hand-pick the item again if it should still go out. For (c) delete the post on the platform by
-  hand, then "Cancel" the row. Archiving an item cancels its pending posts in the same transaction.
+  Look on the platform. For (a) and (b): if the post exists, press "Keep as posted" (the row becomes posted, is never
+  retried, and its metrics are collected); if it does not, "Cancel" the row, and hand-pick the item again if it should
+  still go out (a row that was ever posted cannot be hand-picked again). For (c) delete the post on the platform by
+  hand, then "Cancel" the row. Archiving an item cancels its pending posts in the same transaction and flags rows that
+  are posted or being posted at that moment.
+- **Stale rows.** Each day's selection cancels earlier days' text rows still waiting for copy (`expired`), and the
+  promotion queue offers only today's and yesterday's rows. A scheduled text post more than 24 hours past its time
+  (for example while credentials were missing) is cancelled as `late` instead of being posted.
+- **Visits** are counted only for items that were posted on that platform; the share image is rendered once per item
+  version (in-process cache) and at most 20 renders a minute per network.
 - **Metrics.** Once a day the worker reads reach, likes and comments for posts of the last 7 days; a failure is logged
   and never blocks posting. Visits from social links are counted in `social_visits` (day, platform, item, count; nothing
   about the visitor) and shown in `/admin/social/` for 30 days.
 - **Dependency.** The JPEG conversion uses `sharp` 0.35.5 (Apache-2.0), already in the tree for the brand scripts and
   Next's image optimiser, moved from devDependencies to dependencies; `npm audit --omit=dev` reported 0 vulnerabilities
   (5 Nov 2026).
+- **Pre-deploy check for `029_sponsor_confirmed_category.sql`.** Before deploying the release that carries 029, run on
+  the target database `SELECT count(*) FROM sponsors WHERE confirmed_at IS NOT NULL AND category IS NULL;` It must print
+  `0`; otherwise the migration fails and the deploy stops. Fix those rows first (give each a category in `/admin/sponsors/`
+  or clear its confirmation) and run the check again.
+- **Meta authorisation header.** The adapter sends the Page token as `Authorization: Bearer <token>`. The staging dry run
+  must confirm Meta accepts it (a post goes through); if Meta refuses it, the alternative is `Authorization: OAuth
+  <token>`, a one-line change in `lib/social/adapters/meta.ts` with its test.
 - **Migration and rollback.** `028_social.sql` is additive (`social_platforms` seeded with caps 2/3/1/1, all off;
   `distributions`; `social_visits`; `promoter` in the agents role CHECK). Code rollback: unset `SOCIAL_ENABLED` (nothing
   posts; rows stay), or the previous release (it never reads them and refuses the promoter key). Disable promoter agents
@@ -952,7 +966,8 @@ Behind `SOCIAL_ENABLED` and the TikTok/YouTube switches in `/admin/social/` (off
 - **Flagged video rows** need the owner, as in 5A: the last upload call failed in a way the platform may have acted
   on, a row stopped mid-upload, the approved file changed on disk (nothing was sent), YouTube took the video but not
   the captions (add them in YouTube Studio), or the item was unpublished after posting (delete the post by hand).
-  Check the platform; then cancel the job (if the video is not there) or leave it flagged. A failed row has "Retry".
+  Check the platform; then cancel the job (if the video is not there) or press "Keep as posted" on its row in
+  `/admin/social/` (it is there). A failed row has "Retry".
   Archiving an item cancels its unposted jobs; their files go after 30 days.
 - **Migration and rollback.** `030_video_jobs.sql` is additive (one table). Code rollback: switch TikTok and YouTube
   off in `/admin/social/` or unset `SOCIAL_ENABLED`; or deploy the previous release (it never reads `video_jobs`).

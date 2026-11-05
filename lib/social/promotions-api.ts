@@ -47,6 +47,7 @@ async function promotionQueue(db: Queryable, now: Date) {
      FROM distributions d JOIN social_platforms p ON p.platform = d.platform
      JOIN items i ON i.id = d.item_id JOIN worlds w ON w.id = i.world_id
      WHERE d.status = 'selected' AND p.enabled AND ${socialEligibleWhere('$1')} AND d.platform <> ALL($2::text[])
+       AND d.day >= $1::date - 1
      ORDER BY d.id LIMIT ${QUEUE_SIZE}`,
     [now.toISOString(), [...VIDEO_PLATFORMS]],
   );

@@ -157,6 +157,31 @@ describe('selectForDay', () => {
     expect(await selectForDay(db, 'instagram', DAY, NOW)).toEqual({ selected: 1, skipped: 1 });
   });
 
+  it('5A review M1: a cancelled row that was ever posted cannot be hand-picked again', async () => {
+    const posted = await socialItem(db, { publishedAt: '2026-10-01T00:00:00Z' });
+    await distribution(db, posted, 'instagram', { status: 'cancelled', postedAt: '2026-11-04T10:00:00Z' });
+    expect(await handPick(db, posted, 'instagram', NOW)).toEqual({ ok: false, reason: 'exists' });
+    const withId = await socialItem(db, { publishedAt: '2026-10-01T00:00:00Z' });
+    const d = await distribution(db, withId, 'facebook', { status: 'cancelled' });
+    await db.query("UPDATE distributions SET external_id = 'X1' WHERE id = $1", [d]);
+    expect(await handPick(db, withId, 'facebook', NOW)).toEqual({ ok: false, reason: 'exists' });
+  });
+
+  it('5A review M2: the daily selection expires older selected and copy_ready text rows, never video rows', async () => {
+    const a = await socialItem(db, { publishedAt: '2026-10-01T00:00:00Z' });
+    const old = await distribution(db, a, 'instagram', { status: 'selected', day: '2026-11-03' });
+    const b = await socialItem(db, { publishedAt: '2026-10-01T00:00:00Z' });
+    const oldCopy = await distribution(db, b, 'instagram', { status: 'copy_ready', day: '2026-11-04' });
+    const today = await distribution(db, await socialItem(db, { publishedAt: '2026-10-01T00:00:00Z' }), 'instagram', { status: 'selected', day: DAY });
+    const video = await distribution(db, await socialItem(db, { kind: 'video_script', publishedAt: '2026-10-01T00:00:00Z' }), 'tiktok', { status: 'copy_ready', day: '2026-11-01' });
+    await selectForDay(db, 'instagram', DAY, NOW);
+    const st = async (id: number) => (await db.query<{ status: string; last_error: string | null }>('SELECT status, last_error FROM distributions WHERE id = $1', [id])).rows[0];
+    expect(await st(old)).toEqual({ status: 'cancelled', last_error: 'expired' });
+    expect(await st(oldCopy)).toEqual({ status: 'cancelled', last_error: 'expired' });
+    expect((await st(today)).status).toBe('selected');
+    expect((await st(video)).status).toBe('copy_ready');
+  });
+
   it('a disabled platform or SOCIAL_ENABLED off selects nothing', async () => {
     await socialItem(db);
     await db.query("UPDATE social_platforms SET enabled = false WHERE platform = 'instagram'");

@@ -8,9 +8,26 @@ import sharp from 'sharp';
 import { socialEnabled } from '@/lib/config';
 import type { Queryable } from '@/lib/db';
 import { CREAM, INK, PLUM, plainTitle, worldHex, wrapTitle } from '@/lib/public/palette';
+import { createLimiter } from '@/lib/agents/rate-limit';
+import { clientPrefix } from '@/lib/admin/guard';
 import { socialEligibleWhere } from './eligibility';
 
 const SLUG = /^[a-z0-9-]{1,80}$/;
+
+// 5A review L6: a rendered card is kept by its content (an edited title or colour renders anew), and rendering is
+// rate-limited per network; eligibility is still read on every request, so an unpublished item is 404 at once.
+// ponytail: an in-process LRU of 50 JPEGs (about 10 MB); a shared cache only if the app ever runs as several instances.
+const CACHE_SIZE = 50;
+const cache = new Map<string, Buffer>();
+const shared = globalThis as unknown as { __sparkShareImageLimiter?: ReturnType<typeof createLimiter> };
+const renderLimiter = (shared.__sparkShareImageLimiter ??= createLimiter({ perMinute: 20 }));
+type Opts = { client?: string; limiter?: (key: string) => boolean };
+
+function remember(key: string, jpeg: Buffer): void {
+  cache.delete(key);
+  cache.set(key, jpeg);
+  if (cache.size > CACHE_SIZE) cache.delete(cache.keys().next().value!);
+}
 const notFound = () => new Response('Not found', { status: 404, headers: { 'cache-control': 'no-store' } });
 
 type Card = { title: string; world_name: string; world_color: string | null };
@@ -52,7 +69,7 @@ function card(c: Card): ImageResponse {
   );
 }
 
-export async function socialShareImage(db: Queryable, world: string, slug: string, now: Date): Promise<Response> {
+export async function socialShareImage(db: Queryable, world: string, slug: string, now: Date, o: Opts = {}): Promise<Response> {
   if (!socialEnabled() || !SLUG.test(world) || !SLUG.test(slug)) return notFound();
   const r = await db.query<Card>(
     `SELECT i.title, w.name AS world_name, w.color AS world_color FROM items i JOIN worlds w ON w.id = i.world_id
@@ -60,8 +77,17 @@ export async function socialShareImage(db: Queryable, world: string, slug: strin
     [world, slug, now.toISOString()],
   );
   if (!r.rows[0]) return notFound();
-  const png = Buffer.from(await card(r.rows[0]).arrayBuffer());
-  const jpeg = await sharp(png).flatten({ background: CREAM }).jpeg({ quality: 88 }).toBuffer();
+  const key = JSON.stringify([world, slug, r.rows[0].title, r.rows[0].world_name, r.rows[0].world_color]);
+  let jpeg = cache.get(key);
+  if (jpeg) {
+    remember(key, jpeg);
+  } else {
+    const allow = o.limiter ?? renderLimiter;
+    if (!allow(clientPrefix(o.client ?? 'unknown'))) return new Response('Too many requests', { status: 429, headers: { 'retry-after': '60' } });
+    const png = Buffer.from(await card(r.rows[0]).arrayBuffer());
+    jpeg = await sharp(png).flatten({ background: CREAM }).jpeg({ quality: 88 }).toBuffer();
+    remember(key, jpeg);
+  }
   return new Response(new Uint8Array(jpeg), {
     headers: { 'content-type': 'image/jpeg', 'cache-control': 'public, max-age=3600' },
   });

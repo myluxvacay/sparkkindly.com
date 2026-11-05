@@ -3,11 +3,11 @@
 // refusal reaches the owner as a fixed message code. No Next.js imports. Verified by tests/unit/social-admin.test.ts.
 import type { Queryable } from '@/lib/db';
 import type { ErrorCode } from '@/lib/admin/messages';
-import { cancelDistribution, distributionStatus, parsePlatformForm, pickItem, retryDistribution, savePlatform } from './admin';
+import { cancelDistribution, distributionStatus, keepDistribution, parsePlatformForm, pickItem, retryDistribution, savePlatform } from './admin';
 import { isPlatform } from './states';
 
 type Ctx = { tx: Queryable; admin: { email: string }; form: URLSearchParams; now: Date };
-type Done = { code: 'social_platform_saved' | 'social_picked' | 'social_retried' | 'social_cancelled'; target: string; detail?: Record<string, unknown> };
+type Done = { code: 'social_platform_saved' | 'social_picked' | 'social_retried' | 'social_cancelled' | 'social_kept'; target: string; detail?: Record<string, unknown> };
 type Fail = (status: 400 | 404 | 409, code: ErrorCode) => Error;
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -48,6 +48,14 @@ export function socialHandlers(fail: Fail): Record<string, (c: Ctx) => Promise<D
       await requireStatus(tx, id, fail);
       if (!(await retryDistribution(tx, id, now))) throw fail(409, 'wrong_status');
       return { code: 'social_retried', target: `distribution:${id}` };
+    },
+
+    // 5A review M1: a flagged row the owner found on the platform is kept as posted.
+    async 'social.mark_posted'({ tx, form }) {
+      const id = distributionId(form, fail);
+      await requireStatus(tx, id, fail);
+      if (!(await keepDistribution(tx, id))) throw fail(409, 'wrong_status');
+      return { code: 'social_kept', target: `distribution:${id}` };
     },
 
     async 'social.cancel'({ tx, form }) {

@@ -11,11 +11,12 @@ import { socialEnabled } from '@/lib/config';
 import type { Queryable } from '@/lib/db';
 import type { EnvLike } from '@/lib/env';
 import { hasTiktokCredentials, tiktok } from '../adapters/tiktok';
+import { SocialPostError } from '../adapters/meta';
 import type { VideoAdapter, VideoPayload } from '../adapters/video';
 import { hasYoutubeCredentials, youtube } from '../adapters/youtube';
 import { scheduleTime } from '../copy';
 import { eligibleItem, videoEligibleWhere } from '../eligibility';
-import { duePlatforms, failRow, onError, postedToday, recordPosted, tomorrow, type PosterResult } from '../poster';
+import { deferUnchecked, duePlatforms, failRow, onError, postedToday, recordPosted, tomorrow, type PosterResult } from '../poster';
 import { moveDistribution, VIDEO_PLATFORMS, type VideoPlatform } from '../states';
 import type { Brief } from './brief';
 import { findFile, mediaDirs, sha256File } from './storage';
@@ -96,7 +97,13 @@ async function preflight(db: Queryable, d: Claimed, now: Date, env: EnvLike, r: 
 }
 
 async function postOne(db: Queryable, d: Claimed, now: Date, deps: VideoPosterDeps, adapter: VideoAdapter, r: PosterResult): Promise<void> {
-  const file = await preflight(db, d, now, deps.env, r);
+  let file: Awaited<ReturnType<typeof preflight>>;
+  try {
+    file = await preflight(db, d, now, deps.env, r);
+  } catch {
+    await deferUnchecked(db, d, now, r); // a database error before the upload: nothing was sent (5A review L3)
+    return;
+  }
   if (!file) return;
   let out;
   try {
@@ -143,7 +150,7 @@ export async function collectVideoMetrics(db: Queryable, now: Date, deps: VideoP
       await db.query('UPDATE distributions SET metrics = $2::jsonb, metrics_at = $3 WHERE id = $1', [d.id, JSON.stringify(m), now.toISOString()]);
       out.updated++;
     } catch (err) {
-      console.error(`video metrics: post ${d.id} on ${d.platform} failed:`, err instanceof Error ? err.name : 'error');
+      console.error(`video metrics: post ${d.id} on ${d.platform} failed:`, err instanceof SocialPostError ? err.message : (err as Error)?.name);
       out.failed++;
     }
   }

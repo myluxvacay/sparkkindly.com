@@ -1,6 +1,6 @@
 // The distribution state machine (plan 5A). Each event has one target and the statuses it may start from; every move
 // is one conditional UPDATE (`moveDistribution`), so two callers racing on a row never both win. A posted row is never
-// retried or re-scheduled (the platform has it); flagged waits for the owner, who may only cancel it. No Next.js imports.
+// retried or re-scheduled (the platform has it); flagged waits for the owner, who cancels it or keeps it as posted. No Next.js imports.
 // Verified by tests/unit/social-rules.test.ts and the poster, cancel and promotion tests.
 import type { Queryable } from '@/lib/db';
 
@@ -28,6 +28,7 @@ export const EVENTS = {
   // posting: the poster's post-time re-check; flagged: the owner checked the platform and the post is not there.
   cancel: { from: ['selected', 'copy_ready', 'scheduled', 'posting', 'failed', 'flagged'], to: 'cancelled' },
   retry: { from: ['failed'], to: 'scheduled' }, // the owner's retry
+  keep: { from: ['flagged'], to: 'posted' }, // the owner checked the platform: the post is there (5A review M1)
   pick: { from: ['skipped', 'cancelled'], to: 'selected' }, // the owner's hand-pick
 } as const satisfies Record<string, { from: readonly DistStatus[]; to: DistStatus }>;
 export type DistEvent = keyof typeof EVENTS;

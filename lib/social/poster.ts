@@ -28,6 +28,7 @@ export type PosterResult = { posted: number; deferred: number; failed: number; c
 const MAX_ATTEMPTS = 4; // the first try and 3 retries
 const RETRY_MS = 5 * 60_000;
 const STUCK_MS = 30 * 60_000;
+const LATE_MS = 24 * 3_600_000;
 const PER_RUN = 10;
 
 type Claimed = {
@@ -107,18 +108,37 @@ export async function onError(db: Queryable, d: { id: number; platform: Platform
   }
 }
 
+// A database error in a check before the platform call (5A review L3): nothing was sent, so the row simply waits for
+// the next run (attempt not counted), never flagged. Exported for the video poster.
+export async function deferUnchecked(db: Queryable, d: { id: number; attempts: number }, now: Date, r: PosterResult): Promise<void> {
+  const at = new Date(now.getTime() + RETRY_MS).toISOString();
+  await moveDistribution(db, d.id, 'defer', { set: { attempts: d.attempts - 1, scheduled_for: at, last_error: 'database error before posting' } }).catch(() => undefined);
+  r.deferred++;
+}
+
+// The checks before the platform call; true when the row may go (otherwise it has already been moved).
+async function mayPost(db: Queryable, d: Claimed, now: Date, r: PosterResult): Promise<boolean> {
+  try {
+    if (!(await eligibleItem(db, d.item_id, now))) {
+      await moveDistribution(db, d.id, 'cancel', { set: { last_error: 'item no longer eligible at post time' } });
+      r.cancelled++;
+      return false;
+    }
+    if ((await postedToday(db, d.platform, now)) >= d.daily_cap) {
+      const next = scheduleTime(d.post_time_utc, tomorrow(now)).toISOString();
+      await moveDistribution(db, d.id, 'defer', { set: { attempts: d.attempts - 1, scheduled_for: next } });
+      r.deferred++;
+      return false;
+    }
+    return true;
+  } catch {
+    await deferUnchecked(db, d, now, r);
+    return false;
+  }
+}
+
 async function postOne(db: Queryable, d: Claimed, now: Date, deps: PosterDeps, adapter: PlatformAdapter, r: PosterResult): Promise<void> {
-  if (!(await eligibleItem(db, d.item_id, now))) {
-    await moveDistribution(db, d.id, 'cancel', { set: { last_error: 'item no longer eligible at post time' } });
-    r.cancelled++;
-    return;
-  }
-  if ((await postedToday(db, d.platform, now)) >= d.daily_cap) {
-    const next = scheduleTime(d.post_time_utc, tomorrow(now)).toISOString();
-    await moveDistribution(db, d.id, 'defer', { set: { attempts: d.attempts - 1, scheduled_for: next } });
-    r.deferred++;
-    return;
-  }
+  if (!(await mayPost(db, d, now, r))) return;
   const text = postText(d.platform, { caption: d.caption, hashtags: d.hashtags, link: d.link });
   let out: PostResult;
   try {
@@ -136,9 +156,13 @@ type PostResult = Awaited<ReturnType<PlatformAdapter['post']>>;
 // if even that fails the row stays `posting` and recoverStuck flags it after 30 minutes. Exported for the video poster.
 export async function recordPosted(db: Queryable, d: { id: number; item_id: string; platform: Platform }, out: PostResult, now: Date, r: PosterResult, where?: Parameters<typeof eligibleItem>[3]): Promise<void> {
   try {
-    await moveDistribution(db, d.id, 'posted', {
-      set: { posted_at: now.toISOString(), post_url: out.url, external_id: out.externalId, last_error: null },
-    });
+    const set = { posted_at: now.toISOString(), post_url: out.url, external_id: out.externalId };
+    if (!(await moveDistribution(db, d.id, 'posted', { set: { ...set, last_error: null } }))) {
+      // An unpublish flagged the row while the call was in flight (5A review L2): keep what the platform returned.
+      await db.query("UPDATE distributions SET posted_at = $2, post_url = $3, external_id = $4 WHERE id = $1 AND status = 'flagged'", [d.id, set.posted_at, set.post_url, set.external_id]);
+      r.flagged++;
+      return;
+    }
     r.posted++;
     // Unpublished while the call was in flight: the post exists, so the owner removes it by hand.
     if (!(await eligibleItem(db, d.item_id, now, where))) {
@@ -156,6 +180,7 @@ export async function runPoster(db: Queryable, now: Date, deps: PosterDeps): Pro
   const supported = (Object.keys(adapters) as Platform[]).filter((p) => adapters[p]);
   const ready = supported.filter((p) => hasCredentials(p, deps.env));
   r.noCredentials = await duePlatforms(db, now, supported.filter((p) => !ready.includes(p)));
+  if (ready.length) r.cancelled += await cancelLate(db, now, ready);
   for (let i = 0; i < PER_RUN && ready.length; i++) {
     const d = await claim(db, now, ready);
     if (!d) break;
@@ -164,11 +189,23 @@ export async function runPoster(db: Queryable, now: Date, deps: PosterDeps): Pro
   return r;
 }
 
+// Text posts more than 24 hours past their time are stale (5A review L5): cancelled as late, never posted. (Video posts
+// wait for an approved file and are not passed here.)
+async function cancelLate(db: Queryable, now: Date, platforms: Platform[]): Promise<number> {
+  const r = await db.query(
+    `UPDATE distributions SET status = 'cancelled', version = version + 1, updated_at = $1,
+       last_error = 'late: more than 24 hours past its time, not posted'
+     WHERE status = 'scheduled' AND scheduled_for < $2 AND platform = ANY($3::text[]) RETURNING id`,
+    [now.toISOString(), new Date(now.getTime() - LATE_MS).toISOString(), platforms],
+  );
+  return r.rows.length;
+}
+
 // Rows left in `posting` for 30 minutes: the worker stopped mid-post and the platform may have the post.
 export async function recoverStuck(db: Queryable, now: Date): Promise<number> {
   const r = await db.query<{ id: string; platform: string }>(
     `UPDATE distributions SET status = 'flagged', version = version + 1, updated_at = $1,
-       last_error = 'interrupted while posting: check the platform, then cancel or mark it'
+       last_error = 'interrupted while posting: check the platform, then cancel it or keep it as posted'
      WHERE status = 'posting' AND updated_at < $2 RETURNING id, platform`,
     [now.toISOString(), new Date(now.getTime() - STUCK_MS).toISOString()],
   );

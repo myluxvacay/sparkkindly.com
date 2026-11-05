@@ -45,6 +45,7 @@ export const DONE = {
   social_picked: 'Item picked for that platform today. It waits for the promotion run to write its copy.',
   social_retried: 'Post scheduled for one more attempt now.',
   social_cancelled: 'Post cancelled.',
+  social_kept: 'Kept as posted: it will not be retried.',
   video_approved: 'Video approved: it is scheduled for the platform time.',
   video_cancelled: 'Video job cancelled. Its files are deleted after 30 days.',
   video_retried: 'Video post scheduled for one more attempt now.',

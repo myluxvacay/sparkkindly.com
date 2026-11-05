@@ -12,10 +12,11 @@ export async function cancelForItem(tx: Queryable, itemId: string): Promise<{ ca
      WHERE item_id = $1 AND status IN ('selected', 'copy_ready', 'scheduled') RETURNING id`,
     [itemId],
   );
+  // A row in `posting` may be on the platform a moment from now (5A review L2): flagged like a posted one.
   const f = await tx.query<{ id: string; platform: string }>(
     `UPDATE distributions SET status = 'flagged', version = version + 1, updated_at = now(),
        last_error = 'item unpublished after posting: remove manually from the platform'
-     WHERE item_id = $1 AND status = 'posted' RETURNING id, platform`,
+     WHERE item_id = $1 AND status IN ('posted', 'posting') RETURNING id, platform`,
     [itemId],
   );
   // Plan 5B: the video jobs of the cancelled rows stop too (their files are purged 30 days later).

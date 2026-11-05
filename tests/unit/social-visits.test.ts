@@ -28,9 +28,25 @@ beforeEach(async () => {
 const visits = async () =>
   (await db.query<{ day: string; platform: string; visits: number }>("SELECT to_char(day, 'YYYY-MM-DD') AS day, platform, visits FROM social_visits ORDER BY platform")).rows;
 
+// 5A review L7: only items that were posted on that platform are counted.
+async function postedItem(platforms = ['instagram', 'facebook']) {
+  const item = await socialItem(db);
+  for (const p of platforms) {
+    await db.query("INSERT INTO distributions (item_id, platform, day, status, posted_at) VALUES ($1, $2, '2026-11-04', 'posted', '2026-11-04T12:00:00Z')", [item, p]);
+  }
+  return item;
+}
+
 describe('recordSocialVisit', () => {
+  it('5A review L7: an item never posted on that platform is not counted', async () => {
+    const item = await postedItem(['facebook']);
+    await recordSocialVisit(db, item, 'instagram', NOW);
+    await recordSocialVisit(db, await socialItem(db), 'facebook', NOW);
+    expect(await visits()).toEqual([]);
+  });
+
   it('counts a valid utm_source per day, platform and item', async () => {
-    const item = await socialItem(db);
+    const item = await postedItem();
     await recordSocialVisit(db, item, 'instagram', NOW);
     await recordSocialVisit(db, item, 'instagram', NOW);
     await recordSocialVisit(db, item, 'facebook', NOW);
@@ -41,7 +57,7 @@ describe('recordSocialVisit', () => {
   });
 
   it('ignores any other value, a repeated parameter and a missing one', async () => {
-    const item = await socialItem(db);
+    const item = await postedItem();
     for (const v of ['twitter', 'Instagram', 'instagram ', '', undefined, ['instagram', 'facebook'], "instagram'; DROP TABLE items"]) {
       await recordSocialVisit(db, item, v as never, NOW);
     }

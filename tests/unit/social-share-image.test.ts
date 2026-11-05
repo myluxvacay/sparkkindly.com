@@ -47,6 +47,22 @@ describe('socialShareImage', () => {
     expect((await socialShareImage(db, '../admin', 'x', NOW)).status).toBe(404);
   });
 
+  it('5A review L6: renders once per item (cache) and rate-limits rendering per network; eligibility is checked every time', async () => {
+    const id = await socialItem(db, { world: 'play', title: 'Cache me' });
+    const slug = await slugOf(id);
+    const deny = () => false;
+    const first = await socialShareImage(db, 'play', slug, NOW);
+    const bytes = Buffer.from(await first.arrayBuffer());
+    // Cached: served even when the limiter would refuse a new render.
+    const again = await socialShareImage(db, 'play', slug, NOW, { client: '203.0.113.9', limiter: deny });
+    expect(again.status).toBe(200);
+    expect(Buffer.from(await again.arrayBuffer()).equals(bytes)).toBe(true);
+    const other = await slugOf(await socialItem(db, { world: 'play', title: 'Not cached yet' }));
+    expect((await socialShareImage(db, 'play', other, NOW, { client: '203.0.113.9', limiter: deny })).status).toBe(429);
+    await db.query("UPDATE items SET status = 'archived' WHERE id = $1", [id]);
+    expect((await socialShareImage(db, 'play', slug, NOW)).status).toBe(404);
+  });
+
   it('is 404 with SOCIAL_ENABLED off', async () => {
     const slug = await slugOf(await socialItem(db));
     vi.stubEnv('SOCIAL_ENABLED', '');

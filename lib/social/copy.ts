@@ -19,8 +19,9 @@ export const MAX_HASHTAGS = 8;
 export const CAPTION_LIMIT: Record<Platform, number> = { instagram: 2000, facebook: 500, tiktok: 2000, youtube: 2000 };
 const TOTAL_LIMIT: Partial<Record<Platform, number>> = { instagram: 2200 };
 const HASHTAG = /^[\p{L}\p{N}_]{2,30}$/u;
-// Refused in the raw text, before NFKC can fold them: dot-like characters and the fullwidth @.
-const RAW_FORBIDDEN = /[。．｡․﹒＠@]/u;
+// Refused in the raw text, before NFKC can fold them: dot-like characters (5A review L1 adds the middle dot, the
+// hyphenation point, the bullet operator and the katakana middle dot) and the fullwidth @.
+const RAW_FORBIDDEN = /[。．｡․﹒＠@·‧∙・]/u;
 const LINK_PATTERNS = [
   LINK_LIKE,
   /[a-z][a-z0-9+.-]{1,20}:\S/i, // a scheme without slashes (javascript:, mailto:)
@@ -28,15 +29,24 @@ const LINK_PATTERNS = [
   /[/\\]{2}/,
   /[\p{L}\p{N}]\s?[[(]\s?\.\s?[\])]\s?[\p{L}\p{N}]{2,}/u, // evil[.]com, evil (.) com
   /[\p{L}\p{N}]\s\.\p{L}{2,}/u, // evil .com
+  /[\p{L}\p{N}]\s+\.\s+[\p{L}\p{N}]{2,}/u, // evil . com (5A review L1)
 ];
+// A handle given as "<platform>: name" (DM me on insta: name), 5A review L1.
+const HANDLE = /\b(insta(gram)?|ig|tik\s?tok|youtube|yt|facebook|fb|snap(chat)?|twitter|threads|telegram|whatsapp|discord)\s*:\s*[\p{L}\p{N}_.]{2,}/iu;
 // Line break allowed; ZWJ (U+200D) and VS15/VS16 (U+FE0E, U+FE0F) allowed inside emoji.
 const HIDDEN = /(?![\n‍︎️])[\p{Cc}\p{Cf}\p{Default_Ignorable_Code_Point}]/u;
+// ZWJ only joins emoji: between two pictographs (after an optional skin tone or presentation selector), 5A review L1.
+const STRAY_ZWJ = /(?<![\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}️])‍|‍(?!\p{Extended_Pictographic})/u;
+// The link and mention checks read the text without joiners and selectors, so they cannot split a domain.
+const unjoined = (s: string) => s.replace(/[‍︎️]/gu, '');
 
 const blocked = (s: string) => !!(findBlockedWord(s) || findBlockedWord(foldMarks(s)));
 
-function captionProblem(caption: string): string | null {
-  if (HIDDEN.test(caption)) return 'control_or_format_character';
+function captionProblem(raw: string): string | null {
+  if (HIDDEN.test(raw) || STRAY_ZWJ.test(raw)) return 'control_or_format_character';
+  const caption = unjoined(raw);
   if (LINK_PATTERNS.some((p) => p.test(caption))) return 'link';
+  if (HANDLE.test(caption)) return 'handle';
   if (caption.includes('@')) return 'mention';
   if (caption.includes('#')) return 'hashtag_in_caption';
   if (blocked(caption) || findBlockedTopic(caption) || findBlockedTopic(foldMarks(caption))) return 'blocked';

@@ -121,6 +121,41 @@ describe('queue', () => {
   });
 });
 
+describe('queue freshness (5A review M2)', () => {
+  it('five stale selected rows from earlier days never hide today’s entry', async () => {
+    for (let i = 0; i < 5; i++) {
+      const item = await socialItem(db, { kind: 'quiz' });
+      await distribution(db, item, 'instagram', { day: '2026-11-01' });
+    }
+    const id = await selected('facebook');
+    const { entries } = (await (await promotionsQueueRequest(get(keys.promoter), deps())).json()) as { entries: { id: number }[] };
+    expect(entries.map((e) => e.id)).toEqual([id]);
+  });
+});
+
+describe('caption obfuscation (5A review L1)', () => {
+  it.each([
+    'Visit evil‍.com today',
+    'evil‍.‍com',
+    'bit‍.ly‍/x',
+    'evil·com',
+    'evil‧com',
+    'evil∙com',
+    'evil・com',
+    'evil . com',
+    'DM me on insta: spark_kindly_fake',
+    'Follow us on tiktok: sparkfake',
+  ])('refuses %j', (caption) => {
+    expect(checkCopy('instagram', { caption, hashtags: [] }).ok).toBe(false);
+  });
+
+  it('still passes ordinary text, emoji sequences and a colon in a sentence', () => {
+    for (const caption of ['Family 👨‍👩‍👧 time', '❤️ Love this one.', 'One rule: be kind. Two rules: be curious.', 'Ready? Set. Go!', 'Note: 3 . 5 is not a number']) {
+      expect(checkCopy('instagram', { caption, hashtags: [] }), caption).toMatchObject({ ok: true });
+    }
+  });
+});
+
 describe('checkCopy', () => {
   const good = { caption: 'Can you spot the odd one out? Three are alike, one is not.', hashtags: ['puzzle', 'brainteaser'] };
 

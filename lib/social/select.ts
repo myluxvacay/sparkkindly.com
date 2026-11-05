@@ -112,12 +112,24 @@ export async function claimDay(db: Queryable, platform: Platform, day: string): 
   return r.rows.length === 1;
 }
 
+// Text rows picked on an earlier day and still waiting for copy (or for scheduling) are stale: cancel them so the
+// promotion queue never stalls on them (5A review M2). Video rows wait for a maker and are never expired here.
+async function expireStale(tx: Queryable, platform: Platform, day: string): Promise<void> {
+  if (isVideoPlatform(platform)) return;
+  await tx.query(
+    `UPDATE distributions SET status = 'cancelled', version = version + 1, updated_at = now(), last_error = 'expired'
+     WHERE platform = $1 AND status IN ('selected', 'copy_ready') AND day < $2`,
+    [platform, day],
+  );
+}
+
 export async function selectForDay(db: Db, platform: Platform, day: string, now: Date): Promise<{ selected: number; skipped: number }> {
   const none = { selected: 0, skipped: 0 };
   if (!socialEnabled() || !isPlatform(platform)) return none;
   return db.transaction(async (tx) => {
     const p = await platformRow(tx, platform, true);
     if (!p?.enabled || !(await claimDay(tx, platform, day))) return none;
+    await expireStale(tx, platform, day);
     const cap = Math.max(0, p.daily_cap - (await usedToday(tx, platform, day)));
     const ordered = orderCandidates(await candidates(tx, platform, now), await lastPosts(tx, platform));
     for (const c of ordered) {
@@ -148,12 +160,14 @@ export async function handPickTx(tx: Queryable, itemId: string, platform: Platfo
   if (!p?.enabled) return { ok: false, reason: 'platform' };
   if (!(await eligibleItem(tx, itemId, now))) return { ok: false, reason: 'ineligible' };
   const day = now.toISOString().slice(0, 10);
-  const existing = await tx.query<{ status: string }>(
-    'SELECT status FROM distributions WHERE item_id = $1 AND platform = $2',
+  const existing = await tx.query<{ status: string; ever_posted: boolean }>(
+    'SELECT status, (posted_at IS NOT NULL OR external_id IS NOT NULL) AS ever_posted FROM distributions WHERE item_id = $1 AND platform = $2',
     [itemId, platform],
   );
   const status = existing.rows[0]?.status;
   if (status && status !== 'skipped' && status !== 'cancelled') return { ok: false, reason: 'exists' };
+  // A row that was ever posted is never picked again, even after the owner cancelled it (5A review M1).
+  if (existing.rows[0]?.ever_posted) return { ok: false, reason: 'exists' };
   if ((await usedToday(tx, platform, day)) >= p.daily_cap) return { ok: false, reason: 'cap' };
   await tx.query(
     `INSERT INTO distributions (item_id, platform, day, status) VALUES ($1, $2, $3, 'selected')

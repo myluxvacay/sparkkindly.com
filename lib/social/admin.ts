@@ -48,6 +48,10 @@ export async function distributionStatus(tx: Queryable, id: number): Promise<Dis
 export const retryDistribution = (tx: Queryable, id: number, now: Date) =>
   moveDistribution(tx, id, 'retry', { set: { attempts: RETRY_ATTEMPTS_LEFT, scheduled_for: now.toISOString(), last_error: null } });
 
+// The owner checked the platform and the flagged post is there (5A review M1): it stays as posted, never retried.
+export const keepDistribution = (tx: Queryable, id: number) =>
+  moveDistribution(tx, id, 'keep', { set: { last_error: 'kept as posted by the owner' } });
+
 export const cancelDistribution = (tx: Queryable, id: number) =>
   moveDistribution(tx, id, 'cancel', { set: { last_error: 'cancelled by the owner' } });
 
