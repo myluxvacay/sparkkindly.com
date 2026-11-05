@@ -27,8 +27,9 @@ export type CircleInput = {
 const ZONES = new Set<string>(TIME_ZONES);
 
 // A scheme (http://), www. or a domain-like word (evil.com): names and descriptions reach invite emails and pages, so
-// they never carry a link (4B security review).
-const LINK_LIKE = /[a-z][a-z0-9+.-]*:\/\/|www\.|\w+\.\w{2,}/i;
+// they never carry a link (4B security review). Unicode-aware: any letter or digit, and the ideographic and halfwidth
+// dots NFKC leaves or makes (。 ｡), count; the text is NFKC-normalised before the test.
+const LINK_LIKE = /\p{L}[\p{L}\p{M}\p{N}+.-]*:\/\/|www[.。．｡]|[\p{L}\p{M}\p{N}_-]+[.。．｡]\p{M}*(?:[\p{L}\p{N}]\p{M}*){2,}/iu;
 
 // Trimmed NFKC text of 1..max characters, no control or format characters, no blocked word, nothing link-like;
 // otherwise null.

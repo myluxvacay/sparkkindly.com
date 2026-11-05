@@ -51,7 +51,7 @@ export function createSendBudget(
   let hour = -1;
   let used = 0;
   let warned = false;
-  return (): boolean => {
+  const take = (): boolean => {
     const h = Math.floor(clock() / HOUR);
     if (h !== hour) {
       [hour, used, warned] = [h, 0, false];
@@ -66,6 +66,11 @@ export function createSendBudget(
     }
     return false;
   };
+  // Gives back a slot taken this hour for a send that then did not happen.
+  const refund = () => {
+    if (Math.floor(clock() / HOUR) === hour && used > 0) used--;
+  };
+  return Object.assign(take, { refund });
 }
 
 const shared = globalThis as unknown as {

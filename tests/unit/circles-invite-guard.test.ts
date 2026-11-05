@@ -294,3 +294,81 @@ describe('2 Caddy leaves the app Referrer-Policy alone', () => {
     }
   });
 });
+
+describe('8 invite guard review findings', () => {
+  it('plus-tag, dot, case, googlemail and IDN spellings of one address share one hash', () => {
+    const same = (a: string, b: string) => expect(addressHash(SECRET, a), `${a} ~ ${b}`).toBe(addressHash(SECRET, b));
+    const differ = (a: string, b: string) => expect(addressHash(SECRET, a), `${a} !~ ${b}`).not.toBe(addressHash(SECRET, b));
+    same(' Target+news@Gmail.com ', 'target@gmail.com');
+    same('t.a.r.g.e.t+x@gmail.com', 'target@gmail.com');
+    same('Tar.get@GoogleMail.com', 'target@gmail.com');
+    same('a+x@outlook.com', 'a@outlook.com');
+    same('a+x@proton.me', 'a@proton.me');
+    same('JO@Bücher.Example', 'jo@xn--bcher-kva.example');
+    differ('a+x@example.org', 'a@example.org');
+    differ('a.x@example.org', 'ax@example.org');
+    differ('a.x@outlook.com', 'ax@outlook.com');
+    differ('a@googlemail.com', 'a@outlook.com');
+  });
+
+  it('plus-tag and dot variants share one weekly cap and one suppression', async () => {
+    const out: EmailMessage[] = [];
+    const sender = inviteSender(ENV, async (m) => void out.push(m), db, () => true, () => NOW);
+    for (const to of ['jo@gmail.com', 'j.o+1@gmail.com', 'JO+2@googlemail.com', 'j.o.+3@gmail.com']) await sender(mail(to));
+    expect(out).toHaveLength(3);
+    const t = suppressToken(SECRET, addressHash(SECRET, 's.am+promo@gmail.com')!)!;
+    const req = new Request('http://localhost/circles/stop-invites/confirm/', {
+      method: 'POST',
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      body: `t=${t}`,
+    });
+    await stopInvitesRequest(req, { db, env: ENV, limits: () => true });
+    await sender(mail('Sam@gmail.com'));
+    await sender(mail('sam+other@googlemail.com'));
+    expect(out).toHaveLength(3);
+  });
+
+  it('a refused budget does not consume the address slot', async () => {
+    const out: EmailMessage[] = [];
+    await inviteSender(ENV, async (m) => void out.push(m), db, () => false, () => NOW)(mail('slot@example.test'));
+    expect((await db.query('SELECT count(*)::int AS n FROM invite_address_log')).rows[0].n).toBe(0);
+    const sender = inviteSender(ENV, async (m) => void out.push(m), db, () => true, () => NOW);
+    for (let i = 0; i < 3; i++) await sender(mail('slot@example.test'));
+    expect(out).toHaveLength(3);
+  });
+
+  it('a blocked address spends no budget slot', async () => {
+    const h = addressHash(SECRET, 'blocked@example.test')!;
+    await db.query('INSERT INTO invite_suppressions (addr_hash) VALUES ($1)', [h]);
+    const inviteBudget = createSendBudget({ perHour: 2, warn: () => {} });
+    const out: EmailMessage[] = [];
+    const sender = inviteSender(ENV, async (m) => void out.push(m), db, inviteBudget, () => NOW);
+    for (let i = 0; i < 100; i++) await sender(mail('blocked@example.test'));
+    for (let i = 0; i < 4; i++) await sender(mail('capped@example.test'));
+    expect(out).toHaveLength(2);
+    expect(inviteBudget()).toBe(false);
+  });
+
+  it('a claim lost after the budget check gives the budget slot back', () => {
+    const b = createSendBudget({ perHour: 1, warn: () => {} });
+    expect(b()).toBe(true);
+    b.refund();
+    expect([b(), b()]).toEqual([true, false]);
+  });
+
+  it('a failed send releases the claimed slot', async () => {
+    const failing = inviteSender(ENV, async () => { throw new Error('provider down'); }, db, () => true, () => NOW);
+    await expect(failing(mail('fail@example.test'))).rejects.toThrow('provider down');
+    expect((await db.query('SELECT count(*)::int AS n FROM invite_address_log')).rows[0].n).toBe(0);
+  });
+
+  it('fullwidth and ideographic dots and non-ASCII domain words are link-like; ordinary names are not', () => {
+    for (const bad of ['evil．com', 'evil。com', 'evil｡com', 'bücher.de', 'пример.рф', 'ｗｗｗ．x', 'ｈｔｔｐｓ://x', 'wwW。x', 'evilq́.com', 'evil.ćom', 'evil.q́q́', 'hq́tps://x']) {
+      expect(cleanMemberName(bad), bad).toBeNull();
+      expect(validateCircleInput({ name: bad, kind: 'friends', yourName: 'Sam' }).ok, bad).toBe(false);
+    }
+    for (const good of ['Zoë', 'José García', 'Ünal', '李明', 'Mr. Ödegaard', 'Café Crew', 'Quiz night 2.0', 'St. Mary Quiz', 'José', 'q́ team', 'Mr. Q́uinn']) {
+      expect(cleanMemberName(good), good).toBe(good.normalize('NFKC'));
+    }
+  });
+});

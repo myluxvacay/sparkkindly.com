@@ -437,13 +437,16 @@ If no run is recorded for 36 hours the worker emails the admin list.
   by invite or as a community; removing a member also revokes their own active invites to it. A member who left may rejoin.
 - **Address guard** (4B security review, `lib/circles/invite-guard.ts`, migration 017). Whatever circle or sender, one
   address gets at most 3 invite emails in a rolling 7 days, counted in `invite_address_log` by an HMAC-SHA256 of the
-  lower-cased address (key: `UNSUBSCRIBE_SECRET`, label `invite-address:`), never the address itself; rows go after 8
+  canonical address (lower-cased, domain in punycode; `+tag` dropped only at providers that ignore it, such as
+  Gmail, Outlook, iCloud, Proton and Fastmail; dots dropped and googlemail.com read as gmail.com only for Gmail; no invite email went out before this canonical form, as both flags were off everywhere, so no older hash
+  needs migrating; key: `UNSUBSCRIBE_SECRET`, label `invite-address:`), never the address itself; rows go after 8
   days in the daily `invites-purge`. A mail to an address without an account carries "Never email me SparkKindly
   invites again" (`/circles/stop-invites/?t=…`: the GET page changes nothing, its button POSTs; no sign-in, no flags, an
   invalid token spends the unsubscribe per-network allowance), which adds the hash to `invite_suppressions`; such an
   address gets no invite email again. **Without `UNSUBSCRIBE_SECRET` no invite email is sent at all** (the sender still
   sees "sent"). Invite mail has its own site-wide budget of 60 an hour (`inviteSendBudget`), separate from the account
-  email budget, so invites cannot starve sign-in and consent mail. Circle names, descriptions and "your name in this
+  email budget, so invites cannot starve sign-in and consent mail. A suppressed or capped address spends no budget
+  slot, and a refused budget spends no address slot. Circle names, descriptions and "your name in this
   circle" refuse anything link-like (a scheme, `www.`, or a `word.tld` pattern).
 - **Email invites.** At most 10 sent per account per 24 hours, 3 per address per circle (the address is kept until the
   daily purge, so revoked invites count until then), one active invite per address per circle, 60 sends per network an

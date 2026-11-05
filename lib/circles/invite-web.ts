@@ -19,7 +19,7 @@ import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { joinCommunity } from './communities';
 import { flashCookie } from './invite-flash';
-import { addressHash, claimAddressSend, readSuppressToken, suppressAddress, suppressToken } from './invite-guard';
+import { addressHash, addressSendable, claimAddressSend, readSuppressToken, releaseAddressSend, suppressAddress, suppressToken } from './invite-guard';
 import { inviteEmail } from './invite-email';
 import {
   acceptInvite,
@@ -142,17 +142,26 @@ export async function joinCommunityRequest(request: Request, d: InviteDeps): Pro
 // The production sender. Nothing goes out without UNSUBSCRIBE_SECRET (the address hash needs it), to a suppressed
 // address, past 3 sends to one address in 7 days site-wide (claimAddressSend), or past the invite send budget. A
 // recipient with an account gets the account unsubscribe link; any other address gets "never email me invites again".
+type Budget = (() => boolean) & { refund?: () => void };
+
 export function inviteSender(
   env: EnvLike,
   send: (m: EmailMessage) => Promise<unknown>,
   db: Db,
-  budget = inviteSendBudget,
+  budget = inviteSendBudget as Budget,
   clock: () => Date = () => new Date(),
 ) {
   return async (m: InviteMail): Promise<void> => {
     const secret = unsubscribeSecret(env);
     const h = addressHash(secret, m.to);
-    if (!h || !(await claimAddressSend(db, h, clock())) || !budget()) return;
+    const now = clock();
+    // A blocked address spends no budget slot, and a refused budget spends no address slot; a claim lost to a race
+    // gives its budget slot back.
+    if (!h || !(await addressSendable(db, h, now)) || !budget()) return;
+    if (!(await claimAddressSend(db, h, now))) {
+      budget.refund?.();
+      return;
+    }
     const base = linkBase(env);
     const unsub = m.recipientAccountId ? unsubscribeToken(secret, m.recipientAccountId, 'invites') : null;
     const stop = m.recipientAccountId ? null : suppressToken(secret, h);
@@ -161,7 +170,12 @@ export function inviteSender(
       unsubscribeUrl: unsub ? `${base}/account/unsubscribe/?t=${unsub}` : null,
       stopUrl: stop ? `${base}/circles/stop-invites/?t=${stop}` : null,
     });
-    await send({ to: m.to, ...text });
+    try {
+      await send({ to: m.to, ...text });
+    } catch (e) {
+      await releaseAddressSend(db, h, now);
+      throw e;
+    }
   };
 }
 
