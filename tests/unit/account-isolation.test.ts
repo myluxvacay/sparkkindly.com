@@ -751,6 +751,81 @@ describe('settings, export, deletion, inactivity and unsubscribe (plan 3E, Task 
     expect((await getCircleForMember(db, b.accountId, mine.slug))!.myRole).toBe('owner');
   });
 
+  // Final review 7: the tables are derived from the schema, so a new account-linked column is covered without editing.
+  // Every foreign-key column to accounts(id) or child_profiles(id), and every email column, holds no value of A's after
+  // the deletion; SET NULL columns (circle_reports.reporter_account_id, circle_invites.used_by) keep their row.
+  async function accountLinkedColumns(): Promise<{ t: string; c: string; ref: string }[]> {
+    const fk = await db.query<{ t: string; c: string; ref: string }>(
+      `SELECT c.conrelid::regclass::text AS t, a.attname::text AS c, c.confrelid::regclass::text AS ref
+       FROM pg_constraint c
+       CROSS JOIN LATERAL unnest(c.conkey, c.confkey) AS k(child, parent)
+       JOIN pg_attribute a ON a.attrelid = c.conrelid AND a.attnum = k.child
+       JOIN pg_attribute pa ON pa.attrelid = c.confrelid AND pa.attnum = k.parent
+       WHERE c.contype = 'f' AND c.confrelid IN ('accounts'::regclass, 'child_profiles'::regclass) AND pa.attname = 'id'`,
+    );
+    const mail = await db.query<{ t: string; c: string }>(
+      `SELECT table_name::text AS t, column_name::text AS c FROM information_schema.columns
+       WHERE table_schema = 'public' AND (column_name = 'email' OR column_name LIKE '%\\_email')`,
+    );
+    return [...fk.rows, ...mail.rows.map((m) => ({ ...m, ref: 'email' }))];
+  }
+
+  it('deleting an account leaves none of its ids or address in any account-linked column (derived from the schema)', async () => {
+    const a = await holder('dx');
+    const b = await holder('dy');
+    await link(a.email);
+    const mine = await createCircle(db, a.accountId, { name: 'A fam', kind: 'family', yourName: 'A' }, T0);
+    const theirs = await createCircle(db, b.accountId, { name: 'B pals', kind: 'friends', yourName: 'B' }, T0);
+    if (mine.status !== 'created' || theirs.status !== 'created') throw new Error('circle failed');
+    const idOf = async (slug: string) => (await db.query<{ id: string }>('SELECT id FROM circles WHERE slug = $1', [slug])).rows[0].id;
+    const [mineId, theirsId] = [await idOf(mine.slug), await idOf(theirs.slug)];
+    await db.query("INSERT INTO circle_members (circle_id, account_id, display_name) VALUES ($1, $2, 'B'), ($3, $4, 'A')", [mineId, b.accountId, theirsId, a.accountId]);
+    expect(await addChildToCircle(db, a.accountId, mine.slug, a.profileId, 'on', T0)).toBe('added');
+    // Invites A made (link and email), an invite B sent to A's address, and the B invite A joined through.
+    const inv = (circle: string, by: string, kind: string, email: string | null) =>
+      db.query<{ id: string }>(
+        `INSERT INTO circle_invites (circle_id, created_by, kind, token_hash, invited_email, expires_at)
+         VALUES ($1, $2, $3, md5(random()::text), $4, CASE WHEN $3 = 'email' THEN now() + interval '14 days' END) RETURNING id`,
+        [circle, by, kind, email],
+      );
+    await inv(mineId, a.accountId, 'link', null);
+    await inv(mineId, a.accountId, 'email', `friend-${k++}@example.test`);
+    await inv(theirsId, b.accountId, 'email', a.email);
+    const joinedVia = (await inv(theirsId, b.accountId, 'link', null)).rows[0].id;
+    await db.query('INSERT INTO referrals (invite_id, new_account_id) VALUES ($1, $2)', [joinedVia, a.accountId]);
+    await db.query('UPDATE circle_invites SET used_by = $2 WHERE id = $1', [joinedVia, a.accountId]);
+    await db.query("INSERT INTO circle_reports (circle_id, reporter_account_id, reason) VALUES ($1, $2, 'other')", [theirsId, a.accountId]);
+    // Comments (7A): A's comment with B's reply under it, and A's trust row.
+    const itemId = (await db.query<{ id: string }>('SELECT id FROM items WHERE slug = $1', [a.slug])).rows[0].id;
+    const top = await db.query<{ id: string }>("INSERT INTO comments (item_id, account_id, body, status) VALUES ($1, $2, 'A says', 'published') RETURNING id", [itemId, a.accountId]);
+    await db.query("INSERT INTO comments (item_id, account_id, parent_id, body, status) VALUES ($1, $2, $3, 'B replies', 'published')", [itemId, b.accountId, top.rows[0].id]);
+    await db.query('INSERT INTO account_trust (account_id, display_name) VALUES ($1, $2)', [a.accountId, 'A name']);
+
+    const columns = await accountLinkedColumns();
+    for (const t of ['circle_invites', 'referrals', 'circle_reports', 'comments', 'account_trust', 'account_login_tokens']) {
+      expect(columns.map((x) => x.t), t).toContain(t);
+    }
+    const valueFor = (ref: string) => (ref === 'accounts' ? a.accountId : ref === 'child_profiles' ? a.profileId : a.email);
+    const held = async () => {
+      const out: string[] = [];
+      for (const { t, c, ref } of columns) {
+        const n = await count(`SELECT count(*)::int AS n FROM ${t} WHERE ${c}::text = $1`, [valueFor(ref)]);
+        if (n > 0) out.push(`${t}.${c}`);
+      }
+      return out.sort();
+    };
+    expect((await held()).length).toBeGreaterThan(8);
+
+    expect(await deleteOwnAccount(db, a.accountId, a.email)).toBe('deleted');
+    expect(await held()).toEqual([]);
+    // SET NULL keeps the row: the report stays (moderation evidence) and B's invite keeps its use time.
+    expect(await count('SELECT count(*)::int AS n FROM circle_reports WHERE circle_id = $1 AND reporter_account_id IS NULL', [theirsId])).toBe(1);
+    expect(await count('SELECT count(*)::int AS n FROM circle_invites WHERE id = $1 AND used_by IS NULL', [joinedVia])).toBe(1);
+    // B's reply went with A's comment; B's own rows stay.
+    expect(await count("SELECT count(*)::int AS n FROM comments WHERE body = 'B replies'", [])).toBe(0);
+    expect(await count('SELECT count(*)::int AS n FROM circles WHERE owner_account_id = $1', [b.accountId])).toBe(2);
+  });
+
   it('the inactivity sweep spares accounts with a recent sign-in, a recent answer, or a stale notice and recent activity', async () => {
     const later = new Date(NOW.getTime() + 731 * DAY); // answers in holder() are dated NOW
     const recent = new Date(later.getTime() - 10 * DAY);
