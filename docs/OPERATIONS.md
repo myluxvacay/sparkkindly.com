@@ -663,18 +663,29 @@ Behind the same flags as comments. Plan `docs/superpowers/plans/2026-11-05-proje
   verified, not banned). Reasons `abuse`, `personal_info`, `advertising`, `off_topic`, `other`, a note up to 300
   characters, an urgent checkbox. 10 reports a rolling day per account, at most 3 of them urgent (a 4th urgent is stored
   as a normal report, without an alert). Weight: level 1 = 1, level 0 = 0.5, muted = 0, fixed when the report is made.
-  Open weight >= 2 hides the comment. An urgent report alerts the owner at once (ADMIN_EMAILS, the digest mail path,
-  counts only) and hides the comment at once only from a level-1, unmuted reporter (controller ruling); otherwise it
-  counts its normal weight.
+  Open weight >= 2 hides the comment. An urgent report from any reporter who is not muted hides the comment at once
+  (7B review H1; the earlier level-1-only ruling is reversed) and alerts the owner (ADMIN_EMAILS, the digest mail path,
+  counts only, saying it was hidden). A muted reporter's urgent report hides nothing, sends no email and never reaches
+  the agent (zero-weight reports never change what the agent sees, and their notes are not in its `data`): it shows in
+  the owner queue and the digest count only, and the owner can Publish or Remove it. At most 20 urgent alert emails are
+  sent a UTC day (only emails actually sent count, one `job_runs` row each, job `urgent-alert`); the 21st sends one
+  "cap reached for today" email and then nothing until the next UTC day. A report-triggered hide bumps `updated_at`, so
+  an agent decision read before it is `stale`.
 - **The agent's queue and decisions** (`lib/comments/moderation.ts`, `decisions.ts`). Queue order: held, then reported
   (hidden with open reports), then the sample (about 10% of newly published level-1 comments, `sampled_at`). Escalated
   comments leave the queue. Each entry has an opaque `version` (the comment's `updated_at`); a decision with an old
   version is refused (`stale`, 409): the author edited after the agent read it. Decisions: approve (held or sample:
   publishes, counts an approval), reject (held: `rejected`; reported or sample: `hidden`; trust drops, author emailed),
-  hide (reported or sample), keep (reported: restored, reports dismissed, each reporter charged a false report; three
-  drop the reporter a level once and mute their reports until the owner resets them), escalate (left held or hidden, a
-  sample is hidden; owner decides). An approve is refused for a banned author or text that now fails the length, blocked
-  word or link checks. Every decision writes an `audit_log` row (actor `agent:<name>`, action `comment.<decision>`, no
+  hide (reported or sample), keep (reported: restored, reports dismissed; only level-0 reporters are charged a false
+  report, so the agent can never demote or mute a level-1 reporter; a sampled comment is marked reviewed), escalate (left
+  held or hidden, a sample is hidden; owner decides). Reject and hide need a `code` (`abuse`, `personal_info`,
+  `advertising`, `off_topic`, `links`, `other`): the author's email carries only the fixed sentence for it
+  (`AUTHOR_REASONS`, `lib/comments/rejection-email.ts`). The agent's free-text `reason` (no links, @, line breaks or
+  control characters) and its escalation note (`comments.escalation_note`) are for the owner only and never emailed.
+  A keep on a comment that a level-1 reporter's urgent report hid is converted to an owner escalation (the comment stays
+  hidden, the report open; the reply says `converted: escalated`). At most 10 keeps per agent per UTC day (the 11th is
+  `limit`, 409; the comment stays queued). Approve and keep are refused for a banned author or (approve) text that now
+  fails the length, blocked word or link checks. A deadlock is retried once. Every decision writes an `audit_log` row (actor `agent:<name>`, action `comment.<decision>`, no
   text). A repeated decision returns the current state with no second effect.
 - **Rejection email** (essential mail, to the author's address only): the first 80 characters of their comment, the
   reason, the guidelines link and a signed appeal link (30 days, bound to the comment and the author, HMAC under
@@ -683,20 +694,37 @@ Behind the same flags as comments. Plan `docs/superpowers/plans/2026-11-05-proje
 - **Appeals** (`/comments/appeal/<token>/`: the GET only reads; the button POSTs; one per comment; 20 POSTs an hour per
   address). The owner decides in `/admin/comments/`: overturn (published again, the rejection taken back from the counts;
   the level stays as it is, set it by hand if needed) or uphold; the author is emailed either way.
-- **Owner queue** (`/admin/comments/`): counts, escalations (target within 48 hours), appeals (within 48 hours),
-  comments hidden by an urgent report in the last 7 days (within 24 hours), muted reporters (by report number; reset with
-  `comments.report_reset`). Publish or remove an escalated or urgently reported comment with
-  `comments.escalation_resolve` (remove emails the author with an appeal link). No email, account id or name is shown.
+- **Owner queue** (`/admin/comments/`): counts, escalations with the agent's note (target within 48 hours), appeals
+  (within 48 hours), urgent reports in the last 7 days (within 24 hours; those from muted reporters stay published until
+  ruled on), muted reporters (by report number; reset with `comments.report_reset`). Publish or remove only an escalated
+  comment or one with an open urgent report, with `comments.escalation_resolve`: Remove asks which fixed sentence the
+  author is told and emails it with an appeal link; Publish dismisses the reports with owner accountability (every
+  reporter whose urgent report hid it is charged a false report, at any level: three mute them and drop a level once),
+  overturns an open appeal with the usual email, and clears any earlier code and reason (kept in the audit row).
+  An appeal overturn clears them too. No email, account id or name is shown.
   All `comments.*` actions are refused when the comment flags are off.
-- **Digest**: a Comments section with counts only (held, published and rejected by the agent in 24 hours, escalated,
-  open appeals, urgent reports in 24 hours).
-- **Not built** (spec 4a.6): switching comments to hold-everything when the agent has not run for 48 hours, and a digest
-  alert for escalations past their target. Add both before relying on the agent unattended.
+- **Digest**: a Comments section with counts only (held, published, kept and rejected by the agent in 24 hours,
+  escalated, open appeals, urgent reports in 24 hours) and an alert line when any escalation has waited past 48 hours.
+- **Hold-everything** (spec 4a.6, `lib/comments/hold.ts`): when no enabled moderation-role agent has fetched its queue in
+  the last 48 hours (`agents.last_run_at`, recorded on every queue fetch; exactly 48 hours still counts), new comments
+  from level-1 accounts are held like level-0 ones; the author sees the normal "waiting for review" note. With no
+  moderation agent at all, everything is held.
+- **Weekly spot-check.** The owner's weekly spot-check of agent output (AI governance rules) includes the agent's `keep`
+  decisions (the digest's kept count and the `comment.keep` audit rows): a run of wrong keeps is the sign of an injected
+  or confused agent.
+- **Threat notes** (there is no separate threat-model document yet; recorded here): a comment or report note may try to
+  instruct the moderator, and one agent context reading many entries would let one entry steer the others. Mitigations:
+  one moderator subagent per entry with only its environment's decide tool; a closed list of author-facing reasons; agent
+  keeps capped at 10 a day, never charging trusted reporters, and converted to an owner escalation over a trusted
+  member's urgent report; muted reporters cannot reach the agent or send email.
 - **Migration and rollback.** `022_comment_moderation.sql` is additive (`comment_reports`, `comment_appeals`,
   `agents.role` defaulting to `content`, `account_trust.false_reports`/`reports_muted`, four nullable `comments`
-  columns). Code rollback: unset `COMMENTS_ENABLED`, or the previous release (it never reads them; a moderation-role agent
-  would then be treated as a content agent by the old code, so revoke it in `/admin/agents/` first). Schema rollback is
-  in the migration header, only after the previous release is live.
+  columns), and `024_moderation_review_fixes.sql` adds `comments.moderation_code` and `comments.escalation_note`. Code
+  rollback: unset `COMMENTS_ENABLED`, or the previous release. Before switching to a release older than 7B, disable every
+  moderation agent: the old code ignores `agents.role`, and a moderation agent has `world_id` NULL, which the old code
+  treats as a **master content agent** that may submit items to any world. Run on the server, then check it updated the
+  expected rows: `UPDATE agents SET enabled = false WHERE role = 'moderation';` (re-enable after rolling forward). Schema
+  rollback is in the migration headers, only after the previous release is live.
 
 ### Comment moderation agent (Project 7B)
 
@@ -707,8 +735,11 @@ Behind the same flags as comments. Plan `docs/superpowers/plans/2026-11-05-proje
 - **Schedule.** Twice a day (the daily run and a short mid-day run, spec Project 7), a Windows Task Scheduler entry runs,
   from the repository folder: `claude -p "/moderate-run env=staging" --setting-sources project --allowedTools Agent
   mcp__sparkkindly-staging-moderation --disallowedTools Bash Write Edit Read WebFetch WebSearch`, logging to
-  `%USERPROFILE%\sparkkindly-runs\` like the content run. The moderator (`.claude/agents/sparkkindly-moderator.md`) may
-  use only the two moderation tools; the command prints one line of counts and never comment text. Use `env=prod` only
+  `%USERPROFILE%\sparkkindly-runs\` like the content run. The command reads the queue and starts one moderator per
+  entry (`.claude/agents/sparkkindly-moderator-<env>.md`, each holding only its environment's decide tool, so no context
+  ever sees two comments and no subagent can reach the other environment); its `allowed-tools` frontmatter limits it to
+  the Agent tool and the two queue tools (frontmatter cannot depend on the `env` argument). It prints one line of
+  counts and never comment text. Use `env=prod` only
   after staging has run cleanly. `register-tasks.ps1` does not create this entry yet (owner action, by hand).
 - **Plan usage.** A run reads at most three pages of 20 comments and makes one call per comment; it is small next to the
   content run. Watch the first week's runs for plan-limit hits, as for the content agents.

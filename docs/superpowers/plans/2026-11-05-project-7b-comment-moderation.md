@@ -31,6 +31,15 @@
 
 ---
 
+**Review fixes (5 November 2026, owner/controller rulings; these supersede the text above where they differ):** an urgent
+report hides at once for any unmuted reporter (the level-1-only ruling is reversed); a muted reporter's urgent report
+hides nothing, sends no email and reaches only the owner queue; at most 20 urgent alert emails a UTC day, then one "cap
+reached" email; reject and hide carry a closed reason code and the author sees only its fixed sentence; the escalation
+note is owner-only; the agent's keep charges only level-0 reporters, is capped at 10 a day and is converted to an owner
+escalation over a trusted member's urgent hide; the owner's dismissal makes urgent reporters accountable at every level;
+one moderator subagent per queue entry; hold-everything after 48 hours without a moderation queue fetch; a digest alert
+for escalations past 48 hours. See `docs/OPERATIONS.md` "Comment moderation".
+
 ### Task 1: Reports, weights, hide, urgent alert
 
 **Files:** Create `db/migrations/<next>_comment_moderation.sql` (`comment_reports`, `comment_appeals`, `account_trust.false_reports int default 0`, `account_trust.reports_muted boolean default false`, `comments.escalated_at`, `comments.sampled_at`, `comments.sample_reviewed_at`, `comments.decided_by text`, `agents.role text NOT NULL DEFAULT 'content' CHECK in ('content','moderation')`), `lib/comments/reports.ts`, `lib/comments/notices.ts` (owner alert), `tests/unit/comments-reports.test.ts`; modify `lib/accounts/export.ts` and its completeness test (own reports exported for the reporter; appeals for the author; `moderation_reason` stays excluded).

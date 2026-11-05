@@ -144,6 +144,15 @@ Circles and scores (Project 4), comments and communities (Project 4 onward) and 
 behind their flags and listed above. Sponsorship (Project 6) and social sharing do not exist and store nothing today. Each will need rows added
 here before it launches.
 
+## Owner decisions pending
+
+- **Report notes outlive the reporter** (7B review L8). When a reporter deletes their account, their comment reports stay
+  with the reporter set to null, including any note they wrote (up to 300 characters), so past hide decisions stay
+  explainable. The owner may instead choose to delete a reporter's notes (or whole reports) with the account; that is a
+  one-line change in `lib/accounts/delete.ts` and should be decided before comments go live.
+- `comments.moderation_code` (the closed reason code) and `comments.escalation_note` (the agent's owner-only note) are
+  kept with the comment and deleted with it; neither is exported (the code's sentence reached the author by email).
+
 ## Open questions for the professional
 
 1. **Web server access logs.** OPERATIONS says the sign-in token "appears in Caddy access logs", but the SparkKindly

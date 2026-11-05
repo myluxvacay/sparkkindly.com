@@ -30,7 +30,7 @@ in `.mcp.json`), offers only two tools and uses its own key, so one server never
 A moderation key is refused (403) on the content routes and a content key on the moderation routes. Create it in
 `/admin/agents/` with the role "Comment moderation" and the world "Master agent", then add
 `SPARKKINDLY_STAGING_MODERATION_KEY=skagt_...` (and `SPARKKINDLY_PROD_MODERATION_KEY` for production) to the secrets file.
-The `/moderate-run env=<env>` command starts the `sparkkindly-moderator` agent, which may use only these two tools.
+The `/moderate-run env=<env>` command reads the queue and starts one `sparkkindly-moderator-<env>` agent per entry; each holds only its environment's decide tool and judges one comment.
 
 ## One-time setup
 
