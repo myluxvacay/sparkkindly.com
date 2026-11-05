@@ -25,7 +25,8 @@ describe('admin pages', () => {
     expect(src).toMatch(/export default async function \w+\([^)]*\)[^{]*\{\s*const \w+ = await requireAdmin\(\);/);
   });
 
-  it('every admin route is a sign-in route, /admin/act/ or its key page', () => {
+  // Plan 5B adds the video upload route, which checks origin, session and CSRF itself (social-video-admin.test.tsx).
+  it('every admin route is a sign-in route, /admin/act/, its key page or the video upload', () => {
     const routes = readdirSync('app/admin', { recursive: true }).map(String).filter((f) => f.endsWith('route.ts'));
     expect(routes.map((r) => r.split(path.sep).join('/')).sort()).toEqual([
       'act/key/route.ts',
@@ -33,6 +34,7 @@ describe('admin pages', () => {
       'sign-in/code/submit/route.ts',
       'sign-in/link/confirm/route.ts',
       'sign-in/request/route.ts',
+      'social/videos/[id]/upload/route.ts',
     ]);
   });
 });

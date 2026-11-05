@@ -22,7 +22,7 @@ export default function AdminNav({ email, csrf }: { email: string; csrf: string 
     ...(commentsEnabled() ? ([['/admin/comments/', 'Comments']] as [string, string][]) : []),
     ...(contributorsEnabled() ? ([['/admin/contributions/', 'Contributions']] as [string, string][]) : []),
     ...(sponsorshipEnabled() ? ([['/admin/sponsors/', 'Sponsors']] as [string, string][]) : []),
-    ...(socialEnabled() ? ([['/admin/social/', 'Social']] as [string, string][]) : []),
+    ...(socialEnabled() ? ([['/admin/social/', 'Social'], ['/admin/social/videos/', 'Videos']] as [string, string][]) : []),
   ];
   return (
     <nav aria-label="Admin" className="admin-nav">

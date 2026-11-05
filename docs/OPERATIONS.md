@@ -892,6 +892,28 @@ the TikTok and YouTube rows exist for 5B and are never selected or posted, even 
   posts; rows stay), or the previous release (it never reads them and refuses the promoter key). Disable promoter agents
   before rolling back past the migration; its schema rollback is in the migration header.
 
+## Video jobs (Project 5B)
+
+Behind `SOCIAL_ENABLED` and the TikTok/YouTube switches in `/admin/social/` (off). Plan
+`docs/superpowers/plans/2026-11-05-project-5b-video-queue.md`.
+
+- **Media folders (VM, once, before switching TikTok or YouTube on).** Uploaded files live outside the release and are
+  never served:
+  `sudo install -d -o sparkkindly -g sparkkindly -m 0700 /opt/sparkkindly/shared/media/social /opt/sparkkindly/shared/media/social/quarantine /opt/sparkkindly/shared/media/social/approved`
+  (staging uses its own path through `SOCIAL_MEDIA_DIR` in its env file). Check: `sudo -u sparkkindly test -w
+  /opt/sparkkindly/shared/media/social/quarantine && echo ok` prints `ok`, and `stat -c '%a %U'` on each folder prints
+  `700 sparkkindly`. The app refuses a folder that is a symlink. Never put the folder under the release or `public/`.
+- **Disk.** Uploads are at most 256 MB each, and the quarantine folder holds at most 2 GB in all (an upload beyond that
+  is refused with "The upload area is full"). Quarantine files older than 7 days and files of jobs cancelled more than
+  30 days ago are deleted by the worker once a day (`video purge` in the worker log). Approved files stay until removed
+  by hand; check `du -sh /opt/sparkkindly/shared/media/social` monthly and keep 5 GB free on the VM disk.
+- **Caddy request body.** The upload is one POST of the raw file to `/admin/social/videos/<id>/upload/`. Caddy has no
+  body limit by default; when installing the site block add, inside it, a limit for that path only, and leave
+  `response_header_timeout` long enough for a slow upload to finish (the app answers only after the file is checked):
+  `@videoUpload path_regexp ^/admin/social/videos/[0-9]+/upload/$` then
+  `request_body @videoUpload { max_size 260MB }` (optionally a smaller `request_body` limit for everything else), and raise
+  `response_header_timeout` to `300s`. Validate with `caddy validate` on the VM before reloading; not applied yet.
+
 ## Pilot measurement (roadmap P.2)
 
 `/admin/pilot/` shows the spec 4a.2 pilot metrics against their thresholds, computed from data the site already holds

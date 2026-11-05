@@ -24,6 +24,7 @@ import { approveLink, isContributed, lockContribution, markApproved, ownerDecisi
 import { sendEmail, type EmailMessage } from '@/lib/email';
 import { attachSponsorship, createSponsor, endSponsorship } from '@/lib/sponsorship/admin';
 import { socialHandlers } from '@/lib/social/admin-actions';
+import { videoHandlers } from '@/lib/social/video/admin-actions';
 import { linkBase } from './sessions';
 import { audit } from './audit';
 import { DONE, ERRORS, type DoneCode, type ErrorCode } from './messages';
@@ -476,6 +477,7 @@ const handlers: Record<string, Handler> = {
 };
 
 Object.assign(handlers, socialHandlers((status, code) => new ActionError(status, code)));
+Object.assign(handlers, videoHandlers((status, code) => new ActionError(status, code)));
 
 export const actionNames = Object.keys(handlers);
 
@@ -503,13 +505,14 @@ async function sendAfter(send: (m: EmailMessage) => Promise<unknown>, mail: Emai
 
 // With comments switched off (ACCOUNTS_ENABLED or COMMENTS_ENABLED unset), every comments.* action is unknown.
 // With contributors switched off, every contribution.* action is unknown too; with sponsorship off, every sponsor action;
-// with SOCIAL_ENABLED off, every social.* action (plan 5A).
+// with SOCIAL_ENABLED off, every social.* and video.* action (plans 5A, 5B).
 const available = (name: string) =>
   Object.hasOwn(handlers, name) &&
   (!name.startsWith('comments.') || commentsEnabled()) &&
   (!name.startsWith('contribution.') || contributorsEnabled()) &&
   (!name.startsWith('sponsor') || sponsorshipEnabled()) &&
-  (!name.startsWith('social.') || socialEnabled());
+  (!name.startsWith('social.') || socialEnabled()) &&
+  (!name.startsWith('video.') || socialEnabled());
 
 export async function runAction(
   db: Db,

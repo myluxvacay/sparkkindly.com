@@ -45,6 +45,9 @@ export const DONE = {
   social_picked: 'Item picked for that platform today. It waits for the promotion run to write its copy.',
   social_retried: 'Post scheduled for one more attempt now.',
   social_cancelled: 'Post cancelled.',
+  video_approved: 'Video approved: it is scheduled for the platform time.',
+  video_cancelled: 'Video job cancelled. Its files are deleted after 30 days.',
+  video_retried: 'Video post scheduled for one more attempt now.',
 } as const;
 
 export const ERRORS = {
@@ -68,6 +71,10 @@ export const ERRORS = {
   social_cap: "That platform's posts for today are already at its daily cap.",
   social_platform: 'That platform is switched off.',
   social_exists: 'That item already has a post for that platform.',
+  video_captions: 'Captions are required: upload a caption file for YouTube, or confirm the captions are burned into the TikTok video.',
+  video_invalid: 'The uploaded file did not pass validation. Upload a valid MP4 (H.264) file.',
+  video_missing: 'The uploaded file is no longer on the server (files waiting more than 7 days are deleted). Upload it again.',
+  video_file_changed: 'The file on the server no longer matches the checksum you approved. Upload it again and check it.',
   key_gone: 'That key has already been shown or has expired. Rotate the key again if it was not saved.',
 } as const;
 
