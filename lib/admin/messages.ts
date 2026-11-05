@@ -34,6 +34,10 @@ export const DONE = {
   comments_escalation_published: 'The comment is published.',
   comments_escalation_removed: 'The comment is removed and the author is emailed with a way to appeal.',
   comments_reports_reset: 'That reporter is reset: their reports count again.',
+  contribution_approved: 'Contribution approved and scheduled.',
+  contribution_changes_requested: 'Changes requested: the contributor is emailed your notes.',
+  contribution_rejected: 'Contribution rejected: the contributor is emailed the reason.',
+  contribution_link_approved: 'Link approved: it now shows on the contributor page.',
 } as const;
 
 export const ERRORS = {
@@ -48,6 +52,7 @@ export const ERRORS = {
   needs_approval: 'This item needs approval (Kids content or a review-mode world).',
   safety_rule: 'The database refused that change (a safety rule).',
   kids_comments: 'Kids items never carry comments.',
+  contributed: 'This is a member contribution: reject it in Contributions, where the reason is sent to the contributor.',
   key_gone: 'That key has already been shown or has expired. Rotate the key again if it was not saved.',
 } as const;
 

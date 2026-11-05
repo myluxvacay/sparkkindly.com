@@ -4,7 +4,8 @@ import type { PublicItem } from '@/lib/items/repo';
 // types carry accepted answers, and an answer must never appear in a page before it is submitted.
 const url = (baseUrl: string, path: string) => `${baseUrl}${path}`;
 
-export function articleLd(item: PublicItem, baseUrl: string): object {
+// author: only for a contributed, published item (plan 8); without it the output is exactly as before.
+export function articleLd(item: PublicItem, baseUrl: string, author?: { name: string; slug: string }): object {
   const path = `/${item.world}/${item.slug}/`;
   return {
     '@context': 'https://schema.org',
@@ -15,6 +16,7 @@ export function articleLd(item: PublicItem, baseUrl: string): object {
     mainEntityOfPage: url(baseUrl, path),
     image: url(baseUrl, `/api/template-image/${item.world}/${item.slug}/`),
     publisher: { '@type': 'Organization', name: 'SparkKindly' },
+    ...(author ? { author: { '@type': 'Person', name: author.name, url: url(baseUrl, `/contributors/${author.slug}/`) } } : {}),
   };
 }
 

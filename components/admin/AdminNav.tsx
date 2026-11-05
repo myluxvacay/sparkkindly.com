@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { commentsEnabled } from '@/lib/config';
+import { commentsEnabled, contributorsEnabled } from '@/lib/config';
 import ActionForm from './ActionForm';
 
 const LINKS: [string, string][] = [
@@ -16,8 +16,12 @@ const LINKS: [string, string][] = [
 ];
 
 export default function AdminNav({ email, csrf }: { email: string; csrf: string }) {
-  // The comments page exists only with comments switched on (plan 7A).
-  const links: [string, string][] = commentsEnabled() ? [...LINKS, ['/admin/comments/', 'Comments']] : LINKS;
+  // The comments page exists only with comments switched on (plan 7A), contributions only with contributors on (plan 8).
+  const links: [string, string][] = [
+    ...LINKS,
+    ...(commentsEnabled() ? ([['/admin/comments/', 'Comments']] as [string, string][]) : []),
+    ...(contributorsEnabled() ? ([['/admin/contributions/', 'Contributions']] as [string, string][]) : []),
+  ];
   return (
     <nav aria-label="Admin" className="admin-nav">
       <ul>

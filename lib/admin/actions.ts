@@ -16,7 +16,8 @@ import { commentAuthor, commentRef } from '@/lib/comments/admin';
 import { decideAppeal } from '@/lib/comments/appeals';
 import { resetReporter, resolveEscalation } from '@/lib/comments/owner-actions';
 import { setTrust } from '@/lib/comments/trust';
-import { commentsEnabled } from '@/lib/config';
+import { commentsEnabled, contributorsEnabled } from '@/lib/config';
+import { approveLink, isContributed, lockContribution, markApproved, ownerDecision } from '@/lib/contributors/owner';
 import { sendEmail, type EmailMessage } from '@/lib/email';
 import { linkBase } from './sessions';
 import { audit } from './audit';
@@ -119,28 +120,47 @@ async function appealAction(c: Ctx, outcome: 'overturn' | 'uphold'): Promise<Don
   return { code, target: `comment:${id}`, detail: { outcome, closed: r.status }, mail: r.status === 'done' ? r.mail : undefined };
 }
 
+// in_review -> scheduled, never from draft (where failed gates wait) and never for excluded content. The slot is the
+// agent's own future publish time if it gave one, else the world's next free slot, chosen under the world's slot
+// lock (an item held back to review keeps no stale past time). A contributed item's contribution is approved with it
+// (plan 8), so both queues share this one scheduling path.
+async function approveItem({ tx, admin, now }: Ctx, id: string): Promise<Date> {
+  const item = await lockItem(tx, id, ['in_review']);
+  if (item.risk_tier === 'excluded') throw new ActionError(409, 'excluded');
+  await lockWorldSlots(tx, item.world_id);
+  const current = item.publish_at;
+  const publishAt = current && current.getTime() > now.getTime() ? current : await nextSlot(tx, item.world_id, now);
+  await transitionTx(tx, id, 'scheduled', admin.email, 'approved in admin', { by: admin.email });
+  await tx.query('UPDATE items SET publish_at = $2 WHERE id = $1', [id, publishAt.toISOString()]);
+  await markApproved(tx, id);
+  return publishAt;
+}
+
+// Contributions (plan 8): request changes or reject with the owner's note, emailed to the contributor after commit.
+async function contributionDecision(c: Ctx, decision: 'request_changes' | 'reject'): Promise<Done> {
+  const id = itemId(c.form);
+  const note = text(c.form, decision === 'reject' ? 'reason' : 'notes', 500);
+  const r = await ownerDecision(c.tx, c.admin, id, decision, note, linkBase(process.env));
+  if (r.status !== 'done') throw r.status === 'not_found' ? missing() : new ActionError(409, 'wrong_status');
+  const code = decision === 'reject' ? 'contribution_rejected' : 'contribution_changes_requested';
+  return { code, target: `contribution:${id}`, mail: r.mail };
+}
+
 const ITEM_PATH = /^\/?([a-z0-9-]{2,30})\/([a-z0-9-]{1,80})\/?$/;
 const ITEM_SWITCH: Record<string, boolean | null> = { on: true, off: false, inherit: null };
 
 const handlers: Record<string, Handler> = {
-  // in_review -> scheduled, never from draft (where failed gates wait) and never for excluded content. The slot is the
-  // agent's own future publish time if it gave one, else the world's next free slot, chosen under the world's slot
-  // lock (an item held back to review keeps no stale past time).
-  async 'item.approve'({ tx, admin, form, now }) {
-    const id = itemId(form);
-    const item = await lockItem(tx, id, ['in_review']);
-    if (item.risk_tier === 'excluded') throw new ActionError(409, 'excluded');
-    await lockWorldSlots(tx, item.world_id);
-    const current = item.publish_at;
-    const publishAt = current && current.getTime() > now.getTime() ? current : await nextSlot(tx, item.world_id, now);
-    await transitionTx(tx, id, 'scheduled', admin.email, 'approved in admin', { by: admin.email });
-    await tx.query('UPDATE items SET publish_at = $2 WHERE id = $1', [id, publishAt.toISOString()]);
+  async 'item.approve'(c) {
+    const id = itemId(c.form);
+    const publishAt = await approveItem(c, id);
     return { code: 'approved', target: id, detail: { publishAt: publishAt.toISOString() } };
   },
 
+  // A contributed item is rejected from Contributions, where the owner gives the reason the contributor is emailed.
   async 'item.reject'({ tx, admin, form }) {
     const id = itemId(form);
     await lockItem(tx, id, ['in_review']);
+    if (await isContributed(tx, id)) throw new ActionError(409, 'contributed');
     const reason = field(form, 'reason').slice(0, 500) || 'rejected in admin';
     await transitionTx(tx, id, 'rejected', admin.email, reason);
     return { code: 'rejected', target: id, detail: { reason } };
@@ -363,6 +383,25 @@ const handlers: Record<string, Handler> = {
     return { code: 'comments_reports_reset', target: `report:${report}` };
   },
 
+  // Owner approval of a contribution: only from needs_owner, through the same scheduling path as item.approve.
+  async 'contribution.approve'(c) {
+    const id = itemId(c.form);
+    const locked = await lockContribution(c.tx, id);
+    if (!locked) throw missing();
+    if (locked.state !== 'needs_owner' || !locked.item_id) throw new ActionError(409, 'wrong_status');
+    const publishAt = await approveItem(c, locked.item_id);
+    return { code: 'contribution_approved', target: `contribution:${id}`, detail: { publishAt: publishAt.toISOString() } };
+  },
+  'contribution.request_changes': (c) => contributionDecision(c, 'request_changes'),
+  'contribution.reject': (c) => contributionDecision(c, 'reject'),
+
+  // A contributor's proposed link, by their page id; shown on the contributor page once approved.
+  async 'contribution.link_approve'({ tx, form }) {
+    const slug = field(form, 'slug');
+    if (!/^[a-z0-9]{10}$/.test(slug) || !(await approveLink(tx, slug))) throw missing();
+    return { code: 'contribution_link_approved', target: `contributor:${slug}` };
+  },
+
   async 'agent.create'({ tx, form }) {
     const name = field(form, 'name');
     if (!AGENT_NAME.test(name)) throw bad();
@@ -418,7 +457,11 @@ async function sendAfter(send: (m: EmailMessage) => Promise<unknown>, mail: Emai
 }
 
 // With comments switched off (ACCOUNTS_ENABLED or COMMENTS_ENABLED unset), every comments.* action is unknown.
-const available = (name: string) => Object.hasOwn(handlers, name) && (!name.startsWith('comments.') || commentsEnabled());
+// With contributors switched off, every contribution.* action is unknown too.
+const available = (name: string) =>
+  Object.hasOwn(handlers, name) &&
+  (!name.startsWith('comments.') || commentsEnabled()) &&
+  (!name.startsWith('contribution.') || contributorsEnabled());
 
 export async function runAction(
   db: Db,

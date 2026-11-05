@@ -20,7 +20,8 @@ import { claimInactivitySweep, runInactivitySweep } from '@/lib/accounts/inactiv
 import { claimCirclesPurge, purgeClosedCircles } from '@/lib/jobs/circles-purge';
 import { purgeExpiredInvites } from '@/lib/circles/invites';
 import { claimCircleMail, runCircleMail } from '@/lib/jobs/circle-mail';
-import { circlesEnabled } from '@/lib/config';
+import { circlesEnabled, contributorsEnabled } from '@/lib/config';
+import { sendPublicationNotices } from '@/lib/contributors/notices';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
 // `dbNow` replaces the database clock the account jobs compare with `now` (lib/jobs/guards.ts); for tests only.
@@ -38,6 +39,7 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: Ti
     },
     { delayMs: opts.delayMs },
   );
+  await contributionMail(db, now, env, send, log, opts);
   const claim = await claimDigest(db, now, env).catch((err: Error) => {
     log.push(`digest: could not check (${err.message})`);
     return null;
@@ -166,6 +168,21 @@ async function circleMail(db: Db, now: Date, env: EnvLike, send: Send, log: stri
     async () => {
       const r = await runCircleMail(db, now, send, { env, dbNow });
       log.push(`circle mail: ${r.sent} sent, ${r.skipped} skipped, ${r.failed} failed`);
+    },
+    { delayMs },
+  );
+}
+
+// Every tick with contributors on, after publish-due: one publication email per newly published contributed item
+// (claimed before sending, so never twice; lib/contributors/notices.ts).
+async function contributionMail(db: Db, now: Date, env: EnvLike, send: Send, log: string[], { delayMs }: TickOpts): Promise<void> {
+  if (!contributorsEnabled()) return;
+  await runJob(
+    db,
+    'contribution-mail',
+    async () => {
+      const r = await sendPublicationNotices(db, now, env, send);
+      log.push(`contribution mail: ${r.sent} sent, ${r.failed} failed`);
     },
     { delayMs },
   );

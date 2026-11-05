@@ -1,4 +1,5 @@
 import { cache } from 'react';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import ArticleBody from '@/components/item/ArticleBody';
@@ -19,6 +20,7 @@ import { getPublicItem, listPublic } from '@/lib/public/reads';
 import { accountSessionToken, currentScope } from '@/lib/accounts/scope-next';
 import CommentSection from '@/components/comments/CommentSection';
 import { loadCommentSection } from '@/lib/comments/web';
+import { bylineFor } from '@/lib/contributors/byline';
 import { getWorld } from '@/lib/public/worlds';
 import { JsonLd, metadata as seo } from '@/lib/seo';
 
@@ -50,6 +52,8 @@ export default async function ItemPage({ params, searchParams }: Props) {
   // Null (no section in the HTML) with the flags off, for a child context, on Kids items and where switched off.
   const comments = await loadCommentSection(db, await accountSessionToken(), item.id, new Date());
   const commentCode = (await searchParams).c;
+  // A contributor's credit (plan 8): only for a published contributed item, and null with the flag off.
+  const credit = await bylineFor(db, item.id);
   const related = (await listPublic(db, await currentScope(), { world: item.world, limit: 4, offset: 0 })).filter((i) => i.id !== item.id).slice(0, 3);
 
   const isArticle = item.kind === 'article';
@@ -73,7 +77,13 @@ export default async function ItemPage({ params, searchParams }: Props) {
         <h1>{item.title}</h1>
         <p className="article-summary">{item.summary}</p>
         <p className="byline">
-          {article.byline ?? 'SparkKindly'}
+          {credit ? (
+            <>
+              By <Link href={`/contributors/${credit.slug}/`}>{credit.name}</Link>
+            </>
+          ) : (
+            (article.byline ?? 'SparkKindly')
+          )}
           {isArticle && <> · {Math.max(1, Math.ceil(words / 200))} min read</>}
           <br />
           Published {formatDay(item.publishedAt)}
@@ -108,7 +118,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
         </section>
       )}
       <JsonLd data={breadcrumbLd(site.url, trail)} />
-      {isArticle && <JsonLd data={articleLd(item, site.url)} />}
+      {isArticle && <JsonLd data={articleLd(item, site.url, credit ?? undefined)} />}
     </>
   );
 }
