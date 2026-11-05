@@ -13,7 +13,7 @@ import { handleAdminAction } from '@/lib/admin/act';
 import { newTotpSecret, totpAt } from '@/lib/admin/totp';
 import { sealSecret, TEST_SECRET_KEY } from '@/lib/admin/secret-box';
 import { consumeLink, csrfToken, requestLink, submitCode } from '@/lib/admin/sessions';
-import { clickRequest, loadSponsorLine } from '@/lib/sponsorship/web';
+import { clickHead, clickRequest, loadSponsorLine } from '@/lib/sponsorship/web';
 import { listSponsorsAdmin } from '@/lib/sponsorship/admin';
 import SponsorLine from '@/components/sponsorship/SponsorLine';
 import type { Db } from '@/lib/db';
@@ -164,6 +164,24 @@ describe('clickRequest', () => {
       expect((await clickRequest(go(raw), { db, now: NOW }, raw)).headers.get('location')).toBe('/');
     }
     expect(await clicks(id)).toBe(0);
+  });
+
+  it('a stored non-ASCII link becomes an ASCII Location header (never a thrown header error)', async () => {
+    const { id } = await topicSponsorship();
+    await db.query("UPDATE sponsors SET link = 'https://bücher.example/ä' WHERE id = (SELECT sponsor_id FROM sponsorships WHERE id = $1)", [id]);
+    const r = await clickRequest(go(id, undefined, '203.0.113.77'), { db, now: NOW }, String(id));
+    expect(r.status).toBe(302);
+    expect(r.headers.get('location')).toBe('https://xn--bcher-kva.example/%C3%A4');
+  });
+
+  it('HEAD sends everyone home and counts nothing; 404 with the flag off', async () => {
+    const { id } = await topicSponsorship();
+    const r = clickHead();
+    expect(r.status).toBe(302);
+    expect(r.headers.get('location')).toBe('/');
+    expect(await clicks(id)).toBe(0);
+    vi.stubEnv('SPONSORSHIP_ENABLED', '');
+    expect(clickHead().status).toBe(404);
   });
 
   it('is rate limited per network', async () => {

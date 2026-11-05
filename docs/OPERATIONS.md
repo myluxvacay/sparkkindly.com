@@ -814,7 +814,11 @@ no sponsor row is read. Plan `docs/superpowers/plans/2026-11-05-project-6-sponso
 - **Clicks.** `/go/<id>/` re-checks the viewer and the sponsorship, adds 1 to `click_count` in one UPDATE and redirects
   302 to the stored link with `Referrer-Policy: no-referrer`, `Cache-Control: no-store` and no cookie; anyone else goes
   to `/`. 60 clicks per network per hour (in memory, per process). Nothing about the visitor is stored, so the count is an
-  upper bound (repeat clicks and bots count). Clicks cannot be edited from `/admin`.
+  upper bound (repeat clicks and bots count). Clicks cannot be edited from `/admin`. The stored link is re-checked before
+  counting (a refused link counts nothing) and is kept in its ASCII form (punycode host, percent-encoded path; a link
+  with a control character is refused at entry). `HEAD /go/<id>/` sends everyone home without counting, and the
+  released `robots.txt` disallows `/go/`. `029_sponsor_confirmed_category.sql` adds a CHECK that a confirmed sponsor
+  has a category (rollback in its header).
 - **Migration and rollback.** `025_sponsorship.sql` is additive (`sponsors.category`, `sponsors.confirmed_at`, a default
   on `sponsors.disclosure`, `sponsorships.kind`, `sponsorships.ended_at`). Code rollback: unset `SPONSORSHIP_ENABLED`
   (every line disappears; rows stay), or the previous release (it never reads sponsorship). Schema rollback is in the

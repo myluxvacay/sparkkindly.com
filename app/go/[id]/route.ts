@@ -1,5 +1,5 @@
 import { getDb } from '@/lib/db';
-import { clickRequest } from '@/lib/sponsorship/web';
+import { clickHead, clickRequest } from '@/lib/sponsorship/web';
 
 export const dynamic = 'force-dynamic';
 
@@ -7,4 +7,9 @@ export const dynamic = 'force-dynamic';
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   return clickRequest(request, { db: getDb(), now: new Date() }, id);
+}
+
+// HEAD never counts (without it Next answers HEAD by running GET). OPTIONS is answered by Next itself, never by GET.
+export function HEAD() {
+  return clickHead();
 }

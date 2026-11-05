@@ -60,10 +60,12 @@ export function validateSponsor(input: Record<string, unknown>): Result<SponsorI
   const name = sized(input.name, 80);
   const link = sized(input.link, 500);
   const category = input.category;
-  if (!name || !link || !isSafeSourceUrl(link) || !isCategory(category) || !input.confirmed) {
+  // A control character inside the link is refused (the URL parser would silently drop a newline or tab).
+  if (!name || !link || /\p{Cc}/u.test(link) || !isSafeSourceUrl(link) || !isCategory(category) || !input.confirmed) {
     return fail;
   }
-  return { ok: true, value: { name, link, category } };
+  // Stored in the parser's ASCII form (punycode host, percent-encoded path), so it is always a valid Location header.
+  return { ok: true, value: { name, link: new URL(link).href, category } };
 }
 
 // A real YYYY-MM-DD calendar date (UTC), or null for none; undefined for an invalid value.

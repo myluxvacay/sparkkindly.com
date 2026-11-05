@@ -4,6 +4,7 @@ import path from 'node:path';
 
 const dir = 'db/migrations';
 const files = readdirSync(dir).filter((f) => f.endsWith('.sql')).sort();
+const REPLACED_CHECK = /\bDROP\s+CONSTRAINT\s+(\w+_check)\s*,\s*ADD\s+CONSTRAINT\s+\1\s+CHECK\b/gi;
 
 describe('migration files', () => {
   it('are named NNN_snake_case.sql with consecutive numbers starting at 000', () => {
@@ -18,17 +19,22 @@ describe('migration files', () => {
     for (const f of files.filter((name) => !name.includes('contract'))) {
       const sql = readFileSync(path.join(dir, f), 'utf8').replace(/--.*$/gm, '');
       expect(sql, f).not.toMatch(/\bDROP\s+(TABLE|COLUMN)\b/i);
-      // Replacing a CHECK in one statement (DROP CONSTRAINT x, ADD CONSTRAINT x CHECK ...) drops no data; anything else does.
-      const rest = sql.replace(/\bDROP\s+CONSTRAINT\s+(\w+)\s*,\s*ADD\s+CONSTRAINT\s+\1\s+CHECK\b/gi, '');
+      // Replacing a CHECK in one statement (DROP CONSTRAINT x_check, ADD CONSTRAINT x_check CHECK ...) drops no data;
+      // anything else does. The name must end in _check (a unique, primary or foreign key never does); that it really is
+      // a CHECK and only widens is verified on the database in migrate.test.ts.
+      const rest = sql.replace(REPLACED_CHECK, '');
       expect(rest, f).not.toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
     }
   });
 
   it('a replaced CHECK is still recognised as a drop when it is not re-added in the same statement', () => {
-    const strip = (sql: string) => sql.replace(/\bDROP\s+CONSTRAINT\s+(\w+)\s*,\s*ADD\s+CONSTRAINT\s+\1\s+CHECK\b/gi, '');
-    expect(strip('ALTER TABLE t DROP CONSTRAINT c;')).toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
-    expect(strip('ALTER TABLE t DROP CONSTRAINT c, ADD CONSTRAINT d CHECK (x);')).toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
-    expect(strip('ALTER TABLE t DROP CONSTRAINT c, ADD CONSTRAINT c CHECK (x);')).not.toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
+    const strip = (sql: string) => sql.replace(REPLACED_CHECK, '');
+    expect(strip('ALTER TABLE t DROP CONSTRAINT c_check;')).toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
+    expect(strip('ALTER TABLE t DROP CONSTRAINT c_check, ADD CONSTRAINT d_check CHECK (x);')).toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
+    expect(strip('ALTER TABLE t DROP CONSTRAINT c_check, ADD CONSTRAINT c_check CHECK (x);')).not.toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
+    // A name that does not end in _check (a key, a foreign key) is never excused, even when re-added as a CHECK.
+    expect(strip('ALTER TABLE t DROP CONSTRAINT t_pkey, ADD CONSTRAINT t_pkey CHECK (true);')).toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
+    expect(strip('ALTER TABLE t DROP CONSTRAINT t_a_fkey, ADD CONSTRAINT t_a_fkey CHECK (x);')).toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
   });
 
   it('have no leftover transaction control, because the runner wraps the whole run in one transaction', () => {

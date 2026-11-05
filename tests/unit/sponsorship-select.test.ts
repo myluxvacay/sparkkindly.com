@@ -87,6 +87,7 @@ describe('migration', () => {
     await expect(db.query("INSERT INTO sponsorships (sponsor_id, world_id, label, kind) SELECT $1, id, 'L', 'banner' FROM worlds WHERE slug = 'grow'", [s])).rejects.toThrow(/check/);
     await expect(db.query("INSERT INTO sponsors (name, link, category) VALUES ('G', 'https://g.example/', 'gambling')")).rejects.toThrow(/check/);
     await db.query("INSERT INTO sponsors (name, link) VALUES ('Legacy', 'https://l.example/')");
+    await expect(db.query("INSERT INTO sponsors (name, link, confirmed_at) VALUES ('NoCat', 'https://n.example/', now())")).rejects.toThrow(/check/);
   });
 });
 
@@ -210,6 +211,22 @@ describe('recordClick', () => {
     vi.stubEnv('SPONSORSHIP_ENABLED', '');
     expect(await recordClick(db, id, TODAY, ANON)).toBeNull();
     expect(await clicks(id)).toBe(0);
+  });
+
+  it('re-checks the stored link before counting: an unsafe one sends nobody and counts nothing', async () => {
+    for (const link of ['http://acme.example/', 'https://127.0.0.1/', 'https://acme.example/a\nb', 'not a url']) {
+      const t = await topic();
+      const id = await attach(await sponsor({ link }), { topic: t });
+      expect(await recordClick(db, id, TODAY, ANON), link).toBeNull();
+      expect(await clicks(id), link).toBe(0);
+    }
+  });
+
+  it('returns a stored non-ASCII link (from before normalisation) in its ASCII form', async () => {
+    const t = await topic();
+    const id = await attach(await sponsor({ link: 'https://bücher.example/ä' }), { topic: t });
+    expect(await recordClick(db, id, TODAY, ANON)).toEqual({ url: 'https://xn--bcher-kva.example/%C3%A4' });
+    expect(await clicks(id)).toBe(1);
   });
 
   it('counts every one of concurrent calls', async () => {

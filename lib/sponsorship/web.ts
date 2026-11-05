@@ -31,6 +31,15 @@ type ClickDeps = { db: Db; now: Date; limit?: (client: string) => boolean };
 const HEADERS = { 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' };
 const redirect = (location: string) => new Response(null, { status: 302, headers: { ...HEADERS, Location: location } });
 
+// HEAD /go/<id>/ (plan 6 review): link checkers and previewers send HEAD, which Next would otherwise answer by running
+// GET (and counting a click). It sends everyone home and counts nothing; 404 with the flag off.
+export function clickHead(): Response {
+  if (!sponsorshipEnabled()) {
+    return new Response(null, { status: 404, headers: HEADERS });
+  }
+  return redirect('/');
+}
+
 export async function clickRequest(request: Request, d: ClickDeps, rawId: string): Promise<Response> {
   if (!sponsorshipEnabled()) {
     return new Response('Not found', { status: 404, headers: HEADERS });

@@ -87,6 +87,23 @@ describe('validateSponsor', () => {
     expect(validateSponsor({ ...good, ...change }).ok).toBe(false);
   });
 
+  it('stores the link in its normalised ASCII form: punycode host, percent-encoded path', () => {
+    expect(validateSponsor({ ...good, link: 'https://bücher.example/bücher?q=ä' })).toMatchObject({
+      ok: true,
+      value: { link: 'https://xn--bcher-kva.example/b%C3%BCcher?q=%C3%A4' },
+    });
+    expect(validateSponsor({ ...good, link: 'https://ACME.example' })).toMatchObject({ value: { link: 'https://acme.example/' } });
+  });
+
+  it.each([
+    ['an embedded newline', 'https://acme.example/a\nb'],
+    ['an embedded tab', 'https://acme.example/a\tb'],
+    ['a carriage return', 'https://acme.example/a\rb'],
+    ['another control character', 'https://acme.example/\u0007'],
+  ])('rejects a link with %s rather than silently changing it', (_name, link) => {
+    expect(validateSponsor({ ...good, link }).ok).toBe(false);
+  });
+
   it('accepts an 80-character name', () => {
     expect(validateSponsor({ ...good, name: 'x'.repeat(80) }).ok).toBe(true);
   });
