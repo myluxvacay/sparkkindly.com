@@ -3,7 +3,8 @@
 // locks the author's trust row and the comment (7A lock order), re-checks that the decision applies to the comment's
 // current state, that the agent saw its current version (an author edit after the queue read makes it stale), that an
 // approved author is not banned and that the text still passes the mechanical checks, then applies the effects and
-// writes an audit row with actor agent:<name>. A repeated decision returns the current state with no second effect.
+// writes an audit row with actor agent:<name>. A keep on a comment a trusted member's urgent report hid is converted to
+// an owner escalation (7B review, final ruling). A repeated decision returns the current state with no second effect.
 // Only weighted reports count for the agent (a muted reporter's zero-weight report, urgent or not, is the owner's alone).
 // Comment text, item titles and report notes reach the agent only inside each entry's `data`; no account id, email or
 // display name is ever returned. No Next.js imports. Verified by tests/unit/comments-moderation.test.ts.
@@ -145,6 +146,14 @@ async function decideIn(tx: Queryable, agent: Agent, input: Input, now: Date): P
   if (row.version !== input.version) return fail(409, 'stale');
   if ((input.decision === 'approve' || input.decision === 'keep') && row.banned) return fail(409, 'author_banned');
   if (input.decision === 'keep' && (await keepsToday(tx, actor, now)) >= KEEP_LIMIT) return fail(409, 'limit');
+  if (input.decision === 'keep' && (await trustedUrgentHide(tx, input.id))) {
+    // The agent cannot overrule a trusted member's urgent report: the owner decides (and only the owner's dismissal
+    // charges that reporter). The comment stays hidden, the report stays open, the agent's reason is the owner's note.
+    const note = input.reason ?? 'The moderation agent judged this comment fine; a trusted member urgently reported it.';
+    await tx.query('UPDATE comments SET escalated_at = $2, escalation_note = $3, decided_by = $4 WHERE id = $1', [input.id, now, note, actor]);
+    await audit(tx, actor, 'comment.escalate', `comment:${input.id}`, { from: row.kind, status: row.status, converted: 'keep' });
+    return { result: reply(row.status, { converted: 'escalated' }) };
+  }
   if (input.decision === 'approve' && row.kind === 'held') {
     const level = (await tx.query<{ l: number }>('SELECT level AS l FROM account_trust WHERE account_id = $1', [row.account_id])).rows[0].l;
     const checked = approvable(row, level);
@@ -161,6 +170,16 @@ async function decideIn(tx: Queryable, agent: Agent, input: Input, now: Date): P
   if (!effect.mail) return { result: reply(effect.status) };
   const email = (await tx.query<{ email: string }>('SELECT email FROM accounts WHERE id = $1', [row.account_id])).rows[0].email;
   return { result: reply(effect.status), mail: { to: email, body: row.body, accountId: row.account_id, code: input.code ?? 'other' } };
+}
+
+// An open, weighted urgent report on the comment from a reporter now at level 1 or above.
+async function trustedUrgentHide(tx: Queryable, id: string): Promise<boolean> {
+  const r = await tx.query(
+    `SELECT 1 FROM comment_reports r JOIN account_trust t ON t.account_id = r.reporter_account_id
+     WHERE r.comment_id = $1 AND r.handled_at IS NULL AND r.urgent AND r.weight > 0 AND t.level >= 1 LIMIT 1`,
+    [id],
+  );
+  return r.rows.length > 0;
 }
 
 async function keepsToday(tx: Queryable, actor: string, now: Date): Promise<number> {

@@ -13,6 +13,7 @@ import { reportComment } from '@/lib/comments/reports';
 import { decide, KEEP_LIMIT, moderationQueue, pickForSample, SAMPLE_RATE } from '@/lib/comments/moderation';
 import { AUTHOR_REASONS } from '@/lib/comments/rejection-email';
 import { verifyAppealToken } from '@/lib/comments/appeals';
+import { runAction } from '@/lib/admin/actions';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -294,6 +295,42 @@ describe('keep and escalate', () => {
     expect(await statusOf(db, last.id)).toBe('hidden');
     expect((await moderationQueue(db, NOW)).map((e) => e.id)).toContain(last.id);
     expect((await act(last.id, 'escalate', 'Too many keeps today')).status).toBe(200);
+  });
+
+  it("agent keep on a comment a level-1 reporter's urgent report hid becomes an owner escalation; the owner's keep restores and charges", async () => {
+    const author = await person(db, NOW);
+    const id = await comment(db, await item(db), author.id, 'urgently reported words');
+    const trusted = await person(db, NOW);
+    await setLevel(db, trusted.id, 1);
+    await reportComment(db, trusted.ctx, id, { reason: 'abuse', urgent: 'on' }, NOW, quiet);
+    expect(await statusOf(db, id)).toBe('hidden');
+    const r = await act(id, 'keep', 'Looks fine to me');
+    expect(r).toEqual({ status: 200, json: { id, status: 'hidden', decision: 'keep', converted: 'escalated' } });
+    const row = await db.query('SELECT status, escalated_at IS NOT NULL AS e, escalation_note FROM comments WHERE id = $1', [id]);
+    expect(row.rows[0]).toEqual({ status: 'hidden', e: true, escalation_note: 'Looks fine to me' });
+    const open = await db.query('SELECT count(*)::int AS n FROM comment_reports WHERE comment_id = $1 AND handled_at IS NULL', [id]);
+    expect(open.rows[0].n).toBe(1);
+    expect(await trustRow(db, trusted.id)).toMatchObject({ level: 1, false_reports: 0, reports_muted: false });
+    expect((await moderationQueue(db, NOW)).map((e) => e.id)).not.toContain(id);
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('COMMENTS_ENABLED', 'true');
+    const owner = await runAction(db, { email: 'owner@example.test' }, 'comments.escalation_resolve', new URLSearchParams({ comment: id, outcome: 'publish' }), NOW, async () => ({}));
+    expect(owner).toMatchObject({ ok: true });
+    expect(await statusOf(db, id)).toBe('published');
+    expect((await trustRow(db, trusted.id)).false_reports).toBe(1);
+  });
+
+  it('no agent path charges or demotes a level-1 reporter: keep on an ordinary-report hide restores and charges level 0 only', async () => {
+    const r = await reported();
+    const low = await person(db, NOW);
+    await setLevel(db, low.id, 0);
+    const author = await person(db, NOW);
+    const id = await comment(db, await item(db), author.id, 'level zero urgent');
+    await reportComment(db, low.ctx, id, { reason: 'abuse', urgent: 'on' }, NOW, quiet);
+    expect(await act(id, 'keep')).toMatchObject({ status: 200, json: { status: 'published' } });
+    expect((await trustRow(db, low.id)).false_reports).toBe(1);
+    expect(await act(r.id, 'keep')).toMatchObject({ status: 200, json: { status: 'published' } });
+    for (const p of r.reporters) expect(await trustRow(db, p.id)).toMatchObject({ level: 1, false_reports: 0, reports_muted: false });
   });
 
   it('agent keep clears an earlier code and reason; the audit row records what was cleared', async () => {
