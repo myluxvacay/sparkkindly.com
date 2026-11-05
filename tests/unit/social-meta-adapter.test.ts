@@ -95,6 +95,9 @@ describe('Instagram', () => {
     ['500 on publish (may have posted)', [json(200, { id: 'C1' }), json(200, { status_code: 'FINISHED' }), json(500, {})], 'ambiguous'],
     ['a timeout on publish (may have posted)', [json(200, { id: 'C1' }), json(200, { status_code: 'FINISHED' }), new DOMException('t', 'TimeoutError')], 'ambiguous'],
     ['a redirect', [new Response(null, { status: 302, headers: { location: 'https://evil.example/' } })], 'permanent'],
+    // 5A review H1: a 200 from the publish call that cannot be read may still have posted.
+    ['a 200 non-JSON publish answer', [json(200, { id: 'C1' }), json(200, { status_code: 'FINISHED' }), new Response('oops', { status: 200 })], 'ambiguous'],
+    ['a 200 publish answer without an id', [json(200, { id: 'C1' }), json(200, { status_code: 'FINISHED' }), json(200, {})], 'ambiguous'],
   ] as const)('%s is %s, and the error never carries the token', async (_, answers, kind) => {
     const f = fakeFetch([...answers]);
     const e = await failure(instagram.post(post, deps(f)));
@@ -138,6 +141,12 @@ describe('Facebook', () => {
     expect(f.calls.map((c) => [c.init.method, c.url])).toEqual([['POST', `${G}/111/photos`]]);
     expect(body(f.calls[0])).toEqual({ url: post.imageUrl, message: text });
     assertSafe(f.calls);
+  });
+
+  it('a 200 from the publish call without a usable post id, or not JSON, may have posted: ambiguous (5A review H1)', async () => {
+    for (const a of [json(200, { id: 'P9' }), new Response('<html>ok</html>', { status: 200 }), json(200, { post_id: '../x' })]) {
+      expect((await failure(facebook.post(post, deps(fakeFetch([a]))))).kind).toBe('ambiguous');
+    }
   });
 
   it('its single call is the publish: 5xx or a timeout may have posted (ambiguous); 429 transient; 400 permanent', async () => {

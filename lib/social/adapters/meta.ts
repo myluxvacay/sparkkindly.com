@@ -5,7 +5,8 @@
 // Graph error code only, never a token, caption or response text. Every call has a 15 s timeout and follows no redirect.
 // Failure kinds: transient (429, 5xx, network, still processing) is retried by the poster; permanent (other 4xx, an
 // expired token, a failed container) fails at once; ambiguous (the final publishing call failed in a way the platform
-// may still have acted on) is flagged for the owner and never retried. No Next.js imports.
+// may still have acted on, or answered 200 with nothing usable) is flagged for the owner and never retried.
+// No Next.js imports.
 // Verified by tests/unit/social-meta-adapter.test.ts.
 import type { EnvLike } from '@/lib/env';
 import type { Platform } from '../states';
@@ -60,7 +61,14 @@ async function graph<T>({ deps, token, path, form, final }: Call): Promise<T> {
     const what = (err as Error)?.name === 'TimeoutError' ? 'timed out' : 'network error';
     throw new SocialPostError(final ? 'ambiguous' : 'transient', `Meta request ${what}`);
   }
-  if (res.ok) return (await res.json()) as T;
+  if (res.ok) {
+    // A 200 from the publishing call that cannot be read may still have posted (5A review H1): never retried.
+    try {
+      return (await res.json()) as T;
+    } catch {
+      throw new SocialPostError(final ? 'ambiguous' : 'transient', 'Meta returned an unreadable answer');
+    }
+  }
   const code = await res
     .json()
     .then((b: { error?: { code?: unknown } }) => (typeof b?.error?.code === 'number' ? b.error.code : null))
@@ -72,9 +80,10 @@ async function graph<T>({ deps, token, path, form, final }: Call): Promise<T> {
   throw new SocialPostError('permanent', detail);
 }
 
-const idOf = (v: unknown): string => {
+// `kind` is 'ambiguous' for the publishing call's answer: without a usable id we cannot tell whether it posted.
+const idOf = (v: unknown, kind: FailureKind = 'permanent'): string => {
   const id = (v as { id?: unknown })?.id;
-  if (typeof id !== 'string' || !/^[\w-]{1,100}$/.test(id)) throw new SocialPostError('permanent', 'Meta returned no usable id');
+  if (typeof id !== 'string' || !/^[\w-]{1,100}$/.test(id)) throw new SocialPostError(kind, 'Meta returned no usable id');
   return id;
 };
 
@@ -105,7 +114,7 @@ export const instagram: PlatformAdapter = {
     const { token, igUserId } = credentials('instagram', deps.env);
     const container = idOf(await graph({ deps, token, path: `${igUserId}/media`, form: { image_url: d.imageUrl, caption: d.text } }));
     await waitForContainer(deps, token, container);
-    const media = idOf(await graph({ deps, token, path: `${igUserId}/media_publish`, form: { creation_id: container }, final: true }));
+    const media = idOf(await graph({ deps, token, path: `${igUserId}/media_publish`, form: { creation_id: container }, final: true }), 'ambiguous');
     const link = await graph<{ permalink?: unknown }>({ deps, token, path: `${media}?fields=permalink` }).catch(() => null);
     const url = typeof link?.permalink === 'string' && link.permalink.startsWith('https://') ? link.permalink : null;
     return { externalId: media, url };
@@ -121,7 +130,7 @@ export const facebook: PlatformAdapter = {
   async post(d, deps) {
     const { token, pageId } = credentials('facebook', deps.env);
     const r = await graph<{ post_id?: unknown }>({ deps, token, path: `${pageId}/photos`, form: { url: d.imageUrl, message: d.text }, final: true });
-    const postId = idOf({ id: r.post_id });
+    const postId = idOf({ id: r.post_id }, 'ambiguous');
     return { externalId: postId, url: `https://www.facebook.com/${postId}` };
   },
   async metrics(d, deps) {

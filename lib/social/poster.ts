@@ -5,7 +5,8 @@
 // link) with the stored image URL. Transient failures go back to scheduled 5 minutes later, up to 4 attempts in all, then
 // failed; permanent failures fail at once; an ambiguous one (the platform may have posted) is flagged and never retried.
 // Platforms without credentials are not claimed at all and are reported. A row left in `posting` for 30 minutes (a crash
-// mid-post) is flagged by recoverStuck, never retried. Every failed or flagged row writes one failed_jobs alert (the
+// mid-post) is flagged by recoverStuck, never retried. Once the platform accepted a post, any later error (a database
+// write, the re-check) flags the row, never defers or fails it (5A review H1). Every failed or flagged row writes one failed_jobs alert (the
 // digest), with the status and code only. No Next.js imports. Verified by tests/unit/social-poster.test.ts.
 import { socialEnabled } from '@/lib/config';
 import type { Queryable } from '@/lib/db';
@@ -72,7 +73,7 @@ async function postedToday(db: Queryable, platform: Platform, now: Date): Promis
   return r.rows[0].n;
 }
 
-async function failRow(db: Queryable, d: Claimed, event: 'fail' | 'flag', message: string): Promise<void> {
+async function failRow(db: Queryable, d: { id: number; platform: Platform }, event: 'fail' | 'flag', message: string): Promise<void> {
   await moveDistribution(db, d.id, event, { set: { last_error: message } });
   const what = event === 'fail' ? 'failed' : 'flagged for the owner (it may have been posted)';
   await alert(db, 'social-post', `social post ${d.id} on ${d.platform} ${what}: ${message}`);
@@ -107,19 +108,33 @@ async function postOne(db: Queryable, d: Claimed, now: Date, deps: PosterDeps, a
     r.deferred++;
     return;
   }
+  const text = postText(d.platform, { caption: d.caption, hashtags: d.hashtags, link: d.link });
+  let out: PostResult;
   try {
-    const text = postText(d.platform, { caption: d.caption, hashtags: d.hashtags, link: d.link });
-    const out = await adapter.post({ text, imageUrl: d.image_url }, { fetch: deps.fetch, env: deps.env, sleep: deps.sleep });
+    out = await adapter.post({ text, imageUrl: d.image_url }, { fetch: deps.fetch, env: deps.env, sleep: deps.sleep });
+  } catch (err) {
+    await onError(db, d, err, now, r);
+    return;
+  }
+  await recordPosted(db, d, out, now, r);
+}
+
+type PostResult = Awaited<ReturnType<PlatformAdapter['post']>>;
+
+// After the platform accepted the post (5A review H1): nothing here may lead to a retry. A failing write flags the row;
+// if even that fails the row stays `posting` and recoverStuck flags it after 30 minutes. Exported for the video poster.
+export async function recordPosted(db: Queryable, d: { id: number; item_id: string; platform: Platform }, out: PostResult, now: Date, r: PosterResult, where?: Parameters<typeof eligibleItem>[3]): Promise<void> {
+  try {
     await moveDistribution(db, d.id, 'posted', {
       set: { posted_at: now.toISOString(), post_url: out.url, external_id: out.externalId, last_error: null },
     });
     r.posted++;
     // Unpublished while the call was in flight: the post exists, so the owner removes it by hand.
-    if (!(await eligibleItem(db, d.item_id, now))) {
+    if (!(await eligibleItem(db, d.item_id, now, where))) {
       await failRow(db, d, 'flag', 'item unpublished while posting: remove manually from the platform');
     }
-  } catch (err) {
-    await onError(db, d, err, now, r);
+  } catch {
+    await failRow(db, d, 'flag', `posted as ${out.externalId} but not recorded: check the platform`).catch(() => undefined);
   }
 }
 

@@ -10,6 +10,7 @@ import { newTestDb } from '../helpers/test-db';
 import { distribution, socialItem, statusOf } from '../helpers/social';
 import { seedReference } from '@/db/seed';
 import { postText } from '@/lib/social/copy';
+import { nextStatus } from '@/lib/social/states';
 import { runPoster, recoverStuck } from '@/lib/social/poster';
 import { collectMetrics } from '@/lib/social/metrics';
 import { socialTick } from '@/lib/jobs/social';
@@ -132,6 +133,54 @@ describe('runPoster', () => {
     await runPoster(db, new Date(NOW.getTime() + 3_600_000), deps(adapter));
     expect(adapter.post).toHaveBeenCalledTimes(1);
     expect(await alerts()).toHaveLength(1);
+  });
+
+  it('5A review H1: once the platform accepted the post, a failing database write flags the row; it is never posted again', async () => {
+    const id = await due();
+    const { adapter } = fakeAdapter();
+    let failOnce = true;
+    const flaky = {
+      ...db,
+      query: (text: string, params?: unknown[]) => {
+        if (failOnce && params?.[1] === 'posted') {
+          failOnce = false;
+          return Promise.reject(new Error('connection reset'));
+        }
+        return db.query(text, params as unknown[]);
+      },
+    } as typeof db;
+    await runPoster(flaky, NOW, deps(adapter));
+    expect(['flagged', 'posting']).toContain(await statusOf(db, id));
+    await runPoster(db, new Date(NOW.getTime() + 3_600_000), deps(adapter));
+    await recoverStuck(db, new Date(NOW.getTime() + 3_600_000));
+    await runPoster(db, new Date(NOW.getTime() + 7_200_000), deps(adapter));
+    expect(adapter.post).toHaveBeenCalledTimes(1);
+    expect(await statusOf(db, id)).toBe('flagged');
+  });
+
+  it('5A review H1: an error in the re-check after posting flags the row, never defers or fails it', async () => {
+    const id = await due();
+    const { adapter } = fakeAdapter();
+    let calls = 0;
+    const flaky = {
+      ...db,
+      query: (text: string, params?: unknown[]) => {
+        if (/FROM items i JOIN worlds/.test(text) && ++calls === 2) return Promise.reject(new Error('timeout'));
+        return db.query(text, params as unknown[]);
+      },
+    } as typeof db;
+    await runPoster(flaky, NOW, deps(adapter));
+    expect(await statusOf(db, id)).toBe('flagged');
+    await runPoster(db, new Date(NOW.getTime() + 3_600_000), deps(adapter));
+    expect(adapter.post).toHaveBeenCalledTimes(1);
+  });
+
+  it('5A review H1: an ambiguous adapter answer (a 200 without a usable id) is flagged and the owner is not offered Retry', async () => {
+    const id = await due('facebook');
+    const { adapter } = fakeAdapter([new SocialPostError('ambiguous', 'Meta returned no usable id')]);
+    await runPoster(db, NOW, deps(adapter));
+    expect(await statusOf(db, id)).toBe('flagged');
+    expect(nextStatus('flagged', 'retry')).toBeNull();
   });
 
   it('two concurrent ticks post a row once', async () => {
