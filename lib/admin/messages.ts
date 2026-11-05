@@ -41,6 +41,10 @@ export const DONE = {
   sponsor_created: 'Sponsor saved.',
   sponsorship_attached: 'Sponsorship attached. It shows on matching adults items while its dates allow.',
   sponsorship_ended: 'Sponsorship ended: its line no longer shows anywhere.',
+  social_platform_saved: 'Platform settings saved.',
+  social_picked: 'Item picked for that platform today. It waits for the promotion run to write its copy.',
+  social_retried: 'Post scheduled for one more attempt now.',
+  social_cancelled: 'Post cancelled.',
 } as const;
 
 export const ERRORS = {
@@ -60,6 +64,10 @@ export const ERRORS = {
   sponsor_rules: 'A sponsor needs a name (up to 80 characters), an https link to a public site, an allowed category and the confirmation box ticked.',
   sponsor_target: 'Sponsorship attaches only to a published adults item outside Kids, an existing topic, or a world other than Kids.',
   contributor_banned: 'This contributor is banned from commenting, which also blocks contributing: it cannot be approved.',
+  social_ineligible: 'That item cannot go to social media (Kids, not published, or not a quiz, game or article).',
+  social_cap: "That platform's posts for today are already at its daily cap.",
+  social_platform: 'That platform is switched off.',
+  social_exists: 'That item already has a post for that platform.',
   key_gone: 'That key has already been shown or has expired. Rotate the key again if it was not saved.',
 } as const;
 

@@ -820,6 +820,74 @@ no sponsor row is read. Plan `docs/superpowers/plans/2026-11-05-project-6-sponso
   (every line disappears; rows stay), or the previous release (it never reads sponsorship). Schema rollback is in the
   migration header, only after the previous release is live.
 
+## Social distribution (Project 5A)
+
+Behind `SOCIAL_ENABLED` (off everywhere; `deploy/env/*.example` carry `# SOCIAL_ENABLED=` and empty `META_*` lines)
+**and** a per-platform switch in `/admin/social/` (all off). With the flag unset there is no social job, promotion
+route, `social.*` admin action, Social admin page, share-image format or visit counting, and every page is unchanged.
+Plan `docs/superpowers/plans/2026-11-05-project-5a-social-text-image.md`. Part A posts to Instagram and Facebook only;
+the TikTok and YouTube rows exist for 5B and are never selected or posted, even if switched on.
+
+- **Owner prerequisites (roadmap 5.1).** A Meta Business account; a Facebook Page; an Instagram professional account
+  linked to that Page; a Meta developer app with App Review for `pages_manage_posts`, `pages_read_engagement`,
+  `instagram_basic`, `instagram_content_publish` and `instagram_manage_insights`. Then a long-lived **Page** access token
+  (made from a long-lived user token for an admin of the Page; it does not expire while the app keeps access, and it
+  stops working if the password changes or the app loses permission). Put it only in the root-owned env file on the VM,
+  never in the repository, the database, a prompt, a chat or the owner's secrets file. Rotate it by replacing the line
+  and restarting nothing (the worker reads the env file on each tick).
+- **Env variables** (`/opt/sparkkindly/shared/<env>.env`): `SOCIAL_ENABLED=true`, `META_PAGE_ACCESS_TOKEN`,
+  `META_PAGE_ID`, `META_IG_USER_ID` (the Instagram professional account id). While any one is missing the posts for that
+  platform stay `scheduled` and `/admin/social/` shows "No credentials"; nothing crashes and the other platform still
+  posts. Errors are stored and alerted as an HTTP status and Graph code only, never a token, caption or response text.
+- **Daily flow.** The first worker tick of each UTC day picks, per switched-on platform, up to the day's cap from items
+  published in the last 3 days (never Kids by world, audience or risk tier; quizzes and games first; the world with the
+  oldest last post first; then topics with more answers in 14 days; then newest) and records every other candidate as
+  `skipped` with its reason. The owner may hand-pick any eligible item for today in `/admin/social/` (the cap holds).
+  `/promote-run env=<staging|prod>` writes the copy: one `sparkkindly-promoter-<env>` subagent per entry
+  (`.claude/agents/sparkkindly-promoter-<env>.md`, holding only its environment's copy tool), through the promoter key.
+  The site validates every caption (no links, domains in any script, `@`, `#` in the caption, hidden characters,
+  blocked words; at most 8 hashtags; Facebook 500 characters, Instagram 2,200 in all), builds the link
+  (`https://<site>/<world>/<slug>/?utm_source=<platform>&utm_medium=social&utm_campaign=<world>-<slug>`, from
+  `ADMIN_LINK_BASE`) and the image URL (`/api/template-image/<world>/<slug>/?format=social`, a 1080x1350 JPEG), and
+  schedules it at the platform's time (if that has passed, at once; never after 20:00 UTC, else the next day). The
+  worker posts every 5 minutes, one claimed row at a time, re-checking the item and the day's cap just before the call.
+- **Promoter key and schedule.** In `/admin/agents/` (visible with the flag on) create an agent with role "Social
+  promotion" and world "Master agent"; its key works only on `GET /api/agent/promotions/` and
+  `POST /api/agent/promotions/copy/` (403 everywhere else; every other key gets 403 there). Put it in the owner's
+  secrets file as `SPARKKINDLY_<STAGING|PROD>_PROMOTER_KEY`. Schedule after the daily run, by hand in Windows Task
+  Scheduler like `/moderate-run`: `claude -p "/promote-run env=staging" --setting-sources project --allowedTools Agent
+  mcp__sparkkindly-staging-promoter --disallowedTools Bash Write Edit Read WebFetch WebSearch`. It prints one line of
+  counts, never captions or item text.
+- **Staging dry run (before production).** On staging with a test Page and test Instagram account only: set the flag
+  and the test Page's credentials, switch Instagram and Facebook on with cap 1, hand-pick one item, run
+  `/promote-run env=staging`, then check: `curl -s -o /tmp/s.jpg -w '%{content_type}\n'
+  'https://staging.sparkkindly.com/api/template-image/<world>/<slug>/?format=social'` prints `image/jpeg` (with the
+  staging basic auth; note Meta cannot fetch an image behind basic auth, so the dry run needs that one path reachable,
+  or a production-like host), `file /tmp/s.jpg` says JPEG 1080x1350, the next 5-minute tick posts it, the row shows
+  `posted` with a working post link, and the link opens the item with the UTM values. Record the result here.
+- **Weekly caption spot-check.** Every week read the captions of the last 7 days' posted rows (`/admin/social/`, or
+  `SELECT platform, caption, hashtags FROM distributions WHERE posted_at > now() - interval '7 days'`) for tone,
+  accuracy and anything that should have been refused; record the date, count read and findings here (evaluation
+  evidence, ai-governance.md). A bad caption: delete the post on the platform, then tighten the prompt or the checks.
+- **Failures.** Transient errors (429, 5xx, network, image still processing) retry 3 times 5 minutes apart, then
+  `failed`. Other 4xx and an expired token fail at once. Each failed or flagged row writes one `failed_jobs` alert (the
+  digest). "Retry" in `/admin/social/` gives a failed row one more attempt now; "Cancel" stops a pending or failed one.
+- **Flagged rows** need the owner: (a) the final publishing call failed in a way Meta may still have acted on, or (b) a
+  row stayed in `posting` for 30 minutes (the worker stopped mid-post), or (c) the item was unpublished after posting.
+  Look on the platform. For (a) and (b): if the post exists, leave the row flagged (it is never retried); if it does not,
+  "Cancel" the row, and hand-pick the item again if it should still go out. For (c) delete the post on the platform by
+  hand, then "Cancel" the row. Archiving an item cancels its pending posts in the same transaction.
+- **Metrics.** Once a day the worker reads reach, likes and comments for posts of the last 7 days; a failure is logged
+  and never blocks posting. Visits from social links are counted in `social_visits` (day, platform, item, count; nothing
+  about the visitor) and shown in `/admin/social/` for 30 days.
+- **Dependency.** The JPEG conversion uses `sharp` 0.35.5 (Apache-2.0), already in the tree for the brand scripts and
+  Next's image optimiser, moved from devDependencies to dependencies; `npm audit --omit=dev` reported 0 vulnerabilities
+  (5 Nov 2026).
+- **Migration and rollback.** `028_social.sql` is additive (`social_platforms` seeded with caps 2/3/1/1, all off;
+  `distributions`; `social_visits`; `promoter` in the agents role CHECK). Code rollback: unset `SOCIAL_ENABLED` (nothing
+  posts; rows stay), or the previous release (it never reads them and refuses the promoter key). Disable promoter agents
+  before rolling back past the migration; its schema rollback is in the migration header.
+
 ## Pilot measurement (roadmap P.2)
 
 `/admin/pilot/` shows the spec 4a.2 pilot metrics against their thresholds, computed from data the site already holds

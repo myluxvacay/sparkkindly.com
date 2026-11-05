@@ -50,6 +50,7 @@ describe('nextStatus', () => {
     ['scheduled', 'cancel', 'cancelled'],
     ['posting', 'cancel', 'cancelled'],
     ['failed', 'cancel', 'cancelled'],
+    ['flagged', 'cancel', 'cancelled'], // the owner checked the platform: it is not there
     ['failed', 'retry', 'scheduled'],
     ['skipped', 'pick', 'selected'],
     ['cancelled', 'pick', 'selected'],
@@ -68,9 +69,9 @@ describe('nextStatus', () => {
     }
   });
 
-  it('posted is never retried, re-scheduled or cancelled; flagged and cancelled lead nowhere automatic', () => {
+  it('posted is never retried, re-scheduled or cancelled; flagged only leaves by the owner cancelling it', () => {
     for (const e of ['retry', 'defer', 'claim', 'cancel', 'schedule'] as DistEvent[]) expect(nextStatus('posted', e)).toBeNull();
-    for (const e of Object.keys(EVENTS) as DistEvent[]) expect(nextStatus('flagged', e)).toBeNull();
+    for (const e of Object.keys(EVENTS) as DistEvent[]) if (e !== 'cancel') expect(nextStatus('flagged', e)).toBeNull();
     expect(nextStatus('posting', 'retry')).toBeNull();
   });
 

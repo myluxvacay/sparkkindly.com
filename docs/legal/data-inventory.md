@@ -95,6 +95,14 @@ dates, link text and one click count per sponsorship. No personal data: a click 
 or log row, and the sponsor line and redirect set no cookie and make no third-party request. Items, topics, worlds,
 answers and agent tables hold content, not personal data.
 
+`social_platforms`, `distributions` and `social_visits` (Project 5A, behind `SOCIAL_ENABLED`) hold platform settings,
+the posts made about published items (caption, hashtags, our own link and image URL, the platform's post id and URL,
+reach, likes and comment counts, errors as an HTTP status and code) and one visit count per day, platform and item for
+visits that arrive with a `utm_source` naming a platform. No personal data: no visitor identifier, cookie, address or
+log row; captions never name or describe a person, and the share image carries only the item title, world and logo.
+The Meta page token and ids live only in the root-owned env file on the VM and are read by the worker at call time;
+they are never stored in the database. The worker sends Meta the caption and our public image and item URLs only.
+
 ## 2. Outside the database
 
 | Where | What | Retention | Source |
@@ -143,8 +151,8 @@ From spec 4a.5 and the code:
 ## 5. Planned, not yet available
 
 Circles and scores (Project 4), comments and communities (Project 4 onward) and contributions (Project 8) are built
-behind their flags and listed above. Sponsorship (Project 6) is built behind its flag and stores no personal data (above). Social sharing does not exist
-and stores nothing today. Each will need rows added
+behind their flags and listed above. Sponsorship (Project 6) and social distribution (Project 5A) are built behind their flags and store no personal data
+(above). Each will need rows added
 here before it launches.
 
 ## Owner decisions pending

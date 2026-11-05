@@ -134,6 +134,14 @@ and keeps nothing about the visitor (no cookie, identifier, address or referrer)
 footer or About page may link `/sponsorship/` (Ruling: not added now, so every page stays byte-identical while the
 flag is off). The `/sponsorship/` copy and the excluded-category list need the owner's review.
 
+## Social distribution (Project 5A)
+
+Before `SOCIAL_ENABLED` goes on in production: the privacy page should say that SparkKindly posts about some published
+pieces on its own Instagram and Facebook accounts (never Kids pieces), that links in those posts carry a `utm_source`
+so the site can count, in aggregate and with nothing kept about the visitor, how many visits each platform sends, and
+that Meta's own policies apply on those platforms. The site itself still makes no request to Meta and sets no cookie
+(Ruling: not added now, so every page stays byte-identical while the flag is off).
+
 ## Other places that point at the privacy page
 
 - The parent consent email links to the privacy page (`lib/accounts/consent-email.ts`, `privacyUrl`). It must not be

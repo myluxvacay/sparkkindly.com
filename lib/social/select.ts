@@ -136,24 +136,28 @@ export type PickResult = { ok: true } | { ok: false; reason: 'platform' | 'ineli
 
 // The owner's pick of one item for one platform today (UTC). Any publish date; the eligibility rule and the cap hold.
 export async function handPick(db: Db, itemId: string, platform: Platform, now: Date): Promise<PickResult> {
+  return db.transaction((tx) => handPickTx(tx, itemId, platform, now));
+}
+
+// The same on a transaction the caller owns (the admin action, which audits in it).
+export async function handPickTx(tx: Queryable, itemId: string, platform: Platform, now: Date): Promise<PickResult> {
   if (!socialEnabled() || !isPlatform(platform)) return { ok: false, reason: 'platform' };
-  return db.transaction(async (tx) => {
-    const p = await platformRow(tx, platform, true);
-    if (!p?.enabled) return { ok: false, reason: 'platform' };
-    if (!(await eligibleItem(tx, itemId, now))) return { ok: false, reason: 'ineligible' };
-    const day = now.toISOString().slice(0, 10);
-    const existing = await tx.query<{ status: string }>('SELECT status FROM distributions WHERE item_id = $1 AND platform = $2', [itemId, platform]);
-    const status = existing.rows[0]?.status;
-    if (status && status !== 'skipped' && status !== 'cancelled') return { ok: false, reason: 'exists' };
-    if ((await usedToday(tx, platform, day)) >= p.daily_cap) return { ok: false, reason: 'cap' };
-    const r = await tx.query(
-      `INSERT INTO distributions (item_id, platform, day, status) VALUES ($1, $2, $3, 'selected')
-       ON CONFLICT (item_id, platform) DO UPDATE
-         SET status = 'selected', skip_reason = NULL, day = EXCLUDED.day, version = distributions.version + 1, updated_at = now()
-         WHERE distributions.status IN ('skipped', 'cancelled')
-       RETURNING id`,
-      [itemId, platform, day],
-    );
-    return r.rows.length ? { ok: true } : { ok: false, reason: 'exists' };
-  });
+  const p = await platformRow(tx, platform, true);
+  if (!p?.enabled) return { ok: false, reason: 'platform' };
+  if (!(await eligibleItem(tx, itemId, now))) return { ok: false, reason: 'ineligible' };
+  const day = now.toISOString().slice(0, 10);
+  const existing = await tx.query<{ status: string }>(
+    'SELECT status FROM distributions WHERE item_id = $1 AND platform = $2',
+    [itemId, platform],
+  );
+  const status = existing.rows[0]?.status;
+  if (status && status !== 'skipped' && status !== 'cancelled') return { ok: false, reason: 'exists' };
+  if ((await usedToday(tx, platform, day)) >= p.daily_cap) return { ok: false, reason: 'cap' };
+  await tx.query(
+    `INSERT INTO distributions (item_id, platform, day, status) VALUES ($1, $2, $3, 'selected')
+     ON CONFLICT (item_id, platform) DO UPDATE
+       SET status = 'selected', skip_reason = NULL, day = EXCLUDED.day, version = distributions.version + 1, updated_at = now()`,
+    [itemId, platform, day],
+  );
+  return { ok: true };
 }

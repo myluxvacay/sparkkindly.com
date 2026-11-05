@@ -109,11 +109,11 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 ## Project 5: Social media distribution
 
 - [ ] 5.1 **[owner]** Share access to the SparkKindly Instagram, Facebook, TikTok and YouTube accounts; Meta Business account, Page, Instagram professional account, Meta developer app and review; TikTok developer app and Content Posting approval; Google Cloud project with YouTube Data API — *approvals granted (weeks; start during Project 0).*
-- [ ] 5.2 `distributions` table and per-platform daily caps in `/admin` (Instagram 2, Facebook 3, TikTok 1, YouTube 1) — *caps editable.*
-- [ ] 5.3 Daily selection rule: rotate worlds, prefer playable, prefer popular topics, never Kids; `skipped` with reason — *selection tests.*
-- [ ] 5.4 Promotion agent: captions and hashtags per platform; branded share image — *output validated against platform limits.*
-- [ ] 5.5 Worker posting to Instagram and Facebook via Meta Graph API with UTM links; metrics collection — *a published item appears on both with a working link.*
-- [ ] 5.6 Unpublish cancels scheduled posts and flags posted ones — *test.*
+- [x] 5.2 `distributions` table and per-platform daily caps in `/admin` (Instagram 2, Facebook 3, TikTok 1, YouTube 1) — *caps editable.* (5 Nov 2026, behind `SOCIAL_ENABLED`, platforms all off; independent review pending): migration 028, `/admin/social/`, `social-admin.test.ts`, e2e `social.spec.ts`
+- [x] 5.3 Daily selection rule: rotate worlds, prefer playable, prefer popular topics, never Kids; `skipped` with reason — *selection tests.* (`social-rules.test.ts`, `social-select.test.ts`)
+- [x] 5.4 Promotion agent: captions and hashtags per platform; branded share image — *output validated against platform limits.* (promoter role, `/promote-run`, `social-promotions-api.test.ts`, 1080x1350 JPEG `social-share-image.test.ts`)
+- [x] 5.5 Worker posting to Instagram and Facebook via Meta Graph API with UTM links; metrics collection — *a published item appears on both with a working link.* (built and tested against an injected Meta fake, `social-meta-adapter.test.ts`, `social-poster.test.ts`; the live check waits for 5.1 and the staging dry run in OPERATIONS)
+- [x] 5.6 Unpublish cancels scheduled posts and flags posted ones — *test.* (`social-cancel.test.ts`, e2e `social.spec.ts`)
 - [ ] 5.7 Video jobs queue: brief generation (script, shot list, on-screen text, captions, assets), job in `/admin`, upload of finished file — *a job round-trips.*
 - [ ] 5.8 **[owner]** Decide who makes the videos (person or tool such as Canva) — *recorded.*
 - [ ] 5.9 Worker posting to TikTok and YouTube from attached files — *a Short is posted with no further human step.*

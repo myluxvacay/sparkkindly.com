@@ -19,10 +19,11 @@ import { resetReporter, resolveEscalation } from '@/lib/comments/owner-actions';
 import { setTrust } from '@/lib/comments/trust';
 import { withRetry } from '@/lib/comments/moderation';
 import { isReasonCode } from '@/lib/comments/rejection-email';
-import { commentsEnabled, contributorsEnabled, sponsorshipEnabled } from '@/lib/config';
+import { commentsEnabled, contributorsEnabled, socialEnabled, sponsorshipEnabled } from '@/lib/config';
 import { approveLink, isContributed, lockContribution, markApproved, ownerDecision } from '@/lib/contributors/owner';
 import { sendEmail, type EmailMessage } from '@/lib/email';
 import { attachSponsorship, createSponsor, endSponsorship } from '@/lib/sponsorship/admin';
+import { socialHandlers } from '@/lib/social/admin-actions';
 import { linkBase } from './sessions';
 import { audit } from './audit';
 import { DONE, ERRORS, type DoneCode, type ErrorCode } from './messages';
@@ -474,6 +475,8 @@ const handlers: Record<string, Handler> = {
   },
 };
 
+Object.assign(handlers, socialHandlers((status, code) => new ActionError(status, code)));
+
 export const actionNames = Object.keys(handlers);
 
 const failure = (status: 400 | 404 | 409, code: ErrorCode): AdminActionResult => ({ ok: false, status, code, message: ERRORS[code] });
@@ -499,12 +502,14 @@ async function sendAfter(send: (m: EmailMessage) => Promise<unknown>, mail: Emai
 }
 
 // With comments switched off (ACCOUNTS_ENABLED or COMMENTS_ENABLED unset), every comments.* action is unknown.
-// With contributors switched off, every contribution.* action is unknown too; with sponsorship off, every sponsor action.
+// With contributors switched off, every contribution.* action is unknown too; with sponsorship off, every sponsor action;
+// with SOCIAL_ENABLED off, every social.* action (plan 5A).
 const available = (name: string) =>
   Object.hasOwn(handlers, name) &&
   (!name.startsWith('comments.') || commentsEnabled()) &&
   (!name.startsWith('contribution.') || contributorsEnabled()) &&
-  (!name.startsWith('sponsor') || sponsorshipEnabled());
+  (!name.startsWith('sponsor') || sponsorshipEnabled()) &&
+  (!name.startsWith('social.') || socialEnabled());
 
 export async function runAction(
   db: Db,
