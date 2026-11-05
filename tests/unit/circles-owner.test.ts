@@ -176,6 +176,20 @@ describe('closeCircle', () => {
   });
 });
 
+describe('hidden circles (final review 3)', () => {
+  it('a hidden circle takes no owner action: remove, transfer and close are refused and nothing changes', async () => {
+    const [o, a] = [await account(), await account()];
+    const slug = await circle(o, 'family');
+    await join(slug, a);
+    await db.query('UPDATE circles SET hidden_at = $2 WHERE slug = $1', [slug, T1.toISOString()]);
+    const before = await snapshot();
+    expect(await removeMember(db, o, slug, key(a), T1)).toBe('not_owner');
+    expect(await transferOwnership(db, o, slug, a, T1)).toBe('not_owner');
+    expect(await closeCircle(db, o, slug, T1)).toBe('not_owner');
+    expect(await snapshot()).toEqual(before);
+  });
+});
+
 describe('ids in any letter case (4A review)', () => {
   it('an owner cannot remove their own owner row, or transfer to themself, with an upper-case id', async () => {
     const [o, a] = [await account(), await account()];

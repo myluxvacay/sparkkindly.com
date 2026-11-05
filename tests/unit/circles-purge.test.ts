@@ -45,6 +45,16 @@ async function circle(closedDaysAgo: number | null) {
 const ids = async () => (await db.query<{ id: string }>('SELECT id FROM circles ORDER BY id')).rows.map((r) => r.id).sort();
 
 describe('purgeClosedCircles', () => {
+  it('keeps a closed circle with an unhandled report (moderation evidence) until the report is handled (final review 3)', async () => {
+    const reported = await circle(40);
+    await db.query("INSERT INTO circle_reports (circle_id, reporter_account_id, reason) VALUES ($1, $2, 'safety')", [reported, owner]);
+    expect(await purgeClosedCircles(db, NOW, 100, atNow)).toBe(0);
+    expect(await ids()).toEqual([reported]);
+    await db.query('UPDATE circle_reports SET handled_at = $2 WHERE circle_id = $1', [reported, NOW.toISOString()]);
+    expect(await purgeClosedCircles(db, NOW, 100, atNow)).toBe(1);
+    expect(await ids()).toEqual([]);
+  });
+
   it('deletes only circles closed over 30 days ago, with their members, and leaves open and recent ones', async () => {
     const open = await circle(null);
     const recent = await circle(29);

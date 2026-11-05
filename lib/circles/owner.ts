@@ -13,7 +13,8 @@ export type MemberKey = { accountId: string; profileId: string | null };
 // The circle locked for an owner action by `ownerId`, or the refusal.
 export async function asOwner(tx: Queryable, ownerId: string, slug: string): Promise<CircleRow | 'not_owner' | 'closed'> {
   const c = isUuid(ownerId) ? await lockCircle(tx, slug) : null;
-  if (!c || c.owner_account_id !== ownerId || (await myRole(tx, c.id, ownerId)) !== 'owner') {
+  // A hidden circle (admin moderation) takes no owner action until it is restored (final review 3).
+  if (!c || c.hidden_at || c.owner_account_id !== ownerId || (await myRole(tx, c.id, ownerId)) !== 'owner') {
     return 'not_owner';
   }
   return c.status === 'closed' ? 'closed' : c;
