@@ -118,6 +118,8 @@ export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Re
     sampled_at: 'moderation workflow state (picked for the post-publication sample); the status is exported',
     sample_reviewed_at: 'moderation workflow state (when the sample was reviewed); the status is exported',
     decided_by: 'moderation workflow state naming the agent or the administrator who decided; not about the member',
+    moderation_code: 'the closed reason code of a removal; its fixed sentence reached the author in the email (7B review M2)',
+    escalation_note: "the moderation agent's note to the owner when it escalated; owner-only, never shown to the author (7B review M1)",
   },
   account_trust: {
     account_id: 'internal identifier of the account (the export is already that account)',

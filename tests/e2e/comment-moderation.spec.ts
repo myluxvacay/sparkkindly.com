@@ -72,7 +72,7 @@ async function queued(request: APIRequestContext, key: string, id: string): Prom
 }
 async function decide(request: APIRequestContext, key: string, id: string, decision: string, reason?: string) {
   const e = await queued(request, key, id);
-  const r = await request.post('/api/agent/moderation/decide/', { headers: { 'x-agent-key': key }, data: { id, version: e.version, decision, reason } });
+  const r = await request.post('/api/agent/moderation/decide/', { headers: { 'x-agent-key': key }, data: { id, version: e.version, decision, reason, ...(['reject', 'hide'].includes(decision) ? { code: 'abuse' } : {}) } });
   expect(r.status(), await r.text()).toBe(200);
 }
 

@@ -4,6 +4,7 @@
 // current state, that the agent saw its current version (an author edit after the queue read makes it stale), that an
 // approved author is not banned and that the text still passes the mechanical checks, then applies the effects and
 // writes an audit row with actor agent:<name>. A repeated decision returns the current state with no second effect.
+// Only weighted reports count for the agent (a muted reporter's zero-weight report, urgent or not, is the owner's alone).
 // Comment text, item titles and report notes reach the agent only inside each entry's `data`; no account id, email or
 // display name is ever returned. No Next.js imports. Verified by tests/unit/comments-moderation.test.ts.
 import { z } from 'zod';
@@ -19,7 +20,8 @@ import type { EnvLike } from '@/lib/env';
 import { appealToken } from './appeals';
 import { checkComment } from './checks';
 import { APPLIES, applyDecision, type Decision, type Kind, type Locked } from './decisions';
-import { rejectionEmail } from './rejection-email';
+import { AUTHOR_REASONS, REASON_CODES, rejectionEmail, type ReasonCode } from './rejection-email';
+import { LINK_LIKE } from '@/lib/circles/rules';
 import { lockTrust } from './trust';
 
 export { SAMPLE_RATE, pickForSample } from './sample';
@@ -37,8 +39,8 @@ export type QueueEntry = {
 const KIND_SQL = `CASE
   WHEN c.escalated_at IS NOT NULL THEN NULL
   WHEN c.status = 'held' THEN 'held'
-  WHEN c.status = 'hidden' AND EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL) THEN 'reported'
-  WHEN c.status = 'published' AND EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL AND r.urgent) THEN 'reported'
+  WHEN c.status = 'hidden' AND EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL AND r.weight > 0) THEN 'reported'
+  WHEN c.status = 'published' AND EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL AND r.urgent AND r.weight > 0) THEN 'reported'
   WHEN c.status = 'published' AND c.sampled_at IS NOT NULL AND c.sample_reviewed_at IS NULL THEN 'sample'
 END`;
 const ORDER: Record<Kind, number> = { held: 0, reported: 1, sample: 2 };
@@ -54,7 +56,7 @@ export async function moderationQueue(db: Queryable, _now: Date, limit = 20): Pr
        FROM comments c JOIN items i ON i.id = c.item_id JOIN worlds w ON w.id = i.world_id
        LEFT JOIN account_trust t ON t.account_id = c.account_id
        WHERE c.status IN ('held', 'hidden') OR (c.sampled_at IS NOT NULL AND c.sample_reviewed_at IS NULL)
-          OR (c.status = 'published' AND EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL AND r.urgent))
+          OR (c.status = 'published' AND EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL AND r.urgent AND r.weight > 0))
      ) q WHERE kind IS NOT NULL
      ORDER BY CASE kind WHEN 'held' THEN ${ORDER.held} WHEN 'reported' THEN ${ORDER.reported} ELSE ${ORDER.sample} END, created_at, id
      LIMIT $1`,
@@ -62,7 +64,7 @@ export async function moderationQueue(db: Queryable, _now: Date, limit = 20): Pr
   );
   const reports = await db.query<{ c: string; reason: string; note: string | null; urgent: boolean }>(
     `SELECT comment_id AS c, reason, note, urgent FROM comment_reports
-     WHERE comment_id = ANY($1::uuid[]) AND handled_at IS NULL ORDER BY created_at, id`,
+     WHERE comment_id = ANY($1::uuid[]) AND handled_at IS NULL AND weight > 0 ORDER BY created_at, id`,
     [r.rows.map((x) => x.id)],
   );
   return r.rows.map((x) => ({
@@ -79,17 +81,24 @@ export async function moderationQueue(db: Queryable, _now: Date, limit = 20): Pr
   }));
 }
 
-const NEEDS_REASON: Decision[] = ['reject', 'hide', 'escalate'];
+// reject and hide need a closed code (the author's sentence); escalate needs a note for the owner (7B review M1, M2).
+const NEEDS_CODE: Decision[] = ['reject', 'hide'];
+const NEEDS_REASON: Decision[] = ['escalate'];
+// Agent keeps per agent per UTC day (7B review M3b): an injected batch cannot restore many reported comments at once.
+export const KEEP_LIMIT = 10;
+// The free-text reason is for the owner only, and still plain: no link-like text, no @, no line break or control character.
+const plainReason = (s: string) => !LINK_LIKE.test(s.normalize('NFKC')) && !s.includes('@') && !/[\p{Cc}\p{Cf}]/u.test(s);
 const inputSchema = z.object({
   id: z.string().max(100),
   version: z.string().min(1).max(100),
   decision: z.enum(['approve', 'reject', 'escalate', 'keep', 'hide']),
-  reason: z.string().trim().min(1).max(300).optional(),
+  code: z.enum(REASON_CODES).optional(),
+  reason: z.string().trim().min(1).max(300).refine(plainReason, 'a reason is plain text with no link, @ or line break').optional(),
 });
 type Input = z.infer<typeof inputSchema>;
 
 export type DecideDeps = { env: EnvLike; send: (m: EmailMessage) => Promise<unknown> };
-type Outcome = { result: ApiResult; mail?: { to: string; body: string; accountId: string } };
+type Outcome = { result: ApiResult; mail?: { to: string; body: string; accountId: string; code: ReasonCode } };
 
 const fail = (status: number, error: string, extra: Record<string, unknown> = {}): Outcome => ({ result: { status, json: { error, ...extra } } });
 
@@ -134,26 +143,48 @@ async function decideIn(tx: Queryable, agent: Agent, input: Input, now: Date): P
     return fail(409, 'wrong_state', { status: row.status });
   }
   if (row.version !== input.version) return fail(409, 'stale');
-  if (input.decision === 'approve' && row.banned) return fail(409, 'author_banned');
+  if ((input.decision === 'approve' || input.decision === 'keep') && row.banned) return fail(409, 'author_banned');
+  if (input.decision === 'keep' && (await keepsToday(tx, actor, now)) >= KEEP_LIMIT) return fail(409, 'limit');
   if (input.decision === 'approve' && row.kind === 'held') {
     const level = (await tx.query<{ l: number }>('SELECT level AS l FROM account_trust WHERE account_id = $1', [row.account_id])).rows[0].l;
     const checked = approvable(row, level);
     if (!checked.ok) return fail(409, 'fails_checks', { check: checked.code });
   }
   const locked: Locked = { id: input.id, accountId: row.account_id, kind: row.kind, status: row.status };
-  const effect = await applyDecision(tx, locked, { decision: input.decision, reason: input.reason ?? null, actor, now });
+  const effect = await applyDecision(tx, locked, { decision: input.decision, reason: input.reason ?? null, code: input.code ?? null, actor, now });
   await audit(tx, actor, `comment.${input.decision}`, `comment:${input.id}`, { from: row.kind, status: effect.status });
   if (!effect.mail) return { result: reply(effect.status) };
   const email = (await tx.query<{ email: string }>('SELECT email FROM accounts WHERE id = $1', [row.account_id])).rows[0].email;
-  return { result: reply(effect.status), mail: { to: email, body: row.body, accountId: row.account_id } };
+  return { result: reply(effect.status), mail: { to: email, body: row.body, accountId: row.account_id, code: input.code ?? 'other' } };
 }
 
-async function sendRejection(deps: DecideDeps, id: string, mail: NonNullable<Outcome['mail']>, reason: string, now: Date) {
+async function keepsToday(tx: Queryable, actor: string, now: Date): Promise<number> {
+  const r = await tx.query<{ n: number }>(
+    `SELECT count(*)::int AS n FROM audit_log WHERE actor = $1 AND action = 'comment.keep'
+       AND at >= date_trunc('day', $2::timestamptz AT TIME ZONE 'UTC') AT TIME ZONE 'UTC'`,
+    [actor, now],
+  );
+  return r.rows[0].n;
+}
+
+// One retry on a deadlock (7B review L5): two decisions sharing reporters' trust rows may collide; PostgreSQL aborts one.
+async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
+  try {
+    return await fn();
+  } catch (err) {
+    if ((err as { code?: string }).code !== '40P01') throw err;
+    return fn();
+  }
+}
+
+async function sendRejection(deps: DecideDeps, id: string, mail: NonNullable<Outcome['mail']>, now: Date) {
   const site = linkBase(deps.env);
   const token = appealToken(unsubscribeSecret(deps.env), id, mail.accountId, now);
   if (!token) console.error('comment rejection email: no appeal secret configured; sent without an appeal link');
   try {
-    await deps.send(rejectionEmail({ to: mail.to, body: mail.body, reason, site, appealUrl: token ? `${site}/comments/appeal/${token}/` : null }));
+    await deps.send(
+      rejectionEmail({ to: mail.to, body: mail.body, reason: AUTHOR_REASONS[mail.code], site, appealUrl: token ? `${site}/comments/appeal/${token}/` : null }),
+    );
   } catch (err) {
     console.error('comment rejection email not sent:', (err as Error)?.name);
   }
@@ -165,8 +196,9 @@ export async function decide(db: Db, agent: Agent, input: unknown, now: Date, de
   if (!parsed.success) return { status: 400, json: { error: 'invalid_decision', message: parsed.error.issues[0]?.message } };
   const d = parsed.data;
   if (NEEDS_REASON.includes(d.decision) && !d.reason) return { status: 400, json: { error: 'reason_required' } };
+  if (NEEDS_CODE.includes(d.decision) && !d.code) return { status: 400, json: { error: 'code_required' } };
   if (!isUuid(d.id)) return { status: 404, json: { error: 'not_found' } };
-  const out = await db.transaction((tx) => decideIn(tx, agent, d, now));
-  if (out.mail) await sendRejection(deps, d.id, out.mail, d.reason ?? '', now);
+  const out = await withRetry(() => db.transaction((tx) => decideIn(tx, agent, d, now)));
+  if (out.mail) await sendRejection(deps, d.id, out.mail, now);
   return out.result;
 }

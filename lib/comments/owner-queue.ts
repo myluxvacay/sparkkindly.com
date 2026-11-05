@@ -8,7 +8,7 @@ import { commentCounts, type CommentCounts } from './counts';
 
 type Entry = { id: string; itemTitle: string; path: string; body: string; at: Date };
 export type OwnerQueue = {
-  escalations: (Entry & { reason: string | null; status: string })[];
+  escalations: (Entry & { reason: string | null; note: string | null; status: string })[];
   appeals: (Entry & { reason: string | null; note: string | null; status: string })[];
   urgent: (Entry & { reports: number; status: string; reason: string | null; open: boolean })[];
   muted: { report: string; falseReports: number }[];
@@ -21,7 +21,7 @@ const JOINS = 'FROM comments c JOIN items i ON i.id = c.item_id JOIN worlds w ON
 
 export async function ownerQueue(db: Queryable, now: Date): Promise<OwnerQueue> {
   const escalations = await db.query<OwnerQueue['escalations'][number]>(
-    `${BASE}, c.escalated_at AS at ${JOINS} WHERE c.escalated_at IS NOT NULL AND c.status IN ('held', 'hidden')
+    `${BASE}, c.escalation_note AS note, c.escalated_at AS at ${JOINS} WHERE c.escalated_at IS NOT NULL AND c.status IN ('held', 'hidden')
      ORDER BY c.escalated_at LIMIT 100`,
   );
   const appeals = await db.query<OwnerQueue['appeals'][number]>(

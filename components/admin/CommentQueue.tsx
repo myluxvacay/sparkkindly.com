@@ -3,6 +3,7 @@
 // agent's reason and the author's appeal note are shown; never an email, account id or name. Works without JavaScript.
 import ActionForm from '@/components/admin/ActionForm';
 import type { OwnerQueue } from '@/lib/comments/owner-queue';
+import { AUTHOR_REASONS } from '@/lib/comments/rejection-email';
 
 const RETURN = '/admin/comments/';
 const when = (d: Date) => new Date(d).toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
@@ -26,7 +27,16 @@ function Resolve({ id, csrf, label }: { id: string; csrf: string; label: string 
   return (
     <div className="admin-actions">
       <ActionForm csrf={csrf} action="comments.escalation_resolve" returnTo={RETURN} label="Publish" ariaLabel={`Publish: ${label}`} fields={{ comment: id, outcome: 'publish' }} />
-      <ActionForm csrf={csrf} action="comments.escalation_resolve" returnTo={RETURN} label="Remove" ariaLabel={`Remove: ${label}`} fields={{ comment: id, outcome: 'remove' }} plain />
+      <ActionForm csrf={csrf} action="comments.escalation_resolve" returnTo={RETURN} label="Remove" ariaLabel={`Remove: ${label}`} fields={{ comment: id, outcome: 'remove' }} plain>
+        <label htmlFor={`code-${id}`}>What the author is told</label>
+        <select id={`code-${id}`} name="code" defaultValue="other">
+          {Object.entries(AUTHOR_REASONS).map(([k, v]) => (
+            <option key={k} value={k}>
+              {v}
+            </option>
+          ))}
+        </select>
+      </ActionForm>
     </div>
   );
 }
@@ -47,7 +57,7 @@ export default function CommentQueue({ queue, csrf }: Props) {
               On <a href={e.path}>{e.itemTitle}</a>, {when(e.at)}:
             </p>
             <blockquote>{e.body}</blockquote>
-            <p>Agent&apos;s reason: {e.reason ?? '(none)'}</p>
+            <p>Agent&apos;s note (never sent to the author): {e.note ?? e.reason ?? '(none)'}</p>
             <Resolve id={e.id} csrf={csrf} label={`escalation ${i + 1}`} />
           </li>
         ))}

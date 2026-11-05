@@ -8,13 +8,13 @@ import type { Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { appealToken } from './appeals';
-import { appealOutcomeEmail, rejectionEmail } from './rejection-email';
+import { AUTHOR_REASONS, appealOutcomeEmail, rejectionEmail, type ReasonCode } from './rejection-email';
 import { dismissReports, upholdReports } from './reports';
 import { recordApproval, recordRejection } from './trust';
 
 export type Resolution = { status: 'done'; newStatus: string; mail?: EmailMessage } | { status: 'not_found' | 'wrong_state' };
 
-type Row = { account_id: string; status: string; body: string; reason: string | null; email: string; eligible: boolean; appeal: boolean };
+type Row = { account_id: string; status: string; body: string; code: string | null; email: string; eligible: boolean; appeal: boolean };
 
 // Only an escalated comment or one with an open urgent report (7B review L3); a muted reporter's urgent report leaves
 // the comment published, so published counts too then (H1).
@@ -37,10 +37,11 @@ export async function resolveEscalation(
   outcome: 'publish' | 'remove',
   now: Date,
   env: EnvLike,
+  code: ReasonCode = 'other',
 ): Promise<Resolution> {
   await tx.query('SELECT 1 FROM account_trust WHERE account_id = (SELECT account_id FROM comments WHERE id = $1) FOR UPDATE', [commentId]);
   const r = await tx.query<Row>(
-    `SELECT c.account_id, c.status, c.body, c.moderation_reason AS reason, a.email, ${ELIGIBLE} AS eligible,
+    `SELECT c.account_id, c.status, c.body, c.moderation_code AS code, a.email, ${ELIGIBLE} AS eligible,
             EXISTS (SELECT 1 FROM comment_appeals p WHERE p.comment_id = c.id AND p.decided_at IS NULL) AS appeal
      FROM comments c JOIN accounts a ON a.id = c.account_id WHERE c.id = $1 FOR UPDATE OF c`,
     [commentId],
@@ -54,12 +55,14 @@ export async function resolveEscalation(
     await dismissReports(tx, commentId, now);
     return { status: 'done', newStatus: 'published', mail: await overturnOpenAppeal(tx, commentId, c, now, env) };
   }
+  // Already decided with an author-facing reason: no second rejection or email (L3).
+  if (c.code !== null) return { status: 'wrong_state' };
   const newStatus = c.status === 'held' ? 'rejected' : 'hidden';
-  const reason = c.reason ?? 'It does not follow the community guidelines.';
-  await tx.query('UPDATE comments SET status = $2, escalated_at = NULL, moderation_reason = $3, decided_by = $4 WHERE id = $1', [
+  const reason = AUTHOR_REASONS[code];
+  await tx.query('UPDATE comments SET status = $2, escalated_at = NULL, moderation_code = $3, decided_by = $4 WHERE id = $1', [
     commentId,
     newStatus,
-    reason,
+    code,
     admin.email,
   ]);
   await upholdReports(tx, commentId, now);

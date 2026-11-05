@@ -5,6 +5,20 @@
 import type { EmailMessage } from '@/lib/email';
 
 export const EXCERPT = 80;
+
+// What the author is told, from a closed list (7B review M2): the agent picks a code, never the words. Its free-text
+// reason (and its escalation note) stay with the owner.
+export const AUTHOR_REASONS = {
+  abuse: 'It is unkind to another person: a personal attack, insult, mockery or threat.',
+  personal_info: 'It shares personal information about someone.',
+  advertising: 'It advertises, sells or promotes something.',
+  off_topic: 'It is not about the item it was posted on.',
+  links: 'It contains a link, and links are not allowed in comments yet.',
+  other: 'It does not follow the community guidelines.',
+} as const;
+export type ReasonCode = keyof typeof AUTHOR_REASONS;
+export const REASON_CODES = Object.keys(AUTHOR_REASONS) as [ReasonCode, ...ReasonCode[]];
+export const isReasonCode = (v: unknown): v is ReasonCode => typeof v === 'string' && Object.hasOwn(AUTHOR_REASONS, v);
 const excerpt = (body: string) => [...body].slice(0, EXCERPT).join('');
 
 export function rejectionEmail(o: { to: string; body: string; reason: string; site: string; appealUrl: string | null }): EmailMessage {

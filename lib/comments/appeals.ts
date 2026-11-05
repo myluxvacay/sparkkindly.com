@@ -51,7 +51,7 @@ type Target = { status: string; appealed: boolean };
 async function target(q: Queryable, commentId: string, accountId: string): Promise<Target | null> {
   const r = await q.query<Target>(
     `SELECT c.status, EXISTS (SELECT 1 FROM comment_appeals a WHERE a.comment_id = c.id) AS appealed
-     FROM comments c WHERE c.id = $1 AND c.account_id = $2 AND c.moderation_reason IS NOT NULL`,
+     FROM comments c WHERE c.id = $1 AND c.account_id = $2 AND (c.moderation_code IS NOT NULL OR c.moderation_reason IS NOT NULL)`,
     [commentId, accountId],
   );
   return r.rows[0] ?? null;

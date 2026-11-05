@@ -12,7 +12,9 @@ import { runAction } from '@/lib/admin/actions';
 import { buildDigest, renderDigest } from '@/lib/admin/digest';
 import { ownerQueue } from '@/lib/comments/owner-queue';
 import { reportComment } from '@/lib/comments/reports';
+import { moderationQueue } from '@/lib/comments/moderation';
 import CommentQueue from '@/components/admin/CommentQueue';
+import { AUTHOR_REASONS } from '@/lib/comments/rejection-email';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -129,7 +131,8 @@ describe('owner actions', () => {
     expect(await statusOf(db, e2.id)).toBe('rejected');
     expect((await trustRow(db, e2.author.id)).rejected).toBe(2);
     expect(sent.map((m) => m.to)).toEqual([e2.author.email]);
-    expect(sent[0].text).toContain('Unsure: may name a child');
+    expect(sent[0].text).not.toContain('Unsure: may name a child');
+    expect(sent[0].text).toContain(AUTHOR_REASONS.other);
     expect(await act('comments.escalation_resolve', { comment: e2.id, outcome: 'publish' })).toMatchObject({ ok: false, status: 409 });
     expect(await act('comments.escalation_resolve', { comment: e1.id, outcome: 'maybe' })).toMatchObject({ ok: false, status: 400 });
     expect((await ownerQueue(db, NOW)).escalations).toEqual([]);
@@ -151,6 +154,21 @@ describe('owner actions', () => {
     expect(sent.map((m) => m.to)).toEqual([u.author.email]);
   });
 
+  it("the owner can also publish (keep) a comment a muted reporter urgently reported; it never entered the agent queue", async () => {
+    const u = await decided('published', '', 'muted publish words');
+    await db.query('UPDATE comments SET moderation_reason = NULL WHERE id = $1', [u.id]);
+    const r = await person(db, NOW);
+    await setLevel(db, r.id, 1);
+    await db.query('UPDATE account_trust SET reports_muted = true WHERE account_id = $1', [r.id]);
+    await reportComment(db, r.ctx, u.id, { reason: 'abuse', urgent: 'on' }, NOW, async () => {});
+    expect((await moderationQueue(db, NOW)).map((e) => e.id)).not.toContain(u.id);
+    expect((await ownerQueue(db, NOW)).urgent.map((e) => e.id)).toContain(u.id);
+    expect(await act('comments.escalation_resolve', { comment: u.id, outcome: 'publish' })).toMatchObject({ ok: true });
+    expect(await statusOf(db, u.id)).toBe('published');
+    const open = await db.query('SELECT count(*)::int AS n FROM comment_reports WHERE comment_id = $1 AND handled_at IS NULL', [u.id]);
+    expect(open.rows[0].n).toBe(0);
+  });
+
   it('resolve applies only to escalated comments or open urgent reports (L3)', async () => {
     const plain = await decided('hidden', 'Personal attack', 'already hidden words');
     expect(await act('comments.escalation_resolve', { comment: plain.id, outcome: 'remove' })).toMatchObject({ ok: false, status: 409 });
@@ -170,6 +188,23 @@ describe('owner actions', () => {
     expect((await trustRow(db, e.author.id)).rejected).toBe(0);
     expect(sent.map((m) => m.to)).toEqual([e.author.email]);
     expect(sent[0].subject).toMatch(/appeal/i);
+  });
+
+  it("the agent's escalation note never reaches the author; the owner picks the author's sentence from the closed list (M1)", async () => {
+    const author = await person(db, NOW);
+    await setLevel(db, author.id, 0);
+    const id = await comment(db, await item(db, 'play', 'Owner item'), author.id, 'note words', 'held');
+    await db.query(
+      "UPDATE comments SET escalated_at = $2, escalation_note = 'Reporter Jo says a child named Mia at Elm School is shown' WHERE id = $1",
+      [id, NOW],
+    );
+    const q = await ownerQueue(db, NOW);
+    expect(q.escalations[0].note).toMatch(/Elm School/);
+    expect(await act('comments.escalation_resolve', { comment: id, outcome: 'remove', code: 'personal_info' })).toMatchObject({ ok: true });
+    expect(sent).toHaveLength(1);
+    expect(sent[0].text).not.toMatch(/Jo|Mia|Elm School|child named/);
+    expect(sent[0].text).toContain(AUTHOR_REASONS.personal_info);
+    expect(await act('comments.escalation_resolve', { comment: id, outcome: 'remove', code: 'made-up' })).toMatchObject({ ok: false, status: 400 });
   });
 
   it('report reset unmutes the reporter of that report and clears their false reports', async () => {

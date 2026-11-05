@@ -8,10 +8,12 @@ import type { NotifyOwner } from './reports';
 
 export const ownerAlert =
   (env: EnvLike, send: (m: EmailMessage) => Promise<unknown>): NotifyOwner =>
-  async ({ urgent24h, hidden }) => {
-    const what = hidden
+  async ({ urgent24h, hidden, capReached }) => {
+    const what = capReached
+      ? 'Urgent-alert cap reached for today: no more urgent-report emails will be sent until tomorrow (UTC). See the admin queue for every urgent report.'
+      : hidden
       ? 'An urgent report has hidden a comment on SparkKindly. It stays hidden until it is ruled on (target: within 24 hours).'
-      : "An urgent report was made about a comment on SparkKindly. It was not hidden (the reporter's reports are muted); it waits for the moderation agent and for you (target: within 24 hours).";
+      : "An urgent report was made about a comment on SparkKindly. It was not hidden (the reporter's reports are muted); it waits for you (target: within 24 hours).";
     const text = [
       what,
       '',

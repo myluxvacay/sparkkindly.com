@@ -28,7 +28,7 @@ const set = (tx: Queryable, id: string, sql: string, params: unknown[]) =>
 export async function applyDecision(
   tx: Queryable,
   c: Locked,
-  d: { decision: Decision; reason: string | null; actor: string; now: Date },
+  d: { decision: Decision; reason: string | null; code?: string | null; actor: string; now: Date },
 ): Promise<Effect> {
   // A sampled comment counts as reviewed by any decision but keep (which never applies to a sample).
   const reviewed = ', sample_reviewed_at = CASE WHEN sampled_at IS NOT NULL THEN COALESCE(sample_reviewed_at, $3::timestamptz) END';
@@ -38,18 +38,26 @@ export async function applyDecision(
       await recordApproval(tx, c.accountId);
       return { status: 'published', mail: false };
     case 'keep':
-      await set(tx, c.id, "status = 'published', decided_by = $2", [d.actor]);
+      // A sampled comment that was reported counts as reviewed too, so it never re-queues as a sample.
+      await set(tx, c.id, `status = 'published', decided_by = $2${reviewed}`, [d.actor, d.now]);
       await dismissReports(tx, c.id, d.now);
       return { status: 'published', mail: false };
     case 'escalate': {
       const status = c.kind === 'sample' ? 'hidden' : c.status;
-      await set(tx, c.id, `status = $4, escalated_at = $3, moderation_reason = $5, decided_by = $2${reviewed}`, [d.actor, d.now, status, d.reason]);
+      // The note is for the owner only (7B review M1): never moderation_reason, which an author-facing path could read.
+      await set(tx, c.id, `status = $4, escalated_at = $3, escalation_note = $5, decided_by = $2${reviewed}`, [d.actor, d.now, status, d.reason]);
       return { status, mail: false };
     }
     default: {
       // reject or hide: a held comment is rejected; a reported or sampled one is hidden.
       const status = c.kind === 'held' ? 'rejected' : 'hidden';
-      await set(tx, c.id, `status = $4, moderation_reason = $5, decided_by = $2${reviewed}`, [d.actor, d.now, status, d.reason]);
+      await set(tx, c.id, `status = $4, moderation_reason = $5, moderation_code = $6, decided_by = $2${reviewed}`, [
+        d.actor,
+        d.now,
+        status,
+        d.reason,
+        d.code ?? 'other',
+      ]);
       await upholdReports(tx, c.id, d.now);
       await recordRejection(tx, c.accountId);
       return { status, mail: true };

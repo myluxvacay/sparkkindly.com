@@ -4,9 +4,9 @@
 // counts 1, level 0 counts 0.5, a muted reporter 0. Open weight >= 2 hides the comment pending the moderation agent. An
 // urgent report hides the comment at once for any reporter who is not muted (7B review H1, reversing the earlier
 // level-1-only ruling; spec 4a.6: urgent hides immediately); a muted reporter's urgent report leaves it published but
-// queues it for the agent as `reported` (lib/comments/moderation.ts) and for the owner. Each urgent report alerts the
-// owner (counts only, saying whether it hid the comment), at most URGENT_ALERTS_PER_DAY alerts a UTC day site-wide (the
-// rest show in the digest's urgent count). 10 reports a rolling day per account, of which 3 may be urgent: a further
+// leaves it for the owner only (a zero-weight report never changes what the agent sees). Each urgent report alerts the
+// owner (counts only, saying whether it hid the comment), at most URGENT_ALERTS_PER_DAY alerts sent a UTC day site-wide,
+// then one "cap reached" email (the digest still counts everything). 10 reports a rolling day per account, of which 3 may be urgent: a further
 // urgent report is stored as a normal one, without an alert (the result says urgent: 'limit'). A hide bumps the
 // comment's updated_at, so an agent decision read before it is stale.
 // Lock order (matching 7A and account deletion): reporter account (KEY SHARE), reporter trust row, then the comment row
@@ -35,7 +35,7 @@ export type ReportRefusal = 'not_allowed' | 'not_found' | 'own' | 'duplicate' | 
 export type ReportResult =
   | { status: 'reported' | 'hidden'; urgent?: 'limit' }
   | { status: 'refused'; code: ReportRefusal };
-export type NotifyOwner = (counts: { urgent24h: number; hidden: boolean }) => Promise<unknown>;
+export type NotifyOwner = (counts: { urgent24h: number; hidden: boolean; capReached?: boolean }) => Promise<unknown>;
 
 export const reportWeight = (t: { level: number; reportsMuted: boolean }): number =>
   t.reportsMuted ? 0 : t.level >= 1 ? 1 : 0.5;
@@ -54,7 +54,7 @@ async function reporterOf(tx: Queryable, ctx: AccountContext | null, now: Date):
 }
 
 type Checked = { reason: string; note: string | null; urgent: boolean };
-type Outcome = ReportResult & { alert?: { urgent24h: number; hidden: boolean } };
+type Outcome = ReportResult & { alert?: { urgent24h: number; hidden: boolean; muted: boolean } };
 
 function checkInput(input: ReportInput): Checked | null {
   const note = cleanNote(input.note);
@@ -100,16 +100,6 @@ async function urgentCount(tx: Queryable, now: Date): Promise<number> {
   return r.rows[0].n;
 }
 
-// Whether this urgent report is within the site-wide alert cap: the urgent reports of this UTC day so far, itself included.
-async function alertAllowed(tx: Queryable, now: Date): Promise<boolean> {
-  const r = await tx.query<{ n: number }>(
-    `SELECT count(*)::int AS n FROM comment_reports
-     WHERE urgent AND created_at >= date_trunc('day', $1::timestamptz AT TIME ZONE 'UTC') AT TIME ZONE 'UTC' AND created_at <= $1`,
-    [now],
-  );
-  return r.rows[0].n <= URGENT_ALERTS_PER_DAY;
-}
-
 async function reportIn(tx: Queryable, ctx: AccountContext | null, commentId: string, input: Checked, now: Date): Promise<Outcome> {
   const refuse = (code: ReportRefusal): Outcome => ({ status: 'refused', code });
   const reporter = await reporterOf(tx, ctx, now);
@@ -135,7 +125,7 @@ async function reportIn(tx: Queryable, ctx: AccountContext | null, commentId: st
       now,
     ]);
   }
-  const alert = urgent && (await alertAllowed(tx, now)) ? { urgent24h: await urgentCount(tx, now), hidden: hide } : undefined;
+  const alert = urgent ? { urgent24h: await urgentCount(tx, now), hidden: hide, muted: muted.rows[0].m } : undefined;
   return {
     status: hide ? 'hidden' : 'reported',
     ...(input.urgent && !urgent ? { urgent: 'limit' as const } : {}),
@@ -155,34 +145,66 @@ export async function reportComment(
   const checked = checkInput(input);
   if (!checked) return { status: 'refused', code: 'invalid' };
   const { alert, ...result } = await db.transaction((tx) => reportIn(tx, ctx, commentId, checked, now));
-  if (alert) {
-    try {
-      await notifyOwner(alert);
-    } catch (err) {
-      console.error('urgent comment report alert not sent:', (err as Error)?.name);
-    }
-  }
+  if (alert) await alertOwner(db, alert, now, notifyOwner);
   return result as ReportResult;
 }
 
-// The agent (or the owner) judged a reported comment fine: its open reports are dismissed and each level-0 reporter is
-// charged a false report; a level-1 reporter never is (7B review M3b: a wrong agent `keep` must not erode a trusted
-// member). At FALSE_REPORT_LIMIT a level-0 reporter is muted until the owner resets them. The reporters' trust rows are
-// locked in id order (7B review L5), so two dismissals sharing reporters cannot deadlock on them.
+// The site-wide cap on urgent alert emails (7B review L7, as refined): only alerts actually sent count, one job_runs row
+// each for the UTC day; a muted reporter's alert is sent while the cap is not reached but never counts. When the cap is
+// reached, exactly one "cap reached" email goes (claimed by its own row), then nothing until the next UTC day; the
+// digest still counts every urgent report. ponytail: two alerts racing at the 20th may both send (21); a counter row
+// with a lock would make it exact.
+async function alertOwner(db: Db, a: { urgent24h: number; hidden: boolean; muted: boolean }, now: Date, notifyOwner: NotifyOwner): Promise<void> {
+  const day = now.toISOString().slice(0, 10);
+  const used = await db.query<{ n: number; cap: boolean }>(
+    `SELECT (count(*) FILTER (WHERE run_key LIKE $1 || '#a#%'))::int AS n, bool_or(run_key = $1 || '#cap') AS cap
+     FROM job_runs WHERE job = 'urgent-alert' AND run_key LIKE $1 || '#%'`,
+    [day],
+  );
+  const { n, cap } = used.rows[0];
+  const send = async (counts: Parameters<NotifyOwner>[0]): Promise<boolean> => {
+    try {
+      await notifyOwner(counts);
+      return true;
+    } catch (err) {
+      console.error('urgent comment report alert not sent:', (err as Error)?.name);
+      return false;
+    }
+  };
+  if (cap) return;
+  if (n < URGENT_ALERTS_PER_DAY) {
+    const sent = await send({ urgent24h: a.urgent24h, hidden: a.hidden });
+    if (sent && !a.muted) {
+      await db.query("INSERT INTO job_runs (job, run_key) VALUES ('urgent-alert', $1 || '#a#' || gen_random_uuid())", [day]);
+    }
+    return;
+  }
+  const claimed = await db.query("INSERT INTO job_runs (job, run_key) VALUES ('urgent-alert', $1 || '#cap') ON CONFLICT DO NOTHING RETURNING run_key", [day]);
+  if (claimed.rows.length) await send({ urgent24h: a.urgent24h, hidden: a.hidden, capReached: true });
+}
+
+// The agent (or the owner) judged a reported comment fine: its open reports are dismissed. Who is charged a false report:
+// every reporter whose weighted urgent report hid it, at any level (urgent reports are the abuse vector, so they are
+// accountable), and, for ordinary reports, level-0 reporters only (7B review M3b: a wrong `keep` must not erode a
+// trusted member's ordinary reports). At FALSE_REPORT_LIMIT the reporter drops one level and is muted, once (muting is
+// what makes it once). The trust rows are locked in id order (7B review L5), so two dismissals cannot deadlock on them.
 export async function dismissReports(tx: Queryable, commentId: string, now = new Date()): Promise<void> {
-  const r = await tx.query<{ who: string }>(
+  const r = await tx.query<{ who: string | null; urgent: boolean; weight: string }>(
     `UPDATE comment_reports SET handled_at = $2, dismissed = true WHERE comment_id = $1 AND handled_at IS NULL
-     RETURNING reporter_account_id AS who`,
+     RETURNING reporter_account_id AS who, urgent, weight`,
     [commentId, now],
   );
-  const who = [...new Set(r.rows.map((x) => x.who).filter((x) => x !== null))].sort();
+  const named = r.rows.filter((x): x is { who: string; urgent: boolean; weight: string } => x.who !== null);
+  const who = [...new Set(named.map((x) => x.who))].sort();
   if (!who.length) return;
+  const urgent = [...new Set(named.filter((x) => x.urgent && Number(x.weight) > 0).map((x) => x.who))];
   await tx.query('SELECT 1 FROM account_trust WHERE account_id = ANY($1::uuid[]) ORDER BY account_id FOR UPDATE', [who]);
   await tx.query(
     `UPDATE account_trust SET false_reports = false_reports + 1,
+       level = CASE WHEN NOT reports_muted AND false_reports + 1 >= $2 THEN greatest(level - 1, 0) ELSE level END,
        reports_muted = reports_muted OR false_reports + 1 >= $2, updated_at = now()
-     WHERE account_id = ANY($1::uuid[]) AND level = 0`,
-    [who, FALSE_REPORT_LIMIT],
+     WHERE account_id = ANY($1::uuid[]) AND (level = 0 OR account_id = ANY($3::uuid[]))`,
+    [who, FALSE_REPORT_LIMIT, urgent],
   );
 }
 

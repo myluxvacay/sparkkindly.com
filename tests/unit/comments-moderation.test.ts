@@ -10,7 +10,8 @@ import type { Agent } from '@/lib/agents/auth';
 import type { EmailMessage } from '@/lib/email';
 import { deleteComment, postComment } from '@/lib/comments/repo';
 import { reportComment } from '@/lib/comments/reports';
-import { decide, moderationQueue, pickForSample, SAMPLE_RATE } from '@/lib/comments/moderation';
+import { decide, KEEP_LIMIT, moderationQueue, pickForSample, SAMPLE_RATE } from '@/lib/comments/moderation';
+import { AUTHOR_REASONS } from '@/lib/comments/rejection-email';
 import { verifyAppealToken } from '@/lib/comments/appeals';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -43,8 +44,15 @@ async function versionOf(id: string): Promise<string> {
   if (!e) throw new Error('not queued');
   return e.version;
 }
-const act = async (id: string, decision: string, reason?: string, version?: string) =>
-  decide(db, agent, { id, decision, reason, version: version ?? (await versionOf(id)) }, NOW, deps());
+// reject and hide need a closed author-facing code (7B review M2); the tests default it to 'abuse'.
+const act = async (id: string, decision: string, reason?: string, version?: string, code?: string) =>
+  decide(
+    db,
+    agent,
+    { id, decision, reason, version: version ?? (await versionOf(id)), code: code ?? (['reject', 'hide'].includes(decision) ? 'abuse' : undefined) },
+    NOW,
+    deps(),
+  );
 
 async function held(body = 'a kind held comment') {
   const author = await person(db, NOW);
@@ -160,31 +168,51 @@ describe('approve', () => {
 });
 
 describe('reject and hide', () => {
-  it('rejects a held comment with a private reason, drops trust and emails the author only', async () => {
+  it('rejects a held comment: the private reason is kept for the owner, the author gets only the fixed sentence for the code', async () => {
     const body = 'x'.repeat(70) + ' and then some more words past eighty';
     const h = await held(body);
     await setLevel(db, h.author.id, 0);
     expect(await act(h.id, 'reject', 'Personal attack on another member')).toMatchObject({ status: 200, json: { status: 'rejected' } });
-    const row = await db.query('SELECT status, moderation_reason, decided_by FROM comments WHERE id = $1', [h.id]);
-    expect(row.rows[0]).toEqual({ status: 'rejected', moderation_reason: 'Personal attack on another member', decided_by: 'agent:moderator' });
+    const row = await db.query('SELECT status, moderation_reason, moderation_code, decided_by FROM comments WHERE id = $1', [h.id]);
+    expect(row.rows[0]).toEqual({ status: 'rejected', moderation_reason: 'Personal attack on another member', moderation_code: 'abuse', decided_by: 'agent:moderator' });
     expect(await trustRow(db, h.author.id)).toMatchObject({ rejected: 1, approved: 0 });
     expect(sent).toHaveLength(1);
     const m = sent[0];
     expect(m.to).toBe(h.author.email);
     expect(m.text).toContain(body.slice(0, 80));
     expect(m.text).not.toContain(body.slice(0, 81));
-    expect(m.text).toContain('Personal attack on another member');
+    expect(m.text).not.toContain('Personal attack on another member');
+    expect(m.text).toContain(AUTHOR_REASONS.abuse);
     expect(m.text).toContain('https://s.example.test/community/guidelines/');
     const token = /\/comments\/appeal\/([^/\s]+)\//.exec(m.text)?.[1];
     expect(verifyAppealToken(SECRET, token ?? '', NOW)).toEqual({ commentId: h.id, accountId: h.author.id });
     expect(m.subject).not.toContain('x'.repeat(10));
   });
 
-  it('a reason is required for reject, hide and escalate', async () => {
+  it('reject and hide need a code from the closed list; escalate needs a reason; the reason is capped', async () => {
     const h = await held();
-    for (const d of ['reject', 'escalate']) expect((await act(h.id, d)).status, d).toBe(400);
+    const version = await versionOf(h.id);
+    expect((await decide(db, agent, { id: h.id, decision: 'reject', reason: 'Rude', version }, NOW, deps())).status).toBe(400);
+    expect((await decide(db, agent, { id: h.id, decision: 'reject', code: 'spite', version }, NOW, deps())).status).toBe(400);
+    expect((await act(h.id, 'escalate')).status).toBe(400);
     expect((await act(h.id, 'reject', 'x'.repeat(301))).status).toBe(400);
     expect(await statusOf(db, h.id)).toBe('held');
+    expect(sent).toEqual([]);
+  });
+
+  it('a free-text reason with a link, an @, a line break or a control character is refused, and nothing is emailed', async () => {
+    const h = await held();
+    for (const reason of ['see https://evil.example', 'visit evil.example.com now', 'mail me@example.test', 'two\nlines', 'bell\u0007']) {
+      expect((await act(h.id, 'reject', reason)).status, reason).toBe(400);
+      expect((await act(h.id, 'escalate', reason)).status, reason).toBe(400);
+    }
+    expect(await statusOf(db, h.id)).toBe('held');
+    expect(sent).toEqual([]);
+  });
+
+  it('every code maps to a fixed author-facing sentence', () => {
+    expect(Object.keys(AUTHOR_REASONS).sort()).toEqual(['abuse', 'advertising', 'links', 'off_topic', 'other', 'personal_info']);
+    for (const s of Object.values(AUTHOR_REASONS)) expect(s.length).toBeGreaterThan(20);
   });
 
   it('hides a reported comment: reports handled (not dismissed), trust drops, author emailed', async () => {
@@ -249,8 +277,59 @@ describe('keep and escalate', () => {
     );
     const by = Object.fromEntries(rows.rows.map((x) => [x.id, x]));
     expect([by[h.id].status, by[r.id].status, by[s.id].status]).toEqual(['held', 'hidden', 'hidden']);
-    expect(rows.rows.every((x) => x.e && x.moderation_reason === 'Unsure: may name a child')).toBe(true);
+    expect(rows.rows.every((x) => x.e && x.moderation_reason === null)).toBe(true);
+    const notes = await db.query<{ n: string }>('SELECT escalation_note AS n FROM comments');
+    expect(notes.rows.every((x) => x.n === 'Unsure: may name a child')).toBe(true);
     expect(sent).toEqual([]);
+  });
+
+  it(`at most ${KEEP_LIMIT} keep decisions per agent per UTC day; the next is refused and the comment stays queued (M3b)`, async () => {
+    for (let i = 0; i < KEEP_LIMIT; i++) {
+      const r = await reported(`keep ${i}`);
+      expect((await act(r.id, 'keep')).status).toBe(200);
+    }
+    const last = await reported('one keep too many');
+    expect(await act(last.id, 'keep')).toMatchObject({ status: 409, json: { error: 'limit' } });
+    expect(await statusOf(db, last.id)).toBe('hidden');
+    expect((await moderationQueue(db, NOW)).map((e) => e.id)).toContain(last.id);
+    expect((await act(last.id, 'escalate', 'Too many keeps today')).status).toBe(200);
+  });
+
+  it('keep on a sampled comment that was reported marks the sample reviewed, so it does not come back as a sample', async () => {
+    const s = await sampled();
+    for (let i = 0; i < 2; i++) {
+      const r = await person(db, NOW);
+      await setLevel(db, r.id, 1);
+      await reportComment(db, r.ctx, s.id, { reason: 'abuse' }, NOW, quiet);
+    }
+    expect(await statusOf(db, s.id)).toBe('hidden');
+    expect((await act(s.id, 'keep')).status).toBe(200);
+    expect((await moderationQueue(db, NOW)).map((e) => e.id)).not.toContain(s.id);
+  });
+
+  it("keep (like approve) is refused for a banned author's comment (L2)", async () => {
+    const r = await reported();
+    await db.query('UPDATE account_trust SET banned = true WHERE account_id = $1', [r.author.id]);
+    expect(await act(r.id, 'keep')).toMatchObject({ status: 409, json: { error: 'author_banned' } });
+    expect(await statusOf(db, r.id)).toBe('hidden');
+  });
+
+  it('a deadlock (40P01) is retried once (L5)', async () => {
+    const h = await held();
+    let first = true;
+    const flaky = {
+      ...db,
+      transaction: <T>(fn: (tx: Parameters<Parameters<typeof db.transaction>[0]>[0]) => Promise<T>) => {
+        if (first) {
+          first = false;
+          return Promise.reject(Object.assign(new Error('deadlock detected'), { code: '40P01' }));
+        }
+        return db.transaction(fn);
+      },
+    };
+    const r = await decide(flaky, agent, { id: h.id, decision: 'approve', version: await versionOf(h.id) }, NOW, deps());
+    expect(r.status).toBe(200);
+    expect(await statusOf(db, h.id)).toBe('published');
   });
 });
 
@@ -258,8 +337,8 @@ describe('idempotency, validation and injection', () => {
   it('a repeated decision returns the current state with no second effect or email', async () => {
     const h = await held();
     const version = await versionOf(h.id);
-    await decide(db, agent, { id: h.id, decision: 'reject', reason: 'Rude', version }, NOW, deps());
-    const again = await decide(db, agent, { id: h.id, decision: 'reject', reason: 'Rude', version }, NOW, deps());
+    await decide(db, agent, { id: h.id, decision: 'reject', reason: 'Rude', code: 'abuse', version }, NOW, deps());
+    const again = await decide(db, agent, { id: h.id, decision: 'reject', reason: 'Rude', code: 'abuse', version }, NOW, deps());
     expect(again).toEqual({ status: 200, json: { id: h.id, status: 'rejected', decision: 'reject', replayed: true } });
     expect(sent).toHaveLength(1);
     expect((await trustRow(db, h.author.id)).rejected).toBe(1);
@@ -280,7 +359,7 @@ describe('idempotency, validation and injection', () => {
     const r = await decide(
       db,
       agent,
-      { id: h.id, decision: 'reject', reason: 'Spam', version, status: 'published', accountId: h.author.id, trust: 1 },
+      { id: h.id, decision: 'reject', reason: 'Spam', code: 'advertising', version, status: 'published', accountId: h.author.id, trust: 1 },
       NOW,
       deps(),
     );
@@ -309,7 +388,7 @@ describe('idempotency, validation and injection', () => {
   it('a failing rejection email does not undo the decision', async () => {
     const h = await held();
     const err = vi.spyOn(console, 'error').mockImplementation(() => {});
-    const r = await decide(db, agent, { id: h.id, decision: 'reject', reason: 'Rude', version: await versionOf(h.id) }, NOW, {
+    const r = await decide(db, agent, { id: h.id, decision: 'reject', reason: 'Rude', code: 'abuse', version: await versionOf(h.id) }, NOW, {
       env,
       send: async () => {
         throw new Error('mail down');

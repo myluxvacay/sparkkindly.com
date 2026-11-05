@@ -16,6 +16,7 @@ import { commentAuthor, commentRef } from '@/lib/comments/admin';
 import { decideAppeal } from '@/lib/comments/appeals';
 import { resetReporter, resolveEscalation } from '@/lib/comments/owner-actions';
 import { setTrust } from '@/lib/comments/trust';
+import { isReasonCode } from '@/lib/comments/rejection-email';
 import { commentsEnabled, contributorsEnabled } from '@/lib/config';
 import { approveLink, isContributed, lockContribution, markApproved, ownerDecision } from '@/lib/contributors/owner';
 import { sendEmail, type EmailMessage } from '@/lib/email';
@@ -369,8 +370,10 @@ const handlers: Record<string, Handler> = {
   async 'comments.escalation_resolve'({ tx, admin, form, now }) {
     const outcome = field(form, 'outcome');
     if (outcome !== 'publish' && outcome !== 'remove') throw bad();
+    const reasonCode = field(form, 'code') || 'other';
+    if (!isReasonCode(reasonCode)) throw bad();
     const id = commentId(form);
-    const r = await resolveEscalation(tx, admin, id, outcome, now, process.env);
+    const r = await resolveEscalation(tx, admin, id, outcome, now, process.env, reasonCode);
     if (r.status !== 'done') throw r.status === 'not_found' ? missing() : new ActionError(409, 'wrong_status');
     const code = outcome === 'publish' ? 'comments_escalation_published' : 'comments_escalation_removed';
     return { code, target: `comment:${id}`, detail: { outcome, status: r.newStatus }, mail: r.mail };
