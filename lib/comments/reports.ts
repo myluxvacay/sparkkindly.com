@@ -1,5 +1,5 @@
-// Comment reports (plan 7B, spec Project 7 "Reporting"). A verified, non-banned account in its adult context (any age
-// group from 13, since every signed-in member can see comments) reports another member's published comment once, with
+// Comment reports (plan 7B, spec Project 7 "Reporting"). A verified, non-banned account in its adult context that may
+// comment (public_comment: 16+; ruling: 13-15 accounts get no report form and are refused, as for comments) reports another member's published comment once, with
 // a reason, an optional note (up to 300 characters) and an urgent flag. Each report keeps the weight it carried: level 1
 // counts 1, level 0 counts 0.5, a muted reporter 0. Open weight >= 2 hides the comment pending the moderation agent. An
 // urgent report alerts the owner at once (counts only) and hides the comment at once only when its weight is 1 (a level-1,
@@ -10,11 +10,11 @@
 // Verified by tests/unit/comments-reports.test.ts.
 import { requireAdultContext, type AccountContext } from '@/lib/accounts/context';
 import { isUuid } from '@/lib/accounts/pin';
-import { ageGroupFor } from '@/lib/accounts/policy';
+import { ageGroupFor, type Consent } from '@/lib/accounts/policy';
 import { cleanNote } from '@/lib/circles/reports';
 import type { Db, Queryable } from '@/lib/db';
 import { commentsAllowedFor } from './repo';
-import { ticked } from './rules';
+import { mayComment, ticked } from './rules';
 import { lockTrust } from './trust';
 
 export const REPORT_REASONS = ['abuse', 'personal_info', 'advertising', 'off_topic', 'other'] as const;
@@ -34,17 +34,17 @@ export type NotifyOwner = (counts: { urgent24h: number }) => Promise<unknown>;
 export const reportWeight = (t: { level: number; reportsMuted: boolean }): number =>
   t.reportsMuted ? 0 : t.level >= 1 ? 1 : 0.5;
 
-// The verified account (13+) of an adult context, share-locked; null otherwise.
+// The verified account allowed public_comment (16+) of an adult context, share-locked; null otherwise.
 async function reporterOf(tx: Queryable, ctx: AccountContext | null, now: Date): Promise<string | null> {
   const adult = requireAdultContext(ctx);
   if (!adult || !isUuid(adult.account.id)) return null;
-  const r = await tx.query<{ dob: string; verified: boolean }>(
-    `SELECT to_char(date_of_birth, 'YYYY-MM-DD') AS dob, verified_at IS NOT NULL AS verified FROM accounts WHERE id = $1 FOR KEY SHARE`,
+  const r = await tx.query<{ dob: string; verified: boolean; consent_state: Consent }>(
+    `SELECT to_char(date_of_birth, 'YYYY-MM-DD') AS dob, verified_at IS NOT NULL AS verified, consent_state
+     FROM accounts WHERE id = $1 FOR KEY SHARE`,
     [adult.account.id],
   );
   const a = r.rows[0];
-  const group = a ? ageGroupFor(a.dob, now) : null;
-  return a?.verified && group !== null && group !== 'under_13' ? adult.account.id : null;
+  return a?.verified && mayComment(ageGroupFor(a.dob, now), a.consent_state) ? adult.account.id : null;
 }
 
 type Checked = { reason: string; note: string | null; urgent: boolean };

@@ -647,7 +647,50 @@ If no run is recorded for 36 hours the worker emails the admin list.
   reporting plus the moderation agent (7B) must exist before `COMMENTS_ENABLED` goes on anywhere real
   (`docs/legal/go-live-copy-changes.md`).
 
-## Comment moderation agent (Project 7B)
+## Comment moderation (Project 7B)
+
+Behind the same flags as comments. Plan `docs/superpowers/plans/2026-11-05-project-7b-comment-moderation.md`.
+
+- **Reports** (`/comments/report/`, a `<details>` form under other members' published comments; adult context, 16+,
+  verified, not banned). Reasons `abuse`, `personal_info`, `advertising`, `off_topic`, `other`, a note up to 300
+  characters, an urgent checkbox. 10 reports a rolling day per account, at most 3 of them urgent (a 4th urgent is stored
+  as a normal report, without an alert). Weight: level 1 = 1, level 0 = 0.5, muted = 0, fixed when the report is made.
+  Open weight >= 2 hides the comment. An urgent report alerts the owner at once (ADMIN_EMAILS, the digest mail path,
+  counts only) and hides the comment at once only from a level-1, unmuted reporter (controller ruling); otherwise it
+  counts its normal weight.
+- **The agent's queue and decisions** (`lib/comments/moderation.ts`, `decisions.ts`). Queue order: held, then reported
+  (hidden with open reports), then the sample (about 10% of newly published level-1 comments, `sampled_at`). Escalated
+  comments leave the queue. Each entry has an opaque `version` (the comment's `updated_at`); a decision with an old
+  version is refused (`stale`, 409): the author edited after the agent read it. Decisions: approve (held or sample:
+  publishes, counts an approval), reject (held: `rejected`; reported or sample: `hidden`; trust drops, author emailed),
+  hide (reported or sample), keep (reported: restored, reports dismissed, each reporter charged a false report; three
+  drop the reporter a level once and mute their reports until the owner resets them), escalate (left held or hidden, a
+  sample is hidden; owner decides). An approve is refused for a banned author or text that now fails the length, blocked
+  word or link checks. Every decision writes an `audit_log` row (actor `agent:<name>`, action `comment.<decision>`, no
+  text). A repeated decision returns the current state with no second effect.
+- **Rejection email** (essential mail, to the author's address only): the first 80 characters of their comment, the
+  reason, the guidelines link and a signed appeal link (30 days, bound to the comment and the author, HMAC under
+  `UNSUBSCRIBE_SECRET` with its own `appeal:v1` domain; without the secret the email goes out without the link). A failed
+  send is logged and does not undo the decision; there is no resend (watch the worker and web logs).
+- **Appeals** (`/comments/appeal/<token>/`: the GET only reads; the button POSTs; one per comment; 20 POSTs an hour per
+  address). The owner decides in `/admin/comments/`: overturn (published again, the rejection taken back from the counts;
+  the level stays as it is, set it by hand if needed) or uphold; the author is emailed either way.
+- **Owner queue** (`/admin/comments/`): counts, escalations (target within 48 hours), appeals (within 48 hours),
+  comments hidden by an urgent report in the last 7 days (within 24 hours), muted reporters (by report number; reset with
+  `comments.report_reset`). Publish or remove an escalated or urgently reported comment with
+  `comments.escalation_resolve` (remove emails the author with an appeal link). No email, account id or name is shown.
+  All `comments.*` actions are refused when the comment flags are off.
+- **Digest**: a Comments section with counts only (held, published and rejected by the agent in 24 hours, escalated,
+  open appeals, urgent reports in 24 hours).
+- **Not built** (spec 4a.6): switching comments to hold-everything when the agent has not run for 48 hours, and a digest
+  alert for escalations past their target. Add both before relying on the agent unattended.
+- **Migration and rollback.** `022_comment_moderation.sql` is additive (`comment_reports`, `comment_appeals`,
+  `agents.role` defaulting to `content`, `account_trust.false_reports`/`reports_muted`, four nullable `comments`
+  columns). Code rollback: unset `COMMENTS_ENABLED`, or the previous release (it never reads them; a moderation-role agent
+  would then be treated as a content agent by the old code, so revoke it in `/admin/agents/` first). Schema rollback is
+  in the migration header, only after the previous release is live.
+
+### Comment moderation agent (Project 7B)
 
 - **Key.** In `/admin/agents/` create an agent with role "Comment moderation" and world "Master agent" (a moderation agent
   is never tied to a world). Its key works only on `GET /api/agent/moderation/` and `POST /api/agent/moderation/decide/`

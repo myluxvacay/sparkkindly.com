@@ -22,6 +22,7 @@ import {
   type PendingComment,
   type PublicComment,
 } from './repo';
+import { REPORT_MESSAGES } from './report-web';
 import { mayComment } from './rules';
 import { getTrust } from './trust';
 
@@ -166,4 +167,5 @@ export const COMMENT_MESSAGES: Record<string, { text: string; ok: boolean }> = {
   banned: { text: 'Your account can no longer post comments.', ok: false },
   too_late: { text: 'Comments can only be edited within 15 minutes of posting.', ok: false },
   not_found: { text: 'That comment was not found.', ok: false },
+  ...REPORT_MESSAGES,
 };

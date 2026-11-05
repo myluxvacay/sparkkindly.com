@@ -148,10 +148,12 @@ describe('who may report what', () => {
     expect((await db.query('SELECT count(*)::int AS n FROM comment_reports')).rows[0].n).toBe(0);
   });
 
-  it('a 13-15 account (who can see comments) may report, at level 0 weight', async () => {
+  it('a 13-15 account may not report (ruling: reporting follows public_comment, 16+); a 16-year-old may, at level 0 weight', async () => {
     const a = await target();
     const teen = await person(db, NOW, '2012-01-01', 'parent-mod@example.test');
-    expect(await report(teen.ctx, a.id)).toEqual({ status: 'reported' });
+    expect(await report(teen.ctx, a.id)).toEqual({ status: 'refused', code: 'not_allowed' });
+    const older = await person(db, NOW, '2010-01-01');
+    expect(await report(older.ctx, a.id)).toEqual({ status: 'reported' });
     const w = await db.query<{ weight: string }>('SELECT weight::text FROM comment_reports');
     expect(Number(w.rows[0].weight)).toBe(0.5);
   });

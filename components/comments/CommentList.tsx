@@ -4,6 +4,7 @@ import type { CommentSectionData } from '@/lib/comments/web';
 import { relativeTime } from '@/lib/comments/web';
 import { COMMENT_LIMITS } from '@/lib/comments/rules';
 import CommentForm from './CommentForm';
+import ReportForm from './ReportForm';
 
 type Entry = {
   id: string;
@@ -70,6 +71,7 @@ function Comment({ e, replies, data }: { e: Entry; replies: Entry[]; data: Comme
           )}
           <p className="comment-body">{e.body}</p>
           {e.mine && <OwnActions e={e} data={data} />}
+          {!e.mine && !e.held && data.viewer === 'member' && <ReportForm commentId={e.id} />}
         </>
       )}
       {replies.length > 0 && (

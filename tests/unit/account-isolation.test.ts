@@ -63,6 +63,11 @@ import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, sea
 import { deleteComment, editComment, listPublishedComments, postComment } from '@/lib/comments/repo';
 import { deleteCommentRequest, editCommentRequest, loadCommentSection, postCommentRequest } from '@/lib/comments/web';
 import { setTrust } from '@/lib/comments/trust';
+import { reportCommentRequest } from '@/lib/comments/report-web';
+import { appealState, appealToken, fileAppeal } from '@/lib/comments/appeals';
+import { createAgent } from '@/lib/agents/admin';
+import { queueRequest, decideRequest } from '@/lib/comments/moderation-api';
+import { createLimiter } from '@/lib/agents/rate-limit';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -1532,13 +1537,94 @@ describe('comments (plan 7A, Task 3)', () => {
   });
 });
 
+describe('comment moderation (plan 7B, Task 4)', () => {
+  const NOW = new Date('2026-11-05T12:00:00Z');
+  const SECRET = 'isolation-test-only-appeal-secret-000001';
+  let c = 0;
+  async function person() {
+    const email = `p7b-${c++}@example.test`;
+    const r = await signUp(db, { email, dateOfBirth: '1984-02-02' }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    return { id: r.accountId, email, session: await signIn(email) };
+  }
+  async function rejectedComment() {
+    const a = await person();
+    const quiz = await playItem(db, { world: (await db.query<{ id: number }>("SELECT id FROM worlds WHERE slug = 'play'")).rows[0].id, audience: 'all' });
+    const r = await db.query<{ id: string }>(
+      "INSERT INTO comments (item_id, account_id, body, status, moderation_reason) VALUES ($1, $2, 'A rejected words', 'rejected', 'Rude') RETURNING id",
+      [quiz, a.id],
+    );
+    return { a, id: r.rows[0].id };
+  }
+  beforeEach(() => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('COMMENTS_ENABLED', 'true');
+  });
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it("account B cannot appeal or read account A's rejection, even with a token naming A's comment", async () => {
+    const { a, id } = await rejectedComment();
+    const b = await person();
+    const forged = appealToken(SECRET, id, b.id, NOW)!;
+    expect(await appealState(db, SECRET, forged, NOW)).toBe('invalid');
+    expect(await fileAppeal(db, SECRET, forged, 'mine', NOW)).toBe('invalid');
+    const tampered = appealToken(SECRET, id, a.id, NOW)!.replace(a.id, b.id);
+    expect(await fileAppeal(db, SECRET, tampered, 'mine', NOW)).toBe('invalid');
+    expect((await db.query('SELECT count(*)::int AS n FROM comment_appeals')).rows[0].n).toBe(0);
+  });
+
+  it('a non-owner cannot decide appeals: an account session at /admin/act/ goes to admin sign-in', async () => {
+    const { a, id } = await rejectedComment();
+    expect(await fileAppeal(db, SECRET, appealToken(SECRET, id, a.id, NOW)!, '', NOW)).toBe('filed');
+    const r = await handleAdminAction(
+      new Request('http://localhost/admin/act/', {
+        method: 'POST',
+        headers: { host: 'localhost', origin: 'http://localhost', 'content-type': 'application/x-www-form-urlencoded', cookie: `__Host-sk_account=${a.session}` },
+        body: new URLSearchParams({ action: 'comments.appeal_overturn', comment: id, csrf: 'x' }).toString(),
+      }),
+      { db, env, now: NOW },
+    );
+    expect(r.headers.get('location')).toBe('/admin/sign-in/');
+    expect((await db.query('SELECT status FROM comments WHERE id = $1', [id])).rows[0].status).toBe('rejected');
+  });
+
+  it('a content-role agent key is refused on the moderation routes', async () => {
+    const { key } = await createAgent(db, `content-7b-${c++}`, null);
+    const d = { db, now: NOW, env: {}, send: async () => ({}), limiter: createLimiter({ perMinute: 60 }) };
+    const get = await queueRequest(new Request('http://localhost/api/agent/moderation/', { headers: { 'x-agent-key': key } }), d);
+    const post = await decideRequest(new Request('http://localhost/api/agent/moderation/decide/', { method: 'POST', headers: { 'x-agent-key': key }, body: '{}' }), d);
+    expect([get.status, post.status]).toEqual([403, 403]);
+  });
+
+  it('a child context cannot report (403, nothing stored)', async () => {
+    const parent = await person();
+    const { id } = await rejectedComment();
+    await db.query("UPDATE comments SET status = 'published' WHERE id = $1", [id]);
+    const kid = await createChildProfile(db, parent.id, { displayName: 'Kid', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (kid.status !== 'created') throw new Error('profile failed');
+    await switchToProfile(db, parent.session, kid.profileId, NOW);
+    const r = await reportCommentRequest(
+      new Request('http://localhost/comments/report/', {
+        method: 'POST',
+        headers: { host: 'localhost', origin: 'http://localhost', 'content-type': 'application/x-www-form-urlencoded', cookie: `__Host-sk_account=${parent.session}` },
+        body: new URLSearchParams({ comment: id, reason: 'abuse' }).toString(),
+      }),
+      { db, now: NOW, env: {}, send: async () => ({}) },
+    );
+    expect(r.status).toBe(403);
+    expect((await db.query('SELECT count(*)::int AS n FROM comment_reports')).rows[0].n).toBe(0);
+  });
+});
+
 describe('arrives with later features', () => {
   // The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
   // child profile -> adults item denied at the daily set and scores: covered above (plan 4C, Task 4).
   // child profile -> adults item denied at the email: covered above (plan 4D, Task 3); the daily mail names no item at all.
   // child profile -> settings, export, delete and PIN reset denied: covered above (plan 3E, Task 4).
   // child profile -> invites denied: covered above (plan 4B, Task 3).
-  // child profile -> comments denied: covered above (plan 7A, Task 3).
+  // child profile -> comments denied: covered above (plan 7A, Task 3); reporting: covered above (plan 7B, Task 4).
   it.todo('child profile -> contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
   // 13-15 account -> community join denied at the route: covered above (plan 4B, Task 3).
   // 13-15 account -> public comment denied at the route: covered above (plan 7A, Task 3).

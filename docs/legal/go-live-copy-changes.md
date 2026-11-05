@@ -99,6 +99,20 @@ comments are checked automatically and may wait for review, may be removed, and 
 comment. The draft guidelines page (`app/community/guidelines/page.tsx`, 404 with comments off) needs the owner's read.
 The trust-page test's `/leave a comment/i` guard stays until that copy goes live.
 
+## Comment reports, moderation and appeals (Project 7B)
+
+The privacy page must also say: members can report a comment with a reason, an optional note and an urgent flag; the
+report and the reporter's account are kept (the account link is removed if the reporter deletes their account) and the
+export lists the holder's own reports; reports are read by an AI moderation assistant and by the site owner, never shown
+to the comment's author or other members; comments are reviewed by an AI moderation assistant (Claude, run by the site
+owner) with the owner's oversight, before publication for new members and by random sample afterwards; a removed
+comment's author is emailed the reason and can appeal once within 30 days, and the appeal (with its note) is kept and
+listed in the export ([data inventory](data-inventory.md), `comment_reports` and `comment_appeals`).
+
+The terms must add: comments are moderated by an AI assistant with owner oversight; how to report and what "urgent"
+means; that removals can be appealed and the owner decides; that repeated false reports lower a member's trust and
+stop their reports counting.
+
 ## Other places that point at the privacy page
 
 - The parent consent email links to the privacy page (`lib/accounts/consent-email.ts`, `privacyUrl`). It must not be
