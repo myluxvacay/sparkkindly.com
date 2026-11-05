@@ -68,6 +68,10 @@ import { appealState, appealToken, fileAppeal } from '@/lib/comments/appeals';
 import { createAgent } from '@/lib/agents/admin';
 import { queueRequest, decideRequest } from '@/lib/comments/moderation-api';
 import { createLimiter } from '@/lib/agents/rate-limit';
+import { enableRequest, saveRequest, submitRequest, withdrawRequest } from '@/lib/contributors/web';
+import { getMine } from '@/lib/contributors/drafts';
+import { contributor as contributorFixture, drafted as draftedFixture } from '../helpers/contributors';
+import { person as personFixture } from '../helpers/comments';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -1618,18 +1622,69 @@ describe('comment moderation (plan 7B, Task 4)', () => {
   });
 });
 
-describe('arrives with later features', () => {
-  // The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
-  // child profile -> adults item denied at the daily set and scores: covered above (plan 4C, Task 4).
-  // child profile -> adults item denied at the email: covered above (plan 4D, Task 3); the daily mail names no item at all.
-  // child profile -> settings, export, delete and PIN reset denied: covered above (plan 3E, Task 4).
-  // child profile -> invites denied: covered above (plan 4B, Task 3).
-  // child profile -> comments denied: covered above (plan 7A, Task 3); reporting: covered above (plan 7B, Task 4).
-  it.todo('child profile -> contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
-  // 13-15 account -> community join denied at the route: covered above (plan 4B, Task 3).
-  // 13-15 account -> public comment denied at the route: covered above (plan 7A, Task 3).
-  it.todo('13-15 account -> contribute denied (route level; the capability rows above are covered through can())');
-  // tampered item id at the daily set: an answer to an item outside the set scores nothing, covered above (plan 4C, Task 4).
-  // 13-17 account joining a circle that holds a child profile: covered above (plan 4B, Task 3).
-  // agent key A -> agent B's items denied: covered in tests/unit/agent-api.test.ts and agent-keys.test.ts, not duplicated here.
+// Rows that arrived with later features, and where each is covered:
+// The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
+// child profile -> adults item denied at the daily set and scores: covered above (plan 4C, Task 4).
+// child profile -> adults item denied at the email: covered above (plan 4D, Task 3); the daily mail names no item at all.
+// child profile -> settings, export, delete and PIN reset denied: covered above (plan 3E, Task 4).
+// child profile -> invites denied: covered above (plan 4B, Task 3).
+// child profile -> comments denied: covered above (plan 7A, Task 3); reporting: covered above (plan 7B, Task 4).
+// child profile -> contribute routes denied: covered below (plan 8, Task 4).
+// 13-15 account -> community join denied at the route: covered above (plan 4B, Task 3).
+// 13-15 account -> public comment denied at the route: covered above (plan 7A, Task 3).
+// 13-15 account -> contribute denied at the route: covered below (plan 8, Task 4).
+// tampered item id at the daily set: an answer to an item outside the set scores nothing, covered above (plan 4C, Task 4).
+// 13-17 account joining a circle that holds a child profile: covered above (plan 4B, Task 3).
+// agent key A -> agent B's items denied: covered in tests/unit/agent-api.test.ts and agent-keys.test.ts, not duplicated here.
+
+describe('contributors (plan 8): adult context, own contributions only', () => {
+  const NOW8 = new Date('2026-11-05T12:00:00Z');
+  const form = (path: string, session: string, fields: Record<string, string>) =>
+    new Request(`http://localhost${path}`, {
+      method: 'POST',
+      headers: { host: 'localhost', origin: 'http://localhost', 'content-type': 'application/x-www-form-urlencoded', cookie: `__Host-sk_account=${session}` },
+      body: new URLSearchParams(fields).toString(),
+    });
+  beforeEach(async () => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('CONTRIBUTORS_ENABLED', 'true');
+    await seedReference(db);
+  });
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('child profile -> every contribute route is 403 and nothing is stored', async () => {
+    const parent = await contributorFixture(db, NOW8);
+    const kid = await createChildProfile(db, parent.id, { displayName: 'Kid', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (kid.status !== 'created') throw new Error('profile failed');
+    await switchToProfile(db, parent.session, kid.profileId, NOW8);
+    for (const fn of [enableRequest, saveRequest, submitRequest, withdrawRequest]) {
+      expect((await fn(form('/me/contribute/x/', parent.session, { display_name: 'Kid', terms: 'on', kind: 'article', world: 'play' }), { db, now: NOW8 })).status).toBe(403);
+    }
+    expect((await db.query('SELECT count(*)::int AS n FROM contributions WHERE account_id = $1', [parent.id])).rows[0].n).toBe(0);
+  });
+
+  it('13-15 account -> contribute refused at the route (no profile, nothing stored)', async () => {
+    const teen = await personFixture(db, NOW8, '2012-06-01', `p${Math.random()}@example.test`);
+    const r = await enableRequest(form('/me/contribute/enable/', teen.session, { display_name: 'Teen', terms: 'on' }), { db, now: NOW8 });
+    expect(r.headers.get('location')).toBe('/me/contribute/?r=not_allowed#result');
+    expect((await db.query('SELECT 1 FROM contributor_profiles WHERE account_id = $1', [teen.id])).rows).toHaveLength(0);
+  });
+
+  it("account A -> account B's contribution denied (read, save, submit, withdraw), even with B's valid id", async () => {
+    const a = await contributorFixture(db, NOW8);
+    const b = await contributorFixture(db, NOW8);
+    const id = await draftedFixture(db, b, NOW8);
+    expect(await getMine(db, a.id, id)).toBeNull();
+    for (const [fn, fields] of [
+      [saveRequest, { id, kind: 'article', world: 'discover', title: 'Hijack' }],
+      [submitRequest, { id, original: 'on', licence: 'on' }],
+      [withdrawRequest, { id }],
+    ] as const) {
+      const r = await fn(form('/me/contribute/x/', a.session, fields), { db, now: NOW8 });
+      expect(r.headers.get('location')).toBe('/me/contribute/?r=not_found#result');
+    }
+    expect((await getMine(db, b.id, id))!.state).toBe('draft');
+  });
 });

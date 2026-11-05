@@ -113,6 +113,19 @@ The terms must add: comments are moderated by an AI assistant with owner oversig
 means; that removals can be appealed and the owner decides; that repeated false reports lower a member's trust and
 stop their reports counting.
 
+## Contributors (Project 8)
+
+Before `CONTRIBUTORS_ENABLED` goes on anywhere real: the privacy page must say that members aged 16 and over can
+become contributors; what is kept (display name, optional bio and link, their drafts and submissions with the reviewer's
+and owner's notes, the terms acceptance and declarations with times); that submissions are read by an AI reviewer
+(Claude, run by the site owner) which may search the web for distinctive sentences, and by the site owner; that a
+published piece shows the display name publicly and links to a public contributor page; that deleting the account takes
+published pieces down and removes the page; and that the export lists all of it ([data inventory](data-inventory.md),
+`contributor_profiles` and `contributions`). The terms page (`app/(trust)/terms/page.tsx`) must point to
+`/contributors/terms/` (Ruling: the pointer is added with the go-live copy, not now, so the terms page stays unchanged
+while the flag is off). The draft contributor terms need the owner's (and the professional's) review, including the
+open payment decision.
+
 ## Other places that point at the privacy page
 
 - The parent consent email links to the privacy page (`lib/accounts/consent-email.ts`, `privacyUrl`). It must not be

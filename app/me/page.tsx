@@ -3,6 +3,7 @@ import ItemCard from '@/components/item/ItemCard';
 import { dashboardFor, type Dashboard } from '@/lib/accounts/dashboard';
 import { PLAYING_PAGE, requireContext } from '@/lib/accounts/next';
 import { can } from '@/lib/accounts/policy';
+import { contributorsEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
 import type { PublicItem } from '@/lib/items/repo';
 import { listWorlds, type World } from '@/lib/public/worlds';
@@ -61,6 +62,12 @@ export default async function MePage() {
           <>
             {' '}
             · <Link href="/account/">Your account</Link>
+            {contributorsEnabled() && can(ctx.account.ageGroup, ctx.account.consent, 'contribute') && (
+              <>
+                {' '}
+                · <Link href="/me/contribute/">Write for SparkKindly</Link>
+              </>
+            )}
           </>
         )}
       </p>

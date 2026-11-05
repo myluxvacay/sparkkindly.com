@@ -141,14 +141,14 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 
 ## Project 8: Contributors
 
-- [ ] 8.1 Contributor role (16+), contributor terms and licence text, display name and bio — *role toggle with terms acceptance.*
-- [ ] 8.2 Submission editor at `/me/contribute`: articles and quiz questions, topics from the curated list, sources, originality declaration; three pending max — *validation tests.*
-- [ ] 8.3 Same pipeline as agent items plus owner approval always; best-effort plagiarism search in the reviewer — *a copied paragraph is flagged.*
-- [ ] 8.4 Revision requests and rejections with reasons; contributor notifications and publication email with share link — *emails sent.*
-- [ ] 8.5 Bylines, contributor pages, byline carried into social posts; minors by display name only — *pages render.*
-- [ ] 8.6 Unpublish on contributor request within the problem-report target — *test.*
-- [ ] 8.7 Contributor trust and role removal — *tests.*
-- [ ] 8.8 **[owner]** Decide whether contributors are ever paid — *recorded.*
+- [x] 8.1 Contributor role (16+), contributor terms and licence text, display name and bio — *role toggle with terms acceptance.* (5 Nov 2026, behind `CONTRIBUTORS_ENABLED`: migration 023, `contributors-flow.test.ts`; draft `/contributors/terms/`, owner copy review pending)
+- [x] 8.2 Submission editor at `/me/contribute`: articles and quiz questions, topics from the curated list, sources, originality declaration; three pending max — *validation tests.* (`contributors-rules.test.ts`, `contributors-web.test.tsx`, e2e `contributors.spec.ts`)
+- [ ] 8.3 Same pipeline as agent items plus owner approval always; best-effort plagiarism search in the reviewer — *a copied paragraph is flagged.* (built: gates, `/review-contributions`, verdict API, owner approval, `contributors-review-api.test.ts`; the staging dry run with a copied paragraph is still to do)
+- [ ] 8.4 Revision requests and rejections with reasons; contributor notifications and publication email with share link — *emails sent.* (built and unit-tested, `contributors-owner.test.ts`; emails to a real inbox still to be received on staging)
+- [ ] 8.5 Bylines, contributor pages, byline carried into social posts; minors by display name only — *pages render.* (bylines, contributor pages, JSON-LD author and sitemap built, `contributors-public.test.ts`, e2e; social posts wait for Project 5)
+- [x] 8.6 Unpublish on contributor request within the problem-report target — *test.* (withdrawal archives at once; `contributors-flow.test.ts`, e2e)
+- [ ] 8.7 Contributor trust and role removal — *tests.* (a comment ban blocks contributing; separate contributor trust levels and role removal not built)
+- [ ] 8.8 **[owner]** Decide whether contributors are ever paid — *recorded.* (the terms say unpaid; owner decision open)
 - [ ] 8.9 Done-when: submission with a missing source is flagged, fixed, approved from the shared queue, published with byline and contributor page, and the contributor is emailed.
 
 ---

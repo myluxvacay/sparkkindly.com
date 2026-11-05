@@ -713,6 +713,44 @@ Behind the same flags as comments. Plan `docs/superpowers/plans/2026-11-05-proje
 - **Plan usage.** A run reads at most three pages of 20 comments and makes one call per comment; it is small next to the
   content run. Watch the first week's runs for plan-limit hits, as for the content agents.
 
+## Contributors (Project 8)
+
+Behind `ACCOUNTS_ENABLED` **and** `CONTRIBUTORS_ENABLED` (both off everywhere; `deploy/env/*.example` carry
+`# CONTRIBUTORS_ENABLED=`). With either unset there is no `/me/contribute/`, `/contributors/...` page, byline, agent
+contribution route, `contribution.*` admin action or Contributions admin page, and the worker sends no contribution
+mail. Plan `docs/superpowers/plans/2026-11-05-project-8-contributors.md`.
+
+- **Who.** Members aged 16 and over, verified, adult context, not banned from commenting (a comment ban also blocks
+  contributing). The role is switched on in `/me/contribute/` by accepting `/contributors/terms/` and choosing a display
+  name (comment-name checks, reserved names refused) and an optional bio. An adult may propose one link; it shows on the
+  contributor page only after the owner approves it (`contribution.link_approve`), and never for a 16 or 17-year-old.
+- **What.** Articles (2 to 6 headed sections, 8,000 characters of text, a takeaway) and multiple-choice quiz questions
+  (four options, one correct, an explanation) in any enabled world except Kids; audience always `all`; plain text only,
+  no uploads. Limits: 5 drafts, 3 pending, 10 saves an hour, 5 submissions a day per account (in memory, per process).
+- **Pipeline.** Submit runs the agent item gates synchronously (schema, duplicates, blocked words and topics, sources
+  resolve); a failure keeps the draft with the reasons. A pass creates the item as a `draft` and the contribution waits
+  in `agent_review`. Once an item exists its kind and world are fixed and every revision is gated against the item's own
+  world. The reviewer's pass moves it to `needs_owner` (item `in_review`); its fail to `changes_requested` (reasons
+  shown and emailed). The owner decides in `/admin/contributions/`: approve (the same scheduling path as `item.approve`;
+  approving the item from the main queue approves the contribution too), request changes (notes, emailed; item back to
+  draft) or reject (reason, emailed; item rejected). `item.reject` refuses a contributed item so a reason is always given.
+  The approved item publishes through publish-due; the worker then sends one publication email per item with the share
+  link (claimed in `contributions.publication_mailed_at` before sending; a failed send is not retried).
+- **Reviewer run.** `/review-contributions env=<staging|prod>` (master content key, MCP tools
+  `sparkkindly_contributions_queue` and `sparkkindly_contribution_verdict`; world keys and the moderation key get 403).
+  One `sparkkindly-reviewer` per entry with the plagiarism search; a pass without a source opened (Sourced tier) or
+  without the plagiarism search counts as a fail. Schedule it by hand in Windows Task Scheduler after the daily run, like
+  `/moderate-run`: `claude -p "/review-contributions env=staging" --setting-sources project --allowedTools Agent
+  mcp__sparkkindly-staging --disallowedTools Bash Write Edit Read`. Response target for the owner: 7 days.
+- **Withdrawal and deletion.** A contributor withdraws any piece from `/me/contribute/` (confirm step); a published or
+  scheduled item is archived at once, an unpublished one too. Account deletion archives published contributed items,
+  deletes never-published ones, then cascades the profile and contributions, so no byline or contributor page remains.
+  The export lists the profile, every contribution with its states, reasons and owner notes.
+- **Migration and rollback.** `023_contributors.sql` is additive (`contributor_profiles`, `contributions`). Code
+  rollback: unset `CONTRIBUTORS_ENABLED` (bylines and pages disappear; rows stay), or the previous release (it never reads
+  them). Schema rollback is in the migration header, only after the previous release is live; archive any published
+  contributed items first if the tables are dropped, since the old release would show them without a byline.
+
 ## Pilot measurement (roadmap P.2)
 
 `/admin/pilot/` shows the spec 4a.2 pilot metrics against their thresholds, computed from data the site already holds
