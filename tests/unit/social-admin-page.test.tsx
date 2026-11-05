@@ -58,6 +58,13 @@ describe('SocialAdmin view', () => {
     expect(html).not.toContain('Cancel: Odd one out');
   });
 
+  it('plan 5B: a video platform waiting for re-authorisation says so', () => {
+    const tiktok = { platform: 'tiktok' as const, enabled: true, dailyCap: 1, postTime: '15:00', supported: true, credentials: false, reauth: true };
+    const out = renderToStaticMarkup(<SocialAdmin csrf="CSRF" overview={{ ...overview, platforms: [tiktok] }} />);
+    expect(out).toMatch(/TikTok needs re-authorisation/);
+    expect(out).toMatch(/href="\/admin\/social\/videos\/?"/);
+  });
+
   it('shows visits per platform per item', () => {
     expect(html).toMatch(/Odd one out[^<]*<\/a>[^<]*facebook[^<]*7 visits/);
   });

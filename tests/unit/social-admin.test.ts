@@ -131,7 +131,8 @@ describe('socialOverview', () => {
     const o = await socialOverview(db, NOW, env);
     expect(o.platforms.find((p) => p.platform === 'facebook')).toMatchObject({ credentials: true, supported: true });
     expect(o.platforms.find((p) => p.platform === 'instagram')).toMatchObject({ credentials: false, supported: true });
-    expect(o.platforms.find((p) => p.platform === 'tiktok')).toMatchObject({ supported: false });
+    // Plan 5B: TikTok posts video through the video queue; without its keys it has no credentials.
+    expect(o.platforms.find((p) => p.platform === 'tiktok')).toMatchObject({ supported: true, credentials: false });
     expect(o.distributions.find((d) => d.platform === 'instagram')).toMatchObject({ status: 'posted', title: 'Odd one out', postUrl: 'https://www.instagram.com/p/abc/' });
     expect(o.distributions.find((d) => d.platform === 'facebook')).toMatchObject({ status: 'skipped', skipReason: 'cap_reached' });
     expect(o.visits).toEqual([expect.objectContaining({ platform: 'instagram', title: 'Odd one out', visits: 7 })]);

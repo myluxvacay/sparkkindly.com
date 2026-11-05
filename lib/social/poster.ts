@@ -35,7 +35,7 @@ type Claimed = {
   attempts: number; daily_cap: number; post_time_utc: string;
 };
 
-async function duePlatforms(db: Queryable, now: Date, platforms: Platform[]): Promise<Platform[]> {
+export async function duePlatforms(db: Queryable, now: Date, platforms: Platform[]): Promise<Platform[]> {
   const r = await db.query<{ platform: Platform }>(
     `SELECT DISTINCT d.platform FROM distributions d JOIN social_platforms p ON p.platform = d.platform
      WHERE d.status = 'scheduled' AND d.scheduled_for <= $1 AND p.enabled AND d.platform = ANY($2::text[])`,
@@ -60,10 +60,10 @@ async function claim(db: Queryable, now: Date, platforms: Platform[]): Promise<C
   return r.rows[0] ? { ...r.rows[0], id: Number(r.rows[0].id) } : null;
 }
 
-const tomorrow = (now: Date) => new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1));
+export const tomorrow = (now: Date) => new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1));
 
 // Posts made on the platform during this UTC day (posted, or flagged after posting).
-async function postedToday(db: Queryable, platform: Platform, now: Date): Promise<number> {
+export async function postedToday(db: Queryable, platform: Platform, now: Date): Promise<number> {
   const end = tomorrow(now);
   const start = new Date(end.getTime() - 24 * 3_600_000);
   const r = await db.query<{ n: number }>(
@@ -73,19 +73,30 @@ async function postedToday(db: Queryable, platform: Platform, now: Date): Promis
   return r.rows[0].n;
 }
 
-async function failRow(db: Queryable, d: { id: number; platform: Platform }, event: 'fail' | 'flag', message: string): Promise<void> {
+export async function failRow(db: Queryable, d: { id: number; platform: Platform }, event: 'fail' | 'flag', message: string): Promise<void> {
   await moveDistribution(db, d.id, event, { set: { last_error: message } });
   const what = event === 'fail' ? 'failed' : 'flagged for the owner (it may have been posted)';
   await alert(db, 'social-post', `social post ${d.id} on ${d.platform} ${what}: ${message}`);
 }
 
-async function onError(db: Queryable, d: Claimed, err: unknown, now: Date, r: PosterResult): Promise<void> {
+// A quota or rate limit (plan 5B) writes one failed_jobs line per platform and UTC day, however often it recurs.
+async function limitAlert(db: Queryable, platform: Platform, now: Date, message: string): Promise<void> {
+  const r = await db.query("INSERT INTO job_runs (job, run_key) VALUES ('social-limit', $1) ON CONFLICT DO NOTHING RETURNING run_key", [
+    `${platform}:${now.toISOString().slice(0, 10)}`,
+  ]);
+  if (r.rows.length) await alert(db, 'social-post', `${platform} quota or rate limit reached (${message}): posts wait and retry later`);
+}
+
+// Exported for the video poster (plan 5B), which handles failures the same way.
+export async function onError(db: Queryable, d: { id: number; platform: Platform; attempts: number }, err: unknown, now: Date, r: PosterResult): Promise<void> {
   const e = err instanceof SocialPostError ? err : new SocialPostError('transient', 'unexpected error');
   if (e.kind === 'ambiguous') {
     await failRow(db, d, 'flag', e.message);
     r.flagged++;
   } else if (e.kind === 'transient' && d.attempts < MAX_ATTEMPTS) {
-    await moveDistribution(db, d.id, 'defer', { set: { last_error: e.message, scheduled_for: new Date(now.getTime() + RETRY_MS).toISOString() } });
+    const wait = e.backoffMs ?? RETRY_MS;
+    await moveDistribution(db, d.id, 'defer', { set: { last_error: e.message, scheduled_for: new Date(now.getTime() + wait).toISOString() } });
+    if (e.backoffMs) await limitAlert(db, d.platform, now, e.message);
     r.deferred++;
   } else if (e.kind === 'credentials') {
     await moveDistribution(db, d.id, 'defer', { set: { attempts: d.attempts - 1, last_error: 'no credentials' } });

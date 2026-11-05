@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ActionForm from '@/components/admin/ActionForm';
 import type { DistributionRow, Overview } from '@/lib/social/admin';
 import { PLATFORMS } from '@/lib/social/states';
@@ -21,12 +22,20 @@ function Banner({ platforms }: Pick<Overview, 'platforms'>) {
   if (!missing.length) return null;
   return (
     <div role="alert" className="grown-ups">
-      {missing.map((p) => (
-        <p key={p.platform}>
-          No credentials for {NAME[p.platform]}: nothing is posted there until the Meta settings are in the server env file
-          (docs/OPERATIONS.md, Social distribution).
-        </p>
-      ))}
+      {missing.map((p) =>
+        p.reauth ? (
+          <p key={p.platform}>
+            {NAME[p.platform]} needs re-authorisation: posting there has stopped until the owner signs in again (docs/OPERATIONS.md, Video
+            jobs).
+          </p>
+        ) : (
+          <p key={p.platform}>
+            No credentials for {NAME[p.platform]}: nothing is posted there until the{' '}
+            {p.platform === 'tiktok' || p.platform === 'youtube' ? `${NAME[p.platform]}` : 'Meta'} settings are in the server env file
+            (docs/OPERATIONS.md, {p.platform === 'tiktok' || p.platform === 'youtube' ? 'Video jobs' : 'Social distribution'}).
+          </p>
+        ),
+      )}
     </div>
   );
 }
@@ -37,6 +46,11 @@ function PlatformForm({ csrf, p }: { csrf: string; p: Overview['platforms'][numb
     <li>
       <h3>{NAME[p.platform]}</h3>
       {!p.supported && <p className="muted">Posting to {NAME[p.platform]} comes with short video (Project 5B).</p>}
+      {(p.platform === 'tiktok' || p.platform === 'youtube') && (
+        <p className="muted">
+          Video only: see <Link href="/admin/social/videos/">video jobs</Link>.
+        </p>
+      )}
       <ActionForm csrf={csrf} action="social.platform_set" returnTo={RETURN} label={`Save ${NAME[p.platform]}`} fields={{ platform: p.platform }}>
         <p>
           <label htmlFor={`${id}-on`}>Posting</label>

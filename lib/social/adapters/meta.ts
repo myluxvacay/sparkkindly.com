@@ -17,8 +17,9 @@ const POLL_TRIES = 5;
 const POLL_WAIT_MS = 3_000;
 
 export type FailureKind = 'transient' | 'permanent' | 'credentials' | 'ambiguous';
+// backoffMs (plan 5B): a quota or rate limit asks the poster to wait longer than its usual 5 minutes.
 export class SocialPostError extends Error {
-  constructor(public readonly kind: FailureKind, message: string) {
+  constructor(public readonly kind: FailureKind, message: string, public readonly backoffMs?: number) {
     super(message);
     this.name = 'SocialPostError';
   }
@@ -26,7 +27,7 @@ export class SocialPostError extends Error {
 
 export type AdapterDeps = { fetch: typeof fetch; env: EnvLike; sleep?: (ms: number) => Promise<void> };
 export type PostPayload = { text: string; imageUrl: string };
-export type Metrics = { reach?: number; likes?: number; comments?: number };
+export type Metrics = { reach?: number; likes?: number; comments?: number; views?: number };
 export interface PlatformAdapter {
   post(d: PostPayload, deps: AdapterDeps): Promise<{ externalId: string; url: string | null }>;
   metrics(d: { externalId: string }, deps: AdapterDeps): Promise<Metrics>;

@@ -7,7 +7,9 @@ import type { Queryable } from '@/lib/db';
 import type { EnvLike } from '@/lib/env';
 import { ADAPTERS, hasCredentials } from './adapters/meta';
 import { handPickTx, type PickResult } from './select';
-import { isPlatform, moveDistribution, PLATFORMS, type DistStatus, type Platform } from './states';
+import { isPlatform, isVideoPlatform, moveDistribution, PLATFORMS, type DistStatus, type Platform } from './states';
+import { tokenStatus } from './token-store';
+import { hasVideoCredentials } from './video/poster';
 
 const TIME = /^([01]\d|20):([0-5]\d)$/;
 
@@ -55,7 +57,7 @@ export type DistributionRow = {
   postedAt: Date | null; attempts: number;
 };
 export type Overview = {
-  platforms: (PlatformSettings & { credentials: boolean; supported: boolean })[];
+  platforms: (PlatformSettings & { credentials: boolean; supported: boolean; reauth?: boolean })[];
   distributions: DistributionRow[];
   visits: { platform: Platform; title: string; world: string; slug: string; visits: number }[];
 };
@@ -72,8 +74,10 @@ async function platforms(db: Queryable, env: EnvLike): Promise<Overview['platfor
       enabled: p.enabled,
       dailyCap: p.daily_cap,
       postTime: p.t,
-      supported: !!ADAPTERS[p.platform],
-      credentials: hasCredentials(p.platform, env),
+      // TikTok and YouTube post video through the video queue (plan 5B); their tokens can need re-authorisation.
+      supported: !!ADAPTERS[p.platform] || isVideoPlatform(p.platform),
+      credentials: isVideoPlatform(p.platform) ? hasVideoCredentials(p.platform, env) : hasCredentials(p.platform, env),
+      ...(isVideoPlatform(p.platform) && tokenStatus(p.platform, env) === 'reauth' ? { reauth: true } : {}),
     }));
 }
 
