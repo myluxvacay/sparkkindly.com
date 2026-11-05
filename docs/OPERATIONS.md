@@ -453,6 +453,48 @@ If no run is recorded for 36 hours the worker emails the admin list.
   previous release is live: `DROP TABLE referrals; DROP TABLE circle_invites; ALTER TABLE circle_members DROP COLUMN
   removed_at; DELETE FROM schema_migrations WHERE name = '015_circle_invites.sql';` (as in the migration header).
 
+## Circle sets and scores (Project 4C)
+
+- **Flags.** Same as circles: `ACCOUNTS_ENABLED` and `CIRCLES_ENABLED`. With either unset `/circles/<slug>/set/`,
+  `/scores/`, `/interests/` and the interests POST are 404s.
+- **Interests.** The owner of an open circle picks up to 10 topics and 5 worlds (`/circles/<slug>/interests/`; ids are
+  checked against existing topics and enabled worlds). Members see them read-only; a child profile is sent to its
+  "Playing as" page.
+- **The daily set** (`lib/circles/daily-set.ts`). Up to 5 playable items per circle day: published quizzes and games with
+  a stored answer that the public reads would show. Preference: not shown to the circle in the previous 14 days, then
+  items matching the chosen topics (within the chosen worlds, if any), then the chosen worlds, then any world (the last
+  two are labelled "bonus"); a hash of circle, day and item orders each group. No interests means every world counts.
+  The set is made the first time a member opens the set page that day (an advisory lock makes concurrent first opens
+  produce one set; the circle page's status line only reads) and is then fixed. A closed circle makes no new set.
+- **Day boundaries.** The circle day is the calendar date in `circles.time_zone`, so circles in Auckland and Los Angeles
+  roll over at different instants. There is no way to change a circle's time zone yet.
+- **Child safety.** A circle holding any current child profile gets and shows `kids` and `all` items only. The stored set
+  is re-filtered on every read with the circle's current members, so adding a child hides an `adults` item at once and
+  it stops scoring. Removing the child gives later sets the full range again.
+- **Scores** (`lib/circles/scores.ts`). Derived on every read, nothing stored: a member (an account, or a child profile)
+  earns the points setting per set item answered correctly on that circle day (first answer only; answers on another day
+  count for nothing). Tallies for the day, ISO week (Monday start) and calendar month in the circle's zone, and all
+  time, per member and for the whole circle. Ties share a rank (1, 1, 3). A member who left keeps their points as
+  "Former member" (shown only where they scored); deleting an account or a child profile removes its answer rows and
+  its points everywhere. Scores, sets and names are visible to current members only (and to a child profile for its
+  own circles); a non-member gets a 404. Which answer anyone gave is never shown.
+- **Points setting.** `/admin/pilot/` "Circle scoring": a whole number 0 to 100 (default 10), saved by the audited
+  admin action `scoring.set_points` into `site_settings` (`points_correct`). It applies to every circle at once, past
+  days included.
+- **Re-scoring.** `item_responses.choice` (016) keeps the response for closed questions (option id, true or false,
+  number, order of ids; never typed text). `changeAnswerKey(tx, itemId, answer, now)` in `lib/circles/rescore.ts` is the
+  one way to change an existing item's answer key: in the same transaction it re-checks every stored choice, flips
+  `correct` where it changed, and when anything flipped writes one `circle_notices` row per circle that had the item in a
+  set in the last 30 days (the circle page shows "Scores corrected"; 4D emails it). Answers saved before 016 have no
+  choice and keep their result. There is no admin page for answer-key corrections yet; run it from a script in a
+  transaction if one is ever needed.
+- **Migration and rollback.** `016_circle_sets.sql` is additive (`circle_interests`, `circle_daily_sets`,
+  `circle_notices`, `site_settings`, nullable `item_responses.choice`). Code rollback: unset `CIRCLES_ENABLED` or switch
+  back to the previous release (it never reads them; its record path simply stops writing `choice`). Schema rollback,
+  only after the previous release is live: `DROP TABLE circle_notices; DROP TABLE circle_daily_sets; DROP TABLE
+  circle_interests; DROP TABLE site_settings; ALTER TABLE item_responses DROP COLUMN choice; DELETE FROM
+  schema_migrations WHERE name = '016_circle_sets.sql';` (as in the migration header).
+
 ## Pilot measurement (roadmap P.2)
 
 `/admin/pilot/` shows the spec 4a.2 pilot metrics against their thresholds, computed from data the site already holds

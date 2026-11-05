@@ -26,7 +26,7 @@ import { resetPin } from '@/lib/accounts/pin-reset';
 import { getSettings, saveSettings } from '@/lib/accounts/settings';
 import { runInactivitySweep } from '@/lib/accounts/inactivity';
 import { applyUnsubscribe, readUnsubscribeToken, unsubscribeToken } from '@/lib/accounts/unsubscribe';
-import { createCircle, getCircleForMember, listMyCircles } from '@/lib/circles/repo';
+import { createCircle, getCircleForMember, leaveCircle, listMyCircles } from '@/lib/circles/repo';
 import { addChildToCircle, circleHasChild, removeChildFromCircle } from '@/lib/circles/children';
 import { closeCircle, removeMember, transferOwnership } from '@/lib/circles/owner';
 import {
@@ -49,6 +49,12 @@ import {
   loadInvitePage,
   revokeInviteRequest,
 } from '@/lib/circles/invite-web';
+import { item as playItem } from '../helpers/circle-play';
+import { getOrCreateDailySet } from '@/lib/circles/daily-set';
+import { getTallies } from '@/lib/circles/scores';
+import { changeAnswerKey, listNotices } from '@/lib/circles/rescore';
+import { loadScoresPage, loadSetPage, saveCircleInterestsRequest } from '@/lib/circles/play-web';
+import { getCircleInterests } from '@/lib/circles/interests';
 import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, searchPublic } from '@/lib/public/reads';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -1092,15 +1098,135 @@ describe('invites and communities (plan 4B, Task 3)', () => {
   });
 });
 
+describe('circle sets and scores (plan 4C, Task 4)', () => {
+  const NOW = new Date('2026-11-05T12:00:00Z');
+  let c = 0;
+  async function person() {
+    const email = `p4c-${c++}@example.test`;
+    const r = await signUp(db, { email, dateOfBirth: '1984-02-02' }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    return { id: r.accountId, session: await signIn(email) };
+  }
+  const enrol = (slug: string, accountId: string, name = 'M') =>
+    db.query('INSERT INTO circle_members (circle_id, account_id, display_name) SELECT id, $2, $3 FROM circles WHERE slug = $1', [
+      slug,
+      accountId,
+      name,
+    ]);
+  const idOf = async (slug: string) => (await db.query<{ id: string }>('SELECT id FROM circles WHERE slug = $1', [slug])).rows[0].id;
+  const req = (body: Record<string, string>, cookie: string) =>
+    new Request('http://localhost/x', {
+      method: 'POST',
+      headers: {
+        host: 'staging.sparkkindly.com',
+        origin: 'https://staging.sparkkindly.com',
+        'content-type': 'application/x-www-form-urlencoded',
+        cookie: `__Host-sk_account=${cookie}`,
+      },
+      body: new URLSearchParams(body).toString(),
+    });
+  let world: number;
+  let adultsIds: string[];
+
+  // Owner Ann with member Bob in a family circle, and a child profile of Ann's not yet in it.
+  async function setup() {
+    const ann = await person();
+    const bob = await person();
+    const r = await createCircle(db, ann.id, { name: 'Sets', kind: 'family', yourName: 'Ann' }, T0);
+    if (r.status !== 'created') throw new Error('circle failed');
+    await enrol(r.slug, bob.id, 'Bob');
+    const kid = await createChildProfile(db, ann.id, { displayName: 'Kid', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (kid.status !== 'created') throw new Error('profile failed');
+    return { ann, bob, slug: r.slug, id: await idOf(r.slug), kid: kid.profileId };
+  }
+
+  beforeAll(async () => {
+    world = (await db.query<{ id: number }>("SELECT id FROM worlds WHERE slug = 'play'")).rows[0].id;
+    adultsIds = [];
+    for (let i = 0; i < 6; i++) adultsIds.push(await playItem(db, { world, audience: 'adults' }));
+    for (let i = 0; i < 3; i++) await playItem(db, { world, audience: 'all' });
+  });
+  beforeEach(() => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('CIRCLES_ENABLED', 'true');
+  });
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('child profile in a circle -> no adults item in the set or the scores, even when the stored set held one', async () => {
+    const { ann, slug, id, kid } = await setup();
+    const before = await getOrCreateDailySet(db, id, NOW);
+    const adultsInSet = before.filter((s) => adultsIds.includes(s.itemId));
+    expect(adultsInSet.length).toBeGreaterThan(0);
+    await recordAnswer(db, { accountId: ann.id, profileId: null }, adultsInSet[0].itemId, true, NOW);
+    expect((await getTallies(db, ann.id, null, slug, NOW))!.circleTotals.day).toBe(10);
+    expect(await addChildToCircle(db, ann.id, slug, kid, 'on', NOW)).toBe('added');
+    expect((await getOrCreateDailySet(db, id, NOW)).some((s) => adultsIds.includes(s.itemId))).toBe(false);
+    expect((await getTallies(db, ann.id, null, slug, NOW))!.circleTotals.day).toBe(0);
+    expect(await switchToProfile(db, ann.session, kid, NOW)).toBe(true);
+    const page = await loadSetPage(db, ann.session, slug, NOW);
+    expect(page.status === 'ok' && page.items.some((s) => adultsIds.includes(s.itemId))).toBe(false);
+    const scores = await loadScoresPage(db, ann.session, slug, NOW);
+    expect(scores.status === 'ok' && scores.tallies.circleTotals.day).toBe(0);
+  });
+
+  it('account B (not a member) and a non-member are denied the set, scores and notices', async () => {
+    const { ann, slug } = await setup();
+    const stranger = await person();
+    expect(await getTallies(db, stranger.id, null, slug, NOW)).toBeNull();
+    expect(await listNotices(db, stranger.id, slug, NOW)).toBeNull();
+    expect(await getCircleInterests(db, stranger.id, slug)).toBeNull();
+    expect(await loadSetPage(db, stranger.session, slug, NOW)).toEqual({ status: 'not_found' });
+    expect(await loadScoresPage(db, stranger.session, slug, NOW)).toEqual({ status: 'not_found' });
+    expect((await loadSetPage(db, ann.session, slug, NOW)).status).toBe('ok');
+  });
+
+  it('tampered circle slug, profile id or item id changes nothing', async () => {
+    const { ann, bob, slug, id, kid } = await setup();
+    // Bob with Ann's child's profile id, Ann with a profile not in the circle, a forged slug: no board.
+    expect(await getTallies(db, bob.id, kid, slug, NOW)).toBeNull();
+    expect(await getTallies(db, ann.id, kid, slug, NOW)).toBeNull();
+    expect(await getTallies(db, ann.id, null, 'zzzzzzzzzz', NOW)).toBeNull();
+    // A member posting interests with the owner's account id in the form: not the owner, nothing saved.
+    const body = { world: String(world), account_id: ann.id, circle: slug };
+    const r = await saveCircleInterestsRequest(req(body, bob.session), { db, now: NOW, limit: () => true }, slug);
+    expect(r.headers.get('location')).toContain('r=not-owner');
+    expect(await getCircleInterests(db, ann.id, slug)).toEqual({ worldIds: [], topicIds: [] });
+    // A correct answer to a valid item that is not in the circle's set scores nothing.
+    const set = (await getOrCreateDailySet(db, id, NOW)).map((s) => s.itemId);
+    const outside = await playItem(db, { world, audience: 'all' });
+    expect(set).not.toContain(outside);
+    await recordAnswer(db, { accountId: bob.id, profileId: null }, outside, true, NOW);
+    expect((await getTallies(db, ann.id, null, slug, NOW))!.circleTotals.allTime).toBe(0);
+  });
+
+  it('a left member is denied the set, scores and notices; a re-score notice reaches members only', async () => {
+    const { ann, bob, slug, id } = await setup();
+    const set = await getOrCreateDailySet(db, id, NOW);
+    await recordAnswer(db, { accountId: bob.id, profileId: null }, set[0].itemId, false, NOW, 'a');
+    await db.transaction((tx) => changeAnswerKey(tx, set[0].itemId, 'a', NOW));
+    expect(await listNotices(db, bob.id, slug, NOW)).toHaveLength(1);
+    expect(await leaveCircle(db, bob.id, slug, NOW)).toBe('left');
+    expect(await getTallies(db, bob.id, null, slug, NOW)).toBeNull();
+    expect(await listNotices(db, bob.id, slug, NOW)).toBeNull();
+    expect(await loadSetPage(db, bob.session, slug, NOW)).toEqual({ status: 'not_found' });
+    const board = (await getTallies(db, ann.id, null, slug, NOW))!.day;
+    expect(board.find((r) => r.former)).toMatchObject({ name: 'Former member', points: 10 });
+    await db.transaction((tx) => changeAnswerKey(tx, set[0].itemId, 'b', NOW));
+  });
+});
+
 describe('arrives with later features', () => {
   // The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
-  it.todo('child profile -> adults item denied at the daily set and email routes (these routes do not exist yet)');
+  // child profile -> adults item denied at the daily set and scores: covered above (plan 4C, Task 4).
+  it.todo('child profile -> adults item denied at the email routes (these routes do not exist yet; 4D)');
   // child profile -> settings, export, delete and PIN reset denied: covered above (plan 3E, Task 4).
   // child profile -> invites denied: covered above (plan 4B, Task 3).
   it.todo('child profile -> comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
   // 13-15 account -> community join denied at the route: covered above (plan 4B, Task 3).
   it.todo('13-15 account -> public comment and contribute denied (route level; the capability rows above are covered through can())');
-  it.todo('tampered item id in a daily-set payload denied (the daily set does not exist yet; circle and profile ids are covered above)');
+  // tampered item id at the daily set: an answer to an item outside the set scores nothing, covered above (plan 4C, Task 4).
   // 13-17 account joining a circle that holds a child profile: covered above (plan 4B, Task 3).
   // agent key A -> agent B's items denied: covered in tests/unit/agent-api.test.ts and agent-keys.test.ts, not duplicated here.
 });
