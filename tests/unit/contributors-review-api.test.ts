@@ -8,6 +8,7 @@ import { contributor, drafted, stateOf, itemOf, submitted, DECLARED, okProbe, fr
 import { createAgent } from '@/lib/agents/admin';
 import { createLimiter } from '@/lib/agents/rate-limit';
 import { queueRequest, verdictRequest } from '@/lib/contributors/review-api';
+import { REASON_REPLACED } from '@/lib/contributors/review';
 import { submitContribution } from '@/lib/contributors/submit';
 import { agentRoute } from '@/lib/agents/http';
 import { queueRequest as moderationQueue } from '@/lib/comments/moderation-api';
@@ -160,6 +161,21 @@ describe('verdicts', () => {
     expect(mail.to).toBe(p.email);
     expect(mail.text).toContain('the second claim has no source');
     expect(mail.text).not.toContain('sourcesChecked');
+  });
+
+  it('a reason with a link, an @ or a control character never reaches the contributor: a fixed sentence replaces it', async () => {
+    const p = await contributor(db, NOW);
+    const id = await submitted(db, p, NOW);
+    const [entry] = await queue();
+    const d = deps();
+    const reasons = ['see evil.example/fix for help', 'write to help@evil.example', 'the second claim has no source', 'bell\u0007here'];
+    expect((await verdictRequest(post(reviewerKey, verdict(id, entry.version, { pass: false, reasons })), d)).status).toBe(200);
+    const stored = (await db.query<{ r: string[] }>('SELECT review_reasons AS r FROM contributions WHERE id = $1', [id])).rows[0].r;
+    expect(stored).toEqual([REASON_REPLACED, REASON_REPLACED, 'the second claim has no source', REASON_REPLACED]);
+    const mail = (d.send.mock.calls[0] as unknown as [{ text: string }])[0];
+    expect(mail.text).toContain('the second claim has no source');
+    expect(mail.text).toContain(REASON_REPLACED);
+    expect(mail.text).not.toMatch(/evil\.example|@evil|\u0007/);
   });
 
   it('a pass for a sourced item with no source opened, or without the plagiarism search, counts as a fail', async () => {

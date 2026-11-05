@@ -88,7 +88,7 @@ const NEEDS_REASON: Decision[] = ['escalate'];
 // Agent keeps per agent per UTC day (7B review M3b): an injected batch cannot restore many reported comments at once.
 export const KEEP_LIMIT = 10;
 // The free-text reason is for the owner only, and still plain: no link-like text, no @, no line break or control character.
-const plainReason = (s: string) => !LINK_LIKE.test(s.normalize('NFKC')) && !s.includes('@') && !/[\p{Cc}\p{Cf}]/u.test(s);
+export const plainReason = (s: string) => !LINK_LIKE.test(s.normalize('NFKC')) && !s.includes('@') && !/[\p{Cc}\p{Cf}]/u.test(s);
 const inputSchema = z.object({
   id: z.string().max(100),
   version: z.string().min(1).max(100),

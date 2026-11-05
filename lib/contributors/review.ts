@@ -11,6 +11,7 @@ import { isUuid } from '@/lib/accounts/pin';
 import type { ApiResult } from '@/lib/agents/api';
 import type { Agent } from '@/lib/agents/auth';
 import { parseVerdict, type Tier } from '@/lib/agents/verdict';
+import { plainReason } from '@/lib/comments/moderation';
 import type { Db, Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
@@ -66,9 +67,14 @@ const fail = (status: number, error: string): Outcome => ({ result: { status, js
 
 const NOT_SHOWN = 'The automatic review could not confirm this piece. Please check that every source supports its claim and try again.';
 
+// Reasons reach the contributor (page and email), so they are plain like moderation reasons (plan 8 review M3): a reason
+// with link-like text, an @ or a control character is replaced by a fixed sentence, never passed on.
+export const REASON_REPLACED = 'The automatic review found a problem it could not describe safely. Please check the piece against the guidelines.';
+const plainReasons = (reasons: string[]) => reasons.map((r) => (plainReason(r) ? r : REASON_REPLACED));
+
 // The decision the server takes from the agent's verdict: a pass only when it shows its work for the tier.
 function decision(v: Input, tier: Tier): { pass: boolean; reasons: string[] } {
-  if (!v.pass) return { pass: false, reasons: v.reasons };
+  if (!v.pass) return { pass: false, reasons: plainReasons(v.reasons) };
   try {
     parseVerdict({ pass: v.pass, reasons: v.reasons, sourcesChecked: v.sourcesChecked, solvedAnswer: v.solvedAnswer }, { tier });
   } catch {
