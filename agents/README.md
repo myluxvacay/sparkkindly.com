@@ -32,6 +32,15 @@ A moderation key is refused (403) on the content routes and a content key on the
 `SPARKKINDLY_STAGING_MODERATION_KEY=skagt_...` (and `SPARKKINDLY_PROD_MODERATION_KEY` for production) to the secrets file.
 The `/moderate-run env=<env>` command reads the queue and starts one `sparkkindly-moderator-<env>` agent per entry; each holds only its environment's decide tool and judges one comment.
 
+## The contribution review tools (plan 8, review H1)
+
+A third server role, started with `--role reviewer` (`sparkkindly-staging-reviewer`, `sparkkindly-prod-reviewer` in
+`.mcp.json`), offers only `sparkkindly_contributions_queue` and `sparkkindly_contribution_verdict` and uses its own key,
+`SPARKKINDLY_<STAGING|PROD>_REVIEWER_KEY`. The site accepts a reviewer key on the two contribution routes only (403 on
+brief, items, runs and moderation) and refuses every other key there, so a review run never holds the item submit tool
+and text injected into a contribution cannot publish anything. Create the key in `/admin/agents/` with the role
+"Contribution reviewer" and the world "Master agent". `/review-contributions` may use only Agent and those two tools.
+
 ## One-time setup
 
 1. Create a key for each environment on the server's database (the key is printed once):

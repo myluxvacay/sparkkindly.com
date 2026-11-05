@@ -85,7 +85,7 @@ export function createClient(opts: Options): AgentClient {
     // The moderation agent (plan 7B): its key only works on these two.
     moderationQueue: () => request('GET', '/api/agent/moderation/'),
     moderationDecide: (decision) => request('POST', '/api/agent/moderation/decide/', decision),
-    // Contribution review (plan 8): the master content key only; a world agent's key gets 403.
+    // Contribution review (plan 8): the reviewer-role key only (plan 8 review H1); every other key gets 403.
     contributionsQueue: () => request('GET', '/api/agent/contributions/'),
     contributionVerdict: (verdict) => request('POST', '/api/agent/contributions/review/', verdict),
   };

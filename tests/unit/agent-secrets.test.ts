@@ -78,4 +78,11 @@ describe('resolveConfig', () => {
     });
     expect(resolveConfig('staging', full, 'moderation')).toEqual({ ok: false, missing: ['SPARKKINDLY_STAGING_MODERATION_KEY'] });
   });
+
+  it('the reviewer role (plan 8 review H1) uses its own key setting and names it when missing', () => {
+    expect(resolveConfig('prod', { ...full, SPARKKINDLY_PROD_REVIEWER_KEY: 'skagt_r' }, 'reviewer')).toEqual({
+      ok: true, baseUrl: 'https://sparkkindly.com', agentKey: 'skagt_r', basicAuth: undefined,
+    });
+    expect(resolveConfig('staging', full, 'reviewer')).toEqual({ ok: false, missing: ['SPARKKINDLY_STAGING_REVIEWER_KEY'] });
+  });
 });

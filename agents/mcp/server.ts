@@ -5,13 +5,13 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 import { createClient, type AgentClient, type Result } from '../client';
-import { defaultSecretsPath, loadSecrets, resolveConfig } from '../secrets';
+import { defaultSecretsPath, loadSecrets, resolveConfig, type Role } from '../secrets';
 import { registerContributionTools } from './contribution-tools';
 import { registerModerationTools } from './moderation-tools';
 
 type Deps = {
   client: AgentClient | null; // null when the environment is not configured
-  role?: 'content' | 'moderation'; // which tools this server offers (one key, one role)
+  role?: Role; // which tools this server offers (one key, one role)
   missing?: string[];
   secretsHint?: string;
   formatDoc: string;
@@ -38,6 +38,11 @@ export function buildServer(deps: Deps): McpServer {
 
   if (deps.role === 'moderation') {
     registerModerationTools(server, run);
+    return server;
+  }
+  // The contribution review run (plan 8 review H1) gets only its two tools, never submit_item.
+  if (deps.role === 'reviewer') {
+    registerContributionTools(server, run);
     return server;
   }
 
@@ -104,14 +109,14 @@ export function buildServer(deps: Deps): McpServer {
     (args) => run((c) => c.recordRun(args)),
   );
 
-  registerContributionTools(server, run);
   return server;
 }
 
 async function main() {
   const arg = (name: string) => (process.argv.includes(name) ? process.argv[process.argv.indexOf(name) + 1] : undefined);
   const env = arg('--env') as 'staging' | 'prod';
-  const role = arg('--role') === 'moderation' ? 'moderation' : 'content';
+  const given = arg('--role');
+  const role: Role = given === 'moderation' || given === 'reviewer' ? given : 'content';
   const config = resolveConfig(env, loadSecrets(), role);
   const formatDoc = readFileSync(new URL('../../docs/item-format.md', import.meta.url), 'utf8');
   const server = buildServer({

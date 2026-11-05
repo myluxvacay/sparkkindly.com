@@ -18,8 +18,17 @@ describe('migration files', () => {
     for (const f of files.filter((name) => !name.includes('contract'))) {
       const sql = readFileSync(path.join(dir, f), 'utf8').replace(/--.*$/gm, '');
       expect(sql, f).not.toMatch(/\bDROP\s+(TABLE|COLUMN)\b/i);
-      expect(sql, f).not.toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
+      // Replacing a CHECK in one statement (DROP CONSTRAINT x, ADD CONSTRAINT x CHECK ...) drops no data; anything else does.
+      const rest = sql.replace(/\bDROP\s+CONSTRAINT\s+(\w+)\s*,\s*ADD\s+CONSTRAINT\s+\1\s+CHECK\b/gi, '');
+      expect(rest, f).not.toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
     }
+  });
+
+  it('a replaced CHECK is still recognised as a drop when it is not re-added in the same statement', () => {
+    const strip = (sql: string) => sql.replace(/\bDROP\s+CONSTRAINT\s+(\w+)\s*,\s*ADD\s+CONSTRAINT\s+\1\s+CHECK\b/gi, '');
+    expect(strip('ALTER TABLE t DROP CONSTRAINT c;')).toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
+    expect(strip('ALTER TABLE t DROP CONSTRAINT c, ADD CONSTRAINT d CHECK (x);')).toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
+    expect(strip('ALTER TABLE t DROP CONSTRAINT c, ADD CONSTRAINT c CHECK (x);')).not.toMatch(/\bALTER\s+TABLE\b[^;]*\bDROP\b/i);
   });
 
   it('have no leftover transaction control, because the runner wraps the whole run in one transaction', () => {

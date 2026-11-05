@@ -1,4 +1,4 @@
-// The reviewer agent's side of contributions (plan 8 Task 2): the queue the master content agent reads and the verdict
+// The reviewer agent's side of contributions (plan 8 Task 2): the queue the reviewer-role agent reads and the verdict
 // it posts. AI output is untrusted: the verdict is validated with a closed schema (an unknown field is refused), must
 // name the contribution's current revision, and can at most move it to needs_owner (item in_review); only the owner's
 // admin action approves. A pass that does not show its work (no source opened for a Sourced item, no plagiarism search)
@@ -108,7 +108,7 @@ async function decideIn(tx: Queryable, agent: Agent, v: Input, env: EnvLike): Pr
 }
 
 export async function recordVerdict(db: Db, agent: Agent, input: unknown, deps: VerdictDeps): Promise<ApiResult> {
-  if (agent.role !== 'content' || agent.worldId !== null) return { status: 403, json: { error: 'forbidden_agent' } };
+  if (agent.role !== 'reviewer') return { status: 403, json: { error: 'forbidden_agent' } };
   const parsed = verdictSchema.safeParse(input);
   if (!parsed.success) return { status: 400, json: { error: 'invalid_verdict', message: parsed.error.issues[0]?.message } };
   const v = parsed.data;

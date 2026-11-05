@@ -27,13 +27,17 @@ export type Config =
   | { ok: false; missing: string[] };
 
 // Which site and key an environment uses. When something is missing the result names the setting, never a value.
-// The moderation role (plan 7B) has its own key, <PREFIX>_MODERATION_KEY, so one MCP server never holds both keys.
-export function resolveConfig(env: 'staging' | 'prod', secrets: Record<string, string>, role: 'content' | 'moderation' = 'content'): Config {
+// The moderation role (plan 7B) has its own key, <PREFIX>_MODERATION_KEY, and the reviewer role (plan 8 review H1)
+// <PREFIX>_REVIEWER_KEY, so one MCP server never holds two keys.
+export type Role = 'content' | 'moderation' | 'reviewer';
+const KEY_SUFFIX: Record<Role, string> = { content: 'AGENT_KEY', moderation: 'MODERATION_KEY', reviewer: 'REVIEWER_KEY' };
+
+export function resolveConfig(env: 'staging' | 'prod', secrets: Record<string, string>, role: Role = 'content'): Config {
   if (env !== 'staging' && env !== 'prod') return { ok: false, missing: ['a valid --env (staging or prod)'] };
   const prefix = env === 'staging' ? 'SPARKKINDLY_STAGING' : 'SPARKKINDLY_PROD';
   const missing: string[] = [];
   const url = secrets[`${prefix}_URL`];
-  const keyName = role === 'moderation' ? `${prefix}_MODERATION_KEY` : `${prefix}_AGENT_KEY`;
+  const keyName = `${prefix}_${KEY_SUFFIX[role]}`;
   const key = secrets[keyName];
   if (!url) missing.push(`${prefix}_URL`);
   if (!key) missing.push(keyName);

@@ -92,7 +92,7 @@ export async function listTopicsAdmin(db: Queryable): Promise<{ slug: string; na
   return r.rows;
 }
 
-export type AgentRow = { id: number; name: string; world: string | null; role: 'content' | 'moderation'; enabled: boolean; lastRunAt: Date | null; keyAgeDays: number };
+export type AgentRow = { id: number; name: string; world: string | null; role: 'content' | 'moderation' | 'reviewer'; enabled: boolean; lastRunAt: Date | null; keyAgeDays: number };
 
 export async function listAgents(db: Queryable): Promise<AgentRow[]> {
   const r = await db.query<AgentRow>(

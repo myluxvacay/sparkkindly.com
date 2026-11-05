@@ -442,13 +442,14 @@ const handlers: Record<string, Handler> = {
     const name = field(form, 'name');
     if (!AGENT_NAME.test(name)) throw bad();
     const world = field(form, 'world') || null;
-    // A moderation agent (plan 7B) works on comments only, never in a world.
+    // A moderation agent (plan 7B) works on comments only, a reviewer agent (plan 8 review H1) on contribution reviews
+    // only; neither is ever in a world.
     const role = field(form, 'role') || 'content';
-    if ((role !== 'content' && role !== 'moderation') || (role === 'moderation' && world)) throw bad();
+    if (!['content', 'moderation', 'reviewer'].includes(role) || (role !== 'content' && world)) throw bad();
     if (world) await worldBySlug(tx, world);
     const taken = await tx.query('SELECT 1 FROM agents WHERE name = $1', [name]);
     if (taken.rows.length) throw new ActionError(409, 'exists');
-    const { id, key } = await createAgent(tx, name, world, role);
+    const { id, key } = await createAgent(tx, name, world, role as 'content' | 'moderation' | 'reviewer');
     return { code: 'agent_created', target: `agent:${id}`, detail: { name, world, role }, secret: key };
   },
 

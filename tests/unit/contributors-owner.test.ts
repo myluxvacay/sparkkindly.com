@@ -22,7 +22,7 @@ let db: TestDb;
 const NOW = new Date('2026-11-05T12:00:00Z');
 const admin = { email: 'owner@example.test' };
 const env = { ADMIN_LINK_BASE: 'https://s.example.test' };
-const master: Agent = { id: 1, name: 'master', worldId: null, worldSlug: null, role: 'content' };
+const master: Agent = { id: 1, name: 'master', worldId: null, worldSlug: null, role: 'reviewer' };
 let sent: EmailMessage[] = [];
 const send = async (m: EmailMessage) => void sent.push(m);
 const act = (name: string, fields: Record<string, string>) => runAction(db, admin, name, new URLSearchParams(fields), NOW, send);

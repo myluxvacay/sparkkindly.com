@@ -15,6 +15,14 @@
     "sparkkindly-prod-moderation": {
       "command": "node",
       "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "prod", "--role", "moderation"]
+    },
+    "sparkkindly-staging-reviewer": {
+      "command": "node",
+      "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "staging", "--role", "reviewer"]
+    },
+    "sparkkindly-prod-reviewer": {
+      "command": "node",
+      "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "prod", "--role", "reviewer"]
     }
   }
 }

@@ -722,8 +722,9 @@ Behind the same flags as comments. Plan `docs/superpowers/plans/2026-11-05-proje
   columns), and `024_moderation_review_fixes.sql` adds `comments.moderation_code` and `comments.escalation_note`. Code
   rollback: unset `COMMENTS_ENABLED`, or the previous release. Before switching to a release older than 7B, disable every
   moderation agent: the old code ignores `agents.role`, and a moderation agent has `world_id` NULL, which the old code
-  treats as a **master content agent** that may submit items to any world. Run on the server, then check it updated the
-  expected rows: `UPDATE agents SET enabled = false WHERE role = 'moderation';` (re-enable after rolling forward). Schema
+  treats as a **master content agent** that may submit items to any world. The same holds for contribution reviewer
+  agents (`026_reviewer_role.sql`). Run on the server, then check it updated the expected rows:
+  `UPDATE agents SET enabled = false WHERE role IN ('moderation', 'reviewer');` (re-enable after rolling forward). Schema
   rollback is in the migration headers, only after the previous release is live.
 
 ### Comment moderation agent (Project 7B)
@@ -767,12 +768,16 @@ mail. Plan `docs/superpowers/plans/2026-11-05-project-8-contributors.md`.
   draft) or reject (reason, emailed; item rejected). `item.reject` refuses a contributed item so a reason is always given.
   The approved item publishes through publish-due; the worker then sends one publication email per item with the share
   link (claimed in `contributions.publication_mailed_at` before sending; a failed send is not retried).
-- **Reviewer run.** `/review-contributions env=<staging|prod>` (master content key, MCP tools
-  `sparkkindly_contributions_queue` and `sparkkindly_contribution_verdict`; world keys and the moderation key get 403).
+- **Reviewer run.** `/review-contributions env=<staging|prod>` (reviewer key, MCP servers
+  `sparkkindly-<env>-reviewer` with only `sparkkindly_contributions_queue` and `sparkkindly_contribution_verdict`; the
+  content, world and moderation keys get 403 there, and the reviewer key gets 403 on every other route). Create the key
+  in `/admin/agents/` with role "Contribution reviewer" and world "Master agent"; put it in the owner's secrets file as
+  `SPARKKINDLY_<STAGING|PROD>_REVIEWER_KEY`. Before rolling back past `026_reviewer_role.sql`, disable reviewer agents
+  (see the Comment moderation rollback note).
   One `sparkkindly-reviewer` per entry with the plagiarism search; a pass without a source opened (Sourced tier) or
   without the plagiarism search counts as a fail. Schedule it by hand in Windows Task Scheduler after the daily run, like
   `/moderate-run`: `claude -p "/review-contributions env=staging" --setting-sources project --allowedTools Agent
-  mcp__sparkkindly-staging --disallowedTools Bash Write Edit Read`. Response target for the owner: 7 days.
+  mcp__sparkkindly-staging-reviewer --disallowedTools Bash Write Edit Read`. Response target for the owner: 7 days.
 - **Withdrawal and deletion.** A contributor withdraws any piece from `/me/contribute/` (confirm step); a published or
   scheduled item is archived at once, an unpublished one too. Account deletion archives published contributed items,
   deletes never-published ones, then cascades the profile and contributions, so no byline or contributor page remains.

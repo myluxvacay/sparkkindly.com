@@ -54,7 +54,7 @@ async function member(browser: Browser, years: number): Promise<{ page: Page; id
 
 async function agentKey(): Promise<string> {
   const { key, prefix, hash: h } = generateKey();
-  await sql("INSERT INTO agents (name, world_id, key_prefix, key_hash, role) VALUES ($1, NULL, $2, $3, 'content')", [`e2e-master-${stamp}-${n++}`, prefix, h]);
+  await sql("INSERT INTO agents (name, world_id, key_prefix, key_hash, role) VALUES ($1, NULL, $2, $3, 'reviewer')", [`e2e-reviewer-${stamp}-${n++}`, prefix, h]);
   return key;
 }
 

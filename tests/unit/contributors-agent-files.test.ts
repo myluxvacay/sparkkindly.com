@@ -16,6 +16,27 @@ describe('/review-contributions command', () => {
     expect(command).toMatch(/env=prod/);
   });
 
+  it('may use only Agent and the reviewer-role queue and verdict tools, never submit_item or a content tool', () => {
+    const allowed = /^allowed-tools:\s*(.+)$/m.exec(command)?.[1] ?? '';
+    const tools = allowed.split(',').map((t) => t.trim()).sort();
+    expect(tools).toEqual([
+      'Agent',
+      'mcp__sparkkindly-prod-reviewer__sparkkindly_contribution_verdict',
+      'mcp__sparkkindly-prod-reviewer__sparkkindly_contributions_queue',
+      'mcp__sparkkindly-staging-reviewer__sparkkindly_contribution_verdict',
+      'mcp__sparkkindly-staging-reviewer__sparkkindly_contributions_queue',
+    ]);
+    expect(allowed).not.toMatch(/submit_item|brief|record_run|item_status/);
+    expect(command).not.toMatch(/master content key/i);
+  });
+
+  it('the reviewer servers exist per environment with --role reviewer', () => {
+    const mcp = JSON.parse(readFileSync('.mcp.json', 'utf8')) as { mcpServers: Record<string, { args: string[] }> };
+    for (const env of ['staging', 'prod']) {
+      expect(mcp.mcpServers[`sparkkindly-${env}-reviewer`].args).toEqual(['--import', 'tsx', 'agents/mcp/server.ts', '--env', env, '--role', 'reviewer']);
+    }
+  });
+
   it('never loosens a rule, always prints a count-only summary, never prints contribution text', () => {
     expect(command).toMatch(/never loosen/i);
     expect(command).toMatch(/always[^\n]*summary/i);
@@ -24,6 +45,11 @@ describe('/review-contributions command', () => {
 });
 
 describe('sparkkindly-reviewer', () => {
+  it('stays read-only: WebFetch and WebSearch only, no SparkKindly tool', () => {
+    const tools = /^tools:\s*(.+)$/m.exec(reviewer)?.[1] ?? '';
+    expect(tools.split(',').map((t) => t.trim()).sort()).toEqual(['WebFetch', 'WebSearch']);
+  });
+
   it('is used by both runs and does the plagiarism search for contributions', () => {
     expect(reviewer).toMatch(/\/review-contributions/);
     expect(reviewer).toMatch(/plagiarism/i);
