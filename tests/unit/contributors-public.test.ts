@@ -92,6 +92,8 @@ describe('the contributor page', () => {
     expect((await contributorPage(db, slug, scope()))!.link).toBeNull();
     await db.query('UPDATE contributor_profiles SET link_approved = true WHERE account_id = $1', [p.id]);
     expect((await contributorPage(db, slug, scope()))!.link).toBe('https://example.org/me');
+    // A child profile's scope (kids and all) never gets the external link (L9).
+    expect((await contributorPage(db, slug, { audiences: ['kids', 'all'], now: NOW }))!.link).toBeNull();
     await db.query("UPDATE accounts SET date_of_birth = '2009-06-01' WHERE id = $1", [p.id]);
     expect((await contributorPage(db, slug, scope()))!.link).toBeNull();
   });

@@ -222,6 +222,21 @@ describe('owner actions', () => {
     expect(sent.map((m) => m.to)).toEqual([a.author.email]);
   });
 
+  it('a removal email has an appeal link only while no appeal exists for that comment (L6)', async () => {
+    vi.stubEnv('UNSUBSCRIBE_SECRET', 'l6-test-only-secret-not-real-0123456789');
+    const fresh = await escalated();
+    sent = [];
+    expect(await act('comments.escalation_resolve', { comment: fresh.id, outcome: 'remove' })).toMatchObject({ ok: true });
+    expect(sent[0].text).toContain('/comments/appeal/');
+    const a = await appealed();
+    expect(await act('comments.appeal_overturn', { comment: a.id })).toMatchObject({ ok: true });
+    await db.query('UPDATE comments SET escalated_at = $2 WHERE id = $1', [a.id, NOW]);
+    sent = [];
+    expect(await act('comments.escalation_resolve', { comment: a.id, outcome: 'remove' })).toMatchObject({ ok: true });
+    expect(sent[0].text).not.toContain('/comments/appeal/');
+    vi.stubEnv('UNSUBSCRIBE_SECRET', '');
+  });
+
   it('owner Publish clears any earlier code and reason, and the audit log keeps the trail', async () => {
     const e = await escalated();
     await db.query("UPDATE comments SET moderation_code = 'other' WHERE id = $1", [e.id]);

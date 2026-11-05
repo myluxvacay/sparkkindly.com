@@ -85,7 +85,8 @@ export async function moderationQueue(db: Queryable, _now: Date, limit = 20): Pr
 // reject and hide need a closed code (the author's sentence); escalate needs a note for the owner (7B review M1, M2).
 const NEEDS_CODE: Decision[] = ['reject', 'hide'];
 const NEEDS_REASON: Decision[] = ['escalate'];
-// Agent keeps per agent per UTC day (7B review M3b): an injected batch cannot restore many reported comments at once.
+// Agent keeps per UTC day across every moderation agent (7B review M3b, plan 8 review L8): an injected batch cannot
+// restore many reported comments at once, and a second agent key does not double the allowance.
 export const KEEP_LIMIT = 10;
 // The free-text reason is for the owner only, and still plain: no link-like text, no @, no line break or control character.
 export const plainReason = (s: string) => !LINK_LIKE.test(s.normalize('NFKC')) && !s.includes('@') && !/[\p{Cc}\p{Cf}]/u.test(s);
@@ -145,7 +146,7 @@ async function decideIn(tx: Queryable, agent: Agent, input: Input, now: Date): P
   }
   if (row.version !== input.version) return fail(409, 'stale');
   if ((input.decision === 'approve' || input.decision === 'keep') && row.banned) return fail(409, 'author_banned');
-  if (input.decision === 'keep' && (await keepsToday(tx, actor, now)) >= KEEP_LIMIT) return fail(409, 'limit');
+  if (input.decision === 'keep' && (await keepsToday(tx, now)) >= KEEP_LIMIT) return fail(409, 'limit');
   if (input.decision === 'keep' && (await trustedUrgentHide(tx, input.id))) {
     // The agent cannot overrule a trusted member's urgent report: the owner decides (and only the owner's dismissal
     // charges that reporter). The comment stays hidden, the report stays open, the agent's reason is the owner's note.
@@ -182,17 +183,17 @@ async function trustedUrgentHide(tx: Queryable, id: string): Promise<boolean> {
   return r.rows.length > 0;
 }
 
-async function keepsToday(tx: Queryable, actor: string, now: Date): Promise<number> {
+async function keepsToday(tx: Queryable, now: Date): Promise<number> {
   const r = await tx.query<{ n: number }>(
-    `SELECT count(*)::int AS n FROM audit_log WHERE actor = $1 AND action = 'comment.keep'
-       AND at >= date_trunc('day', $2::timestamptz AT TIME ZONE 'UTC') AT TIME ZONE 'UTC'`,
-    [actor, now],
+    `SELECT count(*)::int AS n FROM audit_log WHERE actor LIKE 'agent:%' AND action = 'comment.keep'
+       AND at >= date_trunc('day', $1::timestamptz AT TIME ZONE 'UTC') AT TIME ZONE 'UTC'`,
+    [now],
   );
   return r.rows[0].n;
 }
 
 // One retry on a deadlock (7B review L5): two decisions sharing reporters' trust rows may collide; PostgreSQL aborts one.
-async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
+export async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
   try {
     return await fn();
   } catch (err) {

@@ -15,7 +15,7 @@ import { recordApproval, recordRejection } from './trust';
 
 export type Resolution = { status: 'done'; newStatus: string; mail?: EmailMessage; cleared?: Cleared } | { status: 'not_found' | 'wrong_state' };
 
-type Row = { account_id: string; status: string; body: string; code: string | null; email: string; eligible: boolean; appeal: boolean };
+type Row = { account_id: string; status: string; body: string; code: string | null; email: string; eligible: boolean; appeal: boolean; appealed: boolean };
 
 // Only an escalated comment or one with an open urgent report (7B review L3): a comment already rejected or hidden by a
 // decision has neither, so it is never removed (and its author emailed) twice. A muted reporter's urgent report leaves
@@ -31,7 +31,8 @@ async function overturnOpenAppeal(tx: Queryable, commentId: string, c: Row, now:
 }
 
 // publish: shown again (an approval for a held comment; open reports dismissed as false; an open appeal overturned).
-// remove: rejected (held) or hidden, trust drops, open reports upheld, and the author is emailed with an appeal link.
+// remove: rejected (held) or hidden, trust drops, open reports upheld, and the author is emailed (with an appeal link
+// unless the comment was already appealed).
 export async function resolveEscalation(
   tx: Queryable,
   admin: { email: string },
@@ -44,7 +45,8 @@ export async function resolveEscalation(
   await tx.query('SELECT 1 FROM account_trust WHERE account_id = (SELECT account_id FROM comments WHERE id = $1) FOR UPDATE', [commentId]);
   const r = await tx.query<Row>(
     `SELECT c.account_id, c.status, c.body, c.moderation_code AS code, a.email, ${ELIGIBLE} AS eligible,
-            EXISTS (SELECT 1 FROM comment_appeals p WHERE p.comment_id = c.id AND p.decided_at IS NULL) AS appeal
+            EXISTS (SELECT 1 FROM comment_appeals p WHERE p.comment_id = c.id AND p.decided_at IS NULL) AS appeal,
+            EXISTS (SELECT 1 FROM comment_appeals p WHERE p.comment_id = c.id) AS appealed
      FROM comments c JOIN accounts a ON a.id = c.account_id WHERE c.id = $1 FOR UPDATE OF c`,
     [commentId],
   );
@@ -69,7 +71,8 @@ export async function resolveEscalation(
   await upholdReports(tx, commentId, now);
   await recordRejection(tx, c.account_id);
   const site = linkBase(env);
-  const token = appealToken(unsubscribeSecret(env), commentId, c.account_id, now);
+  // One appeal per comment (comment_appeals.comment_id is unique): once one exists, no new appeal link (plan 8 review L6).
+  const token = c.appealed ? null : appealToken(unsubscribeSecret(env), commentId, c.account_id, now);
   const appealUrl = token ? `${site}/comments/appeal/${token}/` : null;
   return { status: 'done', newStatus, mail: rejectionEmail({ to: c.email, body: c.body, reason, site, appealUrl }) };
 }

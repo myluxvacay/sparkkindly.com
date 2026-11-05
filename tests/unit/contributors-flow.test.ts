@@ -231,6 +231,19 @@ describe('submitting', () => {
   });
 });
 
+describe('a resubmission whose gates fail (L10)', () => {
+  it('stays in changes_requested with the gate reasons, instead of falling back to draft', async () => {
+    const p = await contributor(db, NOW);
+    const id = await submitted(db, p, NOW);
+    await db.query("UPDATE contributions SET state = 'changes_requested' WHERE id = $1", [id]);
+    const failing = { ...deps(), probe: async () => ({ status: 404, location: null }) };
+    const r = await submitContribution(db, p.ctx, id, DECLARED, NOW, failing);
+    expect(r.status).toBe('gates_failed');
+    expect((await stateOf(db, id)).state).toBe('changes_requested');
+    expect((await getMine(db, p.id, id))!.gateReasons.length).toBeGreaterThan(0);
+  });
+});
+
 describe("revisions keep the item's kind and world", () => {
   async function requested() {
     const p = await contributor(db, NOW);
@@ -352,6 +365,17 @@ describe('account deletion and export', () => {
     expect(await itemOf(db, pendingItem)).toBeUndefined();
     expect((await db.query('SELECT 1 FROM contributions WHERE account_id = $1', [p.id])).rows).toHaveLength(0);
     expect(await getProfile(db, p.id)).toBeNull();
+  });
+
+  it('deletion does not fail when a sponsorship references a never-published contributed item: it is archived (L4)', async () => {
+    const p = await contributor(db, NOW);
+    const id = await submitted(db, p, NOW);
+    const itemId = (await stateOf(db, id)).item_id!;
+    const s = (await db.query<{ id: number }>("INSERT INTO sponsors (name, link) VALUES ('Ref', 'https://ref.example/') RETURNING id")).rows[0].id;
+    await db.query("INSERT INTO sponsorships (sponsor_id, item_id, label, ended_at) VALUES ($1, $2, 'L', now())", [s, itemId]);
+    expect(await deleteAccount(db, p.id, NOW)).toBe(true);
+    expect((await itemOf(db, itemId)).status).toBe('archived');
+    expect((await db.query('SELECT 1 FROM contributions WHERE account_id = $1', [p.id])).rows).toHaveLength(0);
   });
 
   it('the export holds the own profile, drafts, submissions, states and owner notes, nothing of others', async () => {

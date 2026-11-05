@@ -787,6 +787,11 @@ mail. Plan `docs/superpowers/plans/2026-11-05-project-8-contributors.md`.
   rollback: unset `CONTRIBUTORS_ENABLED` (bylines and pages disappear; rows stay), or the previous release (it never reads
   them). Schema rollback is in the migration header, only after the previous release is live; archive any published
   contributed items first if the tables are dropped, since the old release would show them without a byline.
+  The review-fix migrations `026_reviewer_role.sql` and `027_queue_fetched_at.sql` are additive too. Rolling the code back
+  past them: disable reviewer agents first (see the moderation rollback note); the older code approves contributed items
+  from the main queue again without the version check, mails a publication notice even for a contribution withdrawn
+  mid-batch, and refreshes the hold-everything heartbeat on any moderation-key call (`last_run_at`). Roll forward as soon
+  as possible; their schema rollback is in each migration header.
 
 ## Sponsorship (Project 6)
 

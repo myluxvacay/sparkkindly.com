@@ -41,6 +41,21 @@ describe('runAction', () => {
   it('refuses an unknown action', async () => {
     expect(await act('item.delete_everything', {})).toMatchObject({ ok: false, status: 400 });
   });
+
+  it('retries once when PostgreSQL aborts the transaction as a deadlock (40P01), as the agent path does (L5)', async () => {
+    let calls = 0;
+    const flaky = {
+      ...db,
+      transaction: <T>(fn: (tx: typeof db) => Promise<T>) => {
+        calls++;
+        if (calls === 1) return Promise.reject(Object.assign(new Error('deadlock detected'), { code: '40P01' }));
+        return db.transaction(fn as never) as Promise<T>;
+      },
+    } as typeof db;
+    const r = await runAction(flaky, ADMIN, 'topic.create', new URLSearchParams({ slug: 'deadlock-retry', name: 'Retry' }), NOW);
+    expect(r).toMatchObject({ ok: true });
+    expect(calls).toBe(2);
+  });
 });
 
 describe('item actions', () => {

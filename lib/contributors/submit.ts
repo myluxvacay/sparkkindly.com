@@ -54,6 +54,9 @@ const pendingCount = async (tx: Queryable, accountId: string, except: string) =>
 async function check(tx: Queryable, ctx: AccountContext | null, id: unknown, now: Date, lock: boolean): Promise<Locked | SubmitCode> {
   const who = await eligibleContributor(tx, ctx, now);
   if (!who.ok) return who.code;
+  // The account row (before the contribution, as account deletion locks them) serialises the pending cap (plan 8 review
+  // L2): two concurrent submissions cannot both pass the count.
+  if (lock) await tx.query('SELECT 1 FROM accounts WHERE id = $1 FOR NO KEY UPDATE', [who.accountId]);
   if (!(await tx.query('SELECT 1 FROM contributor_profiles WHERE account_id = $1', [who.accountId])).rows.length) return 'no_profile';
   if (!isUuid(id)) return 'not_found';
   const c = await load(tx, who.accountId, id, lock);
@@ -104,8 +107,10 @@ async function applyPass(tx: Queryable, c: Locked, content: ItemContent, now: Da
   return { status: 'agent_review' };
 }
 
+// A failed resubmission after the reviewer or owner asked for changes stays in changes_requested (plan 8 review L10), so
+// the request and its notes are not lost and it does not count as a new draft; a first submission goes back to draft.
 async function applyFail(tx: Queryable, c: Locked, reasons: string[], now: Date): Promise<SubmitResult> {
-  const to = nextState(nextState(c.state, 'submit')!, 'gates_fail');
+  const to = c.state === 'changes_requested' ? c.state : nextState(nextState(c.state, 'submit')!, 'gates_fail');
   await tx.query('UPDATE contributions SET state = $2, gate_reasons = $3::jsonb, updated_at = $4 WHERE id = $1', [
     c.id, to, JSON.stringify(reasons), now.toISOString(),
   ]);
@@ -180,14 +185,18 @@ export async function withdraw(db: Db, ctx: AccountContext | null, id: unknown, 
 }
 
 // Account deletion (lib/accounts/delete.ts), inside its transaction after the account row is locked: published items are
-// archived (no byline remains once the contributions cascade), never-published items are deleted with their text.
+// archived (no byline remains once the contributions cascade), never-published items are deleted with their text, unless
+// a sponsorship row still references one (plan 8 review L4): that item is archived instead, so deletion never fails.
 export async function removeContributions(tx: Queryable, accountId: string): Promise<void> {
   const r = await tx.query<{ item_id: string | null }>('SELECT item_id FROM contributions WHERE account_id = $1 ORDER BY id FOR UPDATE', [accountId]);
   for (const { item_id } of r.rows) {
     if (!item_id) continue;
-    const i = await tx.query<{ published_at: Date | null }>('SELECT published_at FROM items WHERE id = $1 FOR UPDATE', [item_id]);
+    const i = await tx.query<{ published_at: Date | null; sponsored: boolean }>(
+      'SELECT published_at, EXISTS (SELECT 1 FROM sponsorships WHERE item_id = $1) AS sponsored FROM items WHERE id = $1 FOR UPDATE',
+      [item_id],
+    );
     if (!i.rows[0]) continue;
-    if (i.rows[0].published_at) await archiveItem(tx, item_id, 'system', 'contributor account deleted');
+    if (i.rows[0].published_at || i.rows[0].sponsored) await archiveItem(tx, item_id, 'system', 'contributor account deleted');
     else await tx.query('DELETE FROM items WHERE id = $1', [item_id]);
   }
 }

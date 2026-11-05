@@ -59,6 +59,7 @@ export const ERRORS = {
   contributed: 'This is a member contribution: decide it in Contributions, where your decision reaches the contributor.',
   sponsor_rules: 'A sponsor needs a name (up to 80 characters), an https link to a public site, an allowed category and the confirmation box ticked.',
   sponsor_target: 'Sponsorship attaches only to a published adults item outside Kids, an existing topic, or a world other than Kids.',
+  contributor_banned: 'This contributor is banned from commenting, which also blocks contributing: it cannot be approved.',
   key_gone: 'That key has already been shown or has expired. Rotate the key again if it was not saved.',
 } as const;
 

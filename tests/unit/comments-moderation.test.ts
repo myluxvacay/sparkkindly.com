@@ -297,6 +297,17 @@ describe('keep and escalate', () => {
     expect((await act(last.id, 'escalate', 'Too many keeps today')).status).toBe(200);
   });
 
+  it(`the ${KEEP_LIMIT}-a-day keep cap counts every moderation agent together (L8)`, async () => {
+    const other: Agent = { id: 2, name: 'second-moderator', worldId: null, worldSlug: null, role: 'moderation' };
+    for (let i = 0; i < KEEP_LIMIT; i++) {
+      const r = await reported(`shared keep ${i}`);
+      const by = i % 2 === 0 ? agent : other;
+      expect((await decide(db, by, { id: r.id, decision: 'keep', version: await versionOf(r.id) }, NOW, deps())).status).toBe(200);
+    }
+    const last = await reported('one shared keep too many');
+    expect(await decide(db, other, { id: last.id, decision: 'keep', version: await versionOf(last.id) }, NOW, deps())).toMatchObject({ status: 409, json: { error: 'limit' } });
+  });
+
   it("agent keep on a comment a level-1 reporter's urgent report hid becomes an owner escalation; the owner's keep restores and charges", async () => {
     const author = await person(db, NOW);
     const id = await comment(db, await item(db), author.id, 'urgently reported words');

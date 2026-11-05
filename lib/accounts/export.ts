@@ -44,7 +44,7 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   invite_suppressions: 'keyed hash of an address that refused invite emails; no address and no account link, kept so the refusal holds',
 };
 
-// Columns of the two tables exported row by row: each is exported or deliberately excluded with its reason.
+// Columns of the tables exported row by row: each is exported or deliberately excluded with its reason.
 export const EXPORTED_COLUMNS = {
   accounts: [
     'email',

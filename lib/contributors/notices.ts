@@ -43,7 +43,7 @@ const NOTICE_BATCH = 50;
 type Notice = { id: string; email: string; world: string; slug: string };
 
 // The worker's contribution mail (after publish-due): one publication email per approved contributed item that is now
-// published. Each is claimed (publication_mailed_at, set only where still NULL) before it is sent, so a rerun or a second
+// published. Each is claimed (publication_mailed_at, set only where still NULL and still approved) before it is sent, so a rerun or a second
 // worker never mails twice. Ruling: a failed send is not retried (the claim stays), as for circle mail.
 export async function sendPublicationNotices(
   db: Queryable,
@@ -60,7 +60,7 @@ export async function sendPublicationNotices(
   );
   const out = { sent: 0, failed: 0 };
   for (const n of r.rows) {
-    const claim = await db.query('UPDATE contributions SET publication_mailed_at = $2 WHERE id = $1 AND publication_mailed_at IS NULL RETURNING id', [
+    const claim = await db.query("UPDATE contributions SET publication_mailed_at = $2 WHERE id = $1 AND state = 'approved' AND publication_mailed_at IS NULL RETURNING id", [
       n.id, now.toISOString(),
     ]);
     if (!claim.rows.length) continue;

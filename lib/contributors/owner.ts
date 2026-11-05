@@ -19,6 +19,7 @@ export type OwnerEntry = DraftContent & {
   tier: string;
   reviewReasons: string[];
   submittedAt: Date | null;
+  banned: boolean; // banned from commenting, which also blocks contributing: cannot be approved (plan 8 review L3)
 };
 
 type QueueRow = {
@@ -32,12 +33,14 @@ type QueueRow = {
   reasons: unknown;
   submitted_at: Date | null;
   version: string;
+  banned: boolean;
 };
 
 export async function ownerContributionQueue(db: Queryable): Promise<OwnerEntry[]> {
   const r = await db.query<QueueRow>(
     `SELECT c.id, c.item_id, c.revision, c.content, w.slug AS world, p.display_name AS name, i.risk_tier AS tier,
-            i.quality_report->'review'->'reasons' AS reasons, c.submitted_at, c.updated_at::text AS version
+            i.quality_report->'review'->'reasons' AS reasons, c.submitted_at, c.updated_at::text AS version,
+            COALESCE((SELECT t.banned FROM account_trust t WHERE t.account_id = c.account_id), false) AS banned
      FROM contributions c JOIN worlds w ON w.id = c.world_id JOIN items i ON i.id = c.item_id
      JOIN contributor_profiles p ON p.account_id = c.account_id
      WHERE c.state = 'needs_owner' ORDER BY c.submitted_at, c.id LIMIT 50`,
@@ -53,6 +56,7 @@ export async function ownerContributionQueue(db: Queryable): Promise<OwnerEntry[
     tier: x.tier,
     reviewReasons: Array.isArray(x.reasons) ? x.reasons.map(String) : [],
     submittedAt: x.submitted_at,
+    banned: x.banned,
   }));
 }
 
@@ -63,12 +67,13 @@ export async function pendingLinks(db: Queryable): Promise<{ slug: string; displ
   return r.rows.map((x) => ({ slug: x.slug, displayName: x.display_name, link: x.link }));
 }
 
-type Locked = { state: State; item_id: string | null; title: string; email: string; version: string };
+type Locked = { state: State; item_id: string | null; title: string; email: string; version: string; banned: boolean };
 
 // Locks the contribution (its item is locked after it by the callers: contribution before item, as everywhere).
 export async function lockContribution(tx: Queryable, id: string): Promise<Locked | null> {
   const r = await tx.query<Locked>(
-    `SELECT c.state, c.item_id, c.content->>'title' AS title, a.email, c.updated_at::text AS version
+    `SELECT c.state, c.item_id, c.content->>'title' AS title, a.email, c.updated_at::text AS version,
+            COALESCE((SELECT t.banned FROM account_trust t WHERE t.account_id = c.account_id), false) AS banned
      FROM contributions c JOIN accounts a ON a.id = c.account_id WHERE c.id = $1 FOR UPDATE OF c`,
     [id],
   );

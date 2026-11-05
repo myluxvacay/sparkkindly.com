@@ -46,6 +46,8 @@ async function saveIn(tx: Queryable, ctx: AccountContext | null, input: Record<s
     ]);
     return { status: 'saved', id: input.id };
   }
+  // The account row serialises the draft cap (plan 8 review L2): two concurrent saves cannot both pass the count.
+  await tx.query('SELECT 1 FROM accounts WHERE id = $1 FOR NO KEY UPDATE', [who.accountId]);
   const drafts = await tx.query<{ n: string }>("SELECT count(*) AS n FROM contributions WHERE account_id = $1 AND state = 'draft'", [who.accountId]);
   if (Number(drafts.rows[0].n) >= CONTRIBUTOR_LIMITS.drafts) return refuse('draft_limit');
   const r = await tx.query<{ id: string }>(

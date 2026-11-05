@@ -65,6 +65,11 @@ function Entry({ e, csrf }: { e: OwnerEntry; csrf: string }) {
       <p>
         <strong>Reviewer:</strong> {e.reviewReasons.join(' ') || 'no reasons given'}
       </p>
+      {e.banned && (
+        <p>
+          <strong>Comment-banned:</strong> this contributor cannot be approved while the ban stands.
+        </p>
+      )}
       <div className="admin-actions">
         <ActionForm csrf={csrf} action="contribution.approve" returnTo={RETURN} label="Approve" ariaLabel={`Approve: ${e.title}`} fields={{ id: e.id, version: e.version }} />
       </div>

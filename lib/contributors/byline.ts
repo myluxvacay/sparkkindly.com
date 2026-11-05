@@ -50,7 +50,8 @@ export async function contributorPage(db: Queryable, slug: string, scope: Scope)
   return {
     displayName: p.display_name,
     bio: p.bio,
-    link: p.link_approved && adult ? p.link : null,
+    // Never to a child profile's scope (kids and all only, plan 8 review L9): the external link is for adults' views.
+    link: p.link_approved && adult && scope.audiences.includes('adults') ? p.link : null,
     items: items.rows.map(toPublic),
   };
 }

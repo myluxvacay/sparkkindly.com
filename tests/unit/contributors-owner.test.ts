@@ -197,4 +197,36 @@ describe('the publication email', () => {
     expect(await sendPublicationNotices(db, later, env, send)).toEqual({ sent: 0, failed: 0 });
     expect(sent).toHaveLength(0);
   });
+
+  it('a contribution withdrawn after the batch was read is never mailed (the claim requires approved, L1)', async () => {
+    const later = new Date(NOW.getTime() + 3 * 86_400_000);
+    await sendPublicationNotices(db, later, env, send);
+    const a = await needsOwner();
+    const b = await needsOwner();
+    await decide('contribution.approve', a.id);
+    await decide('contribution.approve', b.id);
+    await publishDue(db, later);
+    const ids = [a.id, b.id];
+    const mails: EmailMessage[] = [];
+    const withdrawOther = async (m: EmailMessage) => {
+      mails.push(m);
+      await db.query("UPDATE contributions SET state = 'withdrawn' WHERE id = ANY($1::uuid[]) AND publication_mailed_at IS NULL", [ids]);
+    };
+    await sendPublicationNotices(db, later, env, withdrawOther);
+    expect(mails.filter((m) => m.to === a.p.email || m.to === b.p.email)).toHaveLength(1);
+  });
+});
+
+describe('a comment-banned contributor (L3)', () => {
+  it('cannot be approved; the owner queue shows the ban', async () => {
+    const { p, id, itemId } = await needsOwner();
+    await db.query(
+      `INSERT INTO account_trust (account_id, banned) VALUES ($1, true) ON CONFLICT (account_id) DO UPDATE SET banned = true`,
+      [p.id],
+    );
+    expect((await ownerContributionQueue(db)).find((e) => e.id === id)).toMatchObject({ banned: true });
+    expect(await decide('contribution.approve', id)).toMatchObject({ ok: false, status: 409, code: 'contributor_banned' });
+    expect((await stateOf(db, id)).state).toBe('needs_owner');
+    expect((await itemOf(db, itemId)).status).toBe('in_review');
+  });
 });

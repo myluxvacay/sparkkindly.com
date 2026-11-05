@@ -16,6 +16,7 @@ import { commentAuthor, commentRef } from '@/lib/comments/admin';
 import { decideAppeal } from '@/lib/comments/appeals';
 import { resetReporter, resolveEscalation } from '@/lib/comments/owner-actions';
 import { setTrust } from '@/lib/comments/trust';
+import { withRetry } from '@/lib/comments/moderation';
 import { isReasonCode } from '@/lib/comments/rejection-email';
 import { commentsEnabled, contributorsEnabled, sponsorshipEnabled } from '@/lib/config';
 import { approveLink, isContributed, lockContribution, markApproved, ownerDecision } from '@/lib/contributors/owner';
@@ -401,6 +402,7 @@ const handlers: Record<string, Handler> = {
     // The owner approves exactly what the page showed: a contribution changed since is refused (TOCTOU).
     if (locked.version !== version) throw new ActionError(409, 'changed');
     if (locked.state !== 'needs_owner' || !locked.item_id) throw new ActionError(409, 'wrong_status');
+    if (locked.banned) throw new ActionError(409, 'contributor_banned');
     const publishAt = await approveItem(c, locked.item_id);
     await markApproved(c.tx, id);
     return { code: 'contribution_approved', target: `contribution:${id}`, detail: { publishAt: publishAt.toISOString() } };
@@ -515,12 +517,14 @@ export async function runAction(
   const handler = handlers[name];
   let mail: EmailMessage | undefined;
   try {
-    const result = await db.transaction(async (tx) => {
+    // One retry on a deadlock (plan 8 review L5), as the agent moderation path: owner and agent decisions lock the same
+    // trust rows; PostgreSQL aborts one and the whole transaction is rerun (nothing was committed or sent).
+    const result = await withRetry(() => db.transaction(async (tx) => {
       const done = await handler({ tx, admin, form, now });
       await audit(tx, admin.email, name, done.target, done.detail ?? {});
       mail = done.mail;
       return { ok: true as const, code: done.code, message: DONE[done.code], ...(done.secret ? { secret: done.secret } : {}) };
-    });
+    }));
     await sendAfter(send, mail);
     return result;
   } catch (err) {
