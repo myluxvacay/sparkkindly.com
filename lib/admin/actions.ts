@@ -12,6 +12,8 @@ import {
   type Status,
 } from '@/lib/items/repo';
 import { RESERVED_WORLD_SLUGS } from '@/lib/public/scope';
+import { commentAuthor } from '@/lib/comments/admin';
+import { setTrust } from '@/lib/comments/trust';
 import { audit } from './audit';
 import { DONE, ERRORS, type DoneCode, type ErrorCode } from './messages';
 
@@ -87,6 +89,16 @@ async function one(tx: Queryable, sql: string, params: unknown[]): Promise<void>
   const r = await tx.query(sql, params);
   if (!r.rowCount) throw missing();
 }
+
+// Comments (plan 7A): the author of the comment named in the form (an id or a comment link), or 404.
+async function commentAccount(tx: Queryable, f: URLSearchParams): Promise<{ comment: string; accountId: string }> {
+  const found = await commentAuthor(tx, field(f, 'comment'));
+  if (!found) throw missing();
+  return found;
+}
+
+const ITEM_PATH = /^\/?([a-z0-9-]{2,30})\/([a-z0-9-]{1,80})\/?$/;
+const ITEM_SWITCH: Record<string, boolean | null> = { on: true, off: false, inherit: null };
 
 const handlers: Record<string, Handler> = {
   // in_review -> scheduled, never from draft (where failed gates wait) and never for excluded content. The slot is the
@@ -264,6 +276,48 @@ const handlers: Record<string, Handler> = {
     ]);
     if (!r.rowCount) throw missing();
     return { code: 'circle_reports_handled', target: `circle:${id}`, detail: { reports: r.rowCount } };
+  },
+
+  // Comment switches (plan 7A). Kids never carries comments, so its world and items are refused whatever is asked.
+  async 'comments.world_toggle'({ tx, form }) {
+    const slug = field(form, 'slug');
+    const enabled = flag(form, 'enabled');
+    if (slug === 'kids') throw new ActionError(409, 'kids_comments');
+    await one(tx, 'UPDATE worlds SET comments_enabled = $2 WHERE slug = $1', [slug, enabled]);
+    return { code: enabled ? 'comments_world_on' : 'comments_world_off', target: `world:${slug}`, detail: { enabled } };
+  },
+
+  // An item by its path (/world/slug/): on, off, or inherit the world's switch.
+  async 'comments.item_toggle'({ tx, form }) {
+    const m = ITEM_PATH.exec(field(form, 'item'));
+    const value = field(form, 'value');
+    if (!m || !Object.hasOwn(ITEM_SWITCH, value)) throw bad();
+    const r = await tx.query<{ id: string; kids: boolean }>(
+      `SELECT i.id, (w.slug = 'kids' OR i.audience = 'kids' OR i.risk_tier = 'kids') AS kids
+       FROM items i JOIN worlds w ON w.id = i.world_id WHERE w.slug = $1 AND i.slug = $2 AND i.locale = 'en' FOR UPDATE OF i`,
+      [m[1], m[2]],
+    );
+    const item = r.rows[0];
+    if (!item) throw missing();
+    if (item.kids) throw new ActionError(409, 'kids_comments');
+    await tx.query('UPDATE items SET comments_enabled = $2 WHERE id = $1', [item.id, ITEM_SWITCH[value]]);
+    return { code: 'comments_item_saved', target: item.id, detail: { comments: value } };
+  },
+
+  // Trust by one of the account's comments; the audit row names the comment, never the account or its email.
+  async 'comments.trust_set'({ tx, form }) {
+    const level = field(form, 'level');
+    if (level !== '0' && level !== '1') throw bad();
+    const { comment, accountId } = await commentAccount(tx, form);
+    if (!(await setTrust(tx, accountId, { level: level === '1' ? 1 : 0 }))) throw missing();
+    return { code: 'comments_trust_saved', target: `comment:${comment}`, detail: { level: Number(level) } };
+  },
+
+  async 'comments.ban'({ tx, form }) {
+    const banned = flag(form, 'banned');
+    const { comment, accountId } = await commentAccount(tx, form);
+    if (!(await setTrust(tx, accountId, { banned }))) throw missing();
+    return { code: banned ? 'comments_banned' : 'comments_unbanned', target: `comment:${comment}`, detail: { banned } };
   },
 
   async 'agent.create'({ tx, form }) {

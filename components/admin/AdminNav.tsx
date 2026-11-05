@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { commentsEnabled } from '@/lib/config';
 import ActionForm from './ActionForm';
 
 const LINKS: [string, string][] = [
@@ -15,10 +16,12 @@ const LINKS: [string, string][] = [
 ];
 
 export default function AdminNav({ email, csrf }: { email: string; csrf: string }) {
+  // The comments page exists only with comments switched on (plan 7A).
+  const links: [string, string][] = commentsEnabled() ? [...LINKS, ['/admin/comments/', 'Comments']] : LINKS;
   return (
     <nav aria-label="Admin" className="admin-nav">
       <ul>
-        {LINKS.map(([href, label]) => (
+        {links.map(([href, label]) => (
           <li key={href}>
             <Link href={href}>{label}</Link>
           </li>

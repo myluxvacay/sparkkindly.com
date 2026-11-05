@@ -16,7 +16,9 @@ import { formatDay } from '@/lib/public/dates';
 import { articleLd, breadcrumbLd } from '@/lib/public/jsonld';
 import type { SearchParams } from '@/lib/public/play-params';
 import { getPublicItem, listPublic } from '@/lib/public/reads';
-import { currentScope } from '@/lib/accounts/scope-next';
+import { accountSessionToken, currentScope } from '@/lib/accounts/scope-next';
+import CommentSection from '@/components/comments/CommentSection';
+import { loadCommentSection } from '@/lib/comments/web';
 import { getWorld } from '@/lib/public/worlds';
 import { JsonLd, metadata as seo } from '@/lib/seo';
 
@@ -45,6 +47,9 @@ export default async function ItemPage({ params, searchParams }: Props) {
   if (!item) notFound();
   const db = getDb();
   const w = await getWorld(db, item.world);
+  // Null (no section in the HTML) with the flags off, for a child context, on Kids items and where switched off.
+  const comments = await loadCommentSection(db, await accountSessionToken(), item.id, new Date());
+  const commentCode = (await searchParams).c;
   const related = (await listPublic(db, await currentScope(), { world: item.world, limit: 4, offset: 0 })).filter((i) => i.id !== item.id).slice(0, 3);
 
   const isArticle = item.kind === 'article';
@@ -90,6 +95,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
       <div className="container">
         <ReportLink world={item.world} slug={item.slug} />
       </div>
+      {comments && <CommentSection data={comments} code={typeof commentCode === 'string' ? commentCode : undefined} />}
       {related.length > 0 && (
         <section className="container section">
           <p className="eyebrow">FOLLOW YOUR CURIOSITY</p>

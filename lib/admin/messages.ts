@@ -23,6 +23,12 @@ export const DONE = {
   circle_hidden: 'Circle hidden: its members no longer see it and its email stops.',
   circle_restored: 'Circle restored.',
   circle_reports_handled: 'Reports marked as handled.',
+  comments_world_on: 'Comments switched on for that world.',
+  comments_world_off: 'Comments switched off for that world.',
+  comments_item_saved: 'Comment switch for that item saved.',
+  comments_trust_saved: 'Comment trust level saved.',
+  comments_banned: 'That account can no longer post comments.',
+  comments_unbanned: 'That account can post comments again.',
 } as const;
 
 export const ERRORS = {
@@ -36,6 +42,7 @@ export const ERRORS = {
   kids_review: 'The Kids world always stays in review mode.',
   needs_approval: 'This item needs approval (Kids content or a review-mode world).',
   safety_rule: 'The database refused that change (a safety rule).',
+  kids_comments: 'Kids items never carry comments.',
   key_gone: 'That key has already been shown or has expired. Rotate the key again if it was not saved.',
 } as const;
 
