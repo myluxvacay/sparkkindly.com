@@ -581,6 +581,56 @@ If no run is recorded for 36 hours the worker emails the admin list.
   previous release is live: `DROP TABLE circle_reports; DROP TABLE circle_mail_log; DELETE FROM schema_migrations WHERE
   name IN ('018_circle_mail.sql', '019_circle_reports.sql');`.
 
+## Comments (Project 7A)
+
+- **Flags.** Comments need `ACCOUNTS_ENABLED` **and** `COMMENTS_ENABLED` (`true` or `1`). With either unset there is no
+  comment section on any page (absent from the HTML), `/comments/post|edit|delete/` and `/community/guidelines/` are
+  404s and `/admin/comments/` is a 404 (no nav link). Both are off everywhere; the env examples carry a commented
+  `# COMMENTS_ENABLED=`. Turning comments off is unsetting `COMMENTS_ENABLED` and restarting the web service: the rows
+  stay and nothing shows them.
+- **Who and where.** Signed-in, verified accounts with `public_comment` (16+; never 13-15, whatever the consent), not
+  banned, in the adult context. A child profile context never sees a comment section (no section, count or text in the
+  HTML) and its POSTs get 403. Anonymous visitors read published comments and are sent to sign in to post. Comments
+  exist only on published, visible items. **Kids ruling (plan 7A):** Kids-world items and any `audience = 'kids'` (or
+  kids-tier) item never carry comments for anyone, whatever the switches; the admin page does not offer Kids (spec 4a.5
+  wins over Project 7's "owner can turn it on").
+- **Switches** (`/admin/comments/`, audited admin actions). `comments.world_toggle` per world (`worlds.comments_enabled`,
+  on by default, off for Kids); `comments.item_toggle` by item path (`items.comments_enabled`: on, off, or NULL to follow
+  the world; the item beats the world). When off, the section disappears and posting is refused; existing comments are
+  kept but not shown.
+- **Shape.** Plain text, 1 to 1,000 characters after NFKC and trim (line breaks kept; other control and zero-width
+  characters dropped), one level of replies (a reply's parent must be a top-level comment on the same item, published or
+  the replier's own held one), display name and relative time only. The display name (1 to 30 characters, no `@`, no
+  blocked word, nothing link-like) and the "I have read the community guidelines" tick are asked at the first comment and
+  stored in `account_trust`; the email is never shown. Bodies render as React text: nothing is HTML, markdown or a link.
+- **Trust ladder** (`lib/comments/trust.ts`). Every account starts at level 0: its comments are `held` (published by the
+  moderation agent in 7B). After `TRUST_THRESHOLD` = 5 approvals since the last drop it moves to level 1: comments are
+  `published` at once after the checks. A rejection drops a level and resets the approved count. The owner sets level 0
+  or 1, or bans and lifts a ban, in `/admin/comments/` by pasting a comment id or link (`…#comment-<id>`):
+  `comments.trust_set`, `comments.ban`, audited against the comment, never the account or its email. A banned account
+  cannot post or edit.
+- **Checks on every comment**, in order, each with its own refusal: banned; rate (5 per 10 minutes and 40 per rolling
+  24 hours per account, counted in the database under the account's trust-row lock, so racing posts cannot pass it);
+  length; blocked words (`lib/items/blocked.ts`); duplicate (the same text, ignoring case and spacing, by the same account
+  in 24 hours, or on the same item by anyone); link policy (below level 1 any link-like text, the shared check in
+  `lib/circles/rules.ts`, is refused; at level 1 it is accepted and shown as plain text). An edit re-runs every check but
+  the rate limit.
+- **Edit and delete.** The author edits within 15 minutes of posting (exactly 15 allowed); a level-0 author's edit of a
+  published comment goes back to `held`. Delete at any time: status `deleted`, body emptied, row kept so replies keep
+  their place (shown as "This comment was deleted."). Only `published` comments are ever shown to others; the author
+  also sees their own `held` ones marked "Waiting for review".
+- **Account deletion and export.** Deleting an account cascades its `account_trust` row and its comments, and with them
+  every reply under those comments. The data export lists the holder's own comments (item, world, reply or not, body,
+  status, times) and their trust row; never another's comment, ids, or the moderation reason (7B emails that).
+- **Migration and rollback.** `021_comments.sql` is additive (`account_trust`, `comments`, `worlds.comments_enabled`,
+  `items.comments_enabled`). Code rollback: unset `COMMENTS_ENABLED`, or switch back to the previous release (it never
+  reads them). Schema rollback, only after the previous release is live: `DROP TABLE comments; DROP TABLE
+  account_trust; ALTER TABLE items DROP COLUMN comments_enabled; ALTER TABLE worlds DROP COLUMN comments_enabled;
+  DELETE FROM schema_migrations WHERE name = '021_comments.sql';`.
+- **Before production.** Privacy and terms must mention comments, the guidelines page copy needs the owner's read, and
+  reporting plus the moderation agent (7B) must exist before `COMMENTS_ENABLED` goes on anywhere real
+  (`docs/legal/go-live-copy-changes.md`).
+
 ## Pilot measurement (roadmap P.2)
 
 `/admin/pilot/` shows the spec 4a.2 pilot metrics against their thresholds, computed from data the site already holds

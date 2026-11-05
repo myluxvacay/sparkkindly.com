@@ -60,6 +60,9 @@ import { reportCircle, reportCircleRequest } from '@/lib/circles/reports';
 import { sharePromptFor } from '@/lib/circles/share-prompt';
 import { handleAdminAction } from '@/lib/admin/act';
 import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, searchPublic } from '@/lib/public/reads';
+import { deleteComment, editComment, listPublishedComments, postComment } from '@/lib/comments/repo';
+import { deleteCommentRequest, editCommentRequest, loadCommentSection, postCommentRequest } from '@/lib/comments/web';
+import { setTrust } from '@/lib/comments/trust';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -1333,15 +1336,136 @@ describe('circle mail, reports and share prompts (plan 4D, Task 3)', () => {
   });
 });
 
+describe('comments (plan 7A, Task 3)', () => {
+  const NOW = new Date('2026-11-05T12:00:00Z');
+  let c = 0;
+  let world: number;
+  async function person(dateOfBirth = '1984-02-02', parentEmail?: string) {
+    const email = `p7a-${c++}@example.test`;
+    const r = await signUp(db, { email, dateOfBirth, parentEmail }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    const session = await signIn(email);
+    return { id: r.accountId, email, session, ctx: (await getContext(db, session, NOW))! };
+  }
+  const req = (path: string, body: Record<string, string>, session?: string) =>
+    new Request(`http://localhost${path}`, {
+      method: 'POST',
+      headers: {
+        host: 'staging.sparkkindly.com',
+        origin: 'https://staging.sparkkindly.com',
+        'content-type': 'application/x-www-form-urlencoded',
+        ...(session ? { cookie: `__Host-sk_account=${session}` } : {}),
+      },
+      body: new URLSearchParams(body).toString(),
+    });
+  const deps = () => ({ db, now: NOW });
+  const first = { displayName: 'Sam', guidelines: 'on' };
+  const comments = async () => (await db.query<{ n: number }>('SELECT count(*)::int AS n FROM comments')).rows[0].n;
+  async function child(p: { id: string; session: string }) {
+    const kid = await createChildProfile(db, p.id, { displayName: 'Kid', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (kid.status !== 'created') throw new Error('profile failed');
+    expect(await switchToProfile(db, p.session, kid.profileId, NOW)).toBe(true);
+  }
+
+  beforeAll(async () => {
+    world = (await db.query<{ id: number }>("SELECT id FROM worlds WHERE slug = 'play'")).rows[0].id;
+  });
+  beforeEach(() => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('COMMENTS_ENABLED', 'true');
+  });
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('child profile -> comments denied: no section, no post (route 403), no list', async () => {
+    const quiz = await playItem(db, { world, audience: 'all' });
+    const p = await person();
+    await child(p);
+    const before = await comments();
+    expect(await loadCommentSection(db, p.session, quiz, NOW)).toBeNull();
+    const r = await postCommentRequest(req('/comments/post/', { item: quiz, body: 'hi', display_name: 'Kid', guidelines: 'on' }, p.session), deps());
+    expect(r.status).toBe(403);
+    const ctx = (await getContext(db, p.session, NOW))!;
+    expect(await postComment(db, ctx, { itemId: quiz, body: 'hi', ...first }, NOW)).toEqual({ status: 'refused', code: 'not_allowed' });
+    expect(await comments()).toBe(before);
+  });
+
+  it('13-15 account -> public comment denied (route and repo), with consent confirmed', async () => {
+    const quiz = await playItem(db, { world, audience: 'all' });
+    const teen = await person('2012-01-01', `parent-7a-${c++}@example.test`);
+    await db.query("UPDATE accounts SET consent_state = 'confirmed' WHERE id = $1", [teen.id]);
+    const r = await postCommentRequest(req('/comments/post/', { item: quiz, body: 'hello', display_name: 'Tee', guidelines: 'on' }, teen.session), deps());
+    expect(r.headers.get('location')).toMatch(/\?c=not_allowed#result$/);
+    const ctx = (await getContext(db, teen.session, NOW))!;
+    expect(await postComment(db, ctx, { itemId: quiz, body: 'hello', ...first }, NOW)).toEqual({ status: 'refused', code: 'not_allowed' });
+  });
+
+  it('anonymous -> cannot post (sent to sign in)', async () => {
+    const quiz = await playItem(db, { world, audience: 'all' });
+    const r = await postCommentRequest(req('/comments/post/', { item: quiz, body: 'hello' }), deps());
+    expect([r.status, r.headers.get('location')]).toEqual([303, '/account/sign-in/']);
+  });
+
+  it('account B cannot edit or delete account A comments; tampered comment ids change nothing', async () => {
+    const quiz = await playItem(db, { world, audience: 'all' });
+    const a = await person();
+    const b = await person();
+    const posted = await postComment(db, a.ctx, { itemId: quiz, body: 'A words', ...first }, NOW);
+    if (posted.status === 'refused') throw new Error('refused');
+    expect(await editComment(db, b.id, posted.id, 'B words', NOW)).toBe('not_found');
+    expect(await deleteComment(db, b.id, posted.id, NOW)).toBe(false);
+    await editCommentRequest(req('/comments/edit/', { item: quiz, comment: posted.id, body: 'B words', account: a.id }, b.session), deps());
+    await deleteCommentRequest(req('/comments/delete/', { item: quiz, comment: posted.id, account: a.id }, b.session), deps());
+    for (const id of ['nope', '00000000-0000-0000-0000-000000000001']) {
+      expect(await editComment(db, a.id, id, 'x', NOW)).toBe('not_found');
+      expect(await deleteComment(db, a.id, id, NOW)).toBe(false);
+    }
+    const row = (await db.query('SELECT status, body FROM comments WHERE id = $1', [posted.id])).rows[0];
+    expect(row).toEqual({ status: 'held', body: 'A words' });
+  });
+
+  it('tampered item and parent ids are denied; a reply cannot cross items', async () => {
+    const quiz = await playItem(db, { world, audience: 'all' });
+    const other = await playItem(db, { world, audience: 'all' });
+    const a = await person();
+    await db.transaction((tx) => setTrust(tx, a.id, { level: 1 }));
+    const top = await postComment(db, a.ctx, { itemId: quiz, body: 'top words', ...first }, NOW);
+    if (top.status === 'refused') throw new Error('refused');
+    for (const itemId of ['nope', '00000000-0000-0000-0000-000000000001']) {
+      expect(await postComment(db, a.ctx, { itemId, body: 'x words' }, NOW)).toEqual({ status: 'refused', code: 'no_item' });
+    }
+    expect(await postComment(db, a.ctx, { itemId: other, parentId: top.id, body: 'cross words' }, NOW)).toEqual({ status: 'refused', code: 'no_parent' });
+    expect(await postComment(db, a.ctx, { itemId: quiz, parentId: 'nope', body: 'bad words' }, NOW)).toEqual({ status: 'refused', code: 'no_parent' });
+  });
+
+  it('held, hidden, rejected and deleted comments never reach another viewer', async () => {
+    const quiz = await playItem(db, { world, audience: 'all' });
+    const a = await person();
+    const b = await person();
+    for (const status of ['held', 'hidden', 'rejected']) {
+      await db.query('INSERT INTO comments (item_id, account_id, body, status) VALUES ($1, $2, $3, $4)', [quiz, a.id, `${status} words`, status]);
+    }
+    await db.query("INSERT INTO comments (item_id, account_id, body, status) VALUES ($1, $2, '', 'deleted')", [quiz, a.id]);
+    expect(await listPublishedComments(db, quiz, NOW, b.id)).toEqual([]);
+    const section = await loadCommentSection(db, b.session, quiz, NOW);
+    expect(section!.comments).toEqual([]);
+    expect(section!.pending).toEqual([]);
+    expect(JSON.stringify(await loadCommentSection(db, undefined, quiz, NOW))).not.toMatch(/held words|hidden words|rejected words/);
+  });
+});
+
 describe('arrives with later features', () => {
   // The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
   // child profile -> adults item denied at the daily set and scores: covered above (plan 4C, Task 4).
   // child profile -> adults item denied at the email: covered above (plan 4D, Task 3); the daily mail names no item at all.
   // child profile -> settings, export, delete and PIN reset denied: covered above (plan 3E, Task 4).
   // child profile -> invites denied: covered above (plan 4B, Task 3).
-  it.todo('child profile -> comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
+  // child profile -> comments denied: covered above (plan 7A, Task 3).
+  it.todo('child profile -> contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
   // 13-15 account -> community join denied at the route: covered above (plan 4B, Task 3).
-  it.todo('13-15 account -> public comment and contribute denied (route level; the capability rows above are covered through can())');
+  // 13-15 account -> public comment denied at the route: covered above (plan 7A, Task 3).
+  it.todo('13-15 account -> contribute denied (route level; the capability rows above are covered through can())');
   // tampered item id at the daily set: an answer to an item outside the set scores nothing, covered above (plan 4C, Task 4).
   // 13-17 account joining a circle that holds a child profile: covered above (plan 4B, Task 3).
   // agent key A -> agent B's items denied: covered in tests/unit/agent-api.test.ts and agent-keys.test.ts, not duplicated here.

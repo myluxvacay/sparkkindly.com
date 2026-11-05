@@ -85,6 +85,20 @@ score is corrected, each with a one-click unsubscribe; and that a member can rep
 reason, an optional note and the reporter's account (removed if that account is deleted), which the site owner reviews
 and may hide the circle ([data inventory](data-inventory.md), `circle_mail_log` and `circle_reports`).
 
+## Comments (Project 7A)
+
+Before `COMMENTS_ENABLED` is set in production, the privacy page (and the approved policy) must add that members aged
+16 and over can comment on items outside Kids; that a comment shows the display name chosen at the first comment and a
+relative time, never the email; that comments are kept until the author deletes them (the row stays empty so replies
+keep their place) or the account is deleted (which removes its comments and the replies under them); that the account's
+comment trust level, approved and rejected counts and any ban are stored; and that the export includes the holder's own
+comments and trust ([data inventory](data-inventory.md), `comments` and `account_trust`).
+
+The terms must add the community guidelines (be kind, no personal information, no advertising, keep it relevant), that
+comments are checked automatically and may wait for review, may be removed, and that an account can lose the ability to
+comment. The draft guidelines page (`app/community/guidelines/page.tsx`, 404 with comments off) needs the owner's read.
+The trust-page test's `/leave a comment/i` guard stays until that copy goes live.
+
 ## Other places that point at the privacy page
 
 - The parent consent email links to the privacy page (`lib/accounts/consent-email.ts`, `privacyUrl`). It must not be
