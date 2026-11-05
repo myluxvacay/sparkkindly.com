@@ -224,6 +224,16 @@ describe('agent actions (keys)', () => {
     expect(await act('agent.rotate', { id: 'abc' })).toMatchObject({ ok: false, status: 404 });
   });
 
+  it('creates a moderation agent (plan 7B): no world, role moderation; a moderation agent with a world or an unknown role is refused', async () => {
+    const r = await act('agent.create', { name: 'moderator', world: '', role: 'moderation' });
+    expect(r).toMatchObject({ ok: true });
+    expect(await authenticate(db, (r as { secret: string }).secret)).toMatchObject({ name: 'moderator', worldSlug: null, role: 'moderation' });
+    expect(await act('agent.create', { name: 'mod-play', world: 'play', role: 'moderation' })).toMatchObject({ ok: false, status: 400 });
+    expect(await act('agent.create', { name: 'mod-x', world: '', role: 'admin' })).toMatchObject({ ok: false, status: 400 });
+    const plain = await act('agent.create', { name: 'plain-agent', world: '' });
+    expect(await authenticate(db, (plain as { secret: string }).secret)).toMatchObject({ role: 'content' });
+  });
+
   it('refuses a bad agent name, a taken name and an unknown world', async () => {
     expect(await act('agent.create', { name: 'Bad Name', world: '' })).toMatchObject({ ok: false, status: 400 });
     expect(await act('agent.create', { name: 'agent-a', world: '' })).toMatchObject({ ok: false, status: 409 });

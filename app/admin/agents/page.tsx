@@ -25,7 +25,7 @@ export default async function AdminAgentsPage({ searchParams }: Props) {
             <li key={a.id}>
               <h2>{a.name}</h2>
               <p className="muted">
-                {a.world ?? 'master (any world)'} · {a.enabled ? 'enabled' : 'revoked'} · last run{' '}
+                {a.role === 'moderation' ? 'comment moderation' : (a.world ?? 'master (any world)')} · {a.enabled ? 'enabled' : 'revoked'} · last run{' '}
                 {a.lastRunAt ? new Date(a.lastRunAt).toISOString().slice(0, 16).replace('T', ' ') + ' UTC' : 'never'}
                 {a.keyAgeDays >= 90 ? ` · key is ${a.keyAgeDays} days old: rotate it` : ` · key ${a.keyAgeDays} days old`}
               </p>
@@ -64,6 +64,13 @@ export default async function AdminAgentsPage({ searchParams }: Props) {
                   {w.name}
                 </option>
               ))}
+            </select>
+          </p>
+          <p>
+            <label htmlFor="agent-role">Role</label>
+            <select id="agent-role" name="role" defaultValue="content">
+              <option value="content">Content (items, briefs and runs)</option>
+              <option value="moderation">Comment moderation (choose Master agent as the world)</option>
             </select>
           </p>
           <button type="submit" className="button">

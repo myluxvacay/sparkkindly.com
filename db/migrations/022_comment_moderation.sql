@@ -49,3 +49,4 @@ CREATE TABLE comment_appeals (
 
 CREATE INDEX comment_appeals_open_idx ON comment_appeals (created_at) WHERE decided_at IS NULL;
 CREATE INDEX comments_moderation_idx ON comments (status, created_at) WHERE status IN ('held', 'hidden');
+CREATE INDEX comments_sample_idx ON comments (created_at) WHERE sampled_at IS NOT NULL AND sample_reviewed_at IS NULL;

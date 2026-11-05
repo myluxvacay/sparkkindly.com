@@ -12,6 +12,7 @@ import { ageGroupFor, type Consent } from '@/lib/accounts/policy';
 import { visibleWhere } from '@/lib/public/reads';
 import { checkComment, type CheckCode, type Recent } from './checks';
 import { COMMENT_LIMITS, cleanDisplayName, mayComment, normaliseBody, ticked } from './rules';
+import { pickForSample } from './sample';
 import { lockTrust, type Trust } from './trust';
 
 export type PostInput = { itemId: unknown; parentId?: unknown; body: unknown; displayName?: unknown; guidelines?: unknown };
@@ -149,9 +150,9 @@ async function postIn(tx: Queryable, ctx: AccountContext | null, input: PostInpu
   }
   const status = trust.level === 1 ? 'published' : 'held';
   const r = await tx.query<{ id: string }>(
-    `INSERT INTO comments (item_id, account_id, parent_id, body, status, created_at, updated_at)
-     VALUES ($1, $2, $3, $4, $5, $6, $6) RETURNING id`,
-    [itemId, accountId, hasParent ? input.parentId : null, checked.body, status, now],
+    `INSERT INTO comments (item_id, account_id, parent_id, body, status, created_at, updated_at, sampled_at)
+     VALUES ($1, $2, $3, $4, $5, $6, $6, $7) RETURNING id`,
+    [itemId, accountId, hasParent ? input.parentId : null, checked.body, status, now, status === 'published' && pickForSample() ? now : null],
   );
   return { status, id: r.rows[0].id };
 }

@@ -1,5 +1,5 @@
 import type { Queryable } from '@/lib/db';
-import { authenticate, type Agent } from './auth';
+import { authenticate, type Agent, type AgentRole } from './auth';
 import type { ApiResult } from './api';
 import { createLimiter } from './rate-limit';
 
@@ -12,15 +12,17 @@ const shared = globalThis as unknown as { __sparkAgentLimiter?: ReturnType<typeo
 export const agentLimiter = (shared.__sparkAgentLimiter ??= createLimiter({ perMinute: 60 }));
 
 // Runs one agent API request: authenticate by the X-Agent-Key header (an Authorization header is ignored, because
-// staging's basic auth uses it), apply the per-agent limit, run the handler, and never let an internal error out.
+// staging's basic auth uses it), refuse a key of another role (403; a route is 'content' unless it says otherwise), apply
+// the per-agent limit, run the handler, and never let an internal error out.
 export async function agentRoute(
   request: Request,
   handler: (agent: Agent) => Promise<ApiResult>,
-  deps: { db: Queryable; limiter: (key: string) => boolean },
+  deps: { db: Queryable; limiter: (key: string) => boolean; role?: AgentRole },
 ): Promise<Response> {
   try {
     const agent = await authenticate(deps.db, request.headers.get('x-agent-key'));
     if (!agent) return reply(401, { error: 'unauthorized' });
+    if (agent.role !== (deps.role ?? 'content')) return reply(403, { error: 'forbidden_role' });
     if (!deps.limiter(String(agent.id))) return reply(429, { error: 'rate_limited' }, { 'retry-after': '60' });
     const result = await handler(agent);
     return reply(result.status, result.json);

@@ -92,11 +92,11 @@ export async function listTopicsAdmin(db: Queryable): Promise<{ slug: string; na
   return r.rows;
 }
 
-export type AgentRow = { id: number; name: string; world: string | null; enabled: boolean; lastRunAt: Date | null; keyAgeDays: number };
+export type AgentRow = { id: number; name: string; world: string | null; role: 'content' | 'moderation'; enabled: boolean; lastRunAt: Date | null; keyAgeDays: number };
 
 export async function listAgents(db: Queryable): Promise<AgentRow[]> {
   const r = await db.query<AgentRow>(
-    `SELECT a.id, a.name, w.slug AS world, a.enabled, a.last_run_at AS "lastRunAt", floor(extract(epoch FROM now() - COALESCE(a.key_rotated_at, a.created_at)) / 86400)::int AS "keyAgeDays"
+    `SELECT a.id, a.name, w.slug AS world, a.role, a.enabled, a.last_run_at AS "lastRunAt", floor(extract(epoch FROM now() - COALESCE(a.key_rotated_at, a.created_at)) / 86400)::int AS "keyAgeDays"
      FROM agents a LEFT JOIN worlds w ON w.id = a.world_id ORDER BY a.name`,
   );
   return r.rows;

@@ -324,11 +324,14 @@ const handlers: Record<string, Handler> = {
     const name = field(form, 'name');
     if (!AGENT_NAME.test(name)) throw bad();
     const world = field(form, 'world') || null;
+    // A moderation agent (plan 7B) works on comments only, never in a world.
+    const role = field(form, 'role') || 'content';
+    if ((role !== 'content' && role !== 'moderation') || (role === 'moderation' && world)) throw bad();
     if (world) await worldBySlug(tx, world);
     const taken = await tx.query('SELECT 1 FROM agents WHERE name = $1', [name]);
     if (taken.rows.length) throw new ActionError(409, 'exists');
-    const { id, key } = await createAgent(tx, name, world);
-    return { code: 'agent_created', target: `agent:${id}`, detail: { name, world }, secret: key };
+    const { id, key } = await createAgent(tx, name, world, role);
+    return { code: 'agent_created', target: `agent:${id}`, detail: { name, world, role }, secret: key };
   },
 
   // A new prefix and hash replace the old ones, so the old key stops working at once.
