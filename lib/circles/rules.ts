@@ -26,14 +26,19 @@ export type CircleInput = {
 
 const ZONES = new Set<string>(TIME_ZONES);
 
-// Trimmed NFKC text of 1..max characters, no control or format characters, no blocked word; otherwise null.
+// A scheme (http://), www. or a domain-like word (evil.com): names and descriptions reach invite emails and pages, so
+// they never carry a link (4B security review).
+const LINK_LIKE = /[a-z][a-z0-9+.-]*:\/\/|www\.|\w+\.\w{2,}/i;
+
+// Trimmed NFKC text of 1..max characters, no control or format characters, no blocked word, nothing link-like;
+// otherwise null.
 export function cleanText(v: unknown, max: number): string | null {
   if (typeof v !== 'string') {
     return null;
   }
   const s = v.normalize('NFKC').trim();
   const len = [...s].length;
-  if (len < 1 || len > max || /[\p{Cc}\p{Cf}]/u.test(s) || findBlockedWord(s)) {
+  if (len < 1 || len > max || /[\p{Cc}\p{Cf}]/u.test(s) || LINK_LIKE.test(s) || findBlockedWord(s)) {
     return null;
   }
   return s;

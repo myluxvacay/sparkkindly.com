@@ -10,6 +10,8 @@ import { isUuid } from '@/lib/accounts/pin';
 import { ageGroupFor, can, type Consent } from '@/lib/accounts/policy';
 import { normalizeEmail } from '@/lib/accounts/signup';
 import { hash } from '@/lib/tokens';
+import { circleHasChild } from './children';
+import { pruneAddressLog } from './invite-guard';
 import { joinLocked, lockCircleById, type JoinResult } from './join';
 import { cleanMemberName, type CircleKind } from './rules';
 import { lockCircle, memberCount, myRole, type CircleRow } from './repo';
@@ -48,20 +50,28 @@ export const inviteReturnPath = (raw: unknown): string | null => {
 const newInviteToken = (): string => randomBytes(32).toString('base64url');
 const iso = (d: Date) => d.toISOString();
 
-// Usable invite `i` of circle `c` at $2: not revoked, not used, not expired, circle open and visible, creator a member.
+// Usable invite `i` of circle `c` at $2: not revoked, not used, not expired, circle open and visible, creator a member;
+// and in a circle holding a child profile, made by the owner (ruling, 4B security review: only the owner of a circle
+// with a child decides who is invited, so a member's earlier invite stops working once a child is added).
 const USABLE = `i.revoked_at IS NULL AND i.used_at IS NULL AND (i.expires_at IS NULL OR i.expires_at > $2::timestamptz)
   AND c.status = 'open' AND c.hidden_at IS NULL
   AND EXISTS (SELECT 1 FROM circle_members m WHERE m.circle_id = i.circle_id AND m.account_id = i.created_by
-              AND m.profile_id IS NULL AND m.left_at IS NULL)`;
+              AND m.profile_id IS NULL AND m.left_at IS NULL)
+  AND (i.created_by = c.owner_account_id
+       OR NOT EXISTS (SELECT 1 FROM circle_members k WHERE k.circle_id = i.circle_id AND k.profile_id IS NOT NULL
+                      AND k.left_at IS NULL))`;
 
 type Inviter = { circle: CircleRow; circleName: string; yourName: string };
 
-// The circle locked for an invite by `accountId`: a current member of a visible circle with the `invite` capability.
+// The circle locked for an invite by `accountId`: a current member of a visible circle with the `invite` capability, and
+// its owner when the circle holds a child profile (ruling). Lock order: the circle row, then the account row (FOR UPDATE
+// on the email path, so one account's concurrent sends across circles count against the daily cap one at a time).
 async function asInviter(
   tx: Queryable,
   accountId: string,
   slug: string,
   now: Date,
+  accountLock: 'SHARE' | 'UPDATE' = 'SHARE',
 ): Promise<Inviter | 'not_allowed' | 'closed'> {
   const c = isUuid(accountId) ? await lockCircle(tx, slug) : null;
   if (!c || c.hidden_at) return 'not_allowed';
@@ -73,12 +83,13 @@ async function asInviter(
   }>(
     `SELECT c.name, m.display_name AS dn, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob, a.consent_state
      FROM circle_members m JOIN circles c ON c.id = m.circle_id JOIN accounts a ON a.id = m.account_id
-     WHERE m.circle_id = $1 AND m.account_id = $2 AND m.profile_id IS NULL AND m.left_at IS NULL FOR SHARE OF a`,
+     WHERE m.circle_id = $1 AND m.account_id = $2 AND m.profile_id IS NULL AND m.left_at IS NULL FOR ${accountLock} OF a`,
     [c.id, accountId],
   );
   const row = r.rows[0];
   const group = row ? ageGroupFor(row.dob, now) : null;
   if (!row || !group || !can(group, row.consent_state, 'invite')) return 'not_allowed';
+  if (c.owner_account_id !== accountId && (await circleHasChild(tx, c.id))) return 'not_allowed';
   return c.status === 'open' ? { circle: c, circleName: row.name, yourName: row.dn } : 'closed';
 }
 
@@ -166,7 +177,7 @@ export async function createEmailInvite(
   const to = normalizeEmail(email);
   if (!to) return 'invalid';
   const made = await db.transaction(async (tx) => {
-    const who = await asInviter(tx, accountId, slug, now);
+    const who = await asInviter(tx, accountId, slug, now, 'UPDATE');
     if (typeof who === 'string') return who;
     const refused = await emailRefusal(tx, who.circle.id, accountId, to, now);
     if (refused) return refused;
@@ -255,7 +266,8 @@ export async function listInvites(
     [accountId],
   );
   const group = ageGroupFor(who.rows[0].dob, now);
-  const canInvite = circle.status === 'open' && group !== null && can(group, who.rows[0].consent_state, 'invite');
+  const ownerOnly = role !== 'owner' && (await circleHasChild(db, circle.id));
+  const canInvite = circle.status === 'open' && !ownerOnly && group !== null && can(group, who.rows[0].consent_state, 'invite');
   const r = await db.query<{
     id: string;
     kind: 'link' | 'email';
@@ -373,7 +385,8 @@ export async function acceptInvite(
 }
 
 // Daily: drops the address of every spent invite (used, revoked or expired), then deletes invites spent more than 14
-// days ago unless a referral points at them. Each step touches at most `cap` rows; returns the rows changed.
+// days ago unless a referral points at them, then prunes the per-address send log older than 8 days. Each of the first
+// two steps touches at most `cap` rows; returns the rows changed.
 export async function purgeExpiredInvites(db: Queryable, now: Date, cap = 500): Promise<number> {
   const nulled = await db.query(
     `UPDATE circle_invites SET invited_email = NULL WHERE id IN (
@@ -387,5 +400,5 @@ export async function purgeExpiredInvites(db: Queryable, now: Date, cap = 500): 
          AND NOT EXISTS (SELECT 1 FROM referrals r WHERE r.invite_id = i.id) LIMIT $2)`,
     [iso(new Date(now.getTime() - INVITE_LIMITS.keepDays * DAY)), cap],
   );
-  return (nulled.rowCount ?? 0) + (deleted.rowCount ?? 0);
+  return (nulled.rowCount ?? 0) + (deleted.rowCount ?? 0) + (await pruneAddressLog(db, now));
 }

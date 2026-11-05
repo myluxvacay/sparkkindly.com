@@ -83,6 +83,9 @@ test('a visitor opens a link invite, signs up through it and joins; the old link
   const path = await makeLink(owner);
   expect(path).toMatch(/^\/circles\/join\/[A-Za-z0-9_-]{43}\/$/);
   await axeBothWidths(owner);
+  // Shown once: the first view of the circle page cleared the cookie, so a reload no longer shows the link (4B review).
+  await owner.reload();
+  await expect(owner.getByLabel(/Your invite link/)).toHaveCount(0);
 
   const guest = await visitor(browser);
   const res = await guest.goto(path);

@@ -411,13 +411,18 @@ If no run is recorded for 36 hours the worker emails the admin list.
 - **Tokens.** 32 random bytes, base64url (43 characters), stored only as a sha256 hash in `circle_invites.token_hash`.
   The raw token exists only in the link and the email. A newly made link is shown to its maker once, through a
   10-minute HttpOnly cookie (`__Host-sk_invite`) read by the circle page, and only if it is still that member's active
-  link; after that the member makes a new link (which revokes the old one). Invite pages send `Cache-Control: no-store`
+  link. The proxy (`proxy.ts`) clears the cookie on the first plain GET of a circle page that carries it, and signing
+  out clears it, so the link really shows once; after that the member makes a new link (which revokes the old one). Invite pages send `Cache-Control: no-store`
   and `Referrer-Policy: no-referrer` (`next.config.ts`; the page also carries `<meta name="referrer" content="no-referrer">`
   in case the proxy rewrites the header). Because of no-referrer a browser posts the join form with `Origin: null`; the
   accept route takes that only together with the browser-set `Sec-Fetch-Site: same-origin`.
+- **Who invites.** Members with the `invite` capability. Ruling (4B security review): in a circle that holds a child
+  profile only the **owner** may make links or send email invites, and a member's invite made before a child was added
+  stops working; revoking is unchanged (the owner any invite, a member their own).
 - **Kinds.** A link invite is reusable until revoked; each member has one active link per circle and "Make a new invite
   link" revokes theirs (another member's link keeps working). An email invite is single use and expires 14 days after
-  creation. Every invite stops working when its circle closes or is hidden, and when its creator leaves or is removed.
+  creation. Every invite stops working when its circle closes or is hidden, and when its creator leaves or is removed (leaving and
+  removal both revoke the person's invites to that circle, so rejoining does not bring an old link back).
   The circle owner may revoke any invite; a member only their own (circle page, "Active invites").
 - **Opening never joins.** `GET /circles/join/<token>/` shows the circle name, kind and member count only, and changes
   nothing except `opens`. Joining is the POST to `/circles/join/<token>/accept/` from a signed-in adult context; a
@@ -430,9 +435,20 @@ If no run is recorded for 36 hours the worker emails the admin list.
   and family circles only through an invite; a child-profile context is refused. "Your name in this circle" is required.
   A member the owner removed (`circle_members.removed_at`, set by remove, not by leave) cannot join that circle again,
   by invite or as a community; removing a member also revokes their own active invites to it. A member who left may rejoin.
+- **Address guard** (4B security review, `lib/circles/invite-guard.ts`, migration 017). Whatever circle or sender, one
+  address gets at most 3 invite emails in a rolling 7 days, counted in `invite_address_log` by an HMAC-SHA256 of the
+  lower-cased address (key: `UNSUBSCRIBE_SECRET`, label `invite-address:`), never the address itself; rows go after 8
+  days in the daily `invites-purge`. A mail to an address without an account carries "Never email me SparkKindly
+  invites again" (`/circles/stop-invites/?t=…`: the GET page changes nothing, its button POSTs; no sign-in, no flags, an
+  invalid token spends the unsubscribe per-network allowance), which adds the hash to `invite_suppressions`; such an
+  address gets no invite email again. **Without `UNSUBSCRIBE_SECRET` no invite email is sent at all** (the sender still
+  sees "sent"). Invite mail has its own site-wide budget of 60 an hour (`inviteSendBudget`), separate from the account
+  email budget, so invites cannot starve sign-in and consent mail. Circle names, descriptions and "your name in this
+  circle" refuse anything link-like (a scheme, `www.`, or a `word.tld` pattern).
 - **Email invites.** At most 10 sent per account per 24 hours, 3 per address per circle (the address is kept until the
   daily purge, so revoked invites count until then), one active invite per address per circle, 60 sends per network an
-  hour, and the site-wide email budget. An address whose account has invite email off (`notify_invites`, off by
+  hour, the address guard above and the invite email budget. The account row is locked (`FOR UPDATE`, after the circle
+  row) while the daily count is checked, so one account's concurrent sends across circles cannot pass 10. An address whose account has invite email off (`notify_invites`, off by
   default) is sent nothing; the sender still sees "sent". The mail names the inviter by their circle name, the circle,
   says to ignore it if they do not know them, and has the one-click unsubscribe when the address has an account. Sends
   go through `lib/email.ts` (10-second timeout) and are started, not awaited, so the answer's timing does not say whether
@@ -448,6 +464,17 @@ If no run is recorded for 36 hours the worker emails the admin list.
 - **Emergency revoke from the database.** Every invite of one circle:
   `UPDATE circle_invites SET revoked_at = now() WHERE circle_id = (SELECT id FROM circles WHERE slug = '<slug>') AND revoked_at IS NULL;`
   Every invite site-wide: the same without the `circle_id` condition. Revoked invites cannot be un-revoked; members make new ones.
+- **Referrer-Policy behind Caddy.** The Caddy site blocks set `?Referrer-Policy "strict-origin-when-cross-origin"`
+  (only when the app sent none), so the app's `no-referrer` on invite and stop pages survives. **Owner action:** after
+  this change is deployed, copy the two `deploy/caddy/*.caddy` files to the VM as before, `caddy validate` and reload
+  Caddy, then check `curl -sI https://staging.sparkkindly.com/circles/join/<token>/ -u <staging user> | grep -i referrer`
+  shows `no-referrer` (and the same on production after the cut-over). The production snippet's pinned checksum in
+  `deploy/cutover/switch-to-app.sh` is updated with it.
+- **Migration 017 and rollback.** `017_invite_address_guard.sql` is additive (`invite_address_log`,
+  `invite_suppressions`). Code rollback: the previous release never reads them. Schema rollback, only after the previous
+  release is live: `DROP TABLE invite_suppressions; DROP TABLE invite_address_log; DELETE FROM schema_migrations WHERE
+  name = '017_invite_address_guard.sql';`. Dropping `invite_suppressions` forgets every refusal, so keep it unless the
+  release itself is rolled back.
 - **Migration and rollback.** `015_circle_invites.sql` is additive (two new tables and `circle_members.removed_at`). Code rollback: unset
   `CIRCLES_ENABLED` or switch back to the previous release (it never reads them). Schema rollback, only after the
   previous release is live: `DROP TABLE referrals; DROP TABLE circle_invites; ALTER TABLE circle_members DROP COLUMN

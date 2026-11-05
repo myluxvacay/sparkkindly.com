@@ -11,6 +11,7 @@ import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { issueConsentTokens } from './consent';
 import { consentEmail } from './consent-email';
+import { CLEAR_FLASH } from '@/lib/circles/invite-flash';
 import { accountLinkLimits, accountSendBudget, confirmLimits, signUpLimits } from './limits';
 import { accountStatus, consumeAccountLink, endAccountSession, getAccount, hasFreshLink, requestAccountLink, sessionView } from './sessions';
 import { consentPending } from './policy';
@@ -168,5 +169,8 @@ export async function signOut(request: Request, d: Deps): Promise<Response> {
   const token = readCookie(request, ACCOUNT_COOKIE);
   if ((await sessionView(d.db, token, d.now))?.profile) return forbidden();
   await endAccountSession(d.db, token);
-  return seeOther('/account/sign-in/', accountCookie('', 0));
+  const res = seeOther('/account/sign-in/', accountCookie('', 0));
+  // A one-time invite link still waiting in this browser goes with the session (4B security review).
+  res.headers.append('Set-Cookie', CLEAR_FLASH);
+  return res;
 }

@@ -6,6 +6,7 @@ export const dynamic = 'force-dynamic';
 
 // The flags, Origin, adult context, membership and limits are checked inside emailInviteRequest.
 export async function POST(request: Request, { params }: { params: Promise<{ slug: string }> }) {
-  const send = inviteSender(process.env, (m) => sendEmail(m));
-  return emailInviteRequest(request, { db: getDb(), now: new Date(), send }, (await params).slug);
+  const db = getDb();
+  const send = inviteSender(process.env, (m) => sendEmail(m), db);
+  return emailInviteRequest(request, { db, now: new Date(), send }, (await params).slug);
 }

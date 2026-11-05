@@ -16,6 +16,14 @@ const config: NextConfig = {
           { key: 'Referrer-Policy', value: 'no-referrer' },
         ],
       },
+      // "Never email me invites again" (4B review): the signed token in the URL never leaves in a Referer either.
+      {
+        source: '/circles/stop-invites/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store' },
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+        ],
+      },
     ];
   },
 };

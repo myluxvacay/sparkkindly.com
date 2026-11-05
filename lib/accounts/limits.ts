@@ -83,6 +83,7 @@ const shared = globalThis as unknown as {
   __sparkCircleActionLimits?: ReturnType<typeof createAccountActionLimits>;
   __sparkInviteAcceptLimits?: ReturnType<typeof createCodeLimits>;
   __sparkInviteEmailLimits?: ReturnType<typeof createCodeLimits>;
+  __sparkInviteSendBudget?: ReturnType<typeof createSendBudget>;
 };
 export const signUpLimits = (shared.__sparkSignUpLimits ??= createSignUpLimits());
 export const accountLinkLimits = (shared.__sparkAccountLinkLimits ??= createAccountLinkLimits());
@@ -101,3 +102,7 @@ export const circleActionLimits = (shared.__sparkCircleActionLimits ??= createAc
 // per-account counters (circleActionLimits) and the per-account daily email cap in lib/circles/invites.ts.
 export const inviteAcceptLimits = (shared.__sparkInviteAcceptLimits ??= createCodeLimits(Date.now, 60));
 export const inviteEmailLimits = (shared.__sparkInviteEmailLimits ??= createCodeLimits(Date.now, 60));
+// Invite emails have their own, smaller site-wide budget (4B security review), so invites can never use up the
+// allowance sign-in and consent mail depend on.
+export const inviteSendBudget = (shared.__sparkInviteSendBudget ??= createSendBudget({ perHour: 60, warn: () =>
+  console.warn('invite email budget reached: 60 sent this hour; further invite emails skipped until the next hour') }));

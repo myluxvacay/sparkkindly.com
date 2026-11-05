@@ -83,7 +83,8 @@ async function family(email: string) {
 
 // Personal-data tables as the database sees them: accounts and every table reaching it through foreign keys
 // (followed transitively, so a table referencing child_profiles counts), every account_* table, and every table with a
-// column named email, *_email, account_id or profile_id. Each must be in EXPORTED_TABLES or EXCLUDED_TABLES.
+// column named email, *_email, account_id, profile_id or addr_hash (a keyed hash of an address, 4B review). Each must be
+// in EXPORTED_TABLES or EXCLUDED_TABLES.
 async function personalDataTables(q: Queryable): Promise<string[]> {
   const r = await q.query<{ t: string }>(
     `WITH RECURSIVE fk AS (
@@ -104,7 +105,7 @@ async function personalDataTables(q: Queryable): Promise<string[]> {
      UNION
      SELECT table_name::text FROM information_schema.columns
      WHERE table_schema = 'public'
-       AND (column_name IN ('email', 'account_id', 'profile_id') OR column_name LIKE '%\\_email')`,
+       AND (column_name IN ('email', 'account_id', 'profile_id', 'addr_hash') OR column_name LIKE '%\\_email')`,
   );
   return r.rows.map((x) => x.t).sort();
 }
@@ -145,6 +146,11 @@ describe('export inventory', () => {
     expect(EXCLUDED_TABLES.circle_interests).toMatch(/circle/);
     expect(EXCLUDED_TABLES.circle_daily_sets).toMatch(/circle/);
     expect(EXCLUDED_TABLES.circle_notices).toMatch(/circle/);
+  });
+
+  it('accounts for the invite address guard tables (4B review): excluded with reasons', () => {
+    expect(EXCLUDED_TABLES.invite_address_log).toMatch(/hash/);
+    expect(EXCLUDED_TABLES.invite_suppressions).toMatch(/hash/);
   });
 
   it('includes the seven tables of the data inventory', () => {

@@ -57,3 +57,14 @@
 ### Task 3: Isolation matrix, docs, tracker
 
 - [ ] **Step 1:** Extend `tests/unit/account-isolation.test.ts`: tampered token/circle/invite ids denied; 13-15 community denied; child profile context denied on invite and accept; account B cannot revoke account A's invite. **Step 2:** `docs/OPERATIONS.md` "Circle invites and communities" (token handling, limits, the `opens` caveat, purge, rollback of migration 015, how to revoke from the DB in an emergency); `docs/legal/data-inventory.md` rows for `circle_invites`, `referrals`, invitee address retention; tracker 4.2 and 4.9. **Step 3:** whole unit suite, `rm -rf .next/types; npx tsc --noEmit`, eslint on touched files, `npm run build`. **Step 4: Commit** `docs: invites operations and isolation rows`.
+
+### Review fixes (4B security review, 5 November 2026)
+
+Applied as `fix: 4B security review findings`: a site-wide cap of 3 invite emails per address per 7 days and a "never
+email me invites again" link for addresses without an account (keyed address hashes, migration 017; no secret, no
+invite email); no link-like text in circle names, descriptions or member names; Caddy sets `Referrer-Policy` only when
+the app sent none; the sender's account row is locked for the daily cap; leaving revokes the leaver's invites; the
+one-time link cookie is cleared on first view and on sign-out; invite mail has its own 60-an-hour budget.
+**Ruling:** in a circle that holds a child profile only the owner creates invite links or email invites, and a member's
+earlier invite stops working while a child is in the circle; revoke rules are unchanged. See OPERATIONS "Circle invites
+and communities (Project 4B)".

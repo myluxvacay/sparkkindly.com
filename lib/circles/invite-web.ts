@@ -10,7 +10,7 @@ import { linkBase } from '@/lib/admin/sessions';
 import { asAdult } from '@/lib/accounts/children-web';
 import { uuidOf } from '@/lib/accounts/pin';
 import { getContext, requireAdultContext } from '@/lib/accounts/context';
-import { accountSendBudget, circleActionLimits, inviteAcceptLimits, inviteEmailLimits } from '@/lib/accounts/limits';
+import { circleActionLimits, inviteAcceptLimits, inviteEmailLimits, inviteSendBudget, unsubscribeLimits } from '@/lib/accounts/limits';
 import { unsubscribeSecret, unsubscribeToken } from '@/lib/accounts/unsubscribe';
 import { ACCOUNT_COOKIE, forbidden, tooMany } from '@/lib/accounts/web';
 import { circlesEnabled } from '@/lib/config';
@@ -18,6 +18,8 @@ import type { Db } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { joinCommunity } from './communities';
+import { flashCookie } from './invite-flash';
+import { addressHash, claimAddressSend, readSuppressToken, suppressAddress, suppressToken } from './invite-guard';
 import { inviteEmail } from './invite-email';
 import {
   acceptInvite,
@@ -34,7 +36,7 @@ import { scoped, type CircleDeps } from './web';
 
 export type InviteDeps = CircleDeps & { network?: (ip: string) => boolean; send?: (m: InviteMail) => Promise<unknown> };
 
-export const INVITE_COOKIE = '__Host-sk_invite';
+export { INVITE_COOKIE } from './invite-flash';
 export const INVITE_IMAGE = '/circles/invite-image/';
 const notFound = () => new Response('Not found', { status: 404 });
 const joinPath = (token: string) => `/circles/join/${token}/`;
@@ -96,12 +98,10 @@ export async function acceptInviteRequest(request: Request, d: InviteDeps, token
   return ACCEPT_CODES.has(r.status) ? seeOther(`${joinPath(token)}?r=${r.status}#result`) : notFound();
 }
 
-const flash = (token: string) => `${INVITE_COOKIE}=${token}; Path=/; Max-Age=600; HttpOnly; Secure; SameSite=Lax`;
-
 export const createLinkRequest = (request: Request, d: InviteDeps, slug: string) =>
   invitePost(request, d, slug, async (accountId) => {
     const r = await createLinkInvite(d.db, accountId, slug, d.now);
-    if (r.status === 'created') return seeOther(`/circles/${slug}/?r=link#invites`, flash(r.token));
+    if (r.status === 'created') return seeOther(`/circles/${slug}/?r=link#invites`, flashCookie(r.token));
     return toInvites(slug, r.status === 'closed' ? 'read-only' : 'invite-no');
   });
 
@@ -139,17 +139,40 @@ export async function joinCommunityRequest(request: Request, d: InviteDeps): Pro
   });
 }
 
-// The production sender: the site-wide email budget, the join link on the configured host, and an unsubscribe link
-// for a recipient that has an account (when UNSUBSCRIBE_SECRET is set).
-export function inviteSender(env: EnvLike, send: (m: EmailMessage) => Promise<unknown>, budget = accountSendBudget) {
+// The production sender. Nothing goes out without UNSUBSCRIBE_SECRET (the address hash needs it), to a suppressed
+// address, past 3 sends to one address in 7 days site-wide (claimAddressSend), or past the invite send budget. A
+// recipient with an account gets the account unsubscribe link; any other address gets "never email me invites again".
+export function inviteSender(
+  env: EnvLike,
+  send: (m: EmailMessage) => Promise<unknown>,
+  db: Db,
+  budget = inviteSendBudget,
+  clock: () => Date = () => new Date(),
+) {
   return async (m: InviteMail): Promise<void> => {
-    if (!budget()) return;
+    const secret = unsubscribeSecret(env);
+    const h = addressHash(secret, m.to);
+    if (!h || !(await claimAddressSend(db, h, clock())) || !budget()) return;
     const base = linkBase(env);
-    const unsub = m.recipientAccountId ? unsubscribeToken(unsubscribeSecret(env), m.recipientAccountId, 'invites') : null;
+    const unsub = m.recipientAccountId ? unsubscribeToken(secret, m.recipientAccountId, 'invites') : null;
+    const stop = m.recipientAccountId ? null : suppressToken(secret, h);
     const text = inviteEmail(m, {
       joinUrl: `${base}${joinPath(m.token)}`,
       unsubscribeUrl: unsub ? `${base}/account/unsubscribe/?t=${unsub}` : null,
+      stopUrl: stop ? `${base}/circles/stop-invites/?t=${stop}` : null,
     });
     await send({ to: m.to, ...text });
   };
+}
+
+type StopDeps = { db: Db; env: EnvLike; limits?: (key: string) => boolean };
+
+// "Never email me invites again": the page's POST, with no sign-in and no Origin check (it only ever adds the address
+// the signed token names to the suppression list). The answer is the same for a valid and an invalid token; only
+// invalid ones spend the per-network allowance.
+export async function stopInvitesRequest(request: Request, d: StopDeps): Promise<Response> {
+  const h = readSuppressToken(unsubscribeSecret(d.env), (await readForm(request))?.get('t') ?? '');
+  if (!h && !(d.limits ?? unsubscribeLimits)(clientKey(request))) return tooMany();
+  if (h) await suppressAddress(d.db, h);
+  return seeOther('/circles/stop-invites/?r=done#result');
 }

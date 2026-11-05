@@ -31,6 +31,8 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   circle_interests: 'circle data shared by its members (topic and world ids the owner chose), nothing about one person',
   circle_daily_sets: 'circle data shared by its members (which items the circle got each day), nothing about one person',
   circle_notices: 'circle data shared by its members (an item in its set was re-scored), nothing about one person',
+  invite_address_log: 'keyed hash of an invited address and send times (anti-harassment cap); no address and no account link, pruned after 8 days',
+  invite_suppressions: 'keyed hash of an address that refused invite emails; no address and no account link, kept so the refusal holds',
 };
 
 // Columns of the two tables exported row by row: each is exported or deliberately excluded with its reason.

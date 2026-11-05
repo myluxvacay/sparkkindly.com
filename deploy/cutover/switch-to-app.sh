@@ -27,7 +27,7 @@ APP_URL="${APP_URL:-http://127.0.0.1:3100}"
 SRC="$HERE/../caddy/sparkkindly-public-app.caddy"
 # Pinned checksum of deploy/caddy/sparkkindly-public-app.caddy (LF endings). Update it in the same commit as the snippet;
 # a test fails if they drift apart.
-SNIPPET_SHA256="a5b75312f0769057767e5a73894e27ce5cb6832c6a8554268ecc464c2232f05f"
+SNIPPET_SHA256="1ade61b1092b8e4ca95b33bc329581176edf45da0b23a6f86ba16f8f489cfff0"
 
 OWNER=0; BACKUP=0; DRY=0
 for a in "$@"; do

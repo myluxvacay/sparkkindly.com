@@ -233,6 +233,12 @@ export async function leaveCircle(
       accountId,
       now.toISOString(),
     ]);
+    // The leaver's own invites to this circle stop with them, as on removal (4B security review).
+    await tx.query('UPDATE circle_invites SET revoked_at = $3 WHERE circle_id = $1 AND created_by = $2 AND revoked_at IS NULL', [
+      c.id,
+      accountId,
+      now.toISOString(),
+    ]);
     return 'left';
   });
 }
