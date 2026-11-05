@@ -20,6 +20,9 @@ export const DONE = {
   agent_revoked: 'Agent revoked.',
   hours_logged: 'Hours logged for that week.',
   points_saved: 'Points for a correct circle answer saved.',
+  circle_hidden: 'Circle hidden: its members no longer see it and its email stops.',
+  circle_restored: 'Circle restored.',
+  circle_reports_handled: 'Reports marked as handled.',
 } as const;
 
 export const ERRORS = {

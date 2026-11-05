@@ -2,7 +2,7 @@ import { createHash, randomBytes } from 'node:crypto';
 import { test, expect, type Browser, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { sql } from './helpers/fixtures';
-import { FORM, form } from './helpers/admin';
+import { FORM, form, session, signInContext } from './helpers/admin';
 
 // Circles (plan 4A Task 3). The preview server on 4173 runs with ACCOUNTS_ENABLED and CIRCLES_ENABLED; the server on
 // 4174 has neither, so it covers the flag-off 404s. Only example.test addresses; sign-in links are minted as rows, as
@@ -47,7 +47,7 @@ test('with the flag off every circle page and route is a 404 (server without the
   for (const path of ['/circles/', '/circles/new/', '/circles/abcdefghij/']) {
     expect((await request.get(OFF + path)).status(), path).toBe(404);
   }
-  const posts = ['/circles/create/', ...['leave', 'remove', 'transfer', 'close', 'add-child', 'remove-child'].map((a) => `/circles/abcdefghij/${a}/`)];
+  const posts = ['/circles/create/', ...['leave', 'remove', 'transfer', 'close', 'add-child', 'remove-child', 'report'].map((a) => `/circles/abcdefghij/${a}/`)];
   for (const path of posts) {
     const r = await request.post(OFF + path, { headers: { ...FORM, origin: OFF }, data: form({ confirm: 'on' }), maxRedirects: 0 });
     expect(r.status(), path).toBe(404);
@@ -122,4 +122,41 @@ test('a cross-site POST is refused and a signed-out POST goes to sign-in', async
     maxRedirects: 0,
   });
   expect([anon.status(), anon.headers().location]).toEqual([303, '/account/sign-in/']);
+});
+
+test('a member reports the circle by keyboard; the owner hides it in /admin (members get a 404) and restores it', async ({ browser }) => {
+  const a = await adult(browser);
+  await a.page.goto('/circles/new/');
+  await a.page.getByLabel('Circle name').fill('E2E Reported Circle');
+  await a.page.getByRole('radio', { name: /^Friends:/ }).check();
+  await a.page.getByLabel('Your name in this circle').fill('Sam');
+  await a.page.getByRole('button', { name: 'Create the circle' }).click();
+  await expect(a.page.getByRole('status')).toContainText('Your circle is ready');
+  const slug = /\/circles\/([a-z0-9]{10})\//.exec(a.page.url())![1];
+
+  await a.page.getByText('Report this circle').focus();
+  await a.page.keyboard.press('Enter');
+  await a.page.getByRole('radio', { name: 'A safety worry' }).focus();
+  await a.page.keyboard.press('Space');
+  await a.page.getByLabel(/Anything we should know/).fill('<b>e2e note stays text</b>');
+  await axeBothWidths(a.page);
+  await a.page.getByRole('button', { name: 'Send report' }).press('Enter');
+  await expect(a.page.getByRole('status')).toContainText('Your report is with the SparkKindly team');
+
+  const admin = await browser.newContext();
+  await signInContext(admin, await session());
+  const ap = await admin.newPage();
+  await ap.goto('/admin/circles/');
+  await expect(ap.getByText('<b>e2e note stays text</b>')).toBeVisible();
+  expect(await ap.content()).not.toContain(a.email);
+  await axeBothWidths(ap);
+  await ap.getByRole('button', { name: 'Hide: E2E Reported Circle' }).click();
+  await expect(ap.getByRole('status')).toContainText('Circle hidden');
+  expect((await a.page.goto(`/circles/${slug}/`))!.status()).toBe(404);
+  expect((await a.page.goto(`/circles/${slug}/set/`))!.status()).toBe(404);
+  await ap.getByRole('button', { name: 'Mark reports handled: E2E Reported Circle' }).click();
+  await ap.getByRole('button', { name: 'Restore: E2E Reported Circle' }).click();
+  await expect(ap.getByRole('status')).toContainText('Circle restored');
+  expect((await a.page.goto(`/circles/${slug}/`))!.status()).toBe(200);
+  await admin.close();
 });

@@ -6,6 +6,7 @@ import { ChildControls } from '@/components/circles/ChildControls';
 import { InviteControls } from '@/components/circles/InviteControls';
 import { MemberList } from '@/components/circles/MemberList';
 import { OwnerControls } from '@/components/circles/OwnerControls';
+import { ReportForm } from '@/components/circles/ReportForm';
 import { Result, type Messages } from '@/components/circles/Result';
 import { PLAYING_PAGE } from '@/lib/accounts/next';
 import { ACCOUNT_COOKIE } from '@/lib/accounts/web';
@@ -53,6 +54,10 @@ const MESSAGES: Messages = {
   'email-limit': { text: 'You have sent as many email invites as allowed for now. Please try again tomorrow.', ok: false },
   revoked: { text: 'The invite no longer works.', ok: true },
   'revoke-gone': { text: 'That invite is not active any more.', ok: false },
+  reported: { text: 'Thank you. Your report is with the SparkKindly team.', ok: true },
+  'report-invalid': { text: 'Please choose what is wrong; a note can be up to 300 characters.', ok: false },
+  'report-limit': { text: 'You have sent as many reports as allowed today. Please try again tomorrow.', ok: false },
+  'report-no': { text: 'Your account cannot report this circle.', ok: false },
 };
 const KIND = { friends: 'Friends circle', family: 'Family circle', community: 'Community circle' } as const;
 
@@ -102,6 +107,7 @@ export default async function CirclePage({ params, searchParams }: Props) {
           </button>
         </form>
       )}
+      <ReportForm slug={view.slug} />
       <p>
         <Link href="/circles/">Back to your circles</Link>
       </p>

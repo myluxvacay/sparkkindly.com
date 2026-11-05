@@ -242,6 +242,30 @@ const handlers: Record<string, Handler> = {
     return { code: 'points_saved', target: 'setting:points_correct', detail: { points } };
   },
 
+  // Circle moderation (plan 4D): hiding makes the circle invisible to its members at once (404 pages, out of lists and
+  // mail); nothing is deleted, and restoring brings it back. Handling marks its open reports as dealt with.
+  async 'circle.hide'({ tx, form, now }) {
+    const id = itemId(form);
+    await one(tx, 'UPDATE circles SET hidden_at = $2 WHERE id = $1 AND hidden_at IS NULL', [id, now.toISOString()]);
+    return { code: 'circle_hidden', target: `circle:${id}` };
+  },
+
+  async 'circle.restore'({ tx, form }) {
+    const id = itemId(form);
+    await one(tx, 'UPDATE circles SET hidden_at = NULL WHERE id = $1 AND hidden_at IS NOT NULL', [id]);
+    return { code: 'circle_restored', target: `circle:${id}` };
+  },
+
+  async 'circle.reports_handled'({ tx, form, now }) {
+    const id = itemId(form);
+    const r = await tx.query('UPDATE circle_reports SET handled_at = $2 WHERE circle_id = $1 AND handled_at IS NULL', [
+      id,
+      now.toISOString(),
+    ]);
+    if (!r.rowCount) throw missing();
+    return { code: 'circle_reports_handled', target: `circle:${id}`, detail: { reports: r.rowCount } };
+  },
+
   async 'agent.create'({ tx, form }) {
     const name = field(form, 'name');
     if (!AGENT_NAME.test(name)) throw bad();

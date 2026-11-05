@@ -15,6 +15,7 @@ export const EXPORTED_TABLES = [
   'item_responses',
   'circle_members',
   'circle_invites',
+  'circle_reports',
   'referrals',
 ] as const;
 
@@ -94,6 +95,8 @@ type ExportInvite = {
   revokedAt: string | null;
   usedAt: string | null;
 };
+// A report the account made about a circle (plan 4D): its own words only.
+type ExportReport = { circle: string; reason: string; note: string | null; createdAt: string };
 type ExportChild = {
   displayName: string;
   ageBand: string;
@@ -125,6 +128,7 @@ export type AccountExport = {
   answers: ExportAnswer[];
   circles: ExportMembership[];
   invites: ExportInvite[];
+  reports: ExportReport[];
   joinedThroughInviteAt: string | null;
   childProfiles: ExportChild[];
 };
@@ -241,6 +245,15 @@ async function invitesOf(tx: Queryable, accountId: string): Promise<ExportInvite
   }));
 }
 
+async function reportsOf(tx: Queryable, accountId: string): Promise<ExportReport[]> {
+  const r = await tx.query<{ name: string; reason: string; note: string | null; c: Date }>(
+    `SELECT c.name, r.reason, r.note, r.created_at AS c FROM circle_reports r JOIN circles c ON c.id = r.circle_id
+     WHERE r.reporter_account_id = $1 ORDER BY r.created_at, r.id`,
+    [accountId],
+  );
+  return r.rows.map((x) => ({ circle: x.name, reason: x.reason, note: x.note, createdAt: iso(x.c) as string }));
+}
+
 async function referredAt(tx: Queryable, accountId: string): Promise<string | null> {
   const r = await tx.query<{ j: Date }>('SELECT joined_at AS j FROM referrals WHERE new_account_id = $1', [accountId]);
   return r.rows[0] ? iso(r.rows[0].j) : null;
@@ -272,6 +285,7 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
     answers: answers.get(NIL) ?? [],
     circles: circles.get(NIL) ?? [],
     invites: await invitesOf(tx, accountId),
+    reports: await reportsOf(tx, accountId),
     joinedThroughInviteAt: await referredAt(tx, accountId),
     childProfiles: children.rows.map((c) => ({
       displayName: c.display_name,

@@ -6,7 +6,7 @@ import { BASE, FORM, ORIGIN, OWNER, auditCount, codeFor, cookieHeader, csrfFor, 
 // The adversarial matrix for admin sign-in (data-isolation.md, security.md): only an allow-listed address that has
 // used its emailed link AND given its authenticator code is an admin, on every request.
 
-const PAGES = ['/admin/', '/admin/items/', '/admin/items/new/', '/admin/reports/', '/admin/worlds/', '/admin/topics/', '/admin/agents/', '/admin/runs/', '/admin/digest/', '/admin/pilot/'];
+const PAGES = ['/admin/', '/admin/items/', '/admin/items/new/', '/admin/reports/', '/admin/worlds/', '/admin/topics/', '/admin/agents/', '/admin/runs/', '/admin/digest/', '/admin/circles/', '/admin/pilot/'];
 const axe = async (page: import('@playwright/test').Page) => {
   const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
   return r.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');

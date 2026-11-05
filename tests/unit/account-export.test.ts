@@ -129,6 +129,7 @@ describe('export inventory', () => {
       'child_profiles',
       'circle_invites',
       'circle_members',
+      'circle_reports',
       'item_responses',
       'profile_interests',
       'referrals',
@@ -147,6 +148,21 @@ describe('export inventory', () => {
     expect(EXCLUDED_TABLES.circle_daily_sets).toMatch(/circle/);
     expect(EXCLUDED_TABLES.circle_notices).toMatch(/circle/);
     expect(EXCLUDED_TABLES.circle_mail_log).toMatch(/no address, no account/);
+  });
+
+  it('exports the account’s own circle reports (plan 4D): circle, reason, note and time, nothing about others', async () => {
+    const id = await signedIn(`rep${n++}@example.test`, '1985-03-04');
+    const other = await signedIn(`rep${n++}@example.test`, '1985-03-04');
+    const c = await db.query<{ id: string }>(
+      "INSERT INTO circles (slug, name, kind, owner_account_id) VALUES ('repcircle1', 'Quizzers', 'friends', $1) RETURNING id",
+      [other],
+    );
+    await db.query(
+      "INSERT INTO circle_reports (circle_id, reporter_account_id, reason, note, created_at) VALUES ($1, $2, 'name', 'odd name', $3), ($1, $4, 'other', 'not mine', $3)",
+      [c.rows[0].id, id, T1.toISOString(), other],
+    );
+    const x = await exportAccount(db, id, NOW);
+    expect(x!.reports).toEqual([{ circle: 'Quizzers', reason: 'name', note: 'odd name', createdAt: T1.toISOString() }]);
   });
 
   it('accounts for the invite address guard tables (4B review): excluded with reasons', () => {
