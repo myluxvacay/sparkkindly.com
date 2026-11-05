@@ -15,7 +15,7 @@ import type { EnvLike } from '@/lib/env';
 import { validateCaptions } from './captions';
 import { ensureDirs, mediaDirs, pathIn, removeFile, type MediaDirs } from './storage';
 import { moveVideoJob } from './states';
-import { receiveUpload, type UploadCode, type UploadKind } from './upload';
+import { maxVideoBytes, receiveUpload, type UploadCode, type UploadKind } from './upload';
 import { validateMp4, type Probe, type Validation } from './validate';
 
 type Deps = { db: Db; env: EnvLike; now: Date; jobId: string; probe?: Probe };
@@ -25,7 +25,8 @@ const TEXT = {
   captions_uploaded: 'Caption file uploaded and checked.',
   invalid: 'The file did not pass the checks: see the validation result on the job.',
   wrong_state: 'This job cannot take a file now (no brief yet, already approved or cancelled).',
-  too_large: 'The file is larger than allowed (video 256 MB, captions 200 KB).',
+  too_large: 'The file is larger than allowed (see the limit next to the upload field; captions 200 KB).',
+  disk: 'The server is short of disk space. Delete old files or ask for more space before uploading.',
   bad_name: 'Choose an .mp4 video (or a .vtt or .srt caption file) with a plain file name.',
   busy: 'Another upload to this job is still running.',
   quota: 'The upload area is full. Approve or cancel waiting jobs first.',
@@ -37,13 +38,14 @@ const TEXT = {
   not_found: 'Not found.',
 } as const;
 type Code = keyof typeof TEXT;
-const STATUS: Record<UploadCode, number> = { too_large: 413, bad_name: 400, busy: 409, quota: 507, size_mismatch: 400, aborted: 400, storage: 500 };
+const STATUS: Record<UploadCode, number> = { too_large: 413, bad_name: 400, busy: 409, quota: 507, disk: 507, size_mismatch: 400, aborted: 400, storage: 500 };
 
 const reply = (status: number, code: Code, extra: Record<string, unknown> = {}) =>
   Response.json({ ok: status === 200, code, message: TEXT[code], ...extra }, { status, headers: { 'cache-control': 'no-store' } });
 
 type Job = { state: string; file_name: string | null; captions_path: string | null };
 const OPEN = ['brief_ready', 'uploaded'];
+const PREVIEW_CUES = 20;
 
 async function lockJob(tx: Queryable, id: number): Promise<Job | null> {
   const r = await tx.query<Job>('SELECT state, file_name, captions_path FROM video_jobs WHERE id = $1 FOR UPDATE', [id]);
@@ -51,13 +53,20 @@ async function lockJob(tx: Queryable, id: number): Promise<Job | null> {
 }
 
 async function storeVideo(d: Deps, admin: string, id: number, dirs: MediaDirs, file: { name: string; sha256: string; size: number }): Promise<Response> {
-  const v: Validation = await validateMp4(pathIn(dirs.quarantine, file.name), { probe: d.probe });
+  let v: Validation;
+  try {
+    v = await validateMp4(pathIn(dirs.quarantine, file.name), { probe: d.probe });
+  } catch {
+    await removeFile(dirs, file.name); // 5B review L3: never leave an unchecked file behind
+    return reply(500, 'storage');
+  }
   const old = await d.db.transaction(async (tx) => {
     const job = await lockJob(tx, id);
     if (!job || !OPEN.includes(job.state)) return { refused: true as const };
     if (v.ok) {
       await moveVideoJob(tx, id, 'upload', { set: { file_name: file.name, file_sha256: file.sha256, file_size: file.size, validation: JSON.stringify(v) } });
-    } else {
+    } else if (!job.file_name) {
+      // A refused file replaces the validation shown only when no earlier valid file is waiting (5B review L3).
       await tx.query('UPDATE video_jobs SET validation = $2::jsonb, updated_at = now() WHERE id = $1', [id, JSON.stringify(v)]);
     }
     await audit(tx, admin, 'video.upload', `video_job:${id}`, { ok: v.ok, sha256: file.sha256, size: file.size });
@@ -69,7 +78,10 @@ async function storeVideo(d: Deps, admin: string, id: number, dirs: MediaDirs, f
   return v.ok ? reply(200, 'video_uploaded') : reply(422, 'invalid', { errors: v.errors });
 }
 
-async function storeCaptions(d: Deps, admin: string, id: number, dirs: MediaDirs, name: string): Promise<Response> {
+// The caption file, its checksum and its first cues; the version moves, so an approval from a page opened before this
+// upload is refused (5B review M3).
+async function storeCaptions(d: Deps, admin: string, id: number, dirs: MediaDirs, file: { name: string; sha256: string }): Promise<Response> {
+  const { name } = file;
   const ext = name.endsWith('.srt') ? 'srt' : 'vtt';
   const check = validateCaptions(await readFile(pathIn(dirs.quarantine, name)), ext);
   if (!check.ok) {
@@ -79,7 +91,11 @@ async function storeCaptions(d: Deps, admin: string, id: number, dirs: MediaDirs
   const r = await d.db.transaction(async (tx) => {
     const job = await lockJob(tx, id);
     if (!job || !OPEN.includes(job.state)) return null;
-    await tx.query('UPDATE video_jobs SET captions_path = $2, updated_at = now() WHERE id = $1', [id, name]);
+    await tx.query(
+      `UPDATE video_jobs SET captions_path = $2, captions_sha256 = $3, captions_preview = $4::jsonb, version = version + 1, updated_at = now()
+       WHERE id = $1`,
+      [id, name, file.sha256, JSON.stringify(check.cues.slice(0, PREVIEW_CUES))],
+    );
     await audit(tx, admin, 'video.captions_upload', `video_job:${id}`, {});
     return job;
   });
@@ -110,7 +126,8 @@ export async function handleVideoUpload(request: Request, d: Deps): Promise<Resp
   } catch {
     return reply(400, 'bad_name');
   }
-  const r = await receiveUpload({ body: request.body, declaredSize, clientName, jobId: id, dirs, kind });
+  const limit = kind === 'video' ? maxVideoBytes(process.env) : undefined;
+  const r = await receiveUpload({ body: request.body, declaredSize, clientName, jobId: id, dirs, kind, limit });
   if (!r.ok) return reply(STATUS[r.code], r.code);
-  return kind === 'video' ? storeVideo(d, admin.email, id, dirs, r) : storeCaptions(d, admin.email, id, dirs, r.name);
+  return kind === 'video' ? storeVideo(d, admin.email, id, dirs, r) : storeCaptions(d, admin.email, id, dirs, r);
 }

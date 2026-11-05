@@ -36,6 +36,10 @@ systemctl enable sparkkindly-web sparkkindly-web-staging >/dev/null 2>&1
 # A timer starts only once its live release contains worker.mjs (the first deploy that includes Project 1C).
 [ -f /opt/sparkkindly/app/current/worker.mjs ] && systemctl enable --now sparkkindly-worker.timer >/dev/null 2>&1
 [ -f /opt/sparkkindly-staging/current/worker.mjs ] && systemctl enable --now sparkkindly-worker-staging.timer >/dev/null 2>&1
+# Video poster (Project 5B, review M4): its own oneshot service and 5-minute timer per environment. Installed here; the
+# owner enables each timer once its release contains video-worker.mjs (docs/OPERATIONS.md, Video jobs).
+install -m 644 "$DEPLOY/systemd/sparkkindly-video-poster.service" "$DEPLOY/systemd/sparkkindly-video-poster.timer" "$DEPLOY/systemd/sparkkindly-video-poster-staging.service" "$DEPLOY/systemd/sparkkindly-video-poster-staging.timer" /etc/systemd/system/
+systemctl daemon-reload
 
 echo "== Release receiver (root-owned; the service users can run it but not change it)"
 install -m 755 -o root -g root "$DEPLOY/bin/deploy-receive.sh" /opt/sparkkindly/bin/deploy-receive.sh

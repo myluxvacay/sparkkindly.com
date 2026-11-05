@@ -50,6 +50,13 @@ for u in sparkkindly sparkkindly-staging; do
 done
 install -d -o sparkkindly -g sparkkindly /opt/sparkkindly/app /opt/sparkkindly/app/releases
 install -d -o sparkkindly-staging -g sparkkindly-staging /opt/sparkkindly-staging /opt/sparkkindly-staging/releases
+# Social video (Project 5B, review M1): each service user gets its own token directory and media folders, mode 0700, so
+# staging and production never share a refresh token or a file. media/ itself is traverse-only like shared/.
+install -d -o root -g root -m 711 /opt/sparkkindly/shared/media
+install -d -o sparkkindly -g sparkkindly -m 0700 /opt/sparkkindly/shared/social-tokens
+install -d -o sparkkindly-staging -g sparkkindly-staging -m 0700 /opt/sparkkindly/shared/social-tokens-staging
+install -d -o sparkkindly -g sparkkindly -m 0700 /opt/sparkkindly/shared/media/social /opt/sparkkindly/shared/media/social/quarantine /opt/sparkkindly/shared/media/social/approved
+install -d -o sparkkindly-staging -g sparkkindly-staging -m 0700 /opt/sparkkindly/shared/media/social-staging /opt/sparkkindly/shared/media/social-staging/quarantine /opt/sparkkindly/shared/media/social-staging/approved
 
 echo "== Node ${NODE_VERSION} (private install, system Node untouched)"
 if [ "$("$NODE_DIR/bin/node" --version 2>/dev/null || true)" != "v${NODE_VERSION}" ]; then

@@ -75,8 +75,16 @@ async function startSession(deps: VideoDeps, t: string, d: VideoPayload): Promis
   return sessionUrl(res.headers.get('location'));
 }
 
+// Where to go on after a 308: the byte after the end of its Range header (5B review L4), or the start when it has none.
+function resumeAt(res: Response): number {
+  const m = /^bytes=0-(\d+)$/.exec(res.headers.get('range') ?? '');
+  return m ? Number(m[1]) + 1 : 0;
+}
+
 async function upload(deps: VideoDeps, t: string, url: string, d: VideoPayload): Promise<string> {
-  for (let start = 0; ; start += YOUTUBE_CHUNK_BYTES) {
+  const maxRounds = 3 * Math.ceil(d.size / YOUTUBE_CHUNK_BYTES) + 3; // a server that never moves on cannot loop forever
+  for (let start = 0, round = 0; ; round++) {
+    if (round >= maxRounds) throw new SocialPostError('transient', 'YouTube did not accept the upload');
     const end = Math.min(start + YOUTUBE_CHUNK_BYTES, d.size);
     const final = end === d.size;
     const res = await send(deps, {
@@ -89,7 +97,10 @@ async function upload(deps: VideoDeps, t: string, url: string, d: VideoPayload):
       accept: final ? [] : [308],
       chunk: true,
     });
-    if (!final) continue;
+    if (!final) {
+      start = resumeAt(res);
+      continue;
+    }
     const id = (await json<{ id?: unknown }>(res, SERVICE, true)).id;
     if (typeof id !== 'string' || !/^[\w-]{1,20}$/.test(id)) throw new SocialPostError('ambiguous', 'YouTube returned no usable video id');
     return id;

@@ -23,7 +23,12 @@ function Banner({ platforms }: Pick<Overview, 'platforms'>) {
   return (
     <div role="alert" className="grown-ups">
       {missing.map((p) =>
-        p.reauth ? (
+        p.tokenStore === 'unavailable' ? (
+          <p key={p.platform}>
+            {NAME[p.platform]}: token store unavailable. Its directory is missing or not writable by the site, so nothing is
+            posted there (docs/OPERATIONS.md, Video jobs).
+          </p>
+        ) : p.reauth ? (
           <p key={p.platform}>
             {NAME[p.platform]} needs re-authorisation: posting there has stopped until the owner signs in again (docs/OPERATIONS.md, Video
             jobs).

@@ -64,6 +64,12 @@ describe('SocialAdmin view', () => {
     expect(html).not.toContain('Retry: Fourth');
   });
 
+  it('5B review M1: an unusable token store says so plainly', () => {
+    const yt = { platform: 'youtube' as const, enabled: true, dailyCap: 1, postTime: '16:00', supported: true, credentials: false, tokenStore: 'unavailable' as const };
+    const out = renderToStaticMarkup(<SocialAdmin csrf="CSRF" overview={{ ...overview, platforms: [yt] }} />);
+    expect(out).toMatch(/YouTube: token store unavailable/);
+  });
+
   it('plan 5B: a video platform waiting for re-authorisation says so', () => {
     const tiktok = { platform: 'tiktok' as const, enabled: true, dailyCap: 1, postTime: '15:00', supported: true, credentials: false, reauth: true };
     const out = renderToStaticMarkup(<SocialAdmin csrf="CSRF" overview={{ ...overview, platforms: [tiktok] }} />);

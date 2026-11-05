@@ -37,6 +37,7 @@ const PER_RUN = 4;
 type Claimed = {
   id: number; item_id: string; platform: VideoPlatform; attempts: number; daily_cap: number; post_time_utc: string;
   job_id: string; brief: Brief; file_name: string; captions_path: string | null; approved_checksum: string; file_size: string;
+  approved_captions_checksum: string | null;
 };
 
 async function claim(db: Queryable, now: Date, platforms: VideoPlatform[]): Promise<Claimed | null> {
@@ -51,20 +52,28 @@ async function claim(db: Queryable, now: Date, platforms: VideoPlatform[]): Prom
          AND d.status = 'scheduled'
        RETURNING d.id, d.item_id, d.platform, d.attempts)
      SELECT c.*, p.daily_cap, p.post_time_utc::text AS post_time_utc, j.id AS job_id, j.brief, j.file_name, j.captions_path,
-            j.approved_checksum, j.file_size
+            j.approved_checksum, j.approved_captions_checksum, j.file_size
      FROM c JOIN social_platforms p ON p.platform = c.platform JOIN video_jobs j ON j.distribution_id = c.id`,
     [now.toISOString(), platforms],
   );
   return r.rows[0] ? { ...r.rows[0], id: Number(r.rows[0].id) } : null;
 }
 
-// The approved file, still exactly as approved; null otherwise.
+// The path of an approved file that still hashes to its approved checksum; null otherwise.
+async function approvedPath(env: EnvLike, name: string, checksum: string | null): Promise<string | null> {
+  const file = await findFile(mediaDirs(env), name).catch(() => null);
+  if (file?.where !== 'approved' || !checksum || (await sha256File(file.path).catch(() => '')) !== checksum) return null;
+  return file.path;
+}
+
+// The approved video and caption file, both exactly as approved (5B review M2: a missing or changed caption file stops
+// the post like a changed video); null otherwise.
 async function approvedFile(d: Claimed, env: EnvLike): Promise<{ filePath: string; captionsPath: string | null } | null> {
-  const dirs = mediaDirs(env);
-  const file = await findFile(dirs, d.file_name).catch(() => null);
-  if (file?.where !== 'approved' || (await sha256File(file.path).catch(() => '')) !== d.approved_checksum) return null;
-  const captions = d.captions_path ? await findFile(dirs, d.captions_path).catch(() => null) : null;
-  return { filePath: file.path, captionsPath: captions?.where === 'approved' ? captions.path : null };
+  const filePath = await approvedPath(env, d.file_name, d.approved_checksum);
+  if (!filePath) return null;
+  if (!d.captions_path) return { filePath, captionsPath: null };
+  const captionsPath = await approvedPath(env, d.captions_path, d.approved_captions_checksum);
+  return captionsPath ? { filePath, captionsPath } : null;
 }
 
 function payload(d: Claimed, f: { filePath: string; captionsPath: string | null }): VideoPayload {
@@ -90,7 +99,7 @@ async function preflight(db: Queryable, d: Claimed, now: Date, env: EnvLike, r: 
   }
   const file = await approvedFile(d, env);
   if (!file) {
-    await failRow(db, d, 'flag', 'the approved file is missing or its checksum changed since approval: nothing was sent');
+    await failRow(db, d, 'flag', 'an approved file (video or captions) is missing or changed since approval: nothing was sent');
     r.flagged++;
   }
   return file;

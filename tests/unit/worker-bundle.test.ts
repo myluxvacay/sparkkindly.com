@@ -13,8 +13,9 @@ import pkg from '../../package.json';
 const ALLOWED_EXTERNAL = new Set(['pg']);
 
 describe('the worker bundle', () => {
-  it('imports only node built-ins and packages the standalone release ships', () => {
-    const script = pkg.scripts['worker:build'] as string;
+  // 5B review M4: the video poster's bundle (video-worker.mjs) follows the same rule.
+  it.each(['worker:build', 'worker:video:build'] as const)('%s imports only node built-ins and packages the standalone release ships', (name) => {
+    const script = pkg.scripts[name] as string;
     const args = script.replace(/^esbuild\s+/, '').split(/\s+/).filter((a) => !a.startsWith('--outfile='));
     const out = path.join(mkdtempSync(path.join(tmpdir(), 'worker-bundle-')), 'worker.mjs');
     execFileSync('npx', ['esbuild', ...args, `--outfile=${out}`], { stdio: 'pipe', shell: process.platform === 'win32' });

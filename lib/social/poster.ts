@@ -15,7 +15,7 @@ import { alert } from '@/lib/jobs/guards';
 import { ADAPTERS, hasCredentials, SocialPostError, type PlatformAdapter } from './adapters/meta';
 import { postText, scheduleTime } from './copy';
 import { eligibleItem } from './eligibility';
-import { moveDistribution, type Platform } from './states';
+import { moveDistribution, VIDEO_PLATFORMS, type Platform } from './states';
 
 export type PosterDeps = {
   env: EnvLike;
@@ -28,6 +28,7 @@ export type PosterResult = { posted: number; deferred: number; failed: number; c
 const MAX_ATTEMPTS = 4; // the first try and 3 retries
 const RETRY_MS = 5 * 60_000;
 const STUCK_MS = 30 * 60_000;
+const VIDEO_STUCK_MS = 45 * 60_000;
 const LATE_MS = 24 * 3_600_000;
 const PER_RUN = 10;
 
@@ -201,13 +202,14 @@ async function cancelLate(db: Queryable, now: Date, platforms: Platform[]): Prom
   return r.rows.length;
 }
 
-// Rows left in `posting` for 30 minutes: the worker stopped mid-post and the platform may have the post.
-export async function recoverStuck(db: Queryable, now: Date): Promise<number> {
+// Rows left in `posting` for 30 minutes: the worker stopped mid-post and the platform may have the post. Video rows
+// (5B review M4) are recovered by the video tick only, after 45 minutes (its uploads may take up to 30).
+export async function recoverStuck(db: Queryable, now: Date, o: { video?: boolean } = {}): Promise<number> {
   const r = await db.query<{ id: string; platform: string }>(
     `UPDATE distributions SET status = 'flagged', version = version + 1, updated_at = $1,
        last_error = 'interrupted while posting: check the platform, then cancel it or keep it as posted'
-     WHERE status = 'posting' AND updated_at < $2 RETURNING id, platform`,
-    [now.toISOString(), new Date(now.getTime() - STUCK_MS).toISOString()],
+     WHERE status = 'posting' AND updated_at < $2 AND (platform = ANY($3::text[])) = $4 RETURNING id, platform`,
+    [now.toISOString(), new Date(now.getTime() - (o.video ? VIDEO_STUCK_MS : STUCK_MS)).toISOString(), [...VIDEO_PLATFORMS], !!o.video],
   );
   for (const x of r.rows) await alert(db, 'social-post', `social post ${x.id} on ${x.platform} was interrupted while posting and is flagged`);
   return r.rows.length;

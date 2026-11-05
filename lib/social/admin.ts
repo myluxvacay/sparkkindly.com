@@ -49,11 +49,19 @@ export const retryDistribution = (tx: Queryable, id: number, now: Date) =>
   moveDistribution(tx, id, 'retry', { set: { attempts: RETRY_ATTEMPTS_LEFT, scheduled_for: now.toISOString(), last_error: null } });
 
 // The owner checked the platform and the flagged post is there (5A review M1): it stays as posted, never retried.
-export const keepDistribution = (tx: Queryable, id: number) =>
-  moveDistribution(tx, id, 'keep', { set: { last_error: 'kept as posted by the owner' } });
+// A kept row without a post time gets now, so caps and visit counting see it (5B review L7).
+export async function keepDistribution(tx: Queryable, id: number, now: Date): Promise<boolean> {
+  if (!(await moveDistribution(tx, id, 'keep', { set: { last_error: 'kept as posted by the owner' } }))) return false;
+  await tx.query('UPDATE distributions SET posted_at = $2 WHERE id = $1 AND posted_at IS NULL', [id, now.toISOString()]);
+  return true;
+}
 
-export const cancelDistribution = (tx: Queryable, id: number) =>
-  moveDistribution(tx, id, 'cancel', { set: { last_error: 'cancelled by the owner' } });
+// Cancelling a video platform's row cancels its video job too (5B review L6), whichever page it was cancelled from.
+export async function cancelDistribution(tx: Queryable, id: number): Promise<boolean> {
+  if (!(await moveDistribution(tx, id, 'cancel', { set: { last_error: 'cancelled by the owner' } }))) return false;
+  await tx.query("UPDATE video_jobs SET state = 'cancelled', version = version + 1, updated_at = now() WHERE distribution_id = $1 AND state <> 'cancelled'", [id]);
+  return true;
+}
 
 export type DistributionRow = {
   id: number; platform: Platform; day: string; status: DistStatus; skipReason: string | null; title: string; world: string;
@@ -61,7 +69,7 @@ export type DistributionRow = {
   postedAt: Date | null; attempts: number;
 };
 export type Overview = {
-  platforms: (PlatformSettings & { credentials: boolean; supported: boolean; reauth?: boolean })[];
+  platforms: (PlatformSettings & { credentials: boolean; supported: boolean; reauth?: boolean; tokenStore?: 'unavailable' })[];
   distributions: DistributionRow[];
   visits: { platform: Platform; title: string; world: string; slug: string; visits: number }[];
 };
@@ -82,6 +90,7 @@ async function platforms(db: Queryable, env: EnvLike): Promise<Overview['platfor
       supported: !!ADAPTERS[p.platform] || isVideoPlatform(p.platform),
       credentials: isVideoPlatform(p.platform) ? hasVideoCredentials(p.platform, env) : hasCredentials(p.platform, env),
       ...(isVideoPlatform(p.platform) && tokenStatus(p.platform, env) === 'reauth' ? { reauth: true } : {}),
+      ...(isVideoPlatform(p.platform) && tokenStatus(p.platform, env) === 'unavailable' ? { tokenStore: 'unavailable' as const } : {}),
     }));
 }
 

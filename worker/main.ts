@@ -20,11 +20,9 @@ import { claimInactivitySweep, runInactivitySweep } from '@/lib/accounts/inactiv
 import { claimCirclesPurge, purgeClosedCircles } from '@/lib/jobs/circles-purge';
 import { purgeExpiredInvites } from '@/lib/circles/invites';
 import { claimCircleMail, runCircleMail } from '@/lib/jobs/circle-mail';
-import { circlesEnabled, contributorsEnabled, socialEnabled } from '@/lib/config';
+import { circlesEnabled, contributorsEnabled } from '@/lib/config';
 import { sendPublicationNotices } from '@/lib/contributors/notices';
 import { socialTick } from '@/lib/jobs/social';
-import { purgeCancelledMedia, purgeQuarantine } from '@/lib/jobs/video-purge';
-import { mediaDirs } from '@/lib/social/video/storage';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
 // `dbNow` replaces the database clock the account jobs compare with `now` (lib/jobs/guards.ts); `fetch` replaces the
@@ -71,24 +69,7 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: Ti
   await circleMail(db, now, env, send, log, opts);
   // With SOCIAL_ENABLED on: daily selection, posting every 5 minutes, daily metrics (lib/jobs/social.ts).
   await socialTick(db, now, env, log, { fetch: opts.fetch ?? fetch, delayMs: opts.delayMs });
-  await videoPurge(db, now, env, log, opts);
   return log;
-}
-
-// Once per UTC day with SOCIAL_ENABLED on (plan 5B): old quarantine uploads and cancelled jobs' files are deleted.
-async function videoPurge(db: Db, now: Date, env: EnvLike, log: string[], { delayMs }: TickOpts): Promise<void> {
-  if (!socialEnabled()) return;
-  const claimed = await db
-    .query("INSERT INTO job_runs (job, run_key) VALUES ('video-purge', $1) ON CONFLICT DO NOTHING RETURNING run_key", [now.toISOString().slice(0, 10)])
-    .then((r) => r.rows.length === 1)
-    .catch(() => false);
-  if (!claimed) return;
-  await runJob(db, 'video-purge', async () => {
-    const dirs = mediaDirs(env);
-    const q = await purgeQuarantine(dirs, now);
-    const c = await purgeCancelledMedia(db, dirs, now);
-    log.push(`video purge: ${q} quarantine file(s), ${c} cancelled job(s)`);
-  }, { delayMs });
 }
 
 // Once per UTC day: purge unconfirmed sign-ups and spent credentials (lib/accounts/retention.ts).

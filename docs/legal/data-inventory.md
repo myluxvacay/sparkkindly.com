@@ -105,13 +105,13 @@ they are never stored in the database. The worker sends Meta the caption and our
 
 `video_jobs` (Project 5B, behind `SOCIAL_ENABLED`) holds, per video script and platform, the promotion agent's brief
 (narration, shots, on-screen text, captions, hashtags; no personal data), the uploaded file's server-generated name,
-SHA-256, size and validation result, the caption file's name, the owner's approval (checksum and time) and a free-text
+SHA-256, size and validation result, the caption file's name, checksum and first 20 cue texts, the owner's approval (checksum and time) and a free-text
 "made by" note of up to 100 characters and a licence note (written by the owner; they may name the maker). The files
 themselves live in the media folder `SOCIAL_MEDIA_DIR` (default `/opt/sparkkindly/shared/media/social/`, `quarantine/`
 and `approved/`, owned by the service user, mode 0700), never in the database or the repository and never served by the
 site; quarantine files are deleted after 7 days and cancelled jobs' files after 30. Videos must not show people who
 have not agreed to appear. TikTok and YouTube tokens live only in the token file `SOCIAL_TOKEN_FILE` (default
-`/opt/sparkkindly/shared/social-tokens.json`, mode 0600) and the root-owned env file; they are not in the database,
+`/opt/sparkkindly/shared/social-tokens/tokens.json` in a 0700 directory of the service user; staging has its own) and the root-owned env file; they are not in the database,
 the export or any log. The worker sends TikTok and Google the approved video, its captions and caption file only.
 
 ## 2. Outside the database

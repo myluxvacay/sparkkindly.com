@@ -113,6 +113,8 @@ describe('social.retry and social.cancel', () => {
     const id = await distribution(db, await socialItem(db), 'instagram', { status: 'flagged', caption: 'x' });
     expect(await act('social.mark_posted', { id: String(id) })).toMatchObject({ ok: true, code: 'social_kept' });
     expect(await statusOf(db, id)).toBe('posted');
+    // 5B review L7: a kept row without a post time gets one, so caps and visits count it.
+    expect((await db.query<{ posted_at: Date | null }>('SELECT posted_at FROM distributions WHERE id = $1', [id])).rows[0].posted_at?.toISOString()).toBe(NOW.toISOString());
     expect((await db.query('SELECT 1 FROM audit_log WHERE action = $1 AND target = $2', ['social.mark_posted', `distribution:${id}`])).rows).toHaveLength(1);
     for (const s of ['posted', 'failed', 'scheduled']) {
       const other = await distribution(db, await socialItem(db), 'instagram', { status: s, caption: 'x' });

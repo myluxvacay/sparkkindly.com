@@ -6,6 +6,7 @@ import { requireAdmin } from '@/lib/admin/next';
 import { socialEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
 import { videoJob } from '@/lib/social/video/admin';
+import { maxVideoBytes } from '@/lib/social/video/upload';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,7 +27,7 @@ export default async function AdminVideoJobPage({ params, searchParams }: Props)
       </p>
       <h1>Video job: {job.title}</h1>
       <StatusNote done={done} error={error} />
-      <VideoJobView csrf={admin.csrf} job={job} />
+      <VideoJobView csrf={admin.csrf} job={job} maxVideoMb={maxVideoBytes(process.env) / 1024 / 1024} />
     </>
   );
 }

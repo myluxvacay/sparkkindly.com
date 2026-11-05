@@ -1,0 +1,11 @@
+[Unit]
+Description=Run the SparkKindly video poster (production) every 5 minutes
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=5min
+AccuracySec=10s
+Unit=sparkkindly-video-poster.service
+
+[Install]
+WantedBy=timers.target

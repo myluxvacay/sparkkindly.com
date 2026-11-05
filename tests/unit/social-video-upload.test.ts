@@ -12,7 +12,8 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { mp4, srt, streamOf, vtt } from '../helpers/mp4';
 import { approveFiles, ensureDirs, findFile, mediaDirs, newName, pathIn, sha256File, type MediaDirs } from '@/lib/social/video/storage';
-import { receiveUpload } from '@/lib/social/video/upload';
+import { maxVideoBytes, receiveUpload } from '@/lib/social/video/upload';
+import { acquireLock } from '@/lib/social/lockfile';
 import { validateMp4 } from '@/lib/social/video/validate';
 import { validateCaptions } from '@/lib/social/video/captions';
 import { purgeQuarantine } from '@/lib/jobs/video-purge';
@@ -108,6 +109,34 @@ describe('receiveUpload', () => {
     expect((await upload(streamOf([b]), b.length)).ok).toBe(true); // the lock is released afterwards
   });
 
+  it('5B review L2: refuses when free disk space is under twice the declared size plus 1 GB', async () => {
+    const b = mp4();
+    const low = async () => 1024 * 1024 * 1024 + 2 * b.length - 1;
+    expect(await upload(streamOf([b]), b.length, { freeBytes: low })).toEqual({ ok: false, code: 'disk' });
+    expect((await upload(streamOf([b]), b.length, { freeBytes: async () => 5 * 1024 ** 3 })).ok).toBe(true);
+  });
+
+  it('5B review M4: maxVideoBytes defaults to 128 MB, follows SOCIAL_MAX_VIDEO_MB, never above 256 MB', () => {
+    expect(maxVideoBytes({})).toBe(128 * 1024 * 1024);
+    expect(maxVideoBytes({ SOCIAL_MAX_VIDEO_MB: '200' })).toBe(200 * 1024 * 1024);
+    expect(maxVideoBytes({ SOCIAL_MAX_VIDEO_MB: '900' })).toBe(256 * 1024 * 1024);
+    expect(maxVideoBytes({ SOCIAL_MAX_VIDEO_MB: 'abc' })).toBe(128 * 1024 * 1024);
+  });
+
+  it('5B review L1: a lock is released only by its holder (a nonce), never one taken over meanwhile', async () => {
+    const p = path.join(dirs.quarantine, 'x.lock');
+    const release = await acquireLock(p, 60_000);
+    expect(release).not.toBeNull();
+    expect(await acquireLock(p, 60_000)).toBeNull(); // held
+    writeFileSync(p, 'someone-else'); // a stale-lock takeover by another process
+    await release!();
+    expect(existsSync(p)).toBe(true);
+    rmSync(p);
+    const again = await acquireLock(p, 60_000);
+    await again!();
+    expect(existsSync(p)).toBe(false);
+  });
+
   it('enforces the global quarantine quota', async () => {
     writeFileSync(path.join(dirs.quarantine, newName(1, 'mp4')), Buffer.alloc(900));
     expect(await upload(streamOf([mp4()]), mp4().length, { quota: 1000 })).toEqual({ ok: false, code: 'quota' });
@@ -176,9 +205,9 @@ describe('validateMp4', () => {
 
 describe('validateCaptions', () => {
   it('accepts WebVTT (with a BOM and voice tags) and SRT', () => {
-    expect(validateCaptions(Buffer.from(vtt), 'vtt')).toEqual({ ok: true });
-    expect(validateCaptions(Buffer.from('﻿' + vtt), 'vtt')).toEqual({ ok: true });
-    expect(validateCaptions(Buffer.from(srt), 'srt')).toEqual({ ok: true });
+    expect(validateCaptions(Buffer.from(vtt), 'vtt')).toEqual({ ok: true, cues: ['Three shapes look alike.', 'One hides a secret.'] });
+    expect(validateCaptions(Buffer.from('﻿' + vtt), 'vtt')).toMatchObject({ ok: true });
+    expect(validateCaptions(Buffer.from(srt), 'srt')).toMatchObject({ ok: true });
   });
 
   it.each([

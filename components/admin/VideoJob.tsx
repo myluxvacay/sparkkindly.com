@@ -80,12 +80,24 @@ function FileState({ job }: { job: VideoJobView }) {
         </div>
       )}
       <p>{job.hasCaptions ? 'A caption file is attached.' : 'No caption file yet.'}</p>
+      {job.hasCaptions && (
+        <>
+          <p>
+            Caption file SHA-256 <code style={WRAP}>{job.captionsSha256}</code>. Its first cues, as they will be published:
+          </p>
+          <ol>
+            {job.captionsPreview.map((c, i) => (
+              <li key={i}>{c}</li>
+            ))}
+          </ol>
+        </>
+      )}
     </>
   );
 }
 
 function Approve({ csrf, job, back }: { csrf: string; job: VideoJobView; back: string }) {
-  const fields = { id: String(job.id), version: String(job.version), checksum: job.fileSha256 ?? '' };
+  const fields = { id: String(job.id), version: String(job.version), checksum: job.fileSha256 ?? '', captions_checksum: job.captionsSha256 ?? '' };
   return (
     <ActionForm csrf={csrf} action="video.approve" returnTo={back} label="Approve for posting" fields={fields}>
       <p>
@@ -132,7 +144,7 @@ function Posting({ job }: { job: VideoJobView }) {
   );
 }
 
-export default function VideoJobView({ csrf, job }: { csrf: string; job: VideoJobView }) {
+export default function VideoJobView({ csrf, job, maxVideoMb = 128 }: { csrf: string; job: VideoJobView; maxVideoMb?: number }) {
   const back = `/admin/social/videos/${job.id}/`;
   const open = job.state === 'brief_ready' || job.state === 'uploaded';
   return (
@@ -155,7 +167,7 @@ export default function VideoJobView({ csrf, job }: { csrf: string; job: VideoJo
         <FileState job={job} />
         {open && (
           <>
-            <VideoUpload jobId={job.id} csrf={csrf} kind="video" label="Finished video (MP4, H.264, up to 256 MB)" accept="video/mp4,.mp4" />
+            <VideoUpload jobId={job.id} csrf={csrf} kind="video" label={`Finished video (MP4, H.264, up to ${maxVideoMb} MB)`} accept="video/mp4,.mp4" />
             {job.platform === 'youtube' && <VideoUpload jobId={job.id} csrf={csrf} kind="captions" label="Caption file (WebVTT or SRT)" accept=".vtt,.srt" />}
           </>
         )}

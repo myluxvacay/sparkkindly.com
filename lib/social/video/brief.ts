@@ -8,6 +8,7 @@
 // agent. No Next.js imports. Verified by tests/unit/social-video-brief.test.ts.
 import { z } from 'zod';
 import { worldHex } from '@/lib/public/palette';
+import { withTags } from '../adapters/video';
 import { checkCopy, MAX_HASHTAGS } from '../copy';
 import type { VideoPlatform } from '../states';
 
@@ -61,6 +62,8 @@ function captions(platform: VideoPlatform, c: Captions): Captions {
   }
   if (!c.youtube) throw new Refused('captions', 'missing');
   if (/[\r\n]/.test(c.youtube.title)) throw new Refused('captions', 'title_line_break');
+  // YouTube refuses angle brackets in titles and descriptions (5B review L5).
+  if (/[<>]/.test(c.youtube.title + c.youtube.description)) throw new Refused('captions', 'angle_bracket');
   return {
     youtube: {
       title: text(platform, 'captions', c.youtube.title, LIMITS.title),
@@ -69,16 +72,21 @@ function captions(platform: VideoPlatform, c: Captions): Captions {
   };
 }
 
+// TikTok counts the posted caption, hashtags included, in UTF-16 units against 2,200 (5B review L5).
+const TIKTOK_TOTAL_UNITS = 2200;
+
 function check(platform: VideoPlatform, b: z.infer<typeof briefShape>): Brief {
   if (b.shots.length < LIMITS.minShots || b.shots.length > LIMITS.maxShots) throw new Refused('shots', 'count');
   if (b.onScreenText.length > LIMITS.maxOnScreen) throw new Refused('onScreenText', 'count');
   const tags = checkCopy(platform, { caption: 'x', hashtags: b.hashtags });
   if (!tags.ok) throw new Refused('hashtags', tags.reason);
+  const caps = captions(platform, b.captions);
+  if (caps.tiktok !== undefined && withTags(caps.tiktok, tags.copy.hashtags).length > TIKTOK_TOTAL_UNITS) throw new Refused('captions', 'length');
   return {
     narration: text(platform, 'narration', b.narration, LIMITS.narration),
     shots: b.shots.map((s) => text(platform, 'shots', s, LIMITS.shot)),
     onScreenText: b.onScreenText.map((s) => text(platform, 'onScreenText', s, LIMITS.onScreen)),
-    captions: captions(platform, b.captions),
+    captions: caps,
     hashtags: tags.copy.hashtags,
     durationSeconds: b.durationSeconds,
   };

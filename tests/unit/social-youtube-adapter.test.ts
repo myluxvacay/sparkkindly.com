@@ -100,10 +100,18 @@ describe('YouTube post', () => {
   it('uploads a large file in chunks (308 between them)', async () => {
     const size = YOUTUBE_CHUNK_BYTES + 10;
     writeFileSync(video, Buffer.alloc(size, 3));
-    const f = fakeFetch([session(), new Response(null, { status: 308 }), json(201, { id: 'y' })]);
+    const f = fakeFetch([session(), new Response(null, { status: 308, headers: { range: `bytes=0-${YOUTUBE_CHUNK_BYTES - 1}` } }), json(201, { id: 'y' })]);
     await youtube.post(payload({ size, captionsPath: null }), deps(f));
     expect(new Headers(f.calls[1].init.headers).get('content-range')).toBe(`bytes 0-${YOUTUBE_CHUNK_BYTES - 1}/${size}`);
     expect(new Headers(f.calls[2].init.headers).get('content-range')).toBe(`bytes ${YOUTUBE_CHUNK_BYTES}-${size - 1}/${size}`);
+  });
+
+  it('5B review L4: resumes from the offset in the 308 Range header, not the chunk it sent', async () => {
+    const size = YOUTUBE_CHUNK_BYTES + 10;
+    writeFileSync(video, Buffer.alloc(size, 3));
+    const f = fakeFetch([session(), new Response(null, { status: 308, headers: { range: 'bytes=0-999' } }), json(201, { id: 'y' })]);
+    await youtube.post(payload({ size, captionsPath: null }), deps(f));
+    expect(new Headers(f.calls[2].init.headers).get('content-range')).toBe(`bytes 1000-${size - 1}/${size}`);
   });
 
   it('a captions failure after the video exists is a warning, never a failure (the post exists)', async () => {

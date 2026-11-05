@@ -5,7 +5,7 @@
 // never overwritten and means re-authorisation; a missing file falls back to the env's initial refresh token; tokens
 // never appear in errors.
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { SocialPostError } from '@/lib/social/adapters/meta';
@@ -36,8 +36,23 @@ async function failure(p: Promise<unknown>): Promise<SocialPostError> {
 }
 
 describe('token store', () => {
-  it('defaults to /opt/sparkkindly/shared/social-tokens.json', () => {
-    expect(tokenFile({})).toBe('/opt/sparkkindly/shared/social-tokens.json');
+  it('5B review M3/M1: an unwritable or missing token directory fails closed as "unavailable", before any refresh', async () => {
+    const gone = { SOCIAL_TOKEN_FILE: path.join(dir, 'no-such-dir', 'tokens.json'), TIKTOK_REFRESH_TOKEN: 'x' };
+    expect(tokenStatus('tiktok', gone)).toBe('unavailable');
+    const refresh = fresh();
+    const e = await failure(get(refresh, gone));
+    expect(e.kind).toBe('credentials');
+    expect(e.message).toMatch(/token store unavailable/);
+    expect(refresh).not.toHaveBeenCalled();
+    if (process.platform !== 'win32' && process.getuid?.() !== 0) {
+      const ro = path.join(dir, 'ro');
+      mkdirSync(ro, { mode: 0o500 });
+      expect(tokenStatus('tiktok', { SOCIAL_TOKEN_FILE: path.join(ro, 'tokens.json'), TIKTOK_REFRESH_TOKEN: 'x' })).toBe('unavailable');
+    }
+  });
+
+  it('5B review M1: defaults to its own service-owned directory, /opt/sparkkindly/shared/social-tokens/tokens.json', () => {
+    expect(tokenFile({})).toBe('/opt/sparkkindly/shared/social-tokens/tokens.json');
     expect(tokenFile({ SOCIAL_TOKEN_FILE: file })).toBe(file);
   });
 

@@ -46,6 +46,8 @@ jobs:
           cp deploy/migrate.sh release/migrate.sh
           # The worker (systemd timer) runs release/worker.mjs; pg resolves from the standalone node_modules.
           npm run worker:build
+          # The video poster (its own systemd timer, 5B review M4) runs release/video-worker.mjs.
+          npm run worker:video:build
           chmod +x release/migrate.sh
           printf '%s' "$GITHUB_SHA" > release/RELEASE
           tar -czf release.tgz -C release .

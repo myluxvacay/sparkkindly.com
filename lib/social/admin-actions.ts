@@ -51,10 +51,10 @@ export function socialHandlers(fail: Fail): Record<string, (c: Ctx) => Promise<D
     },
 
     // 5A review M1: a flagged row the owner found on the platform is kept as posted.
-    async 'social.mark_posted'({ tx, form }) {
+    async 'social.mark_posted'({ tx, form, now }) {
       const id = distributionId(form, fail);
       await requireStatus(tx, id, fail);
-      if (!(await keepDistribution(tx, id))) throw fail(409, 'wrong_status');
+      if (!(await keepDistribution(tx, id, now))) throw fail(409, 'wrong_status');
       return { code: 'social_kept', target: `distribution:${id}` };
     },
 

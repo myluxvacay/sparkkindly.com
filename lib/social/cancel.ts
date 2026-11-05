@@ -19,11 +19,11 @@ export async function cancelForItem(tx: Queryable, itemId: string): Promise<{ ca
      WHERE item_id = $1 AND status IN ('posted', 'posting') RETURNING id, platform`,
     [itemId],
   );
-  // Plan 5B: the video jobs of the cancelled rows stop too (their files are purged 30 days later).
+  // Plan 5B: the video jobs of the cancelled rows, and of failed ones (5B review L6), stop too (files purged after 30 days).
   await tx.query(
     `UPDATE video_jobs SET state = 'cancelled', version = version + 1, updated_at = now()
      WHERE item_id = $1 AND state <> 'cancelled'
-       AND distribution_id IN (SELECT id FROM distributions WHERE item_id = $1 AND status = 'cancelled')`,
+       AND distribution_id IN (SELECT id FROM distributions WHERE item_id = $1 AND status IN ('cancelled', 'failed'))`,
     [itemId],
   );
   for (const x of f.rows) {

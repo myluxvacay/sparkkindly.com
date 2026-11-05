@@ -23,14 +23,15 @@ type Fail = (status: 400 | 404 | 409, code: ErrorCode) => Error;
 
 type Locked = {
   item_id: string; platform: VideoPlatform; state: string; version: number; file_name: string | null; file_sha256: string | null;
-  validation: { ok?: boolean } | null; captions_path: string | null; distribution_id: string; dstatus: string; post_time_utc: string;
+  validation: { ok?: boolean } | null; captions_path: string | null; captions_sha256: string | null; distribution_id: string;
+  dstatus: string; post_time_utc: string;
 };
 
 async function lockJob(tx: Queryable, f: URLSearchParams, fail: Fail): Promise<Locked & { id: number }> {
   const raw = (f.get('id') ?? '').trim();
   if (!/^\d{1,12}$/.test(raw)) throw fail(400, 'bad_input');
   const r = await tx.query<Locked>(
-    `SELECT j.item_id, j.platform, j.state, j.version, j.file_name, j.file_sha256, j.validation, j.captions_path,
+    `SELECT j.item_id, j.platform, j.state, j.version, j.file_name, j.file_sha256, j.validation, j.captions_path, j.captions_sha256,
             j.distribution_id, d.status AS dstatus, p.post_time_utc::text AS post_time_utc
      FROM video_jobs j JOIN distributions d ON d.id = j.distribution_id JOIN social_platforms p ON p.platform = j.platform
      WHERE j.id = $1 FOR UPDATE OF j, d`,
@@ -46,14 +47,20 @@ function note(f: URLSearchParams, name: string, max: number, fail: Fail): string
   return v || null;
 }
 
-async function verifiedFile(j: Locked, checksum: string, fail: Fail): Promise<void> {
+// A file still hashing to its checksum, wherever it is now (quarantine before the move, approved after).
+async function matches(dirs: ReturnType<typeof mediaDirs>, name: string, checksum: string, where?: 'approved'): Promise<boolean> {
+  const found = await findFile(dirs, name);
+  return !!found && (!where || found.where === where) && (await sha256File(found.path)) === checksum;
+}
+
+// The video and (5B review M2) the caption file are re-hashed before and after the move to approved/.
+async function verifiedFiles(j: Locked, checksum: string, fail: Fail): Promise<void> {
   const dirs = mediaDirs(process.env);
-  const found = j.file_name ? await findFile(dirs, j.file_name) : null;
-  if (!found) throw fail(409, 'video_missing');
-  if ((await sha256File(found.path)) !== checksum) throw fail(409, 'video_file_changed');
-  await approveFiles(dirs, [j.file_name!, ...(j.captions_path ? [j.captions_path] : [])]);
-  const moved = await findFile(dirs, j.file_name!);
-  if (moved?.where !== 'approved' || (await sha256File(moved.path)) !== checksum) throw fail(409, 'video_file_changed');
+  if (!j.file_name || !(await findFile(dirs, j.file_name))) throw fail(409, 'video_missing');
+  const files: [string, string][] = [[j.file_name, checksum], ...(j.captions_path ? [[j.captions_path, j.captions_sha256 ?? ''] as [string, string]] : [])];
+  for (const [name, sum] of files) if (!(await matches(dirs, name, sum))) throw fail(409, 'video_file_changed');
+  await approveFiles(dirs, files.map(([name]) => name));
+  for (const [name, sum] of files) if (!(await matches(dirs, name, sum, 'approved'))) throw fail(409, 'video_file_changed');
 }
 
 async function approve({ tx, form, now }: Ctx, fail: Fail): Promise<Done> {
@@ -64,13 +71,18 @@ async function approve({ tx, form, now }: Ctx, fail: Fail): Promise<Done> {
   if (!/^[0-9a-f]{64}$/.test(checksum) || !Number.isSafeInteger(version)) throw fail(400, 'bad_input');
   const j = await lockJob(tx, form, fail);
   if (j.state !== 'uploaded') throw fail(409, 'wrong_status');
-  if (j.version !== version || j.file_sha256 !== checksum) throw fail(409, 'changed');
+  // Bound to what the owner saw: the job version, the video's checksum and (5B review M3) the caption file's.
+  const captionsChecksum = (form.get('captions_checksum') ?? '').trim();
+  if (j.version !== version || j.file_sha256 !== checksum || (j.captions_sha256 ?? '') !== captionsChecksum) throw fail(409, 'changed');
   if (j.validation?.ok !== true) throw fail(409, 'video_invalid');
   const burned = form.get('captions_burned') === 'yes';
   if (j.platform === 'youtube' ? !j.captions_path : !burned) throw fail(409, 'video_captions');
   if (!(await eligibleItem(tx, j.item_id, now, videoEligibleWhere))) throw fail(409, 'social_ineligible');
-  await verifiedFile(j, checksum, fail);
-  const set = { approved_checksum: checksum, approved_at: now.toISOString(), maker_note: makerNote, licence_note: licenceNote, captions_burned: burned };
+  await verifiedFiles(j, checksum, fail);
+  const set = {
+    approved_checksum: checksum, approved_captions_checksum: j.captions_sha256, approved_at: now.toISOString(),
+    maker_note: makerNote, licence_note: licenceNote, captions_burned: burned,
+  };
   if (!(await moveVideoJob(tx, j.id, 'approve', { version, set }))) throw fail(409, 'changed');
   const at = scheduleTime(j.post_time_utc, now).toISOString();
   if (!(await moveDistribution(tx, Number(j.distribution_id), 'schedule', { set: { scheduled_for: at } }))) throw fail(409, 'wrong_status');

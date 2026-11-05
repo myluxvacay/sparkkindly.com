@@ -7,7 +7,7 @@
 // archiving the item cancels unposted jobs; metrics tolerate failures; socialTick runs the video selection and poster;
 // no token in any log line.
 import { describe, it, expect, beforeAll, afterAll, beforeEach, afterEach, vi } from 'vitest';
-import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -21,6 +21,8 @@ import { cancelForItem } from '@/lib/social/cancel';
 import { collectVideoMetrics, resumeVideoPolls, runVideoPoster } from '@/lib/social/video/poster';
 import { ensureDirs, mediaDirs, newName } from '@/lib/social/video/storage';
 import { socialTick } from '@/lib/jobs/social';
+import { videoTick } from '@/lib/jobs/video';
+import { purgePostedMedia } from '@/lib/jobs/video-purge';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -70,14 +72,16 @@ async function approved(platform: 'tiktok' | 'youtube' = 'tiktok', o: { file?: B
   const name = newName(d, 'mp4');
   writeFileSync(path.join(dirs.approved, name), file);
   const captions = platform === 'youtube' ? newName(d, 'vtt') : null;
-  if (captions) writeFileSync(path.join(dirs.approved, captions), 'WEBVTT\n\n00:00:00.000 --> 00:00:01.000\nHi\n');
+  const captionsText = Buffer.from('WEBVTT\n\n00:00:00.000 --> 00:00:01.000\nHi\n');
+  if (captions) writeFileSync(path.join(dirs.approved, captions), captionsText);
+  const capSha = captions ? sha(captionsText) : null;
   const r = await db.query<{ id: string }>(
     `INSERT INTO video_jobs (item_id, platform, distribution_id, state, brief, file_name, file_sha256, file_size, validation,
-                             captions_path, approved_checksum, approved_at)
-     VALUES ($1, $2, $3, 'approved', $4::jsonb, $5, $6, $7, '{"ok":true}'::jsonb, $8, $6, '2026-11-05T10:00:00Z') RETURNING id`,
-    [item, platform, d, JSON.stringify(briefFor(platform)), name, sha(file), file.length, captions],
+                             captions_path, captions_sha256, approved_captions_checksum, approved_checksum, approved_at)
+     VALUES ($1, $2, $3, 'approved', $4::jsonb, $5, $6, $7, '{"ok":true}'::jsonb, $8, $9, $9, $6, '2026-11-05T10:00:00Z') RETURNING id`,
+    [item, platform, d, JSON.stringify(briefFor(platform)), name, sha(file), file.length, captions, capSha],
   );
-  return { item, distribution: d, job: Number(r.rows[0].id), name, file };
+  return { item, distribution: d, job: Number(r.rows[0].id), name, file, captions };
 }
 
 function fake(results: (Error | { externalId: string; url: string | null; warning?: string })[] = []) {
@@ -286,7 +290,49 @@ describe('5B review H1: a TikTok upload whose outcome is unknown', () => {
   });
 });
 
+describe('5B review M2: the approved caption file', () => {
+  it('deleted after approval: flagged, nothing sent', async () => {
+    const j = await approved('youtube');
+    rmSync(path.join(root, 'approved', j.captions!));
+    const { adapter } = fake();
+    expect(await runVideoPoster(db, NOW, deps(adapter))).toMatchObject({ flagged: 1 });
+    expect(adapter.post).not.toHaveBeenCalled();
+    expect((await row(j.distribution)).status).toBe('flagged');
+  });
+
+  it('changed after approval: flagged, nothing sent', async () => {
+    const j = await approved('youtube');
+    writeFileSync(path.join(root, 'approved', j.captions!), 'WEBVTT\n\n00:00:00.000 --> 00:00:01.000\nVisit evil.example\n');
+    const { adapter } = fake();
+    await runVideoPoster(db, NOW, deps(adapter));
+    expect(adapter.post).not.toHaveBeenCalled();
+    expect((await row(j.distribution)).status).toBe('flagged');
+  });
+});
+
+describe('5B review L2: approved files of posted jobs', () => {
+  it('are deleted 14 days after posting; recent posts and unposted jobs keep theirs', async () => {
+    const old = await approved('tiktok');
+    const recent = await approved('tiktok');
+    const unposted = await approved('youtube');
+    await db.query("UPDATE distributions SET status = 'posted', posted_at = '2026-10-20T00:00:00Z' WHERE id = $1", [old.distribution]);
+    await db.query("UPDATE distributions SET status = 'posted', posted_at = '2026-11-01T00:00:00Z' WHERE id = $1", [recent.distribution]);
+    expect(await purgePostedMedia(db, mediaDirs(env), NOW)).toBe(1);
+    expect(existsSync(path.join(root, 'approved', old.name))).toBe(false);
+    expect(existsSync(path.join(root, 'approved', recent.name))).toBe(true);
+    expect(existsSync(path.join(root, 'approved', unposted.name))).toBe(true);
+    expect((await db.query<{ file_name: string | null }>('SELECT file_name FROM video_jobs WHERE id = $1', [old.job])).rows[0].file_name).toBeNull();
+  });
+});
+
 describe('unpublish', () => {
+  it('5B review L6: archiving an item with a failed video row cancels its job', async () => {
+    const j = await approved('tiktok');
+    await db.query("UPDATE distributions SET status = 'failed' WHERE id = $1", [j.distribution]);
+    await cancelForItem(db, j.item);
+    expect(await jobState(j.job)).toBe('cancelled');
+  });
+
   it('archiving the item cancels unposted video jobs with their distributions', async () => {
     const j = await approved('tiktok');
     await cancelForItem(db, j.item);
@@ -309,16 +355,36 @@ describe('collectVideoMetrics', () => {
   });
 });
 
-describe('socialTick with video', () => {
-  it('selects video scripts for TikTok and YouTube and posts approved jobs; no token in the log', async () => {
-    await socialItem(db, { kind: 'video_script', publishedAt: '2026-11-05T06:00:00Z' });
+describe('5B review M4: the video tick (its own systemd timer), never the main worker tick', () => {
+  it('videoTick selects video scripts for TikTok and YouTube and posts approved jobs; no token in the log', async () => {
+    await db.query('UPDATE social_platforms SET daily_cap = 5');
+    const fresh = await socialItem(db, { kind: 'video_script', publishedAt: '2026-11-05T06:00:00Z' });
+    await approved('tiktok');
     const log: string[] = [];
     const { adapter } = fake();
-    await socialTick(db, NOW, env, log, { fetch: vi.fn() as never, videoAdapters: { tiktok: adapter, youtube: adapter } });
-    const jobs = (await db.query<{ platform: string }>('SELECT platform FROM video_jobs ORDER BY platform')).rows.map((r) => r.platform);
+    await videoTick(db, new Date('2026-11-05T16:03:00Z'), env, log, { fetch: vi.fn() as never, adapters: { tiktok: adapter, youtube: adapter } });
+    const jobs = (await db.query<{ platform: string }>('SELECT platform FROM video_jobs WHERE item_id = $1 ORDER BY platform', [fresh])).rows.map((r) => r.platform);
     expect(jobs).toEqual(['tiktok', 'youtube']);
     expect(log.join('; ')).toMatch(/video select tiktok/);
-    expect(log.join('; ')).toMatch(/video post/);
+    expect(log.join('; ')).toMatch(/video post: 1 posted/);
     expect(log.join('; ')).not.toMatch(/SECRET/);
+  });
+
+  it('socialTick (the main worker) neither selects video nor runs the video poster', async () => {
+    await socialItem(db, { kind: 'video_script', publishedAt: '2026-11-05T06:00:00Z' });
+    await approved('tiktok');
+    const log: string[] = [];
+    const { adapter } = fake();
+    await socialTick(db, new Date('2026-11-05T16:00:00Z'), env, log, { fetch: vi.fn() as never });
+    expect(adapter.post).not.toHaveBeenCalled();
+    expect(log.join('; ')).not.toMatch(/video/);
+    expect((await db.query("SELECT 1 FROM distributions WHERE status = 'posted'")).rows).toEqual([]);
+  });
+
+  it('with SOCIAL_ENABLED off videoTick does nothing', async () => {
+    vi.stubEnv('SOCIAL_ENABLED', '');
+    const log: string[] = [];
+    await videoTick(db, NOW, env, log, { fetch: vi.fn() as never });
+    expect(log).toEqual([]);
   });
 });

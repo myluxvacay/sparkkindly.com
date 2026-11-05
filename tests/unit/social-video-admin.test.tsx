@@ -94,8 +94,8 @@ function uploadReq(id: number, body: Buffer, o: { kind?: string; name?: string; 
 const send = (req: Request, id: number) => handleVideoUpload(req, { db, env, now: NOW, jobId: String(id), probe: noProbe });
 const jobRow = async (id: number) =>
   (
-    await db.query<{ state: string; version: number; file_name: string | null; file_sha256: string | null; file_size: string | null; validation: { ok: boolean; errors: string[] } | null; captions_path: string | null; approved_checksum: string | null; maker_note: string | null; dstatus: string; scheduled_for: Date | null }>(
-      `SELECT j.state, j.version, j.file_name, j.file_sha256, j.file_size, j.validation, j.captions_path, j.approved_checksum, j.maker_note,
+    await db.query<{ state: string; version: number; file_name: string | null; file_sha256: string | null; file_size: string | null; validation: { ok: boolean; errors: string[] } | null; captions_path: string | null; captions_sha256: string | null; approved_captions_checksum: string | null; approved_checksum: string | null; maker_note: string | null; dstatus: string; scheduled_for: Date | null }>(
+      `SELECT j.state, j.version, j.file_name, j.file_sha256, j.file_size, j.validation, j.captions_path, j.captions_sha256, j.approved_captions_checksum, j.approved_checksum, j.maker_note,
               d.status AS dstatus, d.scheduled_for FROM video_jobs j JOIN distributions d ON d.id = j.distribution_id WHERE j.id = $1`,
       [id],
     )
@@ -164,13 +164,65 @@ describe('the upload route', () => {
     const bad = await send(uploadReq(j.id, Buffer.from('<script>x</script>'), { kind: 'captions', name: 'subs.vtt' }), j.id);
     expect(bad.status).toBe(422);
   });
+
+  it('5B review L3: an invalid upload after a valid one keeps the valid file and its validation', async () => {
+    const j = await uploaded();
+    const before = await jobRow(j.id);
+    expect((await send(uploadReq(j.id, mp4({ codec: 'hvc1' })), j.id)).status).toBe(422);
+    expect(await jobRow(j.id)).toMatchObject({ state: 'uploaded', file_name: before.file_name, validation: { ok: true } });
+    expect(readdirSync(path.join(root, 'quarantine'))).toEqual([before.file_name]);
+  });
+
+  it('5B review M4: the video limit defaults to 128 MB and follows SOCIAL_MAX_VIDEO_MB up to 256', async () => {
+    const j = await job();
+    const declared = 130 * 1024 * 1024;
+    expect((await send(uploadReq(j.id, Buffer.alloc(4), { size: declared }), j.id)).status).toBe(413);
+    vi.stubEnv('SOCIAL_MAX_VIDEO_MB', '200');
+    expect((await send(uploadReq(j.id, Buffer.alloc(4), { size: declared }), j.id)).status).not.toBe(413);
+    vi.stubEnv('SOCIAL_MAX_VIDEO_MB', '9999');
+    expect((await send(uploadReq(j.id, Buffer.alloc(4), { size: 257 * 1024 * 1024 }), j.id)).status).toBe(413);
+  });
+
+  it('5B review M3: the job page shows the caption checksum and the first cues as text', async () => {
+    const j = await uploaded('youtube');
+    await send(uploadReq(j.id, Buffer.from(vtt), { kind: 'captions', name: 'subs.vtt' }), j.id);
+    const view = await videoJob(db, j.id);
+    const html = renderToStaticMarkup(<VideoJobView csrf="CSRF" job={view!} />);
+    expect(html).toContain((await jobRow(j.id)).captions_sha256!);
+    expect(html).toContain('Three shapes look alike.');
+    expect(html).not.toContain('<v Narrator>');
+  });
 });
 
 describe('approval', () => {
   const approve = async (id: number, extra: Record<string, string> = {}) => {
     const r = await jobRow(id);
-    return act('video.approve', { id: String(id), version: String(r.version), checksum: r.file_sha256 ?? '', ...extra });
+    const caps: Record<string, string> = r.captions_sha256 ? { captions_checksum: r.captions_sha256 } : {};
+    return act('video.approve', { id: String(id), version: String(r.version), checksum: r.file_sha256 ?? '', ...caps, ...extra });
   };
+
+  it('5B review M3: a caption upload bumps the version, so an approval from the page opened before it is refused', async () => {
+    const j = await uploaded('youtube');
+    const opened = await jobRow(j.id);
+    await send(uploadReq(j.id, Buffer.from(vtt), { kind: 'captions', name: 'subs.vtt' }), j.id);
+    const now = await jobRow(j.id);
+    expect(now.version).toBe(opened.version + 1);
+    const stale = await act('video.approve', { id: String(j.id), version: String(opened.version), checksum: opened.file_sha256!, captions_checksum: now.captions_sha256! });
+    expect(stale).toMatchObject({ ok: false, code: 'changed' });
+    const wrongCaptions = await act('video.approve', { id: String(j.id), version: String(now.version), checksum: now.file_sha256!, captions_checksum: 'a'.repeat(64) });
+    expect(wrongCaptions).toMatchObject({ ok: false, code: 'changed' });
+    expect(await approve(j.id)).toMatchObject({ ok: true });
+    expect((await jobRow(j.id)).approved_captions_checksum).toBe(now.captions_sha256);
+  });
+
+  it('5B review M3: caption cues are checked like captions (links, blocked words) and refused with the reason', async () => {
+    const j = await uploaded('youtube');
+    const bad = 'WEBVTT\n\n00:00:00.000 --> 00:00:02.000\nGo to evil.example now\n';
+    const r = await send(uploadReq(j.id, Buffer.from(bad), { kind: 'captions', name: 'subs.vtt' }), j.id);
+    expect(r.status).toBe(422);
+    expect(JSON.stringify(await r.json())).toMatch(/link/);
+    expect((await jobRow(j.id)).captions_path).toBeNull();
+  });
 
   it('TikTok: refused without the burned-in captions declaration; approved with it, file moved and re-hashed, scheduled', async () => {
     const j = await uploaded('tiktok');
@@ -229,6 +281,12 @@ describe('approval', () => {
 });
 
 describe('cancel and retry', () => {
+  it('5B review L6: cancelling a video row from /admin/social/ also cancels its job', async () => {
+    const j = await uploaded('tiktok');
+    expect(await act('social.cancel', { id: String(j.distribution) })).toMatchObject({ ok: true });
+    expect(await jobRow(j.id)).toMatchObject({ state: 'cancelled', dstatus: 'cancelled' });
+  });
+
   it('cancel moves the job and its distribution to cancelled; never while posting or once posted', async () => {
     const j = await uploaded('tiktok');
     expect(await act('video.cancel', { id: String(j.id) })).toMatchObject({ ok: true, code: 'video_cancelled' });

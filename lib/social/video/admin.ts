@@ -14,6 +14,7 @@ export type VideoJobRow = {
 export type VideoJobView = VideoJobRow & {
   version: number; itemId: string; brief: (Brief & { assets?: { logo: string; worldColour: string; frames: string[] } }) | null;
   hasFile: boolean; fileSha256: string | null; fileSize: number | null; validation: Validation | null; hasCaptions: boolean;
+  captionsSha256: string | null; captionsPreview: string[];
   captionsBurned: boolean; approvedChecksum: string | null; approvedAt: Date | null; makerNote: string | null;
   licenceNote: string | null; scheduledFor: Date | null; postedAt: Date | null; lastError: string | null;
 };
@@ -42,7 +43,8 @@ export async function videoJob(db: Queryable, id: number): Promise<VideoJobView 
   const r = await db.query<Record<string, unknown>>(
     `SELECT j.id, j.platform, j.state, i.title, w.slug AS world, d.status AS dstatus, d.post_url, j.updated_at, j.version,
             j.item_id, j.brief, j.file_name, j.file_sha256, j.file_size, j.validation, j.captions_path, j.captions_burned,
-            j.approved_checksum, j.approved_at, j.maker_note, j.licence_note, d.scheduled_for, d.posted_at, d.last_error
+            j.approved_checksum, j.approved_at, j.maker_note, j.licence_note, d.scheduled_for, d.posted_at, d.last_error,
+            j.captions_sha256, j.captions_preview
      FROM video_jobs j JOIN items i ON i.id = j.item_id JOIN worlds w ON w.id = i.world_id
      JOIN distributions d ON d.id = j.distribution_id WHERE j.id = $1`,
     [id],
@@ -54,6 +56,8 @@ export async function videoJob(db: Queryable, id: number): Promise<VideoJobView 
     version: x.version as number, itemId: x.item_id as string, brief: x.brief as VideoJobView['brief'],
     hasFile: !!x.file_name, fileSha256: x.file_sha256 as string | null, fileSize: x.file_size === null ? null : Number(x.file_size),
     validation: x.validation as Validation | null, hasCaptions: !!x.captions_path, captionsBurned: x.captions_burned as boolean,
+    captionsSha256: x.captions_sha256 as string | null,
+    captionsPreview: Array.isArray(x.captions_preview) ? (x.captions_preview as unknown[]).filter((c): c is string => typeof c === 'string') : [],
     approvedChecksum: x.approved_checksum as string | null, approvedAt: x.approved_at as Date | null,
     makerNote: x.maker_note as string | null, licenceNote: x.licence_note as string | null,
     scheduledFor: x.scheduled_for as Date | null, postedAt: x.posted_at as Date | null, lastError: x.last_error as string | null,

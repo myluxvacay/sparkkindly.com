@@ -120,6 +120,17 @@ describe('validateBrief', () => {
     expect(yt('Fine', 'Go to evil[.]com')).toMatchObject({ ok: false, field: 'captions' });
   });
 
+  it('5B review L5: no angle brackets in a YouTube title or description; TikTok caption with hashtags fits 2,200 UTF-16 units', () => {
+    const yt = (title: string, description: string) => validateBrief({ ...goodBrief, captions: { youtube: { title, description } } }, 'youtube');
+    expect(yt('A <b>bold</b> title', 'ok')).toMatchObject({ ok: false, field: 'captions' });
+    expect(yt('Fine', 'Less than 3 > 2')).toMatchObject({ ok: false, field: 'captions' });
+    const tags = Array.from({ length: 8 }, (_, i) => `tag${i}${'x'.repeat(20)}`);
+    // 1,990 emoji (2 UTF-16 units each) is within 2,000 characters but far over 2,200 units with the hashtags.
+    expect(validateBrief({ ...goodBrief, hashtags: tags, captions: { tiktok: '🌟'.repeat(1990) } }, 'tiktok')).toMatchObject({ ok: false, field: 'captions' });
+    expect(validateBrief({ ...goodBrief, hashtags: tags, captions: { tiktok: 'a'.repeat(1995) } }, 'tiktok')).toMatchObject({ ok: false, field: 'captions' });
+    expect(validateBrief({ ...goodBrief, hashtags: tags, captions: { tiktok: 'a'.repeat(1900) } }, 'tiktok').ok).toBe(true);
+  });
+
   it('brandAssets are built by the server from the world colour, with fixed paths', () => {
     expect(brandAssets('gold')).toEqual({ logo: '/brand/sparkkindly-logo.png', worldColour: expect.stringMatching(/^#[0-9a-f]{6}$/i), frames: expect.any(Array) });
     expect(brandAssets('nonsense').worldColour).toMatch(/^#[0-9a-f]{6}$/i);

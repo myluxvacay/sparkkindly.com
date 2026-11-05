@@ -160,7 +160,7 @@ test('select, brief, upload, approve and post to TikTok and YouTube; invalid fil
   for (const j of jobs) {
     await admin.goto(`/admin/social/videos/${j.id}/`);
     await expect(admin.getByText('Three paper shapes sit on a desk.', { exact: false })).toBeVisible();
-    const videoInput = admin.getByLabel('Finished video (MP4, H.264, up to 256 MB)');
+    const videoInput = admin.getByLabel('Finished video (MP4, H.264, up to 128 MB)');
     const videoForm = admin.locator('form').filter({ has: videoInput });
     await videoInput.setInputFiles({ name: 'bad.mp4', mimeType: 'video/mp4', buffer: Buffer.concat([Buffer.from('89504e470d0a1a0a', 'hex'), Buffer.alloc(64)]) });
     await videoForm.getByRole('button', { name: 'Upload' }).click();

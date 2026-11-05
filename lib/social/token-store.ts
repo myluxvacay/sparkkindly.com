@@ -1,5 +1,5 @@
 // The rotating TikTok and YouTube tokens (plan 5B, security.md), kept in one JSON file at SOCIAL_TOKEN_FILE (default
-// /opt/sparkkindly/shared/social-tokens.json, mode 0600, owned by the service user), never in the database, the repo,
+// /opt/sparkkindly/shared/social-tokens/tokens.json, in a 0700 directory of the service user; file mode 0600), never in the database, the repo,
 // a log, a prompt or the export. Client ids and secrets and the first refresh token come from the env file; after the
 // first refresh the store keeps the (rotated) refresh token. Every read-refresh-write happens under a lock file
 // (`<file>.lock`, created exclusively; a lock older than two minutes is stale), so two worker ticks refresh once. Writes
@@ -8,8 +8,10 @@
 // a missing file falls back to the env's first refresh token. Errors never carry a token. No Next.js imports.
 // Verified by tests/unit/social-token-store.test.ts.
 import { randomBytes } from 'node:crypto';
-import { readFileSync } from 'node:fs';
-import { chmod, open, rename, rm, stat, writeFile } from 'node:fs/promises';
+import { accessSync, constants, readFileSync } from 'node:fs';
+import path from 'node:path';
+import { chmod, rename, rm, writeFile } from 'node:fs/promises';
+import { acquireLock } from './lockfile';
 import type { EnvLike } from '@/lib/env';
 import { SocialPostError } from './adapters/meta';
 import type { VideoPlatform } from './states';
@@ -18,7 +20,8 @@ export type TokenEntry = { accessToken?: string; refreshToken?: string; expiresA
 type Store = Partial<Record<VideoPlatform, TokenEntry>>;
 export type Refresher = (refreshToken: string) => Promise<{ accessToken: string; refreshToken?: string; expiresIn: number }>;
 
-const DEFAULT_FILE = '/opt/sparkkindly/shared/social-tokens.json';
+// Its own directory, owned by the service user, mode 0700 (5B review M1); staging sets its own path.
+const DEFAULT_FILE = '/opt/sparkkindly/shared/social-tokens/tokens.json';
 const ENV_REFRESH: Record<VideoPlatform, string> = { tiktok: 'TIKTOK_REFRESH_TOKEN', youtube: 'YOUTUBE_REFRESH_TOKEN' };
 const EARLY_MS = 60_000; // refresh a minute before expiry
 const STALE_LOCK_MS = 120_000;
@@ -61,28 +64,38 @@ async function writeTokens(file: string, store: Store): Promise<void> {
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function withLock<T>(file: string, fn: () => Promise<T>): Promise<T> {
-  const lock = `${file}.lock`;
   for (let i = 0; i < LOCK_TRIES; i++) {
-    try {
-      await (await open(lock, 'wx', 0o600)).close();
-    } catch (err) {
-      if ((err as NodeJS.ErrnoException).code !== 'EEXIST') throw new SocialPostError('transient', 'token store unavailable');
-      const s = await stat(lock).catch(() => null);
-      if (s && Date.now() - s.mtimeMs > STALE_LOCK_MS) await rm(lock, { force: true });
+    const release = await acquireLock(`${file}.lock`, STALE_LOCK_MS).catch(() => {
+      throw new SocialPostError('credentials', UNAVAILABLE);
+    });
+    if (!release) {
       await sleep(LOCK_WAIT_MS);
       continue;
     }
     try {
       return await fn();
     } finally {
-      await rm(lock, { force: true });
+      await release();
     }
   }
   throw new SocialPostError('transient', 'token store busy');
 }
 
-// 'ok' (a token or a refresh token to get one), 'missing' (nothing yet) or 'reauth' (refused or corrupt).
-export function tokenStatus(platform: VideoPlatform, env: EnvLike): 'ok' | 'missing' | 'reauth' {
+const UNAVAILABLE = 'token store unavailable: its directory is missing or not writable (docs/OPERATIONS.md, Video jobs)';
+// The store's directory must exist and be writable by this process, or refreshed tokens could not be kept: fail closed.
+function writable(file: string): boolean {
+  try {
+    accessSync(path.dirname(file), constants.W_OK);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// 'ok' (a token or a refresh token to get one), 'missing' (nothing yet), 'reauth' (refused or corrupt) or
+// 'unavailable' (the directory is missing or not writable).
+export function tokenStatus(platform: VideoPlatform, env: EnvLike): 'ok' | 'missing' | 'reauth' | 'unavailable' {
+  if (!writable(tokenFile(env))) return 'unavailable';
   let entry: TokenEntry | undefined;
   try {
     entry = readTokens(tokenFile(env))[platform];
@@ -96,6 +109,7 @@ export function tokenStatus(platform: VideoPlatform, env: EnvLike): 'ok' | 'miss
 // A valid access token for the platform, refreshed (once, under the lock) when it is missing or about to expire.
 export async function accessToken(platform: VideoPlatform, o: { env: EnvLike; now: Date; refresh: Refresher }): Promise<string> {
   const file = tokenFile(o.env);
+  if (!writable(file)) throw new SocialPostError('credentials', UNAVAILABLE);
   return withLock(file, async () => {
     let store: Store;
     try {

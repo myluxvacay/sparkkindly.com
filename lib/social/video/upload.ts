@@ -1,24 +1,34 @@
 // Receiving one uploaded file (plan 5B, media-storage.md): the owner declares the size first (the intent); a declared
-// size over the limit (video 256 MB, captions 200 KB) is refused before a byte is read, and the stream is cut the moment
+// size over the limit (video 128 MB by default, captions 200 KB) is refused before a byte is read, and the stream is cut the moment
 // it passes the declared size, so nothing is ever buffered whole. The client's file name only has to look like one
 // plain `name.mp4` (or `.vtt`/`.srt`): no path, no second extension; it is then discarded and the file is written under a
 // server-generated name, first as `<name>.part` (created exclusively, mode 0600) and renamed when complete. One upload
-// per job at a time (an exclusive lock file; a lock older than an hour is stale). A global quarantine quota guards the
-// disk. Any failure (aborted, oversize, short) removes the partial file. SHA-256 is computed while streaming.
+// per job at a time (an exclusive lock file with a nonce; a lock older than an hour is stale). A global quarantine quota
+// and a free-space check guard the disk. The video limit is maxVideoBytes (128 MB by default). Any failure (aborted, oversize, short) removes the partial file. SHA-256 is computed while streaming.
 // No Next.js imports. Verified by tests/unit/social-video-upload.test.ts.
 import { createHash } from 'node:crypto';
-import { open, rename, rm, stat } from 'node:fs/promises';
+import { open, rename, rm, statfs } from 'node:fs/promises';
+import type { EnvLike } from '@/lib/env';
+import { acquireLock } from '../lockfile';
 import path from 'node:path';
 import { checkDirs, newName, pathIn, usage, type Ext, type MediaDirs } from './storage';
 
-export const MAX_VIDEO_BYTES = 256 * 1024 * 1024;
+const MB = 1024 * 1024;
+export const MAX_VIDEO_BYTES = 256 * MB; // the hard ceiling
+const DEFAULT_VIDEO_MB = 128;
+// 5B review M4: 128 MB unless SOCIAL_MAX_VIDEO_MB says otherwise, never above 256 MB.
+export function maxVideoBytes(env: EnvLike): number {
+  const v = Number((env.SOCIAL_MAX_VIDEO_MB ?? '').trim() || DEFAULT_VIDEO_MB);
+  return Number.isInteger(v) && v > 0 ? Math.min(v * MB, MAX_VIDEO_BYTES) : DEFAULT_VIDEO_MB * MB;
+}
+const FREE_RESERVE = 1024 * MB;
 export const MAX_CAPTIONS_BYTES = 200 * 1024;
 // ponytail: one fixed quota for the whole quarantine folder; make it an env setting if the disk changes.
 export const QUARANTINE_QUOTA = 2 * 1024 * 1024 * 1024;
 const STALE_LOCK_MS = 3_600_000;
 
 export type UploadKind = 'video' | 'captions';
-export type UploadCode = 'too_large' | 'bad_name' | 'busy' | 'quota' | 'size_mismatch' | 'aborted' | 'storage';
+export type UploadCode = 'too_large' | 'bad_name' | 'busy' | 'quota' | 'disk' | 'size_mismatch' | 'aborted' | 'storage';
 export type UploadResult = { ok: true; name: string; sha256: string; size: number } | { ok: false; code: UploadCode };
 
 type Opts = {
@@ -30,6 +40,12 @@ type Opts = {
   kind: UploadKind;
   limit?: number;
   quota?: number;
+  freeBytes?: () => Promise<number>; // for tests; the folder's free space otherwise
+};
+
+const freeSpace = async (dir: string) => {
+  const s = await statfs(dir);
+  return Number(s.bavail) * Number(s.bsize);
 };
 
 class Refused extends Error {
@@ -46,19 +62,11 @@ export function clientExt(name: string, kind: UploadKind): Ext | null {
 }
 
 async function lock(dirs: MediaDirs, jobId: number): Promise<() => Promise<void>> {
-  const p = path.join(dirs.quarantine, `${jobId}.lock`);
-  for (let i = 0; i < 2; i++) {
-    try {
-      await (await open(p, 'wx', 0o600)).close();
-      return () => rm(p, { force: true });
-    } catch (err) {
-      if ((err as NodeJS.ErrnoException).code !== 'EEXIST') throw new Refused('storage');
-      const s = await stat(p).catch(() => null);
-      if (s && Date.now() - s.mtimeMs < STALE_LOCK_MS) throw new Refused('busy');
-      await rm(p, { force: true });
-    }
-  }
-  throw new Refused('busy');
+  const release = await acquireLock(path.join(dirs.quarantine, `${jobId}.lock`), STALE_LOCK_MS).catch(() => {
+    throw new Refused('storage');
+  });
+  if (!release) throw new Refused('busy');
+  return release;
 }
 
 async function stream(body: ReadableStream<Uint8Array>, part: string, declared: number): Promise<string> {
@@ -107,6 +115,8 @@ export async function receiveUpload(o: Opts): Promise<UploadResult> {
     });
     unlock = await lock(o.dirs, o.jobId);
     if ((await usage(o.dirs.quarantine)) + o.declaredSize > (o.quota ?? QUARANTINE_QUOTA)) throw new Refused('quota');
+    // 5B review L2: keep the disk from filling (the file, its move, and a reserve for everything else).
+    if ((await (o.freeBytes ?? (() => freeSpace(o.dirs.quarantine)))()) < 2 * o.declaredSize + FREE_RESERVE) throw new Refused('disk');
     const final = pathIn(o.dirs.quarantine, name);
     part = `${final}.part`;
     const sha256 = await stream(o.body, part, o.declaredSize);

@@ -911,23 +911,32 @@ TikTok and YouTube take video only, through the video jobs queue (see Video jobs
 Behind `SOCIAL_ENABLED` and the TikTok/YouTube switches in `/admin/social/` (off). Plan
 `docs/superpowers/plans/2026-11-05-project-5b-video-queue.md`.
 
-- **Media folders (VM, once, before switching TikTok or YouTube on).** Uploaded files live outside the release and are
-  never served:
-  `sudo install -d -o sparkkindly -g sparkkindly -m 0700 /opt/sparkkindly/shared/media/social /opt/sparkkindly/shared/media/social/quarantine /opt/sparkkindly/shared/media/social/approved`
-  (staging uses its own path through `SOCIAL_MEDIA_DIR` in its env file). Check: `sudo -u sparkkindly test -w
-  /opt/sparkkindly/shared/media/social/quarantine && echo ok` prints `ok`, and `stat -c '%a %U'` on each folder prints
-  `700 sparkkindly`. The app refuses a folder that is a symlink. Never put the folder under the release or `public/`.
-- **Disk.** Uploads are at most 256 MB each, and the quarantine folder holds at most 2 GB in all (an upload beyond that
-  is refused with "The upload area is full"). Quarantine files older than 7 days and files of jobs cancelled more than
-  30 days ago are deleted by the worker once a day (`video purge` in the worker log). Approved files stay until removed
-  by hand; check `du -sh /opt/sparkkindly/shared/media/social` monthly and keep 5 GB free on the VM disk.
+- **Folders (VM, once, before switching TikTok or YouTube on).** `deploy/provision/01-base.sh` creates, for each
+  service user, its own media folders and token directory, mode 0700 (staging and production never share a refresh
+  token or a file): production `/opt/sparkkindly/shared/media/social/{quarantine,approved}` and
+  `/opt/sparkkindly/shared/social-tokens/` (owner `sparkkindly`); staging `/opt/sparkkindly/shared/media/social-staging/...`
+  and `/opt/sparkkindly/shared/social-tokens-staging/` (owner `sparkkindly-staging`). Each env file names its own
+  `SOCIAL_MEDIA_DIR` and `SOCIAL_TOKEN_FILE` (`deploy/env/*.example`). Check, per environment: `sudo -u sparkkindly test
+  -w /opt/sparkkindly/shared/social-tokens && echo ok` prints `ok`, and `stat -c '%a %U'` on each folder prints
+  `700 sparkkindly` (or `700 sparkkindly-staging`). The app refuses a media folder that is a symlink, and a token
+  directory it cannot write shows "token store unavailable" in `/admin/social/` and posts nothing there.
+- **Disk.** Uploads are at most 128 MB each (`SOCIAL_MAX_VIDEO_MB`, at most 256), the quarantine folder holds at most
+  2 GB in all ("The upload area is full"), and an upload is refused while free space is under twice its size plus 1 GB.
+  The video tick deletes quarantine files older than 7 days, files of jobs cancelled more than 30 days ago and approved
+  files 14 days after posting (`video purge` in its log). Check `du -sh /opt/sparkkindly/shared/media` monthly.
+- **Video poster unit.** Uploads run in their own oneshot service, `sparkkindly-video-poster.service` (staging:
+  `sparkkindly-video-poster-staging.service`), every 5 minutes by its timer, with a 30 minute start timeout and 512 MB
+  (`deploy/systemd/`), never in the one-minute worker. `deploy/provision/03-services.sh` installs the units; once the
+  live release contains `video-worker.mjs` the owner enables each with `sudo systemctl enable --now
+  sparkkindly-video-poster.timer` (and the `-staging` one), and checks `journalctl -u sparkkindly-video-poster -n 20`
+  shows `video tick:` lines. Not done from here.
 - **Caddy request body.** The upload is one POST of the raw file to `/admin/social/videos/<id>/upload/`. Caddy has no
   body limit by default; when installing the site block add, inside it, a limit for that path only, and leave
   `response_header_timeout` long enough for a slow upload to finish (the app answers only after the file is checked):
   `@videoUpload path_regexp ^/admin/social/videos/[0-9]+/upload/$` then
   `request_body @videoUpload { max_size 260MB }` (optionally a smaller `request_body` limit for everything else), and raise
   `response_header_timeout` to `300s`. Validate with `caddy validate` on the VM before reloading; not applied yet.
-- **Flow.** The first worker tick of each UTC day picks, per switched-on video platform, up to its cap of published
+- **Flow.** The first video tick of each UTC day picks, per switched-on video platform, up to its cap of published
   `video_script` items from the last 3 days (never Kids by world, audience or risk tier; the 5A rotation and skip
   reasons) and opens one job per item and platform. `/promote-run env=<env>` gives each job to one promoter subagent,
   which sends the brief (narration, 3 to 12 shots, on-screen text, the platform's caption fields, hashtags, 15 to 60
@@ -936,40 +945,46 @@ Behind `SOCIAL_ENABLED` and the TikTok/YouTube switches in `/admin/social/` (off
 - **Makers (roadmap 5.8, the owner's decision, recorded outside code).** Whoever makes the video (the owner, a family
   member, a hired editor, or a tool such as Canva) works from the brief on the job page and gives the owner the finished
   file; only the owner (an admin session with its second factor) uploads it. Record who made it in "Made by".
-- **Upload and approval.** On the job page choose the finished MP4 (H.264, up to 256 MB) and upload it (the page needs
+- **Upload and approval.** On the job page choose the finished MP4 (H.264, up to the limit shown) and upload it (the page needs
   JavaScript for this one form). The server checks it by content (the MP4 boxes must fill the file exactly, H.264, with
   ffprobe on the VM: codec, at most 3 minutes; without ffprobe a warning says only the container was checked;
   `sudo apt-get install ffmpeg` provides it) and shows the result and SHA-256. A refused file is deleted; upload again.
   **All video needs captions**: for YouTube upload a WebVTT or SRT file (up to 200 KB); for TikTok burn the captions into
-  the video and tick the declaration. "Approve for posting" approves exactly the checksum shown: if the file was
-  replaced after the page was opened the approval is refused ("This changed after you opened the page"). Approval moves
-  the files to `approved/`, re-hashes them, and schedules the post at the platform's time.
+  the video and tick the declaration. Every caption cue is checked like a caption (no links, mentions or blocked words)
+  and the job page shows the caption file's SHA-256 and first 20 cues. "Approve for posting" approves exactly the
+  video and caption checksums shown: if either was replaced after the page was opened the approval is refused ("This
+  changed after you opened the page"). Approval moves the files to `approved/`, re-hashes them, and schedules the post
+  at the platform's time; at post time both are hashed again and a missing or changed file stops the post (flagged).
 - **Credentials and token file.** TikTok: a developer app with the Content Posting API (direct post) approved; put
   `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET` and a first `TIKTOK_REFRESH_TOKEN` (from the owner's one-time OAuth
   sign-in with the `video.publish` scope) in the root-owned env file. YouTube: a Google Cloud project with the YouTube
   Data API, an OAuth client, and `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET` and a `YOUTUBE_REFRESH_TOKEN` (scopes
-  `youtube.upload` and `youtube.force-ssl` for captions). The worker keeps the rotating tokens in
-  `/opt/sparkkindly/shared/social-tokens.json`: create it once with
-  `sudo install -o sparkkindly -g sparkkindly -m 0600 /dev/null /opt/sparkkindly/shared/social-tokens.json` and
-  `echo '{}' | sudo -u sparkkindly tee /opt/sparkkindly/shared/social-tokens.json`; check `stat -c '%a %U'` prints
-  `600 sparkkindly`. Never copy it into the repository, a prompt, a chat or the export.
+  `youtube.upload` and `youtube.force-ssl` for captions). Each environment has its own app credentials and refresh
+  tokens. The video tick keeps the rotating tokens in `tokens.json` inside that environment's token directory (created
+  by the app on the first refresh, mode 0600, with a lock file beside it). Never copy it into the repository, a
+  prompt, a chat or the export.
 - **Re-authorisation.** When a platform refuses the refresh token, or the token file is unreadable, `/admin/social/`
   shows "<platform> needs re-authorisation" and nothing posts there. Fix: sign in again to get a new refresh token, put
   it in the env file, then remove that platform's entry from the token file (as the service user, keeping mode 0600:
-  `sudo -u sparkkindly node -e "const f='/opt/sparkkindly/shared/social-tokens.json',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));delete s.tiktok;fs.writeFileSync(f,JSON.stringify(s),{mode:0o600})"`;
-  replace `tiktok` with `youtube` as needed). A corrupt file is never overwritten by the app: replace it with `{}`.
+  `sudo -u sparkkindly node -e "const f='/opt/sparkkindly/shared/social-tokens/tokens.json',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));delete s.tiktok;fs.writeFileSync(f,JSON.stringify(s),{mode:0o600})"`;
+  replace `tiktok` with `youtube`, and the user and path for staging, as needed). A corrupt file is never overwritten by
+  the app: replace it with `{}`.
 - **Private until approved.** TikTok posts from an unaudited app are private (SELF_ONLY); after TikTok approves the app
   set `TIKTOK_PRIVACY=PUBLIC_TO_EVERYONE`. YouTube uploads are private until `YOUTUBE_PRIVACY=public` (or `unlisted`);
   review the first posts before changing either. YouTube's default quota allows about 6 uploads a day: ask Google for a
   quota increase before raising the cap. A quota or rate limit makes posts wait (6 hours for a quota, 30 minutes for a
   rate limit) and writes one digest line per platform per day.
-- **Flagged video rows** need the owner, as in 5A: the last upload call failed in a way the platform may have acted
-  on, a row stopped mid-upload, the approved file changed on disk (nothing was sent), YouTube took the video but not
+- **Flagged video rows** need the owner, as in 5A: the last upload call (or, for TikTok, any status check after the
+  upload) failed in a way the platform may have acted on, a row stopped mid-upload (after 45 minutes), an approved file
+  changed on disk (nothing was sent), YouTube took the video but not
   the captions (add them in YouTube Studio), or the item was unpublished after posting (delete the post by hand).
   Check the platform; then cancel the job (if the video is not there) or press "Keep as posted" on its row in
-  `/admin/social/` (it is there). A failed row has "Retry".
+  `/admin/social/` (it is there). A flagged TikTok row that carries its publish id is checked again by every video
+  tick: TikTok's "complete" settles it as posted and "failed" as failed (nothing was posted, so Retry is safe). A failed
+  row has "Retry".
   Archiving an item cancels its unposted jobs; their files go after 30 days.
-- **Migration and rollback.** `030_video_jobs.sql` is additive (one table). Code rollback: switch TikTok and YouTube
+- **Migration and rollback.** `030_video_jobs.sql` (one table) and `031_video_captions_checksum.sql` (three columns)
+  are additive. Code rollback: switch TikTok and YouTube
   off in `/admin/social/` or unset `SOCIAL_ENABLED`; or deploy the previous release (it never reads `video_jobs`).
   Schema rollback is in the migration header; remove the media folder and token file by hand afterwards.
 
