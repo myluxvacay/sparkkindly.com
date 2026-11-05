@@ -4,6 +4,7 @@ import { requireAdult } from '@/lib/accounts/next';
 import { hasPin } from '@/lib/accounts/pin';
 import { consentPending } from '@/lib/accounts/policy';
 import { getSettings, TIME_ZONES } from '@/lib/accounts/settings';
+import { circlesEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
 import { PinInput } from '@/components/PinInput';
 
@@ -45,9 +46,9 @@ function PrefsForm({ settings, error, pending }: { settings: Prefs; error: boole
     <form method="post" action="/account/settings/save/" className="prose admin-form">
       <h2>Emails and time zone</h2>
       {pending && <p id="pending-hint">These settings are available after your parent or guardian confirms.</p>}
-      <fieldset aria-describedby="notify-hint" disabled={pending}>
+      <fieldset aria-describedby={circlesEnabled() ? 'notify-hint' : undefined} disabled={pending}>
         <legend>Email me when</legend>
-        <p id="notify-hint">Circle emails go to circle members only, and only for the choices ticked here. Every one has an unsubscribe link.</p>
+        {circlesEnabled() && <p id="notify-hint">Circle emails go to circle members only, and only for the choices ticked here. Every one has an unsubscribe link.</p>}
         <label className="admin-radio">
           <input type="checkbox" name="daily_set" defaultChecked={settings.notify.dailySet} /> Daily set ready
         </label>

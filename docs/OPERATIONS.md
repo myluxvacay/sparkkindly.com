@@ -355,7 +355,12 @@ If no run is recorded for 36 hours the worker emails the admin list.
 - **Flags.** Circles need `ACCOUNTS_ENABLED` **and** `CIRCLES_ENABLED` (`true` or `1`). With either unset every
   `/circles/*` page and POST route is a 404 and the account page shows no Circles link. Both are off everywhere; the env
   examples carry a commented `# CIRCLES_ENABLED=`. Turning circles off is unsetting `CIRCLES_ENABLED` and restarting the
-  web service: the rows stay, nothing reads them, and the closed-circle purge keeps running in the worker.
+  web service: the rows stay, nothing reads them, and the closed-circle and invite purges keep running in the worker.
+  Ruling (final review 6): the purges are deliberately not gated on `CIRCLES_ENABLED`; they only delete or null data,
+  and gating them would keep closed circles and invited addresses past their documented retention. The circle mail job
+  is gated, and the stop-invites page and POST stay on whatever the flags say (an opt-out link already emailed must
+  keep working). With circles off the share prompt does no session lookup and the settings page omits the circle
+  email sentence.
 - **Who may create.** Rulings (plan 4A): friends circles by any account with the `create_circle` capability (18+, 16-17,
   and 13-15 once a parent has confirmed); family and community circles by 18+ only. A consent-pending 13-15 account
   cannot create or be added. Joining by invite and communities: see "Circle invites and communities (Project 4B)".

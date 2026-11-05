@@ -123,8 +123,9 @@ async function inactivitySweep(db: Db, now: Date, env: EnvLike, send: Send, log:
   );
 }
 
-// Once per UTC day: delete circles closed more than 30 days ago (lib/jobs/circles-purge.ts), then drop the addresses of
-// spent circle invites and delete invites spent more than 14 days ago (lib/circles/invites.ts).
+// Once per UTC day, whatever CIRCLES_ENABLED says (retention, OPERATIONS "Circles"): delete circles closed more than 30
+// days ago (lib/jobs/circles-purge.ts), then drop the addresses of spent circle invites and delete invites spent more
+// than 14 days ago (lib/circles/invites.ts).
 async function circlesPurge(db: Db, now: Date, log: string[], { delayMs, dbNow }: TickOpts): Promise<void> {
   const claimed = await claimCirclesPurge(db, now).catch((err: Error) => {
     log.push(`circles purge: could not check (${err.message})`);
