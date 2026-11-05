@@ -10,13 +10,15 @@ import { LIMITS, canCreateKind, validateCircleInput, type CircleInput, type Circ
 
 export type Role = 'owner' | 'member';
 export type CircleSummary = { slug: string; name: string; kind: CircleKind; role: Role; memberCount: number };
+// accountId and profileId are given to the owner (for the owner forms) and for the caller's own rows; otherwise null.
 export type CircleMember = {
-  accountId: string;
+  accountId: string | null;
   profileId: string | null;
   name: string;
   role: Role;
   isChild: boolean;
   isYou: boolean;
+  isMine: boolean;
 };
 export type CircleView = {
   slug: string;
@@ -183,14 +185,21 @@ export async function getCircleForMember(db: Queryable, accountId: string, slug:
     timeZone: circle.time_zone,
     status: circle.status,
     myRole: role,
-    members: m.rows.map((r) => ({
-      accountId: r.account_id,
-      profileId: r.profile_id,
-      name: r.display_name,
-      role: r.role,
-      isChild: r.profile_id !== null,
-      isYou: r.account_id === accountId && r.profile_id === null,
-    })),
+    members: m.rows.map((r) => member(r, accountId, role === 'owner')),
+  };
+}
+
+function member(r: MemberRow, viewer: string, owner: boolean): CircleMember {
+  const mine = r.account_id === viewer;
+  const ids = owner || mine;
+  return {
+    accountId: ids ? r.account_id : null,
+    profileId: ids ? r.profile_id : null,
+    name: r.display_name,
+    role: r.role,
+    isChild: r.profile_id !== null,
+    isYou: mine && r.profile_id === null,
+    isMine: mine,
   };
 }
 

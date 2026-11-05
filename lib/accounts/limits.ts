@@ -79,6 +79,8 @@ const shared = globalThis as unknown as {
   __sparkExportLimits?: ReturnType<typeof createAccountActionLimits>;
   __sparkPinResetLimits?: ReturnType<typeof createAccountActionLimits>;
   __sparkInterestsLimits?: ReturnType<typeof createAccountActionLimits>;
+  __sparkCircleCreateLimits?: ReturnType<typeof createAccountActionLimits>;
+  __sparkCircleActionLimits?: ReturnType<typeof createAccountActionLimits>;
 };
 export const signUpLimits = (shared.__sparkSignUpLimits ??= createSignUpLimits());
 export const accountLinkLimits = (shared.__sparkAccountLinkLimits ??= createAccountLinkLimits());
@@ -90,3 +92,6 @@ export const unsubscribeLimits = (shared.__sparkUnsubscribeLimits ??= createUnsu
 export const exportLimits = (shared.__sparkExportLimits ??= createAccountActionLimits());
 export const pinResetLimits = (shared.__sparkPinResetLimits ??= createAccountActionLimits());
 export const interestsLimits = (shared.__sparkInterestsLimits ??= createAccountActionLimits());
+// Circle POSTs (plan 4A): creating, and the member and owner actions, each on its own per-account counter.
+export const circleCreateLimits = (shared.__sparkCircleCreateLimits ??= createAccountActionLimits());
+export const circleActionLimits = (shared.__sparkCircleActionLimits ??= createAccountActionLimits());

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { requireAccount } from '@/lib/accounts/next';
 import { can, consentPending } from '@/lib/accounts/policy';
 import { ageWording, consentDay } from '@/lib/accounts/wording';
+import { circlesEnabled } from '@/lib/config';
 
 export const dynamic = 'force-dynamic';
 
@@ -52,6 +53,12 @@ export default async function AccountPage({ searchParams }: Props) {
       <p>
         <Link href="/me/">Your page</Link> · <Link href="/me/interests/">Choose your interests</Link> ·{' '}
         <Link href="/account/settings/">Settings</Link>
+        {circlesEnabled() && (
+          <>
+            {' '}
+            · <Link href="/circles/">Circles</Link>
+          </>
+        )}
       </p>
       {can(account.ageGroup, account.consent, 'create_child_profile') && (
         <p>

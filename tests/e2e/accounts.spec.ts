@@ -855,7 +855,7 @@ test('an adult changes email choices and time zone, downloads their data, and th
   expect(download.suggestedFilename()).toBe('sparkkindly-export.json');
   const text = readFileSync(await download.path(), 'utf8');
   const data = JSON.parse(text);
-  expect(Object.keys(data).sort()).toEqual(['account', 'answers', 'childProfiles', 'exportedAt', 'interests']);
+  expect(Object.keys(data).sort()).toEqual(['account', 'answers', 'childProfiles', 'circles', 'exportedAt', 'interests']);
   expect(data.account).toMatchObject({ email, timeZone: 'Asia/Tokyo', notify: { dailySet: true, weeklyCircle: false, invites: true } });
   const session = (await page.context().cookies(BASE)).find((x) => x.name === '__Host-sk_account')!.value;
   expect(text).not.toContain(session);

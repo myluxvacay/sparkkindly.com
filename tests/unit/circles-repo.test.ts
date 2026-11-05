@@ -220,6 +220,24 @@ describe('listMyCircles and getCircleForMember', () => {
     await db.query('UPDATE circles SET hidden_at = $2 WHERE slug = $1', [slug, T0.toISOString()]);
     expect(await getCircleForMember(db, a, slug)).toBeNull();
   });
+
+  it("a plain member's view carries no other member's ids; the owner's carries them for the owner forms", async () => {
+    const a = await adult();
+    const b = await adult();
+    const slug = await make(a, { yourName: 'Alex' });
+    await addMember(slug, b, 'Bea');
+    const asMember = await getCircleForMember(db, b, slug);
+    expect(JSON.stringify(asMember)).not.toContain(a);
+    expect(asMember!.members.map((m) => [m.name, m.accountId, m.isMine])).toEqual([
+      ['Alex', null, false],
+      ['Bea', b, true],
+    ]);
+    const asOwner = await getCircleForMember(db, a, slug);
+    expect(asOwner!.members.map((m) => [m.name, m.accountId, m.isMine])).toEqual([
+      ['Alex', a, true],
+      ['Bea', b, false],
+    ]);
+  });
 });
 
 describe('leaveCircle', () => {
