@@ -14,6 +14,9 @@ export const accountsEnabled = (): boolean => ['true', '1'].includes(process.env
 export const circlesEnabled = (): boolean => accountsEnabled() && ['true', '1'].includes(process.env.CIRCLES_ENABLED ?? '');
 // Comments (Project 7) need accounts AND their own switch; with either unset no comment section, route or admin page exists.
 export const commentsEnabled = (): boolean => accountsEnabled() && ['true', '1'].includes(process.env.COMMENTS_ENABLED ?? '');
+// Contributors (Project 8) need accounts AND their own switch; with either unset no contribute page, contributor page,
+// byline, agent route or admin page exists.
+export const contributorsEnabled = (): boolean => accountsEnabled() && ['true', '1'].includes(process.env.CONTRIBUTORS_ENABLED ?? '');
 export const brands = {
   play: { name: 'Play', promise: 'Play. Imagine. Explore.', description: 'A little challenge. A fresh perspective. Make room for the joy of figuring things out.', short: 'Give your curiosity a little room to play.', icon: '✳', color: 'gold' },
   discover: { name: 'Discover', promise: 'Explore the world with wonder.', description: 'Follow a question somewhere unexpected. Look a little closer at the extraordinary in the everyday.', short: 'Big wonders, hiding in plain sight.', icon: '◎', color: 'sage' },

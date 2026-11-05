@@ -158,15 +158,16 @@ const snapshotOf = (i: StoredItem) => ({
 
 // Inserts an item with its topics, answer and first revision. Call it inside a transaction so the pieces land together;
 // createItem is the standalone form.
+async function topicIdsFor(tx: Queryable, topics: string[]): Promise<number[]> {
+  if (!topics.length) return [];
+  const found = await tx.query<{ id: number; slug: string }>('SELECT id, slug FROM topics WHERE slug = ANY($1)', [topics]);
+  const missing = topics.filter((t) => !found.rows.some((r) => r.slug === t));
+  if (missing.length) throw new UnknownTopicError(missing);
+  return found.rows.map((r) => r.id);
+}
+
 export async function insertItem(tx: Queryable, input: NewItem): Promise<StoredItem> {
-  const topics = input.topics ?? [];
-  let topicIds: number[] = [];
-  if (topics.length) {
-    const found = await tx.query<{ id: number; slug: string }>('SELECT id, slug FROM topics WHERE slug = ANY($1)', [topics]);
-    const missing = topics.filter((t) => !found.rows.some((r) => r.slug === t));
-    if (missing.length) throw new UnknownTopicError(missing);
-    topicIds = found.rows.map((r) => r.id);
-  }
+  const topicIds = await topicIdsFor(tx, input.topics ?? []);
   let stored: StoredItem;
   try {
     const r = await tx.query<Row>(
@@ -193,6 +194,39 @@ export async function insertItem(tx: Queryable, input: NewItem): Promise<StoredI
     ]);
   }
   await writeRevision(tx, stored.id, snapshotOf(stored), input.createdBy, 'created');
+  return stored;
+}
+
+export type ItemContent = {
+  title: string;
+  summary: string;
+  body: unknown;
+  riskTier: RiskTier;
+  sources: unknown[];
+  qualityReport: unknown;
+  topics: string[];
+  answer: { value: unknown; explanation: string } | null;
+};
+
+// Replaces a draft item's content, topics and answer, kept as a revision (a contributor's revision, plan 8). Only a
+// draft may be rewritten; returns null when there is no such draft. The caller holds the item's lock.
+export async function replaceContent(tx: Queryable, id: string, c: ItemContent, by: string, reason: string): Promise<StoredItem | null> {
+  const topicIds = await topicIdsFor(tx, c.topics);
+  const r = await tx.query<Row>(
+    `UPDATE items SET title = $2, summary = $3, body = $4::jsonb, risk_tier = $5, sources = $6::jsonb, quality_report = $7::jsonb,
+       updated_at = now()
+     WHERE id = $1 AND status = 'draft' RETURNING ${ITEM_COLUMNS}`,
+    [id, c.title, c.summary, JSON.stringify(c.body), c.riskTier, JSON.stringify(c.sources), JSON.stringify(c.qualityReport)],
+  );
+  if (!r.rows[0]) return null;
+  await tx.query('DELETE FROM item_topics WHERE item_id = $1', [id]);
+  for (const topicId of topicIds) await tx.query('INSERT INTO item_topics (item_id, topic_id) VALUES ($1, $2)', [id, topicId]);
+  await tx.query('DELETE FROM item_answers WHERE item_id = $1', [id]);
+  if (c.answer) {
+    await tx.query('INSERT INTO item_answers (item_id, answer, explanation) VALUES ($1, $2::jsonb, $3)', [id, JSON.stringify(c.answer.value), c.answer.explanation]);
+  }
+  const stored = toStored(r.rows[0]);
+  await writeRevision(tx, id, snapshotOf(stored), by, reason);
   return stored;
 }
 

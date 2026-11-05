@@ -134,6 +134,8 @@ describe('export inventory', () => {
       'comment_appeals',
       'comment_reports',
       'comments',
+      'contributions',
+      'contributor_profiles',
       'item_responses',
       'profile_interests',
       'referrals',
@@ -217,7 +219,14 @@ describe('export inventory', () => {
   });
 
   it('every column of the row-by-row tables (accounts, child_profiles, comments, account_trust) is decided; no PIN fields', async () => {
-    expect(Object.keys(EXPORTED_COLUMNS).sort()).toEqual(['account_trust', 'accounts', 'child_profiles', 'comments']);
+    expect(Object.keys(EXPORTED_COLUMNS).sort()).toEqual([
+      'account_trust',
+      'accounts',
+      'child_profiles',
+      'comments',
+      'contributions',
+      'contributor_profiles',
+    ]);
     for (const table of Object.keys(EXPORTED_COLUMNS) as (keyof typeof EXPORTED_COLUMNS)[]) {
       expect(decidedColumns(table), table).toEqual(await columnsOf(db, table));
       for (const reason of Object.values(EXCLUDED_COLUMNS[table])) expect(reason.length).toBeGreaterThan(10);

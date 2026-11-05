@@ -21,6 +21,8 @@ export const EXPORTED_TABLES = [
   'account_trust',
   'comment_reports',
   'comment_appeals',
+  'contributor_profiles',
+  'contributions',
 ] as const;
 
 // Personal-data tables deliberately left out, each with its reason.
@@ -75,6 +77,23 @@ export const EXPORTED_COLUMNS = {
     'false_reports',
     'reports_muted',
   ],
+  contributor_profiles: ['slug', 'display_name', 'bio', 'link', 'link_approved', 'terms_accepted_at', 'created_at', 'updated_at'],
+  contributions: [
+    'state',
+    'kind',
+    'world_id',
+    'slug',
+    'content',
+    'revision',
+    'gate_reasons',
+    'review_reasons',
+    'owner_notes',
+    'declared_at',
+    'submitted_at',
+    'publication_mailed_at',
+    'created_at',
+    'updated_at',
+  ],
 } as const;
 
 export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Readonly<Record<string, string>>>> = {
@@ -102,6 +121,14 @@ export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Re
   },
   account_trust: {
     account_id: 'internal identifier of the account (the export is already that account)',
+  },
+  contributor_profiles: {
+    account_id: 'internal identifier of the account (the export is already that account)',
+  },
+  contributions: {
+    id: 'internal identifier; meaningless outside the service',
+    account_id: 'internal identifier of the author (the export is already that account)',
+    item_id: 'internal identifier of the item; the published address is exported instead',
   },
 };
 
@@ -153,6 +180,34 @@ type ExportTrust = {
   falseReports: number;
   reportsMuted: boolean;
 };
+// The contributor profile (plan 8): the account's own page id, name, bio and link.
+type ExportContributor = {
+  page: string;
+  displayName: string;
+  bio: string | null;
+  link: string | null;
+  linkApproved: boolean;
+  termsAcceptedAt: string;
+  createdAt: string;
+  updatedAt: string;
+};
+// One of the account's contributions, any state, with the reasons and owner notes addressed to it.
+type ExportContribution = {
+  kind: string;
+  world: string;
+  slug: string;
+  state: string;
+  revision: number;
+  content: unknown;
+  gateReasons: unknown;
+  reviewReasons: unknown;
+  ownerNotes: string | null;
+  declaredAt: string | null;
+  submittedAt: string | null;
+  publicationMailedAt: string | null;
+  createdAt: string;
+  updatedAt: string;
+};
 type ExportChild = {
   displayName: string;
   ageBand: string;
@@ -190,6 +245,8 @@ export type AccountExport = {
   commentTrust: ExportTrust | null;
   commentReports: ExportCommentReport[];
   commentAppeals: ExportAppeal[];
+  contributor: ExportContributor | null;
+  contributions: ExportContribution[];
   childProfiles: ExportChild[];
 };
 
@@ -401,6 +458,56 @@ async function appealsOf(tx: Queryable, accountId: string): Promise<ExportAppeal
   return r.rows.map((x) => ({ item: x.item, world: x.world, note: x.note, createdAt: iso(x.c) as string, outcome: x.o, decidedAt: iso(x.d) }));
 }
 
+async function contributorOf(tx: Queryable, accountId: string): Promise<ExportContributor | null> {
+  const r = await tx.query<{ slug: string; dn: string; bio: string | null; link: string | null; la: boolean; t: Date; c: Date; u: Date }>(
+    `SELECT slug, display_name AS dn, bio, link, link_approved AS la, terms_accepted_at AS t, created_at AS c, updated_at AS u
+     FROM contributor_profiles WHERE account_id = $1`,
+    [accountId],
+  );
+  const p = r.rows[0];
+  return p
+    ? {
+        page: `/contributors/${p.slug}/`,
+        displayName: p.dn,
+        bio: p.bio,
+        link: p.link,
+        linkApproved: p.la,
+        termsAcceptedAt: iso(p.t) as string,
+        createdAt: iso(p.c) as string,
+        updatedAt: iso(p.u) as string,
+      }
+    : null;
+}
+
+async function contributionsOf(tx: Queryable, accountId: string): Promise<ExportContribution[]> {
+  const r = await tx.query<{
+    kind: string; world: string; slug: string; state: string; revision: number; content: unknown; gr: unknown; rr: unknown;
+    notes: string | null; d: Date | null; s: Date | null; m: Date | null; c: Date; u: Date;
+  }>(
+    `SELECT c.kind, w.slug AS world, c.slug, c.state, c.revision, c.content, c.gate_reasons AS gr, c.review_reasons AS rr,
+            c.owner_notes AS notes, c.declared_at AS d, c.submitted_at AS s, c.publication_mailed_at AS m, c.created_at AS c,
+            c.updated_at AS u
+     FROM contributions c JOIN worlds w ON w.id = c.world_id WHERE c.account_id = $1 ORDER BY c.created_at, c.id`,
+    [accountId],
+  );
+  return r.rows.map((x) => ({
+    kind: x.kind,
+    world: x.world,
+    slug: x.slug,
+    state: x.state,
+    revision: x.revision,
+    content: x.content,
+    gateReasons: x.gr,
+    reviewReasons: x.rr,
+    ownerNotes: x.notes,
+    declaredAt: iso(x.d),
+    submittedAt: iso(x.s),
+    publicationMailedAt: iso(x.m),
+    createdAt: iso(x.c) as string,
+    updatedAt: iso(x.u) as string,
+  }));
+}
+
 async function readExport(tx: Queryable, accountId: string, now: Date): Promise<AccountExport | null> {
   const a = await tx.query<AccountRow>(
     `SELECT email, to_char(date_of_birth, 'YYYY-MM-DD') AS dob, time_zone, consent_state, consent_at,
@@ -433,6 +540,8 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
     commentTrust: await trustOf(tx, accountId),
     commentReports: await commentReportsOf(tx, accountId),
     commentAppeals: await appealsOf(tx, accountId),
+    contributor: await contributorOf(tx, accountId),
+    contributions: await contributionsOf(tx, accountId),
     childProfiles: children.rows.map((c) => ({
       displayName: c.display_name,
       ageBand: c.age_band,
