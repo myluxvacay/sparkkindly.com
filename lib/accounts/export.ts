@@ -8,7 +8,15 @@ import { isUuid } from './pin';
 import { maskEmail } from './wording';
 
 // Personal-data tables whose rows for the account appear in the export.
-export const EXPORTED_TABLES = ['accounts', 'child_profiles', 'profile_interests', 'item_responses', 'circle_members'] as const;
+export const EXPORTED_TABLES = [
+  'accounts',
+  'child_profiles',
+  'profile_interests',
+  'item_responses',
+  'circle_members',
+  'circle_invites',
+  'referrals',
+] as const;
 
 // Personal-data tables deliberately left out, each with its reason.
 export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
@@ -70,6 +78,15 @@ type ExportMembership = {
   joinedAt: string;
   leftAt: string | null;
 };
+// An invite the account created: never the invited address or the token.
+type ExportInvite = {
+  circle: string;
+  kind: string;
+  createdAt: string;
+  expiresAt: string | null;
+  revokedAt: string | null;
+  usedAt: string | null;
+};
 type ExportChild = {
   displayName: string;
   ageBand: string;
@@ -100,6 +117,8 @@ export type AccountExport = {
   interests: ExportInterests;
   answers: ExportAnswer[];
   circles: ExportMembership[];
+  invites: ExportInvite[];
+  joinedThroughInviteAt: string | null;
   childProfiles: ExportChild[];
 };
 
@@ -198,6 +217,28 @@ async function circlesByOwner(tx: Queryable, accountId: string): Promise<Map<str
   return out;
 }
 
+async function invitesOf(tx: Queryable, accountId: string): Promise<ExportInvite[]> {
+  const r = await tx.query<{ name: string; kind: string; c: Date; e: Date | null; r: Date | null; u: Date | null }>(
+    `SELECT c.name, i.kind, i.created_at AS c, i.expires_at AS e, i.revoked_at AS r, i.used_at AS u
+     FROM circle_invites i JOIN circles c ON c.id = i.circle_id
+     WHERE i.created_by = $1 ORDER BY i.created_at, i.id`,
+    [accountId],
+  );
+  return r.rows.map((x) => ({
+    circle: x.name,
+    kind: x.kind,
+    createdAt: iso(x.c) as string,
+    expiresAt: iso(x.e),
+    revokedAt: iso(x.r),
+    usedAt: iso(x.u),
+  }));
+}
+
+async function referredAt(tx: Queryable, accountId: string): Promise<string | null> {
+  const r = await tx.query<{ j: Date }>('SELECT joined_at AS j FROM referrals WHERE new_account_id = $1', [accountId]);
+  return r.rows[0] ? iso(r.rows[0].j) : null;
+}
+
 async function readExport(tx: Queryable, accountId: string, now: Date): Promise<AccountExport | null> {
   const a = await tx.query<AccountRow>(
     `SELECT email, to_char(date_of_birth, 'YYYY-MM-DD') AS dob, time_zone, consent_state, consent_at,
@@ -223,6 +264,8 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
     interests: interests.get(NIL) ?? none(),
     answers: answers.get(NIL) ?? [],
     circles: circles.get(NIL) ?? [],
+    invites: await invitesOf(tx, accountId),
+    joinedThroughInviteAt: await referredAt(tx, accountId),
     childProfiles: children.rows.map((c) => ({
       displayName: c.display_name,
       ageBand: c.age_band,

@@ -126,9 +126,11 @@ describe('export inventory', () => {
     expect([...EXPORTED_TABLES].sort()).toEqual([
       'accounts',
       'child_profiles',
+      'circle_invites',
       'circle_members',
       'item_responses',
       'profile_interests',
+      'referrals',
     ]);
     for (const reason of Object.values(EXCLUDED_TABLES)) expect(reason.length).toBeGreaterThan(10);
   });
