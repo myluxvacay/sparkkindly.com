@@ -23,6 +23,7 @@ import { loadCommentSection } from '@/lib/comments/web';
 import { bylineFor } from '@/lib/contributors/byline';
 import SponsorLine from '@/components/sponsorship/SponsorLine';
 import { loadSponsorLine } from '@/lib/sponsorship/web';
+import { recordSocialVisit } from '@/lib/social/visits';
 import { getWorld } from '@/lib/public/worlds';
 import { JsonLd, metadata as seo } from '@/lib/seo';
 
@@ -50,6 +51,8 @@ export default async function ItemPage({ params, searchParams }: Props) {
   const item = await loadItem(world, slug);
   if (!item) notFound();
   const db = getDb();
+  // A landing from a social post (plan 5A): one aggregate count, nothing stored about the visitor, page unchanged.
+  await recordSocialVisit(db, item.id, (await searchParams).utm_source, new Date());
   const w = await getWorld(db, item.world);
   // Null (no section in the HTML) with the flags off, for a child context, on Kids items and where switched off.
   const comments = await loadCommentSection(db, await accountSessionToken(), item.id, new Date());

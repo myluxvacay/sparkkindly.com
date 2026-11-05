@@ -76,12 +76,13 @@ const sameCopy = (d: DistRow, c: { caption: string; hashtags: string[] }) =>
 export async function submitCopy(db: Db, raw: unknown, now: Date, site: string): Promise<ApiResult> {
   const parsed = copyBody.safeParse(raw);
   if (!parsed.success) return { status: 400, json: { error: 'invalid_copy', reason: 'shape' } };
-  const { id, version, caption, hashtags } = parsed.data;
+  const { id, version } = parsed.data;
   return db.transaction(async (tx) => {
     const d = await lockDistribution(tx, id);
     if (!d) return { status: 404, json: { error: 'not_found' } };
-    const check = checkCopy(d.platform, { caption, hashtags });
+    const check = checkCopy(d.platform, parsed.data);
     if (!check.ok) return { status: 400, json: { error: 'invalid_copy', reason: check.reason } };
+    const { caption, hashtags } = check.copy; // the NFKC form: stored and posted exactly as validated
     if (d.status !== 'selected' || d.version !== version) {
       if ((d.status === 'scheduled' || d.status === 'copy_ready') && sameCopy(d, { caption, hashtags })) {
         return { status: 200, json: { status: d.status, replay: true } };

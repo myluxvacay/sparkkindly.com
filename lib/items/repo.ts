@@ -1,4 +1,5 @@
 import type { Db, Queryable } from '@/lib/db';
+import { cancelForItem } from '@/lib/social/cancel';
 
 export type Status = 'draft' | 'in_review' | 'scheduled' | 'published' | 'rejected' | 'archived';
 export type Kind = 'article' | 'game' | 'quiz' | 'video_script' | 'puzzle';
@@ -281,6 +282,8 @@ export async function transitionTx(
     throw domainError(err);
   }
   await writeRevision(tx, id, snapshotOf(stored), by, reason ?? `${from} -> ${to}`);
+  // Unpublished: pending social posts are cancelled and posted ones flagged, in this same transaction (plan 5A).
+  if (to === 'archived') await cancelForItem(tx, id);
   return stored;
 }
 

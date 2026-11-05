@@ -125,8 +125,8 @@ describe('checkCopy', () => {
   const good = { caption: 'Can you spot the odd one out? Three are alike, one is not.', hashtags: ['puzzle', 'brainteaser'] };
 
   it('accepts plain copy with letters, digits, emoji and a line break', () => {
-    expect(checkCopy('instagram', { ...good, caption: 'Ready? 🌟\nTry today’s quiz – 5 questions.' })).toEqual({ ok: true });
-    expect(checkCopy('instagram', { caption: 'x', hashtags: ['Café_2026', 'ünïcode'] })).toEqual({ ok: true });
+    expect(checkCopy('instagram', { ...good, caption: 'Ready? 🌟\nTry today’s quiz – 5 questions.' })).toMatchObject({ ok: true });
+    expect(checkCopy('instagram', { caption: 'x', hashtags: ['Café_2026', 'ünïcode'] })).toMatchObject({ ok: true });
   });
 
   it.each([
@@ -146,6 +146,32 @@ describe('checkCopy', () => {
     ['an over-long caption', 'a'.repeat(2001)],
   ])('refuses %s', (_, caption) => {
     expect(checkCopy('instagram', { caption, hashtags: [] }).ok).toBe(false);
+  });
+
+  it.each([
+    ['a fullwidth dot domain', 'Visit evil．com today'],
+    ['an ideographic dot domain', 'Visit evil。com today'],
+    ['a halfwidth ideographic dot domain', 'Visit evil｡com today'],
+    ['a small full stop domain', 'Visit evil﹒com today'],
+    ['a one dot leader domain', 'Visit evil․com today'],
+    ['a non-Latin TLD', 'Visit пример.рф today'],
+    ['a fullwidth @', 'Thanks ＠bob'],
+    ['a combining-mark trick', 'Visit evil.ćom today'],
+    ['a zero-width character inside a domain', 'Visit evil​.com today'],
+    ['a Hangul filler', 'Hello ㅤ there'],
+    ['a bracketed dot', 'Visit evil[.]com today'],
+    ['a parenthesised dot with spaces', 'Visit evil (.) com today'],
+    ['a space before the dot', 'Visit evil .com today'],
+  ])('refuses %s (after NFKC)', (_, caption) => {
+    expect(checkCopy('instagram', { caption, hashtags: [] }).ok).toBe(false);
+  });
+
+  it('passes accented text, emoji with presentation selectors and ordinary sentences; stores the NFKC form', () => {
+    for (const caption of ['Café crème brûlée, anyone?', '❤️ Love this one. Try it!', 'Two sentences. Another one, too.', 'Family 👨‍👩‍👧 time']) {
+      expect(checkCopy('instagram', { caption, hashtags: [] }), caption).toMatchObject({ ok: true });
+    }
+    expect(checkCopy('instagram', { caption: 'Ｈｅｌｌｏ', hashtags: ['ｑｕｉｚ'] })).toEqual({ ok: true, copy: { caption: 'Hello', hashtags: ['quiz'] } });
+    expect(checkCopy('instagram', { caption: 'ok', hashtags: ['evil．com'] }).ok).toBe(false);
   });
 
   it('applies the platform limits: Facebook 500, Instagram 2,200 including hashtags', () => {

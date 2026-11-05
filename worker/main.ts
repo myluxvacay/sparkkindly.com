@@ -22,10 +22,12 @@ import { purgeExpiredInvites } from '@/lib/circles/invites';
 import { claimCircleMail, runCircleMail } from '@/lib/jobs/circle-mail';
 import { circlesEnabled, contributorsEnabled } from '@/lib/config';
 import { sendPublicationNotices } from '@/lib/contributors/notices';
+import { socialTick } from '@/lib/jobs/social';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
-// `dbNow` replaces the database clock the account jobs compare with `now` (lib/jobs/guards.ts); for tests only.
-type TickOpts = { delayMs?: number; dbNow?: DbNow };
+// `dbNow` replaces the database clock the account jobs compare with `now` (lib/jobs/guards.ts); `fetch` replaces the
+// one the social poster calls Meta with. Both for tests only.
+type TickOpts = { delayMs?: number; dbNow?: DbNow; fetch?: typeof fetch };
 
 export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: TickOpts = {}): Promise<string[]> {
   const log: string[] = [];
@@ -65,6 +67,8 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: Ti
   await inactivitySweep(db, now, env, send, log, opts);
   await circlesPurge(db, now, log, opts);
   await circleMail(db, now, env, send, log, opts);
+  // With SOCIAL_ENABLED on: daily selection, posting every 5 minutes, daily metrics (lib/jobs/social.ts).
+  await socialTick(db, now, env, log, { fetch: opts.fetch ?? fetch, delayMs: opts.delayMs });
   return log;
 }
 

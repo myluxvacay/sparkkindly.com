@@ -1,0 +1,151 @@
+// The social poster (plan 5A), run by the worker every 5 minutes. It claims one due row at a time with a conditional
+// UPDATE (scheduled -> posting, attempts + 1), so two workers never take the same row, and holds no transaction across
+// the platform call. Before posting it re-reads the item (no longer eligible: cancelled) and the day's posts (cap
+// reached: moved to the next day's time, attempt not counted). It posts exactly postText(stored caption, hashtags,
+// link) with the stored image URL. Transient failures go back to scheduled 5 minutes later, up to 4 attempts in all, then
+// failed; permanent failures fail at once; an ambiguous one (the platform may have posted) is flagged and never retried.
+// Platforms without credentials are not claimed at all and are reported. A row left in `posting` for 30 minutes (a crash
+// mid-post) is flagged by recoverStuck, never retried. Every failed or flagged row writes one failed_jobs alert (the
+// digest), with the status and code only. No Next.js imports. Verified by tests/unit/social-poster.test.ts.
+import { socialEnabled } from '@/lib/config';
+import type { Queryable } from '@/lib/db';
+import type { EnvLike } from '@/lib/env';
+import { alert } from '@/lib/jobs/guards';
+import { ADAPTERS, hasCredentials, SocialPostError, type PlatformAdapter } from './adapters/meta';
+import { postText, scheduleTime } from './copy';
+import { eligibleItem } from './eligibility';
+import { moveDistribution, type Platform } from './states';
+
+export type PosterDeps = {
+  env: EnvLike;
+  fetch: typeof fetch;
+  adapters?: Partial<Record<Platform, PlatformAdapter>>;
+  sleep?: (ms: number) => Promise<void>;
+};
+export type PosterResult = { posted: number; deferred: number; failed: number; cancelled: number; flagged: number; noCredentials: Platform[] };
+
+const MAX_ATTEMPTS = 4; // the first try and 3 retries
+const RETRY_MS = 5 * 60_000;
+const STUCK_MS = 30 * 60_000;
+const PER_RUN = 10;
+
+type Claimed = {
+  id: number; item_id: string; platform: Platform; caption: string; hashtags: string[]; link: string; image_url: string;
+  attempts: number; daily_cap: number; post_time_utc: string;
+};
+
+async function duePlatforms(db: Queryable, now: Date, platforms: Platform[]): Promise<Platform[]> {
+  const r = await db.query<{ platform: Platform }>(
+    `SELECT DISTINCT d.platform FROM distributions d JOIN social_platforms p ON p.platform = d.platform
+     WHERE d.status = 'scheduled' AND d.scheduled_for <= $1 AND p.enabled AND d.platform = ANY($2::text[])`,
+    [now.toISOString(), platforms],
+  );
+  return r.rows.map((x) => x.platform);
+}
+
+async function claim(db: Queryable, now: Date, platforms: Platform[]): Promise<Claimed | null> {
+  const r = await db.query<Claimed>(
+    `UPDATE distributions d SET status = 'posting', attempts = d.attempts + 1, version = d.version + 1, updated_at = $1
+     FROM social_platforms p
+     WHERE p.platform = d.platform AND d.id = (
+       SELECT x.id FROM distributions x JOIN social_platforms xp ON xp.platform = x.platform
+       WHERE x.status = 'scheduled' AND x.scheduled_for <= $1 AND xp.enabled AND x.platform = ANY($2::text[])
+       ORDER BY x.scheduled_for, x.id LIMIT 1 FOR UPDATE OF x SKIP LOCKED)
+       AND d.status = 'scheduled'
+     RETURNING d.id, d.item_id, d.platform, d.caption, d.hashtags, d.link, d.image_url, d.attempts, p.daily_cap,
+               p.post_time_utc::text AS post_time_utc`,
+    [now.toISOString(), platforms],
+  );
+  return r.rows[0] ? { ...r.rows[0], id: Number(r.rows[0].id) } : null;
+}
+
+const tomorrow = (now: Date) => new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1));
+
+// Posts made on the platform during this UTC day (posted, or flagged after posting).
+async function postedToday(db: Queryable, platform: Platform, now: Date): Promise<number> {
+  const end = tomorrow(now);
+  const start = new Date(end.getTime() - 24 * 3_600_000);
+  const r = await db.query<{ n: number }>(
+    'SELECT count(*)::int AS n FROM distributions WHERE platform = $1 AND posted_at >= $2 AND posted_at < $3',
+    [platform, start.toISOString(), end.toISOString()],
+  );
+  return r.rows[0].n;
+}
+
+async function failRow(db: Queryable, d: Claimed, event: 'fail' | 'flag', message: string): Promise<void> {
+  await moveDistribution(db, d.id, event, { set: { last_error: message } });
+  const what = event === 'fail' ? 'failed' : 'flagged for the owner (it may have been posted)';
+  await alert(db, 'social-post', `social post ${d.id} on ${d.platform} ${what}: ${message}`);
+}
+
+async function onError(db: Queryable, d: Claimed, err: unknown, now: Date, r: PosterResult): Promise<void> {
+  const e = err instanceof SocialPostError ? err : new SocialPostError('transient', 'unexpected error');
+  if (e.kind === 'ambiguous') {
+    await failRow(db, d, 'flag', e.message);
+    r.flagged++;
+  } else if (e.kind === 'transient' && d.attempts < MAX_ATTEMPTS) {
+    await moveDistribution(db, d.id, 'defer', { set: { last_error: e.message, scheduled_for: new Date(now.getTime() + RETRY_MS).toISOString() } });
+    r.deferred++;
+  } else if (e.kind === 'credentials') {
+    await moveDistribution(db, d.id, 'defer', { set: { attempts: d.attempts - 1, last_error: 'no credentials' } });
+    r.deferred++;
+  } else {
+    await failRow(db, d, 'fail', e.message);
+    r.failed++;
+  }
+}
+
+async function postOne(db: Queryable, d: Claimed, now: Date, deps: PosterDeps, adapter: PlatformAdapter, r: PosterResult): Promise<void> {
+  if (!(await eligibleItem(db, d.item_id, now))) {
+    await moveDistribution(db, d.id, 'cancel', { set: { last_error: 'item no longer eligible at post time' } });
+    r.cancelled++;
+    return;
+  }
+  if ((await postedToday(db, d.platform, now)) >= d.daily_cap) {
+    const next = scheduleTime(d.post_time_utc, tomorrow(now)).toISOString();
+    await moveDistribution(db, d.id, 'defer', { set: { attempts: d.attempts - 1, scheduled_for: next } });
+    r.deferred++;
+    return;
+  }
+  try {
+    const text = postText(d.platform, { caption: d.caption, hashtags: d.hashtags, link: d.link });
+    const out = await adapter.post({ text, imageUrl: d.image_url }, { fetch: deps.fetch, env: deps.env, sleep: deps.sleep });
+    await moveDistribution(db, d.id, 'posted', {
+      set: { posted_at: now.toISOString(), post_url: out.url, external_id: out.externalId, last_error: null },
+    });
+    r.posted++;
+    // Unpublished while the call was in flight: the post exists, so the owner removes it by hand.
+    if (!(await eligibleItem(db, d.item_id, now))) {
+      await failRow(db, d, 'flag', 'item unpublished while posting: remove manually from the platform');
+    }
+  } catch (err) {
+    await onError(db, d, err, now, r);
+  }
+}
+
+export async function runPoster(db: Queryable, now: Date, deps: PosterDeps): Promise<PosterResult> {
+  const r: PosterResult = { posted: 0, deferred: 0, failed: 0, cancelled: 0, flagged: 0, noCredentials: [] };
+  if (!socialEnabled()) return r;
+  const adapters = deps.adapters ?? ADAPTERS;
+  const supported = (Object.keys(adapters) as Platform[]).filter((p) => adapters[p]);
+  const ready = supported.filter((p) => hasCredentials(p, deps.env));
+  r.noCredentials = await duePlatforms(db, now, supported.filter((p) => !ready.includes(p)));
+  for (let i = 0; i < PER_RUN && ready.length; i++) {
+    const d = await claim(db, now, ready);
+    if (!d) break;
+    await postOne(db, d, now, deps, adapters[d.platform]!, r);
+  }
+  return r;
+}
+
+// Rows left in `posting` for 30 minutes: the worker stopped mid-post and the platform may have the post.
+export async function recoverStuck(db: Queryable, now: Date): Promise<number> {
+  const r = await db.query<{ id: string; platform: string }>(
+    `UPDATE distributions SET status = 'flagged', version = version + 1, updated_at = $1,
+       last_error = 'interrupted while posting: check the platform, then cancel or mark it'
+     WHERE status = 'posting' AND updated_at < $2 RETURNING id, platform`,
+    [now.toISOString(), new Date(now.getTime() - STUCK_MS).toISOString()],
+  );
+  for (const x of r.rows) await alert(db, 'social-post', `social post ${x.id} on ${x.platform} was interrupted while posting and is flagged`);
+  return r.rows.length;
+}
