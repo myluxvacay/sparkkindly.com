@@ -114,9 +114,9 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 - [x] 5.4 Promotion agent: captions and hashtags per platform; branded share image — *output validated against platform limits.* (promoter role, `/promote-run`, `social-promotions-api.test.ts`, 1080x1350 JPEG `social-share-image.test.ts`)
 - [x] 5.5 Worker posting to Instagram and Facebook via Meta Graph API with UTM links; metrics collection — *a published item appears on both with a working link.* (built and tested against an injected Meta fake, `social-meta-adapter.test.ts`, `social-poster.test.ts`; the live check waits for 5.1 and the staging dry run in OPERATIONS)
 - [x] 5.6 Unpublish cancels scheduled posts and flags posted ones — *test.* (`social-cancel.test.ts`, e2e `social.spec.ts`)
-- [ ] 5.7 Video jobs queue: brief generation (script, shot list, on-screen text, captions, assets), job in `/admin`, upload of finished file — *a job round-trips.*
+- [x] 5.7 Video jobs queue: brief generation (script, shot list, on-screen text, captions, assets), job in `/admin`, upload of finished file — *a job round-trips.* (5 Nov 2026, behind `SOCIAL_ENABLED`, TikTok/YouTube off; independent review pending): migration 030, `/admin/social/videos/`, `social-video-*.test.ts`, e2e `social-video.spec.ts`; plan `2026-11-05-project-5b-video-queue.md`
 - [ ] 5.8 **[owner]** Decide who makes the videos (person or tool such as Canva) — *recorded.*
-- [ ] 5.9 Worker posting to TikTok and YouTube from attached files — *a Short is posted with no further human step.*
+- [x] 5.9 Worker posting to TikTok and YouTube from attached files — *a Short is posted with no further human step.* (built and tested against injected fakes, `social-tiktok-adapter.test.ts`, `social-youtube-adapter.test.ts`, `social-token-store.test.ts`, `social-video-poster.test.ts`; posting follows the owner's checksum-bound approval (plan 5B); the live check waits for 5.1 and 5.8)
 - [ ] 5.10 Done-when: selected items on Instagram and Facebook by the configured time; skips visible; a finished video is posted automatically.
 
 ## Project 6: Light sponsorship

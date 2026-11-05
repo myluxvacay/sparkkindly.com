@@ -68,6 +68,10 @@ import { appealState, appealToken, fileAppeal } from '@/lib/comments/appeals';
 import { createAgent } from '@/lib/agents/admin';
 import { queueRequest, decideRequest } from '@/lib/comments/moderation-api';
 import { createLimiter } from '@/lib/agents/rate-limit';
+import { briefRequest, promotionsQueueRequest } from '@/lib/social/promotions-api';
+import { agentRoute } from '@/lib/agents/http';
+import { selectVideos } from '@/lib/social/video/select';
+import { handleVideoUpload } from '@/lib/social/video/upload-route';
 import { enableRequest, saveRequest, submitRequest, withdrawRequest } from '@/lib/contributors/web';
 import { getMine } from '@/lib/contributors/drafts';
 import { contributor as contributorFixture, drafted as draftedFixture } from '../helpers/contributors';
@@ -1736,5 +1740,73 @@ describe('sponsorship (plan 6): child, teen and unknown viewers never see it', (
     const spy = vi.spyOn(console, 'error').mockImplementation(() => {});
     expect(await loadSponsorLine(broken, 'a'.repeat(64), itemId, NOW6)).toBeNull();
     spy.mockRestore();
+  });
+});
+
+describe('video jobs (plan 5B): the promoter key stays in its lane, media is never public, Kids is never briefed', () => {
+  const NOW5 = new Date('2026-11-05T09:00:00Z');
+  const limiter = () => createLimiter({ perMinute: 600 });
+  beforeEach(async () => {
+    vi.stubEnv('SOCIAL_ENABLED', 'true');
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    await seedReference(db);
+    await db.query("UPDATE social_platforms SET enabled = true, daily_cap = 5 WHERE platform IN ('tiktok', 'youtube')");
+  });
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+  const video = async (world: string, audience = 'all') =>
+    (
+      await db.query<{ id: string }>(
+        `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, published_at, created_by, risk_tier, approved_by)
+         SELECT id, 'video_script', $2, 'Iso video', 'S', '{}'::jsonb, $3, 'published', '2026-11-05T08:00:00Z', 'test', $4, 'owner'
+         FROM worlds WHERE slug = $1 RETURNING id`,
+        [world, `iso-video-${Math.random().toString(36).slice(2, 8)}`, audience, world === 'kids' || audience === 'kids' ? 'kids' : 'reflective'],
+      )
+    ).rows[0].id;
+  const upload = (id: number, headers: Record<string, string>) =>
+    handleVideoUpload(
+      new Request(`http://localhost/admin/social/videos/${id}/upload/`, {
+        method: 'POST',
+        headers: { host: 'localhost', origin: 'http://localhost', 'x-upload-kind': 'video', 'x-file-name': 'a.mp4', 'x-declared-size': '4', ...headers },
+        body: new Uint8Array(4),
+      }),
+      { db, env: {}, now: NOW5, jobId: String(id), probe: async () => null },
+    );
+
+  it('Kids video scripts (world or audience) never get a job; a Kids job planted by hand is never offered or briefed', async () => {
+    const kidsWorld = await video('kids');
+    const kidsAudience = await video('play', 'kids');
+    await db.query("DELETE FROM job_runs WHERE job = 'social-select'");
+    await selectVideos(db, 'tiktok', '2026-11-05', NOW5);
+    const jobs = await db.query('SELECT 1 FROM video_jobs WHERE item_id = ANY($1::uuid[])', [[kidsWorld, kidsAudience]]);
+    expect(jobs.rows).toEqual([]);
+    const d = (await db.query<{ id: string }>("INSERT INTO distributions (item_id, platform, day, status) VALUES ($1, 'youtube', '2026-11-05', 'selected') RETURNING id", [kidsWorld])).rows[0].id;
+    const j = Number((await db.query<{ id: string }>("INSERT INTO video_jobs (item_id, platform, distribution_id) VALUES ($1, 'youtube', $2) RETURNING id", [kidsWorld, d])).rows[0].id);
+    const { key } = await createAgent(db, `iso-promoter-${Math.random().toString(36).slice(2, 8)}`, null, 'promoter');
+    const get = new Request('http://localhost/api/agent/promotions/', { headers: { 'x-agent-key': key } });
+    const { entries } = (await (await promotionsQueueRequest(get, { db, now: NOW5, site: 'https://sparkkindly.com', limiter: limiter() })).json()) as { entries: { id: number; kind: string }[] };
+    expect(entries.filter((e) => e.kind === 'video_script').map((e) => e.id)).not.toContain(j);
+    const brief = {
+      id: j, version: 1, narration: 'n', shots: ['a', 'b', 'c'], onScreenText: [], captions: { youtube: { title: 't', description: 'd' } }, hashtags: [], durationSeconds: 20,
+    };
+    const post = new Request('http://localhost/api/agent/promotions/brief/', { method: 'POST', headers: { 'x-agent-key': key, 'content-type': 'application/json' }, body: JSON.stringify(brief) });
+    const r = await briefRequest(post, { db, now: NOW5, site: 'https://sparkkindly.com', limiter: limiter() });
+    expect(r.status).toBe(409);
+    expect((await db.query<{ state: string }>('SELECT state FROM video_jobs WHERE id = $1', [j])).rows[0].state).toBe('cancelled');
+  });
+
+  it('the upload route refuses an agent key, a member session and no session; the promoter key is refused on the content API', async () => {
+    const item = await video('play');
+    const d = (await db.query<{ id: string }>("INSERT INTO distributions (item_id, platform, day, status) VALUES ($1, 'tiktok', '2026-11-05', 'copy_ready') RETURNING id", [item])).rows[0].id;
+    const j = Number((await db.query<{ id: string }>("INSERT INTO video_jobs (item_id, platform, distribution_id, state) VALUES ($1, 'tiktok', $2, 'brief_ready') RETURNING id", [item, d])).rows[0].id);
+    const { key } = await createAgent(db, `iso-promoter-${Math.random().toString(36).slice(2, 8)}`, null, 'promoter');
+    const member = await personFixture(db, NOW5);
+    for (const headers of [{ 'x-agent-key': key }, { cookie: `__Host-sk_account=${member.session}` }, {}] as Record<string, string>[]) {
+      expect((await upload(j, headers)).status).toBe(401);
+    }
+    const content = await agentRoute(new Request('http://localhost/api/agent/brief/', { headers: { 'x-agent-key': key } }), async () => ({ status: 200, json: {} }), { db, limiter: limiter() });
+    expect(content.status).toBe(403);
+    expect((await db.query<{ file_name: string | null }>('SELECT file_name FROM video_jobs WHERE id = $1', [j])).rows[0].file_name).toBeNull();
   });
 });

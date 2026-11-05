@@ -103,6 +103,17 @@ log row; captions never name or describe a person, and the share image carries o
 The Meta page token and ids live only in the root-owned env file on the VM and are read by the worker at call time;
 they are never stored in the database. The worker sends Meta the caption and our public image and item URLs only.
 
+`video_jobs` (Project 5B, behind `SOCIAL_ENABLED`) holds, per video script and platform, the promotion agent's brief
+(narration, shots, on-screen text, captions, hashtags; no personal data), the uploaded file's server-generated name,
+SHA-256, size and validation result, the caption file's name, the owner's approval (checksum and time) and a free-text
+"made by" note of up to 100 characters and a licence note (written by the owner; they may name the maker). The files
+themselves live in the media folder `SOCIAL_MEDIA_DIR` (default `/opt/sparkkindly/shared/media/social/`, `quarantine/`
+and `approved/`, owned by the service user, mode 0700), never in the database or the repository and never served by the
+site; quarantine files are deleted after 7 days and cancelled jobs' files after 30. Videos must not show people who
+have not agreed to appear. TikTok and YouTube tokens live only in the token file `SOCIAL_TOKEN_FILE` (default
+`/opt/sparkkindly/shared/social-tokens.json`, mode 0600) and the root-owned env file; they are not in the database,
+the export or any log. The worker sends TikTok and Google the approved video, its captions and caption file only.
+
 ## 2. Outside the database
 
 | Where | What | Retention | Source |
@@ -151,7 +162,7 @@ From spec 4a.5 and the code:
 ## 5. Planned, not yet available
 
 Circles and scores (Project 4), comments and communities (Project 4 onward) and contributions (Project 8) are built
-behind their flags and listed above. Sponsorship (Project 6) and social distribution (Project 5A) are built behind their flags and store no personal data
+behind their flags and listed above. Sponsorship (Project 6) and social distribution (Projects 5A and 5B) are built behind their flags and store no personal data
 (above). Each will need rows added
 here before it launches.
 

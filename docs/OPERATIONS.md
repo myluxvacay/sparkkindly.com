@@ -830,7 +830,7 @@ Behind `SOCIAL_ENABLED` (off everywhere; `deploy/env/*.example` carry `# SOCIAL_
 **and** a per-platform switch in `/admin/social/` (all off). With the flag unset there is no social job, promotion
 route, `social.*` admin action, Social admin page, share-image format or visit counting, and every page is unchanged.
 Plan `docs/superpowers/plans/2026-11-05-project-5a-social-text-image.md`. Part A posts to Instagram and Facebook only;
-the TikTok and YouTube rows exist for 5B and are never selected or posted, even if switched on.
+TikTok and YouTube take video only, through the video jobs queue (see Video jobs, below).
 
 - **Owner prerequisites (roadmap 5.1).** A Meta Business account; a Facebook Page; an Instagram professional account
   linked to that Page; a Meta developer app with App Review for `pages_manage_posts`, `pages_read_engagement`,
@@ -913,6 +913,50 @@ Behind `SOCIAL_ENABLED` and the TikTok/YouTube switches in `/admin/social/` (off
   `@videoUpload path_regexp ^/admin/social/videos/[0-9]+/upload/$` then
   `request_body @videoUpload { max_size 260MB }` (optionally a smaller `request_body` limit for everything else), and raise
   `response_header_timeout` to `300s`. Validate with `caddy validate` on the VM before reloading; not applied yet.
+- **Flow.** The first worker tick of each UTC day picks, per switched-on video platform, up to its cap of published
+  `video_script` items from the last 3 days (never Kids by world, audience or risk tier; the 5A rotation and skip
+  reasons) and opens one job per item and platform. `/promote-run env=<env>` gives each job to one promoter subagent,
+  which sends the brief (narration, 3 to 12 shots, on-screen text, the platform's caption fields, hashtags, 15 to 60
+  seconds) with `sparkkindly_promotion_brief`; the site checks every text like a caption and adds the brand assets
+  itself. The job then shows in `/admin/social/videos/` as "brief ready".
+- **Makers (roadmap 5.8, the owner's decision, recorded outside code).** Whoever makes the video (the owner, a family
+  member, a hired editor, or a tool such as Canva) works from the brief on the job page and gives the owner the finished
+  file; only the owner (an admin session with its second factor) uploads it. Record who made it in "Made by".
+- **Upload and approval.** On the job page choose the finished MP4 (H.264, up to 256 MB) and upload it (the page needs
+  JavaScript for this one form). The server checks it by content (the MP4 boxes must fill the file exactly, H.264, with
+  ffprobe on the VM: codec, at most 3 minutes; without ffprobe a warning says only the container was checked;
+  `sudo apt-get install ffmpeg` provides it) and shows the result and SHA-256. A refused file is deleted; upload again.
+  **All video needs captions**: for YouTube upload a WebVTT or SRT file (up to 200 KB); for TikTok burn the captions into
+  the video and tick the declaration. "Approve for posting" approves exactly the checksum shown: if the file was
+  replaced after the page was opened the approval is refused ("This changed after you opened the page"). Approval moves
+  the files to `approved/`, re-hashes them, and schedules the post at the platform's time.
+- **Credentials and token file.** TikTok: a developer app with the Content Posting API (direct post) approved; put
+  `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET` and a first `TIKTOK_REFRESH_TOKEN` (from the owner's one-time OAuth
+  sign-in with the `video.publish` scope) in the root-owned env file. YouTube: a Google Cloud project with the YouTube
+  Data API, an OAuth client, and `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET` and a `YOUTUBE_REFRESH_TOKEN` (scopes
+  `youtube.upload` and `youtube.force-ssl` for captions). The worker keeps the rotating tokens in
+  `/opt/sparkkindly/shared/social-tokens.json`: create it once with
+  `sudo install -o sparkkindly -g sparkkindly -m 0600 /dev/null /opt/sparkkindly/shared/social-tokens.json` and
+  `echo '{}' | sudo -u sparkkindly tee /opt/sparkkindly/shared/social-tokens.json`; check `stat -c '%a %U'` prints
+  `600 sparkkindly`. Never copy it into the repository, a prompt, a chat or the export.
+- **Re-authorisation.** When a platform refuses the refresh token, or the token file is unreadable, `/admin/social/`
+  shows "<platform> needs re-authorisation" and nothing posts there. Fix: sign in again to get a new refresh token, put
+  it in the env file, then remove that platform's entry from the token file (as the service user, keeping mode 0600:
+  `sudo -u sparkkindly node -e "const f='/opt/sparkkindly/shared/social-tokens.json',fs=require('fs');const s=JSON.parse(fs.readFileSync(f));delete s.tiktok;fs.writeFileSync(f,JSON.stringify(s),{mode:0o600})"`;
+  replace `tiktok` with `youtube` as needed). A corrupt file is never overwritten by the app: replace it with `{}`.
+- **Private until approved.** TikTok posts from an unaudited app are private (SELF_ONLY); after TikTok approves the app
+  set `TIKTOK_PRIVACY=PUBLIC_TO_EVERYONE`. YouTube uploads are private until `YOUTUBE_PRIVACY=public` (or `unlisted`);
+  review the first posts before changing either. YouTube's default quota allows about 6 uploads a day: ask Google for a
+  quota increase before raising the cap. A quota or rate limit makes posts wait (6 hours for a quota, 30 minutes for a
+  rate limit) and writes one digest line per platform per day.
+- **Flagged video rows** need the owner, as in 5A: the last upload call failed in a way the platform may have acted
+  on, a row stopped mid-upload, the approved file changed on disk (nothing was sent), YouTube took the video but not
+  the captions (add them in YouTube Studio), or the item was unpublished after posting (delete the post by hand).
+  Check the platform; then cancel the job (if the video is not there) or leave it flagged. A failed row has "Retry".
+  Archiving an item cancels its unposted jobs; their files go after 30 days.
+- **Migration and rollback.** `030_video_jobs.sql` is additive (one table). Code rollback: switch TikTok and YouTube
+  off in `/admin/social/` or unset `SOCIAL_ENABLED`; or deploy the previous release (it never reads `video_jobs`).
+  Schema rollback is in the migration header; remove the media folder and token file by hand afterwards.
 
 ## Pilot measurement (roadmap P.2)
 

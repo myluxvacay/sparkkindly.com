@@ -43,7 +43,7 @@ export default function VideoUpload({ jobId, csrf, kind, label, accept }: Props)
     <form className="admin-action" onSubmit={onSubmit}>
       <p>
         <label htmlFor={id}>{label}</label>
-        <input id={id} name="file" type="file" accept={accept} required />
+        <input id={id} name="file" type="file" accept={accept} required style={{ maxWidth: '100%' }} />
       </p>
       <noscript>
         <p>Uploading needs JavaScript in this browser.</p>

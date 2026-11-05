@@ -8,6 +8,7 @@ import type { VideoJobView } from '@/lib/social/video/admin';
 const NAME = { tiktok: 'TikTok', youtube: 'YouTube' } as const;
 const utc = (d: Date | null) => (d ? `${new Date(d).toISOString().slice(0, 16).replace('T', ' ')} UTC` : '');
 const mb = (n: number) => `${(n / 1024 / 1024).toFixed(1)} MB`;
+const WRAP = { wordBreak: 'break-all' } as const; // a 64-character checksum must wrap at 320px
 
 function Brief({ job }: { job: VideoJobView }) {
   const b = job.brief;
@@ -60,7 +61,7 @@ function FileState({ job }: { job: VideoJobView }) {
     <>
       {job.hasFile && (
         <p>
-          File: {job.fileSize ? mb(job.fileSize) : ''}, SHA-256 <code>{job.fileSha256}</code>
+          File: {job.fileSize ? mb(job.fileSize) : ''}, SHA-256 <code style={WRAP}>{job.fileSha256}</code>
         </p>
       )}
       {v && (
@@ -87,7 +88,9 @@ function Approve({ csrf, job, back }: { csrf: string; job: VideoJobView; back: s
   const fields = { id: String(job.id), version: String(job.version), checksum: job.fileSha256 ?? '' };
   return (
     <ActionForm csrf={csrf} action="video.approve" returnTo={back} label="Approve for posting" fields={fields}>
-      <p>You approve exactly the file with SHA-256 {job.fileSha256}. If it is replaced, approve again.</p>
+      <p>
+        You approve exactly the file with SHA-256 <code style={WRAP}>{job.fileSha256}</code>. If it is replaced, approve again.
+      </p>
       {job.platform === 'tiktok' && (
         <p>
           <input id="captions-burned" name="captions_burned" type="checkbox" value="yes" required />{' '}
@@ -96,11 +99,11 @@ function Approve({ csrf, job, back }: { csrf: string; job: VideoJobView; back: s
       )}
       <p>
         <label htmlFor="maker-note">Made by (up to 100 characters)</label>
-        <input id="maker-note" name="maker_note" maxLength={100} defaultValue={job.makerNote ?? ''} />
+        <input id="maker-note" name="maker_note" maxLength={100} defaultValue={job.makerNote ?? ''} style={{ maxWidth: '100%' }} />
       </p>
       <p>
         <label htmlFor="licence-note">Licence note (music, footage; up to 200 characters)</label>
-        <input id="licence-note" name="licence_note" maxLength={200} defaultValue={job.licenceNote ?? ''} />
+        <input id="licence-note" name="licence_note" maxLength={200} defaultValue={job.licenceNote ?? ''} style={{ maxWidth: '100%' }} />
       </p>
     </ActionForm>
   );

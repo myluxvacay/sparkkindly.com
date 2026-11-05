@@ -142,6 +142,10 @@ so the site can count, in aggregate and with nothing kept about the visitor, how
 that Meta's own policies apply on those platforms. The site itself still makes no request to Meta and sets no cookie
 (Ruling: not added now, so every page stays byte-identical while the flag is off).
 
+Before TikTok or YouTube is switched on (Project 5B): the same privacy paragraph names TikTok and YouTube as well, and
+says that short videos are made from published pieces (never Kids pieces), posted from SparkKindly's own accounts, and
+that TikTok's and Google's policies apply there. Not added now, for the same reason.
+
 ## Other places that point at the privacy page
 
 - The parent consent email links to the privacy page (`lib/accounts/consent-email.ts`, `privacyUrl`). It must not be
