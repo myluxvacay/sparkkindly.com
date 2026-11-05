@@ -231,6 +231,86 @@ describe('submitting', () => {
   });
 });
 
+describe("revisions keep the item's kind and world", () => {
+  async function requested() {
+    const p = await contributor(db, NOW);
+    const id = await submitted(db, p, NOW);
+    await db.query("UPDATE contributions SET state = 'changes_requested' WHERE id = $1", [id]);
+    return { p, id, itemId: (await stateOf(db, id)).item_id! };
+  }
+  const quizDraft = {
+    kind: 'quiz',
+    world: 'discover',
+    title: 'Which planet is the largest of all?',
+    summary: 'A quick question about the planets in our solar system.',
+    question: 'Which planet in our solar system is the largest?',
+    options: ['Mars', 'Jupiter', 'Venus', 'Earth'],
+    correct: 1,
+    explanation: 'Jupiter is more than eleven times as wide as Earth.',
+    sources: [{ title: 'NASA', url: 'https://science.nasa.gov/jupiter' }],
+  };
+
+  it('a revision with a different kind or world (Kids included) is refused and changes nothing', async () => {
+    const { p, id } = await requested();
+    const before = await getMine(db, p.id, id);
+    expect(await saveDraft(db, p.ctx, { ...quizDraft, id }, NOW, deps())).toEqual({ status: 'refused', code: 'item_locked' });
+    expect(await saveDraft(db, p.ctx, { ...articleDraft({ world: 'play' }), id }, NOW, deps())).toEqual({ status: 'refused', code: 'item_locked' });
+    expect((await saveDraft(db, p.ctx, { ...articleDraft({ world: 'kids' }), id }, NOW, deps())).status).toBe('refused');
+    const after = await getMine(db, p.id, id);
+    expect(after).toEqual(before);
+  });
+
+  it('a contribution row tampered to disagree with its item is refused on submit', async () => {
+    for (const tamper of [
+      "UPDATE contributions SET world_id = (SELECT id FROM worlds WHERE slug = 'play'), content = jsonb_set(content, '{world}', '\"play\"') WHERE id = $1",
+      "UPDATE contributions SET kind = 'quiz', content = jsonb_set(content, '{kind}', '\"quiz\"') WHERE id = $1",
+      "UPDATE contributions SET content = jsonb_set(content, '{world}', '\"play\"') WHERE id = $1",
+    ]) {
+      const { p, id, itemId } = await requested();
+      await db.query(tamper, [id]);
+      expect(await submitContribution(db, p.ctx, id, DECLARED, NOW, deps())).toEqual({ status: 'refused', code: 'wrong_state' });
+      expect((await itemOf(db, itemId)).status).toBe('draft');
+    }
+  });
+
+  it("Kids is refused on every revision against the item's actual values", async () => {
+    for (const tamper of [
+      "UPDATE items SET world_id = (SELECT id FROM worlds WHERE slug = 'kids') WHERE id = $1",
+      "UPDATE items SET audience = 'kids' WHERE id = $1",
+      "UPDATE items SET risk_tier = 'kids' WHERE id = $1",
+    ]) {
+      const { p, id, itemId } = await requested();
+      await db.query(tamper, [itemId]);
+      if (tamper.includes('world_id')) {
+        await db.query("UPDATE contributions SET world_id = (SELECT id FROM worlds WHERE slug = 'kids'), content = jsonb_set(content, '{world}', '\"kids\"') WHERE id = $1", [id]);
+      }
+      expect(await submitContribution(db, p.ctx, id, DECLARED, NOW, deps())).toEqual({ status: 'refused', code: 'kids' });
+    }
+  });
+
+  it("the gates run against the item's world (a Discover item stays Sourced and needs a source)", async () => {
+    const { p, id } = await requested();
+    await saveDraft(db, p.ctx, { ...articleDraft({ sources: [] }), id }, NOW, deps());
+    const r = await submitContribution(db, p.ctx, id, DECLARED, NOW, deps());
+    expect(r.status).toBe('gates_failed');
+    expect(r.status === 'gates_failed' && r.reasons.join(' ')).toMatch(/source/);
+  });
+
+  it('replaceContent cannot change kind, world or audience', async () => {
+    const { itemId } = await requested();
+    const { replaceContent } = await import('@/lib/items/repo');
+    await db.transaction((tx) =>
+      replaceContent(tx, itemId, {
+        title: 'T', summary: 'S long enough', body: {}, riskTier: 'sourced', sources: [], qualityReport: {}, topics: [], answer: null,
+        kind: 'quiz', worldId: 1, world_id: 1, audience: 'kids',
+      } as never, 'test', 'test'),
+    );
+    const row = (await db.query<{ kind: string; audience: string; w: string }>(
+      'SELECT i.kind, i.audience, w.slug AS w FROM items i JOIN worlds w ON w.id = i.world_id WHERE i.id = $1', [itemId])).rows[0];
+    expect(row).toEqual({ kind: 'article', audience: 'all', w: 'discover' });
+  });
+});
+
 describe('withdrawal', () => {
   it('withdraws at any stage; a published item is archived at once', async () => {
     const p = await contributor(db, NOW);

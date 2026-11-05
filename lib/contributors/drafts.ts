@@ -8,7 +8,8 @@ import { eligibleContributor } from './profile';
 import { CONTRIBUTOR_LIMITS, EDITABLE_STATES, contributorLimits, newItemSlug, parseDraft, type ContributorLimits, type DraftContent } from './rules';
 import type { State } from './states';
 
-export type SaveCode = 'not_allowed' | 'banned' | 'no_profile' | 'rate' | 'invalid' | 'draft_limit' | 'not_found' | 'wrong_state';
+export type SaveCode =
+  | 'not_allowed' | 'banned' | 'no_profile' | 'rate' | 'invalid' | 'draft_limit' | 'not_found' | 'wrong_state' | 'item_locked';
 export type SaveResult = { status: 'saved'; id: string } | { status: 'refused'; code: SaveCode; errors?: string[] };
 export type SaveDeps = { limits?: ContributorLimits };
 
@@ -31,9 +32,15 @@ async function saveIn(tx: Queryable, ctx: AccountContext | null, input: Record<s
   const content = JSON.stringify(parsed.value);
   if (input.id !== undefined && input.id !== null && input.id !== '') {
     if (!isUuid(input.id)) return refuse('not_found');
-    const r = await tx.query<{ state: State }>('SELECT state FROM contributions WHERE id = $1 AND account_id = $2 FOR UPDATE', [input.id, who.accountId]);
-    if (!r.rows[0]) return refuse('not_found');
-    if (!(EDITABLE_STATES as readonly string[]).includes(r.rows[0].state)) return refuse('wrong_state');
+    const r = await tx.query<{ state: State; item_id: string | null; kind: string; world_id: number }>(
+      'SELECT state, item_id, kind, world_id FROM contributions WHERE id = $1 AND account_id = $2 FOR UPDATE',
+      [input.id, who.accountId],
+    );
+    const row = r.rows[0];
+    if (!row) return refuse('not_found');
+    if (!(EDITABLE_STATES as readonly string[]).includes(row.state)) return refuse('wrong_state');
+    // Once an item exists its kind and world are fixed: a revision changes the text, never what it is or where it lives.
+    if (row.item_id && (row.kind !== parsed.value.kind || row.world_id !== world)) return refuse('item_locked');
     await tx.query('UPDATE contributions SET kind = $2, world_id = $3, content = $4::jsonb, updated_at = $5 WHERE id = $1', [
       input.id, parsed.value.kind, world, content, now.toISOString(),
     ]);

@@ -23,6 +23,8 @@ export type SubmitDeps = { probe?: Probe; limits?: ContributorLimits };
 type Locked = {
   id: string; account_id: string; state: State; kind: 'article' | 'quiz'; world_id: number; world: string; slug: string;
   content: DraftContent; revision: number; item_id: string | null; version: string;
+  // The item's own values, when it exists: a revision is checked and gated against these, never the contribution row's.
+  item_kind: string | null; item_world_id: number | null; item_world: string | null; item_audience: string | null; item_tier: string | null;
 };
 
 const refuse = (code: SubmitCode): SubmitResult => ({ status: 'refused', code });
@@ -31,8 +33,11 @@ const CREATED_BY = 'contributor'; // items.created_by names no person; the link 
 async function load(tx: Queryable, accountId: string, id: string, lock: boolean): Promise<Locked | undefined> {
   const r = await tx.query<Locked>(
     `SELECT c.id, c.account_id, c.state, c.kind, c.world_id, w.slug AS world, c.slug, c.content, c.revision, c.item_id,
-            c.updated_at::text AS version
-     FROM contributions c JOIN worlds w ON w.id = c.world_id WHERE c.id = $1 AND c.account_id = $2${lock ? ' FOR UPDATE OF c' : ''}`,
+            c.updated_at::text AS version, i.kind AS item_kind, i.world_id AS item_world_id, iw.slug AS item_world,
+            i.audience AS item_audience, i.risk_tier AS item_tier
+     FROM contributions c JOIN worlds w ON w.id = c.world_id
+     LEFT JOIN items i ON i.id = c.item_id LEFT JOIN worlds iw ON iw.id = i.world_id
+     WHERE c.id = $1 AND c.account_id = $2${lock ? ' FOR UPDATE OF c' : ''}`,
     [id, accountId],
   );
   return r.rows[0];
@@ -55,6 +60,13 @@ async function check(tx: Queryable, ctx: AccountContext | null, id: unknown, now
   if (!c) return 'not_found';
   if (!(EDITABLE_STATES as readonly string[]).includes(c.state)) return 'wrong_state';
   if (c.world === 'kids' || c.content.world === 'kids') return 'kids';
+  if (c.item_id) {
+    if (c.item_world === 'kids' || c.item_audience === 'kids' || c.item_tier === 'kids') return 'kids';
+    const agrees = c.item_kind === c.kind && c.item_world_id === c.world_id && c.content.kind === c.kind && c.content.world === c.item_world;
+    if (!agrees) return 'wrong_state';
+  } else if (c.content.kind !== c.kind || c.content.world !== c.world) {
+    return 'wrong_state';
+  }
   if ((await pendingCount(tx, who.accountId, c.id)) >= CONTRIBUTOR_LIMITS.pending) return 'pending_limit';
   return c;
 }
@@ -117,8 +129,9 @@ export async function submitContribution(
   });
   if (typeof first === 'string') return refuse(first);
 
-  const world = { id: first.world_id, slug: first.world };
-  const sub = toSubmission({ ...first, revision: first.revision + 1 }, now);
+  // check() has made the item's world and kind (when an item exists) equal to these; gate against the item's values.
+  const world = first.item_id ? { id: first.item_world_id!, slug: first.item_world! } : { id: first.world_id, slug: first.world };
+  const sub = toSubmission({ ...first, world: world.slug, kind: (first.item_kind ?? first.kind) as Locked['kind'], revision: first.revision + 1 }, now);
   const gates = await runGates(db, sub, world, { probe: deps.probe, now, ignoreItemId: first.item_id ?? undefined });
   const riskTier = riskTierFor(sub, world);
   if (riskTier === 'kids') return refuse('kids');
