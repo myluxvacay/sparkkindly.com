@@ -8,7 +8,7 @@ import { isUuid } from './pin';
 import { maskEmail } from './wording';
 
 // Personal-data tables whose rows for the account appear in the export.
-export const EXPORTED_TABLES = ['accounts', 'child_profiles', 'profile_interests', 'item_responses'] as const;
+export const EXPORTED_TABLES = ['accounts', 'child_profiles', 'profile_interests', 'item_responses', 'circle_members'] as const;
 
 // Personal-data tables deliberately left out, each with its reason.
 export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
@@ -19,6 +19,7 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   admin_login_tokens: 'administrator sign-in credentials (token hashes), not member accounts',
   admin_sessions: 'administrator session credentials (token hashes), not member accounts',
   events: 'site event log; profile_id is never written today (only item_published events). Revisit if that changes',
+  circles: "circle data shared by its members; the export lists the account's own memberships",
 };
 
 // Columns of the two tables exported row by row: each is exported or deliberately excluded with its reason.
@@ -60,12 +61,22 @@ export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Re
 
 type ExportInterests = { topics: string[]; worlds: string[] };
 type ExportAnswer = { item: string; world: string; correct: boolean; answeredAt: string };
+// One of the holder's (or a child's) own circle memberships: nothing about the circle's other members.
+type ExportMembership = {
+  circle: string;
+  kind: string;
+  role: string;
+  yourName: string;
+  joinedAt: string;
+  leftAt: string | null;
+};
 type ExportChild = {
   displayName: string;
   ageBand: string;
   createdAt: string;
   interests: ExportInterests;
   answers: ExportAnswer[];
+  circles: ExportMembership[];
 };
 
 export type AccountExport = {
@@ -88,6 +99,7 @@ export type AccountExport = {
   };
   interests: ExportInterests;
   answers: ExportAnswer[];
+  circles: ExportMembership[];
   childProfiles: ExportChild[];
 };
 
@@ -169,6 +181,23 @@ async function answersByOwner(tx: Queryable, accountId: string): Promise<Map<str
   return out;
 }
 
+async function circlesByOwner(tx: Queryable, accountId: string): Promise<Map<string, ExportMembership[]>> {
+  const r = await tx.query<{ p: string | null; name: string; kind: string; role: string; dn: string; j: Date; l: Date | null }>(
+    `SELECT m.profile_id AS p, c.name, c.kind, m.role, m.display_name AS dn, m.joined_at AS j, m.left_at AS l
+     FROM circle_members m JOIN circles c ON c.id = m.circle_id
+     WHERE m.account_id = $1 ORDER BY m.joined_at, c.name`,
+    [accountId],
+  );
+  const out = new Map<string, ExportMembership[]>();
+  for (const row of r.rows) {
+    const key = ownerKey(row.p);
+    const list = out.get(key) ?? [];
+    list.push({ circle: row.name, kind: row.kind, role: row.role, yourName: row.dn, joinedAt: iso(row.j) as string, leftAt: iso(row.l) });
+    out.set(key, list);
+  }
+  return out;
+}
+
 async function readExport(tx: Queryable, accountId: string, now: Date): Promise<AccountExport | null> {
   const a = await tx.query<AccountRow>(
     `SELECT email, to_char(date_of_birth, 'YYYY-MM-DD') AS dob, time_zone, consent_state, consent_at,
@@ -186,18 +215,21 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
   );
   const interests = await interestsByOwner(tx, accountId);
   const answers = await answersByOwner(tx, accountId);
+  const circles = await circlesByOwner(tx, accountId);
   const none = (): ExportInterests => ({ topics: [], worlds: [] });
   return {
     exportedAt: now.toISOString(),
     account: accountSection(a.rows[0]),
     interests: interests.get(NIL) ?? none(),
     answers: answers.get(NIL) ?? [],
+    circles: circles.get(NIL) ?? [],
     childProfiles: children.rows.map((c) => ({
       displayName: c.display_name,
       ageBand: c.age_band,
       createdAt: iso(c.created_at) as string,
       interests: interests.get(c.id) ?? none(),
       answers: answers.get(c.id) ?? [],
+      circles: circles.get(c.id) ?? [],
     })),
   };
 }

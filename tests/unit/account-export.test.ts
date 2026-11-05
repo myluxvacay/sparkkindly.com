@@ -10,6 +10,7 @@ import { createChildProfile } from '@/lib/accounts/children';
 import { setInterests } from '@/lib/accounts/interests';
 import { recordAnswer } from '@/lib/accounts/responses';
 import { saveSettings } from '@/lib/accounts/settings';
+import { createCircle, leaveCircle } from '@/lib/circles/repo';
 import {
   EXCLUDED_COLUMNS,
   EXCLUDED_TABLES,
@@ -49,6 +50,7 @@ afterAll(async () => {
   await db.close();
 });
 beforeEach(async () => {
+  await db.query('DELETE FROM circles');
   await db.query('DELETE FROM accounts');
 });
 
@@ -121,8 +123,20 @@ const decidedColumns = (table: keyof typeof EXPORTED_COLUMNS) =>
 describe('export inventory', () => {
   it('every personal-data table in the schema is either exported or excluded with a reason', async () => {
     expect(decided()).toEqual(await personalDataTables(db));
-    expect([...EXPORTED_TABLES].sort()).toEqual(['accounts', 'child_profiles', 'item_responses', 'profile_interests']);
+    expect([...EXPORTED_TABLES].sort()).toEqual([
+      'accounts',
+      'child_profiles',
+      'circle_members',
+      'item_responses',
+      'profile_interests',
+    ]);
     for (const reason of Object.values(EXCLUDED_TABLES)) expect(reason.length).toBeGreaterThan(10);
+  });
+
+  it('accounts for both circle tables: memberships exported, circles excluded with a reason', () => {
+    expect(EXPORTED_TABLES).toContain('circle_members');
+    expect(EXCLUDED_TABLES.circles).toMatch(/own memberships/);
+    expect(EXPORTED_TABLES).not.toContain('circles');
   });
 
   it('includes the seven tables of the data inventory', () => {
@@ -248,6 +262,7 @@ describe('exportAccount', () => {
       createdAt: expect.stringMatching(/^\d{4}-\d\d-\d\dT/),
       interests: { topics: [topics[1].name], worlds: [] },
       answers: [{ item: items[1].slug, world: worlds[1].slug, correct: false, answeredAt: T1.toISOString() }],
+      circles: [],
     });
     expect(leo).toEqual({
       displayName: 'Leo',
@@ -255,6 +270,7 @@ describe('exportAccount', () => {
       createdAt: expect.stringMatching(/^\d{4}-\d\d-\d\dT/),
       interests: { topics: [], worlds: [worlds[1].slug] },
       answers: [{ item: items[2].slug, world: worlds[0].slug, correct: true, answeredAt: T1.toISOString() }],
+      circles: [],
     });
   });
 
@@ -316,5 +332,48 @@ describe('exportAccount', () => {
     ]);
     expect(y!.childProfiles.map((c) => c.displayName)).toEqual(['Zed']);
     expect(y!.interests).toEqual({ topics: [], worlds: [] });
+  });
+});
+
+describe('exportAccount: circle memberships', () => {
+  const circle = async (owner: string, name: string, kind: string, yourName: string) => {
+    const r = await createCircle(db, owner, { name, kind, yourName }, T0);
+    if (r.status !== 'created') throw new Error('circle failed');
+    return r.slug;
+  };
+  const join = (slug: string, accountId: string, name: string, profileId: string | null = null) =>
+    db.query(
+      `INSERT INTO circle_members (circle_id, account_id, profile_id, display_name, joined_at)
+       SELECT id, $2, $3, $4, $5 FROM circles WHERE slug = $1`,
+      [slug, accountId, profileId, name, T1.toISOString()],
+    );
+
+  it("lists the account's own memberships (and each child's), never another member's name, email or the circle id", async () => {
+    const fam = await family(`circ${n++}@example.test`);
+    const otherEmail = `other${n++}@example.test`;
+    const other = await signedIn(otherEmail, '1980-01-01');
+    const home = await circle(fam.id, 'Home Team', 'family', 'Mum');
+    await join(home, other, 'Grandpa Joe');
+    await join(home, fam.id, 'Mia', fam.mia);
+    const quiz = await circle(other, 'Quiz Night', 'friends', 'Joe');
+    await join(quiz, fam.id, 'Mum Q');
+    const LEFT = new Date('2026-11-03T10:00:00Z');
+    expect(await leaveCircle(db, fam.id, quiz, LEFT)).toBe('left');
+    const x = await exportAccount(db, fam.id, NOW);
+    expect(x!.circles).toEqual([
+      { circle: 'Home Team', kind: 'family', role: 'owner', yourName: 'Mum', joinedAt: T0.toISOString(), leftAt: null },
+      { circle: 'Quiz Night', kind: 'friends', role: 'member', yourName: 'Mum Q', joinedAt: T1.toISOString(), leftAt: LEFT.toISOString() },
+    ]);
+    const mia = x!.childProfiles.find((c) => c.displayName === 'Mia')!;
+    expect(mia.circles).toEqual([
+      { circle: 'Home Team', kind: 'family', role: 'member', yourName: 'Mia', joinedAt: T1.toISOString(), leftAt: null },
+    ]);
+    const text = JSON.stringify(x);
+    for (const s of ['Grandpa Joe', '"Joe"', otherEmail, home, quiz]) expect(text).not.toContain(s);
+    const ids = (await db.query<{ id: string }>('SELECT id FROM circles')).rows.map((r) => r.id);
+    for (const id of ids) expect(text).not.toContain(id);
+    const y = await exportAccount(db, other, NOW);
+    expect(JSON.stringify(y)).not.toContain('Mum');
+    expect(y!.circles.map((c) => c.yourName)).toEqual(['Joe', 'Grandpa Joe']);
   });
 });
