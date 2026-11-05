@@ -20,6 +20,10 @@ export const contributorsEnabled = (): boolean => accountsEnabled() && ['true', 
 // Sponsorship (Project 6) has its own switch, independent of accounts; with it unset no sponsor line, /go/ route,
 // /sponsorship/ page or admin page exists.
 export const sponsorshipEnabled = (): boolean => ['true', '1'].includes(process.env.SPONSORSHIP_ENABLED ?? '');
+// Social distribution (Project 5A) has its own switch, independent of accounts; with it unset no social job runs, no
+// promotion route or admin page exists and item pages never count social visits. Each platform also has its own
+// switch in /admin/social/ (all off).
+export const socialEnabled = (): boolean => ['true', '1'].includes(process.env.SOCIAL_ENABLED ?? '');
 export const brands = {
   play: { name: 'Play', promise: 'Play. Imagine. Explore.', description: 'A little challenge. A fresh perspective. Make room for the joy of figuring things out.', short: 'Give your curiosity a little room to play.', icon: '✳', color: 'gold' },
   discover: { name: 'Discover', promise: 'Explore the world with wonder.', description: 'Follow a question somewhere unexpected. Look a little closer at the extraordinary in the everyday.', short: 'Big wonders, hiding in plain sight.', icon: '◎', color: 'sage' },

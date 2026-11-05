@@ -4,7 +4,7 @@ import { hashSecret, parseKey } from './keys';
 
 // role: 'content' agents use the item, brief and run routes; 'moderation' agents only the comment moderation routes;
 // 'reviewer' agents only the contribution review routes (plan 8 review H1).
-export type AgentRole = 'content' | 'moderation' | 'reviewer';
+export type AgentRole = 'content' | 'moderation' | 'reviewer' | 'promoter';
 export type Agent = { id: number; name: string; worldId: number | null; worldSlug: string | null; role: AgentRole };
 
 const UNKNOWN_HASH = hashSecret('no such agent'); // compared when the prefix is unknown, so timing does not reveal it

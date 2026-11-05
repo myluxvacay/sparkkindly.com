@@ -11,15 +11,15 @@ export class UnknownWorldError extends Error {
 
 // Creates an agent and returns its key, once. worldSlug null makes a master agent that names the world per request.
 // A moderation agent (plan 7B) works on comments only, a reviewer agent (plan 8 review H1) on contribution reviews only;
-// neither is ever tied to a world.
+// neither is ever tied to a world; nor is a promoter agent (plan 5A), which only writes social post copy.
 export async function createAgent(
   db: Queryable,
   name: string,
   worldSlug: string | null,
   role: AgentRole = 'content',
 ): Promise<{ id: number; key: string }> {
-  if (role !== 'content' && role !== 'moderation' && role !== 'reviewer') {
-    throw new Error('An agent role is content, moderation or reviewer');
+  if (role !== 'content' && role !== 'moderation' && role !== 'reviewer' && role !== 'promoter') {
+    throw new Error('An agent role is content, moderation, reviewer or promoter');
   }
   if (role !== 'content' && worldSlug !== null) throw new Error(`A ${role} agent is not tied to a world`);
   let worldId: number | null = null;
