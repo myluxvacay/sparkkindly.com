@@ -18,6 +18,7 @@ export const DONE = {
   agent_rotated: 'Key rotated. Copy the new key now: it is shown once.',
   agent_enabled: 'Agent enabled.',
   agent_revoked: 'Agent revoked.',
+  hours_logged: 'Hours logged for that week.',
 } as const;
 
 export const ERRORS = {

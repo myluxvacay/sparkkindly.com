@@ -10,6 +10,7 @@ const LINKS: [string, string][] = [
   ['/admin/agents/', 'Agents'],
   ['/admin/runs/', 'Runs'],
   ['/admin/digest/', 'Digest'],
+  ['/admin/pilot/', 'Pilot'],
 ];
 
 export default function AdminNav({ email, csrf }: { email: string; csrf: string }) {

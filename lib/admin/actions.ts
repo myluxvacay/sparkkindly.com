@@ -212,6 +212,24 @@ const handlers: Record<string, Handler> = {
     return { code: 'topic_renamed', target: `topic:${slug}`, detail: { name } };
   },
 
+  // One row per week, keyed by its Monday: a re-post for the same week replaces it.
+  async 'ops.log_hours'({ tx, form }) {
+    const date = field(form, 'week_start');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || new Date(`${date}T00:00:00Z`).toISOString().slice(0, 10) !== date) throw bad();
+    const hoursText = field(form, 'hours');
+    if (!/^\d{1,2}(\.\d)?$/.test(hoursText) || Number(hoursText) > 80) throw bad();
+    const note = text(form, 'note', 200, 0) || null;
+    const week = (
+      await tx.query<{ w: string }>(
+        `INSERT INTO operating_hours (week_start, hours, note) VALUES (date_trunc('week', $1::date)::date, $2, $3)
+         ON CONFLICT (week_start) DO UPDATE SET hours = EXCLUDED.hours, note = EXCLUDED.note, logged_at = now()
+         RETURNING to_char(week_start, 'YYYY-MM-DD') AS w`,
+        [date, hoursText, note],
+      )
+    ).rows[0].w;
+    return { code: 'hours_logged', target: `week:${week}`, detail: { hours: Number(hoursText) } };
+  },
+
   async 'agent.create'({ tx, form }) {
     const name = field(form, 'name');
     if (!AGENT_NAME.test(name)) throw bad();

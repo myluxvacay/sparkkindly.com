@@ -65,3 +65,29 @@ export async function pilotMetrics(db: Queryable, now: Date, days = 21): Promise
     quality: { ...quality, per100: quality.percent },
   };
 }
+
+export type Effort = { weeks: number; average: number | null; threshold: number; met: boolean | null };
+
+// Average of the last 4 logged weeks (not after today); no logged weeks is "no data", not a pass.
+export async function operatingEffort(db: Queryable, now: Date): Promise<Effort> {
+  const r = await db.query<{ weeks: number; average: number | null }>(
+    `SELECT count(*)::int AS weeks, avg(hours)::float8 AS average
+       FROM (SELECT hours FROM operating_hours WHERE week_start <= $1::date ORDER BY week_start DESC LIMIT 4) w`,
+    [now.toISOString()],
+  );
+  const { weeks, average } = r.rows[0];
+  const threshold = PILOT_THRESHOLDS.hoursPerWeek;
+  if (!weeks || average === null) return { weeks: 0, average: null, threshold, met: null };
+  const rounded = round1(average);
+  return { weeks, average: rounded, threshold, met: rounded < threshold };
+}
+
+export type HoursRow = { weekStart: string; hours: number; note: string | null };
+
+export async function recentHours(db: Queryable, limit = 8): Promise<HoursRow[]> {
+  const r = await db.query<{ week_start: string; hours: number; note: string | null }>(
+    "SELECT to_char(week_start, 'YYYY-MM-DD') AS week_start, hours::float8 AS hours, note FROM operating_hours ORDER BY week_start DESC LIMIT $1",
+    [limit],
+  );
+  return r.rows.map((x) => ({ weekStart: x.week_start, hours: x.hours, note: x.note }));
+}

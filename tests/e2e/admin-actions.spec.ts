@@ -17,6 +17,7 @@ test.afterAll(async () => {
   await resetExtras();
   await sql("DELETE FROM agents WHERE name LIKE 'e2e-%'");
   await sql("DELETE FROM topics WHERE slug LIKE 'e2e-%'");
+  await sql("DELETE FROM operating_hours WHERE week_start = '2026-11-02'");
 });
 
 test('approve a Kids item from the queue, by keyboard; it is scheduled with the owner as approver', async ({ page }) => {
@@ -119,6 +120,22 @@ test('a return address off the admin area is ignored, and the topics, runs and d
     await page.goto(path);
     expect(await axe(page), path).toEqual([]);
   }
+});
+
+test('the pilot page shows every metric, logs hours, and passes axe at 320px', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 800 });
+  await page.goto('/admin/pilot/');
+  for (const name of ['Activation', 'Return', 'Interest uptake', 'Quality', 'Operating effort', 'Circle value (Pilot B)']) {
+    await expect(page.getByRole('heading', { level: 2, name })).toBeVisible();
+  }
+  await expect(page.getByText('not measured (no visitor identifiers by design)')).toBeVisible();
+  await page.getByLabel(/A date in the week/).fill('2026-11-04');
+  await page.getByLabel(/Hours worked/).fill('1.5');
+  await page.getByRole('button', { name: 'Log hours' }).click();
+  await expect(page.getByText('Hours logged for that week.')).toBeVisible();
+  await expect(page.getByRole('rowheader', { name: '2026-11-02' })).toBeVisible();
+  expect(await axe(page)).toEqual([]);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
 test('the queue reflows at 320px without horizontal scrolling', async ({ page }) => {

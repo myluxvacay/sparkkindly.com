@@ -239,3 +239,31 @@ describe('audit', () => {
     expect(JSON.stringify(rows)).not.toMatch(/skagt_|key_hash|[0-9a-f]{64}/);
   });
 });
+
+describe('ops.log_hours', () => {
+  const hours = async () => (await db.query<{ week_start: string; hours: string; note: string | null }>("SELECT to_char(week_start, 'YYYY-MM-DD') AS week_start, hours, note FROM operating_hours ORDER BY week_start")).rows;
+
+  it('logs the week on its Monday, replaces a re-post for the same week, and audits each', async () => {
+    const before = await auditCount();
+    expect(await act('ops.log_hours', { week_start: '2026-11-04', hours: '1.5', note: 'quiet' })).toMatchObject({ ok: true });
+    expect(await act('ops.log_hours', { week_start: '2026-11-08', hours: '3' })).toMatchObject({ ok: true });
+    expect(await hours()).toEqual([{ week_start: '2026-11-02', hours: '3.0', note: null }]);
+    expect(await auditCount()).toBe(before + 2);
+    expect((await audits()).at(-1)).toMatchObject({ actor: ADMIN.email, action: 'ops.log_hours', target: 'week:2026-11-02' });
+  });
+
+  it.each([
+    ['a non-date', { week_start: 'tomorrow', hours: '1' }],
+    ['an impossible date', { week_start: '2026-02-31', hours: '1' }],
+    ['negative hours', { week_start: '2026-11-02', hours: '-1' }],
+    ['hours over 80', { week_start: '2026-11-02', hours: '80.5' }],
+    ['non-numeric hours', { week_start: '2026-11-02', hours: 'lots' }],
+    ['a note over 200 characters', { week_start: '2026-11-02', hours: '1', note: 'x'.repeat(201) }],
+  ])('rejects %s with 400 and writes nothing', async (_n, fields) => {
+    const before = await auditCount();
+    const rows = await hours();
+    expect(await act('ops.log_hours', fields)).toMatchObject({ ok: false, status: 400, code: 'bad_input' });
+    expect(await hours()).toEqual(rows);
+    expect(await auditCount()).toBe(before);
+  });
+});

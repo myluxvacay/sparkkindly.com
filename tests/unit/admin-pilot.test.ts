@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { seedReference } from '@/db/seed';
 import { createItem } from '@/lib/items/repo';
-import { pilotMetrics } from '@/lib/admin/pilot';
+import { operatingEffort, pilotMetrics, recentHours } from '@/lib/admin/pilot';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -123,5 +123,30 @@ describe('pilotMetrics', () => {
     const json = JSON.stringify(await pilotMetrics(db, NOW));
     expect(json).not.toMatch(/@|email|"id"|account_id/);
     expect(Object.keys(JSON.parse(json)).sort()).toEqual(['activation', 'interestUptake', 'members', 'quality', 'returning']);
+  });
+});
+
+describe('operating hours', () => {
+  beforeEach(async () => {
+    await db.exec('DELETE FROM operating_hours');
+  });
+  const log = (week: string, hours: number) => db.query('INSERT INTO operating_hours (week_start, hours) VALUES ($1, $2)', [week, hours]);
+
+  it('has no verdict without logged weeks', async () => {
+    expect(await operatingEffort(db, NOW)).toEqual({ weeks: 0, average: null, threshold: 2, met: null });
+  });
+
+  it('averages only the last 4 logged weeks and is met when under 2 hours', async () => {
+    for (const [w, h] of [['2026-10-05', 40], ['2026-10-26', 1], ['2026-11-02', 2], ['2026-11-09', 2], ['2026-11-16', 2.5]] as const) await log(w, h);
+    expect(await operatingEffort(db, NOW)).toEqual({ weeks: 4, average: 1.9, threshold: 2, met: true });
+    await log('2026-11-23', 4);
+    expect(await operatingEffort(db, NOW)).toMatchObject({ average: 2.6, met: false });
+  });
+
+  it('lists the most recent weeks first, limited', async () => {
+    for (let i = 1; i <= 9; i++) await log(`2026-0${i}-05`, i);
+    const rows = await recentHours(db, 8);
+    expect(rows).toHaveLength(8);
+    expect(rows[0]).toMatchObject({ weekStart: '2026-09-05', hours: 9 });
   });
 });

@@ -88,7 +88,7 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 ## Pilots (gate before Project 4)
 
 - [ ] P.1 **[owner]** Confirm the thresholds in spec 4a.2 or set new ones — *numbers recorded.*
-- [ ] P.2 Measurement in place: activation, return, interest uptake, operating hours, quality — *dashboard in `/admin`.*
+- [x] P.2 Measurement in place: activation, return, interest uptake, operating hours, quality — *dashboard in `/admin`.* (built 4 Nov 2026, `/admin/pilot/`, plan `2026-11-04-pilot-measurement.md`; staging check pending)
 - [ ] P.3 **[owner]** Pilot A: invite 20–30 people aged 13–25; 3 weeks — *participants signed up.*
 - [ ] P.4 **[owner]** Pilot B: one friends' group chat playing the daily items; 2 weeks; hand tally — *daily answer rate recorded.*
 - [ ] P.5 Pilot report against thresholds; owner records expand / change / stop in the spec — *decision written.*

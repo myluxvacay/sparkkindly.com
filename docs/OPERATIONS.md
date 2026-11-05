@@ -349,3 +349,16 @@ If no run is recorded for 36 hours the worker emails the admin list.
 - **Data inventory rows added by 3E** (all go with account deletion and are in the export): `accounts.notify_daily_set`, `notify_weekly_circle`, `notify_invites` (the holder's email preferences; until changed or deletion); `accounts.inactivity_notice_at` (when the idle notice was sent; cleared on sign-in; used by the retention job); `accounts.last_sign_in_at` (last email-link sign-in; retention job; kept while the account lives); `accounts.last_seen_at` (when one of the account's sessions was last used, to the hour; retention job).
 - **Migrations and rollback.** `011_settings.sql` (three notification columns and `inactivity_notice_at`) and `012_last_sign_in.sql` (`last_sign_in_at`, `last_seen_at`, backfilled from `verified_at` and live sessions) are additive; the rollback is in each header (`DROP COLUMN` plus the `schema_migrations` row). Rolling the app back needs the previous release live first: the 3E code reads the new columns (`export.ts` selects them), so drop the columns only after the older release is running. The older release ignores them. Rolling back below 012 and forward again can lose activity timestamps (the older code does not update `last_sign_in_at` or `last_seen_at`, so the inactivity sweep would see accounts as idler than they are). Before deploying forward after such a rollback, either run `UPDATE accounts SET last_seen_at = now(), last_sign_in_at = now() WHERE verified_at IS NOT NULL;` or disable the inactivity job for a day.
 - **Before production.** The go-live gate stands: the privacy and About pages must be rewritten (they still say there are no accounts and that SparkKindly does not save answers) with the professional privacy review (tracker 3.11) before `ACCOUNTS_ENABLED` goes on in production, and must state the export, deletion and inactivity behaviour above, including the 30-day backup ageing. The drafts for that review (data inventory, privacy policy, terms, community guidelines, the exact page-copy and e2e changes, and the professional's checklist) are in `docs/legal/`; none is published.
+
+## Pilot measurement (roadmap P.2)
+
+`/admin/pilot/` shows the spec 4a.2 pilot metrics against their thresholds, computed from data the site already holds
+(no new tracking, no cookie, aggregates only). Activation, return and interest uptake are over verified accounts created in
+the last 21 days ("signed-in members"); visitors are not measured because the site holds no visitor identifiers.
+Quality is unpublishes plus text edits of published items per 100 items published in the window. Pilot B (circle value) is
+the owner's hand tally and is not shown. Thresholds are the `PILOT_THRESHOLDS` constant in `lib/admin/pilot.ts`; changing
+the owner's numbers (P.1) is a one-line edit.
+- **Log operating hours** with the form on the page (`ops.log_hours`): one row per week, saved under that week's Monday;
+  logging the same week again replaces it. Effort is the average of the last 4 logged weeks, met under 2 hours.
+- Migration `013_operating_hours.sql` is additive. Rollback: `DROP TABLE operating_hours` and delete its
+  `schema_migrations` row.
