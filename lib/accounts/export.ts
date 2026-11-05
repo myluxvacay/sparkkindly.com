@@ -28,6 +28,8 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   admin_sessions: 'administrator session credentials (token hashes), not member accounts',
   events: 'site event log; profile_id is never written today (only item_published events). Revisit if that changes',
   circles: "circle data shared by its members; the export lists the account's own memberships",
+  circle_interests: 'circle data shared by its members (topic and world ids the owner chose), nothing about one person',
+  circle_daily_sets: 'circle data shared by its members (which items the circle got each day), nothing about one person',
 };
 
 // Columns of the two tables exported row by row: each is exported or deliberately excluded with its reason.

@@ -11,7 +11,7 @@ import { lockCircle, myRole, type CircleRow } from './repo';
 export type MemberKey = { accountId: string; profileId: string | null };
 
 // The circle locked for an owner action by `ownerId`, or the refusal.
-async function asOwner(tx: Queryable, ownerId: string, slug: string): Promise<CircleRow | 'not_owner' | 'closed'> {
+export async function asOwner(tx: Queryable, ownerId: string, slug: string): Promise<CircleRow | 'not_owner' | 'closed'> {
   const c = isUuid(ownerId) ? await lockCircle(tx, slug) : null;
   if (!c || c.owner_account_id !== ownerId || (await myRole(tx, c.id, ownerId)) !== 'owner') {
     return 'not_owner';

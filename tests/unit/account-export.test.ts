@@ -141,6 +141,11 @@ describe('export inventory', () => {
     expect(EXPORTED_TABLES).not.toContain('circles');
   });
 
+  it('accounts for the circle set tables (plan 4C): excluded with reasons, as circle data shared by members', () => {
+    expect(EXCLUDED_TABLES.circle_interests).toMatch(/circle/);
+    expect(EXCLUDED_TABLES.circle_daily_sets).toMatch(/circle/);
+  });
+
   it('includes the seven tables of the data inventory', () => {
     for (const t of [
       'accounts',
