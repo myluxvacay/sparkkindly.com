@@ -4,7 +4,7 @@
 // each circle that had the item in a set in the last 30 days.
 import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
-import { adult, circleOf, fixtures, item, join, type Fixtures } from '../helpers/circle-play';
+import { adult, childIn, circleOf, fixtures, item, join, type Fixtures } from '../helpers/circle-play';
 import { recordAnswer } from '@/lib/accounts/responses';
 import { recordPlay } from '@/lib/accounts/record-play';
 import { playResult } from '@/lib/play/answer';
@@ -68,7 +68,7 @@ describe('rescoreItem and changeAnswerKey', () => {
     await join(db, c1.slug, b);
     await inSet(c1.id, id, '2026-11-05');
     await inSet(c1.id, id, '2026-11-01');
-    await inSet(c2.id, id, '2026-10-10');
+    await inSet(c2.id, id, '2026-11-05');
     await inSet(c3.id, id, '2026-09-20'); // more than 30 days ago
 
     expect(await db.transaction((tx) => changeAnswerKey(tx, id, 'a', NOW))).toEqual({ changed: 2, circles: 2 });
@@ -86,6 +86,28 @@ describe('rescoreItem and changeAnswerKey', () => {
     expect(await listNotices(db, old, c1.slug, NOW)).toBeNull();
     expect(await listNotices(db, a, 'zzzzzzzzzz', NOW)).toBeNull();
     expect(JSON.stringify(await listNotices(db, a, c1.slug, NOW))).not.toMatch(/choice|answer/);
+  });
+
+  it('notifies only circles where a current or former member flipped answer counted on a set day (final review 4)', async () => {
+    const [ann, bob, cat, dan] = [await adult(db), await adult(db), await adult(db), await adult(db)];
+    const id = await item(db, { world: f.worlds.a });
+    const adultsItem = await item(db, { world: f.worlds.a, audience: 'adults' });
+    for (const who of [ann, bob]) await recordAnswer(db, { accountId: who, profileId: null }, id, true, NOW, 'b');
+    await recordAnswer(db, { accountId: ann, profileId: null }, adultsItem, true, NOW, 'b');
+    const stranger = await circleOf(db, dan, { kind: 'friends' }); // dan never answered; ann and bob are not members
+    const former = await circleOf(db, cat, { kind: 'friends' });
+    await join(db, former.slug, bob);
+    await db.query('UPDATE circle_members SET left_at = $2 WHERE circle_id = $1 AND account_id = $3', [former.id, NOW.toISOString(), bob]);
+    const otherDay = await circleOf(db, ann, { kind: 'friends', name: 'Other day' });
+    const family = await circleOf(db, ann, { kind: 'family', name: 'Family' });
+    await childIn(db, ann, family.slug, 'Mia');
+    for (const c of [stranger, former]) await inSet(c.id, id, '2026-11-05');
+    await inSet(otherDay.id, id, '2026-11-03');
+    await inSet(family.id, adultsItem, '2026-11-05');
+
+    expect((await db.transaction((tx) => changeAnswerKey(tx, id, 'a', NOW)))!.changed).toBe(2);
+    expect(await db.transaction((tx) => changeAnswerKey(tx, adultsItem, 'a', NOW))).toEqual({ changed: 1, circles: 0 });
+    expect(await notices()).toEqual([former.id]);
   });
 
   it('an item without an answer row is not changed', async () => {
