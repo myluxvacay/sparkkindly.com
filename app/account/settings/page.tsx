@@ -47,7 +47,7 @@ function PrefsForm({ settings, error, pending }: { settings: Prefs; error: boole
       {pending && <p id="pending-hint">These settings are available after your parent or guardian confirms.</p>}
       <fieldset aria-describedby="notify-hint" disabled={pending}>
         <legend>Email me when</legend>
-        <p id="notify-hint">Only sign-in and consent emails are sent right now. These choices apply when the others start.</p>
+        <p id="notify-hint">Circle emails go to circle members only, and only for the choices ticked here. Every one has an unsubscribe link.</p>
         <label className="admin-radio">
           <input type="checkbox" name="daily_set" defaultChecked={settings.notify.dailySet} /> Daily set ready
         </label>

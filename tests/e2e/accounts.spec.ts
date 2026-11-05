@@ -832,7 +832,7 @@ test('an adult changes email choices and time zone, downloads their data, and th
   await page.getByRole('link', { name: 'Settings' }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'Settings' })).toBeVisible();
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
-  await expect(page.getByRole('group', { name: 'Email me when' })).toContainText('Only sign-in and consent emails are sent right now');
+  await expect(page.getByRole('group', { name: 'Email me when' })).toContainText('Circle emails go to circle members only, and only for the choices ticked here');
   await expect(page.getByRole('heading', { name: 'Forgotten your PIN?' })).toHaveCount(0);
   await axeBothWidths(page);
 
@@ -855,7 +855,7 @@ test('an adult changes email choices and time zone, downloads their data, and th
   expect(download.suggestedFilename()).toBe('sparkkindly-export.json');
   const text = readFileSync(await download.path(), 'utf8');
   const data = JSON.parse(text);
-  expect(Object.keys(data).sort()).toEqual(['account', 'answers', 'childProfiles', 'circles', 'exportedAt', 'interests', 'invites', 'joinedThroughInviteAt']);
+  expect(Object.keys(data).sort()).toEqual(['account', 'answers', 'childProfiles', 'circles', 'exportedAt', 'interests', 'invites', 'joinedThroughInviteAt', 'reports']);
   expect(data.account).toMatchObject({ email, timeZone: 'Asia/Tokyo', notify: { dailySet: true, weeklyCircle: false, invites: true } });
   const session = (await page.context().cookies(BASE)).find((x) => x.name === '__Host-sk_account')!.value;
   expect(text).not.toContain(session);

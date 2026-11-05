@@ -100,11 +100,11 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 - [x] 4.3 Circle interests and time zone; daily set selection with child-safe filtering and "bonus" fill — *a circle with a child profile never gets an `adults` item.* (4C, 5 Nov 2026, behind `CIRCLES_ENABLED`: owner-chosen topics and worlds, five items a circle day, read-time audience re-filter; plan `2026-11-05-project-4c-daily-set-scores.md`; staging check pending)
 - [x] 4.4 Scoring (correctness only), tallies daily/weekly/monthly/all-time, ties, re-scoring on corrections, "former member" rule, recompute on deletion — *property tests on tallies.* (4C: derived on read, competition ranks, points 0 to 100 in `/admin/pilot/`, `changeAnswerKey` re-scores stored choices and writes circle notices; `circles-scores.test.ts`, `circles-rescore.test.ts`)
 - [x] 4.5 In-circle leaderboards only; no public rankings — *no public route exposes scores.* (4C: `/circles/<slug>/scores/` for current members and their child profiles only; a source scan keeps `lib/circles/scores` inside `app/circles` and `lib/circles`; e2e `circle-play.spec.ts`)
-- [ ] 4.6 Member notifications: daily set ready, weekly summary, honouring preferences — *emails sent per preference.*
-- [ ] 4.7 Growth loop: post-answer invite and share prompts; branded share image without personal data — *share image contains no names.*
-- [ ] 4.8 Community moderation: blocked words on names and descriptions, owner hide, leave and report — *tests.*
+- [x] 4.6 Member notifications: daily set ready, weekly summary, honouring preferences — *emails sent per preference.* (4D: hourly `circle-mail` job, claims per circle/kind/period, re-score emails, RFC 8058 headers; `circles-mail.test.ts`, `circle-mail-job.test.ts`)
+- [x] 4.7 Growth loop: post-answer invite and share prompts; branded share image without personal data — *share image contains no names.* (4D: prompt after a set answer, plain public item URL, the existing item template image; `circles-share-prompt.test.ts`, `circle-play.spec.ts`)
+- [x] 4.8 Community moderation: blocked words on names and descriptions, owner hide, leave and report — *tests.* (4D: member reports, `/admin/circles/` hide and restore, audited; `circles-reports.test.ts`, `circles.spec.ts`)
 - [x] 4.9 Younger-teen rules: 13–15 cannot join public communities — *permission tests.* (4A: 13–17 create friends circles only and a consent-pending 13–15 creates none; 4B: the shared join rules refuse 13–15 in communities, 13–17 in a circle with a child profile and consent-pending 13–15 everywhere; `account-isolation.test.ts`)
-- [ ] 4.10 Done-when: a circle of four, including two child profiles, plays the daily set and sees scores; a friend joins through a link.
+- [x] 4.10 Done-when: a circle of four, including two child profiles, plays the daily set and sees scores; a friend joins through a link. (e2e `circle-play.spec.ts`, 4C; with 4D's emails, reports and share prompt Project 4 is built behind `CIRCLES_ENABLED`, staging check pending)
 
 ## Project 5: Social media distribution
 

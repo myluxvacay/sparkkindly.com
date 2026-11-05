@@ -125,6 +125,10 @@ test('a family of four plays the daily set, a child reads the scores, a friend j
   await axeBothWidths(mum);
 
   await answer(mum, slug, 'Circle quiz 1');
+  // 4D growth prompt: an adult member's answer to a set item offers the invite link and the plain public item URL.
+  await expect(mum.getByRole('link', { name: 'Invite someone to The Play Home' })).toBeVisible();
+  expect(await mum.getByLabel(/Share this game/).inputValue()).toMatch(/^https?:\/\/[^/?#]+\/play\/e2e-cp-1\/$/);
+  await axeBothWidths(mum);
   await answer(mum, slug, 'Circle quiz 2');
   await answer(dad, slug, 'Circle quiz 1');
   await mum.goto(`/circles/${slug}/set/`);
@@ -138,6 +142,7 @@ test('a family of four plays the daily set, a child reads the scores, a friend j
   await expect(mum).toHaveURL(new RegExp(`/circles/${slug}/set/$`));
   await expect(mum.getByText('Circle quiz for adults')).toHaveCount(0);
   for (const t of ['Circle quiz 1', 'Circle quiz 2', 'Circle quiz 3']) await answer(mum, slug, t);
+  await expect(mum.getByRole('heading', { name: 'Play it together' })).toHaveCount(0);
   expect((await mum.goto(`/circles/${slug}/interests/`))!.url()).toContain('/account/children/playing/');
   await mum.goto(`/circles/${slug}/scores/`);
   const table = mum.getByRole('table', { name: /Today/ });

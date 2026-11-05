@@ -9,6 +9,7 @@ import { recordableRequest, recordPlay, type AnswerNote } from '@/lib/accounts/r
 import { clueCount, hasResponse, toParams, type SearchParams } from '@/lib/public/play-params';
 import PlayForm from './PlayForm';
 import PlayResult from './PlayResult';
+import SharePrompt from './SharePrompt';
 
 // One playable item: the answer form until a response arrives, then the server's verdict. Shared by the item page and
 // /quiz/, so both behave the same. A signed-in context allowed to save answers gets its first answer recorded, only for
@@ -33,6 +34,7 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
       {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} />}
       {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
       <Note note={note} />
+      {result?.status === 'ok' && <SharePrompt itemId={item.id} />}
     </div>
   );
 }

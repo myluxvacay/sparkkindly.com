@@ -79,6 +79,12 @@ expires (14 days), that the invite email names the inviter by their name in the 
 records which invite brought a new account ([data inventory](data-inventory.md), `circle_invites` and `referrals`).
 The trust-page test's `/join (a|the) (circle|community)/i` guard stays until that copy goes live.
 
+From Project 4D it must also say that circle members who switch them on get a "your set is ready" email, a weekly
+summary (their own rank and points, the circle total and member count, never other members' names) and an email when a
+score is corrected, each with a one-click unsubscribe; and that a member can report a circle, the report keeping the
+reason, an optional note and the reporter's account (removed if that account is deleted), which the site owner reviews
+and may hide the circle ([data inventory](data-inventory.md), `circle_mail_log` and `circle_reports`).
+
 ## Other places that point at the privacy page
 
 - The parent consent email links to the privacy page (`lib/accounts/consent-email.ts`, `privacyUrl`). It must not be

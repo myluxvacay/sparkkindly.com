@@ -339,7 +339,7 @@ If no run is recorded for 36 hours the worker emails the admin list.
 
 ### Settings, export, deletion and inactivity (Project 3E)
 
-- **Settings page.** `/account/settings/` (adult context only; behind `ACCOUNTS_ENABLED`) holds three notification preferences (`notify_daily_set`, `notify_weekly_circle`, `notify_invites`, all off by default) and the time zone (a native select of supported zones; an invalid value keeps the old one). Nothing sends the optional emails yet; the preferences are ready for when something does. Every POST (save, export, delete, PIN reset) checks `Origin`, takes the account from the session only (form-supplied account or profile ids are ignored) and answers 403 in a child context. Anonymous goes to sign-in. A consent-pending 13 to 15 account sees the form disabled ("available after your parent or guardian confirms") and its save is refused with a neutral code: until consent it saves interests only. Export, PIN reset and the interests save each allow 30 POSTs per account per hour (in memory, per process); past that the answer is 429 "Too many attempts. Please try again later."
+- **Settings page.** `/account/settings/` (adult context only; behind `ACCOUNTS_ENABLED`) holds three notification preferences (`notify_daily_set`, `notify_weekly_circle`, `notify_invites`, all off by default) and the time zone (a native select of supported zones; an invalid value keeps the old one). Invite emails (4B) and the circle set-ready, re-score and weekly emails (4D) honour them. Every POST (save, export, delete, PIN reset) checks `Origin`, takes the account from the session only (form-supplied account or profile ids are ignored) and answers 403 in a child context. Anonymous goes to sign-in. A consent-pending 13 to 15 account sees the form disabled ("available after your parent or guardian confirms") and its save is refused with a neutral code: until consent it saves interests only. Export, PIN reset and the interests save each allow 30 POSTs per account per hour (in memory, per process); past that the answer is 429 "Too many attempts. Please try again later."
 - **Export.** A POST to `/account/settings/export/` returns one JSON file (`Content-Disposition: attachment`, `Cache-Control: no-store`) with the account (email, date of birth, time zone, consent state and dates, guardian confirmation, notification preferences, `verified_at`, `last_sign_in_at`, `last_seen_at`, `inactivity_notice_at`), the holder's interests and answers, and each child profile with its own interests and answers. Never exported: the PIN hash and counters, tokens, sessions, internal ids, other accounts' data; the parent address appears only masked. The read runs in one repeatable-read, read-only transaction. `tests/unit/account-export.test.ts` follows the schema: a new personal-data table, or a new column on `accounts` or `child_profiles`, fails it until it is exported or excluded with a reason in `lib/accounts/export.ts`.
 - **Self-service deletion.** `/account/settings/delete/` names what goes and needs the account email typed (case-insensitive) in an adult context. It removes the account from every personal-data table: `accounts`, `account_login_tokens` (by address, no foreign key), `account_sessions`, `account_consent_tokens`, `child_profiles`, `profile_interests` and `item_responses`, in one transaction, then clears the cookie and goes to sign-in with a neutral code. Backups age out within 30 days (see "Backups, restore and monitoring"), so a deleted account can persist in a backup for up to 30 days and is never restored selectively. The account-isolation test checks all seven tables.
 - **Inactivity.** The worker job `inactivity-sweep` runs once per UTC day (claimed in `job_runs`). Last activity is the greatest of `last_sign_in_at`, `last_seen_at` (updated by the session refresh at most hourly), `verified_at` and the latest answer by the account or any of its profiles. At 730 days idle (slightly under 24 calendar months across a leap day, so a notice can come a day early) the account gets one notice email at its own address and `inactivity_notice_at` is set. Thirty days after the notice it is deleted if still inactive, rechecked under the account row lock; found active it is spared and the notice cleared. Signing in by email link clears the notice. Unverified accounts (the 48 hour purge) and consent-pending teens (the consent sweep) are excluded. Each run is capped at 50 notices and 20 deletions; past a cap it stops and writes a `failed_jobs` row (job `inactivity-sweep`, counts only, never an address), which shows with the other failed jobs. The run refuses, with the same kind of alert, when the worker clock and the database clock differ by more than 10 minutes. The consent sweep (at most 20 deletions per run, job `consent-sweep`) and the unverified purge (at most 500 accounts per run, job `account-purge`) have the same cap alert and clock check (`lib/jobs/guards.ts`). A failed notice send is retried the next day. Addresses are never logged.
@@ -515,7 +515,7 @@ If no run is recorded for 36 hours the worker emails the admin list.
   number, order of ids; never typed text). `changeAnswerKey(tx, itemId, answer, now)` in `lib/circles/rescore.ts` is the
   one way to change an existing item's answer key: in the same transaction it re-checks every stored choice, flips
   `correct` where it changed, and when anything flipped writes one `circle_notices` row per circle that had the item in a
-  set in the last 30 days (the circle page shows "Scores corrected"; 4D emails it). Answers saved before 016 have no
+  set in the last 30 days (the circle page shows "Scores corrected"; 4D emails it, see "Circle email, reports and hiding"). Answers saved before 016 have no
   choice and keep their result. There is no admin page for answer-key corrections yet; run it from a script in a
   transaction if one is ever needed.
 - **Migration and rollback.** `016_circle_sets.sql` is additive (`circle_interests`, `circle_daily_sets`,
@@ -524,6 +524,55 @@ If no run is recorded for 36 hours the worker emails the admin list.
   only after the previous release is live: `DROP TABLE circle_notices; DROP TABLE circle_daily_sets; DROP TABLE
   circle_interests; DROP TABLE site_settings; ALTER TABLE item_responses DROP COLUMN choice; DELETE FROM
   schema_migrations WHERE name = '016_circle_sets.sql';` (as in the migration header).
+
+## Circle email, reports and hiding (Project 4D)
+
+- **Flags.** Same as circles: `ACCOUNTS_ENABLED` and `CIRCLES_ENABLED`. With either unset the worker sends no circle
+  mail, `/circles/<slug>/report/` is a 404 and no share prompt shows. `/admin/circles/` itself is an admin page and
+  always available (it simply lists nothing until reports exist).
+- **Circle mail job** (`lib/jobs/circle-mail.ts`, `lib/circles/mail.ts`). Once per UTC hour (`job_runs` key
+  `circle-mail` + the hour) the worker selects: the set-ready email for each open, visible circle with at least one
+  member besides the owner, from 07:00 in the circle's time zone (period: the local day; the set is made then if
+  nobody opened it, and an empty set sends nothing); the weekly summary of the previous Monday-to-Sunday week from Monday
+  08:00 local (period: that Monday; if the worker was down all Monday it goes later that week); and one re-score email
+  per `circle_notices` row of the last 24 hours. Recipients are current account members (never a child profile) whose
+  account is verified, not consent-pending, with `notify_daily_set` (set-ready, re-score) or `notify_weekly_circle`
+  (weekly) on, re-read when the mail is chosen. Each (circle, kind, period) is claimed in `circle_mail_log` before
+  sending, so a rerun, a crash and restart, or two workers never mail a period twice.
+- **What the emails show.** The set-ready and re-score emails name only the circle and link to it: no item, answer or
+  member name. The weekly email shows the recipient's own rank and points (and, for an adult, each of their own child
+  profiles by circle name), the circle total and the member count; never another member's name. Every email ends with
+  the 3E unsubscribe link for its preference and carries `List-Unsubscribe` (the one-click
+  `/account/unsubscribe/confirm/?t=…` POST) and `List-Unsubscribe-Post: List-Unsubscribe=One-Click` (RFC 8058), sent
+  as MailerSend custom headers. Without `UNSUBSCRIBE_SECRET` no circle email is sent at all.
+- **Caps and failures.** At most 200 emails and 50 (circle, kind, period) batches a run; a circle is never split, the
+  rest go next hour. The run refuses (one `failed_jobs` alert) when the worker and database clocks differ by more than 10
+  minutes. Each send is bounded by `sendEmail`'s 10-second timeout. A failed send is not retried in that period (the
+  claim stays, as retrying would re-mail those who got it); each run with failures writes one `failed_jobs` row with
+  the count, never an address.
+- **How to stop mail.** All of it: unset `CIRCLES_ENABLED` (or remove `UNSUBSCRIBE_SECRET`, which also disables
+  unsubscribe and invite mail). One person: they untick the preference in settings or use the email's unsubscribe link.
+  One circle: hide it in `/admin/circles/`.
+- **Reports.** A current account member whose account may join circles reports their own circle from the circle page
+  ("Report this circle": reason `name`, `behaviour`, `safety` or `other`, optional note up to 300 characters; blocked
+  words are not applied to notes). 5 reports per account per rolling day. A child profile context gets 403 (it tells its
+  adult). The row (`circle_reports`) keeps the circle, the reporter account (nulled when that account is deleted, so the
+  report stays), reason, note and times; never a member's contact details. Reporters see their own reports in their
+  data export.
+- **Hiding.** `/admin/circles/` lists reported circles (open and total report counts, the latest reason and note, member
+  count; no names or addresses) with "Hide circle", "Restore circle" and "Mark reports handled" (admin actions
+  `circle.hide`, `circle.restore`, `circle.reports_handled`, each audited). A hidden circle is a 404 for its members on
+  every page, leaves their lists, the communities list and invite pages, and gets no mail; nothing is deleted, and
+  restore brings everything back.
+- **Share prompt** (`lib/circles/share-prompt.ts`). After an adult-context member answers an item that is in today's
+  set of one of their circles, the result area offers "Invite someone to <circle>" (only where they may invite) and the
+  item's public URL as text to copy, with nothing appended (no circle, member or account id). Never in a child context,
+  never for Kids world items, never for anonymous visitors.
+- **Migrations and rollback.** `018_circle_mail.sql` (`circle_mail_log`) and `019_circle_reports.sql`
+  (`circle_reports`) are additive (017 was already taken by the invite address guard). Code rollback: unset
+  `CIRCLES_ENABLED` or switch back to the previous release (it never reads them). Schema rollback, only after the
+  previous release is live: `DROP TABLE circle_reports; DROP TABLE circle_mail_log; DELETE FROM schema_migrations WHERE
+  name IN ('018_circle_mail.sql', '019_circle_reports.sql');`.
 
 ## Pilot measurement (roadmap P.2)
 

@@ -55,6 +55,10 @@ import { getTallies } from '@/lib/circles/scores';
 import { changeAnswerKey, listNotices } from '@/lib/circles/rescore';
 import { loadScoresPage, loadSetPage, saveCircleInterestsRequest } from '@/lib/circles/play-web';
 import { getCircleInterests } from '@/lib/circles/interests';
+import { dailyMailFor, weeklyMailFor } from '@/lib/circles/mail';
+import { reportCircle, reportCircleRequest } from '@/lib/circles/reports';
+import { sharePromptFor } from '@/lib/circles/share-prompt';
+import { handleAdminAction } from '@/lib/admin/act';
 import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, searchPublic } from '@/lib/public/reads';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -1217,10 +1221,122 @@ describe('circle sets and scores (plan 4C, Task 4)', () => {
   });
 });
 
+describe('circle mail, reports and share prompts (plan 4D, Task 3)', () => {
+  const NOW = new Date('2026-11-05T12:00:00Z');
+  const LINKS = { base: 'https://staging.sparkkindly.com', secret: 'test-only-unsubscribe-secret-0123456789abcdef' };
+  const CAP = { mails: 200, circles: 50 };
+  let c = 0;
+  let world: number;
+  async function person() {
+    const email = `p4d-${c++}@example.test`;
+    const r = await signUp(db, { email, dateOfBirth: '1984-02-02' }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    const session = await signIn(email);
+    await db.query('UPDATE accounts SET notify_daily_set = true, notify_weekly_circle = true WHERE id = $1', [r.accountId]);
+    return { id: r.accountId, email, session };
+  }
+  const req = (body: Record<string, string>, cookie: string, url = 'http://localhost/x') =>
+    new Request(url, {
+      method: 'POST',
+      headers: {
+        host: 'staging.sparkkindly.com',
+        origin: 'https://staging.sparkkindly.com',
+        'content-type': 'application/x-www-form-urlencoded',
+        cookie,
+      },
+      body: new URLSearchParams(body).toString(),
+    });
+  // Ann's family circle with member Bob and a child profile of Ann's (not yet in it), and Cat in a circle of her own.
+  async function setup() {
+    const ann = await person();
+    const bob = await person();
+    const cat = await person();
+    const r = await createCircle(db, ann.id, { name: 'Mail', kind: 'family', yourName: 'Ann' }, T0);
+    const other = await createCircle(db, cat.id, { name: 'Other', kind: 'friends', yourName: 'Cat' }, T0);
+    if (r.status !== 'created' || other.status !== 'created') throw new Error('circle failed');
+    await db.query("INSERT INTO circle_members (circle_id, account_id, display_name) SELECT id, $2, 'Bob' FROM circles WHERE slug = $1", [
+      r.slug,
+      bob.id,
+    ]);
+    const kid = await createChildProfile(db, ann.id, { displayName: 'Kid', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (kid.status !== 'created') throw new Error('profile failed');
+    const id = (await db.query<{ id: string }>('SELECT id FROM circles WHERE slug = $1', [r.slug])).rows[0].id;
+    return { ann, bob, cat, slug: r.slug, id, kid: kid.profileId };
+  }
+
+  beforeAll(async () => {
+    world = (await db.query<{ id: number }>("SELECT id FROM worlds WHERE slug = 'play'")).rows[0].id;
+  });
+  beforeEach(() => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('CIRCLES_ENABLED', 'true');
+  });
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('account B and non-members get no mail for circle A; members get only their own circle mail', async () => {
+    const { ann, bob, cat, id } = await setup();
+    const batches = await weeklyMailFor(db, new Date('2026-11-09T09:00:00Z'), CAP, LINKS);
+    const forA = batches.find((b) => b.claim.circleId === id);
+    expect(forA?.mails.map((m) => m.to).sort()).toEqual([ann.email, bob.email].sort());
+    for (const b of batches) {
+      for (const m of b.mails) if (m.to === cat.email) expect(m.claim.circleId).not.toBe(id);
+      if (b.claim.circleId !== id) expect(b.mails.map((m) => m.to)).not.toContain(ann.email);
+    }
+    expect(await dailyMailFor(db, new Date('2026-11-05T08:00:00Z'), CAP, { ...LINKS, secret: '' })).toEqual([]);
+  });
+
+  it('child profile -> adults item denied at the email: the weekly summary scores it nothing while a child is in', async () => {
+    const { ann, slug, id, kid } = await setup();
+    const adultsItem = await playItem(db, { world, audience: 'adults' });
+    await db.query("INSERT INTO circle_daily_sets (circle_id, day, position, item_id) VALUES ($1, '2026-11-04', 1, $2)", [id, adultsItem]);
+    await recordAnswer(db, { accountId: ann.id, profileId: null }, adultsItem, true, new Date('2026-11-04T12:00:00Z'));
+    const mine = async () =>
+      (await weeklyMailFor(db, new Date('2026-11-09T09:00:00Z'), CAP, LINKS))
+        .find((b) => b.claim.circleId === id)!
+        .mails.find((m) => m.to === ann.email)!.text;
+    expect(await mine()).toMatch(/You: rank 1, 10 points/);
+    expect(await addChildToCircle(db, ann.id, slug, kid, 'on', NOW)).toBe('added');
+    expect(await mine()).toMatch(/You: rank 1, 0 points/);
+  });
+
+  it('account B cannot report circle A; a child context is denied the report route', async () => {
+    const { ann, cat, slug, kid } = await setup();
+    expect(await reportCircle(db, cat.id, slug, { reason: 'safety' }, NOW)).toBe('not_member');
+    const deps = { db, now: NOW, limit: () => true };
+    const viaRoute = await reportCircleRequest(req({ reason: 'safety' }, `__Host-sk_account=${cat.session}`), deps, slug);
+    expect(viaRoute.headers.get('location')).toBe('/circles/?r=gone#result');
+    expect(await switchToProfile(db, ann.session, kid, NOW)).toBe(true);
+    expect((await reportCircleRequest(req({ reason: 'safety' }, `__Host-sk_account=${ann.session}`), deps, slug)).status).toBe(403);
+    expect((await db.query('SELECT count(*)::int AS n FROM circle_reports')).rows[0].n).toBe(0);
+  });
+
+  it('a member account session gets no admin data or action (hide refused, sent to admin sign-in)', async () => {
+    const { bob, id } = await setup();
+    const r = await handleAdminAction(
+      req({ action: 'circle.hide', id, csrf: 'x' }, `__Host-sk_account=${bob.session}`, 'http://localhost/admin/act/'),
+      { db, env: { ADMIN_EMAILS: bob.email }, now: NOW },
+    );
+    expect([r.status, r.headers.get('location')]).toEqual([303, '/admin/sign-in/']);
+    expect((await db.query('SELECT hidden_at FROM circles WHERE id = $1', [id])).rows[0].hidden_at).toBeNull();
+  });
+
+  it('share prompt: account B, non-members and a child context get none', async () => {
+    const { ann, cat, id, kid } = await setup();
+    const quiz = await playItem(db, { world, audience: 'all' });
+    await db.query("INSERT INTO circle_daily_sets (circle_id, day, position, item_id) VALUES ($1, '2026-11-05', 1, $2)", [id, quiz]);
+    expect(await sharePromptFor(db, (await getContext(db, ann.session, NOW))!, quiz, NOW, LINKS.base)).not.toBeNull();
+    expect(await sharePromptFor(db, (await getContext(db, cat.session, NOW))!, quiz, NOW, LINKS.base)).toBeNull();
+    expect(await switchToProfile(db, ann.session, kid, NOW)).toBe(true);
+    expect(await sharePromptFor(db, (await getContext(db, ann.session, NOW))!, quiz, NOW, LINKS.base)).toBeNull();
+  });
+});
+
 describe('arrives with later features', () => {
   // The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
   // child profile -> adults item denied at the daily set and scores: covered above (plan 4C, Task 4).
-  it.todo('child profile -> adults item denied at the email routes (these routes do not exist yet; 4D)');
+  // child profile -> adults item denied at the email: covered above (plan 4D, Task 3); the daily mail names no item at all.
   // child profile -> settings, export, delete and PIN reset denied: covered above (plan 3E, Task 4).
   // child profile -> invites denied: covered above (plan 4B, Task 3).
   it.todo('child profile -> comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
