@@ -42,3 +42,32 @@ export function templateImage(item: PublicItem, world: { name: string; color: st
     { width: 1200, height: 630, headers: { 'cache-control': 'public, max-age=86400' } },
   );
 }
+
+// The one preview image for every circle invite (plan 4B): brand and a fixed line only, never a circle or person's
+// name, so the image says nothing about who invited whom and can be cached publicly.
+export function inviteImage(): ImageResponse {
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          background: CREAM,
+          padding: 72,
+          borderLeft: `24px solid ${worldHex('coral')}`,
+        }}
+      >
+        <div style={{ display: 'flex', fontSize: 40, color: PLUM }}>SparkKindly</div>
+        <div style={{ display: 'flex', flexDirection: 'column', fontSize: 72, lineHeight: 1.15, color: PLUM }}>
+          <div style={{ display: 'flex' }}>You are invited</div>
+          <div style={{ display: 'flex' }}>to join a circle</div>
+        </div>
+        <div style={{ display: 'flex', fontSize: 28, color: INK }}>A daily set of quizzes and games, played together</div>
+      </div>
+    ),
+    { width: 1200, height: 630, headers: { 'cache-control': 'public, max-age=86400' } },
+  );
+}

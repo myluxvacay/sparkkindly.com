@@ -25,7 +25,7 @@ const back = (slug: string, code: string) => seeOther(`/circles/${slug}/?r=${cod
 const checked = (form: URLSearchParams) => form.get('confirm') === 'on';
 const field = (form: URLSearchParams, name: string) => form.get(name) ?? '';
 
-function post(request: Request, d: CircleDeps, limit: (id: string) => boolean, act: Act): Promise<Response> {
+export function post(request: Request, d: CircleDeps, limit: (id: string) => boolean, act: Act): Promise<Response> {
   if (!circlesEnabled()) return Promise.resolve(notFound());
   return asAdult(request, d, async (ctx, form) => {
     if (!(d.limit ?? limit)(ctx.account.id)) return tooMany();
@@ -34,7 +34,7 @@ function post(request: Request, d: CircleDeps, limit: (id: string) => boolean, a
 }
 
 // A POST under /circles/<slug>/: only for a current member of that circle.
-function scoped(request: Request, d: CircleDeps, slug: string, act: Act): Promise<Response> {
+export function scoped(request: Request, d: CircleDeps, slug: string, act: Act): Promise<Response> {
   return post(request, d, circleActionLimits, async (accountId, form) => {
     if (!isSlug(slug) || !(await getCircleForMember(d.db, accountId, slug))) return seeOther(GONE);
     return act(accountId, form);

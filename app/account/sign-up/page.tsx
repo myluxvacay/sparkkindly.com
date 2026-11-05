@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import { requireAccounts } from '@/lib/accounts/next';
+import { inviteReturnPath } from '@/lib/circles/invites';
 
 export const dynamic = 'force-dynamic';
 
-type Props = { searchParams: Promise<{ sent?: string; r?: string; invalid?: string }> };
+type Props = { searchParams: Promise<{ next?: string; sent?: string; r?: string; invalid?: string }> };
 
 export default async function AccountSignUpPage({ searchParams }: Props) {
   requireAccounts();
   const q = await searchParams;
+  // An invite page the visitor came from (validated); the emailed sign-in link brings them back to it.
+  const next = inviteReturnPath(q.next);
   // r=a: under 13 (nothing stored); r=b: a 13-15 sign-up without a usable parent email. Neutral on purpose.
   const under13 = q.r === 'a';
   const parentError = q.r === 'b';
@@ -41,6 +44,7 @@ export default async function AccountSignUpPage({ searchParams }: Props) {
         </div>
       )}
       <form method="post" action="/account/sign-up/submit/" className="prose admin-form">
+        {next && <input type="hidden" name="next" value={next} />}
         <p>
           <label htmlFor="email">Email address</label>
           <input id="email" name="email" type="email" required autoComplete="email" maxLength={254} />

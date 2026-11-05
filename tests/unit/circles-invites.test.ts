@@ -15,6 +15,8 @@ import {
   acceptInvite,
   createEmailInvite,
   createLinkInvite,
+  inviteReturnPath,
+  listInvites,
   previewInvite,
   purgeExpiredInvites,
   recordOpen,
@@ -153,6 +155,69 @@ describe('link invites', () => {
     expect(await closeCircle(db, owner, slug, T0)).toBe('closed');
     expect(await createLinkInvite(db, owner, slug, T0)).toEqual({ status: 'closed' });
     expect(await invites()).toEqual([]);
+  });
+});
+
+describe('listInvites', () => {
+  it('shows a member their own active invites (address included) and the owner every active invite (no address)', async () => {
+    const owner = await account();
+    const slug = await circle(owner);
+    const member = await account();
+    await addMember(slug, member, 'Mo');
+    const box = mailbox();
+    await createEmailInvite(db, member, slug, 'friend@example.test', T0, box.send);
+    const memberLink = await link(member, slug, at(1));
+    await link(owner, slug, at(2));
+    const mine = await listInvites(db, member, slug, at(3), memberLink);
+    expect(mine).toMatchObject({ canInvite: true, link: memberLink, hasLink: true });
+    expect(mine!.invites.map((i) => [i.kind, i.by, i.email])).toEqual([
+      ['email', 'Mo', 'friend@example.test'],
+      ['link', 'Mo', null],
+    ]);
+    const owners = await listInvites(db, owner, slug, at(3), memberLink);
+    expect(owners!.link).toBeNull();
+    expect(owners!.invites.map((i) => [i.kind, i.by, i.email])).toEqual([
+      ['email', 'Mo', null],
+      ['link', 'Mo', null],
+      ['link', 'Olly Owner', null],
+    ]);
+    expect(await listInvites(db, await account(), slug, at(3), memberLink)).toBeNull();
+    // A flash token that is not the viewer's own active link is never shown.
+    expect((await listInvites(db, member, slug, at(3), 'A'.repeat(43)))!.link).toBeNull();
+  });
+
+  it('says canInvite false for a member without the capability and for a closed circle', async () => {
+    const owner = await account();
+    const slug = await circle(owner);
+    const pending = await account('2012-01-01');
+    await addMember(slug, pending);
+    expect((await listInvites(db, pending, slug, T0, null))!.canInvite).toBe(false);
+    await closeCircle(db, owner, slug, T0);
+    expect((await listInvites(db, owner, slug, T0, null))!.canInvite).toBe(false);
+  });
+});
+
+describe('inviteReturnPath', () => {
+  it('accepts only /circles/join/<43-character token>/', () => {
+    const t = 'A'.repeat(43);
+    expect(inviteReturnPath(`/circles/join/${t}/`)).toBe(`/circles/join/${t}/`);
+    for (const bad of [
+      '//evil.example/',
+      'https://evil.example/',
+      `https://evil.example/circles/join/${t}/`,
+      `/circles/join/${t}`,
+      `/circles/join/${t}/x`,
+      `/circles/join/${'A'.repeat(42)}/`,
+      `/circles/join/${'A'.repeat(44)}/`,
+      `/circles/join/${'A'.repeat(42)}%2F/`,
+      '/account/',
+      `/circles/join/${t}/`.repeat(50),
+      `/\evil.example/`,
+      null,
+      42,
+    ]) {
+      expect(inviteReturnPath(bad), String(bad)).toBeNull();
+    }
   });
 });
 

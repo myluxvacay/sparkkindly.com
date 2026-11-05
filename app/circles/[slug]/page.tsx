@@ -3,11 +3,15 @@ import Link from 'next/link';
 import { cookies } from 'next/headers';
 import { notFound, redirect } from 'next/navigation';
 import { ChildControls } from '@/components/circles/ChildControls';
+import { InviteControls } from '@/components/circles/InviteControls';
 import { MemberList } from '@/components/circles/MemberList';
 import { OwnerControls } from '@/components/circles/OwnerControls';
 import { Result, type Messages } from '@/components/circles/Result';
 import { PLAYING_PAGE } from '@/lib/accounts/next';
 import { ACCOUNT_COOKIE } from '@/lib/accounts/web';
+import { linkBase } from '@/lib/admin/sessions';
+import { INVITE_COOKIE } from '@/lib/circles/invite-web';
+import { listInvites } from '@/lib/circles/invites';
 import { loadCirclePage } from '@/lib/circles/web';
 import { getDb } from '@/lib/db';
 
@@ -37,17 +41,32 @@ const MESSAGES: Messages = {
   'child-limit': { text: 'This circle is full (30 members).', ok: false },
   'child-already': { text: 'That child profile is already in the circle.', ok: false },
   'child-gone': { text: 'That child profile is not in the circle.', ok: false },
+  joined: { text: 'You are in the circle.', ok: true },
+  link: { text: 'Your new invite link is below. Copy it now.', ok: true },
+  'invite-no': { text: 'Your account cannot invite people to this circle.', ok: false },
+  'email-sent': { text: 'The invite is sent.', ok: true },
+  'email-invalid': { text: 'Please check the email address and try again.', ok: false },
+  'email-duplicate': { text: 'That address already has an active invite to this circle.', ok: false },
+  'email-limit': { text: 'You have sent as many email invites as allowed for now. Please try again tomorrow.', ok: false },
+  revoked: { text: 'The invite no longer works.', ok: true },
+  'revoke-gone': { text: 'That invite is not active any more.', ok: false },
 };
 const KIND = { friends: 'Friends circle', family: 'Family circle', community: 'Community circle' } as const;
 
 export default async function CirclePage({ params, searchParams }: Props) {
   const [{ slug }, { r }] = await Promise.all([params, searchParams]);
-  const token = (await cookies()).get(ACCOUNT_COOKIE)?.value ?? '';
-  const page = await loadCirclePage(getDb(), token, slug, new Date());
+  const jar = await cookies();
+  const token = jar.get(ACCOUNT_COOKIE)?.value ?? '';
+  const now = new Date();
+  const page = await loadCirclePage(getDb(), token, slug, now);
   if (page.status === 'sign_in') return redirect('/account/sign-in/');
   if (page.status === 'child') return redirect(PLAYING_PAGE);
   if (page.status !== 'ok') return notFound();
   const { view, children } = page;
+  const me = view.members.find((m) => m.isYou);
+  const invites = me?.accountId
+    ? await listInvites(getDb(), me.accountId, slug, now, jar.get(INVITE_COOKIE)?.value ?? null)
+    : null;
   const myChildren = view.members.filter((m) => m.isChild && m.isMine);
   const open = view.status === 'open';
   return (
@@ -62,6 +81,9 @@ export default async function CirclePage({ params, searchParams }: Props) {
       <h2>Members</h2>
       <MemberList members={view.members} />
       {open && view.myRole === 'owner' && <OwnerControls slug={view.slug} members={view.members} />}
+      {invites && (invites.canInvite || invites.invites.length > 0) && (
+        <InviteControls slug={view.slug} section={invites} base={linkBase(process.env)} />
+      )}
       {open && <ChildControls slug={view.slug} addable={children} inCircle={myChildren} />}
       {view.myRole === 'member' && (
         <form method="post" action={`/circles/${view.slug}/leave/`}>

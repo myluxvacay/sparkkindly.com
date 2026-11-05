@@ -17,14 +17,34 @@ import { lockCircle, memberCount, myRole, type CircleRow } from './repo';
 const DAY = 86_400_000;
 const HOUR = 3_600_000;
 
-export const INVITE_LIMITS = { emailsPerDay: 10, perAddress: 3, emailDays: 14, keepDays: 14 } as const;
+export const INVITE_LIMITS = {
+  emailsPerDay: 10,
+  perAddress: 3,
+  emailDays: 14,
+  keepDays: 14,
+} as const;
 
 // What the injected sender gets; the web layer turns it into the email (links, unsubscribe).
-export type InviteMail = { to: string; token: string; inviterName: string; circleName: string; recipientAccountId: string | null };
-export type InvitePreview = { circleName: string; kind: CircleKind; memberCount: number };
+export type InviteMail = {
+  to: string;
+  token: string;
+  inviterName: string;
+  circleName: string;
+  recipientAccountId: string | null;
+};
+export type InvitePreview = {
+  circleName: string;
+  kind: CircleKind;
+  memberCount: number;
+};
 
 const TOKEN = /^[A-Za-z0-9_-]{43}$/;
 export const isInviteToken = (v: unknown): v is string => typeof v === 'string' && TOKEN.test(v);
+// The only return path sign-up and sign-in carry: an invite page, nothing else (never an open redirect).
+export const inviteReturnPath = (raw: unknown): string | null => {
+  const m = typeof raw === 'string' ? /^\/circles\/join\/([^/]+)\/$/.exec(raw) : null;
+  return m && isInviteToken(m[1]) ? (raw as string) : null;
+};
 const newInviteToken = (): string => randomBytes(32).toString('base64url');
 const iso = (d: Date) => d.toISOString();
 
@@ -37,10 +57,20 @@ const USABLE = `i.revoked_at IS NULL AND i.used_at IS NULL AND (i.expires_at IS 
 type Inviter = { circle: CircleRow; circleName: string; yourName: string };
 
 // The circle locked for an invite by `accountId`: a current member of a visible circle with the `invite` capability.
-async function asInviter(tx: Queryable, accountId: string, slug: string, now: Date): Promise<Inviter | 'not_allowed' | 'closed'> {
+async function asInviter(
+  tx: Queryable,
+  accountId: string,
+  slug: string,
+  now: Date,
+): Promise<Inviter | 'not_allowed' | 'closed'> {
   const c = isUuid(accountId) ? await lockCircle(tx, slug) : null;
   if (!c || c.hidden_at) return 'not_allowed';
-  const r = await tx.query<{ name: string; dn: string; dob: string; consent_state: Consent }>(
+  const r = await tx.query<{
+    name: string;
+    dn: string;
+    dob: string;
+    consent_state: Consent;
+  }>(
     `SELECT c.name, m.display_name AS dn, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob, a.consent_state
      FROM circle_members m JOIN circles c ON c.id = m.circle_id JOIN accounts a ON a.id = m.account_id
      WHERE m.circle_id = $1 AND m.account_id = $2 AND m.profile_id IS NULL AND m.left_at IS NULL FOR SHARE OF a`,
@@ -52,7 +82,13 @@ async function asInviter(tx: Queryable, accountId: string, slug: string, now: Da
   return c.status === 'open' ? { circle: c, circleName: row.name, yourName: row.dn } : 'closed';
 }
 
-async function insertInvite(tx: Queryable, circleId: string, accountId: string, now: Date, email: string | null): Promise<string> {
+async function insertInvite(
+  tx: Queryable,
+  circleId: string,
+  accountId: string,
+  now: Date,
+  email: string | null,
+): Promise<string> {
   const token = newInviteToken();
   await tx.query(
     `INSERT INTO circle_invites (circle_id, created_by, kind, token_hash, invited_email, created_at, expires_at)
@@ -84,7 +120,10 @@ export async function createLinkInvite(
       "UPDATE circle_invites SET revoked_at = $3 WHERE circle_id = $1 AND created_by = $2 AND kind = 'link' AND revoked_at IS NULL",
       [who.circle.id, accountId, iso(now)],
     );
-    return { status: 'created', token: await insertInvite(tx, who.circle.id, accountId, now, null) };
+    return {
+      status: 'created',
+      token: await insertInvite(tx, who.circle.id, accountId, now, null),
+    };
   });
 }
 
@@ -92,7 +131,13 @@ type EmailOutcome = 'invalid' | 'not_allowed' | 'closed' | 'limit' | 'duplicate'
 
 // The daily per-account cap, an active invite to the same address, and the per-address cap (revoked invites keep their
 // address until the daily purge, so the cap counts the recent ones).
-async function emailRefusal(tx: Queryable, circleId: string, accountId: string, email: string, now: Date): Promise<EmailOutcome | null> {
+async function emailRefusal(
+  tx: Queryable,
+  circleId: string,
+  accountId: string,
+  email: string,
+  now: Date,
+): Promise<EmailOutcome | null> {
   const r = await tx.query<{ today: number; active: number; same: number }>(
     `SELECT
        (SELECT count(*)::int FROM circle_invites WHERE created_by = $1 AND kind = 'email' AND created_at > $4::timestamptz) AS today,
@@ -126,8 +171,17 @@ export async function createEmailInvite(
     const refused = await emailRefusal(tx, who.circle.id, accountId, to, now);
     if (refused) return refused;
     const token = await insertInvite(tx, who.circle.id, accountId, now, to);
-    const r = await tx.query<{ id: string; notify_invites: boolean }>('SELECT id, notify_invites FROM accounts WHERE email = $1', [to]);
-    const mail: InviteMail = { to, token, inviterName: who.yourName, circleName: who.circleName, recipientAccountId: r.rows[0]?.id ?? null };
+    const r = await tx.query<{ id: string; notify_invites: boolean }>(
+      'SELECT id, notify_invites FROM accounts WHERE email = $1',
+      [to],
+    );
+    const mail: InviteMail = {
+      to,
+      token,
+      inviterName: who.yourName,
+      circleName: who.circleName,
+      recipientAccountId: r.rows[0]?.id ?? null,
+    };
     return { mail, quiet: r.rows[0]?.notify_invites === false };
   });
   if (typeof made === 'string') return made;
@@ -138,7 +192,13 @@ export async function createEmailInvite(
 }
 
 // The circle's owner may revoke any of its invites; a member only their own. False when nothing was revoked.
-export async function revokeInvite(db: Db, accountId: string, slug: string, inviteId: string, now: Date): Promise<boolean> {
+export async function revokeInvite(
+  db: Db,
+  accountId: string,
+  slug: string,
+  inviteId: string,
+  now: Date,
+): Promise<boolean> {
   if (!isUuid(accountId) || !isUuid(inviteId)) return false;
   return db.transaction(async (tx) => {
     const c = await lockCircle(tx, slug);
@@ -153,6 +213,77 @@ export async function revokeInvite(db: Db, accountId: string, slug: string, invi
   });
 }
 
+export type ListedInvite = {
+  id: string;
+  kind: 'link' | 'email';
+  by: string;
+  email: string | null;
+  expiresAt: Date | null;
+};
+export type InviteSection = {
+  canInvite: boolean;
+  link: string | null;
+  hasLink: boolean;
+  invites: ListedInvite[];
+};
+
+// The invite section of a circle page, or null for a non-member. A member sees their own active invites (with the
+// address they typed); the owner sees every active invite, other members' without the address. `flash` is the link
+// token just minted for this browser: it is shown only when it is the viewer's own active link in this circle.
+export async function listInvites(
+  db: Queryable,
+  accountId: string,
+  slug: string,
+  now: Date,
+  flash: string | null,
+): Promise<InviteSection | null> {
+  const c = isUuid(accountId)
+    ? await db.query<{ id: string; status: string; hidden_at: Date | null }>(
+        'SELECT id, status, hidden_at FROM circles WHERE slug = $1',
+        [slug],
+      )
+    : null;
+  const circle = c?.rows[0];
+  const role = circle && !circle.hidden_at ? await myRole(db, circle.id, accountId) : null;
+  if (!circle || !role) return null;
+  const who = await db.query<{ dob: string; consent_state: Consent }>(
+    "SELECT to_char(date_of_birth, 'YYYY-MM-DD') AS dob, consent_state FROM accounts WHERE id = $1",
+    [accountId],
+  );
+  const group = ageGroupFor(who.rows[0].dob, now);
+  const canInvite = circle.status === 'open' && group !== null && can(group, who.rows[0].consent_state, 'invite');
+  const r = await db.query<{
+    id: string;
+    kind: 'link' | 'email';
+    created_by: string;
+    token_hash: string;
+    dn: string;
+    invited_email: string | null;
+    expires_at: Date | null;
+  }>(
+    `SELECT i.id, i.kind, i.created_by, i.token_hash, m.display_name AS dn, i.invited_email, i.expires_at
+     FROM circle_invites i JOIN circles c ON c.id = i.circle_id
+     JOIN circle_members m ON m.circle_id = i.circle_id AND m.account_id = i.created_by AND m.profile_id IS NULL
+     WHERE i.circle_id = $1 AND (i.created_by = $3 OR $4) AND ${USABLE}
+     ORDER BY i.created_at, i.id`,
+    [circle.id, iso(now), accountId, role === 'owner'],
+  );
+  const mine = r.rows.filter((i) => i.created_by === accountId && i.kind === 'link');
+  const shown = isInviteToken(flash) && mine.some((i) => i.token_hash === hash(flash)) ? flash : null;
+  return {
+    canInvite,
+    link: shown,
+    hasLink: mine.length > 0,
+    invites: r.rows.map((i) => ({
+      id: i.id,
+      kind: i.kind,
+      by: i.dn,
+      email: i.created_by === accountId ? i.invited_email : null,
+      expiresAt: i.expires_at,
+    })),
+  };
+}
+
 // Read-only: name, kind and member count of the circle behind a usable token, or null. Never changes the invite.
 export async function previewInvite(db: Queryable, token: string, now: Date): Promise<InvitePreview | null> {
   if (!isInviteToken(token)) return null;
@@ -162,7 +293,13 @@ export async function previewInvite(db: Queryable, token: string, now: Date): Pr
     [hash(token), iso(now)],
   );
   const c = r.rows[0];
-  return c ? { circleName: c.name, kind: c.kind, memberCount: await memberCount(db, c.id) } : null;
+  return c
+    ? {
+        circleName: c.name,
+        kind: c.kind,
+        memberCount: await memberCount(db, c.id),
+      }
+    : null;
 }
 
 // Counts a page view of the invite. An upper bound: chat-app previews, scanners and crawlers open links too.
@@ -173,7 +310,13 @@ export async function recordOpen(db: Queryable, token: string): Promise<void> {
 }
 
 // A referral: the account was created in the last hour and this is its first circle. Holds no names.
-async function recordReferral(tx: Queryable, inviteId: string, accountId: string, circleId: string, now: Date): Promise<void> {
+async function recordReferral(
+  tx: Queryable,
+  inviteId: string,
+  accountId: string,
+  circleId: string,
+  now: Date,
+): Promise<void> {
   await tx.query(
     `INSERT INTO referrals (invite_id, new_account_id, joined_at)
      SELECT $1, $2, $3 FROM accounts a
@@ -198,7 +341,9 @@ export async function acceptInvite(
   if (!isInviteToken(token)) return { status: 'invalid' };
   const h = hash(token);
   return db.transaction(async (tx) => {
-    const found = await tx.query<{ circle_id: string }>('SELECT circle_id FROM circle_invites WHERE token_hash = $1', [h]);
+    const found = await tx.query<{ circle_id: string }>('SELECT circle_id FROM circle_invites WHERE token_hash = $1', [
+      h,
+    ]);
     const c = found.rows[0] ? await lockCircleById(tx, found.rows[0].circle_id) : null;
     const r = c
       ? await tx.query<{ id: string; kind: 'link' | 'email' }>(

@@ -81,6 +81,8 @@ const shared = globalThis as unknown as {
   __sparkInterestsLimits?: ReturnType<typeof createAccountActionLimits>;
   __sparkCircleCreateLimits?: ReturnType<typeof createAccountActionLimits>;
   __sparkCircleActionLimits?: ReturnType<typeof createAccountActionLimits>;
+  __sparkInviteAcceptLimits?: ReturnType<typeof createCodeLimits>;
+  __sparkInviteEmailLimits?: ReturnType<typeof createCodeLimits>;
 };
 export const signUpLimits = (shared.__sparkSignUpLimits ??= createSignUpLimits());
 export const accountLinkLimits = (shared.__sparkAccountLinkLimits ??= createAccountLinkLimits());
@@ -95,3 +97,7 @@ export const interestsLimits = (shared.__sparkInterestsLimits ??= createAccountA
 // Circle POSTs (plan 4A): creating, and the member and owner actions, each on its own per-account counter.
 export const circleCreateLimits = (shared.__sparkCircleCreateLimits ??= createAccountActionLimits());
 export const circleActionLimits = (shared.__sparkCircleActionLimits ??= createAccountActionLimits());
+// Invite POSTs (plan 4B): accepting an invite and sending email invites, 60 per network per hour each, on top of the
+// per-account counters (circleActionLimits) and the per-account daily email cap in lib/circles/invites.ts.
+export const inviteAcceptLimits = (shared.__sparkInviteAcceptLimits ??= createCodeLimits(Date.now, 60));
+export const inviteEmailLimits = (shared.__sparkInviteEmailLimits ??= createCodeLimits(Date.now, 60));

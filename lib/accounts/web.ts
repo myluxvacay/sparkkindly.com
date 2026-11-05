@@ -15,6 +15,7 @@ import { accountLinkLimits, accountSendBudget, confirmLimits, signUpLimits } fro
 import { accountStatus, consumeAccountLink, endAccountSession, getAccount, hasFreshLink, requestAccountLink, sessionView } from './sessions';
 import { consentPending } from './policy';
 import { normalizeEmail, signUp } from './signup';
+import { inviteReturnPath } from '@/lib/circles/invites';
 
 export const ACCOUNT_COOKIE = '__Host-sk_account';
 const SESSION_SECONDS = 30 * 24 * 60 * 60;
@@ -42,7 +43,15 @@ export const tooMany = () => new Response('Too many attempts. Please try again l
 // addresses use (and grow) nothing and a burst for one address mints once. The site-wide budget is checked before the
 // mint (a budget-blocked request spends no mint) and applies to sign-up sends and to unverified addresses only, so
 // anonymous sign-up traffic can never starve a verified member's sign-in link.
-async function emailLink(d: Deps, email: string, ip: string, links: typeof accountLinkLimits, fromSignUp: boolean): Promise<void> {
+// `next` is an invite page (plan 4B) the person came from, already validated; the link carries it to the confirm step.
+async function emailLink(
+  d: Deps,
+  email: string,
+  ip: string,
+  links: typeof accountLinkLimits,
+  fromSignUp: boolean,
+  next: string | null = null,
+): Promise<void> {
   try {
     if (!links.client(ip)) return;
     const status = await accountStatus(d.db, email);
@@ -54,7 +63,7 @@ async function emailLink(d: Deps, email: string, ip: string, links: typeof accou
     await d.send({
       to: email,
       subject: 'Your SparkKindly sign-in link',
-      text: `Use this link within 15 minutes to sign in to SparkKindly:\n\n${linkBase(d.env)}/account/sign-in/link/?token=${token}\n\nIf you did not ask for it, ignore this email.`,
+      text: `Use this link within 15 minutes to sign in to SparkKindly:\n\n${linkBase(d.env)}/account/sign-in/link/?token=${token}${next ? `&next=${encodeURIComponent(next)}` : ''}\n\nIf you did not ask for it, ignore this email.`,
     });
   } catch (err) {
     console.error('account sign-in email not sent:', (err as Error).name);
@@ -98,7 +107,8 @@ export async function requestAccountSignIn(request: Request, d: Deps): Promise<R
   const done = seeOther('/account/sign-in/?sent=1');
   if (!email) return done;
   const ip = clientKey(request);
-  d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits, false));
+  const next = inviteReturnPath(form?.get('next'));
+  d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits, false, next));
   return done;
 }
 
@@ -125,7 +135,8 @@ export async function submitSignUp(request: Request, d: Deps): Promise<Response>
     default: {
       // created and exists look the same, and both send a sign-in link (signUp accepted the address, so it normalizes)
       const email = normalizeEmail(form.get('email'))!;
-      d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits, true));
+      const next = inviteReturnPath(form.get('next'));
+      d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits, true, next));
       return seeOther('/account/sign-up/?sent=1');
     }
   }
@@ -147,7 +158,8 @@ export async function confirmAccountLink(request: Request, d: Deps): Promise<Res
     const account = await getAccount(d.db, session, d.now).catch(() => null);
     if (account && consentPending(account.ageGroup, account.consent)) await emailConsentRequest(d, account.id, true);
   });
-  return seeOther('/account/', accountCookie(session, SESSION_SECONDS));
+  // Back to the invite page the person came from (validated: an invite path only, never another URL).
+  return seeOther(inviteReturnPath(form?.get('next')) ?? '/account/', accountCookie(session, SESSION_SECONDS));
 }
 
 // Refused in a child context (ruling, 3C Task 3 review): a crafted POST must not drop a child to anonymous.

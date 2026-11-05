@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import { requireAccounts } from '@/lib/accounts/next';
+import { inviteReturnPath } from '@/lib/circles/invites';
 
 export const dynamic = 'force-dynamic';
 
-type Props = { searchParams: Promise<{ sent?: string; expired?: string; r?: string }> };
+type Props = { searchParams: Promise<{ next?: string; sent?: string; expired?: string; r?: string }> };
 
 export default async function AccountSignInPage({ searchParams }: Props) {
   requireAccounts();
-  const { sent, expired, r } = await searchParams;
+  const { sent, expired, r, next: rawNext } = await searchParams;
+  // An invite page the visitor came from (validated); the emailed sign-in link brings them back to it.
+  const next = inviteReturnPath(rawNext);
   return (
     <>
       <h1>Sign in</h1>
@@ -27,6 +30,7 @@ export default async function AccountSignInPage({ searchParams }: Props) {
         </div>
       )}
       <form method="post" action="/account/sign-in/request/" className="prose admin-form">
+        {next && <input type="hidden" name="next" value={next} />}
         <p>
           <label htmlFor="email">Email address</label>
           <input id="email" name="email" type="email" required autoComplete="email" maxLength={254} />

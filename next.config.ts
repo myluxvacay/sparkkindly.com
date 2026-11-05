@@ -6,5 +6,17 @@ const config: NextConfig = {
   images: { unoptimized: true },
   poweredByHeader: false,
   serverExternalPackages: ['pg'],
+  // Invite pages (plan 4B): never cached, and the token in the URL never leaves in a Referer.
+  async headers() {
+    return [
+      {
+        source: '/circles/join/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store' },
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+        ],
+      },
+    ];
+  },
 };
 export default config;

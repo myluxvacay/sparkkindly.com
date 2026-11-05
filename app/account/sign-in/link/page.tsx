@@ -2,10 +2,11 @@ import { currentContext, requireAccounts } from '@/lib/accounts/next';
 import { linkTarget } from '@/lib/accounts/sessions';
 import { ageWording, maskEmail } from '@/lib/accounts/wording';
 import { getDb } from '@/lib/db';
+import { inviteReturnPath } from '@/lib/circles/invites';
 
 export const dynamic = 'force-dynamic';
 
-type Props = { searchParams: Promise<{ token?: string }> };
+type Props = { searchParams: Promise<{ token?: string; next?: string }> };
 
 // Opening the emailed link only shows this button: the token is used by the POST, so a mail scanner that fetches the
 // link cannot use it up or sign in. The page names the account the link signs into (so a link planted by someone else
@@ -13,7 +14,8 @@ type Props = { searchParams: Promise<{ token?: string }> };
 // or expired link gets the same generic page whatever the reason.
 export default async function AccountLinkPage({ searchParams }: Props) {
   requireAccounts();
-  const { token } = await searchParams;
+  const { token, next: rawNext } = await searchParams;
+  const next = inviteReturnPath(rawNext);
   const target = typeof token === 'string' ? await linkTarget(getDb(), token, new Date()) : null;
   // The whole context, so the warning shows in a child profile too (the account behind it is still signed in here).
   const current = target ? (await currentContext())?.account : null;
@@ -23,6 +25,7 @@ export default async function AccountLinkPage({ searchParams }: Props) {
       {target ? (
         <form method="post" action="/account/sign-in/link/confirm/" className="prose admin-form">
           <input type="hidden" name="token" value={token} />
+          {next && <input type="hidden" name="next" value={next} />}
           <p>
             Sign in as <strong>{target.email}</strong>
           </p>
