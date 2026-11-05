@@ -5,6 +5,8 @@
 // bounded by sendEmail's own timeout. Ruling: a failed send is not retried in that period (the claim stays, since
 // retrying the batch would re-mail those who got it); the run writes one failed_jobs alert with the count, never an
 // address. No Next.js imports; verified by tests/unit/circle-mail-job.test.ts.
+// ponytail: 200 mails and 50 batches an hour, sent one by one, carries roughly 1,000 active circles (a set-ready mail a
+// day each plus the Monday weekly); past that, raise the caps or send in parallel batches.
 import type { Db, Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';

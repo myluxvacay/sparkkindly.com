@@ -392,6 +392,10 @@ If no run is recorded for 36 hours the worker emails the admin list.
   profile display name. Deleting the profile removes its circle rows.
 - **Leaving.** The member's row keeps `left_at` (4C shows past contributions as "former member"); lists show current
   members only. Leaving takes the account's child profiles out of that circle too.
+- **Lock order.** Circle writes and account deletion lock circle rows first, then the account row. The inactivity and
+  consent sweeps lock the account row first and then delete it, so a sweep racing a circle write on the same account can
+  deadlock; PostgreSQL aborts one transaction, which fails safe (nothing half-done) and is retried on the sweep's next
+  run or by the person trying again.
 - **Account deletion.** In the deletion transaction, each open circle the account owns passes to its longest-standing
   other 18+ account member; with none it is closed. Owned closed circles keep no owner (`owner_account_id` is NULL only on
   a closed circle, enforced by a CHECK). The account's own member rows cascade.
@@ -403,7 +407,8 @@ If no run is recorded for 36 hours the worker emails the admin list.
 - **Migration and rollback.** `014_circles.sql` is additive (two new tables). Rollback of the code: unset
   `CIRCLES_ENABLED`, or switch `current` back to the previous release (it never reads the tables). Rollback of the
   schema, only after the previous release is live: `DROP TABLE circle_members; DROP TABLE circles; DELETE FROM
-  schema_migrations WHERE name = '014_circles.sql';` (as in the migration header). An older release's account deletion
+  schema_migrations WHERE name = '014_circles.sql';` (as in the migration header). The circle schema rollbacks work only
+  in reverse order, 020 back to 014 (each later table references an earlier one). An older release's account deletion
   fails on an account that owns a circle (the plain foreign key), so drop the tables before deleting accounts with an
   older release live.
 - **Before production.** The privacy page must say what circle members see of each other before `CIRCLES_ENABLED` goes

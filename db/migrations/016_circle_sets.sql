@@ -7,7 +7,8 @@
 -- number, an order of ids; never free text) so a corrected key can re-score it; older rows stay NULL (not re-scorable).
 -- Expand only: new tables and one nullable column the previous release never reads.
 -- Rollback: DROP TABLE circle_notices; DROP TABLE circle_daily_sets; DROP TABLE circle_interests; DROP TABLE site_settings;
--- ALTER TABLE item_responses DROP COLUMN choice; DELETE FROM schema_migrations WHERE name = '016_circle_sets.sql'.
+-- ALTER TABLE item_responses DROP COLUMN choice; DROP INDEX item_responses_item_idx;
+-- DELETE FROM schema_migrations WHERE name = '016_circle_sets.sql'.
 CREATE TABLE circle_interests (
   circle_id uuid NOT NULL REFERENCES circles (id) ON DELETE CASCADE,
   topic_id  int REFERENCES topics (id) ON DELETE CASCADE,

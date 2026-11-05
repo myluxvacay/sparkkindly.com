@@ -14,7 +14,10 @@ export async function deleteAccount(db: Db, accountId: string, now = new Date())
 // The same deletion inside a caller's transaction (withdraw validates its token and deletes under one account lock).
 // `now` decides which circle members are adults when an owned circle is handed over.
 export async function deleteAccountIn(tx: Queryable, accountId: string, now = new Date()): Promise<boolean> {
-  // Lock order as in every circle write: the circle rows first (in id order), then the account row.
+  // Lock order as in every circle write: the circle rows first (in id order), then the account row. The inactivity and
+  // consent sweeps lock the account row first and then delete through here, so a deletion racing a circle write on the
+  // same account can deadlock; PostgreSQL aborts one side, which fails safe (nothing half-done) and is retried (the
+  // sweep on its next run, the person by trying again).
   await tx.query('SELECT id FROM circles WHERE owner_account_id = $1 ORDER BY id FOR UPDATE', [accountId]);
   const found = await tx.query<{ email: string }>('SELECT email FROM accounts WHERE id = $1 FOR UPDATE', [accountId]);
   const row = found.rows[0];
@@ -22,7 +25,8 @@ export async function deleteAccountIn(tx: Queryable, accountId: string, now = ne
     return false;
   }
   await tx.query('DELETE FROM account_login_tokens WHERE email = $1', [row.email]);
-  // Pending circle invites to the address (no foreign key); the account's own invites and referral row cascade.
+  // Pending circle invites to the address (no foreign key; exact address only: another spelling of the same mailbox, such
+  // as a +tag, is left to expire within 14 days and be nulled by the invite purge); own invites and referral cascade.
   await tx.query('DELETE FROM circle_invites WHERE invited_email = $1', [row.email]);
   await handOverOwnedCircles(tx, accountId, now);
   await tx.query('DELETE FROM accounts WHERE id = $1', [accountId]);

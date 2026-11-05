@@ -114,6 +114,10 @@ answers and agent tables hold content, not personal data.
 | Inactivity sweep (daily) | after 730 days idle a notice; 30 days later the account if still idle; at most 50 notices and 20 deletions a run | `lib/accounts/inactivity.ts` |
 | Backups | age out as above (up to 31 days counting the hide-then-delete rule) | OPERATIONS "Backups, restore and monitoring" |
 
+Pending circle invites to the deleted account's address are deleted by exact address only. An invite sent to another
+spelling of the same mailbox (a `+tag`, Gmail dots) stays until it expires (14 days at most) and the daily invite purge
+nulls its address (Project 4 final review 8).
+
 The export (`/account/settings/export/`) returns everything above that belongs to the account except the PIN hash
 and counters, tokens, sessions and internal ids; the parent address is masked (`lib/accounts/export.ts`).
 
