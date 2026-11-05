@@ -785,6 +785,10 @@ data.
 
 Purpose: people bring their people, and compete together every day.
 
+**Owner decision, 4 November 2026:** all features (Projects 4 to 8) are built first, ahead of the pilot gate in section
+4a.2. The pilots (P.1 to P.5) run afterwards, and their result decides which features are switched on in production, not
+whether they are built. Circle features stay behind `ACCOUNTS_ENABLED` plus a separate `CIRCLES_ENABLED` flag (off everywhere).
+
 What gets built:
 
 - **Circles.** A signed-in account holder creates a circle with a name and a
