@@ -12,6 +12,9 @@ import { ACCOUNT_COOKIE } from '@/lib/accounts/web';
 import { linkBase } from '@/lib/admin/sessions';
 import { INVITE_COOKIE } from '@/lib/circles/invite-web';
 import { listInvites } from '@/lib/circles/invites';
+import { loadSetStatus } from '@/lib/circles/play-web';
+import { listNotices } from '@/lib/circles/rescore';
+import { isSlug } from '@/lib/circles/repo';
 import { loadCirclePage } from '@/lib/circles/web';
 import { getDb } from '@/lib/db';
 
@@ -60,7 +63,8 @@ export default async function CirclePage({ params, searchParams }: Props) {
   const now = new Date();
   const page = await loadCirclePage(getDb(), token, slug, now);
   if (page.status === 'sign_in') return redirect('/account/sign-in/');
-  if (page.status === 'child') return redirect(PLAYING_PAGE);
+  // A child profile reads only the set and scores of its own circles (the set page 404s for any other circle).
+  if (page.status === 'child') return redirect(isSlug(slug) ? `/circles/${slug}/set/` : PLAYING_PAGE);
   if (page.status !== 'ok') return notFound();
   const { view, children } = page;
   const me = view.members.find((m) => m.isYou);
@@ -69,6 +73,9 @@ export default async function CirclePage({ params, searchParams }: Props) {
     : null;
   const myChildren = view.members.filter((m) => m.isChild && m.isMine);
   const open = view.status === 'open';
+  const [status, notices] = me?.accountId
+    ? await Promise.all([loadSetStatus(getDb(), me.accountId, slug, now), listNotices(getDb(), me.accountId, slug, now)])
+    : [null, null];
   return (
     <>
       <h1>{view.name}</h1>
@@ -77,6 +84,7 @@ export default async function CirclePage({ params, searchParams }: Props) {
         {KIND[view.kind]}. Time zone {view.timeZone}.
       </p>
       {view.description && <p>{view.description}</p>}
+      <SetSection slug={view.slug} status={status} notices={notices ?? []} owner={view.myRole === 'owner'} />
       {!open && <p role="note">This circle is closed: nobody can join, leave or change it. It is deleted 30 days after closing.</p>}
       <h2>Members</h2>
       <MemberList members={view.members} />
@@ -98,5 +106,45 @@ export default async function CirclePage({ params, searchParams }: Props) {
         <Link href="/circles/">Back to your circles</Link>
       </p>
     </>
+  );
+}
+
+type SetSectionProps = { slug: string; status: { items: number; answered: number } | null; notices: { at: Date }[]; owner: boolean };
+
+// Today's set, scores and interests links, and any re-scoring notices of the last 30 days.
+function SetSection({ slug, status, notices, owner }: SetSectionProps) {
+  return (
+    <section aria-labelledby="play">
+      <h2 id="play">Play together</h2>
+      {status && status.items > 0 && (
+        <p>
+          Today&apos;s set has {status.items} {status.items === 1 ? 'item' : 'items'}; you have answered {status.answered}.
+        </p>
+      )}
+      <ul>
+        <li>
+          <Link href={`/circles/${slug}/set/`}>Today&apos;s set</Link>
+        </li>
+        <li>
+          <Link href={`/circles/${slug}/scores/`}>Scores</Link>
+        </li>
+        <li>
+          <Link href={`/circles/${slug}/interests/`}>{owner ? "Choose the circle's interests" : "The circle's interests"}</Link>
+        </li>
+      </ul>
+      {notices.length > 0 && (
+        <div role="note">
+          <h3>Scores corrected</h3>
+          <ul>
+            {notices.map((n, i) => (
+              <li key={i}>
+                On {n.at.toISOString().slice(0, 10)} the answer to an item in a recent set was corrected, and scores were worked out
+                again.
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </section>
   );
 }
