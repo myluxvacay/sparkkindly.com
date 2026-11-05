@@ -55,3 +55,12 @@ export const trustRow = async (db: Db, accountId: string) =>
       [accountId],
     )
   ).rows[0];
+
+// An enabled moderation agent that has fetched its queue (last_run_at far in the future), so level-1 comments publish at
+// once (hold-everything, lib/comments/hold.ts). Tests of the hold itself use their own agents.
+export async function activeModerator(db: Db): Promise<void> {
+  await db.query(
+    `INSERT INTO agents (name, key_prefix, key_hash, role, last_run_at)
+     VALUES ('fixture-moderator', 'fix00000', repeat('0', 64), 'moderation', '2100-01-01T00:00:00Z') ON CONFLICT (name) DO NOTHING`,
+  );
+}

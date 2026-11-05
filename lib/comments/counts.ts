@@ -7,7 +7,9 @@ export type CommentCounts = {
   held: number;
   publishedByAgent: number;
   rejectedByAgent: number;
+  keptByAgent: number;
   escalated: number;
+  escalatedOverdue: number; // waiting past the 48-hour target (spec 4a.6)
   appealsOpen: number;
   urgent24h: number;
 };
@@ -16,11 +18,15 @@ export async function commentCounts(db: Queryable, now: Date): Promise<CommentCo
   const r = await db.query<CommentCounts>(
     `SELECT
        (SELECT count(*)::int FROM comments WHERE status = 'held' AND escalated_at IS NULL) AS held,
-       (SELECT count(*)::int FROM audit_log WHERE actor LIKE 'agent:%' AND action IN ('comment.approve', 'comment.keep')
+       (SELECT count(*)::int FROM audit_log WHERE actor LIKE 'agent:%' AND action = 'comment.approve'
           AND at > $1::timestamptz - interval '24 hours' AND at <= $1) AS "publishedByAgent",
+       (SELECT count(*)::int FROM audit_log WHERE actor LIKE 'agent:%' AND action = 'comment.keep'
+          AND at > $1::timestamptz - interval '24 hours' AND at <= $1) AS "keptByAgent",
        (SELECT count(*)::int FROM audit_log WHERE actor LIKE 'agent:%' AND action IN ('comment.reject', 'comment.hide')
           AND at > $1::timestamptz - interval '24 hours' AND at <= $1) AS "rejectedByAgent",
        (SELECT count(*)::int FROM comments WHERE escalated_at IS NOT NULL AND status IN ('held', 'hidden')) AS escalated,
+       (SELECT count(*)::int FROM comments WHERE escalated_at IS NOT NULL AND status IN ('held', 'hidden')
+          AND escalated_at < $1::timestamptz - interval '48 hours') AS "escalatedOverdue",
        (SELECT count(*)::int FROM comment_appeals WHERE decided_at IS NULL) AS "appealsOpen",
        (SELECT count(*)::int FROM comment_reports WHERE urgent AND created_at > $1::timestamptz - interval '24 hours'
           AND created_at <= $1) AS "urgent24h"`,

@@ -3,6 +3,7 @@
 import { describe, it, expect, beforeAll, afterAll, beforeEach, afterEach, vi } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { newTestDb } from '../helpers/test-db';
+import { activeModerator } from '../helpers/comments';
 import { seedReference } from '@/db/seed';
 import { signUp } from '@/lib/accounts/signup';
 import { consumeAccountLink, requestAccountLink } from '@/lib/accounts/sessions';
@@ -39,6 +40,7 @@ let adminSession: string;
 beforeAll(async () => {
   db = await newTestDb();
   await seedReference(db);
+  await activeModerator(db);
   const secret = newTotpSecret();
   await db.query('INSERT INTO admin_users (email, totp_secret) VALUES ($1, $2)', [OWNER, sealSecret(secret, OWNER, env)]);
   const first = (await consumeLink(db, (await requestLink(db, OWNER, env, NOW))!, env, NOW))!;

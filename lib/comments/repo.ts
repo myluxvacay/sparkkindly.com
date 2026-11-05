@@ -14,6 +14,7 @@ import { checkComment, type CheckCode, type Recent } from './checks';
 import { COMMENT_LIMITS, cleanDisplayName, mayComment, normaliseBody, ticked } from './rules';
 import { pickForSample } from './sample';
 import { lockTrust, type Trust } from './trust';
+import { moderationActive } from './hold';
 
 export type PostInput = { itemId: unknown; parentId?: unknown; body: unknown; displayName?: unknown; guidelines?: unknown };
 export type RefusalCode = CheckCode | 'not_allowed' | 'comments_off' | 'no_item' | 'no_parent' | 'name' | 'guidelines' | 'banned';
@@ -148,7 +149,8 @@ async function postIn(tx: Queryable, ctx: AccountContext | null, input: PostInpu
       [accountId, first.name, now],
     );
   }
-  const status = trust.level === 1 ? 'published' : 'held';
+  // Level 1 publishes at once only while the moderation agent is running (hold-everything, spec 4a.6).
+  const status = trust.level === 1 && (await moderationActive(tx, now)) ? 'published' : 'held';
   const r = await tx.query<{ id: string }>(
     `INSERT INTO comments (item_id, account_id, parent_id, body, status, created_at, updated_at, sampled_at)
      VALUES ($1, $2, $3, $4, $5, $6, $6, $7) RETURNING id`,

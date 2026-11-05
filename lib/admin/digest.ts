@@ -80,6 +80,8 @@ export async function buildDigest(db: Queryable, now: Date): Promise<Digest> {
   const stale = Number(oldKeys.rows[0].n);
   if (stale) d.alerts.push(`${stale} agent key is over 90 days old: rotate it in /admin/agents/.`);
   d.alerts.push(...(await agentAlerts(db, now)));
+  const overdue = d.comments.escalatedOverdue;
+  if (overdue) d.alerts.push(`${overdue} comment escalation${overdue === 1 ? ' is' : 's are'} waiting past the 48-hour target: see /admin/comments/.`);
   return d;
 }
 
@@ -87,6 +89,7 @@ function commentSection(c: CommentCounts): string {
   return section('Comments', [
     `Held, waiting for the moderation agent: ${c.held}`,
     `Published by the agent in the last 24 hours: ${c.publishedByAgent}`,
+    `Kept by the agent in the last 24 hours (reported comments restored): ${c.keptByAgent}`,
     `Rejected or hidden by the agent in the last 24 hours: ${c.rejectedByAgent}`,
     `Escalated to you: ${c.escalated}`,
     `Open appeals: ${c.appealsOpen}`,

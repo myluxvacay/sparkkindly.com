@@ -15,8 +15,9 @@ function Counts({ c }: { c: OwnerQueue['counts'] }) {
     <ul className="admin-list">
       <li>Held, waiting for the moderation agent: {c.held}</li>
       <li>Published by the agent (24 hours): {c.publishedByAgent}</li>
+      <li>Kept by the agent (24 hours): {c.keptByAgent}</li>
       <li>Rejected or hidden by the agent (24 hours): {c.rejectedByAgent}</li>
-      <li>Escalated to you: {c.escalated}</li>
+      <li>Escalated to you: {c.escalated} ({c.escalatedOverdue} past the 48-hour target)</li>
       <li>Open appeals: {c.appealsOpen}</li>
       <li>Urgent reports (24 hours): {c.urgent24h}</li>
     </ul>

@@ -6,6 +6,7 @@ import { agentRoute, readJson } from '@/lib/agents/http';
 import { commentsEnabled } from '@/lib/config';
 import type { Db } from '@/lib/db';
 import { decide, moderationQueue, type DecideDeps } from './moderation';
+import { recordQueueFetch } from './hold';
 
 export type ModerationDeps = DecideDeps & { db: Db; now: Date; limiter: (key: string) => boolean };
 
@@ -15,7 +16,10 @@ const notFound = () => Response.json({ error: 'not_found' }, { status: 404, head
 // GET /api/agent/moderation/: up to 20 comments needing a decision.
 export function queueRequest(request: Request, d: ModerationDeps): Promise<Response> {
   if (!commentsEnabled()) return Promise.resolve(notFound());
-  return agentRoute(request, async () => ({ status: 200, json: { comments: await moderationQueue(d.db, d.now) } }), {
+  return agentRoute(request, async (agent) => {
+    await recordQueueFetch(d.db, agent.id, d.now); // the hold-everything heartbeat (lib/comments/hold.ts)
+    return { status: 200, json: { comments: await moderationQueue(d.db, d.now) } };
+  }, {
     db: d.db,
     limiter: d.limiter,
     role: 'moderation',

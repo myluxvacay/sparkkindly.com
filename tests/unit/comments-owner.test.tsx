@@ -238,7 +238,7 @@ describe('digest counts', () => {
     await escalated();
     await appealed();
     const d = await buildDigest(db, NOW);
-    expect(d.comments).toEqual({ held: 1, publishedByAgent: 1, rejectedByAgent: 1, escalated: 1, appealsOpen: 1, urgent24h: 0 });
+    expect(d.comments).toEqual({ held: 1, publishedByAgent: 1, keptByAgent: 0, rejectedByAgent: 1, escalated: 1, escalatedOverdue: 0, appealsOpen: 1, urgent24h: 0 });
     const { text } = renderDigest(d);
     expect(text).toContain('Comments');
     expect(text).toContain('Held, waiting for the moderation agent: 1');

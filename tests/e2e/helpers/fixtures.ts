@@ -97,3 +97,12 @@ export async function addWorld(slug: string, name: string): Promise<void> {
 export async function addTopic(slug: string, name: string): Promise<void> {
   await withClient((c) => c.query('INSERT INTO topics (slug, name) VALUES ($1, $2)', [slug, name]));
 }
+
+// An enabled moderation agent that has just fetched its queue, so level-1 comments publish at once (hold-everything,
+// lib/comments/hold.ts: without one fetching in 48 hours every new comment is held).
+export async function activeModerator(): Promise<void> {
+  await sql(
+    `INSERT INTO agents (name, key_prefix, key_hash, role, last_run_at) VALUES ('e2e-fixture-moderator', 'e2efix00', repeat('0', 64), 'moderation', now())
+     ON CONFLICT (name) DO UPDATE SET last_run_at = now(), enabled = true`,
+  );
+}

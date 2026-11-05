@@ -1,7 +1,7 @@
 import { createHash, randomBytes } from 'node:crypto';
 import { test, expect, type Browser, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { addItem, sql } from './helpers/fixtures';
+import { activeModerator, addItem, sql } from './helpers/fixtures';
 import { BASE, FORM, form, session, signInContext } from './helpers/admin';
 
 // Comments (plan 7A Task 2). The preview server on 4173 runs with ACCOUNTS_ENABLED and COMMENTS_ENABLED; the server on
@@ -61,6 +61,10 @@ async function post(page: Page, body: string, first = false) {
 }
 const section = (page: Page) => page.locator('#comments');
 const said = (page: Page, text: string) => section(page).locator('.comment-body', { hasText: text });
+
+test.beforeEach(async () => {
+  await activeModerator();
+});
 
 test('with the flags off every comment route is a 404 (server without the flags)', async ({ request }) => {
   for (const path of ['/comments/post/', '/comments/edit/', '/comments/delete/']) {

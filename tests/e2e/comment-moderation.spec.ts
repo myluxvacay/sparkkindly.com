@@ -1,7 +1,7 @@
 import { createHash, randomBytes } from 'node:crypto';
 import { test, expect, type Browser, type Page, type APIRequestContext } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { addItem, sql } from './helpers/fixtures';
+import { activeModerator, addItem, sql } from './helpers/fixtures';
 import { BASE, session, signInContext } from './helpers/admin';
 import { generateKey } from '../../lib/agents/keys';
 import { appealToken } from '../../lib/comments/appeals';
@@ -93,6 +93,10 @@ async function report(page: Page, url: string, body: string, urgent = false) {
   if (urgent) await li.getByLabel(/Urgent: someone may be in danger/).check();
   await li.getByRole('button', { name: 'Send report' }).click();
 }
+
+test.beforeEach(async () => {
+  await activeModerator();
+});
 
 test('held, approved by the agent, reported, hidden, kept, urgently hidden, rejected, appealed and overturned', async ({ browser, request }) => {
   const slug = `e2e-moderation-${stamp}`;

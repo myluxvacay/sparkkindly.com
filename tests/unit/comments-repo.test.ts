@@ -3,6 +3,7 @@
 // derived from the server-side context and stored rows, never from the caller's input.
 import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
+import { activeModerator } from '../helpers/comments';
 import { seedReference } from '@/db/seed';
 import { signUp } from '@/lib/accounts/signup';
 import { consumeAccountLink, requestAccountLink } from '@/lib/accounts/sessions';
@@ -31,6 +32,7 @@ let n = 0;
 beforeAll(async () => {
   db = await newTestDb();
   await seedReference(db);
+  await activeModerator(db);
   for (const w of (await db.query<{ id: number; slug: string }>('SELECT id, slug FROM worlds')).rows) worlds[w.slug] = w.id;
 });
 afterAll(async () => {

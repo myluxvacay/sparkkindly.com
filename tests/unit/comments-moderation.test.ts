@@ -4,7 +4,7 @@
 // the effects. Text inside comments, items or report notes never steers anything.
 import { describe, it, expect, beforeAll, afterAll, beforeEach, vi } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
-import { comment, item, person, setLevel, statusOf, trustRow } from '../helpers/comments';
+import { comment, item, person, setLevel, statusOf, trustRow, activeModerator } from '../helpers/comments';
 import { seedReference } from '@/db/seed';
 import type { Agent } from '@/lib/agents/auth';
 import type { EmailMessage } from '@/lib/email';
@@ -27,6 +27,7 @@ const quiet = async () => {};
 beforeAll(async () => {
   db = await newTestDb();
   await seedReference(db);
+  await activeModerator(db);
 });
 afterAll(async () => {
   await db.close();
