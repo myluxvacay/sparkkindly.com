@@ -2,6 +2,7 @@
 // duplicate, link policy. "Banned" is checked first by the caller, from the locked trust row. Pure; the caller counts
 // `recent` inside the same transaction. Verified by tests/unit/comments-checks.test.ts.
 import { findBlockedWord } from '@/lib/items/blocked';
+import { foldMarks } from '@/lib/circles/rules';
 import { COMMENT_LIMITS, hasLinkLike, normaliseBody } from './rules';
 
 export type CheckCode = 'length' | 'blocked' | 'link' | 'duplicate' | 'rate';
@@ -18,7 +19,7 @@ export function checkComment(input: { body: unknown; trustLevel: 0 | 1; recent: 
   if (body === null || len < 1 || len > COMMENT_LIMITS.body) {
     return { ok: false, code: 'length' };
   }
-  if (findBlockedWord(body)) {
+  if (findBlockedWord(body) || findBlockedWord(foldMarks(body))) {
     return { ok: false, code: 'blocked' };
   }
   if (recent.sameBodyByAuthor24h || recent.sameBodyOnItem) {

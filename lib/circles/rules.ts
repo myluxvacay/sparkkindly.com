@@ -31,15 +31,19 @@ const ZONES = new Set<string>(TIME_ZONES);
 // dots NFKC leaves or makes (。 ｡), count; the text is NFKC-normalised before the test.
 export const LINK_LIKE = /\p{L}[\p{L}\p{M}\p{N}+.-]*:\/\/|www[.。．｡]|[\p{L}\p{M}\p{N}_-]+[.。．｡]\p{M}*(?:[\p{L}\p{N}]\p{M}*){2,}/iu;
 
-// Trimmed NFKC text of 1..max characters, no control or format characters, no blocked word, nothing link-like;
-// otherwise null.
+// The text with its combining marks removed (NFD, then no \p{M}): "f\u0301uck" reads as "fuck" to the blocked-word test.
+export const foldMarks = (s: string): string => s.normalize('NFD').replace(/\p{M}/gu, '');
+
+// Trimmed NFKC text of 1..max characters, no control, format or default-ignorable characters (blank-looking Hangul
+// fillers), no blocked word (also behind combining marks), nothing link-like; otherwise null.
 export function cleanText(v: unknown, max: number): string | null {
   if (typeof v !== 'string') {
     return null;
   }
   const s = v.normalize('NFKC').trim();
   const len = [...s].length;
-  if (len < 1 || len > max || /[\p{Cc}\p{Cf}]/u.test(s) || LINK_LIKE.test(s) || findBlockedWord(s)) {
+  const hidden = /[\p{Cc}\p{Cf}\p{Default_Ignorable_Code_Point}]/u.test(s);
+  if (len < 1 || len > max || hidden || LINK_LIKE.test(s) || findBlockedWord(s) || findBlockedWord(foldMarks(s))) {
     return null;
   }
   return s;

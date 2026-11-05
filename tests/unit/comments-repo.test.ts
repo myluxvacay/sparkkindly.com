@@ -211,15 +211,16 @@ describe('rate limits and duplicates (explicit clock)', () => {
     expect((await post(p.ctx, it1, 'one more', {}, at(31 * MIN))).status).toBe('held');
   });
 
-  it('same body by the same author in 24 hours, or the same body on the item, is a duplicate', async () => {
+  it('same body by the same author in 24 hours, or the same body published on the item, is a duplicate', async () => {
     const a = await person();
     const b = await person();
     const it1 = await item();
     const it2 = await item();
+    await level1(a.id); // published, so the item-wide check applies to others (7A review L1: never others' held text)
     await posted(a.ctx, it1, 'Lovely  idea');
     expect(await post(a.ctx, it2, 'lovely idea', {}, at(MIN))).toEqual({ status: 'refused', code: 'duplicate' });
     expect(await post(b.ctx, it1, 'Lovely idea')).toEqual({ status: 'refused', code: 'duplicate' });
-    expect((await post(a.ctx, it2, 'lovely idea', {}, at(24 * 60 * MIN + 1))).status).toBe('held');
+    expect((await post(a.ctx, it2, 'lovely idea', {}, at(24 * 60 * MIN + 1))).status).toBe('published');
   });
 
   it('links: refused at level 0, accepted as text at level 1', async () => {
@@ -315,5 +316,53 @@ describe('listing', () => {
     expect(await deleteAccount(db, a.id, NOW)).toBe(true);
     expect((await db.query<{ id: string }>('SELECT id FROM comments')).rows.map((r) => r.id)).toEqual([keep]);
     expect((await db.query('SELECT count(*)::int AS n FROM account_trust WHERE account_id = $1', [a.id])).rows[0].n).toBe(0);
+  });
+});
+
+describe('7A review fixes', () => {
+  it("M1: an author cannot delete a hidden or rejected comment, so its hidden replies never reappear under a placeholder", async () => {
+    const it1 = await item();
+    const a = await person();
+    const b = await person();
+    await level1(a.id);
+    await level1(b.id);
+    const top = await posted(a.ctx, it1, 'parent words');
+    await posted(b.ctx, it1, 'reply words', { parentId: top });
+    for (const status of ['hidden', 'rejected']) {
+      await db.query('UPDATE comments SET status = $2 WHERE id = $1', [top, status]);
+      expect(await deleteComment(db, a.id, top, NOW), status).toBe(false);
+      expect((await statusOf(top)).status).toBe(status);
+      expect(await listPublishedComments(db, it1, NOW)).toEqual([]);
+    }
+  });
+
+  it("L1: the item-wide duplicate check matches published comments and the author's own, never others' held text", async () => {
+    const it1 = await item();
+    const a = await person();
+    const b = await person();
+    await posted(a.ctx, it1, 'the same words');
+    expect((await post(b.ctx, it1, 'The  same words')).status).toBe('held');
+    await level1(a.id);
+    await posted(a.ctx, it1, 'published words');
+    expect(await post(b.ctx, it1, 'published words')).toEqual({ status: 'refused', code: 'duplicate' });
+    const c = await person();
+    await db.query("INSERT INTO comments (item_id, account_id, body, status) VALUES ($1, $2, 'my hidden words', 'hidden')", [it1, c.id]);
+    expect(await post(c.ctx, it1, 'my hidden words')).toEqual({ status: 'refused', code: 'duplicate' });
+  });
+
+  it('L5: a parent or item deleted mid-flight (foreign key 23503) is a refusal, not an error', async () => {
+    const it1 = await item();
+    const a = await person();
+    const failing = (constraint: string) =>
+      ({
+        ...db,
+        transaction: async () => {
+          throw Object.assign(new Error('violates foreign key'), { code: '23503', constraint });
+        },
+      }) as typeof db;
+    expect(await postComment(failing('comments_parent_id_fkey'), a.ctx, { itemId: it1, body: 'x', ...first }, NOW)).toEqual({ status: 'refused', code: 'no_parent' });
+    expect(await postComment(failing('comments_item_id_fkey'), a.ctx, { itemId: it1, body: 'x', ...first }, NOW)).toEqual({ status: 'refused', code: 'no_item' });
+    const other = { ...db, transaction: async () => { throw Object.assign(new Error('boom'), { code: '23514' }); } } as typeof db;
+    await expect(postComment(other, a.ctx, { itemId: it1, body: 'x', ...first }, NOW)).rejects.toThrow('boom');
   });
 });

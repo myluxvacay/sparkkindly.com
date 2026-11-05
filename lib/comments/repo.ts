@@ -89,8 +89,8 @@ async function recentFor(
     `SELECT
        EXISTS (SELECT 1 FROM comments WHERE account_id = $1 AND created_at > $4::timestamptz - interval '24 hours'
                AND status <> 'deleted' AND id IS DISTINCT FROM $5 AND ${KEY('body')} = ${KEY('$3')}) AS a,
-       EXISTS (SELECT 1 FROM comments WHERE item_id = $2 AND status <> 'deleted' AND id IS DISTINCT FROM $5
-               AND ${KEY('body')} = ${KEY('$3')}) AS i,
+       EXISTS (SELECT 1 FROM comments WHERE item_id = $2 AND (status = 'published' OR (account_id = $1 AND status <> 'deleted'))
+               AND id IS DISTINCT FROM $5 AND ${KEY('body')} = ${KEY('$3')}) AS i,
        (SELECT count(*)::int FROM comments WHERE account_id = $1 AND created_at > $4::timestamptz - interval '10 minutes'
           AND created_at <= $4) AS m,
        (SELECT count(*)::int FROM comments WHERE account_id = $1 AND created_at > $4::timestamptz - interval '24 hours'
@@ -157,8 +157,16 @@ async function postIn(tx: Queryable, ctx: AccountContext | null, input: PostInpu
   return { status, id: r.rows[0].id };
 }
 
-export const postComment = (db: Db, ctx: AccountContext | null, input: PostInput, now: Date): Promise<PostResult> =>
-  db.transaction((tx) => postIn(tx, ctx, input, now));
+// A parent or item deleted between the checks and the insert breaks a foreign key (23503): a refusal, not an error.
+export async function postComment(db: Db, ctx: AccountContext | null, input: PostInput, now: Date): Promise<PostResult> {
+  try {
+    return await db.transaction((tx) => postIn(tx, ctx, input, now));
+  } catch (err) {
+    const e = err as { code?: string; constraint?: string };
+    if (e.code !== '23503') throw err;
+    return { status: 'refused', code: e.constraint?.includes('parent') ? 'no_parent' : 'no_item' };
+  }
+}
 
 // The author's own held or published comment, within COMMENT_LIMITS.editMs of creation (exactly 15 minutes allowed).
 // Every check runs again except the rate limit (an edit adds no comment); a level-0 author's edit is held again.
@@ -202,14 +210,16 @@ export async function editComment(db: Db, accountId: string, commentId: string, 
   });
 }
 
-// The author's own comment, any status but deleted: the body is emptied and the row kept so replies keep their place.
+// The author's own held or published comment: the body is emptied and the row kept so replies keep their place. A
+// hidden or rejected comment cannot be deleted (7A review M1): its replies stay hidden with it, never shown again under
+// a deleted placeholder. Account deletion still removes it.
 export async function deleteComment(db: Db, accountId: string, commentId: string, now: Date): Promise<boolean> {
   if (!isUuid(accountId) || !isUuid(commentId)) {
     return false;
   }
   const r = await db.query(
     `UPDATE comments SET status = 'deleted', body = '', updated_at = $3
-     WHERE id = $1 AND account_id = $2 AND status <> 'deleted'`,
+     WHERE id = $1 AND account_id = $2 AND status IN ('held', 'published')`,
     [commentId, accountId, now],
   );
   return r.rowCount === 1;

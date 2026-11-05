@@ -24,6 +24,14 @@ const config: NextConfig = {
           { key: 'Referrer-Policy', value: 'no-referrer' },
         ],
       },
+      // Appeal links (plan 7B): a signed token in the URL; never cached, never sent on in a Referer.
+      {
+        source: '/comments/appeal/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store' },
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+        ],
+      },
     ];
   },
 };

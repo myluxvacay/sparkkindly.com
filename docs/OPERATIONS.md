@@ -618,7 +618,9 @@ If no run is recorded for 36 hours the worker emails the admin list.
   characters dropped), one level of replies (a reply's parent must be a top-level comment on the same item, published or
   the replier's own held one), display name and relative time only. The display name (1 to 30 characters, no `@`, no
   blocked word, nothing link-like) and the "I have read the community guidelines" tick are asked at the first comment and
-  stored in `account_trust`; the email is never shown. Bodies render as React text: nothing is HTML, markdown or a link.
+  stored in `account_trust`; the email is never shown. Blank-looking text (Hangul fillers and other default-ignorable
+  characters) counts as nothing, and reserved names (SparkKindly, Admin, Administrator, Moderator, Mod, Owner, Staff,
+  Support, Team, any case or spacing) are refused. Bodies render as React text: nothing is HTML, markdown or a link.
 - **Trust ladder** (`lib/comments/trust.ts`). Every account starts at level 0: its comments are `held` (published by the
   moderation agent in 7B). After `TRUST_THRESHOLD` = 5 approvals since the last drop it moves to level 1: comments are
   `published` at once after the checks. A rejection drops a level and resets the approved count. The owner sets level 0
@@ -627,12 +629,14 @@ If no run is recorded for 36 hours the worker emails the admin list.
   cannot post or edit.
 - **Checks on every comment**, in order, each with its own refusal: banned; rate (5 per 10 minutes and 40 per rolling
   24 hours per account, counted in the database under the account's trust-row lock, so racing posts cannot pass it);
-  length; blocked words (`lib/items/blocked.ts`); duplicate (the same text, ignoring case and spacing, by the same account
-  in 24 hours, or on the same item by anyone); link policy (below level 1 any link-like text, the shared check in
+  length; blocked words (`lib/items/blocked.ts`, also behind combining marks); duplicate (the same text, ignoring case
+  and spacing, by the same account in 24 hours, or published on the same item, or the author's own on it in any status:
+  another member's held or hidden text is never confirmed); link policy (below level 1 any link-like text, the shared check in
   `lib/circles/rules.ts`, is refused; at level 1 it is accepted and shown as plain text). An edit re-runs every check but
   the rate limit.
 - **Edit and delete.** The author edits within 15 minutes of posting (exactly 15 allowed); a level-0 author's edit of a
-  published comment goes back to `held`. Delete at any time: status `deleted`, body emptied, row kept so replies keep
+  published comment goes back to `held`. Delete a held or published comment at any time (a hidden or rejected one
+  cannot be deleted, so its hidden replies never reappear under a placeholder): status `deleted`, body emptied, row kept so replies keep
   their place (shown as "This comment was deleted."). Only `published` comments are ever shown to others; the author
   also sees their own `held` ones marked "Waiting for review".
 - **Account deletion and export.** Deleting an account cascades its `account_trust` row and its comments, and with them
@@ -643,6 +647,10 @@ If no run is recorded for 36 hours the worker emails the admin list.
   reads them). Schema rollback, only after the previous release is live: `DROP TABLE comments; DROP TABLE
   account_trust; ALTER TABLE items DROP COLUMN comments_enabled; ALTER TABLE worlds DROP COLUMN comments_enabled;
   DELETE FROM schema_migrations WHERE name = '021_comments.sql';`.
+- **Caching and profile switches.** Item pages with comments are `force-dynamic` and served `private, no-store`; no
+  code sets `Vary: Cookie` (nothing caches these pages, so none is needed). After switching to a child profile, the
+  browser's back/forward cache can still show an adult page already open in that tab until it is reloaded; the next
+  request is rendered for the child context. Close adult tabs before handing the device to a child.
 - **Before production.** Privacy and terms must mention comments, the guidelines page copy needs the owner's read, and
   reporting plus the moderation agent (7B) must exist before `COMMENTS_ENABLED` goes on anywhere real
   (`docs/legal/go-live-copy-changes.md`).

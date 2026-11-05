@@ -323,3 +323,20 @@ describe('owner switches and trust', () => {
     expect(ok.headers.get('location')).toBe('/admin/comments/?done=comments_world_off');
   });
 });
+
+describe('7A review fixes: flags off', () => {
+  it('I1: the comments.* admin actions are refused as unknown when the comment flags are off', async () => {
+    vi.stubEnv('COMMENTS_ENABLED', '');
+    const r = await runAction(db, { email: OWNER }, 'comments.world_toggle', new URLSearchParams({ slug: 'grow', enabled: 'false' }), NOW);
+    expect(r).toMatchObject({ ok: false, code: 'unknown_action' });
+    expect((await db.query("SELECT comments_enabled FROM worlds WHERE slug = 'grow'")).rows[0].comments_enabled).toBe(true);
+  });
+
+  it('I3: the guidelines page has no metadata of its own when comments are off', async () => {
+    const page = await import('@/app/community/guidelines/page');
+    vi.stubEnv('COMMENTS_ENABLED', '');
+    expect(await page.generateMetadata()).toEqual({});
+    vi.stubEnv('COMMENTS_ENABLED', 'true');
+    expect(await page.generateMetadata()).toMatchObject({ title: expect.anything() });
+  });
+});

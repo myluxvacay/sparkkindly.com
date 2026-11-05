@@ -109,3 +109,29 @@ describe('cleanDisplayName', () => {
     for (const bad of ['', 'a'.repeat(31), 'sam@example', 'shit', 'evil.com', 42]) expect(cleanDisplayName(bad)).toBeNull();
   });
 });
+
+describe('7A review fixes: hidden marks, blank-looking text and reserved names', () => {
+  it('L2: a blocked word hidden behind combining marks is refused; ordinary accented text is accepted', () => {
+    expect(check('f\u0301uck this')).toEqual({ ok: false, code: 'blocked' });
+    expect(check('s\u0308hit happens')).toEqual({ ok: false, code: 'blocked' });
+    expect(check('Un café crème, très bien')).toMatchObject({ ok: true });
+    expect(check('Ein schöner Tag, naïve façade')).toMatchObject({ ok: true });
+  });
+
+  it('L2: Hangul fillers and other default-ignorable characters count as nothing in a body and are refused in a name', () => {
+    for (const blank of ['\u3164', '\u115F', '\u1160', '\uFFA0', '\u3164 \u3164', '\u034F']) {
+      expect(check(blank), JSON.stringify(blank)).toEqual({ ok: false, code: 'length' });
+      expect(cleanDisplayName(blank), JSON.stringify(blank)).toBeNull();
+    }
+    expect(normaliseBody('hi\u3164there')).toBe('hithere');
+    expect(cleanDisplayName('Sam\u3164')).toBeNull();
+    expect(cleanDisplayName('Zoë')).toBe('Zoë');
+  });
+
+  it('L3: reserved display names are refused, whatever the case or spacing', () => {
+    for (const name of ['SparkKindly', 'spark kindly', 'SPARK  KINDLY', 'Admin', 'administrator', 'Moderator', 'mod', 'Owner', 'staff', 'Support', 'TEAM', 'Ａｄｍｉｎ']) {
+      expect(cleanDisplayName(name), name).toBeNull();
+    }
+    for (const name of ['Modest', 'Teamwork fan', 'Sam the admin fan']) expect(cleanDisplayName(name), name).not.toBeNull();
+  });
+});
