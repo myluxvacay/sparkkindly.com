@@ -782,6 +782,33 @@ mail. Plan `docs/superpowers/plans/2026-11-05-project-8-contributors.md`.
   them). Schema rollback is in the migration header, only after the previous release is live; archive any published
   contributed items first if the tables are dropped, since the old release would show them without a byline.
 
+## Sponsorship (Project 6)
+
+Behind `SPONSORSHIP_ENABLED` alone (off everywhere; `deploy/env/*.example` carry `# SPONSORSHIP_ENABLED=`). It does not
+need `ACCOUNTS_ENABLED`; with accounts on, the account cookie adds the under-18 and child-profile checks. With it unset
+there is no sponsor line, `/go/<id>/` route, `/sponsorship/` page, `sponsor*` admin action or Sponsors admin page, and
+no sponsor row is read. Plan `docs/superpowers/plans/2026-11-05-project-6-sponsorship.md`.
+
+- **Who sees it.** Only on a published item with audience `adults`, outside the Kids world and the kids risk tier; only
+  for an anonymous visitor or a signed-in adult in the adult context. Never a child profile, a 13-17 account (pending or
+  confirmed) or a session whose lookup failed. Nothing in circles, emails, JSON-LD, search, the sitemap or share prompts.
+- **Attach.** `/admin/sponsors/`: add a sponsor (name, https link to a public host, a category from the allowed list,
+  and the box "not in an excluded category and not marketed to children", recorded as `confirmed_at` and in the audit
+  row). Then attach a sponsorship to one topic (its address), one world (not Kids) or one item (`world/slug`, a published
+  adults item), with link text (up to 60 characters), the kind (`supported` or `affiliate`, which picks the fixed
+  disclosure sentence) and optional first and last days (UTC dates, inclusive; a sponsorship ending today shows until
+  the end of today UTC). Precedence when several match: item, then topic, then world, then the most recently started.
+- **End.** "End now" on the sponsorship (`sponsorship.end`, audited): the line disappears on the next page view and
+  `/go/<id>/` sends visitors home.
+- **Clicks.** `/go/<id>/` re-checks the viewer and the sponsorship, adds 1 to `click_count` in one UPDATE and redirects
+  302 to the stored link with `Referrer-Policy: no-referrer`, `Cache-Control: no-store` and no cookie; anyone else goes
+  to `/`. 60 clicks per network per hour (in memory, per process). Nothing about the visitor is stored, so the count is an
+  upper bound (repeat clicks and bots count). Clicks cannot be edited from `/admin`.
+- **Migration and rollback.** `025_sponsorship.sql` is additive (`sponsors.category`, `sponsors.confirmed_at`, a default
+  on `sponsors.disclosure`, `sponsorships.kind`, `sponsorships.ended_at`). Code rollback: unset `SPONSORSHIP_ENABLED`
+  (every line disappears; rows stay), or the previous release (it never reads sponsorship). Schema rollback is in the
+  migration header, only after the previous release is live.
+
 ## Pilot measurement (roadmap P.2)
 
 `/admin/pilot/` shows the spec 4a.2 pilot metrics against their thresholds, computed from data the site already holds

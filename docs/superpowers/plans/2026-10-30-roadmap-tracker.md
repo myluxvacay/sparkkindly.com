@@ -121,11 +121,11 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 
 ## Project 6: Light sponsorship
 
-- [ ] 6.1 `sponsors` and `sponsorships` admin screens; excluded-category checklist at creation — *owner can attach a sponsor to a Grow topic.*
-- [ ] 6.2 Rendering: one line, fixed position, plain-language disclosure next to the link, `rel="sponsored"`; only on `adults` items; never to child profiles, under-18 accounts, or circles with children — *visibility tests for each rule.*
-- [ ] 6.3 Click counting without third-party scripts — *counts increment.*
-- [ ] 6.4 Disclosure page and contributor-terms note — *pages live.*
-- [ ] 6.5 Done-when: sponsor line appears on matching adult items with clicks counted and is absent for a child profile.
+- [x] 6.1 `sponsors` and `sponsorships` admin screens; excluded-category checklist at creation — *owner can attach a sponsor to a Grow topic.* (5 Nov 2026, behind `SPONSORSHIP_ENABLED`; independent review pending): migration 025, `/admin/sponsors/`, `sponsorship-web.test.tsx`, e2e `sponsorship.spec.ts`
+- [x] 6.2 Rendering: one line, fixed position, plain-language disclosure next to the link, `rel="sponsored"`; only on `adults` items; never to child profiles, under-18 accounts, or circles with children — *visibility tests for each rule.* (`sponsorship-rules.test.ts`, `sponsorship-select.test.ts`, isolation rows in `account-isolation.test.ts`)
+- [x] 6.3 Click counting without third-party scripts — *counts increment.* (`/go/<id>/`, atomic UPDATE, no identifiers; upper bound)
+- [x] 6.4 Disclosure page and contributor-terms note — *pages live.* (`/sponsorship/` behind the flag; the contributor terms already carry the note)
+- [x] 6.5 Done-when: sponsor line appears on matching adult items with clicks counted and is absent for a child profile.
 
 ## Project 7: Comments and moderation
 

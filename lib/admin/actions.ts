@@ -17,9 +17,10 @@ import { decideAppeal } from '@/lib/comments/appeals';
 import { resetReporter, resolveEscalation } from '@/lib/comments/owner-actions';
 import { setTrust } from '@/lib/comments/trust';
 import { isReasonCode } from '@/lib/comments/rejection-email';
-import { commentsEnabled, contributorsEnabled } from '@/lib/config';
+import { commentsEnabled, contributorsEnabled, sponsorshipEnabled } from '@/lib/config';
 import { approveLink, isContributed, lockContribution, markApproved, ownerDecision } from '@/lib/contributors/owner';
 import { sendEmail, type EmailMessage } from '@/lib/email';
+import { attachSponsorship, createSponsor, endSponsorship } from '@/lib/sponsorship/admin';
 import { linkBase } from './sessions';
 import { audit } from './audit';
 import { DONE, ERRORS, type DoneCode, type ErrorCode } from './messages';
@@ -416,6 +417,27 @@ const handlers: Record<string, Handler> = {
     return { code: 'contribution_link_approved', target: `contributor:${slug}` };
   },
 
+  // Sponsorship (plan 6): the confirmation is recorded in the audit row; clicks are never written by an action.
+  async 'sponsor.create'({ tx, form, now }) {
+    const r = await createSponsor(tx, form, now);
+    if (!r.ok) throw new ActionError(400, 'sponsor_rules');
+    const { id, name, category } = r.value;
+    return { code: 'sponsor_created', target: `sponsor:${id}`, detail: { name, category, confirmed: true } };
+  },
+
+  async 'sponsorship.attach'({ tx, form }) {
+    const r = await attachSponsorship(tx, form);
+    if (!r.ok) throw r.reason === 'missing' ? missing() : r.reason === 'target' ? new ActionError(400, 'sponsor_target') : bad();
+    const { id, sponsorId, target, targetRef, kind, startsOn, endsOn } = r.value;
+    return { code: 'sponsorship_attached', target: `sponsorship:${id}`, detail: { sponsorId, target, targetRef, kind, startsOn, endsOn } };
+  },
+
+  async 'sponsorship.end'({ tx, form, now }) {
+    const id = intId(form);
+    if (!(await endSponsorship(tx, id, now))) throw missing();
+    return { code: 'sponsorship_ended', target: `sponsorship:${id}` };
+  },
+
   async 'agent.create'({ tx, form }) {
     const name = field(form, 'name');
     if (!AGENT_NAME.test(name)) throw bad();
@@ -471,11 +493,12 @@ async function sendAfter(send: (m: EmailMessage) => Promise<unknown>, mail: Emai
 }
 
 // With comments switched off (ACCOUNTS_ENABLED or COMMENTS_ENABLED unset), every comments.* action is unknown.
-// With contributors switched off, every contribution.* action is unknown too.
+// With contributors switched off, every contribution.* action is unknown too; with sponsorship off, every sponsor action.
 const available = (name: string) =>
   Object.hasOwn(handlers, name) &&
   (!name.startsWith('comments.') || commentsEnabled()) &&
-  (!name.startsWith('contribution.') || contributorsEnabled());
+  (!name.startsWith('contribution.') || contributorsEnabled()) &&
+  (!name.startsWith('sponsor') || sponsorshipEnabled());
 
 export async function runAction(
   db: Db,

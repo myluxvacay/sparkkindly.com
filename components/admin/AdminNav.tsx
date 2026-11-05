@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { commentsEnabled, contributorsEnabled } from '@/lib/config';
+import { commentsEnabled, contributorsEnabled, sponsorshipEnabled } from '@/lib/config';
 import ActionForm from './ActionForm';
 
 const LINKS: [string, string][] = [
@@ -21,6 +21,7 @@ export default function AdminNav({ email, csrf }: { email: string; csrf: string 
     ...LINKS,
     ...(commentsEnabled() ? ([['/admin/comments/', 'Comments']] as [string, string][]) : []),
     ...(contributorsEnabled() ? ([['/admin/contributions/', 'Contributions']] as [string, string][]) : []),
+    ...(sponsorshipEnabled() ? ([['/admin/sponsors/', 'Sponsors']] as [string, string][]) : []),
   ];
   return (
     <nav aria-label="Admin" className="admin-nav">

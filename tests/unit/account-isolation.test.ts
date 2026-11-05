@@ -72,6 +72,7 @@ import { enableRequest, saveRequest, submitRequest, withdrawRequest } from '@/li
 import { getMine } from '@/lib/contributors/drafts';
 import { contributor as contributorFixture, drafted as draftedFixture } from '../helpers/contributors';
 import { person as personFixture } from '../helpers/comments';
+import { clickRequest, loadSponsorLine } from '@/lib/sponsorship/web';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -1686,5 +1687,54 @@ describe('contributors (plan 8): adult context, own contributions only', () => {
       expect(r.headers.get('location')).toBe('/me/contribute/?r=not_found#result');
     }
     expect((await getMine(db, b.id, id))!.state).toBe('draft');
+  });
+});
+
+describe('sponsorship (plan 6): child, teen and unknown viewers never see it', () => {
+  const NOW6 = new Date('2026-11-05T12:00:00Z');
+  let itemId: string;
+  let shipId: number;
+  beforeEach(async () => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('SPONSORSHIP_ENABLED', 'true');
+    await seedReference(db);
+    itemId = (
+      await db.query<{ id: string }>(
+        `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, published_at, created_by, risk_tier, approved_by)
+         SELECT id, 'article', $1, 'T', 'S', '{}'::jsonb, 'adults', 'published', '2026-11-01T00:00:00Z', 'test', 'reflective', 'owner'
+         FROM worlds WHERE slug = 'grow' RETURNING id`,
+        [`iso-sponsored-${Math.random().toString(36).slice(2, 8)}`],
+      )
+    ).rows[0].id;
+    const sponsor = (await db.query<{ id: number }>("INSERT INTO sponsors (name, link, category, confirmed_at) VALUES ('Iso Sponsor', 'https://iso.example/', 'books', now()) RETURNING id")).rows[0].id;
+    shipId = (await db.query<{ id: number }>("INSERT INTO sponsorships (sponsor_id, item_id, label) VALUES ($1, $2, 'Iso link') RETURNING id", [sponsor, itemId])).rows[0].id;
+  });
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+  const go = (session: string) => new Request(`http://localhost/go/${shipId}/`, { headers: { cookie: `__Host-sk_account=${session}` } });
+  const clicks = async () => (await db.query<{ c: number }>('SELECT click_count AS c FROM sponsorships WHERE id = $1', [shipId])).rows[0].c;
+
+  it('own adult context -> the line; child profile, 16-17 and 13-15 accounts -> no line and no redirect', async () => {
+    const adult = await personFixture(db, NOW6);
+    expect(await loadSponsorLine(db, adult.session, itemId, NOW6)).toMatchObject({ id: shipId });
+    const parent = await personFixture(db, NOW6);
+    const kid = await createChildProfile(db, parent.id, { displayName: 'Kid', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (kid.status !== 'created') throw new Error('profile failed');
+    await switchToProfile(db, parent.session, kid.profileId, NOW6);
+    const older = await personFixture(db, NOW6, '2010-01-01');
+    const younger = await personFixture(db, NOW6, '2012-06-01', `p${Math.random()}@example.test`);
+    for (const s of [parent.session, older.session, younger.session]) {
+      expect(await loadSponsorLine(db, s, itemId, NOW6)).toBeNull();
+      expect((await clickRequest(go(s), { db, now: NOW6 }, String(shipId))).headers.get('location')).toBe('/');
+    }
+    expect(await clicks()).toBe(0);
+  });
+
+  it('a session lookup that fails -> unknown: no line', async () => {
+    const broken = { query: () => Promise.reject(new Error('down')) } as unknown as typeof db;
+    const spy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    expect(await loadSponsorLine(broken, 'a'.repeat(64), itemId, NOW6)).toBeNull();
+    spy.mockRestore();
   });
 });

@@ -38,6 +38,9 @@ export const DONE = {
   contribution_changes_requested: 'Changes requested: the contributor is emailed your notes.',
   contribution_rejected: 'Contribution rejected: the contributor is emailed the reason.',
   contribution_link_approved: 'Link approved: it now shows on the contributor page.',
+  sponsor_created: 'Sponsor saved.',
+  sponsorship_attached: 'Sponsorship attached. It shows on matching adults items while its dates allow.',
+  sponsorship_ended: 'Sponsorship ended: its line no longer shows anywhere.',
 } as const;
 
 export const ERRORS = {
@@ -54,6 +57,8 @@ export const ERRORS = {
   kids_comments: 'Kids items never carry comments.',
   changed: 'This changed after you opened the page. Please review it again.',
   contributed: 'This is a member contribution: reject it in Contributions, where the reason is sent to the contributor.',
+  sponsor_rules: 'A sponsor needs a name (up to 80 characters), an https link to a public site, an allowed category and the confirmation box ticked.',
+  sponsor_target: 'Sponsorship attaches only to a published adults item outside Kids, an existing topic, or a world other than Kids.',
   key_gone: 'That key has already been shown or has expired. Rotate the key again if it was not saved.',
 } as const;
 

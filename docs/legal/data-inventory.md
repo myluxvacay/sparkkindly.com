@@ -90,7 +90,9 @@ account or a child profile removes its points everywhere. A consent-pending
 | `admin_users`, `admin_login_tokens`, `admin_sessions`, `audit_log` | operator email addresses, sealed authenticator secrets, token hashes, admin actions | site operators | admin sessions at most 12 hours; others until removed | `005_admin.sql`, `001_core.sql`, OPERATIONS 1C |
 | `failed_jobs`, `job_runs` | job names, counts and error names. The account jobs write counts only, never an address | site operators | no automatic deletion in the code | `001_core.sql`, `005_admin.sql`, `lib/accounts/inactivity.ts` |
 
-Unused tables from migration 001 (`sponsors`, `sponsorships`) hold no personal data. Items, topics, worlds,
+`sponsors` and `sponsorships` (Project 6, behind `SPONSORSHIP_ENABLED`) hold sponsor names, links, categories,
+dates, link text and one click count per sponsorship. No personal data: a click stores no identifier, address, cookie
+or log row, and the sponsor line and redirect set no cookie and make no third-party request. Items, topics, worlds,
 answers and agent tables hold content, not personal data.
 
 ## 2. Outside the database
@@ -141,7 +143,8 @@ From spec 4a.5 and the code:
 ## 5. Planned, not yet available
 
 Circles and scores (Project 4), comments and communities (Project 4 onward) and contributions (Project 8) are built
-behind their flags and listed above. Sponsorship (Project 6) and social sharing do not exist and store nothing today. Each will need rows added
+behind their flags and listed above. Sponsorship (Project 6) is built behind its flag and stores no personal data (above). Social sharing does not exist
+and stores nothing today. Each will need rows added
 here before it launches.
 
 ## Owner decisions pending

@@ -21,6 +21,8 @@ import { accountSessionToken, currentScope } from '@/lib/accounts/scope-next';
 import CommentSection from '@/components/comments/CommentSection';
 import { loadCommentSection } from '@/lib/comments/web';
 import { bylineFor } from '@/lib/contributors/byline';
+import SponsorLine from '@/components/sponsorship/SponsorLine';
+import { loadSponsorLine } from '@/lib/sponsorship/web';
 import { getWorld } from '@/lib/public/worlds';
 import { JsonLd, metadata as seo } from '@/lib/seo';
 
@@ -54,6 +56,9 @@ export default async function ItemPage({ params, searchParams }: Props) {
   const commentCode = (await searchParams).c;
   // A contributor's credit (plan 8): only for a published contributed item, and null with the flag off.
   const credit = await bylineFor(db, item.id);
+  // One sponsor line (plan 6): null with the flag off (nothing read), for a viewer who may not see it, and on an item
+  // that may not carry it.
+  const sponsor = await loadSponsorLine(db, await accountSessionToken(), item.id, new Date());
   const related = (await listPublic(db, await currentScope(), { world: item.world, limit: 4, offset: 0 })).filter((i) => i.id !== item.id).slice(0, 3);
 
   const isArticle = item.kind === 'article';
@@ -75,6 +80,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
           {KIND_EYEBROW[item.kind] ?? 'ITEM'}
         </p>
         <h1>{item.title}</h1>
+        {sponsor && <SponsorLine line={sponsor} />}
         <p className="article-summary">{item.summary}</p>
         <p className="byline">
           {credit ? (

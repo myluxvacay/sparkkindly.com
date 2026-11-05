@@ -126,6 +126,14 @@ published pieces down and removes the page; and that the export lists all of it 
 while the flag is off). The draft contributor terms need the owner's (and the professional's) review, including the
 open payment decision.
 
+## Sponsorship (Project 6)
+
+Before `SPONSORSHIP_ENABLED` goes on anywhere real: the privacy page should say that some adults-only pieces carry
+one disclosed sponsor line, that the sponsor link passes through `/go/<id>/` on our own site, which counts the click
+and keeps nothing about the visitor (no cookie, identifier, address or referrer), and point to `/sponsorship/`. The
+footer or About page may link `/sponsorship/` (Ruling: not added now, so every page stays byte-identical while the
+flag is off). The `/sponsorship/` copy and the excluded-category list need the owner's review.
+
 ## Other places that point at the privacy page
 
 - The parent consent email links to the privacy page (`lib/accounts/consent-email.ts`, `privacyUrl`). It must not be
