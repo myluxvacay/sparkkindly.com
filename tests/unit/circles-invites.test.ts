@@ -1,14 +1,16 @@
 // @vitest-environment node
 // Circle invites (plan 4B Task 1): link and email invites, preview, acceptance, revocation, limits, referrals, deletion,
 // export and the purge of spent invites.
-import { describe, it, expect, beforeEach, afterAll, beforeAll } from 'vitest';
+import { describe, it, expect, beforeEach, afterAll, beforeAll, vi } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { signUp } from '@/lib/accounts/signup';
 import { deleteAccount } from '@/lib/accounts/delete';
 import { exportAccount } from '@/lib/accounts/export';
 import { hash } from '@/lib/tokens';
 import { createCircle } from '@/lib/circles/repo';
-import { closeCircle } from '@/lib/circles/owner';
+import { closeCircle, removeMember } from '@/lib/circles/owner';
+import { joinCommunity } from '@/lib/circles/communities';
+import { leaveCircle } from '@/lib/circles/repo';
 import { tick } from '@/worker/main';
 import {
   INVITE_LIMITS,
@@ -348,14 +350,70 @@ describe('email invites', () => {
     expect(off).not.toBe(on);
   });
 
-  it('a send failure still answers sent and leaves the invite in place', async () => {
+  it('a send failure still answers sent, leaves the invite in place and logs the error name only', async () => {
     const owner = await account();
     const slug = await circle(owner);
+    const log = vi.spyOn(console, 'error').mockImplementation(() => {});
     const r = await createEmailInvite(db, owner, slug, 'a@example.test', T0, async () => {
-      throw new Error('boom a@example.test');
+      throw new TypeError('boom a@example.test');
     });
     expect(r).toBe('sent');
     expect(await invites()).toHaveLength(1);
+    await new Promise((done) => setTimeout(done, 0));
+    expect(log).toHaveBeenCalledWith('circle invite email not sent:', 'TypeError');
+    expect(JSON.stringify(log.mock.calls)).not.toContain('a@example.test');
+    log.mockRestore();
+  });
+
+  it('never waits for the mail provider, so mailed and unmailed addresses answer alike', async () => {
+    const owner = await account();
+    const slug = await circle(owner);
+    let started = 0;
+    const never = () => {
+      started++;
+      return new Promise<never>(() => {});
+    };
+    const r = await Promise.race([
+      createEmailInvite(db, owner, slug, 'slow@example.test', T0, never),
+      new Promise((done) => setTimeout(() => done('hung'), 2000)),
+    ]);
+    expect(r).toBe('sent');
+    expect(started).toBe(1);
+  });
+});
+
+describe('removed members', () => {
+  it('a member the owner removed cannot rejoin through a link or as a community; a member who left can', async () => {
+    const owner = await account();
+    const slug = await circle(owner);
+    const token = await link(owner, slug);
+    const [gone, leaver] = [await account(), await account()];
+    for (const p of [gone, leaver]) expect((await acceptInvite(db, p, token, 'Pat', T0)).status).toBe('joined');
+    expect(await removeMember(db, owner, slug, { accountId: gone, profileId: null }, T0)).toBe('removed');
+    expect(await leaveCircle(db, leaver, slug, T0)).toBe('left');
+    expect(await acceptInvite(db, gone, token, 'Pat', at(1))).toEqual({ status: 'removed' });
+    expect(await acceptInvite(db, leaver, token, 'Pat', at(1))).toEqual({ status: 'joined', slug });
+
+    const community = await circle(owner, 'community', 'Open');
+    expect((await joinCommunity(db, gone, community, 'Pat', T0)).status).toBe('joined');
+    expect(await removeMember(db, owner, community, { accountId: gone, profileId: null }, T0)).toBe('removed');
+    expect(await joinCommunity(db, gone, community, 'Pat', at(1))).toEqual({ status: 'removed' });
+  });
+
+  it("removing a member revokes that member's own active invites in that circle only", async () => {
+    const owner = await account();
+    const slug = await circle(owner);
+    const other = await circle(owner, 'friends', 'Other');
+    const m = await account();
+    for (const s of [slug, other]) expect((await acceptInvite(db, m, await link(owner, s), 'Mo', T0)).status).toBe('joined');
+    const here = await link(m, slug, at(1));
+    const there = await link(m, other, at(1));
+    const ownerLink = await link(owner, slug, at(2));
+    expect(await removeMember(db, owner, slug, { accountId: m, profileId: null }, at(3))).toBe('removed');
+    const revoked = (await db.query<{ token_hash: string }>('SELECT token_hash FROM circle_invites WHERE revoked_at = $1', [at(3).toISOString()])).rows;
+    expect(revoked.map((r) => r.token_hash)).toEqual([hash(here)]);
+    expect(await previewInvite(db, there, at(4))).not.toBeNull();
+    expect(await previewInvite(db, ownerLink, at(4))).not.toBeNull();
   });
 });
 

@@ -24,6 +24,7 @@ const MESSAGES: Messages = {
   has_child_adults_only: { text: 'This circle includes a child profile, so only adults (18 and over) can join it.', ok: false },
   full: { text: 'This circle is full (30 members).', ok: false },
   account_limit: { text: 'You are already in 10 circles. Leave one before joining another.', ok: false },
+  removed: { text: 'The owner removed you from this circle, so you cannot join it again.', ok: false },
   already_member: { text: 'You are already in this circle.', ok: true },
 };
 const KIND = { friends: 'friends circle', family: 'family circle', community: 'community' } as const;

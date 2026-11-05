@@ -70,7 +70,7 @@ export function inviteMetadata(p: InvitePreview | null): Metadata {
   };
 }
 
-const ACCEPT_CODES = new Set(['name', 'capability', 'community_age', 'has_child_adults_only', 'full', 'account_limit', 'already_member']);
+const ACCEPT_CODES = new Set(['name', 'capability', 'community_age', 'has_child_adults_only', 'full', 'account_limit', 'already_member', 'removed']);
 
 // The invite page sends no Referer (Referrer-Policy no-referrer), so a browser posts its join form with `Origin: null`.
 // That alone proves nothing; with the browser-set Sec-Fetch-Site: same-origin it is our own page (a cross-site page

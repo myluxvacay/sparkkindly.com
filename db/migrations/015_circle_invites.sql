@@ -2,8 +2,13 @@
 -- expires 14 days after creation. Tokens are never stored: only their sha256 hashes. The invited address is kept only
 -- until the invite is accepted, revoked or expired (lib/circles/invites.ts nulls it; the daily purge catches the rest).
 -- A referral records that a new account first joined through an invite: invite, account and time, no names.
--- Expand only: two new tables the previous release never reads.
--- Rollback: DROP TABLE referrals; DROP TABLE circle_invites; DELETE FROM schema_migrations WHERE name = '015_circle_invites.sql'.
+-- circle_members.removed_at marks a member the owner removed (leaving sets only left_at): a removed account cannot join
+-- that circle again, through an invite or as a community.
+-- Expand only: two new tables and a nullable column the previous release never reads.
+-- Rollback: DROP TABLE referrals; DROP TABLE circle_invites; ALTER TABLE circle_members DROP COLUMN removed_at;
+-- DELETE FROM schema_migrations WHERE name = '015_circle_invites.sql'.
+ALTER TABLE circle_members ADD COLUMN removed_at timestamptz;
+
 CREATE TABLE circle_invites (
   id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   circle_id     uuid NOT NULL REFERENCES circles (id) ON DELETE CASCADE,

@@ -18,6 +18,7 @@ export type JoinReason =
   | 'full'
   | 'account_limit'
   | 'already_member'
+  | 'removed'
   | 'closed';
 export type JoinResult = { status: 'joined'; slug: string } | { status: JoinReason | 'name' };
 
@@ -30,6 +31,7 @@ export type JoinInput = {
   memberCount: number;
   accountCircleCount: number;
   alreadyMember: boolean;
+  removed?: boolean;
   circleOpen: boolean;
   circleHidden: boolean;
 };
@@ -37,6 +39,7 @@ export type JoinInput = {
 function refusal(i: JoinInput): JoinReason | null {
   if (!i.circleOpen || i.circleHidden) return 'closed';
   if (i.alreadyMember) return 'already_member';
+  if (i.removed) return 'removed';
   if (!can(i.group, i.consent, 'join_circle')) return 'capability';
   if (i.circleKind === 'community' && !can(i.group, i.consent, 'join_community')) return 'community_age';
   if (i.circleKind !== 'community' && !i.viaInvite) return 'invite_only';
@@ -62,7 +65,7 @@ export async function lockCircleById(tx: Queryable, circleId: string): Promise<L
   return r.rows[0] ?? null;
 }
 
-type Joiner = { dob: string; consent_state: Consent; circles: number; member: boolean };
+type Joiner = { dob: string; consent_state: Consent; circles: number; member: boolean; removed: boolean };
 
 // The account row, locked, with its open-circle count and whether it is already a current member of this circle.
 async function lockJoiner(tx: Queryable, accountId: string, circleId: string): Promise<Joiner | null> {
@@ -71,7 +74,9 @@ async function lockJoiner(tx: Queryable, accountId: string, circleId: string): P
        (SELECT count(*)::int FROM circle_members m JOIN circles c ON c.id = m.circle_id
         WHERE m.account_id = a.id AND m.profile_id IS NULL AND m.left_at IS NULL AND c.status = 'open') AS circles,
        EXISTS (SELECT 1 FROM circle_members m WHERE m.circle_id = $2 AND m.account_id = a.id AND m.profile_id IS NULL
-               AND m.left_at IS NULL) AS member
+               AND m.left_at IS NULL) AS member,
+       EXISTS (SELECT 1 FROM circle_members m WHERE m.circle_id = $2 AND m.account_id = a.id AND m.profile_id IS NULL
+               AND m.removed_at IS NOT NULL) AS removed
      FROM accounts a WHERE a.id = $1 FOR UPDATE OF a`,
     [accountId, circleId],
   );
@@ -100,6 +105,7 @@ export async function joinLocked(
     memberCount: await memberCount(tx, c.id),
     accountCircleCount: a.circles,
     alreadyMember: a.member,
+    removed: a.removed,
     circleOpen: c.status === 'open',
     circleHidden: c.hidden_at !== null,
   });

@@ -421,12 +421,15 @@ If no run is recorded for 36 hours the worker emails the admin list.
   open and visible; under 30 members; the account in fewer than 10 open circles; `join_circle` (a consent-pending 13-15
   is refused); a circle holding a child profile admits 18+ only; a community needs `join_community` (not 13-15); friends
   and family circles only through an invite; a child-profile context is refused. "Your name in this circle" is required.
+  A member the owner removed (`circle_members.removed_at`, set by remove, not by leave) cannot join that circle again,
+  by invite or as a community; removing a member also revokes their own active invites to it. A member who left may rejoin.
 - **Email invites.** At most 10 sent per account per 24 hours, 3 per address per circle (the address is kept until the
   daily purge, so revoked invites count until then), one active invite per address per circle, 60 sends per network an
   hour, and the site-wide email budget. An address whose account has invite email off (`notify_invites`, off by
   default) is sent nothing; the sender still sees "sent". The mail names the inviter by their circle name, the circle,
   says to ignore it if they do not know them, and has the one-click unsubscribe when the address has an account. Sends
-  go through `lib/email.ts` (10-second timeout); a failed send is logged by error name only and the invite stays.
+  go through `lib/email.ts` (10-second timeout) and are started, not awaited, so the answer's timing does not say whether
+  an address was mailed; a failed send is logged by error name only and the invite stays.
 - **Communities.** `/circles/communities/` is public: name, description and member count of open, visible communities,
   newest first, 20 a page, never member names. Signed-in adults and 16-17s join from the list.
 - **Referrals.** When an account created within the last hour first joins a circle through an invite, one `referrals`
@@ -438,10 +441,10 @@ If no run is recorded for 36 hours the worker emails the admin list.
 - **Emergency revoke from the database.** Every invite of one circle:
   `UPDATE circle_invites SET revoked_at = now() WHERE circle_id = (SELECT id FROM circles WHERE slug = '<slug>') AND revoked_at IS NULL;`
   Every invite site-wide: the same without the `circle_id` condition. Revoked invites cannot be un-revoked; members make new ones.
-- **Migration and rollback.** `015_circle_invites.sql` is additive (two new tables). Code rollback: unset
+- **Migration and rollback.** `015_circle_invites.sql` is additive (two new tables and `circle_members.removed_at`). Code rollback: unset
   `CIRCLES_ENABLED` or switch back to the previous release (it never reads them). Schema rollback, only after the
-  previous release is live: `DROP TABLE referrals; DROP TABLE circle_invites; DELETE FROM schema_migrations WHERE name =
-  '015_circle_invites.sql';` (as in the migration header).
+  previous release is live: `DROP TABLE referrals; DROP TABLE circle_invites; ALTER TABLE circle_members DROP COLUMN
+  removed_at; DELETE FROM schema_migrations WHERE name = '015_circle_invites.sql';` (as in the migration header).
 
 ## Pilot measurement (roadmap P.2)
 

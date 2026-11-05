@@ -19,6 +19,7 @@ const MESSAGES: Messages = {
   community_age: { text: 'Communities are open to members aged 16 and over.', ok: false },
   full: { text: 'That community is full (30 members).', ok: false },
   account_limit: { text: 'You are already in 10 circles. Leave one before joining another.', ok: false },
+  removed: { text: 'The owner removed you from that community, so you cannot join it again.', ok: false },
   already_member: { text: 'You are already in that community.', ok: true },
   closed: { text: 'That community is not available any more.', ok: false },
   invite_only: { text: 'That circle can be joined only through an invite.', ok: false },

@@ -39,14 +39,24 @@ export async function removeMember(
       return 'is_owner';
     }
     // An account member leaves with its child profiles; a child profile alone leaves its adult in place.
+    // removed_at (unlike a plain leave) keeps a removed account from joining again (lib/circles/join.ts).
     const r = await tx.query(
-      `UPDATE circle_members SET left_at = $4
+      `UPDATE circle_members SET left_at = $4, removed_at = $4
        WHERE circle_id = $1 AND account_id = $2 AND left_at IS NULL AND ($3::uuid IS NULL OR profile_id = $3::uuid)
          AND EXISTS (SELECT 1 FROM circle_members t WHERE t.circle_id = $1 AND t.account_id = $2 AND t.left_at IS NULL
                      AND t.profile_id IS NOT DISTINCT FROM $3::uuid)`,
       [c.id, accountId, profileId, now.toISOString()],
     );
-    return (r.rowCount ?? 0) > 0 ? 'removed' : 'not_found';
+    if ((r.rowCount ?? 0) === 0) return 'not_found';
+    if (profileId === null) {
+      // A removed account's own invites to this circle stop working with it.
+      await tx.query('UPDATE circle_invites SET revoked_at = $3 WHERE circle_id = $1 AND created_by = $2 AND revoked_at IS NULL', [
+        c.id,
+        accountId,
+        now.toISOString(),
+      ]);
+    }
+    return 'removed';
   });
 }
 

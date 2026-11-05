@@ -153,8 +153,8 @@ async function emailRefusal(
 }
 
 // Records a single-use invite and mails it. An address whose account turned invite email off gets nothing, and the
-// sender still sees 'sent' (so the answer never says whether an address has an account). A failed send is logged by
-// error name only and the invite stays (the sender may revoke it).
+// sender still sees 'sent' (so neither the answer nor its timing says whether an address has an account). The send is
+// started, not awaited; a failed send is logged by error name only and the invite stays (the sender may revoke it).
 export async function createEmailInvite(
   db: Db,
   accountId: string,
@@ -185,8 +185,12 @@ export async function createEmailInvite(
     return { mail, quiet: r.rows[0]?.notify_invites === false };
   });
   if (typeof made === 'string') return made;
+  // Never awaited: waiting for the provider only when mail goes out would tell, by timing, whether the address has an
+  // account with invite email off. The send keeps lib/email.ts's bounded timeout; errors are logged by name only.
   if (!made.quiet) {
-    await send(made.mail).catch((err: Error) => console.error('circle invite email not sent:', err.name));
+    void Promise.resolve()
+      .then(() => send(made.mail))
+      .catch((err: Error) => console.error('circle invite email not sent:', err?.name));
   }
   return 'sent';
 }

@@ -64,6 +64,7 @@ describe('canJoin', () => {
     expect(reason({ circleOpen: false })).toBe('closed');
     expect(reason({ circleHidden: true })).toBe('closed');
     expect(reason({ alreadyMember: true })).toBe('already_member');
+    expect(reason({ removed: true })).toBe('removed');
     expect(reason({ memberCount: LIMITS.members })).toBe('full');
     expect(reason({ memberCount: LIMITS.members - 1 })).toBe('ok');
     expect(reason({ accountCircleCount: LIMITS.memberOf })).toBe('account_limit');

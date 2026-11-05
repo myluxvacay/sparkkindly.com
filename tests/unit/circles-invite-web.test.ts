@@ -230,6 +230,19 @@ describe('accepting', () => {
     ]);
   });
 
+  it('a removed member is told on the invite page', async () => {
+    const a = await account();
+    const slug = await circle(a.id);
+    const t = await token(a.id, slug);
+    const b = await account();
+    await acceptInviteRequest(post({ your_name: 'Bea' }, { cookie: b.session }), deps(), t);
+    await db.query('UPDATE circle_members SET left_at = now(), removed_at = now() WHERE account_id = $1', [b.id]);
+    expect(where(await acceptInviteRequest(post({ your_name: 'Bea' }, { cookie: b.session }), deps(), t))).toEqual([
+      303,
+      `/circles/join/${t}/?r=removed#result`,
+    ]);
+  });
+
   it('a bad name goes back to the page; an unknown token is a plain 404', async () => {
     const a = await account();
     const t = await token(a.id, await circle(a.id));
