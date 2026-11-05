@@ -18,7 +18,7 @@ import { seedReference } from '@/db/seed';
 import { SocialPostError } from '@/lib/social/adapters/meta';
 import type { VideoAdapter, VideoPayload } from '@/lib/social/adapters/video';
 import { cancelForItem } from '@/lib/social/cancel';
-import { collectVideoMetrics, runVideoPoster } from '@/lib/social/video/poster';
+import { collectVideoMetrics, resumeVideoPolls, runVideoPoster } from '@/lib/social/video/poster';
 import { ensureDirs, mediaDirs, newName } from '@/lib/social/video/storage';
 import { socialTick } from '@/lib/jobs/social';
 
@@ -231,6 +231,58 @@ describe('runVideoPoster', () => {
     const { adapter } = fake([{ externalId: 'Y1', url: 'https://www.youtube.com/shorts/Y1', warning: 'posted without captions: add them in YouTube Studio' }]);
     await runVideoPoster(db, NOW, deps(adapter));
     expect(await row(j.distribution)).toMatchObject({ status: 'flagged', external_id: 'Y1', last_error: expect.stringMatching(/captions/) });
+  });
+});
+
+describe('5B review H1: a TikTok upload whose outcome is unknown', () => {
+  const tokens = () =>
+    writeFileSync(env.SOCIAL_TOKEN_FILE, JSON.stringify({ tiktok: { accessToken: 'ACT', refreshToken: 'R', expiresAt: NOW.getTime() + 86_400_000 } }));
+  const tiktokFetch = (poll: () => Response) => {
+    const calls: string[] = [];
+    const f = (async (url: string | URL) => {
+      const u = String(url);
+      calls.push(u);
+      if (u.endsWith('/post/publish/video/init/')) return Response.json({ data: { publish_id: 'v_pub_h1', upload_url: 'https://open-upload.tiktokapis.com/v/?u=1' }, error: { code: 'ok' } });
+      if (u.startsWith('https://open-upload.tiktokapis.com/')) return new Response(null, { status: 201 });
+      if (u.endsWith('/post/publish/status/fetch/')) return poll();
+      throw new Error(`unexpected ${u}`);
+    }) as typeof fetch;
+    return { f, calls };
+  };
+  const status = (s: string) => () => Response.json({ data: { status: s }, error: { code: 'ok' } });
+
+  it('a rate-limited status poll after the upload flags the row with the publish id; it is never uploaded again', async () => {
+    tokens();
+    const j = await approved('tiktok');
+    const { f, calls } = tiktokFetch(() => Response.json({ error: { code: 'rate_limit_exceeded' } }, { status: 429 }));
+    const { tiktok } = await import('@/lib/social/adapters/tiktok');
+    const vdeps = { env, fetch: f, adapters: { tiktok }, sleep: async () => undefined };
+    expect(await runVideoPoster(db, NOW, vdeps)).toMatchObject({ flagged: 1, deferred: 0 });
+    expect(await row(j.distribution)).toMatchObject({ status: 'flagged', external_id: 'v_pub_h1' });
+    const before = calls.length;
+    await runVideoPoster(db, new Date(NOW.getTime() + 3_600_000), vdeps);
+    expect(calls.length).toBe(before);
+    expect((await row(j.distribution)).status).toBe('flagged');
+  });
+
+  it('later ticks resume the status poll: pending stays flagged, PUBLISH_COMPLETE settles it as posted, FAILED as failed', async () => {
+    tokens();
+    const { tiktok } = await import('@/lib/social/adapters/tiktok');
+    const a = await approved('tiktok');
+    await db.query("UPDATE distributions SET status = 'flagged', external_id = 'v_pub_a', last_error = 'x' WHERE id = $1", [a.distribution]);
+    const later = new Date(NOW.getTime() + 600_000);
+    const pending = tiktokFetch(status('PROCESSING_UPLOAD'));
+    await resumeVideoPolls(db, later, { env, fetch: pending.f, adapters: { tiktok } });
+    expect((await row(a.distribution)).status).toBe('flagged');
+    const done = tiktokFetch(status('PUBLISH_COMPLETE'));
+    expect(await resumeVideoPolls(db, later, { env, fetch: done.f, adapters: { tiktok } })).toEqual({ posted: 1, failed: 0, pending: 0 });
+    const r = await row(a.distribution);
+    expect(r).toMatchObject({ status: 'posted', external_id: 'v_pub_a' });
+    expect(done.calls.some((u) => u.includes('init'))).toBe(false);
+    const b = await approved('tiktok');
+    await db.query("UPDATE distributions SET status = 'flagged', external_id = 'v_pub_b' WHERE id = $1", [b.distribution]);
+    await resumeVideoPolls(db, later, { env, fetch: tiktokFetch(status('FAILED')).f, adapters: { tiktok } });
+    expect(await row(b.distribution)).toMatchObject({ status: 'failed', last_error: expect.stringMatching(/FAILED/) });
   });
 });
 

@@ -119,6 +119,36 @@ describe('TikTok post', () => {
     expect(e.message).not.toMatch(SECRETS);
   });
 
+  it.each([
+    ['429', json(429, { error: { code: 'rate_limit_exceeded' } })],
+    ['200 with rate_limit_exceeded', json(200, { error: { code: 'rate_limit_exceeded' } })],
+    ['401', json(401, { error: { code: 'access_token_invalid' } })],
+    ['200 without the envelope', json(200, {})],
+    ['200 not JSON', new Response('oops', { status: 200 })],
+  ] as const)('5B review H1: after the upload, a status poll answering %s is ambiguous, never transient', async (_, poll) => {
+    const f = fakeFetch([ok({ publish_id: 'v_pub_1', upload_url: UPLOAD }), new Response(null, { status: 201 }), poll]);
+    const e = await failure(tiktok.post(payload(), deps(f)));
+    expect(e.kind).toBe('ambiguous');
+    expect(e.backoffMs).toBeUndefined();
+  });
+
+  it('5B review H1: the publish id is handed to the poster before the upload and the polling', async () => {
+    const seen: string[] = [];
+    const f = fakeFetch([ok({ publish_id: 'v_pub_7', upload_url: UPLOAD }), new Response(null, { status: 201 }), json(500, {})]);
+    await failure(tiktok.post(payload(), { ...deps(f), onPublishId: async (id: string) => { seen.push(`${id}@${f.calls.length}`); } }));
+    expect(seen).toEqual(['v_pub_7@1']);
+  });
+
+  it('5B review H1: check() settles a publish id: complete, failed, or still pending (errors are pending)', async () => {
+    const c = (answer: Response | Error) => tiktok.check!({ externalId: 'v_pub_1' }, deps(fakeFetch([answer])));
+    expect(await c(ok({ status: 'PUBLISH_COMPLETE', publicaly_available_post_id: [42] }))).toEqual({ state: 'posted', externalId: '42', url: null });
+    expect(await c(ok({ status: 'PUBLISH_COMPLETE' }))).toEqual({ state: 'posted', externalId: 'v_pub_1', url: null });
+    expect(await c(ok({ status: 'FAILED' }))).toEqual({ state: 'failed' });
+    expect(await c(ok({ status: 'PROCESSING_UPLOAD' }))).toEqual({ state: 'pending' });
+    expect(await c(json(429, {}))).toEqual({ state: 'pending' });
+    expect(await c(new TypeError('fetch failed'))).toEqual({ state: 'pending' });
+  });
+
   it('a status poll that never completes within the bounded wait is ambiguous (it may still publish)', async () => {
     const f = fakeFetch([ok({ publish_id: 'p', upload_url: UPLOAD }), new Response(null, { status: 201 }), ...Array.from({ length: 30 }, () => ok({ status: 'PROCESSING_UPLOAD' }))]);
     expect((await failure(tiktok.post(payload(), deps(f)))).kind).toBe('ambiguous');

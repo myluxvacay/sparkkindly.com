@@ -9,7 +9,7 @@
 import type { EnvLike } from '@/lib/env';
 import { accessToken, tokenStatus } from '../token-store';
 import { SocialPostError } from './meta';
-import { clean, failure, json, num, readChunk, reasonOf, send, withTags, type VideoAdapter, type VideoDeps, type VideoPayload } from './video';
+import { clean, failure, json, num, readChunk, reasonOf, send, withTags, type CheckResult, type VideoAdapter, type VideoDeps, type VideoPayload } from './video';
 
 const API = 'https://open.tiktokapis.com/v2';
 const SERVICE = 'TikTok';
@@ -93,15 +93,20 @@ async function upload(deps: VideoDeps, url: string, d: VideoPayload, chunk: numb
   }
 }
 
-// After the upload everything is ambiguous except an explicit FAILED.
+type Status = { status?: string; publicaly_available_post_id?: unknown[] };
+const statusOf = (deps: VideoDeps, token: string, publishId: string) =>
+  call<Status>(deps, token, 'post/publish/status/fetch/', { publish_id: publishId }, true);
+const publicId = (s: Status): string | null => {
+  const id = s.publicaly_available_post_id?.[0];
+  return (typeof id === 'string' || typeof id === 'number') && /^[0-9]{1,30}$/.test(String(id)) ? String(id) : null;
+};
+
+// After the upload everything is ambiguous except an explicit FAILED (call(..., final) makes every error ambiguous).
 async function waitForPublish(deps: VideoDeps, token: string, publishId: string): Promise<string | null> {
   const sleep = deps.sleep ?? ((ms: number) => new Promise((r) => setTimeout(r, ms)));
   for (let i = 0; i < POLL_TRIES; i++) {
-    const s = await call<{ status?: string; publicaly_available_post_id?: unknown[] }>(deps, token, 'post/publish/status/fetch/', { publish_id: publishId }, true);
-    if (s.status === 'PUBLISH_COMPLETE') {
-      const id = s.publicaly_available_post_id?.[0];
-      return (typeof id === 'string' || typeof id === 'number') && /^\d{1,30}$/.test(String(id)) ? String(id) : null;
-    }
+    const s = await statusOf(deps, token, publishId);
+    if (s.status === 'PUBLISH_COMPLETE') return publicId(s);
     if (s.status === 'FAILED') throw new SocialPostError('permanent', 'TikTok could not process the video');
     await sleep(POLL_WAIT_MS);
   }
@@ -119,9 +124,20 @@ export const tiktok: VideoAdapter = {
     });
     const publishId = typeof init.publish_id === 'string' && /^[\w.-]{1,100}$/.test(init.publish_id) ? init.publish_id : null;
     if (!publishId) throw new SocialPostError('permanent', 'TikTok returned no usable publish id');
+    await deps.onPublishId?.(publishId);
     await upload(deps, uploadUrl(init.upload_url), d, chunk, count);
     const postId = await waitForPublish(deps, t, publishId);
     return { externalId: postId ?? publishId, url: null };
+  },
+
+  async check(d, deps): Promise<CheckResult> {
+    try {
+      const s = await statusOf(deps, await token(deps), d.externalId);
+      if (s.status === 'PUBLISH_COMPLETE') return { state: 'posted', externalId: publicId(s) ?? d.externalId, url: null };
+      return s.status === 'FAILED' ? { state: 'failed' } : { state: 'pending' };
+    } catch {
+      return { state: 'pending' };
+    }
   },
 
   // Only a public post id can be queried; a private post (publish id) has no metrics.

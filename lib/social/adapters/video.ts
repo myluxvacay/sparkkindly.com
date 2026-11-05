@@ -17,11 +17,16 @@ export type VideoPayload = {
   description?: string;
   captionsPath: string | null;
 };
-export type VideoDeps = AdapterDeps & { now?: () => Date };
+// onPublishId (5B review H1): the platform's id for an upload in progress, handed over before the publishing call, so
+// a row whose outcome is unknown can be checked later instead of uploaded again.
+export type VideoDeps = AdapterDeps & { now?: () => Date; onPublishId?: (id: string) => Promise<void> };
+export type CheckResult = { state: 'posted'; externalId: string; url: string | null } | { state: 'failed' } | { state: 'pending' };
 export type VideoResult = { externalId: string; url: string | null; warning?: string };
 export interface VideoAdapter {
   post(d: VideoPayload, deps: VideoDeps): Promise<VideoResult>;
   metrics(d: { externalId: string }, deps: VideoDeps): Promise<Metrics>;
+  // Settles an upload whose outcome was unknown, by its publish id (TikTok); errors count as still pending.
+  check?(d: { externalId: string }, deps: VideoDeps): Promise<CheckResult>;
 }
 
 export const RATE_BACKOFF_MS = 30 * 60_000;
@@ -45,6 +50,8 @@ const RATE = new Set(['rateLimitExceeded', 'userRateLimitExceeded', 'rate_limit_
 
 export function failure(service: string, status: number, reason: string | null, final = false): SocialPostError {
   const detail = `${service} answered HTTP ${status}${reason ? ` (${reason})` : ''}`;
+  // On or after the publishing call any error answer may hide a post (5B review H1): flagged, never retried.
+  if (final) return new SocialPostError('ambiguous', detail);
   if (reason && QUOTA.has(reason)) return new SocialPostError('transient', detail, QUOTA_BACKOFF_MS);
   if (status === 429 || (reason && RATE.has(reason))) return new SocialPostError('transient', detail, RATE_BACKOFF_MS);
   if (status >= 500) return new SocialPostError(final ? 'ambiguous' : 'transient', detail);

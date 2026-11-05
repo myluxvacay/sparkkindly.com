@@ -13,7 +13,7 @@ import { collectMetrics } from '@/lib/social/metrics';
 import { recoverStuck, runPoster } from '@/lib/social/poster';
 import { selectForDay } from '@/lib/social/select';
 import type { VideoAdapter } from '@/lib/social/adapters/video';
-import { collectVideoMetrics, runVideoPoster, VIDEO_ADAPTERS } from '@/lib/social/video/poster';
+import { collectVideoMetrics, resumeVideoPolls, runVideoPoster, VIDEO_ADAPTERS } from '@/lib/social/video/poster';
 import { selectVideos } from '@/lib/social/video/select';
 import { VIDEO_PLATFORMS, type Platform, type VideoPlatform } from '@/lib/social/states';
 import { runJob } from './run-job';
@@ -51,9 +51,10 @@ export async function socialTick(db: Db, now: Date, env: EnvLike, log: string[],
       const r = await runPoster(db, now, deps);
       const missing = r.noCredentials.length ? `, no credentials: ${r.noCredentials.join(' ')}` : '';
       log.push(`social post: ${r.posted} posted, ${r.deferred} deferred, ${r.failed} failed, ${r.cancelled} cancelled, ${r.flagged + stuck} flagged${missing}`);
+      const resumed = await resumeVideoPolls(db, now, videoDeps);
       const v = await runVideoPoster(db, now, videoDeps);
       const vMissing = v.noCredentials.length ? `, no credentials: ${v.noCredentials.join(' ')}` : '';
-      log.push(`video post: ${v.posted} posted, ${v.deferred} deferred, ${v.failed} failed, ${v.cancelled} cancelled, ${v.flagged} flagged${vMissing}`);
+      log.push(`video post: ${v.posted} posted, ${v.deferred} deferred, ${v.failed} failed, ${v.cancelled} cancelled, ${v.flagged} flagged${vMissing}; resumed ${resumed.posted} posted, ${resumed.failed} failed`);
     }, { delayMs: o.delayMs });
   }
   if (await claimMetrics(db, day).catch(() => false)) {

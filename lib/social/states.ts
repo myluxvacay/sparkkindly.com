@@ -29,6 +29,7 @@ export const EVENTS = {
   cancel: { from: ['selected', 'copy_ready', 'scheduled', 'posting', 'failed', 'flagged'], to: 'cancelled' },
   retry: { from: ['failed'], to: 'scheduled' }, // the owner's retry
   keep: { from: ['flagged'], to: 'posted' }, // the owner checked the platform: the post is there (5A review M1)
+  unposted: { from: ['flagged'], to: 'failed' }, // the platform said the upload FAILED: nothing posted (5B review H1)
   pick: { from: ['skipped', 'cancelled'], to: 'selected' }, // the owner's hand-pick
 } as const satisfies Record<string, { from: readonly DistStatus[]; to: DistStatus }>;
 export type DistEvent = keyof typeof EVENTS;

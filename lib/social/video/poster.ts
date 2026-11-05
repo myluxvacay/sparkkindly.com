@@ -107,7 +107,11 @@ async function postOne(db: Queryable, d: Claimed, now: Date, deps: VideoPosterDe
   if (!file) return;
   let out;
   try {
-    out = await adapter.post(payload(d, file), { fetch: deps.fetch, env: deps.env, sleep: deps.sleep, now: () => now });
+    // The publish id is stored before the upload (5B review H1), so a row whose outcome is unknown can be checked later.
+    const onPublishId = async (id: string) => {
+      await db.query("UPDATE distributions SET external_id = $2 WHERE id = $1 AND status = 'posting'", [d.id, id]);
+    };
+    out = await adapter.post(payload(d, file), { fetch: deps.fetch, env: deps.env, sleep: deps.sleep, now: () => now, onPublishId });
   } catch (err) {
     await onError(db, d, err, now, r);
     return;
@@ -132,6 +136,39 @@ export async function runVideoPoster(db: Queryable, now: Date, deps: VideoPoster
 }
 
 const WINDOW_MS = 7 * 24 * 3_600_000;
+
+// 5B review H1: flagged video rows that carry the platform's publish id and no post yet are checked again on later ticks
+// (never uploaded again). PUBLISH_COMPLETE settles them as posted (flagged again if the item was unpublished meanwhile),
+// FAILED as failed (nothing was posted, so the owner's Retry is safe); anything else leaves them flagged.
+export async function resumeVideoPolls(db: Queryable, now: Date, deps: VideoPosterDeps): Promise<{ posted: number; failed: number; pending: number }> {
+  const out = { posted: 0, failed: 0, pending: 0 };
+  if (!socialEnabled()) return out;
+  const adapters = deps.adapters ?? VIDEO_ADAPTERS;
+  const r = await db.query<{ id: string; item_id: string; platform: VideoPlatform; external_id: string }>(
+    `SELECT d.id, d.item_id, d.platform, d.external_id FROM distributions d JOIN video_jobs j ON j.distribution_id = d.id AND j.state = 'approved'
+     WHERE d.status = 'flagged' AND d.posted_at IS NULL AND d.external_id IS NOT NULL AND d.updated_at > $1 ORDER BY d.id LIMIT 20`,
+    [new Date(now.getTime() - WINDOW_MS).toISOString()],
+  );
+  for (const x of r.rows) {
+    const adapter = adapters[x.platform];
+    if (!adapter?.check || !hasVideoCredentials(x.platform, deps.env)) continue;
+    const c = await adapter.check({ externalId: x.external_id }, { fetch: deps.fetch, env: deps.env, sleep: deps.sleep, now: () => now });
+    const d = { id: Number(x.id), item_id: x.item_id, platform: x.platform };
+    if (c.state === 'posted') {
+      await moveDistribution(db, d.id, 'keep', { set: { posted_at: now.toISOString(), external_id: c.externalId, post_url: c.url, last_error: null } });
+      if (!(await eligibleItem(db, d.item_id, now, videoEligibleWhere))) {
+        await failRow(db, d, 'flag', 'item unpublished while posting: remove manually from the platform');
+      }
+      out.posted++;
+    } else if (c.state === 'failed') {
+      await moveDistribution(db, d.id, 'unposted', { set: { last_error: 'the platform reported the upload FAILED: nothing was posted, Retry is safe' } });
+      out.failed++;
+    } else {
+      out.pending++;
+    }
+  }
+  return out;
+}
 
 // Daily views, likes and comments for posted videos of the last 7 days; one failure never stops the others.
 export async function collectVideoMetrics(db: Queryable, now: Date, deps: VideoPosterDeps): Promise<{ updated: number; failed: number }> {

@@ -124,6 +124,10 @@ describe('YouTube post', () => {
     ['500 on the last chunk', [session(), json(500, {})], 'ambiguous', false],
     ['a timeout on the last chunk', [session(), new DOMException('t', 'TimeoutError')], 'ambiguous', false],
     ['a 200 without an id on the last chunk', [session(), new Response('oops', { status: 200 })], 'ambiguous', false],
+    // 5B review H1: any error answer to the last chunk may have created the video.
+    ['429 on the last chunk', [session(), json(429, {})], 'ambiguous', false],
+    ['quotaExceeded on the last chunk', [session(), json(403, { error: { errors: [{ reason: 'quotaExceeded' }] } })], 'ambiguous', false],
+    ['401 on the last chunk', [session(), json(401, {})], 'ambiguous', false],
   ] as const)('%s is %s, and no error carries a token or the session URL', async (_, answers, kind, backoff) => {
     const e = await failure(youtube.post(payload(), deps(fakeFetch([...answers]))));
     expect(e.kind).toBe(kind);
