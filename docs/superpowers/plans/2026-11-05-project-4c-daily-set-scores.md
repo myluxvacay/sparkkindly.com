@@ -12,7 +12,7 @@
 
 ## Global Constraints
 
-- Playable items only: `items.kind IN ('quiz','game','puzzle')` that have an `item_answers` row, status `published`, not archived.
+- Playable items only: `items.kind IN ('quiz','game')` (`puzzle` is excluded: the public reads never show it) that have an `item_answers` row, status `published`, not archived.
 - Set size 5 items a day (constant `SET_SIZE`). Chosen from the circle's topics and worlds; short of 5, filled from the circle's chosen worlds, then from any world, those marked `bonus`. A circle with no interests uses all worlds.
 - **Audience is a safety filter:** a circle that contains any current child profile gets `kids` and `all` items only, on every read of the set (the stored set is re-filtered at read time with the circle's current make-up, so adding a child later hides any `adults` item at once and unscored). Other circles use the full scope for adults/teens as the rest of the site does (`currentScope` rules).
 - The set for a circle day is created on first request and then fixed (unique on circle, day, position): same circle and day always return the same items. Ordering is deterministic from a hash of (circle id, day, item id); items shown to the circle in the previous 14 days are skipped unless needed to fill.

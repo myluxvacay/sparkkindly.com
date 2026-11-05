@@ -446,7 +446,9 @@ If no run is recorded for 36 hours the worker emails the admin list.
   address gets no invite email again. **Without `UNSUBSCRIBE_SECRET` no invite email is sent at all** (the sender still
   sees "sent"). Invite mail has its own site-wide budget of 60 an hour (`inviteSendBudget`), separate from the account
   email budget, so invites cannot starve sign-in and consent mail. A suppressed or capped address spends no budget
-  slot, and a refused budget spends no address slot. Circle names, descriptions and "your name in this
+  slot, and a refused budget spends no address slot. **Rotating `UNSUBSCRIBE_SECRET` changes every address hash**: the
+  suppression list stops matching (people who chose "never email me invites again" could be invited again) and every
+  address's weekly cap restarts; it also invalidates every unsubscribe link already sent. Rotate it only if it leaked. Circle names, descriptions and "your name in this
   circle" refuse anything link-like (a scheme, `www.`, or a `word.tld` pattern).
 - **Email invites.** At most 10 sent per account per 24 hours, 3 per address per circle (the address is kept until the
   daily purge, so revoked invites count until then), one active invite per address per circle, 60 sends per network an
@@ -521,7 +523,8 @@ If no run is recorded for 36 hours the worker emails the admin list.
   `correct` where it changed, and when anything flipped writes one `circle_notices` row per circle that had the item in a
   set in the last 30 days (the circle page shows "Scores corrected"; 4D emails it, see "Circle email, reports and hiding"). Answers saved before 016 have no
   choice and keep their result. There is no admin page for answer-key corrections yet; run it from a script in a
-  transaction if one is ever needed.
+  transaction if one is ever needed. **Never change `item_answers.answer` with a plain UPDATE**: every key correction
+  goes through `changeAnswerKey` inside a transaction, or stored answers and circle scores silently disagree with the key.
 - **Migration and rollback.** `016_circle_sets.sql` is additive (`circle_interests`, `circle_daily_sets`,
   `circle_notices`, `site_settings`, nullable `item_responses.choice`). Code rollback: unset `CIRCLES_ENABLED` or switch
   back to the previous release (it never reads them; its record path simply stops writing `choice`). Schema rollback,

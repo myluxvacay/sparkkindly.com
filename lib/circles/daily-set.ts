@@ -121,6 +121,8 @@ export async function getOrCreateDailySet(db: Db, circleId: string, now: Date): 
   const day = circleDay(c.rows[0].time_zone, now);
   const has = await db.query('SELECT 1 FROM circle_daily_sets WHERE circle_id = $1 AND day = $2 LIMIT 1', [circleId, day]);
   // A closed circle is read-only: it shows the sets it has and makes no new one.
+  // ponytail: a day with no playable item stores no row, so every open that day re-runs the selection under the lock;
+  // cheap while empty days are rare (an empty catalogue). Store an empty-day marker if they ever become common.
   if (has.rows.length === 0 && c.rows[0].status === 'open') await createSet(db, circleId, day, now);
   return readSet(db, circleId, day, now);
 }
