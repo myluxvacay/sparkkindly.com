@@ -17,7 +17,7 @@ export const NOTE_MAX = 300;
 export type ReportResult = 'reported' | 'invalid' | 'not_member' | 'limit' | 'not_allowed';
 
 // Trimmed NFKC note of 1..300 characters without control or format characters; '' or absent is no note; else false.
-function cleanNote(v: unknown): string | null | false {
+export function cleanNote(v: unknown): string | null | false {
   if (v === undefined || v === null) return null;
   if (typeof v !== 'string') return false;
   const s = v.normalize('NFKC').trim();

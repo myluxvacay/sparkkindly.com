@@ -131,6 +131,8 @@ describe('export inventory', () => {
       'circle_invites',
       'circle_members',
       'circle_reports',
+      'comment_appeals',
+      'comment_reports',
       'comments',
       'item_responses',
       'profile_interests',
@@ -452,10 +454,62 @@ describe('exportAccount: comments and trust (plan 7A)', () => {
       displayName: 'Sam',
       guidelinesAcceptedAt: T1.toISOString(),
       updatedAt: T1.toISOString(),
+      falseReports: 0,
+      reportsMuted: false,
     });
     const text = JSON.stringify(x);
     for (const s of ['their words', 'Otto', otherEmail, 'private agent note', top, other]) expect(text).not.toContain(s);
     const fresh = await exportAccount(db, await signedIn(`com${n++}@example.test`, '1985-03-04'), NOW);
     expect([fresh!.comments, fresh!.commentTrust]).toEqual([[], null]);
+  });
+});
+
+describe('exportAccount: comment reports and appeals (plan 7B)', () => {
+  const comment = (itemId: string, accountId: string, body: string, status: string) =>
+    db
+      .query<{ id: string }>(
+        `INSERT INTO comments (item_id, account_id, body, status, created_at, updated_at, moderation_reason, decided_by)
+         VALUES ($1, $2, $3, $4, $5, $5, 'private agent note', 'agent:moderator') RETURNING id`,
+        [itemId, accountId, body, status, T1.toISOString()],
+      )
+      .then((r) => r.rows[0].id);
+
+  it('the new comment columns are decided: workflow state and the decider are excluded with reasons', () => {
+    for (const c of ['escalated_at', 'sampled_at', 'sample_reviewed_at', 'decided_by']) {
+      expect(EXCLUDED_COLUMNS.comments[c], c).toMatch(/moderation/);
+    }
+    expect(EXPORTED_COLUMNS.account_trust).toEqual(expect.arrayContaining(['false_reports', 'reports_muted']));
+  });
+
+  it("exports the reporter's own reports and the author's own appeals; never the reported text, the other member or the reason", async () => {
+    const me = await signedIn(`rep${n++}@example.test`, '1985-03-04');
+    const otherEmail = `rep${n++}@example.test`;
+    const other = await signedIn(otherEmail, '1985-03-04');
+    const theirs = await comment(items[0].id, other, 'their reported words', 'hidden');
+    const mine = await comment(items[1].id, me, 'my rejected words', 'rejected');
+    await db.query(
+      `INSERT INTO comment_reports (comment_id, reporter_account_id, reason, note, urgent, weight, created_at)
+       VALUES ($1, $2, 'abuse', 'my note', true, 0.5, $4), ($3, $5, 'other', 'their note', false, 1, $4)`,
+      [theirs, me, mine, T1.toISOString(), other],
+    );
+    await db.query("INSERT INTO comment_appeals (comment_id, account_id, note, created_at) VALUES ($1, $2, 'please look again', $3)", [
+      mine,
+      me,
+      T1.toISOString(),
+    ]);
+    const x = await exportAccount(db, me, NOW);
+    expect(x!.commentReports).toEqual([
+      { item: items[0].slug, world: worlds[0].slug, reason: 'abuse', note: 'my note', urgent: true, createdAt: T1.toISOString(), dismissed: false },
+    ]);
+    expect(x!.commentAppeals).toEqual([
+      { item: items[1].slug, world: worlds[1].slug, note: 'please look again', createdAt: T1.toISOString(), outcome: null, decidedAt: null },
+    ]);
+    const text = JSON.stringify(x);
+    for (const s of ['their reported words', 'their note', otherEmail, other, theirs, 'private agent note', 'agent:moderator']) {
+      expect(text).not.toContain(s);
+    }
+    const y = await exportAccount(db, other, NOW);
+    expect(y!.commentReports.map((r) => r.note)).toEqual(['their note']);
+    expect(y!.commentAppeals).toEqual([]);
   });
 });

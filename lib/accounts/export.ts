@@ -19,6 +19,8 @@ export const EXPORTED_TABLES = [
   'referrals',
   'comments',
   'account_trust',
+  'comment_reports',
+  'comment_appeals',
 ] as const;
 
 // Personal-data tables deliberately left out, each with its reason.
@@ -62,7 +64,17 @@ export const EXPORTED_COLUMNS = {
   ],
   child_profiles: ['display_name', 'age_band', 'created_at'],
   comments: ['body', 'status', 'created_at', 'updated_at'],
-  account_trust: ['level', 'approved', 'rejected', 'banned', 'display_name', 'guidelines_accepted_at', 'updated_at'],
+  account_trust: [
+    'level',
+    'approved',
+    'rejected',
+    'banned',
+    'display_name',
+    'guidelines_accepted_at',
+    'updated_at',
+    'false_reports',
+    'reports_muted',
+  ],
 } as const;
 
 export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Readonly<Record<string, string>>>> = {
@@ -83,6 +95,10 @@ export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Re
     account_id: 'internal identifier of the author (the export is already that account)',
     parent_id: "internal identifier of another (possibly someone else's) comment; exported as reply: true/false",
     moderation_reason: "the moderation agent's private reason; it reaches the author in the rejection email (7B), not here",
+    escalated_at: 'moderation workflow state (when the moderation agent asked the owner); the status is exported',
+    sampled_at: 'moderation workflow state (picked for the post-publication sample); the status is exported',
+    sample_reviewed_at: 'moderation workflow state (when the sample was reviewed); the status is exported',
+    decided_by: 'moderation workflow state naming the agent or the administrator who decided; not about the member',
   },
   account_trust: {
     account_id: 'internal identifier of the account (the export is already that account)',
@@ -122,6 +138,10 @@ type ExportComment = {
   createdAt: string;
   updatedAt: string;
 };
+// A report the account made about a comment (plan 7B): its own words only, never the reported text or its author.
+type ExportCommentReport = { item: string; world: string; reason: string; note: string | null; urgent: boolean; createdAt: string; dismissed: boolean };
+// An appeal the account filed against a decision on its own comment (plan 7B).
+type ExportAppeal = { item: string; world: string; note: string | null; createdAt: string; outcome: string | null; decidedAt: string | null };
 type ExportTrust = {
   level: number;
   approved: number;
@@ -130,6 +150,8 @@ type ExportTrust = {
   displayName: string | null;
   guidelinesAcceptedAt: string | null;
   updatedAt: string;
+  falseReports: number;
+  reportsMuted: boolean;
 };
 type ExportChild = {
   displayName: string;
@@ -166,6 +188,8 @@ export type AccountExport = {
   joinedThroughInviteAt: string | null;
   comments: ExportComment[];
   commentTrust: ExportTrust | null;
+  commentReports: ExportCommentReport[];
+  commentAppeals: ExportAppeal[];
   childProfiles: ExportChild[];
 };
 
@@ -315,8 +339,19 @@ async function commentsOf(tx: Queryable, accountId: string): Promise<ExportComme
 }
 
 async function trustOf(tx: Queryable, accountId: string): Promise<ExportTrust | null> {
-  const r = await tx.query<{ level: number; approved: number; rejected: number; banned: boolean; dn: string | null; g: Date | null; u: Date }>(
-    `SELECT level, approved, rejected, banned, display_name AS dn, guidelines_accepted_at AS g, updated_at AS u
+  const r = await tx.query<{
+    level: number;
+    approved: number;
+    rejected: number;
+    banned: boolean;
+    dn: string | null;
+    g: Date | null;
+    u: Date;
+    f: number;
+    m: boolean;
+  }>(
+    `SELECT level, approved, rejected, banned, display_name AS dn, guidelines_accepted_at AS g, updated_at AS u,
+            false_reports AS f, reports_muted AS m
      FROM account_trust WHERE account_id = $1`,
     [accountId],
   );
@@ -330,8 +365,40 @@ async function trustOf(tx: Queryable, accountId: string): Promise<ExportTrust | 
         displayName: t.dn,
         guidelinesAcceptedAt: iso(t.g),
         updatedAt: iso(t.u) as string,
+        falseReports: t.f,
+        reportsMuted: t.m,
       }
     : null;
+}
+
+async function commentReportsOf(tx: Queryable, accountId: string): Promise<ExportCommentReport[]> {
+  const r = await tx.query<{ item: string; world: string; reason: string; note: string | null; urgent: boolean; c: Date; d: boolean }>(
+    `SELECT i.slug AS item, w.slug AS world, r.reason, r.note, r.urgent, r.created_at AS c, r.dismissed AS d
+     FROM comment_reports r JOIN comments c ON c.id = r.comment_id JOIN items i ON i.id = c.item_id
+     JOIN worlds w ON w.id = i.world_id
+     WHERE r.reporter_account_id = $1 ORDER BY r.created_at, r.id`,
+    [accountId],
+  );
+  return r.rows.map((x) => ({
+    item: x.item,
+    world: x.world,
+    reason: x.reason,
+    note: x.note,
+    urgent: x.urgent,
+    createdAt: iso(x.c) as string,
+    dismissed: x.d,
+  }));
+}
+
+async function appealsOf(tx: Queryable, accountId: string): Promise<ExportAppeal[]> {
+  const r = await tx.query<{ item: string; world: string; note: string | null; c: Date; o: string | null; d: Date | null }>(
+    `SELECT i.slug AS item, w.slug AS world, a.note, a.created_at AS c, a.outcome AS o, a.decided_at AS d
+     FROM comment_appeals a JOIN comments c ON c.id = a.comment_id JOIN items i ON i.id = c.item_id
+     JOIN worlds w ON w.id = i.world_id
+     WHERE a.account_id = $1 ORDER BY a.created_at, a.id`,
+    [accountId],
+  );
+  return r.rows.map((x) => ({ item: x.item, world: x.world, note: x.note, createdAt: iso(x.c) as string, outcome: x.o, decidedAt: iso(x.d) }));
 }
 
 async function readExport(tx: Queryable, accountId: string, now: Date): Promise<AccountExport | null> {
@@ -364,6 +431,8 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
     joinedThroughInviteAt: await referredAt(tx, accountId),
     comments: await commentsOf(tx, accountId),
     commentTrust: await trustOf(tx, accountId),
+    commentReports: await commentReportsOf(tx, accountId),
+    commentAppeals: await appealsOf(tx, accountId),
     childProfiles: children.rows.map((c) => ({
       displayName: c.display_name,
       ageBand: c.age_band,
