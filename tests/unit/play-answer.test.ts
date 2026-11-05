@@ -109,3 +109,44 @@ describe('playResult', () => {
     expect(await playResult(db, anon, 'play', 'a-draft', p({}))).toEqual({ status: 'not_found' });
   });
 });
+
+describe('4C review M1: only a closed response the item itself offers is kept as the choice', () => {
+  const PHONE = 'my phone is 07700 900123, call me';
+  const four = (p: string) => ['a', 'b', 'c', 'd'].map((id) => ({ id, text: `${p} ${id}` }));
+  async function item(slug: string, b: unknown, answer: unknown) {
+    const w = await db.query<{ id: number }>("SELECT id FROM worlds WHERE slug = 'play'");
+    const r = await db.query<{ id: string }>(
+      `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, published_at, created_by, risk_tier, approved_by)
+       VALUES ($1,'quiz',$2,'A title','A summary of the item.',$3::jsonb,'all','published','2026-10-31T00:00:00Z','test','computable','test') RETURNING id`,
+      [w.rows[0].id, slug, JSON.stringify(b)],
+    );
+    await db.query('INSERT INTO item_answers (item_id, answer, explanation) VALUES ($1, $2::jsonb, $3)', [r.rows[0].id, JSON.stringify(answer), EXPL]);
+  }
+  const play = (slug: string, o: Record<string, string>) => playResult(db, anon, 'play', slug, p(o));
+
+  beforeAll(async () => {
+    await item('m1-odd', { mechanic: 'odd_one_out', prompt: 'Which one?', items: four('Item'), difficulty: 'easy' }, 'c');
+    await item('m1-tf', { mechanic: 'true_false', prompt: 'True?', difficulty: 'easy' }, true);
+    await item('m1-num', { mechanic: 'number', prompt: 'How many?', difficulty: 'easy' }, { value: 7, tolerance: 0 });
+    await item('m1-order', { mechanic: 'put_in_order', prompt: 'Order?', items: four('Step').slice(0, 3), difficulty: 'easy' }, ['a', 'b', 'c']);
+  });
+
+  it('multiple choice: free text is scored wrong and not kept; an option id is kept', async () => {
+    expect(await play('good', { r: PHONE })).toMatchObject({ status: 'ok', correct: false, choice: null });
+    expect(await play('good', { r: 'a' })).toMatchObject({ status: 'ok', correct: false, choice: 'a' });
+  });
+
+  it('odd one out: free text is not kept; an item id is', async () => {
+    expect(await play('m1-odd', { r: PHONE })).toMatchObject({ status: 'ok', correct: false, choice: null });
+    expect(await play('m1-odd', { r: 'c' })).toMatchObject({ status: 'ok', correct: true, choice: 'c' });
+  });
+
+  it('true/false, number and order keep only their closed forms', async () => {
+    expect(await play('m1-tf', { r: PHONE })).toEqual({ status: 'invalid' });
+    expect(await play('m1-tf', { r: 'true' })).toMatchObject({ choice: true });
+    expect(await play('m1-num', { r: PHONE })).toEqual({ status: 'invalid' });
+    expect(await play('m1-num', { r: '7' })).toMatchObject({ correct: true, choice: 7 });
+    expect(await play('m1-order', { 'pos-a': '1', 'pos-b': '2', 'pos-c': '3', r: PHONE })).toMatchObject({ correct: true, choice: ['a', 'b', 'c'] });
+    expect(await play('m1-order', { 'pos-a': PHONE, 'pos-b': '2', 'pos-c': '3' })).toEqual({ status: 'invalid' });
+  });
+});
