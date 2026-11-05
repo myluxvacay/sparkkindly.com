@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation';
 import ActionForm from '@/components/admin/ActionForm';
+import CommentQueue from '@/components/admin/CommentQueue';
 import StatusNote from '@/components/admin/StatusNote';
 import { requireAdmin } from '@/lib/admin/next';
 import { commentSwitches, trustByComment } from '@/lib/comments/admin';
+import { ownerQueue } from '@/lib/comments/owner-queue';
 import { commentsEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
 
@@ -11,7 +13,7 @@ export const dynamic = 'force-dynamic';
 type Props = { searchParams: Promise<{ done?: string; error?: string; comment?: string }> };
 const RETURN = '/admin/comments/';
 
-// Comment switches and trust (plan 7A): per-world switches (Kids is never offered: its items never carry comments), a
+// The moderation queue (plan 7B: escalations, appeals, urgent reports, counts), then comment switches and trust (plan 7A): per-world switches (Kids is never offered: its items never carry comments), a
 // per-item switch by path, and an account's trust found through one of its comments. No email or account id is shown.
 export default async function AdminCommentsPage({ searchParams }: Props) {
   const admin = await requireAdmin();
@@ -19,11 +21,13 @@ export default async function AdminCommentsPage({ searchParams }: Props) {
   const { done, error, comment } = await searchParams;
   const db = getDb();
   const switches = await commentSwitches(db);
+  const queue = await ownerQueue(db, new Date());
   const trust = comment ? await trustByComment(db, comment) : null;
   return (
     <>
       <h1>Comments</h1>
       <StatusNote done={done} error={error} />
+      <CommentQueue queue={queue} csrf={admin.csrf} />
       <h2>Worlds</h2>
       <p>Comments are never offered on Kids items.</p>
       <ul className="admin-list">

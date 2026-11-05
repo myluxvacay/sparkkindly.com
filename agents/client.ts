@@ -7,6 +7,8 @@ export interface AgentClient {
   submit(item: unknown): Promise<Result>;
   status(id: string): Promise<Result>;
   recordRun(run: unknown): Promise<Result>;
+  moderationQueue(): Promise<Result>;
+  moderationDecide(decision: unknown): Promise<Result>;
 }
 
 type Options = {
@@ -78,5 +80,8 @@ export function createClient(opts: Options): AgentClient {
     },
     status: (id) => request('GET', `/api/agent/items/${encodeURIComponent(id)}/`),
     recordRun: (run) => request('POST', '/api/agent/runs/', run),
+    // The moderation agent (plan 7B): its key only works on these two.
+    moderationQueue: () => request('GET', '/api/agent/moderation/'),
+    moderationDecide: (decision) => request('POST', '/api/agent/moderation/decide/', decision),
   };
 }

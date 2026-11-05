@@ -7,6 +7,14 @@
     "sparkkindly-prod": {
       "command": "node",
       "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "prod"]
+    },
+    "sparkkindly-staging-moderation": {
+      "command": "node",
+      "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "staging", "--role", "moderation"]
+    },
+    "sparkkindly-prod-moderation": {
+      "command": "node",
+      "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "prod", "--role", "moderation"]
     }
   }
 }

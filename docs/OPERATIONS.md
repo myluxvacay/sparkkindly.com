@@ -647,6 +647,21 @@ If no run is recorded for 36 hours the worker emails the admin list.
   reporting plus the moderation agent (7B) must exist before `COMMENTS_ENABLED` goes on anywhere real
   (`docs/legal/go-live-copy-changes.md`).
 
+## Comment moderation agent (Project 7B)
+
+- **Key.** In `/admin/agents/` create an agent with role "Comment moderation" and world "Master agent" (a moderation agent
+  is never tied to a world). Its key works only on `GET /api/agent/moderation/` and `POST /api/agent/moderation/decide/`
+  (403 everywhere else; a content key gets 403 there). Put it in the owner's secrets file as
+  `SPARKKINDLY_<STAGING|PROD>_MODERATION_KEY`; rotate it from `/admin/agents/` like any key.
+- **Schedule.** Twice a day (the daily run and a short mid-day run, spec Project 7), a Windows Task Scheduler entry runs,
+  from the repository folder: `claude -p "/moderate-run env=staging" --setting-sources project --allowedTools Agent
+  mcp__sparkkindly-staging-moderation --disallowedTools Bash Write Edit Read WebFetch WebSearch`, logging to
+  `%USERPROFILE%\sparkkindly-runs\` like the content run. The moderator (`.claude/agents/sparkkindly-moderator.md`) may
+  use only the two moderation tools; the command prints one line of counts and never comment text. Use `env=prod` only
+  after staging has run cleanly. `register-tasks.ps1` does not create this entry yet (owner action, by hand).
+- **Plan usage.** A run reads at most three pages of 20 comments and makes one call per comment; it is small next to the
+  content run. Watch the first week's runs for plan-limit hits, as for the content agents.
+
 ## Pilot measurement (roadmap P.2)
 
 `/admin/pilot/` shows the spec 4a.2 pilot metrics against their thresholds, computed from data the site already holds

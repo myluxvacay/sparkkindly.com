@@ -27,14 +27,16 @@ export type Config =
   | { ok: false; missing: string[] };
 
 // Which site and key an environment uses. When something is missing the result names the setting, never a value.
-export function resolveConfig(env: 'staging' | 'prod', secrets: Record<string, string>): Config {
+// The moderation role (plan 7B) has its own key, <PREFIX>_MODERATION_KEY, so one MCP server never holds both keys.
+export function resolveConfig(env: 'staging' | 'prod', secrets: Record<string, string>, role: 'content' | 'moderation' = 'content'): Config {
   if (env !== 'staging' && env !== 'prod') return { ok: false, missing: ['a valid --env (staging or prod)'] };
   const prefix = env === 'staging' ? 'SPARKKINDLY_STAGING' : 'SPARKKINDLY_PROD';
   const missing: string[] = [];
   const url = secrets[`${prefix}_URL`];
-  const key = secrets[`${prefix}_AGENT_KEY`];
+  const keyName = role === 'moderation' ? `${prefix}_MODERATION_KEY` : `${prefix}_AGENT_KEY`;
+  const key = secrets[keyName];
   if (!url) missing.push(`${prefix}_URL`);
-  if (!key) missing.push(`${prefix}_AGENT_KEY`);
+  if (!key) missing.push(keyName);
   if (missing.length) return { ok: false, missing };
   if (!url.startsWith('https://')) return { ok: false, missing: [`${prefix}_URL must start with https://`] };
   const user = env === 'staging' ? secrets.STAGING_BASIC_AUTH_USER : undefined;

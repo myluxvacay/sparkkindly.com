@@ -6,9 +6,11 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod';
 import { createClient, type AgentClient, type Result } from '../client';
 import { defaultSecretsPath, loadSecrets, resolveConfig } from '../secrets';
+import { registerModerationTools } from './moderation-tools';
 
 type Deps = {
   client: AgentClient | null; // null when the environment is not configured
+  role?: 'content' | 'moderation'; // which tools this server offers (one key, one role)
   missing?: string[];
   secretsHint?: string;
   formatDoc: string;
@@ -31,6 +33,11 @@ export function buildServer(deps: Deps): McpServer {
     } catch {
       return asText({ ok: false, status: 0, data: null, error: 'The request failed unexpectedly.' });
     }
+  }
+
+  if (deps.role === 'moderation') {
+    registerModerationTools(server, run);
+    return server;
   }
 
   server.registerTool(
@@ -100,19 +107,21 @@ export function buildServer(deps: Deps): McpServer {
 }
 
 async function main() {
-  const flag = process.argv.indexOf('--env');
-  const env = process.argv[flag + 1] as 'staging' | 'prod';
-  const config = resolveConfig(env, loadSecrets());
+  const arg = (name: string) => (process.argv.includes(name) ? process.argv[process.argv.indexOf(name) + 1] : undefined);
+  const env = arg('--env') as 'staging' | 'prod';
+  const role = arg('--role') === 'moderation' ? 'moderation' : 'content';
+  const config = resolveConfig(env, loadSecrets(), role);
   const formatDoc = readFileSync(new URL('../../docs/item-format.md', import.meta.url), 'utf8');
   const server = buildServer({
     client: config.ok ? createClient({ baseUrl: config.baseUrl, agentKey: config.agentKey, basicAuth: config.basicAuth }) : null,
+    role,
     missing: config.ok ? undefined : config.missing,
     secretsHint: defaultSecretsPath(),
     formatDoc,
   });
   await server.connect(new StdioServerTransport());
   // stdout carries the protocol; anything for a human goes to stderr.
-  console.error(`sparkkindly MCP server ready (${env}${config.ok ? '' : ', NOT configured: ' + config.missing.join(', ')})`);
+  console.error(`sparkkindly MCP server ready (${env}, ${role}${config.ok ? '' : ', NOT configured: ' + config.missing.join(', ')})`);
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

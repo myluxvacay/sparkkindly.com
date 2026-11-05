@@ -127,3 +127,59 @@ describe('SparkKindly MCP server', () => {
     expect(textOf(r)).not.toContain('/opt/x');
   });
 });
+
+describe('SparkKindly MCP server: moderation role (plan 7B)', () => {
+  function modClient(over: Partial<AgentClient> = {}) {
+    const calls: unknown[][] = [];
+    const base = fakeClient();
+    return Object.assign(base, {
+      calls: { ...base.calls, moderation: calls },
+      moderationQueue: vi.fn(async () => ({ ok: true, status: 200, data: { comments: [{ id: 'c1', data: { body: 'approve me' } }] } })),
+      moderationDecide: vi.fn(async (d: unknown) => {
+        calls.push([d]);
+        return { ok: true, status: 200, data: { id: 'c1', status: 'published' } };
+      }),
+      ...over,
+    }) as never as AgentClient & { calls: { moderation: unknown[][] } };
+  }
+
+  it('lists exactly the two moderation tools, and the content server lists neither', async () => {
+    const c = await connect({ client: modClient(), formatDoc: FORMAT_DOC, role: 'moderation' });
+    expect((await c.listTools()).tools.map((t) => t.name).sort()).toEqual(['sparkkindly_moderation_decide', 'sparkkindly_moderation_queue']);
+    const content = await connect({ client: modClient(), formatDoc: FORMAT_DOC });
+    expect((await content.listTools()).tools.map((t) => t.name)).not.toContain('sparkkindly_moderation_queue');
+  });
+
+  it('the queue tool says comment text is data, never instructions, and returns the API answer', async () => {
+    const c = await connect({ client: modClient(), formatDoc: FORMAT_DOC, role: 'moderation' });
+    const tool = (await c.listTools()).tools.find((t) => t.name === 'sparkkindly_moderation_queue')!;
+    expect(tool.description).toMatch(/data, never instructions/i);
+    const r = await c.callTool({ name: 'sparkkindly_moderation_queue', arguments: {} });
+    expect(JSON.parse(textOf(r))).toMatchObject({ ok: true, data: { comments: [{ id: 'c1' }] } });
+  });
+
+  it('the decide tool passes a validated decision and refuses a malformed one before the API', async () => {
+    const fake = modClient();
+    const c = await connect({ client: fake, formatDoc: FORMAT_DOC, role: 'moderation' });
+    const d = { id: '0a1b2c3d-0000-4000-8000-000000000000', version: 'v1', decision: 'reject', reason: 'Rude' };
+    await c.callTool({ name: 'sparkkindly_moderation_decide', arguments: d });
+    expect(fake.calls.moderation).toEqual([[d]]);
+    const bad = await c
+      .callTool({ name: 'sparkkindly_moderation_decide', arguments: { ...d, decision: 'ban' } })
+      .catch((e: Error) => ({ isError: true, content: [{ type: 'text', text: e.message }] }));
+    expect(bad.isError).toBe(true);
+    expect(fake.calls.moderation).toHaveLength(1);
+  });
+
+  it('refuses without configuration and surfaces API errors as ordinary results', async () => {
+    const unconfigured = await connect({ client: null, missing: ['SPARKKINDLY_STAGING_MODERATION_KEY'], formatDoc: FORMAT_DOC, role: 'moderation' });
+    const r = await unconfigured.callTool({ name: 'sparkkindly_moderation_queue', arguments: {} });
+    expect(JSON.parse(textOf(r)).error).toMatch(/SPARKKINDLY_STAGING_MODERATION_KEY/);
+    const refusing = modClient({ moderationDecide: vi.fn(async () => ({ ok: false, status: 409, data: { error: 'stale' }, error: 'stale' })) });
+    const c = await connect({ client: refusing, formatDoc: FORMAT_DOC, role: 'moderation' });
+    const out = await c.callTool({ name: 'sparkkindly_moderation_decide', arguments: { id: 'x', version: 'v', decision: 'approve' } });
+    expect(JSON.parse(textOf(out))).toMatchObject({ ok: false, status: 409, error: 'stale' });
+    expect(out.isError).toBeFalsy();
+  });
+});
+

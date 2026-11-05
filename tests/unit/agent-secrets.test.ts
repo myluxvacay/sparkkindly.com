@@ -71,4 +71,11 @@ describe('resolveConfig', () => {
     expect(resolveConfig('dev' as never, full)).toEqual({ ok: false, missing: ['a valid --env (staging or prod)'] });
     expect(resolveConfig('prod', { ...full, SPARKKINDLY_PROD_URL: 'http://sparkkindly.com' })).toEqual({ ok: false, missing: ['SPARKKINDLY_PROD_URL must start with https://'] });
   });
+
+  it('the moderation role (plan 7B) uses its own key setting and names it when missing', () => {
+    expect(resolveConfig('prod', { ...full, SPARKKINDLY_PROD_MODERATION_KEY: 'skagt_m' }, 'moderation')).toEqual({
+      ok: true, baseUrl: 'https://sparkkindly.com', agentKey: 'skagt_m', basicAuth: undefined,
+    });
+    expect(resolveConfig('staging', full, 'moderation')).toEqual({ ok: false, missing: ['SPARKKINDLY_STAGING_MODERATION_KEY'] });
+  });
 });

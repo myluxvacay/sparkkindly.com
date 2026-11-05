@@ -29,6 +29,11 @@ export const DONE = {
   comments_trust_saved: 'Comment trust level saved.',
   comments_banned: 'That account can no longer post comments.',
   comments_unbanned: 'That account can post comments again.',
+  comments_appeal_overturned: 'Appeal overturned: the comment is published and the author is emailed.',
+  comments_appeal_upheld: 'Appeal upheld: the author is emailed.',
+  comments_escalation_published: 'The comment is published.',
+  comments_escalation_removed: 'The comment is removed and the author is emailed with a way to appeal.',
+  comments_reports_reset: 'That reporter is reset: their reports count again.',
 } as const;
 
 export const ERRORS = {

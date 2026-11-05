@@ -1,6 +1,7 @@
 import type { Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
+import { commentCounts, type CommentCounts } from '@/lib/comments/counts';
 import { agentAlerts } from './digest-agents';
 import { allowList, linkBase } from './sessions';
 
@@ -16,6 +17,7 @@ export type Digest = {
   failedJobs: { job: string; error: string; at: Date }[];
   buffer: { world: string; days: number }[];
   openReports: number;
+  comments: CommentCounts; // plan 7B: counts only, never comment text
   alerts: string[];
 };
 
@@ -62,6 +64,7 @@ export async function buildDigest(db: Queryable, now: Date): Promise<Digest> {
     failedJobs: failed.rows,
     buffer: buffer.rows.map((b) => ({ world: b.world, days: Number(b.days) })),
     openReports: Number(reports.rows[0].n),
+    comments: await commentCounts(db, now),
     alerts: [],
   };
   const lateKids = d.waiting.filter((w) => w.world === 'kids' && now.getTime() - new Date(w.since).getTime() > 2 * DAY);
@@ -80,6 +83,17 @@ export async function buildDigest(db: Queryable, now: Date): Promise<Digest> {
   return d;
 }
 
+function commentSection(c: CommentCounts): string {
+  return section('Comments', [
+    `Held, waiting for the moderation agent: ${c.held}`,
+    `Published by the agent in the last 24 hours: ${c.publishedByAgent}`,
+    `Rejected or hidden by the agent in the last 24 hours: ${c.rejectedByAgent}`,
+    `Escalated to you: ${c.escalated}`,
+    `Open appeals: ${c.appealsOpen}`,
+    `Urgent reports in the last 24 hours: ${c.urgent24h}`,
+  ]);
+}
+
 function section(title: string, lines: string[]): string {
   return `${title}\n${lines.length ? lines.map((l) => `- ${l}`).join('\n') : '- none'}\n`;
 }
@@ -94,6 +108,7 @@ export function renderDigest(d: Digest, adminUrl = 'https://sparkkindly.com/admi
     section('Failed jobs', d.failedJobs.map((f) => `${f.job}: ${f.error}`)),
     section('Buffer (days of scheduled items ahead)', d.buffer.map((b) => `${b.world}: ${b.days}`)),
     `Open problem reports: ${d.openReports}\n`,
+    commentSection(d.comments),
     `Open the admin area: ${adminUrl}\n`,
   ].join('\n');
   return { subject, text };

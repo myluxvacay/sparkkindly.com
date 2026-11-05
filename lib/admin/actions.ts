@@ -12,8 +12,13 @@ import {
   type Status,
 } from '@/lib/items/repo';
 import { RESERVED_WORLD_SLUGS } from '@/lib/public/scope';
-import { commentAuthor } from '@/lib/comments/admin';
+import { commentAuthor, commentRef } from '@/lib/comments/admin';
+import { decideAppeal } from '@/lib/comments/appeals';
+import { resetReporter, resolveEscalation } from '@/lib/comments/owner-actions';
 import { setTrust } from '@/lib/comments/trust';
+import { commentsEnabled } from '@/lib/config';
+import { sendEmail, type EmailMessage } from '@/lib/email';
+import { linkBase } from './sessions';
 import { audit } from './audit';
 import { DONE, ERRORS, type DoneCode, type ErrorCode } from './messages';
 
@@ -26,7 +31,8 @@ export type AdminActionResult =
   | { ok: true; code: DoneCode; message: string; secret?: string }
   | { ok: false; status: 400 | 404 | 409; code: ErrorCode; message: string };
 
-type Done = { code: DoneCode; target: string; detail?: Record<string, unknown>; secret?: string };
+// mail: sent after the transaction commits (a failed send is logged and never undoes the change).
+type Done = { code: DoneCode; target: string; detail?: Record<string, unknown>; secret?: string; mail?: EmailMessage };
 type Ctx = { tx: Queryable; admin: { email: string }; form: URLSearchParams; now: Date };
 type Handler = (c: Ctx) => Promise<Done>;
 
@@ -95,6 +101,22 @@ async function commentAccount(tx: Queryable, f: URLSearchParams): Promise<{ comm
   const found = await commentAuthor(tx, field(f, 'comment'));
   if (!found) throw missing();
   return found;
+}
+
+// Comment moderation (plan 7B): the comment named in the form by id or link, or 404.
+function commentId(f: URLSearchParams): string {
+  const id = commentRef(field(f, 'comment'));
+  if (!id) throw missing();
+  return id;
+}
+
+async function appealAction(c: Ctx, outcome: 'overturn' | 'uphold'): Promise<Done> {
+  const id = commentId(c.form);
+  const r = await decideAppeal(c.tx, c.admin, id, outcome, c.now, linkBase(process.env));
+  if (r.status === 'not_found') throw missing();
+  if (r.status === 'decided') throw new ActionError(409, 'wrong_status');
+  const code = outcome === 'overturn' ? 'comments_appeal_overturned' : 'comments_appeal_upheld';
+  return { code, target: `comment:${id}`, detail: { outcome, closed: r.status }, mail: r.status === 'done' ? r.mail : undefined };
 }
 
 const ITEM_PATH = /^\/?([a-z0-9-]{2,30})\/([a-z0-9-]{1,80})\/?$/;
@@ -320,6 +342,27 @@ const handlers: Record<string, Handler> = {
     return { code: banned ? 'comments_banned' : 'comments_unbanned', target: `comment:${comment}`, detail: { banned } };
   },
 
+  'comments.appeal_overturn': (c) => appealAction(c, 'overturn'),
+  'comments.appeal_uphold': (c) => appealAction(c, 'uphold'),
+
+  // An escalated or urgently reported comment: publish it, or remove it (the author is emailed with an appeal link).
+  async 'comments.escalation_resolve'({ tx, admin, form, now }) {
+    const outcome = field(form, 'outcome');
+    if (outcome !== 'publish' && outcome !== 'remove') throw bad();
+    const id = commentId(form);
+    const r = await resolveEscalation(tx, admin, id, outcome, now, process.env);
+    if (r.status !== 'done') throw r.status === 'not_found' ? missing() : new ActionError(409, 'wrong_status');
+    const code = outcome === 'publish' ? 'comments_escalation_published' : 'comments_escalation_removed';
+    return { code, target: `comment:${id}`, detail: { outcome, status: r.newStatus }, mail: r.mail };
+  },
+
+  // A muted reporter, named only by one of their reports.
+  async 'comments.report_reset'({ tx, form }) {
+    const report = field(form, 'report');
+    if (!(await resetReporter(tx, report))) throw missing();
+    return { code: 'comments_reports_reset', target: `report:${report}` };
+  },
+
   async 'agent.create'({ tx, form }) {
     const name = field(form, 'name');
     if (!AGENT_NAME.test(name)) throw bad();
@@ -365,21 +408,38 @@ function asResult(err: unknown): AdminActionResult {
   throw err;
 }
 
+async function sendAfter(send: (m: EmailMessage) => Promise<unknown>, mail: EmailMessage | undefined): Promise<void> {
+  if (!mail) return;
+  try {
+    await send(mail);
+  } catch (err) {
+    console.error('admin action email not sent:', (err as Error)?.name);
+  }
+}
+
+// With comments switched off (ACCOUNTS_ENABLED or COMMENTS_ENABLED unset), every comments.* action is unknown.
+const available = (name: string) => Object.hasOwn(handlers, name) && (!name.startsWith('comments.') || commentsEnabled());
+
 export async function runAction(
   db: Db,
   admin: { email: string },
   name: string,
   form: URLSearchParams,
   now: Date = new Date(),
+  send: (m: EmailMessage) => Promise<unknown> = (m) => sendEmail(m),
 ): Promise<AdminActionResult> {
-  const handler = Object.hasOwn(handlers, name) ? handlers[name] : undefined;
-  if (!handler) return failure(400, 'unknown_action');
+  if (!available(name)) return failure(400, 'unknown_action');
+  const handler = handlers[name];
+  let mail: EmailMessage | undefined;
   try {
-    return await db.transaction(async (tx) => {
+    const result = await db.transaction(async (tx) => {
       const done = await handler({ tx, admin, form, now });
       await audit(tx, admin.email, name, done.target, done.detail ?? {});
+      mail = done.mail;
       return { ok: true as const, code: done.code, message: DONE[done.code], ...(done.secret ? { secret: done.secret } : {}) };
     });
+    await sendAfter(send, mail);
+    return result;
   } catch (err) {
     return asResult(err);
   }

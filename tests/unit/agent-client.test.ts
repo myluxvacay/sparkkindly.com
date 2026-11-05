@@ -158,4 +158,16 @@ describe('timeout', () => {
     const r = await createClient({ baseUrl: 'https://s', agentKey: KEY, fetch: stub(() => { throw new DOMException('timed out', 'TimeoutError'); }) }).submit({ kind: 'quiz' });
     expect(r.error).toMatch(/may have been (stored|saved)/i);
   });
+
+  it('moderation (plan 7B): the queue is a GET and a decision a POST, on the moderation URLs', async () => {
+    const fetch = stub(() => json(200, { comments: [] }));
+    const c = createClient({ baseUrl: 'https://sparkkindly.com/', agentKey: KEY, fetch });
+    await c.moderationQueue();
+    const decision = { id: '0a1b2c3d-0000-4000-8000-000000000000', version: 'v1', decision: 'approve' };
+    await c.moderationDecide(decision);
+    expect(urlOf(fetch, 0)).toBe('https://sparkkindly.com/api/agent/moderation/');
+    expect((fetch.mock.calls[0][1] as RequestInit).method).toBe('GET');
+    expect(urlOf(fetch, 1)).toBe('https://sparkkindly.com/api/agent/moderation/decide/');
+    expect(JSON.parse(String((fetch.mock.calls[1][1] as RequestInit).body))).toEqual(decision);
+  });
 });
