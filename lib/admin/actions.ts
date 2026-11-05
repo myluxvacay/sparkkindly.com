@@ -230,6 +230,18 @@ const handlers: Record<string, Handler> = {
     return { code: 'hours_logged', target: `week:${week}`, detail: { hours: Number(hoursText) } };
   },
 
+  // Points a circle member earns per correct set answer (plan 4C): a whole number 0 to 100; scores read it on every view.
+  async 'scoring.set_points'({ tx, form }) {
+    const raw = field(form, 'points');
+    if (!/^(0|[1-9]\d{0,2})$/.test(raw) || Number(raw) > 100) throw bad();
+    const points = Number(raw);
+    await tx.query(
+      `INSERT INTO site_settings (key, value) VALUES ('points_correct', $1) ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value`,
+      [String(points)],
+    );
+    return { code: 'points_saved', target: 'setting:points_correct', detail: { points } };
+  },
+
   async 'agent.create'({ tx, form }) {
     const name = field(form, 'name');
     if (!AGENT_NAME.test(name)) throw bad();

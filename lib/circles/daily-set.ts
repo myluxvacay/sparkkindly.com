@@ -12,7 +12,9 @@ import type { Db, Queryable } from '@/lib/db';
 import { visibleWhere } from '@/lib/public/reads';
 import type { Audience } from '@/lib/public/scope';
 import { CHILD_AUDIENCES } from '@/lib/accounts/context';
+import { isUuid } from '@/lib/accounts/pin';
 import { circleHasChild } from './children';
+import { isSlug } from './repo';
 import { interestsOf } from './interests';
 
 export const SET_SIZE = 5;
@@ -116,4 +118,26 @@ export async function getOrCreateDailySet(db: Db, circleId: string, now: Date): 
   // A closed circle is read-only: it shows the sets it has and makes no new one.
   if (has.rows.length === 0 && c.rows[0].status === 'open') await createSet(db, circleId, day, now);
   return readSet(db, circleId, day, now);
+}
+
+export type ViewerCircle = { id: string; name: string; slug: string; timeZone: string; status: 'open' | 'closed' };
+
+// The visible circle named by `slug` when the viewer (the account holder, profileId null, or one of the account's child
+// profiles) is a current member of it; otherwise null. Both ids come from the server-side context; a profile id that is
+// not the account's, or not in the circle, matches no member row.
+export async function circleForViewer(
+  q: Queryable,
+  accountId: string,
+  profileId: string | null,
+  slug: string,
+): Promise<ViewerCircle | null> {
+  if (!isUuid(accountId) || (profileId !== null && !isUuid(profileId)) || !isSlug(slug)) return null;
+  const r = await q.query<{ id: string; name: string; time_zone: string; status: 'open' | 'closed' }>(
+    `SELECT c.id, c.name, c.time_zone, c.status FROM circles c JOIN circle_members m ON m.circle_id = c.id
+     WHERE c.slug = $1 AND c.hidden_at IS NULL AND m.account_id = $2 AND m.profile_id IS NOT DISTINCT FROM $3::uuid
+       AND m.left_at IS NULL`,
+    [slug, accountId, profileId],
+  );
+  const c = r.rows[0];
+  return c ? { id: c.id, name: c.name, slug, timeZone: c.time_zone, status: c.status } : null;
 }

@@ -75,7 +75,7 @@ async function family(email: string) {
   await setInterests(db, { accountId: id, profileId: null }, { topicIds: [topics[0].id], worldIds: [worlds[0].id] });
   await setInterests(db, { accountId: id, profileId: mia }, { topicIds: [topics[1].id], worldIds: [] });
   await setInterests(db, { accountId: id, profileId: leo }, { topicIds: [], worldIds: [worlds[1].id] });
-  await recordAnswer(db, { accountId: id, profileId: null }, items[0].id, true, T1);
+  await recordAnswer(db, { accountId: id, profileId: null }, items[0].id, true, T1, 'b');
   await recordAnswer(db, { accountId: id, profileId: mia }, items[1].id, false, T1);
   await recordAnswer(db, { accountId: id, profileId: leo }, items[2].id, true, T1);
   return { id, mia, leo };
@@ -144,6 +144,7 @@ describe('export inventory', () => {
   it('accounts for the circle set tables (plan 4C): excluded with reasons, as circle data shared by members', () => {
     expect(EXCLUDED_TABLES.circle_interests).toMatch(/circle/);
     expect(EXCLUDED_TABLES.circle_daily_sets).toMatch(/circle/);
+    expect(EXCLUDED_TABLES.circle_notices).toMatch(/circle/);
   });
 
   it('includes the seven tables of the data inventory', () => {
@@ -259,7 +260,7 @@ describe('exportAccount', () => {
     expect(x!.account.createdAt).toMatch(/^\d{4}-\d\d-\d\dT/);
     expect(x!.interests).toEqual({ topics: [topics[0].name], worlds: [worlds[0].slug] });
     expect(x!.answers).toEqual([
-      { item: items[0].slug, world: worlds[0].slug, correct: true, answeredAt: T1.toISOString() },
+      { item: items[0].slug, world: worlds[0].slug, correct: true, answeredAt: T1.toISOString(), choice: 'b' },
     ]);
     expect(x!.childProfiles).toHaveLength(2);
     const [leo, mia] = [...x!.childProfiles].sort((a, b) => a.displayName.localeCompare(b.displayName));
@@ -268,7 +269,7 @@ describe('exportAccount', () => {
       ageBand: '6-9',
       createdAt: expect.stringMatching(/^\d{4}-\d\d-\d\dT/),
       interests: { topics: [topics[1].name], worlds: [] },
-      answers: [{ item: items[1].slug, world: worlds[1].slug, correct: false, answeredAt: T1.toISOString() }],
+      answers: [{ item: items[1].slug, world: worlds[1].slug, correct: false, answeredAt: T1.toISOString(), choice: null }],
       circles: [],
     });
     expect(leo).toEqual({
@@ -276,7 +277,7 @@ describe('exportAccount', () => {
       ageBand: '10-12',
       createdAt: expect.stringMatching(/^\d{4}-\d\d-\d\dT/),
       interests: { topics: [], worlds: [worlds[1].slug] },
-      answers: [{ item: items[2].slug, world: worlds[0].slug, correct: true, answeredAt: T1.toISOString() }],
+      answers: [{ item: items[2].slug, world: worlds[0].slug, correct: true, answeredAt: T1.toISOString(), choice: null }],
       circles: [],
     });
   });
@@ -335,7 +336,7 @@ describe('exportAccount', () => {
     expect(x!.childProfiles.map((c) => c.displayName).sort()).toEqual(['Leo', 'Mia']);
     const y = await exportAccount(db, b, NOW);
     expect(y!.answers).toEqual([
-      { item: items[2].slug, world: worlds[0].slug, correct: false, answeredAt: T0.toISOString() },
+      { item: items[2].slug, world: worlds[0].slug, correct: false, answeredAt: T0.toISOString(), choice: null },
     ]);
     expect(y!.childProfiles.map((c) => c.displayName)).toEqual(['Zed']);
     expect(y!.interests).toEqual({ topics: [], worlds: [] });

@@ -19,6 +19,7 @@ export const DONE = {
   agent_enabled: 'Agent enabled.',
   agent_revoked: 'Agent revoked.',
   hours_logged: 'Hours logged for that week.',
+  points_saved: 'Points for a correct circle answer saved.',
 } as const;
 
 export const ERRORS = {

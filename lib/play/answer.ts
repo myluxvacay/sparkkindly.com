@@ -6,9 +6,13 @@ import type { Scope } from '@/lib/public/scope';
 import { checkAnswer, describeAnswer, parseGiven } from './check';
 
 export type PlayResult =
-  | { status: 'ok'; itemId: string; correct: boolean; answerText: string; explanation: string }
+  | { status: 'ok'; itemId: string; correct: boolean; answerText: string; explanation: string; choice: unknown }
   | { status: 'invalid' }
   | { status: 'not_found' };
+
+// Mechanics whose response is a closed choice (an id, true/false, a number, an order of ids). Only these keep the
+// response for re-scoring (plan 4C); free text a player typed (short_text, clue_reveal) is never stored.
+const CLOSED: readonly Mechanic[] = ['multiple_choice', 'odd_one_out', 'true_false', 'number', 'put_in_order'];
 
 const isMechanic = (x: unknown): x is Mechanic => (mechanics as readonly unknown[]).includes(x);
 
@@ -32,5 +36,6 @@ export async function playResult(db: Queryable, scope: Scope, world: string, slu
     correct: checkAnswer(body.mechanic, answer.value, given),
     answerText: describeAnswer(item.body, answer.value),
     explanation: answer.explanation,
+    choice: CLOSED.includes(body.mechanic) ? given : null,
   };
 }

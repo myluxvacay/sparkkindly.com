@@ -20,25 +20,27 @@ const FROM_SHOWN = `FROM item_responses r JOIN items i ON i.id = r.item_id JOIN 
 
 export type Answered = { itemId: string; correct: boolean; answeredAt: Date };
 
-// True when this answer was newly stored; false when ignored (repeat, unknown item, foreign profile, bad id).
+// True when this answer was newly stored; false when ignored (repeat, unknown item, foreign profile, bad id). `choice` is
+// the closed response kept for re-scoring (lib/circles/rescore.ts), or null (free text is never passed in).
 export async function recordAnswer(
   db: Db,
   owner: Owner,
   itemId: string,
   correct: boolean,
   now: Date,
+  choice: unknown = null,
 ): Promise<boolean> {
   if (!validOwner(owner) || !isUuid(itemId)) {
     return false;
   }
   try {
     const r = await db.query(
-      `INSERT INTO item_responses (account_id, profile_id, item_id, correct, answered_at)
-       SELECT $1, $2, $3, $4, $5
+      `INSERT INTO item_responses (account_id, profile_id, item_id, correct, answered_at, choice)
+       SELECT $1, $2, $3, $4, $5, $6::jsonb
        WHERE EXISTS (SELECT 1 FROM items WHERE id = $3)
          AND ($2::uuid IS NULL OR EXISTS (SELECT 1 FROM child_profiles WHERE id = $2 AND account_id = $1))
        ON CONFLICT DO NOTHING`,
-      [owner.accountId, owner.profileId, itemId, correct, now.toISOString()],
+      [owner.accountId, owner.profileId, itemId, correct, now.toISOString(), choice === null ? null : JSON.stringify(choice)],
     );
     return (r.rowCount ?? 0) > 0;
   } catch (e) {

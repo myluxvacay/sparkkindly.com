@@ -73,6 +73,7 @@ describe('playResult', () => {
       correct: true,
       answerText: 'Beta',
       explanation: EXPL,
+      choice: 'b',
     });
     expect(await playResult(db, anon, 'play', 'good', p({ r: 'a' }))).toMatchObject({
       status: 'ok',

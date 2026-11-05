@@ -2,6 +2,7 @@ import ActionForm from '@/components/admin/ActionForm';
 import StatusNote from '@/components/admin/StatusNote';
 import { requireAdmin } from '@/lib/admin/next';
 import { operatingEffort, pilotMetrics, recentHours, type Metric } from '@/lib/admin/pilot';
+import { pointsCorrect } from '@/lib/circles/points';
 import { getDb } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -33,7 +34,12 @@ export default async function AdminPilotPage({ searchParams }: Props) {
   const { done, error } = await searchParams;
   const db = getDb();
   const now = new Date();
-  const [m, effort, hours] = await Promise.all([pilotMetrics(db, now), operatingEffort(db, now), recentHours(db, 8)]);
+  const [m, effort, hours, points] = await Promise.all([
+    pilotMetrics(db, now),
+    operatingEffort(db, now),
+    recentHours(db, 8),
+    pointsCorrect(db),
+  ]);
   return (
     <>
       <h1>Pilot measurement</h1>
@@ -111,6 +117,19 @@ export default async function AdminPilotPage({ searchParams }: Props) {
       <section aria-labelledby="circles">
         <h2 id="circles">Circle value (Pilot B)</h2>
         <p>Pilot B is a hand tally by the owner. It is not measured here.</p>
+      </section>
+      <section aria-labelledby="scoring">
+        <h2 id="scoring">Circle scoring</h2>
+        <p>
+          A correct answer to a circle&apos;s daily set earns {points} points. Nothing is given for speed. A change applies to every
+          circle&apos;s scores at once, past days included.
+        </p>
+        <ActionForm csrf={admin.csrf} action="scoring.set_points" returnTo={BACK} label="Save points">
+          <p>
+            <label htmlFor="points-correct">Points for a correct answer (0 to 100)</label>
+            <input id="points-correct" name="points" type="number" min="0" max="100" step="1" defaultValue={points} required />
+          </p>
+        </ActionForm>
       </section>
     </>
   );

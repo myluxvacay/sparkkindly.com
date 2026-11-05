@@ -43,7 +43,7 @@ export async function recordPlay(
   try {
     // false is a repeat (the first answer is already saved); a profile or account deleted mid-request also reads
     // as false. ponytail: not told apart, the session check just passed so that race is negligible.
-    await recordAnswer(db, owner, result.itemId, result.correct, now);
+    await recordAnswer(db, owner, result.itemId, result.correct, now, result.choice);
     return 'saved';
   } catch (err) {
     console.error('answer recording failed:', (err as Error)?.name);

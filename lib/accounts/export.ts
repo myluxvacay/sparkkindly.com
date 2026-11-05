@@ -30,6 +30,7 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   circles: "circle data shared by its members; the export lists the account's own memberships",
   circle_interests: 'circle data shared by its members (topic and world ids the owner chose), nothing about one person',
   circle_daily_sets: 'circle data shared by its members (which items the circle got each day), nothing about one person',
+  circle_notices: 'circle data shared by its members (an item in its set was re-scored), nothing about one person',
 };
 
 // Columns of the two tables exported row by row: each is exported or deliberately excluded with its reason.
@@ -70,7 +71,8 @@ export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Re
 };
 
 type ExportInterests = { topics: string[]; worlds: string[] };
-type ExportAnswer = { item: string; world: string; correct: boolean; answeredAt: string };
+// choice: the closed answer kept for re-scoring (an option id, true/false, a number, an order), or null.
+type ExportAnswer = { item: string; world: string; correct: boolean; answeredAt: string; choice: unknown };
 // One of the holder's (or a child's) own circle memberships: nothing about the circle's other members.
 type ExportMembership = {
   circle: string;
@@ -186,8 +188,8 @@ async function interestsByOwner(tx: Queryable, accountId: string): Promise<Map<s
 }
 
 async function answersByOwner(tx: Queryable, accountId: string): Promise<Map<string, ExportAnswer[]>> {
-  const r = await tx.query<{ p: string | null; item: string; world: string; correct: boolean; at: Date }>(
-    `SELECT r.profile_id AS p, i.slug AS item, w.slug AS world, r.correct, r.answered_at AS at
+  const r = await tx.query<{ p: string | null; item: string; world: string; correct: boolean; at: Date; choice: unknown }>(
+    `SELECT r.profile_id AS p, i.slug AS item, w.slug AS world, r.correct, r.answered_at AS at, r.choice
      FROM item_responses r JOIN items i ON i.id = r.item_id JOIN worlds w ON w.id = i.world_id
      WHERE r.account_id = $1 ORDER BY r.answered_at, i.slug`,
     [accountId],
@@ -196,7 +198,7 @@ async function answersByOwner(tx: Queryable, accountId: string): Promise<Map<str
   for (const row of r.rows) {
     const key = ownerKey(row.p);
     const list = out.get(key) ?? [];
-    list.push({ item: row.item, world: row.world, correct: row.correct, answeredAt: iso(row.at) as string });
+    list.push({ item: row.item, world: row.world, correct: row.correct, answeredAt: iso(row.at) as string, choice: row.choice });
     out.set(key, list);
   }
   return out;
