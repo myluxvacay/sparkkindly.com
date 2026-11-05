@@ -706,7 +706,7 @@ Behind the same flags as comments. Plan `docs/superpowers/plans/2026-11-05-proje
 - **Digest**: a Comments section with counts only (held, published, kept and rejected by the agent in 24 hours,
   escalated, open appeals, urgent reports in 24 hours) and an alert line when any escalation has waited past 48 hours.
 - **Hold-everything** (spec 4a.6, `lib/comments/hold.ts`): when no enabled moderation-role agent has fetched its queue in
-  the last 48 hours (`agents.last_run_at`, recorded on every queue fetch; exactly 48 hours still counts), new comments
+  the last 48 hours (`agents.queue_fetched_at`, written only by a queue fetch, never by authenticating or deciding; migration 027; exactly 48 hours still counts), new comments
   from level-1 accounts are held like level-0 ones; the author sees the normal "waiting for review" note. With no
   moderation agent at all, everything is held.
 - **Weekly spot-check.** The owner's weekly spot-check of agent output (AI governance rules) includes the agent's `keep`

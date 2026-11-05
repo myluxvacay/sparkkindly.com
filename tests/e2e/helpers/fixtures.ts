@@ -102,7 +102,7 @@ export async function addTopic(slug: string, name: string): Promise<void> {
 // lib/comments/hold.ts: without one fetching in 48 hours every new comment is held).
 export async function activeModerator(): Promise<void> {
   await sql(
-    `INSERT INTO agents (name, key_prefix, key_hash, role, last_run_at) VALUES ('e2e-fixture-moderator', 'e2efix00', repeat('0', 64), 'moderation', now())
-     ON CONFLICT (name) DO UPDATE SET last_run_at = now(), enabled = true`,
+    `INSERT INTO agents (name, key_prefix, key_hash, role, queue_fetched_at) VALUES ('e2e-fixture-moderator', 'e2efix00', repeat('0', 64), 'moderation', now())
+     ON CONFLICT (name) DO UPDATE SET queue_fetched_at = now(), enabled = true`,
   );
 }

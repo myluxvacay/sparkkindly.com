@@ -8,7 +8,8 @@ import { seedReference } from '@/db/seed';
 import { createAgent } from '@/lib/agents/admin';
 import { createLimiter } from '@/lib/agents/rate-limit';
 import { postComment } from '@/lib/comments/repo';
-import { queueRequest } from '@/lib/comments/moderation-api';
+import { decideRequest, queueRequest } from '@/lib/comments/moderation-api';
+import { agentRoute } from '@/lib/agents/http';
 import { moderationActive } from '@/lib/comments/hold';
 import { commentCounts } from '@/lib/comments/counts';
 import { buildDigest, renderDigest } from '@/lib/admin/digest';
@@ -40,7 +41,7 @@ async function levelOnePost(now = NOW) {
   return postComment(db, p.ctx, { itemId: await item(db), body: 'a level one comment' }, now);
 }
 const lastRun = (at: Date | null, enabled = true) =>
-  db.query("UPDATE agents SET last_run_at = $1, enabled = $2 WHERE role = 'moderation'", [at, enabled]);
+  db.query("UPDATE agents SET queue_fetched_at = $1, enabled = $2 WHERE role = 'moderation'", [at, enabled]);
 
 describe('hold-everything', () => {
   it('no moderation agent at all: level-1 comments are held', async () => {
@@ -65,8 +66,25 @@ describe('hold-everything', () => {
     await lastRun(NOW, false);
     expect((await levelOnePost()).status).toBe('held');
     const { id } = await createAgent(db, 'master', null);
-    await db.query('UPDATE agents SET last_run_at = $2 WHERE id = $1', [id, NOW]);
+    await db.query('UPDATE agents SET queue_fetched_at = $2 WHERE id = $1', [id, NOW]);
     expect(await moderationActive(db, NOW)).toBe(false);
+  });
+
+  it('only a queue fetch is the heartbeat: a recent sign of life, a decide call or a refused call does not count', async () => {
+    const { key } = await createAgent(db, 'moderator', null, 'moderation');
+    await db.query("UPDATE agents SET queue_fetched_at = $1, last_run_at = $2 WHERE role = 'moderation'", [new Date(NOW.getTime() - 72 * H), NOW]);
+    expect(await moderationActive(db, NOW)).toBe(false);
+    const deps = { db, now: NOW, env: {}, send: async () => ({}), limiter: createLimiter({ perMinute: 60 }) };
+    const decide = new Request('https://s.example.test/api/agent/moderation/decide/', {
+      method: 'POST',
+      headers: { 'x-agent-key': key, 'content-type': 'application/json' },
+      body: JSON.stringify({ id: 'x', version: '1', decision: 'approve' }),
+    });
+    await decideRequest(decide, deps);
+    const denied = await agentRoute(new Request('https://s.example.test/api/agent/brief/', { headers: { 'x-agent-key': key } }), async () => ({ status: 200, json: {} }), { db, limiter: deps.limiter });
+    expect(denied.status).toBe(403);
+    expect(await moderationActive(db, NOW)).toBe(false);
+    expect((await levelOnePost()).status).toBe('held');
   });
 
   it('a queue fetch by the moderation agent records the time, which re-opens instant publishing', async () => {
