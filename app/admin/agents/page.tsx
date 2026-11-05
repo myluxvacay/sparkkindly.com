@@ -2,6 +2,7 @@ import ActionForm from '@/components/admin/ActionForm';
 import StatusNote from '@/components/admin/StatusNote';
 import { requireAdmin } from '@/lib/admin/next';
 import { listAgents, listWorldsAdmin } from '@/lib/admin/queries';
+import { socialEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
@@ -25,7 +26,7 @@ export default async function AdminAgentsPage({ searchParams }: Props) {
             <li key={a.id}>
               <h2>{a.name}</h2>
               <p className="muted">
-                {a.role === 'moderation' ? 'comment moderation' : a.role === 'reviewer' ? 'contribution reviewer' : (a.world ?? 'master (any world)')} · {a.enabled ? 'enabled' : 'revoked'} · last run{' '}
+                {a.role === 'moderation' ? 'comment moderation' : a.role === 'reviewer' ? 'contribution reviewer' : a.role === 'promoter' ? 'social promotion' : (a.world ?? 'master (any world)')} · {a.enabled ? 'enabled' : 'revoked'} · last run{' '}
                 {a.lastRunAt ? new Date(a.lastRunAt).toISOString().slice(0, 16).replace('T', ' ') + ' UTC' : 'never'}
                 {a.keyAgeDays >= 90 ? ` · key is ${a.keyAgeDays} days old: rotate it` : ` · key ${a.keyAgeDays} days old`}
               </p>
@@ -72,6 +73,7 @@ export default async function AdminAgentsPage({ searchParams }: Props) {
               <option value="content">Content (items, briefs and runs)</option>
               <option value="moderation">Comment moderation (choose Master agent as the world)</option>
               <option value="reviewer">Contribution reviewer (choose Master agent as the world)</option>
+              {socialEnabled() && <option value="promoter">Social promotion (choose Master agent as the world)</option>}
             </select>
           </p>
           <button type="submit" className="button">

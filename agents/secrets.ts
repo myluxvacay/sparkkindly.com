@@ -29,8 +29,13 @@ export type Config =
 // Which site and key an environment uses. When something is missing the result names the setting, never a value.
 // The moderation role (plan 7B) has its own key, <PREFIX>_MODERATION_KEY, and the reviewer role (plan 8 review H1)
 // <PREFIX>_REVIEWER_KEY, so one MCP server never holds two keys.
-export type Role = 'content' | 'moderation' | 'reviewer';
-const KEY_SUFFIX: Record<Role, string> = { content: 'AGENT_KEY', moderation: 'MODERATION_KEY', reviewer: 'REVIEWER_KEY' };
+export type Role = 'content' | 'moderation' | 'reviewer' | 'promoter';
+const KEY_SUFFIX: Record<Role, string> = {
+  content: 'AGENT_KEY',
+  moderation: 'MODERATION_KEY',
+  reviewer: 'REVIEWER_KEY',
+  promoter: 'PROMOTER_KEY', // plan 5A
+};
 
 export function resolveConfig(env: 'staging' | 'prod', secrets: Record<string, string>, role: Role = 'content'): Config {
   if (env !== 'staging' && env !== 'prod') return { ok: false, missing: ['a valid --env (staging or prod)'] };

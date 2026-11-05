@@ -7,8 +7,9 @@ const SLUG = /^[a-z0-9-]{1,80}$/;
 
 export function siteBase(site: string): string {
   const u = new URL(site);
-  if (u.protocol !== 'https:' || u.username || u.password || (u.pathname !== '/' && u.pathname !== '')) {
-    throw new Error('The site address must be a bare https origin');
+  const local = u.protocol === 'http:' && (u.hostname === 'localhost' || u.hostname === '127.0.0.1'); // dev and e2e only
+  if ((u.protocol !== 'https:' && !local) || u.username || u.password || (u.pathname !== '/' && u.pathname !== '')) {
+    throw new Error('The site address must be a bare https origin (http only for localhost)');
   }
   return u.origin;
 }

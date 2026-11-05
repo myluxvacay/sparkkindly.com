@@ -8,6 +8,7 @@ import { createClient, type AgentClient, type Result } from '../client';
 import { defaultSecretsPath, loadSecrets, resolveConfig, type Role } from '../secrets';
 import { registerContributionTools } from './contribution-tools';
 import { registerModerationTools } from './moderation-tools';
+import { registerPromotionTools } from './promotion-tools';
 
 type Deps = {
   client: AgentClient | null; // null when the environment is not configured
@@ -43,6 +44,11 @@ export function buildServer(deps: Deps): McpServer {
   // The contribution review run (plan 8 review H1) gets only its two tools, never submit_item.
   if (deps.role === 'reviewer') {
     registerContributionTools(server, run);
+    return server;
+  }
+  // The promotion run (plan 5A) gets only its two tools.
+  if (deps.role === 'promoter') {
+    registerPromotionTools(server, run);
     return server;
   }
 
@@ -116,7 +122,7 @@ async function main() {
   const arg = (name: string) => (process.argv.includes(name) ? process.argv[process.argv.indexOf(name) + 1] : undefined);
   const env = arg('--env') as 'staging' | 'prod';
   const given = arg('--role');
-  const role: Role = given === 'moderation' || given === 'reviewer' ? given : 'content';
+  const role: Role = given === 'moderation' || given === 'reviewer' || given === 'promoter' ? given : 'content';
   const config = resolveConfig(env, loadSecrets(), role);
   const formatDoc = readFileSync(new URL('../../docs/item-format.md', import.meta.url), 'utf8');
   const server = buildServer({

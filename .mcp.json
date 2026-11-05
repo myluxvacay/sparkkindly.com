@@ -23,6 +23,14 @@
     "sparkkindly-prod-reviewer": {
       "command": "node",
       "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "prod", "--role", "reviewer"]
+    },
+    "sparkkindly-staging-promoter": {
+      "command": "node",
+      "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "staging", "--role", "promoter"]
+    },
+    "sparkkindly-prod-promoter": {
+      "command": "node",
+      "args": ["--import", "tsx", "agents/mcp/server.ts", "--env", "prod", "--role", "promoter"]
     }
   }
 }

@@ -248,6 +248,9 @@ describe('agent actions (keys)', () => {
     const reviewer = await act('agent.create', { name: 'reviewer', world: '', role: 'reviewer' });
     expect(await authenticate(db, (reviewer as { secret: string }).secret)).toMatchObject({ name: 'reviewer', worldSlug: null, role: 'reviewer' });
     expect(await act('agent.create', { name: 'rev-play', world: 'play', role: 'reviewer' })).toMatchObject({ ok: false, status: 400 });
+    const promoter = await act('agent.create', { name: 'promoter', world: '', role: 'promoter' });
+    expect(await authenticate(db, (promoter as { secret: string }).secret)).toMatchObject({ name: 'promoter', worldSlug: null, role: 'promoter' });
+    expect(await act('agent.create', { name: 'promo-play', world: 'play', role: 'promoter' })).toMatchObject({ ok: false, status: 400 });
     const plain = await act('agent.create', { name: 'plain-agent', world: '' });
     expect(await authenticate(db, (plain as { secret: string }).secret)).toMatchObject({ role: 'content' });
   });

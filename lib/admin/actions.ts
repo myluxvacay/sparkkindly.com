@@ -1,5 +1,6 @@
 import type { Db, Queryable } from '@/lib/db';
 import { createAgent } from '@/lib/agents/admin';
+import type { AgentRole } from '@/lib/agents/auth';
 import { generateKey } from '@/lib/agents/keys';
 import { lockWorldSlots, nextSlot } from '@/lib/items/policy';
 import {
@@ -447,13 +448,13 @@ const handlers: Record<string, Handler> = {
     if (!AGENT_NAME.test(name)) throw bad();
     const world = field(form, 'world') || null;
     // A moderation agent (plan 7B) works on comments only, a reviewer agent (plan 8 review H1) on contribution reviews
-    // only; neither is ever in a world.
+    // only, a promoter agent (plan 5A) on social post copy only; none is ever in a world.
     const role = field(form, 'role') || 'content';
-    if (!['content', 'moderation', 'reviewer'].includes(role) || (role !== 'content' && world)) throw bad();
+    if (!['content', 'moderation', 'reviewer', 'promoter'].includes(role) || (role !== 'content' && world)) throw bad();
     if (world) await worldBySlug(tx, world);
     const taken = await tx.query('SELECT 1 FROM agents WHERE name = $1', [name]);
     if (taken.rows.length) throw new ActionError(409, 'exists');
-    const { id, key } = await createAgent(tx, name, world, role as 'content' | 'moderation' | 'reviewer');
+    const { id, key } = await createAgent(tx, name, world, role as AgentRole);
     return { code: 'agent_created', target: `agent:${id}`, detail: { name, world, role }, secret: key };
   },
 

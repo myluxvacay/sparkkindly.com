@@ -11,6 +11,8 @@ export interface AgentClient {
   moderationDecide(decision: unknown): Promise<Result>;
   contributionsQueue(): Promise<Result>;
   contributionVerdict(verdict: unknown): Promise<Result>;
+  promotionsQueue(): Promise<Result>;
+  promotionCopy(copy: unknown): Promise<Result>;
 }
 
 type Options = {
@@ -88,5 +90,8 @@ export function createClient(opts: Options): AgentClient {
     // Contribution review (plan 8): the reviewer-role key only (plan 8 review H1); every other key gets 403.
     contributionsQueue: () => request('GET', '/api/agent/contributions/'),
     contributionVerdict: (verdict) => request('POST', '/api/agent/contributions/review/', verdict),
+    // Social promotion (plan 5A): the promoter-role key only; every other key gets 403.
+    promotionsQueue: () => request('GET', '/api/agent/promotions/'),
+    promotionCopy: (copy) => request('POST', '/api/agent/promotions/copy/', copy),
   };
 }
