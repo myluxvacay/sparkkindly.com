@@ -15,9 +15,20 @@ const list = (v: string | undefined) => (v ?? '').split(',').map((t) => t.trim()
 describe.each(['staging', 'prod'])('sparkkindly-promoter-%s subagent', (env) => {
   const agent = read(`.claude/agents/sparkkindly-promoter-${env}.md`);
 
-  it("holds only this environment's copy tool (not the queue, not the other environment, no web access)", () => {
+  it("holds only this environment's copy and brief tools (not the queue, not the other environment, no web access)", () => {
     expect(front(agent).name).toBe(`sparkkindly-promoter-${env}`);
-    expect(list(front(agent).tools)).toEqual([`mcp__sparkkindly-${env}-promoter__sparkkindly_promotion_copy`]);
+    expect(list(front(agent).tools)).toEqual([
+      `mcp__sparkkindly-${env}-promoter__sparkkindly_promotion_brief`,
+      `mcp__sparkkindly-${env}-promoter__sparkkindly_promotion_copy`,
+    ]);
+  });
+
+  it('writes a video brief (plan 5B) for a video_script entry under the same rules, never choosing assets', () => {
+    expect(agent).toMatch(/video_script/);
+    expect(agent).toMatch(/narration/i);
+    expect(agent).toMatch(/shots?/i);
+    expect(agent).toMatch(/15 to 60/);
+    expect(agent).toMatch(/assets[^\n]*(server|site)/i);
   });
 
   it('writes copy for exactly one entry, states the untrusted-data rule and the copy rules', () => {
@@ -53,7 +64,7 @@ describe('/promote-run command', () => {
 
   it('ends with a count-only summary and never prints item text or captions', () => {
     expect(command).toMatch(/always[^\n]*(end|finish)[^\n]*summary/i);
-    expect(command).toMatch(/scheduled[^\n]*refused/i);
+    expect(command).toMatch(/scheduled[^\n]*briefed[^\n]*refused/i);
     expect(command).toMatch(/never print[^\n]*(item text|captions?)/i);
   });
 });

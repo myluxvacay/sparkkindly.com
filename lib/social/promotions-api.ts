@@ -12,11 +12,13 @@ import type { Db, Queryable } from '@/lib/db';
 import { CAPTION_LIMIT, checkCopy, MAX_HASHTAGS, scheduleTime } from './copy';
 import { eligibleItem, socialEligibleWhere } from './eligibility';
 import { buildLink, siteBase } from './links';
-import { moveDistribution, type Platform } from './states';
+import { isVideoPlatform, moveDistribution, VIDEO_PLATFORMS, type Platform } from './states';
+import { submitBrief, videoQueue } from './video/jobs';
 
 export type PromotionDeps = { db: Db; now: Date; site: string; limiter: (key: string) => boolean };
 
 const MAX_COPY_BYTES = 16_384;
+const MAX_BRIEF_BYTES = 32_768;
 const QUEUE_SIZE = 5;
 const EXCERPT_CHARS = 600;
 const notFound = () => Response.json({ error: 'not_found' }, { status: 404, headers: { 'cache-control': 'no-store' } });
@@ -44,9 +46,9 @@ async function promotionQueue(db: Queryable, now: Date) {
     `SELECT d.id, d.version, d.platform, w.slug AS world, i.kind, i.title, i.summary, i.body
      FROM distributions d JOIN social_platforms p ON p.platform = d.platform
      JOIN items i ON i.id = d.item_id JOIN worlds w ON w.id = i.world_id
-     WHERE d.status = 'selected' AND p.enabled AND ${socialEligibleWhere('$1')}
+     WHERE d.status = 'selected' AND p.enabled AND ${socialEligibleWhere('$1')} AND d.platform <> ALL($2::text[])
      ORDER BY d.id LIMIT ${QUEUE_SIZE}`,
-    [now.toISOString()],
+    [now.toISOString(), [...VIDEO_PLATFORMS]],
   );
   return r.rows.map((x) => ({
     id: Number(x.id),
@@ -79,7 +81,8 @@ export async function submitCopy(db: Db, raw: unknown, now: Date, site: string):
   const { id, version } = parsed.data;
   return db.transaction(async (tx) => {
     const d = await lockDistribution(tx, id);
-    if (!d) return { status: 404, json: { error: 'not_found' } };
+    // A video platform's row takes a brief through its video job (plan 5B), never text copy.
+    if (!d || isVideoPlatform(d.platform)) return { status: 404, json: { error: 'not_found' } };
     const check = checkCopy(d.platform, parsed.data);
     if (!check.ok) return { status: 400, json: { error: 'invalid_copy', reason: check.reason } };
     const { caption, hashtags } = check.copy; // the NFKC form: stored and posted exactly as validated
@@ -109,10 +112,12 @@ export async function submitCopy(db: Db, raw: unknown, now: Date, site: string):
   });
 }
 
-// GET /api/agent/promotions/: up to 5 selected entries waiting for copy.
+// GET /api/agent/promotions/: up to 5 selected entries waiting for copy, then up to 5 video jobs waiting for a brief
+// (plan 5B; kind video_script, answered with POST /api/agent/promotions/brief/).
 export function promotionsQueueRequest(request: Request, d: PromotionDeps): Promise<Response> {
   if (!socialEnabled()) return Promise.resolve(notFound());
-  return agentRoute(request, async () => ({ status: 200, json: { entries: await promotionQueue(d.db, d.now) } }), {
+  const entries = async () => [...(await promotionQueue(d.db, d.now)), ...(await videoQueue(d.db, d.now))];
+  return agentRoute(request, async () => ({ status: 200, json: { entries: await entries() } }), {
     db: d.db,
     limiter: d.limiter,
     role: 'promoter',
@@ -128,6 +133,20 @@ export function copyRequest(request: Request, d: PromotionDeps): Promise<Respons
       const body = await readJson(request, MAX_COPY_BYTES);
       if (!body.ok) return { status: body.response.status, json: await body.response.json() };
       return submitCopy(d.db, body.value, d.now, d.site);
+    },
+    { db: d.db, limiter: d.limiter, role: 'promoter' },
+  );
+}
+
+// POST /api/agent/promotions/brief/: one video job's brief (plan 5B), re-validated by the server.
+export function briefRequest(request: Request, d: PromotionDeps): Promise<Response> {
+  if (!socialEnabled()) return Promise.resolve(notFound());
+  return agentRoute(
+    request,
+    async () => {
+      const body = await readJson(request, MAX_BRIEF_BYTES);
+      if (!body.ok) return { status: body.response.status, json: await body.response.json() };
+      return submitBrief(d.db, body.value, d.now);
     },
     { db: d.db, limiter: d.limiter, role: 'promoter' },
   );

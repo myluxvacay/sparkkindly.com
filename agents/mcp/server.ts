@@ -46,7 +46,7 @@ export function buildServer(deps: Deps): McpServer {
     registerContributionTools(server, run);
     return server;
   }
-  // The promotion run (plan 5A) gets only its two tools.
+  // The promotion run (plan 5A) gets only its three tools (queue, copy and, plan 5B, the video brief).
   if (deps.role === 'promoter') {
     registerPromotionTools(server, run);
     return server;

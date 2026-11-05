@@ -7,7 +7,7 @@
 import { socialEnabled } from '@/lib/config';
 import type { Db, Queryable } from '@/lib/db';
 import { eligibleItem, socialEligibleWhere } from './eligibility';
-import { isPlatform, type Platform } from './states';
+import { isPlatform, isVideoPlatform, type Platform } from './states';
 
 export type Candidate = { itemId: string; worldSlug: string; kind: string; topicScore: number; publishedAt: Date };
 export type SkipReason = 'cap_reached' | 'world_rotation' | 'not_playable' | 'lower_topic_popularity';
@@ -55,7 +55,7 @@ export function skipReason(c: Candidate, ordered: Candidate[], cap: number): Ski
 
 type PlatformRow = { enabled: boolean; daily_cap: number };
 
-async function platformRow(db: Queryable, platform: Platform, lock = false): Promise<PlatformRow | null> {
+export async function platformRow(db: Queryable, platform: Platform, lock = false): Promise<PlatformRow | null> {
   const r = await db.query<PlatformRow>(
     `SELECT enabled, daily_cap FROM social_platforms WHERE platform = $1${lock ? ' FOR UPDATE' : ''}`,
     [platform],
@@ -73,14 +73,15 @@ export async function usedToday(db: Queryable, platform: Platform, day: string):
   return r.rows[0].n;
 }
 
-async function candidates(db: Queryable, platform: Platform, now: Date): Promise<Candidate[]> {
+// `where` is the eligibility rule (videoEligibleWhere for the video queue, plan 5B).
+export async function candidates(db: Queryable, platform: Platform, now: Date, where = socialEligibleWhere): Promise<Candidate[]> {
   const r = await db.query<{ id: string; world: string; kind: string; score: number; published_at: Date }>(
     `SELECT i.id, w.slug AS world, i.kind, i.published_at,
             (SELECT count(*)::int FROM item_responses ir JOIN item_topics rt ON rt.item_id = ir.item_id
              WHERE ir.answered_at > $2::timestamptz - interval '14 days'
                AND rt.topic_id IN (SELECT topic_id FROM item_topics WHERE item_id = i.id)) AS score
      FROM items i JOIN worlds w ON w.id = i.world_id
-     WHERE ${socialEligibleWhere('$2')} AND i.published_at > $2::timestamptz - interval '3 days'
+     WHERE ${where('$2')} AND i.published_at > $2::timestamptz - interval '3 days'
        AND NOT EXISTS (SELECT 1 FROM distributions d WHERE d.item_id = i.id AND d.platform = $1)`,
     [platform, now.toISOString()],
   );
@@ -93,7 +94,7 @@ async function candidates(db: Queryable, platform: Platform, now: Date): Promise
   }));
 }
 
-async function lastPosts(db: Queryable, platform: Platform): Promise<Record<string, Date>> {
+export async function lastPosts(db: Queryable, platform: Platform): Promise<Record<string, Date>> {
   const r = await db.query<{ slug: string; at: Date }>(
     `SELECT w.slug, max(d.posted_at) AS at FROM distributions d
      JOIN items i ON i.id = d.item_id JOIN worlds w ON w.id = i.world_id
@@ -103,7 +104,7 @@ async function lastPosts(db: Queryable, platform: Platform): Promise<Record<stri
   return Object.fromEntries(r.rows.map((x) => [x.slug, new Date(x.at)]));
 }
 
-async function claimDay(db: Queryable, platform: Platform, day: string): Promise<boolean> {
+export async function claimDay(db: Queryable, platform: Platform, day: string): Promise<boolean> {
   const r = await db.query(
     "INSERT INTO job_runs (job, run_key) VALUES ('social-select', $1) ON CONFLICT DO NOTHING RETURNING run_key",
     [`${platform}:${day}`],
@@ -141,7 +142,8 @@ export async function handPick(db: Db, itemId: string, platform: Platform, now: 
 
 // The same on a transaction the caller owns (the admin action, which audits in it).
 export async function handPickTx(tx: Queryable, itemId: string, platform: Platform, now: Date): Promise<PickResult> {
-  if (!socialEnabled() || !isPlatform(platform)) return { ok: false, reason: 'platform' };
+  // TikTok and YouTube take only video, which comes from the video queue (plan 5B), never from a hand-pick.
+  if (!socialEnabled() || !isPlatform(platform) || isVideoPlatform(platform)) return { ok: false, reason: 'platform' };
   const p = await platformRow(tx, platform, true);
   if (!p?.enabled) return { ok: false, reason: 'platform' };
   if (!(await eligibleItem(tx, itemId, now))) return { ok: false, reason: 'ineligible' };

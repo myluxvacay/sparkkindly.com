@@ -13,6 +13,7 @@ export interface AgentClient {
   contributionVerdict(verdict: unknown): Promise<Result>;
   promotionsQueue(): Promise<Result>;
   promotionCopy(copy: unknown): Promise<Result>;
+  promotionBrief(brief: unknown): Promise<Result>;
 }
 
 type Options = {
@@ -93,5 +94,6 @@ export function createClient(opts: Options): AgentClient {
     // Social promotion (plan 5A): the promoter-role key only; every other key gets 403.
     promotionsQueue: () => request('GET', '/api/agent/promotions/'),
     promotionCopy: (copy) => request('POST', '/api/agent/promotions/copy/', copy),
+    promotionBrief: (brief) => request('POST', '/api/agent/promotions/brief/', brief), // plan 5B
   };
 }

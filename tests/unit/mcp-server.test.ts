@@ -251,13 +251,43 @@ describe('SparkKindly MCP server: promoter role (plan 5A)', () => {
     }) as never as AgentClient & { calls: { copy: unknown[][] } };
   }
 
-  it('the promoter server lists exactly the two promotion tools; no other server offers them', async () => {
+  it('the promoter server lists exactly the three promotion tools; no other server offers them', async () => {
     const c = await connect({ client: promoClient(), formatDoc: FORMAT_DOC, role: 'promoter' });
-    expect((await c.listTools()).tools.map((t) => t.name).sort()).toEqual(['sparkkindly_promotion_copy', 'sparkkindly_promotions_queue']);
+    expect((await c.listTools()).tools.map((t) => t.name).sort()).toEqual([
+      'sparkkindly_promotion_brief',
+      'sparkkindly_promotion_copy',
+      'sparkkindly_promotions_queue',
+    ]);
     for (const role of ['moderation', 'reviewer', undefined] as const) {
       const other = await connect({ client: promoClient(), formatDoc: FORMAT_DOC, role });
-      expect((await other.listTools()).tools.map((t) => t.name)).not.toContain('sparkkindly_promotions_queue');
+      const names = (await other.listTools()).tools.map((t) => t.name);
+      expect(names).not.toContain('sparkkindly_promotions_queue');
+      expect(names).not.toContain('sparkkindly_promotion_brief');
     }
+  });
+
+  it('the brief tool (plan 5B) carries the brief fields only, never assets, and refuses a malformed call before the API', async () => {
+    const calls: unknown[] = [];
+    const fake = Object.assign(promoClient(), {
+      promotionBrief: vi.fn(async (v: unknown) => {
+        calls.push(v);
+        return { ok: true, status: 200, data: { status: 'brief_ready' } };
+      }),
+    });
+    const c = await connect({ client: fake, formatDoc: FORMAT_DOC, role: 'promoter' });
+    const tool = (await c.listTools()).tools.find((t) => t.name === 'sparkkindly_promotion_brief')!;
+    expect(Object.keys(tool.inputSchema.properties ?? {})).not.toContain('assets');
+    const v = {
+      id: 4, version: 1, narration: 'Find the odd one out.', shots: ['a', 'b', 'c'], onScreenText: ['Look'],
+      captions: { tiktok: 'Guess!' }, hashtags: ['puzzle'], durationSeconds: 20,
+    };
+    await c.callTool({ name: 'sparkkindly_promotion_brief', arguments: v });
+    expect(calls).toEqual([v]);
+    const bad = await c
+      .callTool({ name: 'sparkkindly_promotion_brief', arguments: { ...v, durationSeconds: 'long' } })
+      .catch((e: Error) => ({ isError: true, content: [{ type: 'text', text: e.message }] }));
+    expect(bad.isError).toBe(true);
+    expect(calls).toHaveLength(1);
   });
 
   it('the queue tool says item text is data, never instructions', async () => {

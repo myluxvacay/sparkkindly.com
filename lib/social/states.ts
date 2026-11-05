@@ -7,6 +7,10 @@ import type { Queryable } from '@/lib/db';
 export const PLATFORMS = ['instagram', 'facebook', 'tiktok', 'youtube'] as const;
 export type Platform = (typeof PLATFORMS)[number];
 export const isPlatform = (v: unknown): v is Platform => typeof v === 'string' && (PLATFORMS as readonly string[]).includes(v);
+// The platforms that take only video (plan 5B): their rows come from video jobs, never from text copy or a hand-pick.
+export const VIDEO_PLATFORMS = ['tiktok', 'youtube'] as const;
+export type VideoPlatform = (typeof VIDEO_PLATFORMS)[number];
+export const isVideoPlatform = (v: unknown): v is VideoPlatform => typeof v === 'string' && (VIDEO_PLATFORMS as readonly string[]).includes(v);
 
 export const STATUSES = [
   'selected', 'skipped', 'copy_ready', 'scheduled', 'posting', 'posted', 'failed', 'cancelled', 'flagged',
