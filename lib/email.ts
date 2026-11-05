@@ -17,7 +17,8 @@ export class EmailSendError extends Error {
   }
 }
 
-export type EmailMessage = { to: string; subject: string; text: string; html?: string };
+// headers: extra mail headers (List-Unsubscribe and List-Unsubscribe-Post, RFC 8058), sent as MailerSend name/value pairs.
+export type EmailMessage = { to: string; subject: string; text: string; html?: string; headers?: Record<string, string> };
 
 type EmailDeps = { fetch?: typeof fetch; env?: EnvLike };
 
@@ -39,6 +40,7 @@ export async function sendEmail(
       subject: msg.subject,
       text: msg.text,
       ...(msg.html ? { html: msg.html } : {}),
+      ...(msg.headers ? { headers: Object.entries(msg.headers).map(([name, value]) => ({ name, value })) } : {}),
     }),
     signal: AbortSignal.timeout(TIMEOUT_MS),
   });

@@ -19,6 +19,8 @@ import { claimConsentSweep, runConsentSweep } from '@/lib/accounts/consent-sweep
 import { claimInactivitySweep, runInactivitySweep } from '@/lib/accounts/inactivity';
 import { claimCirclesPurge, purgeClosedCircles } from '@/lib/jobs/circles-purge';
 import { purgeExpiredInvites } from '@/lib/circles/invites';
+import { claimCircleMail, runCircleMail } from '@/lib/jobs/circle-mail';
+import { circlesEnabled } from '@/lib/config';
 
 type Send = (m: EmailMessage) => Promise<unknown>;
 // `dbNow` replaces the database clock the account jobs compare with `now` (lib/jobs/guards.ts); for tests only.
@@ -60,6 +62,7 @@ export async function tick(db: Db, now: Date, env: EnvLike, send: Send, opts: Ti
   await consentSweep(db, now, env, send, log, opts);
   await inactivitySweep(db, now, env, send, log, opts);
   await circlesPurge(db, now, log, opts);
+  await circleMail(db, now, env, send, log, opts);
   return log;
 }
 
@@ -142,6 +145,26 @@ async function circlesPurge(db: Db, now: Date, log: string[], { delayMs, dbNow }
     'invites-purge',
     async () => {
       log.push(`invites purge: ${await purgeExpiredInvites(db, now)} changed`);
+    },
+    { delayMs },
+  );
+}
+
+// Once per UTC hour with circles on: set-ready, weekly and re-score emails (lib/jobs/circle-mail.ts).
+async function circleMail(db: Db, now: Date, env: EnvLike, send: Send, log: string[], { delayMs, dbNow }: TickOpts): Promise<void> {
+  if (!circlesEnabled()) return;
+  const claimed = await claimCircleMail(db, now).catch((err: Error) => {
+    log.push(`circle mail: could not check (${err.message})`);
+    return null;
+  });
+  if (claimed === false) log.push('circle mail: done this hour');
+  if (!claimed) return;
+  await runJob(
+    db,
+    'circle-mail',
+    async () => {
+      const r = await runCircleMail(db, now, send, { env, dbNow });
+      log.push(`circle mail: ${r.sent} sent, ${r.skipped} skipped, ${r.failed} failed`);
     },
     { delayMs },
   );

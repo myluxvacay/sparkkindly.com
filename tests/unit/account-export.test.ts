@@ -146,6 +146,7 @@ describe('export inventory', () => {
     expect(EXCLUDED_TABLES.circle_interests).toMatch(/circle/);
     expect(EXCLUDED_TABLES.circle_daily_sets).toMatch(/circle/);
     expect(EXCLUDED_TABLES.circle_notices).toMatch(/circle/);
+    expect(EXCLUDED_TABLES.circle_mail_log).toMatch(/no address, no account/);
   });
 
   it('accounts for the invite address guard tables (4B review): excluded with reasons', () => {

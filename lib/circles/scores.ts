@@ -30,7 +30,8 @@ export function rankWithTies(points: number[]): number[] {
 type Row = { name: string; former: boolean; you: boolean } & Record<Period, number>;
 
 // One aggregate over every member row (current and former) with correct counts per window. $1 clock, $2 audiences.
-const COUNTS = `
+// Also read by the weekly email (lib/circles/mail.ts), which uses aid and pid to find the recipient's own rows.
+export const COUNTS = `
   WITH scored AS (
     SELECT r.account_id, r.profile_id, s.day
     FROM circle_daily_sets s
@@ -38,7 +39,7 @@ const COUNTS = `
     JOIN item_responses r ON r.item_id = s.item_id AND r.correct
     WHERE s.circle_id = $3 AND s.day <= $5::date AND (r.answered_at AT TIME ZONE $4::text)::date = s.day AND ${PLAYABLE}
   )
-  SELECT m.display_name AS name, m.left_at IS NOT NULL AS former,
+  SELECT m.display_name AS name, m.left_at IS NOT NULL AS former, m.account_id AS aid, m.profile_id AS pid,
          (m.account_id = $6 AND m.profile_id IS NOT DISTINCT FROM $7::uuid) AS you,
          (count(x.day) FILTER (WHERE x.day = $5::date))::int AS day,
          (count(x.day) FILTER (WHERE x.day >= date_trunc('week', $5::date)::date))::int AS week,

@@ -47,4 +47,13 @@ describe('sendEmail', () => {
     await sendEmail({ to: 'a@example.com', subject: 'x', text: 'y' }, { fetch, env });
     expect((fetch.mock.calls[0][1] as RequestInit).signal).toBeInstanceOf(AbortSignal);
   });
+  it('passes custom headers (List-Unsubscribe) as MailerSend name/value pairs, only when given', async () => {
+    const fetch = vi.fn(async (..._args: FetchArgs) => new Response(null, { status: 202 }));
+    const headers = { 'List-Unsubscribe': '<https://x.test/u>', 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' };
+    await sendEmail({ to: 'a@example.com', subject: 'x', text: 'y', headers }, { fetch, env });
+    expect(JSON.parse((fetch.mock.calls[0][1] as RequestInit).body as string).headers).toEqual([
+      { name: 'List-Unsubscribe', value: '<https://x.test/u>' },
+      { name: 'List-Unsubscribe-Post', value: 'List-Unsubscribe=One-Click' },
+    ]);
+  });
 });
