@@ -824,6 +824,8 @@ describe('settings, export, deletion, inactivity and unsubscribe (plan 3E, Task 
     // B's reply went with A's comment; B's own rows stay.
     expect(await count("SELECT count(*)::int AS n FROM comments WHERE body = 'B replies'", [])).toBe(0);
     expect(await count('SELECT count(*)::int AS n FROM circles WHERE owner_account_id = $1', [b.accountId])).toBe(2);
+    // This file shares one database: leave no report behind for the later report-count rows.
+    await db.query('DELETE FROM circle_reports WHERE circle_id = $1', [theirsId]);
   });
 
   it('the inactivity sweep spares accounts with a recent sign-in, a recent answer, or a stale notice and recent activity', async () => {
