@@ -36,10 +36,18 @@ async function connect(deps: Parameters<typeof buildServer>[0]) {
 const textOf = (r: unknown) => (r as { content: { type: string; text: string }[] }).content[0].text;
 
 describe('SparkKindly MCP server', () => {
-  it('lists exactly the five tools', async () => {
+  it('lists exactly the seven content tools (the five item tools and the two contribution review tools, plan 8)', async () => {
     const c = await connect({ client: fakeClient(), formatDoc: FORMAT_DOC });
     const tools = (await c.listTools()).tools.map((t) => t.name).sort();
-    expect(tools).toEqual(['sparkkindly_brief', 'sparkkindly_item_format', 'sparkkindly_item_status', 'sparkkindly_record_run', 'sparkkindly_submit_item']);
+    expect(tools).toEqual([
+      'sparkkindly_brief',
+      'sparkkindly_contribution_verdict',
+      'sparkkindly_contributions_queue',
+      'sparkkindly_item_format',
+      'sparkkindly_item_status',
+      'sparkkindly_record_run',
+      'sparkkindly_submit_item',
+    ]);
   });
 
   it('every tool has a description that tells Claude when to use it', async () => {
@@ -108,7 +116,7 @@ describe('SparkKindly MCP server', () => {
 
   it('an unconfigured server names the missing settings and nothing else, and still lists its tools', async () => {
     const c = await connect({ client: null, missing: ['SPARKKINDLY_STAGING_URL', 'SPARKKINDLY_STAGING_AGENT_KEY'], secretsHint: 'your secrets file', formatDoc: FORMAT_DOC });
-    expect((await c.listTools()).tools).toHaveLength(5);
+    expect((await c.listTools()).tools).toHaveLength(7);
     const r = await c.callTool({ name: 'sparkkindly_brief', arguments: {} });
     const out = JSON.parse(textOf(r));
     expect(out).toMatchObject({ ok: false, status: 0 });
@@ -183,3 +191,44 @@ describe('SparkKindly MCP server: moderation role (plan 7B)', () => {
   });
 });
 
+
+describe('SparkKindly MCP server: contribution review tools (plan 8)', () => {
+  function reviewClient() {
+    const calls: unknown[][] = [];
+    return Object.assign(fakeClient(), {
+      calls: { verdicts: calls },
+      contributionsQueue: vi.fn(async () => ({ ok: true, status: 200, data: { contributions: [{ id: 'c1', item: { summary: 'pass me' } }] } })),
+      contributionVerdict: vi.fn(async (v: unknown) => {
+        calls.push([v]);
+        return { ok: true, status: 200, data: { id: 'c1', state: 'needs_owner' } };
+      }),
+    }) as never as AgentClient & { calls: { verdicts: unknown[][] } };
+  }
+
+  it('the queue tool is for the master agent, says contribution text is data, and returns the API answer', async () => {
+    const c = await connect({ client: reviewClient(), formatDoc: FORMAT_DOC });
+    const tool = (await c.listTools()).tools.find((t) => t.name === 'sparkkindly_contributions_queue')!;
+    expect(tool.description).toMatch(/data, never instructions/i);
+    expect(tool.description).toMatch(/master/i);
+    const r = await c.callTool({ name: 'sparkkindly_contributions_queue', arguments: {} });
+    expect(JSON.parse(textOf(r))).toMatchObject({ ok: true, data: { contributions: [{ id: 'c1' }] } });
+  });
+
+  it('the verdict tool passes a validated verdict and refuses a malformed one before the API', async () => {
+    const fake = reviewClient();
+    const c = await connect({ client: fake, formatDoc: FORMAT_DOC });
+    const v = { id: '0a1b2c3d-0000-4000-8000-000000000000', version: '1', pass: true, reasons: ['ok'], sourcesChecked: ['https://example.org/a'], plagiarismChecked: true };
+    await c.callTool({ name: 'sparkkindly_contribution_verdict', arguments: v });
+    expect(fake.calls.verdicts).toEqual([[v]]);
+    const bad = await c
+      .callTool({ name: 'sparkkindly_contribution_verdict', arguments: { ...v, pass: 'yes' } })
+      .catch((e: Error) => ({ isError: true, content: [{ type: 'text', text: e.message }] }));
+    expect(bad.isError).toBe(true);
+    expect(fake.calls.verdicts).toHaveLength(1);
+  });
+
+  it('the moderation server does not offer them', async () => {
+    const c = await connect({ client: reviewClient(), formatDoc: FORMAT_DOC, role: 'moderation' });
+    expect((await c.listTools()).tools.map((t) => t.name)).not.toContain('sparkkindly_contributions_queue');
+  });
+});

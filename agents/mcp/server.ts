@@ -6,6 +6,7 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod';
 import { createClient, type AgentClient, type Result } from '../client';
 import { defaultSecretsPath, loadSecrets, resolveConfig } from '../secrets';
+import { registerContributionTools } from './contribution-tools';
 import { registerModerationTools } from './moderation-tools';
 
 type Deps = {
@@ -103,6 +104,7 @@ export function buildServer(deps: Deps): McpServer {
     (args) => run((c) => c.recordRun(args)),
   );
 
+  registerContributionTools(server, run);
   return server;
 }
 

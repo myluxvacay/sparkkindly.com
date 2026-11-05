@@ -170,4 +170,16 @@ describe('timeout', () => {
     expect(urlOf(fetch, 1)).toBe('https://sparkkindly.com/api/agent/moderation/decide/');
     expect(JSON.parse(String((fetch.mock.calls[1][1] as RequestInit).body))).toEqual(decision);
   });
+
+  it('contributions (plan 8): the queue is a GET and a verdict a POST, on the contribution URLs', async () => {
+    const fetch = stub(() => json(200, { contributions: [] }));
+    const c = createClient({ baseUrl: 'https://sparkkindly.com/', agentKey: KEY, fetch });
+    await c.contributionsQueue();
+    const verdict = { id: '0a1b2c3d-0000-4000-8000-000000000000', version: '1', pass: false, reasons: ['x'], sourcesChecked: [], plagiarismChecked: true };
+    await c.contributionVerdict(verdict);
+    expect(urlOf(fetch, 0)).toBe('https://sparkkindly.com/api/agent/contributions/');
+    expect((fetch.mock.calls[0][1] as RequestInit).method).toBe('GET');
+    expect(urlOf(fetch, 1)).toBe('https://sparkkindly.com/api/agent/contributions/review/');
+    expect(JSON.parse(String((fetch.mock.calls[1][1] as RequestInit).body))).toEqual(verdict);
+  });
 });
