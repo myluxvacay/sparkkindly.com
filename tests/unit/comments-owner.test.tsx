@@ -135,6 +135,43 @@ describe('owner actions', () => {
     expect((await ownerQueue(db, NOW)).escalations).toEqual([]);
   });
 
+  it("a muted reporter's urgent report leaves the comment published; the owner can still remove it (7B review H1)", async () => {
+    const u = await decided('published', '', 'muted urgent words');
+    await db.query('UPDATE comments SET moderation_reason = NULL WHERE id = $1', [u.id]);
+    const r = await person(db, NOW);
+    await setLevel(db, r.id, 1);
+    await db.query('UPDATE account_trust SET reports_muted = true WHERE account_id = $1', [r.id]);
+    await reportComment(db, r.ctx, u.id, { reason: 'abuse', urgent: 'on' }, NOW, async () => {});
+    expect(await statusOf(db, u.id)).toBe('published');
+    const q = await ownerQueue(db, NOW);
+    const html = renderToStaticMarkup(<CommentQueue queue={q} csrf="t" />);
+    expect(html).toMatch(/Remove: urgent report 1/);
+    expect(await act('comments.escalation_resolve', { comment: u.id, outcome: 'remove' })).toMatchObject({ ok: true });
+    expect(await statusOf(db, u.id)).toBe('hidden');
+    expect(sent.map((m) => m.to)).toEqual([u.author.email]);
+  });
+
+  it('resolve applies only to escalated comments or open urgent reports (L3)', async () => {
+    const plain = await decided('hidden', 'Personal attack', 'already hidden words');
+    expect(await act('comments.escalation_resolve', { comment: plain.id, outcome: 'remove' })).toMatchObject({ ok: false, status: 409 });
+    expect(await act('comments.escalation_resolve', { comment: plain.id, outcome: 'publish' })).toMatchObject({ ok: false, status: 409 });
+    const quiet = await decided('published', '', 'quiet words');
+    expect(await act('comments.escalation_resolve', { comment: quiet.id, outcome: 'remove' })).toMatchObject({ ok: false, status: 409 });
+    expect(sent).toEqual([]);
+  });
+
+  it('publishing a comment with an open appeal closes the appeal as overturned and emails the outcome (L3)', async () => {
+    const e = await escalated();
+    await db.query("UPDATE comments SET status = 'hidden' WHERE id = $1", [e.id]);
+    await db.query("INSERT INTO comment_appeals (comment_id, account_id, note, created_at) VALUES ($1, $2, 'please', $3)", [e.id, e.author.id, NOW]);
+    expect(await act('comments.escalation_resolve', { comment: e.id, outcome: 'publish' })).toMatchObject({ ok: true });
+    const ap = await db.query<{ outcome: string }>('SELECT outcome FROM comment_appeals WHERE comment_id = $1', [e.id]);
+    expect(ap.rows[0].outcome).toBe('overturn');
+    expect((await trustRow(db, e.author.id)).rejected).toBe(0);
+    expect(sent.map((m) => m.to)).toEqual([e.author.email]);
+    expect(sent[0].subject).toMatch(/appeal/i);
+  });
+
   it('report reset unmutes the reporter of that report and clears their false reports', async () => {
     const r = await person(db, NOW);
     await setLevel(db, r.id, 0);

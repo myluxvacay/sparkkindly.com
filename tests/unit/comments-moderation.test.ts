@@ -215,11 +215,19 @@ describe('reject and hide', () => {
 });
 
 describe('keep and escalate', () => {
-  it('keep restores a reported comment, dismisses its reports and charges each reporter', async () => {
+  it('keep restores a reported comment and dismisses its reports; level-1 reporters are never charged, level-0 are (M3b)', async () => {
     const r = await reported();
     expect(await act(r.id, 'keep')).toMatchObject({ status: 200, json: { status: 'published' } });
     expect(await statusOf(db, r.id)).toBe('published');
-    for (const p of r.reporters) expect((await trustRow(db, p.id)).false_reports).toBe(1);
+    for (const p of r.reporters) expect((await trustRow(db, p.id)).false_reports).toBe(0);
+    const low = await person(db, NOW);
+    await setLevel(db, low.id, 0);
+    const author = await person(db, NOW);
+    const other = await comment(db, await item(db), author.id, 'another reported comment');
+    await reportComment(db, low.ctx, other, { reason: 'abuse', urgent: 'on' }, NOW, quiet);
+    expect(await statusOf(db, other)).toBe('hidden');
+    await act(other, 'keep');
+    expect((await trustRow(db, low.id)).false_reports).toBe(1);
     const open = await db.query('SELECT count(*)::int AS n FROM comment_reports WHERE NOT dismissed');
     expect(open.rows[0].n).toBe(0);
     expect(sent).toEqual([]);

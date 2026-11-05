@@ -10,7 +10,8 @@ import { createChildProfile } from '@/lib/accounts/children';
 import { deleteAccount } from '@/lib/accounts/delete';
 import { switchToProfile, getContext } from '@/lib/accounts/context';
 import { listPublishedComments } from '@/lib/comments/repo';
-import { dismissReports, reportComment, reportWeight, REPORT_LIMIT, URGENT_LIMIT, type NotifyOwner } from '@/lib/comments/reports';
+import { dismissReports, reportComment, reportWeight, REPORT_LIMIT, URGENT_ALERTS_PER_DAY, URGENT_LIMIT, type NotifyOwner } from '@/lib/comments/reports';
+import { moderationQueue } from '@/lib/comments/moderation';
 import { ownerAlert } from '@/lib/comments/notices';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -196,7 +197,7 @@ describe('urgent reports', () => {
     const sent = JSON.stringify(notify.mock.calls[0]);
     expect(sent).not.toContain('555');
     expect(sent).not.toContain('child is named');
-    expect(notify.mock.calls[0][0]).toEqual({ urgent24h: 1 });
+    expect(notify.mock.calls[0][0]).toEqual({ urgent24h: 1, hidden: true });
   });
 
   it('a non-urgent report never alerts; a failing alert does not undo the hide', async () => {
@@ -214,23 +215,36 @@ describe('urgent reports', () => {
     expect(await statusOf(db, a.id)).toBe('hidden');
   });
 
-  it('from a level-0 or muted reporter: alerts the owner (no text) but does not hide alone', async () => {
+  it('from a level-0 reporter (and a brand-new one): hides at once too (7B review H1)', async () => {
     const a = await target('call me on 555 0199');
     const notify = vi.fn(quiet);
-    expect(await report((await reporter(0)).ctx, a.id, { reason: 'abuse', urgent: 'on', note: 'danger' }, notify)).toEqual({ status: 'reported' });
-    expect(await statusOf(db, a.id)).toBe('published');
-    expect(notify).toHaveBeenCalledTimes(1);
+    expect(await report((await reporter(0)).ctx, a.id, { reason: 'abuse', urgent: 'on', note: 'danger' }, notify)).toEqual({ status: 'hidden' });
+    expect(await statusOf(db, a.id)).toBe('hidden');
+    expect(notify.mock.calls[0][0]).toEqual({ urgent24h: 1, hidden: true });
     expect(JSON.stringify(notify.mock.calls)).not.toMatch(/555|danger/);
+    const b = await target();
+    const fresh = await person(db, NOW);
+    expect(await report(fresh.ctx, b.id, { reason: 'abuse', urgent: 'on' })).toEqual({ status: 'hidden' });
+  });
+
+  it('a hide by a report bumps the version, so a decision read before it is stale (L4)', async () => {
+    const a = await target();
+    const before = (await db.query<{ v: string }>('SELECT updated_at::text AS v FROM comments WHERE id = $1', [a.id])).rows[0].v;
+    await report((await reporter(0)).ctx, a.id, { reason: 'abuse', urgent: 'on' }, quiet, new Date(NOW.getTime() + 60_000));
+    const after = (await db.query<{ v: string }>('SELECT updated_at::text AS v FROM comments WHERE id = $1', [a.id])).rows[0].v;
+    expect(after).not.toBe(before);
+  });
+
+  it('from a muted reporter: not hidden, but queued for the agent as reported, and the alert says so', async () => {
+    const a = await target('call me on 555 0199');
+    const notify = vi.fn(quiet);
     const muted = await reporter(1);
     await db.query('UPDATE account_trust SET reports_muted = true WHERE account_id = $1', [muted.id]);
     expect(await report(muted.ctx, a.id, { reason: 'abuse', urgent: 'on' }, notify)).toEqual({ status: 'reported' });
     expect(await statusOf(db, a.id)).toBe('published');
-  });
-
-  it('two level-0 urgent reports (weight 1.0) do not hide; four do', async () => {
-    const a = await target();
-    for (let i = 0; i < 3; i++) expect(await report((await reporter(0)).ctx, a.id, { reason: 'abuse', urgent: 'on' })).toEqual({ status: 'reported' });
-    expect(await report((await reporter(0)).ctx, a.id, { reason: 'abuse', urgent: 'on' })).toEqual({ status: 'hidden' });
+    expect(notify.mock.calls[0][0]).toEqual({ urgent24h: 1, hidden: false });
+    const q = await moderationQueue(db, NOW);
+    expect(q.find((e) => e.id === a.id)?.reason).toBe('reported');
   });
 
   it(`the ${URGENT_LIMIT + 1}th urgent report in a day by one account is stored as a normal report, without an alert`, async () => {
@@ -248,44 +262,69 @@ describe('urgent reports', () => {
     expect(stored.rows).toEqual([{ urgent: false }]);
   });
 
-  it('ownerAlert emails each admin address a subject and body with counts and the admin link only', async () => {
+  it(`at most ${URGENT_ALERTS_PER_DAY} urgent alert emails a UTC day site-wide; later urgent reports still hide (L7)`, async () => {
+    const notify = vi.fn(quiet);
+    const day = new Date('2026-11-07T01:00:00Z');
+    for (let i = 0; i < URGENT_ALERTS_PER_DAY + 1; i++) {
+      const a = await target(`cap ${i}`);
+      expect(await report((await reporter(0)).ctx, a.id, { reason: 'abuse', urgent: 'on' }, notify, day)).toEqual({ status: 'hidden' });
+    }
+    expect(notify).toHaveBeenCalledTimes(URGENT_ALERTS_PER_DAY);
+    const next = await target('next day');
+    await report((await reporter(0)).ctx, next.id, { reason: 'abuse', urgent: 'on' }, notify, new Date('2026-11-08T00:30:00Z'));
+    expect(notify).toHaveBeenCalledTimes(URGENT_ALERTS_PER_DAY + 1);
+  });
+
+  it('ownerAlert emails each admin address counts and the admin link only, and says whether the comment was hidden', async () => {
     const send = vi.fn(async () => ({}));
-    await ownerAlert({ ADMIN_EMAILS: 'a@example.test, b@example.test', ADMIN_LINK_BASE: 'https://s.example.test' }, send)({ urgent24h: 3 });
+    await ownerAlert({ ADMIN_EMAILS: 'a@example.test, b@example.test', ADMIN_LINK_BASE: 'https://s.example.test' }, send)({ urgent24h: 3, hidden: true });
     expect(send).toHaveBeenCalledTimes(2);
     const m = (send.mock.calls[0] as unknown as [{ to: string; subject: string; text: string }])[0];
     expect(m.to).toBe('a@example.test');
     expect(m.subject).toMatch(/urgent/i);
     expect(m.text).toContain('3');
+    expect(m.text).toMatch(/has hidden a comment/);
     expect(m.text).toContain('https://s.example.test/admin/comments/');
-    await ownerAlert({}, send)({ urgent24h: 1 });
-    expect(send).toHaveBeenCalledTimes(2);
+    await ownerAlert({ ADMIN_EMAILS: 'a@example.test' }, send)({ urgent24h: 4, hidden: false });
+    const n = (send.mock.calls[2] as unknown as [{ text: string }])[0];
+    expect(n.text).toMatch(/not hidden/);
+    expect(n.text).not.toMatch(/has hidden/);
+    await ownerAlert({}, send)({ urgent24h: 1, hidden: true });
+    expect(send).toHaveBeenCalledTimes(3);
   });
 });
 
 describe('false reports', () => {
-  it('three dismissed reports drop the reporter one level, once, and mute their weight', async () => {
-    const r = await reporter(1);
+  it('only level-0 reporters are charged (M3b); three dismissed reports mute their weight', async () => {
+    const r = await reporter(0);
     const ids: string[] = [];
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
       const a = await target(`fine words ${i}`);
       await report(r.ctx, a.id);
       ids.push(a.id);
     }
     for (const id of ids.slice(0, 2)) await db.transaction((tx) => dismissReports(tx, id));
-    expect(await trustRow(db, r.id)).toMatchObject({ level: 1, false_reports: 2, reports_muted: false });
+    expect(await trustRow(db, r.id)).toMatchObject({ level: 0, false_reports: 2, reports_muted: false });
     await db.transaction((tx) => dismissReports(tx, ids[2]));
     expect(await trustRow(db, r.id)).toMatchObject({ level: 0, false_reports: 3, reports_muted: true });
-    await setLevel(db, r.id, 1);
-    await db.transaction((tx) => dismissReports(tx, ids[3]));
-    expect(await trustRow(db, r.id)).toMatchObject({ level: 1, false_reports: 4, reports_muted: true });
     const open = await db.query('SELECT count(*)::int AS n FROM comment_reports WHERE handled_at IS NULL OR NOT dismissed');
     expect(open.rows[0].n).toBe(0);
   });
 
+  it('a level-1 reporter is never charged a false report (M3b)', async () => {
+    const r = await reporter(1);
+    for (let i = 0; i < 4; i++) {
+      const a = await target(`level one ${i}`);
+      await report(r.ctx, a.id);
+      await db.transaction((tx) => dismissReports(tx, a.id));
+    }
+    expect(await trustRow(db, r.id)).toMatchObject({ level: 1, false_reports: 0, reports_muted: false });
+  });
+
   it("dismissing twice charges nobody twice; a deleted reporter's report is dismissed without a charge", async () => {
     const a = await target();
-    const r = await reporter(1);
-    const gone = await reporter(1);
+    const r = await reporter(0);
+    const gone = await reporter(0);
     await report(r.ctx, a.id);
     await report(gone.ctx, a.id);
     await deleteAccount(db, gone.id);

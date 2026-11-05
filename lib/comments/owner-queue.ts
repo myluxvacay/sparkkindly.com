@@ -10,7 +10,7 @@ type Entry = { id: string; itemTitle: string; path: string; body: string; at: Da
 export type OwnerQueue = {
   escalations: (Entry & { reason: string | null; status: string })[];
   appeals: (Entry & { reason: string | null; note: string | null; status: string })[];
-  urgent: (Entry & { reports: number; status: string; reason: string | null })[];
+  urgent: (Entry & { reports: number; status: string; reason: string | null; open: boolean })[];
   muted: { report: string; falseReports: number }[];
   counts: CommentCounts;
 };
@@ -29,7 +29,7 @@ export async function ownerQueue(db: Queryable, now: Date): Promise<OwnerQueue> 
      WHERE a.decided_at IS NULL ORDER BY a.created_at LIMIT 100`,
   );
   const urgent = await db.query<OwnerQueue['urgent'][number]>(
-    `${BASE}, count(r.id)::int AS reports, max(r.created_at) AS at ${JOINS} JOIN comment_reports r ON r.comment_id = c.id
+    `${BASE}, count(r.id)::int AS reports, max(r.created_at) AS at, bool_or(r.handled_at IS NULL) AS open ${JOINS} JOIN comment_reports r ON r.comment_id = c.id
      WHERE r.urgent AND r.created_at > $1::timestamptz - interval '7 days' AND c.status <> 'deleted'
      GROUP BY c.id, i.title, w.slug, i.slug, c.body, c.status, c.moderation_reason ORDER BY max(r.created_at) DESC LIMIT 100`,
     [now],

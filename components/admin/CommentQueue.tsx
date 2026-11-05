@@ -74,7 +74,7 @@ export default function CommentQueue({ queue, csrf }: Props) {
       </ul>
 
       <h3>Urgent reports (last 7 days)</h3>
-      <p className="muted">Response target: within 24 hours. A comment hidden by an urgent report stays hidden until ruled on.</p>
+      <p className="muted">Response target: within 24 hours. A comment hidden by an urgent report stays hidden until ruled on; one reported by a muted reporter stays published until ruled on.</p>
       {queue.urgent.length === 0 && <p>None.</p>}
       <ul className="admin-list">
         {queue.urgent.map((u, i) => (
@@ -83,7 +83,7 @@ export default function CommentQueue({ queue, csrf }: Props) {
               On <a href={u.path}>{u.itemTitle}</a>: {u.reports} urgent report{u.reports === 1 ? '' : 's'}, latest {when(u.at)}; now {u.status}.
             </p>
             <blockquote>{u.body}</blockquote>
-            {(u.status === 'hidden' || u.status === 'held') && <Resolve id={u.id} csrf={csrf} label={`urgent report ${i + 1}`} />}
+            {u.open && ['hidden', 'held', 'published'].includes(u.status) && <Resolve id={u.id} csrf={csrf} label={`urgent report ${i + 1}`} />}
           </li>
         ))}
       </ul>

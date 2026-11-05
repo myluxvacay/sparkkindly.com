@@ -8,16 +8,28 @@ import type { Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
 import { appealToken } from './appeals';
-import { rejectionEmail } from './rejection-email';
+import { appealOutcomeEmail, rejectionEmail } from './rejection-email';
 import { dismissReports, upholdReports } from './reports';
 import { recordApproval, recordRejection } from './trust';
 
 export type Resolution = { status: 'done'; newStatus: string; mail?: EmailMessage } | { status: 'not_found' | 'wrong_state' };
 
-type Row = { account_id: string; status: string; body: string; reason: string | null; email: string };
+type Row = { account_id: string; status: string; body: string; reason: string | null; email: string; eligible: boolean; appeal: boolean };
 
-// publish: shown again (an approval for a held comment; open reports dismissed as false). remove: rejected (held) or
-// hidden, trust drops, open reports upheld, and the author is emailed the reason with an appeal link.
+// Only an escalated comment or one with an open urgent report (7B review L3); a muted reporter's urgent report leaves
+// the comment published, so published counts too then (H1).
+const ELIGIBLE = `(c.escalated_at IS NOT NULL OR EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL AND r.urgent))`;
+
+// An open appeal on a comment the owner publishes is closed as overturned, with the usual outcome email (L3).
+async function overturnOpenAppeal(tx: Queryable, commentId: string, c: Row, now: Date, env: EnvLike): Promise<EmailMessage | undefined> {
+  if (!c.appeal) return undefined;
+  await tx.query("UPDATE comment_appeals SET outcome = 'overturn', decided_at = $2 WHERE comment_id = $1 AND decided_at IS NULL", [commentId, now]);
+  await tx.query('UPDATE account_trust SET rejected = greatest(rejected - 1, 0), updated_at = now() WHERE account_id = $1', [c.account_id]);
+  return appealOutcomeEmail({ to: c.email, body: c.body, outcome: 'overturn', site: linkBase(env) });
+}
+
+// publish: shown again (an approval for a held comment; open reports dismissed as false; an open appeal overturned).
+// remove: rejected (held) or hidden, trust drops, open reports upheld, and the author is emailed with an appeal link.
 export async function resolveEscalation(
   tx: Queryable,
   admin: { email: string },
@@ -28,18 +40,19 @@ export async function resolveEscalation(
 ): Promise<Resolution> {
   await tx.query('SELECT 1 FROM account_trust WHERE account_id = (SELECT account_id FROM comments WHERE id = $1) FOR UPDATE', [commentId]);
   const r = await tx.query<Row>(
-    `SELECT c.account_id, c.status, c.body, c.moderation_reason AS reason, a.email
+    `SELECT c.account_id, c.status, c.body, c.moderation_reason AS reason, a.email, ${ELIGIBLE} AS eligible,
+            EXISTS (SELECT 1 FROM comment_appeals p WHERE p.comment_id = c.id AND p.decided_at IS NULL) AS appeal
      FROM comments c JOIN accounts a ON a.id = c.account_id WHERE c.id = $1 FOR UPDATE OF c`,
     [commentId],
   );
   const c = r.rows[0];
   if (!c) return { status: 'not_found' };
-  if (c.status !== 'held' && c.status !== 'hidden') return { status: 'wrong_state' };
+  if (!c.eligible || !['held', 'hidden', 'published'].includes(c.status)) return { status: 'wrong_state' };
   if (outcome === 'publish') {
     await tx.query("UPDATE comments SET status = 'published', escalated_at = NULL, decided_by = $2 WHERE id = $1", [commentId, admin.email]);
     if (c.status === 'held') await recordApproval(tx, c.account_id);
     await dismissReports(tx, commentId, now);
-    return { status: 'done', newStatus: 'published' };
+    return { status: 'done', newStatus: 'published', mail: await overturnOpenAppeal(tx, commentId, c, now, env) };
   }
   const newStatus = c.status === 'held' ? 'rejected' : 'hidden';
   const reason = c.reason ?? 'It does not follow the community guidelines.';

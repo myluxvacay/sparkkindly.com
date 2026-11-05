@@ -38,6 +38,7 @@ const KIND_SQL = `CASE
   WHEN c.escalated_at IS NOT NULL THEN NULL
   WHEN c.status = 'held' THEN 'held'
   WHEN c.status = 'hidden' AND EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL) THEN 'reported'
+  WHEN c.status = 'published' AND EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL AND r.urgent) THEN 'reported'
   WHEN c.status = 'published' AND c.sampled_at IS NOT NULL AND c.sample_reviewed_at IS NULL THEN 'sample'
 END`;
 const ORDER: Record<Kind, number> = { held: 0, reported: 1, sample: 2 };
@@ -53,6 +54,7 @@ export async function moderationQueue(db: Queryable, _now: Date, limit = 20): Pr
        FROM comments c JOIN items i ON i.id = c.item_id JOIN worlds w ON w.id = i.world_id
        LEFT JOIN account_trust t ON t.account_id = c.account_id
        WHERE c.status IN ('held', 'hidden') OR (c.sampled_at IS NOT NULL AND c.sample_reviewed_at IS NULL)
+          OR (c.status = 'published' AND EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL AND r.urgent))
      ) q WHERE kind IS NOT NULL
      ORDER BY CASE kind WHEN 'held' THEN ${ORDER.held} WHEN 'reported' THEN ${ORDER.reported} ELSE ${ORDER.sample} END, created_at, id
      LIMIT $1`,

@@ -2,9 +2,13 @@
 // comment (public_comment: 16+; ruling: 13-15 accounts get no report form and are refused, as for comments) reports another member's published comment once, with
 // a reason, an optional note (up to 300 characters) and an urgent flag. Each report keeps the weight it carried: level 1
 // counts 1, level 0 counts 0.5, a muted reporter 0. Open weight >= 2 hides the comment pending the moderation agent. An
-// urgent report alerts the owner at once (counts only) and hides the comment at once only when its weight is 1 (a level-1,
-// unmuted reporter); otherwise it counts its normal weight. 10 reports a rolling day per account, of which 3 may be
-// urgent: a further urgent report is stored as a normal one, without an alert (the result says urgent: 'limit').
+// urgent report hides the comment at once for any reporter who is not muted (7B review H1, reversing the earlier
+// level-1-only ruling; spec 4a.6: urgent hides immediately); a muted reporter's urgent report leaves it published but
+// queues it for the agent as `reported` (lib/comments/moderation.ts) and for the owner. Each urgent report alerts the
+// owner (counts only, saying whether it hid the comment), at most URGENT_ALERTS_PER_DAY alerts a UTC day site-wide (the
+// rest show in the digest's urgent count). 10 reports a rolling day per account, of which 3 may be urgent: a further
+// urgent report is stored as a normal one, without an alert (the result says urgent: 'limit'). A hide bumps the
+// comment's updated_at, so an agent decision read before it is stale.
 // Lock order (matching 7A and account deletion): reporter account (KEY SHARE), reporter trust row, then the comment row
 // FOR UPDATE, so two reports crossing the threshold together hide it exactly once. No Next.js imports.
 // Verified by tests/unit/comments-reports.test.ts.
@@ -23,13 +27,15 @@ export const URGENT_LIMIT = 3;
 export const HIDE_WEIGHT = 2;
 // Dismissed reports after which a reporter drops a level (once) and their reports weigh 0 until the owner resets it.
 export const FALSE_REPORT_LIMIT = 3;
+// Site-wide urgent alert emails per UTC day (7B review L7).
+export const URGENT_ALERTS_PER_DAY = 20;
 
 export type ReportInput = { reason: unknown; note?: unknown; urgent?: unknown };
 export type ReportRefusal = 'not_allowed' | 'not_found' | 'own' | 'duplicate' | 'invalid' | 'limit';
 export type ReportResult =
   | { status: 'reported' | 'hidden'; urgent?: 'limit' }
   | { status: 'refused'; code: ReportRefusal };
-export type NotifyOwner = (counts: { urgent24h: number }) => Promise<unknown>;
+export type NotifyOwner = (counts: { urgent24h: number; hidden: boolean }) => Promise<unknown>;
 
 export const reportWeight = (t: { level: number; reportsMuted: boolean }): number =>
   t.reportsMuted ? 0 : t.level >= 1 ? 1 : 0.5;
@@ -48,7 +54,7 @@ async function reporterOf(tx: Queryable, ctx: AccountContext | null, now: Date):
 }
 
 type Checked = { reason: string; note: string | null; urgent: boolean };
-type Outcome = ReportResult & { urgent24h?: number };
+type Outcome = ReportResult & { alert?: { urgent24h: number; hidden: boolean } };
 
 function checkInput(input: ReportInput): Checked | null {
   const note = cleanNote(input.note);
@@ -94,6 +100,16 @@ async function urgentCount(tx: Queryable, now: Date): Promise<number> {
   return r.rows[0].n;
 }
 
+// Whether this urgent report is within the site-wide alert cap: the urgent reports of this UTC day so far, itself included.
+async function alertAllowed(tx: Queryable, now: Date): Promise<boolean> {
+  const r = await tx.query<{ n: number }>(
+    `SELECT count(*)::int AS n FROM comment_reports
+     WHERE urgent AND created_at >= date_trunc('day', $1::timestamptz AT TIME ZONE 'UTC') AT TIME ZONE 'UTC' AND created_at <= $1`,
+    [now],
+  );
+  return r.rows[0].n <= URGENT_ALERTS_PER_DAY;
+}
+
 async function reportIn(tx: Queryable, ctx: AccountContext | null, commentId: string, input: Checked, now: Date): Promise<Outcome> {
   const refuse = (code: ReportRefusal): Outcome => ({ status: 'refused', code });
   const reporter = await reporterOf(tx, ctx, now);
@@ -112,12 +128,18 @@ async function reportIn(tx: Queryable, ctx: AccountContext | null, commentId: st
      VALUES ($1, $2, $3, $4, $5, $6, $7)`,
     [commentId, reporter, input.reason, input.note, urgent, weight, now],
   );
-  const hide = (urgent && weight >= 1) || (await overThreshold(tx, commentId));
-  if (hide) await tx.query("UPDATE comments SET status = 'hidden' WHERE id = $1", [commentId]);
+  const hide = (urgent && !muted.rows[0].m) || (await overThreshold(tx, commentId));
+  if (hide) {
+    await tx.query("UPDATE comments SET status = 'hidden', updated_at = greatest(updated_at + interval '1 millisecond', $2) WHERE id = $1", [
+      commentId,
+      now,
+    ]);
+  }
+  const alert = urgent && (await alertAllowed(tx, now)) ? { urgent24h: await urgentCount(tx, now), hidden: hide } : undefined;
   return {
     status: hide ? 'hidden' : 'reported',
     ...(input.urgent && !urgent ? { urgent: 'limit' as const } : {}),
-    ...(urgent ? { urgent24h: await urgentCount(tx, now) } : {}),
+    ...(alert ? { alert } : {}),
   };
 }
 
@@ -132,10 +154,10 @@ export async function reportComment(
   if (!isUuid(commentId)) return { status: 'refused', code: 'not_found' };
   const checked = checkInput(input);
   if (!checked) return { status: 'refused', code: 'invalid' };
-  const { urgent24h, ...result } = await db.transaction((tx) => reportIn(tx, ctx, commentId, checked, now));
-  if (urgent24h !== undefined) {
+  const { alert, ...result } = await db.transaction((tx) => reportIn(tx, ctx, commentId, checked, now));
+  if (alert) {
     try {
-      await notifyOwner({ urgent24h });
+      await notifyOwner(alert);
     } catch (err) {
       console.error('urgent comment report alert not sent:', (err as Error)?.name);
     }
@@ -143,21 +165,23 @@ export async function reportComment(
   return result as ReportResult;
 }
 
-// The agent judged a reported comment fine (keep): its open reports are dismissed and each reporter is charged a false
-// report. At FALSE_REPORT_LIMIT the reporter drops one level and is muted, once (muting is what makes it once).
+// The agent (or the owner) judged a reported comment fine: its open reports are dismissed and each level-0 reporter is
+// charged a false report; a level-1 reporter never is (7B review M3b: a wrong agent `keep` must not erode a trusted
+// member). At FALSE_REPORT_LIMIT a level-0 reporter is muted until the owner resets them. The reporters' trust rows are
+// locked in id order (7B review L5), so two dismissals sharing reporters cannot deadlock on them.
 export async function dismissReports(tx: Queryable, commentId: string, now = new Date()): Promise<void> {
   const r = await tx.query<{ who: string }>(
     `UPDATE comment_reports SET handled_at = $2, dismissed = true WHERE comment_id = $1 AND handled_at IS NULL
      RETURNING reporter_account_id AS who`,
     [commentId, now],
   );
-  const who = r.rows.map((x) => x.who).filter((x) => x !== null);
+  const who = [...new Set(r.rows.map((x) => x.who).filter((x) => x !== null))].sort();
   if (!who.length) return;
+  await tx.query('SELECT 1 FROM account_trust WHERE account_id = ANY($1::uuid[]) ORDER BY account_id FOR UPDATE', [who]);
   await tx.query(
     `UPDATE account_trust SET false_reports = false_reports + 1,
-       level = CASE WHEN NOT reports_muted AND false_reports + 1 >= $2 THEN greatest(level - 1, 0) ELSE level END,
        reports_muted = reports_muted OR false_reports + 1 >= $2, updated_at = now()
-     WHERE account_id = ANY($1::uuid[])`,
+     WHERE account_id = ANY($1::uuid[]) AND level = 0`,
     [who, FALSE_REPORT_LIMIT],
   );
 }
