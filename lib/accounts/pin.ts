@@ -16,6 +16,9 @@ const derive = (pin: string, salt: Buffer): Promise<Buffer> =>
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 export const isUuid = (v: unknown): v is string => typeof v === 'string' && UUID.test(v);
+// A uuid from a form or URL in its one stored spelling (lower case), or null. JS compares strings case-sensitively while
+// PostgreSQL compares uuids case-insensitively, so every caller-supplied id is lower-cased here before any comparison.
+export const uuidOf = (v: unknown): string | null => (isUuid(v) ? v.toLowerCase() : null);
 
 export const isPin = (v: unknown): v is string => typeof v === 'string' && PIN.test(v);
 

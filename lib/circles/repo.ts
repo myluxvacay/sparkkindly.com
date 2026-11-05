@@ -10,10 +10,12 @@ import { LIMITS, canCreateKind, validateCircleInput, type CircleInput, type Circ
 
 export type Role = 'owner' | 'member';
 export type CircleSummary = { slug: string; name: string; kind: CircleKind; role: Role; memberCount: number };
-// accountId and profileId are given to the owner (for the owner forms) and for the caller's own rows; otherwise null.
+// accountId and profileId are given for the caller's own rows only; the owner gets an opaque `key` per member for the
+// owner forms (resolved server-side within the owner's own circle), never another member's ids.
 export type CircleMember = {
   accountId: string | null;
   profileId: string | null;
+  key: string | null;
   name: string;
   role: Role;
   isChild: boolean;
@@ -156,7 +158,7 @@ export async function listMyCircles(db: Queryable, accountId: string): Promise<C
   return r.rows.map((c) => ({ slug: c.slug, name: c.name, kind: c.kind, role: c.role, memberCount: c.n }));
 }
 
-type MemberRow = { account_id: string; profile_id: string | null; display_name: string; role: Role };
+type MemberRow = { account_id: string; profile_id: string | null; display_name: string; role: Role; member_key: string };
 
 // Null unless the caller is a current member of a visible (not hidden) circle. Closed circles stay readable.
 export async function getCircleForMember(db: Queryable, accountId: string, slug: string): Promise<CircleView | null> {
@@ -173,7 +175,7 @@ export async function getCircleForMember(db: Queryable, accountId: string, slug:
     return null;
   }
   const m = await db.query<MemberRow>(
-    `SELECT account_id, profile_id, display_name, role FROM circle_members
+    `SELECT account_id, profile_id, display_name, role, member_key FROM circle_members
      WHERE circle_id = $1 AND left_at IS NULL ORDER BY joined_at, account_id, profile_id NULLS FIRST`,
     [circle.id],
   );
@@ -191,10 +193,10 @@ export async function getCircleForMember(db: Queryable, accountId: string, slug:
 
 function member(r: MemberRow, viewer: string, owner: boolean): CircleMember {
   const mine = r.account_id === viewer;
-  const ids = owner || mine;
   return {
-    accountId: ids ? r.account_id : null,
-    profileId: ids ? r.profile_id : null,
+    accountId: mine ? r.account_id : null,
+    profileId: mine ? r.profile_id : null,
+    key: owner ? r.member_key : null,
     name: r.display_name,
     role: r.role,
     isChild: r.profile_id !== null,
@@ -203,13 +205,14 @@ function member(r: MemberRow, viewer: string, owner: boolean): CircleMember {
   };
 }
 
-// An owner transfers or closes first. Leaving also takes the account's child profiles out of the circle.
+// An owner transfers or closes first. Leaving also takes the account's child profiles out of the circle. A closed
+// circle accepts no writes, leaving included (4A review): it answers read_only to every member.
 export async function leaveCircle(
   db: Db,
   accountId: string,
   slug: string,
   now: Date,
-): Promise<'left' | 'owner_must_transfer' | 'not_member'> {
+): Promise<'left' | 'owner_must_transfer' | 'not_member' | 'read_only'> {
   if (!isUuid(accountId)) {
     return 'not_member';
   }
@@ -218,6 +221,9 @@ export async function leaveCircle(
     const role = c ? await myRole(tx, c.id, accountId) : null;
     if (!c || !role) {
       return 'not_member';
+    }
+    if (c.status === 'closed') {
+      return 'read_only';
     }
     if (role === 'owner') {
       return 'owner_must_transfer';

@@ -363,17 +363,24 @@ If no run is recorded for 36 hours the worker emails the admin list.
   at most 30 current members (accounts and child profiles). Name 1 to 40 characters, "your name in this circle" 1 to 30
   (no `@`), community description up to 200; all trimmed, NFKC-normalised and checked against the blocked-words list.
   Circle POSTs share a per-account allowance of 30 an hour for creating and 30 an hour for member and owner actions.
+  Ruling (4A review): the 5-open-circles limit applies at creation only; a transfer or an owner-deletion hand-over may
+  take an account above 5 owned circles.
 - **What a circle holds and shows.** `circles`: name, kind, optional description, owner, time zone (default the
   owner's), open or closed, `hidden_at` (for the admin hide in 4.8; a hidden circle is invisible to its members and
   takes no new child), created and closed times. Its URL is `/circles/<slug>/`, a 10-character random slug, never
   derived from the name. `circle_members`: one row per account or child profile, with the name chosen for the circle,
-  role, `joined_at` and `left_at`. Members see each other's circle names and roles only, never an email. Ids of other
-  members reach only the owner's page (for the owner forms). A non-member gets a 404 for the circle page and the same
+  role, `joined_at` and `left_at`. Members see each other's circle names and roles only, never an email. No page carries
+  another member's account or profile id: the owner's forms post an opaque per-row `member_key` (16 hex, migration 015),
+  resolved on the server within the owner's own circle only. Ids from forms are lower-cased at the boundary
+  (`uuidOf` in `lib/accounts/pin.ts`), and the remove statement never touches the `owner` row. A non-member gets a 404 for the circle page and the same
   neutral "not available" answer as a missing circle for every POST.
 - **Owner rules.** The owner removes a member (an adult removed takes their child profiles out with them), transfers
   ownership to another current 18+ account member, or closes the circle. The owner cannot leave without transferring or
   closing. Every owner action locks the circle row first (`FOR UPDATE`), so racing actions leave exactly one owner on an
-  open circle. A closed circle is read-only (no owner action, no child added or removed) and stays readable by members.
+  open circle. A closed circle is read-only (no owner action, no child added or removed, nobody leaves) and stays
+  readable by members. Account deletion locks the account's owned circles (in id order) before the account row, the same
+  order as every circle write, and locks the heir's account row (`FOR SHARE`) at hand-over, so an heir being deleted at
+  the same moment is skipped.
 - **Child profiles.** Only the profile's own adult, only into an open family circle that adult belongs to, only after
   ticking "everyone in this circle sees this display name and its scores". A circle with any 13-17 member takes no child
   (and the 4B join path must refuse a teen in a circle that holds a child: `circleHasChild`). The child appears under its

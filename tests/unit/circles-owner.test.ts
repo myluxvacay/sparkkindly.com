@@ -6,7 +6,8 @@ import { newTestDb } from '../helpers/test-db';
 import { signUp } from '@/lib/accounts/signup';
 import { deleteAccount } from '@/lib/accounts/delete';
 import { createCircle, getCircleForMember, leaveCircle } from '@/lib/circles/repo';
-import { closeCircle, removeMember, transferOwnership } from '@/lib/circles/owner';
+import { closeCircle, removeMember, removeMemberByKey, transferOwnership, transferOwnershipByKey } from '@/lib/circles/owner';
+import type { Db, Queryable } from '@/lib/db';
 import { addChildToCircle, removeChildFromCircle } from '@/lib/circles/children';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -168,8 +169,105 @@ describe('closeCircle', () => {
     const mia = await child(a);
     expect(await addChildToCircle(db, a, slug, mia, 'on', T1)).toBe('not_allowed');
     expect(await removeChildFromCircle(db, a, slug, mia, T1)).toBe(false);
+    expect(await leaveCircle(db, a, slug, T1)).toBe('read_only');
+    expect(await leaveCircle(db, o, slug, T1)).toBe('read_only');
     expect(await snapshot()).toEqual(before);
     expect((await getCircleForMember(db, a, slug))!.status).toBe('closed');
+  });
+});
+
+describe('ids in any letter case (4A review)', () => {
+  it('an owner cannot remove their own owner row, or transfer to themself, with an upper-case id', async () => {
+    const [o, a] = [await account(), await account()];
+    const slug = await circle(o);
+    await join(slug, a);
+    const before = await snapshot();
+    expect(await removeMember(db, o, slug, key(o.toUpperCase()), T1)).toBe('is_owner');
+    expect(await transferOwnership(db, o, slug, o.toUpperCase(), T1)).toBe('not_eligible');
+    expect(await snapshot()).toEqual(before);
+    await invariant();
+    // A member id in upper case still names that member.
+    expect(await removeMember(db, o, slug, key(a.toUpperCase()), T1)).toBe('removed');
+    await invariant();
+  });
+
+  it('an owner cannot escape the 5-open-circles limit that way', async () => {
+    const o = await account();
+    const slugs: string[] = [];
+    for (let i = 0; i < 5; i++) slugs.push(await circle(o));
+    for (const slug of slugs) await removeMember(db, o, slug, key(o.toUpperCase()), T1);
+    await invariant();
+    expect(await createCircle(db, o, { name: 'Sixth', kind: 'friends', yourName: 'Owner' }, T1)).toEqual({ status: 'limit' });
+  });
+});
+
+describe('member keys (4A review)', () => {
+  it("the owner's view carries opaque member keys, never another member's account or profile id", async () => {
+    const [o, a] = [await account(), await account()];
+    const slug = await circle(o, 'family');
+    await join(slug, a);
+    const mia = await child(a);
+    expect(await addChildToCircle(db, a, slug, mia, 'on', ADDED)).toBe('added');
+    const view = (await getCircleForMember(db, o, slug))!;
+    const text = JSON.stringify(view);
+    expect(text).not.toContain(a);
+    expect(text).not.toContain(mia);
+    for (const m of view.members) expect(m.key).toMatch(/^[0-9a-f]{16}$/);
+    expect(new Set(view.members.map((m) => m.key)).size).toBe(3);
+    const asMember = (await getCircleForMember(db, a, slug))!;
+    expect(asMember.members.every((m) => m.key === null)).toBe(true);
+  });
+
+  it('remove and transfer take a key of the owner’s own circle only; a raw id or another circle’s key fails', async () => {
+    const [o, a, b, other] = [await account(), await account(), await account(), await account()];
+    const slug = await circle(o);
+    const theirs = await circle(other);
+    await join(slug, a, JOINED, 'Ann');
+    await join(slug, b, JOINED, 'Ben');
+    await join(theirs, a);
+    const keyOf = async (s: string, viewer: string, name: string) =>
+      (await getCircleForMember(db, viewer, s))!.members.find((m) => m.name === name)!.key!;
+    const foreign = await keyOf(theirs, other, 'Member');
+    const before = await snapshot();
+    expect(await removeMemberByKey(db, o, slug, a, T1)).toBe('not_found');
+    expect(await removeMemberByKey(db, o, slug, foreign, T1)).toBe('not_found');
+    expect(await transferOwnershipByKey(db, o, slug, b, T1)).toBe('not_eligible');
+    expect(await transferOwnershipByKey(db, o, slug, foreign, T1)).toBe('not_eligible');
+    expect(await removeMemberByKey(db, o, slug, await keyOf(slug, o, 'Owner'), T1)).toBe('is_owner');
+    expect(await removeMemberByKey(db, a, slug, await keyOf(slug, o, 'Ben'), T1)).toBe('not_owner');
+    expect(await snapshot()).toEqual(before);
+    expect(await removeMemberByKey(db, o, slug, await keyOf(slug, o, 'Ann'), T1)).toBe('removed');
+    expect(await transferOwnershipByKey(db, o, slug, await keyOf(slug, o, 'Ben'), T1)).toBe('transferred');
+    await invariant();
+  });
+});
+
+// Records every statement a deletion runs, in order.
+function recording(): { db: Db; seen: string[] } {
+  const seen: string[] = [];
+  const wrap = (q: Queryable): Queryable => ({
+    query: (text: string, params?: unknown[]) => {
+      seen.push(text.replace(/\s+/g, ' '));
+      return q.query(text, params);
+    },
+    exec: (sql: string) => q.exec(sql),
+  } as Queryable);
+  return { db: { ...wrap(db), transaction: (fn) => db.transaction((tx) => fn(wrap(tx))) } as Db, seen };
+}
+
+describe('deletion locks (4A review)', () => {
+  it('locks the owned circles before the account row, and the heir account row at hand-over', async () => {
+    const [o, a] = [await account(), await account()];
+    const slug = await circle(o);
+    await join(slug, a);
+    const r = recording();
+    expect(await deleteAccount(r.db, o, T1)).toBe(true);
+    const circles = r.seen.findIndex((t) => /FROM circles WHERE owner_account_id = \$1 .*FOR UPDATE/.test(t));
+    const accountRow = r.seen.findIndex((t) => /FROM accounts WHERE id = \$1 FOR UPDATE/.test(t));
+    expect(circles).toBeGreaterThanOrEqual(0);
+    expect(circles).toBeLessThan(accountRow);
+    expect(r.seen.some((t) => /m\.account_id <> \$2 .*FOR SHARE OF a/.test(t))).toBe(true);
+    expect((await getCircleForMember(db, a, slug))!.myRole).toBe('owner');
   });
 });
 

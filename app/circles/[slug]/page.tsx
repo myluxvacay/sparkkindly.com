@@ -77,7 +77,7 @@ export default async function CirclePage({ params, searchParams }: Props) {
         {KIND[view.kind]}. Time zone {view.timeZone}.
       </p>
       {view.description && <p>{view.description}</p>}
-      {!open && <p role="note">This circle is closed. It is deleted 30 days after closing.</p>}
+      {!open && <p role="note">This circle is closed: nobody can join, leave or change it. It is deleted 30 days after closing.</p>}
       <h2>Members</h2>
       <MemberList members={view.members} />
       {open && view.myRole === 'owner' && <OwnerControls slug={view.slug} members={view.members} />}
@@ -85,7 +85,7 @@ export default async function CirclePage({ params, searchParams }: Props) {
         <InviteControls slug={view.slug} section={invites} base={linkBase(process.env)} />
       )}
       {open && <ChildControls slug={view.slug} addable={children} inCircle={myChildren} />}
-      {view.myRole === 'member' && (
+      {open && view.myRole === 'member' && (
         <form method="post" action={`/circles/${view.slug}/leave/`}>
           <h2>Leave</h2>
           <p>Your past answers stay in the circle as &quot;former member&quot;.</p>

@@ -221,7 +221,7 @@ describe('listMyCircles and getCircleForMember', () => {
     expect(await getCircleForMember(db, a, slug)).toBeNull();
   });
 
-  it("a plain member's view carries no other member's ids; the owner's carries them for the owner forms", async () => {
+  it("no view carries another member's ids; the owner's carries opaque keys for the owner forms", async () => {
     const a = await adult();
     const b = await adult();
     const slug = await make(a, { yourName: 'Alex' });
@@ -233,9 +233,10 @@ describe('listMyCircles and getCircleForMember', () => {
       ['Bea', b, true],
     ]);
     const asOwner = await getCircleForMember(db, a, slug);
+    expect(JSON.stringify(asOwner)).not.toContain(b);
     expect(asOwner!.members.map((m) => [m.name, m.accountId, m.isMine])).toEqual([
       ['Alex', a, true],
-      ['Bea', b, false],
+      ['Bea', null, false],
     ]);
   });
 });

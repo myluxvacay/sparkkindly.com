@@ -8,6 +8,7 @@ import type { Metadata } from 'next';
 import { clientKey, readCookie, readForm, sameOrigin, seeOther } from '@/lib/admin/guard';
 import { linkBase } from '@/lib/admin/sessions';
 import { asAdult } from '@/lib/accounts/children-web';
+import { uuidOf } from '@/lib/accounts/pin';
 import { getContext, requireAdultContext } from '@/lib/accounts/context';
 import { accountSendBudget, circleActionLimits, inviteAcceptLimits, inviteEmailLimits } from '@/lib/accounts/limits';
 import { unsubscribeSecret, unsubscribeToken } from '@/lib/accounts/unsubscribe';
@@ -114,7 +115,7 @@ export const emailInviteRequest = (request: Request, d: InviteDeps, slug: string
 
 export const revokeInviteRequest = (request: Request, d: InviteDeps, slug: string) =>
   invitePost(request, d, slug, async (accountId, form) => {
-    const ok = await revokeInvite(d.db, accountId, slug, form.get('invite_id') ?? '', d.now);
+    const ok = await revokeInvite(d.db, accountId, slug, uuidOf(form.get('invite_id')) ?? '', d.now);
     return toInvites(slug, ok ? 'revoked' : 'revoke-gone');
   });
 

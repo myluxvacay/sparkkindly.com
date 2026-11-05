@@ -13,6 +13,8 @@ export async function deleteAccount(db: Db, accountId: string, now = new Date())
 // The same deletion inside a caller's transaction (withdraw validates its token and deletes under one account lock).
 // `now` decides which circle members are adults when an owned circle is handed over.
 export async function deleteAccountIn(tx: Queryable, accountId: string, now = new Date()): Promise<boolean> {
+  // Lock order as in every circle write: the circle rows first (in id order), then the account row.
+  await tx.query('SELECT id FROM circles WHERE owner_account_id = $1 ORDER BY id FOR UPDATE', [accountId]);
   const found = await tx.query<{ email: string }>('SELECT email FROM accounts WHERE id = $1 FOR UPDATE', [accountId]);
   const row = found.rows[0];
   if (!row) {

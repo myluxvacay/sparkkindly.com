@@ -13,7 +13,8 @@ import { tooMany } from '@/lib/accounts/web';
 import { circlesEnabled } from '@/lib/config';
 import type { Db } from '@/lib/db';
 import { addChildToCircle, removeChildFromCircle } from './children';
-import { closeCircle, removeMember, transferOwnership } from './owner';
+import { uuidOf } from '@/lib/accounts/pin';
+import { closeCircle, removeMemberByKey, transferOwnershipByKey } from './owner';
 import { createCircle, getCircleForMember, isSlug, leaveCircle, type CircleView } from './repo';
 
 export type CircleDeps = { db: Db; now: Date; limit?: (accountId: string) => boolean };
@@ -60,6 +61,7 @@ export const leaveCircleRequest = (request: Request, d: CircleDeps, slug: string
   scoped(request, d, slug, async (accountId) => {
     const r = await leaveCircle(d.db, accountId, slug, d.now);
     if (r === 'left') return seeOther('/circles/?r=left#result');
+    if (r === 'read_only') return back(slug, 'read-only');
     return r === 'owner_must_transfer' ? back(slug, 'owner-leave') : seeOther(GONE);
   });
 
@@ -68,8 +70,8 @@ const OWNER_CODES = { not_owner: 'not-owner', closed: 'read-only' } as const;
 export const removeMemberRequest = (request: Request, d: CircleDeps, slug: string) =>
   scoped(request, d, slug, async (accountId, form) => {
     if (!checked(form)) return back(slug, 'confirm');
-    const member = { accountId: field(form, 'member_account'), profileId: form.get('member_profile') || null };
-    const r = await removeMember(d.db, accountId, slug, member, d.now);
+    // The owner's page posts an opaque member key, resolved within this circle only (never an account or profile id).
+    const r = await removeMemberByKey(d.db, accountId, slug, field(form, 'member_key'), d.now);
     const codes = { ...OWNER_CODES, removed: 'removed', not_found: 'member-gone', is_owner: 'is-owner' } as const;
     return back(slug, codes[r]);
   });
@@ -77,7 +79,7 @@ export const removeMemberRequest = (request: Request, d: CircleDeps, slug: strin
 export const transferRequest = (request: Request, d: CircleDeps, slug: string) =>
   scoped(request, d, slug, async (accountId, form) => {
     if (!checked(form)) return back(slug, 'confirm');
-    const r = await transferOwnership(d.db, accountId, slug, field(form, 'to_account'), d.now);
+    const r = await transferOwnershipByKey(d.db, accountId, slug, field(form, 'to_member'), d.now);
     return back(slug, { ...OWNER_CODES, transferred: 'transferred', not_eligible: 'not-eligible' }[r]);
   });
 
@@ -99,13 +101,13 @@ const CHILD_CODES = {
 
 export const addChildRequest = (request: Request, d: CircleDeps, slug: string) =>
   scoped(request, d, slug, async (accountId, form) => {
-    const r = await addChildToCircle(d.db, accountId, slug, field(form, 'profile_id'), form.get('confirm'), d.now);
+    const r = await addChildToCircle(d.db, accountId, slug, uuidOf(form.get('profile_id')) ?? '', form.get('confirm'), d.now);
     return back(slug, CHILD_CODES[r]);
   });
 
 export const removeChildRequest = (request: Request, d: CircleDeps, slug: string) =>
   scoped(request, d, slug, async (accountId, form) => {
-    const ok = await removeChildFromCircle(d.db, accountId, slug, field(form, 'profile_id'), d.now);
+    const ok = await removeChildFromCircle(d.db, accountId, slug, uuidOf(form.get('profile_id')) ?? '', d.now);
     return back(slug, ok ? 'child-removed' : 'child-gone');
   });
 

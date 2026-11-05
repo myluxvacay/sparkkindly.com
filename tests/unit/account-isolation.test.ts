@@ -856,7 +856,7 @@ describe('circles (plan 4A, Task 4)', () => {
     expect(await listMyCircles(db, a.id)).toEqual([]);
     const before = await rowsOf(slug);
     for (const [name, fn] of Object.entries(SCOPED)) {
-      const r = await fn(req({ confirm: 'on', member_account: b.id, to_account: a.id }, a.session), d(), slug);
+      const r = await fn(req({ confirm: 'on', member_key: '0123456789abcdef', to_member: '0123456789abcdef' }, a.session), d(), slug);
       expect([r.status, r.headers.get('location')], name).toEqual([303, '/circles/?r=gone#result']);
     }
     expect(await rowsOf(slug)).toEqual(before);

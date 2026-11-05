@@ -4,10 +4,16 @@
 -- A referral records that a new account first joined through an invite: invite, account and time, no names.
 -- circle_members.removed_at marks a member the owner removed (leaving sets only left_at): a removed account cannot join
 -- that circle again, through an invite or as a community.
--- Expand only: two new tables and a nullable column the previous release never reads.
--- Rollback: DROP TABLE referrals; DROP TABLE circle_invites; ALTER TABLE circle_members DROP COLUMN removed_at;
--- DELETE FROM schema_migrations WHERE name = '015_circle_invites.sql'.
-ALTER TABLE circle_members ADD COLUMN removed_at timestamptz;
+-- circle_members.member_key is an opaque random key (16 hex) the owner's forms post instead of account or profile ids;
+-- the server resolves it within the owner's own circle only (4A review).
+-- Expand only: two new tables and two columns the previous release never reads (member_key is filled for existing rows
+-- by its per-row default).
+-- Rollback: DROP TABLE referrals; DROP TABLE circle_invites; ALTER TABLE circle_members DROP COLUMN removed_at,
+-- DROP COLUMN member_key; DELETE FROM schema_migrations WHERE name = '015_circle_invites.sql'.
+ALTER TABLE circle_members
+  ADD COLUMN removed_at timestamptz,
+  ADD COLUMN member_key text NOT NULL DEFAULT left(replace(gen_random_uuid()::text, '-', ''), 16) CHECK (member_key ~ '^[0-9a-f]{16}$');
+CREATE UNIQUE INDEX circle_members_member_key ON circle_members (circle_id, member_key);
 
 CREATE TABLE circle_invites (
   id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),

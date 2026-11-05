@@ -58,6 +58,10 @@ async function join(slug: string, accountId: string, name = 'Bea') {
     [slug, accountId, name],
   );
 }
+// The opaque key the owner's page posts for a member (4A review: no account or profile ids in the owner's forms).
+async function keyOf(slug: string, ownerId: string, name: string) {
+  return (await getCircleForMember(db, ownerId, slug))!.members.find((m) => m.name === name)!.key!;
+}
 async function profile(accountId: string) {
   const p = await createChildProfile(db, accountId, { displayName: 'Mia', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, NOW);
   if (p.status !== 'created') throw new Error('profile failed');
@@ -161,7 +165,7 @@ describe('circle-scoped POSTs', () => {
     const slug = await created(a.session);
     for (const target of [slug, 'zzzzzzzzzz', '../evil', 'x?r=1']) {
       for (const [name, fn] of Object.entries(SCOPED)) {
-        const res = await fn(post({ confirm: 'on', member_account: a.id, to_account: s.id }, { cookie: s.session }), deps(), target);
+        const res = await fn(post({ confirm: 'on', member_key: '0123456789abcdef', to_member: '0123456789abcdef' }, { cookie: s.session }), deps(), target);
         expect(where(res), `${name} ${target}`).toEqual([303, '/circles/?r=gone#result']);
       }
     }
@@ -175,11 +179,13 @@ describe('circle-scoped POSTs', () => {
     await join(slug, b.id);
     const back = (code: string) => [303, `/circles/${slug}/?r=${code}#result`];
     expect(where(await closeCircleRequest(post({}, { cookie: a.session }), deps(), slug))).toEqual(back('confirm'));
-    expect(where(await removeMemberRequest(post({ member_account: b.id }, { cookie: a.session }), deps(), slug))).toEqual(back('confirm'));
-    expect(where(await transferRequest(post({ to_account: b.id }, { cookie: a.session }), deps(), slug))).toEqual(back('confirm'));
+    const bKey = await keyOf(slug, a.id, 'Bea');
+    const aKey = await keyOf(slug, a.id, 'Mum');
+    expect(where(await removeMemberRequest(post({ member_key: bKey }, { cookie: a.session }), deps(), slug))).toEqual(back('confirm'));
+    expect(where(await transferRequest(post({ to_member: bKey }, { cookie: a.session }), deps(), slug))).toEqual(back('confirm'));
     expect(where(await closeCircleRequest(post({ confirm: 'on' }, { cookie: b.session }), deps(), slug))).toEqual(back('not-owner'));
-    expect(where(await removeMemberRequest(post({ confirm: 'on', member_account: a.id }, { cookie: b.session }), deps(), slug))).toEqual(back('not-owner'));
-    expect(where(await transferRequest(post({ confirm: 'on', to_account: b.id }, { cookie: b.session }), deps(), slug))).toEqual(back('not-owner'));
+    expect(where(await removeMemberRequest(post({ confirm: 'on', member_key: aKey }, { cookie: b.session }), deps(), slug))).toEqual(back('not-owner'));
+    expect(where(await transferRequest(post({ confirm: 'on', to_member: bKey }, { cookie: b.session }), deps(), slug))).toEqual(back('not-owner'));
     expect((await getCircleForMember(db, a.id, slug))!.myRole).toBe('owner');
   });
 
@@ -192,10 +198,44 @@ describe('circle-scoped POSTs', () => {
     await join(slug, c.id, 'Cy');
     const back = (code: string) => [303, `/circles/${slug}/?r=${code}#result`];
     expect(where(await leaveCircleRequest(post({}, { cookie: a.session }), deps(), slug))).toEqual(back('owner-leave'));
-    expect(where(await transferRequest(post({ confirm: 'on', to_account: b.id }, { cookie: a.session }), deps(), slug))).toEqual(back('transferred'));
+    const bKey = await keyOf(slug, a.id, 'Bea');
+    expect(where(await transferRequest(post({ confirm: 'on', to_member: bKey }, { cookie: a.session }), deps(), slug))).toEqual(back('transferred'));
     expect(where(await leaveCircleRequest(post({}, { cookie: a.session }), deps(), slug))).toEqual([303, '/circles/?r=left#result']);
-    expect(where(await removeMemberRequest(post({ confirm: 'on', member_account: c.id }, { cookie: b.session }), deps(), slug))).toEqual(back('removed'));
+    const cKey = await keyOf(slug, b.id, 'Cy');
+    expect(where(await removeMemberRequest(post({ confirm: 'on', member_key: cKey }, { cookie: b.session }), deps(), slug))).toEqual(back('removed'));
     expect(where(await closeCircleRequest(post({ confirm: 'on' }, { cookie: b.session }), deps(), slug))).toEqual(back('closed'));
+  });
+
+  it('a raw account id posted to remove or transfer no longer works (4A review)', async () => {
+    const a = await account();
+    const b = await account();
+    const slug = await created(a.session);
+    await join(slug, b.id);
+    const back = (code: string) => [303, `/circles/${slug}/?r=${code}#result`];
+    const raw = { confirm: 'on', member_account: b.id, member_key: b.id, to_account: b.id, to_member: b.id };
+    expect(where(await removeMemberRequest(post(raw, { cookie: a.session }), deps(), slug))).toEqual(back('member-gone'));
+    expect(where(await transferRequest(post(raw, { cookie: a.session }), deps(), slug))).toEqual(back('not-eligible'));
+    expect((await getCircleForMember(db, a.id, slug))!.myRole).toBe('owner');
+  });
+
+  it('a closed circle refuses leaving, for members and the owner alike (4A review)', async () => {
+    const a = await account();
+    const b = await account();
+    const slug = await created(a.session);
+    await join(slug, b.id);
+    await closeCircleRequest(post({ confirm: 'on' }, { cookie: a.session }), deps(), slug);
+    const back = (code: string) => [303, `/circles/${slug}/?r=${code}#result`];
+    expect(where(await leaveCircleRequest(post({}, { cookie: b.session }), deps(), slug))).toEqual(back('read-only'));
+    expect(where(await leaveCircleRequest(post({}, { cookie: a.session }), deps(), slug))).toEqual(back('read-only'));
+  });
+
+  it('a profile id in upper case still names the profile (ids are lower-cased at the boundary)', async () => {
+    const a = await account();
+    const slug = await created(a.session);
+    const mia = await profile(a.id);
+    const back = (code: string) => [303, `/circles/${slug}/?r=${code}#result`];
+    expect(where(await addChildRequest(post({ profile_id: mia.toUpperCase(), confirm: 'on' }, { cookie: a.session }), deps(), slug))).toEqual(back('child-added'));
+    expect(where(await removeChildRequest(post({ profile_id: mia.toUpperCase() }, { cookie: a.session }), deps(), slug))).toEqual(back('child-removed'));
   });
 
   it("adds the adult's own child with the confirmation only, and removes it", async () => {

@@ -9,7 +9,7 @@ function Confirm({ id, text }: { id: string; text: string }) {
   );
 }
 
-const keyOf = (m: CircleMember) => `${m.accountId}${m.profileId ? `-${m.profileId}` : ''}`;
+const keyOf = (m: CircleMember) => m.key ?? '';
 
 export function OwnerControls({ slug, members }: { slug: string; members: CircleMember[] }) {
   const others = members.filter((m) => !m.isYou);
@@ -20,8 +20,7 @@ export function OwnerControls({ slug, members }: { slug: string; members: Circle
       {others.length > 0 && <h3>Remove a member</h3>}
       {others.map((m) => (
         <form method="post" action={`/circles/${slug}/remove/`} key={keyOf(m)} className="admin-actions">
-          <input type="hidden" name="member_account" value={m.accountId ?? ''} />
-          {m.profileId && <input type="hidden" name="member_profile" value={m.profileId} />}
+          <input type="hidden" name="member_key" value={keyOf(m)} />
           <Confirm id={`remove-${keyOf(m)}`} text={`Yes, remove ${m.name}`} />
           <button type="submit" className="button">
             Remove {m.name}
@@ -32,10 +31,10 @@ export function OwnerControls({ slug, members }: { slug: string; members: Circle
         <form method="post" action={`/circles/${slug}/transfer/`}>
           <h3>Make someone else the owner</h3>
           <p>
-            <label htmlFor="to_account">New owner (adult members only)</label>
-            <select id="to_account" name="to_account" required>
+            <label htmlFor="to_member">New owner (adult members only)</label>
+            <select id="to_member" name="to_member" required>
               {adults.map((m) => (
-                <option key={keyOf(m)} value={m.accountId ?? ''}>
+                <option key={keyOf(m)} value={keyOf(m)}>
                   {m.name}
                 </option>
               ))}
