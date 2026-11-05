@@ -66,13 +66,13 @@ function Entry({ e, csrf }: { e: OwnerEntry; csrf: string }) {
         <strong>Reviewer:</strong> {e.reviewReasons.join(' ') || 'no reasons given'}
       </p>
       <div className="admin-actions">
-        <ActionForm csrf={csrf} action="contribution.approve" returnTo={RETURN} label="Approve" ariaLabel={`Approve: ${e.title}`} fields={{ id: e.id }} />
+        <ActionForm csrf={csrf} action="contribution.approve" returnTo={RETURN} label="Approve" ariaLabel={`Approve: ${e.title}`} fields={{ id: e.id, version: e.version }} />
       </div>
-      <ActionForm csrf={csrf} action="contribution.request_changes" returnTo={RETURN} label="Request changes" ariaLabel={`Request changes: ${e.title}`} fields={{ id: e.id }}>
+      <ActionForm csrf={csrf} action="contribution.request_changes" returnTo={RETURN} label="Request changes" ariaLabel={`Request changes: ${e.title}`} fields={{ id: e.id, version: e.version }}>
         <label htmlFor={`notes-${e.id}`}>Notes for the contributor (1 to 500 characters)</label>
         <textarea id={`notes-${e.id}`} name="notes" required maxLength={500} rows={3} />
       </ActionForm>
-      <ActionForm csrf={csrf} action="contribution.reject" returnTo={RETURN} label="Reject" ariaLabel={`Reject: ${e.title}`} fields={{ id: e.id }} plain>
+      <ActionForm csrf={csrf} action="contribution.reject" returnTo={RETURN} label="Reject" ariaLabel={`Reject: ${e.title}`} fields={{ id: e.id, version: e.version }} plain>
         <label htmlFor={`reason-${e.id}`}>Reason for the contributor (1 to 500 characters)</label>
         <textarea id={`reason-${e.id}`} name="reason" required maxLength={500} rows={2} />
       </ActionForm>
@@ -100,7 +100,7 @@ export default function ContributionQueue({ queue, links, csrf }: Props) {
           {links.map((l) => (
             <li key={l.slug}>
               {l.displayName}: {l.link}{' '}
-              <ActionForm csrf={csrf} action="contribution.link_approve" returnTo={RETURN} label="Approve link" ariaLabel={`Approve link: ${l.displayName}`} fields={{ slug: l.slug }} plain />
+              <ActionForm csrf={csrf} action="contribution.link_approve" returnTo={RETURN} label="Approve link" ariaLabel={`Approve link: ${l.displayName}`} fields={{ slug: l.slug, link: l.link }} plain />
             </li>
           ))}
         </ul>

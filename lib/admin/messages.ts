@@ -52,6 +52,7 @@ export const ERRORS = {
   needs_approval: 'This item needs approval (Kids content or a review-mode world).',
   safety_rule: 'The database refused that change (a safety rule).',
   kids_comments: 'Kids items never carry comments.',
+  changed: 'This changed after you opened the page. Please review it again.',
   contributed: 'This is a member contribution: reject it in Contributions, where the reason is sent to the contributor.',
   key_gone: 'That key has already been shown or has expired. Rotate the key again if it was not saved.',
 } as const;

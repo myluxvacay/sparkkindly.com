@@ -26,6 +26,10 @@ const master: Agent = { id: 1, name: 'master', worldId: null, worldSlug: null, r
 let sent: EmailMessage[] = [];
 const send = async (m: EmailMessage) => void sent.push(m);
 const act = (name: string, fields: Record<string, string>) => runAction(db, admin, name, new URLSearchParams(fields), NOW, send);
+// The version the owner's page showed (the contribution's updated_at as text), as the admin form sends it.
+const versionOf = async (id: string) =>
+  (await db.query<{ v: string }>('SELECT updated_at::text AS v FROM contributions WHERE id = $1', [id])).rows[0]?.v ?? '';
+const decide = async (name: string, id: string, fields: Record<string, string> = {}) => act(name, { id, version: await versionOf(id), ...fields });
 
 beforeAll(async () => {
   db = await newTestDb();
@@ -65,7 +69,7 @@ describe('the owner queue', () => {
 describe('admin actions', () => {
   it('approve: only from needs_owner, puts the item on the normal slot path, audited', async () => {
     const { id, itemId } = await needsOwner();
-    const r = await act('contribution.approve', { id });
+    const r = await decide('contribution.approve', id);
     expect(r).toMatchObject({ ok: true, code: 'contribution_approved' });
     expect((await stateOf(db, id)).state).toBe('approved');
     const item = await db.query<{ status: string; publish_at: Date; approved_by: string }>('SELECT status, publish_at, approved_by FROM items WHERE id = $1', [itemId]);
@@ -73,12 +77,12 @@ describe('admin actions', () => {
     expect(item.rows[0].publish_at.getUTCHours()).toBe(6);
     const audit = await db.query<{ action: string; actor: string }>('SELECT action, actor FROM audit_log WHERE target = $1', [`contribution:${id}`]);
     expect(audit.rows.map((a) => a.action)).toContain('contribution.approve');
-    expect(await act('contribution.approve', { id })).toMatchObject({ ok: false, status: 409 });
+    expect(await decide('contribution.approve', id)).toMatchObject({ ok: false, status: 409 });
     const p = await contributor(db, NOW);
     const early = await submitted(db, p, NOW);
-    expect(await act('contribution.approve', { id: early })).toMatchObject({ ok: false, status: 409 });
+    expect(await decide('contribution.approve', early)).toMatchObject({ ok: false, status: 409 });
     expect((await stateOf(db, early)).state).toBe('agent_review');
-    expect(await act('contribution.approve', { id: 'not-a-uuid' })).toMatchObject({ ok: false, status: 404 });
+    expect(await act('contribution.approve', { id: 'not-a-uuid', version: 'x' })).toMatchObject({ ok: false, status: 404 });
   });
 
   it('item.approve from the main queue approves the contribution too (one scheduling path)', async () => {
@@ -91,10 +95,10 @@ describe('admin actions', () => {
 
   it('request changes: notes 1 to 500 characters, emailed (notes only), item back to draft', async () => {
     const { p, id, itemId } = await needsOwner();
-    expect(await act('contribution.request_changes', { id, notes: '' })).toMatchObject({ ok: false, status: 400 });
-    expect(await act('contribution.request_changes', { id, notes: 'x'.repeat(501) })).toMatchObject({ ok: false, status: 400 });
+    expect(await decide('contribution.request_changes', id, { notes: '' })).toMatchObject({ ok: false, status: 400 });
+    expect(await decide('contribution.request_changes', id, { notes: 'x'.repeat(501) })).toMatchObject({ ok: false, status: 400 });
     expect(sent).toHaveLength(0);
-    expect(await act('contribution.request_changes', { id, notes: 'Please cite the second claim.' })).toMatchObject({ ok: true });
+    expect(await decide('contribution.request_changes', id, { notes: 'Please cite the second claim.' })).toMatchObject({ ok: true });
     expect(await stateOf(db, id)).toMatchObject({ state: 'changes_requested' });
     expect((await itemOf(db, itemId)).status).toBe('draft');
     expect(sent).toHaveLength(1);
@@ -105,8 +109,8 @@ describe('admin actions', () => {
 
   it('reject: a reason is required, emailed, item rejected', async () => {
     const { p, id, itemId } = await needsOwner();
-    expect(await act('contribution.reject', { id })).toMatchObject({ ok: false, status: 400 });
-    expect(await act('contribution.reject', { id, reason: 'This repeats an existing article.' })).toMatchObject({ ok: true, code: 'contribution_rejected' });
+    expect(await decide('contribution.reject', id)).toMatchObject({ ok: false, status: 400 });
+    expect(await decide('contribution.reject', id, { reason: 'This repeats an existing article.' })).toMatchObject({ ok: true, code: 'contribution_rejected' });
     expect((await stateOf(db, id)).state).toBe('rejected');
     expect((await itemOf(db, itemId)).status).toBe('rejected');
     expect(sent.map((m) => m.to)).toEqual([p.email]);
@@ -118,16 +122,45 @@ describe('admin actions', () => {
     const e = await enableContributor(db, p.ctx, { displayName: 'Linker', terms: 'on', link: 'https://example.org/me' }, NOW);
     const slug = e.status === 'enabled' ? e.slug : '';
     expect((await pendingLinks(db)).map((l) => l.slug)).toContain(slug);
-    expect(await act('contribution.link_approve', { slug })).toMatchObject({ ok: true, code: 'contribution_link_approved' });
+    const link = 'https://example.org/me';
+    expect(await act('contribution.link_approve', { slug, link })).toMatchObject({ ok: true, code: 'contribution_link_approved' });
     expect((await pendingLinks(db)).map((l) => l.slug)).not.toContain(slug);
-    expect(await act('contribution.link_approve', { slug })).toMatchObject({ ok: false, status: 404 });
-    expect(await act('contribution.link_approve', { slug: 'zzzzzzzzzz' })).toMatchObject({ ok: false, status: 404 });
+    expect(await act('contribution.link_approve', { slug, link })).toMatchObject({ ok: false, status: 404 });
+    expect(await act('contribution.link_approve', { slug: 'zzzzzzzzzz', link })).toMatchObject({ ok: false, status: 404 });
+  });
+
+  it('a link edited between the page load and the approval is refused, not approved (TOCTOU)', async () => {
+    const p = await person(db, NOW);
+    const e = await enableContributor(db, p.ctx, { displayName: 'Swapper', terms: 'on', link: 'https://example.org/shown' }, NOW);
+    const slug = e.status === 'enabled' ? e.slug : '';
+    const shown = (await pendingLinks(db)).find((l) => l.slug === slug)!.link;
+    await enableContributor(db, p.ctx, { displayName: 'Swapper', link: 'https://evil.example/swapped' }, NOW);
+    expect(await act('contribution.link_approve', { slug, link: shown })).toMatchObject({ ok: false, status: 409, code: 'changed' });
+    const row = await db.query<{ link: string; link_approved: boolean }>('SELECT link, link_approved FROM contributor_profiles WHERE slug = $1', [slug]);
+    expect(row.rows[0]).toEqual({ link: 'https://evil.example/swapped', link_approved: false });
+    expect(await act('contribution.link_approve', { slug })).toMatchObject({ ok: false, status: 400 });
+  });
+
+  it('a contribution changed between the page load and the decision is refused, state unchanged (TOCTOU)', async () => {
+    const { id } = await needsOwner();
+    const seen = await versionOf(id);
+    await db.query("UPDATE contributions SET content = jsonb_set(content, '{title}', '\"Changed title\"'), updated_at = now() + interval '1 second' WHERE id = $1", [id]);
+    for (const [name, extra] of [
+      ['contribution.approve', {}],
+      ['contribution.request_changes', { notes: 'Fix it' }],
+      ['contribution.reject', { reason: 'No' }],
+    ] as const) {
+      expect(await act(name, { id, version: seen, ...extra }), name).toMatchObject({ ok: false, status: 409, code: 'changed' });
+    }
+    expect((await stateOf(db, id)).state).toBe('needs_owner');
+    expect(await act('contribution.approve', { id })).toMatchObject({ ok: false, status: 400 });
+    expect(sent).toHaveLength(0);
   });
 
   it('with the flag off every contribution action is unknown; without a session the route goes to sign-in', async () => {
     const { id } = await needsOwner();
     vi.stubEnv('CONTRIBUTORS_ENABLED', '');
-    expect(await act('contribution.approve', { id })).toMatchObject({ ok: false, code: 'unknown_action' });
+    expect(await decide('contribution.approve', id)).toMatchObject({ ok: false, code: 'unknown_action' });
     vi.stubEnv('CONTRIBUTORS_ENABLED', 'true');
     const req = new Request('http://localhost/admin/act/', {
       method: 'POST',
@@ -143,7 +176,7 @@ describe('admin actions', () => {
 describe('the publication email', () => {
   it('is sent once per item after it publishes, with the share link and nothing else', async () => {
     const { p, id, itemId } = await needsOwner();
-    await act('contribution.approve', { id });
+    await decide('contribution.approve', id);
     sent = [];
     expect(await sendPublicationNotices(db, NOW, env, send)).toEqual({ sent: 0, failed: 0 });
     const later = new Date(NOW.getTime() + 3 * 86_400_000);

@@ -141,8 +141,10 @@ async function approveItem({ tx, admin, now }: Ctx, id: string): Promise<Date> {
 // Contributions (plan 8): request changes or reject with the owner's note, emailed to the contributor after commit.
 async function contributionDecision(c: Ctx, decision: 'request_changes' | 'reject'): Promise<Done> {
   const id = itemId(c.form);
+  const version = text(c.form, 'version', 64);
   const note = text(c.form, decision === 'reject' ? 'reason' : 'notes', 500);
-  const r = await ownerDecision(c.tx, c.admin, id, decision, note, linkBase(process.env));
+  const r = await ownerDecision(c.tx, c.admin, id, decision, note, linkBase(process.env), version);
+  if (r.status === 'changed') throw new ActionError(409, 'changed');
   if (r.status !== 'done') throw r.status === 'not_found' ? missing() : new ActionError(409, 'wrong_status');
   const code = decision === 'reject' ? 'contribution_rejected' : 'contribution_changes_requested';
   return { code, target: `contribution:${id}`, mail: r.mail };
@@ -391,8 +393,11 @@ const handlers: Record<string, Handler> = {
   // Owner approval of a contribution: only from needs_owner, through the same scheduling path as item.approve.
   async 'contribution.approve'(c) {
     const id = itemId(c.form);
+    const version = text(c.form, 'version', 64);
     const locked = await lockContribution(c.tx, id);
     if (!locked) throw missing();
+    // The owner approves exactly what the page showed: a contribution changed since is refused (TOCTOU).
+    if (locked.version !== version) throw new ActionError(409, 'changed');
     if (locked.state !== 'needs_owner' || !locked.item_id) throw new ActionError(409, 'wrong_status');
     const publishAt = await approveItem(c, locked.item_id);
     return { code: 'contribution_approved', target: `contribution:${id}`, detail: { publishAt: publishAt.toISOString() } };
@@ -403,7 +408,11 @@ const handlers: Record<string, Handler> = {
   // A contributor's proposed link, by their page id; shown on the contributor page once approved.
   async 'contribution.link_approve'({ tx, form }) {
     const slug = field(form, 'slug');
-    if (!/^[a-z0-9]{10}$/.test(slug) || !(await approveLink(tx, slug))) throw missing();
+    const link = text(form, 'link', 200);
+    if (!/^[a-z0-9]{10}$/.test(slug)) throw missing();
+    const r = await approveLink(tx, slug, link);
+    if (r === 'changed') throw new ActionError(409, 'changed');
+    if (r === 'not_found') throw missing();
     return { code: 'contribution_link_approved', target: `contributor:${slug}` };
   },
 
