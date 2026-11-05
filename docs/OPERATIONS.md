@@ -552,6 +552,12 @@ If no run is recorded for 36 hours the worker emails the admin list.
   the 3E unsubscribe link for its preference and carries `List-Unsubscribe` (the one-click
   `/account/unsubscribe/confirm/?t=…` POST) and `List-Unsubscribe-Post: List-Unsubscribe=One-Click` (RFC 8058), sent
   as MailerSend custom headers. Without `UNSUBSCRIBE_SECRET` no circle email is sent at all.
+- **Custom headers and the MailerSend plan.** MailerSend custom headers may need a paid plan. If MailerSend refuses
+  them (HTTP 422), `sendEmail` sends the message once more without them and logs only "custom headers refused (status
+  422)"; the body's unsubscribe link still goes out, but mail clients then show no one-click unsubscribe. Before
+  `CIRCLES_ENABLED` is turned on, send one real staging circle email and inspect its raw headers for
+  `List-Unsubscribe` and `List-Unsubscribe-Post`; if they are missing, upgrade the plan or accept body-link-only
+  unsubscribe as an owner decision.
 - **Caps and failures.** At most 200 emails and 50 (circle, kind, period) batches a run; a circle is never split, the
   rest go next hour. The run refuses (one `failed_jobs` alert) when the worker and database clocks differ by more than 10
   minutes. Each send is bounded by `sendEmail`'s 10-second timeout. A failed send is not retried in that period (the
