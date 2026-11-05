@@ -76,12 +76,19 @@ function pick(circleId: string, day: string, list: Candidate[]): Candidate[] {
   return ordered.slice(0, SET_SIZE);
 }
 
+// The audiences a new set is drawn with: the child audiences when a child profile is a member now or was one earlier
+// that circle day (circle_child_days), so the set is not filled with `adults` items readSet would then hide.
+async function setAudiences(tx: Queryable, circleId: string, day: string): Promise<readonly Audience[]> {
+  const childDay = await tx.query('SELECT 1 FROM circle_child_days WHERE circle_id = $1 AND day = $2', [circleId, day]);
+  return childDay.rows.length > 0 ? CHILD_AUDIENCES : circleAudiences(tx, circleId);
+}
+
 async function createSet(db: Db, circleId: string, day: string, now: Date): Promise<void> {
   await db.transaction(async (tx) => {
     await tx.query('SELECT pg_advisory_xact_lock(hashtext($1))', [`circle-set:${circleId}:${day}`]);
     const has = await tx.query('SELECT 1 FROM circle_daily_sets WHERE circle_id = $1 AND day = $2 LIMIT 1', [circleId, day]);
     if (has.rows.length > 0) return;
-    const chosen = pick(circleId, day, await candidates(tx, circleId, day, now, await circleAudiences(tx, circleId)));
+    const chosen = pick(circleId, day, await candidates(tx, circleId, day, now, await setAudiences(tx, circleId, day)));
     for (const [i, c] of chosen.entries()) {
       await tx.query(
         `INSERT INTO circle_daily_sets (circle_id, day, position, item_id, bonus) VALUES ($1, $2, $3, $4, $5)

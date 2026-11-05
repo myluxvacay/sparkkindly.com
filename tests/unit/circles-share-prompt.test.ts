@@ -8,6 +8,7 @@ import { adult, childIn, circleOf, fixtures, item, join, type Fixtures } from '.
 import type { AccountContext } from '@/lib/accounts/context';
 import { getOrCreateDailySet } from '@/lib/circles/daily-set';
 import { sharePromptFor } from '@/lib/circles/share-prompt';
+import { removeChildFromCircle } from '@/lib/circles/children';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -113,5 +114,16 @@ describe('sharePromptFor', () => {
     expect(await sharePromptFor(db, ctx(owner), adultsItem, NOW, BASE)).not.toBeNull();
     await childIn(db, owner, c.slug, 'Mia');
     expect(await sharePromptFor(db, ctx(owner), adultsItem, NOW, BASE)).toBeNull();
+  });
+
+  it('an adults item stays out after a child joins and is removed the same day (child days, final review 1)', async () => {
+    const adultsItem = await item(db, { world: f.worlds.a, audience: 'adults' });
+    const owner = await adult(db);
+    const c = await circleOf(db, owner, { kind: 'family' });
+    expect((await getOrCreateDailySet(db, c.id, NOW)).map((s) => s.itemId)).toEqual([adultsItem]);
+    const kid = await childIn(db, owner, c.slug, 'Mia');
+    await db.query('UPDATE circle_members SET joined_at = $2 WHERE profile_id = $1', [kid, NOW.toISOString()]);
+    expect(await removeChildFromCircle(db, owner, c.slug, kid, new Date(NOW.getTime() + 3_600_000))).toBe(true);
+    expect(await sharePromptFor(db, ctx(owner), adultsItem, new Date(NOW.getTime() + 7_200_000), BASE)).toBeNull();
   });
 });

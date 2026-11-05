@@ -78,6 +78,21 @@ describe('child days', () => {
     expect(await allTime(mum, c.slug, D3)).toBe(0);
   });
 
+  it('a set first made on a child day uses the child audiences, so it is full of kids and all items (final review 2)', async () => {
+    const { mum, c } = await setup();
+    for (let i = 0; i < 5; i++) await item(db, { world: f.worlds.a, audience: 'adults' });
+    const safe = await item(db, { world: f.worlds.a, audience: 'all' });
+    const kid = await childIn(db, mum, c.slug, 'Mia');
+    await db.query('UPDATE circle_members SET joined_at = $2 WHERE profile_id = $1', [kid, D1.toISOString()]);
+    expect(await removeChildFromCircle(db, mum, c.slug, kid, D1_LATER)).toBe(true);
+    expect((await getOrCreateDailySet(db, c.id, D1_LATER)).map((s) => s.itemId)).toEqual([safe]);
+    const stored = await db.query<{ n: number }>(
+      "SELECT count(*)::int AS n FROM circle_daily_sets s JOIN items i ON i.id = s.item_id WHERE s.circle_id = $1 AND i.audience = 'adults'",
+      [c.id],
+    );
+    expect(stored.rows[0].n).toBe(0);
+  });
+
   it('a closed circle with child days is purged cleanly', async () => {
     const { mum, c } = await setup();
     const kid = await childIn(db, mum, c.slug, 'Mia');
