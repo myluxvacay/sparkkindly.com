@@ -39,6 +39,16 @@ import {
   removeMemberRequest,
   transferRequest,
 } from '@/lib/circles/web';
+import { acceptInvite, createEmailInvite, createLinkInvite, previewInvite, revokeInvite } from '@/lib/circles/invites';
+import { joinCommunity } from '@/lib/circles/communities';
+import {
+  acceptInviteRequest,
+  createLinkRequest,
+  emailInviteRequest,
+  joinCommunityRequest,
+  loadInvitePage,
+  revokeInviteRequest,
+} from '@/lib/circles/invite-web';
 import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, searchPublic } from '@/lib/public/reads';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -920,13 +930,177 @@ describe('circles (plan 4A, Task 4)', () => {
   });
 });
 
+describe('invites and communities (plan 4B, Task 3)', () => {
+  const NOW = new Date('2026-11-05T12:00:00Z');
+  let c = 0;
+  const req = (body: Record<string, string>, cookie: string) =>
+    new Request('http://localhost/x', {
+      method: 'POST',
+      headers: {
+        host: 'staging.sparkkindly.com',
+        origin: 'https://staging.sparkkindly.com',
+        'content-type': 'application/x-www-form-urlencoded',
+        cookie: `__Host-sk_account=${cookie}`,
+      },
+      body: new URLSearchParams(body).toString(),
+    });
+  const d = () => ({ db, now: NOW, limit: () => true, network: () => true, send: async () => undefined });
+  const count = async (sql: string, p: unknown[]) => (await db.query<{ n: number }>(sql, p)).rows[0].n;
+  async function person(dateOfBirth = '1984-02-02', consent?: Consent) {
+    const email = `p4b-${c++}@example.test`;
+    const parentEmail = dateOfBirth.startsWith('2012') ? `p4b-parent-${c++}@example.test` : undefined;
+    const r = await signUp(db, { email, dateOfBirth, parentEmail }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    if (consent) await db.query('UPDATE accounts SET consent_state = $2 WHERE id = $1', [r.accountId, consent]);
+    return { id: r.accountId, email, session: await signIn(email) };
+  }
+  async function circleOf(owner: { id: string }, kind = 'friends') {
+    const r = await createCircle(db, owner.id, { name: 'Invite isolation', kind, yourName: 'Owner' }, T0);
+    if (r.status !== 'created') throw new Error('circle failed');
+    return r.slug;
+  }
+  async function linkOf(owner: { id: string }, slug: string) {
+    const r = await createLinkInvite(db, owner.id, slug, NOW);
+    if (r.status !== 'created') throw new Error('link failed');
+    return r.token;
+  }
+  const invites = async () => (await db.query('SELECT id, circle_id, revoked_at, used_at FROM circle_invites ORDER BY id')).rows;
+  const members = async (slug: string) =>
+    (
+      await db.query(
+        'SELECT m.account_id, m.left_at FROM circle_members m JOIN circles x ON x.id = m.circle_id WHERE x.slug = $1 ORDER BY 1',
+        [slug],
+      )
+    ).rows;
+  const inviteOf = async (slug: string) =>
+    (await db.query<{ id: string }>('SELECT i.id FROM circle_invites i JOIN circles x ON x.id = i.circle_id WHERE x.slug = $1', [slug]))
+      .rows[0].id;
+
+  beforeEach(() => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('CIRCLES_ENABLED', 'true');
+  });
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('tampered token, circle and invite ids are denied and change nothing', async () => {
+    const a = await person();
+    const s = await person();
+    const slug = await circleOf(a);
+    const other = await circleOf(s);
+    const token = await linkOf(a, slug);
+    await linkOf(s, other);
+    const before = [await invites(), await members(slug), await members(other)];
+    const intruder = await person();
+    const flipped = `${token.slice(0, -1)}${token.endsWith('A') ? 'B' : 'A'}`;
+    for (const t of [flipped, 'A'.repeat(43), `${token}=`, `${token.slice(0, 42)}`]) {
+      expect(await previewInvite(db, t, NOW), t).toBeNull();
+      expect(await acceptInvite(db, intruder.id, t, 'Ivy', NOW), t).toEqual({ status: 'invalid' });
+    }
+    // A circle id or slug in the form never redirects the join: the token decides.
+    const r = await acceptInviteRequest(req({ your_name: 'Ivy', circle: other, slug: other }, intruder.session), d(), flipped);
+    expect(r.status).toBe(404);
+    // Another circle's invite id, through this circle's URL or by someone who is neither its owner nor its creator.
+    const theirs = await inviteOf(other);
+    expect(await revokeInvite(db, a.id, slug, theirs, NOW)).toBe(false);
+    expect(await revokeInvite(db, a.id, other, theirs, NOW)).toBe(false);
+    const viaUrl = await revokeInviteRequest(req({ invite_id: theirs }, a.session), d(), slug);
+    expect(viaUrl.headers.get('location')).toBe(`/circles/${slug}/?r=revoke-gone#invites`);
+    // A stranger to the URL circle gets the neutral answer whatever circle the form names.
+    const made = await createLinkRequest(req({ circle: slug }, intruder.session), d(), other);
+    expect(made.headers.get('location')).toBe('/circles/?r=gone#result');
+    expect(await createLinkInvite(db, intruder.id, other, NOW)).toEqual({ status: 'not_allowed' });
+    expect([await invites(), await members(slug), await members(other)]).toEqual(before);
+  });
+
+  it("account B cannot revoke account A's invite; A's own revocation works", async () => {
+    const owner = await person();
+    const a = await person();
+    const b = await person();
+    const slug = await circleOf(owner);
+    for (const p of [a, b]) expect((await acceptInvite(db, p.id, await linkOf(owner, slug), 'M', NOW)).status).toBe('joined');
+    await linkOf(a, slug);
+    const id = (await db.query<{ id: string }>('SELECT id FROM circle_invites WHERE created_by = $1', [a.id])).rows[0].id;
+    expect(await revokeInvite(db, b.id, slug, id, NOW)).toBe(false);
+    const r = await revokeInviteRequest(req({ invite_id: id }, b.session), d(), slug);
+    expect(r.headers.get('location')).toBe(`/circles/${slug}/?r=revoke-gone#invites`);
+    expect(await revokeInvite(db, a.id, slug, id, NOW)).toBe(true);
+  });
+
+  it('13-15 account -> community join denied (library and route); a friends circle by invite allowed; pending denied', async () => {
+    const owner = await person();
+    const community = await circleOf(owner, 'community');
+    const friends = await circleOf(owner);
+    const teen = await person('2012-01-01', 'confirmed');
+    expect(await joinCommunity(db, teen.id, community, 'Tia', NOW)).toEqual({ status: 'community_age' });
+    const r = await joinCommunityRequest(req({ slug: community, your_name: 'Tia' }, teen.session), d());
+    expect(r.headers.get('location')).toBe('/circles/communities/?r=community_age#result');
+    expect(await acceptInvite(db, teen.id, await linkOf(owner, community), 'Tia', NOW)).toEqual({ status: 'community_age' });
+    expect((await acceptInvite(db, teen.id, await linkOf(owner, friends), 'Tia', NOW)).status).toBe('joined');
+    const pending = await person('2012-01-01');
+    expect(await acceptInvite(db, pending.id, await linkOf(owner, friends), 'Pip', NOW)).toEqual({ status: 'capability' });
+  });
+
+  it('13-17 account -> a circle holding a child profile refused through an invite', async () => {
+    const owner = await person();
+    const fam = await circleOf(owner, 'family');
+    const kid = await createChildProfile(db, owner.id, { displayName: 'Kid', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (kid.status !== 'created') throw new Error('profile failed');
+    expect(await addChildToCircle(db, owner.id, fam, kid.profileId, 'on', NOW)).toBe('added');
+    const token = await linkOf(owner, fam);
+    for (const dob of ['2010-01-01', '2012-01-01']) {
+      const teen = await person(dob, 'confirmed');
+      expect(await acceptInvite(db, teen.id, token, 'Teen', NOW), dob).toEqual({ status: 'has_child_adults_only' });
+    }
+    expect((await acceptInvite(db, (await person()).id, token, 'Adult', NOW)).status).toBe('joined');
+  });
+
+  it('child profile context -> invite page shows no form; accept and every invite write denied', async () => {
+    const owner = await person();
+    const slug = await circleOf(owner);
+    const token = await linkOf(owner, slug);
+    const kid = await createChildProfile(db, owner.id, { displayName: 'Kid', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (kid.status !== 'created') throw new Error('profile failed');
+    expect(await switchToProfile(db, owner.session, kid.profileId, NOW)).toBe(true);
+    const before = [await invites(), await members(slug)];
+    expect(await loadInvitePage(db, owner.session, token, NOW)).toMatchObject({ viewer: 'child' });
+    expect((await acceptInviteRequest(req({ your_name: 'Kid' }, owner.session), d(), token)).status).toBe(403);
+    expect((await createLinkRequest(req({}, owner.session), d(), slug)).status).toBe(403);
+    expect((await emailInviteRequest(req({ email: 'x@example.test' }, owner.session), d(), slug)).status).toBe(403);
+    expect((await revokeInviteRequest(req({ invite_id: await inviteOf(slug) }, owner.session), d(), slug)).status).toBe(403);
+    expect((await joinCommunityRequest(req({ slug, your_name: 'Kid' }, owner.session), d())).status).toBe(403);
+    expect([await invites(), await members(slug)]).toEqual(before);
+  });
+
+  it('deleting an account removes its invites, its referral row and pending invites to its address; others keep theirs', async () => {
+    const owner = await person();
+    const slug = await circleOf(owner);
+    const fresh = await person();
+    await db.query("UPDATE accounts SET created_at = $2::timestamptz - interval '5 minutes' WHERE id = $1", [fresh.id, NOW.toISOString()]);
+    expect((await acceptInvite(db, fresh.id, await linkOf(owner, slug), 'F', NOW)).status).toBe('joined');
+    await linkOf(fresh, slug);
+    const target = await person();
+    expect(await createEmailInvite(db, owner.id, slug, target.email, NOW, async () => undefined)).toBe('sent');
+    expect(await count('SELECT count(*)::int AS n FROM referrals WHERE new_account_id = $1', [fresh.id])).toBe(1);
+    expect(await deleteOwnAccount(db, fresh.id, fresh.email)).toBe('deleted');
+    expect(await deleteOwnAccount(db, target.id, target.email)).toBe('deleted');
+    expect(await count('SELECT count(*)::int AS n FROM circle_invites WHERE created_by = $1', [fresh.id])).toBe(0);
+    expect(await count('SELECT count(*)::int AS n FROM referrals WHERE new_account_id = $1', [fresh.id])).toBe(0);
+    expect(await count('SELECT count(*)::int AS n FROM circle_invites WHERE invited_email = $1', [target.email])).toBe(0);
+    expect(await count('SELECT count(*)::int AS n FROM circle_invites WHERE created_by = $1', [owner.id])).toBe(1);
+  });
+});
+
 describe('arrives with later features', () => {
   // The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
   it.todo('child profile -> adults item denied at the daily set and email routes (these routes do not exist yet)');
   // child profile -> settings, export, delete and PIN reset denied: covered above (plan 3E, Task 4).
-  it.todo('child profile -> invites, comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
-  it.todo('13-15 account -> public comment, community join, contribute denied (route level; the capability rows above are covered through can())');
+  // child profile -> invites denied: covered above (plan 4B, Task 3).
+  it.todo('child profile -> comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
+  // 13-15 account -> community join denied at the route: covered above (plan 4B, Task 3).
+  it.todo('13-15 account -> public comment and contribute denied (route level; the capability rows above are covered through can())');
   it.todo('tampered item id in a daily-set payload denied (the daily set does not exist yet; circle and profile ids are covered above)');
-  it.todo('13-17 account joining a circle that holds a child profile refused (the join path is plan 4B; it must use circleHasChild)');
+  // 13-17 account joining a circle that holds a child profile: covered above (plan 4B, Task 3).
   // agent key A -> agent B's items denied: covered in tests/unit/agent-api.test.ts and agent-keys.test.ts, not duplicated here.
 });

@@ -96,14 +96,14 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 ## Project 4: Circles, competitions and invites
 
 - [x] 4.1 Circles (friends, family, community): create, membership, owner actions (remove, transfer, close; 30-day score retention after close) — *tests for each action.* (4A, 5 Nov 2026, behind `CIRCLES_ENABLED`: create, list, leave, remove, transfer, close, child profiles in family circles, owner-deletion hand-over, 30-day purge; plan `2026-11-05-project-4a-circles-core.md`; joining by invite is 4.2/4B, scores 4C; staging check pending)
-- [ ] 4.2 Invites: shareable link (revocable), single-use email invites (14-day expiry), referral tracking, link previews for chat apps — *preview renders with title and image.*
+- [x] 4.2 Invites: shareable link (revocable), single-use email invites (14-day expiry), referral tracking, link previews for chat apps — *preview renders with title and image.* (4B, 5 Nov 2026, behind `CIRCLES_ENABLED`: link and email invites, preview page and branded image, sign-up return path, public communities, referrals, invite purge; plan `2026-11-05-project-4b-invites-joining.md`; staging check pending)
 - [ ] 4.3 Circle interests and time zone; daily set selection with child-safe filtering and "bonus" fill — *a circle with a child profile never gets an `adults` item.*
 - [ ] 4.4 Scoring (correctness only), tallies daily/weekly/monthly/all-time, ties, re-scoring on corrections, "former member" rule, recompute on deletion — *property tests on tallies.*
 - [ ] 4.5 In-circle leaderboards only; no public rankings — *no public route exposes scores.*
 - [ ] 4.6 Member notifications: daily set ready, weekly summary, honouring preferences — *emails sent per preference.*
 - [ ] 4.7 Growth loop: post-answer invite and share prompts; branded share image without personal data — *share image contains no names.*
 - [ ] 4.8 Community moderation: blocked words on names and descriptions, owner hide, leave and report — *tests.*
-- [ ] 4.9 Younger-teen rules: 13–15 cannot join public communities — *permission tests.* (4A: 13–17 create friends circles only and a consent-pending 13–15 creates none; the community join rule lands with the join path in 4B)
+- [x] 4.9 Younger-teen rules: 13–15 cannot join public communities — *permission tests.* (4A: 13–17 create friends circles only and a consent-pending 13–15 creates none; 4B: the shared join rules refuse 13–15 in communities, 13–17 in a circle with a child profile and consent-pending 13–15 everywhere; `account-isolation.test.ts`)
 - [ ] 4.10 Done-when: a circle of four, including two child profiles, plays the daily set and sees scores; a friend joins through a link.
 
 ## Project 5: Social media distribution

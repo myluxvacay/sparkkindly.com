@@ -74,6 +74,11 @@ circle see each other's circle names, roles and, from 4C, scores, including a ch
 adult adds it to a family circle; that the email is never shown to other members; and that a closed circle is deleted
 30 days after closing ([data inventory](data-inventory.md), `circles` and `circle_members`).
 
+It must also say (Project 4B) that an email invite stores the invited address only until the invite is used, revoked or
+expires (14 days), that the invite email names the inviter by their name in the circle, and that a `referrals` row
+records which invite brought a new account ([data inventory](data-inventory.md), `circle_invites` and `referrals`).
+The trust-page test's `/join (a|the) (circle|community)/i` guard stays until that copy goes live.
+
 ## Other places that point at the privacy page
 
 - The parent consent email links to the privacy page (`lib/accounts/consent-email.ts`, `privacyUrl`). It must not be

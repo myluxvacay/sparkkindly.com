@@ -358,7 +358,7 @@ If no run is recorded for 36 hours the worker emails the admin list.
   web service: the rows stay, nothing reads them, and the closed-circle purge keeps running in the worker.
 - **Who may create.** Rulings (plan 4A): friends circles by any account with the `create_circle` capability (18+, 16-17,
   and 13-15 once a parent has confirmed); family and community circles by 18+ only. A consent-pending 13-15 account
-  cannot create or be added. Joining by invite is plan 4B.
+  cannot create or be added. Joining by invite and communities: see "Circle invites and communities (Project 4B)".
 - **Limits** (`lib/circles/rules.ts`). An account owns at most 5 open circles and belongs to at most 10; a circle holds
   at most 30 current members (accounts and child profiles). Name 1 to 40 characters, "your name in this circle" 1 to 30
   (no `@`), community description up to 200; all trimmed, NFKC-normalised and checked against the blocked-words list.
@@ -396,6 +396,52 @@ If no run is recorded for 36 hours the worker emails the admin list.
   older release live.
 - **Before production.** The privacy page must say what circle members see of each other before `CIRCLES_ENABLED` goes
   on in production (data inventory, `docs/legal/go-live-copy-changes.md`).
+
+## Circle invites and communities (Project 4B)
+
+- **Flags.** Same as circles: `ACCOUNTS_ENABLED` and `CIRCLES_ENABLED`. With either unset every invite page
+  (`/circles/join/<token>/`), `/circles/communities/`, the invite image and every invite POST is a 404.
+- **Tokens.** 32 random bytes, base64url (43 characters), stored only as a sha256 hash in `circle_invites.token_hash`.
+  The raw token exists only in the link and the email. A newly made link is shown to its maker once, through a
+  10-minute HttpOnly cookie (`__Host-sk_invite`) read by the circle page, and only if it is still that member's active
+  link; after that the member makes a new link (which revokes the old one). Invite pages send `Cache-Control: no-store`
+  and `Referrer-Policy: no-referrer` (`next.config.ts`; the page also carries `<meta name="referrer" content="no-referrer">`
+  in case the proxy rewrites the header). Because of no-referrer a browser posts the join form with `Origin: null`; the
+  accept route takes that only together with the browser-set `Sec-Fetch-Site: same-origin`.
+- **Kinds.** A link invite is reusable until revoked; each member has one active link per circle and "Make a new invite
+  link" revokes theirs (another member's link keeps working). An email invite is single use and expires 14 days after
+  creation. Every invite stops working when its circle closes or is hidden, and when its creator leaves or is removed.
+  The circle owner may revoke any invite; a member only their own (circle page, "Active invites").
+- **Opening never joins.** `GET /circles/join/<token>/` shows the circle name, kind and member count only, and changes
+  nothing except `opens`. Joining is the POST to `/circles/join/<token>/accept/` from a signed-in adult context; a
+  signed-out visitor is sent to sign-up carrying only the validated path `/circles/join/<token>/` (sign-up, sign-in, the
+  emailed link and the confirm step accept no other `next`). A revoked, expired, used or unknown token is one neutral
+  404. **`opens` is an upper bound:** chat-app previews, mail scanners and crawlers fetch links too.
+- **Join rules** (`lib/circles/join.ts`, shared by invites and communities). Signed in; not already a member; circle
+  open and visible; under 30 members; the account in fewer than 10 open circles; `join_circle` (a consent-pending 13-15
+  is refused); a circle holding a child profile admits 18+ only; a community needs `join_community` (not 13-15); friends
+  and family circles only through an invite; a child-profile context is refused. "Your name in this circle" is required.
+- **Email invites.** At most 10 sent per account per 24 hours, 3 per address per circle (the address is kept until the
+  daily purge, so revoked invites count until then), one active invite per address per circle, 60 sends per network an
+  hour, and the site-wide email budget. An address whose account has invite email off (`notify_invites`, off by
+  default) is sent nothing; the sender still sees "sent". The mail names the inviter by their circle name, the circle,
+  says to ignore it if they do not know them, and has the one-click unsubscribe when the address has an account. Sends
+  go through `lib/email.ts` (10-second timeout); a failed send is logged by error name only and the invite stays.
+- **Communities.** `/circles/communities/` is public: name, description and member count of open, visible communities,
+  newest first, 20 a page, never member names. Signed-in adults and 16-17s join from the list.
+- **Referrals.** When an account created within the last hour first joins a circle through an invite, one `referrals`
+  row records invite, account and time (no names). It is in the account's export (`joinedThroughInviteAt`).
+- **Purge.** After `circles-purge`, the same daily worker run does `invites-purge`: it nulls `invited_email` on every
+  used, revoked or expired invite and deletes invites spent more than 14 days ago, unless a referral points at them (500
+  rows per step per run). Account deletion removes the account's invites, its referral row and pending invites to its
+  address; the export lists invites the account created without addresses.
+- **Emergency revoke from the database.** Every invite of one circle:
+  `UPDATE circle_invites SET revoked_at = now() WHERE circle_id = (SELECT id FROM circles WHERE slug = '<slug>') AND revoked_at IS NULL;`
+  Every invite site-wide: the same without the `circle_id` condition. Revoked invites cannot be un-revoked; members make new ones.
+- **Migration and rollback.** `015_circle_invites.sql` is additive (two new tables). Code rollback: unset
+  `CIRCLES_ENABLED` or switch back to the previous release (it never reads them). Schema rollback, only after the
+  previous release is live: `DROP TABLE referrals; DROP TABLE circle_invites; DELETE FROM schema_migrations WHERE name =
+  '015_circle_invites.sql';` (as in the migration header).
 
 ## Pilot measurement (roadmap P.2)
 
