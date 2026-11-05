@@ -1,6 +1,6 @@
 // The owner's side of contributions (plan 8 Task 3): the queue shown in /admin/contributions/ and the decisions the
-// admin actions apply (lib/admin/actions.ts runs them inside its audited transaction; approval itself goes through the
-// shared item.approve path there). Owner approval is the only way past needs_owner. The contributor's display name is
+// admin actions apply (lib/admin/actions.ts runs them inside its audited transaction; approval goes through the shared
+// scheduling path there, and item.approve refuses a contributed item). Owner approval is the only way past needs_owner. The contributor's display name is
 // shown to the owner; never an email or account id. Notes reach the contributor by email (notes only, never the
 // reviewer's transcript). No Next.js imports. Verified by tests/unit/contributors-owner.test.ts.
 import type { Queryable } from '@/lib/db';
@@ -75,9 +75,9 @@ export async function lockContribution(tx: Queryable, id: string): Promise<Locke
   return r.rows[0] ?? null;
 }
 
-// Called by item.approve after it scheduled the item: a contributed item approved from either queue is approved here too.
-export async function markApproved(tx: Queryable, itemId: string): Promise<void> {
-  await tx.query("UPDATE contributions SET state = 'approved', updated_at = now() WHERE item_id = $1 AND state = 'needs_owner'", [itemId]);
+// Called by contribution.approve (the contribution already locked) after its item was scheduled.
+export async function markApproved(tx: Queryable, id: string): Promise<void> {
+  await tx.query("UPDATE contributions SET state = 'approved', updated_at = now() WHERE id = $1 AND state = 'needs_owner'", [id]);
 }
 
 export const isContributed = async (tx: Queryable, itemId: string): Promise<boolean> =>

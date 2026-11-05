@@ -125,8 +125,8 @@ async function appealAction(c: Ctx, outcome: 'overturn' | 'uphold'): Promise<Don
 
 // in_review -> scheduled, never from draft (where failed gates wait) and never for excluded content. The slot is the
 // agent's own future publish time if it gave one, else the world's next free slot, chosen under the world's slot
-// lock (an item held back to review keeps no stale past time). A contributed item's contribution is approved with it
-// (plan 8), so both queues share this one scheduling path.
+// lock (an item held back to review keeps no stale past time). Shared by item.approve (never a contributed item) and
+// contribution.approve, which locks the contribution first and marks it approved itself (contribution before item).
 async function approveItem({ tx, admin, now }: Ctx, id: string): Promise<Date> {
   const item = await lockItem(tx, id, ['in_review']);
   if (item.risk_tier === 'excluded') throw new ActionError(409, 'excluded');
@@ -135,7 +135,6 @@ async function approveItem({ tx, admin, now }: Ctx, id: string): Promise<Date> {
   const publishAt = current && current.getTime() > now.getTime() ? current : await nextSlot(tx, item.world_id, now);
   await transitionTx(tx, id, 'scheduled', admin.email, 'approved in admin', { by: admin.email });
   await tx.query('UPDATE items SET publish_at = $2 WHERE id = $1', [id, publishAt.toISOString()]);
-  await markApproved(tx, id);
   return publishAt;
 }
 
@@ -155,8 +154,10 @@ const ITEM_PATH = /^\/?([a-z0-9-]{2,30})\/([a-z0-9-]{1,80})\/?$/;
 const ITEM_SWITCH: Record<string, boolean | null> = { on: true, off: false, inherit: null };
 
 const handlers: Record<string, Handler> = {
+  // A contributed item is approved only from Contributions, bound to the version the owner reviewed (plan 8 review M1).
   async 'item.approve'(c) {
     const id = itemId(c.form);
+    if (await isContributed(c.tx, id)) throw new ActionError(409, 'contributed');
     const publishAt = await approveItem(c, id);
     return { code: 'approved', target: id, detail: { publishAt: publishAt.toISOString() } };
   },
@@ -401,6 +402,7 @@ const handlers: Record<string, Handler> = {
     if (locked.version !== version) throw new ActionError(409, 'changed');
     if (locked.state !== 'needs_owner' || !locked.item_id) throw new ActionError(409, 'wrong_status');
     const publishAt = await approveItem(c, locked.item_id);
+    await markApproved(c.tx, id);
     return { code: 'contribution_approved', target: `contribution:${id}`, detail: { publishAt: publishAt.toISOString() } };
   },
   'contribution.request_changes': (c) => contributionDecision(c, 'request_changes'),

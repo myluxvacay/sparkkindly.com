@@ -11,11 +11,14 @@ export type QueueRow = {
   createdAt: Date; decision: string | null;
 };
 
+// The main approval queue; contributed items are decided in Contributions only (plan 8 review M1).
 export async function listQueue(db: Queryable): Promise<QueueRow[]> {
   const r = await db.query<QueueRow>(
     `SELECT i.id, i.title, w.slug AS world, i.kind, i.audience, i.risk_tier AS "riskTier", i.created_by AS "createdBy",
             i.created_at AS "createdAt", i.quality_report->>'decision' AS decision
-     FROM items i JOIN worlds w ON w.id = i.world_id WHERE i.status = 'in_review' ORDER BY i.created_at LIMIT 200`,
+     FROM items i JOIN worlds w ON w.id = i.world_id
+     WHERE i.status = 'in_review' AND NOT EXISTS (SELECT 1 FROM contributions c WHERE c.item_id = i.id)
+     ORDER BY i.created_at LIMIT 200`,
   );
   return r.rows;
 }

@@ -763,8 +763,9 @@ mail. Plan `docs/superpowers/plans/2026-11-05-project-8-contributors.md`.
   resolve); a failure keeps the draft with the reasons. A pass creates the item as a `draft` and the contribution waits
   in `agent_review`. Once an item exists its kind and world are fixed and every revision is gated against the item's own
   world. The reviewer's pass moves it to `needs_owner` (item `in_review`); its fail to `changes_requested` (reasons
-  shown and emailed). The owner decides in `/admin/contributions/`: approve (the same scheduling path as `item.approve`;
-  approving the item from the main queue approves the contribution too), request changes (notes, emailed; item back to
+  shown and emailed). The owner decides in `/admin/contributions/`: approve (the same scheduling path as `item.approve`,
+  bound to the version the owner reviewed; contributed items are not listed in the main queue and `item.approve`
+  refuses them), request changes (notes, emailed; item back to
   draft) or reject (reason, emailed; item rejected). `item.reject` refuses a contributed item so a reason is always given.
   The approved item publishes through publish-due; the worker then sends one publication email per item with the share
   link (claimed in `contributions.publication_mailed_at` before sending; a failed send is not retried).

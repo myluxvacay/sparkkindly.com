@@ -15,6 +15,7 @@ import { ownerContributionQueue, pendingLinks } from '@/lib/contributors/owner';
 import { enableContributor } from '@/lib/contributors/profile';
 import { sendPublicationNotices } from '@/lib/contributors/notices';
 import { publishDue } from '@/lib/jobs/publish-due';
+import { listQueue } from '@/lib/admin/queries';
 import { person } from '../helpers/comments';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -85,10 +86,13 @@ describe('admin actions', () => {
     expect(await act('contribution.approve', { id: 'not-a-uuid', version: 'x' })).toMatchObject({ ok: false, status: 404 });
   });
 
-  it('item.approve from the main queue approves the contribution too (one scheduling path)', async () => {
+  it('item.approve refuses a contributed item (409 contributed) and the main queue never lists one: approval is version-bound', async () => {
     const { id, itemId } = await needsOwner();
-    expect(await act('item.approve', { id: itemId })).toMatchObject({ ok: true });
-    expect((await stateOf(db, id)).state).toBe('approved');
+    expect((await listQueue(db)).map((q) => q.id)).not.toContain(itemId);
+    // A stale main-queue page (or a crafted form) cannot approve around the contribution's version check.
+    expect(await act('item.approve', { id: itemId })).toMatchObject({ ok: false, status: 409, code: 'contributed' });
+    expect((await stateOf(db, id)).state).toBe('needs_owner');
+    expect((await itemOf(db, itemId)).status).toBe('in_review');
     const other = await needsOwner();
     expect(await act('item.reject', { id: other.itemId, reason: 'no' })).toMatchObject({ ok: false, status: 409, code: 'contributed' });
   });
