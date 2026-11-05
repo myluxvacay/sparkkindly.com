@@ -296,6 +296,16 @@ describe('keep and escalate', () => {
     expect((await act(last.id, 'escalate', 'Too many keeps today')).status).toBe(200);
   });
 
+  it('agent keep clears an earlier code and reason; the audit row records what was cleared', async () => {
+    const r = await reported();
+    await db.query("UPDATE comments SET moderation_code = 'abuse', moderation_reason = 'old' WHERE id = $1", [r.id]);
+    expect((await act(r.id, 'keep')).status).toBe(200);
+    const row = await db.query('SELECT moderation_code, moderation_reason FROM comments WHERE id = $1', [r.id]);
+    expect(row.rows[0]).toEqual({ moderation_code: null, moderation_reason: null });
+    const audit = await db.query<{ detail: { cleared?: unknown } }>("SELECT detail FROM audit_log WHERE action = 'comment.keep'");
+    expect(audit.rows[0].detail.cleared).toEqual({ code: 'abuse', reason: 'old' });
+  });
+
   it('keep on a sampled comment that was reported marks the sample reviewed, so it does not come back as a sample', async () => {
     const s = await sampled();
     for (let i = 0; i < 2; i++) {

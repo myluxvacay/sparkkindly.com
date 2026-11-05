@@ -10,14 +10,16 @@ import type { EnvLike } from '@/lib/env';
 import { appealToken } from './appeals';
 import { AUTHOR_REASONS, appealOutcomeEmail, rejectionEmail, type ReasonCode } from './rejection-email';
 import { dismissReports, upholdReports } from './reports';
+import { clearDecision, type Cleared } from './decisions';
 import { recordApproval, recordRejection } from './trust';
 
-export type Resolution = { status: 'done'; newStatus: string; mail?: EmailMessage } | { status: 'not_found' | 'wrong_state' };
+export type Resolution = { status: 'done'; newStatus: string; mail?: EmailMessage; cleared?: Cleared } | { status: 'not_found' | 'wrong_state' };
 
 type Row = { account_id: string; status: string; body: string; code: string | null; email: string; eligible: boolean; appeal: boolean };
 
-// Only an escalated comment or one with an open urgent report (7B review L3); a muted reporter's urgent report leaves
-// the comment published, so published counts too then (H1).
+// Only an escalated comment or one with an open urgent report (7B review L3): a comment already rejected or hidden by a
+// decision has neither, so it is never removed (and its author emailed) twice. A muted reporter's urgent report leaves
+// the comment published, so published counts too then. The state decides, never a stored code.
 const ELIGIBLE = `(c.escalated_at IS NOT NULL OR EXISTS (SELECT 1 FROM comment_reports r WHERE r.comment_id = c.id AND r.handled_at IS NULL AND r.urgent))`;
 
 // An open appeal on a comment the owner publishes is closed as overturned, with the usual outcome email (L3).
@@ -52,11 +54,10 @@ export async function resolveEscalation(
   if (outcome === 'publish') {
     await tx.query("UPDATE comments SET status = 'published', escalated_at = NULL, decided_by = $2 WHERE id = $1", [commentId, admin.email]);
     if (c.status === 'held') await recordApproval(tx, c.account_id);
-    await dismissReports(tx, commentId, now);
-    return { status: 'done', newStatus: 'published', mail: await overturnOpenAppeal(tx, commentId, c, now, env) };
+    await dismissReports(tx, commentId, now, 'owner');
+    const cleared = (await clearDecision(tx, commentId)) ?? undefined;
+    return { status: 'done', newStatus: 'published', mail: await overturnOpenAppeal(tx, commentId, c, now, env), cleared };
   }
-  // Already decided with an author-facing reason: no second rejection or email (L3).
-  if (c.code !== null) return { status: 'wrong_state' };
   const newStatus = c.status === 'held' ? 'rejected' : 'hidden';
   const reason = AUTHOR_REASONS[code];
   await tx.query('UPDATE comments SET status = $2, escalated_at = NULL, moderation_code = $3, decided_by = $4 WHERE id = $1', [

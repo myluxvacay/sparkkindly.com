@@ -118,7 +118,8 @@ async function appealAction(c: Ctx, outcome: 'overturn' | 'uphold'): Promise<Don
   if (r.status === 'not_found') throw missing();
   if (r.status === 'decided') throw new ActionError(409, 'wrong_status');
   const code = outcome === 'overturn' ? 'comments_appeal_overturned' : 'comments_appeal_upheld';
-  return { code, target: `comment:${id}`, detail: { outcome, closed: r.status }, mail: r.status === 'done' ? r.mail : undefined };
+  const cleared = r.status === 'done' ? r.cleared : undefined;
+  return { code, target: `comment:${id}`, detail: { outcome, closed: r.status, ...(cleared ? { cleared } : {}) }, mail: r.status === 'done' ? r.mail : undefined };
 }
 
 // in_review -> scheduled, never from draft (where failed gates wait) and never for excluded content. The slot is the
@@ -376,7 +377,8 @@ const handlers: Record<string, Handler> = {
     const r = await resolveEscalation(tx, admin, id, outcome, now, process.env, reasonCode);
     if (r.status !== 'done') throw r.status === 'not_found' ? missing() : new ActionError(409, 'wrong_status');
     const code = outcome === 'publish' ? 'comments_escalation_published' : 'comments_escalation_removed';
-    return { code, target: `comment:${id}`, detail: { outcome, status: r.newStatus }, mail: r.mail };
+    const detail = { outcome, status: r.newStatus, ...(outcome === 'remove' ? { code: reasonCode } : {}), ...(r.cleared ? { cleared: r.cleared } : {}) };
+    return { code, target: `comment:${id}`, detail, mail: r.mail };
   },
 
   // A muted reporter, named only by one of their reports.

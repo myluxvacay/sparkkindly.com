@@ -152,7 +152,12 @@ async function decideIn(tx: Queryable, agent: Agent, input: Input, now: Date): P
   }
   const locked: Locked = { id: input.id, accountId: row.account_id, kind: row.kind, status: row.status };
   const effect = await applyDecision(tx, locked, { decision: input.decision, reason: input.reason ?? null, code: input.code ?? null, actor, now });
-  await audit(tx, actor, `comment.${input.decision}`, `comment:${input.id}`, { from: row.kind, status: effect.status });
+  await audit(tx, actor, `comment.${input.decision}`, `comment:${input.id}`, {
+    from: row.kind,
+    status: effect.status,
+    ...(input.code ? { code: input.code } : {}),
+    ...(effect.cleared ? { cleared: effect.cleared } : {}),
+  });
   if (!effect.mail) return { result: reply(effect.status) };
   const email = (await tx.query<{ email: string }>('SELECT email FROM accounts WHERE id = $1', [row.account_id])).rows[0].email;
   return { result: reply(effect.status), mail: { to: email, body: row.body, accountId: row.account_id, code: input.code ?? 'other' } };

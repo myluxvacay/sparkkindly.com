@@ -207,6 +207,41 @@ describe('owner actions', () => {
     expect(await act('comments.escalation_resolve', { comment: id, outcome: 'remove', code: 'made-up' })).toMatchObject({ ok: false, status: 400 });
   });
 
+  it('reject, appeal overturn, then a new urgent hide: the owner Remove works and emails; no stale code blocks it', async () => {
+    const a = await appealed();
+    await db.query("UPDATE comments SET moderation_code = 'abuse' WHERE id = $1", [a.id]);
+    expect(await act('comments.appeal_overturn', { comment: a.id })).toMatchObject({ ok: true });
+    const row = await db.query('SELECT status, moderation_code, moderation_reason FROM comments WHERE id = $1', [a.id]);
+    expect(row.rows[0]).toEqual({ status: 'published', moderation_code: null, moderation_reason: null });
+    const r = await person(db, NOW);
+    await setLevel(db, r.id, 1);
+    await reportComment(db, r.ctx, a.id, { reason: 'abuse', urgent: 'on' }, NOW, async () => {});
+    expect(await statusOf(db, a.id)).toBe('hidden');
+    sent = [];
+    expect(await act('comments.escalation_resolve', { comment: a.id, outcome: 'remove', code: 'abuse' })).toMatchObject({ ok: true });
+    expect(sent.map((m) => m.to)).toEqual([a.author.email]);
+  });
+
+  it('owner Publish clears any earlier code and reason, and the audit log keeps the trail', async () => {
+    const e = await escalated();
+    await db.query("UPDATE comments SET moderation_code = 'other' WHERE id = $1", [e.id]);
+    expect(await act('comments.escalation_resolve', { comment: e.id, outcome: 'publish' })).toMatchObject({ ok: true });
+    const row = await db.query('SELECT moderation_code, moderation_reason FROM comments WHERE id = $1', [e.id]);
+    expect(row.rows[0]).toEqual({ moderation_code: null, moderation_reason: null });
+    const audit = await db.query<{ detail: { cleared?: unknown } }>("SELECT detail FROM audit_log WHERE action = 'comments.escalation_resolve'");
+    expect(audit.rows[0].detail.cleared).toEqual({ code: 'other', reason: 'Unsure: may name a child' });
+  });
+
+  it('owner Publish of an urgently hidden comment charges a level-1 urgent reporter (owner accountability)', async () => {
+    const u = await decided('published', '', 'owner keeps this');
+    await db.query('UPDATE comments SET moderation_reason = NULL WHERE id = $1', [u.id]);
+    const r = await person(db, NOW);
+    await setLevel(db, r.id, 1);
+    await reportComment(db, r.ctx, u.id, { reason: 'abuse', urgent: 'on' }, NOW, async () => {});
+    expect(await act('comments.escalation_resolve', { comment: u.id, outcome: 'publish' })).toMatchObject({ ok: true });
+    expect((await trustRow(db, r.id)).false_reports).toBe(1);
+  });
+
   it('report reset unmutes the reporter of that report and clears their false reports', async () => {
     const r = await person(db, NOW);
     await setLevel(db, r.id, 0);

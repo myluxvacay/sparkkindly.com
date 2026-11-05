@@ -19,7 +19,20 @@ export const APPLIES: Record<Decision, Kind[]> = {
 };
 
 export type Locked = { id: string; accountId: string; kind: Kind; status: string };
-type Effect = { status: string; mail: boolean };
+type Effect = { status: string; mail: boolean; cleared?: Cleared };
+export type Cleared = { code: string | null; reason: string | null };
+
+// A comment published again (agent keep, owner Publish, appeal overturn) carries no earlier removal reason, so no stale
+// code can block or colour a later decision. Returns what was cleared, for the caller's audit row; null when nothing was.
+export async function clearDecision(tx: Queryable, id: string): Promise<Cleared | null> {
+  const r = await tx.query<Cleared>(
+    `UPDATE comments c SET moderation_code = NULL, moderation_reason = NULL FROM (SELECT moderation_code, moderation_reason FROM comments WHERE id = $1) old
+     WHERE c.id = $1 RETURNING old.moderation_code AS code, old.moderation_reason AS reason`,
+    [id],
+  );
+  const old = r.rows[0];
+  return old && (old.code !== null || old.reason !== null) ? old : null;
+}
 
 const set = (tx: Queryable, id: string, sql: string, params: unknown[]) =>
   tx.query(`UPDATE comments SET ${sql} WHERE id = $1`, [id, ...params]);
@@ -40,8 +53,8 @@ export async function applyDecision(
     case 'keep':
       // A sampled comment that was reported counts as reviewed too, so it never re-queues as a sample.
       await set(tx, c.id, `status = 'published', decided_by = $2${reviewed}`, [d.actor, d.now]);
-      await dismissReports(tx, c.id, d.now);
-      return { status: 'published', mail: false };
+      await dismissReports(tx, c.id, d.now, 'agent');
+      return { status: 'published', mail: false, cleared: (await clearDecision(tx, c.id)) ?? undefined };
     case 'escalate': {
       const status = c.kind === 'sample' ? 'hidden' : c.status;
       // The note is for the owner only (7B review M1): never moderation_reason, which an author-facing path could read.

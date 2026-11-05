@@ -5,6 +5,7 @@
 // or hidden. Ids in the form are never read: the token alone names the comment and the author. The owner decides in
 // /admin/comments/ (decideAppeal, inside the admin action's transaction). No Next.js imports.
 // Verified by tests/unit/comments-appeals.test.ts.
+import { clearDecision, type Cleared } from './decisions';
 import { createHmac, timingSafeEqual } from 'node:crypto';
 import { clientKey, readForm, sameOrigin, seeOther } from '@/lib/admin/guard';
 import { isUuid } from '@/lib/accounts/pin';
@@ -106,7 +107,7 @@ export async function fileAppealRequest(request: Request, d: AppealDeps, token: 
   return seeOther(`/comments/appeal/${encodeURIComponent(token)}/?a=${result}#result`);
 }
 
-export type AppealDecision = { status: 'done'; mail: EmailMessage } | { status: 'not_found' | 'decided' | 'gone' };
+export type AppealDecision = { status: 'done'; mail: EmailMessage; cleared?: Cleared } | { status: 'not_found' | 'decided' | 'gone' };
 
 // The owner's decision on an open appeal. overturn: the comment is published again and the rejection it cost is taken
 // back from the counts (rejected - 1; the level is the owner's to set by hand); uphold: nothing changes. Either way the
@@ -138,9 +139,11 @@ export async function decideAppeal(
     return { status: 'gone' };
   }
   await close(outcome);
+  let cleared: Cleared | undefined;
   if (outcome === 'overturn') {
     await tx.query("UPDATE comments SET status = 'published', decided_by = $2 WHERE id = $1", [commentId, admin.email]);
     await tx.query('UPDATE account_trust SET rejected = greatest(rejected - 1, 0), updated_at = now() WHERE account_id = $1', [row.account_id]);
+    cleared = (await clearDecision(tx, commentId)) ?? undefined;
   }
-  return { status: 'done', mail: appealOutcomeEmail({ to: row.email, body: row.body, outcome, site }) };
+  return { status: 'done', mail: appealOutcomeEmail({ to: row.email, body: row.body, outcome, site }), cleared };
 }

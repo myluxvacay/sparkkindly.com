@@ -4,8 +4,8 @@
 // counts 1, level 0 counts 0.5, a muted reporter 0. Open weight >= 2 hides the comment pending the moderation agent. An
 // urgent report hides the comment at once for any reporter who is not muted (7B review H1, reversing the earlier
 // level-1-only ruling; spec 4a.6: urgent hides immediately); a muted reporter's urgent report leaves it published but
-// leaves it for the owner only (a zero-weight report never changes what the agent sees). Each urgent report alerts the
-// owner (counts only, saying whether it hid the comment), at most URGENT_ALERTS_PER_DAY alerts sent a UTC day site-wide,
+// leaves it for the owner's queue and digest only, with no email (a zero-weight report never changes what the agent
+// sees). Any other urgent report alerts the owner (counts only, saying whether it hid the comment), at most URGENT_ALERTS_PER_DAY alerts sent a UTC day site-wide,
 // then one "cap reached" email (the digest still counts everything). 10 reports a rolling day per account, of which 3 may be urgent: a further
 // urgent report is stored as a normal one, without an alert (the result says urgent: 'limit'). A hide bumps the
 // comment's updated_at, so an agent decision read before it is stale.
@@ -150,7 +150,7 @@ export async function reportComment(
 }
 
 // The site-wide cap on urgent alert emails (7B review L7, as refined): only alerts actually sent count, one job_runs row
-// each for the UTC day; a muted reporter's alert is sent while the cap is not reached but never counts. When the cap is
+// each for the UTC day; a muted reporter's urgent report sends no email at all (queue and digest only). When the cap is
 // reached, exactly one "cap reached" email goes (claimed by its own row), then nothing until the next UTC day; the
 // digest still counts every urgent report. ponytail: two alerts racing at the 20th may both send (21); a counter row
 // with a lock would make it exact.
@@ -161,6 +161,7 @@ async function alertOwner(db: Db, a: { urgent24h: number; hidden: boolean; muted
      FROM job_runs WHERE job = 'urgent-alert' AND run_key LIKE $1 || '#%'`,
     [day],
   );
+  if (a.muted) return; // a muted reporter's urgent report reaches the owner through the queue and the digest only
   const { n, cap } = used.rows[0];
   const send = async (counts: Parameters<NotifyOwner>[0]): Promise<boolean> => {
     try {
@@ -174,7 +175,7 @@ async function alertOwner(db: Db, a: { urgent24h: number; hidden: boolean; muted
   if (cap) return;
   if (n < URGENT_ALERTS_PER_DAY) {
     const sent = await send({ urgent24h: a.urgent24h, hidden: a.hidden });
-    if (sent && !a.muted) {
+    if (sent) {
       await db.query("INSERT INTO job_runs (job, run_key) VALUES ('urgent-alert', $1 || '#a#' || gen_random_uuid())", [day]);
     }
     return;
@@ -183,12 +184,12 @@ async function alertOwner(db: Db, a: { urgent24h: number; hidden: boolean; muted
   if (claimed.rows.length) await send({ urgent24h: a.urgent24h, hidden: a.hidden, capReached: true });
 }
 
-// The agent (or the owner) judged a reported comment fine: its open reports are dismissed. Who is charged a false report:
-// every reporter whose weighted urgent report hid it, at any level (urgent reports are the abuse vector, so they are
-// accountable), and, for ordinary reports, level-0 reporters only (7B review M3b: a wrong `keep` must not erode a
-// trusted member's ordinary reports). At FALSE_REPORT_LIMIT the reporter drops one level and is muted, once (muting is
-// what makes it once). The trust rows are locked in id order (7B review L5), so two dismissals cannot deadlock on them.
-export async function dismissReports(tx: Queryable, commentId: string, now = new Date()): Promise<void> {
+// A reported comment judged fine: its open reports are dismissed and false reports charged. By the AGENT (keep): only
+// level-0 reporters are charged, ordinary or urgent, so a manipulated agent can never demote or mute a trusted (level>=1)
+// reporter. By the OWNER (an admin action): also every reporter whose weighted urgent report hid it, at any level
+// (urgent reports are the abuse vector). At FALSE_REPORT_LIMIT the reporter drops one level and is muted, once (muting
+// is what makes it once). The trust rows are locked in id order (7B review L5), so two dismissals cannot deadlock.
+export async function dismissReports(tx: Queryable, commentId: string, now = new Date(), by: 'agent' | 'owner' = 'agent'): Promise<void> {
   const r = await tx.query<{ who: string | null; urgent: boolean; weight: string }>(
     `UPDATE comment_reports SET handled_at = $2, dismissed = true WHERE comment_id = $1 AND handled_at IS NULL
      RETURNING reporter_account_id AS who, urgent, weight`,
@@ -197,7 +198,7 @@ export async function dismissReports(tx: Queryable, commentId: string, now = new
   const named = r.rows.filter((x): x is { who: string; urgent: boolean; weight: string } => x.who !== null);
   const who = [...new Set(named.map((x) => x.who))].sort();
   if (!who.length) return;
-  const urgent = [...new Set(named.filter((x) => x.urgent && Number(x.weight) > 0).map((x) => x.who))];
+  const urgent = by === 'owner' ? [...new Set(named.filter((x) => x.urgent && Number(x.weight) > 0).map((x) => x.who))] : [];
   await tx.query('SELECT 1 FROM account_trust WHERE account_id = ANY($1::uuid[]) ORDER BY account_id FOR UPDATE', [who]);
   await tx.query(
     `UPDATE account_trust SET false_reports = false_reports + 1,
