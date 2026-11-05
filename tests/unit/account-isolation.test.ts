@@ -1,7 +1,7 @@
 // @vitest-environment node
 // Adversarial matrix for the account surface (.claude/rules/data-isolation.md, "Required adversarial cases").
 // Cases whose features do not exist yet are it.todo so later plans see them.
-import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import { describe, it, expect, beforeAll, afterAll, beforeEach, afterEach, vi } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { signUp } from '@/lib/accounts/signup';
 import { requestAccountLink, consumeAccountLink, getAccount, endAccountSession } from '@/lib/accounts/sessions';
@@ -26,8 +26,19 @@ import { resetPin } from '@/lib/accounts/pin-reset';
 import { getSettings, saveSettings } from '@/lib/accounts/settings';
 import { runInactivitySweep } from '@/lib/accounts/inactivity';
 import { applyUnsubscribe, readUnsubscribeToken, unsubscribeToken } from '@/lib/accounts/unsubscribe';
-import { createCircle, getCircleForMember } from '@/lib/circles/repo';
-import { addChildToCircle } from '@/lib/circles/children';
+import { createCircle, getCircleForMember, listMyCircles } from '@/lib/circles/repo';
+import { addChildToCircle, circleHasChild, removeChildFromCircle } from '@/lib/circles/children';
+import { closeCircle, removeMember, transferOwnership } from '@/lib/circles/owner';
+import {
+  addChildRequest,
+  closeCircleRequest,
+  createCircleRequest,
+  leaveCircleRequest,
+  loadCirclePage,
+  removeChildRequest,
+  removeMemberRequest,
+  transferRequest,
+} from '@/lib/circles/web';
 import { findQuizBySlug, getPublicItem, latestQuiz, listPublic, listQuizzes, searchPublic } from '@/lib/public/reads';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
@@ -762,13 +773,160 @@ describe('settings, export, deletion, inactivity and unsubscribe (plan 3E, Task 
   });
 });
 
+describe('circles (plan 4A, Task 4)', () => {
+  const NOW = new Date('2026-11-04T12:00:00Z');
+  let c = 0;
+  const headers = (cookie: string) => ({
+    host: 'staging.sparkkindly.com',
+    origin: 'https://staging.sparkkindly.com',
+    'content-type': 'application/x-www-form-urlencoded',
+    cookie: `__Host-sk_account=${cookie}`,
+  });
+  const req = (body: Record<string, string>, cookie: string) =>
+    new Request('http://localhost/x', { method: 'POST', headers: headers(cookie), body: new URLSearchParams(body).toString() });
+  const d = () => ({ db, now: NOW, limit: () => true });
+  async function person(dateOfBirth = '1984-02-02') {
+    const email = `p4a-${c++}@example.test`;
+    const r = await signUp(db, { email, dateOfBirth }, T0);
+    if (r.status !== 'created') throw new Error('sign-up failed');
+    return { id: r.accountId, session: await signIn(email) };
+  }
+  async function circleOf(owner: { id: string }, kind = 'family') {
+    const r = await createCircle(db, owner.id, { name: 'Isolation', kind, yourName: 'Owner' }, T0);
+    if (r.status !== 'created') throw new Error('circle failed');
+    return r.slug;
+  }
+  async function kidOf(accountId: string) {
+    const k = await createChildProfile(db, accountId, { displayName: 'Kid', ageBand: '6-9', guardianConfirmed: 'on', pin: '4826' }, T0);
+    if (k.status !== 'created') throw new Error('profile failed');
+    return k.profileId;
+  }
+  const enrol = (slug: string, accountId: string) =>
+    db.query("INSERT INTO circle_members (circle_id, account_id, display_name) SELECT id, $2, 'M' FROM circles WHERE slug = $1", [
+      slug,
+      accountId,
+    ]);
+  const rowsOf = async (slug: string) =>
+    (
+      await db.query(
+        'SELECT m.* FROM circle_members m JOIN circles x ON x.id = m.circle_id WHERE x.slug = $1 ORDER BY m.account_id, m.profile_id',
+        [slug],
+      )
+    ).rows;
+  const SCOPED = {
+    leave: leaveCircleRequest,
+    remove: removeMemberRequest,
+    transfer: transferRequest,
+    close: closeCircleRequest,
+    addChild: addChildRequest,
+    removeChild: removeChildRequest,
+  };
+
+  beforeEach(() => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('CIRCLES_ENABLED', 'true');
+  });
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it('own account -> own circle allowed (page and list)', async () => {
+    const a = await person();
+    const slug = await circleOf(a);
+    expect((await loadCirclePage(db, a.session, slug, NOW)).status).toBe('ok');
+    expect(await listMyCircles(db, a.id)).toHaveLength(1);
+  });
+
+  it("account A -> account B's circle denied; non-member -> 404 page, neutral POST answer, no change", async () => {
+    const a = await person();
+    const b = await person();
+    const slug = await circleOf(b);
+    expect(await getCircleForMember(db, a.id, slug)).toBeNull();
+    expect(await loadCirclePage(db, a.session, slug, NOW)).toEqual({ status: 'not_found' });
+    expect(await listMyCircles(db, a.id)).toEqual([]);
+    const before = await rowsOf(slug);
+    for (const [name, fn] of Object.entries(SCOPED)) {
+      const r = await fn(req({ confirm: 'on', member_account: b.id, to_account: a.id }, a.session), d(), slug);
+      expect([r.status, r.headers.get('location')], name).toEqual([303, '/circles/?r=gone#result']);
+    }
+    expect(await rowsOf(slug)).toEqual(before);
+  });
+
+  it('child profile -> every circle write and the circle page denied', async () => {
+    const a = await person();
+    const slug = await circleOf(a);
+    const kid = await kidOf(a.id);
+    expect(await switchToProfile(db, a.session, kid, NOW)).toBe(true);
+    const before = await rowsOf(slug);
+    expect((await createCircleRequest(req({ name: 'Kids', kind: 'friends', your_name: 'K' }, a.session), d())).status).toBe(403);
+    for (const [name, fn] of Object.entries(SCOPED)) {
+      expect((await fn(req({ confirm: 'on', profile_id: kid }, a.session), d(), slug)).status, name).toBe(403);
+    }
+    expect(await loadCirclePage(db, a.session, slug, NOW)).toEqual({ status: 'child' });
+    expect(await rowsOf(slug)).toEqual(before);
+  });
+
+  it('tampered circle / member / profile ids are denied and change nothing', async () => {
+    const a = await person();
+    const b = await person();
+    const s = await person();
+    const slug = await circleOf(a);
+    const other = await circleOf(s);
+    await enrol(slug, b.id);
+    const zed = await kidOf(s.id);
+    const before = [await rowsOf(slug), await rowsOf(other)];
+    expect(await removeMember(db, a.id, slug, { accountId: s.id, profileId: null }, NOW)).toBe('not_found');
+    expect(await removeMember(db, a.id, other, { accountId: s.id, profileId: null }, NOW)).toBe('not_owner');
+    expect(await removeMember(db, a.id, slug, { accountId: b.id, profileId: zed }, NOW)).toBe('not_found');
+    expect(await transferOwnership(db, a.id, slug, s.id, NOW)).toBe('not_eligible');
+    expect(await addChildToCircle(db, a.id, slug, zed, 'on', NOW)).toBe('not_allowed');
+    expect(await removeChildFromCircle(db, a.id, other, zed, NOW)).toBe(false);
+    const forged = await createCircleRequest(req({ name: 'Mine', kind: 'friends', your_name: 'B', account_id: s.id }, b.session), d());
+    const made = /^\/circles\/([a-z0-9]{10})\//.exec(forged.headers.get('location') ?? '')![1];
+    expect((await getCircleForMember(db, b.id, made))!.myRole).toBe('owner');
+    expect(await getCircleForMember(db, s.id, made)).toBeNull();
+    expect([await rowsOf(slug), await rowsOf(other)]).toEqual(before);
+  });
+
+  it('a circle with a child profile never gains a 13-17 member: no child beside a teen, no teen as owner', async () => {
+    const a = await person();
+    const teen = await person('2010-01-01');
+    const slug = await circleOf(a);
+    const kid = await kidOf(a.id);
+    await enrol(slug, teen.id);
+    expect(await addChildToCircle(db, a.id, slug, kid, 'on', NOW)).toBe('has_teen');
+    expect(await transferOwnership(db, a.id, slug, teen.id, NOW)).toBe('not_eligible');
+    const fam = await circleOf(a);
+    expect(await addChildToCircle(db, a.id, fam, kid, 'on', NOW)).toBe('added');
+    const id = (await db.query<{ id: string }>('SELECT id FROM circles WHERE slug = $1', [fam])).rows[0].id;
+    expect(await circleHasChild(db, id)).toBe(true);
+    for (const kind of ['friends', 'community']) {
+      expect(await addChildToCircle(db, a.id, await circleOf(a, kind), kid, 'on', NOW)).toBe('not_family');
+    }
+    expect(await createCircle(db, teen.id, { name: 'Fam', kind: 'family', yourName: 'T' }, NOW)).toEqual({ status: 'not_allowed' });
+  });
+
+  it('an owner action by a plain member is denied', async () => {
+    const a = await person();
+    const b = await person();
+    const slug = await circleOf(a);
+    await enrol(slug, b.id);
+    expect(await removeMember(db, b.id, slug, { accountId: a.id, profileId: null }, NOW)).toBe('not_owner');
+    expect(await transferOwnership(db, b.id, slug, b.id, NOW)).toBe('not_owner');
+    expect(await closeCircle(db, b.id, slug, NOW)).toBe('not_owner');
+    const r = await closeCircleRequest(req({ confirm: 'on' }, b.session), d(), slug);
+    expect(r.headers.get('location')).toBe(`/circles/${slug}/?r=not-owner#result`);
+    expect(await getCircleForMember(db, a.id, slug)).toMatchObject({ status: 'open', myRole: 'owner' });
+  });
+});
+
 describe('arrives with later features', () => {
   // The public reads take the session scope and /me the context audiences (both tested above); later routes add their own row.
   it.todo('child profile -> adults item denied at the daily set and email routes (these routes do not exist yet)');
   // child profile -> settings, export, delete and PIN reset denied: covered above (plan 3E, Task 4).
   it.todo('child profile -> invites, comments and contribute routes denied (routes do not exist yet; they must use requireAdultContext)');
   it.todo('13-15 account -> public comment, community join, contribute denied (route level; the capability rows above are covered through can())');
-  it.todo('non-member -> circle denied');
-  it.todo('tampered circle id / item id in payload denied (circles and the daily set do not exist yet; profile id tampering is covered above)');
+  it.todo('tampered item id in a daily-set payload denied (the daily set does not exist yet; circle and profile ids are covered above)');
+  it.todo('13-17 account joining a circle that holds a child profile refused (the join path is plan 4B; it must use circleHasChild)');
   // agent key A -> agent B's items denied: covered in tests/unit/agent-api.test.ts and agent-keys.test.ts, not duplicated here.
 });

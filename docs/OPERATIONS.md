@@ -350,6 +350,53 @@ If no run is recorded for 36 hours the worker emails the admin list.
 - **Migrations and rollback.** `011_settings.sql` (three notification columns and `inactivity_notice_at`) and `012_last_sign_in.sql` (`last_sign_in_at`, `last_seen_at`, backfilled from `verified_at` and live sessions) are additive; the rollback is in each header (`DROP COLUMN` plus the `schema_migrations` row). Rolling the app back needs the previous release live first: the 3E code reads the new columns (`export.ts` selects them), so drop the columns only after the older release is running. The older release ignores them. Rolling back below 012 and forward again can lose activity timestamps (the older code does not update `last_sign_in_at` or `last_seen_at`, so the inactivity sweep would see accounts as idler than they are). Before deploying forward after such a rollback, either run `UPDATE accounts SET last_seen_at = now(), last_sign_in_at = now() WHERE verified_at IS NOT NULL;` or disable the inactivity job for a day.
 - **Before production.** The go-live gate stands: the privacy and About pages must be rewritten (they still say there are no accounts and that SparkKindly does not save answers) with the professional privacy review (tracker 3.11) before `ACCOUNTS_ENABLED` goes on in production, and must state the export, deletion and inactivity behaviour above, including the 30-day backup ageing. The drafts for that review (data inventory, privacy policy, terms, community guidelines, the exact page-copy and e2e changes, and the professional's checklist) are in `docs/legal/`; none is published.
 
+## Circles (Project 4A)
+
+- **Flags.** Circles need `ACCOUNTS_ENABLED` **and** `CIRCLES_ENABLED` (`true` or `1`). With either unset every
+  `/circles/*` page and POST route is a 404 and the account page shows no Circles link. Both are off everywhere; the env
+  examples carry a commented `# CIRCLES_ENABLED=`. Turning circles off is unsetting `CIRCLES_ENABLED` and restarting the
+  web service: the rows stay, nothing reads them, and the closed-circle purge keeps running in the worker.
+- **Who may create.** Rulings (plan 4A): friends circles by any account with the `create_circle` capability (18+, 16-17,
+  and 13-15 once a parent has confirmed); family and community circles by 18+ only. A consent-pending 13-15 account
+  cannot create or be added. Joining by invite is plan 4B.
+- **Limits** (`lib/circles/rules.ts`). An account owns at most 5 open circles and belongs to at most 10; a circle holds
+  at most 30 current members (accounts and child profiles). Name 1 to 40 characters, "your name in this circle" 1 to 30
+  (no `@`), community description up to 200; all trimmed, NFKC-normalised and checked against the blocked-words list.
+  Circle POSTs share a per-account allowance of 30 an hour for creating and 30 an hour for member and owner actions.
+- **What a circle holds and shows.** `circles`: name, kind, optional description, owner, time zone (default the
+  owner's), open or closed, `hidden_at` (for the admin hide in 4.8; a hidden circle is invisible to its members and
+  takes no new child), created and closed times. Its URL is `/circles/<slug>/`, a 10-character random slug, never
+  derived from the name. `circle_members`: one row per account or child profile, with the name chosen for the circle,
+  role, `joined_at` and `left_at`. Members see each other's circle names and roles only, never an email. Ids of other
+  members reach only the owner's page (for the owner forms). A non-member gets a 404 for the circle page and the same
+  neutral "not available" answer as a missing circle for every POST.
+- **Owner rules.** The owner removes a member (an adult removed takes their child profiles out with them), transfers
+  ownership to another current 18+ account member, or closes the circle. The owner cannot leave without transferring or
+  closing. Every owner action locks the circle row first (`FOR UPDATE`), so racing actions leave exactly one owner on an
+  open circle. A closed circle is read-only (no owner action, no child added or removed) and stays readable by members.
+- **Child profiles.** Only the profile's own adult, only into an open family circle that adult belongs to, only after
+  ticking "everyone in this circle sees this display name and its scores". A circle with any 13-17 member takes no child
+  (and the 4B join path must refuse a teen in a circle that holds a child: `circleHasChild`). The child appears under its
+  profile display name. Deleting the profile removes its circle rows.
+- **Leaving.** The member's row keeps `left_at` (4C shows past contributions as "former member"); lists show current
+  members only. Leaving takes the account's child profiles out of that circle too.
+- **Account deletion.** In the deletion transaction, each open circle the account owns passes to its longest-standing
+  other 18+ account member; with none it is closed. Owned closed circles keep no owner (`owner_account_id` is NULL only on
+  a closed circle, enforced by a CHECK). The account's own member rows cascade.
+- **Export.** The account export lists the holder's own memberships (circle name, kind, role, their name in it, joined,
+  left) and each child profile's, and nothing about other members.
+- **Purge.** The worker job `circles-purge` runs once per UTC day (claimed in `job_runs`) and deletes circles closed more
+  than 30 days ago, with their member rows. At most 100 a run (more due: an alert row in `failed_jobs`); it refuses to
+  run when the worker and database clocks differ by more than 10 minutes, like the account jobs.
+- **Migration and rollback.** `014_circles.sql` is additive (two new tables). Rollback of the code: unset
+  `CIRCLES_ENABLED`, or switch `current` back to the previous release (it never reads the tables). Rollback of the
+  schema, only after the previous release is live: `DROP TABLE circle_members; DROP TABLE circles; DELETE FROM
+  schema_migrations WHERE name = '014_circles.sql';` (as in the migration header). An older release's account deletion
+  fails on an account that owns a circle (the plain foreign key), so drop the tables before deleting accounts with an
+  older release live.
+- **Before production.** The privacy page must say what circle members see of each other before `CIRCLES_ENABLED` goes
+  on in production (data inventory, `docs/legal/go-live-copy-changes.md`).
+
 ## Pilot measurement (roadmap P.2)
 
 `/admin/pilot/` shows the spec 4a.2 pilot metrics against their thresholds, computed from data the site already holds

@@ -67,6 +67,13 @@ without a mouse and without JavaScript stays true for signed-in play.
 | "no page claims an answer is wholly unrecorded …" | About: `toContainText('SparkKindly does not save your answer')` | Keep if the About replacement keeps that phrase (it does above); otherwise update. The quiz-note and privacy-log assertions stay unchanged. |
 | "trust pages make no third-party request and store nothing in the browser" | `context.cookies()` is empty | Unchanged: the test visits signed out. Consider a signed-in variant that expects exactly one cookie, `__Host-sk_account`. |
 
+## Circles (Project 4A)
+
+Before `CIRCLES_ENABLED` is set in production, the privacy page (and the approved policy) must add that members of a
+circle see each other's circle names, roles and, from 4C, scores, including a child profile's display name once its
+adult adds it to a family circle; that the email is never shown to other members; and that a closed circle is deleted
+30 days after closing ([data inventory](data-inventory.md), `circles` and `circle_members`).
+
 ## Other places that point at the privacy page
 
 - The parent consent email links to the privacy page (`lib/accounts/consent-email.ts`, `privacyUrl`). It must not be
