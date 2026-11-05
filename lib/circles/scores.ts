@@ -1,13 +1,14 @@
 // Circle scores (plan 4C, spec Project 4 "Competitions" and "Leaderboards"). Derived on every read from item_responses
 // joined to the circle's daily sets, so a deletion or a re-scored answer recomputes by itself. A member earns
 // points_correct (site_settings, default 10) per set item answered correctly inside that circle day (circles.time_zone);
-// nothing for speed. Set items are re-filtered with the circle's current audiences (PLAYABLE), so an `adults` item scores
+// nothing for speed. Set items are re-filtered with the circle's current audiences (PLAYABLE) and its child days
+// (CHILD_DAY_SAFE), so an `adults` item scores
 // nothing while a child is in the circle. Former members (left_at) keep their points as "Former member". Competition
 // ranks: ties share, the next rank skips. Members only (circleForViewer); never which answer anyone chose.
 // Imported only under app/circles/** and lib/circles/** (tests/unit/circles-play-web.test.ts scans for it).
 // No Next.js imports. Verified by tests/unit/circles-scores.test.ts.
 import type { Db } from '@/lib/db';
-import { PLAYABLE, circleAudiences, circleDay, circleForViewer } from './daily-set';
+import { CHILD_DAY_SAFE, PLAYABLE, circleAudiences, circleDay, circleForViewer } from './daily-set';
 import { pointsCorrect } from './points';
 
 export type BoardRow = { rank: number; name: string; points: number; former: boolean; you: boolean };
@@ -38,6 +39,7 @@ export const COUNTS = `
     JOIN items i ON i.id = s.item_id JOIN worlds w ON w.id = i.world_id
     JOIN item_responses r ON r.item_id = s.item_id AND r.correct
     WHERE s.circle_id = $3 AND s.day <= $5::date AND (r.answered_at AT TIME ZONE $4::text)::date = s.day AND ${PLAYABLE}
+      AND ${CHILD_DAY_SAFE}
   )
   SELECT m.display_name AS name, m.left_at IS NOT NULL AS former, m.account_id AS aid, m.profile_id AS pid,
          (m.account_id = $6 AND m.profile_id IS NOT DISTINCT FROM $7::uuid) AS you,

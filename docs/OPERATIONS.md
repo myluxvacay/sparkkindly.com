@@ -500,7 +500,11 @@ If no run is recorded for 36 hours the worker emails the admin list.
   roll over at different instants. There is no way to change a circle's time zone yet.
 - **Child safety.** A circle holding any current child profile gets and shows `kids` and `all` items only. The stored set
   is re-filtered on every read with the circle's current members, so adding a child hides an `adults` item at once and
-  it stops scoring. Removing the child gives later sets the full range again.
+  it stops scoring. Removing the child gives later sets the full range again; the days the child was a member stay
+  child-safe (no `adults` item shown or scored), recorded in `circle_child_days` by a trigger when a child member row
+  is closed or deleted (migration `020_circle_child_days.sql`, 4C review). Rollback, only after the previous release is
+  live: `DROP TRIGGER circle_members_child_days ON circle_members; DROP FUNCTION circle_child_days_mark(); DROP TABLE
+  circle_child_days; DELETE FROM schema_migrations WHERE name = '020_circle_child_days.sql';`.
 - **Scores** (`lib/circles/scores.ts`). Derived on every read, nothing stored: a member (an account, or a child profile)
   earns the points setting per set item answered correctly on that circle day (first answer only; answers on another day
   count for nothing). Tallies for the day, ISO week (Monday start) and calendar month in the circle's zone, and all

@@ -44,6 +44,11 @@ export async function circleAudiences(q: Queryable, circleId: string): Promise<r
 export const PLAYABLE = `${visibleWhere('$1', '$2')} AND i.kind IN ('quiz', 'game')
   AND EXISTS (SELECT 1 FROM item_answers a WHERE a.item_id = i.id)`;
 
+// A set day on which a child profile was a member keeps its `adults` items out (and scoreless) after the child leaves;
+// only later days get the full scope again (4C review M2, migration 020). Needs the aliases i (item) and s (set row).
+export const CHILD_DAY_SAFE = `NOT (i.audience = 'adults'
+  AND EXISTS (SELECT 1 FROM circle_child_days cd WHERE cd.circle_id = s.circle_id AND cd.day = s.day))`;
+
 type Candidate = { id: string; tier: number; recent: boolean };
 
 // ponytail: reads every playable id and sorts in JS; move ordering into SQL if the catalogue reaches tens of thousands.
@@ -94,7 +99,7 @@ export async function readSet(q: Queryable, circleId: string, day: string, now: 
   const r = await q.query<SetRow>(
     `SELECT s.item_id, s.position, s.bonus, i.title, i.slug, w.slug AS world, i.kind
      FROM circle_daily_sets s JOIN items i ON i.id = s.item_id JOIN worlds w ON w.id = i.world_id
-     WHERE s.circle_id = $3 AND s.day = $4 AND ${PLAYABLE} ORDER BY s.position`,
+     WHERE s.circle_id = $3 AND s.day = $4 AND ${PLAYABLE} AND ${CHILD_DAY_SAFE} ORDER BY s.position`,
     [now, [...(await circleAudiences(q, circleId))], circleId, day],
   );
   return r.rows.map((x) => ({

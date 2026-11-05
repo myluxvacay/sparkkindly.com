@@ -148,6 +148,7 @@ describe('export inventory', () => {
     expect(EXCLUDED_TABLES.circle_daily_sets).toMatch(/circle/);
     expect(EXCLUDED_TABLES.circle_notices).toMatch(/circle/);
     expect(EXCLUDED_TABLES.circle_mail_log).toMatch(/no address, no account/);
+    expect(EXCLUDED_TABLES.circle_child_days).toMatch(/circle/);
   });
 
   it('exports the account’s own circle reports (plan 4D): circle, reason, note and time, nothing about others', async () => {
