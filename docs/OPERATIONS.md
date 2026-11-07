@@ -826,6 +826,35 @@ no sponsor row is read. Plan `docs/superpowers/plans/2026-11-05-project-6-sponso
   (every line disappears; rows stay), or the previous release (it never reads sponsorship). Schema rollback is in the
   migration header, only after the previous release is live.
 
+## Save world
+
+The sixth world (owner decision, 7 November 2026; plan `docs/superpowers/plans/2026-11-07-save-world.md`): money-skills
+guides and quizzes for everyone 13 and over, plus "how this offer works" explainers. `033_save_world.sql` adds the
+`save` row (enabled, auto approval, so every item still passes the quality gates and the reviewer), four money topics
+under Money habits, and moves Kids from position 4 to 5 only if it was still there, so Kids stays last.
+
+- **Education only.** The world page, every Save item page and `/quiz/` (when today's quiz is a Save quiz) show
+  "General information, not financial advice. Check the details with the provider before you decide." Goals:
+  `agents/worlds/save.md` (no personal advice, no named investment or credit product, no crypto or get-rich claims, no
+  excluded sponsor categories, no prices, rates or end dates in item text).
+- **Audiences.** Guides and quizzes are `all`: everyone sees them and they never carry a sponsor line. Offer
+  explainers are `adults`: never shown to a child profile (lists, detail, search, topic pages, daily sets) and their
+  sponsor line follows the Sponsorship rules above (anonymous visitors and adults only).
+- **Attach an affiliate offer.** Publish (or let the agents draft) the offer explainer as an `adults` article in Save.
+  Agents never write offer links; to have them draft an explainer, name the offer in the world's goals in
+  `/admin/worlds/`. Then in `/admin/sponsors/` add the provider as a sponsor (category `finance-education` or another
+  allowed one, confirmation box ticked) and attach a sponsorship of kind `affiliate` to that item (`save/<slug>`) or to
+  a Save topic, with link text and a last day (`ends_on`). The disclosure "SparkKindly earns a commission if you buy
+  through this link." is added by the site.
+- **When an offer ends.** After its `ends_on` (UTC, inclusive) the line disappears and `/go/<id>/` sends visitors home;
+  the explainer stays, because it carries no dates. "End now" ends it at once. Archive the item if the offer is gone
+  for good.
+- **Content runs.** `scripts/scheduler/register-tasks.ps1` runs Save with Together and Grow at 13:00 (task name
+  unchanged). Re-run it once (`-Env staging`, later `prod`) so the registered task picks up the new world list.
+- **Rollback.** Disable the world (`UPDATE worlds SET enabled = false WHERE slug = 'save'`, or `/admin/worlds/`): its
+  pages 404 and it leaves the navigation, home grid, sitemap and circle choices. The full schema rollback is in the
+  migration header and only applies when no item uses the world.
+
 ## Social distribution (Project 5A)
 
 Behind `SOCIAL_ENABLED` (off everywhere; `deploy/env/*.example` carry `# SOCIAL_ENABLED=` and empty `META_*` lines)

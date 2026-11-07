@@ -80,4 +80,6 @@ Ask Claude something like "create a Play quiz on number patterns on staging". Cl
 - Agent keys travel in the `X-Agent-Key` header only. The API URLs end with a slash.
 - Limits: 60 requests a minute per agent, 200 KB per item, at most 10 sources per item.
 - Kids items, and anything in a world set to review mode, always wait for the owner's approval.
+- Save items are money education only. Agents never write offer links: an offer explainer (audience `adults`) gets its
+  link only from a sponsorship the owner attaches in `/admin/sponsors/` (see `docs/OPERATIONS.md`, "Save world").
 - A corrected item gets a new idempotency key automatically, because the key is derived from the item's content.

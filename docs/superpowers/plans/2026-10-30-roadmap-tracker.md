@@ -154,7 +154,7 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 ## Save world (owner decision, 7 November 2026)
 
 - [x] S.1 World definition, data and copy: `save` row (migration 033, after Grow, Kids stays last), config copy, brand enum, money topics, goals file `agents/worlds/save.md`, counts of worlds no longer hard-coded — *`save-world.test.ts`, `import-legacy.test.ts`, `agent-formats.test.ts`.* Plan `2026-11-07-save-world.md`.
-- [ ] S.2 Disclaimer on every Save page, offer rules (offers are `adults` articles; links only from an owner sponsorship), agent files and e2e `save.spec.ts`.
+- [x] S.2 Disclaimer on every Save page (world, items, `/quiz/`), offer rules (offers are `adults` articles; links only from an owner sponsorship), agent files, OPERATIONS "Save world" — *`money-disclaimer.test.tsx`, `sponsorship-select.test.ts`, `account-isolation.test.ts`, e2e `save.spec.ts`.*
 
 ---
 

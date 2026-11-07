@@ -93,7 +93,8 @@ account or a child profile removes its points everywhere. A consent-pending
 `sponsors` and `sponsorships` (Project 6, behind `SPONSORSHIP_ENABLED`) hold sponsor names, links, categories,
 dates, link text and one click count per sponsorship. No personal data: a click stores no identifier, address, cookie
 or log row, and the sponsor line and redirect set no cookie and make no third-party request. Items, topics, worlds,
-answers and agent tables hold content, not personal data.
+answers and agent tables hold content, not personal data. The Save world (7 November 2026) adds a world row
+and topics only; it collects nothing new.
 
 `social_platforms`, `distributions` and `social_visits` (Project 5A, behind `SOCIAL_ENABLED`) hold platform settings,
 the posts made about published items (caption, hashtags, our own link and image URL, the platform's post id and URL,

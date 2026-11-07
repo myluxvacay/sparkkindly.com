@@ -1,8 +1,8 @@
-import { createHash, randomBytes } from 'node:crypto';
 import { test, expect, type Browser, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { addItem, addTopic, sql } from './helpers/fixtures';
 import { BASE, session, signInContext } from './helpers/admin';
+import { hash, member as signedIn } from './helpers/members';
 
 // Sponsorship (plan 6 Task 2). The preview server on 4173 runs with SPONSORSHIP_ENABLED (and accounts); the server on
 // 4174 has no flags. The owner attaches a sponsor to a Grow topic in /admin; an anonymous visitor sees one line on the
@@ -15,8 +15,6 @@ const TOPIC = `e2e-sponsor-${stamp}`;
 const SPONSOR = `Acme Budget ${stamp}`;
 const LINK = 'https://acme.example.test/budget';
 const LABEL = 'Plan a budget with Acme';
-const hash = (t: string) => createHash('sha256').update(t).digest('hex');
-let n = 0;
 
 const axe = async (page: Page) => {
   await page.waitForFunction(() => document.title.trim().length > 0); // the title can stream in after the body
@@ -30,30 +28,7 @@ async function axeBothWidths(page: Page) {
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
   await page.setViewportSize({ width: 1280, height: 720 });
 }
-const dobYearsAgo = (years: number) => {
-  const d = new Date(Date.now() - 200 * 86_400_000);
-  d.setUTCFullYear(d.getUTCFullYear() - years);
-  return d.toISOString().slice(0, 10);
-};
-
-async function member(browser: Browser, years: number): Promise<{ page: Page; id: string; token: string }> {
-  const context = await browser.newContext({ extraHTTPHeaders: { 'x-forwarded-for': `198.51.100.${(n = n + 1) % 250}` } });
-  const page = await context.newPage();
-  const email = `e2e-sponsor-${stamp}-${n++}@example.test`;
-  await page.goto('/account/sign-up/');
-  await page.getByLabel('Email address').fill(email);
-  await page.getByLabel('Date of birth').fill(dobYearsAgo(years));
-  await page.getByRole('button', { name: 'Create account' }).click();
-  await expect(page.getByRole('status')).toContainText('Check your email');
-  const link = randomBytes(32).toString('hex');
-  await sql("INSERT INTO account_login_tokens (token_hash, email, expires_at) VALUES ($1, $2, now() + interval '15 minutes')", [hash(link), email]);
-  await page.goto(`/account/sign-in/link/?token=${link}`);
-  await page.getByRole('button', { name: 'Continue' }).click();
-  await expect(page).toHaveURL(/\/account\//);
-  const id = (await sql('SELECT id FROM accounts WHERE email = $1', [email])).rows[0].id as string;
-  const token = (await page.context().cookies(BASE)).find((c) => c.name === '__Host-sk_account')!.value;
-  return { page, id, token };
-}
+const member = (browser: Browser, years: number) => signedIn(browser, years, `e2e-sponsor-${stamp}`);
 
 const ADULTS = `e2e-sponsored-${stamp}`;
 const ALL = `e2e-sponsor-all-${stamp}`;

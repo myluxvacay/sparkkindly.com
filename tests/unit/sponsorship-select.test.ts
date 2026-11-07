@@ -169,6 +169,26 @@ describe('sponsorFor', () => {
   });
 });
 
+// Save world (plan 2026-11-07 Task 2): offers are adults articles whose only link is an owner-attached affiliate
+// sponsorship; guides are `all` and never carry a line, even when the same topic or the whole world is sponsored.
+describe('Save world offers and guides', () => {
+  it('an all guide never shows a line; an adults offer shows the affiliate disclosure until ends_on', async () => {
+    const t = await topic();
+    const guide = await item({ world: 'save', audience: 'all', topic: t });
+    const offer = await item({ world: 'save', audience: 'adults', topic: t });
+    const s = await sponsor({ name: 'Acme Savings' });
+    await attach(s, { world: 'save' }, { kind: 'affiliate', label: 'See the Acme account' });
+    const id = await attach(s, { topic: t }, { kind: 'affiliate', label: 'See the Acme account', endsOn: TODAY });
+    expect(await sponsorFor(db, guide, TODAY)).toBeNull();
+    expect(await sponsorFor(db, offer, TODAY)).toMatchObject({
+      id,
+      kind: 'affiliate',
+      disclosure: 'SparkKindly earns a commission if you buy through this link.',
+    });
+    expect((await sponsorFor(db, offer, '2026-11-06'))?.id).not.toBe(id); // the topic offer ended; the world one remains
+  });
+});
+
 describe('recordClick', () => {
   it('increments exactly once per call and returns the stored link', async () => {
     const i = await item();

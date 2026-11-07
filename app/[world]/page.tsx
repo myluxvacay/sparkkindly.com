@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ItemCard from '@/components/item/ItemCard';
 import Breadcrumb from '@/components/Breadcrumb';
 import Pager from '@/components/Pager';
+import MoneyDisclaimer, { showsMoneyDisclaimer } from '@/components/item/MoneyDisclaimer';
 import { getDb } from '@/lib/db';
 import { currentScope } from '@/lib/accounts/scope-next';
 import { getWorld } from '@/lib/public/worlds';
@@ -45,6 +46,7 @@ export default async function WorldPage({ params, searchParams }: Props) {
         <p>{w.description}</p>
         <span className="intro-symbol" aria-hidden="true">{w.icon}</span>
       </header>
+      {showsMoneyDisclaimer(w.slug) && <MoneyDisclaimer />}
       {w.slug === 'kids' && (
         <aside className="grown-ups">
           <h2>For grown-ups</h2>

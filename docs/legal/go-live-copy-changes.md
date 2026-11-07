@@ -135,6 +135,14 @@ and keeps nothing about the visitor (no cookie, identifier, address or referrer)
 footer or About page may link `/sponsorship/` (Ruling: not added now, so every page stays byte-identical while the
 flag is off). The `/sponsorship/` copy and the excluded-category list need the owner's review.
 
+## Save world (7 November 2026)
+
+New public copy, no new data collected: the Save world page and every Save item carry "General information, not
+financial advice. Check the details with the provider before you decide."; the About page lists Save among the worlds;
+the home page counts the enabled worlds ("SIX WORLDS. ONE SHARED SPARK."). Save offers use the existing sponsorship
+line and disclosure (above), so the privacy wording planned for sponsorship covers them. The disclaimer wording needs
+the owner's (and the professional's) review before go-live.
+
 ## Social distribution (Project 5A)
 
 Before `SOCIAL_ENABLED` goes on in production: the privacy page should say that SparkKindly posts about some published

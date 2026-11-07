@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import ArticleBody from '@/components/item/ArticleBody';
 import Breadcrumb from '@/components/Breadcrumb';
 import ItemCard from '@/components/item/ItemCard';
+import MoneyDisclaimer, { showsMoneyDisclaimer } from '@/components/item/MoneyDisclaimer';
 import PlayPanel from '@/components/item/PlayPanel';
 import Picture from '@/components/Picture';
 import ReportLink from '@/components/item/ReportLink';
@@ -110,6 +111,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
           Published {formatDay(item.publishedAt)}
         </p>
         {article.ageGuidance && <p className="pill">{article.ageGuidance}</p>}
+        {showsMoneyDisclaimer(item.world) && <MoneyDisclaimer />}
       </div>
       {isArticle && (
         <div className="container article-media">

@@ -518,6 +518,25 @@ describe('child profile -> adults item denied on the public reads, through the s
       expect(seen).toContain('iso-adults-quiz');
     }
   });
+
+  it('Save world (plan 2026-11-07): an adults offer is denied to the child on detail, world list and search; a guide is not', async () => {
+    for (const [slug, audience] of [['iso-save-offer', 'adults'], ['iso-save-guide', 'all']]) {
+      await db.query(
+        `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, published_at, created_by, risk_tier, approved_by)
+         SELECT id, 'article', $1, 'Savingsquill ' || $1, 'A summary.', '{}'::jsonb, $2, 'published', '2026-10-31T00:00:00Z', 'test', 'sourced', 'test'
+         FROM worlds WHERE slug = 'save'`,
+        [slug, audience],
+      );
+    }
+    const asChild = await scopeForSession(db, child, T0);
+    expect(await getPublicItem(db, asChild, 'save', 'iso-save-offer')).toBeNull();
+    const childSees = [...slugs(await listPublic(db, asChild, { world: 'save', ...page })), ...slugs(await searchPublic(db, asChild, 'savingsquill', page))];
+    expect(childSees).not.toContain('iso-save-offer');
+    expect(childSees).toContain('iso-save-guide');
+    for (const token of [adult, undefined]) {
+      expect((await getPublicItem(db, await scopeForSession(db, token, T0), 'save', 'iso-save-offer'))?.slug).toBe('iso-save-offer');
+    }
+  });
 });
 
 describe('interests, saved answers and /me (plan 3D, Task 5)', () => {

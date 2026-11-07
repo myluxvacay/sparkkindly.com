@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MoneyDisclaimer, { showsMoneyDisclaimer } from '@/components/item/MoneyDisclaimer';
 import PlayPanel from '@/components/item/PlayPanel';
 import ShareButtons from '@/components/item/ShareButtons';
 import { isChildScope } from '@/lib/public/share';
@@ -29,6 +30,7 @@ export default async function QuizPage({ searchParams }: { searchParams: Promise
       <p>One question to stretch your thinking. Take your time.</p>
       {quiz ? (
         <>
+          {showsMoneyDisclaimer(quiz.world) && <MoneyDisclaimer />}
           <PlayPanel item={quiz} searchParams={await searchParams} />
           <ShareButtons item={quiz} childContext={isChildScope(scope)} />
         </>
