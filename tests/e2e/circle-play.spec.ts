@@ -17,6 +17,7 @@ let n = 0;
 const fresh = () => `e2e-play-${Date.now()}-${n++}@example.test`;
 
 const axe = async (page: Page) => {
+  await page.waitForFunction(() => document.title.trim().length > 0); // the title can stream in after the body
   const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
   return r.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
 };

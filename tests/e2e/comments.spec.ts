@@ -11,6 +11,7 @@ import { BASE, FORM, form, session, signInContext } from './helpers/admin';
 const OFF = 'http://localhost:4174';
 const hash = (t: string) => createHash('sha256').update(t).digest('hex');
 const axe = async (page: Page) => {
+  await page.waitForFunction(() => document.title.trim().length > 0); // the title can stream in after the body
   const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
   return r.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
 };

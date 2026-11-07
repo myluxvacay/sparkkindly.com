@@ -8,6 +8,7 @@ import { BASE, FORM, ORIGIN, OWNER, auditCount, codeFor, cookieHeader, csrfFor, 
 
 const PAGES = ['/admin/', '/admin/items/', '/admin/items/new/', '/admin/reports/', '/admin/worlds/', '/admin/topics/', '/admin/agents/', '/admin/runs/', '/admin/digest/', '/admin/circles/', '/admin/pilot/'];
 const axe = async (page: import('@playwright/test').Page) => {
+  await page.waitForFunction(() => document.title.trim().length > 0); // the title can stream in after the body
   const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
   return r.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
 };

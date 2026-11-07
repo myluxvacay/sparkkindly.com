@@ -40,6 +40,7 @@ const PAGES = [
 ];
 
 async function axe(page: Page) {
+  await page.waitForFunction(() => document.title.trim().length > 0); // the title can stream in after the body
   const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice']).analyze();
   return r.violations.map((v) => `${v.impact} ${v.id}: ${v.nodes.map((n) => n.target.join(' ')).join(' | ')}`);
 }
