@@ -2,7 +2,7 @@ import Link from 'next/link';
 import TrustPage from '@/components/TrustPage';
 import { metadata as seo } from '@/lib/seo';
 
-export const metadata = seo('About SparkKindly', 'A little curiosity. A little kindness.', '/about/');
+export const metadata = seo('About', 'A little curiosity. A little kindness.', '/about/');
 
 export default function Page() {
   return (

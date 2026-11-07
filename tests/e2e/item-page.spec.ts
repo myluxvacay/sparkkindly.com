@@ -24,7 +24,7 @@ test('the starter article keeps its canonical URL and a template og:image', asyn
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://sparkkindly.com/discover/a-day-in-shadows/');
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', /\/api\/template-image\/discover\/a-day-in-shadows\/$/);
   const release = process.env.SITE_RELEASE !== 'false';
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', release ? 'index, follow' : 'noindex, nofollow');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', release ? 'index, follow, max-image-preview:large' : 'noindex, nofollow');
   const types = (await page.locator('script[type="application/ld+json"]').allTextContents()).map((d) => JSON.parse(d)['@type']);
   expect(types).toEqual(expect.arrayContaining(['BreadcrumbList', 'Article']));
 });
