@@ -276,3 +276,13 @@ describe.skipIf(!hasBash)('rollback-to-static.sh', () => {
     }
   });
 });
+
+describe('static asset caching (SEO audit M5)', () => {
+  it('both app site blocks cache /images/* and /brand/* for a week, deferred past the proxied headers', () => {
+    for (const f of ['deploy/caddy/sparkkindly-public-app.caddy', 'deploy/caddy/sparkkindly-staging.caddy']) {
+      const text = read(f);
+      expect(text, f).toMatch(/^\s*@static path \/images\/\* \/brand\/\*$/m);
+      expect(text, f).toMatch(/header @static \{\s*Cache-Control "public, max-age=604800"\s*defer\s*\}/);
+    }
+  });
+});

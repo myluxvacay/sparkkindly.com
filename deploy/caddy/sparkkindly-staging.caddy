@@ -14,5 +14,11 @@ staging.sparkkindly.com {
         X-Frame-Options "DENY"
         -Server
     }
+    # Brand assets and the mock-up's images change rarely (SEO audit M5); deferred so the app's own header is replaced.
+    @static path /images/* /brand/*
+    header @static {
+        Cache-Control "public, max-age=604800"
+        defer
+    }
     reverse_proxy 127.0.0.1:3101
 }

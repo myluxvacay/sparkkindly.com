@@ -10,6 +10,12 @@ sparkkindly.com {
         X-Frame-Options "DENY"
         -Server
     }
+    # Brand assets and the mock-up's images change rarely (SEO audit M5); deferred so the app's own header is replaced.
+    @static path /images/* /brand/*
+    header @static {
+        Cache-Control "public, max-age=604800"
+        defer
+    }
     # If the app is down or restarting, show a plain page instead of Caddy's bare 502. Not verified with a real
     # `caddy validate` yet: switch-to-app.sh validates it on the VM before anything goes live.
     handle_errors {

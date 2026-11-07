@@ -1004,3 +1004,14 @@ the owner's numbers (P.1) is a one-line edit.
   logging the same week again replaces it. Effort is the average of the last 4 logged weeks, met under 2 hours.
 - Migration `013_operating_hours.sql` is additive. Rollback: `DROP TABLE operating_hours` and delete its
   `schema_migrations` row.
+
+## SEO
+
+- **Static asset caching (SEO audit M5).** `deploy/caddy/sparkkindly-public-app.caddy` and
+  `deploy/caddy/sparkkindly-staging.caddy` send `Cache-Control "public, max-age=604800"` (deferred, replacing the app's
+  header) for `/images/*` and `/brand/*`. The production snippet's pinned checksum in `deploy/cutover/switch-to-app.sh`
+  was updated with it. The live Caddy config is not changed by a deploy: after the change is merged, the owner installs
+  the updated snippet on the VM (for production through the cut-over script, for staging through
+  `deploy/provision/04-caddy-staging.sh`) and reloads Caddy (`sudo systemctl reload caddy`, after `caddy validate`).
+- **Sitemap.** One file at `/sitemap.xml` with up to 45,000 items (under the 50,000-URL limit; tested at the cap). When
+  the published item count nears that, split it into `generateSitemaps()` chunks with an index.
