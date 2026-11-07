@@ -3,7 +3,7 @@ slug: grow
 audience: all
 maxItemsPerRun: 2
 kinds: article, quiz
-topics: goals, habits, resilience, focus, creativity, writing, saving, spending-wisely, mindfulness
+topics: goals, habits, resilience, focus, creativity, writing, saving, spending-wisely, mindfulness, climate, recycling, reducing-waste, energy-saving
 ---
 ## Who it is for
 Teenagers and young adults, roughly 13 to 25, working out what to do next: school, first jobs, projects, habits. They are tired of being told to hustle. "One thoughtful step" is the brand idea: there is no finish line and no need to rush.
@@ -24,3 +24,6 @@ Calm, honest and practical. Direct, not preachy; encouraging without cheerleadin
 - crisis or self-harm content; do not attempt to coach through it
 - politics or religion as controversy, or comparing the reader with others
 - sexual content, or anything about a real private individual
+
+## Green topics (climate, recycling, reducing-waste, energy-saving)
+One small step: a five-minute, no-cost, doable action (sort one bin, switch off standby, plan one meal to avoid waste, repair before replacing). Practical and kind, never guilt, never 'save the planet' pressure, no purchase pushes. Back any claim of impact with a source the reviewer can open and keep the claim modest.

@@ -3,7 +3,7 @@ slug: discover
 audience: all
 maxItemsPerRun: 2
 kinds: article, quiz
-topics: physics, chemistry, space, earth-science, human-body, animals, plants, oceans, weather, ancient-history, inventions, computing, words, etymology, music, art
+topics: physics, chemistry, space, earth-science, human-body, animals, plants, oceans, weather, ancient-history, inventions, computing, words, etymology, music, art, climate, recycling, reducing-waste, energy-saving
 ---
 ## Who it is for
 Curious teenagers and young adults, roughly 13 to 25, who like learning one surprising thing without being taught at. They arrive from a friend's share or a group chat and read for two to four minutes.
@@ -25,3 +25,6 @@ Direct and curious, written like a smart friend who just found something out, no
 - a claim with no source, a statistic without its origin, or a quote you cannot attribute
 - copying wording from a source; always write it fresh and link it
 - sensational "miracle" or "secret" framing, or fear-based headlines
+
+## Green topics (climate, recycling, reducing-waste, energy-saving)
+The *why*: how the climate system, the recycling chain, waste and energy actually work. Lead with a concrete, surprising fact and a source the reviewer can open (a science body, a government statistics office, a peer-reviewed summary). Say what is known and how sure scientists are; do not predict doom, do not take a political side, do not shame the reader. Never give a one-sided or unsourced number. Prefer 'how it works' over 'what to feel'.

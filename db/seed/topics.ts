@@ -15,6 +15,7 @@ export const topicParents: Record<string, string> = {
   technology: 'Technology',
   kindness: 'Kindness',
   'play-and-games': 'Play and games',
+  green: 'Green',
 };
 
 export const topicChildren: Record<string, Record<string, string>> = {
@@ -32,6 +33,7 @@ export const topicChildren: Record<string, Record<string, string>> = {
   technology: { computing: 'Computing', 'internet-safety': 'Internet safety' },
   kindness: { gratitude: 'Gratitude', 'helping-others': 'Helping others' },
   'play-and-games': { 'word-games': 'Word games', 'brain-teasers': 'Brain teasers' },
+  green: { climate: 'Climate', recycling: 'Recycling', 'reducing-waste': 'Reducing waste', 'energy-saving': 'Saving energy' },
 };
 
 // Top-level topics with no parent.
