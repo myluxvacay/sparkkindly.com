@@ -111,11 +111,10 @@ describe('the contributor page', () => {
 });
 
 describe('JSON-LD', () => {
-  const item = { world: 'discover', slug: 'x', title: 'T', summary: 'S', publishedAt: NOW } as PublicItem;
-  it('adds author only for a contributed item and is unchanged otherwise', () => {
-    const base = articleLd(item, 'https://sparkkindly.com');
-    expect(base).not.toHaveProperty('author');
-    expect(Object.keys(base)).toEqual(['@context', '@type', 'headline', 'description', 'datePublished', 'mainEntityOfPage', 'image', 'publisher']);
+  const item = { world: 'discover', slug: 'x', title: 'T', summary: 'S', publishedAt: NOW, updatedAt: NOW } as PublicItem;
+  it('the author is the contributor (Person) only for a contributed item; otherwise SparkKindly (SEO audit M2)', () => {
+    const base = articleLd(item, 'https://sparkkindly.com') as Record<string, unknown>;
+    expect(base.author).toEqual({ '@type': 'Organization', name: 'SparkKindly', url: 'https://sparkkindly.com/' });
     const ld = articleLd(item, 'https://sparkkindly.com', { name: 'Ada', slug: 'abcdefghij' }) as Record<string, unknown>;
     expect(ld.author).toEqual({ '@type': 'Person', name: 'Ada', url: 'https://sparkkindly.com/contributors/abcdefghij/' });
   });

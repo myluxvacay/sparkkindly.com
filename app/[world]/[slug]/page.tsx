@@ -41,7 +41,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = `/${item.world}/${item.slug}/`;
   const image = { url: `/api/template-image/${item.world}/${item.slug}/`, width: 1200, height: 630, alt: item.title };
   const base = seo(item.title, item.summary, path);
-  return { ...base, openGraph: { ...base.openGraph, type: 'article', images: [image] }, twitter: { ...base.twitter, images: [image.url] } };
+  // SEO audit L2: article:published_time and article:modified_time.
+  const openGraph = {
+    ...base.openGraph,
+    type: 'article' as const,
+    images: [image],
+    publishedTime: item.publishedAt.toISOString(),
+    modifiedTime: item.updatedAt.toISOString(),
+  };
+  return { ...base, openGraph, twitter: { ...base.twitter, images: [image.url] } };
 }
 
 const KIND_EYEBROW: Record<string, string> = { article: 'ARTICLE', quiz: 'QUIZ', game: 'GAME' };
