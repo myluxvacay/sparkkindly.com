@@ -13,7 +13,7 @@ type Claim = { status: 'ok' | 'quiet' } | { status: 'claimed'; day: string; to: 
 // recorded (a fresh install must not alarm), or when nobody is on the allow-list. Claiming happens here, sending in
 // deliverHeartbeat, so runJob can retry a failed send without re-alerting.
 export async function claimHeartbeat(db: Queryable, now: Date, env: EnvLike): Promise<Claim> {
-  const master = await db.query("SELECT 1 FROM agents WHERE world_id IS NULL AND enabled LIMIT 1");
+  const master = await db.query("SELECT 1 FROM agents WHERE role = 'content' AND world_id IS NULL AND enabled LIMIT 1");
   if (!master.rows.length) return { status: 'quiet' };
   const last = await latestRun(db);
   if (!last) return { status: 'quiet' };

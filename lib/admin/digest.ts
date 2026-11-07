@@ -52,7 +52,7 @@ export async function buildDigest(db: Queryable, now: Date): Promise<Digest> {
     [at],
   );
   const reports = await db.query<{ n: string }>("SELECT count(*) AS n FROM problem_reports WHERE status = 'open'");
-  const agents = await db.query<{ n: string }>('SELECT count(*) AS n FROM agents WHERE last_run_at > $1::timestamptz', [
+  const agents = await db.query<{ n: string }>("SELECT count(*) AS n FROM agents WHERE role = 'content' AND last_run_at > $1::timestamptz", [
     new Date(now.getTime() - 3 * DAY).toISOString(),
   ]);
 

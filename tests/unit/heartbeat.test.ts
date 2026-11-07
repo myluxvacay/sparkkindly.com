@@ -62,6 +62,22 @@ describe('claimHeartbeat', () => {
     expect(await claimHeartbeat(db, NOW, env)).toEqual({ status: 'quiet' });
   });
 
+  it('a disabled content master with an enabled moderation agent is quiet: only a content agent is a master', async () => {
+    await runEndedAt(hoursAgo(80));
+    await db.query("UPDATE agents SET enabled = false WHERE name = 'master'");
+    await createAgent(db, 'moderator', null, 'moderation');
+    await createAgent(db, 'promoter', null, 'promoter');
+    expect(await claimHeartbeat(db, NOW, env)).toEqual({ status: 'quiet' });
+  });
+
+  it('an active moderation or promoter agent does not hide a silent content master', async () => {
+    await runEndedAt(hoursAgo(80));
+    await createAgent(db, 'moderator', null, 'moderation');
+    await createAgent(db, 'promoter', null, 'promoter');
+    await db.query("UPDATE agents SET last_run_at = $1 WHERE role <> 'content'", [hoursAgo(1)]);
+    expect(await claimHeartbeat(db, NOW, env)).toMatchObject({ status: 'claimed' });
+  });
+
   it('is quiet with nobody on the allow-list, and does not use up the day', async () => {
     await runEndedAt(hoursAgo(80));
     expect(await claimHeartbeat(db, NOW, {})).toEqual({ status: 'quiet' });

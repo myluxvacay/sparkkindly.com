@@ -76,6 +76,27 @@ describe('key age alert', () => {
   });
 });
 
+describe('agent silence alert', () => {
+  it('counts only content agents: an active moderation or promoter agent does not hide a silent content agent', async () => {
+    const recent = hoursAgo(2).toISOString();
+    const old = hoursAgo(24 * 5).toISOString();
+    await db.query(
+      `INSERT INTO agents (name, key_prefix, key_hash, role, last_run_at, key_rotated_at) VALUES
+       ('silent-content', 'cccccccc', 'h1', 'content', $1, $3),
+       ('busy-moderator', 'mmmmmmmm', 'h2', 'moderation', $2, $3),
+       ('busy-promoter', 'pppppppp', 'h3', 'promoter', $2, $3)`,
+      [old, recent, NOW.toISOString()],
+    );
+    try {
+      expect((await buildDigest(db, NOW)).alerts.join(' ')).toMatch(/No agent has run in 3 days/);
+      await db.query("UPDATE agents SET last_run_at = $1 WHERE name = 'silent-content'", [recent]);
+      expect((await buildDigest(db, NOW)).alerts.join(' ')).not.toMatch(/No agent has run/);
+    } finally {
+      await db.query("DELETE FROM agents WHERE name IN ('silent-content', 'busy-moderator', 'busy-promoter')");
+    }
+  });
+});
+
 describe('renderDigest', () => {
   it('is plain text naming each section, and treats titles as data', async () => {
     const d = await buildDigest(db, NOW);
