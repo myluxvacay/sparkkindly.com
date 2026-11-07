@@ -1,6 +1,7 @@
 import type { Queryable } from '@/lib/db';
 import { PUBLIC_SELECT, toPublic, type PublicItem } from '@/lib/items/repo';
 import type { Scope } from './scope';
+import { SITEMAP_MAX_ITEMS } from './sitemap';
 
 type Row = Record<string, unknown>;
 type Page = { limit: number; offset: number };
@@ -110,7 +111,7 @@ export async function searchPublic(db: Queryable, scope: Scope, q: string, page:
   return r.rows.map(toPublic);
 }
 
-const SITEMAP_LIMIT = 5000;
+const SITEMAP_LIMIT = SITEMAP_MAX_ITEMS;
 
 // Everything the sitemap may list, under the same VISIBLE predicate as every other read: item locations with their
 // last change, and the topics that have at least one visible item.

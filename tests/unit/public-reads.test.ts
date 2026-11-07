@@ -193,6 +193,19 @@ describe('sitemapRows', () => {
     for (const s of [draft, script, hiddenWorld]) expect(got, s).not.toContain(s);
     expect((await sitemapRows(db, none)).items).toEqual([]);
   });
+
+  it('SEO audit M4: lists more than the old 5,000-item cap', async () => {
+    await db.query(
+      `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, published_at, created_by, risk_tier, approved_by)
+       SELECT w.id, 'article', 'bulk-' || g, 'Bulk', 'A bulk summary.', '{}'::jsonb, 'all', 'published', '2026-01-01T00:00:00Z', 'test', 'computable', 'test'
+       FROM worlds w, generate_series(1, 5001) g WHERE w.slug = 'grow'`,
+    );
+    try {
+      expect((await sitemapRows(db, anon)).items.length).toBeGreaterThan(5001);
+    } finally {
+      await db.query("DELETE FROM items WHERE slug LIKE 'bulk-%'");
+    }
+  });
 });
 
 describe('search', () => {
