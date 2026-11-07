@@ -151,6 +151,11 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 - [ ] 8.8 **[owner]** Decide whether contributors are ever paid — *recorded.* (the terms say unpaid; owner decision open)
 - [ ] 8.9 Done-when: submission with a missing source is flagged, fixed, approved from the shared queue, published with byline and contributor page, and the contributor is emailed.
 
+## Save world (owner decision, 7 November 2026)
+
+- [x] S.1 World definition, data and copy: `save` row (migration 033, after Grow, Kids stays last), config copy, brand enum, money topics, goals file `agents/worlds/save.md`, counts of worlds no longer hard-coded — *`save-world.test.ts`, `import-legacy.test.ts`, `agent-formats.test.ts`.* Plan `2026-11-07-save-world.md`.
+- [ ] S.2 Disclaimer on every Save page, offer rules (offers are `adults` articles; links only from an owner sponsorship), agent files and e2e `save.spec.ts`.
+
 ---
 
 ## Standing owner actions (not tied to one project)

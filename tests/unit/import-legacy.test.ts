@@ -21,12 +21,12 @@ afterAll(async () => {
 });
 
 describe('seedReference', () => {
-  it('creates five worlds with Kids in review mode and the rest on auto', async () => {
+  it('creates six worlds with Kids last and in review mode and the rest on auto', async () => {
     await seedReference(db);
     const r = await db.query<{ slug: string; approval_mode: string }>('SELECT slug, approval_mode FROM worlds ORDER BY sort');
-    expect(r.rows.map((w) => w.slug)).toEqual(['play', 'discover', 'together', 'grow', 'kids']);
+    expect(r.rows.map((w) => w.slug)).toEqual(['play', 'discover', 'together', 'grow', 'save', 'kids']);
     expect(r.rows.find((w) => w.slug === 'kids')?.approval_mode).toBe('review');
-    expect(r.rows.filter((w) => w.approval_mode === 'auto')).toHaveLength(4);
+    expect(r.rows.filter((w) => w.approval_mode === 'auto')).toHaveLength(5);
   });
 
   it('is idempotent and does not overwrite an owner change', async () => {

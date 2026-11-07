@@ -15,7 +15,7 @@ Items marked **[owner decision]** still need the owner's answer. Items marked
 ## 1. What we are building and why
 
 SparkKindly is a site for all ages. It brings people a little daily curiosity
-and kindness through five "worlds":
+and kindness through six "worlds":
 
 | World | Who it is for | What it offers |
 | --- | --- | --- |
@@ -23,9 +23,19 @@ and kindness through five "worlds":
 | Discover | everyone | general knowledge, science, the world |
 | Together | couples, families, friends | relationships and connection |
 | Grow | everyone | motivation and personal growth |
+| Save | everyone 13 and over | everyday money skills: guides, quizzes and curated offers |
 | Kids | children about 6–9, with an adult | learning and discovery for children |
 
 New worlds (for example Travel) will be added over time.
+
+**Save world (owner decision, 7 November 2026):** the five worlds become six. Save sits after Grow and before
+Kids (Kids stays last) and offers general money-skills guides and quizzes for everyone 13 and over (audience
+`all`, never a sponsor line) plus curated offers: "how this offer works" explainers rated `adults` that may carry
+an owner-attached affiliate sponsorship (Project 6 rules: disclosure, excluded categories, `ends_on`, never to
+under-18s or child profiles). Education only, never personal financial advice: every Save page shows "General
+information, not financial advice. Check the details with the provider before you decide." Item text carries no
+time-dependent facts (prices, rates, end dates). Save is never rated `kids`; comments follow the default (on).
+Plan: `docs/superpowers/plans/2026-11-07-save-world.md`.
 
 **The problem today.** The live site at https://sparkkindly.com is a mock-up
 built to show the look and feel. It has 10 hand-written articles and 14 quiz

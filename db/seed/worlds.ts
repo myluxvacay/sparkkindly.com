@@ -11,8 +11,9 @@ export type WorldSeed = {
   approvalMode: 'auto' | 'review';
 };
 
-// The five launch worlds, taken from the brand kit. Kids starts in review mode: nothing for children goes out
-// unreviewed. Later worlds (for example Travel) are added in /admin, not here.
+// The worlds from the brand kit (the five launch worlds plus Save, which migration 033 also adds to existing
+// databases). Kids starts in review mode: nothing for children goes out unreviewed. Later worlds (for example Travel)
+// are added in /admin, not here.
 export const worldSeeds: WorldSeed[] = Object.entries(brands).map(([slug, b], i) => ({
   slug,
   name: b.name,

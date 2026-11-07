@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { brands, isBrand } from '@/lib/config';
 import type { World } from '@/lib/public/worlds';
 
-// The five launch worlds keep their written blurb; any other world uses its stored description.
+// Worlds defined in lib/config.ts keep their written blurb; any other world uses its stored description.
 export default function BrandCard({ world, index }: { world: World; index: number }) {
   const blurb = isBrand(world.slug) ? brands[world.slug].short : (world.description ?? '');
   return (

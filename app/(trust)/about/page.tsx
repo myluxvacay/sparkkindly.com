@@ -2,7 +2,7 @@ import Link from 'next/link';
 import TrustPage from '@/components/TrustPage';
 import { metadata as seo } from '@/lib/seo';
 
-export const metadata = seo('About', 'Why SparkKindly exists, its five worlds of quizzes, games and short reads, who writes the content, how it is checked and how to tell us something is wrong.', '/about/');
+export const metadata = seo('About', 'Why SparkKindly exists, its worlds of quizzes, games and short reads, who writes the content, how it is checked and how to tell us something is wrong.', '/about/');
 
 export default function Page() {
   return (
@@ -19,9 +19,9 @@ export default function Page() {
           ],
         },
         {
-          heading: 'Five worlds to explore',
+          heading: 'Six worlds to explore',
           paragraphs: [
-            'Play offers puzzles with explained answers. Discover follows questions about the world. Together shares fictional stories and everyday ideas for connection. Grow offers optional reflection. Kids is a separate destination for ages 6 to 9, to explore with an adult.',
+            'Play offers puzzles with explained answers. Discover follows questions about the world. Together shares fictional stories and everyday ideas for connection. Grow offers optional reflection. Save explains everyday money skills for everyone 13 and over; it is general information, not financial advice. Kids is a separate destination for ages 6 to 9, to explore with an adult.',
           ],
         },
         {

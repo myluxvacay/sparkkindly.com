@@ -33,7 +33,7 @@ async function addFixtures() {
 
 const TRUST = ['/about/', '/editorial-policy/', '/privacy/', '/terms/', '/accessibility/', '/contact/'];
 const PAGES = [
-  '/', '/play/', '/discover/', '/together/', '/grow/', '/kids/', '/kids/shadow-explorers/', '/discover/a-day-in-shadows/',
+  '/', '/play/', '/discover/', '/together/', '/grow/', '/save/', '/kids/', '/kids/shadow-explorers/', '/discover/a-day-in-shadows/',
   '/play/number-detective-001/', '/quiz/', '/quiz/archive/', '/search/', '/search/?q=shadows', '/search/?q=zzzzqqqq',
   '/topics/e2e-signoff/', '/report/discover/a-day-in-shadows/', '/report/discover/a-day-in-shadows/?error=1#result', ...TRUST,
   '/play/sg-mc/', '/play/sg-order/', '/play/sg-clue/', '/no-such-world/no-such-item/',

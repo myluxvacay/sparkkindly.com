@@ -1,5 +1,5 @@
 // @vitest-environment node
-// Circle interests (plan 4C Task 1): the owner picks up to 10 topics and 5 worlds; ids must exist; members read them.
+// Circle interests (plan 4C Task 1): the owner picks up to 10 topics and 6 worlds; ids must exist; members read them.
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { adult, circleOf, fixtures, join, type Fixtures } from '../helpers/circle-play';
@@ -54,7 +54,7 @@ describe('setCircleInterests', () => {
       { worldIds: ['1'], topicIds: [] },
       { worldIds: [1.5], topicIds: [] },
       { worldIds: null, topicIds: [] },
-      { worldIds: [1, 2, 3, 4, 5, 6], topicIds: [] },
+      { worldIds: [1, 2, 3, 4, 5, 6, 7], topicIds: [] },
       { worldIds: [], topicIds: Array.from({ length: 11 }, (_, i) => i + 1) },
     ];
     for (const input of bad) expect(await setCircleInterests(db, owner, slug, input), JSON.stringify(input)).toBe('invalid');

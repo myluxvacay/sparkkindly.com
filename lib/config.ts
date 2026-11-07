@@ -29,6 +29,7 @@ export const brands = {
   discover: { name: 'Discover', promise: 'Explore the world with wonder.', description: 'Follow a question somewhere unexpected. Look a little closer at the extraordinary in the everyday.', short: 'Big wonders, hiding in plain sight.', icon: '◎', color: 'sage' },
   together: { name: 'Together', promise: 'Small acts. Stronger connections.', description: 'Stories and simple ideas for showing up, paying attention, and making someone’s day a little brighter.', short: 'Small moments. A little more connection.', icon: '⌘', color: 'coral' },
   grow: { name: 'Grow', promise: 'Take one thoughtful step.', description: 'Pause, reflect, and find your next small step. There is no finish line and no need to rush.', short: 'Make space for your next small step.', icon: '↗', color: 'sage' },
+  save: { name: 'Save', promise: 'Spend smart. Keep more.', description: 'Everyday money skills for everyone 13 and over: budgeting, saving and reading an offer before you sign up.', short: 'Money skills, one small habit at a time.', icon: '◇', color: 'sky' },
   kids: { name: 'Kids', promise: 'Wonder, learn and be kind.', description: 'Simple discoveries for ages 6–9, with an adult alongside. A little screen time, a lot of real-world wonder.', short: 'Little discoveries, shared with a grown-up.', icon: '☀', color: 'gold' },
 } as const;
 export type Brand = keyof typeof brands;

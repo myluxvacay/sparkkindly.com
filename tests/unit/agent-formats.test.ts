@@ -52,11 +52,11 @@ describe('the goals files in agents/worlds', () => {
   const files = readdirSync(dir).filter((f) => f.endsWith('.md'));
   const topics = new Set([...Object.keys(topicParents), ...Object.keys(topicRoots), ...Object.values(topicChildren).flatMap((c) => Object.keys(c))]);
 
-  it('covers the five worlds', () => {
-    expect(files.sort()).toEqual(['discover.md', 'grow.md', 'kids.md', 'play.md', 'together.md']);
+  it('covers the six worlds', () => {
+    expect(files.sort()).toEqual(['discover.md', 'grow.md', 'kids.md', 'play.md', 'save.md', 'together.md']);
   });
 
-  it.each(['discover', 'grow', 'kids', 'play', 'together'])('%s parses and only names real kinds and topics', (slug) => {
+  it.each(['discover', 'grow', 'kids', 'play', 'save', 'together'])('%s parses and only names real kinds and topics', (slug) => {
     const g = parseGoals(readFileSync(path.join(dir, `${slug}.md`), 'utf8'));
     expect(g.slug).toBe(slug);
     for (const k of g.kinds) expect(supportedKinds as readonly string[]).toContain(k);
@@ -64,6 +64,7 @@ describe('the goals files in agents/worlds', () => {
     expect(g.never.length).toBeGreaterThanOrEqual(5);
     if (slug === 'kids') expect(g.audience).toBe('kids');
     else expect(g.audience).not.toBe('kids');
+    if (slug === 'save') expect(g.audience).toBe('all');
   });
 });
 

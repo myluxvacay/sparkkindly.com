@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { site } from './config';
 
-const BANNER_ALT = 'SparkKindly — Think sharp. Be kind. Five worlds: Play, Discover, Together, Grow and Kids.';
+const BANNER_ALT = 'SparkKindly — Think sharp. Be kind. Brand artwork for Play, Discover, Together, Grow and Kids.';
 
 // absoluteTitle: the title is used as is, without the layout's "%s | SparkKindly" template (the home page, SEO audit H2).
 export type SeoOptions = { absoluteTitle?: boolean };

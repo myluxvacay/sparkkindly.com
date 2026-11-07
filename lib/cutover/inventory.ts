@@ -5,7 +5,7 @@ export type Entry = { path: string; status: 200 | 308; location?: string };
 const WORLDS = ['play', 'discover', 'together', 'grow', 'kids'];
 const STATIC = ['/', '/quiz/', '/quiz/archive/', '/about/', '/editorial-policy/', '/privacy/', '/accessibility/', '/contact/'];
 // Pages the new app adds. They are checked too, but they are not part of "the old site still works".
-const NEW_PAGES = ['/terms/', '/search/'];
+const NEW_PAGES = ['/terms/', '/search/', '/save/'];
 
 export function buildInventory(articles: { brand: string; slug: string }[], quizzes: { id: string; brand: string }[]): Entry[] {
   const ok = (path: string): Entry => ({ path, status: 200 });

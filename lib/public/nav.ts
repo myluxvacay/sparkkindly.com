@@ -7,7 +7,7 @@ const launchWorlds = (): World[] =>
     slug, name: b.name, promise: b.promise, description: b.description, icon: b.icon, color: b.color, sort,
   }));
 
-// The worlds for the header, footer and home page. If the database is unreachable the five launch worlds keep navigation
+// The worlds for the header, footer and home page. If the database is unreachable the launch worlds in config keep navigation
 // working; the page's own read then fails and shows the error page.
 export async function navWorlds(): Promise<World[]> {
   try {
@@ -17,3 +17,7 @@ export async function navWorlds(): Promise<World[]> {
     return launchWorlds();
   }
 }
+
+// "Six worlds", "five worlds"...: the home page counts the enabled worlds instead of hard-coding the number.
+const WORDS = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+export const worldCountWords = (n: number): string => `${WORDS[n] ?? n} world${n === 1 ? '' : 's'}`;

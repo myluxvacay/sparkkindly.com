@@ -99,7 +99,7 @@ previous release must still run on the newer schema; a migration may only drop s
 `contract` (a test enforces this). By hand on the VM, as the staging user:
 `cd /opt/sparkkindly-staging/current && set -a && . /opt/sparkkindly/shared/staging.env && set +a && /opt/sparkkindly/node/bin/node db/migrate.mjs`.
 
-**Starter content (staging only).** `npm run content:import` seeds the five worlds and the curated topics and imports the
+**Starter content (staging only).** `npm run content:import` seeds the worlds (six, with Save) and the curated topics and imports the
 10 articles and 14 quizzes, with answers stored apart. It is idempotent and **refuses the production database** unless
 given `--allow-production`, which is a cut-over step that needs a verified backup first. Run it through a temporary SSH
 tunnel (`ssh -N -L 55432:127.0.0.1:5432 root@2.25.121.2`) with `DATABASE_URL` built from
@@ -267,7 +267,7 @@ worker timers are not installed (`03-services.sh`), no authenticator is enrolled
 ## Content agents (Project 2)
 
 What runs: Windows Task Scheduler on the owner's machine starts `scripts/scheduler/run-daily.ps1` three times a day
-(play and discover 08:00, together and grow 13:00, kids 18:00, local time). Each run calls `claude -p "/daily-run env=<env>
+(play and discover 08:00, together, grow and save 13:00, kids 18:00, local time). Each run calls `claude -p "/daily-run env=<env>
 worlds=<list>"`. The master command (`.claude/commands/daily-run.md`) reads each world's brief, starts a world agent
 (`.claude/agents/sparkkindly-world-agent.md`, goals in `agents/worlds/<slug>.md`), sends **every** draft to the reviewer
 (`.claude/agents/sparkkindly-reviewer.md`, web tools only, cannot submit), submits passes, and records the run with
@@ -499,7 +499,7 @@ If no run is recorded for 36 hours the worker emails the admin list.
 
 - **Flags.** Same as circles: `ACCOUNTS_ENABLED` and `CIRCLES_ENABLED`. With either unset `/circles/<slug>/set/`,
   `/scores/`, `/interests/` and the interests POST are 404s.
-- **Interests.** The owner of an open circle picks up to 10 topics and 5 worlds (`/circles/<slug>/interests/`; ids are
+- **Interests.** The owner of an open circle picks up to 10 topics and 6 worlds (`/circles/<slug>/interests/`; ids are
   checked against existing topics and enabled worlds). Members see them read-only; a child profile is sent to its
   "Playing as" page.
 - **The daily set** (`lib/circles/daily-set.ts`). Up to 5 playable items per circle day: published quizzes and games with

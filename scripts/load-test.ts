@@ -12,7 +12,7 @@
 import { checkTarget, parseBound } from '../lib/cutover/guard';
 
 const PATHS = [
-  '/', '/play/', '/discover/', '/together/', '/grow/', '/kids/', '/quiz/', '/quiz/archive/', '/search/?q=shadows',
+  '/', '/play/', '/discover/', '/together/', '/grow/', '/save/', '/kids/', '/quiz/', '/quiz/archive/', '/search/?q=shadows',
   '/discover/a-day-in-shadows/', '/play/number-detective-001/', '/about/', '/privacy/',
 ];
 

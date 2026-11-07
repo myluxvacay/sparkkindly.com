@@ -4,11 +4,12 @@ import { addItem, addTopic, addWorld, resetExtras, setWorldEnabled } from './hel
 test.beforeEach(resetExtras);
 test.afterAll(resetExtras);
 
-test('home lists the five worlds and shows a new database item without a rebuild', async ({ page }) => {
+test('home lists the six worlds with Kids last and shows a new database item without a rebuild', async ({ page }) => {
   await page.goto('/', { waitUntil: 'networkidle' });
-  for (const w of ['Play', 'Discover', 'Together', 'Grow', 'Kids']) {
-    await expect(page.locator('.world-grid').getByRole('heading', { name: w, exact: true })).toBeVisible();
-  }
+  const order = ['Play', 'Discover', 'Together', 'Grow', 'Save', 'Kids'];
+  await expect(page.locator('.world-grid h3')).toHaveText(order);
+  await expect(page.getByText('SIX WORLDS. ONE SHARED SPARK.')).toBeVisible();
+  await expect(page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Save', exact: true })).toHaveAttribute('href', '/save/');
   await addItem({ world: 'discover', slug: 'home-fixture', title: 'Fresh from the database' });
   await page.goto('/');
   await expect(page.getByRole('heading', { name: 'Fresh from the database' })).toBeVisible();

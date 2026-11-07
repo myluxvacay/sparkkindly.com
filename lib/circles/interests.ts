@@ -7,7 +7,7 @@ import { isUuid } from '@/lib/accounts/pin';
 import { asOwner } from './owner';
 import { isSlug, myRole } from './repo';
 
-export const INTEREST_LIMITS = { topics: 10, worlds: 5 } as const;
+export const INTEREST_LIMITS = { topics: 10, worlds: 6 } as const;
 export type CircleInterests = { worldIds: number[]; topicIds: number[] };
 export type SaveResult = 'saved' | 'not_owner' | 'invalid' | 'closed';
 

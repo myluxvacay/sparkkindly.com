@@ -22,6 +22,7 @@ describe('buildInventory', () => {
 
   it('adds the new trust page and has no duplicate paths', () => {
     expect(by('/terms/')?.status).toBe(200);
+    expect(by('/save/')?.status).toBe(200);
     expect(new Set(inv.map((e) => e.path)).size).toBe(inv.length);
   });
 });

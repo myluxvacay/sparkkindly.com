@@ -3,7 +3,7 @@
 export const PLUM = '#5b2c6f';
 export const INK = '#302438';
 export const CREAM = '#fff7eb';
-const HEX: Record<string, string> = { gold: '#f7c948', sage: '#6ea99f', coral: '#ff7a7a' };
+const HEX: Record<string, string> = { gold: '#f7c948', sage: '#6ea99f', coral: '#ff7a7a', sky: '#5b8fc9' };
 
 export const worldHex = (colorKey: string): string => HEX[colorKey] ?? PLUM;
 
