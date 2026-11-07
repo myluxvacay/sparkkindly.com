@@ -26,9 +26,22 @@ describe('trust page descriptions', () => {
   it.each(PAGES)('%s: 70 to 160 characters', async (file) => {
     vi.stubEnv('ACCOUNTS_ENABLED', 'true');
     vi.stubEnv('COMMENTS_ENABLED', 'true');
+    vi.stubEnv('CONTRIBUTORS_ENABLED', 'true');
+    vi.stubEnv('SPONSORSHIP_ENABLED', 'true');
     const d = await descriptionOf(file);
     expect(d.length, d).toBeGreaterThanOrEqual(70);
     expect(d.length, d).toBeLessThanOrEqual(160);
+  });
+});
+
+describe('flag-off pages carry no page metadata (SEO audit L4)', () => {
+  it.each(['app/community/guidelines/page', 'app/contributors/terms/page', 'app/sponsorship/page'])('%s', async (file) => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('COMMENTS_ENABLED', '');
+    vi.stubEnv('CONTRIBUTORS_ENABLED', '');
+    vi.stubEnv('SPONSORSHIP_ENABLED', '');
+    const mod = (await import(`@/${file}`)) as { generateMetadata: () => Promise<Metadata> };
+    expect(await mod.generateMetadata()).toEqual({});
   });
 });
 

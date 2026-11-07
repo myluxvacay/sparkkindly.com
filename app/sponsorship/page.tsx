@@ -4,7 +4,10 @@ import { sponsorshipEnabled } from '@/lib/config';
 import { metadata as seo } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
-export const metadata = seo('How sponsorship works', 'How sponsorship works on SparkKindly: what a sponsor line looks like, who never sees one, why sponsors have no say in what we publish, and what we count.', '/sponsorship/');
+// With the flag off the 404 carries no metadata of this page (SEO audit L4).
+export async function generateMetadata() {
+  return sponsorshipEnabled() ? seo('How sponsorship works', 'How sponsorship works on SparkKindly: what a sponsor line looks like, who never sees one, why sponsors have no say in what we publish, and what we count.', '/sponsorship/') : {};
+}
 
 // Plan 6: the disclosure page every sponsor line links to. With the flag off the page does not exist.
 export default function Page() {

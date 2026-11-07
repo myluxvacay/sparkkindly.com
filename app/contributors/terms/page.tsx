@@ -4,7 +4,10 @@ import { contributorsEnabled } from '@/lib/config';
 import { metadata as seo } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
-export const metadata = seo('Contributor terms', 'The terms for writing for SparkKindly: who can contribute, keeping your copyright, how a piece is reviewed, payment and sponsorship, and withdrawing a piece.', '/contributors/terms/');
+// With the flag off the 404 carries no metadata of this page (SEO audit L4).
+export async function generateMetadata() {
+  return contributorsEnabled() ? seo('Contributor terms', 'The terms for writing for SparkKindly: who can contribute, keeping your copyright, how a piece is reviewed, payment and sponsorship, and withdrawing a piece.', '/contributors/terms/') : {};
+}
 
 // Plan 8. Draft written by the builder, not by a lawyer; payment is an open owner decision (spec Project 8). With the
 // flag off the page does not exist.
