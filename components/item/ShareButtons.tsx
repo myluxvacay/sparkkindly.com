@@ -1,6 +1,7 @@
 import { site } from '@/lib/config';
 import { shareLinks, shareText, shareUrl, type ShareInput } from '@/lib/public/share';
 import ShareClient from './ShareClient';
+import ShareIcon from './ShareIcon';
 
 // "Share this" under an item (owner request). Plain anchors that work without JavaScript; the island adds the device
 // share and copy buttons. childContext: a child profile, or a scope without adults (a failed lookup fails closed).
@@ -19,6 +20,7 @@ export default function ShareButtons({ item, childContext }: { item: ShareInput;
                 rel="noopener noreferrer"
                 {...(l.href.startsWith('https:') ? { target: '_blank' } : {})}
               >
+                <ShareIcon id={l.id} />
                 {l.label}
               </a>
             </li>

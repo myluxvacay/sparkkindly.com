@@ -37,3 +37,25 @@ textarea:focus-visible,select:focus-visible,[tabindex="-1"]:focus-visible{outlin
 .comment-body { white-space: pre-wrap; overflow-wrap: anywhere; }
 .comment-status { font-style: italic; }
 .topic-links ul{list-style:none;padding:0;margin:30px 0 10px;display:flex;flex-wrap:wrap;gap:10px}.topic-links li{margin:0}.topic-links a{min-height:44px;display:inline-flex;align-items:center;font-size:12px;letter-spacing:.5px;padding:8px 16px;text-decoration:none}.topic-links a:hover{text-decoration:underline}.topic-index{columns:3 240px;margin-top:30px}.topic-index li{min-height:44px;break-inside:avoid}.topic-index a{display:inline-flex;align-items:center;min-height:44px}.share-buttons{padding-block:10px 30px}.share-buttons h2{font-size:26px;margin-bottom:16px}.share-buttons ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}.share-buttons li{margin:0}.share-buttons a{min-height:44px;min-width:44px;display:inline-flex;align-items:center;padding:8px 16px;border:1px solid var(--line);border-radius:5px;font-size:14px;text-decoration:none}.share-buttons a:hover{text-decoration:underline}.share-client{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}.share-client .button{min-height:44px;gap:8px}.share-client p{margin:0;flex-basis:100%}
+/* Compact spacing, share icons, header sign-in, circles feature (owner request, 7 Nov 2026) */
+.section{padding-block:56px}
+.article-heading{padding-block:32px 20px}
+.share-buttons{padding-block:4px 16px}
+.share-buttons h2{font-size:20px;margin-bottom:10px}
+.share-buttons ul{gap:8px}
+.share-buttons a,.share-client .button{min-height:44px;gap:8px;padding:8px 14px;font-size:13px;border-radius:999px;background:#fff;color:var(--plum);border:1px solid var(--line)}
+.share-client .button{font-weight:500}
+.share-buttons a:hover,.share-client .button:hover{background:#f3ecf5;border-color:var(--plum)}
+.share-icon{flex-shrink:0}
+.share-client{margin-bottom:8px}
+.header-signin{white-space:nowrap;font-size:14px;font-weight:500;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;padding-inline:4px;color:var(--plum)}
+.header-signin:hover{text-decoration:underline}
+.circles-feature{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center;background:#eef5f2;border:1px solid #d5e5df;border-radius:7px;padding:36px 44px}
+.circles-feature h2{font-size:34px;margin-bottom:12px}
+.circles-feature p{font-size:14px;color:#4f5a56;margin-bottom:16px}
+.circles-points{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.circles-points li{margin:0;padding:14px 16px;background:#fff;border:1px solid #d5e5df;border-radius:6px;font-size:13px;color:#4f5a56}
+.circles-points strong{display:block;font-size:15px;color:var(--plum);margin-bottom:2px}
+@media(max-width:800px){.section{padding-block:40px}.circles-feature{grid-template-columns:1fr;padding:26px 22px;gap:22px}.circles-feature h2{font-size:28px}.header-signin{margin-left:auto;margin-right:8px;order:2}.menu-toggle{order:3}}
+@media(max-width:700px){.content-card .image-link{display:none}.card-meta{margin:6px 0 8px}.content-card h3{font-size:22px;margin-bottom:6px}.content-grid{gap:20px}}
+@media(max-width:580px){.section{padding-block:32px}.share-buttons a,.share-client .button{padding:8px 12px}}

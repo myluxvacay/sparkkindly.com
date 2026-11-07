@@ -1,5 +1,6 @@
 'use client';
 import { useState, useSyncExternalStore } from 'react';
+import ShareIcon from './ShareIcon';
 
 // The progressive part of "Share this": a device share button (only where navigator.share exists) and a copy-link
 // button with a polite confirmation. Renders nothing until JavaScript runs, so the no-JS page keeps only the plain
@@ -23,12 +24,14 @@ export default function ShareClient({ url, title, text }: { url: string; title: 
   return (
     <div className="share-client">
       {canShare && (
-        <button type="button" className="button" onClick={share}>
+        <button type="button" className="button share-btn" onClick={share}>
+          <ShareIcon id="share" />
           Share…
         </button>
       )}
       {typeof navigator.clipboard?.writeText === 'function' && (
-        <button type="button" className="button" onClick={copy}>
+        <button type="button" className="button share-btn" onClick={copy}>
+          <ShareIcon id="copy" />
           Copy link
         </button>
       )}
