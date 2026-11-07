@@ -24,7 +24,7 @@ You **never write content yourself**. World agents draft, the reviewer judges, y
 
 Optional argument `bulk=<n>` (default off; **refuse it for `env=prod`**; n at most 50). It fills staging with enough content to see the site under load. Everything else above still applies: every item is reviewed, nothing loosens a gate, Kids items still stop at `in_review`.
 
-- Split n across the requested worlds weighted to Play and Discover. For n=50 and all five worlds: play 15, discover 15, together 8, grow 8, kids 4. These replace `maxItemsPerRun` for this run only.
+- Split n across the requested worlds weighted to Play and Discover. For n=50 and all six worlds: play 13, discover 13, together 7, grow 7, save 7, kids 3 (scale the same way for fewer worlds). These replace `maxItemsPerRun` for this run only.
 - Do **not** skip a world because it already has `bufferDays` scheduled (step 2); scheduling stays one slot per world per day, so the dates simply extend further ahead.
 - Start several `sparkkindly-world-agent` calls per world, each with `count` at most 5, in parallel. Give every call a disjoint set of topic slugs from the brief (and tell it the topics the sibling calls hold) so the parallel drafts cannot repeat a premise.
 - Reviewers, one retry and `sparkkindly_record_run` work exactly as in steps 4 to 10. Stop starting new work on a usage limit and record `rateLimited`.

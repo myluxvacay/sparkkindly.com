@@ -14,7 +14,7 @@
 
 ## Global Constraints
 
-- **Audience rulings:** Save guides and quizzes are audience `all` (open to teens and anonymous visitors; never a sponsor line). Offer articles are audience `adults` (never to a child profile or under-18; sponsor line only for anonymous visitors and 18+ per the existing rules). Save is never rated `kids`. Child profiles see no Save item rated `adults`.
+- **Audience rulings:** Save guides and quizzes are audience `all` (open to teens and anonymous visitors; never a sponsor line). Offer articles are audience `adults` (never to a child profile; `adults` means "aimed at adults", not an age gate, so a 13-17 account may read the explainer but never sees the sponsor line or affiliate link; the line shows only to anonymous visitors and 18+ per the existing rules). Save is never rated `kids`. Child profiles see no Save item rated `adults`.
 - **Education only:** every Save page (world page and every Save item page) carries a plain disclaimer: "General information, not financial advice. Check the details with the provider before you decide." The agent goals forbid recommending a specific investment, loan, credit product, broker, crypto or any "guaranteed" return, personalised advice, get-rich claims and anything on the excluded sponsor categories (gambling, alcohol, tobacco and vaping, weapons, adult content, payday lending, cryptocurrency and get-rich schemes, supplements and weight-loss, political and religious bodies, anything marketed to children).
 - **No time-dependent facts in item text:** prices, rates, end dates and "this week" never appear in an item body; the only dated element of an offer is the sponsorship's `ends_on`, so an expired offer simply loses its link.
 - Sources: facts need sources the reviewer has opened (existing `sourced` tier); offers also need the provider's own terms page as a source.
@@ -23,7 +23,7 @@
 
 ## Review Focus
 
-- A child profile, a 13-17 account and an anonymous visitor: offer (`adults`) never reaches the child or the teen on any route (list, detail, search, topic page, sitemap, daily set, share image, email); guides (`all`) reach everyone and never show a sponsor line.
+- A child profile, a 13-17 account and an anonymous visitor: offer (`adults`) never reaches the child profile on any route, and never carries the sponsor line or affiliate link for the teen (list, detail, search, topic page, sitemap, daily set, share image, email); guides (`all`) reach everyone and never show a sponsor line.
 - The disclaimer is on every Save item page and the world page, not only the world page.
 - Every place that lists the five worlds (nav, home grid, footer, sitemap, SEO alt text, trust pages, cut-over inventory, circle sharing, admin, social copy, privacy and about copy) now handles six without a hard-coded count of five.
 - The content agent cannot invent offers or links: it drafts guides and "how this offer works" explainers; links come only from the owner's sponsorship.
@@ -45,3 +45,5 @@
 
 - [ ] **Step 1: Failing tests (unit + e2e):** disclaimer on `/save/` and on a Save item; absent on other worlds; a Save `all` guide never shows a sponsor line even if a sponsorship targets its topic; a Save `adults` offer shows the affiliate disclosure for an anonymous visitor and nothing for a child session or a 16-year-old; the offer disappears from child-profile list, search, topic page and sitemap; axe at 320px and desktop on `/save/`, a guide and an offer; privacy gate (no third-party requests, no storage identifiers on Kids pages) still green; `account-isolation` rows.
 - [ ] **Step 2: Run, watch fail. Step 3: Implement. Step 4:** whole unit suite, `SITE_RELEASE=false npm run build`, then `SITE_RELEASE=false npx playwright test` for the affected specs (public-browse, site, sponsorship, item-page, search, seo, a11y-signoff, save). **Step 5: Commit** `feat: Save world disclaimer, offer rules and agent files`.
+
+**Ruling (review, 7 November 2026):** the first wording said teens never reach an offer. The platform's `adults` rating is not an age gate (see OPERATIONS, Accounts), so the plan now says what the code does: child profiles never receive offers; teens may read an explainer but never see the sponsor line (spec 4a.5). Owner to confirm.
