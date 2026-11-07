@@ -2,7 +2,7 @@ import Link from 'next/link';
 import TrustPage from '@/components/TrustPage';
 import { metadata as seo } from '@/lib/seo';
 
-export const metadata = seo('Editorial policy', 'Care in every question.', '/editorial-policy/');
+export const metadata = seo('Editorial policy', 'How SparkKindly makes its content: AI-assisted drafts, the checks before anything is published, sources and accuracy, Kids content and corrections.', '/editorial-policy/');
 
 export default function Page() {
   return (

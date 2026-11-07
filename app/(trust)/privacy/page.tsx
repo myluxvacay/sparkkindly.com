@@ -2,7 +2,7 @@ import Link from 'next/link';
 import TrustPage from '@/components/TrustPage';
 import { metadata as seo } from '@/lib/seo';
 
-export const metadata = seo('Privacy and the grown-up guide', 'Curiosity without a profile.', '/privacy/');
+export const metadata = seo('Privacy and the grown-up guide', 'What SparkKindly collects and what it does not: your answers, hosting and technical logs, Kids and shared devices, and other websites we link to.', '/privacy/');
 
 export default function Page() {
   return (

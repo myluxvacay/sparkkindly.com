@@ -6,6 +6,7 @@ import { seedReference } from '@/db/seed';
 import { worldSeeds } from '@/db/seed/worlds';
 import {
   getPublicItem, listPublic, searchPublic, listQuizzes, latestQuiz, findQuizBySlug, sitemapRows, listByInterests, listPublicByIds,
+  topicCounts, topicsNamed,
 } from '@/lib/public/reads';
 import { listWorlds, getWorld, getTopic } from '@/lib/public/worlds';
 import { anonymousScope, RESERVED_WORLD_SLUGS, type Scope } from '@/lib/public/scope';
@@ -272,5 +273,29 @@ describe('listByInterests and listPublicByIds', () => {
     expect((await listPublicByIds(db, child, [ok, adults, draft])).map((i) => i.id)).toEqual([ok]);
     expect((await listPublicByIds(db, anon, [ok, adults])).map((i) => i.id).sort()).toEqual([ok, adults].sort());
     expect(await listPublicByIds(db, anon, [])).toEqual([]);
+  });
+});
+
+describe('topic counts and names (SEO audit H1, M6)', () => {
+  it('lists every curated topic with its count of items the scope may see', async () => {
+    await put({ topics: ['gratitude'] });
+    await put({ topics: ['gratitude'], audience: 'adults' });
+    await put({ topics: ['gratitude'], status: 'draft' });
+    const all = await topicCounts(db, anon);
+    const total = (await db.query<{ n: number }>('SELECT count(*)::int AS n FROM topics')).rows[0].n;
+    expect(all).toHaveLength(total);
+    expect(all.find((t) => t.slug === 'gratitude')).toEqual({ slug: 'gratitude', name: 'Gratitude', count: 2 });
+    expect((await topicCounts(db, child)).find((t) => t.slug === 'gratitude')?.count).toBe(1);
+    expect(all.find((t) => t.slug === 'helping-others')?.count).toBe(0);
+    const names = all.map((t) => t.name);
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
+  });
+
+  it('names the given topic slugs in name order, ignoring unknown ones', async () => {
+    expect(await topicsNamed(db, ['space', 'no-such-topic', 'physics'])).toEqual([
+      { slug: 'physics', name: 'Physics' },
+      { slug: 'space', name: 'Space' },
+    ]);
+    expect(await topicsNamed(db, [])).toEqual([]);
   });
 });

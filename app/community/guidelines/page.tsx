@@ -6,7 +6,7 @@ import { metadata as seo } from '@/lib/seo';
 export const dynamic = 'force-dynamic';
 // With comments off the 404 carries no metadata of this page (7A review I3).
 export async function generateMetadata() {
-  return commentsEnabled() ? seo('Community guidelines', 'Be kind. Keep it relevant.', '/community/guidelines/') : {};
+  return commentsEnabled() ? seo('Community guidelines', 'SparkKindly community guidelines: who can comment, the rules (be kind, no personal information, no advertising, stay relevant) and how comments are checked.', '/community/guidelines/') : {};
 }
 
 // Linked from every comment form (plan 7A, spec Project 7). With comments off it does not exist.

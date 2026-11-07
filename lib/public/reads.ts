@@ -130,3 +130,23 @@ export async function sitemapRows(
   );
   return { items: items.rows.map((r) => ({ world: r.world, slug: r.slug, updatedAt: r.updated_at })), topics: topics.rows.map((r) => r.slug) };
 }
+
+// Every curated topic with its count of items the scope may see, by name (the /topics/ index and the topic page's
+// description, SEO audit H1 and M6). A topic with nothing visible has count 0.
+export async function topicCounts(db: Queryable, scope: Scope): Promise<{ slug: string; name: string; count: number }[]> {
+  const r = await db.query<{ slug: string; name: string; count: number }>(
+    `SELECT t.slug, t.name, count(i.id)::int AS count FROM topics t
+     LEFT JOIN item_topics it ON it.topic_id = t.id
+     LEFT JOIN (items i JOIN worlds w ON w.id = i.world_id) ON i.id = it.item_id AND ${VISIBLE}
+     GROUP BY t.slug, t.name`,
+    base(scope),
+  );
+  return r.rows.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+// The curated topics among these slugs, by name (an item page's topic links); an unknown slug is simply absent.
+export async function topicsNamed(db: Queryable, slugs: string[]): Promise<{ slug: string; name: string }[]> {
+  if (!slugs.length) return [];
+  const r = await db.query<{ slug: string; name: string }>('SELECT slug, name FROM topics WHERE slug = ANY($1::text[])', [slugs]);
+  return r.rows.sort((a, b) => a.name.localeCompare(b.name));
+}

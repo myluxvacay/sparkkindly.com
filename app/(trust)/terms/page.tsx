@@ -2,7 +2,7 @@ import Link from 'next/link';
 import TrustPage from '@/components/TrustPage';
 import { metadata as seo } from '@/lib/seo';
 
-export const metadata = seo('Terms of use', 'Plain terms for using SparkKindly.', '/terms/');
+export const metadata = seo('Terms of use', 'Plain terms for using SparkKindly: information rather than advice, Kids activities with an adult, our content and brand, problem reports and changes.', '/terms/');
 
 // Draft written by the builder, not by a lawyer. Governing law, liability limits and a company name are owner/legal
 // decisions and are deliberately absent (see docs/CUTOVER.md, "Owner decisions").

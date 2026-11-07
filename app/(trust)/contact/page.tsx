@@ -4,7 +4,7 @@ import { site } from '@/lib/config';
 import { metadata as seo } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic'; // CONTACT_EMAIL is read at run time, not baked in at build
-export const metadata =seo('Contact', 'Let’s keep the conversation thoughtful.', '/contact/');
+export const metadata =seo('Contact', 'How to contact SparkKindly: report something wrong on a page, ask a general question, or reach us as a parent or carer about the Kids world.', '/contact/');
 
 // The address is shown only when the owner sets CONTACT_EMAIL; nothing here invents one.
 export default function Page() {

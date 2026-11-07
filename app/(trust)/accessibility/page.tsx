@@ -4,7 +4,7 @@ import { site } from '@/lib/config';
 import { metadata as seo } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic'; // CONTACT_EMAIL is read at run time, not baked in at build
-export const metadata =seo('Accessibility', 'A place with room for you.', '/accessibility/');
+export const metadata =seo('Accessibility', 'SparkKindly aims for WCAG 2.2 AA: what we have built in, how images and media are handled, the known limits and how to tell us about a barrier.', '/accessibility/');
 
 export default function Page() {
   return (

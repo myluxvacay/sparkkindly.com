@@ -6,7 +6,8 @@ import Pager from '@/components/Pager';
 import { getDb } from '@/lib/db';
 import { currentScope } from '@/lib/accounts/scope-next';
 import { getTopic, listWorlds } from '@/lib/public/worlds';
-import { listPublic } from '@/lib/public/reads';
+import { listPublic, topicCounts } from '@/lib/public/reads';
+import { topicDescription } from '@/lib/public/topics';
 import { PAGE_SIZE, parsePage } from '@/lib/public/paging';
 import { metadata as seo } from '@/lib/seo';
 
@@ -15,8 +16,9 @@ export const dynamic = 'force-dynamic';
 type Props = { params: Promise<{ slug: string }>; searchParams: Promise<{ page?: string }> };
 
 export async function generateMetadata({ params }: Props) {
-  const t = await getTopic(getDb(), (await params).slug);
-  return t ? seo(`Topic: ${t.name}`, `Everything on SparkKindly about ${t.name}.`, `/topics/${t.slug}/`) : {};
+  const slug = (await params).slug;
+  const t = (await topicCounts(getDb(), await currentScope())).find((x) => x.slug === slug);
+  return t ? seo(`Topic: ${t.name}`, topicDescription(t.name, t.count), `/topics/${t.slug}/`) : {};
 }
 
 export default async function TopicPage({ params, searchParams }: Props) {
