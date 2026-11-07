@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import * as ld from '@/lib/public/jsonld';
-import { parsePage, PAGE_SIZE } from '@/lib/public/paging';
+import { pageCanonical, parsePage, PAGE_SIZE } from '@/lib/public/paging';
 import { escapeJsonLd } from '@/lib/seo';
 import type { PublicItem } from '@/lib/items/repo';
 
@@ -82,4 +82,12 @@ describe('parsePage', () => {
     (raw, page) => expect(parsePage(raw)).toBe(page),
   );
   it('uses twelve per page', () => expect(PAGE_SIZE).toBe(12));
+});
+
+describe('pageCanonical (SEO audit M3)', () => {
+  it('is the path itself for page 1 and adds only ?page=N after that', () => {
+    expect(pageCanonical('/play/', 1)).toBe('/play/');
+    expect(pageCanonical('/play/', 2)).toBe('/play/?page=2');
+    expect(pageCanonical('/topics/owls/', 40)).toBe('/topics/owls/?page=40');
+  });
 });

@@ -24,12 +24,12 @@ test('a world with no items shows an empty state', async ({ page }) => {
 });
 
 test('bad page numbers never break a world page', async ({ page }) => {
-  for (const q of ['-1', 'abc', '999999', '0', '2.5']) {
+  for (const q of ['-1', 'abc', '0', '2.5']) {
     const res = await page.goto(`/discover/?page=${q}`);
     expect(res?.status(), q).toBe(200);
   }
-  await page.goto('/discover/?page=999999');
-  await expect(page.getByRole('link', { name: 'Back to the first page' })).toBeVisible();
+  // SEO audit M3: a page past the end is a 404, not an empty indexable page.
+  expect((await page.goto('/discover/?page=999999'))?.status()).toBe(404);
 });
 
 test('a disabled world is gone from the header and 404s', async ({ page }) => {

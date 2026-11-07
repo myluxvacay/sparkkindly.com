@@ -38,7 +38,8 @@ test('the archive is newest first and tolerates bad page numbers', async ({ page
   await addItem({ world: 'play', slug: 'fx-newest-quiz', kind: 'quiz', title: 'Newest fixture quiz', publishedAt: 'now()', body: { mechanic: 'true_false', prompt: 'A prompt that is long enough.', difficulty: 'easy' }, answer: { value: true, explanation: 'An explanation that is long enough.' } });
   await page.goto('/quiz/archive/');
   await expect(page.locator('main h2 a, main h3 a').first()).toHaveText('Newest fixture quiz');
-  for (const q of ['-1', 'abc', '999999']) expect((await page.goto(`/quiz/archive/?page=${q}`))?.status(), q).toBe(200);
+  for (const q of ['-1', 'abc']) expect((await page.goto(`/quiz/archive/?page=${q}`))?.status(), q).toBe(200);
+  expect((await page.goto('/quiz/archive/?page=999999'))?.status()).toBe(404); // SEO audit M3: past the end
 });
 
 test('an old quiz id redirects permanently to its item page', async ({ request }) => {

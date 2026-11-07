@@ -8,3 +8,7 @@ export function parsePage(raw: string | undefined): number {
   const n = Number(raw);
   return n < 1 ? 1 : Math.min(n, MAX_PAGE);
 }
+
+// The self-referencing canonical of a paginated listing (SEO audit M3): page 1 is the path itself, later pages keep only
+// ?page=N, so tracking or other parameters never make a second URL for the same page.
+export const pageCanonical = (path: string, page: number): string => (page > 1 ? `${path}?page=${page}` : path);
