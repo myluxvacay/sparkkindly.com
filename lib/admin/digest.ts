@@ -1,6 +1,7 @@
 import type { Queryable } from '@/lib/db';
 import type { EmailMessage } from '@/lib/email';
 import type { EnvLike } from '@/lib/env';
+import { commentsEnabled } from '@/lib/config';
 import { commentCounts, type CommentCounts } from '@/lib/comments/counts';
 import { agentAlerts } from './digest-agents';
 import { allowList, linkBase } from './sessions';
@@ -17,7 +18,7 @@ export type Digest = {
   failedJobs: { job: string; error: string; at: Date }[];
   buffer: { world: string; days: number }[];
   openReports: number;
-  comments: CommentCounts; // plan 7B: counts only, never comment text
+  comments: CommentCounts | null; // plan 7B: counts only, never comment text; null with comments off (final review L6)
   alerts: string[];
 };
 
@@ -64,7 +65,7 @@ export async function buildDigest(db: Queryable, now: Date): Promise<Digest> {
     failedJobs: failed.rows,
     buffer: buffer.rows.map((b) => ({ world: b.world, days: Number(b.days) })),
     openReports: Number(reports.rows[0].n),
-    comments: await commentCounts(db, now),
+    comments: commentsEnabled() ? await commentCounts(db, now) : null,
     alerts: [],
   };
   const lateKids = d.waiting.filter((w) => w.world === 'kids' && now.getTime() - new Date(w.since).getTime() > 2 * DAY);
@@ -80,7 +81,7 @@ export async function buildDigest(db: Queryable, now: Date): Promise<Digest> {
   const stale = Number(oldKeys.rows[0].n);
   if (stale) d.alerts.push(`${stale} agent key is over 90 days old: rotate it in /admin/agents/.`);
   d.alerts.push(...(await agentAlerts(db, now)));
-  const overdue = d.comments.escalatedOverdue;
+  const overdue = d.comments?.escalatedOverdue ?? 0;
   if (overdue) d.alerts.push(`${overdue} comment escalation${overdue === 1 ? ' is' : 's are'} waiting past the 48-hour target: see /admin/comments/.`);
   return d;
 }
@@ -111,7 +112,7 @@ export function renderDigest(d: Digest, adminUrl = 'https://sparkkindly.com/admi
     section('Failed jobs', d.failedJobs.map((f) => `${f.job}: ${f.error}`)),
     section('Buffer (days of scheduled items ahead)', d.buffer.map((b) => `${b.world}: ${b.days}`)),
     `Open problem reports: ${d.openReports}\n`,
-    commentSection(d.comments),
+    ...(d.comments ? [commentSection(d.comments)] : []),
     `Open the admin area: ${adminUrl}\n`,
   ].join('\n');
   return { subject, text };

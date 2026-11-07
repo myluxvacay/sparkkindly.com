@@ -2,7 +2,7 @@ import { createHash, randomBytes } from 'node:crypto';
 import { test, expect, type Browser, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { sql } from './helpers/fixtures';
-import { BASE, FORM, form, session, signInContext } from './helpers/admin';
+import { BASE, FORM, form, session, signInContext, watchThirdParty } from './helpers/admin';
 import { generateKey } from '../../lib/agents/keys';
 
 // Contributors (plan 8 Task 4). The preview server on 4173 runs with ACCOUNTS_ENABLED and CONTRIBUTORS_ENABLED; the
@@ -85,6 +85,7 @@ test('with the flags off every contribute page and route is a 404 (server withou
 test('a 16-year-old writes and submits; the reviewer passes it; the owner approves; it publishes with a byline; withdrawal removes it', async ({ browser, request }) => {
   const teen = await member(browser, 16);
   const page = teen.page;
+  const pageThirdParty = watchThirdParty(page);
   await page.goto('/me/contribute/');
   await expect(page.getByLabel(/One link/)).toHaveCount(0);
   await page.getByLabel(/Display name/).fill('Robin Writes');
@@ -128,6 +129,7 @@ test('a 16-year-old writes and submits; the reviewer passes it; the owner approv
   await sql("UPDATE items SET status = 'published', published_at = now() - interval '1 minute' WHERE id = $1", [item.id]);
 
   const anon = await (await browser.newContext()).newPage();
+  const anonThirdParty = watchThirdParty(anon);
   await anon.goto(`/grow/${item.slug}/`);
   const byline = anon.getByRole('link', { name: 'Robin Writes' });
   await expect(byline).toBeVisible();
@@ -135,6 +137,8 @@ test('a 16-year-old writes and submits; the reviewer passes it; the owner approv
   await expect(anon.getByRole('heading', { level: 1, name: 'Robin Writes' })).toBeVisible();
   await expect(anon.getByRole('link', { name: title })).toBeVisible();
   await axeBothWidths(anon);
+  expect(pageThirdParty).toEqual([]);
+  expect(anonThirdParty).toEqual([]);
   const contributorUrl = anon.url();
 
   // Withdrawal (with its confirm step) takes it down at once.

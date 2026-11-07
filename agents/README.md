@@ -39,7 +39,8 @@ A third server role, started with `--role reviewer` (`sparkkindly-staging-review
 `SPARKKINDLY_<STAGING|PROD>_REVIEWER_KEY`. The site accepts a reviewer key on the two contribution routes only (403 on
 brief, items, runs and moderation) and refuses every other key there, so a review run never holds the item submit tool
 and text injected into a contribution cannot publish anything. Create the key in `/admin/agents/` with the role
-"Contribution reviewer" and the world "Master agent". `/review-contributions` may use only Agent and those two tools.
+"Contribution reviewer" and the world "Master agent". `/review-contributions` may use only Agent and the queue tool; the verdict tool belongs to its per-environment
+subagent, `sparkkindly-contribution-reviewer-<env>` (one per entry, final review L9).
 
 ## One-time setup
 

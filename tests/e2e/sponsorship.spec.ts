@@ -133,7 +133,8 @@ test('a child profile, a 16-year-old and the same topic on an all or Kids item s
     expect(html, slug).not.toContain('/go/');
   }
   const id = (await sql('SELECT s.id FROM sponsorships s JOIN sponsors sp ON sp.id = s.sponsor_id WHERE sp.name = $1', [SPONSOR])).rows[0]?.id;
-  test.skip(!id, 'needs the sponsorship from the previous test');
+  // Fails, never skips, when the previous test did not create the sponsorship (final review L7).
+  expect(id, 'needs the sponsorship from the previous test').toBeTruthy();
 
   const teen = await member(browser, 16);
   await teen.page.goto(`/grow/${ADULTS}/`);

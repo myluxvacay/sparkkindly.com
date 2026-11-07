@@ -5,7 +5,7 @@ import { queueRequest } from '@/lib/contributors/review-api';
 
 export const dynamic = 'force-dynamic';
 
-// GET /api/agent/contributions/  contributions waiting for the reviewer (master content key only)
+// GET /api/agent/contributions/  contributions waiting for the reviewer (contribution reviewer key only: role 'reviewer')
 export async function GET(request: Request) {
   return queueRequest(request, { db: getDb(), now: new Date(), env: process.env, send: (m) => sendEmail(m), limiter: agentLimiter });
 }

@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { addItem, addTopic, sql } from './helpers/fixtures';
-import { BASE, FORM, ORIGIN, form } from './helpers/admin';
+import { BASE, FORM, ORIGIN, form, watchThirdParty } from './helpers/admin';
 
 // Member accounts (Project 3A, Task 4). The preview server on 4173 runs with ACCOUNTS_ENABLED=true; the server on
 // 4174 does not, so it covers the flag-off 404s. Only example.test addresses. There is no mail sink in this harness:
@@ -718,13 +718,6 @@ async function tabTo(page: Page, target: ReturnType<Page['locator']>) {
   }
   throw new Error('target never received focus');
 }
-const watchThirdParty = (page: Page) => {
-  const seen: string[] = [];
-  page.on('request', (r) => {
-    if (!r.url().startsWith(`${BASE}/`)) seen.push(r.url());
-  });
-  return seen;
-};
 
 test('an adult picks interests from the keyboard; /me lists matching items and answered history, privately', async ({ page }) => {
   const stamp = Date.now();

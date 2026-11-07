@@ -97,6 +97,25 @@ describe('agent silence alert', () => {
   });
 });
 
+describe('the comments part of the digest (final review L6)', () => {
+  it('with comments off has no Comments section and no escalation alert: the flag-off email is unchanged', async () => {
+    vi.stubEnv('ACCOUNTS_ENABLED', 'true');
+    vi.stubEnv('COMMENTS_ENABLED', '');
+    try {
+      const d = await buildDigest(db, NOW);
+      expect(d.comments).toBeNull();
+      expect(d.alerts.join(' ')).not.toMatch(/comment escalation/);
+      expect(renderDigest(d).text).not.toMatch(/^Comments$/m);
+      vi.stubEnv('COMMENTS_ENABLED', 'true');
+      const on = await buildDigest(db, NOW);
+      expect(on.comments).not.toBeNull();
+      expect(renderDigest(on).text).toMatch(/^Comments$/m);
+    } finally {
+      vi.unstubAllEnvs();
+    }
+  });
+});
+
 describe('renderDigest', () => {
   it('is plain text naming each section, and treats titles as data', async () => {
     const d = await buildDigest(db, NOW);

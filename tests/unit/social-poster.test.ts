@@ -348,4 +348,19 @@ describe('socialTick', () => {
     await socialTick(db, new Date('2026-11-05T12:03:00Z'), env, later, { fetch: vi.fn() as never });
     expect(later.join('; ')).not.toMatch(/social post/);
   });
+
+  it('final review L5: posts once per 5-minute bucket, so a drifting timer that misses the :x0/:x5 minute skips nothing', async () => {
+    const posted = async (iso: string) => {
+      const log: string[] = [];
+      await socialTick(db, new Date(iso), env, log, { fetch: vi.fn() as never });
+      return /social post/.test(log.join('; '));
+    };
+    await db.query("INSERT INTO job_runs (job, run_key) VALUES ('social-post', '2026-11-04T11:55')"); // over a day old: pruned
+    expect(await posted('2026-11-05T12:04:59Z')).toBe(true); // the 12:00 bucket, first tick in it
+    expect(await posted('2026-11-05T12:04:59Z')).toBe(false); // same bucket: already claimed
+    expect(await posted('2026-11-05T12:06:01Z')).toBe(true); // the 12:05 bucket, its :05 minute missed
+    expect(await posted('2026-11-05T12:09:30Z')).toBe(false);
+    const keys = (await db.query<{ run_key: string }>("SELECT run_key FROM job_runs WHERE job = 'social-post' ORDER BY run_key")).rows;
+    expect(keys.map((k) => k.run_key)).toEqual(['2026-11-05T12:00', '2026-11-05T12:05']);
+  });
 });

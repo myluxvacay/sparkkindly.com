@@ -2,7 +2,7 @@ import { createHash, randomBytes } from 'node:crypto';
 import { test, expect, type Browser, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { activeModerator, addItem, sql } from './helpers/fixtures';
-import { BASE, FORM, form, session, signInContext } from './helpers/admin';
+import { BASE, FORM, form, session, signInContext, watchThirdParty } from './helpers/admin';
 
 // Comments (plan 7A Task 2). The preview server on 4173 runs with ACCOUNTS_ENABLED and COMMENTS_ENABLED; the server on
 // 4174 has neither, so it covers the flag-off 404s. Only example.test addresses; sign-in links are minted as rows, as in
@@ -80,6 +80,7 @@ test('a 16-year-old is held, then promoted by the owner and published at once; l
   await addItem({ world: 'play', slug, title: 'Comment fixture' });
   const url = `/play/${slug}/`;
   const teen = await member(browser, 16);
+  const teenThirdParty = watchThirdParty(teen.page);
   await teen.page.goto(url);
   await expect(teen.page.getByRole('heading', { level: 2, name: 'Comments' })).toBeVisible();
   await axeBothWidths(teen.page);
@@ -91,6 +92,7 @@ test('a 16-year-old is held, then promoted by the owner and published at once; l
 
   const anon = await browser.newContext();
   const anonPage = await anon.newPage();
+  const anonThirdParty = watchThirdParty(anonPage);
   await anonPage.goto(url);
   await expect(section(anonPage)).toBeVisible();
   await expect(said(anonPage, `My first words ${stamp}`)).toHaveCount(0);
@@ -121,6 +123,8 @@ test('a 16-year-old is held, then promoted by the owner and published at once; l
   await expect(said(anonPage, `My first words ${stamp}`)).toHaveCount(0);
   await expect(section(anonPage).locator('time').first()).toHaveAttribute('datetime', /^\d{4}-\d\d-\d\dT/);
   await axeBothWidths(anonPage);
+  expect(teenThirdParty).toEqual([]);
+  expect(anonThirdParty).toEqual([]);
 
   // The owner switches the world off: the section disappears; back on again.
   const admin2 = await owner.newPage();
@@ -167,4 +171,12 @@ test('a child profile sees no comment section on Play or Discover items; no sect
   await expect(anonPage.getByRole('heading', { level: 1, name: 'Kids comment fixture' })).toBeVisible();
   await expect(section(anonPage)).toHaveCount(0);
   await anon.close();
+});
+
+test('the community guidelines page makes no third-party request', async ({ page }) => {
+  const thirdParty = watchThirdParty(page);
+  await page.goto('/community/guidelines/');
+  await expect(page.getByRole('heading', { level: 1, name: 'Be kind. Keep it relevant.' })).toBeVisible();
+  await axeBothWidths(page);
+  expect(thirdParty).toEqual([]);
 });

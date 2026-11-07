@@ -2,7 +2,7 @@
 // database (through the shared fixture connection), so specs can test the admin area without email. Only
 // example.test addresses; the preview server runs with ADMIN_EMAILS=owner@example.test.
 import { createHash, randomBytes } from 'node:crypto';
-import type { BrowserContext } from '@playwright/test';
+import type { BrowserContext, Page } from '@playwright/test';
 import { sql } from './fixtures';
 import { newTotpSecret, totpAt } from '../../../lib/admin/totp';
 import { sealSecret, TEST_SECRET_KEY } from '../../../lib/admin/secret-box';
@@ -10,6 +10,15 @@ import { sealSecret, TEST_SECRET_KEY } from '../../../lib/admin/secret-box';
 export const OWNER = 'owner@example.test';
 export const BASE = 'http://localhost:4173';
 export const ORIGIN = { origin: BASE };
+
+// Collects every request the page makes off the site (the privacy gate: no third-party requests); assert it is [].
+export const watchThirdParty = (page: Page) => {
+  const seen: string[] = [];
+  page.on('request', (r) => {
+    if (!r.url().startsWith(`${BASE}/`)) seen.push(r.url());
+  });
+  return seen;
+};
 const hash = (t: string) => createHash('sha256').update(t).digest('hex');
 export const csrfFor = (session: string) => hash(`csrf:${session}`);
 

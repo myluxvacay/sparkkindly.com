@@ -1,6 +1,7 @@
 -- Social distribution, text and image posts (Project 5A). Expand only: three new tables and a wider agents.role CHECK
 -- (the promotion agent's key, role 'promoter', accepted only by /api/agent/promotions/*). The previous release ignores
--- the tables and refuses a promoter key on every route (its routes accept only content, moderation or reviewer).
+-- the tables; a release from 7B on refuses the new keys; earlier releases treat any world_id NULL key as a master
+-- content agent - disable them first (UPDATE agents SET enabled = false WHERE role <> 'content').
 -- social_platforms: per-platform switch (all off), daily cap (0 to 10) and posting time (UTC), set in /admin/social/.
 -- distributions: one row per item and platform, ever; status moves only through lib/social/states.ts.
 -- social_visits: aggregate landings from a social link per day, platform and item. No identifier of any kind.

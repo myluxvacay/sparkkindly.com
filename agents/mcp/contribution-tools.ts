@@ -25,7 +25,7 @@ export function registerContributionTools(server: McpServer, run: Run): void {
     {
       title: 'Post the reviewer verdict for one contribution',
       description:
-        "Reviewer role only (used by /review-contributions). Post the sparkkindly-reviewer's verdict for one queued contribution: pass, reasons (short, shown to the contributor on a fail), the source URLs actually opened, and whether the plagiarism search ran. A pass for a Sourced item needs at least one source opened and plagiarismChecked true, or the site counts it as a fail. A pass only reaches the owner's queue; the owner always decides. A refusal (stale, wrong_state) is an ordinary result; do not retry it.",
+        "Reviewer role only (used by /review-contributions). Post your verdict for the one queued contribution you reviewed: pass, reasons (short, shown to the contributor on a fail), the source URLs actually opened, and whether the plagiarism search ran. A pass for a Sourced item needs at least one source opened and plagiarismChecked true, or the site counts it as a fail. A pass only reaches the owner's queue; the owner always decides. A refusal (stale, wrong_state) is an ordinary result; do not retry it.",
       inputSchema: {
         id: z.string().min(1).max(100),
         version: z.string().min(1).max(20),

@@ -723,8 +723,8 @@ Behind the same flags as comments. Plan `docs/superpowers/plans/2026-11-05-proje
   rollback: unset `COMMENTS_ENABLED`, or the previous release. Before switching to a release older than 7B, disable every
   moderation agent: the old code ignores `agents.role`, and a moderation agent has `world_id` NULL, which the old code
   treats as a **master content agent** that may submit items to any world. The same holds for contribution reviewer
-  agents (`026_reviewer_role.sql`). Run on the server, then check it updated the expected rows:
-  `UPDATE agents SET enabled = false WHERE role IN ('moderation', 'reviewer');` (re-enable after rolling forward). Schema
+  agents (`026_reviewer_role.sql`) and promoter agents (`028_social.sql`). Run on the server, then check it updated the
+  expected rows: `UPDATE agents SET enabled = false WHERE role <> 'content';` (re-enable after rolling forward). Schema
   rollback is in the migration headers, only after the previous release is live.
 
 ### Comment moderation agent (Project 7B)
@@ -775,10 +775,12 @@ mail. Plan `docs/superpowers/plans/2026-11-05-project-8-contributors.md`.
   in `/admin/agents/` with role "Contribution reviewer" and world "Master agent"; put it in the owner's secrets file as
   `SPARKKINDLY_<STAGING|PROD>_REVIEWER_KEY`. Before rolling back past `026_reviewer_role.sql`, disable reviewer agents
   (see the Comment moderation rollback note).
-  One `sparkkindly-reviewer` per entry with the plagiarism search; a pass without a source opened (Sourced tier) or
-  without the plagiarism search counts as a fail. Schedule it by hand in Windows Task Scheduler after the daily run, like
+  The command holds only the queue tools and starts one `sparkkindly-contribution-reviewer-<env>` per entry (web tools
+  and that environment's verdict tool only), which reviews it with the plagiarism search and posts its verdict; a pass
+  without a source opened (Sourced tier) or without the plagiarism search counts as a fail. Schedule it by hand in Windows Task Scheduler after the daily run, like
   `/moderate-run`: `claude -p "/review-contributions env=staging" --setting-sources project --allowedTools Agent
-  mcp__sparkkindly-staging-reviewer --disallowedTools Bash Write Edit Read`. Response target for the owner: 7 days.
+  mcp__sparkkindly-staging-reviewer WebFetch WebSearch --disallowedTools Bash Write Edit Read` (the web tools are for the
+  reviewer subagents). Response target for the owner: 7 days.
 - **Withdrawal and deletion.** A contributor withdraws any piece from `/me/contribute/` (confirm step); a published or
   scheduled item is archived at once, an unpublished one too. Account deletion archives published contributed items,
   deletes never-published ones, then cascades the profile and contributions, so no byline or contributor page remains.
@@ -893,7 +895,8 @@ TikTok and YouTube take video only, through the video jobs queue (see Video jobs
   about the visitor) and shown in `/admin/social/` for 30 days.
 - **Dependency.** The JPEG conversion uses `sharp` 0.35.5 (Apache-2.0), already in the tree for the brand scripts and
   Next's image optimiser, moved from devDependencies to dependencies; `npm audit --omit=dev` reported 0 vulnerabilities
-  (5 Nov 2026).
+  (5 Nov 2026). `sharp` is a native dependency installed for the release runner's platform (Linux x86-64, glibc); the VM
+  must match it, or the `?format=social` branch of `/api/template-image/` fails.
 - **Pre-deploy check for `029_sponsor_confirmed_category.sql`.** Before deploying the release that carries 029, run on
   the target database `SELECT count(*) FROM sponsors WHERE confirmed_at IS NOT NULL AND category IS NULL;` It must print
   `0`; otherwise the migration fails and the deploy stops. Fix those rows first (give each a category in `/admin/sponsors/`
@@ -903,8 +906,9 @@ TikTok and YouTube take video only, through the video jobs queue (see Video jobs
   <token>`, a one-line change in `lib/social/adapters/meta.ts` with its test.
 - **Migration and rollback.** `028_social.sql` is additive (`social_platforms` seeded with caps 2/3/1/1, all off;
   `distributions`; `social_visits`; `promoter` in the agents role CHECK). Code rollback: unset `SOCIAL_ENABLED` (nothing
-  posts; rows stay), or the previous release (it never reads them and refuses the promoter key). Disable promoter agents
-  before rolling back past the migration; its schema rollback is in the migration header.
+  posts; rows stay), or the previous release. A release from 7B on refuses the new keys; earlier releases treat any
+  `world_id` NULL key as a master content agent, so disable them first (`UPDATE agents SET enabled = false WHERE role <>
+  'content';`, as under comment moderation above). Its schema rollback is in the migration header.
 
 ## Video jobs (Project 5B)
 
