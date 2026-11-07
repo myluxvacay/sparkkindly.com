@@ -56,13 +56,14 @@ export default async function WorldPage({ params, searchParams }: Props) {
         </aside>
       )}
       {feature && (
-        <section className="brand-feature">
+        <section className="brand-feature feature-card">
           <img src={`/api/template-image/${feature.world}/${feature.slug}/`} width={800} height={420} alt="" />
           <div>
             <p className="eyebrow">FEATURED {feature.kind === 'article' ? 'READ' : feature.kind.toUpperCase()}</p>
             <h2><Link href={`/${feature.world}/${feature.slug}/`}>{feature.title}</Link></h2>
             <p>{feature.summary}</p>
-            <Link className="button" href={`/${feature.world}/${feature.slug}/`}>Take a closer look ↗</Link>
+            {/* The title link covers the whole card; this is its visual call to action, not a second link. */}
+            <span className="button" aria-hidden="true">Take a closer look ↗</span>
           </div>
         </section>
       )}
