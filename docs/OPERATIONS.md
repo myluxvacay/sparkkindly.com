@@ -1015,3 +1015,10 @@ the owner's numbers (P.1) is a one-line edit.
   `deploy/provision/04-caddy-staging.sh`) and reloads Caddy (`sudo systemctl reload caddy`, after `caddy validate`).
 - **Sitemap.** One file at `/sitemap.xml` with up to 45,000 items (under the 50,000-URL limit; tested at the cap). When
   the published item count nears that, split it into `generateSitemaps()` chunks with an index.
+- **Deferred minors (SEO audit, 6 Nov 2026).** L7 favicon set (an `.ico` and SVG icon beside the PNGs), L8 hero
+  image alt text review, L9 a micro-cache for anonymous public pages, L10 client JavaScript size. Not done; revisit
+  after launch traffic shows whether they matter.
+- **Owner decisions pending (SEO audit).** (1) AI-crawler policy in `app/robots.ts`: allow or disallow GPTBot, ClaudeBot
+  and Google-Extended (today all crawlers get the same rules). (2) A `/.well-known/security.txt` with a contact the owner
+  reads. (3) An HSTS header (`Strict-Transport-Security`) in the production Caddy block; once sent, browsers refuse
+  plain HTTP for its max-age, so start with a short max-age and no `preload`.

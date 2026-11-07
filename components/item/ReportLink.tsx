@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function ReportLink({ world, slug }: { world: string; slug: string }) {
   return (
     <p className="muted">
-      <Link href={`/report/${encodeURIComponent(world)}/${encodeURIComponent(slug)}/`}>Report a problem with this page</Link>
+      <Link rel="nofollow" href={`/report/${encodeURIComponent(world)}/${encodeURIComponent(slug)}/`}>Report a problem with this page</Link>
     </p>
   );
 }
