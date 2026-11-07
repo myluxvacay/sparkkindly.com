@@ -1,8 +1,8 @@
 // The branded share image for social posts (plan 5A): 1080x1350 (Instagram's 4:5 portrait), title, world colour and
 // name, the SparkKindly wordmark; no personal data, no faces, no user content. Rendered by next/og (PNG) and converted to
 // JPEG with sharp (already in the tree; Instagram accepts only JPEG). Served only for an item eligible for social
-// media, read by world and slug alone (no session), so it is the same for everyone and publicly cacheable.
-// Verified by tests/unit/social-share-image.test.ts.
+// media, read by world and slug; a signed-in caller's audiences narrow it further (the route sets those copies private).
+// Verified by tests/unit/social-share-image.test.ts and tests/unit/social-share-image-route.test.ts.
 import { ImageResponse } from 'next/og';
 import sharp from 'sharp';
 import { socialEnabled } from '@/lib/config';
@@ -21,7 +21,8 @@ const CACHE_SIZE = 50;
 const cache = new Map<string, Buffer>();
 const shared = globalThis as unknown as { __sparkShareImageLimiter?: ReturnType<typeof createLimiter> };
 const renderLimiter = (shared.__sparkShareImageLimiter ??= createLimiter({ perMinute: 20 }));
-type Opts = { client?: string; limiter?: (key: string) => boolean };
+// audiences: the viewer's scope when the request carried an account session (final review M2); omitted = public.
+type Opts = { client?: string; limiter?: (key: string) => boolean; audiences?: readonly string[] };
 
 function remember(key: string, jpeg: Buffer): void {
   cache.delete(key);
@@ -73,8 +74,8 @@ export async function socialShareImage(db: Queryable, world: string, slug: strin
   if (!socialEnabled() || !SLUG.test(world) || !SLUG.test(slug)) return notFound();
   const r = await db.query<Card>(
     `SELECT i.title, w.name AS world_name, w.color AS world_color FROM items i JOIN worlds w ON w.id = i.world_id
-     WHERE w.slug = $1 AND i.slug = $2 AND ${socialEligibleWhere('$3')}`,
-    [world, slug, now.toISOString()],
+     WHERE w.slug = $1 AND i.slug = $2 AND ${socialEligibleWhere('$3')} AND ($4::text[] IS NULL OR i.audience = ANY($4::text[]))`,
+    [world, slug, now.toISOString(), o.audiences ?? null],
   );
   if (!r.rows[0]) return notFound();
   const key = JSON.stringify([world, slug, r.rows[0].title, r.rows[0].world_name, r.rows[0].world_color]);
