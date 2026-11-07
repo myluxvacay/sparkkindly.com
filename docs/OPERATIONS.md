@@ -1022,3 +1022,16 @@ the owner's numbers (P.1) is a one-line edit.
   and Google-Extended (today all crawlers get the same rules). (2) A `/.well-known/security.txt` with a contact the owner
   reads. (3) An HSTS header (`Strict-Transport-Security`) in the production Caddy block; once sent, browsers refuse
   plain HTTP for its max-age, so start with a short max-age and no `preload`.
+
+## Sharing
+
+- Every published item page, and the quiz of the day, has a "Share this" section under the content
+  (`components/item/ShareButtons.tsx`, links built in `lib/public/share.ts`). Plain links work without JavaScript:
+  WhatsApp, text message, email, Facebook, X, Telegram. A small client island (`components/item/ShareClient.tsx`) adds
+  the device "Share…" button where the browser supports it and "Copy link" with a "Link copied" confirmation; it uses no
+  storage and makes no requests. Nothing loads from a share site until a link is clicked.
+- The shared link is the clean canonical item URL (no query string, so no tracking, session or answer); the text is the
+  title, with "Can you get this one?" before it for quizzes and games, never an answer or result.
+- Kids items (world or audience `kids`) show no social-network links; a child context (a child profile, or a scope
+  without adults) shows only the device share and copy buttons. Circle pages have no share section; the circle's own
+  "Play it together" prompt is unchanged.

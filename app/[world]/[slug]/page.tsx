@@ -8,6 +8,7 @@ import ItemCard from '@/components/item/ItemCard';
 import PlayPanel from '@/components/item/PlayPanel';
 import Picture from '@/components/Picture';
 import ReportLink from '@/components/item/ReportLink';
+import ShareButtons from '@/components/item/ShareButtons';
 import Sources from '@/components/item/Sources';
 import TopicLinks from '@/components/item/TopicLinks';
 import VideoBlock from '@/components/item/VideoBlock';
@@ -18,6 +19,7 @@ import { formatDay } from '@/lib/public/dates';
 import { articleLd, breadcrumbLd } from '@/lib/public/jsonld';
 import type { SearchParams } from '@/lib/public/play-params';
 import { getPublicItem, listPublic, topicsNamed } from '@/lib/public/reads';
+import { isChildScope } from '@/lib/public/share';
 import { accountSessionToken, currentScope } from '@/lib/accounts/scope-next';
 import CommentSection from '@/components/comments/CommentSection';
 import { loadCommentSection } from '@/lib/comments/web';
@@ -120,6 +122,9 @@ export default async function ItemPage({ params, searchParams }: Props) {
       )}
       {isArticle && <VideoBlock article={article} />}
       {isArticle ? <ArticleBody article={article} /> : <div className="container section quiz-page"><PlayPanel item={item} searchParams={await searchParams} /></div>}
+      <div className="container">
+        <ShareButtons item={item} childContext={isChildScope(await currentScope())} />
+      </div>
       <Sources sources={item.sources} article={article} image={image} />
       <div className="container">
         <TopicLinks topics={topics} />

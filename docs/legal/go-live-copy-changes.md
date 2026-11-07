@@ -26,6 +26,7 @@ sentence:
 | "Accounts are not available yet" | whole section | Replace with the approved "Teens aged 13 to 15", "Teens aged 16 and 17", "Cookies", "Who we share data with", "How long we keep things" and "Your rights and how to use them" sections. |
 | "Hosting and technical logs" | "We have not yet independently reviewed how long the host and server keep logs …" | Update after the professional and the owner confirm whether access logs are written (data inventory, open question 1). |
 | "What this notice is not" | "A review of child privacy … has not yet happened, and the owner has asked for it." | "This notice was reviewed by a privacy professional on [date of review]." |
+| "Other websites" | "Source links lead to other websites with their own privacy practices. Reading our pages does not load them; only clicking a link does." | "Source links and the share links under each item (WhatsApp, Facebook, X, Telegram, email, text message) lead to other websites or apps with their own privacy practices. Reading our pages does not load them; only clicking a link does, and a shared link carries only the page's address and title." (added 6 November 2026 with the share buttons; the live page already says the substance) |
 | `updated` | "1 November 2026" | the publication date |
 
 ## About (`app/(trust)/about/page.tsx`)
