@@ -9,6 +9,7 @@ import PlayPanel from '@/components/item/PlayPanel';
 import Picture from '@/components/Picture';
 import ReportLink from '@/components/item/ReportLink';
 import Sources from '@/components/item/Sources';
+import TopicLinks from '@/components/item/TopicLinks';
 import VideoBlock from '@/components/item/VideoBlock';
 import { site } from '@/lib/config';
 import { getDb } from '@/lib/db';
@@ -16,7 +17,7 @@ import { readArticle, readImage } from '@/lib/public/body';
 import { formatDay } from '@/lib/public/dates';
 import { articleLd, breadcrumbLd } from '@/lib/public/jsonld';
 import type { SearchParams } from '@/lib/public/play-params';
-import { getPublicItem, listPublic } from '@/lib/public/reads';
+import { getPublicItem, listPublic, topicsNamed } from '@/lib/public/reads';
 import { accountSessionToken, currentScope } from '@/lib/accounts/scope-next';
 import CommentSection from '@/components/comments/CommentSection';
 import { loadCommentSection } from '@/lib/comments/web';
@@ -70,6 +71,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
   // One sponsor line (plan 6): null with the flag off (nothing read), for a viewer who may not see it, and on an item
   // that may not carry it.
   const sponsor = await loadSponsorLine(db, await accountSessionToken(), item.id, new Date());
+  const topics = await topicsNamed(db, item.topics);
   const related = (await listPublic(db, await currentScope(), { world: item.world, limit: 4, offset: 0 })).filter((i) => i.id !== item.id).slice(0, 3);
 
   const isArticle = item.kind === 'article';
@@ -120,6 +122,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
       {isArticle ? <ArticleBody article={article} /> : <div className="container section quiz-page"><PlayPanel item={item} searchParams={await searchParams} /></div>}
       <Sources sources={item.sources} article={article} image={image} />
       <div className="container">
+        <TopicLinks topics={topics} />
         <ReportLink world={item.world} slug={item.slug} />
       </div>
       {comments && <CommentSection data={comments} code={typeof commentCode === 'string' ? commentCode : undefined} />}

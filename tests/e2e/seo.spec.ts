@@ -63,3 +63,39 @@ test('paginated listings: self-referencing canonical with only ?page=N, and 404 
   await page.goto('/quiz/archive/?page=1&x=1');
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://sparkkindly.com/quiz/archive/');
 });
+
+test('an item page links its own topics; /topics/ lists every topic with counts and is in the footer', async ({ page }) => {
+  await topicFixture();
+  await page.goto(`/grow/${TOPIC}-0/`);
+  const chips = page.getByRole('navigation', { name: 'Topics' });
+  await expect(chips.getByRole('link', { name: TOPIC_NAME })).toHaveAttribute('href', `/topics/${TOPIC}/`);
+  await expect(chips.getByRole('link')).toHaveCount(1);
+  await page.getByRole('contentinfo').getByRole('link', { name: 'Topics' }).click();
+  await expect(page).toHaveURL(/\/topics\/$/);
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await expect(page.getByRole('link', { name: `${TOPIC_NAME} (13)` })).toHaveAttribute('href', `/topics/${TOPIC}/`);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://sparkkindly.com/topics/');
+  const description = await page.locator('meta[name="description"]').getAttribute('content');
+  expect(description!.length).toBeGreaterThanOrEqual(70);
+  expect(description!.length).toBeLessThanOrEqual(160);
+  const topicPage = await page.goto(`/topics/${TOPIC}/`);
+  expect(topicPage?.status()).toBe(200);
+  const topicDescription = await page.locator('meta[name="description"]').getAttribute('content');
+  expect(topicDescription).toContain(TOPIC_NAME);
+  expect(topicDescription).toContain('13');
+});
+
+test('trust pages have 70-160 character descriptions', async ({ page }) => {
+  for (const path of ['/about/', '/editorial-policy/', '/accessibility/', '/privacy/', '/terms/', '/contact/', '/community/guidelines/', '/contributors/terms/', '/sponsorship/']) {
+    await page.goto(path);
+    const d = (await page.locator('meta[name="description"]').getAttribute('content')) ?? '';
+    expect(d.length, path).toBeGreaterThanOrEqual(70);
+    expect(d.length, path).toBeLessThanOrEqual(160);
+  }
+});
+
+test('the sitemap lists /topics/ on a released build', async ({ request }) => {
+  const body = await (await request.get('/sitemap.xml')).text();
+  if (process.env.SITE_RELEASE === 'false') expect(body).not.toContain('/topics/');
+  else expect(body).toContain('https://sparkkindly.com/topics/');
+});

@@ -11,7 +11,7 @@ describe('buildSitemap', () => {
   it('lists static pages, worlds, topics and items with trailing slashes', () => {
     expect(urls).toEqual(expect.arrayContaining([
       `${base}/`, `${base}/quiz/archive/`, `${base}/about/`, `${base}/privacy/`, `${base}/terms/`,
-      `${base}/play/`, `${base}/kids/`, `${base}/topics/owls/`, `${base}/play/a-quiz/`,
+      `${base}/play/`, `${base}/kids/`, `${base}/topics/`, `${base}/topics/owls/`, `${base}/play/a-quiz/`,
     ]));
     expect(urls.every((u) => u.endsWith('/'))).toBe(true);
   });
