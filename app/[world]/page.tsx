@@ -5,7 +5,9 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Pager from '@/components/Pager';
 import MoneyDisclaimer, { showsMoneyDisclaimer } from '@/components/item/MoneyDisclaimer';
 import { getDb } from '@/lib/db';
-import { currentScope } from '@/lib/accounts/scope-next';
+import { accountSessionToken, currentScope } from '@/lib/accounts/scope-next';
+import SponsorCard from '@/components/sponsorship/SponsorCard';
+import { loadWorldSponsor } from '@/lib/sponsorship/web';
 import { getWorld } from '@/lib/public/worlds';
 import { listPublic } from '@/lib/public/reads';
 import { PAGE_SIZE, pageCanonical, parsePage } from '@/lib/public/paging';
@@ -36,6 +38,8 @@ export default async function WorldPage({ params, searchParams }: Props) {
   const feature = page === 1 ? items[0] : undefined;
   const rest = feature ? items.slice(1) : items;
   const here = `/${w.slug}/`;
+  // The world's own sponsorship (Save, Grow and Discover only; null elsewhere, with the flag off and for viewers who may not see it).
+  const sponsor = page === 1 ? await loadWorldSponsor(db, await accountSessionToken(), w.slug, new Date()) : null;
 
   return (
     <div className="container section">
@@ -69,6 +73,7 @@ export default async function WorldPage({ params, searchParams }: Props) {
           </div>
         </section>
       )}
+      {sponsor && <SponsorCard line={sponsor} />}
       <section className="section">
         <p className="eyebrow">KEEP EXPLORING</p>
         <h2>More from {w.name}</h2>

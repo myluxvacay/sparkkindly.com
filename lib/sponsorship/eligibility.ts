@@ -24,13 +24,17 @@ export function viewerMaySeeSponsorship(viewer: SponsorViewer): boolean {
   return viewer.group === 'adult' && can(viewer.group, viewer.consent, 'see_sponsorship');
 }
 
+// The only worlds that may carry sponsorship (owner decision, 8 November 2026). Play, Together and Kids never do.
+export const SPONSOR_WORLDS = ['save', 'grow', 'discover'] as const;
+export const worldMaySponsor = (slug: string): boolean => (SPONSOR_WORLDS as readonly string[]).includes(slug);
+
 export type SponsorableItem = { audience: string; worldSlug: string; riskTier: string; status: string };
 
 export const itemMayCarrySponsorship = (i: SponsorableItem): boolean =>
-  i.status === 'published' && i.audience === 'adults' && i.worldSlug !== 'kids' && i.riskTier !== 'kids';
+  i.status === 'published' && i.audience === 'adults' && worldMaySponsor(i.worldSlug) && i.riskTier !== 'kids';
 
 // The same rule in SQL, over `items i JOIN worlds w`, for the click counter.
-export const ITEM_SPONSORABLE_SQL = `i.status = 'published' AND i.audience = 'adults' AND w.slug <> 'kids' AND i.risk_tier <> 'kids'`;
+export const ITEM_SPONSORABLE_SQL = `i.status = 'published' AND i.audience = 'adults' AND w.slug IN ('save', 'grow', 'discover') AND i.risk_tier <> 'kids'`;
 
 export async function sponsorViewerForSession(db: Db, token: string | undefined, now: Date): Promise<SponsorViewer> {
   if (!token) {

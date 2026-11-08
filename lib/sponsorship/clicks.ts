@@ -36,6 +36,7 @@ export async function recordClick(
      WHERE s.id = $1 AND sp.id = s.sponsor_id AND ${activeWhere('$2')} AND sp.link = $3
        AND (s.item_id IS NULL OR EXISTS (SELECT 1 FROM items i JOIN worlds w ON w.id = i.world_id
                                          WHERE i.id = s.item_id AND ${ITEM_SPONSORABLE_SQL}))
+       AND (s.world_id IS NULL OR s.world_id IN (SELECT id FROM worlds WHERE slug IN ('save', 'grow', 'discover')))
      RETURNING sp.link`,
     [sponsorshipId, today, stored.rows[0].link],
   );

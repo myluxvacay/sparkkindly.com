@@ -26,6 +26,7 @@ import CommentSection from '@/components/comments/CommentSection';
 import { loadCommentSection } from '@/lib/comments/web';
 import { bylineFor } from '@/lib/contributors/byline';
 import SponsorLine from '@/components/sponsorship/SponsorLine';
+import SponsorCard from '@/components/sponsorship/SponsorCard';
 import { loadSponsorLine } from '@/lib/sponsorship/web';
 import { recordSocialVisit } from '@/lib/social/visits';
 import VideoPlayer from '@/components/item/VideoPlayer';
@@ -133,6 +134,11 @@ export default async function ItemPage({ params, searchParams }: Props) {
         </div>
       )}
       {isArticle ? <ArticleBody article={article} /> : <div className="container section quiz-page"><PlayPanel item={item} searchParams={await searchParams} /></div>}
+      {sponsor && (
+        <div className="container">
+          <SponsorCard line={sponsor} />
+        </div>
+      )}
       <div className="container">
         <ShareButtons item={item} childContext={isChildScope(await currentScope())} />
       </div>

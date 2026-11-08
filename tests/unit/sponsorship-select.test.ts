@@ -122,9 +122,9 @@ describe('sponsorFor', () => {
 
   it('prefers item over topic over world, then the most recently started', async () => {
     const t = await topic();
-    const i = await item({ world: 'together', topic: t });
+    const i = await item({ world: 'discover', topic: t });
     const s = await sponsor();
-    const w = await attach(s, { world: 'together' });
+    const w = await attach(s, { world: 'discover' });
     expect((await sponsorFor(db, i, TODAY))?.id).toBe(w);
     const older = await attach(s, { topic: t }, { startsOn: '2026-10-01' });
     const newer = await attach(s, { topic: t }, { startsOn: '2026-11-01' });

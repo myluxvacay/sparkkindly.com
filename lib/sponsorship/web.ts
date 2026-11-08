@@ -11,16 +11,21 @@ import type { Db } from '@/lib/db';
 import { recordClick } from './clicks';
 import { sponsorViewerForSession, viewerMaySeeSponsorship } from './eligibility';
 import { utcDay } from './rules';
-import { sponsorFor, type SponsorLine } from './select';
+import { sponsorFor, worldSponsorFor, type SponsorLine } from './select';
+
+// The same gate for every sponsor read: flag on, and a viewer who may see sponsorship (an anonymous visitor or an adult;
+// never a child profile, a teen or a failed lookup).
+async function viewerMaySee(db: Db, token: string | undefined, now: Date): Promise<boolean> {
+  return sponsorshipEnabled() && viewerMaySeeSponsorship(await sponsorViewerForSession(db, token, now));
+}
 
 export async function loadSponsorLine(db: Db, token: string | undefined, itemId: string, now: Date): Promise<SponsorLine | null> {
-  if (!sponsorshipEnabled()) {
-    return null;
-  }
-  if (!viewerMaySeeSponsorship(await sponsorViewerForSession(db, token, now))) {
-    return null;
-  }
-  return sponsorFor(db, itemId, utcDay(now));
+  return (await viewerMaySee(db, token, now)) ? sponsorFor(db, itemId, utcDay(now)) : null;
+}
+
+// The card on a world's page: the world's own sponsorship, only in Save, Grow and Discover, for the same viewers.
+export async function loadWorldSponsor(db: Db, token: string | undefined, worldSlug: string, now: Date): Promise<SponsorLine | null> {
+  return (await viewerMaySee(db, token, now)) ? worldSponsorFor(db, worldSlug, utcDay(now)) : null;
 }
 
 // Clicks: 60 per network (IPv4 /24, IPv6 /64) per hour. ponytail: per-process memory, like the other limits.

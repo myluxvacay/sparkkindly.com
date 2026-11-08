@@ -8,7 +8,7 @@
 import { isUuid } from '@/lib/accounts/pin';
 import { sponsorshipEnabled } from '@/lib/config';
 import type { Queryable } from '@/lib/db';
-import { itemMayCarrySponsorship } from './eligibility';
+import { itemMayCarrySponsorship, worldMaySponsor } from './eligibility';
 import { disclosureFor, type SponsorshipKind, type TargetType } from './rules';
 
 export type SponsorLine = { id: number; label: string; kind: SponsorshipKind; disclosure: string; sponsorName: string };
@@ -62,4 +62,22 @@ export async function sponsorFor(db: Queryable, itemId: string, today: string): 
     sponsorName: row.name,
     disclosure: disclosureFor(row.kind, row.target, row.name),
   };
+}
+
+// The sponsorship attached to a whole world, for the card on that world's page. Only the three sponsorable worlds, only a
+// world-targeted sponsorship (an item's or topic's own line stays on its item page), the most recently started wins.
+// The caller decides the viewer first, as for sponsorFor.
+export async function worldSponsorFor(db: Queryable, worldSlug: string, today: string): Promise<SponsorLine | null> {
+  if (!sponsorshipEnabled() || !worldMaySponsor(worldSlug)) {
+    return null;
+  }
+  const r = await db.query<LineRow>(
+    `SELECT s.id, s.label, s.kind, sp.name, 'world' AS target
+     FROM sponsorships s JOIN sponsors sp ON sp.id = s.sponsor_id JOIN worlds w ON w.id = s.world_id
+     WHERE ${activeWhere('$1')} AND w.slug = $2
+     ORDER BY s.starts_on DESC NULLS LAST, s.id DESC LIMIT 1`,
+    [today, worldSlug],
+  );
+  const row = r.rows[0];
+  return row ? { id: row.id, label: row.label, kind: row.kind, sponsorName: row.name, disclosure: disclosureFor(row.kind, 'world', row.name) } : null;
 }

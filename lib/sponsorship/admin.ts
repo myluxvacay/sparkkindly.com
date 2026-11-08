@@ -35,7 +35,7 @@ async function resolveTarget(tx: Queryable, s: SponsorshipInput): Promise<{ colu
     return r.rows[0] ? { column: 'topic_id', id: r.rows[0].id } : null;
   }
   if (s.target === 'world') {
-    const r = await tx.query<{ id: number }>("SELECT id FROM worlds WHERE slug = $1 AND slug <> 'kids'", [s.targetRef]);
+    const r = await tx.query<{ id: number }>("SELECT id FROM worlds WHERE slug = $1 AND slug IN ('save', 'grow', 'discover')", [s.targetRef]);
     return r.rows[0] ? { column: 'world_id', id: r.rows[0].id } : null;
   }
   const m = ITEM_PATH.exec(s.targetRef);

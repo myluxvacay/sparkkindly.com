@@ -77,3 +77,9 @@ textarea:focus-visible,select:focus-visible,[tabindex="-1"]:focus-visible{outlin
 .video-play{position:absolute;inset:auto auto 50% 50%;transform:translate(-50%,50%);display:inline-flex;gap:12px;align-items:center;min-height:56px;padding:12px 28px;background:var(--plum);color:#fff;border:2px solid #fff;border-radius:40px;font:600 16px/1.2 var(--sans)}
 .video-play:hover{background:#432052}
 .video-frame:not(:has(img)) .video-play{background:var(--plum)}
+
+/* Sponsor card: bottom of an article and on a world page. */
+.sponsor-card{margin:40px 0;padding:22px 26px;border:1px solid var(--line);border-left:4px solid var(--plum);border-radius:6px;background:#faf6ee;max-width:740px}
+.sponsor-card .eyebrow{margin-bottom:8px}
+.sponsor-card-link{font:500 20px/1.35 var(--serif);margin-bottom:8px}
+.sponsor-card-note{font-size:13px;color:var(--muted);margin-bottom:0}
