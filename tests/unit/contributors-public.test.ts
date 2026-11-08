@@ -6,7 +6,7 @@ import { newTestDb } from '../helpers/test-db';
 import { seedReference } from '@/db/seed';
 import { contributor, stateOf, submitted } from '../helpers/contributors';
 import { person } from '../helpers/comments';
-import { bylineFor, contributorPage, contributorSlugs } from '@/lib/contributors/byline';
+import { bylineFor, contributorList, contributorPage, contributorSlugs } from '@/lib/contributors/byline';
 import { enableContributor, getProfile } from '@/lib/contributors/profile';
 import { withdraw } from '@/lib/contributors/submit';
 import { articleLd } from '@/lib/public/jsonld';
@@ -117,5 +117,29 @@ describe('JSON-LD', () => {
     expect(base.author).toEqual({ '@type': 'Organization', name: 'SparkKindly', url: 'https://sparkkindly.com/' });
     const ld = articleLd(item, 'https://sparkkindly.com', { name: 'Ada', slug: 'abcdefghij' }) as Record<string, unknown>;
     expect(ld.author).toEqual({ '@type': 'Person', name: 'Ada', url: 'https://sparkkindly.com/contributors/abcdefghij/' });
+  });
+});
+
+describe('the contributors index', () => {
+  it('lists a contributor with a visible published piece, none for a pending one, and nothing with the flag off', async () => {
+    const p = await contributor(db, NOW);
+    await submitted(db, p, NOW); // pending: not listed
+    const name = (await getProfile(db, p.id))!.displayName;
+    expect((await contributorList(db, scope())).some((c) => c.displayName === name)).toBe(false);
+    await published(p);
+    const row = (await contributorList(db, scope())).find((c) => c.displayName === name);
+    expect(row?.pieces).toBe(1);
+    expect(JSON.stringify(row)).not.toContain(p.email);
+    vi.stubEnv('CONTRIBUTORS_ENABLED', '');
+    expect(await contributorList(db, scope())).toEqual([]);
+  });
+
+  it('a child scope sees only contributors with kids/all pieces', async () => {
+    const p = await contributor(db, NOW);
+    const { itemId } = await published(p);
+    await db.query("UPDATE items SET audience = 'adults' WHERE id = $1", [itemId]);
+    const name = (await getProfile(db, p.id))!.displayName;
+    expect((await contributorList(db, { audiences: ['kids', 'all'], now: NOW })).some((c) => c.displayName === name)).toBe(false);
+    expect((await contributorList(db, { audiences: ['all', 'adults'], now: NOW })).some((c) => c.displayName === name)).toBe(true);
   });
 });

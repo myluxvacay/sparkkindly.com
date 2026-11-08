@@ -68,3 +68,22 @@ export async function contributorSlugs(db: Queryable, now: Date): Promise<string
   );
   return r.rows.map((x) => x.slug);
 }
+
+export type ContributorSummary = { displayName: string; slug: string; pieces: number };
+
+// The index at /contributors/: every contributor with at least one item this viewer's scope may see (so a child
+// profile never learns of a contributor who has only adults pieces). Empty with the flag off.
+export async function contributorList(db: Queryable, scope: Scope): Promise<ContributorSummary[]> {
+  if (!contributorsEnabled()) return [];
+  const r = await db.query<{ display_name: string; slug: string; pieces: string }>(
+    `SELECT p.display_name, p.slug, count(*) AS pieces
+     FROM contributor_profiles p
+     JOIN contributions c ON c.account_id = p.account_id AND c.state = 'approved'
+     JOIN items i ON i.id = c.item_id
+     JOIN worlds w ON w.id = i.world_id
+     WHERE ${visibleWhere('$1', '$2')}
+     GROUP BY p.display_name, p.slug ORDER BY p.display_name, p.slug LIMIT ${PAGE_LIMIT}`,
+    [scope.now, [...scope.audiences]],
+  );
+  return r.rows.map((x) => ({ displayName: x.display_name, slug: x.slug, pieces: Number(x.pieces) }));
+}
