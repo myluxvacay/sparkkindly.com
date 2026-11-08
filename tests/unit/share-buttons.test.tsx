@@ -105,6 +105,7 @@ describe('client components', () => {
       'components/SocialLinks.tsx',
       'components/admin/VideoUpload.tsx',
       'components/item/ShareClient.tsx',
+      'components/item/VideoPlayer.tsx', // owner-attached YouTube video: loads the player only after a press
     ]);
   });
 

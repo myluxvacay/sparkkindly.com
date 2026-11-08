@@ -28,6 +28,8 @@ import { bylineFor } from '@/lib/contributors/byline';
 import SponsorLine from '@/components/sponsorship/SponsorLine';
 import { loadSponsorLine } from '@/lib/sponsorship/web';
 import { recordSocialVisit } from '@/lib/social/visits';
+import VideoPlayer from '@/components/item/VideoPlayer';
+import { getVideoId } from '@/lib/items/video';
 import { getWorld } from '@/lib/public/worlds';
 import { JsonLd, metadata as seo } from '@/lib/seo';
 
@@ -78,6 +80,8 @@ export default async function ItemPage({ params, searchParams }: Props) {
   const related = (await listPublic(db, await currentScope(), { world: item.world, limit: 4, offset: 0 })).filter((i) => i.id !== item.id).slice(0, 3);
 
   const isArticle = item.kind === 'article';
+  // An owner-attached YouTube video: never on Kids content, whatever the database holds.
+  const videoId = isArticle && item.audience !== 'kids' && item.world !== 'kids' ? await getVideoId(db, item.id) : null;
   const article = readArticle(item.body);
   const image = readImage(item.image);
   const words = article.sections.flatMap((s) => s.paragraphs).join(' ').split(/\s+/).length;
@@ -123,6 +127,11 @@ export default async function ItemPage({ params, searchParams }: Props) {
         </div>
       )}
       {isArticle && <VideoBlock article={article} />}
+      {videoId && (
+        <div className="container article-media">
+          <VideoPlayer id={videoId} poster={`/api/video-poster/${item.world}/${item.slug}/`} title={item.title} />
+        </div>
+      )}
       {isArticle ? <ArticleBody article={article} /> : <div className="container section quiz-page"><PlayPanel item={item} searchParams={await searchParams} /></div>}
       <div className="container">
         <ShareButtons item={item} childContext={isChildScope(await currentScope())} />

@@ -87,6 +87,37 @@ export default async function AdminItemPage({ params, searchParams }: Props) {
         </form>
       </section>
 
+      {item.audience !== 'kids' && world !== 'kids' && (
+        <section aria-labelledby="video">
+          <h2 id="video">YouTube video</h2>
+          <p>
+            Shows a preview and a Play button on the article. Nothing loads from YouTube until a reader presses Play. Leave the link empty
+            to remove the video. Never available on Kids content.
+          </p>
+          <form method="post" action="/admin/act/" className="admin-form">
+            <input type="hidden" name="csrf" value={admin.csrf} />
+            <input type="hidden" name="action" value="item.video" />
+            <input type="hidden" name="return" value={here} />
+            <input type="hidden" name="id" value={item.id} />
+            <p>
+              <label htmlFor="video-url">YouTube link</label>
+              <input id="video-url" name="url" type="url" maxLength={200} placeholder="https://www.youtube.com/watch?v=…" />
+            </p>
+            <p>
+              <input id="video-captions" name="captions" type="checkbox" value="yes" />{' '}
+              <label htmlFor="video-captions">This video has captions</label>
+            </p>
+            <p>
+              <label htmlFor="video-reason">Why (kept in the audit log)</label>
+              <input id="video-reason" name="reason" required maxLength={200} />
+            </p>
+            <button type="submit" className="button">
+              Save video
+            </button>
+          </form>
+        </section>
+      )}
+
       <section aria-labelledby="reports">
         <h2 id="reports">Problem reports ({reports.length})</h2>
         <ul>

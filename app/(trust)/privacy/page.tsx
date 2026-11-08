@@ -16,6 +16,7 @@ export default function Page() {
           heading: 'What we collect today',
           paragraphs: [
             'SparkKindly has no accounts, sign-in, comments, uploads, analytics, advertising, tracking cookies, local-storage identifiers, fingerprinting or location features. Your browser makes no requests to other companies’ servers while you read or play: fonts, images and scripts all come from SparkKindly itself.',
+            'A few articles carry a video from YouTube. Nothing is requested from YouTube until you press Play: the preview picture comes from SparkKindly. When you press Play, the video loads from YouTube (a Google service), which may set its own cookies. Kids pages never carry a video.',
             'The only thing a visitor can send us is a “Report a problem” form. It stores the kind of problem, the message you type (up to 1000 characters, optional), the page it is about and the time. It does not store your name, email address or any account, and we ask you not to type personal details into it.',
           ],
         },

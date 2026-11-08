@@ -25,6 +25,7 @@ import { sendEmail, type EmailMessage } from '@/lib/email';
 import { attachSponsorship, createSponsor, endSponsorship } from '@/lib/sponsorship/admin';
 import { socialHandlers } from '@/lib/social/admin-actions';
 import { videoHandlers } from '@/lib/social/video/admin-actions';
+import { parseYouTubeId } from '@/lib/items/video';
 import { linkBase } from './sessions';
 import { audit } from './audit';
 import { DONE, ERRORS, type DoneCode, type ErrorCode } from './messages';
@@ -191,6 +192,27 @@ const handlers: Record<string, Handler> = {
     const reason = text(form, 'reason', 200);
     if (!(await updateText(tx, id, { title, summary }, admin.email, reason))) throw missing();
     return { code: 'saved', target: id, detail: { title, summary, reason } };
+  },
+
+  // The owner attaches (or, with an empty link, removes) a YouTube video. Never on Kids content; the owner confirms the
+  // video has captions (video never ships without them).
+  async 'item.video'({ tx, form }) {
+    const id = itemId(form);
+    const reason = text(form, 'reason', 200);
+    const url = field(form, 'url');
+    const r = await tx.query<{ audience: string; world: string }>(
+      'SELECT i.audience, w.slug AS world FROM items i JOIN worlds w ON w.id = i.world_id WHERE i.id = $1 FOR UPDATE OF i',
+      [id],
+    );
+    const item = r.rows[0];
+    if (!item) throw missing();
+    let videoId: string | null = null;
+    if (url) {
+      videoId = parseYouTubeId(url);
+      if (!videoId || form.get('captions') !== 'yes' || item.audience === 'kids' || item.world === 'kids') throw bad();
+    }
+    await tx.query('UPDATE items SET video_youtube_id = $2 WHERE id = $1', [id, videoId]);
+    return { code: 'saved', target: id, detail: { video: videoId, reason } };
   },
 
   // An owner-written article goes live at once. In the Kids world it is Kids content; the owner is its approver.
