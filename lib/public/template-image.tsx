@@ -102,7 +102,7 @@ export function resultCardImage(item: PublicItem, world: { name: string; color: 
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex', fontSize: 34, fontWeight: 700, letterSpacing: 4, color: PLUM, marginBottom: 36 }}>
-            I ANSWERED TODAY'S SPARK
+            {"I ANSWERED TODAY'S SPARK"}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', fontSize: 88, lineHeight: 1.12, fontWeight: 700, color: INK }}>
             {lines.map((l, i) => (
