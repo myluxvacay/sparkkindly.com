@@ -20,9 +20,9 @@ function progressText({ total, correct }: Dashboard['progress']): string {
 function Items({ items, worlds, empty }: { items: PublicItem[]; worlds: Map<string, World>; empty: string }) {
   if (items.length === 0) return <p>{empty}</p>;
   return (
-    <div className="content-grid two-col">
+    <div className="card-list">
       {items.map((i) => (
-        <ItemCard item={i} world={worlds.get(i.world)} key={i.id} />
+        <ItemCard item={i} world={worlds.get(i.world)} key={i.id} variant="text" />
       ))}
     </div>
   );

@@ -42,8 +42,8 @@ export default async function TopicPage({ params, searchParams }: Props) {
       <Breadcrumb trail={[{ name: 'Home', href: '/' }, { name: topic.name }]} />
       <p className="eyebrow">TOPIC</p>
       <h1>{topic.name}</h1>
-      <div className="content-grid two-col">
-        {items.map((i) => <ItemCard item={i} world={byWorld.get(i.world)} key={i.id} headingLevel={2} />)}
+      <div className="card-list">
+        {items.map((i) => <ItemCard item={i} world={byWorld.get(i.world)} key={i.id} headingLevel={2} variant="text" />)}
       </div>
       {!items.length && <p>Nothing here yet. <Link href="/">Back to the beginning</Link>.</p>}
       <Pager

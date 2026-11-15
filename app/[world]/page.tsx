@@ -78,7 +78,7 @@ export default async function WorldPage({ params, searchParams }: Props) {
         <p className="eyebrow">KEEP EXPLORING</p>
         <h2>More from {w.name}</h2>
         <div className="content-grid two-col">
-          {rest.map((i) => <ItemCard item={i} world={w} key={i.id} />)}
+          {rest.map((i) => <ItemCard item={i} world={w} key={i.id} variant="strip" />)}
         </div>
         {!items.length && page === 1 && <p>Our first pieces are being reviewed. Please come back for a little more wonder.</p>}
         <Pager
