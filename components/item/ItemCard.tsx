@@ -40,12 +40,15 @@ export default function ItemCard({ item, world, headingLevel = 3, variant = 'row
   }
   if (variant === 'strip') {
     const image = readImage(item.image);
-    const src = image.src ?? `/api/template-image/${item.world}/${item.slug}/`;
     return (
       <article className="content-card strip-card">
-        <Link className="strip-thumb" href={href} tabIndex={-1} aria-hidden="true">
-          <img src={src} alt="" width={208} height={156} loading="lazy" />
-        </Link>
+        {image.src ? (
+          <Link className="strip-thumb" href={href} tabIndex={-1} aria-hidden="true">
+            <img src={image.src} alt="" width={208} height={156} loading="lazy" />
+          </Link>
+        ) : (
+          <span className={`card-tile ${world?.color ?? 'gold'}`} aria-hidden="true">{world?.icon ?? '✦'}</span>
+        )}
         <div className="card-body">
           {meta}
           {heading}
