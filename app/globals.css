@@ -277,3 +277,31 @@ html[data-theme="dark"] .theme-toggle .icon-moon{display:none}
 @media(min-width:801px) and (max-width:1000px){.nav-families{display:none}.main-nav{gap:8px}.header-inner{gap:10px}.wordmark .brand-badge{width:48px;height:48px}}
 @media(max-width:400px){.menu-toggle{padding:8px;font-size:11px}.wordmark .brand-badge{width:40px;height:40px}.brand-name{font-size:20px}}
 .spark-hero-title{color:#fdf6ec;font-size:22px;margin:18px 0 0}
+
+/* Compact density pass (owner feedback Nov 15, 2026): listing cards become short rows
+   with a small world tile instead of the full-width share image, and the generous
+   section/feature spacing tightens site-wide. Type sizes keep the teen-UI floors. */
+.content-card{display:flex;gap:16px;align-items:flex-start;background:#fffdf9;border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.card-tile{flex:0 0 auto;width:56px;height:56px;border-radius:12px;display:grid;place-items:center;font-size:26px;background:#f7c94866;color:#553229}
+.card-tile.sage{background:#6ea99f38}
+.card-tile.coral{background:#ff7a7a40}
+.card-tile.sky{background:#5b8fc938}
+.card-body{min-width:0}
+.content-card .card-meta{margin:0 0 6px}
+.content-card h2,.content-card h3{font-size:21px;line-height:1.25;margin-bottom:6px}
+.content-card p{line-height:1.55;margin-bottom:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.content-grid{gap:22px}
+.section{padding-block:44px}
+.world-card{padding:18px 20px 20px}
+.world-top{margin-bottom:14px}
+.world-card h3{font-size:24px;margin-bottom:8px}
+.world-card p{margin-bottom:14px}
+.brand-intro{padding:40px;margin-bottom:32px}
+.brand-feature>img{height:300px}
+.story-poster{height:400px}
+.archive-grid{gap:18px}
+.archive-grid article{padding:22px}
+.mission{padding-block:64px 72px}
+html[data-theme="dark"] .content-card{background:#2e2138;border-color:#4a3a56}
+@media(max-width:800px){.section{padding-block:32px}}
+@media(max-width:580px){.section{padding-block:26px}.card-tile{width:48px;height:48px;font-size:22px}.content-card{padding:14px 15px;gap:13px}}
