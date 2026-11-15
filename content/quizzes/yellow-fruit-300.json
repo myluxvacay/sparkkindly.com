@@ -1,0 +1,32 @@
+{
+  "id": "yellow-fruit-300",
+  "scheduledDate": "2026-04-14",
+  "brand": "kids",
+  "prompt": "Which fruit is yellow and curves like a smile?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Apple"
+    },
+    {
+      "id": "b",
+      "text": "Grape"
+    },
+    {
+      "id": "c",
+      "text": "Banana"
+    },
+    {
+      "id": "d",
+      "text": "Plum"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A banana is yellow when it is ripe and has a gentle curve, a bit like a smile.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

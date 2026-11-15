@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-43",
+  "slug": "tessellations-tiling-patterns",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Tessellations: Which Shapes Tile a Floor With No Gaps?",
+  "description": "Only three regular shapes can tile a floor alone - and the reason is a neat bit of angle arithmetic.",
+  "publishedAt": "2026-09-19",
+  "updatedAt": "2026-09-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "play-and-games"
+  ],
+  "sources": [
+    {
+      "title": "Tessellation - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tessellation",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The 360 test",
+      "paragraphs": [
+        "A tessellation is a pattern of shapes that covers a surface with no gaps and no overlaps. For one regular polygon to tile on its own, its corner angles must fit around a point exactly, adding to 360 degrees. Equilateral triangles have 60-degree corners, and six of them meet perfectly: 6 x 60 = 360.",
+        "Squares manage it too: 4 x 90 = 360. Regular hexagons pass with three corners of 120 degrees. But a regular pentagon's corner is 108 degrees, and 360 is not divisible by 108 - three pentagons leave a gap and four overlap. So of all regular polygons, only triangles, squares and hexagons can tile alone."
+      ]
+    },
+    {
+      "heading": "Beyond the regular three",
+      "paragraphs": [
+        "Loosen the rules and the world opens up. Any triangle at all can tile, and so can any quadrilateral - even a lopsided one - if you rotate copies cleverly. Honeybees exploit the hexagon's efficiency, Islamic artists built breathtaking geometric tilings, and the Dutch artist M. C. Escher turned tessellation into art, bending tile edges into lizards, birds and fish that interlock perfectly.",
+        "Recently, mathematicians even found an 'aperiodic monotile' - a single shape, nicknamed the hat, that tiles the plane but only in patterns that never exactly repeat. It settled a question that had been open for half a century, which shows how deep the rabbit hole under a bathroom floor can go."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Cut out a dozen paper hexagons or squares and tile a tabletop, then try with regular pentagons and watch the gaps appear - the failure is the proof, felt by hand. Then take any lopsided quadrilateral, trace it, rotate the copy 180 degrees around the midpoint of a side, and keep going: your odd shape will tile.",
+        "For the Escher trick, start with a square tile. Cut a bump out of one side and tape the cut piece onto the opposite side. Whatever creature emerges will still tile - trace it across a page and colour the herd."
+      ]
+    }
+  ],
+  "takeaway": "A shape tiles alone only if its corner angle divides 360 exactly - that is why floors love triangles, squares and hexagons, and never regular pentagons.",
+  "fiction": false
+}

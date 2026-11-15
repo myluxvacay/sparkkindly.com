@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-71",
+  "slug": "classic-riddles-sphinx-and-friends",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Riddle of the Sphinx and Three More Classics",
+  "description": "What walks on four feet in the morning, two at noon and three in the evening? Start with the most famous riddle ever told.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "logic-puzzles"
+  ],
+  "sources": [
+    {
+      "title": "Riddle of the Sphinx - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Riddle_of_the_Sphinx",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The riddle that guarded a city",
+      "paragraphs": [
+        "In Greek myth, the Sphinx sat outside Thebes and devoured travellers who could not answer her riddle: 'What creature walks on four feet in the morning, two feet at noon, and three feet in the evening?' Oedipus answered correctly and the Sphinx was defeated. The answer is a human being: we crawl on all fours as babies, walk on two legs as adults, and lean on a walking stick in old age - the 'morning', 'noon' and 'evening' are the stages of a life.",
+        "Notice the riddle's machinery, because every classic riddle uses it: describe something utterly familiar in language that points somewhere else. 'Morning' means infancy, 'feet' includes hands and a stick. Solving a riddle is mostly the art of questioning the words, not the world."
+      ]
+    },
+    {
+      "heading": "Three more classics - answers at the end",
+      "paragraphs": [
+        "Try these three, which have survived centuries of retelling. First: 'The more of me you take, the more you leave behind. What am I?' Second: 'What has a head and a tail, but no body?' Third: 'What runs but never walks, has a mouth but never talks, has a bed but never sleeps?'",
+        "Answers: footsteps - every step you take leaves another behind you. A coin - heads on one side, tails on the other, and nothing in between that counts as a body. And a river - it runs, its opening is a mouth, and its channel is a bed. Each answer, once heard, makes every clue click at once; that click is the signature of a well-made riddle."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Learn one classic riddle by heart and perform it - riddles are theatre, and the pause before the answer is part of the artefact. Then try writing your own using the Sphinx's method: pick an ordinary thing, list three true facts about it, and rephrase each fact so it sounds like it belongs to something else.",
+        "Test your riddle on a friend. If they solve it instantly, your clues point too directly; if they cannot solve it even after the answer, a clue was unfair. The sweet spot - hard before, obvious after - is exactly where the Sphinx has been sitting for two thousand years."
+      ]
+    }
+  ],
+  "takeaway": "Classic riddles work by describing the familiar in unfamiliar words - solve them by asking what fits every clue at once.",
+  "fiction": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "save-bulk-64",
+  "slug": "the-shopping-list-shield",
+  "brand": "save",
+  "contentType": "article",
+  "title": "The list is a shield",
+  "description": "A written list does more than remind you — it gives you a polite, pre-made \"no\" for everything that was not on it.",
+  "publishedAt": "2026-10-09",
+  "updatedAt": "2026-10-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "spending-wisely",
+    "budgeting",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Decide at home, execute in the shop",
+      "paragraphs": [
+        "At home, you are calm, fed, and surrounded by evidence of what you already own. In the shop, you are surrounded by professionals whose job is to add items to your basket. The list moves the decision to the place where you make it better.",
+        "Write the list from your actual supplies, not from the shop's layout. Check the cupboards first; buying a third jar of something you already have is the quietest waste in the weekly shop."
+      ]
+    },
+    {
+      "heading": "The one-extra rule",
+      "paragraphs": [
+        "A list that allows no exceptions can feel like a punishment and get abandoned. Try allowing exactly one unplanned extra per trip. The limit keeps the shield up while leaving room for a genuine discovery or a small pleasure.",
+        "Everything else that tempts you goes on next week's list draft. If it still looks good after a week at home, it can earn its place properly."
+      ]
+    },
+    {
+      "heading": "Digital lists work too",
+      "paragraphs": [
+        "A shared notes app list works as well as paper, and it has one advantage: the whole household can add to it, so the shopper is not guessing and nobody buys duplicates. Cross items off as you go and the trip gets shorter as well as cheaper.",
+        "Judge the system after a month, not a trip. The savings from lists are unglamorous — a few pounds or dollars a week in avoided extras and duplicates — but they are among the most reliable in all of household budgeting."
+      ]
+    }
+  ],
+  "takeaway": "Shop from a list written at home, allow yourself one extra, and park everything else on next week's draft — the shield only works if you carry it.",
+  "fiction": false
+}

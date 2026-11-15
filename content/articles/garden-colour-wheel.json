@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-85",
+  "slug": "garden-colour-wheel",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Garden Colour Wheel",
+  "description": "For ages 6–9 with an adult: collect fallen petals and leaves and arrange them into a rainbow wheel of colours.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "nature"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Collect the rainbow",
+      "paragraphs": [
+        "Hunt for fallen petals and leaves in as many colours as you can find — red, orange, yellow, green, purple, pink, white, and brown.",
+        "Only take what has already fallen. Fallen petals are the garden's gifts; flowers still growing are gifts for bees and everyone else."
+      ]
+    },
+    {
+      "heading": "Build the wheel",
+      "paragraphs": [
+        "Arrange your finds in a big circle on the paper, in rainbow order. Each colour melts into the next, like a wheel of paint.",
+        "Step back and look. A garden holds the whole rainbow at once, if you gather it gently."
+      ]
+    },
+    {
+      "heading": "Name the shades",
+      "paragraphs": [
+        "Look closely at one colour family. How many different greens did you find? Light green, dark green, yellow-green, blue-green.",
+        "Artists mix paints to get these shades. The garden grows them all for free."
+      ]
+    }
+  ],
+  "takeaway": "Fallen petals and leaves can build a whole rainbow wheel, showing every colour the garden grows.",
+  "fiction": false,
+  "materials": [
+    "Fallen petals and leaves",
+    "A big sheet of paper",
+    "A glue stick (optional)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only collect petals and leaves that have already fallen. Never pick flowers from gardens without the owner's permission, and wash your hands afterwards."
+  ],
+  "screenFreeExtension": "Take a photo of your wheel, then return everything to the garden so it can feed the soil."
+}

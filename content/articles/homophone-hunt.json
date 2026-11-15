@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-86",
+  "slug": "homophone-hunt",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Homophone hunt: words that sound the same but mean different things",
+  "description": "Flour and flower, knight and night — homophones are sound-alike words with different spellings and meanings, and they make brilliant game material.",
+  "publishedAt": "2026-06-10",
+  "updatedAt": "2026-06-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "words"
+  ],
+  "sources": [
+    {
+      "title": "Homophone — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Homophone",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Same sound, different word",
+      "paragraphs": [
+        "Homophones are words that are pronounced identically but differ in meaning and usually in spelling. Sea and see, right and write, pair and pear, their, there and they're — English is full of these sound twins, which is why spelling tests and autocorrect both have such a hard life.",
+        "Some sets are generous: to, too and two; buy, by and bye; and the champion trio of right, write and rite, with wright (a maker, as in playwright) making four for the very keen."
+      ]
+    },
+    {
+      "heading": "Why they exist",
+      "paragraphs": [
+        "English borrowed words from many languages and then let pronunciation drift for a thousand years. Knight once had its k and gh sounded out loud; as speech softened, words that once sounded different collapsed into the same shape, leaving spelling to remember the difference.",
+        "That history makes homophones a gift for jokes. “Why did the baker stop making doughnuts? He got tired of the hole thing” only works because whole and hole share a sound."
+      ]
+    },
+    {
+      "heading": "Try it: the homophone sentence game",
+      "paragraphs": [
+        "Take turns building the silliest correct sentence you can using a homophone pair: “The knight spent the night guarding the castle.” Score a point for each pair used correctly, and two points if the sentence makes somebody laugh.",
+        "For a drawing version, one player draws a homophone — a flower made of flour, perhaps — and everyone else guesses which spelling was meant. The arguments about the answer are the best part."
+      ]
+    }
+  ],
+  "takeaway": "Homophones prove that English spelling remembers things English speech has forgotten — and they are endless fun to play with.",
+  "fiction": false
+}

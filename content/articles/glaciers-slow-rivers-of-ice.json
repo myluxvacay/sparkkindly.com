@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-63",
+  "slug": "glaciers-slow-rivers-of-ice",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Glaciers: slow rivers of ice",
+  "description": "A glacier is a river that flows in years instead of hours, carving valleys and carrying mountains away grain by grain.",
+  "publishedAt": "2026-09-30",
+  "updatedAt": "2026-09-30",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "earth-science",
+    "climate"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Glacier",
+      "url": "https://en.wikipedia.org/wiki/Glacier",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Snow that becomes a river",
+      "paragraphs": [
+        "Where more snow falls in winter than melts in summer, the surplus piles up year after year. Its own weight squeezes the buried layers, first into granular firn and finally into dense glacial ice. Once the ice grows thick enough — around 50 metres — gravity starts it moving.",
+        "Glaciers flow by creeping within the ice itself and, where meltwater lubricates the base, by sliding over the bedrock. Speeds range from a few centimetres a day to, in rare surging glaciers, tens of metres a day."
+      ]
+    },
+    {
+      "heading": "Sculptors and storehouses",
+      "paragraphs": [
+        "Moving ice is a powerful tool. It plucks rock from valley floors, grinds it with embedded debris, and deposits the rubble in ridges called moraines when it melts. Many famous valleys, fjords and lake basins are glacier-carved, and the Great Lakes of North America were gouged by ice sheets.",
+        "Glaciers also store about two-thirds of the world's fresh water. Their meltwater feeds rivers that hundreds of millions of people depend on, which is why scientists watch their slow retreat so closely."
+      ]
+    }
+  ],
+  "takeaway": "Glaciers are flowing ice formed from compacted snow; they carve landscapes and store most of Earth's fresh water.",
+  "fiction": false
+}

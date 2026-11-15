@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-105",
+  "slug": "kaprekar-constant-6174",
+  "brand": "play",
+  "contentType": "article",
+  "title": "6174: the number every four-digit number falls into",
+  "description": "Pick any four-digit number, shuffle its digits into the biggest and smallest arrangements, subtract — and repeat. Within seven steps you will always land on 6174.",
+  "publishedAt": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "6174 — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/6174",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The routine",
+      "paragraphs": [
+        "Take a four-digit number whose digits are not all the same — say 3524. Arrange the digits to make the largest number (5432) and the smallest (2345) and subtract: 5432 − 2345 = 3087. Repeat: 8730 − 0378 = 8352. Again: 8532 − 2358 = 6174.",
+        "Now try to leave. 7641 − 1467 = 6174. The number is a trapdoor: once you land on it, the routine maps it to itself forever. The Indian mathematician D. R. Kaprekar described this in 1949, and 6174 is called Kaprekar's constant."
+      ]
+    },
+    {
+      "heading": "Every road leads there",
+      "paragraphs": [
+        "The startling part is that 6174 is not just an example — every four-digit number with at least two different digits reaches it, in at most seven rounds of the routine. Mathematicians have checked them all; there are no exceptions and no escape routes.",
+        "Three-digit numbers have their own trapdoor: 495. Try 321: 321 − 123 = 198; 981 − 189 = 792; 972 − 279 = 693; 963 − 369 = 594; 954 − 459 = 495 — and there it stays."
+      ]
+    },
+    {
+      "heading": "Try it: race to the constant",
+      "paragraphs": [
+        "Each player picks a secret four-digit number, then everyone performs the routine on their own number, counting the steps. Compare: who took the longest road to 6174? (Seven steps is the maximum — see if anyone's number achieves it.)",
+        "Then investigate like a mathematician: what goes wrong with a number like 1111, whose digits are all the same? The routine collapses to zero, which is why the rule insists on at least two different digits."
+      ]
+    }
+  ],
+  "takeaway": "Kaprekar's routine is a funnel in number space: thousands of starting points, one resting place — 6174.",
+  "fiction": false
+}

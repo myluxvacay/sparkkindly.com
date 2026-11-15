@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-120",
+  "slug": "line-drying-laundry",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Line-drying laundry when you can",
+  "description": "Fresh air dries clothes for free, treats fabrics gently and gives the tumble dryer long holidays.",
+  "publishedAt": "2026-07-25",
+  "updatedAt": "2026-07-25",
+  "tags": [
+    "green",
+    "energy-saving"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Why air beats heat for clothes",
+      "paragraphs": [
+        "Tumble dryers are hard on fabrics as well as bills: the heat and tumbling that dry clothes also wear them thin, which is where much of the lint in the filter came from. Line-dried clothes generally last longer and need less ironing if they are shaken and hung with a little care.",
+        "Sunlight is a gentle natural freshener for whites, though it can fade strong colours, so turn bright and dark items inside out or choose a shady, breezy spot for them."
+      ]
+    },
+    {
+      "heading": "Making it work in real homes",
+      "paragraphs": [
+        "Outdoors is ideal, but a folding rack near a window or in a ventilated room handles most loads in flats and small houses. Spacing items out, rather than overlapping them, is the difference between dry-by-evening and still-damp-tomorrow.",
+        "Indoor drying adds moisture to the air, so open a window a crack or run an extractor while clothes dry, especially in rooms prone to condensation. A small fan pointed at the rack speeds things up remarkably on still days."
+      ]
+    },
+    {
+      "heading": "A rhythm, not a rule",
+      "paragraphs": [
+        "Few households can line-dry everything in a wet winter week, and nobody needs to. Drying the big, slow items like towels and bedding on racks when weather allows, and reserving the dryer for genuine rushes, captures most of the saving.",
+        "Thick items dried halfway in the dryer and finished on the rack is a perfectly good compromise: less energy than a full cycle, less damp in the house, and clothes that still feel soft."
+      ]
+    }
+  ],
+  "takeaway": "Shake, space and hang whenever weather and space allow, and let the dryer become the backup instead of the default."
+}

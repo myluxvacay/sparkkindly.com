@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-117",
+  "slug": "second-hand-first",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Second-hand first: a gentle shopping habit",
+  "description": "Checking the second-hand options before buying new saves money and resources, and often finds better quality too.",
+  "publishedAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "tags": [
+    "green",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The habit, not the rule",
+      "paragraphs": [
+        "Second-hand first simply means pausing before any non-urgent purchase and asking whether a used version would serve just as well. Furniture, books, bicycles, children's clothes and kitchen equipment are all abundant second-hand, because people outgrow or duplicate them long before they wear out.",
+        "It is a first look, not a ban on buying new. Shoes that must fit perfectly, safety equipment and mattresses are all reasonable exceptions where new makes sense."
+      ]
+    },
+    {
+      "heading": "Where to look",
+      "paragraphs": [
+        "Charity shops, online marketplaces, community selling groups and specialist refurbishers each suit different hunts. Setting an alert for a specific item on a marketplace turns waiting into a strategy rather than a chore.",
+        "Older used items are frequently better made than their cheap modern equivalents: solid wood furniture, cast-iron pans and well-made tools were built to be repaired, and often cost less than flimsy new versions."
+      ]
+    },
+    {
+      "heading": "Buying used, kindly and safely",
+      "paragraphs": [
+        "Check items carefully, ask about faults, and meet sellers in sensible public places for local pickups. For children's equipment, check current safety guidance, since standards change and some items, like old car seats, should not be reused.",
+        "Selling or giving away your own outgrown things completes the circle. The household that buys second-hand first usually finds it natural to pass things on too."
+      ]
+    }
+  ],
+  "takeaway": "Look for a used version first, buy new when it genuinely matters, and pass your own things on in turn."
+}

@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-89",
+  "slug": "the-game-of-ghost",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Ghost: the word game where finishing a word loses",
+  "description": "Players add one letter at a time, each secretly aiming at a word — but whoever completes a word loses the round. Ghost is spelling played as a bluff.",
+  "publishedAt": "2026-06-16",
+  "updatedAt": "2026-06-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "play-and-games"
+  ],
+  "sources": [
+    {
+      "title": "Ghost (game) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ghost_(game)",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A letter at a time",
+      "paragraphs": [
+        "Ghost needs no equipment at all. The first player says a letter. The next adds a letter to the end, and so on around the circle. Every player must have a real word in mind that the growing string of letters could become — but the player who actually completes a word of four letters or more loses the round.",
+        "So if the letters stand at G-H-O-S, the next player is in danger: adding T finishes “ghost” and loses. A clever player steers earlier, choosing letters that keep several possible words alive while narrowing everyone else's choices."
+      ]
+    },
+    {
+      "heading": "Bluffing and challenges",
+      "paragraphs": [
+        "The spice of the game is the challenge. If you suspect the player before you had no real word in mind — they were just adding a desperate letter — you may challenge. They must name the word they were aiming at. If they cannot, they lose; if they can, you do.",
+        "Traditionally, losing a round earns you a letter of the word GHOST, and collecting all five puts you out — which is how the game got its name. Shorter family versions simply play first to three lost rounds."
+      ]
+    },
+    {
+      "heading": "Try it: a friendly first game",
+      "paragraphs": [
+        "Agree your rules before you start: minimum word length four, no names of people or places, and a dictionary (or a trusted phone) as referee. Beginners do well by keeping a few long, flexible words in reserve — words starting with common pairs like ST, TR and PL.",
+        "Watch what happens with the letters Q and U, or an awkward K near the end of a string. Ghost rewards players who think two moves ahead, which is exactly what makes it a quiet little strategy game in disguise."
+      ]
+    }
+  ],
+  "takeaway": "In Ghost, the letters are a cliff edge: every player must walk towards a word without being the one who arrives.",
+  "fiction": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-54",
+  "slug": "the-flytrap-that-counts",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The flytrap that counts",
+  "description": "A Venus flytrap does not snap at every touch. It counts first — and only spends its energy on real prey.",
+  "publishedAt": "2026-09-14",
+  "updatedAt": "2026-09-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Venus flytrap",
+      "url": "https://en.wikipedia.org/wiki/Venus_flytrap",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Two touches to spring the trap",
+      "paragraphs": [
+        "Each leaf of a Venus flytrap is a hinged trap lined with tiny trigger hairs. Experiments have shown that one touch is not enough: an insect must brush the hairs twice within roughly half a minute before the trap snaps shut. A single brush might be a raindrop or a speck of debris, and closing is expensive, so the plant waits for better evidence.",
+        "Once the trap closes, the struggling of the trapped insect keeps stimulating the hairs. The more it struggles, the more tightly the plant seals the trap and the more digestive juices it releases — a rough count of touches guides how much effort to invest."
+      ]
+    },
+    {
+      "heading": "Why a plant eats animals at all",
+      "paragraphs": [
+        "Flytraps grow in sunny, waterlogged soils that are extremely poor in nutrients, especially nitrogen. Catching insects is the plant's way of mining what the soil cannot give. It still makes its own food from sunlight like other green plants; the prey is a supplement, not a meal of energy.",
+        "The whole strategy is a budget. Counting touches, sealing slowly, digesting for days — everything about the flytrap is shaped by the cost of acting on false alarms."
+      ]
+    }
+  ],
+  "takeaway": "The Venus flytrap counts touches before closing, saving its costly trap for prey that is really there.",
+  "fiction": false
+}

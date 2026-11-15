@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-110",
+  "slug": "the-calendar-that-skipped-ten-days",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The calendar that skipped ten days",
+  "description": "In October 1582, people in several countries went to sleep on the 4th and woke up on the 15th — to fix a calendar that had drifted ten days from the seasons.",
+  "publishedAt": "2026-07-17",
+  "updatedAt": "2026-07-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "history",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Gregorian calendar",
+      "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Julian calendar",
+      "url": "https://en.wikipedia.org/wiki/Julian_calendar",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A year that is not quite 365 days",
+      "paragraphs": [
+        "A calendar has an awkward job: fit whole days into a year that refuses to be whole. Earth takes about 365 days, 5 hours and 49 minutes to circle the Sun. Julius Caesar's calendar, from 45 BC, rounded this to 365 days plus one leap day every four years — close, but about eleven minutes too generous each year.",
+        "Eleven minutes sounds like nothing. But minutes compound: after sixteen centuries, the calendar had drifted ten full days, and the spring equinox — used to set the date of Easter — was falling on 11 March instead of 21 March."
+      ]
+    },
+    {
+      "heading": "The great skip",
+      "paragraphs": [
+        "Pope Gregory XIII's reform of 1582 made two fixes. First, the skip: in Italy, Spain, Portugal and Poland, Thursday 4 October was followed directly by Friday 15 October. Rent, wages and birthdays caused predictable grumbling, but the sky and the calendar agreed again.",
+        "Second, a smarter leap rule: century years are leap years only if divisible by 400. So 2000 was a leap year, but 1700, 1800 and 1900 were not. The Gregorian calendar now drifts by only about a day every 3,000 years."
+      ]
+    },
+    {
+      "heading": "Adoption, slowly and suspiciously",
+      "paragraphs": [
+        "Not everyone trusted a pope's arithmetic. Britain and its colonies waited until 1752, by which time they had to skip eleven days; Russia held out until 1918, and Greece until 1923. Travellers of the era sometimes crossed a border and changed date by nearly a fortnight.",
+        "Today the Gregorian calendar is the world's shared civil calendar — a quiet piece of international agreement, maintained by nothing more than everyone continuing to use it."
+      ]
+    }
+  ],
+  "takeaway": "The Gregorian reform skipped ten days in 1582 and refined the leap year, fixing an eleven-minute yearly error that had grown for 1,600 years.",
+  "fiction": false
+}

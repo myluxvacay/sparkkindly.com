@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-68",
+  "slug": "bogo-maths",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Buy one, get one: the real maths",
+  "description": "\"Buy one get one free\" sounds like half price — and sometimes is. The catch is whether you needed two in the first place.",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "understanding-offers",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "When BOGO is a genuine bargain",
+      "paragraphs": [
+        "If an item costs $10 and the offer gives you two for $10, each one effectively costs $5 — a true 50% saving, provided both get used. For storable staples you buy every week anyway, that is real money saved.",
+        "\"Buy one, get one half price\" is gentler than it sounds: two $20 items cost $30 together, so each is effectively $15 — a 25% saving overall, not 50%. Worth having, but worth naming correctly."
+      ]
+    },
+    {
+      "heading": "When BOGO quietly costs more",
+      "paragraphs": [
+        "The maths flips when the second item was never needed. Two perishable items where one expires is not a saving; it is paying full price and throwing half away. A bargain you bin is just spending with extra steps.",
+        "BOGO can also pull you up a price tier. The premium brand on BOGO may still cost more per unit than your usual brand at its normal price. Compare the effective unit price against what you would ordinarily buy, not against the same item's full price."
+      ]
+    },
+    {
+      "heading": "A two-question test",
+      "paragraphs": [
+        "Before any multi-buy offer, ask: would I buy this item at this total price anyway, and will every unit be used before it spoils or bores me? Two honest yeses mean take the offer. Anything else means the offer is selling, and you are buying, a story.",
+        "If storage is the only obstacle and the item genuinely keeps — rice, soap, tinned food — a multi-buy can be a quiet way to lower your costs for months. The test still applies; it just passes more often for things that do not expire."
+      ]
+    }
+  ],
+  "takeaway": "Work out the effective price per item, compare it with your usual brand, and only count the saving on items that will genuinely be used.",
+  "fiction": false
+}

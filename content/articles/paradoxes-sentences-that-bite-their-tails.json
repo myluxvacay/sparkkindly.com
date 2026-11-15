@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-73",
+  "slug": "paradoxes-sentences-that-bite-their-tails",
+  "brand": "play",
+  "contentType": "article",
+  "title": "This Sentence Is False: A Gentle Introduction to Paradox",
+  "description": "Some sentences cannot be true or false without breaking logic - meet the liar paradox and its surprisingly useful family.",
+  "publishedAt": "2026-11-03",
+  "updatedAt": "2026-11-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Liar paradox - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Liar_paradox",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A sentence with no safe answer",
+      "paragraphs": [
+        "Consider the sentence: 'This sentence is false.' If it is true, then what it says holds - so it is false. If it is false, then its claim fails - so it is true. Each answer destroys itself and hands you the other one, forever. This is the liar paradox, known since ancient Greece, where the poet Epimenides - himself a Cretan - was said to have declared that all Cretans are liars.",
+        "It is tempting to dismiss this as wordplay, but logicians take it seriously because it is not about trick wording. Any language strong enough to talk about its own sentences can build this loop. The paradox is less a joke than a boundary marker: it shows where straightforward ideas about truth stop working."
+      ]
+    },
+    {
+      "heading": "Why paradoxes earn their keep",
+      "paragraphs": [
+        "In the early 1900s, a cousin of the liar paradox - Bertrand Russell's paradox about the set of all sets that do not contain themselves, often retold as a barber who shaves all and only those who do not shave themselves - genuinely broke the foundations of mathematics as they then stood. Rebuilding those foundations carefully took decades and made modern logic far stronger.",
+        "Computing inherited the pattern too. Alan Turing's halting problem - proving that no program can perfectly predict whether other programs will finish - is proved by a liar-style loop: build a program that does the opposite of whatever the predictor says. Self-reference, the engine of the paradox, turned out to be one of the deepest ideas in science."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Try the two-card version, Jourdain's paradox. Write on one side of a card: 'The sentence on the back of this card is true.' Write on the back: 'The sentence on the front of this card is false.' Follow the loop with a friend, each of you arguing one side, and see if either of you can find a stable assignment of true and false. (You cannot - that is the point.)",
+        "Then hunt for gentler self-reference in the wild: signs that say 'ignore this sign', instructions that refer to themselves, rules about rules. You will start seeing the loop everywhere - and now you know it has been fascinating thinkers for over two thousand years."
+      ]
+    }
+  ],
+  "takeaway": "Paradoxes are logic pointing at its own edges - a sentence that refers to itself can trap truth in a loop with no exit.",
+  "fiction": false
+}

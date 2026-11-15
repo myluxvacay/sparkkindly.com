@@ -1,0 +1,32 @@
+{
+  "id": "quiet-friend-check-303",
+  "scheduledDate": "2026-04-17",
+  "brand": "together",
+  "prompt": "A usually cheerful friend has been quiet for several days. Which approach is most caring?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Demand to know what is wrong"
+    },
+    {
+      "id": "b",
+      "text": "Tell the rest of the group they seem off"
+    },
+    {
+      "id": "c",
+      "text": "Ignore it completely"
+    },
+    {
+      "id": "d",
+      "text": "Ask gently if they are okay, and let them share as much as they want"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A gentle question with no pressure opens the door while leaving your friend in control of the conversation.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

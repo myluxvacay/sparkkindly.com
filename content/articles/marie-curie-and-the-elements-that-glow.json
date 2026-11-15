@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-127",
+  "slug": "marie-curie-and-the-elements-that-glow",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Marie Curie and the elements that glow",
+  "description": "Working in a draughty shed with tonnes of ore, Marie Curie discovered two new elements and gave science the word 'radioactivity'.",
+  "publishedAt": "2026-08-26",
+  "updatedAt": "2026-08-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Marie Curie",
+      "url": "https://en.wikipedia.org/wiki/Marie_Curie",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Smithsonian Magazine: Marie Curie",
+      "url": "https://www.smithsonianmag.com/history/marie-curie-179491602/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Rays from a dark mineral",
+      "paragraphs": [
+        "In 1896, Henri Becquerel found that uranium salts fogged photographic plates even in darkness — they were emitting invisible rays. Marie Curie, a Polish-born physicist working in Paris, took up the puzzle with her husband Pierre, measuring the rays precisely and showing they came from the uranium atoms themselves.",
+        "She coined the word radioactivity for the phenomenon. Testing every known element, she found thorium also emitted rays — and that a uranium ore called pitchblende was far more radioactive than its uranium could explain. Something unknown and much stronger was hiding inside it."
+      ]
+    },
+    {
+      "heading": "Tonnes of ore, grams of discovery",
+      "paragraphs": [
+        "The Curies' laboratory was a leaky shed. There, over four years, they processed tonnes of pitchblende residue — stirring boiling vats by hand — slowly concentrating the hidden elements. In 1898 they announced two new ones: polonium, named for Marie's occupied homeland, and radium, which glowed faintly in the dark and warmed itself.",
+        "Marie Curie went on to win two Nobel Prizes, in physics and in chemistry — still the only person to win in two different sciences. During the First World War she organised mobile X-ray units, driven to the front to help surgeons find shrapnel in wounded soldiers."
+      ]
+    },
+    {
+      "heading": "The price, and the lesson",
+      "paragraphs": [
+        "Nobody then understood the danger. The Curies handled radioactive material daily, carried it in pockets, and marvelled at its glow; Marie died in 1934 of an illness almost certainly caused by her years of exposure. Her notebooks remain radioactive today and are kept in lead-lined boxes.",
+        "Modern science kept her discoveries and learned her lesson: protective shielding, distance and monitoring now guard everyone who works with radiation, and radium's medical descendants treat cancers with precision she would have admired."
+      ]
+    }
+  ],
+  "takeaway": "Marie Curie's patient chemistry revealed polonium and radium and founded radioactivity science — at a personal cost that taught science to protect its own.",
+  "fiction": false
+}

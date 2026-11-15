@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-56",
+  "slug": "do-trees-talk-through-fungi",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Do trees talk through fungi?",
+  "description": "Under every forest, roots and fungi weave a vast network. What travels along it — and what it means — is an active scientific question.",
+  "publishedAt": "2026-09-18",
+  "updatedAt": "2026-09-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Mycorrhizal network",
+      "url": "https://en.wikipedia.org/wiki/Mycorrhizal_network",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The partnership underground",
+      "paragraphs": [
+        "Most land plants partner with fungi called mycorrhizae. The fungi thread through the soil and into or around root cells, trading mineral nutrients they gather for sugars the plant makes in sunlight. The fungal threads — far thinner than roots — reach water and nutrients the plant could never touch alone.",
+        "Because one fungus can connect to several trees, researchers realised the forest floor contains shared networks. Experiments have traced carbon and other substances moving between trees along these fungal pathways, sometimes from a well-lit tree toward a shaded one."
+      ]
+    },
+    {
+      "heading": "Where the science gets careful",
+      "paragraphs": [
+        "Popular accounts sometimes leap from these findings to claims of forests as single thinking organisms, with mother trees deliberately nursing their young. Many scientists urge caution: movement of substances through a network is well supported, but intention, communication and large benefits to receiving trees are much harder to prove, and some headline results have proved difficult to replicate.",
+        "The honest picture is still wonderful. A real, ancient trading system links roots and fungi beneath the forest, moving real resources. What it means for the forest is a question science is actively, carefully working on — and saying 'we don't know yet' is part of the discovery."
+      ]
+    }
+  ],
+  "takeaway": "Fungi link tree roots into real trading networks, though grand claims about tree 'talk' go beyond what the evidence yet shows.",
+  "fiction": false
+}

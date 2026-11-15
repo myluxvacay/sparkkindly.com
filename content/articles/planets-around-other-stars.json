@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-93",
+  "slug": "planets-around-other-stars",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Planets around other stars",
+  "description": "For most of history we knew of no planets beyond our own solar system; now astronomers have confirmed more than five thousand.",
+  "publishedAt": "2026-06-06",
+  "updatedAt": "2026-06-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Exoplanet",
+      "url": "https://en.wikipedia.org/wiki/Exoplanet",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "NASA: Exoplanets",
+      "url": "https://science.nasa.gov/exoplanets/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A long time not knowing",
+      "paragraphs": [
+        "Until surprisingly recently, nobody knew whether other stars had planets at all. Planets are small and dark, and their stars are dazzlingly bright, so a planet is like a firefly hovering beside a lighthouse.",
+        "The first confirmed planets beyond our solar system were found in 1992, orbiting the spinning remnant of a dead star. In 1995, astronomers found a planet around a sun-like star, 51 Pegasi — a giant world hugging its star far closer than Mercury hugs our Sun, which nobody had expected."
+      ]
+    },
+    {
+      "heading": "How to find an invisible world",
+      "paragraphs": [
+        "Most exoplanets are found indirectly. In the transit method, a telescope watches a star's light dip slightly and regularly, the signature of a planet crossing in front of it. The Kepler space telescope used this trick to find thousands of worlds at once.",
+        "Astronomers also watch stars wobble. A planet's gravity tugs its star in a tiny circle, and that wobble, measured in starlight, can reveal the planet's mass even when the planet itself cannot be seen."
+      ]
+    },
+    {
+      "heading": "Worlds stranger than fiction",
+      "paragraphs": [
+        "The catalogue now holds more than 5,500 confirmed planets: lava worlds, puffy giants, planets with two suns, and a few rocky worlds in the temperate zones where liquid water might exist.",
+        "None of this proves that life exists elsewhere. But every new world sharpens the question, and the telescopes keep getting better at asking it."
+      ]
+    }
+  ],
+  "takeaway": "We find distant planets not by seeing them, but by watching their stars dim and wobble — and there are thousands of them.",
+  "fiction": false
+}

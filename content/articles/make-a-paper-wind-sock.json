@@ -1,0 +1,68 @@
+{
+  "id": "kids-bulk-33",
+  "slug": "make-a-paper-wind-sock",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Make a Paper Wind Sock",
+  "description": "For ages 6–9 with an adult: make a colourful wind sock and watch it dance to show the wind's direction.",
+  "publishedAt": "2026-09-15",
+  "updatedAt": "2026-09-15",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "art"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make the sock",
+      "paragraphs": [
+        "Roll a sheet of paper into a tube and tape it closed, or use a paper bag with the bottom cut off by your adult. Decorate it with bright colours and patterns.",
+        "Tape long streamers around one end. Tie string to the other end so you can hold it up high or hang it from a branch with your adult's help."
+      ]
+    },
+    {
+      "heading": "Watch it dance",
+      "paragraphs": [
+        "Take your wind sock outside. When the wind blows, the sock lifts and points away from the wind, and the streamers flutter and dance.",
+        "On a calm day, the sock hangs down sadly. On a breezy day, it flies proudly. The sock is telling you how strong the wind is without saying a word."
+      ]
+    },
+    {
+      "heading": "Which way is the wind going?",
+      "paragraphs": [
+        "Turn slowly in a circle holding your sock. The wind always pushes it the same way. That direction is where the wind is blowing to.",
+        "Airports and farms use giant wind socks for the same job. Yours is a pocket-sized version of a real tool."
+      ]
+    }
+  ],
+  "takeaway": "A wind sock points where the wind is going and dances harder when the wind is stronger.",
+  "fiction": false,
+  "materials": [
+    "Paper or a paper bag",
+    "Sticky tape",
+    "String",
+    "Crayons",
+    "Streamers or tissue strips"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult should help with any cutting. Never fly your wind sock near roads or in stormy weather."
+  ],
+  "screenFreeExtension": "Run with your wind sock on a calm day and make your own wind — see how fast you need to go."
+}

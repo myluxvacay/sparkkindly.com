@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-84",
+  "slug": "the-textbook-swap-and-library-route",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Textbooks: the swap, the reserve shelf, and the older edition",
+  "description": "New textbooks are priced for people who do not check the alternatives. The library reserve shelf and last year's edition usually hold the same knowledge for far less.",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "student-money",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start at the library, not the bookshop",
+      "paragraphs": [
+        "Most course textbooks sit in the university or college library, and popular ones are often held in a short-loan or reserve section precisely because everyone needs them. For many readings, the reserve copy plus your own notes is the entire solution — at a cost of zero.",
+        "Check the library catalogue the week before term starts, not the week everyone else does. Knowing which books are available on reserve tells you which ones, if any, you genuinely need to own."
+      ]
+    },
+    {
+      "heading": "Older editions and honest questions",
+      "paragraphs": [
+        "Textbooks change slowly between editions; often the differences are reordered chapters and refreshed examples. A previous edition can cost a tenth of the new one. Ask your tutor a direct question: \"Does the edition matter for this course?\" Many will say honestly when it does not.",
+        "Where page numbers differ, the library's new edition is your cross-reference for the set readings. Ten minutes with both open aligns the chapters."
+      ]
+    },
+    {
+      "heading": "Swaps, rentals, and selling on",
+      "paragraphs": [
+        "Students a year ahead of you are a bookshop that wants to clear stock. Department noticeboards, course group chats, and swap shelves move textbooks at friendly prices — and at the end of your course, you become the seller and recover much of the cost.",
+        "Renting suits books you will never open again; buying second-hand suits books you might keep or resell. Either way, the new-copy price is the last resort, not the starting point."
+      ]
+    }
+  ],
+  "takeaway": "Check the library reserve shelf first, ask whether the older edition is acceptable, and buy or swap second-hand — save the new-copy price for the rare book that earns it.",
+  "fiction": false
+}

@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-128",
+  "slug": "the-double-helix-and-the-photograph-that-mattered",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The double helix and the photograph that mattered",
+  "description": "The shape of DNA was solved in 1953 by models, arguments and one extraordinary X-ray photograph — taken by a scientist long denied her share of credit.",
+  "publishedAt": "2026-08-28",
+  "updatedAt": "2026-08-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: DNA",
+      "url": "https://en.wikipedia.org/wiki/DNA",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Rosalind Franklin",
+      "url": "https://en.wikipedia.org/wiki/Rosalind_Franklin",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A molecule with a secret shape",
+      "paragraphs": [
+        "By the early 1950s, biologists knew that DNA carried hereditary information, but nobody knew how. The molecule's shape was the key: understand the structure, and you might understand how it stores instructions and copies itself.",
+        "Several teams raced. At King's College London, Rosalind Franklin, an expert in X-ray crystallography, was producing the sharpest images ever made of DNA fibres — beaming X-rays through them and reading the scatter patterns like coded shadows."
+      ]
+    },
+    {
+      "heading": "Photo 51",
+      "paragraphs": [
+        "In May 1952, Franklin and her research student Raymond Gosling captured an image known as Photo 51: a crisp X of spots that announced, to a trained eye, a helix. Franklin's measurements pinned down the spacing of the structure and the crucial fact that its two strands run in opposite directions.",
+        "The photograph and Franklin's unpublished report reached James Watson and Francis Crick in Cambridge without her knowledge — a sharing that would be handled very differently today. With her data, plus work from Maurice Wilkins and others, they built the famous double helix model, published in 1953 alongside papers from Franklin's own team."
+      ]
+    },
+    {
+      "heading": "Credit, corrected slowly",
+      "paragraphs": [
+        "The double helix explained heredity at a stroke: the paired bases — A with T, C with G — mean each strand carries the instructions to rebuild the other. Watson, Crick and Wilkins received the Nobel Prize in 1962; Franklin had died in 1958, aged 37, and Nobel Prizes are not awarded posthumously.",
+        "History has been repairing the record ever since. Modern accounts place Franklin where she belongs: not a footnote to the discovery, but one of its central scientists, whose photograph truly did matter."
+      ]
+    }
+  ],
+  "takeaway": "DNA's double helix was cracked with Rosalind Franklin's Photo 51 and precise data — and science is still correcting who gets the credit.",
+  "fiction": false
+}

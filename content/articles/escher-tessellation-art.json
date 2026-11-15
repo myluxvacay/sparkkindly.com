@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-127",
+  "slug": "escher-tessellation-art",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Escher's lizards: when tessellations come alive",
+  "description": "M. C. Escher visited the Alhambra palace in Spain and came home obsessed with tiling. His interlocking lizards, birds and fish turned a maths rule into unforgettable art.",
+  "publishedAt": "2026-08-25",
+  "updatedAt": "2026-08-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "M. C. Escher — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/M._C._Escher",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A palace made of patterns",
+      "paragraphs": [
+        "In 1922, and again in 1936, the Dutch artist M. C. Escher visited the Alhambra, a Moorish palace in Granada, Spain, whose walls are covered in geometric tilework of breathtaking complexity. Escher spent days copying the patterns into notebooks, calling the work absorbing and, in the best sense, addictive.",
+        "Islamic artists, avoiding images of living beings in religious spaces, had spent centuries pushing pure geometry to its limits. Escher took their tiling rules and broke one of their customs: he asked what would happen if the tiles were alive."
+      ]
+    },
+    {
+      "heading": "From hexagons to lizards",
+      "paragraphs": [
+        "Escher's method starts with a shape that tiles — often a hexagon or square — and then trades bumps between neighbouring edges: cut a notch from one side, add the matching bump to the opposite side, and the shape still tiles. Keep carving, and the tile grows a head, a tail, four little legs.",
+        "The results are his famous prints: lizards crawling out of a notebook page and back into the pattern, birds becoming fish as they cross the sky of a picture, angels and devils sharing a circle. Mathematicians wrote to him in admiration; he cheerfully replied that he knew no mathematics at all — only wonder, pursued very precisely."
+      ]
+    },
+    {
+      "heading": "Try it: grow your own tile creature",
+      "paragraphs": [
+        "Start with a paper hexagon or square. Cut a shape from one edge and tape the cut piece to the opposite edge. Trace your new tile across a page, rotating as needed, until the sheet is covered — then look at the creature hiding in the outline and draw in its eye.",
+        "The golden rule is Escher's own: whatever you take from one side must be given to the other. Break it and the tiling fails; keep it and you can grow almost anything."
+      ]
+    }
+  ],
+  "takeaway": "Escher proved a tile could be a creature: follow the rule of bumps and notches, and a floor pattern starts to crawl.",
+  "fiction": false
+}

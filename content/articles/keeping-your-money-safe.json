@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-41",
+  "slug": "keeping-your-money-safe",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Keeping money safe: the everyday basics",
+  "description": "Most money is lost to tricks rather than break-ins — a few plain habits close the doors that tricksters rely on.",
+  "publishedAt": "2026-09-08",
+  "updatedAt": "2026-09-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-basics",
+    "money-habits"
+  ],
+  "sources": [
+    {
+      "title": "Consumer Financial Protection Bureau",
+      "url": "https://www.consumerfinance.gov/consumer-tools/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Slow down at the moment of pressure",
+      "paragraphs": [
+        "Scams about money almost always manufacture urgency: pay now, verify now, or lose everything. Real banks and tax offices do not demand instant payment by gift card or transfer, and they never ask for card details over the phone.",
+        "Pausing is a genuine security tool. Put the phone down, find the organisation's real number yourself, and ask. A legitimate caller will never mind you checking."
+      ]
+    },
+    {
+      "heading": "Keys, codes, and passwords",
+      "paragraphs": [
+        "Use a different password for banking than for shopping or social media, and turn on two-step verification wherever it is offered. The code sent to your phone is a second lock, and it stops most break-ins even if a password leaks.",
+        "Never share one-time codes. No genuine company asks you to read a code aloud or type it into a page reached from a link they sent you."
+      ]
+    },
+    {
+      "heading": "Check the record often",
+      "paragraphs": [
+        "Look through your transactions once a week. Small unfamiliar charges are worth querying immediately — criminals often test a stolen card with a tiny purchase first.",
+        "If something is wrong, contact your bank using the number on your card. Acting quickly usually limits the damage, and banks have clear processes for disputing payments you did not make."
+      ]
+    }
+  ],
+  "takeaway": "Urgency is the scammer's favourite tool: pause, verify through channels you found yourself, and check your transactions weekly.",
+  "fiction": false
+}

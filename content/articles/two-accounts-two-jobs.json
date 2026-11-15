@@ -1,0 +1,56 @@
+{
+  "id": "save-bulk-39",
+  "slug": "two-accounts-two-jobs",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Two kinds of accounts, two different jobs",
+  "description": "One account is for money on the move; the other is for money that is waiting. Mixing up the jobs causes most money muddles.",
+  "publishedAt": "2026-09-05",
+  "updatedAt": "2026-09-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-basics",
+    "saving",
+    "budgeting"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The everyday account",
+      "paragraphs": [
+        "An everyday account — called a current account in some countries and a checking account in others — is built for traffic: wages arrive, bills leave, and cards draw on it daily. It usually pays little or no interest, because the money is not expected to stay long.",
+        "Think of it as a hallway rather than a room. Money passes through, and that is fine, as long as enough pauses there to cover the bills you know are coming."
+      ]
+    },
+    {
+      "heading": "The waiting account",
+      "paragraphs": [
+        "A savings account is built for patience. It often pays some interest, and the slight effort of moving money out of it is a feature, not a flaw: it protects savings from impulse spending.",
+        "Giving savings their own home also makes progress visible. Watching a named pot grow toward a goal is far more encouraging than watching one blurred balance rise and fall."
+      ]
+    },
+    {
+      "heading": "A simple way to use both",
+      "paragraphs": [
+        "Let wages land in the everyday account, cover the essentials, then move a set amount into savings on payday itself. Whatever remains in the everyday account is genuinely spare, and you can spend it without doing sums in the supermarket queue.",
+        "If your bank offers pots or spaces within one account, those can play the same roles without opening anything new. What matters is the separation you can see, not the number of account numbers you own."
+      ]
+    }
+  ],
+  "takeaway": "Let one account handle the traffic of daily life, and give your savings a separate, quieter home where they can grow undisturbed.",
+  "fiction": false
+}

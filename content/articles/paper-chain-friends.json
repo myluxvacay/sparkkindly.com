@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-116",
+  "slug": "paper-chain-friends",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Paper Chain Friends",
+  "description": "For ages 6–9 with an adult: fold, draw, and cut a chain of paper friends holding hands.",
+  "publishedAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "kindness"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Fold and draw",
+      "paragraphs": [
+        "Your adult folds a long strip of paper like a zigzag fan.",
+        "Draw half a person on the top fold, with the hand reaching right to the edge."
+      ]
+    },
+    {
+      "heading": "Open the chain",
+      "paragraphs": [
+        "Your adult cuts around the person, carefully not cutting where the hands touch the folds.",
+        "Open it gently. A whole row of friends appears, holding hands. Colour each one differently."
+      ]
+    }
+  ],
+  "takeaway": "Paper friends hold hands all the way across the page, and nobody is left out.",
+  "fiction": false,
+  "materials": [
+    "A long strip of paper",
+    "Pencils or crayons",
+    "Scissors"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult does all the cutting for this activity."
+  ],
+  "screenFreeExtension": "Make a paper chain of your whole family, pets included, and hang it in the kitchen."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-123",
+  "slug": "when-computers-were-people",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "When computers were people",
+  "description": "For two centuries, 'computer' was a job title — teams of people, often women, who calculated the numbers that science and spaceflight ran on.",
+  "publishedAt": "2026-08-16",
+  "updatedAt": "2026-08-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "computing",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Human computer",
+      "url": "https://en.wikipedia.org/wiki/Human_computer",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Katherine Johnson",
+      "url": "https://en.wikipedia.org/wiki/Katherine_Johnson",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A profession of pencils",
+      "paragraphs": [
+        "From the 1700s into the mid-1900s, a computer was a person. Governments, astronomers and engineers employed rooms of them to produce the tables everyone depended on: tide tables, navigation charts, artillery ranges, planetary positions. The work was split into small steps, checked by doing it twice, and carried out with pencils, paper and mechanical adding machines.",
+        "Many of these computers were women, hired because they were skilled and — in the unfair economics of the time — cheaper. Their names rarely appeared on the publications their numbers made possible."
+      ]
+    },
+    {
+      "heading": "The Harvard and NASA computers",
+      "paragraphs": [
+        "At Harvard Observatory, women computers measured and classified hundreds of thousands of stars from photographic plates; their work produced the classification system for stars still used today. At NASA and its predecessor, teams of women mathematicians calculated flight paths for rockets and astronauts.",
+        "Katherine Johnson, one of the most celebrated, personally checked the electronic computer's numbers for John Glenn's first American orbital flight in 1962 — at his request. 'If she says they're good,' Glenn said, 'then I'm ready to go.'"
+      ]
+    },
+    {
+      "heading": "The handover to machines",
+      "paragraphs": [
+        "Electronic computers took the job title along with the job. The human teams faded, though their methods — dividing work, double-checking, writing steps others could repeat — became the foundations of programming itself.",
+        "Remembering them restores something important: computing was never only about machines. It began as people being careful together, at scale, with pencils."
+      ]
+    }
+  ],
+  "takeaway": "Before machines, 'computers' were people — often uncredited women — whose careful arithmetic carried astronomy and the first spaceflights.",
+  "fiction": false
+}

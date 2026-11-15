@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-109",
+  "slug": "how-humans-learned-to-tell-time",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How humans learned to tell time",
+  "description": "Shadows, dripping water, swinging pendulums and vibrating atoms: each age measured time with the best tool it had.",
+  "publishedAt": "2026-07-14",
+  "updatedAt": "2026-07-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "history",
+    "inventions"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: History of timekeeping devices",
+      "url": "https://en.wikipedia.org/wiki/History_of_timekeeping_devices",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Atomic clock",
+      "url": "https://en.wikipedia.org/wiki/Atomic_clock",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Time by shadow and water",
+      "paragraphs": [
+        "The first clocks were the sky itself. Egyptians raised obelisks whose shadows marked the hours, and built sundials to divide the daylight. But shadows fail at night and under clouds, so inventors turned to water clocks, which measured time by steady dripping, and to candles and incense sticks marked with the hours they would burn.",
+        "These tools were good enough to run temples, courts and monasteries — communities that lived by scheduled prayer and work. Timekeeping began as a social tool: a way for people to agree on when."
+      ]
+    },
+    {
+      "heading": "The tick arrives",
+      "paragraphs": [
+        "Mechanical clocks appeared in Europe around the 13th century, driven by falling weights and regulated by a rocking mechanism that let the gears escape one tooth at a time — the original tick. Town clocks struck the hours for everyone within earshot, and public time was born.",
+        "In the 1650s, Christiaan Huygens built the first pendulum clock, applying Galileo's observation that a pendulum's swing keeps steady time. Accuracy leapt from losing perhaps fifteen minutes a day to fifteen seconds. Two centuries later, precise portable clocks solved the great problem of finding longitude at sea, saving countless ships."
+      ]
+    },
+    {
+      "heading": "Atoms set the standard",
+      "paragraphs": [
+        "The twentieth century replaced springs with vibrations: first quartz crystals, then atoms themselves. An atomic clock counts the unchanging oscillations of caesium atoms, and since 1967 the second has been officially defined by those oscillations — 9,192,631,770 of them.",
+        "The best modern clocks would not gain or lose a second in hundreds of millions of years. We went looking for a better way to say 'noon', and ended up measuring the heartbeat of matter itself."
+      ]
+    }
+  ],
+  "takeaway": "Timekeeping moved from shadows to water to pendulums to atoms, and each step made human cooperation a little more precise.",
+  "fiction": false
+}

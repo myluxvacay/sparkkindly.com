@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-58",
+  "slug": "a-starter-emergency-cushion",
+  "brand": "save",
+  "contentType": "article",
+  "title": "A starter emergency cushion",
+  "description": "You do not need months of expenses saved before a cushion starts helping. Even $250 changes how a bad week feels.",
+  "publishedAt": "2026-10-01",
+  "updatedAt": "2026-10-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "saving",
+    "money-basics"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start embarrassingly small",
+      "paragraphs": [
+        "Advice about emergency funds often talks about three to six months of expenses, which can sound like being told to build a house when you need a tent. Start with a starter cushion instead: $250, in a separate savings account, reachable within a day or two.",
+        "At $10 a week, $250 takes twenty-five weeks. At $25 a week, ten weeks. Either way, the day it is finished, a broken appliance or a lost shift stops being a debt event and becomes a withdrawal."
+      ]
+    },
+    {
+      "heading": "What counts as an emergency",
+      "paragraphs": [
+        "Decide the rules while you are calm: the cushion is for costs that are necessary, unexpected, and urgent — a repair that keeps the car running, a prescription, heating in winter. It is not for sales, holidays, or lending to friends, however kind the impulse.",
+        "Clear rules protect the pot from the thousand small arguments your future self will make. Write them down where you keep the account details."
+      ]
+    },
+    {
+      "heading": "Refill without drama",
+      "paragraphs": [
+        "If you use the cushion, that is the system working, not failing. Refill it with the same weekly amount, at the same calm pace. Then, when life allows, grow it toward $500 and beyond.",
+        "It also helps to keep the cushion somewhere slightly separate from everyday money — close enough to reach in a genuine emergency, far enough that a tempting sale cannot reach it first."
+      ]
+    }
+  ],
+  "takeaway": "Build a $250 starter cushion in its own account, define what counts as an emergency, and refill it calmly whenever life uses it.",
+  "fiction": false
+}

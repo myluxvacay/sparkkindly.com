@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-60",
+  "slug": "cost-per-use-not-price-tag",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Cost per use, not the price tag",
+  "description": "A $120 pair of shoes worn 240 times costs less per wear than a $30 pair worn 20 times. The price tag only tells half the story.",
+  "publishedAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "spending-wisely",
+    "saving"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Do the division",
+      "paragraphs": [
+        "Cost per use is simple division: the price divided by how many times you will realistically use the thing. Shoes at $120 worn 240 times cost 50 cents a wear. Shoes at $30 worn 20 times cost $1.50 a wear — three times as much, despite the \"cheaper\" tag.",
+        "The same maths works for a $60 game played for 120 hours (50 cents an hour) versus a $25 game abandoned after five hours ($5 an hour). Price is a fact; cost per use is the truth."
+      ]
+    },
+    {
+      "heading": "Be honest about the denominator",
+      "paragraphs": [
+        "The trick only works if your estimate of use is honest. A bread maker used every week is a bargain; the same machine used twice is an expensive ornament. Think about your actual habits, not the habits of the person you hope to become.",
+        "For clothes, ask how often the item fits your real week. For tools and hobbies, ask when the last similar thing got used. Your history is the best predictor you have."
+      ]
+    },
+    {
+      "heading": "When cheap is genuinely right",
+      "paragraphs": [
+        "Cost per use does not always favour the expensive option. For things you will use a handful of times — a costume, a specialist tool for one job — the cheap version, or borrowing, wins easily. The point is the division, not a rule to buy premium.",
+        "There is also a cash-flow truth here: a costly, durable item only helps if buying it does not wreck this month's essentials. Cost per use guides the choice between options you can afford; it never justifies money you do not have."
+      ]
+    }
+  ],
+  "takeaway": "Divide the price by realistic uses before you buy. The cheapest tag often hides the most expensive cost per use.",
+  "fiction": false
+}

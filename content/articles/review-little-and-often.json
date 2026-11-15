@@ -1,0 +1,54 @@
+{
+  "id": "grow-bulk-131",
+  "slug": "review-little-and-often",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Review little and often",
+  "description": "Five minutes of review today can save an hour of relearning next month. Small, regular reviews are the cheapest study habit there is.",
+  "publishedAt": "2026-08-14",
+  "updatedAt": "2026-08-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Spaced repetition — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Spaced_repetition",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Forgetting is fast, review is cheap",
+      "paragraphs": [
+        "New learning fades quickly at first: a lesson from Monday can feel half-gone by Friday. A short review interrupts that fade, and each review makes the memory fade more slowly the next time.",
+        "The review does not need to be thorough. Skim your notes, retell the main points aloud, or answer three questions from memory. Ten honest minutes is plenty."
+      ]
+    },
+    {
+      "heading": "Build reviews into the week",
+      "paragraphs": [
+        "Add a review to the end of each study session: five minutes on the previous session before starting the new one. Add a slightly bigger one weekly, flipping through everything once, lightly.",
+        "Keep a simple list of topics and dates reviewed. Seeing the chain of small reviews grow is satisfying, and it shows you at a glance what has not been revisited for a while."
+      ]
+    }
+  ],
+  "takeaway": "Spend a few minutes reviewing soon and often, and let each review stretch the memory further.",
+  "fiction": false
+}

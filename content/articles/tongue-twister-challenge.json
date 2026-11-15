@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-59",
+  "slug": "tongue-twister-challenge",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Tongue Twister Challenge",
+  "description": "For ages 6–9 with an adult: try classic tongue twisters slowly, then faster, and invent one of your own.",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start slowly",
+      "paragraphs": [
+        "A tongue twister is a sentence that trips your tongue. Try this one very slowly: She sells seashells by the seashore.",
+        "Say it three times slowly, then a little faster. Your tongue must dance between sounds that are almost the same."
+      ]
+    },
+    {
+      "heading": "Try more twisters",
+      "paragraphs": [
+        "Here is another: Red lorry, yellow lorry. And a short tricky one: Toy boat, toy boat, toy boat.",
+        "Watch your mouth in the mirror. Your lips and tongue move in complicated patterns, faster than you can think about them."
+      ]
+    },
+    {
+      "heading": "Invent your own",
+      "paragraphs": [
+        "Pick a sound you like, such as the letter P. Now write a silly sentence where lots of words start with it: Peter Penguin paints purple pumpkins.",
+        "The best twisters are funny as well as tricky. Write yours down and challenge your family at dinner."
+      ]
+    }
+  ],
+  "takeaway": "Tongue twisters train your mouth to move precisely, and the mistakes are the funniest part.",
+  "fiction": false,
+  "materials": [
+    "A mirror",
+    "Paper",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "This is a talking game — take breaks if your mouth gets tired, and laugh as much as you like."
+  ],
+  "screenFreeExtension": "Teach your twister to someone else and count how many tries they need."
+}

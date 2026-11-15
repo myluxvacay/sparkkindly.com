@@ -1,0 +1,38 @@
+{
+  "id": "saturn-rings-262",
+  "scheduledDate": "2026-03-07",
+  "brand": "discover",
+  "prompt": "Which planet is famous for its wide, bright rings?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Mars"
+    },
+    {
+      "id": "b",
+      "text": "Jupiter"
+    },
+    {
+      "id": "c",
+      "text": "Saturn"
+    },
+    {
+      "id": "d",
+      "text": "Neptune"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Saturn's rings are made of countless ice and rock particles and stretch hundreds of thousands of kilometres wide.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Saturn",
+      "url": "https://en.wikipedia.org/wiki/Saturn",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

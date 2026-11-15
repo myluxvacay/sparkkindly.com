@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-98",
+  "slug": "a-walk-for-ideas",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Take a walk, bring back an idea",
+  "description": "A short walk is a gentle way to unstick a stuck project. Arrive home with one idea, not ten.",
+  "publishedAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "creativity",
+    "wellbeing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Moving helps thinking loosen",
+      "paragraphs": [
+        "Many people notice that ideas arrive in the shower, on a bus or halfway around the block. A change of scene and gentle movement seem to loosen thoughts that staring at the page only tightens.",
+        "You do not need a long hike. Ten or fifteen minutes around your own streets is enough, and you can leave the headphones out so your mind has room to wander."
+      ]
+    },
+    {
+      "heading": "Set one small mission",
+      "paragraphs": [
+        "Before you go, name the problem in one sentence: 'I need an ending for the story' or 'I need a colour for the poster'. Then stop trying to solve it and just walk.",
+        "Carry a way to catch whatever surfaces: a notes app, a scrap of paper, a voice memo. Aim to bring back one usable idea. If none comes, you still had a walk, which is its own small win."
+      ]
+    }
+  ],
+  "takeaway": "Name the problem, take the walk, and catch one idea on the way home.",
+  "fiction": false
+}

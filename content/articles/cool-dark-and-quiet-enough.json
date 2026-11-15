@@ -1,0 +1,61 @@
+{
+  "id": "grow-bulk-73",
+  "slug": "cool-dark-and-quiet-enough",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Cool, dark and quiet enough",
+  "description": "You do not need a perfect sleep cave; small improvements to temperature, light and noise add up to real rest.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "sleep"
+  ],
+  "sources": [
+    {
+      "title": "Sleep hygiene",
+      "url": "https://en.wikipedia.org/wiki/Sleep_hygiene",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The body likes a falling temperature",
+      "paragraphs": [
+        "Sleepiness is linked to your body cooling slightly, which is why a stuffy, warm room can make sleep elusive and why a hot bath an hour or two before bed — after which you cool down — helps some people. A bedroom on the cooler side, with bedding you can adjust, suits most sleepers.",
+        "Treat every specific number you read online as a rough guide rather than a law. Comfort is personal, seasonal and partly what you are used to. The direction is what matters: cooler than your living room, not a fridge."
+      ]
+    },
+    {
+      "heading": "Dark and quiet, within reason",
+      "paragraphs": [
+        "Light is the other big lever: the darker the better for most people, and small leaks — hallway light, glowing chargers, early summer dawn — are worth cheap fixes like a door wedge, a sticker over the LED or simple blackout liners. An eye mask is the budget traveller’s version and works anywhere.",
+        "For noise, consistency helps more than silence. A steady low sound, like a fan, can mask the disruptive pattern of sudden noises better than a quiet room where every creak stands out. Earplugs suit some people; experiment kindly."
+      ]
+    },
+    {
+      "heading": "“Enough” is the operative word",
+      "paragraphs": [
+        "Sleep advice can accidentally create a new anxiety: the room must be perfect or the night is ruined. Resist that. These are nudges that make good sleep more likely, not conditions it requires. People sleep well in imperfect rooms all over the world, every night.",
+        "Pick the one improvement that annoys you most — the streetlight stripe across the bed, the too-warm duvet — fix that, and live with it for a fortnight before buying or changing anything else."
+      ]
+    }
+  ],
+  "takeaway": "Nudge the room cooler, darker and steadier — then stop optimising and sleep.",
+  "fiction": false
+}

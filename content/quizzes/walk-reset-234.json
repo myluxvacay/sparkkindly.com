@@ -1,0 +1,32 @@
+{
+  "id": "walk-reset-234",
+  "scheduledDate": "2026-02-07",
+  "brand": "grow",
+  "prompt": "You feel restless and cannot settle to your work. Which quick reset is most likely to help?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Force yourself to sit still for another hour"
+    },
+    {
+      "id": "b",
+      "text": "Take a short walk, get some fresh air, and drink some water"
+    },
+    {
+      "id": "c",
+      "text": "Open five more browser tabs"
+    },
+    {
+      "id": "d",
+      "text": "Drink a large energy drink"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Movement, daylight and hydration reliably shift your state, and your focus often returns along with your body.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

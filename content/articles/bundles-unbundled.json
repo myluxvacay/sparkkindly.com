@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-75",
+  "slug": "bundles-unbundled",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Bundles: when the package costs more",
+  "description": "Bundles promise simplicity and savings. Sometimes they deliver both — and sometimes they charge you for things you never use.",
+  "publishedAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "understanding-offers",
+    "budgeting"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Unbundle on paper",
+      "paragraphs": [
+        "Take any bundle — broadband with TV and phone, software suites, travel packages — and price the parts you would actually buy, separately. Compare that total with the bundle price. The difference is what the unused parts cost you.",
+        "Suppose a bundle is $70 a month, but the broadband alone is $40 and the rest is channels and features you would never buy separately. You are not saving on a $90 package; you are spending $30 a month — $360 a year — on decoration."
+      ]
+    },
+    {
+      "heading": "When bundles genuinely win",
+      "paragraphs": [
+        "Bundles can be excellent value when you truly use most of the parts, when one bill replaces genuine hassle, or when the combined price undercuts even your cherry-picked parts. Some combinations also include perks — shared storage, family accounts — that are awkward to assemble alone.",
+        "The test is usage, not arithmetic alone. List the parts, mark the ones used monthly, and let that honest list decide."
+      ]
+    },
+    {
+      "heading": "Renegotiate at renewal",
+      "paragraphs": [
+        "Bundle prices creep at renewal, counting on inertia. A month before renewal, repeat the unbundling exercise and phone with your figures. Providers often find a better price for customers who have clearly done the maths.",
+        "If the provider will not move, that is useful information too: you can switch with a clear list of exactly which parts you need, instead of shopping for a vague replacement and ending up with another oversized package."
+      ]
+    }
+  ],
+  "takeaway": "Price the parts you would actually use before accepting any bundle — and repeat the exercise at every renewal, when the quiet price rises happen.",
+  "fiction": false
+}

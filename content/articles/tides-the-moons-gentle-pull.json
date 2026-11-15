@@ -1,0 +1,59 @@
+{
+  "id": "discover-bulk-76",
+  "slug": "tides-the-moons-gentle-pull",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Tides: the Moon's gentle pull",
+  "description": "Twice a day the sea climbs the shore and retreats. The conductor of this slow rhythm is the Moon.",
+  "publishedAt": "2026-10-21",
+  "updatedAt": "2026-10-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "NOAA: Tides and water levels",
+      "url": "https://oceanservice.noaa.gov/education/tutorial_tides/welcome.html",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Tide",
+      "url": "https://en.wikipedia.org/wiki/Tide",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A bulge on both sides",
+      "paragraphs": [
+        "The Moon's gravity pulls on Earth's oceans, but not evenly: it pulls hardest on the water nearest to it and weakest on the far side. The result is two bulges of water — one facing the Moon, drawn toward it, and one on the opposite side, effectively left behind. As Earth rotates beneath these bulges, each coast passes through high water roughly twice a day.",
+        "The Sun contributes too, with a smaller tide of its own. When Sun, Moon and Earth align at new and full moon, the tides add up into extra-high spring tides. When they sit at right angles, they partly cancel into gentler neap tides."
+      ]
+    },
+    {
+      "heading": "Why every coast is different",
+      "paragraphs": [
+        "The tidy two-tide pattern is reshaped by reality. Continents block the bulges, ocean basins slosh at their own natural rhythms, and funnel-shaped bays can amplify the range enormously — Canada's Bay of Fundy sees tides of up to about 16 metres, the largest on Earth.",
+        "Some places get only one high tide a day, others a mixture. The Moon sets the tempo, but the local coastline writes the actual music."
+      ]
+    }
+  ],
+  "takeaway": "Tides are the ocean's response to the Moon's uneven gravity, shaped by the Sun and by each coastline's geography.",
+  "fiction": false
+}

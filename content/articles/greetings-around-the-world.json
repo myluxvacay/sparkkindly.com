@@ -1,0 +1,61 @@
+{
+  "id": "together-bulk-66",
+  "slug": "greetings-around-the-world",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Greetings around the world",
+  "description": "A bow, a press of palms, a hand on the heart: every greeting is a small promise about how people will treat each other.",
+  "publishedAt": "2026-10-12",
+  "updatedAt": "2026-10-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "traditions",
+    "communication"
+  ],
+  "sources": [
+    {
+      "title": "Namaste — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Namaste",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Palms together",
+      "paragraphs": [
+        "In India and Nepal, a common greeting presses the palms together with a slight bow and the word “Namaste” — often understood as a respectful recognition of the other person. In Thailand, a similar gesture, the wai, adjusts its height with the respect owed, and in Cambodia and Laos cousins of the gesture appear too.",
+        "What these share is a greeting that makes a small bow of the whole body: I arrive peacefully, and I honour you."
+      ]
+    },
+    {
+      "heading": "Bows, hands, and hearts",
+      "paragraphs": [
+        "In Japan, bowing carries the greeting, with deeper bows for deeper respect. In much of the Middle East and Central Asia, a hand placed over the heart after a handshake — or instead of one — adds sincerity to the words. Handshakes themselves, now global, began as a way of showing an empty, weaponless hand.",
+        "None of these is merely decoration. Each is a tiny ceremony that converts a stranger into a person, in under three seconds."
+      ]
+    },
+    {
+      "heading": "Borrow respectfully",
+      "paragraphs": [
+        "Travellers do well to follow the local lead: return a bow with a bow, accept the offered hand or the offered palm-press, and let your host set the form. Getting it slightly wrong with obvious goodwill is forgiven almost everywhere; not trying is remembered too.",
+        "And your own greeting, offered warmly and by name where you can, is part of the same worldwide language. The forms differ. The sentence underneath is always: you are worth greeting properly."
+      ]
+    }
+  ],
+  "takeaway": "Every greeting, in every form, makes the same small promise: you are worth greeting properly.",
+  "fiction": false
+}

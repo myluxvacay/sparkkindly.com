@@ -1,0 +1,32 @@
+{
+  "id": "keeping-promises-417",
+  "scheduledDate": "2026-08-09",
+  "brand": "together",
+  "prompt": "You promised to help your neighbour on Saturday, but when the day comes you don't feel like it. What should you do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Pretend you forgot"
+    },
+    {
+      "id": "b",
+      "text": "Keep your promise - they are counting on you"
+    },
+    {
+      "id": "c",
+      "text": "Send someone else without asking"
+    },
+    {
+      "id": "d",
+      "text": "Help only if they pay you"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Keeping your word, even when it is inconvenient, is how people learn that they can trust and rely on you.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

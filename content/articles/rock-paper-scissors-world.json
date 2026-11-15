@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-123",
+  "slug": "rock-paper-scissors-world",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Rock paper scissors: the hand game that crossed the world",
+  "description": "It began with hand games in ancient China, grew up in Japan as jan-ken, and now settles arguments on every continent. The story of the world's fastest referee.",
+  "publishedAt": "2026-08-18",
+  "updatedAt": "2026-08-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Rock paper scissors — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rock_paper_scissors",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "From China to Japan to everywhere",
+      "paragraphs": [
+        "Hand games in which gestures defeat one another were played in China as early as the Han dynasty, some two thousand years ago, under names like shoushiling. Japan developed its own family of such games, and one of them — jan-ken, with its three shapes — became the ancestor of the version the world plays now.",
+        "Travellers carried jan-ken westward in the early twentieth century, and rock, paper, scissors spread with astonishing speed. Within a few decades it had become the universal coin-flip: quick, fair-feeling, and requiring nothing but hands."
+      ]
+    },
+    {
+      "heading": "Is it really random?",
+      "paragraphs": [
+        "In theory, yes: each shape beats one and loses to one, so no choice is better than another. In practice, humans are gloriously predictable. Studies of real games find that rock is the most common opening throw, especially among beginners, and that players who win tend to repeat their shape while players who lose tend to switch.",
+        "That means the game has a psychology layer hiding inside the luck: beat the player, not the odds. Scissors, incidentally, is statistically the least common first throw — which makes paper, the shape scissors beats... a risky opener. Choose wisely, or better, choose randomly."
+      ]
+    },
+    {
+      "heading": "Try it: a championship of the house",
+      "paragraphs": [
+        "Run a best-of-five knockout bracket for everyone at home, with a proper trophy for the champion — a wooden spoon will do. Keep a record of each player's favourite opening throw in a “scouting report” for next year's championship.",
+        "Then test the psychology: announce, truthfully, what the statistics say people throw first, and watch everyone at the table tie themselves in knots trying to out-think it."
+      ]
+    }
+  ],
+  "takeaway": "Rock paper scissors travelled from Han-dynasty China to every playground on Earth — and it still cannot be beaten, only read.",
+  "fiction": false
+}

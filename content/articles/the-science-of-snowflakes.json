@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-71",
+  "slug": "the-science-of-snowflakes",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Snowflakes: crystals with a biography",
+  "description": "Every snowflake starts as a speck of dust in a cloud — and its shape records the whole journey down.",
+  "publishedAt": "2026-10-13",
+  "updatedAt": "2026-10-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "weather",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Snowflake",
+      "url": "https://en.wikipedia.org/wiki/Snowflake",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Born around a speck",
+      "paragraphs": [
+        "A snowflake begins when water vapour in a cold cloud condenses onto a microscopic nucleus — a grain of dust, pollen or even a bacterium. As the young crystal grows, it takes the hexagonal shape dictated by the way water molecules lock together, which is why snowflakes have six sides and six-fold symmetry.",
+        "What happens next depends on the temperature and humidity of each layer of air the crystal falls through. Plates grow in one range, needles in another, and the feathery branching stars called dendrites form in air around −12 to −16°C with plenty of moisture."
+      ]
+    },
+    {
+      "heading": "Similar, never identical",
+      "paragraphs": [
+        "Because a falling crystal passes through ever-changing conditions, its arms record a history: each change of layer adds a new style of growth to all six arms at once, which keeps them matching. The path is so long and so detailed that two complex snowflakes having identical histories is, for practical purposes, impossible.",
+        "The famous claim that no two snowflakes are alike is not a strict law — simple crystals can match, and scientists have grown near-identical pairs in laboratories. But for the elaborate natural stars, it is close enough to the truth to stand."
+      ]
+    }
+  ],
+  "takeaway": "Snowflakes grow as six-sided ice crystals whose branching shapes record the temperature and humidity of their fall.",
+  "fiction": false
+}

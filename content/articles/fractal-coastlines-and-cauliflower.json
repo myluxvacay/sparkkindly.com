@@ -1,0 +1,66 @@
+{
+  "id": "play-bulk-41",
+  "slug": "fractal-coastlines-and-cauliflower",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Fractals: The Shape That Looks the Same When You Zoom In",
+  "description": "A cauliflower floret is a tiny cauliflower, and a coastline gets longer the closer you measure - welcome to fractals.",
+  "publishedAt": "2026-09-16",
+  "updatedAt": "2026-09-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Fractal - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fractal",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Coastline paradox - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Coastline_paradox",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Copies all the way down",
+      "paragraphs": [
+        "Break a floret off a romanesco cauliflower and it looks like a miniature cauliflower, complete with its own smaller florets, which have smaller ones still. Shapes that resemble themselves at every scale are called fractals, and nature is full of them: fern leaves, tree branches, river deltas, lightning bolts and the branching of blood vessels all repeat their pattern as you zoom.",
+        "Mathematicians build exact fractals with simple rules repeated forever. Start with a triangle, add a smaller triangle to the middle of each side, then repeat - you get the Koch snowflake, a shape whose edge gets longer at every step without limit, while the area inside stays modest and finite."
+      ]
+    },
+    {
+      "heading": "The coastline that would not sit still",
+      "paragraphs": [
+        "In the 1950s the scientist Lewis Fry Richardson noticed something odd: the measured length of a coastline depends on the length of your ruler. A long ruler strides past bays and inlets; a short one follows them, and a shorter one still traces every rock. Britain's coast measures roughly twice as long with a short ruler as with a long one - and in principle it never settles to one true value.",
+        "Coastlines are fractal-like, so the question 'how long is the coast?' is incomplete until you add 'measured at what scale?' It is a cheerful warning that some quantities depend on how you look, and that more precision does not always mean more truth."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Draw the first three stages of a Koch snowflake: begin with a triangle, then replace the middle third of each side with two sides of a smaller outward triangle, and repeat on the new, wigglier shape. Count the sides each time - the count multiplies by four at every stage.",
+        "Or take a map of a wiggly coastline or river and 'measure' it twice: once with long straight steps on a ruler, once with short steps of a compass or a piece of string. Compare the two answers and you have reproduced Richardson's discovery at home."
+      ]
+    }
+  ],
+  "takeaway": "Fractals repeat their pattern at every scale, which is why zooming in never simplifies them - and why some lengths depend on your ruler.",
+  "fiction": false
+}

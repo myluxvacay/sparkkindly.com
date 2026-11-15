@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-95",
+  "slug": "the-little-spacecraft-that-would-not-stop",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The little spacecraft that would not stop",
+  "description": "Voyager 1 and 2 were built to work for five years; nearly five decades later they are still calling home from between the stars.",
+  "publishedAt": "2026-06-11",
+  "updatedAt": "2026-06-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "NASA: Voyager",
+      "url": "https://science.nasa.gov/mission/voyager/",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Voyager program",
+      "url": "https://en.wikipedia.org/wiki/Voyager_program",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A grand tour, seized at the right moment",
+      "paragraphs": [
+        "In the late 1970s, the outer planets were lining up in a pattern that occurs only once every 176 years, letting a spacecraft borrow speed from each planet in turn. NASA launched two identical probes, Voyager 1 and Voyager 2, in 1977 to take advantage of it.",
+        "Between them they visited Jupiter and Saturn, and Voyager 2 went on to Uranus and Neptune — still the only spacecraft ever to visit those two worlds. They found volcanoes erupting on Jupiter's moon Io and geysers on Neptune's moon Triton."
+      ]
+    },
+    {
+      "heading": "Into the space between stars",
+      "paragraphs": [
+        "The probes kept going. In 2012, Voyager 1 crossed into interstellar space, the first human-made object to do so; Voyager 2 followed in 2018. Both are now more than 20 billion kilometres away, where their radio signals, travelling at the speed of light, take most of a day to reach Earth.",
+        "Their power is fading year by year, and engineers switch off instruments one by one to keep the transmitters alive. Sometime in the 2030s, the last signal is expected to fall silent."
+      ]
+    },
+    {
+      "heading": "A message in a bottle",
+      "paragraphs": [
+        "Each Voyager carries a golden record: sounds of Earth, greetings in 55 languages, music from many cultures, and pictures of our planet and its life. It is a postcard thrown into an enormous ocean, addressed to whoever might find it.",
+        "Long after their radios stop, the Voyagers will keep drifting among the stars — small, patient proof of how far curiosity can travel."
+      ]
+    }
+  ],
+  "takeaway": "Built for five years, the Voyagers have flown for nearly fifty, and now carry Earth's greeting card into interstellar space.",
+  "fiction": false
+}

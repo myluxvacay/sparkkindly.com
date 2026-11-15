@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-136",
+  "slug": "the-imaginary-train",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "The Imaginary Train",
+  "description": "For ages 6–9 with an adult: line up chairs, hand out tickets, and travel anywhere without leaving home.",
+  "publishedAt": "2026-08-11",
+  "updatedAt": "2026-08-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family-activities",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "All aboard",
+      "paragraphs": [
+        "Line up chairs in a row. The first chair is for the driver, who makes the best train noises.",
+        "Hand everyone a ticket. Tickets must be checked before the train can leave."
+      ]
+    },
+    {
+      "heading": "The journey",
+      "paragraphs": [
+        "Call out what you pass: mountains, the sea, a field of cows, a tunnel. Everyone looks out of the same side.",
+        "When you arrive, announce the station grandly. Travellers must take their imaginary luggage."
+      ]
+    }
+  ],
+  "takeaway": "A row of chairs can travel further than any real train.",
+  "fiction": false,
+  "materials": [
+    "Chairs in a row",
+    "Paper tickets",
+    "A bag for the journey"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult helps line up the chairs so they are steady to sit on."
+  ],
+  "screenFreeExtension": "Draw the view from your train window at the most exciting part of the trip."
+}

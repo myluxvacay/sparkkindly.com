@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-80",
+  "slug": "bioluminescence-living-light",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Bioluminescence: living light",
+  "description": "Some creatures make light the chemical way — cold, efficient, and switched on in an instant.",
+  "publishedAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Bioluminescence",
+      "url": "https://en.wikipedia.org/wiki/Bioluminescence",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Light without heat",
+      "paragraphs": [
+        "Bioluminescence is light produced by a chemical reaction inside a living thing, typically involving a molecule called luciferin and an enzyme, luciferase. Unlike a hot bulb, the reaction wastes almost no energy as heat. Fireflies are the famous land example, but the true home of living light is the ocean.",
+        "In the sea, the talent is everywhere: bacteria, plankton, jellyfish, squid, shrimp and fish all glow. A breaking wave on the right night can sparkle with dinoflagellates — single-celled plankton that flash when disturbed, turning the surf into brief blue fire."
+      ]
+    },
+    {
+      "heading": "Why glow?",
+      "paragraphs": [
+        "The uses are as varied as the users. Some animals flash to startle predators, or release glowing clouds as a smokescreen. Some wear patterns of light on their undersides that match the faint light from above, erasing their silhouette — camouflage by lamp. Anglerfish fish with it, some squid signal with it, and fireflies court with it.",
+        "Scientists have borrowed the chemistry widely: the genes for these glow proteins now light up research in medicine and biology, letting researchers watch processes inside living cells. The deep sea's invention became one of science's best tools."
+      ]
+    }
+  ],
+  "takeaway": "Bioluminescence is cold chemical light made by living things, used across the ocean to hunt, hide, signal and court.",
+  "fiction": false
+}

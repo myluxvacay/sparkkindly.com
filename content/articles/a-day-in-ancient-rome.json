@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-102",
+  "slug": "a-day-in-ancient-rome",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "A day in ancient Rome",
+  "description": "Bread queues, public baths, apartment blocks and very loud streets — everyday life in the largest city of the ancient world.",
+  "publishedAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "ancient-history",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ancient Rome",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Rome",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Insula (building)",
+      "url": "https://en.wikipedia.org/wiki/Insula_(building)",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A city of a million neighbours",
+      "paragraphs": [
+        "At its height, Rome held around a million people — a scale no European city would reach again for well over a thousand years. Most Romans lived not in marble palaces but in insulae, apartment blocks of several storeys, with shops at street level and families crowded into rooms above.",
+        "The upper floors were the cheapest and the most dangerous: no running water, cooking fires in braziers, and a long climb. The wealthy escaped to courtyard houses, but everyone shared the same noisy, smoky, vivid streets."
+      ]
+    },
+    {
+      "heading": "Bread, water and baths",
+      "paragraphs": [
+        "Rome ran on logistics. Aqueducts carried fresh water tens of kilometres into the city, filling fountains, homes and the great public baths. The state distributed free or cheap grain to citizens, and bakeries turned it into the bread that anchored every meal.",
+        "In the afternoon, Romans of all ranks headed to the baths — part swimming pool, part gym, part social club, part business meeting. For a small coin, anyone could wash, exercise, oil their skin and catch up on the city's news."
+      ]
+    },
+    {
+      "heading": "Evenings in a city without lights",
+      "paragraphs": [
+        "Dinner was the main meal, eaten in the late afternoon, often with guests reclining on couches. Streets had no lighting, so most people hurried home before dark, while carts — banned from the centre by day — rumbled through the night delivering goods.",
+        "It was crowded, unequal and occasionally dangerous. It was also recognisably a city: commuters, landlords, fast food stalls and all. In many ways, the Romans invented urban life as we still live it."
+      ]
+    }
+  ],
+  "takeaway": "Ancient Rome was a working city of apartment blocks, public baths and bread queues — the original template for big-city life.",
+  "fiction": false
+}

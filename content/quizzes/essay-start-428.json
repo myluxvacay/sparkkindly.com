@@ -1,0 +1,32 @@
+{
+  "id": "essay-start-428",
+  "scheduledDate": "2026-08-20",
+  "brand": "grow",
+  "prompt": "You are staring at a blank page, unable to start an essay. What is a good first move?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Wait for the perfect opening line"
+    },
+    {
+      "id": "b",
+      "text": "Write a rough first paragraph - it is allowed to be messy"
+    },
+    {
+      "id": "c",
+      "text": "Copy someone else's introduction"
+    },
+    {
+      "id": "d",
+      "text": "Decide the essay is impossible"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A messy draft gives you something to improve. Editing a rough start is far easier than facing an empty page.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

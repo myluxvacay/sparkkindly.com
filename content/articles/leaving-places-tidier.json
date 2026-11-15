@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-121",
+  "slug": "leaving-places-tidier",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Leaving places tidier than you found them",
+  "description": "Picking up a little litter on a walk, and leaving picnic spots spotless, is a small habit with a visible ripple.",
+  "publishedAt": "2026-07-27",
+  "updatedAt": "2026-07-27",
+  "tags": [
+    "green",
+    "reducing-waste"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "A small habit with a long reach",
+      "paragraphs": [
+        "Parks, beaches and towpaths stay pleasant because somebody clears them, and that somebody is often just other visitors. Carrying a small bag on a walk and collecting a few stray wrappers takes no extra time and leaves the path nicer for the next person and for wildlife.",
+        "It helps to reframe it: not cleaning up after strangers in resentment, but tending a place you enjoy, the way you would straighten a cushion in a shared room."
+      ]
+    },
+    {
+      "heading": "Doing it safely and sensibly",
+      "paragraphs": [
+        "Gloves or a simple litter picker keep hands away from anything sharp or unpleasant, and some things, like broken glass or anything hazardous, are best left and reported to the council or site staff rather than handled.",
+        "Wash hands afterwards, and put what you collect in a proper bin, or recycling where the items qualify, so the effort is not undone by the next gust of wind."
+      ]
+    },
+    {
+      "heading": "The ripple effect",
+      "paragraphs": [
+        "Tidy places tend to stay tidy: people litter less where the ground is already clean, and children who see adults tidying outdoors absorb the standard without a word of instruction.",
+        "You will never see most of the effect, and that is fine. The place itself, and the creatures that live in it, register the difference even when no one is watching."
+      ]
+    }
+  ],
+  "takeaway": "Carry a bag, collect a little, leave it cleaner: shared places run on exactly this kind of quiet care."
+}

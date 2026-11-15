@@ -1,0 +1,32 @@
+{
+  "id": "phone-away-268",
+  "scheduledDate": "2026-03-13",
+  "brand": "grow",
+  "prompt": "Your phone keeps breaking your concentration while you study. Which move helps most?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keep it face-down beside your book"
+    },
+    {
+      "id": "b",
+      "text": "Check it briefly between paragraphs as a reward"
+    },
+    {
+      "id": "c",
+      "text": "Put it in another room until the study session ends"
+    },
+    {
+      "id": "d",
+      "text": "Turn the sound off but keep it in your pocket"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Distance works better than willpower: a phone in another room cannot interrupt you with sights, sounds or temptation.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

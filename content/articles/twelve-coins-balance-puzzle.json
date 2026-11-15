@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-56",
+  "slug": "twelve-coins-balance-puzzle",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Twelve Coins, One Fake, Three Weighings",
+  "description": "One coin is slightly heavier or lighter, and a balance scale may be used just three times - here is the thinking that makes it possible.",
+  "publishedAt": "2026-10-09",
+  "updatedAt": "2026-10-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Balance puzzle - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Balance_puzzle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Count the information first",
+      "paragraphs": [
+        "Twelve coins look identical, but one is fake - a little heavier or a little lighter than the rest. You have a balance scale and may use it exactly three times. Before touching a coin, count what three weighings can possibly tell you. Each weighing has three outcomes - left side down, right side down, or balance - so three weighings produce 3 x 3 x 3 = 27 possible outcome patterns.",
+        "The fake coin presents 24 suspects: it could be any of the 12 coins, and it could be heavy or light. Since 24 is less than 27, the information budget just barely allows a solution. That counting argument is the soul of the puzzle: you are not really weighing coins, you are spending outcomes, and every weighing must split the suspects as evenly as possible."
+      ]
+    },
+    {
+      "heading": "Warm up with nine coins, then attack twelve",
+      "paragraphs": [
+        "First master the warm-up: nine coins, one known to be heavier, two weighings. Weigh three against three. If one side drops, the heavy coin is among those three; if it balances, it is among the three you left out. Then weigh one against one from the guilty trio - a drop identifies the heavy coin, and a balance convicts the one you held back. Nine suspects, nine outcome patterns, exact fit.",
+        "For the full twelve, the standard opening is four against four. If it balances, the fake is among the four coins left out, and you now own eight certified-good coins to weigh suspects against - the puzzle becomes a smaller, friendlier one. If it tips, the real bookkeeping begins: label every coin, track which ones could be heavy (those on the low side) and which could be light (those on the high side), and design the second weighing so that each of its three outcomes leaves at most three suspects for the last weighing. It can be done - and finishing that tree yourself is one of the great satisfactions in all of puzzling."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Play the nine-coin version physically: have a friend secretly mark one coin's underside and be your 'scale master', or use a real balance and a slightly heavier coin if you can find one. Narrate your suspect count before every weighing - that narration is the actual skill.",
+        "Then draw the twelve-coin decision tree on paper, starting from the tipping case of the first weighing. Expect the tree to fight back; professional puzzle-setters consider this one of the hardest fair puzzles ever devised, and it dates to the 1940s."
+      ]
+    }
+  ],
+  "takeaway": "Count the information first: three weighings give 27 possible stories, enough to separate 24 suspects - then design each weighing to split the suspects evenly.",
+  "fiction": false
+}

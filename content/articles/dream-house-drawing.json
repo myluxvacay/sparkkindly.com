@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-109",
+  "slug": "dream-house-drawing",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Draw a Dream House",
+  "description": "For ages 6–9 with an adult: draw the house you would build if anything at all were possible.",
+  "publishedAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Dream big",
+      "paragraphs": [
+        "Would your house be in a tree, under the sea, or on a cloud? Draw where it sits first.",
+        "Add the rooms you dream about: a library tower, a pancake kitchen, a nap room full of cushions."
+      ]
+    },
+    {
+      "heading": "Add the details",
+      "paragraphs": [
+        "Draw who lives there and how they get in. A ladder? A lift? A friendly whale who gives rides?",
+        "Show your house to your family and give them a tour, one room at a time."
+      ]
+    }
+  ],
+  "takeaway": "In a drawing, a house can have a slide for stairs and a roof made of cake.",
+  "fiction": false,
+  "materials": [
+    "Big paper",
+    "Pencils or crayons"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Dream houses can be as impossible as you like; that is the game."
+  ],
+  "screenFreeExtension": "Draw a dream house for your pet, your teddy, or a friendly dragon."
+}

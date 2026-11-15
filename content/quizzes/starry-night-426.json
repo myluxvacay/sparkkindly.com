@@ -1,0 +1,38 @@
+{
+  "id": "starry-night-426",
+  "scheduledDate": "2026-08-18",
+  "brand": "discover",
+  "prompt": "Who painted the famous swirling night-sky painting The Starry Night?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Pablo Picasso"
+    },
+    {
+      "id": "b",
+      "text": "Vincent van Gogh"
+    },
+    {
+      "id": "c",
+      "text": "Claude Monet"
+    },
+    {
+      "id": "d",
+      "text": "Leonardo da Vinci"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Dutch artist Vincent van Gogh painted The Starry Night in 1889, based on the view from his window in Saint-Remy, France.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "The Starry Night",
+      "url": "https://en.wikipedia.org/wiki/The_Starry_Night",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

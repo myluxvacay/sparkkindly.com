@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-46",
+  "slug": "spiral-patterns-shells-to-galaxies",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Spirals Everywhere: From Shells to Galaxies (and One Myth)",
+  "description": "Spirals show up at every size in nature - here is the maths behind them, plus a famous claim you should check before repeating.",
+  "publishedAt": "2026-09-24",
+  "updatedAt": "2026-09-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Logarithmic spiral - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Logarithmic_spiral",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The spiral that never changes shape",
+      "paragraphs": [
+        "Most natural spirals are logarithmic spirals: as the curve winds outward, it grows by the same factor for every full turn. A shell built this way lets its owner grow without ever changing shape - each new chamber is a scaled-up copy of the last, so the animal never needs to redesign its home.",
+        "The same form appears in the arms of spiral galaxies, the swirl of a hurricane seen from space, and the flight path of a hawk spiralling down toward prey, which keeps its target at a constant angle in its vision. One simple growth rule, endlessly reused at wildly different scales."
+      ]
+    },
+    {
+      "heading": "A myth worth checking",
+      "paragraphs": [
+        "You will often read that the nautilus shell is a perfect 'golden spiral' built on the golden ratio. It is a lovely story, but when researchers actually measure nautilus shells, the spirals are logarithmic yet usually noticeably different from the golden spiral. The claim survives because it is beautiful and rarely checked.",
+        "This is worth remembering beyond shells. Nature really is full of mathematical patterns - Fibonacci counts in seed heads, hexagons in honeycomb - which makes it tempting to see the famous patterns everywhere. The scientific habit is to enjoy the pattern and measure it anyway."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Draw your own approximation: draw two small adjacent squares, then add squares whose sides follow 1, 1, 2, 3, 5, 8, and draw a quarter-circle in each square, corner to corner. A smooth spiral blooms out of pure addition - the Fibonacci spiral.",
+        "Then photograph or sketch three spirals you meet this week - a shell, a fern tip, a draining sink, a galaxy picture - and ask of each: does it grow by a steady factor, like the logarithmic spiral, or is it a different creature, like the even spacing of a rolled-up rope?"
+      ]
+    }
+  ],
+  "takeaway": "A logarithmic spiral keeps its shape while it grows, which is why shells, storms and galaxies share it - and why it is worth checking claims that every spiral is 'golden'.",
+  "fiction": false
+}

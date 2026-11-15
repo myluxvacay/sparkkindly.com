@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-45",
+  "slug": "track-one-week-of-spending",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Track one week of spending",
+  "description": "Before building any budget, spend seven days simply writing down everything you spend — the results are usually surprising and always useful.",
+  "publishedAt": "2026-09-13",
+  "updatedAt": "2026-09-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "budgeting",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "No judging, just noticing",
+      "paragraphs": [
+        "For one week, record every purchase: the coffee, the bus fare, the subscription that renewed itself. A notes app, a scrap of paper, or your bank's transaction list all work. The only rule is completeness.",
+        "Do not change your behaviour during the week, and do not scold yourself. You are collecting evidence, not standing trial. The spending you feel sheepish about is exactly the spending worth seeing clearly."
+      ]
+    },
+    {
+      "heading": "Sort it into piles",
+      "paragraphs": [
+        "At the end of the week, group the spending into a few piles: essentials, food extras, transport, fun, and the easily missed category of small-and-often. Add each pile up.",
+        "Most people discover the total is not wrecked by one big purchase but by the small-and-often pile: $4 here and $6 there, five times a week, quietly becomes $200 a month."
+      ]
+    },
+    {
+      "heading": "Pick one gentle change",
+      "paragraphs": [
+        "Choose a single change the evidence suggests — perhaps a weekly cap on the small-and-often pile, or one subscription moved to a cheaper tier. One change, kept, beats five changes abandoned by Friday.",
+        "Tell someone your one change, or write it where you will see it. A change with a witness — even just future you, reading the note — survives the week far more often than a change that lives only in your head."
+      ]
+    }
+  ],
+  "takeaway": "Seven honest days of tracking teach you more about your money than any budget template — start with evidence, then change one thing.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "broken-umbrella-207",
+  "scheduledDate": "2026-01-11",
+  "brand": "together",
+  "prompt": "You borrowed a friend's umbrella and the wind broke it. What is the right thing to do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Return it quietly and hope they don't notice"
+    },
+    {
+      "id": "b",
+      "text": "Blame the weather and say nothing"
+    },
+    {
+      "id": "c",
+      "text": "Tell them honestly and offer to repair or replace it"
+    },
+    {
+      "id": "d",
+      "text": "Buy yourself a new one instead"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Honesty plus making it right protects trust. Accidents happen, but hiding them is what damages friendships.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

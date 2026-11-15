@@ -1,0 +1,32 @@
+{
+  "id": "showing-the-way-397",
+  "scheduledDate": "2026-07-20",
+  "brand": "together",
+  "prompt": "A new student asks where the library is, and it happens to be on your way. What is the most helpful thing to do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Point vaguely down the hall"
+    },
+    {
+      "id": "b",
+      "text": "Walk with them to the library"
+    },
+    {
+      "id": "c",
+      "text": "Tell them to ask someone else"
+    },
+    {
+      "id": "d",
+      "text": "Describe a shortcut through a locked corridor"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Walking with them takes a moment, makes sure they actually arrive, and helps a new person feel welcome.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

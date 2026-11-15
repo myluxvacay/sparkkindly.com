@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-95",
+  "slug": "my-picture-dictionary",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "My Picture Dictionary",
+  "description": "For ages 6–9 with an adult: make a little book of your favourite words, with your own drawing for every one.",
+  "publishedAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "art"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Choose your words",
+      "paragraphs": [
+        "Pick words you love: puddle, giggle, breakfast, dragon. Words you like saying are the best ones.",
+        "Write one word at the top of each page, with help if you need it."
+      ]
+    },
+    {
+      "heading": "Draw each word",
+      "paragraphs": [
+        "Draw a picture that shows what the word means. A puddle with a boot splashing in it says puddle perfectly.",
+        "Read your dictionary to your family. You are the author."
+      ]
+    }
+  ],
+  "takeaway": "A dictionary you make yourself, with your own pictures, is a book about your world.",
+  "fiction": false,
+  "materials": [
+    "Paper folded into a booklet",
+    "Pencils or crayons"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult helps fold and staple or tie the booklet."
+  ],
+  "screenFreeExtension": "Add one new word to your dictionary every day for a week."
+}

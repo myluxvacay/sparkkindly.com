@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-66",
+  "slug": "the-man-who-didnt-need-water",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Man Who Said Thank You for a Gun",
+  "description": "A classic lateral-thinking puzzle: a man asks for water, the bartender points a gun at him, and the man leaves happy. Can you work out why?",
+  "publishedAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "logic-puzzles"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The puzzle",
+      "paragraphs": [
+        "A man walks into a bar and asks the bartender for a glass of water. The bartender pulls out a gun and points it at him. The man pauses, says 'thank you', and walks out - without drinking anything. No shots are fired, no crime is involved, and both men behave perfectly sensibly. What is going on?",
+        "This is a lateral-thinking puzzle, a story that seems impossible because your brain quietly adds assumptions that were never stated. The standard way to solve one is to interrogate those assumptions with yes-or-no questions: Was the man thirsty? Was he in danger? Did he get what he came for? That last question is the key that turns the lock."
+      ]
+    },
+    {
+      "heading": "The solution",
+      "paragraphs": [
+        "The man had hiccups. He asked for water because drinking is a common hiccup cure. The bartender, recognising the problem, chose a faster remedy: a sudden fright. The shock cured the hiccups on the spot - so the man, no longer needing the water, thanked him and left. Every strange detail was a clue: the thanks only makes sense if the gun was a favour.",
+        "Notice how the solution works. Nothing in the story was false; the impossibility lived entirely in the listener's assumptions - that a gun means a threat, and that a man who asks for water must be thirsty. Lateral puzzles are exercises in finding the assumption you did not know you had made."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Two more, with the answers in the last lines of this section - cover them and think first. One: a woman pushes her car up to a hotel, hands the owner some money, and announces that she is bankrupt. Two: a man lives on the tenth floor; every morning he rides the lift to the ground floor, but coming home he rides only to the seventh and walks the rest - unless it is raining, when he rides all the way.",
+        "Answers: the woman is playing Monopoly - her token is the car, and the hotel is on a board square. The man is too short to reach the tenth-floor button; he can press the ground-floor button going down, and on rainy days he can press the tenth button with the tip of his umbrella."
+      ]
+    }
+  ],
+  "takeaway": "Lateral puzzles hide their answer behind an assumption - list what you are assuming, and the strange story turns ordinary.",
+  "fiction": false
+}

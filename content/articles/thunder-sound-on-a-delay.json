@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-72",
+  "slug": "thunder-sound-on-a-delay",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Thunder: sound on a delay",
+  "description": "Lightning and thunder are born in the same instant. The gap between them is a built-in distance meter.",
+  "publishedAt": "2026-10-15",
+  "updatedAt": "2026-10-15",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "weather",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Thunder",
+      "url": "https://en.wikipedia.org/wiki/Thunder",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Why the sound lags",
+      "paragraphs": [
+        "A lightning stroke heats its channel of air almost instantly to tens of thousands of degrees. The superheated air expands faster than the speed of sound, creating a shock wave that relaxes into the rolling pressure wave we hear as thunder.",
+        "Light reaches you essentially instantly, but sound dawdles at about 343 metres per second — roughly three seconds per kilometre. Count the seconds between flash and bang, divide by three, and you have the storm's distance in kilometres. If the gap shrinks, the storm is coming closer."
+      ]
+    },
+    {
+      "heading": "Why thunder rolls and rumbles",
+      "paragraphs": [
+        "A lightning channel is kilometres long, so sound from its far ends arrives later than sound from the near parts, stretching a single crack into a long roll. Reflections from clouds, hills and buildings smear it further. Close strikes sound like a sharp crack or tear; distant ones arrive as low rumble, because air absorbs the high frequencies first.",
+        "Thunder can usually be heard up to about 15–25 kilometres away. If you can hear it at all, the storm is close enough to respect: lightning can strike well outside the rain area."
+      ]
+    }
+  ],
+  "takeaway": "Thunder is the shock wave from lightning-heated air, and its delay after the flash measures the storm's distance.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "twenty-eight-days-401",
+  "scheduledDate": "2026-07-24",
+  "brand": "play",
+  "prompt": "Trick question: which month of the year has 28 days?",
+  "options": [
+    {
+      "id": "a",
+      "text": "February only"
+    },
+    {
+      "id": "b",
+      "text": "All of them"
+    },
+    {
+      "id": "c",
+      "text": "January"
+    },
+    {
+      "id": "d",
+      "text": "None of them"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Every month has at least 28 days. February is simply the only month that sometimes has exactly 28 and no more.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

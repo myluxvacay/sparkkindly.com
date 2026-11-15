@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-61",
+  "slug": "memory-game-maths",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Memory Game: Maths Behind Matching Pairs",
+  "description": "Concentration feels like a memory test, but a little probability explains why the endgame feels so different from the start.",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "probability"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Luck first, knowledge later",
+      "paragraphs": [
+        "In the matching-pairs game - cards face down, flip two, keep them if they match - the early game is mostly chance. Suppose 24 cards lie face down. You flip one; its partner is exactly one of the 23 remaining cards, so a blind second flip matches with probability 1 in 23, about 4 percent. Early matches are gifts, not skill.",
+        "But every card you have ever seen and remembered changes the game. A card flipped and lost is not wasted - it is information banked. Once you know where both copies of a pair are sitting, a match becomes certain rather than lucky. The whole arc of the game is the conversion of luck into knowledge."
+      ]
+    },
+    {
+      "heading": "How the good players actually play",
+      "paragraphs": [
+        "Strong players obey one rule early: always flip an unknown card first. Flipping a card you already know first teaches you nothing new; flipping an unknown one might complete a pair you half-know, and at worst adds a new location to your map. Only when your first flip matches something in memory do you spend a known card as the second flip.",
+        "Memory itself can be engineered. Narrate locations silently ('the frog is top-left'), group the board into neighbourhoods, and attach pairs to little stories. Most people can hold only a handful of unrelated locations at once, but chunking - remembering 'the top row is frog, star, moon' as one item instead of three - stretches that handful considerably."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Play a round with 6 pairs, then a round with 12, and count how many locations you can reliably hold. Note the moment in the 12-pair game where the board flips from foggy to familiar - that is the information tipping point, and it arrives earlier as your chunking improves.",
+        "For a probability postscript, compute the blind-match chance at the start of the 6-pair game: after your first flip, the partner is 1 of 11 remaining cards. Compare that friendly 1-in-11 with the 1-in-23 of the bigger game, and you can feel why small decks feel lucky and big decks feel earned."
+      ]
+    }
+  ],
+  "takeaway": "Early flips buy information and late flips spend it - the player who treats every revealed card as treasure wins the endgame.",
+  "fiction": false
+}

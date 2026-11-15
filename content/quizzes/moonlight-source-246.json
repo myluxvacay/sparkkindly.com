@@ -1,0 +1,38 @@
+{
+  "id": "moonlight-source-246",
+  "scheduledDate": "2026-02-19",
+  "brand": "discover",
+  "prompt": "Why does the Moon shine brightly in the night sky?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It makes its own light"
+    },
+    {
+      "id": "b",
+      "text": "It glows because it is hot"
+    },
+    {
+      "id": "c",
+      "text": "It reflects light from the Sun"
+    },
+    {
+      "id": "d",
+      "text": "It reflects light from Earth's cities"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The Moon produces no light of its own; the brightness we see is sunlight bouncing off its surface.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Moon",
+      "url": "https://en.wikipedia.org/wiki/Moon",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

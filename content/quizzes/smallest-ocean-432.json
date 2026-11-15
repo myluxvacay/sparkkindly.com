@@ -1,0 +1,38 @@
+{
+  "id": "smallest-ocean-432",
+  "scheduledDate": "2026-08-24",
+  "brand": "discover",
+  "prompt": "Which is the smallest of the world's oceans?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Indian Ocean"
+    },
+    {
+      "id": "b",
+      "text": "Atlantic Ocean"
+    },
+    {
+      "id": "c",
+      "text": "Arctic Ocean"
+    },
+    {
+      "id": "d",
+      "text": "Southern Ocean"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The Arctic Ocean, around the North Pole, is much smaller and shallower than the other four oceans.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Arctic Ocean",
+      "url": "https://en.wikipedia.org/wiki/Arctic_Ocean",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-55",
+  "slug": "bridge-and-torch-puzzle",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Bridge and Torch: Get Everyone Across in Seventeen Minutes",
+  "description": "Four walkers, one torch, a bridge that holds two - the fastest plan needs a counter-intuitive trick with the slowest pair.",
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "play-and-games"
+  ],
+  "sources": [
+    {
+      "title": "Bridge and torch problem - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bridge_and_torch_problem",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The problem",
+      "paragraphs": [
+        "Four people must cross a rickety bridge at night. The bridge holds at most two people at once, there is only one torch, and nobody may cross without it. The four walk at different speeds: alone, they need 1, 2, 5 and 10 minutes to cross. When two cross together, they move at the slower person's pace. Everyone must be across within 17 minutes. It sounds impossible - the two slowest alone seem to eat the whole budget.",
+        "The obvious plan fails: have the fastest walker escort everyone. That costs 10 (escorting the slowest), 1 (returning), 5, 1 and 2 - a total of 19 minutes. Two minutes too many. The fix requires questioning the assumption that the fastest person should do all the escorting."
+      ]
+    },
+    {
+      "heading": "The seventeen-minute solution",
+      "paragraphs": [
+        "Send the 1-minute and 2-minute walkers across together: 2 minutes. The 1-minute walker returns with the torch: 1 minute, total 3. Now the trick - send the 5-minute and 10-minute walkers across together: 10 minutes, total 13. The 2-minute walker, waiting on the far side, brings the torch back: 2 minutes, total 15. Finally the 1 and 2 cross together: 2 minutes, total 17 exactly.",
+        "The saving came from pairing the two slowest walkers. When the 5-minute walker crosses with the fastest escort, her 5 minutes are paid in full; when she crosses with the 10-minute walker, her time hides completely inside his. Whenever a problem charges you for the maximum of a pair, ask whether two expensive items can be overlapped."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Change the times to 1, 3, 6 and 9 minutes and find the best plan. (Hint: the slow-pair trick gives 3 + 1 + 9 + 3 + 3 = 19 minutes, beating the escort-everyone plan of 20.) Then try 1, 2, 4 and 8 and see whether the same shape of solution still wins.",
+        "For the real connoisseur version, ask what happens with five walkers, or when the bridge holds three. The puzzle generalises beautifully, and the slow-pair idea remains the key that unlocks most versions."
+      ]
+    }
+  ],
+  "takeaway": "Send the two slowest across together: pairing them hides the second-slowest time inside the slowest, which is where the saving lives.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "dice-opposite-421",
+  "scheduledDate": "2026-08-13",
+  "brand": "play",
+  "prompt": "On a normal dice, opposite faces always add up to 7. If the top face shows 2, what number is on the bottom?",
+  "options": [
+    {
+      "id": "a",
+      "text": "3"
+    },
+    {
+      "id": "b",
+      "text": "4"
+    },
+    {
+      "id": "c",
+      "text": "5"
+    },
+    {
+      "id": "d",
+      "text": "6"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Opposite faces sum to 7, so the face opposite 2 is 7 - 2 = 5.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

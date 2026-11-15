@@ -1,0 +1,38 @@
+{
+  "id": "air-mostly-252",
+  "scheduledDate": "2026-02-25",
+  "brand": "discover",
+  "prompt": "Which gas makes up most of the air around us?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Oxygen"
+    },
+    {
+      "id": "b",
+      "text": "Carbon dioxide"
+    },
+    {
+      "id": "c",
+      "text": "Nitrogen"
+    },
+    {
+      "id": "d",
+      "text": "Hydrogen"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "About 78% of Earth's atmosphere is nitrogen. Oxygen comes second at about 21%.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Atmosphere of Earth",
+      "url": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

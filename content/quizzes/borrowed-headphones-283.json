@@ -1,0 +1,32 @@
+{
+  "id": "borrowed-headphones-283",
+  "scheduledDate": "2026-03-28",
+  "brand": "together",
+  "prompt": "You borrowed your sibling's headphones without asking and they are upset. What is the best first step?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Deny it was you"
+    },
+    {
+      "id": "b",
+      "text": "Say sorry and ask first next time"
+    },
+    {
+      "id": "c",
+      "text": "Blame them for leaving the headphones out"
+    },
+    {
+      "id": "d",
+      "text": "Stay silent and hope they forget"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A simple apology plus a promise to ask first respects both their feelings and their belongings.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

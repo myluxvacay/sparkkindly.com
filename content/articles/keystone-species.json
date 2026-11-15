@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-87",
+  "slug": "keystone-species",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Keystone species: small part, huge job",
+  "description": "Remove a keystone species and the whole ecosystem sags, like an arch losing the stone that locks it in place.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Keystone species",
+      "url": "https://en.wikipedia.org/wiki/Keystone_species",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The otter, the urchin and the forest",
+      "paragraphs": [
+        "Along North America's Pacific coast, sea otters hunt sea urchins. Left unchecked, urchins multiply and mow down kelp forests, leaving barren rock. Where otters thrive, urchins stay scarce, kelp grows into underwater forests, and hundreds of species find food and shelter. The otter is not the biggest or most numerous animal in this story, but remove it and the arch collapses.",
+        "The term comes from architecture: the keystone is the single wedge at the top of an arch that holds all the others in place. Ecologist Robert Paine coined it after experiments in which removing one starfish species from a shore caused the whole community to simplify into a mussel monoculture."
+      ]
+    },
+    {
+      "heading": "Keystones come in many forms",
+      "paragraphs": [
+        "Some keystones are predators, like wolves and otters. Others are engineers, like beavers, whose dams create wetlands used by countless species. Still others are connectors: fig trees that fruit in lean seasons and keep entire forests of animals fed, or pollinators on which whole plant communities depend.",
+        "For conservation, the idea is a compass. Protecting a keystone can protect an entire web of life at once — and losing one can unravel far more than a single species."
+      ]
+    }
+  ],
+  "takeaway": "A keystone species has an effect on its ecosystem far larger than its numbers suggest, holding whole communities together.",
+  "fiction": false
+}

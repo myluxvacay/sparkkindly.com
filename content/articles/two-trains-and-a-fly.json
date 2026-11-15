@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-70",
+  "slug": "two-trains-and-a-fly",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Two Trains and a Fly: The Puzzle That Stumped a Genius (Almost)",
+  "description": "A fly zigzags between two approaching trains - the hard way sums an infinite series, but there is a one-line shortcut.",
+  "publishedAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Two trains and a fly - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Two_trains_and_a_fly",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The puzzle",
+      "paragraphs": [
+        "Two stations stand 100 kilometres apart. At the same moment, a train leaves each station toward the other, both travelling at 50 kilometres per hour. At that same instant, a fly leaves the front of one train and flies at 75 kilometres per hour toward the other train. Each time it meets a train, it turns around instantly and flies back. How far does the fly travel before the trains meet and its zigzag ends?",
+        "The direct approach is daunting: work out the first leg, then the second, then the third - an infinite list of shrinking legs. It can be done, with an infinite series, and the sum does converge. But there is a door in the side of this problem that opens onto a one-line answer."
+      ]
+    },
+    {
+      "heading": "The shortcut, and the anecdote",
+      "paragraphs": [
+        "Forget the fly's path and ask about time. The trains close on each other at 50 + 50 = 100 kilometres per hour, so they meet after exactly one hour. The fly flies at 75 kilometres per hour for that entire hour - it never stops or slows - so it travels 75 kilometres. The zigzags were a distraction; the clock was the answer.",
+        "Legend says this puzzle was put to the great mathematician John von Neumann, who answered instantly. The questioner laughed: 'You must have spotted the trick - most people try to sum the series.' Von Neumann is said to have replied, puzzled: 'I did sum the series.' The story is probably too good to be perfectly true, but it survives because it honours both kinds of cleverness - the shortcut, and the raw power to not need it."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Verify the shortcut the hard way for the first few legs: the fly meets the oncoming train after covering 60 kilometres (the gap closes at 125 kilometres per hour, so they meet after 0.8 hours, at 60 kilometres flown), then turns and flies a shorter leg. Add three legs and watch the total creep toward 75.",
+        "Then change one number - make the fly only slightly faster than the trains, or the trains different speeds - and confirm the shortcut still works instantly while the series method gets uglier. Choosing the frame that makes a problem collapse is a transferable superpower."
+      ]
+    }
+  ],
+  "takeaway": "Before summing an endless zigzag, look for the clock: the fly flies for exactly as long as the trains take to meet.",
+  "fiction": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "together-bulk-73",
+  "slug": "harvest-thanks",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Harvest thanks",
+  "description": "Before gratitude was a practice, it was a season: the table laid at the end of the gathering-in.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "traditions",
+    "gratitude"
+  ],
+  "sources": [
+    {
+      "title": "Thanksgiving — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Thanksgiving",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Thanks with dirt on it",
+      "paragraphs": [
+        "Harvest festivals are among humanity’s oldest celebrations. Thanksgiving in North America centres on a shared feast of gratitude; Germany’s Erntedankfest thanks God and community for the gathered crops, often with processions and decorated churches; in China and Vietnam, the Mid-Autumn Festival pairs the harvest moon with family reunion and mooncakes. Different tables, same astonishment: the earth provided, again.",
+        "Original gratitude was not a mood. It was a response to survival, said out loud, together, over food."
+      ]
+    },
+    {
+      "heading": "Gratitude that names its sources",
+      "paragraphs": [
+        "Harvest thanks is specific by nature: this field, this rain, these hands. That specificity is what modern gratitude practice keeps rediscovering — thanks that names its object lands differently from a general glow of appreciation.",
+        "It also remembers the labour. Behind every harvest table stand planters, pickers, drivers, and cooks, most of them unnamed. Naming the chain, even briefly, is part of the thanks."
+      ]
+    },
+    {
+      "heading": "A harvest of your own",
+      "paragraphs": [
+        "Your household has harvests too: the project finished, the exam survived, the garden’s three heroic tomatoes. Mark one each year with a deliberate meal and one spoken sentence of thanks that names what actually made it possible.",
+        "Gratitude kept seasonal and spoken has a way of surviving the winter."
+      ]
+    }
+  ],
+  "takeaway": "Make gratitude seasonal, spoken, and specific — naming the field, the rain, and the hands.",
+  "fiction": false
+}

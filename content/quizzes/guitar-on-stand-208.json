@@ -1,0 +1,32 @@
+{
+  "id": "guitar-on-stand-208",
+  "scheduledDate": "2026-01-12",
+  "brand": "grow",
+  "prompt": "You want to practise guitar every day. Which setup makes practice most likely to happen?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Guitar in its case in the attic"
+    },
+    {
+      "id": "b",
+      "text": "Guitar on a stand in the room where you relax"
+    },
+    {
+      "id": "c",
+      "text": "Guitar kept at a friend's house"
+    },
+    {
+      "id": "d",
+      "text": "No guitar; just watch videos about guitar"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Visible, ready-to-use tools remove friction. Every extra step between you and starting is a chance to skip practising.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

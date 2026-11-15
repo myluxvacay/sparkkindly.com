@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-138",
+  "slug": "a-museum-of-one-object",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "A museum of one object",
+  "description": "Choose one ordinary object and give it the full museum treatment: history, materials, design, memories. Attention turns the everyday into an exhibit.",
+  "publishedAt": "2026-08-27",
+  "updatedAt": "2026-08-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "curiosity",
+    "creativity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Pick your exhibit",
+      "paragraphs": [
+        "A kettle, a bicycle bell, a favourite mug, a door key. The more ordinary the object, the better the game, because the point is discovering how much story a plain thing can hold.",
+        "Begin with observation alone: weight, materials, marks of wear, sounds it makes, the small design decisions someone made about it long ago."
+      ]
+    },
+    {
+      "heading": "Write its label",
+      "paragraphs": [
+        "Museums explain objects with short labels. Write one for yours: what it is, roughly when and where it was made, what it is for, and one interesting thing most people would miss.",
+        "Then add the personal gallery: where this object has been, what it has witnessed, why this one matters to you. You have just practised history, science and storytelling on a mug, which is a fine afternoon's work."
+      ]
+    }
+  ],
+  "takeaway": "Give one ordinary object the museum treatment and read the story it was hiding.",
+  "fiction": false
+}

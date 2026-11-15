@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-53",
+  "slug": "friendship-across-the-miles",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Friendship across the miles",
+  "description": "Distance changes how a friendship must be fed, but not how much it can matter.",
+  "publishedAt": "2026-09-24",
+  "updatedAt": "2026-09-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "friendship",
+    "communication"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Lower the bar for contact",
+      "paragraphs": [
+        "Long-distance friendships die of ceremony: the feeling that contact must be a long call, properly scheduled, with news worth reporting. Replace ceremony with crumbs — a photo of nothing, a voice note from a walk, a link with “this is so you” attached.",
+        "Crumbs keep the path walked. It is the overgrown path, not the short one, that eventually becomes impassable."
+      ]
+    },
+    {
+      "heading": "Rituals beat intentions",
+      "paragraphs": [
+        "A standing call, a shared game on Sundays, a birthday tradition that survives geography — rituals carry a friendship through the months when both of you are busy and uninspired. Intentions, however warm, do not appear in anyone’s calendar.",
+        "Keep rituals small enough to survive bad weeks. A ten-minute call that happens beats an hour that gets postponed forever."
+      ]
+    },
+    {
+      "heading": "Say the quiet part",
+      "paragraphs": [
+        "Once in a while, say plainly that the friendship matters and the distance does not change that. People cannot always tell from crumbs alone, and hearing it outright refuels both sides for another season of crumbs.",
+        "And when you finally meet in person, do not waste the first hour apologising for the gaps. Pick up the thread where it always was: mid-sentence."
+      ]
+    }
+  ],
+  "takeaway": "Feed it with crumbs, hold it with rituals, and say outright that it matters.",
+  "fiction": false
+}

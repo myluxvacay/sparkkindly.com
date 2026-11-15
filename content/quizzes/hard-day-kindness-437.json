@@ -1,0 +1,32 @@
+{
+  "id": "hard-day-kindness-437",
+  "scheduledDate": "2026-08-29",
+  "brand": "together",
+  "prompt": "A family member comes home after a really hard day. Which small act could help most?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Immediately list all your own problems"
+    },
+    {
+      "id": "b",
+      "text": "Ask if they'd like to talk, or just some quiet company"
+    },
+    {
+      "id": "c",
+      "text": "Tell them to cheer up"
+    },
+    {
+      "id": "d",
+      "text": "Turn the television up loud"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Letting them choose, talking or quiet company, offers comfort without pressure and shows that you noticed how they feel.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

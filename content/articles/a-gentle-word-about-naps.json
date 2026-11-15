@@ -1,0 +1,55 @@
+{
+  "id": "grow-bulk-70",
+  "slug": "a-gentle-word-about-naps",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "A gentle word about naps",
+  "description": "Naps are neither lazy nor magic; kept short and early, they can refresh you without stealing from the night.",
+  "publishedAt": "2026-10-18",
+  "updatedAt": "2026-10-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "sleep"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Why naps have a mixed reputation",
+      "paragraphs": [
+        "A nap can feel like a small resurrection — or like waking from the depths with a heavy head and a stolen evening’s sleepiness. Both experiences are real, and the difference is mostly timing and length rather than whether you are “a nap person.”",
+        "Sleep deepens the longer you are in it. Wake from the light early stage and you surface fairly cleanly. Wake from deep sleep and you get sleep inertia: that groggy, worse-than-before feeling that can take half an hour to clear."
+      ]
+    },
+    {
+      "heading": "Short and early is the classic recipe",
+      "paragraphs": [
+        "For most people, the nap that works is twenty minutes or so, taken in the early afternoon when alertness naturally dips. Set an alarm for slightly longer than the nap itself to allow falling-asleep time, and keep the room dim and cool if you can.",
+        "Long or late naps are the usual culprits when night sleep suffers: they pay out some of your sleepiness early, leaving less of it at bedtime. If your nights are fragile, protect them by keeping naps short, early, or — for a while — skipped."
+      ]
+    },
+    {
+      "heading": "The coffee question, and other tools",
+      "paragraphs": [
+        "Some people swear by drinking a coffee immediately before a short nap, so the caffeine arrives as they wake. It works for some and ruins the nap for others; treat it as an experiment, not a rule, and never let it push caffeine later into your day.",
+        "And if you cannot nap, rest still counts. Lying down with eyes closed in a quiet room, without pressure to sleep, gives the body and mind a genuine pause. Not every rest needs to become sleep to be worth taking."
+      ]
+    }
+  ],
+  "takeaway": "Keep naps short, early and unhurried — a refreshment, not a second night.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "corridor-help-267",
+  "scheduledDate": "2026-03-12",
+  "brand": "together",
+  "prompt": "You see a classmate drop their books in a busy corridor. What is the kindest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Step around them quickly"
+    },
+    {
+      "id": "b",
+      "text": "Laugh so they know it is not serious"
+    },
+    {
+      "id": "c",
+      "text": "Help pick the books up and check they are okay"
+    },
+    {
+      "id": "d",
+      "text": "Take a photo for the group chat"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Helping with the books and checking on the person turns an embarrassing moment into a supported one.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

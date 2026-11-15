@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-119",
+  "slug": "keeping-food-cold-the-refrigerator-story",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Keeping food cold: the refrigerator story",
+  "description": "For most of history, cold was harvested from mountains and lakes; the refrigerator learned to manufacture it in a box in your kitchen.",
+  "publishedAt": "2026-08-07",
+  "updatedAt": "2026-08-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "technology",
+    "inventions"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Refrigerator",
+      "url": "https://en.wikipedia.org/wiki/Refrigerator",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Vapor-compression refrigeration",
+      "url": "https://en.wikipedia.org/wiki/Vapor-compression_refrigeration",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The age of harvested ice",
+      "paragraphs": [
+        "Cold slows the growth of the microbes that spoil food, and people have exploited that for millennia — with cellars, spring houses and stored winter ice. In the 19th century, harvesting lake ice became a great industry: blocks were cut in New England winters and shipped as far as India, packed in sawdust.",
+        "Households kept food in an icebox, a cabinet cooled by a melting block delivered by the iceman. It worked, but the cold depended on weather, distance and delivery routes — and it always ran out."
+      ]
+    },
+    {
+      "heading": "Making cold from a cycle",
+      "paragraphs": [
+        "The refrigerator's trick is a loop with four steps. A special fluid is squeezed by a compressor until it is hot, sheds that heat through coils at the back, then expands suddenly through a narrow valve and turns very cold, absorbing heat from inside the cabinet — and round it goes. Squeeze, release heat, expand, absorb heat: cold, manufactured continuously.",
+        "Working versions were demonstrated in the 19th century and first served breweries and meat packers. Domestic electric refrigerators spread in the 1920s and 1930s, finally retiring the iceman and his tongs."
+      ]
+    },
+    {
+      "heading": "A quiet revolution in the kitchen",
+      "paragraphs": [
+        "Reliable cold changed what people could eat: fresh milk and meat far from farms, leftovers kept safely, markets that stocked food weekly instead of daily. It also changed medicine, since vaccines and many medicines survive only while kept cold — a 'cold chain' now stretches from factories to the most remote clinics.",
+        "Modern fridges sip electricity compared with their grandparents and use kinder fluids than early models. The hum in your kitchen is the sound of one of history's most useful cycles, still turning."
+      ]
+    }
+  ],
+  "takeaway": "The refrigerator manufactures cold with a four-step cycle of squeezing and expanding a fluid — ending the age of harvested ice.",
+  "fiction": false
+}

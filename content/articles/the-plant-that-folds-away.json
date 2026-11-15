@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-58",
+  "slug": "the-plant-that-folds-away",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The plant that folds away",
+  "description": "Brush a leaf of the sensitive plant and it folds shut in seconds — one of the fastest moves in the plant world.",
+  "publishedAt": "2026-09-21",
+  "updatedAt": "2026-09-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Mimosa pudica",
+      "url": "https://en.wikipedia.org/wiki/Mimosa_pudica",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Movement by water pressure",
+      "paragraphs": [
+        "The sensitive plant, Mimosa pudica, folds its leaflets and droops its leaf stalks when touched, shaken or warmed. The movement runs on water, not muscle. Special hinge-like structures at the base of each leaflet rapidly lose water from their cells when disturbed, collapsing like deflating cushions and pulling the leaflet closed.",
+        "Within about ten minutes the cells refill, the hinges firm up, and the leaf reopens. A strong disturbance can fold a whole branch, and the signal can travel from leaf to leaf through the plant."
+      ]
+    },
+    {
+      "heading": "Why fold?",
+      "paragraphs": [
+        "A folded plant presents a smaller, droopier target, which may discourage grazing animals, dislodge small insects, or make the plant look less appetising than its upright neighbours. The response is costly — a folded leaf gathers less light — so it is kept for genuine disturbances.",
+        "Perhaps most intriguingly, experiments suggest the plant can learn: repeatedly dropped plants eventually stopped folding when the drops proved harmless, and remembered for weeks. Whether that counts as memory in the animal sense is debated, but the behaviour is real and measurable."
+      ]
+    }
+  ],
+  "takeaway": "The sensitive plant folds by rapidly draining water from hinge cells, a fast defence that slowly resets.",
+  "fiction": false
+}

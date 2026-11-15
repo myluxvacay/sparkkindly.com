@@ -1,0 +1,56 @@
+{
+  "id": "save-bulk-90",
+  "slug": "travel-home-for-less",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Getting home for less",
+  "description": "The journey home is a fixed feature of student life, and its price varies wildly depending on when and how you book. A little planning halves it.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "student-money",
+    "spending-wisely",
+    "saving"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Book the calendar, not the mood",
+      "paragraphs": [
+        "Train and coach prices generally rise as departure approaches and as popular times sell. The cheapest tickets belong to people who book when term dates are announced — which is to say, early, calmly, and for the less fashionable departure times.",
+        "If your route offers advance fares, railcards, or student coach discounts, the savings stack: a discount card that costs a little can pay for itself in a single holiday journey and keep saving all year. Do the maths on your actual route before buying one."
+      ]
+    },
+    {
+      "heading": "Flexibility is a currency",
+      "paragraphs": [
+        "Travelling a day earlier, an hour later, or from the next station along can change the price dramatically. Splitting a journey into separate tickets for each leg is sometimes cheaper than the through ticket — price-comparison sites will often check this for you.",
+        "Off-peak is your friend. If your timetable allows a mid-morning Tuesday departure instead of the Friday evening rush, the same seat can cost a fraction as much."
+      ]
+    },
+    {
+      "heading": "Share and pool",
+      "paragraphs": [
+        "If friends travel the same route, group discounts, shared taxis for the awkward last leg, or a lift rota with families can cut costs for everyone. And keep a small travel sinking fund during term — a few pounds or dollars a week — so the journey home never competes with the last week of term.",
+        "Finally, protect the booking once made: note the ticket's conditions. The cheapest advance tickets are often non-refundable and tied to a specific train, so set alarms and guard the departure time like an exam — a missed cheap ticket is the dearest of all."
+      ]
+    }
+  ],
+  "takeaway": "Book early, travel off-peak, use student and advance discounts, and save a little weekly for the fare — the trip home should cost planning, not panic.",
+  "fiction": false
+}

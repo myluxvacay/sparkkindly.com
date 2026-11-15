@@ -1,0 +1,32 @@
+{
+  "id": "accepting-apology-237",
+  "scheduledDate": "2026-02-10",
+  "brand": "together",
+  "prompt": "A friend apologises sincerely for forgetting something important to you, and clearly feels awful. What response best protects the friendship?",
+  "options": [
+    {
+      "id": "a",
+      "text": "'You always let me down'"
+    },
+    {
+      "id": "b",
+      "text": "'Thank you for saying sorry - we're okay'"
+    },
+    {
+      "id": "c",
+      "text": "Accept, then bring it up again every week"
+    },
+    {
+      "id": "d",
+      "text": "Ignore the apology completely"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Accepting a sincere apology graciously closes the matter and rewards the courage it took to say sorry.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

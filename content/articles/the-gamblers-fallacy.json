@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-36",
+  "slug": "the-gamblers-fallacy",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Gambler's Fallacy: When 'Due' Is an Illusion",
+  "description": "After five reds, black feels 'due' - but the wheel has no memory. Spotting this trap protects you in games and in everyday guesses.",
+  "publishedAt": "2026-09-09",
+  "updatedAt": "2026-09-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "probability",
+    "brain-teasers"
+  ],
+  "sources": [
+    {
+      "title": "Gambler's fallacy - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gambler%27s_fallacy",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The night the wheel went black",
+      "paragraphs": [
+        "In August 1913, at the Monte Carlo Casino, a roulette ball landed on black 26 times in a row. As the streak grew, gamblers crowded the table betting on red, certain it was due. They lost fortunes. Every spin, including the 27th, was an independent event - the wheel had no memory of the streak and no debt to repay.",
+        "This mistake is called the gambler's fallacy: believing that past random events change the odds of the next one. A coin that has landed heads five times is not 'due' for tails. It is just a coin, and the next flip is still fifty-fifty."
+      ]
+    },
+    {
+      "heading": "What the law of large numbers really says",
+      "paragraphs": [
+        "People often defend the fallacy with a real law: in the long run, heads and tails do balance out to about half each. But the balance arrives by dilution, not by correction. A streak of five heads gets swamped by thousands of later flips; the coin never compensates, it just gets outnumbered.",
+        "There is a mirror-image mistake too: the hot-hand fallacy, believing a streak means the next success is more likely. In pure chance games, both beliefs are wrong in opposite directions. The honest summary is boring and powerful: independent events stay independent."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Keep a prediction journal for one evening of any game involving dice, cards or coins. Before each random event, write your prediction and, honestly, whether a streak influenced it. Afterwards, count how often 'due' thinking appeared - and how it performed.",
+        "You will probably find the urge to bet against a streak is strongest exactly when it is least justified. Noticing the urge, rather than obeying it, is the real skill this fallacy teaches."
+      ]
+    }
+  ],
+  "takeaway": "Independent events don't remember: after any streak, the next flip is still fifty-fifty.",
+  "fiction": false
+}

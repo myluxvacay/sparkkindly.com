@@ -1,0 +1,32 @@
+{
+  "id": "six-times-seven-389",
+  "scheduledDate": "2026-07-12",
+  "brand": "save",
+  "prompt": "You save $6 every week. How much will you have saved after 7 weeks?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$36"
+    },
+    {
+      "id": "b",
+      "text": "$42"
+    },
+    {
+      "id": "c",
+      "text": "$48"
+    },
+    {
+      "id": "d",
+      "text": "$13"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "$6 x 7 weeks = $42. Regular small amounts grow into a tidy sum faster than most people expect.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

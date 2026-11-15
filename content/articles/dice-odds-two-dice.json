@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-31",
+  "slug": "dice-odds-two-dice",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Two Dice: Why Seven Is the Busiest Number",
+  "description": "Roll two dice and some totals turn up far more often than others - here is the simple counting trick that explains why.",
+  "publishedAt": "2026-09-01",
+  "updatedAt": "2026-09-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "probability",
+    "play-and-games"
+  ],
+  "sources": [
+    {
+      "title": "Dice - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dice",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Thirty-six little worlds",
+      "paragraphs": [
+        "When you roll two dice, there are 36 equally likely pairs of faces, from double one to double six. Each pair is its own little world, and every world is just as likely as every other. The totals, though, are not equally likely at all.",
+        "A total of 2 can only happen one way: one and one. A total of 7 can happen six ways - 1+6, 2+5, 3+4, 4+3, 5+2 and 6+1. That is why seven turns up in about one roll in six, while two and twelve each appear only about once in 36 rolls."
+      ]
+    },
+    {
+      "heading": "The triangle of totals",
+      "paragraphs": [
+        "If you count the ways to make each total from 2 to 12, you get a neat pattern: 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1. The counts climb steadily to seven and then fall away again, like a triangle. Extreme totals are rare because so few pairs can build them.",
+        "Game designers lean on this triangle constantly. In games where dice decide which resources you collect or how far you move, the middle numbers are the busy ones, and smart players build their plans around six, seven and eight rather than two or twelve."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Roll two dice 36 times and tally the totals. You will not get exactly 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1 - real dice wobble around the prediction - but seven should be near the top of your chart and the extremes near the bottom.",
+        "Then roll 72 more times and add the results together. Notice how the triangle gets clearer as you collect more rolls. That settling-down is one of the most useful ideas in all of probability, and you can watch it happen on a kitchen table."
+      ]
+    }
+  ],
+  "takeaway": "Seven is the most likely total of two dice because six different pairs make it - count the ways, and the luck gets less mysterious.",
+  "fiction": false
+}

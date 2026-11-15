@@ -1,0 +1,56 @@
+{
+  "id": "save-bulk-89",
+  "slug": "your-first-term-budget",
+  "brand": "save",
+  "contentType": "article",
+  "title": "A first-term money map",
+  "description": "Student money often arrives in lumps while spending flows weekly. A term map — income divided by weeks — turns the lump into a livable rhythm.",
+  "publishedAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "student-money",
+    "budgeting",
+    "money-basics"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Divide by the weeks, honestly",
+      "paragraphs": [
+        "Add up everything you will receive this term: loans, grants, family help, job income you can count on. Divide by the number of weeks in the term. That weekly figure — not the impressive lump in your account in week one — is your real income.",
+        "Suppose the term brings $2,600 across thirteen weeks. That is $200 a week, from which rent and bills may already claim their share. Seeing the weekly truth early is the entire trick."
+      ]
+    },
+    {
+      "heading": "Take the big costs off the top",
+      "paragraphs": [
+        "Subtract the term's fixed costs first: rent, bills, travel passes, course materials. What remains is your weekly living money. Move the fixed-cost share somewhere it cannot be casually spent — a separate account or pot — the day the lump arrives.",
+        "Freshers' weeks and end-of-term celebrations are the two danger zones: one spends the term's money in a fortnight, the other arrives when the account is thinnest. A term map that expects both survives both."
+      ]
+    },
+    {
+      "heading": "Review at half-term",
+      "paragraphs": [
+        "Halfway through, compare the map with reality and adjust the weekly figure up or down honestly. A small correction at week six is painless; the same correction discovered in week twelve is not.",
+        "If the map shows the money will not stretch, act at half-term rather than at the end: more hours at work, a word with the student support office, or a honest conversation at home are all easier with weeks still in hand. Early honesty is the cheapest financial tool there is."
+      ]
+    }
+  ],
+  "takeaway": "Divide your term's income by its weeks, set the fixed costs aside the day the money lands, and re-check at half-term — lumpy income, weekly life, no surprises.",
+  "fiction": false
+}

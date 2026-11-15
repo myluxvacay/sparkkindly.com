@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-66",
+  "slug": "free-shipping-traps",
+  "brand": "save",
+  "contentType": "article",
+  "title": "\"Free shipping\" and the fuller basket",
+  "description": "Free delivery thresholds are set just above what you meant to spend. The extra item you add to qualify is rarely free at all.",
+  "publishedAt": "2026-10-12",
+  "updatedAt": "2026-10-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "spending-wisely",
+    "understanding-offers"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The threshold trick",
+      "paragraphs": [
+        "Suppose shipping costs $5, but delivery is \"free\" over $35 — and your basket holds $28 of things you actually want. Adding a $7 item to cross the line feels clever. But you have spent $7 to save $5, and you own something you never went shopping for.",
+        "The threshold is not generosity; it is a target chosen because most baskets fall just short of it. Retailers know the extra item is usually chosen in a hurry, at full price, from whatever the site suggests."
+      ]
+    },
+    {
+      "heading": "Better responses",
+      "paragraphs": [
+        "Option one: pay the $5 shipping and buy only what you came for. Option two: wait and combine — keep a list of genuinely needed items from that shop until a natural order crosses the threshold on its own.",
+        "Option three: check whether the same item is available locally at a fair price. A slightly higher shelf price with no shipping and no filler can be the cheapest honest total."
+      ]
+    },
+    {
+      "heading": "Count the basket, not the delivery",
+      "paragraphs": [
+        "Judge every order by the full amount leaving your account for the things you wanted. \"Free shipping\" on a padded basket costs more than honest shipping on a lean one, every single time.",
+        "Some shops offer free collection from a local store instead. If the store is on a journey you already make, that is genuinely free delivery — the only version of the offer that never asks you to buy anything extra."
+      ]
+    }
+  ],
+  "takeaway": "Never add an item just to reach a free-shipping threshold: compare the total basket cost, and let needed items accumulate until they cross the line naturally.",
+  "fiction": false
+}

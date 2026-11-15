@@ -1,0 +1,56 @@
+{
+  "id": "save-bulk-87",
+  "slug": "eating-well-on-a-student-budget",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Eating well on a student budget",
+  "description": "Good food on little money is a skill, not a sacrifice: a few staples, a short list of reliable meals, and a freezer doing quiet work.",
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "student-money",
+    "budgeting",
+    "saving"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Build around cheap staples",
+      "paragraphs": [
+        "Rice, pasta, oats, lentils, eggs, frozen vegetables, and tinned tomatoes are inexpensive in almost every shop and combine into dozens of meals. A store cupboard stocked with staples means dinner is always mostly bought already.",
+        "Lentils and beans deserve special mention: they cost little, need no soaking in their tinned form, keep for ages, and turn a thin soup or sauce into a meal that actually fills you."
+      ]
+    },
+    {
+      "heading": "Cook once, eat twice",
+      "paragraphs": [
+        "Cooking for one is the most expensive way to eat. Cook double and freeze the second portion, and future tired-you gets a free, instant meal on the evening when takeaway would otherwise win.",
+        "A small rotation of meals you can cook without thinking — a curry, a pasta sauce, a stir-fry, a soup — beats a shelf of recipe books. Skill with five meals feeds you better than ambition about fifty."
+      ]
+    },
+    {
+      "heading": "Shop with a plan and a time limit",
+      "paragraphs": [
+        "Shop from a list, after eating if you can manage it, and compare unit prices on your staples. Supermarket own-brand versions of basic ingredients are usually indistinguishable in a cooked dish, and the difference across a term is real money.",
+        "Reduced-price shelves near closing time are worth learning, too: bread, fruit, and ready items are often marked down heavily. Freeze what you can, plan tomorrow's meal around the rest, and the savings repeat weekly."
+      ]
+    }
+  ],
+  "takeaway": "Stock cheap staples, cook double and freeze the extra, and master five reliable meals — eating well at student prices is a system, not a struggle.",
+  "fiction": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-76",
+  "slug": "zero-the-number-that-wasnt",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Zero: The Number That Took Thousands of Years to Invent",
+  "description": "Counting feels natural, but zero arrived late and changed everything - the story of nothing, and why you cannot divide by it.",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "maths-and-logic",
+    "brain-teasers"
+  ],
+  "sources": [
+    {
+      "title": "0 - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/0",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Nothing, in two acts",
+      "paragraphs": [
+        "Zero had to be invented twice. First came zero the placeholder: Babylonian scribes, and later Maya astronomers independently, used a symbol to mark an empty position, the way the 0 in 305 tells you the tens column is empty. Without it, written numbers are ambiguous - is that 35, 305 or 3005?",
+        "The second invention was far bolder: zero as a number in its own right, something you can add, subtract and multiply. That step happened in India, where in 628 CE the astronomer Brahmagupta wrote down rules for calculating with zero. From India the idea travelled through Arabic scholarship to Europe, where Fibonacci's book of 1202 helped spread the Hindu-Arabic numerals - and the rest is calculators."
+      ]
+    },
+    {
+      "heading": "Why you cannot divide by zero",
+      "paragraphs": [
+        "Division is a question: 6 divided by 3 asks '3 times what equals 6?' and the answer is 2. But 6 divided by 0 asks '0 times what equals 6?' - and no number answers it, because 0 times anything is 0. So division by zero is not forbidden by stubbornness; it simply has no answer, and mathematicians leave it undefined.",
+        "Zero divided by zero is worse: '0 times what equals 0?' is answered by every number at once, which is the same as having no definite answer. When a computer or calculator meets these questions it reports an error, and behind that error message sits this exact piece of reasoning from over a thousand years ago."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Feel zero's power by doing arithmetic the Roman way: try multiplying XLVII by III using only Roman numerals, then do 47 x 3 in decimal. The Roman system, with no zero and no place value, makes even small multiplication a research project - which is why Roman accountants used counting boards and why Europe eventually switched.",
+        "Then write the numbers from 95 to 105 in both systems and look at what happens at 100. Decimal notation sails through the boundary with a new column; the 0s you write without thinking are doing heavy lifting every single time."
+      ]
+    }
+  ],
+  "takeaway": "Zero is an invention, not an obvious fact: as a placeholder it powers place value, and as a number it still refuses to divide.",
+  "fiction": false
+}

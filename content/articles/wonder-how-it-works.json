@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-140",
+  "slug": "wonder-how-it-works",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Wonder how it works",
+  "description": "Lifts, locks, loaves of bread: the world is full of quiet machinery. Guessing how something works, then checking, is curiosity in its purest form.",
+  "publishedAt": "2026-08-31",
+  "updatedAt": "2026-08-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "curiosity",
+    "focus"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Guess before you look it up",
+      "paragraphs": [
+        "When something puzzles you, resist the instant search. First, make your best guess about how it might work: what parts it needs, what energy it uses, what could go wrong with it. Draw it if you can.",
+        "The guess matters even when it is wrong. It gives your mind hooks, so the real explanation, when you find it, sticks to something instead of sliding off."
+      ]
+    },
+    {
+      "heading": "Then check, and enjoy the gap",
+      "paragraphs": [
+        "Now look it up or ask someone who knows. Compare the real mechanism with your guess. The differences are where the learning lives, and they are often more interesting than the answer alone.",
+        "Keep a running list of things you have wondered about: how traffic lights decide, why bread rises, how a zip works. It is a curriculum you wrote yourself, which is the most motivating kind."
+      ]
+    }
+  ],
+  "takeaway": "Guess first, check second, and keep a list of things you wonder about.",
+  "fiction": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-65",
+  "slug": "twenty-questions-a-million-things",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Twenty Questions: Finding One Thing in a Million",
+  "description": "Twenty yes-or-no questions can pinpoint almost anything - because each good question cuts the possibilities in half.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Twenty questions - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Twenty_questions",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The doubling ladder",
+      "paragraphs": [
+        "One yes-or-no question can distinguish between 2 possibilities. Two questions can handle 4, three questions 8. Each question doubles your reach: 10 questions cover 1,024 possibilities, and 20 questions cover 2 to the power 20 - 1,048,576. Over a million things, searchable with twenty careful questions. That is the entire engine of the parlour game Twenty Questions.",
+        "It is also the engine inside a great deal of computing. Searching a sorted list by repeatedly halving it - binary search - is the same trick wearing a lab coat. When a computer finds one name among a billion in a fraction of a second, it is playing Twenty Questions at electronic speed, needing only about 30 halvings."
+      ]
+    },
+    {
+      "heading": "What makes a question good",
+      "paragraphs": [
+        "A good question splits the remaining possibilities as evenly as possible. 'Is it alive?' divides the world usefully; 'Is it a toaster?' gambles everything on one item and usually wastes a turn. Early questions should be broad categories - animal, vegetable or mineral, in the classic opening - and later questions narrow in on the surviving branch.",
+        "You can feel the same strategy in number guessing. To find a secret number from 1 to 100, never guess randomly: guess 50, then halve the surviving range. Seven questions always suffice, because 2 to the power 7 is 128. Players who guess 'lucky' numbers instead are relying on the one strategy the maths cannot help."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Play the number game with a partner: they pick a number from 1 to 100, you halve relentlessly and count your questions - you should never need more than seven. Then play classic Twenty Questions and track how the possibility space shrinks after each answer.",
+        "Finally, try being the answerer with a deliberately tricky object, and notice which questions hurt most. The questions that split your category cleanly in half are the ones good players ask - and now you know their secret is arithmetic, not intuition."
+      ]
+    }
+  ],
+  "takeaway": "Halving is powerful: twenty well-chosen yes-or-no questions can search a million possibilities, because 2 to the power 20 is more than a million.",
+  "fiction": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "kids-bulk-107",
+  "slug": "sponge-stamp-patterns",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Sponge Stamp Patterns",
+  "description": "For ages 6–9 with an adult: dip sponge shapes in paint and stamp rows of cheerful patterns.",
+  "publishedAt": "2026-07-01",
+  "updatedAt": "2026-07-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Stamp a row",
+      "paragraphs": [
+        "Your adult cuts the sponge into a square, a triangle, and a circle. Dip one in paint and press it on the paper.",
+        "Stamp it again and again in a row. Keep the spaces between stamps as even as you can."
+      ]
+    },
+    {
+      "heading": "Mix the pattern",
+      "paragraphs": [
+        "Try a rhythm: circle, square, circle, square. Then invent your own rhythm with all three shapes.",
+        "Patterns are like songs for your eyes. See if your family can read your pattern out loud."
+      ]
+    }
+  ],
+  "takeaway": "Stamping the same shape in a row makes patterns that march across the page.",
+  "fiction": false,
+  "materials": [
+    "A soft sponge",
+    "Washable paint",
+    "Paper",
+    "A tray"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult cuts the sponge into shapes; wash hands after painting."
+  ],
+  "screenFreeExtension": "Stamp a pattern border around a drawing to make a picture frame."
+}

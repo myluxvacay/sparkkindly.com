@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-57",
+  "slug": "sunflowers-follow-the-sun",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Young sunflowers follow the Sun",
+  "description": "A young sunflower turns its face east to west each day — and keeps the rhythm going even on cloudy days.",
+  "publishedAt": "2026-09-19",
+  "updatedAt": "2026-09-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Heliotropism",
+      "url": "https://en.wikipedia.org/wiki/Heliotropism",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A clock inside the stem",
+      "paragraphs": [
+        "Tracking the Sun is called heliotropism, and in sunflowers it is driven by an internal daily clock rather than simple light-chasing. At night, the stem grows faster on its west side, swinging the head back to face east before dawn — the plant anticipates sunrise instead of merely reacting to it.",
+        "Experiments that moved sunflowers indoors under fixed lights found the plants kept swaying on their roughly 24-hour rhythm for days, and struggled when researchers imposed artificial days of the wrong length. The behaviour is timed from within."
+      ]
+    },
+    {
+      "heading": "Why bother turning?",
+      "paragraphs": [
+        "Facing the Sun warms the flower head, and warm heads attract more pollinating insects; east-facing heads can draw several times more bee visits than west-facing ones. Warmth also helps seeds develop. Interestingly, mature sunflower heads mostly stop tracking and settle facing east, keeping the warmth benefit.",
+        "Growth itself does the steering. No muscles, no nerves — just one side of the stem growing a little faster than the other, guided by a clock written into the plant's cells."
+      ]
+    }
+  ],
+  "takeaway": "Young sunflowers track the Sun using an internal clock that grows one side of the stem faster than the other.",
+  "fiction": false
+}

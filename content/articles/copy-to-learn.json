@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-96",
+  "slug": "copy-to-learn",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Copy to learn, then make it yours",
+  "description": "Careful copying is one of the oldest ways to learn a craft. The trick is to study while you copy, then step away and create.",
+  "publishedAt": "2026-06-10",
+  "updatedAt": "2026-06-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "creativity",
+    "focus"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Copying with your eyes open",
+      "paragraphs": [
+        "Art students have copied master paintings for centuries, and musicians learn favourite songs note by note. Copying slows you down enough to notice decisions you would otherwise miss: why this colour, why this chord, why this sentence works.",
+        "Choose something you admire and reproduce it as closely as you can, for practice only. Ask yourself at each step what the maker chose and why."
+      ]
+    },
+    {
+      "heading": "Then close the book",
+      "paragraphs": [
+        "The learning lands in the second step: put the original away and make your own piece using what you noticed. It will come out different, because your hand, your taste and your mistakes are not theirs.",
+        "Keep practice copies clearly labelled as studies, and never present them as original work. The honesty matters, and so does the distance between the copy and your own creation."
+      ]
+    }
+  ],
+  "takeaway": "Copy to understand, then close the book and make your own.",
+  "fiction": false
+}

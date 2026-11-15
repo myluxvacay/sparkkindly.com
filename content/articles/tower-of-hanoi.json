@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-109",
+  "slug": "tower-of-hanoi",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Tower of Hanoi: sixty-four disks and the end of the world",
+  "description": "Move a tower of disks one at a time, never placing a larger disk on a smaller one. Three disks are easy, four are fun — and sixty-four would outlast the Sun.",
+  "publishedAt": "2026-07-23",
+  "updatedAt": "2026-07-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "patterns"
+  ],
+  "sources": [
+    {
+      "title": "Tower of Hanoi — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tower_of_Hanoi",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The puzzle and its legend",
+      "paragraphs": [
+        "The Tower of Hanoi was invented in 1883 by the French mathematician Édouard Lucas. It has three pegs and a stack of disks of decreasing size on the first peg. Move the whole tower to another peg, one disk at a time, and never rest a larger disk on a smaller one.",
+        "Lucas wrapped his puzzle in a legend: monks in a temple moving 64 golden disks, with the world to end when the last disk falls into place. It is a wonderful story — and, as the arithmetic shows, a reassuring one."
+      ]
+    },
+    {
+      "heading": "The doubling pattern",
+      "paragraphs": [
+        "Count the best possible solutions. One disk: 1 move. Two disks: 3 moves. Three: 7. Four: 15. The pattern is 2-to-the-power-of-n minus 1: every extra disk a little more than doubles the work, because you must move the whole tower above it twice.",
+        "For 64 disks the count is 18,446,744,073,709,551,615 moves. At one move per second, without sleep or mistakes, that is roughly 585 billion years — many times the age of the universe. The monks, and we, are safe."
+      ]
+    },
+    {
+      "heading": "Try it: coins and coasters",
+      "paragraphs": [
+        "Build a tower from four coins or coasters of different sizes and three drawn circles. Solve it in the perfect 15 moves: the secret rhythm is to move the smallest disk every other turn, always in the same direction around the pegs.",
+        "Notice the deeper trick while you play: to move the biggest disk, you must first park the entire smaller tower out of the way. Solving the small problem is the big problem — programmers call this recursion, and Hanoi is their favourite example."
+      ]
+    }
+  ],
+  "takeaway": "The Tower of Hanoi doubles its difficulty with every disk: a toy of four disks teaches the same lesson as a legend of sixty-four.",
+  "fiction": false
+}

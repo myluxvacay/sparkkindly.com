@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-62",
+  "slug": "design-your-own-board-game",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Design Your Own Board Game in an Afternoon",
+  "description": "Every great board game is a loop of interesting choices - here is a friendly recipe for inventing one and playtesting it kindly.",
+  "publishedAt": "2026-10-18",
+  "updatedAt": "2026-10-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "brain-teasers"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start with a decision, not a theme",
+      "paragraphs": [
+        "The game designer Sid Meier famously defined a game as 'a series of interesting decisions'. That is the best starting point for your own design: before castles, spaceships or artwork, decide what players will choose on their turn, and why the choice is hard. A turn with one obvious best move is not a decision; a turn where two good moves pull against each other is a game.",
+        "Build the smallest loop that contains that decision. Perhaps: collect a card, then choose between banking it safely or risking it for more. One mechanic, repeated with rising stakes, can carry an entire game - many published classics are exactly that, polished."
+      ]
+    },
+    {
+      "heading": "Balance, feedback and the catch-up problem",
+      "paragraphs": [
+        "Three dials matter most. Luck versus skill: dice and card draws let beginners beat experts sometimes, which keeps families playing, but too much luck makes choices feel pointless. Feedback: players should see the effect of their decisions quickly, or they cannot learn. And catch-up: if the leader always extends their lead, the last half of the game is a ceremony - a small rubber-band, like giving the trailing player a bonus, keeps everyone in the story.",
+        "Playtesting is where these dials get set, and it has one golden rule: watch, do not defend. Note where players hesitate (a rule is unclear), where they check their phones (a decision is dull), and where they laugh or groan (the game is alive). Change exactly one rule between tests, or you will never know what fixed what."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Take a game you own and reskin it in thirty minutes: keep the skeleton, change the theme and exactly one rule - snakes and ladders where you may choose between two dice, perhaps, or a race game where landing on an opponent sends you forward instead of them back. Play it and feel how one change ripples.",
+        "Then write your rules on a single page. If they do not fit, the game is too complicated for its own good - simplify until they do. A one-page rulebook is not a limitation; it is a design tool that forces every rule to earn its place."
+      ]
+    }
+  ],
+  "takeaway": "A board game is a loop of choices with feedback - prototype tiny, playtest honestly, and change one rule at a time.",
+  "fiction": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "first-flight-year-276",
+  "scheduledDate": "2026-03-21",
+  "brand": "discover",
+  "prompt": "In which year did the Wright brothers make the first powered aeroplane flight?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1899"
+    },
+    {
+      "id": "b",
+      "text": "1903"
+    },
+    {
+      "id": "c",
+      "text": "1911"
+    },
+    {
+      "id": "d",
+      "text": "1925"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Orville and Wilbur Wright flew at Kitty Hawk on 17 December 1903, staying airborne for 12 seconds on the first flight.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Wright brothers",
+      "url": "https://en.wikipedia.org/wiki/Wright_brothers",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

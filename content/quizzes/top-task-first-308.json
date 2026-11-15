@@ -1,0 +1,32 @@
+{
+  "id": "top-task-first-308",
+  "scheduledDate": "2026-04-22",
+  "brand": "grow",
+  "prompt": "Your to-do list has fourteen items and you feel stuck. What is the best first move?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Rewrite the list in neater handwriting"
+    },
+    {
+      "id": "b",
+      "text": "Add a few more items so nothing is forgotten"
+    },
+    {
+      "id": "c",
+      "text": "Do only the easiest items all day"
+    },
+    {
+      "id": "d",
+      "text": "Choose the single most important task and start there"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Picking one priority breaks the paralysis, and finishing what matters most makes the rest of the list feel lighter.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

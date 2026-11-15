@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-123",
+  "slug": "refilling-bottles-and-jars",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Refilling bottles and jars you already own",
+  "description": "Refill shops and supermarket stations let sturdy containers work for years instead of minutes.",
+  "publishedAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "tags": [
+    "green",
+    "reducing-waste"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The container graveyard",
+      "paragraphs": [
+        "Most households recycle a steady stream of bottles and jars that were each used for a few weeks. Refilling turns that stream into a small set of trusted containers, a good pump bottle for washing-up liquid, sturdy jars for rice and lentils, that simply get topped up.",
+        "The containers you already own are usually the best candidates. A bottle that has survived a year in your kitchen has already proved its design."
+      ]
+    },
+    {
+      "heading": "How refill shopping works",
+      "paragraphs": [
+        "At a refill shop you weigh your empty container, fill it, and pay for the contents by weight; the container's weight is deducted, so you buy only the product. Supermarket refill stations for detergent or dry goods work similarly.",
+        "Start with two or three staples you use constantly, like hand soap, washing-up liquid or oats. A short, familiar routine sticks; a whole-house conversion in one trip usually does not."
+      ]
+    },
+    {
+      "heading": "At home without a refill shop",
+      "paragraphs": [
+        "Buying larger sizes and decanting into your working bottles achieves much of the same effect: fewer, bigger containers instead of many small ones, and less packaging per litre overall.",
+        "Glass jars from jam and sauces, washed and relabelled, make excellent storage for dry goods and leftovers. A shelf of matching rescued jars looks better than most bought storage, and it cost nothing but washing-up."
+      ]
+    }
+  ],
+  "takeaway": "Pick two or three staples, refill the containers you trust, and let the rest of the shelf convert gradually."
+}

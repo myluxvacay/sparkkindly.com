@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-91",
+  "slug": "picture-dice-stories",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Picture Dice Stories",
+  "description": "For ages 6–9 with an adult: draw pictures on big paper dice and roll them to start a brand-new story.",
+  "publishedAt": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "art"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make your dice",
+      "paragraphs": [
+        "An adult helps you fold paper into two big cubes. On one, draw who is in the story: a cat, a pirate, a robot.",
+        "On the other dice, draw where they are: a castle, a boat, a forest. Keep the pictures big and simple."
+      ]
+    },
+    {
+      "heading": "Roll and tell",
+      "paragraphs": [
+        "Roll both dice. Start your story with the picture pair you rolled: Once, a robot sailed on a boat...",
+        "Take turns rolling and adding one part each. The story can be as silly as you like."
+      ]
+    }
+  ],
+  "takeaway": "A roll of the dice can start a story that nobody has ever told before.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Crayons",
+    "Sticky tape"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult helps fold and tape the dice so they stay strong."
+  ],
+  "screenFreeExtension": "Tell the story again at bedtime and change the ending."
+}

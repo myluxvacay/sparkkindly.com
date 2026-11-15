@@ -1,0 +1,67 @@
+{
+  "id": "kids-bulk-56",
+  "slug": "silly-sentence-dice",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Silly Sentence Dice",
+  "description": "For ages 6–9 with an adult: make paper dice covered in words and roll them to build the silliest sentences ever.",
+  "publishedAt": "2026-10-11",
+  "updatedAt": "2026-10-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make word dice",
+      "paragraphs": [
+        "Your adult helps you fold paper into cubes. On one cube, write who-words: the cat, a giant, my grandma, the robot. On another, write doing-words: dances, snores, juggles, swims.",
+        "On a third cube, write where-words: in the bath, on the moon, under the table, at the zoo. Your dice are loaded with silliness."
+      ]
+    },
+    {
+      "heading": "Roll a sentence",
+      "paragraphs": [
+        "Roll all three dice and read your sentence out loud: The robot juggles on the moon. Every roll builds a new sentence.",
+        "Some sentences are funny because they could never happen. Some are funny because they nearly could. Both kinds deserve a good laugh."
+      ]
+    },
+    {
+      "heading": "Add more dice",
+      "paragraphs": [
+        "Make a fourth cube with describing words — sleepy, enormous, sparkly, upside-down — and slot them into your sentences.",
+        "You are learning how sentences are built, one silly roll at a time. Grammar has never been this giggly."
+      ]
+    }
+  ],
+  "takeaway": "Rolling word dice builds brand-new sentences, and the silliest ones teach you how sentences work.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "A pencil",
+    "Sticky tape",
+    "Scissors (an adult helps)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult should help fold and cut the dice. Sentences must stay kind — no making fun of real people."
+  ],
+  "screenFreeExtension": "Act out your silliest sentence while your family guesses which sentence it was."
+}

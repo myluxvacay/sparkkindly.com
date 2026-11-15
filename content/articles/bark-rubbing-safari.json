@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-21",
+  "slug": "bark-rubbing-safari",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Bark Rubbing Safari",
+  "description": "For ages 6–9 with an adult: feel tree bark with your fingers, then make crayon rubbings of the different patterns.",
+  "publishedAt": "2026-09-01",
+  "updatedAt": "2026-09-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "art"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Feel first",
+      "paragraphs": [
+        "Walk slowly with your adult and find three trees. Touch each trunk gently with your fingertips. One might feel rough, one might feel smooth, and one might feel bumpy like a dragon's back.",
+        "Bark is the tree's coat. It keeps the tree safe from weather and bugs. Every kind of tree wears a slightly different coat."
+      ]
+    },
+    {
+      "heading": "Make a rubbing",
+      "paragraphs": [
+        "Hold your paper flat against the trunk. Your adult can help hold the top. Rub the side of a crayon over the paper, up and down, until the bark's pattern appears like magic.",
+        "Try the same tree with two colours. Then rub a different tree and compare. Which rubbing has long lines? Which one has little cracks and dots?"
+      ]
+    },
+    {
+      "heading": "Be a bark detective",
+      "paragraphs": [
+        "Look at your rubbings together. Can you guess which tree each one came from? Show your adult and see if they can guess too.",
+        "Thank the trees by leaving them just as you found them. Take your rubbings home, but leave the bark and branches exactly as they were."
+      ]
+    }
+  ],
+  "takeaway": "Every tree's bark has its own pattern, and a crayon rubbing lets you take the pattern home without harming the tree.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Thick crayons with the paper peeled off",
+    "A bag for collecting fallen leaves"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Stay where an adult can see you. Never pull bark off a tree — only rub the surface gently."
+  ],
+  "screenFreeExtension": "Lay your rubbings side by side at home and make a pretend forest on the floor with toy animals."
+}

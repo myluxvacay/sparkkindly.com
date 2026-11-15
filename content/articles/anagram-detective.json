@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-82",
+  "slug": "anagram-detective",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Anagram detective: new words hiding inside old ones",
+  "description": "Listen contains silent. Astronomer hides a moon starer. Anagrams reward anyone who likes shuffling letters until a secret word falls out.",
+  "publishedAt": "2026-06-03",
+  "updatedAt": "2026-06-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "words"
+  ],
+  "sources": [
+    {
+      "title": "Anagram — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Anagram",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The same letters, a different story",
+      "paragraphs": [
+        "An anagram rearranges every letter of a word or phrase to make a new one. Listen becomes silent, triangle becomes integral, and dormitory, with a bit of cheek, becomes dirty room. Nothing is added and nothing is taken away — only the order changes.",
+        "The best anagrams feel like a joke the letters were keeping. “The eyes” turns into “they see”, and “astronomer” becomes “moon starer”, which is almost a job description."
+      ]
+    },
+    {
+      "heading": "A famous arithmetic trick",
+      "paragraphs": [
+        "Here is a gem to test carefully: “eleven plus two” is an anagram of “twelve plus one”. Count the letters of each side and you will find thirteen on both — and, delightfully, both sums equal thirteen too.",
+        "Writers have played this game for centuries. In the 1600s, King Louis XIII of France employed a royal anagrammatist whose job was to rearrange the king's name into flattering phrases for court entertainment."
+      ]
+    },
+    {
+      "heading": "Try it: anagram your name",
+      "paragraphs": [
+        "Write your name in capital letters, then cut the letters out or use letter tiles so you can slide them around. Look for small words first — at, in, art, ten — then see what is left over. Vowels are precious: a name with two or three is far more generous.",
+        "Set a house rule before you start: every letter must be used exactly once, and ordinary dictionary words only. Then challenge a friend to beat your best find from the same set of letters."
+      ]
+    }
+  ],
+  "takeaway": "Every word is a crowd of other words waiting to be let out — shuffle the letters and see who appears.",
+  "fiction": false
+}

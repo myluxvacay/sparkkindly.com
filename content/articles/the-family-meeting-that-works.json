@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-61",
+  "slug": "the-family-meeting-that-works",
+  "brand": "together",
+  "contentType": "article",
+  "title": "The family meeting that works",
+  "description": "Twenty minutes, a short list, and a rule about kindness: how households can actually talk about the hard stuff.",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "communication"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Keep it small and scheduled",
+      "paragraphs": [
+        "A family meeting works when it is boring in structure: same time most weeks, twenty minutes, one small list. Scheduling it removes the drama of calling one — nobody has to guess whether this conversation means catastrophe.",
+        "Start with what went well. It sounds soft; it is actually structural. Meetings that open with gratitude get through the difficult items with measurably less shouting."
+      ]
+    },
+    {
+      "heading": "One speaker, one topic",
+      "paragraphs": [
+        "Two rules carry the whole thing: one person speaks at a time, and each item gets finished before the next begins. Most family arguments are actually three arguments braided together; unbraiding them is nine-tenths of the solution.",
+        "Young children can hold a talking object; adults, in our experience, sometimes need one too."
+      ]
+    },
+    {
+      "heading": "End with decisions, not victories",
+      "paragraphs": [
+        "Close each item with who does what by when, said out loud and agreed. Unfinished items go on next week’s list without shame. A family meeting is not a court; nobody should leave with a verdict, only with a plan.",
+        "And end on time, even mid-success. Leaving people wanting slightly more meeting is the secret to them attending the next one."
+      ]
+    }
+  ],
+  "takeaway": "Same time, short list, one topic at a time, and decisions instead of verdicts.",
+  "fiction": false
+}

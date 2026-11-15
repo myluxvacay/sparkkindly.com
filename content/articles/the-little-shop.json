@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-134",
+  "slug": "the-little-shop",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "The Little Shop",
+  "description": "For ages 6–9 with an adult: set up a pretend shop and practise counting, choosing, and saying thank you.",
+  "publishedAt": "2026-08-08",
+  "updatedAt": "2026-08-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Set up shop",
+      "paragraphs": [
+        "Line up your boxes and tins on a table or blanket. Every shop needs a counter and a friendly shopkeeper.",
+        "Give each thing a price in pretend coins: two lids for the pasta, three for the jam."
+      ]
+    },
+    {
+      "heading": "Open for customers",
+      "paragraphs": [
+        "Customers choose, count out their coins, and say thank you. Shopkeepers say: Have a lovely day!",
+        "Swap jobs so everyone gets to shop and everyone gets to sell."
+      ]
+    }
+  ],
+  "takeaway": "A shop is a game about choosing, counting, and being polite.",
+  "fiction": false,
+  "materials": [
+    "Clean empty boxes and tins from home",
+    "Big lids or leaves as pretend coins",
+    "A bag for shopping"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult checks the pretend coins are big and the shop things are clean and safe to handle."
+  ],
+  "screenFreeExtension": "Draw price tags for your shop with dots to count instead of numbers."
+}

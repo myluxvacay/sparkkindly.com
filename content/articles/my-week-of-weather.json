@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-137",
+  "slug": "my-week-of-weather",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "My Week of Weather",
+  "description": "For ages 6–9 with an adult: draw the weather every day for a week and become a weather watcher.",
+  "publishedAt": "2026-08-13",
+  "updatedAt": "2026-08-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "science"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Draw each day",
+      "paragraphs": [
+        "Each day, look at the sky with your adult. Draw the weather in that day's box: sun, cloud, rain, or wind.",
+        "Add one word under your drawing: hot, cold, blowy, or drippy. Weather words are fun to collect."
+      ]
+    },
+    {
+      "heading": "Read your week",
+      "paragraphs": [
+        "At the end of the week, look at all seven boxes. How many sunny days did you have?",
+        "Real weather watchers keep records just like this, for years and years."
+      ]
+    }
+  ],
+  "takeaway": "Weather watchers notice the sky a little bit every day.",
+  "fiction": false,
+  "materials": [
+    "Paper divided into seven boxes",
+    "Crayons"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Look at the weather from a window or with your adult outside; never go out in stormy weather to check."
+  ],
+  "screenFreeExtension": "Start a new chart next week and see if the weather repeats itself."
+}

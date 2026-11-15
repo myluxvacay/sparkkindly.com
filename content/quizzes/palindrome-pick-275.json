@@ -1,0 +1,32 @@
+{
+  "id": "palindrome-pick-275",
+  "scheduledDate": "2026-03-20",
+  "brand": "play",
+  "prompt": "Which word reads the same forwards and backwards?",
+  "options": [
+    {
+      "id": "a",
+      "text": "lemon"
+    },
+    {
+      "id": "b",
+      "text": "level"
+    },
+    {
+      "id": "c",
+      "text": "lever"
+    },
+    {
+      "id": "d",
+      "text": "label"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Spelled backwards, level is still level. The others all change when they are reversed.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

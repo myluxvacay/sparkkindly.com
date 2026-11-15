@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-113",
+  "slug": "why-glass-metal-and-plastic-differ",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Why glass, metal and plastic are recycled differently",
+  "description": "Each material has its own journey back into new products, which explains the different rules for each.",
+  "publishedAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "tags": [
+    "recycling",
+    "green"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Glass and metal: the repeat performers",
+      "paragraphs": [
+        "Glass melts back into new bottles and jars without losing quality, as long as colours are sorted and ceramics or oven glass, which melt differently, stay out. Metal is similarly forgiving: aluminium and steel can be melted and remade again and again, saving large amounts of energy compared with making them from raw ore.",
+        "This is why a drinks can is one of the most valuable things in your bin, and why returning it to the recycling stream matters more than its small size suggests."
+      ]
+    },
+    {
+      "heading": "Plastic: a family, not a material",
+      "paragraphs": [
+        "Plastic is a whole family of different materials with different melting points and uses, and they cannot simply be melted together. Sorting plants separate the main types, and each is usually recycled into a narrower range of products than the one it came from.",
+        "Contamination matters more for plastic too, because mixed or dirty batches have few buyers. Keeping plastic recycling to the bottles and tubs your service lists gives those items their best chance of a second life."
+      ]
+    },
+    {
+      "heading": "What this means at your bin",
+      "paragraphs": [
+        "The rules that seem fussy, no window glass, no plastic film, rinse the tin, are really about keeping each material stream clean enough to sell. Every rejected load is usually a load where streams got mixed or soiled.",
+        "Understanding the why makes the sorting feel less like obeying arbitrary instructions and more like what it is: the first step of a manufacturing process that starts in your kitchen."
+      ]
+    }
+  ],
+  "takeaway": "Glass and metal can loop almost forever; plastic needs careful sorting, and clean streams are what make any of it possible."
+}

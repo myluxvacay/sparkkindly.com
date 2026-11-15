@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-46",
+  "slug": "comfort-without-fixing",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Comfort without fixing",
+  "description": "Sometimes the most helpful sentence is not a solution but a witness: “That sounds really hard.”",
+  "publishedAt": "2026-09-15",
+  "updatedAt": "2026-09-15",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "empathy",
+    "friendship"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The urge to fix is a compliment — and a trap",
+      "paragraphs": [
+        "Wanting to solve someone’s problem comes from caring. But advice given before a person feels heard lands as dismissal: it says, silently, that their feelings are a detour on the way to your answer.",
+        "Most people telling you something painful already know the likely fixes. What they cannot give themselves is the feeling of not being alone inside it."
+      ]
+    },
+    {
+      "heading": "Witness first, toolbox later",
+      "paragraphs": [
+        "Try a simple order of operations: reflect what you heard (“So the whole project landed on you again”), name the feeling if it seems welcome (“No wonder you’re furious”), and only then ask, “Do you want ideas, or just company?”",
+        "That last question is a small masterpiece. It hands control to the person in pain, which is often the very thing their situation has taken from them."
+      ]
+    },
+    {
+      "heading": "When fixing is right",
+      "paragraphs": [
+        "Sometimes help really is practical: a lift, a form filled in, a phone call made. The difference is consent. Offered help — “Shall I ring them for you?” — supports; imposed help rearranges someone’s life around your anxiety.",
+        "Comfort without fixing does not mean never fixing. It means the person, not your discomfort, decides when the toolbox opens."
+      ]
+    }
+  ],
+  "takeaway": "Witness first, ask before advising, and let the person in pain hold the toolbox key.",
+  "fiction": false
+}

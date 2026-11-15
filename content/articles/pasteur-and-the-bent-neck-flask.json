@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-126",
+  "slug": "pasteur-and-the-bent-neck-flask",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Pasteur and the bent-neck flask",
+  "description": "A gracefully curved piece of glassware settled one of science's oldest arguments: whether life can spring from broth alone.",
+  "publishedAt": "2026-08-23",
+  "updatedAt": "2026-08-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Louis Pasteur",
+      "url": "https://en.wikipedia.org/wiki/Louis_Pasteur",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Spontaneous generation",
+      "url": "https://en.wikipedia.org/wiki/Spontaneous_generation",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Did life appear by itself?",
+      "paragraphs": [
+        "For centuries, thoughtful people believed in spontaneous generation: that maggots arose from meat, mice from grain, and microbes from broth itself. It seemed obvious — leave broth alone and it clouded with life. Where else could the life have come from?",
+        "By the 1800s the argument had narrowed to broth and microbes, and it was fierce. If sterile broth stayed clear, was that because germs were kept out — or because the treatment had destroyed some vital force the broth needed to create life?"
+      ]
+    },
+    {
+      "heading": "The swan neck solution",
+      "paragraphs": [
+        "In 1859, Louis Pasteur designed an elegant answer: a flask with a long, S-curved neck like a swan's. Broth inside was boiled sterile. Air — carrying whatever 'vital force' anyone wished to propose — could drift freely through the open neck. But dust and microbes, being heavier, settled in the curve's low bend and never reached the broth.",
+        "The broth stayed clear indefinitely. Tip the flask so the broth touched the bend, and within days it teemed with microbes. The difference was not a life force. It was dust."
+      ]
+    },
+    {
+      "heading": "What the flask built",
+      "paragraphs": [
+        "The experiment helped establish germ theory — the understanding that microbes cause fermentation, spoilage and much disease. From it flowed pasteurisation, sterile surgical practice, and eventually modern food safety and medicine.",
+        "It remains a model of how to settle an argument: not by shouting, but by designing a test where the two sides predict different results — and letting the broth decide."
+      ]
+    }
+  ],
+  "takeaway": "Pasteur's swan-neck flask let air in but kept dust out, showing microbes come from other microbes — a foundation stone of germ theory.",
+  "fiction": false
+}

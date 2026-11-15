@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-112",
+  "slug": "recycling-symbols-explained",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Recycling symbols, explained simply",
+  "description": "The triangles, ticks and tidyman marks on packaging each mean something different, and only some of them mean recycle this at home.",
+  "publishedAt": "2026-07-10",
+  "updatedAt": "2026-07-10",
+  "tags": [
+    "recycling",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The numbered triangle",
+      "paragraphs": [
+        "The triangle of arrows with a number from 1 to 7 identifies the type of plastic. Numbers 1 and 2, used for most drinks bottles and milk containers, are widely recycled. Higher numbers are accepted in fewer places, and the symbol alone never guarantees collection in your area.",
+        "Think of the number as information for sorting plants, not an instruction to you. Your local recycling list remains the deciding voice."
+      ]
+    },
+    {
+      "heading": "Labels that talk about collection",
+      "paragraphs": [
+        "Many countries use labels that say things like recycle at home, recycle at store, or check local collection. These are far more useful than the triangle, because they describe what households can actually do rather than what the material is.",
+        "A store-collection label usually refers to plastic films and bags, which supermarkets gather at drop-off points because home sorting machinery tangles on them."
+      ]
+    },
+    {
+      "heading": "The other marks",
+      "paragraphs": [
+        "The tidyman figure simply asks you not to litter; it says nothing about recycling. A green dot used in parts of Europe means the producer contributed to packaging recovery schemes, not that the pack is recyclable.",
+        "Once you know the handful of marks, packaging becomes much less confusing, and the symbol soup turns into two questions: what is it made of, and does my local service take it?"
+      ]
+    }
+  ],
+  "takeaway": "Read the collection label first, the plastic number second, and let your local list settle every argument."
+}

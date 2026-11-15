@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-60",
+  "slug": "how-volcanoes-build-new-land",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How volcanoes build new land",
+  "description": "Volcanoes are famous for destruction, but they are also Earth's great builders, raising islands from the sea floor.",
+  "publishedAt": "2026-09-25",
+  "updatedAt": "2026-09-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "earth-science",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Volcano",
+      "url": "https://en.wikipedia.org/wiki/Volcano",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "From eruption to island",
+      "paragraphs": [
+        "Beneath a volcano, molten rock called magma collects in chambers within the crust. When pressure and buoyancy drive it upward, it erupts as lava, ash and gas. Lava that reaches the sea boils the water in clouds of steam and shatters into fragments that pile up on the sea floor, layer upon layer.",
+        "Given enough eruptions, the pile breaks the surface. In 1963, fishermen near Iceland watched exactly this: an underwater eruption built the island of Surtsey from the sea in a matter of days and weeks. Scientists have studied it ever since as a natural laboratory of how new land is colonised by life."
+      ]
+    },
+    {
+      "heading": "Building continents and coasts",
+      "paragraphs": [
+        "The Hawaiian islands are the exposed tips of a chain of volcanoes built over millions of years as the Pacific plate drifted over a hot spot in the mantle. The same process, repeated across deep time, has built mountain ranges, plateaus and much of the ocean floor itself.",
+        "Volcanic soil weathers into some of the richest farmland on Earth, which is why people continue to live in the shadow of volcanoes that could rebuild — or bury — their fields again."
+      ]
+    }
+  ],
+  "takeaway": "Volcanoes build land layer by layer, from sea-floor piles that become islands to the very crust beneath the oceans.",
+  "fiction": false
+}

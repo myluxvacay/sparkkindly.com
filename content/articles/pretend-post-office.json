@@ -1,0 +1,60 @@
+{
+  "id": "kids-bulk-122",
+  "slug": "pretend-post-office",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Pretend Post Office",
+  "description": "For ages 6–9 with an adult: write tiny letters, stamp them, and deliver them around your home.",
+  "publishedAt": "2026-07-22",
+  "updatedAt": "2026-07-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Write your letters",
+      "paragraphs": [
+        "Fold a small piece of paper. Draw or write something kind inside for someone in your family.",
+        "Stick a sticker in the corner as a stamp and write their name on the front."
+      ]
+    },
+    {
+      "heading": "Deliver the post",
+      "paragraphs": [
+        "Put the letters in your post bag and deliver them one by one, knocking politely at each door or chair.",
+        "Watch the faces when your letters arrive. Post people bring smiles."
+      ]
+    }
+  ],
+  "takeaway": "A letter is a hug you can hold in your hand.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Pencils",
+    "Stickers for stamps",
+    "A bag for the post"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Deliver letters only inside your home, to people who are happy to receive them."
+  ],
+  "screenFreeExtension": "Draw a postcard from a place you dream of visiting and post it to the fridge."
+}

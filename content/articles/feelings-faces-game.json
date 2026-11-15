@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-54",
+  "slug": "feelings-faces-game",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Feelings Faces Game",
+  "description": "For ages 6–9 with an adult: draw and mime feelings for others to guess, and talk about what each feeling is like.",
+  "publishedAt": "2026-10-09",
+  "updatedAt": "2026-10-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "kindness",
+    "words"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Draw the faces",
+      "paragraphs": [
+        "Draw simple faces on pieces of paper — happy, sad, surprised, worried, excited, sleepy, cross. Big eyes and mouths make the feelings easy to see.",
+        "Look in the mirror and copy each face. Feel how your eyebrows, eyes, and mouth all move together to make one feeling."
+      ]
+    },
+    {
+      "heading": "Mime and guess",
+      "paragraphs": [
+        "Shuffle the cards. Take one, look at it secretly, and make that face. Everyone else guesses which feeling you are showing.",
+        "Some faces are easy to guess. Some are tricky — a worried face and a thinking face can look almost the same."
+      ]
+    },
+    {
+      "heading": "Feelings are messages",
+      "paragraphs": [
+        "Feelings tell us what we need. A sad friend might need company. A cross friend might need space and quiet.",
+        "When you can read faces, you can be kind at the right moment, in the right way."
+      ]
+    }
+  ],
+  "takeaway": "Faces show feelings like signs, and learning to read them helps you know how to be kind.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Coloured pencils",
+    "A mirror"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Every feeling is allowed in this game — there are no wrong feelings, only guesses about faces."
+  ],
+  "screenFreeExtension": "Notice feelings on faces around you today and think about what each person might need."
+}

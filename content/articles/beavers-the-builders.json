@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-89",
+  "slug": "beavers-the-builders",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Beavers: the original engineers",
+  "description": "A beaver dam does not just house a beaver. It builds a wetland, stores water, and shelters a neighbourhood of other species.",
+  "publishedAt": "2026-11-12",
+  "updatedAt": "2026-11-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Beaver",
+      "url": "https://en.wikipedia.org/wiki/Beaver",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Why build a dam at all?",
+      "paragraphs": [
+        "Beavers are excellent swimmers but clumsy on land, so they make the water come to them. By damming a stream with sticks, mud and stones, they raise a pond deep enough to hide the underwater entrance of their lodge and to keep it ice-free at the bottom in winter. A food cache of branches, sunk in the pond, completes the design.",
+        "The construction is constant work: beavers can hear running water and are driven to repair leaks, famously investigating even recordings of trickling played through speakers. Their teeth, reinforced with iron-rich orange enamel, grow continuously to replace what gnawing wears away."
+      ]
+    },
+    {
+      "heading": "A pond becomes a neighbourhood",
+      "paragraphs": [
+        "The pond changes everything around it. It slows floods, traps sediment, recharges groundwater, and creates wetland habitat for fish, frogs, ducks, insects and plants that could not live in the fast stream. In dry years, beaver ponds hold water long after streams elsewhere have failed.",
+        "People once trapped beavers nearly to disappearance for their fur. Now land managers increasingly welcome them back as partners: few engineers work so cheaply, or maintain their own dams so diligently."
+      ]
+    }
+  ],
+  "takeaway": "Beaver dams create ponds that protect the builders and whole wetland communities, storing water and sheltering many species.",
+  "fiction": false
+}

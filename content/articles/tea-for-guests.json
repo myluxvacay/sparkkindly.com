@@ -1,0 +1,61 @@
+{
+  "id": "together-bulk-67",
+  "slug": "tea-for-guests",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Tea for guests",
+  "description": "Across half the world, the first act of welcome is not a word but a kettle.",
+  "publishedAt": "2026-10-13",
+  "updatedAt": "2026-10-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "traditions",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Tea culture — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tea_culture",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The kettle goes on",
+      "paragraphs": [
+        "In Britain and Ireland, bad news, good news, and no news at all are met with the same first response: the kettle goes on. In Morocco, mint tea is poured from a height into small glasses for guests, and refills are part of the hospitality. In Japan, the tea ceremony raises preparation itself into an art of attention, where the guest’s comfort shapes every movement.",
+        "Different leaves, different vessels — one grammar: sit down, you are expected to stay a while."
+      ]
+    },
+    {
+      "heading": "Tea slows the moment down",
+      "paragraphs": [
+        "Tea cannot be rushed without ruining it, which is precisely its social function. The minutes while water boils and leaves steep are a built-in pause in which strangers become acquaintances and difficult conversations find their gentler opening lines.",
+        "Many cultures understand this instinctively: the drink is the excuse; the unhurried minutes are the gift."
+      ]
+    },
+    {
+      "heading": "Your own version",
+      "paragraphs": [
+        "You do not need a ceremony to borrow the principle. A drink made for a guest, served before any business is discussed, tells them the relationship outranks the agenda. Coffee, lemonade, or plain cold water in a good glass all speak the same language.",
+        "Keep something in the cupboard for the unexpected guest. Hospitality is mostly decided before the doorbell rings."
+      ]
+    }
+  ],
+  "takeaway": "Put the kettle on first: the drink is the excuse, and the unhurried minutes are the gift.",
+  "fiction": false
+}

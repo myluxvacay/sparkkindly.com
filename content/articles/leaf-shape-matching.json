@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-28",
+  "slug": "leaf-shape-matching",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Leaf Shape Matching",
+  "description": "For ages 6–9 with an adult: collect fallen leaves and match them to the trees they came from.",
+  "publishedAt": "2026-09-09",
+  "updatedAt": "2026-09-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Collect fallen leaves",
+      "paragraphs": [
+        "Walk with your adult and pick up leaves that have already fallen to the ground. Try to find leaves with different shapes — round ones, long ones, and ones with pointy edges.",
+        "Every kind of tree grows its own shape of leaf. The shape is like the tree's signature, written over and over again."
+      ]
+    },
+    {
+      "heading": "Match leaf to tree",
+      "paragraphs": [
+        "Stand under a tree and look up at its leaves. Do they match one of yours? Hold your leaf up and compare the shape and the edges.",
+        "Some leaves grow one by one, and some grow in groups on a single stalk. That is another clue for your matching game."
+      ]
+    },
+    {
+      "heading": "Make a leaf line-up",
+      "paragraphs": [
+        "Back home, lay your leaves in a row. Can you sort them into shape families? Draw around your favourite leaf to keep its shape forever.",
+        "Leaves that stay on the ground are not wasted. They rot down slowly and feed the soil and the tiny creatures in it."
+      ]
+    }
+  ],
+  "takeaway": "Each tree has its own leaf shape, so a fallen leaf can tell you which tree it came from.",
+  "fiction": false,
+  "materials": [
+    "A bag for collecting",
+    "Paper",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only collect leaves that have already fallen. Never eat leaves or berries, and wash your hands after collecting."
+  ],
+  "screenFreeExtension": "Arrange your leaves from smallest to biggest on the floor and walk along them like a leaf road."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "play-bulk-114",
+  "slug": "oldest-board-games",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The oldest board games: racing games from ancient tombs",
+  "description": "Five thousand years ago, Egyptians raced pieces across a board called Senet, and Mesopotamian kings played the Royal Game of Ur. Board games are older than most writing.",
+  "publishedAt": "2026-08-01",
+  "updatedAt": "2026-08-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "curiosity",
+    "play-and-games"
+  ],
+  "sources": [
+    {
+      "title": "Royal Game of Ur — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Royal_Game_of_Ur",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Senet — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Senet",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Games from the tombs",
+      "paragraphs": [
+        "In the 1920s, archaeologist Leonard Woolley excavated royal tombs at Ur, in modern Iraq, and found beautiful game boards inlaid with shell and lapis lazuli, dating to about 2600 BCE. The Royal Game of Ur is a race game: two players move pieces along a track, knocking rivals off, guided by throws of pyramid-shaped dice.",
+        "Egypt's Senet is older still, played from around 3100 BCE. Boards were buried with pharaohs — Tutankhamun owned several — and the race across its thirty squares took on religious meaning, symbolising the soul's journey."
+      ]
+    },
+    {
+      "heading": "How we know the rules",
+      "paragraphs": [
+        "For centuries nobody knew how the Royal Game of Ur was played. Then a clay tablet written by a Babylonian astronomer around 177 BCE, translating far older rules, was matched to the boards by a curator at the British Museum in the 1980s — and a game silent for two thousand years became playable again.",
+        "Both games share a shape with Snakes and Ladders and backgammon: a race along a path, luck from the throw, and small decisions about which piece to move. The recipe has survived five thousand years because it works."
+      ]
+    },
+    {
+      "heading": "Try it: play a five-thousand-year-old game",
+      "paragraphs": [
+        "Draw the Ur board — a block of four-by-three squares joined to a two-by-three block by a two-square bridge — and use coins as dice: throw three coins, count the heads, move that many squares. Race seven pieces home; land on an opponent to send them back.",
+        "Then reflect for a moment on what you are holding: a game an ancient family might have argued over, in a language no one has spoken for millennia, that still makes people argue today."
+      ]
+    }
+  ],
+  "takeaway": "The oldest board games were race games buried with kings — and with a pencil, some coins and a drawn board, they still play beautifully.",
+  "fiction": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-40",
+  "slug": "debit-cards-explained",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Debit cards: your money, on a card",
+  "description": "A debit card spends money straight from your bank account — no borrowing involved — which makes it simple, but worth handling with care.",
+  "publishedAt": "2026-09-06",
+  "updatedAt": "2026-09-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-basics",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Straight from your account",
+      "paragraphs": [
+        "When you pay with a debit card, the money leaves your bank account, usually within a day or two. There is no bill at the end of the month and no interest, because it was your money all along.",
+        "That direct link is the card's strength and its risk. A mistaken or fraudulent payment affects your real balance straight away, which is why glancing at your transactions regularly matters."
+      ]
+    },
+    {
+      "heading": "Small habits that protect you",
+      "paragraphs": [
+        "Your PIN is the key to the card: never share it, and shield the keypad when you type it. Banks do not ask for your PIN by phone, text, or email — anyone who does is trying to trick you.",
+        "Turn on transaction alerts if your bank offers them. A quick buzz for each payment means a charge you do not recognise gets spotted in minutes rather than at the end of the month."
+      ]
+    },
+    {
+      "heading": "Watch the balance, not just the card",
+      "paragraphs": [
+        "Because payments can take a day to settle, the balance on screen may not show everything you have already spent. Keeping a small cushion in the account — even $20 or $30 — protects you from accidental overdrafts and the fees that can follow.",
+        "If you share the account with anyone, agree that both of you check before large purchases. Most debit card surprises in shared accounts are communication gaps, not carelessness — and a ten-second check prevents nearly all of them."
+      ]
+    }
+  ],
+  "takeaway": "A debit card spends your own money directly, so guard the PIN, switch on alerts, and keep a small cushion in the account.",
+  "fiction": false
+}

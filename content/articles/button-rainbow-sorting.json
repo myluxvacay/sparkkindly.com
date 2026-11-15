@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-148",
+  "slug": "button-rainbow-sorting",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Button Rainbow Sorting",
+  "description": "For ages 6–9 with an adult: sort a pile of big buttons by colour and make a rainbow you can count.",
+  "publishedAt": "2026-08-28",
+  "updatedAt": "2026-08-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "art"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Sort by colour",
+      "paragraphs": [
+        "Tip the buttons onto the tray. Pick one up and name its colour, then put it in its bowl.",
+        "Keep going until every button has found its colour family."
+      ]
+    },
+    {
+      "heading": "Make the rainbow",
+      "paragraphs": [
+        "Line the bowls up in rainbow order and count the buttons in each one.",
+        "Which colour won? Tip them back, shuffle, and the game is ready for tomorrow."
+      ]
+    }
+  ],
+  "takeaway": "Sorting is how your brain turns a jumble into a pattern.",
+  "fiction": false,
+  "materials": [
+    "Big buttons",
+    "A tray",
+    "Small bowls or a muffin tin"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult checks the buttons are big, sorts with you, and keeps all buttons away from babies and toddlers."
+  ],
+  "screenFreeExtension": "Sort the buttons a second way: by size, by number of holes, or by shiny and not shiny."
+}

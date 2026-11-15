@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-98",
+  "slug": "how-your-nose-reads-the-air",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How your nose reads the air",
+  "description": "You carry around four hundred kinds of scent sensors, and together they can distinguish a staggering variety of smells — including ones that unlock memories.",
+  "publishedAt": "2026-06-18",
+  "updatedAt": "2026-06-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Olfaction",
+      "url": "https://en.wikipedia.org/wiki/Olfaction",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Olfactory receptor",
+      "url": "https://en.wikipedia.org/wiki/Olfactory_receptor",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A patch of sensors the size of a stamp",
+      "paragraphs": [
+        "High inside your nose sits a small patch of tissue, only a few centimetres across, packed with millions of smell receptor cells. Humans have about 400 different types of these receptors, each one responding to particular shapes and features of airborne molecules.",
+        "No single receptor identifies a smell by itself. Instead, each scent activates a pattern across many receptors, like a chord played on a piano, and your brain learns to recognise the chord. With 400 keys, the number of possible chords is enormous."
+      ]
+    },
+    {
+      "heading": "Why flavour is mostly smell",
+      "paragraphs": [
+        "Much of what you call taste is actually smell. Your tongue detects only a handful of basics — sweet, salty, sour, bitter, savoury — while your nose, working from behind your mouth as you chew, supplies the rich detail that makes a strawberry different from a raspberry.",
+        "This is why food tastes dull when you have a blocked nose. The tongue is doing its job as usual; the orchestra behind it has gone quiet."
+      ]
+    },
+    {
+      "heading": "The memory connection",
+      "paragraphs": [
+        "Smell has a unusually direct line to the parts of the brain involved in emotion and memory. That is why the smell of rain on hot pavement or a particular soap can return a childhood afternoon to you whole, before you have time to think about it.",
+        "Scientists are still mapping exactly how the brain builds these links. Your nose, meanwhile, keeps quietly reading the air — and filing the memories away."
+      ]
+    }
+  ],
+  "takeaway": "Smell works by pattern: about 400 receptor types play chords your brain recognises, flavours, and files away as memories.",
+  "fiction": false
+}

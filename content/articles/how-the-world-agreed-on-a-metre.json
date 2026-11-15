@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-125",
+  "slug": "how-the-world-agreed-on-a-metre",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How the world agreed on a metre",
+  "description": "A metre was once defined as a fraction of the Earth's meridian, then as a metal bar in Paris, and now as the distance light travels in a sliver of a second.",
+  "publishedAt": "2026-08-21",
+  "updatedAt": "2026-08-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Metre",
+      "url": "https://en.wikipedia.org/wiki/Metre",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: International System of Units",
+      "url": "https://en.wikipedia.org/wiki/International_System_of_Units",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A world of mismatched measures",
+      "paragraphs": [
+        "Two centuries ago, measurement was local chaos. Towns kept their own feet, pounds and bushels; a 'foot' in one city differed from the next, and trade ran on argument and conversion tables. Scientists dreamed of a unit drawn from nature itself, belonging to no king and no town.",
+        "Revolutionary France took up the challenge. The metre was defined as one ten-millionth of the distance from the North Pole to the equator, along the meridian through Paris. Surveyors spent seven dangerous years measuring an arc of that meridian across France and Spain to fix the length."
+      ]
+    },
+    {
+      "heading": "From planet to bar to light",
+      "paragraphs": [
+        "The survey's result was cast into a platinum bar, kept in Paris as the metre for the world. Copies were shared, and in 1875 seventeen nations signed the Metre Convention — measurement became diplomacy. But bars can scratch, warp and gather dust at the atomic scale, and the metre was redefined twice more: first by the wavelength of light from a particular atom, and in 1983 by light itself.",
+        "Today a metre is the distance light travels in a vacuum in 1/299,792,458 of a second. Anyone, anywhere, with good enough equipment can realise the standard exactly — no trip to Paris required."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "paragraphs": [
+        "In 2019 the whole system of units was re-anchored to constants of nature: the kilogram, ampere and kelvin joined the metre in being defined by physics rather than objects. The last artifact standard, a metal cylinder in a vault, was honourably retired.",
+        "It is one of humanity's quietest triumphs: nearly every country on Earth now measures with the same ruler, and the ruler is the universe."
+      ]
+    }
+  ],
+  "takeaway": "The metre travelled from a fraction of the Earth, to a bar in Paris, to a definition built from the speed of light — measurement's quiet triumph.",
+  "fiction": false
+}

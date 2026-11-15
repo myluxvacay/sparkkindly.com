@@ -1,0 +1,38 @@
+{
+  "id": "why-seasons-206",
+  "scheduledDate": "2026-01-10",
+  "brand": "discover",
+  "prompt": "What is the main cause of the seasons on Earth?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Earth getting closer to the Sun in summer"
+    },
+    {
+      "id": "b",
+      "text": "The Moon pulling on the oceans"
+    },
+    {
+      "id": "c",
+      "text": "The tilt of Earth's axis as it orbits the Sun"
+    },
+    {
+      "id": "d",
+      "text": "Earth spinning faster in summer"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Earth's axis is tilted, so each hemisphere takes turns leaning toward the Sun during the year, changing the sunlight and temperatures it receives.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Axial tilt",
+      "url": "https://en.wikipedia.org/wiki/Axial_tilt",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

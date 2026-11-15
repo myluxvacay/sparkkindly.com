@@ -1,0 +1,56 @@
+{
+  "id": "save-bulk-49",
+  "slug": "smoothing-income-with-a-buffer-account",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Smoothing bumpy income with a buffer account",
+  "description": "When pay arrives in lumps, a buffer account can turn it into something that feels like a steady salary.",
+  "publishedAt": "2026-09-19",
+  "updatedAt": "2026-09-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "budgeting",
+    "money-basics",
+    "student-money"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The problem the buffer solves",
+      "paragraphs": [
+        "Freelance, seasonal, and shift work pay in waves: a fat month, then a thin one. Spending that follows the waves feels chaotic, and bills — annoyingly — arrive on a perfectly even schedule.",
+        "A buffer account sits between the waves and your spending. All income lands there first. Out of it, you pay yourself a fixed amount on a fixed day, like a salary you give yourself."
+      ]
+    },
+    {
+      "heading": "How big should the buffer be?",
+      "paragraphs": [
+        "The buffer works once it holds roughly one month of your essential spending. Build it gradually: in good months, leave more in the buffer than your self-paid salary takes out, and let the surplus accumulate.",
+        "Suppose your essentials are $900 a month and you pay yourself $900 on the first of each month. A month that brings in $1,400 adds $500 to the buffer; a month that brings in $600 draws $300 out. The spending never changes — only the buffer breathes."
+      ]
+    },
+    {
+      "heading": "Rules that keep it honest",
+      "paragraphs": [
+        "Only pay yourself the fixed amount on the fixed day, even in a wonderful month. Extra treats come from a separate decision, not from quietly raising the salary whenever work is good. That discipline is what carries you through the thin months.",
+        "Expect the first months to feel strange, especially watching a good month's money sit in the buffer instead of being enjoyed. The first thin month that passes without panic is the moment the system stops feeling strange and starts feeling like safety."
+      ]
+    }
+  ],
+  "takeaway": "Route lumpy income through a buffer account and pay yourself a fixed monthly amount — the waves stay in the account, not in your life.",
+  "fiction": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-100",
+  "slug": "the-mystery-of-hiccups",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The mystery of hiccups",
+  "description": "A sudden spasm, a sharp 'hic', and nobody — not even science — can fully explain why we do it or how to stop it reliably.",
+  "publishedAt": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Hiccup",
+      "url": "https://en.wikipedia.org/wiki/Hiccup",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A hiccup, taken apart",
+      "paragraphs": [
+        "A hiccup begins in your diaphragm, the broad muscle beneath your lungs that does most of the work of breathing. The muscle suddenly contracts, you suck in air sharply — and about 25 milliseconds later the flap at the top of your windpipe snaps shut, cutting the breath off with the familiar 'hic' sound.",
+        "The whole loop is a reflex, triggered by signals travelling along nerves between the brain, neck and chest. Eating too quickly, fizzy drinks, a sudden laugh or excitement can set it off, which is why hiccups so often arrive at mealtimes and parties."
+      ]
+    },
+    {
+      "heading": "Why do we have them at all?",
+      "paragraphs": [
+        "Here is the honest part: nobody knows what hiccups are for. One suggestion is that the reflex is a leftover from very early life — babies hiccup often, even before birth — perhaps connected with learning to coordinate breathing and feeding.",
+        "Another idea notes that creatures like tadpoles use a similar pattern to pump water over their gills, raising the possibility that the wiring is ancient. These are informed guesses, not settled answers, and hiccups remain one of the body's small unsolved puzzles."
+      ]
+    },
+    {
+      "heading": "The cures that might be coincidence",
+      "paragraphs": [
+        "Holding your breath, sipping cold water and breathing into a bag are all attempts to interrupt the reflex loop or raise carbon dioxide in the blood. Sometimes they seem to work — though hiccups usually stop on their own within minutes, so the last remedy tried tends to get the credit.",
+        "Very rarely, hiccups last for days or longer, and those deserve a doctor's attention. But the ordinary kind? A brief, noisy mystery, solved by patience."
+      ]
+    }
+  ],
+  "takeaway": "A hiccup is a diaphragm reflex with an unknown purpose; it usually stops by itself, and every folk cure benefits from that timing.",
+  "fiction": false
+}

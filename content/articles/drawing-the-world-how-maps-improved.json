@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-108",
+  "slug": "drawing-the-world-how-maps-improved",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Drawing the world: how maps improved",
+  "description": "From clay tablets to satellites, the story of maps is the story of humans slowly learning the shape of their own home.",
+  "publishedAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "history",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: History of cartography",
+      "url": "https://en.wikipedia.org/wiki/History_of_cartography",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Mercator projection",
+      "url": "https://en.wikipedia.org/wiki/Mercator_projection",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "First sketches of home",
+      "paragraphs": [
+        "People have drawn maps for at least as long as they have written. A Babylonian clay tablet from about 600 BC shows the world as a disc ringed by ocean, with Babylon near the centre — a reminder that every mapmaker starts by placing home in the middle.",
+        "Greek scholars made the great leap to mathematics. Eratosthenes, around 240 BC, measured Earth's circumference using shadows in two cities and got remarkably close to the true value. Ptolemy later mapped the world with lines of latitude and longitude, a framework we still use."
+      ]
+    },
+    {
+      "heading": "Charts for sailors, puzzles for scholars",
+      "paragraphs": [
+        "In the age of sail, portolan charts mapped coastlines and harbours with impressive practical accuracy, drawn from generations of sailors' experience. In 1569 Gerardus Mercator published a projection that let sailors plot straight compass courses — though it stretches lands near the poles, which is why Greenland looks Africa-sized on many classroom maps when Africa is actually about fourteen times larger.",
+        "Every flat map distorts something. Choosing a projection means choosing which truth to keep: shapes, areas, distances or directions. There is no honest flat map of a round world, only honest choices."
+      ]
+    },
+    {
+      "heading": "The view from above",
+      "paragraphs": [
+        "Aerial photographs and then satellites transformed mapping in the twentieth century. Surveyors who once spent years walking a coastline could now watch whole continents at once, tracking forests, ice, cities and storms.",
+        "Today the map in a phone updates with live traffic — the latest chapter in a 2,600-year effort to answer a child's question: what does our world look like, and where am I in it?"
+      ]
+    }
+  ],
+  "takeaway": "Maps improved by measurement, mathematics and finally flight — and every flat map still makes an honest bargain with distortion.",
+  "fiction": false
+}

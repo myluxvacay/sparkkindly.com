@@ -1,0 +1,32 @@
+{
+  "id": "dropped-books-427",
+  "scheduledDate": "2026-08-19",
+  "brand": "together",
+  "prompt": "In a busy hallway, a student drops all their books and looks embarrassed. What is a kind thing to do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Step around them quickly"
+    },
+    {
+      "id": "b",
+      "text": "Help pick the books up"
+    },
+    {
+      "id": "c",
+      "text": "Laugh with your friends"
+    },
+    {
+      "id": "d",
+      "text": "Take a photo"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Helping for ten seconds turns an embarrassing moment into a reminder that people look out for each other.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

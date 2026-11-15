@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-145",
+  "slug": "helping-hands-missions",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Helping Hands Missions",
+  "description": "For ages 6–9 with an adult: get a secret helping mission each day and complete it like a kindness agent.",
+  "publishedAt": "2026-08-24",
+  "updatedAt": "2026-08-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "kindness",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Fill the mission box",
+      "paragraphs": [
+        "Your adult writes simple missions on slips: water a plant, pair up the socks, set out the spoons.",
+        "Fold the slips and put them in the box. One mission a day is plenty."
+      ]
+    },
+    {
+      "heading": "Complete your mission",
+      "paragraphs": [
+        "Draw out one slip and read your mission. Do it carefully, like a secret agent of kindness.",
+        "Report back when it is done. Mission complete. The house is a little bit happier."
+      ]
+    }
+  ],
+  "takeaway": "Small helping hands can change how a whole house feels.",
+  "fiction": false,
+  "materials": [
+    "Paper slips for missions",
+    "A small box or hat"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only do jobs your adult chooses for you; never use cleaning sprays, sharp things, or hot things on a mission."
+  ],
+  "screenFreeExtension": "Invent a new mission for the box that would make your adult smile."
+}

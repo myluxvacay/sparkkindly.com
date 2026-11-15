@@ -1,0 +1,67 @@
+{
+  "id": "kids-bulk-36",
+  "slug": "leaf-sorting-and-pressing",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Leaf Sorting and Pressing",
+  "description": "For ages 6–9 with an adult: sort fallen leaves by colour and shape, then press one to keep.",
+  "publishedAt": "2026-09-18",
+  "updatedAt": "2026-09-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Gather your leaves",
+      "paragraphs": [
+        "Collect fallen leaves in as many colours as you can find — red, gold, orange, brown, and maybe a green one that fell early.",
+        "In autumn, leaves stop making their green colour. The colours that were hiding underneath — yellows and oranges — finally get to show."
+      ]
+    },
+    {
+      "heading": "Sort them out",
+      "paragraphs": [
+        "Sort your leaves into piles. You could sort by colour, by size, or by shape. Each way of sorting tells a different story about your collection.",
+        "Count the leaves in each pile. Which pile is biggest? A collection sorted and counted is the start of real science."
+      ]
+    },
+    {
+      "heading": "Press a favourite",
+      "paragraphs": [
+        "Lay your favourite leaf flat between two sheets of paper, then stack heavy books on top. Leave it for a week.",
+        "When you open the books, your leaf will be flat and dry, ready to stick into a notebook. Pressed leaves can keep their colours for a long, long time."
+      ]
+    }
+  ],
+  "takeaway": "Sorting leaves by colour, size, or shape turns a walk into science, and pressing keeps one leaf forever.",
+  "fiction": false,
+  "materials": [
+    "Fallen leaves",
+    "Heavy books",
+    "Paper",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only collect leaves already on the ground. Wash your hands after handling leaves, and never eat wild leaves or berries."
+  ],
+  "screenFreeExtension": "Make a leaf parade on the floor, sorted by colour from lightest to darkest."
+}

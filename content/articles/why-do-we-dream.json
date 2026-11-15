@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-99",
+  "slug": "why-do-we-dream",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why do we dream?",
+  "description": "Every night your brain stages strange, vivid stories you rarely remember — scientists have good clues about why, but the case is still open.",
+  "publishedAt": "2026-06-21",
+  "updatedAt": "2026-06-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Dream",
+      "url": "https://en.wikipedia.org/wiki/Dream",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Rapid eye movement sleep",
+      "url": "https://en.wikipedia.org/wiki/Rapid_eye_movement_sleep",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Stories in the dark",
+      "paragraphs": [
+        "Most vivid dreams arrive during a stage of sleep called REM, short for rapid eye movement, when your eyes dart beneath closed lids and your brain is almost as active as when you are awake. Your body, sensibly, switches off most muscle movement during REM, so you cannot act the dreams out.",
+        "You probably dream for around two hours a night, in several episodes, whether or not you remember any of it. Dreams near morning are the ones most likely to survive into waking memory."
+      ]
+    },
+    {
+      "heading": "The leading clues",
+      "paragraphs": [
+        "Honest science begins here with a confession: nobody knows for certain why we dream. But there are strong clues. One idea is that dreams help the brain sort the day's experiences, strengthening useful memories and filing emotional events so they feel less sharp.",
+        "Another idea holds that dreams are rehearsals — a safe simulator where the brain practises responding to threats and social situations. A third suggests dreaming is simply the brain's storytelling side making sense of its own night-time housekeeping noise. These ideas are not enemies; dreams may do several jobs at once."
+      ]
+    },
+    {
+      "heading": "An open question you sleep inside",
+      "paragraphs": [
+        "What researchers can say firmly is that sleep itself is essential, and dreaming is one of its most creative features. The mystery is part of the charm: every night, without any effort from you, your mind becomes a novelist.",
+        "If you want to meet your dreams more often, keep a notebook by the bed and write the moment you wake. The stories fade within minutes — catching them is half the fun."
+      ]
+    }
+  ],
+  "takeaway": "Dreaming is real, nightly and still unexplained; the best-supported ideas involve memory, emotion and practice, and the case remains open.",
+  "fiction": false
+}

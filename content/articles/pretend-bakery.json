@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-130",
+  "slug": "pretend-bakery",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Pretend Bakery",
+  "description": "For ages 6–9 with an adult: roll, pat, and bake pretend cakes for the most patient customers in the world.",
+  "publishedAt": "2026-08-03",
+  "updatedAt": "2026-08-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family-activities",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Set up the bakery",
+      "paragraphs": [
+        "Roll your dough into cakes, buns, and one very wobbly jelly. Line them up on the tray.",
+        "Make a sign for your bakery and decide what today's special is."
+      ]
+    },
+    {
+      "heading": "Serve the customers",
+      "paragraphs": [
+        "Take orders from your toys and family: One rainbow cake, please. Count the cakes as you serve them.",
+        "Bakers use patterns: every cake gets three berries, every bun gets a swirl."
+      ]
+    }
+  ],
+  "takeaway": "A good baker makes the same cake the same way, every single time.",
+  "fiction": false,
+  "materials": [
+    "Playdough or soft clay",
+    "A rolling pin",
+    "Baking trays and cupcake cases"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Playdough is for playing, never for eating; wash hands before and after."
+  ],
+  "screenFreeExtension": "Draw a menu for your bakery with pictures and prices in buttons."
+}

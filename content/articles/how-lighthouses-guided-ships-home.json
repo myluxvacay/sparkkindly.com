@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-111",
+  "slug": "how-lighthouses-guided-ships-home",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How lighthouses guided ships home",
+  "description": "For two thousand years, a tower, a fire and a keeper's vigilance were all that stood between sailors and the rocks.",
+  "publishedAt": "2026-07-19",
+  "updatedAt": "2026-07-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "history",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Lighthouse",
+      "url": "https://en.wikipedia.org/wiki/Lighthouse",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Pharos of Alexandria",
+      "url": "https://en.wikipedia.org/wiki/Pharos_of_Alexandria",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The first great light",
+      "paragraphs": [
+        "The most famous lighthouse of the ancient world stood on the island of Pharos at Alexandria in Egypt, built around 280 BC. Ancient writers described a tower well over 100 metres tall with a fire at its summit, visible far out to sea — one of the tallest structures of its age and counted among the Seven Wonders of the World.",
+        "For centuries, most lights were simpler: fires on headlands, tended by whoever lived nearby. They warned of danger as much as they guided, and a light in the wrong place could be a trap — wreckers were accused of showing false lights to lure ships onto rocks for plunder."
+      ]
+    },
+    {
+      "heading": "Engineering against the sea",
+      "paragraphs": [
+        "The hardest lighthouses stand not on shores but on bare rocks in open water. In 1759, John Smeaton completed the third Eddystone Lighthouse off the English coast, using interlocking stone blocks dovetailed together like a puzzle and a quick-setting mortar. It became the model for modern lighthouse design.",
+        "In 1822, Augustin-Jean Fresnel transformed the light itself: his lens of concentric glass rings could gather a lamp's glow into a beam visible for tens of kilometres. Each lighthouse was given its own rhythm of flashes, so sailors could identify exactly which light they were seeing, like a signature written in light."
+      ]
+    },
+    {
+      "heading": "The keepers retire",
+      "paragraphs": [
+        "Keepers once lived in the towers year-round, trimming wicks, winding clockwork and keeping the lamp alive through storms. Through the twentieth century, automation replaced them; Britain's last staffed lighthouse went automatic in 1998.",
+        "Satellites now guide most ships, yet lighthouses still shine — as backups when technology fails, and as monuments to a simple, honourable idea: someone should keep a light on for strangers at sea."
+      ]
+    }
+  ],
+  "takeaway": "From the Pharos of Alexandria to Fresnel's lens, lighthouses turned firelight into a language of safety that sailors could read from far away.",
+  "fiction": false
+}

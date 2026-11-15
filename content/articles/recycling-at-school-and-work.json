@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-115",
+  "slug": "recycling-at-school-and-work",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Recycling at school and work",
+  "description": "The bins away from home follow the same rules but fail in their own ways, and a few shared habits fix most of them.",
+  "publishedAt": "2026-07-16",
+  "updatedAt": "2026-07-16",
+  "tags": [
+    "recycling",
+    "green"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Different place, same principles",
+      "paragraphs": [
+        "Schools and workplaces generate mountains of paper, food packaging and drinks containers. The materials are the same as at home, but the sorting depends on dozens of people making quick decisions, often in a hurry and far from the bin they know.",
+        "Clear labels with pictures of the actual items, a coffee cup, a banana skin, a drinks can, work far better than long written rules, because nobody reads a paragraph while holding rubbish."
+      ]
+    },
+    {
+      "heading": "The cup problem",
+      "paragraphs": [
+        "Disposable coffee cups are the classic workplace contaminant: most have a plastic lining that home-style recycling cannot process, so they need special collection schemes, which many cafés and offices now run. A reusable cup sidesteps the question entirely.",
+        "Food scraps in the recycling bin are the other regular problem. A food waste caddy placed right beside the recycling, not across the room, catches most of it."
+      ]
+    },
+    {
+      "heading": "Make someone the friendly expert",
+      "paragraphs": [
+        "Systems improve when one person per class, team or office floor happily answers the is-this-recyclable questions and occasionally shares what changed. People copy people far more readily than posters.",
+        "If your school or workplace has no recycling for something common, asking the facilities team or council is a reasonable, often welcomed nudge. Many schemes exist but are never requested."
+      ]
+    }
+  ],
+  "takeaway": "Picture labels, bins side by side and one friendly expert per group will fix most recycling away from home."
+}

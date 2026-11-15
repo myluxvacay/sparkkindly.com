@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-69",
+  "slug": "how-hurricanes-are-born",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How hurricanes are born",
+  "description": "A hurricane begins as a modest cluster of thunderstorms over warm water. Given the right conditions, it organises into a giant.",
+  "publishedAt": "2026-10-10",
+  "updatedAt": "2026-10-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "weather",
+    "oceans"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Tropical cyclone",
+      "url": "https://en.wikipedia.org/wiki/Tropical_cyclone",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The ingredients",
+      "paragraphs": [
+        "Tropical cyclones — called hurricanes in the Atlantic — need a specific recipe: ocean water warmer than about 26.5°C down to some depth, moist air, thunderstorms to start with, weak change of wind with height, and enough distance from the equator for Earth's rotation to start the spin. Remove any ingredient and the storm usually fails.",
+        "Warm water is the fuel. Evaporation loads the air with water vapour, and as that vapour condenses into cloud droplets it releases heat — the same heat that evaporated it — warming the air, making it rise faster, and pulling more moist air in at the surface."
+      ]
+    },
+    {
+      "heading": "The engine organises",
+      "paragraphs": [
+        "As air spirals inward and rises, the rotation concentrates, winds strengthen, and the storm can develop its famous eye: a calm, clear centre ringed by the eyewall, where the fiercest winds and rain occur. A mature hurricane releases heat energy comparable to a large explosion every few minutes, sustained for days.",
+        "Landfall usually dooms the storm by cutting off its warm-water fuel, though not before it can drive a destructive surge of seawater ashore. Forecasting the track and intensity of these engines is one of meteorology's great, still-improving challenges."
+      ]
+    }
+  ],
+  "takeaway": "Hurricanes are heat engines powered by warm ocean water, organised by Earth's rotation into spinning storms with a calm eye.",
+  "fiction": false
+}

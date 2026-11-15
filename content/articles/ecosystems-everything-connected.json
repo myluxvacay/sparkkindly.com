@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-88",
+  "slug": "ecosystems-everything-connected",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Ecosystems: everything connected",
+  "description": "An ecosystem is not a collection of separate things. It is a web of exchanges — energy, nutrients, favours and meals.",
+  "publishedAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ecosystem",
+      "url": "https://en.wikipedia.org/wiki/Ecosystem",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Energy flows, nutrients cycle",
+      "paragraphs": [
+        "Every ecosystem runs on two great movements. Energy flows through it once: sunlight is captured by plants, passed to the animals that eat them, then to the animals that eat those, leaking away as heat at every step. That is why there are always fewer lions than grass — each transfer keeps only about a tenth of the energy.",
+        "Nutrients, by contrast, go around in circles. The carbon, nitrogen and phosphorus in a leaf this spring may be in a worm next year and a tree again in a decade, endlessly recycled by the decomposers. An ecosystem is less a place than a pattern of these flows."
+      ]
+    },
+    {
+      "heading": "Built from relationships",
+      "paragraphs": [
+        "The connections are the ecosystem. Flowers depend on pollinators; pollinators depend on flowers through seasons when nothing else blooms. Predators keep grazers from stripping the land bare. Even competition is a connection, shaping which species can share a home.",
+        "This is why changes ripple. Introduce or remove one species and the effects travel the web — sometimes obviously, sometimes in ways nobody predicts. Studying an ecosystem means studying relationships, and humility is part of the method."
+      ]
+    }
+  ],
+  "takeaway": "An ecosystem is a web of relationships where energy flows through once and nutrients cycle endlessly.",
+  "fiction": false
+}

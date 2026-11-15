@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-142",
+  "slug": "watch-dont-touch-tiny-visitors",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Watch, Don't Touch: Tiny Visitors",
+  "description": "For ages 6–9 with an adult: find a spot where insects visit and watch them work without touching.",
+  "publishedAt": "2026-08-20",
+  "updatedAt": "2026-08-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Find a busy spot",
+      "paragraphs": [
+        "With your adult, find a place where insects visit: a flower, a log, a patch of grass.",
+        "Settle down a little way away. Quiet watchers see the most."
+      ]
+    },
+    {
+      "heading": "Watch them work",
+      "paragraphs": [
+        "Follow one visitor with your eyes. Where is it going? What is it carrying?",
+        "Draw your visitor when you get home, with all its legs in the right places."
+      ]
+    }
+  ],
+  "takeaway": "Tiny creatures are busy neighbours, and watching is kinder than touching.",
+  "fiction": false,
+  "materials": [
+    "A magnifying glass (optional)",
+    "Paper and a pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Look only: never touch insects, and wash hands after being outdoors; leave every creature where it lives."
+  ],
+  "screenFreeExtension": "Draw a visitor map showing where each tiny visitor was working."
+}

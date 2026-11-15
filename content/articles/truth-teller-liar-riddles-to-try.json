@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-54",
+  "slug": "truth-teller-liar-riddles-to-try",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Two Brothers: A Truth-and-Lies Riddle Workshop",
+  "description": "One brother always lies, the other never does - learn the case-splitting method and you can solve, and invent, a whole family of riddles.",
+  "publishedAt": "2026-10-06",
+  "updatedAt": "2026-10-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "brain-teasers"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The method: split the cases",
+      "paragraphs": [
+        "Two brothers have a peculiar family rule: one always tells the truth and the other always lies, in everything they say. You do not know which is which. The solving method for every riddle of this kind is called case-splitting: assume one brother is the truth-teller, follow the consequences, and check for contradictions. A case that contradicts itself is impossible; the surviving case is the answer.",
+        "Warm up with a single statement. One brother announces: 'We are both liars.' Suppose he were the truth-teller - then his claim would be true, making him a liar, which contradicts the supposition. So he is the liar. But then his claim is false, so they are not both liars - meaning his brother tells the truth. One statement, fully solved."
+      ]
+    },
+    {
+      "heading": "A two-statement workout",
+      "paragraphs": [
+        "Now both brothers speak. The first says: 'My brother is the liar.' The second says: 'We are the same type.' Test the case where the first brother tells the truth: then the second really is the liar, so his statement 'we are the same type' is false - and indeed they are different types. Everything is consistent, so this case survives.",
+        "Test the other case: suppose the first brother lies. Then his claim is false, so the second brother is the truth-teller - whose statement 'we are the same type' would have to be true. But a liar and a truth-teller are not the same type. Contradiction, so this case dies. The answer is forced: the first brother tells the truth and the second lies."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Invent your own pair of statements. Give each brother one line, then run both cases honestly. Beginners often accidentally build riddles where both cases survive - the statements are then too weak, and the fix is to make one statement talk about the statements themselves, like the examples above.",
+        "A reliable recipe: make one brother claim something about the pair ('we are both...', 'we are different...') and the other claim something about the first brother. Self-reference is what gives these riddles their grip - it is the same ingredient that powers the knights and knaves island."
+      ]
+    }
+  ],
+  "takeaway": "Case-splitting is the whole method: assume each person is the truth-teller in turn, and keep only the story with no contradictions.",
+  "fiction": false
+}

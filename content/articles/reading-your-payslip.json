@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-38",
+  "slug": "reading-your-payslip",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Your payslip, line by line",
+  "description": "A payslip looks crowded, but it tells one story: what you earned, what was taken off, and what you actually received.",
+  "publishedAt": "2026-09-04",
+  "updatedAt": "2026-09-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-basics",
+    "student-money"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start with the big number",
+      "paragraphs": [
+        "The largest figure on a payslip is usually your gross pay: everything you earned before anything was taken away. If you are paid by the hour, it should match your hours multiplied by your hourly rate, with overtime shown separately.",
+        "It is worth a thirty-second check each payday. Mistakes happen, and they are far easier to fix in the week they occur than months later."
+      ]
+    },
+    {
+      "heading": "The deductions in the middle",
+      "paragraphs": [
+        "Between gross pay and the amount that lands in your account sits a list of deductions. Common ones include income tax, contributions toward pensions or social insurance, and sometimes student loan repayments or union fees.",
+        "These are not your employer keeping your money. They are amounts your employer is required to send onward on your behalf, and the payslip is your receipt proving it happened."
+      ]
+    },
+    {
+      "heading": "The number to budget with",
+      "paragraphs": [
+        "The final figure — net pay, or take-home pay — is what actually arrives in your account. It is the only honest number to build a budget on, because it is the money you can genuinely use.",
+        "Keep your payslips somewhere safe. Landlords, lenders, and tax offices may ask for them, and a tidy set of payslips is proof of income you will be glad to have."
+      ]
+    }
+  ],
+  "takeaway": "Budget from your net pay, check the gross against your hours, and keep payslips as proof of what you earned.",
+  "fiction": false
+}

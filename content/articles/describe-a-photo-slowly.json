@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-104",
+  "slug": "describe-a-photo-slowly",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Describe a photo slowly",
+  "description": "Turning a photograph into words is a quiet writing exercise that sharpens your eye for detail.",
+  "publishedAt": "2026-06-25",
+  "updatedAt": "2026-06-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "writing",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Look longer than feels natural",
+      "paragraphs": [
+        "Choose any photo: one on your phone, one in a book, one on a wall. Look at it for a full minute before writing. Notice what you missed in the first glance: background objects, expressions, light, small signs of the moment before and after.",
+        "Then write a description for someone who will never see the image. Plain words are fine. The goal is attention, not poetry."
+      ]
+    },
+    {
+      "heading": "Go layer by layer",
+      "paragraphs": [
+        "Start with the obvious: who or what, where, when it might be. Then move to details: colours, textures, what is worn or weathered. Finish with the feeling of the scene and one thing you are unsure about.",
+        "This exercise pays rent everywhere: stories get richer, essays get clearer, and even messages to friends get more vivid. Ten slow minutes is plenty."
+      ]
+    }
+  ],
+  "takeaway": "One photo, one minute of looking, one honest paragraph of words.",
+  "fiction": false
+}

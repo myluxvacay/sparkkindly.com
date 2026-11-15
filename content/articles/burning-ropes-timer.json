@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-69",
+  "slug": "burning-ropes-timer",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Measure 45 Minutes With Two Burning Ropes",
+  "description": "Each rope burns for exactly an hour but unevenly - no clock, no measuring by length. The trick is to burn from both ends.",
+  "publishedAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "maths-and-logic"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The problem",
+      "paragraphs": [
+        "You have two ropes and a lighter. Each rope takes exactly 60 minutes to burn from one end to the other - but neither burns evenly: one half might burn in five minutes and the rest crawl for fifty-five. You cannot trust lengths, and you have no clock. Using only the ropes and the flame, measure exactly 45 minutes.",
+        "The uneven burning kills the obvious idea of cutting a rope at the three-quarter mark - you have no way to find that mark. What you need is a fact about these ropes that stays true no matter how unevenly they burn. There is exactly one, and it is beautiful."
+      ]
+    },
+    {
+      "heading": "Burn from both ends",
+      "paragraphs": [
+        "Light a rope at both ends at once. The two flames eat toward each other, fast where the rope is eager, slow where it is stubborn - but between them they consume the whole rope in exactly 30 minutes, because the total burn is fixed and two flames do the work. Unevenness changes where they meet, not when.",
+        "Now the full recipe. Light rope one at both ends and rope two at one end, all at the same moment. When rope one is gone, 30 minutes have passed, and rope two has 30 minutes of burn left in it. At that instant, light rope two's other end. Its remaining length now burns from both ends and lasts exactly 15 minutes. When it vanishes, you have measured 30 + 15 = 45 minutes."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "First convince yourself the both-ends fact is airtight: imagine a rope whose first centimetre burns in 59 minutes and the rest in 1. Lit at both ends, does it still take 30 minutes in total? (Yes - the slow centimetre is being eaten from behind by the fast flame racing around... trace it carefully; the meeting point simply moves very close to the slow end.)",
+        "Then explore the family: with these two ropes you can also measure 15 minutes (start rope two's second flame the moment rope one dies, and watch for the next 15), 30, 60, 75 and 90. Which times are impossible, and why? That question turns a party trick into real mathematics."
+      ]
+    }
+  ],
+  "takeaway": "Burning a rope from both ends always halves its time, however unevenly it burns - combine two ropes and 45 minutes falls out.",
+  "fiction": false
+}

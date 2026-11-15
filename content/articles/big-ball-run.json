@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-132",
+  "slug": "big-ball-run",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Big Ball Run",
+  "description": "For ages 6–9 with an adult: send a big soft ball rolling through cardboard tubes and watch its journey.",
+  "publishedAt": "2026-08-05",
+  "updatedAt": "2026-08-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Build the run",
+      "paragraphs": [
+        "Your adult helps tape tubes together into a path down a chair or a stack of books.",
+        "Test with your hand first: the path should slope gently all the way down."
+      ]
+    },
+    {
+      "heading": "Let it roll",
+      "paragraphs": [
+        "Drop the ball at the top and watch it travel. Where does it speed up? Where does it stop?",
+        "Change one thing, a steeper slope or a longer tube, and roll it again."
+      ]
+    }
+  ],
+  "takeaway": "A ball always rolls downhill, and you get to design the hill.",
+  "fiction": false,
+  "materials": [
+    "Cardboard tubes",
+    "Sticky tape",
+    "A big soft ball"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Use a big ball that cannot fit in anyone's mouth, and keep small balls away from babies."
+  ],
+  "screenFreeExtension": "Time your ball with claps: how many claps does the longest run take?"
+}

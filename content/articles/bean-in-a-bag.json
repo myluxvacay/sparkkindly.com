@@ -1,0 +1,68 @@
+{
+  "id": "kids-bulk-78",
+  "slug": "bean-in-a-bag",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "A Bean in a Bag",
+  "description": "For ages 6–9 with an adult: grow a bean in a clear bag on the window and watch its roots and shoots appear.",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "science"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Set up the bag",
+      "paragraphs": [
+        "Fold a wet paper towel into a clear bag. Slide a dried bean between the towel and the side of the bag so you can see it clearly.",
+        "Tape the bag to a sunny window. The towel keeps the bean damp, and the clear bag turns it into a tiny greenhouse you can see inside."
+      ]
+    },
+    {
+      "heading": "Roots first",
+      "paragraphs": [
+        "After a few days, the bean swells and its skin splits. A white root pushes out and grows downwards, always downwards.",
+        "Roots know which way is down without being told. Then a shoot grows up towards the light. The bean is doing two journeys at once."
+      ]
+    },
+    {
+      "heading": "A plant from a seed",
+      "paragraphs": [
+        "Soon, leaves unfold and the empty bean case shrivels. The baby plant ate the bean's stored food to get started.",
+        "Every giant bean plant begins exactly like this — a seed, some water, some light, and a little patience."
+      ]
+    }
+  ],
+  "takeaway": "A bean in a damp bag shows roots growing down and shoots growing up, all from one small seed.",
+  "fiction": false,
+  "materials": [
+    "A dried bean (an adult provides)",
+    "A clear zip bag",
+    "A paper towel",
+    "Sticky tape",
+    "Water"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Use dried beans only for growing — never eat dried beans from the packet. Wash hands after handling."
+  ],
+  "screenFreeExtension": "Plant your bean in a pot of soil once it has roots and keep watching it grow."
+}

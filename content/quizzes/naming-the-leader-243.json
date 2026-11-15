@@ -1,0 +1,32 @@
+{
+  "id": "naming-the-leader-243",
+  "scheduledDate": "2026-02-16",
+  "brand": "together",
+  "prompt": "Your team wins an award for a project that a quieter teammate actually led. You are asked to speak. What should you do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Accept all the praise yourself"
+    },
+    {
+      "id": "b",
+      "text": "Name the teammate's leading role clearly and proudly"
+    },
+    {
+      "id": "c",
+      "text": "Say the award was just luck"
+    },
+    {
+      "id": "d",
+      "text": "Avoid mentioning anyone's role"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Public, accurate credit costs you nothing and makes talented people feel valued and visible.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

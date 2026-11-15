@@ -1,0 +1,59 @@
+{
+  "id": "discover-bulk-77",
+  "slug": "coral-reefs-cities-of-the-sea",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Coral reefs: cities built by tiny animals",
+  "description": "A coral reef is a city raised by animals smaller than your fingernail, and it shelters a quarter of all ocean species.",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Coral reef",
+      "url": "https://en.wikipedia.org/wiki/Coral_reef",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "NOAA: Coral reef ecosystems",
+      "url": "https://www.noaa.gov/education/resource-collections/marine-life/coral-reef-ecosystems",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Builders with gardens inside",
+      "paragraphs": [
+        "Reef-building corals are colonies of tiny polyps, relatives of jellyfish, that secrete limestone skeletons beneath themselves. Generation upon generation, the skeletons accumulate into reefs. Most reef corals also host algae inside their tissues: the algae photosynthesise and share food with the coral, while the coral gives them shelter. That partnership powers the whole city.",
+        "Because the algae need sunlight, reef corals thrive in clear, shallow, warm water — places otherwise poor in nutrients. The reef becomes an oasis, concentrating life in a watery desert."
+      ]
+    },
+    {
+      "heading": "Why reefs matter so much",
+      "paragraphs": [
+        "Though they cover less than one percent of the ocean floor, coral reefs support an estimated quarter of all marine species — fish, turtles, sharks, sponges, crustaceans and more. They also buffer coastlines against storm waves and underpin fisheries and tourism for hundreds of millions of people.",
+        "Reefs are sensitive to heat: unusually warm water can cause corals to expel their algae and turn white, a stress called bleaching, from which they recover only if conditions ease. The cities of the sea are ancient, but they are built to a narrow specification."
+      ]
+    }
+  ],
+  "takeaway": "Coral reefs are limestone cities built by tiny polyps and their algae partners, sheltering a quarter of ocean species.",
+  "fiction": false
+}

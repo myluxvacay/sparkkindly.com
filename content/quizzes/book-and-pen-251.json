@@ -1,0 +1,32 @@
+{
+  "id": "book-and-pen-251",
+  "scheduledDate": "2026-02-24",
+  "brand": "play",
+  "prompt": "A book and a pen cost $11 in total. The book costs $10 more than the pen. How much does the pen cost?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$1"
+    },
+    {
+      "id": "b",
+      "text": "$0.25"
+    },
+    {
+      "id": "c",
+      "text": "$1.50"
+    },
+    {
+      "id": "d",
+      "text": "$0.50"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "If the pen costs x, the book costs x + $10, so x + x + 10 = 11, which gives x = $0.50. Check: $0.50 + $10.50 = $11.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-96",
+  "slug": "the-tiny-balancers-inside-your-ears",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The tiny balancers inside your ears",
+  "description": "Deep inside each ear, three tiny loops of fluid tell your brain which way is up — and they do it without you ever noticing.",
+  "publishedAt": "2026-06-13",
+  "updatedAt": "2026-06-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Vestibular system",
+      "url": "https://en.wikipedia.org/wiki/Vestibular_system",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Semicircular canal",
+      "url": "https://en.wikipedia.org/wiki/Semicircular_canal",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Three loops, three directions",
+      "paragraphs": [
+        "Your inner ear is famous for hearing, but tucked beside the hearing organ sits a second instrument: three curved tubes called semicircular canals, arranged at right angles to one another like the corner of a box.",
+        "Each canal is filled with fluid and lined with tiny hair cells. When you turn your head, the fluid lags behind for a moment and bends the hairs, and that bend becomes a signal: the head is rotating, this way, this fast. Between the three canals, every possible turn is covered."
+      ]
+    },
+    {
+      "heading": "Stones that sense gravity",
+      "paragraphs": [
+        "Nearby sit two small chambers containing tiny crystals of calcium carbonate — literally little stones resting on a bed of hair cells. When you tilt your head or speed up in a lift, the crystals shift, and your brain learns which way gravity is pulling.",
+        "Your brain combines these signals with what your eyes see and what your muscles feel. When the signals disagree — as when you read in a moving car — the confusion can make you feel queasy, which is one reason looking at the horizon helps."
+      ]
+    },
+    {
+      "heading": "Quiet work, noticed only when it fails",
+      "paragraphs": [
+        "You never feel this system working, which is the surest sign that it works well. It steadies your eyes when you walk, keeps you upright in the dark, and lets dancers spin and stop without falling.",
+        "Next time you balance on one foot, spare a thought for the loops and stones in your ears, quietly solving physics problems on your behalf."
+      ]
+    }
+  ],
+  "takeaway": "Your sense of balance comes from fluid-filled loops and tiny crystals in your inner ears, reporting every turn and tilt to your brain.",
+  "fiction": false
+}

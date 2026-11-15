@@ -1,0 +1,60 @@
+{
+  "id": "kids-bulk-113",
+  "slug": "toy-shadow-tracing",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Trace a Toy's Shadow",
+  "description": "For ages 6–9 with an adult: stand a toy in the sunshine and trace the shadow it throws on paper.",
+  "publishedAt": "2026-07-09",
+  "updatedAt": "2026-07-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "science"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Set up your toy",
+      "paragraphs": [
+        "Put paper on the ground in a sunny place and stand your toy at one edge.",
+        "The toy's shadow will fall across the paper like a grey picture of itself."
+      ]
+    },
+    {
+      "heading": "Trace the shadow",
+      "paragraphs": [
+        "Trace around the shadow slowly with your pencil. Shadows wriggle, so take your time.",
+        "Colour in your tracing. You have drawn with sunlight as your helper."
+      ]
+    }
+  ],
+  "takeaway": "A shadow is a drawing the light makes for you.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "A pencil",
+    "A favourite toy",
+    "A sunny spot or a torch"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Never look directly at the Sun; trace shadows on the paper, and let an adult hold the torch if you use one."
+  ],
+  "screenFreeExtension": "Trace the same toy's shadow in the morning and the afternoon, and compare the two shapes."
+}

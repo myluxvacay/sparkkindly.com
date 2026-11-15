@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-65",
+  "slug": "family-jokes-family-rules",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Family jokes, family rules",
+  "description": "Every family runs on two invisible documents: the rules nobody wrote down and the jokes nobody else understands.",
+  "publishedAt": "2026-10-11",
+  "updatedAt": "2026-10-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "traditions"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The jokes are the archive",
+      "paragraphs": [
+        "The story of the disastrous holiday, the nickname with a twenty-year pedigree, the phrase that reduces the whole table to helplessness — these are not decorations on family life. They are its archive: proof, retold annually, that you have a shared past and survived it together.",
+        "Tell them in front of the children, even the ones too young to understand. They are learning the shape of belonging before they learn the content."
+      ]
+    },
+    {
+      "heading": "Rules work better when they are few",
+      "paragraphs": [
+        "Unwritten family rules — we do not shout at the table, we always say where we are going, we knock — hold because everyone can recite them. Families rarely need more rules; they need the few real ones kept consistently and the rest released.",
+        "It is worth, once in a while, saying the rules out loud together and retiring the dead ones. A rule nobody can explain becomes a superstition, and superstitions breed resentment."
+      ]
+    },
+    {
+      "heading": "Welcome the editors",
+      "paragraphs": [
+        "New partners, grown children, and in-laws will edit both documents — adding jokes, questioning rules. That is not dilution; it is how the archive stays alive. The families that thrive are the ones whose story can absorb new authors.",
+        "Keep the pen moving. A family’s documents are never finished, and that is rather the point."
+      ]
+    }
+  ],
+  "takeaway": "Keep the jokes retold, the rules few and explainable, and the documents open to new editors.",
+  "fiction": false
+}

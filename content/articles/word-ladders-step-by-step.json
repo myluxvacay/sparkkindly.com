@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-84",
+  "slug": "word-ladders-step-by-step",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Word ladders: climb from CAT to DOG one letter at a time",
+  "description": "Change a single letter, keep a real word, and step by step you can walk from CAT to DOG. Lewis Carroll invented this gentle staircase of words.",
+  "publishedAt": "2026-06-07",
+  "updatedAt": "2026-06-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "patterns"
+  ],
+  "sources": [
+    {
+      "title": "Word ladder — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Word_ladder",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "One letter per step",
+      "paragraphs": [
+        "A word ladder turns one word into another by changing exactly one letter at a time, with every step a proper word. Here is the classic climb: CAT, COT, COG, DOG. The a becomes o, the t becomes g, and finally the c becomes d — three small steps and the cat is a dog.",
+        "The game was invented by Lewis Carroll, the author of Alice's Adventures in Wonderland, who called it Doublets. He published it in the magazine Vanity Fair in 1879, and it has been a breakfast-table favourite ever since."
+      ]
+    },
+    {
+      "heading": "Why ladders are satisfying",
+      "paragraphs": [
+        "A good ladder feels like a maze with a friendly size. You can always see the goal, and you can always test a step instantly: is it a word, and did only one letter change? Short ladders suit beginners; longer ones, like COLD to WARM, reward planning.",
+        "Try COLD to WARM now if you like: COLD, CORD, CARD, WARD, WARM works in four steps. Notice how the middle steps drift away in meaning while the letters barely move — that contrast is the game's quiet charm."
+      ]
+    },
+    {
+      "heading": "Try it: set a ladder for a friend",
+      "paragraphs": [
+        "Pick two words of the same length with a family resemblance, like HEAD and TAIL, and solve your own ladder before you set it. Write the start and finish at the top and bottom of a page and leave blank rungs between.",
+        "House rules keep it kind: proper nouns do not count, every rung must be a word you could use in a sentence, and the setter must always be able to show a solution. If a ladder defeats everyone, reveal one middle rung as a hint."
+      ]
+    }
+  ],
+  "takeaway": "One letter at a time is all it takes: a word ladder turns spelling into a staircase anyone can climb.",
+  "fiction": false
+}

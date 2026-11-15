@@ -1,0 +1,68 @@
+{
+  "id": "kids-bulk-49",
+  "slug": "ice-boat-tub-sailing",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Ice Boat Sailing",
+  "description": "For ages 6–9 with an adult: freeze a tiny boat with a paper sail and sail it in a tub as it melts.",
+  "publishedAt": "2026-10-03",
+  "updatedAt": "2026-10-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "oceans"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Build and freeze",
+      "paragraphs": [
+        "Ask your adult to stand a straw in a small tub of water, with a paper triangle sail taped to it. Freeze the tub overnight.",
+        "In the morning, pop out your ice boat. The ice is the boat's body, and it floats because ice is lighter than water."
+      ]
+    },
+    {
+      "heading": "Set sail",
+      "paragraphs": [
+        "Float your boat in a big bowl of water. Blow gently behind the sail and watch it glide.",
+        "As the boat sails, it slowly melts and gets smaller. Your voyage has a time limit set by melting, which makes it extra exciting."
+      ]
+    },
+    {
+      "heading": "Notice the melt",
+      "paragraphs": [
+        "Watch the boat shrink. The sail leans more and more as the ice melts beneath it, until — plop — the boat tips over.",
+        "Icebergs are giant ice boats made by nature. They melt slowly as they drift into warmer seas, just like yours."
+      ]
+    }
+  ],
+  "takeaway": "An ice boat floats and sails while it melts, getting smaller until it finally tips over.",
+  "fiction": false,
+  "materials": [
+    "A small plastic tub",
+    "Water",
+    "A straw",
+    "Paper for a sail",
+    "A big bowl of water"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult should prepare the frozen boat and fill the bowl. Always be with an adult around water."
+  ],
+  "screenFreeExtension": "Draw the boat's journey across the bowl as a wiggly voyage map."
+}

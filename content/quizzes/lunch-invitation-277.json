@@ -1,0 +1,32 @@
+{
+  "id": "lunch-invitation-277",
+  "scheduledDate": "2026-03-22",
+  "brand": "together",
+  "prompt": "A new student has sat alone at lunch all week. Which is the most welcoming move?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Point it out loudly so others notice"
+    },
+    {
+      "id": "b",
+      "text": "Assume they prefer being alone"
+    },
+    {
+      "id": "c",
+      "text": "Wait for them to approach you first"
+    },
+    {
+      "id": "d",
+      "text": "Invite them to join your table"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A direct, friendly invitation removes the hardest step for someone new: having to ask to belong.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

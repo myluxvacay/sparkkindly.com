@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-34",
+  "slug": "rainbow-hunting",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Rainbow Hunting",
+  "description": "For ages 6–9 with an adult: learn when and where to look for a rainbow after rain while the sun shines.",
+  "publishedAt": "2026-09-16",
+  "updatedAt": "2026-09-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The rainbow recipe",
+      "paragraphs": [
+        "A rainbow needs two ingredients at the same time: rain falling and sun shining. That is why rainbows often appear when a shower is ending and the sun peeks out.",
+        "Sunlight looks white, but it is really many colours mixed together. Each raindrop bends the light and separates the colours, like a tiny glass prism."
+      ]
+    },
+    {
+      "heading": "Where to stand",
+      "paragraphs": [
+        "To see a rainbow, the sun must be behind you and the rain in front of you. Turn your back to the sun — never look at the sun itself — and search the sky over the rain.",
+        "Rainbows are often easiest to spot in the morning or late afternoon, when the sun is low. At lunchtime the sun is too high for most rainbows."
+      ]
+    },
+    {
+      "heading": "Colours in order",
+      "paragraphs": [
+        "A rainbow's colours always come in the same order: red, orange, yellow, green, blue, indigo, and violet. Red is on the outside of the bow.",
+        "Sometimes you can see a second, fainter rainbow outside the first one. In that rainbow, the colours run the other way round."
+      ]
+    }
+  ],
+  "takeaway": "Rainbows appear when sun shines through rain with the sun behind you, and their colours always line up in the same order.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Coloured pencils",
+    "A spray bottle of water (an adult uses it)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Never look directly at the Sun, even when rainbow hunting. Always look away from the sun, towards the rain."
+  ],
+  "screenFreeExtension": "On a sunny day, ask an adult to spray a fine mist of water and look for a tiny rainbow in the spray."
+}

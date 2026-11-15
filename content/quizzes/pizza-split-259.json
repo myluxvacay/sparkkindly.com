@@ -1,0 +1,32 @@
+{
+  "id": "pizza-split-259",
+  "scheduledDate": "2026-03-04",
+  "brand": "save",
+  "prompt": "Three friends share a pizza costing $24 and agree to split a $6 tip equally too. How much does each friend pay?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$8"
+    },
+    {
+      "id": "b",
+      "text": "$9"
+    },
+    {
+      "id": "c",
+      "text": "$10"
+    },
+    {
+      "id": "d",
+      "text": "$12"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The total is $24 + $6 = $30, and $30 shared equally by 3 friends is $10 each.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

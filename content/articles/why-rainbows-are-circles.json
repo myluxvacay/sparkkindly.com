@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-70",
+  "slug": "why-rainbows-are-circles",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why rainbows are really circles",
+  "description": "Every rainbow is a full circle. The ground simply cuts off the part you usually see.",
+  "publishedAt": "2026-10-11",
+  "updatedAt": "2026-10-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "weather",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Rainbow",
+      "url": "https://en.wikipedia.org/wiki/Rainbow",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "One raindrop, one slice of colour",
+      "paragraphs": [
+        "A rainbow forms when sunlight enters raindrops, bends, reflects once off the inside back of each drop, and bends again on the way out. Bending separates white light into its colours, because each colour bends by a slightly different amount. Each drop sends one colour to your eye, depending on the exact angle.",
+        "The geometry is strict: the bow appears around the point exactly opposite the Sun, at an angle of about 42 degrees for the main bow. That fixed angle is why a rainbow is an arc of a circle — and why the circle's centre sits below the horizon when the Sun is up."
+      ]
+    },
+    {
+      "heading": "Seeing the whole thing",
+      "paragraphs": [
+        "From a mountain ridge or an aircraft, with rain below and Sun behind, the full circle can appear, floating complete around the shadow of the plane. Pilots see this often enough that the phenomenon has a name when it rings the aircraft's shadow: a glory is its close cousin, formed slightly differently.",
+        "A second, fainter bow sometimes appears outside the first, at about 51 degrees, with its colours reversed — light that reflected twice inside the drops. Your rainbow is also private: the drops sending light to your eyes are not the ones serving the person beside you. No two people see exactly the same rainbow."
+      ]
+    }
+  ],
+  "takeaway": "Rainbows are complete circles of light bent by raindrops; the horizon usually hides the lower half.",
+  "fiction": false
+}

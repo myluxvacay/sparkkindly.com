@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-114",
+  "slug": "vaccines-teaching-the-body-to-remember",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Vaccines: teaching the body to remember",
+  "description": "A vaccine is a training session for the immune system — a safe rehearsal that prepares the body to defeat a disease it has never met.",
+  "publishedAt": "2026-07-26",
+  "updatedAt": "2026-07-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "inventions",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Vaccine",
+      "url": "https://en.wikipedia.org/wiki/Vaccine",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Edward Jenner",
+      "url": "https://en.wikipedia.org/wiki/Edward_Jenner",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The body's memory",
+      "paragraphs": [
+        "When your immune system defeats an infection, it keeps specialised memory cells that recognise that germ. Meet the same germ again and the response is faster and stronger — often so fast you never feel ill. A vaccine's job is to create that memory without the danger of the disease itself, using a weakened, inactivated or partial version of the germ, or instructions that let your own cells display a harmless piece of it.",
+        "It is less like medicine and more like a fire drill: a calm rehearsal today so that a real emergency is handled swiftly."
+      ]
+    },
+    {
+      "heading": "Jenner and the milkmaids",
+      "paragraphs": [
+        "Smallpox once killed or scarred a large share of everyone it infected. In 1796, the English doctor Edward Jenner tested a folk observation: milkmaids who had caught the mild disease cowpox seemed protected from smallpox. He showed that material from cowpox could indeed protect a person, and published his results for the world.",
+        "Jenner was building on older practices of deliberate mild exposure used in parts of Asia, Africa and the Ottoman world. His contribution was evidence, persistence and a name: vaccination, from vacca, the Latin word for cow. Louis Pasteur later extended the idea to other diseases, weakening germs in the laboratory to make new vaccines."
+      ]
+    },
+    {
+      "heading": "The disease that no longer exists",
+      "paragraphs": [
+        "In 1980, after a worldwide campaign of vaccination and surveillance, the World Health Organization declared smallpox eradicated — the first disease deliberately wiped from the Earth, and still the only one to infect humans. Polio has since been pushed to the edge of eradication.",
+        "Vaccines remain one of the clearest demonstrations of an idea: that understanding how the body remembers can protect not just one person, but everyone they will ever meet."
+      ]
+    }
+  ],
+  "takeaway": "Vaccines rehearse the immune system safely, building memory without illness — an idea strong enough to erase smallpox from the world.",
+  "fiction": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-69",
+  "slug": "was-now-and-other-anchor-prices",
+  "brand": "save",
+  "contentType": "article",
+  "title": "\"Was/now\" prices and the anchor trick",
+  "description": "A crossed-out high price makes the current price feel small. That feeling is manufactured — the crossed-out number is an anchor, not a fact about value.",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "understanding-offers",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "How anchoring works",
+      "paragraphs": [
+        "Show someone a jacket marked \"was $200, now $80\" and $80 feels like a steal. Show the same jacket at $80 with no history and it feels like a decision. The first number you see drags your judgement toward it; psychologists call this anchoring, and price tags are built on it.",
+        "The anchor only works if the \"was\" price was real — an actual price at which the item genuinely sold, for a reasonable time. In many places, rules require exactly that, yet some \"was\" prices are brief, rare, or from a different, dearer version of the product."
+      ]
+    },
+    {
+      "heading": "Questions that cut the anchor",
+      "paragraphs": [
+        "Ignore the crossed-out number and judge the current price on its own: what would this be worth to me, and what do similar items cost elsewhere? A two-minute comparison search usually reveals whether \"now\" is special or simply normal.",
+        "Sale seasons deserve the same calm. Some shops raise prices shortly before a sale so the discount looks dramatic. Price-tracking websites and your own memory of last month's price are better guides than the banner."
+      ]
+    },
+    {
+      "heading": "A discount is not income",
+      "paragraphs": [
+        "\"I saved $120\" is only true if you would genuinely have paid the $200. Spending $80 you never planned to spend is not saving $120; it is spending $80. The anchor's favourite trick is making expenditure feel like earnings.",
+        "None of this means never enjoying a genuine sale. It means letting your own valuation lead: decide what the item is worth to you first, then check the price. When the price is below your valuation, buy happily — the anchor never gets a vote."
+      ]
+    }
+  ],
+  "takeaway": "Judge every offer by the \"now\" price against the wider market, and remember: money not spent is the only discount that is always real.",
+  "fiction": false
+}

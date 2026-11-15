@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-115",
+  "slug": "how-weather-forecasts-are-made",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How weather forecasts are made",
+  "description": "Millions of measurements, a planet-sized calculation and a healthy respect for chaos — the recipe behind tomorrow's forecast.",
+  "publishedAt": "2026-07-28",
+  "updatedAt": "2026-07-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "technology",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Numerical weather prediction",
+      "url": "https://en.wikipedia.org/wiki/Numerical_weather_prediction",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Weather forecasting",
+      "url": "https://en.wikipedia.org/wiki/Weather_forecasting",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Measuring the whole sky",
+      "paragraphs": [
+        "A forecast begins as a census of the atmosphere. Weather stations, ships, aircraft, ocean buoys and weather balloons report temperature, pressure, wind and humidity, while satellites and radar watch from above. Twice a day, hundreds of balloons rise simultaneously around the world, sampling the air up to the edge of the stratosphere.",
+        "All of this pours into a few forecasting centres, where the first task is simply to agree on what the atmosphere looks like right now — a three-dimensional snapshot of a restless ocean of air."
+      ]
+    },
+    {
+      "heading": "A planet inside a computer",
+      "paragraphs": [
+        "Supercomputers divide the atmosphere into millions of boxes and apply the laws of physics to each one: air flows, rises, cools, forms clouds. Then they step the whole virtual planet forward minutes at a time, computing days of weather in hours of calculation.",
+        "Because tiny errors grow — the famous butterfly effect — forecasters run the model many times with slightly different starting points. If most runs agree on rain, confidence is high; if they scatter, the forecast honestly becomes a probability."
+      ]
+    },
+    {
+      "heading": "Better than you remember",
+      "paragraphs": [
+        "Forecasts have improved steadily, roughly gaining a day of skill per decade: today's four-day forecast is about as accurate as the one-day forecast of the 1990s. Storm warnings now save lives that would once have been lost without notice.",
+        "Yet the atmosphere keeps its secrets past about two weeks, where chaos wins. The forecast is not a promise — it is physics, statistics and humility, delivered with your morning news."
+      ]
+    }
+  ],
+  "takeaway": "Forecasts come from measuring the whole atmosphere and simulating it many times over — skill that improves yearly, bounded by honest chaos.",
+  "fiction": false
+}

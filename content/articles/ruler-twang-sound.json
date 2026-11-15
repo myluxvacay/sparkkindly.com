@@ -1,0 +1,65 @@
+{
+  "id": "kids-bulk-76",
+  "slug": "ruler-twang-sound",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "The Twanging Ruler",
+  "description": "For ages 6–9 with an adult: twang a ruler on the edge of a table and hear how the sound changes with its length.",
+  "publishedAt": "2026-11-04",
+  "updatedAt": "2026-11-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make it sing",
+      "paragraphs": [
+        "Lay a ruler on a table so that half of it sticks out over the edge. Press down hard on the part on the table and flick the free end.",
+        "The ruler bounces up and down very fast and sings a low, funny note. That fast bouncing is called vibration, and vibration is what sound is made of."
+      ]
+    },
+    {
+      "heading": "Short and long",
+      "paragraphs": [
+        "Slide the ruler so only a little sticks out, and flick it again. Now the note is higher and the bounce is faster and smaller.",
+        "Long overhang, slow vibration, low sound. Short overhang, fast vibration, high sound. You have just played physics."
+      ]
+    },
+    {
+      "heading": "See the sound",
+      "paragraphs": [
+        "Watch the ruler's end closely as it sings. At first it is a blur. As the sound fades, you can see the bouncing slow down and stop.",
+        "Guitars, drums, and your own voice all work by vibrating. The twanging ruler is their table-top cousin."
+      ]
+    }
+  ],
+  "takeaway": "Sound is vibration — a long ruler vibrates slowly with a low note, and a short one vibrates fast and high.",
+  "fiction": false,
+  "materials": [
+    "A wooden or plastic ruler",
+    "A sturdy table"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Hold the ruler firmly so it does not fly off the table. Keep faces away from the twanging end."
+  ],
+  "screenFreeExtension": "Make a family orchestra of twangs — long rulers sing low, short rulers sing high."
+}

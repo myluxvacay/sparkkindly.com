@@ -1,0 +1,67 @@
+{
+  "id": "kids-bulk-46",
+  "slug": "water-drop-magnifier",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "A Water Drop Magnifier",
+  "description": "For ages 6–9 with an adult: turn a single drop of water into a magnifying lens that makes letters look bigger.",
+  "publishedAt": "2026-09-30",
+  "updatedAt": "2026-09-30",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make the lens",
+      "paragraphs": [
+        "Put a clear plastic lid over some small print. Ask your adult to place one round drop of water in the middle of the lid, right over a word.",
+        "Look down through the drop. The letters underneath look bigger. Your drop of water is working as a magnifying lens."
+      ]
+    },
+    {
+      "heading": "Why it works",
+      "paragraphs": [
+        "The drop is curved like a tiny hill. Light bends as it passes through the curve, and the bend makes things look larger than they are.",
+        "Real magnifying glasses work the same way. They are made of curved glass instead of water, but the bending trick is identical."
+      ]
+    },
+    {
+      "heading": "Drop detective work",
+      "paragraphs": [
+        "Try a bigger drop and a smaller drop. Which one makes the letters look biggest? A flatter drop bends light less than a tall, round one.",
+        "When you finish, tip the water away. Your amazing science tool was just one drop of water all along."
+      ]
+    }
+  ],
+  "takeaway": "A curved drop of water bends light like a magnifying glass and makes small things look bigger.",
+  "fiction": false,
+  "materials": [
+    "A clear plastic lid",
+    "Water",
+    "A spoon",
+    "An old newspaper"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult should help with the water. Keep water away from books that must not get wet — use an old newspaper."
+  ],
+  "screenFreeExtension": "Look at other tiny things through your drop — a grain of rice, a seed, or the lines on your fingertip."
+}

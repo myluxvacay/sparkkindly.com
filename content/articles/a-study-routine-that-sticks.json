@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-125",
+  "slug": "a-study-routine-that-sticks",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "A study routine that sticks",
+  "description": "A routine sticks when it is small, scheduled and kind to miss. Here is how to build one that survives real life.",
+  "publishedAt": "2026-08-03",
+  "updatedAt": "2026-08-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "motivation"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Attach study to a fixed anchor",
+      "paragraphs": [
+        "Vague intentions like 'study more' dissolve under pressure. A routine survives when it is tied to an anchor that already happens: after dinner, before the evening show, first thing on Saturday with coffee.",
+        "Choose a modest dose: twenty or thirty minutes is enough to make progress and small enough to start on a tired day. You can always do more; the routine only asks for the dose."
+      ]
+    },
+    {
+      "heading": "Make the start automatic",
+      "paragraphs": [
+        "Decide in advance where you will sit, what you will open first, and what 'starting' looks like. Every decision you remove from the moment is one less chance to negotiate your way out.",
+        "End each session by writing the next session's first task on a note. Tomorrow's you will thank today's you for the running start, and the chain of sessions will hold through busy weeks."
+      ]
+    }
+  ],
+  "takeaway": "Anchor a small study dose to a moment that already exists, and prepare each next start.",
+  "fiction": false
+}

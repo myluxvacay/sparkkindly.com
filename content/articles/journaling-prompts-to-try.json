@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-100",
+  "slug": "journaling-prompts-to-try",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Journaling prompts that actually help",
+  "description": "A good prompt gives your pen a place to start. Here are gentle ones that tend to unlock real writing.",
+  "publishedAt": "2026-06-18",
+  "updatedAt": "2026-06-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "writing",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start with the concrete",
+      "paragraphs": [
+        "Vague prompts like 'write about your feelings' can stall anyone. Concrete ones work better: 'Describe the room you are in as if for someone who will never see it.' 'What sound did you hear first this morning?'",
+        "Specific questions give your memory something to grab. Answer in plain sentences and do not worry about whether it sounds like proper journaling."
+      ]
+    },
+    {
+      "heading": "A handful to rotate",
+      "paragraphs": [
+        "Try these on different days: What is one thing I know now that I did not know last month? What would I do this week if I knew it would work out? What am I tired of, and what is one honest sentence about it?",
+        "Keep a short list inside your notebook's cover. On a blank day, pick one at random, set a timer for ten minutes, and write without lifting the pen more than you need to."
+      ]
+    }
+  ],
+  "takeaway": "Concrete prompts, ten minutes, no audience: that is enough to begin.",
+  "fiction": false
+}

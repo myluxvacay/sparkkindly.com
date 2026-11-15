@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-94",
+  "slug": "the-quiet-far-side-of-the-moon",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The quiet far side of the Moon",
+  "description": "One half of the Moon never faces Earth, and it stayed unseen by human eyes until a spacecraft flew around it in 1959.",
+  "publishedAt": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Far side of the Moon",
+      "url": "https://en.wikipedia.org/wiki/Far_side_of_the_Moon",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Chang'e 4",
+      "url": "https://en.wikipedia.org/wiki/Chang%27e_4",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Always the same face",
+      "paragraphs": [
+        "The Moon takes the same time to spin once as it does to orbit Earth — about 27 days — so the same side always faces us. This is not a coincidence but the result of Earth's gravity gently braking the Moon's spin over billions of years, a state called tidal locking.",
+        "That means half of the Moon was completely unknown until 1959, when the Soviet probe Luna 3 photographed it and sent home grainy pictures of a landscape nobody had ever seen."
+      ]
+    },
+    {
+      "heading": "A different kind of landscape",
+      "paragraphs": [
+        "The far side surprised everyone. The familiar face has broad dark plains of ancient lava, but the far side is mostly bright, cratered highlands with a thicker crust, and almost no dark plains at all. Why the two halves differ is still debated.",
+        "In 2019, China's Chang'e 4 became the first spacecraft to land softly on the far side. Because the Moon itself blocks radio signals, the lander talks to Earth through a relay satellite parked in a halo orbit beyond the Moon."
+      ]
+    },
+    {
+      "heading": "The quietest place we know",
+      "paragraphs": [
+        "Shielded by the Moon from Earth's radio chatter, the far side is the most radio-quiet place in the inner solar system. Astronomers dream of building a telescope there one day, listening for whispers from the early universe in perfect silence.",
+        "Exploration there is still young. In 2024, China's Chang'e 6 mission landed in a vast far-side crater and brought the first samples from that hidden half back to Earth, giving scientists Moon rock they had waited decades to hold. The quiet side, it turns out, has plenty to say."
+      ]
+    }
+  ],
+  "takeaway": "The Moon's far side is not dark or mysterious — it is simply turned away, thicker-crusted, cratered, and wonderfully quiet.",
+  "fiction": false
+}

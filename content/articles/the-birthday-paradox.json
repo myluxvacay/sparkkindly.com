@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-33",
+  "slug": "the-birthday-paradox",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Birthday Paradox: Twins in a Crowd of Twenty-Three",
+  "description": "In a group of just 23 people, two probably share a birthday - the trick is counting pairs, not people.",
+  "publishedAt": "2026-09-04",
+  "updatedAt": "2026-09-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "probability",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Birthday problem - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Birthday_problem",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The answer nobody believes",
+      "paragraphs": [
+        "How many people do you need in a room before it is more likely than not that two of them share a birthday? Most people guess somewhere near 183, halfway to 365. The real answer is just 23. With 23 people, the chance of a shared birthday is already about 50.7 percent.",
+        "The surprise comes from a quiet misunderstanding. You are not looking for someone who matches you, or matches any particular day. Any two people matching counts, and a group contains far more pairs than it contains people."
+      ]
+    },
+    {
+      "heading": "Count the pairs",
+      "paragraphs": [
+        "Twenty-three people make 253 pairs, because each of the 23 people can be paired with 22 others and we then halve the count to avoid counting each pair twice. Every pair is a fresh chance to match. Even though each single pair is unlikely to share a birthday - about 1 in 365 - 253 chances add up fast.",
+        "You can also work it backwards. The chance that nobody matches is 365/365 x 364/365 x 363/365 and so on, one term per person. After 23 terms the product dips just below one half, which means a match has become the more likely outcome. With 50 people the chance of a match is about 97 percent."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Collect the birthdays of a class, team or group chat of around 25 to 30 people and check for a match. You will find one more often than not - and when you do not, you have met the other half of the probability, which is just as real.",
+        "Then try the pairs count on different group sizes: 10 people make 45 pairs, 30 people make 435. Watching the pairs explode while the group grows gently is the whole secret of the paradox."
+      ]
+    }
+  ],
+  "takeaway": "Shared birthdays are likely in small groups because pairs grow much faster than people - 23 people already make 253 chances to match.",
+  "fiction": false
+}

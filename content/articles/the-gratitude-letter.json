@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-81",
+  "slug": "the-gratitude-letter",
+  "brand": "together",
+  "contentType": "article",
+  "title": "The gratitude letter",
+  "description": "One page, written by hand, naming what someone did and what it changed: the most underused powerful object in ordinary life.",
+  "publishedAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "gratitude",
+    "family"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Who is yours addressed to?",
+      "paragraphs": [
+        "Almost everyone has one: the teacher who redirected a life, the friend who appeared in the worst month, the colleague who taught you the trade, the grandparent whose lessons only landed years later. The letter exists in your head, fully written, permanently unsent.",
+        "The gap between the written-in-head letter and the sent one is usually about twenty minutes and one envelope."
+      ]
+    },
+    {
+      "heading": "A structure that works",
+      "paragraphs": [
+        "Keep it simple: what they did, specifically; what it made possible; what you still carry from it. Three short paragraphs are plenty. Do not dilute it with apology for the delay or news about yourself — this document has one subject, and it is them.",
+        "Handwrite it if you can. Handwriting is slow, unreproducible, and unmistakably yours; in a world of forwarded everything, it arrives like an original painting."
+      ]
+    },
+    {
+      "heading": "Send it to the living",
+      "paragraphs": [
+        "We are fluent in gratitude at funerals, where it does the honoured person no good at all. The entire argument of the gratitude letter is timing: say it while it can still be received, reread, and kept in a drawer for hard days.",
+        "Write one this month. Pick the name that surfaced while you read this, before the sensible reasons to postpone assemble themselves."
+      ]
+    }
+  ],
+  "takeaway": "Write the letter in your head no longer: three paragraphs, by hand, sent to the living.",
+  "fiction": false
+}

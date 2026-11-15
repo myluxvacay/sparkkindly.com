@@ -1,0 +1,38 @@
+{
+  "id": "sleep-wind-down-278",
+  "scheduledDate": "2026-03-23",
+  "brand": "grow",
+  "prompt": "Which evening routine best supports a good night's sleep?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Drinking coffee to feel tired later"
+    },
+    {
+      "id": "b",
+      "text": "Bright screens right up until bedtime"
+    },
+    {
+      "id": "c",
+      "text": "Dim lights and screens off an hour before bed"
+    },
+    {
+      "id": "d",
+      "text": "A hard workout in the last ten minutes before bed"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Dim light and a break from screens before bed help your body clock wind down, making it easier to fall asleep.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sleep hygiene",
+      "url": "https://en.wikipedia.org/wiki/Sleep_hygiene",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

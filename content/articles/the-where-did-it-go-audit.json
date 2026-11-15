@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-48",
+  "slug": "the-where-did-it-go-audit",
+  "brand": "save",
+  "contentType": "article",
+  "title": "The \"where did it go?\" audit",
+  "description": "When money seems to vanish between payday and month's end, a calm look at three months of statements usually finds the leak.",
+  "publishedAt": "2026-09-17",
+  "updatedAt": "2026-09-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "budgeting",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Gather the evidence",
+      "paragraphs": [
+        "Open three months of bank statements. You are looking for patterns, not individual embarrassments, so work through them quickly and highlight anything that repeats.",
+        "Repeating payments are the interesting ones: subscriptions, regular takeaways on the same weekday, top-ups, delivery fees. One-off spending is life; repeated spending is a system, and systems can be redesigned."
+      ]
+    },
+    {
+      "heading": "Name the top three leaks",
+      "paragraphs": [
+        "Add up each repeated pattern across the three months. A $9 weekly charge is $117 over a quarter; a $15 twice-weekly habit comes to nearly $400. Seeing the quarterly figure changes how a \"small\" charge feels.",
+        "Pick the three largest patterns and ask one question of each: do I still want this, at this frequency, at this price? Often the answer is yes to the thing but no to the frequency."
+      ]
+    },
+    {
+      "heading": "Fix it at the source",
+      "paragraphs": [
+        "Cancel inside the app or account where the payment started, not just by deleting the app. Then check next month's statement to confirm the charge has actually stopped — cancelled subscriptions occasionally keep billing.",
+        "Expect the audit to feel uncomfortable for an afternoon and relieving for months. The leaks you find are rarely about willpower; they are about systems set up once and never revisited. Revisiting them is the entire skill."
+      ]
+    }
+  ],
+  "takeaway": "Three months of statements and three honest questions will find where the money goes — and most leaks are repeated small charges, not big ones.",
+  "fiction": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-150",
+  "slug": "sock-pair-detectives",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Sock Pair Detectives",
+  "description": "For ages 6–9 with an adult: help with the laundry by hunting down matching sock pairs like a detective.",
+  "publishedAt": "2026-08-31",
+  "updatedAt": "2026-08-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Spread the evidence",
+      "paragraphs": [
+        "Tip the clean socks onto a bed or table. Spread them out so you can see every clue.",
+        "Look at colours, stripes, and sizes. Detectives look before they grab."
+      ]
+    },
+    {
+      "heading": "Match the pairs",
+      "paragraphs": [
+        "Find two socks that match exactly and fold them into a pair. Put finished pairs in a neat row.",
+        "One lonely sock usually means its partner is hiding at the bottom. Check the basket twice."
+      ]
+    }
+  ],
+  "takeaway": "Every sock has a partner, and a good detective never gives up.",
+  "fiction": false,
+  "materials": [
+    "A basket of clean socks",
+    "A bed or table for sorting"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only sort clean laundry, and let your adult check your detective work."
+  ],
+  "screenFreeExtension": "Time your detective work: can you pair the whole basket before a song finishes?"
+}

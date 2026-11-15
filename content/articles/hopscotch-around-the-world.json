@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-122",
+  "slug": "hopscotch-around-the-world",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Hopscotch around the world: one court, many names",
+  "description": "In France it is Marelle, in Spain Rayuela — and the chalk court is the same from Paris to Manila. Hopscotch is a world traveller drawn in chalk.",
+  "publishedAt": "2026-08-16",
+  "updatedAt": "2026-08-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "patterns"
+  ],
+  "sources": [
+    {
+      "title": "Hopscotch — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hopscotch",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The court and the marker",
+      "paragraphs": [
+        "Draw a court of numbered squares — singles and pairs, usually eight to ten of them — ending in a safe “home”. Toss your marker into square one, then hop the court skipping the marked square: one foot in single squares, two feet in the pairs, turn at the top, and collect your marker on the way back.",
+        "A marker that lands on a line, a foot that touches a line, a hop into the marked square — any of these ends your turn. It is a game of balance, aim and honesty, playable by one player or ten."
+      ]
+    },
+    {
+      "heading": "A court drawn on every continent",
+      "paragraphs": [
+        "Hopscotch is found all over the world under local names and local court designs: Marelle in France, Rayuela in Spanish-speaking countries, courts scratched in schoolyards from India to Brazil. Some courts spiral; some add a “heaven” at the top that you must reach without a single fault.",
+        "Tradition claims very old roots for the game — courts resembling hopscotch have been linked to Roman times — but its true history is the schoolyard itself: a game so well designed that no generation has managed to improve it out of existence."
+      ]
+    },
+    {
+      "heading": "Try it: design your own court",
+      "paragraphs": [
+        "Chalk a classic court and play a full championship: each player must complete the court with the marker in every square, one fault and your turn passes. Then design a house court — add a spiral, a jump-across gap, a square where you must turn around twice.",
+        "Photograph your design before the rain takes it, and keep a court album. Chalk is temporary; that is the point. Every playground artist signs their work knowing the weather will clear the gallery."
+      ]
+    }
+  ],
+  "takeaway": "Hopscotch is a world language spoken in chalk: draw the court anywhere on Earth and somebody nearby knows how to play.",
+  "fiction": false
+}

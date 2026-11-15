@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-34",
+  "slug": "monty-hall-switch-or-stay",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Monty Hall: The Door Puzzle That Fools Almost Everyone",
+  "description": "Three doors, one car, two goats, and a host who knows everything - switching doors doubles your chance of winning, and here is why.",
+  "publishedAt": "2026-09-06",
+  "updatedAt": "2026-09-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "probability",
+    "logic-puzzles"
+  ],
+  "sources": [
+    {
+      "title": "Monty Hall problem - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Monty_Hall_problem",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The game",
+      "paragraphs": [
+        "A game show offers you three doors. Behind one is a car; behind the other two are goats. You pick door 1. The host, who knows where the car is, opens door 3 to reveal a goat, and offers you the chance to switch to door 2. Most people feel the two remaining doors must be fifty-fifty. They are not. Switching wins two times out of three.",
+        "When this puzzle was published in a magazine in 1990, thousands of readers - including professional mathematicians - wrote in to insist the answer was wrong. It is a wonderful reminder that probability can be certain and still feel impossible."
+      ]
+    },
+    {
+      "heading": "Where the missing third goes",
+      "paragraphs": [
+        "When you first picked door 1, you had a 1 in 3 chance of choosing the car, and a 2 in 3 chance of choosing a goat. That 2 in 3 does not vanish when the host opens a door. The host can always reveal a goat, and never reveals the car, so his choice quietly concentrates all of that 2 in 3 onto the one door he leaves closed for you.",
+        "If the 50-50 feeling still nags, scale the puzzle up. Imagine 100 doors: you pick one, and the host opens 98 goat doors, leaving one other closed. Your first pick is still just 1 in 100. The surviving door carries the other 99 in 100. Switching now feels obviously right - and it is the same logic with three doors."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Play it at home with three cups and a coin hidden under one. Have a partner play the host, always revealing an empty cup after your first pick. Play 30 rounds always staying, then 30 rounds always switching, and tally the wins.",
+        "The switch column should pull clearly ahead. Small samples wobble, so if your first experiment is close, run it again - the two-to-one pattern is patient and will show itself."
+      ]
+    }
+  ],
+  "takeaway": "Switching wins two times out of three, because your first pick was probably wrong and the host's reveal quietly hands you the other doors' chances combined.",
+  "fiction": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-53",
+  "slug": "three-hats-deduction",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Three Hats: Deducing What You Cannot See",
+  "description": "Three friends, three white hats, and a long silence - then one of them suddenly knows. This puzzle shows how reasoning about other minds works.",
+  "publishedAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Induction puzzles - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Induction_puzzles",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The setup",
+      "paragraphs": [
+        "A teacher shows three friends a bag containing three white hats and two black hats. The friends close their eyes; the teacher puts a hat on each of them - in fact, a white hat on all three - and hides the rest. Each friend can see the others' hats but not their own. The teacher asks: 'If you know the colour of your hat, say so.'",
+        "Nobody speaks. A minute passes. Nobody speaks. Then, at nearly the same moment, all three say: 'Mine is white.' Each of them was right. The interesting question is not the answer - it is what the silence told them."
+      ]
+    },
+    {
+      "heading": "Silence is information",
+      "paragraphs": [
+        "Follow one friend's reasoning. Suppose she saw two black hats. She would know at once that hers must be white, since only two black hats exist. She sees no such thing - and crucially, neither does anyone else, because nobody spoke immediately. That first silence rules out the two-black world entirely.",
+        "So consider the next possibility: she sees one black hat and one white. She reasons: 'If my hat were also black, then the friend in white would be looking at two black hats and would have known instantly. He did not speak - so my hat cannot be black; it must be white.' She would speak after the first round of silence. But nobody does. That second silence rules out the one-black world too. Only one possibility remains: everyone is looking at two white hats - so her own is white as well."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Play it with three people, real hats or cards held to foreheads: use three red cards and two black cards from a deck, deal reds to everyone, and agree that nobody may speak until they can prove their colour. Time the silences - you will feel each round eliminate a world.",
+        "Then read about the muddy children puzzle, this puzzle's famous cousin, where a whole class of children reasons in exactly the same ladder of silences. It is one of the clearest windows into how groups can know things that no individual could know alone."
+      ]
+    }
+  ],
+  "takeaway": "Silence carries information: each moment of nobody knowing rules out a whole world, until only one possibility is left.",
+  "fiction": false
+}

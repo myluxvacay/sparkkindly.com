@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-116",
+  "slug": "the-little-squares-that-link-the-world",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The little squares that link the world",
+  "description": "QR codes were invented to track car parts in Japanese factories; three decades later they open menus, tickets, payments and doors everywhere.",
+  "publishedAt": "2026-07-31",
+  "updatedAt": "2026-07-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "technology",
+    "computing"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: QR code",
+      "url": "https://en.wikipedia.org/wiki/QR_code",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Born on a factory floor",
+      "paragraphs": [
+        "By the early 1990s, Japanese car-parts makers had outgrown ordinary barcodes, which store only a small string of characters in one direction. In 1994, engineer Masahiro Hara and his team at Denso Wave set out to build a code that could hold far more information and be read at speed from any angle.",
+        "The result was the QR — Quick Response — code. Where a barcode stores data in the widths of its lines, a QR code stores it in a grid of squares, in two directions at once, holding hundreds of times more: thousands of characters, including Japanese script."
+      ]
+    },
+    {
+      "heading": "Clever squares",
+      "paragraphs": [
+        "Look closely and you can see its design thinking. The three large squares in the corners tell a scanner where the code is and which way up it sits, so it reads correctly upside down or at an angle. Extra alignment patterns correct for bending and distortion.",
+        "Best of all, QR codes carry spare copies of their data woven through the pattern. A code can be torn, dirty or partly covered — up to about 30 percent damaged — and still scan perfectly. That toughness is why codes survive on posters, packaging and pavement."
+      ]
+    },
+    {
+      "heading": "A gift that spread",
+      "paragraphs": [
+        "Denso Wave chose to publish the specification and not enforce its patent, letting anyone create and use QR codes freely. Adoption was gradual until phone cameras learned to scan them natively — and then, helped by a pandemic-era need for touchless menus and payments, the little squares became part of the furniture of daily life.",
+        "It is a neat moral for inventors: sometimes the fastest way for your idea to conquer the world is to give it away."
+      ]
+    }
+  ],
+  "takeaway": "QR codes pack data in two dimensions, survive damage by carrying spare copies, and spread worldwide because their makers shared them freely.",
+  "fiction": false
+}

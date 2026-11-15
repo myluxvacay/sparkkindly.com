@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-113",
+  "slug": "keep-a-done-list",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Keep a done list",
+  "description": "To-do lists show what is left. A done list shows what you have actually moved, and some days that is the list you need.",
+  "publishedAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "motivation",
+    "focus"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The list that only grows",
+      "paragraphs": [
+        "A to-do list can feel like it never shrinks, because finished items vanish while new ones arrive. Your effort disappears from view the moment it succeeds.",
+        "A done list fixes the accounting. Every completed thing, large or small, gets written down and stays there, visible proof of a day that was not wasted."
+      ]
+    },
+    {
+      "heading": "Write it at the speed of life",
+      "paragraphs": [
+        "Keep the done list wherever it is easiest: the back of your planner, a notes app, a whiteboard. Add things as you finish them, including the unglamorous: forms sent, calls made, rooms tidied.",
+        "At the end of the week, read it once. You will usually find the week was fuller than your memory claimed, especially the parts that helped other people."
+      ]
+    }
+  ],
+  "takeaway": "Track what you finished, not only what remains, and let the record encourage you.",
+  "fiction": false
+}

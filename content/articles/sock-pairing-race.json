@@ -1,0 +1,65 @@
+{
+  "id": "kids-bulk-61",
+  "slug": "sock-pairing-race",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Sock Pairing Race",
+  "description": "For ages 6–9 with an adult: race the laundry basket by matching clean socks into pairs against the clock.",
+  "publishedAt": "2026-10-17",
+  "updatedAt": "2026-10-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Tip out the socks",
+      "paragraphs": [
+        "Tip a basket of clean socks onto a rug. Every sock has exactly one twin hiding in the pile. Your job is to reunite them.",
+        "Matching means looking at colour, pattern, and size all at once. A stripy sock's twin has the same stripes in the same order."
+      ]
+    },
+    {
+      "heading": "Race the clock",
+      "paragraphs": [
+        "Ask your adult to set a timer for two minutes. Pair as many socks as you can, rolling each finished pair into a ball.",
+        "When the timer sings, count your pairs. Next time, try to beat your own record — you are racing yourself, not anyone else."
+      ]
+    },
+    {
+      "heading": "You are helping",
+      "paragraphs": [
+        "This game is secretly a real household job. Matched socks make mornings faster for the whole family.",
+        "Scientists call what you did sorting and matching. The laundry calls it very helpful indeed."
+      ]
+    }
+  ],
+  "takeaway": "Matching socks into pairs is a race, a puzzle, and a real way to help your family.",
+  "fiction": false,
+  "materials": [
+    "A basket of clean odd socks",
+    "A timer"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only use clean laundry, with tidy hands. This is a helping game — the socks go back in the family drawers afterwards."
+  ],
+  "screenFreeExtension": "Sort other pairs at home — shoes by the door, gloves in the drawer — into their matching twos."
+}
