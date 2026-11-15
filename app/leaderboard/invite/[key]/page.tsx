@@ -60,7 +60,7 @@ export default async function LeaderInvitePage({ params, searchParams }: Props) 
           then come back.
         </p>
       ) : (
-        <form method="post" action={`/leaderboard/invite/${key}/`} className="prose admin-form">
+        <form method="post" action={`/leaderboard/invite/${key}/send/`} className="prose admin-form">
           <fieldset>
             <legend>Choose one of your circles</legend>
             {mine.map((c) => (
