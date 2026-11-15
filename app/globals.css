@@ -93,3 +93,138 @@ textarea:focus-visible,select:focus-visible,[tabindex="-1"]:focus-visible{outlin
 .board-points{margin-left:auto;text-align:right;font-size:13px;color:var(--muted)}
 .board-points strong{display:block;font-size:17px;color:var(--ink)}
 .board-invite{font-size:13px;white-space:nowrap}
+
+/* Teen UI pass (owner request, 15 Nov 2026): the evaluation's quick wins and presentation moves.
+   Palette and brand hues are unchanged; they are used at full strength, type floors are raised,
+   headings move to Inter (Playfair stays for the wordmark, story headlines and the mission),
+   and a dark scheme follows the reader's own setting. */
+
+/* Type floors: nothing a reader is asked to read sits under 11px, card text breathes. */
+.eyebrow{font-size:11px}
+.world-card p{font-size:14px}
+.content-card p{font-size:15px}
+.card-meta{font-size:11px}
+.quiz-preview p:not(.eyebrow){font-size:14px}
+.section-heading>p{font-size:14px}
+.pill{font-size:11px}
+.footer nav a{font-size:12px}
+
+/* UI headings in Inter; Playfair remains the voice of the wordmark, stories and the manifesto. */
+h1,h2,h3{font-family:var(--sans);font-weight:800;letter-spacing:-.6px}
+.wordmark{font-family:var(--serif);font-weight:500}
+.article-heading h1,.story-copy h2,.mission h2{font-family:var(--serif);font-weight:400;letter-spacing:-1px}
+.quiz-form legend{font-family:var(--sans);font-weight:700;letter-spacing:-.3px}
+
+/* World colour at full strength: chips and world headers stop whispering. */
+.brand-label{background:var(--gold);color:#302438}
+.brand-label.sage{background:var(--sage);color:#17352f}
+.brand-label.coral{background:var(--coral);color:#4a1717}
+.brand-label.sky{background:var(--sky);color:#10283f}
+.brand-intro{background:var(--gold)}
+.brand-intro.intro-sage{background:var(--sage)}
+.brand-intro.intro-coral{background:var(--coral)}
+.brand-intro.intro-sky{background:var(--sky)}
+.brand-intro .eyebrow{color:#302438}
+.brand-intro h1{color:#241529}
+.brand-intro>p:last-of-type{color:#302438}
+.world-icon{background:var(--gold)}
+.world-sage .world-icon{background:var(--sage)}
+.world-coral .world-icon{background:var(--coral)}
+.world-sky .world-icon{background:var(--sky)}
+
+/* The play surface: a plum panel with gold accents; options and the verdict stay light cards on it. */
+.quiz-panel{background:var(--plum);border-color:#432052;color:#fdf6ec}
+.quiz-panel .eyebrow{color:var(--gold)}
+.quiz-panel a{color:#ffe087}
+.quiz-panel .button{background:var(--gold);border-color:var(--gold);color:#3a2444}
+.quiz-panel .button:hover{background:#ffe087}
+.quiz-panel .text-button{color:#ffe087}
+.quiz-form legend{color:#fdf6ec}
+.option{color:var(--ink)}
+.option.selected{border-color:var(--gold);box-shadow:inset 0 0 0 2px var(--gold);background:#fdf3d3}
+.quiz-note{color:#e7d7f2}
+.quiz-panel .difficulty{color:var(--gold)}
+.quiz-panel .difficulty-bar{background:#8a639c}
+.quiz-panel .difficulty-bar.filled{background:var(--gold)}
+.quiz-result{background:#fffdf9;color:var(--ink)}
+.quiz-result h3,.quiz-result h2{color:var(--plum)}
+
+/* Motion: a small vocabulary, all of it feedback. The reduced-motion block above kills every
+   animation and transition for readers who ask for that, including these. */
+@keyframes sk-pop{0%{transform:scale(.96);opacity:.4}60%{transform:scale(1.015)}100%{transform:scale(1);opacity:1}}
+@keyframes sk-rise{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes sk-bar{from{transform:scaleY(.3)}to{transform:scaleY(1)}}
+.quiz-result{animation:sk-pop .28s ease-out}
+.quiz-result{position:relative;overflow:visible}
+.quiz-result::after{content:'';position:absolute;top:10px;right:16px;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:14px 6px 0 var(--gold),-12px 12px 0 var(--coral),22px -4px 0 var(--sage),-20px -6px 0 var(--sky),30px 12px 0 var(--coral);opacity:0;animation:sk-burst .55s ease-out .05s}
+@keyframes sk-burst{0%{opacity:0;transform:scale(.4)}35%{opacity:1}100%{opacity:0;transform:scale(1.5) translateY(-8px)}}
+.difficulty-bar.filled{transform-origin:bottom;animation:sk-bar .3s ease-out}
+.difficulty-bar.filled:nth-child(2){animation-delay:.06s}
+.difficulty-bar.filled:nth-child(3){animation-delay:.12s}
+.content-card,.world-card{animation:sk-rise .35s ease-out}
+
+/* Phones keep their pictures: a text-only feed was the loudest "boring website" signal. */
+@media(max-width:700px){.content-card .image-link{display:block}}
+
+/* Circle scores become a board, matching the public leaderboard's rows. */
+.score-periods{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 22px}
+.score-periods a{display:inline-flex;align-items:center;min-height:44px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:14px;font-weight:600;color:var(--plum);background:#fffdf9}
+.score-periods a[aria-current]{background:var(--plum);border-color:var(--plum);color:#fff}
+.score-table{border-collapse:separate;border-spacing:0 10px;width:100%}
+.score-table caption{text-align:left;font-weight:600;color:var(--muted);margin-bottom:4px}
+.score-table th,.score-table td{padding:14px 18px;background:#fffdf9;border-block:1px solid var(--line);text-align:left;font-size:15px}
+.score-table th:first-child,.score-table td:first-child{border-left:1px solid var(--line);border-radius:7px 0 0 7px}
+.score-table th:last-child,.score-table td:last-child{border-right:1px solid var(--line);border-radius:0 7px 7px 0;text-align:right}
+.score-table thead th{background:transparent;border:0;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px;padding-block:4px}
+.score-table tbody tr.you th,.score-table tbody tr.you td{border-color:var(--plum);background:#f5eef7}
+.score-rank{display:inline-grid;place-items:center;min-width:38px;height:38px;border-radius:50%;background:#f2ebf6;color:var(--plum);font-weight:800}
+.score-rank.top{background:var(--gold);color:#3a2444}
+.score-you{display:inline-block;margin-left:8px;background:var(--plum);color:#fff;border-radius:999px;font-size:11px;font-weight:700;padding:2px 9px;vertical-align:2px}
+
+/* Result card (gap: sharing an artifact, not a bare link). */
+.result-card{margin-top:22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.result-card img{width:150px;height:auto;border-radius:8px;border:1px solid #432052}
+.result-card p{margin:0;font-size:13px;color:#e7d7f2;max-width:300px}
+.result-card a{font-weight:700}
+
+/* Dark scheme: the same brand after dark. Plum deepens, cream becomes the text colour, gold stays
+   the accent. Light cards that carry dark text by design (options, verdicts, form inputs, the
+   grown-ups panels) keep their light ground with their text colour pinned. */
+@media (prefers-color-scheme: dark){
+  :root{--paper:#1e1326;--ink:#f4edf3;--muted:#c9b6cb;--line:#483259;--plum:#dfaef0;--cream:#2a1a36}
+  .site-header{background:var(--paper);border-color:var(--line)}
+  .main-nav{background:var(--paper)}
+  .menu-toggle{border-color:var(--line);color:var(--plum)}
+  .button{background:#7a4495;border-color:#7a4495;color:#fff}
+  .button:hover{background:#8f56ab}
+  .quiz-panel .button{background:var(--gold);border-color:var(--gold);color:#3a2444}
+  .world-card{background:#2a1a36;border-color:var(--line)}
+  .world-card p{color:var(--muted)}
+  .world-number{color:var(--muted)}
+  .latest-section{background:#241529;border-color:var(--line)}
+  .footer{background:#180d20;border-color:var(--line)}
+  .footer-bottom{border-color:var(--line)}
+  .footer-bottom p,.footer-top p{color:var(--muted)}
+  .quiz-feature{background:#2a1a36;border-color:var(--line)}
+  .quiz-preview{background:#1e1326}
+  .board-row{background:#2a1a36}
+  .board-row.you{background:#3a2350;border-color:var(--plum)}
+  .board-name{color:var(--ink)}
+  .score-table th,.score-table td{background:#2a1a36}
+  .score-table thead th{background:transparent}
+  .score-table tbody tr.you th,.score-table tbody tr.you td{background:#3a2350}
+  .score-periods a{background:#2a1a36}
+  .score-periods a[aria-current]{background:#7a4495;border-color:#7a4495;color:#fff}
+  .score-you{background:#7a4495}
+  .circles-feature{background:#1d2a24;border-color:#33503f}
+  .circles-feature p{color:#c4d6cc}
+  .circles-points li{background:#26362d;border-color:#33503f;color:#c4d6cc}
+  .archive-grid article{background:#2a1a36}
+  .grown-ups,.takeaway,.activity-info,.money-disclaimer{color:#302438}
+  .grown-ups p,.takeaway p,.activity-info p{color:#302438}
+  .option,.quiz-result{color:#302438}
+  .admin-form input,.admin-form select,.admin-form textarea,.admin-inline input{color:#302438;background:#fff}
+  .share-buttons a{background:#2a1a36;color:var(--plum)}
+  .preview-notice{background:#120818}
+  .topic-index a{color:var(--plum)}
+}
