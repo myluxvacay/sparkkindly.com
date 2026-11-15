@@ -32,8 +32,10 @@ const playBody = z.object({
   options: z.array(choice).catch([]),
   items: z.array(choice).catch([]),
   clues: list.catch([]),
+  difficulty: opt(z.enum(['easy', 'medium', 'hard'])),
 });
 export type PlayView = z.infer<typeof playBody>;
+export type Difficulty = NonNullable<PlayView['difficulty']>;
 
 const image = z.object({ src: opt(text), alt: z.string().catch(''), width: opt(z.number()), height: opt(z.number()), credit: opt(text), rights: opt(text) });
 export type ImageView = z.infer<typeof image>;
