@@ -65,6 +65,7 @@ const CAPS: Record<Capability, true> = {
   marketing_email: true,
   invite: true,
   profile_page: true,
+  public_leaderboard: true,
 };
 const ALL = Object.keys(CAPS) as Capability[];
 const without = (...no: Capability[]) => ALL.filter((c) => !no.includes(c));

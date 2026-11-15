@@ -17,6 +17,9 @@ export const commentsEnabled = (): boolean => accountsEnabled() && ['true', '1']
 // Contributors (Project 8) need accounts AND their own switch; with either unset no contribute page, contributor page,
 // byline, agent route or admin page exists.
 export const contributorsEnabled = (): boolean => accountsEnabled() && ['true', '1'].includes(process.env.CONTRIBUTORS_ENABLED ?? '');
+// Public leaderboard (Project 4.11, ADR 0004) needs accounts AND its own switch; with either unset the /leaderboard/
+// route and the settings section do not exist.
+export const leaderboardEnabled = (): boolean => accountsEnabled() && ['true', '1'].includes(process.env.LEADERBOARD_ENABLED ?? '');
 // Sponsorship (Project 6) has its own switch, independent of accounts; with it unset no sponsor line, /go/ route,
 // /sponsorship/ page or admin page exists.
 export const sponsorshipEnabled = (): boolean => ['true', '1'].includes(process.env.SPONSORSHIP_ENABLED ?? '');
