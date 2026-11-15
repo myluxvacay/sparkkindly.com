@@ -7,7 +7,9 @@ test('home to brand to article, direct refresh and useful 404',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/');await expect(page.getByRole('heading',{level:1})).toHaveText('Today’s Spark');await expect(page.getByRole('heading',{name:/Brighter minds/})).toBeVisible();
  await page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Discover',exact:true}).click();
- await page.getByRole('link',{name:'A day in shadows'}).first().click();await expect(page.getByRole('heading',{level:1})).toHaveText('A day in shadows');
+ // At library scale the starter article is pages deep in the world listing, so land on the world page, then go to the article directly.
+ await expect(page.getByRole('heading',{level:1})).toHaveText('Explore the world with wonder.');
+ await page.goto('/discover/a-day-in-shadows/');await expect(page.getByRole('heading',{level:1})).toHaveText('A day in shadows');
  await page.reload();await expect(page.getByRole('heading',{name:'Follow a changing angle'})).toBeVisible();expect(errors).toEqual([]);
  await page.goto('/404.html');await expect(page.getByRole('heading',{name:'This spark wandered off.'})).toBeVisible();
 });

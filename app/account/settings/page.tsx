@@ -28,6 +28,11 @@ const RESULTS: Record<string, { text: string; ok: boolean; form?: 'prefs' | 'pin
     ok: false,
     form: 'leaderboard',
   },
+  'lb-taken': {
+    text: 'That public name is already taken by another member. Please choose another name.',
+    ok: false,
+    form: 'leaderboard',
+  },
   'lb-invalid': {
     text: 'Please add a public name (up to 30 characters) and pick an avatar, then save again.',
     ok: false,

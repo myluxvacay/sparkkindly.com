@@ -42,3 +42,11 @@ dashboard; no email address is exposed at any point.
   expand-only with a documented rollback; every opt-in defaults off.
 - **Open.** Whether a monthly board joins the all-time board after launch, and whether community circles get
   public boards of their own — both the owner's call, neither blocks this work.
+
+## Addendum — 15 November 2026
+
+Public display names are unique across members, compared case-insensitively (the owner's decision,
+resolving the pre-launch review's open question about duplicate names). The settings save refuses a
+colliding name as "taken" without writing, and the partial unique index in migration 037 is the
+backstop. An opted-out member's stored name stays reserved, matching the keep-name-on-opt-out
+behavior above.

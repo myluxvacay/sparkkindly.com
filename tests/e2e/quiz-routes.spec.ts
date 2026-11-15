@@ -7,8 +7,11 @@ test.afterAll(resetExtras);
 
 const starters = fs
   .readdirSync('content/quizzes')
-  .map((f) => JSON.parse(fs.readFileSync(`content/quizzes/${f}`, 'utf8')) as { id: string; brand: string; reviewStatus: string })
-  .filter((q) => q.reviewStatus === 'approved');
+  .map((f) => JSON.parse(fs.readFileSync(`content/quizzes/${f}`, 'utf8')) as { id: string; brand: string; reviewStatus: string; scheduledDate: string })
+  .filter((q) => q.reviewStatus === 'approved')
+  // The archive lists published quizzes only: a quiz appears on its scheduled date, and the seed library now
+  // schedules quizzes months ahead, so not-yet-due quizzes are excluded here just as the archive excludes them.
+  .filter((q) => q.scheduledDate <= new Date().toISOString().slice(0, 10));
 
 test('/quiz/ shows the latest quiz with an answer form and canonical to its item page', async ({ page }) => {
   await page.goto('/quiz/');
@@ -26,7 +29,7 @@ test('answering from /quiz/ lands on the item page with the verdict', async ({ p
 
 test('the archive links every published starter quiz across its pages', async ({ page }) => {
   const seen = new Set<string>();
-  for (let n = 1; n <= 10; n++) {
+  for (let n = 1; n <= 60; n++) {
     await page.goto(`/quiz/archive/?page=${n}`);
     for (const h of await page.locator('main a[href^="/"]').evaluateAll((as) => as.map((a) => a.getAttribute('href') ?? ''))) seen.add(h);
     if ((await page.getByRole('link', { name: /Older/ }).count()) === 0) break;
