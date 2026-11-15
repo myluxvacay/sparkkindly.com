@@ -39,7 +39,7 @@ function ScoreTable({ board, caption }: { board: Board; caption: string }) {
             </td>
             <th scope="row">
               {r.name}
-              {r.you && <span className="score-you">You</span>}
+              {r.you && <span className="score-you">(you)</span>}
             </th>
             <td>{r.points}</td>
           </tr>
