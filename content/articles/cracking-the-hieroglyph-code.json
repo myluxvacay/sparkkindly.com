@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-105",
+  "slug": "cracking-the-hieroglyph-code",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Cracking the hieroglyph code",
+  "description": "For over a thousand years nobody could read ancient Egyptian writing — until a black stone, a patient scholar and a list of kings' names unlocked it.",
+  "publishedAt": "2026-07-05",
+  "updatedAt": "2026-07-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "ancient-history",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Rosetta Stone",
+      "url": "https://en.wikipedia.org/wiki/Rosetta_Stone",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Egyptian hieroglyphs",
+      "url": "https://en.wikipedia.org/wiki/Egyptian_hieroglyphs",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A language falls silent",
+      "paragraphs": [
+        "Egyptians wrote in hieroglyphs for more than 3,000 years. But as Egypt came under Greek and then Roman rule, the old script faded from use, and by about AD 400 the last person who could read it had died. For the next fourteen centuries, the temples' walls were covered in writing that nobody understood.",
+        "Many assumed the signs were pure symbols, each picture standing for an idea. The truth, when it came, was cleverer: hieroglyphs mix signs for sounds, signs for whole words, and silent helper signs that clarify meaning."
+      ]
+    },
+    {
+      "heading": "The stone with three scripts",
+      "paragraphs": [
+        "In 1799, soldiers rebuilding a fort near the town of Rosetta in Egypt dug up a black stone slab carrying the same decree in three scripts: hieroglyphs, a everyday Egyptian script, and Greek — which scholars could read. Here, at last, was a crib sheet.",
+        "Progress was slow until the French scholar Jean-François Champollion, who knew Coptic — the descendant of the ancient Egyptian language — attacked the problem. In 1822, comparing the names of rulers written inside oval rings called cartouches, he realised the signs recorded sounds, and the code broke open."
+      ]
+    },
+    {
+      "heading": "Egypt speaks again",
+      "paragraphs": [
+        "Within decades, scholars could read letters, tax receipts, poems, jokes and prayers written thousands of years earlier. Egypt stopped being a land of silent monuments and became a civilisation with a voice.",
+        "The Rosetta Stone now sits in the British Museum, and its lesson travels well: no code is unbreakable if you can find two versions of the same message — and one very stubborn reader."
+      ]
+    }
+  ],
+  "takeaway": "The Rosetta Stone's three matching scripts let Champollion prove hieroglyphs recorded sounds, giving ancient Egypt its voice back.",
+  "fiction": false
+}

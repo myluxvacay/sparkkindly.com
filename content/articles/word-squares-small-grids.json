@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-85",
+  "slug": "word-squares-small-grids",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Word squares: tiny grids that read both ways",
+  "description": "In a word square, the rows and columns spell the same words, like a crossword that mirrors itself. A three-by-three square is the perfect place to start.",
+  "publishedAt": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "patterns"
+  ],
+  "sources": [
+    {
+      "title": "Word square — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Word_square",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A grid with a mirror inside",
+      "paragraphs": [
+        "Write these three words in a stack: BAT, ARE, TEN. Now read down the columns instead of across. The first column spells BAT, the second ARE and the third TEN — the grid reads the same in both directions. That is a word square.",
+        "Word squares are old. The most famous, the SATOR square, was carved in Roman times with five Latin words — SATOR, AREPO, TENET, OPERA, ROTAS — arranged so they read across, down, and even backwards. It has been found scratched into walls from Pompeii to England."
+      ]
+    },
+    {
+      "heading": "Why squares are tricky",
+      "paragraphs": [
+        "Every letter does double duty: it belongs to a row word and a column word at the same time. Choosing the first word fixes the first letter of every other word, so one greedy choice can paint you into a corner three rows later.",
+        "That is also why squares are such good training for crosswords and Scrabble. You learn to think about words by their skeletons — which letters they start with, and which letters they can offer to their neighbours."
+      ]
+    },
+    {
+      "heading": "Try it: build a three-by-three",
+      "paragraphs": [
+        "Start with the middle. In a three-letter square, a first word ending in a common letter, like T or E, gives the third row an easier start. If you get stuck, change the first word rather than forcing the last row.",
+        "Graduation challenge: a four-by-four square. CARD, AREA, REAR, DARK is a lovely one to check letter by letter — read the columns and confirm it works, then try to build a different one of your own."
+      ]
+    }
+  ],
+  "takeaway": "A word square is a crossword folded in half: every word you place must agree with itself in two directions.",
+  "fiction": false
+}

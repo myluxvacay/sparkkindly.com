@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-52",
+  "slug": "the-star-nosed-mole",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The star-nosed mole's remarkable nose",
+  "description": "Ringed with 22 tiny pink feelers, the star-nosed mole owns one of the fastest, most sensitive noses on Earth.",
+  "publishedAt": "2026-09-11",
+  "updatedAt": "2026-09-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Star-nosed mole",
+      "url": "https://en.wikipedia.org/wiki/Star-nosed_mole",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A star that feels, not smells",
+      "paragraphs": [
+        "The star on this mole's face is not for smelling. Its 22 fleshy rays are touch organs, covered in more than 25,000 minute sensory receptors — far more than cover your entire hand. The mole lives in dark tunnels and wetlands where eyes are nearly useless, so it reads the world by touch instead.",
+        "As it travels, the mole presses its star against the ground many times a second, taking tiny tactile snapshots. The outer rays sweep and search, while the small central pair examines anything interesting in fine detail, much the way your eyes flick across a page and then settle on one word."
+      ]
+    },
+    {
+      "heading": "The fastest eater",
+      "paragraphs": [
+        "All that sensing pays off in speed. The star-nosed mole can identify a morsel and decide whether it is food in a fraction of a second, and it holds a record as one of the fastest-eating mammals known. It can even sniff underwater, blowing out bubbles onto an object and breathing them back in to catch its scent.",
+        "For an animal that hunts tiny worms and insect larvae in mud and shallow water, hesitation means hunger. The star turns every encounter into instant information."
+      ]
+    }
+  ],
+  "takeaway": "The star-nosed mole explores by touch with over 25,000 sensors, letting it find and judge food in a fraction of a second.",
+  "fiction": false
+}

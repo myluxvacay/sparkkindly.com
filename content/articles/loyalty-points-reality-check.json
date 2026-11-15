@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-72",
+  "slug": "loyalty-points-reality-check",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Points, stamps, and what they are really worth",
+  "description": "Loyalty points feel like a bonus, but they are a currency with an exchange rate set by the shop. Do the conversion before you chase them.",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "understanding-offers",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Find the exchange rate",
+      "paragraphs": [
+        "Points are worth whatever they buy. If 100 points earn you $1 off, each point is worth one cent, and earning one point per dollar means the scheme returns about 1% of your spending — eventually, and only at that shop.",
+        "That is not nothing, but it reframes the chase: spending an extra $20 to \"earn\" points returns roughly 20 cents of value. Points should reward shopping you were doing anyway, never direct it."
+      ]
+    },
+    {
+      "heading": "The traps in the small print",
+      "paragraphs": [
+        "Points often expire, can be devalued when the shop changes the conversion rate, and sometimes require a minimum spend to unlock. A balance you never quite reach is a loan of your loyalty at zero interest — to the shop.",
+        "Double-points events deserve the same maths as sales: the discount is the points' real value, not the glittering headline number of points themselves."
+      ]
+    },
+    {
+      "heading": "Use schemes passively",
+      "paragraphs": [
+        "The healthy relationship with loyalty schemes is passive: carry the card for shops you already use, collect what falls your way, and spend points on things you would have bought. The moment a scheme changes where you shop or what you buy, it is working for the shop, not for you.",
+        "One exception is worth making: points and stamps that are about to expire. Spending a nearly expired balance on something genuinely useful is recovering your own money. Set a reminder rather than letting the balance evaporate."
+      ]
+    }
+  ],
+  "takeaway": "Convert points to money before valuing them — usually about a cent each — and let schemes reward your normal shopping rather than steer it.",
+  "fiction": false
+}

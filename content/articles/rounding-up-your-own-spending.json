@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-132",
+  "slug": "rounding-up-your-own-spending",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Rounding up your own spending",
+  "description": "Sweeping the small change from everyday purchases into savings is a painless habit that quietly builds a cushion.",
+  "publishedAt": "2026-08-16",
+  "updatedAt": "2026-08-16",
+  "tags": [
+    "saving",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "How the trick works",
+      "paragraphs": [
+        "Each time you spend, round the amount up to the next whole unit and move the difference into savings. A coffee at 3.60 sends 0.40 to the pot; a shop at 17.25 sends 0.75. No single transfer is noticeable, which is exactly the point.",
+        "Some banking apps do this automatically. If yours does not, a weekly manual version works nearly as well: scan the week's spending, round up the total, and move that amount in one go."
+      ]
+    },
+    {
+      "heading": "Why painless works",
+      "paragraphs": [
+        "Saving schemes fail when they hurt. Rounding up succeeds because the amounts sit below the threshold of attention, the same reason loose change disappears unnoticed when it is not gathered.",
+        "Over a year of ordinary spending, the gathered change commonly reaches a few hundred in local currency: enough for a modest emergency cushion, a festive-season fund, or the first milestone of a bigger goal."
+      ]
+    },
+    {
+      "heading": "Give the pot a job",
+      "paragraphs": [
+        "Name the destination before you start, even if it is simply the beginnings of a rainy-day fund. Money swept into a pot with a purpose tends to stay there; money swept into nowhere gets swept back.",
+        "Check in monthly, enjoy the total, and resist upgrading the rule until it feels effortless. Habits that stay small stay kept, and kept habits are the whole game."
+      ]
+    }
+  ],
+  "takeaway": "Round up each purchase, sweep the change to a named pot, and let money too small to miss become too useful to ignore."
+}

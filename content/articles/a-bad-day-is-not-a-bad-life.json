@@ -1,0 +1,56 @@
+{
+  "id": "grow-bulk-60",
+  "slug": "a-bad-day-is-not-a-bad-life",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "A bad day is not a bad life",
+  "description": "On the worst days the mind generalises wildly; a few small anchors can keep one hard day in its proper size.",
+  "publishedAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "resilience",
+    "stress"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Why bad days feel bigger than they are",
+      "paragraphs": [
+        "When we are tired, ill, disappointed or overwhelmed, the mind tends to stretch the feeling in both directions: it has always been like this, and it will always be like this. That is not insight. It is what an exhausted brain does with limited information.",
+        "The day itself is usually smaller than the story about it. Something specific went wrong, at a specific time, for specific reasons — and specific things can be met, mended or simply waited out."
+      ]
+    },
+    {
+      "heading": "Shrink the day back to its edges",
+      "paragraphs": [
+        "Name the actual events, plainly: the meeting went badly, the news was disappointing, sleep was poor. A list of facts is almost always less frightening than the fog they arrived in, and it often reveals that one or two things, not everything, are wrong.",
+        "Then ask the smallest useful question: what would help even slightly in the next hour? Food, water, daylight, a shower, a message to someone kind. Bad days rarely need solutions. They need basic care and the passage of time."
+      ]
+    },
+    {
+      "heading": "Let tomorrow give evidence",
+      "paragraphs": [
+        "Avoid making permanent decisions inside a bad day: do not quit, send the angry message, or rewrite your opinion of yourself at midnight. Sleep first. Very few verdicts look the same after rest.",
+        "If low days begin arriving often, lasting longer, or making ordinary life hard to manage, that deserves more than tips from an article — please talk to a trusted adult, a doctor or another professional. Asking for that kind of help is a strength, not a surrender."
+      ]
+    }
+  ],
+  "takeaway": "Keep the bad day inside its own borders: facts, basic care, sleep, and no permanent verdicts.",
+  "fiction": false
+}

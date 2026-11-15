@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-106",
+  "slug": "think-of-a-number-tricks",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Think of a number: how the classic trick always works",
+  "description": "Double it, add ten, halve it, take away the number you started with — and the answer is always 5. Here is the algebra hiding inside the magic.",
+  "publishedAt": "2026-07-17",
+  "updatedAt": "2026-07-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The trick",
+      "paragraphs": [
+        "Ask a friend to think of a number and keep it secret. Tell them: double it. Add 10. Halve the result. Now subtract the number you first thought of. Then announce, with great confidence: “You are thinking of 5.” You will be right every time, whatever number they chose.",
+        "Try it on 3: double is 6, add 10 gives 16, halve gives 8, subtract the original 3 gives 5. Try it on 100: 200, 210, 105, minus 100 — 5 again. The starting number seems to matter enormously and actually matters not at all."
+      ]
+    },
+    {
+      "heading": "Why it cannot fail",
+      "paragraphs": [
+        "Call the secret number n. Doubling gives 2n. Adding 10 gives 2n + 10. Halving gives n + 5. Subtracting the original n leaves 5 — the n cancels itself, which is why the trick works for 3, for 100, and for a million.",
+        "Every trick of this family is built the same way: the instructions quietly arrange for the secret number to be subtracted from itself, while a few harmless-looking additions decide what the final answer will be. Change “add 10” to “add 14” and the answer becomes 7 instead."
+      ]
+    },
+    {
+      "heading": "Try it: build your own",
+      "paragraphs": [
+        "Design a trick with a target answer of your choice. Start with n, double it, add double your target, halve, subtract n — and you will land on your target. Dress it up with silly extra steps (multiply by 1! think of a colour!) to hide the machinery.",
+        "Perform it once, then reveal the secret and watch your audience immediately start building tricks of their own. That moment — magic turning into algebra — is the whole point."
+      ]
+    }
+  ],
+  "takeaway": "A think-of-a-number trick is algebra in a magician's hat: the secret number cancels itself, and the answer was decided before you began.",
+  "fiction": false
+}

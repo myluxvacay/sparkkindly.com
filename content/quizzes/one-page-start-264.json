@@ -1,0 +1,32 @@
+{
+  "id": "one-page-start-264",
+  "scheduledDate": "2026-03-09",
+  "brand": "grow",
+  "prompt": "You want to read more but never seem to start. Which tiny step is most likely to work?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Read one page straight after breakfast each day"
+    },
+    {
+      "id": "b",
+      "text": "Wait for a completely free weekend"
+    },
+    {
+      "id": "c",
+      "text": "Buy five new books for motivation"
+    },
+    {
+      "id": "d",
+      "text": "Promise yourself two hours every night"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "One page tied to an existing routine is so small it is hard to skip, and small starts build into steady habits.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

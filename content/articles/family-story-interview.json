@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-53",
+  "slug": "family-story-interview",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Interview a Storyteller",
+  "description": "For ages 6–9 with an adult: ask a family member five questions and collect a real story from when they were young.",
+  "publishedAt": "2026-10-08",
+  "updatedAt": "2026-10-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family-activities",
+    "words"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Prepare your questions",
+      "paragraphs": [
+        "Every family is full of stories that nobody has written down. Choose a storyteller — a grandparent, an aunt, or an older cousin — and prepare five questions.",
+        "Good starter questions: What was your favourite game as a child? What food did you love? Did you ever get into funny trouble?"
+      ]
+    },
+    {
+      "heading": "Hold the microphone",
+      "paragraphs": [
+        "Sit together and hold your pretend microphone. Ask one question at a time and listen to the whole answer before asking the next.",
+        "Listening is the real job of an interviewer. Write down the best bits — the funny parts, the surprising parts."
+      ]
+    },
+    {
+      "heading": "Keep the story safe",
+      "paragraphs": [
+        "Stories disappear if nobody keeps them. Read your notes aloud so your storyteller can check you heard right.",
+        "You have just saved a piece of your family's history. That makes you a story keeper."
+      ]
+    }
+  ],
+  "takeaway": "Asking questions and listening carefully turns family memories into stories that are saved forever.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "A pencil",
+    "A pretend microphone (a wooden spoon works)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Interview someone your adult knows and trusts. If a question makes them sad, move on kindly to the next one."
+  ],
+  "screenFreeExtension": "Retell the story you collected at dinner, in your own words, like a news reporter."
+}

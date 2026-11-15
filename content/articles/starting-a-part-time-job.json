@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-86",
+  "slug": "starting-a-part-time-job",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Starting a part-time job: what to expect and what to ask",
+  "description": "A first part-time job brings a payslip, a schedule, and a new relationship with money. Knowing the basics before you start makes all three easier.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "student-money",
+    "money-basics"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Questions to ask before day one",
+      "paragraphs": [
+        "Ask how much the job pays per hour, how and when you are paid, how many hours a week are typical, and how shifts are scheduled and changed. Ask what the busiest periods are — exam season collisions are easier to handle when they were never a surprise.",
+        "You should also receive something in writing: a contract or at least a summary of pay and hours. Keep it, along with every payslip. Paperwork feels dull until the day it settles a disagreement in your favour."
+      ]
+    },
+    {
+      "heading": "Your first payslip",
+      "paragraphs": [
+        "Your first pay may look smaller than hours-times-rate suggests. Tax and other deductions may apply depending on how much you earn and where you live, and your payslip lists them line by line. Read it, compare it with your hours, and ask politely if a figure puzzles you.",
+        "Track your own shifts in a notebook or app. If the payslip and your record disagree, your record is what turns a vague worry into a quick, friendly fix."
+      ]
+    },
+    {
+      "heading": "Give the money a plan before it arrives",
+      "paragraphs": [
+        "Decide the split in advance: what this income is for — term-time spending, saving toward summer, easing next term's books. Even a rough plan beats watching the balance dissolve into untracked small spending, which is the default fate of unplanned money.",
+        "A simple starting split works for many students: most of the income for term-time life, a slice for saving, and a slice kept deliberately guilt-free for fun. The exact proportions matter less than deciding them before the money lands."
+      ]
+    }
+  ],
+  "takeaway": "Ask about pay, hours, and scheduling before you start, keep your contract and payslips, track your own shifts — and decide what the money is for before it arrives.",
+  "fiction": false
+}

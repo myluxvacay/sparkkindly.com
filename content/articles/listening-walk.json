@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-83",
+  "slug": "listening-walk",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "The Listening Walk",
+  "description": "For ages 6–9 with an adult: take a slow walk where ears lead the way and count every different sound you hear.",
+  "publishedAt": "2026-11-12",
+  "updatedAt": "2026-11-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Ears in charge",
+      "paragraphs": [
+        "On this walk, your ears are the boss. Walk slowly with your adult and listen harder than you ever have before.",
+        "Every place has a sound mix. Birds, wind, leaves, distant cars, a dog barking, your own footsteps — count each different sound."
+      ]
+    },
+    {
+      "heading": "Stop and count",
+      "paragraphs": [
+        "Every few minutes, stop somewhere safe and stand perfectly still for twenty seconds. How many sounds can you count in the quiet?",
+        "Some sounds only appear when you stop: a bee humming, water dripping, a flag flapping. Moving feet hide the little sounds."
+      ]
+    },
+    {
+      "heading": "Near and far",
+      "paragraphs": [
+        "Sort your sounds into near sounds and far sounds. A faraway train and a close-up crunch of gravel live in the same walk.",
+        "Back home, your list is a picture of your place — painted in sound instead of colour."
+      ]
+    }
+  ],
+  "takeaway": "A listening walk shows that every place has its own music, if you walk slowly enough to hear it.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "A pencil",
+    "A quiet route chosen by an adult"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Stay with your adult and stay aware of traffic — stop and stand still in a safe place to listen, never in the road."
+  ],
+  "screenFreeExtension": "Draw a sound map of your walk, marking where each sound lives."
+}

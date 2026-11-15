@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-111",
+  "slug": "rest-is-part-of-the-work",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Rest is part of the work",
+  "description": "Rest is not a reward you earn after the work. It is one of the ingredients the work is made from.",
+  "publishedAt": "2026-07-08",
+  "updatedAt": "2026-07-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "motivation",
+    "wellbeing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Tired minds make expensive mistakes",
+      "paragraphs": [
+        "Anyone who has reread their own exhausted writing knows the pattern: the last tired hour often creates errors that the next morning has to fix. Pushing through can feel productive while quietly costing more than it saves.",
+        "Rest is when a lot of invisible work happens. Ideas settle, skills consolidate, and problems that looked solid at midnight often have a visible crack by morning."
+      ]
+    },
+    {
+      "heading": "Plan rest like you plan work",
+      "paragraphs": [
+        "Put breaks in the plan rather than taking them as leftovers: a pause between tasks, an evening off each week, a real stopping time most days. Planned rest does not need to be justified or earned.",
+        "Notice what actually restores you. Scrolling often leaves people more tired, while a walk, a nap, music or unhurried company tends to return something. Choose the rest that rests you."
+      ]
+    }
+  ],
+  "takeaway": "Schedule rest as an ingredient of the work, not a prize at the end of it.",
+  "fiction": false
+}

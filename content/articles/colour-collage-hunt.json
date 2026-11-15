@@ -1,0 +1,67 @@
+{
+  "id": "kids-bulk-70",
+  "slug": "colour-collage-hunt",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Colour Collage Hunt",
+  "description": "For ages 6–9 with an adult: choose one colour and build a collage using only things in that colour.",
+  "publishedAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Pick your colour",
+      "paragraphs": [
+        "Choose one colour — let us say green. Your mission is to fill a whole page with green and nothing but green.",
+        "Flip through the magazines your adult gave you. Every green thing is treasure: leaves, frogs, jumpers, apples, traffic lights."
+      ]
+    },
+    {
+      "heading": "Cut and collect",
+      "paragraphs": [
+        "Cut out your green finds, with your adult's help, and keep them in a pile. Look how many shades of green there are — dark forest green, pale mint, bright grass green.",
+        "One colour is never just one colour. Your collage will prove it."
+      ]
+    },
+    {
+      "heading": "Build the collage",
+      "paragraphs": [
+        "Arrange your pieces on the big sheet before gluing. Overlap them like scales so no white gaps peek through.",
+        "Stand back and look. From far away, your page is a field of green. From close up, it is a hundred tiny pictures."
+      ]
+    }
+  ],
+  "takeaway": "A collage in a single colour shows how many shades that colour can have.",
+  "fiction": false,
+  "materials": [
+    "Old magazines or catalogues (an adult provides)",
+    "Scissors (an adult helps)",
+    "A glue stick",
+    "A big sheet of paper"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult should do or closely help with all cutting. Only use magazines an adult gives you for cutting up."
+  ],
+  "screenFreeExtension": "Make a rainbow of collages across a week — one colour each day."
+}

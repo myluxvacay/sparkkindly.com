@@ -1,0 +1,67 @@
+{
+  "id": "kids-bulk-25",
+  "slug": "ant-trail-detectives",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Ant Trail Detectives",
+  "description": "For ages 6–9 with an adult: follow an ant trail with your eyes and discover where the ants are going.",
+  "publishedAt": "2026-09-06",
+  "updatedAt": "2026-09-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Find a trail",
+      "paragraphs": [
+        "On a dry day, look along a path or near a wall for a line of busy ants. They often walk in a long line, like a tiny train on an invisible track.",
+        "The ants are following a smell trail that other ants left behind. The smell tells them: this way to food, this way home."
+      ]
+    },
+    {
+      "heading": "Watch the workers",
+      "paragraphs": [
+        "Follow the trail with your eyes. Where does it start? Where does it end? Some ants may carry crumbs or bits of leaf bigger than themselves.",
+        "Ants are very strong for their size. A crumb to an ant is like a whole loaf of bread to you. Watch how they pass each other without bumping."
+      ]
+    },
+    {
+      "heading": "A tiny test",
+      "paragraphs": [
+        "Ask your adult to place a small leaf near the trail, not on it. Watch whether the ants explore it or march straight past.",
+        "When you finish, leave the trail exactly as you found it. The ants still have a busy day of work to do."
+      ]
+    }
+  ],
+  "takeaway": "Ants follow smell trails in long lines, and careful watching shows you their whole busy world.",
+  "fiction": false,
+  "materials": [
+    "A magnifying glass if you have one",
+    "A small leaf",
+    "Paper",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Never touch ants or their nests, and never block their path with your hands. Some ants can bite, so keep fingers away."
+  ],
+  "screenFreeExtension": "Draw a map of the ant trail at home and add the places the ants visited, like a treasure map."
+}

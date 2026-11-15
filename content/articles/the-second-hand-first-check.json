@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-63",
+  "slug": "the-second-hand-first-check",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Second-hand first: the two-minute check before buying new",
+  "description": "For many things, someone nearby is selling a barely used version for half the price. Checking first is a habit worth more than any single bargain.",
+  "publishedAt": "2026-10-08",
+  "updatedAt": "2026-10-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "spending-wisely",
+    "saving"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "What second-hand suits best",
+      "paragraphs": [
+        "Some categories are second-hand gold: furniture, textbooks, sports equipment, children's clothes, tools, and board games. These are durable things people sell because they moved, grew, or lost interest — not because the item failed.",
+        "Electronics need more care: check the battery health, the charger, and whether the model still receives updates. A short checklist turns a gamble into a judgement."
+      ]
+    },
+    {
+      "heading": "The two-minute routine",
+      "paragraphs": [
+        "Before buying new, spend two minutes searching a local marketplace or charity shop listing. If a good used version exists at half price or less, you have saved real money for two minutes of effort — a very respectable hourly rate.",
+        "If nothing turns up, buy new with a clear conscience. The check is the habit; it does not have to succeed every time to pay for itself across a year."
+      ]
+    },
+    {
+      "heading": "Safety and sense",
+      "paragraphs": [
+        "Meet sellers in public places, pay through traceable methods for larger items, and test before you pay when you can. For safety equipment — helmets, car seats, smoke alarms — new is usually the wiser buy, because hidden damage matters.",
+        "Buying second-hand is also quietly good for the planet: every used item bought is one less new item manufactured and one less thing landfilled. Thrift and thoughtfulness point the same way here."
+      ]
+    }
+  ],
+  "takeaway": "Make \"check second-hand first\" a two-minute reflex for durable goods, and let new be the deliberate exception rather than the default.",
+  "fiction": false
+}

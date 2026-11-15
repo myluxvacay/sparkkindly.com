@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-47",
+  "slug": "leaf-boat-regatta",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Leaf Boat Regatta",
+  "description": "For ages 6–9 with an adult: float leaf boats in a bowl of water and see which leaf makes the best boat.",
+  "publishedAt": "2026-10-01",
+  "updatedAt": "2026-10-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "science"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Choose your boats",
+      "paragraphs": [
+        "Collect fallen leaves of different shapes and sizes — a wide leaf, a long leaf, and a curled leaf make a good racing fleet.",
+        "Leaves float because they are light and spread their weight over the water. A curled leaf works like a tiny boat hull."
+      ]
+    },
+    {
+      "heading": "Launch the fleet",
+      "paragraphs": [
+        "Fill a big bowl or tub with water and float your leaves. Watch which leaf sits highest and which one wobbles.",
+        "Load each boat with tiny bits of grass, one piece at a time. How much cargo can each boat carry before it sinks? Count the pieces."
+      ]
+    },
+    {
+      "heading": "Crown the winner",
+      "paragraphs": [
+        "The best boat is not always the biggest. A wide, curled leaf often beats a huge flat one that lets water wash over its edges.",
+        "When the regatta ends, tip the water on the garden. Your boats can sail again another day, or rest in the compost."
+      ]
+    }
+  ],
+  "takeaway": "Wide, curled leaves make the best boats because they spread out and keep the water out.",
+  "fiction": false,
+  "materials": [
+    "A big bowl or tub of water",
+    "Fallen leaves of different shapes",
+    "Tiny bits of grass for cargo"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only use fallen leaves, and wash your hands after playing. An adult should carry and place the water bowl."
+  ],
+  "screenFreeExtension": "Blow gently through a straw to make wind and sail your leaf boat across the bowl."
+}

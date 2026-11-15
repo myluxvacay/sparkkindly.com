@@ -1,0 +1,56 @@
+{
+  "id": "save-bulk-70",
+  "slug": "the-annual-subscription-audit",
+  "brand": "save",
+  "contentType": "article",
+  "title": "The annual subscription audit",
+  "description": "Subscriptions renew in silence. One deliberate audit a year — an hour with your statements — is the counter-move.",
+  "publishedAt": "2026-10-18",
+  "updatedAt": "2026-10-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "understanding-offers",
+    "budgeting",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "List every recurring charge",
+      "paragraphs": [
+        "Go through three months of bank and card statements and write down every repeating payment: streaming, apps, storage, memberships, software, boxes of things. Include the annual ones you can remember, and note each amount and renewal date.",
+        "The totals surprise almost everyone. Three forgotten subscriptions at $12, $9, and $15 a month come to $36 a month — $432 a year — for services that may not have been opened since spring."
+      ]
+    },
+    {
+      "heading": "Keep, downgrade, or cancel",
+      "paragraphs": [
+        "For each subscription ask when you last used it and whether a cheaper tier would do. Many services offer smaller plans, student rates, or pause options that are never advertised on the renewal email.",
+        "Cancel in the service's own settings and note the confirmation. Deleting the app does not stop the billing; only cancelling the subscription does."
+      ]
+    },
+    {
+      "heading": "Make next year's audit easy",
+      "paragraphs": [
+        "Keep the list. Add every new subscription to it on the day you start it, with its renewal date. Ten seconds now saves the archaeology later, and the list itself makes you choosier about starting new ones.",
+        "While the list is in front of you, set a calendar reminder for next year's audit a week before your most expensive renewal. The audit works best as an appointment with yourself, not an accident of noticing a charge."
+      ]
+    }
+  ],
+  "takeaway": "Once a year, list every recurring payment, total it honestly, and keep, downgrade, or cancel each one on purpose.",
+  "fiction": false
+}

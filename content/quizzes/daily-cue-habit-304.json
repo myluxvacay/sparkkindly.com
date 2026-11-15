@@ -1,0 +1,32 @@
+{
+  "id": "daily-cue-habit-304",
+  "scheduledDate": "2026-04-18",
+  "brand": "grow",
+  "prompt": "You want a new habit to stick. Which strategy gives it the best chance?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Do it whenever you happen to remember"
+    },
+    {
+      "id": "b",
+      "text": "Rely on willpower alone"
+    },
+    {
+      "id": "c",
+      "text": "Attach it to something you already do every day"
+    },
+    {
+      "id": "d",
+      "text": "Only do it on days you feel motivated"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Linking a new habit to a reliable daily cue — like brushing your teeth — means the cue reminds you automatically.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

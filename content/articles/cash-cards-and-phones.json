@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-43",
+  "slug": "cash-cards-and-phones",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Cash, cards, and phones: three ways to pay",
+  "description": "Each way of paying has its own feel, cost, and trail — choosing deliberately beats defaulting to whatever is closest to hand.",
+  "publishedAt": "2026-09-11",
+  "updatedAt": "2026-09-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-basics",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Cash: visible and finite",
+      "paragraphs": [
+        "Cash makes spending physical. You hand something over and your wallet is visibly lighter, which is why some people find a cash budget easier to keep. When the envelope is empty, the spending stops by itself.",
+        "The downsides are real too: cash earns nothing, leaves no record, is hard to replace if lost, and does not work for online shopping."
+      ]
+    },
+    {
+      "heading": "Cards: convenient and recorded",
+      "paragraphs": [
+        "Debit cards draw directly on your account and leave a tidy record of every payment, which makes reviewing your spending almost effortless. Contactless payment is fast — sometimes so fast that small purchases slip by unnoticed.",
+        "Credit cards are different: they spend the bank's money, which you repay later, possibly with interest. The bill always arrives, so treat them as a payment method, not extra income."
+      ]
+    },
+    {
+      "heading": "Phones: fastest of all",
+      "paragraphs": [
+        "Paying by phone or watch is secure and quick, and the record appears instantly in your banking app. That instant record genuinely helps with spotting mistakes and fraud early.",
+        "The trade-off is friction — or rather, the lack of it. The less a payment feels like spending, the more deliberately you need to review the total at the end of the week."
+      ]
+    }
+  ],
+  "takeaway": "Cash limits you physically, cards record you automatically, and phones make it effortless — pick the tool that helps your habits, not just your speed.",
+  "fiction": false
+}

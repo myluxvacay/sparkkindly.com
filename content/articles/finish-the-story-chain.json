@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-92",
+  "slug": "finish-the-story-chain",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Finish the Story",
+  "description": "For ages 6–9 with an adult: take turns adding one line each to a story that nobody can predict.",
+  "publishedAt": "2026-06-10",
+  "updatedAt": "2026-06-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "One line each",
+      "paragraphs": [
+        "The first person starts: One morning, a tiny door appeared in the garden fence.",
+        "Pass the toy to the next person. They add just one more line. Then it moves on again."
+      ]
+    },
+    {
+      "heading": "Land the ending",
+      "paragraphs": [
+        "When the story feels nearly finished, someone says: And from that day on... and adds the last line.",
+        "Clap for your story. Nobody could have told that exact story alone."
+      ]
+    }
+  ],
+  "takeaway": "When everyone adds a line, a story can wander to wonderful places.",
+  "fiction": false,
+  "materials": [
+    "Just your voices",
+    "A stuffed toy to pass (optional)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Keep stories friendly: everyone should feel happy listening."
+  ],
+  "screenFreeExtension": "Start a story at breakfast and finish it at bedtime, one line at a time."
+}

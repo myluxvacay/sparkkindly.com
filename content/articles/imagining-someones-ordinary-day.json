@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-47",
+  "slug": "imagining-someones-ordinary-day",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Imagining someone’s ordinary day",
+  "description": "Kindness gets easier when you remember that everyone you meet is in the middle of a day you cannot see.",
+  "publishedAt": "2026-09-16",
+  "updatedAt": "2026-09-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "empathy",
+    "helping-others"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The cashier’s Tuesday",
+      "paragraphs": [
+        "The person scanning your shopping has already served two hundred people, two of whom were rude about things outside their control. The driver who annoyed you may be on hour nine. None of this excuses bad behaviour — theirs or yours — but it changes the temperature of your response.",
+        "Imagining an ordinary day is not imagination for its own sake. It is a brake on the story your irritation wants to tell."
+      ]
+    },
+    {
+      "heading": "Everyone is mid-something",
+      "paragraphs": [
+        "The curt email may be mid-illness. The friend who forgot may be mid-crisis. We judge others by their worst visible moment and ourselves by our full context; remembering their unseen context simply evens the scales.",
+        "You do not need the details. “They are in the middle of a day” is enough of a thought to slow a sharp reply by the few seconds it needs."
+      ]
+    },
+    {
+      "heading": "Make it a reflex",
+      "paragraphs": [
+        "Practise on strangers where the stakes are low: the slow walker, the loud caller, the person who took the last seat. Invent their ordinary day kindly. The habit, built on strangers, will be there when it is a friend whose day you need to imagine.",
+        "It will also be there for yourself. People who imagine others’ days tend to forgive their own more quickly, too."
+      ]
+    }
+  ],
+  "takeaway": "Before you judge a moment, remember the whole unseen day around it.",
+  "fiction": false
+}

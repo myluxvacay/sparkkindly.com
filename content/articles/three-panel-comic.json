@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-102",
+  "slug": "three-panel-comic",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Draw Your Day in Three Pictures",
+  "description": "For ages 6–9 with an adult: turn today into a tiny comic with a beginning, a middle, and an end.",
+  "publishedAt": "2026-06-24",
+  "updatedAt": "2026-06-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Draw three boxes",
+      "paragraphs": [
+        "Draw three boxes in a row on your page. The first box is the start of your day.",
+        "Draw one small thing that really happened in each box. Keep the pictures simple."
+      ]
+    },
+    {
+      "heading": "Tell the comic",
+      "paragraphs": [
+        "Point to each box and tell your day like a story: First... Then... At the end...",
+        "Add speech bubbles if your pictures want to talk. Comics can whisper or shout."
+      ]
+    }
+  ],
+  "takeaway": "Every day is a little story with a beginning, a middle, and an end.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Pencils or crayons"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult helps draw the three boxes if you would like."
+  ],
+  "screenFreeExtension": "Make a three-picture comic of tomorrow before it happens, then check if you were right."
+}

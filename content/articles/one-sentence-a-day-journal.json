@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-103",
+  "slug": "one-sentence-a-day-journal",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "The one-sentence-a-day journal",
+  "description": "One honest sentence a day is a journal almost anyone can keep, and over months it becomes a surprisingly rich record.",
+  "publishedAt": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "writing",
+    "wellbeing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Why one sentence works",
+      "paragraphs": [
+        "Most journals fail because they ask for pages on days when you have nothing left. One sentence lowers the cost to almost nothing, so the habit survives busy and tired days.",
+        "The constraint is also a pleasure. Choosing the single sentence means choosing what the day was about, and that small act of choosing is the reflection itself."
+      ]
+    },
+    {
+      "heading": "Make the sentence earn its place",
+      "paragraphs": [
+        "Skip the weather report unless the weather truly mattered. Prefer the specific over the general: not 'good day with friends' but 'Mara tried to teach me chess and we laughed until our sides hurt'.",
+        "Keep the journal by your bed or with your keys, and write at the same moment each day. Missing a day is not failure; write two sentences tomorrow, or simply continue."
+      ]
+    }
+  ],
+  "takeaway": "One true sentence a day adds up to a year you can reread.",
+  "fiction": false
+}

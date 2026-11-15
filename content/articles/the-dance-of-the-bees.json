@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-50",
+  "slug": "the-dance-of-the-bees",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The dance of the bees",
+  "description": "A honeybee that finds good flowers comes home and dances the directions, drawing a map her sisters can follow.",
+  "publishedAt": "2026-09-08",
+  "updatedAt": "2026-09-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Waggle dance",
+      "url": "https://en.wikipedia.org/wiki/Waggle_dance",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A map drawn in movement",
+      "paragraphs": [
+        "When a foraging bee returns from a rich patch of flowers, she performs a figure-of-eight dance on the honeycomb, waggling her abdomen during the straight middle run. Her nestmates gather round, touching her with their antennae to follow the pattern in the darkness of the hive.",
+        "The dance carries real information. The angle of the straight run, measured against gravity inside the hive, points to the direction of the flowers relative to the Sun. The longer the waggle lasts, the farther away the flowers are."
+      ]
+    },
+    {
+      "heading": "Smell and taste complete the message",
+      "paragraphs": [
+        "Dancers also share the scent of the flowers and tiny tastes of the nectar they collected, so followers know what to search for when they arrive. A lively, long dance recruits more bees than a half-hearted one, which means the colony naturally sends more workers to better food.",
+        "The waggle dance is one of the most remarkable communication systems known in any insect: an abstract message, translated from sunlight and distance into movement, understood by an audience that has never seen the place described."
+      ]
+    }
+  ],
+  "takeaway": "The waggle dance encodes the direction and distance of flowers into movement that other bees can read.",
+  "fiction": false
+}

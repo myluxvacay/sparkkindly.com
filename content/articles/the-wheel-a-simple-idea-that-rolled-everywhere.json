@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-112",
+  "slug": "the-wheel-a-simple-idea-that-rolled-everywhere",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The wheel: a simple idea that rolled everywhere",
+  "description": "The wheel seems obvious — yet it was invented remarkably late, probably first for making pots, and only later for carrying loads.",
+  "publishedAt": "2026-07-21",
+  "updatedAt": "2026-07-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "inventions",
+    "ancient-history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Wheel",
+      "url": "https://en.wikipedia.org/wiki/Wheel",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Late, for something so simple",
+      "paragraphs": [
+        "Humans were farming, building cities and sailing boats long before anyone made a wheel. The earliest evidence comes from Mesopotamia around 3500 BC — and the first wheels were probably not on carts at all, but under clay: the potter's wheel, spinning to shape smooth, even vessels.",
+        "The delay makes sense once you see that a wheel is really a system. A useful cart wheel needs an axle, a frame, smooth bearings, and roads or at least firm ground — plus animals strong enough to pull. Inventing the wheel meant inventing its whole supporting cast."
+      ]
+    },
+    {
+      "heading": "From solid discs to spokes",
+      "paragraphs": [
+        "Early cart wheels were solid wooden discs, heavy but sturdy. Around 2000 BC, wheelwrights in several regions began cutting them away into spokes, making wheels light enough for fast chariots. Iron tyres, greased bearings and eventually ball bearings each squeezed more speed and strength from the design.",
+        "Meanwhile the wheel multiplied into new jobs: water wheels ground grain and lifted water, gear wheels carried motion into clocks and mills, and the flywheel steadied engines. One idea became a family of hundreds."
+      ]
+    },
+    {
+      "heading": "The places that chose otherwise",
+      "paragraphs": [
+        "The wheel was not universal. In the Americas, people knew the principle — wheeled ceramic figures survive from ancient Mexico — but without large domesticated animals suited to pulling carts, and with mountains and jungles to cross, wheels never took over transport. Llamas, boats and human porters did the work instead.",
+        "It is a useful lesson in how invention works: an idea succeeds not when it is clever, but when the world around it is ready to roll with it."
+      ]
+    }
+  ],
+  "takeaway": "The wheel arrived late because it needed axles, animals and roads — and once that system existed, it rolled into almost every machine.",
+  "fiction": false
+}

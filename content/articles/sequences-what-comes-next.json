@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-47",
+  "slug": "sequences-what-comes-next",
+  "brand": "play",
+  "contentType": "article",
+  "title": "What Comes Next? A Smarter Way to Attack Sequences",
+  "description": "'What comes next?' puzzles have a secret: many answers can fit. These four checks help you find the answer the setter most likely meant.",
+  "publishedAt": "2026-09-25",
+  "updatedAt": "2026-09-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "brain-teasers"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The honest secret of sequence puzzles",
+      "paragraphs": [
+        "Here is something puzzle books rarely admit: any short sequence has infinitely many valid continuations, because you can always invent some rule that fits the given terms and produces whatever next term you like. The real game is not finding the answer but finding the simplest rule - the one the setter most likely intended.",
+        "That is oddly liberating. Instead of guessing blindly, you run a short checklist of the usual suspects, and the intended pattern normally steps forward within a minute."
+      ]
+    },
+    {
+      "heading": "The four checks",
+      "paragraphs": [
+        "First, differences: subtract each term from the next. For 2, 6, 12, 20 the differences are 4, 6, 8 - growing by 2 - so the next difference is 10 and the next term is 30. Second, ratios: for 3, 6, 12, 24 each term doubles. Some sequences mix the two, like 3, 5, 9, 17, 33, where each term is the last one doubled minus 1.",
+        "Third, interleaving: split the sequence into alternate terms. In 1, 10, 2, 20, 3, 30 there are really two easy sequences holding hands. Fourth, famous families: squares (1, 4, 9, 16), cubes, primes, and Fibonacci numbers all turn up constantly, so it is worth having their first half-dozen terms memorised."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Set a friend a sequence with a stated-in-your-head rule - say, start at 5 and repeatedly add the digits of the last term: 5, 10, 11, 13, 17, 25... Then ask them to continue it, and afterwards reveal the rule and check together.",
+        "Now the mischievous version: take the start 2, 4, 8 and find two different rules that fit - doubling gives 16 next, but 'add the previous increase plus 2' also fits those terms and gives 14. You have just proved the honest secret: simplicity, not logic alone, picks the winner."
+      ]
+    }
+  ],
+  "takeaway": "There is never just one possible rule for a sequence - the game is finding the simplest one, and differences are the first place to look.",
+  "fiction": false
+}

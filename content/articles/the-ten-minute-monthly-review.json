@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-79",
+  "slug": "the-ten-minute-monthly-review",
+  "brand": "save",
+  "contentType": "article",
+  "title": "The ten-minute monthly money review",
+  "description": "Once a month, ten minutes, four questions. That is the whole system — and it catches almost every money problem while it is still small.",
+  "publishedAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-habits",
+    "budgeting"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The four questions",
+      "paragraphs": [
+        "Sit down with your banking app and ask: what came in, what went out, what surprised me, and what changes next month? Ten honest minutes. No spreadsheets are required, though a notebook of the answers is surprisingly motivating over time.",
+        "The surprise question does most of the work. Money stress usually comes from surprises — the forgotten renewal, the creeping category — and a monthly review shrinks the maximum age of any surprise to thirty days."
+      ]
+    },
+    {
+      "heading": "Check the standing machinery",
+      "paragraphs": [
+        "Glance at the automatic parts of your money while you are there: savings transfers still running, subscriptions still wanted, bills still correct. Systems drift; a monthly glance is how you notice before drift becomes damage.",
+        "Also check progress on your current goal, however small. Seeing a pot grow by even a little, on paper, once a month, is the feedback loop that keeps habits alive."
+      ]
+    },
+    {
+      "heading": "End with one action",
+      "paragraphs": [
+        "Close the review by choosing exactly one action for the coming month: cancel one thing, raise one transfer by $5, re-quote one bill. One action, done, beats a page of intentions. Then close the app and get on with your life — the review is a servant, not a hobby.",
+        "Pick a fixed day for the review — payday works well, or the first of the month — and attach it to something you already do, like a particular coffee or commute. Habits anchored to existing routines rarely need motivation to survive."
+      ]
+    }
+  ],
+  "takeaway": "Ten minutes monthly: in, out, surprises, one change. Small problems caught early stay small, and goals stay visible.",
+  "fiction": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-96",
+  "slug": "clap-the-rhyme",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Clap the Rhyme",
+  "description": "For ages 6–9 with an adult: clap the beat of a favourite rhyme and stomp softly on the rhyming words.",
+  "publishedAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Find the beat",
+      "paragraphs": [
+        "Say a rhyme you know, like Twinkle, Twinkle, Little Star. Clap once for every beat as you say it.",
+        "Notice how the words fit the claps like footsteps on a path."
+      ]
+    },
+    {
+      "heading": "Stomp the rhymes",
+      "paragraphs": [
+        "Say it again. This time, stomp softly on the rhyming words: star and are, high and sky.",
+        "Try clapping faster and slower. The rhyme still works, like a song played at different speeds."
+      ]
+    }
+  ],
+  "takeaway": "Rhymes have a beat you can feel in your hands and feet.",
+  "fiction": false,
+  "materials": [
+    "Just your hands and feet",
+    "A favourite rhyme book"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Stomp gently, especially if people live below you."
+  ],
+  "screenFreeExtension": "Clap the beat of a song you love and see if the words still fit."
+}

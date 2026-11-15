@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-128",
+  "slug": "the-visible-savings-jar",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "The visible savings jar",
+  "description": "Coins and notes you can see growing make saving feel real, especially for children and anyone who finds apps abstract.",
+  "publishedAt": "2026-08-09",
+  "updatedAt": "2026-08-09",
+  "tags": [
+    "saving",
+    "green"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Why seeing works",
+      "paragraphs": [
+        "Numbers on a screen are easy to ignore, but a jar slowly filling on the kitchen shelf is a daily, physical reminder that saving is happening. For children it may be the clearest lesson in patience there is: small amounts, added often, become something worthwhile.",
+        "A jar also catches the money that otherwise vanishes: the change from a market stall, the coins at the bottom of a bag, the note left in a coat pocket from last winter."
+      ]
+    },
+    {
+      "heading": "Set it up in five minutes",
+      "paragraphs": [
+        "Choose a clear jar or bottle, label it with the goal and the target amount, and put it where the household passes daily. Decide the rule together: all silver coins, change from notes, or a set amount each Friday.",
+        "When the jar fills, count it together and move the money somewhere safer, like a bank or savings account, noting the total on the label before starting again. The ceremony of counting is part of the pleasure."
+      ]
+    },
+    {
+      "heading": "Honest limits",
+      "paragraphs": [
+        "A jar is a motivator, not a vault: it earns no interest and should never hold more than the household is comfortable having in cash at home. Use it for goals of weeks or a few months, and bank anything larger.",
+        "Pair the jar with the account it feeds and you get the best of both: the visible encouragement at home, and the safety and small interest of money properly stored."
+      ]
+    }
+  ],
+  "takeaway": "Label a clear jar with the goal, feed it by one simple rule, and bank the contents each time it fills."
+}

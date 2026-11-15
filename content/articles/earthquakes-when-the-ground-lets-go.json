@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-61",
+  "slug": "earthquakes-when-the-ground-lets-go",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Earthquakes: when the ground lets go",
+  "description": "The ground beneath us is always creeping. An earthquake is the moment it suddenly catches up.",
+  "publishedAt": "2026-09-26",
+  "updatedAt": "2026-09-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "earth-science",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Earthquake",
+      "url": "https://en.wikipedia.org/wiki/Earthquake",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Stress, stored like a bent stick",
+      "paragraphs": [
+        "Earth's outer shell is broken into plates that drift a few centimetres a year. Along their edges, friction locks the rocks together even as the plates keep pushing. The rock bends and stores energy, the way a stick flexes further and further in your hands.",
+        "When the stress finally beats friction, the fault slips — sometimes by metres in seconds — and the stored energy radiates outward as seismic waves. That release point is the earthquake's focus; the spot on the surface above it is the epicentre."
+      ]
+    },
+    {
+      "heading": "Reading the waves",
+      "paragraphs": [
+        "Seismometers around the world record two main families of waves: fast compressional waves and slower shear waves. The gap between their arrivals at a station reveals how far away the quake struck, and combining three or more stations pinpoints it.",
+        "Earthquakes cannot yet be predicted in the way weather can, and honest seismologists say so plainly. What science can do is map the faults, measure the strain, and build structures that ride out the shaking when the ground lets go."
+      ]
+    }
+  ],
+  "takeaway": "Earthquakes release energy stored in stressed rock along faults, and their waves let scientists locate and measure them.",
+  "fiction": false
+}

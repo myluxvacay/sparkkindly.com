@@ -1,0 +1,32 @@
+{
+  "id": "dice-chance-235",
+  "scheduledDate": "2026-02-08",
+  "brand": "play",
+  "prompt": "You roll one fair six-sided die. What is the chance of rolling an even number?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1 in 6"
+    },
+    {
+      "id": "b",
+      "text": "1 in 3"
+    },
+    {
+      "id": "c",
+      "text": "1 in 2"
+    },
+    {
+      "id": "d",
+      "text": "5 in 6"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Three of the six faces are even (2, 4 and 6), and 3 out of 6 is the same as 1 in 2.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

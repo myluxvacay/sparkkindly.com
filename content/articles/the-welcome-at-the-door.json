@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-72",
+  "slug": "the-welcome-at-the-door",
+  "brand": "together",
+  "contentType": "article",
+  "title": "The welcome at the door",
+  "description": "The first sixty seconds at a threshold decide how a guest will remember the whole visit.",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "traditions",
+    "empathy"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Thresholds are ceremonies",
+      "paragraphs": [
+        "Cultures have always marked the doorway: shoes left at the entrance in Japan and much of Asia, signalling the shedding of the outside world; bread and salt at Slavic thresholds; the guest in many Arab and Pashtun traditions treated as a charge of honour from the moment they cross. The message in every dialect is identical: you have crossed from public to protected.",
+        "Hosts who understand this treat the doorway as part of the hospitality, not the corridor before it."
+      ]
+    },
+    {
+      "heading": "The sixty-second craft",
+      "paragraphs": [
+        "A good welcome is fast and total: come to the door yourself, use their name, take the coat, offer the drink, and introduce them to one friendly person before you are called away. Each step removes one small uncertainty — where to go, what to do with their hands, whether they were truly expected.",
+        "Being expected is the core of it. Guests can tell in under a minute whether their arrival is a pleasure or an interruption wearing a smile."
+      ]
+    },
+    {
+      "heading": "Guests have a craft too",
+      "paragraphs": [
+        "The guest’s half of the ceremony: arrive close to the time, bring something small or nothing but appetite, compliment one specific thing, and never apologise excessively for existing in the house. Ease is contagious in both directions.",
+        "Doorways are small stages, but the play performed on them — you are welcome here — is one of the oldest and kindest there is."
+      ]
+    }
+  ],
+  "takeaway": "Treat the doorway as part of the welcome: name, coat, drink, and one friendly introduction.",
+  "fiction": false
+}

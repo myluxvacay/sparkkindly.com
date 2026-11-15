@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-98",
+  "slug": "animal-alphabet",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Animal Alphabet",
+  "description": "For ages 6–9 with an adult: think of an animal for every letter of the alphabet, and draw the trickiest ones.",
+  "publishedAt": "2026-06-18",
+  "updatedAt": "2026-06-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "words"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Letter by letter",
+      "paragraphs": [
+        "Start at A. Ant! B. Bear! C. Cat! Say an animal for each letter as far as you can go.",
+        "Some letters are easy and some are tricky. Q and X might need a grown-up clue."
+      ]
+    },
+    {
+      "heading": "Draw the tricky ones",
+      "paragraphs": [
+        "Pick the animal that was hardest to think of and draw it on your page.",
+        "Write its letter beside it in your biggest, proudest writing."
+      ]
+    }
+  ],
+  "takeaway": "The alphabet is full of animals, from ant to zebra.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "A pencil",
+    "Crayons"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "It is fine to peek at a picture book together for the hardest letters."
+  ],
+  "screenFreeExtension": "Turn your alphabet into a poster for your wall."
+}

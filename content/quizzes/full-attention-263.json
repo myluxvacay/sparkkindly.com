@@ -1,0 +1,32 @@
+{
+  "id": "full-attention-263",
+  "scheduledDate": "2026-03-08",
+  "brand": "together",
+  "prompt": "A friend is telling you about a difficult day. Which action shows you are really listening?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Putting your phone away and facing them"
+    },
+    {
+      "id": "b",
+      "text": "Glancing at your phone between sentences"
+    },
+    {
+      "id": "c",
+      "text": "Changing the subject to something happier"
+    },
+    {
+      "id": "d",
+      "text": "Telling them others have it worse"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Putting distractions away and giving someone your full attention tells them their words matter to you.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-90",
+  "slug": "decomposers-natures-clean-up-crew",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Decomposers: nature's clean-up crew",
+  "description": "Without fungi, bacteria and the small creatures of the soil, the world would bury itself in its own dead. Instead, everything returns.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "plants"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Decomposer",
+      "url": "https://en.wikipedia.org/wiki/Decomposer",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The third team in every ecosystem",
+      "paragraphs": [
+        "Ecology lessons usually star producers (plants) and consumers (animals). The decomposers get less glory and do indispensable work: they break down dead bodies, fallen leaves, dung and wood, releasing the locked-up nutrients in forms that plants can absorb again. Without them, nutrients would stay trapped in corpses and forests would starve amid their own litter.",
+        "The crew is vast. Bacteria and fungi do the chemical dismantling — fungi are the only organisms that can fully break down lignin, the tough stuff of wood. Earthworms, beetles, mites and millipedes shred and mix the material, spreading the work through the soil."
+      ]
+    },
+    {
+      "heading": "Soil: the crowded underground city",
+      "paragraphs": [
+        "A teaspoon of healthy soil can hold more microorganisms than there are people on Earth. This underground city is not just recycling; it builds the soil itself — its crumbly structure, its water-holding sponges of organic matter, its slow release of fertility.",
+        "Every meal you have ever eaten grew from nutrients that decomposers freed. The clean-up crew is quiet, unglamorous and absolutely foundational: the reason the living world is a cycle rather than a one-way slide into waste."
+      ]
+    }
+  ],
+  "takeaway": "Decomposers break down dead matter and return its nutrients to the soil, closing the loop that all life depends on.",
+  "fiction": false
+}

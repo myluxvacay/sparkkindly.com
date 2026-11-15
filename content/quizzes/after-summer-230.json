@@ -1,0 +1,32 @@
+{
+  "id": "after-summer-230",
+  "scheduledDate": "2026-02-03",
+  "brand": "kids",
+  "prompt": "Which season comes right after summer?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Spring"
+    },
+    {
+      "id": "b",
+      "text": "Autumn"
+    },
+    {
+      "id": "c",
+      "text": "Winter"
+    },
+    {
+      "id": "d",
+      "text": "Summer again"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "After summer comes autumn, when the leaves turn orange and red and fall from the trees.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

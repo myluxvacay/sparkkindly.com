@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-124",
+  "slug": "cats-cradle-string-games",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Cat's cradle and string figures: stories told on a loop of string",
+  "description": "With nothing but a loop of string and two pairs of hands, people across the world have woven cradles, stars, animals and whole stories. String figures are humanity's pocket theatre.",
+  "publishedAt": "2026-08-20",
+  "updatedAt": "2026-08-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "patterns"
+  ],
+  "sources": [
+    {
+      "title": "String figure — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/String_figure",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A loop of string, a thousand pictures",
+      "paragraphs": [
+        "A string figure begins with a loop of cord draped over the hands. With a choreography of fingers — under this loop, over that one, release and pull — the string rearranges into patterns: a cradle, a cup and saucer, a star, a running animal. Anthropologists have recorded string figures on every inhabited continent.",
+        "In many cultures the figures were storytelling props: an Inuit narrator might shape the characters of a tale as it unfolded, Pacific islanders wove long sequences to accompany chants, and the figures carried names, jokes and lessons with them."
+      ]
+    },
+    {
+      "heading": "The two-player cradle",
+      "paragraphs": [
+        "Cat's cradle is the famous two-player version. One player makes the cradle; the second pinches, lifts and transfers the string to transform it — cradle to candles, to the manger, to diamonds, and (if nobody fumbles) back again. Each transfer is a tiny act of trust: pull the wrong loop and the whole world collapses into spaghetti.",
+        "The collapse is part of the curriculum. String figures teach sequence, symmetry and patience, and they do it at the speed of fingers — which is why they survived every entertainment revolution since the Stone Age."
+      ]
+    },
+    {
+      "heading": "Try it: learn the opening moves",
+      "paragraphs": [
+        "Cut a metre of soft cord and tie the ends. Learn the cradle first (string behind both hands, pick up the far string with each middle finger), then teach a partner the first transfer. There are excellent slow diagrams in any string-games book; the fumbling is traditional and expected.",
+        "Graduation goal: the cup and saucer, a solo figure that ends with a satisfying reveal. Perform it for an audience of one grandparent and accept your applause."
+      ]
+    }
+  ],
+  "takeaway": "String figures are stories you hold in your hands — the oldest portable animation in the world.",
+  "fiction": false
+}

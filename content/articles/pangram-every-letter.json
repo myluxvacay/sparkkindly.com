@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-83",
+  "slug": "pangram-every-letter",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Pangrams: sentences that use every letter of the alphabet",
+  "description": "One famous sentence about a quick brown fox quietly contains all twenty-six letters. Pangrams are part puzzle, part treasure hunt.",
+  "publishedAt": "2026-06-05",
+  "updatedAt": "2026-06-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "words"
+  ],
+  "sources": [
+    {
+      "title": "Pangram — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pangram",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The quick brown fox",
+      "paragraphs": [
+        "You have probably typed it without thinking: “The quick brown fox jumps over the lazy dog.” It was used to test typewriters and keyboards because it contains every letter of the alphabet at least once. A sentence that does this is called a pangram, from Greek words meaning “every letter”.",
+        "The fox sentence uses 35 letters in total, because some letters repeat. The repeat offenders are usually the common vowels and letters like o, e and r, while the rare letters — j, q, x and z — are the ones that make pangrams hard to build."
+      ]
+    },
+    {
+      "heading": "Shorter is harder",
+      "paragraphs": [
+        "Puzzle makers chase the perfect pangram: 26 letters, each used exactly once. Those are extremely hard to make into sensible English, so most short pangrams cheat gracefully with unusual words. “Pack my box with five dozen liquor jugs” is a beloved one at 32 letters.",
+        "Pangrams also do real work. Font designers use them to preview how every letter of a typeface looks in running text, and the fox sentence still ships inside software as sample text for exactly that reason."
+      ]
+    },
+    {
+      "heading": "Try it: write your own pangram",
+      "paragraphs": [
+        "Start by placing the awkward letters. Give j, q, x and z a home early — words like jazz, quick, box and quiz are your friends. Then fill the gaps with common letters and read the result aloud to check it still sounds like a sentence.",
+        "Score yourselves kindly: count the total letters, and see who can get closest to 26 while keeping the sentence sensible. A silly sentence that works beats an elegant one that drops the q."
+      ]
+    }
+  ],
+  "takeaway": "A pangram packs the whole alphabet into one sentence — the trick is hiding the rare letters where nobody notices them.",
+  "fiction": false
+}

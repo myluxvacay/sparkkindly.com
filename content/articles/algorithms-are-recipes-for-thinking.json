@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-121",
+  "slug": "algorithms-are-recipes-for-thinking",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Algorithms are recipes for thinking",
+  "description": "An algorithm is just a set of steps guaranteed to finish a job — you use them when you sort laundry, follow a recipe or find a name in a list.",
+  "publishedAt": "2026-08-12",
+  "updatedAt": "2026-08-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "computing",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Algorithm",
+      "url": "https://en.wikipedia.org/wiki/Algorithm",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Muhammad ibn Musa al-Khwarizmi",
+      "url": "https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A word with a person's name inside",
+      "paragraphs": [
+        "The word algorithm comes from the Latinised name of Muhammad ibn Musa al-Khwarizmi, a scholar in 9th-century Baghdad whose books on calculation taught Europe the Hindu-Arabic numerals we still use. His name became the word for any step-by-step method of solving a problem.",
+        "An algorithm must be precise enough that no judgement is needed mid-step, and it must finish. A cake recipe is nearly an algorithm — 'bake until golden' leaves a little judgement in, which is why recipes still sometimes fail us."
+      ]
+    },
+    {
+      "heading": "Algorithms you already know",
+      "paragraphs": [
+        "Searching a printed phone book teaches the most elegant trick in computing. Open it in the middle: if your name comes later, throw away the entire first half. Repeat. Each step halves the search, so a million entries fall in about twenty steps. That is binary search, and computers use it constantly.",
+        "Sorting works the same way. Dealing cards into order one at a time, or splitting a pile into smaller piles and merging them sorted — these are real sorting algorithms, differing only in how much work they make you do."
+      ]
+    },
+    {
+      "heading": "Why steps matter",
+      "paragraphs": [
+        "The study of algorithms is mostly the study of effort: how does the work grow as the problem grows? A method fine for ten names may be hopeless for ten billion. Choosing the right steps is the quiet heart of computer science.",
+        "When people argue about 'the algorithm' in daily life, they usually mean a company's recipe for ranking posts or videos. Remember the humble original: a recipe for thinking, written so carefully that even a machine — or a tired human — can follow it to the end."
+      ]
+    }
+  ],
+  "takeaway": "Algorithms are finishable recipes for problems, named after a Baghdad scholar, and the cleverest ones win by throwing away half the work at every step.",
+  "fiction": false
+}

@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-128",
+  "slug": "one-thing-at-a-time",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "One thing at a time",
+  "description": "Multitasking mostly means switching quickly and paying for every switch. One thing at a time feels slower and usually is not.",
+  "publishedAt": "2026-08-09",
+  "updatedAt": "2026-08-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "wellbeing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The hidden cost of switching",
+      "paragraphs": [
+        "Each time you jump from a task to a message and back, part of your attention stays behind, catching up. A day of constant switching can leave you busy, tired, and oddly unfinished.",
+        "Working on one thing at a time is not a moral stance; it is an efficiency one. The task gets your whole mind, errors drop, and finishing something completely becomes possible again."
+      ]
+    },
+    {
+      "heading": "Make single-tasking easy",
+      "paragraphs": [
+        "You cannot rely on willpower against a buzzing pocket. Put the phone in another room, close the extra tabs, and let people know you will be unreachable for a short stretch. Most things can wait thirty minutes.",
+        "Start with one protected block a day, even twenty minutes. Notice how the work feels: slower at first, then strangely calm, and often done sooner than the fragmented version would have been."
+      ]
+    }
+  ],
+  "takeaway": "Give one thing your whole attention for a short block, and let the rest wait.",
+  "fiction": false
+}

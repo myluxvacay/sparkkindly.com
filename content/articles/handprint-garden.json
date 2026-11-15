@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-104",
+  "slug": "handprint-garden",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Handprint Garden",
+  "description": "For ages 6–9 with an adult: turn painted handprints into a garden of flowers, trees, and suns.",
+  "publishedAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "plants"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Print your hands",
+      "paragraphs": [
+        "Your adult spreads a little paint on the tray. Press your hand in, then press it onto the paper.",
+        "Green handprints with fingers up make grass and leaves. Round prints make flower heads."
+      ]
+    },
+    {
+      "heading": "Grow the garden",
+      "paragraphs": [
+        "Add stems, a sun, and maybe a bee with your fingertips when the paint is dry.",
+        "Sign your garden with one last tiny print in the corner."
+      ]
+    }
+  ],
+  "takeaway": "Your own hand can bloom into a whole garden.",
+  "fiction": false,
+  "materials": [
+    "Big paper",
+    "Washable paint",
+    "A tray or plate for paint"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult checks the paint is washable and safe for skin; wash hands well when you finish."
+  ],
+  "screenFreeExtension": "Make a handprint card to give to someone you love."
+}

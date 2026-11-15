@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-73",
+  "slug": "discount-codes-and-cashback",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Codes, cashback, and stacking rules",
+  "description": "A code at checkout and cashback afterwards can both be genuine — as long as you read the order they apply in and the conditions attached.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "understanding-offers",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Two different kinds of saving",
+      "paragraphs": [
+        "A discount code reduces the price before you pay: 10% off means the $50 basket becomes $45 at the till. Cashback returns money after you pay: buy at $50 and later receive, say, 3% — $1.50 — back through the cashback site or card.",
+        "Both are real, but they feel different. Codes help immediately; cashback arrives slowly, sometimes has a minimum payout, and occasionally fails to track. Count cashback as a pleasant bonus, never as part of the price, until it is actually in your account."
+      ]
+    },
+    {
+      "heading": "Why stacking sometimes fails",
+      "paragraphs": [
+        "\"Stacking\" means combining a code with cashback or a sale. Retailers often forbid it in the small print: using a code from another site can cancel the cashback, because the shop pays commission to only one source per order.",
+        "If the cashback matters more than the code, go through the cashback site last and use only codes listed there. If the code is bigger, take the code and let the cashback go. Chasing both can lose both."
+      ]
+    },
+    {
+      "heading": "Search, but briefly",
+      "paragraphs": [
+        "A two-minute search for a code before checkout is one of the best-paid habits in shopping. Set a limit, though: twenty minutes hunting for 5% off a small basket pays you less than minimum wage and tests your willpower against a screen full of offers.",
+        "One more caution: code sites sometimes list expired or invented codes to keep you clicking. If two codes in a row fail, stop. The checkout is waiting, and your time is part of the price."
+      ]
+    }
+  ],
+  "takeaway": "Take codes at face value, treat cashback as a bonus until it lands, and check stacking rules — combining offers carelessly can cancel both.",
+  "fiction": false
+}

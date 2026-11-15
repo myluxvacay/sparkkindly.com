@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-36",
+  "slug": "how-a-bank-account-works",
+  "brand": "save",
+  "contentType": "article",
+  "title": "How a bank account actually works",
+  "description": "A bank account is a safe place to keep money, with a careful record of everything that comes in and goes out.",
+  "publishedAt": "2026-09-01",
+  "updatedAt": "2026-09-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-basics",
+    "saving"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A safe box with a notebook attached",
+      "paragraphs": [
+        "When you put money into a bank account, the bank keeps it safe and keeps a record — like a notebook that never loses a page — of what you paid in, what you took out, and what is left. That leftover amount is your balance.",
+        "Because the record is kept for you, you do not need to carry cash or remember every purchase. You can check the notebook at any time through an app, a website, or a printed statement."
+      ]
+    },
+    {
+      "heading": "Money in, money out",
+      "paragraphs": [
+        "Money arrives as deposits: wages from a job, a transfer from a friend, or cash you hand over at a branch. Money leaves as withdrawals: cash from a machine, a card payment in a shop, or a transfer you send to someone else.",
+        "Your account number is a bit like a house address — fine to give to people who need to pay you. The passwords and codes that let money leave the account are like house keys, and those you keep to yourself."
+      ]
+    },
+    {
+      "heading": "Why not just keep cash?",
+      "paragraphs": [
+        "Cash at home can be lost or stolen, and it leaves no record. Money in an account is protected by law in many countries up to a set limit, and the record helps you see where your money actually goes.",
+        "An account also unlocks everyday tools: wages paid straight in, bills paid on time, and savings kept in a separate pot so a treat does not accidentally spend the rent money."
+      ]
+    }
+  ],
+  "takeaway": "A bank account is a guarded notebook for your money: it records everything, keeps it safe, and makes paying and saving much easier.",
+  "fiction": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-78",
+  "slug": "anglerfish-a-lantern-in-the-dark",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Anglerfish: a lantern in the dark",
+  "description": "In the ocean's midnight zone there is no sunlight at all — so the anglerfish brings its own.",
+  "publishedAt": "2026-10-25",
+  "updatedAt": "2026-10-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Anglerfish",
+      "url": "https://en.wikipedia.org/wiki/Anglerfish",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Fishing with light",
+      "paragraphs": [
+        "Deep-sea anglerfish carry a modified fin ray that arches over the head like a fishing rod, tipped with a fleshy lure. In many species the lure glows, lit by symbiotic bacteria the fish hosts in a special organ. In water where no sunlight has ever reached, a small drifting light is irresistible to curious prey.",
+        "When a smaller fish or crustacean approaches to investigate, the anglerfish's enormous mouth and expandable stomach do the rest. Meals in the deep sea are rare and unpredictable, so anglerfish are built to swallow prey nearly their own size and then wait, patiently, for the next visitor."
+      ]
+    },
+    {
+      "heading": "Extreme lives in an extreme place",
+      "paragraphs": [
+        "The deep ocean is cold, dark and under crushing pressure, and food mostly arrives as a slow snowfall of debris from the sunlit world above. Life there runs lean: slow growth, huge mouths, and senses tuned to the faintest signals.",
+        "Anglerfish are not the only locals with lanterns. A large majority of deep-sea animals can produce light — to hunt, to hide, to signal, or to startle. In the biggest habitat on Earth, bioluminescence is not a curiosity. It is the local language."
+      ]
+    }
+  ],
+  "takeaway": "Anglerfish hunt in total darkness using a glowing bacterial lure, in a deep ocean where living light is everywhere.",
+  "fiction": false
+}

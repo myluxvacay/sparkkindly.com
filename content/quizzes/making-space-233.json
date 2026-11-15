@@ -1,0 +1,32 @@
+{
+  "id": "making-space-233",
+  "scheduledDate": "2026-02-06",
+  "brand": "together",
+  "prompt": "In a group discussion, one person has not managed to say anything yet. What best helps include them?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keep the discussion moving; silence means they agree"
+    },
+    {
+      "id": "b",
+      "text": "Put them on the spot with a very hard question"
+    },
+    {
+      "id": "c",
+      "text": "Pause and invite their view by name, then give them time to answer"
+    },
+    {
+      "id": "d",
+      "text": "Speak for them"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A warm invitation plus patient silence gives quieter people a genuine opening to contribute.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

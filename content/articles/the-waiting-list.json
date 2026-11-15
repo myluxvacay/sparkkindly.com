@@ -1,0 +1,56 @@
+{
+  "id": "save-bulk-55",
+  "slug": "the-waiting-list",
+  "brand": "save",
+  "contentType": "article",
+  "title": "A waiting list for things you want",
+  "description": "Write down what you want instead of buying it, date it, and revisit it in a month. Most wants quietly expire; the survivors are worth your money.",
+  "publishedAt": "2026-09-27",
+  "updatedAt": "2026-09-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "saving",
+    "spending-wisely",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Catch the want, keep the money",
+      "paragraphs": [
+        "When you feel the pull to buy something non-essential, add it to a waiting list instead of a basket: the item, the price, and today's date. Then close the shop tab. You have honoured the desire without spending anything.",
+        "This works because wanting is often about the moment — the image, the novelty, the mood. Written down, the want gets a fair hearing later, when the moment has passed and your judgement is back on duty."
+      ]
+    },
+    {
+      "heading": "The thirty-day review",
+      "paragraphs": [
+        "Once a month, read the list. Cross off everything that makes you shrug. What remains — the thing you still genuinely want after thirty days — has earned consideration, ideally from a treats pot you have been feeding.",
+        "You will find most entries expire on their own. That is not deprivation; that is discovering how many purchases were only ever weather."
+      ]
+    },
+    {
+      "heading": "A kinder way to say no",
+      "paragraphs": [
+        "The list never says never; it says \"not yet, and let us check.\" That makes it far easier to keep than a blunt ban — and bans are famous for ending in splurges.",
+        "Keep the list somewhere you will actually see it — a note on your phone beats a notebook in a drawer. Reviewing it should feel like browsing your own past wishes, half amusement and half relief at the money still in your account."
+      ]
+    }
+  ],
+  "takeaway": "Park every non-essential want on a dated list for thirty days. Most will fade; the few that survive deserve a planned place in your budget.",
+  "fiction": false
+}

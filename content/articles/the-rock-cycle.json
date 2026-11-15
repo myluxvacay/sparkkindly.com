@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-65",
+  "slug": "the-rock-cycle",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The rock cycle never stops",
+  "description": "Every rock you have ever picked up is mid-journey — melting, hardening, crumbling and reforming on a loop with no end.",
+  "publishedAt": "2026-10-03",
+  "updatedAt": "2026-10-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "earth-science",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Rock cycle",
+      "url": "https://en.wikipedia.org/wiki/Rock_cycle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Three families of rock",
+      "paragraphs": [
+        "Igneous rocks are born from cooling magma or lava: granite slowly underground, basalt quickly at the surface. Sedimentary rocks form from compressed layers of sediment — sandstone from sand, shale from mud, limestone from the shells of sea creatures. Metamorphic rocks are existing rocks transformed by heat and pressure deep underground, like marble remade from limestone.",
+        "These are not one-way destinies. Any rock, given the right conditions, can become any other kind. A granite mountain can weather into sand, the sand can cement into sandstone, and the sandstone, buried and squeezed, can recrystallise into quartzite."
+      ]
+    },
+    {
+      "heading": "Powered from inside and out",
+      "paragraphs": [
+        "Two engines drive the cycle. Earth's internal heat melts rock, lifts mountains and opens the crust where new rock forms. The Sun powers the surface engine: weather, rivers, ice and waves that break rock down and carry the pieces away.",
+        "The timescale is humbling. The pebble in your pocket may contain grains that were once a beach, a seabed, and part of a mountain range — possibly more than once. Geology's deepest lesson is that even stone is temporary."
+      ]
+    }
+  ],
+  "takeaway": "The rock cycle endlessly remakes igneous, sedimentary and metamorphic rock, driven by Earth's heat and the Sun.",
+  "fiction": false
+}

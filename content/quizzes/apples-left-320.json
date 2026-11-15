@@ -1,0 +1,32 @@
+{
+  "id": "apples-left-320",
+  "scheduledDate": "2026-05-04",
+  "brand": "kids",
+  "prompt": "You have 5 apples and you eat 2 of them. How many apples are left?",
+  "options": [
+    {
+      "id": "a",
+      "text": "2"
+    },
+    {
+      "id": "b",
+      "text": "3"
+    },
+    {
+      "id": "c",
+      "text": "5"
+    },
+    {
+      "id": "d",
+      "text": "7"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "5 take away 2 leaves 3 apples. You can count them: 5, 4, 3.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

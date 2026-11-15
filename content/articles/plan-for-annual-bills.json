@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-50",
+  "slug": "plan-for-annual-bills",
+  "brand": "save",
+  "contentType": "article",
+  "title": "The bills that only come once a year",
+  "description": "Insurance renewals, annual memberships, and yearly fees feel like ambushes — until you spread them across the months like everything else.",
+  "publishedAt": "2026-09-20",
+  "updatedAt": "2026-09-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "budgeting",
+    "saving"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make the list",
+      "paragraphs": [
+        "Sit down once and list every payment that arrives yearly or quarterly: insurance, memberships, subscriptions billed annually, vehicle costs, professional fees. Write the amount and the month it lands beside each one.",
+        "Add them up. The total often shocks people — $900 a year in \"rare\" bills is $75 a month that was never in the budget, which explains a lot of mysteriously tight months."
+      ]
+    },
+    {
+      "heading": "Divide by twelve",
+      "paragraphs": [
+        "For each bill, divide the yearly cost by twelve and treat that as a monthly cost. A $600 annual insurance premium becomes $50 a month. Move those monthly amounts into a separate pot as part of your normal payday routine.",
+        "When the bill arrives, pay it from the pot without drama. The ambush has been converted into a routine you have already funded."
+      ]
+    },
+    {
+      "heading": "Renewals are decisions too",
+      "paragraphs": [
+        "A month before each annual bill is due, ask whether you still want it. Auto-renewal relies on you not asking. Memberships you used twice and insurance you could re-quote are the usual savings hiding in this list.",
+        "This list has one more gift: it shows your true monthly cost of living. Add the monthly share of annual bills to your regular monthly spending, and the number you budget against finally matches the life you actually fund."
+      ]
+    }
+  ],
+  "takeaway": "List every yearly bill, divide each by twelve, and save the pieces monthly — annual costs stop being emergencies and start being routine.",
+  "fiction": false
+}

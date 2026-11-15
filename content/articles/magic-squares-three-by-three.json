@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-99",
+  "slug": "magic-squares-three-by-three",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Magic squares: the three-by-three that always makes fifteen",
+  "description": "Arrange the numbers 1 to 9 so every row, column and diagonal adds to fifteen. This ancient puzzle has exactly one solution at its heart.",
+  "publishedAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "patterns"
+  ],
+  "sources": [
+    {
+      "title": "Magic square — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Magic_square",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The puzzle and its legend",
+      "paragraphs": [
+        "A magic square arranges numbers so that every row, every column and both diagonals add to the same total — the magic constant. The most famous is the three-by-three using the numbers 1 to 9, where every line makes 15.",
+        "Chinese legend tells of the Lo Shu square, said to have been seen on the shell of a turtle emerging from the Luo River thousands of years ago. Whether or not the turtle existed, the square is real, and mathematicians have admired it ever since."
+      ]
+    },
+    {
+      "heading": "Finding the heart of the square",
+      "paragraphs": [
+        "Here is the key insight: the centre cell belongs to four different lines — a row, a column and both diagonals. The only number that can survive that much adding is 5, the middle number of 1 to 9. Put 5 in the centre and the puzzle is half solved.",
+        "Pairs that make 10 must sit opposite each other across the centre: 1 with 9, 2 with 8, 3 with 7, 4 with 6. One classic arrangement is 8-1-6 across the top, 3-5-7 through the middle, and 4-9-2 along the bottom. Check the diagonals: 8+5+2 and 6+5+4 both make 15."
+      ]
+    },
+    {
+      "heading": "Try it: build and bend the square",
+      "paragraphs": [
+        "Copy the classic square, then rotate it or flip it like a mirror. Every rotation and reflection still works, and those eight versions are the only solutions there are — the three-by-three magic square is, underneath, a single idea.",
+        "Now bend the rules: can you make a magic square using only even numbers, or the numbers 2 to 10? The constant changes, but the centre trick still guides you. Finding the new centre is your first move."
+      ]
+    }
+  ],
+  "takeaway": "In the three-by-three magic square, 5 holds the centre and every line makes 15 — one elegant idea with eight disguises.",
+  "fiction": false
+}

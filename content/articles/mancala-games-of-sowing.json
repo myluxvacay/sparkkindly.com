@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-125",
+  "slug": "mancala-games-of-sowing",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Mancala: the family of sowing games",
+  "description": "Pick up the stones in a pit and sow them one by one around the board. Mancala games — oware, kalah, congkak, bao — have been played across Africa and Asia for centuries.",
+  "publishedAt": "2026-08-22",
+  "updatedAt": "2026-08-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "number-puzzles"
+  ],
+  "sources": [
+    {
+      "title": "Mancala — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mancala",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Sowing seeds, harvesting strategy",
+      "paragraphs": [
+        "Mancala is not one game but a family of hundreds, all sharing one beautiful move: lift every stone from one of your pits and drop them, one at a time, into the pits that follow — sowing, as farmers sow seed. Captures, stores and winning conditions vary by region, but the rhythm is universal.",
+        "In Ghana, oware is a game of national pride and fierce calculation. Congkak is played across Malaysia and Indonesia, traditionally with shells or seeds on a boat-shaped board. Bao, from East Africa, is considered one of the most complex board games in the world — masters study it like chess."
+      ]
+    },
+    {
+      "heading": "Counting that feels like farming",
+      "paragraphs": [
+        "Every mancala move is arithmetic in disguise: you count a pit's stones, forecast where the last stone will land, and plan captures several sowings ahead. Good players “keep the rhythm” of the board the way farmers know their fields — by constant, affectionate attention.",
+        "The games also carry a social rule as old as the boards: play is conversation. Matches in markets and courtyards gather spectators, advice and laughter; winning matters, and so does being worth playing against."
+      ]
+    },
+    {
+      "heading": "Try it: an egg-box mancala",
+      "paragraphs": [
+        "An egg carton makes a perfect twelve-pit board, with a small bowl at each end as stores. Put four counters in each pit and play the simplest kalah rules: sow anti-clockwise; if your last stone lands in your store, take another turn; if it lands in an empty pit on your side, capture that stone and the pit opposite.",
+        "Play a match of three games and swap strategies afterwards. You will find the second game is nothing like the first — that is five hundred years of players talking."
+      ]
+    }
+  ],
+  "takeaway": "Mancala turns counting into farming and farming into strategy: sow carefully, and the board will feed you.",
+  "fiction": false
+}

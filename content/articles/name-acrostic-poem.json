@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-88",
+  "slug": "name-acrostic-poem",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "A Poem from Your Name",
+  "description": "For ages 6–9 with an adult: write your name down the page and start one happy line with each letter.",
+  "publishedAt": "2026-06-04",
+  "updatedAt": "2026-06-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "art"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Write your name",
+      "paragraphs": [
+        "Write your name in big letters down the left side of the page, one letter on each line.",
+        "Look at the first letter. Think of a happy word that starts with that sound."
+      ]
+    },
+    {
+      "heading": "Grow each line",
+      "paragraphs": [
+        "Turn each letter into a short line. For A you might write: Apples are my favourite snack.",
+        "Read your poem out loud when it is finished. You have made your very first poem."
+      ]
+    }
+  ],
+  "takeaway": "Your own name can be the start of a poem that is all about you.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Pencils or crayons"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only use your first name, and keep your poem at home with your family."
+  ],
+  "screenFreeExtension": "Make an acrostic poem for someone in your family as a surprise gift."
+}

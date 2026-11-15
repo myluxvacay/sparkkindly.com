@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-67",
+  "slug": "the-missing-dollar-riddle",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Missing Dollar: Anatomy of a Trick",
+  "description": "Three guests, a 30-dollar room and a vanished dollar that was never missing - this famous riddle is a masterclass in misleading arithmetic.",
+  "publishedAt": "2026-10-25",
+  "updatedAt": "2026-10-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Missing dollar riddle - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Missing_dollar_riddle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The riddle as it is usually told",
+      "paragraphs": [
+        "Three friends share a hotel room costing 30 dollars and pay 10 dollars each. Later, the clerk realises the room should have cost 25 dollars and sends the bellboy back with 5 dollars. The bellboy, unable to split 5 evenly, keeps 2 dollars and returns 1 dollar to each friend. Now each friend has paid 9 dollars - 27 in total - and the bellboy has 2. That makes 29. Where is the missing dollar?",
+        "The riddle has been circulating since the 1930s, and it still catches nearly everyone on first hearing. The numbers feel so close to adding up that your brain signs off on the sum before checking what is actually being added."
+      ]
+    },
+    {
+      "heading": "Draw the ledger",
+      "paragraphs": [
+        "There is no missing dollar; there is a misleading addition. Follow the money with a simple ledger. The friends have parted with 27 dollars in total. Of that, 25 dollars sits in the hotel till and 2 dollars sits in the bellboy's pocket: 25 + 2 = 27. Everything is accounted for.",
+        "The trick is the sentence 'each paid 9, and the bellboy has 2, making 29'. The bellboy's 2 dollars are already inside the 27 the friends paid - adding them again counts the same money twice, and comparing the result to 30 mixes up two different totals. The honest comparison with 30 is: 25 (hotel) + 2 (bellboy) + 3 (returned to the friends) = 30."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Tell the riddle to a friend and watch for the exact moment they accept the false sum - then ask them, 'Should we be adding the bellboy's money, or subtracting it?' That single question usually cracks it, and it generalises: whenever a word problem produces a paradox, check whether the same quantity has been counted twice.",
+        "Then build your own version with different numbers - a 40-dollar meal, a 7-dollar overcharge - and verify with a ledger that your version still 'loses' a dollar only through the same double-count. Inventing the trick is the surest way to become immune to it."
+      ]
+    }
+  ],
+  "takeaway": "The dollar vanishes because the riddle adds money that is already counted - draw the ledger, and every dollar has a home.",
+  "fiction": false
+}

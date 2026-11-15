@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-41",
+  "slug": "hard-news-kind-words",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Hard news, kind words",
+  "description": "When you must tell someone something difficult, honesty and gentleness are not opposites.",
+  "publishedAt": "2026-09-08",
+  "updatedAt": "2026-09-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "communication",
+    "empathy"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Say it plainly and soon",
+      "paragraphs": [
+        "Difficult news rarely improves with delay, and it almost always gets worse when it arrives by rumour. If it is yours to tell, tell it directly, in person or by voice when you can, and early enough for the person to act on it.",
+        "Plain words are kinder than decorated ones. “The funding was not approved” lands more softly than a long speech that keeps the listener bracing for five minutes."
+      ]
+    },
+    {
+      "heading": "Give the headline first",
+      "paragraphs": [
+        "Start with the core fact, then the details, then what happens next. People in shock stop hearing after the first sentence or two, so put the essential thing first and be ready to repeat the rest later.",
+        "It also helps to say what is not changing: “Your job is safe; the project is ending.” Knowing the edges of the bad news makes the middle easier to bear."
+      ]
+    },
+    {
+      "heading": "Stay for the weather",
+      "paragraphs": [
+        "After delivering hard news, do not rush to fill the silence with solutions. Sit with the person a while. Offer the practical things — water, a walk, a lift home — and let feelings arrive at their own speed.",
+        "You cannot make hard news soft. You can only make sure nobody has to hold it alone in the first few minutes."
+      ]
+    }
+  ],
+  "takeaway": "Tell hard news plainly, early, and headline-first — then stay a while.",
+  "fiction": false
+}

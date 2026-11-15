@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-90",
+  "slug": "letters-round-longest-word",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The letters round: nine random letters, one long word",
+  "description": "Deal out a jumble of vowels and consonants, start a timer, and race to build the longest word you can. A homemade letters round turns any evening into a game show.",
+  "publishedAt": "2026-06-18",
+  "updatedAt": "2026-06-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "play-and-games"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "How the round works",
+      "paragraphs": [
+        "Write the alphabet on slips of paper, keeping vowels (A, E, I, O, U) in one pile and consonants in another. Draw three or four vowels and five or six consonants, lay out your nine letters, and set a timer for sixty seconds. Everyone writes down the longest word they can build, using each letter at most as many times as it appears.",
+        "When time is up, read your words aloud from shortest to longest for maximum drama. Score one point per letter in your best word — and double points, by house tradition, for anyone who uses all nine."
+      ]
+    },
+    {
+      "heading": "Tricks the regulars use",
+      "paragraphs": [
+        "Hunt for endings first. If you can spot -ING, -ED, -ER or -TION among your letters, you only need a short stem to reach a long word. Common pairs help too: QU, CH, SH and TH often unlock words that the raw letters seemed to forbid.",
+        "Do not fall in love with your first word. A six-letter find in the first ten seconds is a safety net, not a finish line — keep scanning for the seven hiding behind it. Many a round is won by the player who kept shuffling while others relaxed."
+      ]
+    },
+    {
+      "heading": "Try it: tonight's edition",
+      "paragraphs": [
+        "Play three rounds and keep a running total. To level the field between strong spellers and beginners, let younger players score double for any word of five letters or more, or give everyone the option of swapping one letter between rounds.",
+        "Keep a family record book of the best words ever found from nine letters. It becomes a small hall of fame — and a standing invitation for somebody to beat the nine-letter legend at the top."
+      ]
+    }
+  ],
+  "takeaway": "Nine letters, sixty seconds, one long word: the letters round proves a game show can fit inside an envelope of paper slips.",
+  "fiction": false
+}

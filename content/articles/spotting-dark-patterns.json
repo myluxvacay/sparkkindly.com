@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-62",
+  "slug": "spotting-dark-patterns",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Dark patterns: when shops nudge too hard",
+  "description": "Some websites are designed to rush, guilt, or confuse you into spending. Learning the tricks makes them much less powerful.",
+  "publishedAt": "2026-10-07",
+  "updatedAt": "2026-10-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "spending-wisely",
+    "understanding-offers"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Dark pattern",
+      "url": "https://en.wikipedia.org/wiki/Dark_pattern",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Meet the usual suspects",
+      "paragraphs": [
+        "A dark pattern is a design choice that pushes you toward a decision you might not make on reflection. Familiar examples: countdown timers that reset when they expire, \"14 people are viewing this\" banners, and pre-ticked boxes adding extras to your basket.",
+        "Others work by friction in reverse: signing up takes one click, but cancelling requires a phone call, a queue, and a retention speech. When leaving is deliberately harder than joining, the design is the message."
+      ]
+    },
+    {
+      "heading": "Questions that break the spell",
+      "paragraphs": [
+        "When you feel rushed, ask: is this deadline real? Shops with permanent \"sales\" and timers that restart are performing urgency, not reporting it. Close the tab and return tomorrow; the offer will almost certainly still be there.",
+        "Before paying, empty the basket mentally: check for pre-ticked insurance, gift wrap, priority fees, and subscriptions that crept in. The honest total is the one after you remove everything you did not choose."
+      ]
+    },
+    {
+      "heading": "You are not the problem",
+      "paragraphs": [
+        "These designs are built by professionals and tested on millions of people. Falling for one is not foolishness; it is the design working as intended. Noticing it is a skill, and like most skills it sharpens quickly with practice.",
+        "A calmer shopping environment helps too: unsubscribe from marketing emails, turn off shopping app notifications, and remove saved card details so every purchase requires a small, deliberate effort. Friction you choose is protection; friction removed by design is exposure."
+      ]
+    }
+  ],
+  "takeaway": "Fake urgency, pre-ticked extras, and one-way doors are design choices, not facts. Slow down, check the basket, and let tomorrow test today's offer.",
+  "fiction": false
+}

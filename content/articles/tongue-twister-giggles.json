@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-94",
+  "slug": "tongue-twister-giggles",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Tongue Twister Giggles",
+  "description": "For ages 6–9 with an adult: try a tongue twister slowly, then faster, then laugh when the words get tangled.",
+  "publishedAt": "2026-06-12",
+  "updatedAt": "2026-06-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start slow",
+      "paragraphs": [
+        "Try this one very slowly: Red lorry, yellow lorry. Say each word clearly, like you are teaching a baby robot.",
+        "Now try: She sells seashells. Slow first. Speed comes later."
+      ]
+    },
+    {
+      "heading": "Speed up and giggle",
+      "paragraphs": [
+        "Say it a little faster each time. Soon the words will tangle, and that is the funniest part.",
+        "When everyone is laughing, slow right down and try to land it perfectly one last time."
+      ]
+    }
+  ],
+  "takeaway": "Tongue twisters are tiny games your mouth plays with tricky sounds.",
+  "fiction": false,
+  "materials": [
+    "Just your voices",
+    "A glass of water for sip breaks"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Stop for a drink of water whenever you need one."
+  ],
+  "screenFreeExtension": "Invent your own tongue twister using the name of your pet or your favourite food."
+}

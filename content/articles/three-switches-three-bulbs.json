@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-68",
+  "slug": "three-switches-three-bulbs",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Three Switches, Three Bulbs, One Visit",
+  "description": "The switches are outside the room and you may enter only once - but light bulbs remember heat, and that is the extra clue.",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "logic-puzzles"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "One visit is not enough - until it is",
+      "paragraphs": [
+        "Outside a closed room stand three switches, each wired to one of three bulbs inside. You may flip the switches however you like, but you may enter the room only once, and from inside you cannot see the switches. How do you work out which switch controls which bulb?",
+        "If bulbs only reported 'on' or 'off', the puzzle would be impossible: one visit gives you one snapshot, and a snapshot cannot distinguish the two bulbs that are off. The puzzle is solvable because bulbs report something else as well. They remember, in heat, that they were on."
+      ]
+    },
+    {
+      "heading": "The solution",
+      "paragraphs": [
+        "Turn the first switch on and leave it for a few minutes. Then turn it off, turn the second switch on, and walk in. The bulb that is lit belongs to the second switch. Touch the two dark bulbs: the warm one belongs to the first switch - it was on until moments ago - and the cold one belongs to the third switch, which was never used.",
+        "The elegant move is realising that the bulb carries two channels of information: light tells you its present, heat tells you its past. Many hard problems, in engineering and in life, crack open the same way - not by looking harder at the obvious signal, but by finding a second kind of evidence nobody thought to read."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Stage the puzzle with three torches or lamps and a friend operating hidden switches, and solve it for real. Then consider the modern complication: LED bulbs barely warm up. How would you adapt the method - perhaps with brightness levels, or by timing how long a bulb has glowed? The puzzle mutates with technology, and adapting it is half the fun.",
+        "As a warm-up for younger puzzlers, try two switches and two bulbs first, where one visit genuinely is enough - and notice exactly why adding the third bulb forces the heat trick into existence."
+      ]
+    }
+  ],
+  "takeaway": "When one look is not enough, find a second kind of evidence - here, heat remembers what light forgets.",
+  "fiction": false
+}

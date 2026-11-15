@@ -1,0 +1,66 @@
+{
+  "id": "play-bulk-91",
+  "slug": "collective-nouns-animals",
+  "brand": "play",
+  "contentType": "article",
+  "title": "A murder of crows: the strange poetry of collective nouns",
+  "description": "A pride of lions, a parliament of owls, an ostentation of peacocks. Collective nouns are some of the most playful phrases in English — here is where they came from.",
+  "publishedAt": "2026-06-20",
+  "updatedAt": "2026-06-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "List of animal names — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/List_of_animal_names",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Collective noun — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Collective_noun",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Names with feathers on",
+      "paragraphs": [
+        "English does not settle for “a group of”. Geese on the ground are a gaggle, but in flight they become a skein. Fish gather in a school, wolves in a pack, and larks rise in an exaltation — a word that sounds exactly like the joy of the thing it describes.",
+        "The darker ones are famous: a murder of crows, an unkindness of ravens, a conspiracy of lemurs. And some are pure theatre: an ostentation of peacocks, a dazzle of zebras, a flamboyance of flamingos."
+      ]
+    },
+    {
+      "heading": "Where the fancy ones came from",
+      "paragraphs": [
+        "Many of these terms were collected in the Book of Saint Albans, printed in 1486, which listed the “terms of venery” a well-educated hunter was expected to know. Scholars suspect some were always jokes — wordplay for the hunting lodge rather than serious science.",
+        "That suspicion is good news for players: inventing collective nouns has been a parlour game for over five hundred years. Modern additions, like a prickle of porcupines, follow the same rule — the name should paint a picture of the animal's character."
+      ]
+    },
+    {
+      "heading": "Try it: invent your own",
+      "paragraphs": [
+        "Deal out animals and invent the group name each deserves. A group of sloths might be a slow-motion; a group of kittens, a chaos. The test of a good invention is whether a listener smiles and says “oh, that's exactly right”.",
+        "For a harder round, use people: a group of teachers, a group of toddlers, a group of grandparents. Five centuries of tradition say you are allowed — encouraged, even — to be a little bit cheeky, as long as you stay kind."
+      ]
+    }
+  ],
+  "takeaway": "Collective nouns are miniature poems: the best ones tell you what the animal is like before you have seen a single one.",
+  "fiction": false
+}

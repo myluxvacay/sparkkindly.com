@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-80",
+  "slug": "make-saving-automatic",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Make saving automatic",
+  "description": "The most reliable savers are not the most disciplined people; they are the people who arranged for saving to happen without them.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-habits",
+    "saving"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Decisions are expensive; defaults are free",
+      "paragraphs": [
+        "Every manual transfer is a fresh decision, and fresh decisions compete with tired evenings, busy weeks, and tempting sales. An automatic transfer set once makes the decision permanently, in a calm moment, with your best interests in charge.",
+        "Most banks let you schedule a transfer for payday. Pairing the saving with the arrival of income matters: money moved on payday is barely missed, while the same amount feels painful to move at month's end."
+      ]
+    },
+    {
+      "heading": "Automate more than saving",
+      "paragraphs": [
+        "The same trick works across your money life: bills on direct debit so they are never late, a monthly amount into a bills pot so annual costs are covered, even an automatic top-up to a gifts fund before December.",
+        "Start with one automation — the payday savings transfer — and add others only when the first has run smoothly for a couple of months. Systems built gradually are systems that survive."
+      ]
+    },
+    {
+      "heading": "Review the machine occasionally",
+      "paragraphs": [
+        "Automatic does not mean forgotten. Amounts that suited last year's income may pinch or underachieve this year. A quick check during your monthly review keeps the machinery matched to your life.",
+        "It is also worth checking that the automation still points where you think it does after changing jobs, banks, or accounts. Transfers fail silently more often than people expect, and one glance a month catches it."
+      ]
+    }
+  ],
+  "takeaway": "Set one automatic payday transfer to savings and let it run. Willpower fades; defaults quietly compound.",
+  "fiction": false
+}

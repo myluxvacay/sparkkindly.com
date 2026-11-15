@@ -1,0 +1,38 @@
+{
+  "id": "closest-star-202",
+  "scheduledDate": "2026-01-06",
+  "brand": "discover",
+  "prompt": "What is the closest star to Earth?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The North Star"
+    },
+    {
+      "id": "b",
+      "text": "The Sun"
+    },
+    {
+      "id": "c",
+      "text": "Proxima Centauri"
+    },
+    {
+      "id": "d",
+      "text": "The Moon"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The Sun is our own star, about 150 million kilometres away - far closer than any other star. The Moon is not a star at all.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Sun",
+      "url": "https://en.wikipedia.org/wiki/Sun",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

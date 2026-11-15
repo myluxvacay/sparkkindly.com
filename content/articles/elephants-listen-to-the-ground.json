@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-51",
+  "slug": "elephants-listen-to-the-ground",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Elephants listen to the ground",
+  "description": "Elephants hold conversations too low for us to hear, and they pick up distant messages through their feet.",
+  "publishedAt": "2026-09-09",
+  "updatedAt": "2026-09-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Elephant communication",
+      "url": "https://en.wikipedia.org/wiki/Elephant_communication",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Calls below hearing",
+      "paragraphs": [
+        "Elephants produce powerful rumbles with very low frequencies, some of them below the range of human hearing. These infrasound calls can travel for kilometres through the air, letting separated herds keep in touch across the savanna.",
+        "The same rumbles also travel through the ground itself. An elephant's call can set up vibrations in the earth that other elephants detect far away, sometimes beyond the reach of the airborne sound."
+      ]
+    },
+    {
+      "heading": "Feet and trunks as receivers",
+      "paragraphs": [
+        "Elephants are often seen freezing mid-stride, leaning forward and lifting one foot. Researchers believe they are listening through the soles of their feet and the sensitive tip of the trunk pressed to the ground, both rich in vibration sensors.",
+        "Using two channels at once — air and earth — gives elephants a communication network that works in wind, darkness and dense bush. A distant thunderstorm, a rival herd, or a family member calling can all register underfoot."
+      ]
+    }
+  ],
+  "takeaway": "Elephants communicate in deep rumbles that travel through both air and ground, and they listen with their feet and trunks.",
+  "fiction": false
+}

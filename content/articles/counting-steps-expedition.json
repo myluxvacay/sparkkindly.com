@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-62",
+  "slug": "counting-steps-expedition",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Counting Steps Expedition",
+  "description": "For ages 6–9 with an adult: count how many of your steps it takes to cross the garden, the room, or the whole street.",
+  "publishedAt": "2026-10-18",
+  "updatedAt": "2026-10-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Choose a journey",
+      "paragraphs": [
+        "Pick a journey you make all the time — from your bed to the kitchen, or from your door to the gate. Guess how many steps it takes. Write your guess down.",
+        "Now walk it slowly and count every step out loud. Heel to toe, steady steps — no giant leaps, unless leaping is the experiment."
+      ]
+    },
+    {
+      "heading": "Compare and wonder",
+      "paragraphs": [
+        "Was the real number bigger or smaller than your guess? Steps are a measuring tool you always carry with you.",
+        "Ask your adult to walk the same journey and count their steps. Their number will be smaller, because grown-up legs are longer."
+      ]
+    },
+    {
+      "heading": "Map your world in steps",
+      "paragraphs": [
+        "Count more journeys and write them all down: 24 steps to the bathroom, 61 steps to the letterbox. You are making a map measured in you.",
+        "Long ago, people measured land in steps and feet. Your expedition uses the oldest measuring tool in the world."
+      ]
+    }
+  ],
+  "takeaway": "Your steps are a measuring tool you always carry, and counting journeys turns your home into a map.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "A pencil",
+    "Chalk (outdoors)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Count steps only in safe places with your adult, away from traffic. Look up often so you do not bump into things."
+  ],
+  "screenFreeExtension": "Guess before you count — estimating first makes the real number a surprise."
+}

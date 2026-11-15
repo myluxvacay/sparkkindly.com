@@ -1,0 +1,38 @@
+{
+  "id": "swimming-bird-396",
+  "scheduledDate": "2026-07-19",
+  "brand": "discover",
+  "prompt": "Which bird cannot fly but is an excellent swimmer?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Eagle"
+    },
+    {
+      "id": "b",
+      "text": "Penguin"
+    },
+    {
+      "id": "c",
+      "text": "Owl"
+    },
+    {
+      "id": "d",
+      "text": "Sparrow"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A penguin's wings work like flippers, making it a fast, graceful swimmer, but it cannot fly at all.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Penguin",
+      "url": "https://en.wikipedia.org/wiki/Penguin",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

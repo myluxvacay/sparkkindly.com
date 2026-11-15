@@ -1,0 +1,32 @@
+{
+  "id": "peak-energy-224",
+  "scheduledDate": "2026-01-28",
+  "brand": "grow",
+  "prompt": "You notice your thinking is sharpest in the morning. How should you plan a demanding task?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Save it for late evening, when it is quiet"
+    },
+    {
+      "id": "b",
+      "text": "Do it first thing and leave the easy tasks for later"
+    },
+    {
+      "id": "c",
+      "text": "Split it randomly across the week"
+    },
+    {
+      "id": "d",
+      "text": "Wait for a completely free weekend"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Matching hard work to your peak-energy hours means the same task takes less time and feels easier.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "first-olympics-226",
+  "scheduledDate": "2026-01-30",
+  "brand": "discover",
+  "prompt": "The ancient Olympic Games were first held in which country?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Italy"
+    },
+    {
+      "id": "b",
+      "text": "Egypt"
+    },
+    {
+      "id": "c",
+      "text": "Greece"
+    },
+    {
+      "id": "d",
+      "text": "Turkey"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The games began at Olympia in ancient Greece in 776 BC and were held every four years for nearly twelve centuries.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Ancient Olympic Games",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

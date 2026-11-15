@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-87",
+  "slug": "portmanteau-suitcase-words",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Portmanteau words: brunch, smog and other happy blends",
+  "description": "When two words are packed into one suitcase, you get a portmanteau: brunch, motel, Brexit. Lewis Carroll invented the idea — and the name.",
+  "publishedAt": "2026-06-12",
+  "updatedAt": "2026-06-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "word-games"
+  ],
+  "sources": [
+    {
+      "title": "Portmanteau — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Portmanteau",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Two meanings packed in one word",
+      "paragraphs": [
+        "In Through the Looking-Glass, Humpty Dumpty explains the word slithy as “lithe and slimy”, adding: “You see it's like a portmanteau — there are two meanings packed up into one word.” A portmanteau was a suitcase that opened into two halves, and Carroll borrowed it for blended words.",
+        "Once you start looking, blends are everywhere. Brunch packs breakfast and lunch; smog packs smoke and fog; a motel is a motor hotel; and spork, that picnic compromise, is spoon and fork travelling together."
+      ]
+    },
+    {
+      "heading": "Blends that stuck",
+      "paragraphs": [
+        "Some blends become so familiar we forget they were ever new. Bollywood blends Bombay and Hollywood. Brexit, British and exit, went from newspaper shorthand to history books in a few years. Others, like frenemy, survive because they name a feeling nothing else quite covers.",
+        "A good blend keeps a recognisable piece of each parent. That is the craft: chop too much away and nobody can unpack your suitcase; chop too little and you just have two words holding hands."
+      ]
+    },
+    {
+      "heading": "Try it: invent a blend",
+      "paragraphs": [
+        "Pick two things you love and pack them together. A cat that naps professionally might be a napetite... or try describing a robot vacuum as a dustbuster's cousin and see what name emerges. The game is to make a blend that a friend can decode without help.",
+        "Then reverse it: deal out famous blends — podcast, hangry, glamping, motel — and challenge everyone to unpack the two parents hiding inside each one."
+      ]
+    }
+  ],
+  "takeaway": "A portmanteau word is a suitcase with two meanings inside; the fun is packing one that other people can unpack.",
+  "fiction": false
+}

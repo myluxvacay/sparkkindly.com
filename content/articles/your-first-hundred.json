@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-52",
+  "slug": "your-first-hundred",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Your first $100",
+  "description": "The first hundred is the hardest and the most important: it proves saving is something you do, not something other people do.",
+  "publishedAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "saving",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Small enough to start today",
+      "paragraphs": [
+        "A hundred dollars is a deliberately humble target. At $5 a week it takes twenty weeks; at $10 a week, ten weeks. The amount matters less than the finish line being close enough to see from where you stand.",
+        "Choose a weekly figure you could manage even in a bad week. A plan that survives bad weeks is worth ten ambitious plans that collapse by the second one."
+      ]
+    },
+    {
+      "heading": "Make it visible and separate",
+      "paragraphs": [
+        "Keep the hundred in its own pot or account, with a name if your bank allows it — \"First 100\" works fine. Watching the number climb is the reward that carries you through the weeks when motivation dips.",
+        "Separate matters for another reason too: money mixed into everyday spending gets spent. A named pot has a job, and most of us hesitate before raiding a pot with a purpose."
+      ]
+    },
+    {
+      "heading": "When you get there",
+      "paragraphs": [
+        "Leave the hundred where it is. It has quietly become your starter emergency cushion — the thing that turns a broken phone screen from a crisis into an inconvenience. Then set the next target, perhaps $250, using exactly the habit you have just built.",
+        "Tell someone, too. A hundred saved is a small, real achievement, and saying it aloud makes it harder to quietly undo on a dull evening. Habits grow stronger when they are witnessed kindly."
+      ]
+    }
+  ],
+  "takeaway": "Save your first $100 in a separate, named pot at a pace that survives bad weeks — the habit you build is worth more than the amount.",
+  "fiction": false
+}

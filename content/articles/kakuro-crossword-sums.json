@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-103",
+  "slug": "kakuro-crossword-sums",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Kakuro: the crossword that adds up",
+  "description": "Kakuro replaces crossword letters with digits and clues with sums. No repeats inside a sum, every total exact — a calm, logical workout.",
+  "publishedAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "patterns"
+  ],
+  "sources": [
+    {
+      "title": "Kakuro — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kakuro",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Crosswords meet arithmetic",
+      "paragraphs": [
+        "A Kakuro grid looks like a crossword: black cells carry clues, white cells wait to be filled. Each clue is a sum, pointing across or down, and you fill the white cells with digits 1 to 9 that add up to it. The golden rule: within a single sum, no digit may repeat.",
+        "The name is shortened from the Japanese “kasan kurosu” — addition cross. Kakuro has been a newspaper staple in Japan for decades and a quiet favourite everywhere else ever since."
+      ]
+    },
+    {
+      "heading": "The magic of unique sums",
+      "paragraphs": [
+        "Some sums have only one possible combination, and finding them is the key that opens the puzzle. A sum of 3 across two cells must be 1 + 2. A sum of 4 in two cells must be 1 + 3 (2 + 2 is banned by the no-repeat rule). At the top end, 16 in two cells is 7 + 9, and 17 is 8 + 9.",
+        "Three-cell sums have their own certainties: 7 in three cells can only be 1 + 2 + 4. Learn these “magic blocks” and a Kakuro grid starts offering you free cells in the first minute."
+      ]
+    },
+    {
+      "heading": "Try it: build the reflex",
+      "paragraphs": [
+        "Practise by listing combinations: how many ways can two different digits make 10? (1+9, 2+8, 3+7, 4+6 — four ways.) Which two-digit sums have exactly one way? Working this out once teaches you more than solving three puzzles by luck.",
+        "When you solve, begin where two restricted sums cross — a cell belonging to a “3 in two” across and a “17 in two” down has very few places to hide. Intersections are where Kakuro confesses."
+      ]
+    }
+  ],
+  "takeaway": "Kakuro is arithmetic with a crossword's skeleton: learn the sums that have only one combination and the grid begins to open.",
+  "fiction": false
+}

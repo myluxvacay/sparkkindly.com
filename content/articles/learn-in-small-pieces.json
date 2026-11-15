@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-127",
+  "slug": "learn-in-small-pieces",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Learn a skill in small pieces",
+  "description": "Big skills are bundles of small ones. Learning piece by piece, in an order that makes sense, turns an overwhelming goal into a series of friendly steps.",
+  "publishedAt": "2026-08-07",
+  "updatedAt": "2026-08-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Unbundle the skill",
+      "paragraphs": [
+        "'Learn guitar' sounds like one thing, but it is really chords, rhythm, finger strength, reading music and a dozen other pieces. Each piece is small enough to practise on its own, and progress in one makes the others easier.",
+        "Write the pieces down. A visible map stops the discouragement of feeling like you are 'not getting anywhere' when in fact three of the ten pieces have quietly improved."
+      ]
+    },
+    {
+      "heading": "Practise one piece at a time",
+      "paragraphs": [
+        "Pick the piece that unlocks the most, or the one you enjoy most, and give it your sessions for a week or two. Short, frequent practice beats occasional marathons for almost every skill.",
+        "Every so often, put the pieces back together: play the whole song slowly, cook the full meal, hold the real conversation. The pieces exist to serve the whole, and the whole is where the fun lives."
+      ]
+    }
+  ],
+  "takeaway": "Break the skill into pieces, practise one at a time, and keep reassembling the whole.",
+  "fiction": false
+}

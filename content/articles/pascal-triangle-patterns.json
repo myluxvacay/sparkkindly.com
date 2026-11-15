@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-42",
+  "slug": "pascal-triangle-patterns",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Pascal's Triangle: A Pyramid Full of Secrets",
+  "description": "Build this simple triangle of numbers and you will find counting numbers, powers of two, and even Fibonacci hiding inside.",
+  "publishedAt": "2026-09-18",
+  "updatedAt": "2026-09-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Pascal's triangle - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pascal%27s_triangle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "One rule builds everything",
+      "paragraphs": [
+        "Pascal's triangle starts with a single 1 at the top. Every row begins and ends with 1, and every other number is the sum of the two numbers diagonally above it. That is the entire recipe - yet the triangle was studied in India, China and Persia centuries before Blaise Pascal wrote about it in the 1600s.",
+        "The first rows run: 1; 1 1; 1 2 1; 1 3 3 1; 1 4 6 4 1; 1 5 10 10 5 1. Build a few rows yourself and the addition rhythm becomes hypnotic - which is good, because the patterns are easier to spot while your pencil is doing the work."
+      ]
+    },
+    {
+      "heading": "Patterns stacked inside patterns",
+      "paragraphs": [
+        "Add up each row and you get 1, 2, 4, 8, 16, 32 - the powers of two, doubling every time. Look along the edges and you find the counting numbers 1, 2, 3, 4, 5, and one diagonal further in sit the triangular numbers 1, 3, 6, 10, 15. Slice the triangle along shallow diagonals and add those numbers up, and out fall the Fibonacci numbers.",
+        "The triangle also counts combinations. The row 1 4 6 4 1 tells you the ways to choose things from a set of four: there is 1 way to choose none, 4 ways to choose one, 6 ways to choose two, 4 ways to choose three and 1 way to choose all four. This is why the triangle turns up inside probability, including the dice and coin questions elsewhere in this collection."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Build the triangle down to at least the eighth row, then colour in every odd number. A large triangle of Sierpinski-style holes appears - a fractal hiding inside an addition table, connecting this puzzle to the cauliflower and the coastline.",
+        "Then pick a row and check its sum, and pick the row for five objects - 1 5 10 10 5 1 - and verify the 10 by listing the ways to choose two fruits from an apple, banana, cherry, date and elderberry. Ten pairs, if your list is complete."
+      ]
+    }
+  ],
+  "takeaway": "Pascal's triangle is built by one addition rule, yet it stores the counting numbers, combinations and Fibonacci numbers all at once.",
+  "fiction": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-69",
+  "slug": "bread-on-the-table",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Bread on the table",
+  "description": "Sharing food is humanity’s oldest peace treaty, and the table is still where strangers become guests.",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "traditions",
+    "helping-others"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The oldest diplomacy",
+      "paragraphs": [
+        "Long before written treaties, sharing food was how humans signalled peaceful intent: I feed you, therefore I do not harm you. Echoes survive everywhere — in the bread and salt offered to guests in Slavic and Middle Eastern traditions, in the guest treated as an honour in Pashtun hospitality, in the simple fact that we still seal friendships and business alike over meals.",
+        "Eating together remains the fastest known technology for turning “them” into “us.”"
+      ]
+    },
+    {
+      "heading": "Feed people before you persuade them",
+      "paragraphs": [
+        "There is practical wisdom in the old order of operations: food first, business second. A fed guest is a calmer listener; a host who feeds you has made a small investment in your welfare that changes the whole negotiation. Many cultures simply refuse to discuss serious matters with an unfed guest.",
+        "At home, the same law applies in miniature. Difficult family conversations go measurably better after dinner than before it."
+      ]
+    },
+    {
+      "heading": "Make room at yours",
+      "paragraphs": [
+        "You do not need feast-level cooking. Soup and bread, offered without apology, have carried more hospitality than many banquets. What guests remember is rarely the menu; it is whether there was a place set for them and time that was not rationed.",
+        "Keep one expandable habit — an extra portion in the pot, a folding chair that fits your table — and your home joins a tradition older than every nation at it."
+      ]
+    }
+  ],
+  "takeaway": "Feed people first; the table has been turning strangers into guests for thousands of years.",
+  "fiction": false
+}

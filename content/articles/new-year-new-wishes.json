@@ -1,0 +1,61 @@
+{
+  "id": "together-bulk-70",
+  "slug": "new-year-new-wishes",
+  "brand": "together",
+  "contentType": "article",
+  "title": "New year, new wishes",
+  "description": "However the world rings in a new year, the wishes underneath are strikingly alike.",
+  "publishedAt": "2026-10-18",
+  "updatedAt": "2026-10-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "traditions",
+    "gratitude"
+  ],
+  "sources": [
+    {
+      "title": "New Year's Eve — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/New_Year%27s_Eve",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Twelve grapes and first feet",
+      "paragraphs": [
+        "In Spain, the turn of the year is eaten: twelve grapes, one with each midnight chime, for twelve months of luck. In Scotland, “first-footing” sends the first visitor across the threshold with gifts like coal, bread, or whisky — symbols of warmth, food, and cheer for the year ahead. In Denmark, people leap from chairs at midnight, jumping into the new year in the most literal way available.",
+        "In Japan, temple bells ring 108 times to clear the desires that trouble the human heart, while in many Chinese celebrations of the Lunar New Year, red envelopes of money pass from elders to children with wishes for prosperity."
+      ]
+    },
+    {
+      "heading": "The wishes underneath",
+      "paragraphs": [
+        "Strip away the costumes and the wishes converge: health, enough food, warmth, luck, a clean start. Cultures that agree on little else agree that a year should begin with hope spoken out loud, in company, preferably with something delicious in hand.",
+        "Even the cleaning customs — sweeping out the old year, settling debts, wearing new clothes — tell the same story: beginnings deserve a cleared stage."
+      ]
+    },
+    {
+      "heading": "Borrow one",
+      "paragraphs": [
+        "There is no rule that your household may keep only its own traditions. Eat twelve grapes, leap off a sofa, write wishes on paper to burn or keep — adopted rituals, practised with respect and a little humour, become real ones by repetition.",
+        "What matters is the marking. A year that is welcomed deliberately is a year the family remembers choosing."
+      ]
+    }
+  ],
+  "takeaway": "Beneath every new-year custom sits the same wish list: health, warmth, enough, and a clean start.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "right-change-229",
+  "scheduledDate": "2026-02-02",
+  "brand": "save",
+  "prompt": "You buy a snack for $13 and pay with a $20 note. How much change should you get?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$3"
+    },
+    {
+      "id": "b",
+      "text": "$13"
+    },
+    {
+      "id": "c",
+      "text": "$17"
+    },
+    {
+      "id": "d",
+      "text": "$7"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "$20 - $13 = $7 change. It is always worth a quick count before you leave the till.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

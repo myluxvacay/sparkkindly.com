@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-29",
+  "slug": "flower-colour-census",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Flower Colour Census",
+  "description": "For ages 6–9 with an adult: count the flowers of each colour in a garden or park and make a colour chart.",
+  "publishedAt": "2026-09-10",
+  "updatedAt": "2026-09-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "art"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Choose your patch",
+      "paragraphs": [
+        "Pick one small patch of garden or park with your adult. Your job is to count every flower colour you can see in that patch — and only that patch.",
+        "Scientists who count living things call this a census. You are going to do a census of colours."
+      ]
+    },
+    {
+      "heading": "Count colour by colour",
+      "paragraphs": [
+        "Start with red. Walk slowly and count every red flower, making a little mark on your paper for each one. Then do the same for yellow, white, purple, and pink.",
+        "Tiny flowers count too. Look low near the grass, where small flowers like to hide. Bees may be visiting — watch them work, but give them space."
+      ]
+    },
+    {
+      "heading": "Find the winner",
+      "paragraphs": [
+        "Add up your marks. Which colour has the most flowers in your patch? Draw a chart with a bar for each colour to show what you found.",
+        "Try the same census in a different patch. Gardens change from place to place and week to week, so your chart is a snapshot of one special day."
+      ]
+    }
+  ],
+  "takeaway": "Counting flowers colour by colour turns a garden into a chart, and shows which colours bloom most in your patch.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Coloured pencils or crayons",
+    "A clipboard if you have one"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Count flowers with your eyes — do not pick them, so bees and other people can enjoy them too. Keep a safe distance from bees on flowers."
+  ],
+  "screenFreeExtension": "Make a colour chart picture at home using your counts, with a tall tower of colour for the winner."
+}

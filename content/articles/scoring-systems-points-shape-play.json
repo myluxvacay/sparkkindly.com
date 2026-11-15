@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-64",
+  "slug": "scoring-systems-points-shape-play",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Why Points Work: How Scoring Changes the Way We Play",
+  "description": "Points are not just bookkeeping - they quietly tell players what to value. Change the scoring and you change the game.",
+  "publishedAt": "2026-10-21",
+  "updatedAt": "2026-10-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "maths-and-logic"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The scoreboard is a teacher",
+      "paragraphs": [
+        "Players chase whatever the scoring system rewards, usually without noticing they are being steered. In Scrabble, the letters Q and Z are worth 10 points, so players hoard them and hunt for short words that use them - the letter values literally reshape everyone's vocabulary during the game. In racing games that award points per finishing place, a safe second place can be worth more than a risky lunge for first.",
+        "Designers know this and use scoring as an invisible tutorial. Want players to explore? Award points for visiting new places. Want them to take risks? Make second place worth little. The rules say what is allowed; the points say what is wise."
+      ]
+    },
+    {
+      "heading": "Risk, catch-up and inverted goals",
+      "paragraphs": [
+        "Scoring also controls courage. When only first place counts, trailing players rationally gamble on wild plays, because a safe second is worth the same as last. When every place scores, the same players turn careful. Neither is better - but they are different games wearing the same clothes, and the scoreboard alone made the difference.",
+        "Some games invert scoring entirely: in the card game Hearts, points are punishments, and the player with the fewest wins. Inversion scrambles every instinct - suddenly the 'best' cards are traps and being too successful is dangerous. It is the fastest way to feel, in your hands, how completely scoring governs behaviour."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Take a familiar game and change only its scoring, then play and watch behaviour bend. Count cards instead of points in a trick-taking game, or award double points for the last lap of a race game. Note which decisions changed - you have just done professional game-design research at a kitchen table.",
+        "Then design scoring for a game of your own invention: write down the one behaviour you most want to encourage, and attach the points to exactly that. If players ignore your intention, the points are lying about your design - adjust the numbers, not the players."
+      ]
+    }
+  ],
+  "takeaway": "Players chase what the scoreboard rewards - so the scoring system is the game's hidden rulebook for behaviour.",
+  "fiction": false
+}

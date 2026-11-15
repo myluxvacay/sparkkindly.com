@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-146",
+  "slug": "compliment-postcards",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Compliment Postcards",
+  "description": "For ages 6–9 with an adult: make postcards that tell people one true, kind thing about them.",
+  "publishedAt": "2026-08-25",
+  "updatedAt": "2026-08-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "kindness",
+    "words"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Think of a true thing",
+      "paragraphs": [
+        "Choose a person. Think of something true: You tell the best stories. You always share your crayons.",
+        "True compliments feel better than big flattery, because people can believe them."
+      ]
+    },
+    {
+      "heading": "Make and give",
+      "paragraphs": [
+        "Write or dictate the compliment on your card and decorate the other side.",
+        "Give it in person if you can. Watching someone read a compliment is half the fun."
+      ]
+    }
+  ],
+  "takeaway": "A true compliment is a tiny gift that costs nothing.",
+  "fiction": false,
+  "materials": [
+    "Card or thick paper",
+    "Crayons",
+    "Stickers (optional)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Compliments should be true and kind; an adult helps deliver them."
+  ],
+  "screenFreeExtension": "Leave a compliment postcard somewhere in the house for someone to find by surprise."
+}

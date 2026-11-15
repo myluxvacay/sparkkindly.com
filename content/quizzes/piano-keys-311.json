@@ -1,0 +1,32 @@
+{
+  "id": "piano-keys-311",
+  "scheduledDate": "2026-04-25",
+  "brand": "play",
+  "prompt": "What has many keys but cannot open a single lock?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A keyring"
+    },
+    {
+      "id": "b",
+      "text": "A piano"
+    },
+    {
+      "id": "c",
+      "text": "A locksmith"
+    },
+    {
+      "id": "d",
+      "text": "A password"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A piano has 88 keys, but they make music rather than opening locks.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

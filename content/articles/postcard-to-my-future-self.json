@@ -1,0 +1,67 @@
+{
+  "id": "kids-bulk-81",
+  "slug": "postcard-to-my-future-self",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "A Postcard to Future Me",
+  "description": "For ages 6–9 with an adult: write and decorate a postcard to yourself, to be opened in one year.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Write to the future",
+      "paragraphs": [
+        "On your card, write a message to yourself in one year's time. Tell future-you what you love doing now, your favourite food, and your best friend.",
+        "Ask future-you some questions: Can you swim yet? Did the tooth fall out? Is your hair longer?"
+      ]
+    },
+    {
+      "heading": "Draw today's world",
+      "paragraphs": [
+        "Draw a picture of yourself today — your height, your hairstyle, your favourite jumper. Add the date in big numbers.",
+        "Future-you will laugh at how much has changed. That is the magic of the postcard: it freezes today still."
+      ]
+    },
+    {
+      "heading": "Seal and hide",
+      "paragraphs": [
+        "Put the card in its envelope and write DO NOT OPEN UNTIL next to next year's date. Ask your adult to keep it somewhere safe.",
+        "One year from now, opening it will feel like getting a letter from a friendly stranger who knows you very well."
+      ]
+    }
+  ],
+  "takeaway": "A postcard to your future self freezes today in words and pictures, ready to surprise you in a year.",
+  "fiction": false,
+  "materials": [
+    "A card or thick paper",
+    "Coloured pencils",
+    "An envelope",
+    "A safe keeping place"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult keeps the postcard somewhere safe. Write only things you are happy for your family to read."
+  ],
+  "screenFreeExtension": "Write a second postcard for a friend and swap — each of you keeps the other's safe for a year."
+}

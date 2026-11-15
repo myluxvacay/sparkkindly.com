@@ -1,0 +1,32 @@
+{
+  "id": "one-piece-critique-238",
+  "scheduledDate": "2026-02-11",
+  "brand": "grow",
+  "prompt": "You want to get better at drawing. Which request brings the most useful growth?",
+  "options": [
+    {
+      "id": "a",
+      "text": "'Tell me I'm talented'"
+    },
+    {
+      "id": "b",
+      "text": "'Look at everything I have ever drawn and judge all of it'"
+    },
+    {
+      "id": "c",
+      "text": "'Critique this one piece: what should I work on next?'"
+    },
+    {
+      "id": "d",
+      "text": "'Compare me with the best artist you know'"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Specific feedback on one piece gives you one clear, practisable next step instead of vague praise or discouragement.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

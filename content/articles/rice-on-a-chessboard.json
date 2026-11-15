@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-77",
+  "slug": "rice-on-a-chessboard",
+  "brand": "play",
+  "contentType": "article",
+  "title": "One Grain, Two Grains, Four: The Chessboard That Broke a Kingdom",
+  "description": "A modest-sounding reward - rice doubled on every square - grows past all the rice on Earth. This is exponential growth, felt.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "maths-and-logic",
+    "play-and-games"
+  ],
+  "sources": [
+    {
+      "title": "Wheat and chessboard problem - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wheat_and_chessboard_problem",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The legend of the modest request",
+      "paragraphs": [
+        "In a famous legend, the inventor of chess presents the game to a king, who offers any reward he likes. The inventor asks for something that sounds humble: one grain of rice on the first square of the chessboard, two on the second, four on the third - doubling on every square to the 64th. The king, amused by such modesty, agrees at once. He has made a catastrophic mistake.",
+        "Doubling feels gentle at first. The first row of the board totals only 255 grains - a handful. By the tenth square you owe 512 grains for that square alone. But doubling has a property our intuition handles badly: every step adds as much as everything that came before, combined, plus one. The growth does not speed up gradually; it detonates."
+      ]
+    },
+    {
+      "heading": "The numbers that end kingdoms",
+      "paragraphs": [
+        "On square 20 the debt for that single square is 524,288 grains. On square 32 it is about 2.1 billion grains - a pile weighing tens of tonnes, for one square. The final square alone demands about 9.2 quintillion grains, and the whole board totals 2 to the power 64 minus 1: roughly 18.4 quintillion grains of rice.",
+        "Converted to harvests, that is on the order of a thousand years of the entire world's modern rice production. No kingdom, and no planet operating at today's rates, could pay the second half of the board. The legend usually ends with the king realising that the inventor asked not for rice but for a lesson - and the lesson is that exponential growth outruns every linear intuition we own."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Try the paper version: a sheet of paper is about 0.1 millimetres thick. Fold it in half 7 times and it is roughly 128 sheets thick - already hard to fold. If you could fold it 42 times, the stack would reach about 440,000 kilometres - past the Moon. Nobody can fold paper 42 times, and that impossibility is itself the lesson about doubling.",
+        "Then do the money version: one penny doubled every day for a month. By day 30 you would have over 5 million pounds or dollars from that single day's doubling chain - compute a few days by hand (day 10 is about 5.12, day 20 about 5,242) and watch the moment the numbers stop feeling real."
+      ]
+    }
+  ],
+  "takeaway": "Doubling feels slow until it suddenly is not: 64 doublings turn one grain of rice into more than a kingdom - or a world - can pay.",
+  "fiction": false
+}

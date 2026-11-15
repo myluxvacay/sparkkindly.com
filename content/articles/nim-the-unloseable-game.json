@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-63",
+  "slug": "nim-the-unloseable-game",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Nim: The Tiny Game With a Perfect Strategy",
+  "description": "Take 1, 2 or 3 stones from a pile - last move wins. This ancient game hides a pattern that makes one player unbeatable.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Nim - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nim",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Rules that fit in one breath",
+      "paragraphs": [
+        "Put 20 stones (or coins, or matches) in a pile. Two players take turns removing 1, 2 or 3 stones. Whoever takes the last stone wins. That is the whole game - and if the first player plays perfectly, the second player cannot win; if the pile started at a different size, the advantage flips in a way you can compute in seconds.",
+        "The secret number is 4 - one more than the maximum take. Whatever your opponent removes, you can remove the complement to 4: if they take 1, you take 3; if they take 2, you take 2; if they take 3, you take 1. Every pair of moves removes exactly 4 stones, so the pile lands on 16, 12, 8, 4 - and whoever controls that ladder controls the ending."
+      ]
+    },
+    {
+      "heading": "Why multiples of four are safe ground",
+      "paragraphs": [
+        "Work backwards from the end. Facing a pile of 4, you lose against perfect play: whatever you take (1, 2 or 3), your opponent takes the rest and wins. So 4 is a losing position for the player to move - and therefore leaving 4 is the goal. The same logic climbs: 8 is losing because any move you make lets the opponent leave you 4; and so on up the ladder of multiples of 4.",
+        "So the strategy writes itself. If the pile is a multiple of 4, the second player mirrors complements and wins. If it is not, the first player takes the remainder - from 17, take 1 to leave 16 - and becomes the mirrorer. One warning: this is the version where the last move wins. In the misere version, where taking the last stone loses, the endgame flips and the strategy needs a small adjustment near the end."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Play with 17 stones and take 1 immediately, then mirror every one of your opponent's moves to 4. Watch their confusion grow as the pile keeps landing on your numbers. Then be generous and teach them the ladder - the game becomes a duel of who spots non-multiples first.",
+        "For a glimpse of the deep version: full Nim uses several piles, and its winning strategy involves writing the pile sizes in binary and making the 'nim-sum' zero - the same binary counting you can do on your fingers. The one-pile game is the doorway to that beautiful machinery."
+      ]
+    }
+  ],
+  "takeaway": "In take-away Nim, multiples of four are safe ground: always leave one, and mirror your opponent's move to make each round remove exactly four.",
+  "fiction": false
+}

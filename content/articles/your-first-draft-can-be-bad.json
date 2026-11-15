@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-94",
+  "slug": "your-first-draft-can-be-bad",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Your first draft is allowed to be bad",
+  "description": "A rough first draft is not a failure. It is raw material, and raw material is exactly what you need.",
+  "publishedAt": "2026-06-07",
+  "updatedAt": "2026-06-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "writing",
+    "creativity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Drafts and editing are different jobs",
+      "paragraphs": [
+        "Writing a first draft and improving it are two separate skills, and they fight each other when you try to do both at once. The inner editor whispers that every sentence is wrong, and the page stays empty.",
+        "Give the draft permission to be clumsy. Its only job is to exist so that the editor has something to work with later."
+      ]
+    },
+    {
+      "heading": "Write it ugly, then walk away",
+      "paragraphs": [
+        "Set a short timer and write without stopping to fix anything. If you get stuck, write the boring version of the sentence and move on. You can mark weak spots with a simple note like [fix later].",
+        "When the draft is done, leave it alone for a while, even just overnight. You will return with kinder, clearer eyes, and the fixing will feel more like tidying than rescuing."
+      ]
+    }
+  ],
+  "takeaway": "Let the first draft be rough; you cannot edit a blank page.",
+  "fiction": false
+}

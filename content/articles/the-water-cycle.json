@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-86",
+  "slug": "the-water-cycle",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The water cycle: round and round",
+  "description": "The water in your glass is ancient. It has been ocean, cloud, rain, river and glacier more times than anyone can count.",
+  "publishedAt": "2026-11-07",
+  "updatedAt": "2026-11-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "climate",
+    "oceans"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Water cycle",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Lifted by the Sun",
+      "paragraphs": [
+        "The Sun evaporates water from oceans, lakes, soil and leaves — plants release vast quantities through transpiration — and the vapour rises into the atmosphere. Cooling as it climbs, it condenses into cloud droplets and eventually falls as precipitation. Some rain runs off into rivers; some soaks into groundwater; some locks into ice. All of it, eventually, returns to the sea or the sky to go around again.",
+        "The amounts are staggering. The atmosphere holds only about two weeks' worth of the planet's water at any moment, constantly exchanged. A water molecule spends, on average, about nine days in the air, a few weeks in a river, thousands of years in deep groundwater — and around 3,000 years in the ocean."
+      ]
+    },
+    {
+      "heading": "A cycle with no beginning",
+      "paragraphs": [
+        "Earth's water is essentially a closed account: almost none arrives or leaves. The water dinosaurs drank is the water in today's rain. What changes is only where it sits — ocean, ice cap, aquifer, cloud — and those storages are the buffers of the whole system.",
+        "That is why the water cycle is also a story about care. Pollution put into a river enters a loop that returns to taps, fields and seas. The cycle forgives nothing and forgets nothing; it simply keeps everything moving."
+      ]
+    }
+  ],
+  "takeaway": "The water cycle endlessly circulates Earth's fixed supply of water through ocean, air, land and ice.",
+  "fiction": false
+}

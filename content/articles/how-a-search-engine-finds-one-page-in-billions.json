@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-122",
+  "slug": "how-a-search-engine-finds-one-page-in-billions",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How a search engine finds one page in billions",
+  "description": "It does not search the web when you type — it searches an enormous index it built beforehand, the way you use the index at the back of a book.",
+  "publishedAt": "2026-08-14",
+  "updatedAt": "2026-08-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "computing",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Search engine",
+      "url": "https://en.wikipedia.org/wiki/Search_engine",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Web crawler",
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "First, walk the whole web",
+      "paragraphs": [
+        "Before any searching happens, programs called crawlers travel the web endlessly, following links from page to page and copying what they find. The web has hundreds of billions of pages, so crawling never finishes; it just keeps refreshing, like painting a bridge that grows.",
+        "Each copied page is taken apart and filed into an index: a vast lookup table recording which words appear on which pages, where, and in what company. Building the index is the real work — answering your question afterwards is the quick part."
+      ]
+    },
+    {
+      "heading": "Answering in a blink",
+      "paragraphs": [
+        "When you type a query, the engine consults its index, not the live web. It gathers candidate pages, then ranks them using hundreds of signals: how well the words match, whether the page is trusted and well-made, how fresh it is, where you are, and what people asking similar questions found useful.",
+        "Early engines leaned heavily on one famous signal — the number and quality of links pointing to a page, treating each link as a vote. Modern ranking mixes far more, and the details are guarded, partly to stay ahead of people trying to game them."
+      ]
+    },
+    {
+      "heading": "A librarian for a library with no walls",
+      "paragraphs": [
+        "Think of the engine as a librarian who has read everything, keeps perfect notes, and answers in a quarter of a second. The librarian cannot show you books that were never delivered — pages no crawler could reach simply do not exist for search.",
+        "Knowing this makes you a sharper searcher: choose words the page itself would use, and remember that the first answer is a ranking, not a verdict."
+      ]
+    }
+  ],
+  "takeaway": "Search engines answer from a pre-built index of the crawled web, ranking pages by many signals — speed comes from doing the reading in advance.",
+  "fiction": false
+}

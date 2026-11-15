@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-74",
+  "slug": "first-steps-into-volunteering",
+  "brand": "together",
+  "contentType": "article",
+  "title": "First steps into volunteering",
+  "description": "You do not need a grand cause or a free calendar — you need a first shift.",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "helping-others",
+    "friendship"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start embarrassingly small",
+      "paragraphs": [
+        "The biggest obstacle to volunteering is imagining it requires a transformed life. It requires a Tuesday. Food banks, libraries, park clean-ups, charity shops, and school clubs all run on people who give two ordinary hours, repeatedly. Pick the cause nearest your house or your heart — proximity beats passion for attendance.",
+        "One shift teaches you more about whether a role fits than a month of thinking about it."
+      ]
+    },
+    {
+      "heading": "Be boringly reliable",
+      "paragraphs": [
+        "Organisations do not need heroes; they need the person who actually arrives. The volunteer who comes every week, on time, and does the unglamorous task without being chased is worth more than a dozen enthusiastic maybes.",
+        "Reliability is also how trust — and the more interesting tasks — find you."
+      ]
+    },
+    {
+      "heading": "Bring a friend, keep the debrief",
+      "paragraphs": [
+        "Volunteering with a friend halves the awkwardness of the first day and doubles the chance you both return. Afterwards, over tea, compare notes: what surprised you, who you met, what you would do differently. The debrief is where service turns into understanding.",
+        "And if the first placement is wrong, change it without guilt. The right fit is not a luxury; it is what makes the habit survive the year."
+      ]
+    }
+  ],
+  "takeaway": "Take one small shift, be boringly reliable, and let the habit — not the heroics — do the work.",
+  "fiction": false
+}

@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-92",
+  "slug": "borrow-ideas-kindly",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Borrow ideas kindly",
+  "description": "Every maker borrows. Doing it kindly means crediting sources, changing what you take, and adding something of your own.",
+  "publishedAt": "2026-06-03",
+  "updatedAt": "2026-06-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "creativity",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Borrowing is how learning works",
+      "paragraphs": [
+        "Painters study other painters, cooks adapt recipes, and programmers reuse patterns. Borrowing a technique, a structure or a spark of inspiration is a normal and healthy part of learning any craft.",
+        "The line to respect is simple: do not pass off someone else's finished work as your own. Borrow the idea, not the credit."
+      ]
+    },
+    {
+      "heading": "Change it, credit it, add to it",
+      "paragraphs": [
+        "A kind way to borrow has three steps. Change the idea enough that it fits your voice and your purpose. Credit the source when you share the result. Then add one thing that is genuinely yours.",
+        "Most creators are glad to be an influence when they are named. A short line like 'inspired by' costs nothing and builds the kind of community you would like to belong to."
+      ]
+    }
+  ],
+  "takeaway": "Borrow the spark, do the work yourself, and name where the spark came from.",
+  "fiction": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "kids-bulk-117",
+  "slug": "garden-flag-making",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Flags for the Garden",
+  "description": "For ages 6–9 with an adult: paint paper flags and hang them up to flutter in the breeze.",
+  "publishedAt": "2026-07-15",
+  "updatedAt": "2026-07-15",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "nature"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Paint your flags",
+      "paragraphs": [
+        "Cut or fold paper into triangles or rectangles. Paint each one brightly so it can be seen from far away.",
+        "Try stripes, spots, or a big smiling sun. Wet paint needs a few minutes to dry."
+      ]
+    },
+    {
+      "heading": "Hang and watch",
+      "paragraphs": [
+        "Your adult tapes the flags along a string and hangs it somewhere safe outside.",
+        "Watch them flutter. On a still day they hang quietly; on a windy day they dance."
+      ]
+    }
+  ],
+  "takeaway": "A flag shows you the wind you cannot see.",
+  "fiction": false,
+  "materials": [
+    "Paper or card",
+    "Paints or crayons",
+    "String",
+    "Sticky tape"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult hangs the flags and checks they are secure and away from any road."
+  ],
+  "screenFreeExtension": "Make a new flag for each season and watch how the garden changes around them."
+}

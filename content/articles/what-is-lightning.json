@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-68",
+  "slug": "what-is-lightning",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "What is lightning, really?",
+  "description": "A lightning bolt is a giant spark: the sky balancing its electric books in a fraction of a second.",
+  "publishedAt": "2026-10-08",
+  "updatedAt": "2026-10-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "weather",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Lightning",
+      "url": "https://en.wikipedia.org/wiki/Lightning",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Charge builds in the cloud",
+      "paragraphs": [
+        "Inside a thundercloud, rising and falling air tosses ice crystals and soft hail past each other in furious turbulence. Their collisions strip and transfer electric charge, gradually separating the cloud into a mostly negative base and a positive top — like a battery the size of a mountain.",
+        "Air is normally an excellent insulator, which is why the charge can build so high. But when the electric field grows strong enough, the air itself breaks down into a conductive path, and the stored energy escapes all at once."
+      ]
+    },
+    {
+      "heading": "A bolt in steps",
+      "paragraphs": [
+        "A faint leader reaches down from the cloud in quick steps, ionising a channel. When it nears the ground, a streamer rises to meet it — and the main return stroke surges up that channel at a sizeable fraction of the speed of light. That brilliant surge is the flash you see, and it heats the air to roughly five times the surface temperature of the Sun.",
+        "Most flashes never touch the ground at all; they jump within or between clouds. The ones that do are why the safety rule is absolute: when thunder roars, get indoors, because the spark can strike kilometres ahead of the rain."
+      ]
+    }
+  ],
+  "takeaway": "Lightning is a sudden discharge of electric charge built up inside storm clouds, flashing through a channel of ionised air.",
+  "fiction": false
+}

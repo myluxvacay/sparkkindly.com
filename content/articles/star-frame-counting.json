@@ -1,0 +1,67 @@
+{
+  "id": "kids-bulk-40",
+  "slug": "star-frame-counting",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Count the Stars in a Square",
+  "description": "For ages 6–9 with an adult: make a paper frame, hold it up to the night sky, and count the stars inside.",
+  "publishedAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make your star frame",
+      "paragraphs": [
+        "Your adult cuts a square window in a sheet of card. This is your star frame. Wait for a clear, dark night and lie on a blanket outside with your adult.",
+        "The darker the sky, the more stars you can see. Street lights hide the faint ones, so let your eyes get used to the dark for a few minutes first."
+      ]
+    },
+    {
+      "heading": "Count inside the frame",
+      "paragraphs": [
+        "Hold the frame up with straight arms and count every star inside the square. Write the number down or remember it.",
+        "Now point the frame at a different part of the sky and count again. Some squares are busy star cities. Some are quiet star villages."
+      ]
+    },
+    {
+      "heading": "A sky full of numbers",
+      "paragraphs": [
+        "Scientists estimate numbers in just this way — count a small patch carefully, then imagine the whole sky.",
+        "Nobody can count every star one by one. There are far too many. Your little square is a window into something enormous."
+      ]
+    }
+  ],
+  "takeaway": "Counting stars in one small square shows how the sky holds more stars than anyone could ever count.",
+  "fiction": false,
+  "materials": [
+    "A sheet of card (an adult cuts the window)",
+    "A blanket",
+    "A notebook",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only go out at night with an adult, in a safe place. Never look at the Sun — this is a night-time activity only."
+  ],
+  "screenFreeExtension": "Sprinkle a pinch of salt on dark paper and count the 'stars' in a drawn square, just like the sky game."
+}

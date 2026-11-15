@@ -1,0 +1,38 @@
+{
+  "id": "cloud-making-242",
+  "scheduledDate": "2026-02-15",
+  "brand": "discover",
+  "prompt": "What is it called when water vapour in the air cools and turns back into tiny liquid droplets?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Evaporation"
+    },
+    {
+      "id": "b",
+      "text": "Condensation"
+    },
+    {
+      "id": "c",
+      "text": "Freezing"
+    },
+    {
+      "id": "d",
+      "text": "Melting"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Condensation is the step in the water cycle that forms clouds, and the dew you see on grass in the morning.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Condensation",
+      "url": "https://en.wikipedia.org/wiki/Condensation",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

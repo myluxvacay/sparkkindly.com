@@ -1,0 +1,54 @@
+{
+  "id": "grow-bulk-126",
+  "slug": "revision-that-works",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Revision that actually works",
+  "description": "Rereading notes feels like revision but mostly is not. Testing yourself, in small doses spread over time, is what makes learning stay.",
+  "publishedAt": "2026-08-05",
+  "updatedAt": "2026-08-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Spaced repetition — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Spaced_repetition",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Recall beats rereading",
+      "paragraphs": [
+        "When you reread, everything looks familiar, and familiarity feels like knowledge. The honest test is closing the book and asking: can I actually produce this? That effortful act of recall is what strengthens memory.",
+        "Practise with questions, flashcards, or a blank page you fill from memory before checking. Getting things wrong during practice is not failure; it is the mechanism working, because the correction lands harder."
+      ]
+    },
+    {
+      "heading": "Spread it out, keep it small",
+      "paragraphs": [
+        "Several short reviews across days beat one long session the night before, a pattern researchers call the spacing effect. Review a topic a day later, then a few days later, then a week later, widening the gaps as it firms up.",
+        "Keep sessions short and mixed: a little of last week's topic alongside today's. It feels harder than rereading, and that feeling of effort is a good sign, not a warning."
+      ]
+    }
+  ],
+  "takeaway": "Close the book, test yourself, and spread short reviews across days.",
+  "fiction": false
+}

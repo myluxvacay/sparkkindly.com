@@ -1,0 +1,38 @@
+{
+  "id": "plant-roots-422",
+  "scheduledDate": "2026-08-14",
+  "brand": "discover",
+  "prompt": "Which part of a plant takes in water from the soil?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The leaves"
+    },
+    {
+      "id": "b",
+      "text": "The flower"
+    },
+    {
+      "id": "c",
+      "text": "The stem"
+    },
+    {
+      "id": "d",
+      "text": "The roots"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Roots spread through the soil and absorb water and minerals, which the stem then carries to the rest of the plant.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Root",
+      "url": "https://en.wikipedia.org/wiki/Root",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

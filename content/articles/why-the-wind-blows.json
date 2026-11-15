@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-74",
+  "slug": "why-the-wind-blows",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why the wind blows",
+  "description": "Wind is air evening things out — rushing from where there is too much of it toward where there is too little.",
+  "publishedAt": "2026-10-18",
+  "updatedAt": "2026-10-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "weather",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Wind",
+      "url": "https://en.wikipedia.org/wiki/Wind",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "It starts with pressure",
+      "paragraphs": [
+        "The Sun heats Earth's surface unevenly: dark land warms faster than water, the equator more than the poles. Warm air expands, grows lighter and rises, leaving lower pressure beneath it; cool air sinks and raises pressure. Air then flows from high pressure toward low, trying to level the difference. That flow is wind.",
+        "The bigger the pressure difference over a given distance, the stronger the wind. On a weather map, tightly packed isobars — lines of equal pressure — are a warning of a gale."
+      ]
+    },
+    {
+      "heading": "The spin that bends it",
+      "paragraphs": [
+        "If Earth stood still, winds would blow straight from high to low pressure. But the planet rotates, and the Coriolis effect bends moving air to the right in the northern hemisphere and to the left in the southern. The result is that winds spiral around pressure systems instead of crossing them directly, and great planetary wind belts — trade winds, westerlies — girdle the globe.",
+        "Close to the ground, friction with trees, hills and buildings slows the flow and lets it angle inward toward low pressure. That is why storms at the surface slowly fill in and die, their energy spent against the turning Earth and the rough land."
+      ]
+    }
+  ],
+  "takeaway": "Wind is air flowing from high to low pressure, bent by Earth's rotation and slowed by friction at the surface.",
+  "fiction": false
+}

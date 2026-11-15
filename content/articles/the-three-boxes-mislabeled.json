@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-51",
+  "slug": "the-three-boxes-mislabeled",
+  "brand": "play",
+  "contentType": "article",
+  "title": "All the Labels Are Wrong: The Three Boxes Puzzle",
+  "description": "Three boxes of fruit, every label incorrect, and one single pick allowed - logic does the rest.",
+  "publishedAt": "2026-10-01",
+  "updatedAt": "2026-10-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "brain-teasers"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "One draw is enough",
+      "paragraphs": [
+        "Three boxes hold apples, oranges, and a mix of both. They are labelled 'Apples', 'Oranges' and 'Mixed' - but every single label is wrong. You may draw exactly one fruit from one box, without looking inside. From that one draw, you can relabel all three boxes correctly. Which box do you draw from?",
+        "The key is the guarantee that all labels are wrong. The box labelled 'Mixed' cannot contain the mix - so it must contain only apples or only oranges. That makes it the perfect box to sample: whatever you draw tells you its entire contents."
+      ]
+    },
+    {
+      "heading": "Untangling all three",
+      "paragraphs": [
+        "Draw from the 'Mixed' box and suppose you pull out an apple. That box is the Apples box. Now consider the box labelled 'Oranges': its label is wrong, so it is not oranges - and the apples are accounted for - so it must be the Mixed box. The last box, labelled 'Apples', gets the only remaining identity: Oranges. One draw, three certainties.",
+        "If your draw had been an orange, the same chain runs in mirror image. Notice how each step uses up one fact completely before moving on - logicians call this constraint propagation, and it is the engine inside Sudoku, scheduling software and a good deal of detective fiction."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Set the puzzle up physically with three cups, counters in two colours, and sticky-note labels - deliberately mislabelled. Let a friend make the single draw and talk through the chain aloud. Hearing the reasoning spoken makes it stick far better than reading it.",
+        "Then design a nastier version: four boxes, or labels where you are only told that at least one label is wrong. Does one draw still suffice? Finding exactly where the puzzle breaks teaches you which assumption was doing the heavy lifting."
+      ]
+    }
+  ],
+  "takeaway": "When every label is wrong, the 'Mixed' box is the key: one draw from it untangles all three boxes.",
+  "fiction": false
+}

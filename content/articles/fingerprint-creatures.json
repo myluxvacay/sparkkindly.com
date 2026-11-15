@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-111",
+  "slug": "fingerprint-creatures",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Fingerprint Creatures",
+  "description": "For ages 6–9 with an adult: turn your fingerprints into bees, caterpillars, and other tiny creatures.",
+  "publishedAt": "2026-07-07",
+  "updatedAt": "2026-07-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "animals"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Print a row",
+      "paragraphs": [
+        "Press your fingertip into the ink or paint and stamp it on the paper. Try a row of prints in a line.",
+        "That row is already a caterpillar waiting to happen."
+      ]
+    },
+    {
+      "heading": "Add the details",
+      "paragraphs": [
+        "Draw tiny legs, wings, eyes, and antennae on your prints. One print can be a bee; three can be a train.",
+        "Look closely at your fingerprint's swirls. Even your art has a pattern only you can make."
+      ]
+    }
+  ],
+  "takeaway": "No two fingerprints are the same, and each one can become a creature.",
+  "fiction": false,
+  "materials": [
+    "Washable ink pad or paint",
+    "Paper",
+    "A fine pen or crayon"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Wash hands well after printing; an adult checks the ink or paint is washable."
+  ],
+  "screenFreeExtension": "Make a fingerprint picture of your whole family as tiny creatures."
+}

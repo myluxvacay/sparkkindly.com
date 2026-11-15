@@ -1,0 +1,38 @@
+{
+  "id": "magma-or-lava-222",
+  "scheduledDate": "2026-01-26",
+  "brand": "discover",
+  "prompt": "What is molten rock called while it is still beneath Earth's surface?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Lava"
+    },
+    {
+      "id": "b",
+      "text": "Magma"
+    },
+    {
+      "id": "c",
+      "text": "Ash"
+    },
+    {
+      "id": "d",
+      "text": "Sediment"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Underground, molten rock is called magma. Only once it erupts onto the surface is it called lava.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Magma",
+      "url": "https://en.wikipedia.org/wiki/Magma",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

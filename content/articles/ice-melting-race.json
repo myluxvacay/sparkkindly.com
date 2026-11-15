@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-45",
+  "slug": "ice-melting-race",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "The Great Ice Melting Race",
+  "description": "For ages 6–9 with an adult: race ice cubes in different places and discover what makes ice melt fastest.",
+  "publishedAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Set up the race",
+      "paragraphs": [
+        "Put one ice cube on a plate in the sunshine and one on a plate in the shade. Start them at the same time. Which one will melt first?",
+        "Ice melts when warmth reaches it. Sunshine carries warmth, so the sunny cube has a head start in the race."
+      ]
+    },
+    {
+      "heading": "Watch and time",
+      "paragraphs": [
+        "Check your cubes every few minutes. The sunny cube shrinks and sits in a growing puddle. The shady cube keeps its shape for longer.",
+        "Ask your adult to time how long each cube takes to melt completely. Write the times down — that is real experiment data."
+      ]
+    },
+    {
+      "heading": "Try more racers",
+      "paragraphs": [
+        "Race more cubes in new places: one wrapped in a cloth, one in a bowl of cold water, one with salt sprinkled on it by your adult.",
+        "The wrapped cube melts slowly because the cloth keeps warmth out. Salt makes ice melt faster — that is why it is spread on icy winter paths."
+      ]
+    }
+  ],
+  "takeaway": "Ice melts fastest where the most warmth reaches it, and racing cubes in different places proves it.",
+  "fiction": false,
+  "materials": [
+    "Ice cubes",
+    "Small plates or bowls",
+    "A timer"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult should get the ice out of the freezer. Wipe up melted water so nobody slips."
+  ],
+  "screenFreeExtension": "Guess which will dry first — a wet flannel in the sun or in the shade — then test your guess."
+}

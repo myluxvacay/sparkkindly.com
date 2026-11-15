@@ -1,0 +1,32 @@
+{
+  "id": "little-and-often-language-258",
+  "scheduledDate": "2026-03-03",
+  "brand": "grow",
+  "prompt": "Which plan best builds skill in a new language over three months?",
+  "options": [
+    {
+      "id": "a",
+      "text": "One five-hour study session each month"
+    },
+    {
+      "id": "b",
+      "text": "Short practice with real conversation on most days"
+    },
+    {
+      "id": "c",
+      "text": "Memorise a dictionary from A to Z"
+    },
+    {
+      "id": "d",
+      "text": "Only watch films in the language, with subtitles in your own language"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Frequent, active practice - especially speaking - builds usable skill far faster than rare marathon sessions.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

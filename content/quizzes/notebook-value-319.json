@@ -1,0 +1,32 @@
+{
+  "id": "notebook-value-319",
+  "scheduledDate": "2026-05-03",
+  "brand": "save",
+  "prompt": "One shop sells a notebook for $3. Another sells a pack of 4 notebooks for $10. Which is better value?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The single notebook"
+    },
+    {
+      "id": "b",
+      "text": "The pack of 4"
+    },
+    {
+      "id": "c",
+      "text": "They cost exactly the same per notebook"
+    },
+    {
+      "id": "d",
+      "text": "It is impossible to compare"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "In the pack, each notebook costs $10 ÷ 4 = $2.50, which is less than $3 for a single one.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

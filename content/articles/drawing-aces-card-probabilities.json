@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-38",
+  "slug": "drawing-aces-card-probabilities",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Ace Hunting: Probabilities in a Deck of Cards",
+  "description": "What are the chances the next card is an ace - and how do they change as cards leave the deck? A gentle tour of drawing without replacement.",
+  "publishedAt": "2026-09-12",
+  "updatedAt": "2026-09-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "probability",
+    "play-and-games"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Four aces in fifty-two",
+      "paragraphs": [
+        "A standard deck holds 52 cards and 4 aces, so the chance that a single drawn card is an ace is 4 out of 52, which simplifies to 1 in 13 - about 7.7 percent. Clean, simple, and true only while the deck is complete.",
+        "The moment a card leaves the deck, the odds move. Draw a card that is not an ace and the chance the next card is an ace rises slightly, to 4 in 51. Draw an ace first and the chance falls to 3 in 51. Drawing without replacement means every card you have seen is information, and the probabilities update to match."
+      ]
+    },
+    {
+      "heading": "Two aces in a row",
+      "paragraphs": [
+        "What about drawing two aces back to back? Multiply the changing odds: 4/52 for the first, then 3/51 for the second. The result is 12 out of 2,652, which simplifies to 1 in 221 - under half of one percent. Rare, but not miraculous: deal two cards to enough pairs of players and it will happen regularly.",
+        "Compare that with putting the first card back and shuffling, where the second draw stays 4/52 and the pair comes out at 1 in 169. Replacement keeps the world unchanged; without replacement, the deck remembers - and skilled card players are, at heart, people who track what the deck remembers."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Shuffle a deck, predict 'ace or not' before each draw, and draw ten cards without replacing them, keeping a tally. Then work out what the ace probability was before each draw, given the cards already out. Notice how your predictions could have improved by simply counting.",
+        "Try the same tally for hearts, where you start with 13 chances in 52. The bigger target makes the updating effect easier to see in a short experiment."
+      ]
+    }
+  ],
+  "takeaway": "Cards that have left the deck change the odds for the next draw - counting what has gone is the first skill of card probability.",
+  "fiction": false
+}

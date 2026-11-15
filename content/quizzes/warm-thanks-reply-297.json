@@ -1,0 +1,32 @@
+{
+  "id": "warm-thanks-reply-297",
+  "scheduledDate": "2026-04-11",
+  "brand": "together",
+  "prompt": "Someone thanks you warmly for a small favour. Which reply is kindest?",
+  "options": [
+    {
+      "id": "a",
+      "text": "“You owe me one now.”"
+    },
+    {
+      "id": "b",
+      "text": "“Anytime — I was glad to help.”"
+    },
+    {
+      "id": "c",
+      "text": "“Whatever.”"
+    },
+    {
+      "id": "d",
+      "text": "“Please don't ever mention it again.”"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Accepting thanks warmly lets the other person feel their gratitude landed instead of becoming a debt.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

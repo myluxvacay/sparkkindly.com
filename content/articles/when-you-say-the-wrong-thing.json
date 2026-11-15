@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-43",
+  "slug": "when-you-say-the-wrong-thing",
+  "brand": "together",
+  "contentType": "article",
+  "title": "When you say the wrong thing",
+  "description": "Everyone puts a foot wrong in conversation sometimes; what matters is the next thirty seconds.",
+  "publishedAt": "2026-09-11",
+  "updatedAt": "2026-09-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "communication",
+    "empathy"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Stop digging",
+      "paragraphs": [
+        "The first rule of saying the wrong thing is to stop explaining it. Long defences — “I only meant…”, “You have to admit it sounded like…” — turn a small stumble into a long trench.",
+        "A short, clean sentence works better: “That came out wrong. I’m sorry.” Then quiet. Let the apology be the whole message."
+      ]
+    },
+    {
+      "heading": "Name it, do not dramatise it",
+      "paragraphs": [
+        "A brief acknowledgement beats both silence and theatre. Pretending nothing happened forces the other person to carry the moment alone; making it enormous forces them to comfort you about your own mistake.",
+        "Aim for the middle: name what you said, own it, and move the conversation gently on. Most people are relieved to be handed that exit."
+      ]
+    },
+    {
+      "heading": "Learn the shape of it",
+      "paragraphs": [
+        "Later, in private, it is worth asking what the stumble was made of: tiredness, a joke borrowed from the wrong company, an assumption you did not know you held. That is where the actual repair to yourself happens.",
+        "You will say the wrong thing again. The goal is not perfection; it is becoming someone whose mistakes are small, owned, and quickly mended."
+      ]
+    }
+  ],
+  "takeaway": "Stop, name it, apologise once and cleanly — then learn its shape for next time.",
+  "fiction": false
+}

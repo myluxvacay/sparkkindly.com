@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-100",
+  "slug": "invent-a-word",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Invent a Word",
+  "description": "For ages 6–9 with an adult: invent a brand-new word for something that has no name, and teach it to your family.",
+  "publishedAt": "2026-06-21",
+  "updatedAt": "2026-06-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Find a nameless thing",
+      "paragraphs": [
+        "Some things have no word. The happy feeling when you smell dinner cooking. The wobble of a loose tooth.",
+        "Pick one nameless thing. Say it slowly and think about what it feels like."
+      ]
+    },
+    {
+      "heading": "Build your word",
+      "paragraphs": [
+        "Squash two words together, or make a sound that fits. The dinner-smell feeling could be yumwait.",
+        "Teach your word to your family and use it all week. You are now a word inventor."
+      ]
+    }
+  ],
+  "takeaway": "If something has no word, you can be the person who invents one.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Made-up words are for fun at home; be kind and do not tease anyone with them."
+  ],
+  "screenFreeExtension": "Write your new word in your picture dictionary so nobody forgets it."
+}

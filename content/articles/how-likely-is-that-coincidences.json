@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-39",
+  "slug": "how-likely-is-that-coincidences",
+  "brand": "play",
+  "contentType": "article",
+  "title": "How Likely Is That? A Field Guide to Coincidences",
+  "description": "Meeting a friend in a foreign city feels impossible - until you count how many chances the world gets to surprise you.",
+  "publishedAt": "2026-09-13",
+  "updatedAt": "2026-09-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "probability",
+    "brain-teasers"
+  ],
+  "sources": [
+    {
+      "title": "Littlewood's law - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Littlewood%27s_law",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The one hit among a million misses",
+      "paragraphs": [
+        "You bump into an old school friend in an airport on the other side of the world, and it feels like the universe winked. But consider the invisible side of the ledger: all the airports where you met nobody, all the friends who were never there, all the near-misses you never even noticed. We count the one astonishing hit and ignore the millions of ordinary non-events around it.",
+        "The mathematician J. E. Littlewood made this precise with a playful definition: call something a miracle if it is a one-in-a-million event. An awake person notices roughly one event per second for about eight hours a day - which adds up to around a million events a month. So by Littlewood's arithmetic, each of us should expect about one 'miracle' a month."
+      ]
+    },
+    {
+      "heading": "The birthday paradox, generalised",
+      "paragraphs": [
+        "Coincidences multiply for the same reason shared birthdays do: pairs. Your life crosses paths with thousands of people, places, songs, names and dates, and every crossing is a pair that could match in some noticeable way. The number of possible matches is enormous, so some of them land - not because they were aimed, but because there were so many chances.",
+        "This does not make coincidences dull. It makes them a kind of weather: unpredictable in detail, guaranteed in general. The skill worth building is not refusing to be surprised, but asking the follow-up question - how many chances did this surprise get?"
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "For one week, keep a coincidence diary. Write down every coincidence, and also estimate the near-misses: friends you almost ran into, songs that almost matched the moment, names that almost recurred. The diary usually reveals that the 'hits' sit inside a large crowd of almosts.",
+        "Then rate each coincidence with the pair question: how many people, days or places could have produced this match? The ones that still look unlikely after that count are the genuinely rare ones - and they are the best stories."
+      ]
+    }
+  ],
+  "takeaway": "Coincidences feel impossible one at a time, but life runs so many trials that surprising matches are guaranteed - count the chances, not just the hit.",
+  "fiction": false
+}

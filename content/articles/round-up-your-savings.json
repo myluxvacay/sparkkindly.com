@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-56",
+  "slug": "round-up-your-savings",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Round it up: painless small saving",
+  "description": "Rounding each purchase up to the next whole number and saving the difference turns spare change into a steady habit.",
+  "publishedAt": "2026-09-28",
+  "updatedAt": "2026-09-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "saving",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "How it works",
+      "paragraphs": [
+        "Buy something for $3.40 and you move 60 cents to savings, rounding the spend up to $4. A $12.25 purchase contributes 75 cents. Some banking apps do this automatically; a notebook and a weekly transfer do it manually.",
+        "Individually the amounts are trivial. Across twenty purchases a week, though, an average round-up of about 50 cents each becomes roughly $10 a week — over $500 a year — collected from money you barely noticed spending."
+      ]
+    },
+    {
+      "heading": "Why painless works",
+      "paragraphs": [
+        "Saving systems fail when they hurt. Round-ups succeed because the sacrifice sits below the threshold of regret: nobody's week is ruined by 60 cents. The habit survives busy months, tired months, and expensive months alike.",
+        "That durability is the whole point. A modest system you keep for a year beats a heroic system you abandon in February."
+      ]
+    },
+    {
+      "heading": "Give the pot a purpose",
+      "paragraphs": [
+        "Round-ups grow faster with a destination: a treats fund, a gifts pot, a first emergency cushion. Check the pot monthly, enjoy watching it climb, and let it do its named job when the time comes.",
+        "If your bank does not offer automatic round-ups, a manual version works: once a week, move the odd amount that takes your current account to a round number. It takes thirty seconds and keeps the same painless spirit."
+      ]
+    }
+  ],
+  "takeaway": "Round every purchase up and save the change: pennies per purchase, hundreds per year, and a habit too painless to quit.",
+  "fiction": false
+}

@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-118",
+  "slug": "the-brake-that-made-tall-buildings-possible",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The brake that made tall buildings possible",
+  "description": "Skyscrapers did not begin with steel or ambition, but with a safety brake — and a showman who cut his own rope to prove it worked.",
+  "publishedAt": "2026-08-05",
+  "updatedAt": "2026-08-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "inventions",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Elisha Otis",
+      "url": "https://en.wikipedia.org/wiki/Elisha_Otis",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Elevator",
+      "url": "https://en.wikipedia.org/wiki/Elevator",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Lifts that nobody trusted",
+      "paragraphs": [
+        "Hoists existed for centuries — platforms raised by ropes, animals or steam. Factories used them for freight, but people sensibly refused to ride: if the rope broke, the platform fell, and everyone knew it. Buildings stayed low partly because legs, not lifts, set the limit.",
+        "In 1852, the mechanic Elisha Otis was asked to build a freight hoist for a factory in New York, and he added a simple guardian: a spring above the platform, held bent by the rope's tension. If the rope went slack, the spring would snap outward and drive toothed bars into the guide rails, locking the platform in place."
+      ]
+    },
+    {
+      "heading": "The demonstration",
+      "paragraphs": [
+        "At the Crystal Palace exhibition in New York in 1854, Otis staged one of the great product demonstrations. Standing on his platform as it rose high above the crowd, he ordered the rope cut. The platform dropped a few centimetres — and stopped. 'All safe, gentlemen, all safe,' he announced, bowing.",
+        "Orders followed. In 1857 his company installed a passenger elevator in a New York department store, and the idea of riding a lift stopped seeming reckless. Combined with steel-frame construction later in the century, the safe elevator removed the ceiling on buildings — literally."
+      ]
+    },
+    {
+      "heading": "The city grows upward",
+      "paragraphs": [
+        "Once people trusted lifts, height became valuable instead of punishing: the top floor, once the cheapest for its stairs, became the penthouse. Elevators now move billions of passengers, and their safety record rests on descendants of Otis's spring — brakes that engage precisely when everything else fails.",
+        "The lesson is one inventors relearn in every field: often the breakthrough is not the machine, but the reason people finally trust it."
+      ]
+    }
+  ],
+  "takeaway": "Otis's safety brake, proved by cutting his own rope in 1854, made elevators trustworthy — and trustworthy elevators made skyscrapers possible.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "compare-first-429",
+  "scheduledDate": "2026-08-21",
+  "brand": "save",
+  "prompt": "Why is it smart to compare prices before buying something?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Shops always charge exactly the same"
+    },
+    {
+      "id": "b",
+      "text": "The same item can cost less somewhere else, leaving money for other goals"
+    },
+    {
+      "id": "c",
+      "text": "Comparing takes no time at all"
+    },
+    {
+      "id": "d",
+      "text": "Expensive always means better quality"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Prices differ between shops and change with offers, so a quick comparison can save money without giving anything up.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

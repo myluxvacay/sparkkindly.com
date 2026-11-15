@@ -1,0 +1,65 @@
+{
+  "id": "kids-bulk-48",
+  "slug": "pebble-stack-balance",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Pebble Stack Challenge",
+  "description": "For ages 6–9 with an adult: balance smooth pebbles into the tallest tower you can build at the beach or in the garden.",
+  "publishedAt": "2026-10-02",
+  "updatedAt": "2026-10-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Find flat pebbles",
+      "paragraphs": [
+        "Look for smooth, flat pebbles. Flat stones stack best because they give the next stone a steady place to sit.",
+        "Start with the biggest, flattest pebble at the bottom. A tower is only as strong as its first stone."
+      ]
+    },
+    {
+      "heading": "Stack slowly",
+      "paragraphs": [
+        "Add one pebble at a time. Before you let go, feel whether it wobbles. If it wobbles, turn it around or choose a different stone.",
+        "Small stones can fill gaps and steady a wobbly layer. Builders of real stone walls use exactly this trick."
+      ]
+    },
+    {
+      "heading": "Count your tower",
+      "paragraphs": [
+        "How many pebbles high can you go? Count them before the tower tumbles — and it will tumble, which is part of the fun.",
+        "Try again with a wider bottom stone. Each fall teaches your hands something new about balance."
+      ]
+    }
+  ],
+  "takeaway": "Tall pebble towers need a wide, flat start and patient hands — every tumble teaches you balance.",
+  "fiction": false,
+  "materials": [
+    "Smooth pebbles or stones",
+    "A flat patch of ground"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only stack pebbles you can lift easily — never drop stones on toes. Wash your hands after handling beach pebbles, and gently take your tower down when you finish."
+  ],
+  "screenFreeExtension": "Build a tower of cushions or wooden blocks indoors and try to beat your pebble record."
+}

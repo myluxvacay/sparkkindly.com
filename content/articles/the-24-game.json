@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-101",
+  "slug": "the-24-game",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The 24 game: four numbers, one target",
+  "description": "Use addition, subtraction, multiplication and division to turn four numbers into exactly 24. Simple to learn, deliciously hard to master.",
+  "publishedAt": "2026-07-08",
+  "updatedAt": "2026-07-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "play-and-games"
+  ],
+  "sources": [
+    {
+      "title": "24 Game — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/24_Game",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The rules of the race",
+      "paragraphs": [
+        "You are given four numbers — traditionally from a card game played in classrooms for decades. You must use each number exactly once, combining them with +, −, × and ÷ (and brackets wherever you like) to make exactly 24.",
+        "Warm up with 1, 2, 3 and 4. One solution: (1 + 3) × (2 + 4) = 4 × 6 = 24. Another: 4 × (3 + 2 + 1) also works. Easy rounds like this teach the game's main lesson — build friendly chunks first, then combine them."
+      ]
+    },
+    {
+      "heading": "The famous hard one",
+      "paragraphs": [
+        "Now the legendary set: 3, 3, 8, 8. Almost everyone gets stuck at 22 or 25. The answer hides in a fraction: 8 ÷ (3 − 8 ÷ 3) = 8 ÷ (1/3) = 24. Dividing by a third triples the 8 — that is the trick the puzzle was guarding.",
+        "Fractions feel like cheating the first time you see them, but they are perfectly legal: the rules only demand that you use the four numbers once each. Many of the hardest 24 puzzles surrender only when a fraction appears."
+      ]
+    },
+    {
+      "heading": "Try it: deal a round",
+      "paragraphs": [
+        "Write the digits 1 to 9 on slips, draw four, and race to 24. Agree a kindness rule: after two minutes anyone may ask for the first step as a hint, at the cost of sharing the glory.",
+        "Keep a family list of “impossible-feeling” sets and their solutions — 1, 5, 5, 5 is another classic (try 5 × (5 − 1 ÷ 5)). The list becomes a trophy cabinet of near-defeats turned into wins."
+      ]
+    }
+  ],
+  "takeaway": "The 24 game turns four innocent numbers into a treasure hunt — and the treasure is usually hiding inside a fraction.",
+  "fiction": false
+}

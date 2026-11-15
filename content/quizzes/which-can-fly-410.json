@@ -1,0 +1,32 @@
+{
+  "id": "which-can-fly-410",
+  "scheduledDate": "2026-08-02",
+  "brand": "kids",
+  "prompt": "Which of these animals can fly?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Penguin"
+    },
+    {
+      "id": "b",
+      "text": "Ostrich"
+    },
+    {
+      "id": "c",
+      "text": "Robin"
+    },
+    {
+      "id": "d",
+      "text": "Kiwi"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A robin is a small bird that flies from tree to tree. Penguins, ostriches and kiwis are birds that cannot fly.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

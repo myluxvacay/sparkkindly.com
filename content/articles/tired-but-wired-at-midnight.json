@@ -1,0 +1,56 @@
+{
+  "id": "grow-bulk-75",
+  "slug": "tired-but-wired-at-midnight",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Tired but wired at midnight",
+  "description": "Exhausted yet unable to sleep is a common and miserable state; a few steady responses work better than lying there trying harder.",
+  "publishedAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "sleep",
+    "stress"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Trying to sleep is the problem",
+      "paragraphs": [
+        "Sleep is one of the few things that retreats when chased. The effort of trying — monitoring whether it is working yet, calculating remaining hours, dreading tomorrow — is itself alerting, and the bed slowly becomes associated with frustration instead of rest.",
+        "If you recognise the pattern of lying awake feeling tired but wired, the first comfort is that it is common and usually fixable with habits. It is a state, not a life sentence."
+      ]
+    },
+    {
+      "heading": "Get up before the bed becomes a battleground",
+      "paragraphs": [
+        "A widely used guideline: if you have been awake in bed for roughly twenty minutes and sleep feels no closer, get up. Go somewhere dim and do something calm and slightly dull — read, listen to quiet music — until sleepiness returns, then go back to bed. Repeat as needed, without clock-watching.",
+        "This feels backwards at 2 a.m., but it protects the bed’s meaning. You are teaching your brain that bed is where sleep happens, not where worrying happens. The lesson takes some nights to land, and then it tends to hold."
+      ]
+    },
+    {
+      "heading": "Lower the stakes of one night",
+      "paragraphs": [
+        "One bad night is miserable and survivable; most people function better after poor sleep than they feared at 3 a.m. Catastrophising the night is understandable and unhelpful. Tomorrow can be adjusted — lighter demands, daylight, a short nap — and the next night usually repays some of the debt.",
+        "If sleeplessness is frequent, lasts for weeks or months, or is affecting your health, mood or safety, please see a doctor. Persistent insomnia has effective, specific treatments, and general articles like this one are not a substitute for them."
+      ]
+    }
+  ],
+  "takeaway": "Stop chasing sleep: get up, keep it dim and dull, and return when sleepiness does.",
+  "fiction": false
+}

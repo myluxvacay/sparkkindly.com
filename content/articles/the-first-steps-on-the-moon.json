@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-91",
+  "slug": "the-first-steps-on-the-moon",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The first steps on the Moon",
+  "description": "How three travellers, a fragile landing craft and a roomful of patient people brought human footsteps to another world.",
+  "publishedAt": "2026-06-01",
+  "updatedAt": "2026-06-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "NASA: Apollo 11",
+      "url": "https://www.nasa.gov/mission/apollo-11/",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Apollo 11",
+      "url": "https://en.wikipedia.org/wiki/Apollo_11",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A journey of four days",
+      "paragraphs": [
+        "On 16 July 1969, a Saturn V rocket lifted three astronauts from Florida: Neil Armstrong, Buzz Aldrin and Michael Collins. Their spacecraft travelled for four days to reach the Moon, a journey of about 384,000 kilometres that most people today make only in imagination.",
+        "The plan asked a great deal of everyone. Collins would stay alone in the command module, orbiting the Moon, while Armstrong and Aldrin descended in a small landing craft called Eagle. If anything went wrong below, there was no rescue waiting — only careful preparation and calm voices on the radio."
+      ]
+    },
+    {
+      "heading": "Twenty minutes of fuel to spare",
+      "paragraphs": [
+        "The landing on 20 July was tenser than anyone had hoped. Alarms sounded in the cabin, and the computer guided Eagle toward a field of boulders, so Armstrong took partial control and flew further, searching for a clear patch while the fuel gauges fell.",
+        "When Eagle finally touched down in the Sea of Tranquillity, roughly 25 seconds of landing fuel remained. Hours later, Armstrong climbed down the ladder and set the first human footstep on another world, watched by an estimated 600 million people back on Earth."
+      ]
+    },
+    {
+      "heading": "What the footsteps left behind",
+      "paragraphs": [
+        "The astronauts planted a flag, collected about 21 kilograms of Moon rock and dust, and set up experiments, including a mirror that scientists still use to measure the Moon's distance with lasers.",
+        "They returned home safely on 24 July, splashing down in the Pacific Ocean. The rocks they carried back are still being studied today, and each new test tells us a little more about how the Moon — and perhaps the Earth — began."
+      ]
+    }
+  ],
+  "takeaway": "Apollo 11 succeeded because thousands of people checked, practised and prepared, so that two could walk calmly on the Moon.",
+  "fiction": false
+}

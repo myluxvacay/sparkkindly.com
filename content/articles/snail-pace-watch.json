@@ -1,0 +1,65 @@
+{
+  "id": "kids-bulk-30",
+  "slug": "snail-pace-watch",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Snail Pace Watch",
+  "description": "For ages 6–9 with an adult: watch a garden snail glide along and time how far it goes in one minute.",
+  "publishedAt": "2026-09-11",
+  "updatedAt": "2026-09-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "kindness"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Meet a snail",
+      "paragraphs": [
+        "After rain or on a damp morning, look for a snail on a wall, a path edge, or a leaf. Snails carry their home — their shell — on their backs wherever they go.",
+        "A snail moves on one big, soft foot. It makes slippery slime to glide on, which is why it leaves a shiny trail behind."
+      ]
+    },
+    {
+      "heading": "Time the glide",
+      "paragraphs": [
+        "Ask your adult to start a timer for one minute. Mark where the snail starts, then mark where it reaches when the minute ends.",
+        "Snails are famous for being slow, but they never stop. Measure the snail's minute journey with your finger. Could an ant have gone further? Probably — but the snail is not racing anyone."
+      ]
+    },
+    {
+      "heading": "Leave it in peace",
+      "paragraphs": [
+        "If you placed a leaf near the snail, it may stop for a nibble. Snails eat leaves and help clean up the garden.",
+        "When you say goodbye, leave the snail where it is. It knows its own way home — after all, it carries it."
+      ]
+    }
+  ],
+  "takeaway": "A snail glides slowly on one soft foot, carrying its home, and it gets there in the end.",
+  "fiction": false,
+  "materials": [
+    "A watch or timer",
+    "A small leaf"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Be gentle — never pull a snail off a surface, as that can hurt it. Wash your hands well after being near snails."
+  ],
+  "screenFreeExtension": "Move like a snail across the room, as slowly as you can, and see who can go slowest without stopping."
+}

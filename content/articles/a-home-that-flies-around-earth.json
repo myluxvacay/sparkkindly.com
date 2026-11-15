@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-92",
+  "slug": "a-home-that-flies-around-earth",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "A home that flies around Earth",
+  "description": "The International Space Station circles our planet every 93 minutes, and people have lived aboard it without a break since the year 2000.",
+  "publishedAt": "2026-06-03",
+  "updatedAt": "2026-06-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: International Space Station",
+      "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "NASA: International Space Station",
+      "url": "https://www.nasa.gov/international-space-station/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Sixteen sunrises a day",
+      "paragraphs": [
+        "The International Space Station travels at about 28,000 kilometres per hour, completing one orbit of Earth roughly every 93 minutes. Its crew sees a sunrise or sunset about every 45 minutes — sixteen of each in a single day.",
+        "The station was built piece by piece in orbit, beginning in 1998, by space agencies from the United States, Russia, Europe, Japan and Canada. Its solar wings stretch wider than a football field, gathering sunlight to power everything on board."
+      ]
+    },
+    {
+      "heading": "Everyday life in orbit",
+      "paragraphs": [
+        "People have lived on the station continuously since November 2000. Astronauts sleep in small cabins strapped into sleeping bags so they do not drift, exercise for about two hours a day to protect their bones and muscles, and eat food that must be secured so crumbs do not float into equipment.",
+        "Water is precious up there. The station recycles most of its water, including moisture from the air and even treated urine, turning yesterday's drink into tomorrow's coffee, as one astronaut famously joked."
+      ]
+    },
+    {
+      "heading": "A laboratory like no other",
+      "paragraphs": [
+        "The station's real purpose is experiment. In weightlessness, flames burn differently, crystals grow more perfectly, and the human body changes in ways that teach doctors about ageing and illness on Earth.",
+        "You can sometimes see the station yourself. It looks like a bright, steady star gliding silently across the twilight sky — a home, flying, with people inside it looking back at you."
+      ]
+    }
+  ],
+  "takeaway": "The space station is both a home and a laboratory, circling Earth every 93 minutes with a crew that never quite has a night.",
+  "fiction": false
+}

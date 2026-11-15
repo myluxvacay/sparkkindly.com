@@ -1,0 +1,65 @@
+{
+  "id": "kids-bulk-65",
+  "slug": "domino-topple-trail",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Domino Topple Trail",
+  "description": "For ages 6–9 with an adult: stand dominoes or blocks in a winding line and topple the whole trail with one push.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "science"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Stand them up",
+      "paragraphs": [
+        "Stand each domino on its end, close to the next one — about half a domino's length apart. Too far apart and the fall cannot jump the gap.",
+        "A curving trail is harder than a straight one. Each domino must aim at the middle of the next, like tiny falling soldiers in a parade."
+      ]
+    },
+    {
+      "heading": "The one-push rule",
+      "paragraphs": [
+        "When the whole trail is standing, push only the first domino. If your spacing is right, the fall travels all the way to the end, clickety-clickety-click.",
+        "If the trail stops, you have found a gap or a crooked domino. Fix it and try again. Engineers call this testing."
+      ]
+    },
+    {
+      "heading": "Why it works",
+      "paragraphs": [
+        "Each standing domino holds a little bit of falling energy. When it falls, it gives that energy to the next one, like passing a message down a line.",
+        "A tiny push at the start can topple a hundred dominoes — one small cause can make a very big effect."
+      ]
+    }
+  ],
+  "takeaway": "A domino trail passes falling energy from piece to piece, so one small push can topple the whole line.",
+  "fiction": false,
+  "materials": [
+    "Dominoes, wooden blocks, or paperback books",
+    "A smooth floor"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Use light dominoes or blocks that cannot hurt toes. Keep the trail away from breakable things."
+  ],
+  "screenFreeExtension": "Build a trail that splits in two and topples both ways from one push."
+}

@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-58",
+  "slug": "chess-queen-and-king-endgame",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Friendliest Checkmate: King and Queen vs King",
+  "description": "Every chess player should own one checkmate they can always finish - king and queen versus king is the one, and it has a simple recipe.",
+  "publishedAt": "2026-10-12",
+  "updatedAt": "2026-10-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Chess endgame - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chess_endgame",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Why the queen needs her king",
+      "paragraphs": [
+        "A queen is the strongest piece on the board, yet she cannot force checkmate alone: she can control squares but cannot safely approach the enemy king, who would simply capture her. Checkmate with king and queen is a duet - the queen builds a shrinking cage, and your own king walks up to deliver the final protection.",
+        "The recipe has three steps. First, use the queen to fence the lone king into a smaller and smaller box, keeping her roughly a knight's move away from him so she is never captured and never accidentally traps him completely. Second, when he is pinned to an edge or corner, bring your king close. Third, deliver checkmate on the edge, with your king guarding the queen."
+      ]
+    },
+    {
+      "heading": "The one way this win slips away",
+      "paragraphs": [
+        "Beware stalemate - the cruelest rule for the winning side. If the lone king has no legal move but is not in check, the game is a draw, and all your advantage evaporates. The classic accident: the enemy king sits in a corner, your queen hovers one square away covering all his escape squares, it is his move, and he is not in check. Drawn.",
+        "The safe habit is simple: when the enemy king reaches the edge, stop shrinking the cage with the queen. Leave him at least one square to move to, park the queen, and let your king do the walking. Only when your king is near should the queen close the final door - with check."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Set up a lone king anywhere on the board against your king and queen, and practise the recipe against a friend or an app until you can finish from any starting position in under a minute. Time yourself gently across a week and watch the mate get tidier.",
+        "Then graduate to king and rook versus king - the same ideas, but the cage is built of straight lines and the finish is slower and more methodical. Master those two endings and you own the two most common winning positions in all of chess."
+      ]
+    }
+  ],
+  "takeaway": "Shrink the box with your queen, walk your king up, and mate on the edge - and watch for stalemate, the one way this win slips away.",
+  "fiction": false
+}

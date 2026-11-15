@@ -7,7 +7,7 @@ describe('owner publication approval',()=>{
  it('records the owner instruction without claiming independent reviews',()=>{
    expect(launchApprovalSchema.parse(launch).decision).toBe('owner-directed-public-launch');
    expect(launch.outstandingReviews).toHaveLength(4);
-   expect(approvalRecordSchema.parse(record).entries).toHaveLength(24);
+   expect(approvalRecordSchema.parse(record).entries).toHaveLength(allArticles.length+allQuizzes.length);
  });
  it('does not permit outstanding reviews under a fully-reviewed release claim',()=>{
    expect(launchApprovalSchema.safeParse({...launch,decision:'fully-reviewed-release'}).success).toBe(false);

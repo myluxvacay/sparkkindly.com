@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-144",
+  "slug": "gratitude-picture-letters",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Gratitude Picture Letters",
+  "description": "For ages 6–9 with an adult: draw a picture letter that says thank you without needing many words.",
+  "publishedAt": "2026-08-22",
+  "updatedAt": "2026-08-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "kindness",
+    "art"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Choose your person",
+      "paragraphs": [
+        "Think of someone who helped you, taught you, or made you laugh. Picture their face.",
+        "Decide what you want to thank them for. One clear thing is best."
+      ]
+    },
+    {
+      "heading": "Draw the thank you",
+      "paragraphs": [
+        "Draw the helpful thing happening: the lift, the story, the shared umbrella.",
+        "Write or dictate the words thank you, and give your letter away. Giving is the best part."
+      ]
+    }
+  ],
+  "takeaway": "A drawing can say thank you as loudly as any words.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Crayons",
+    "An envelope (optional)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Give your letter with your adult's help, to someone you know."
+  ],
+  "screenFreeExtension": "Keep a gratitude page and add one small thank-you drawing every week."
+}

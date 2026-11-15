@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-132",
+  "slug": "keep-a-practice-log",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Keep a practice log",
+  "description": "A practice log is a few lines after each session: what you worked on, what improved, what to try next. It turns scattered practice into a path.",
+  "publishedAt": "2026-08-16",
+  "updatedAt": "2026-08-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "motivation"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Memory lies, logs do not",
+      "paragraphs": [
+        "Ask a musician what they practised last Tuesday and you will get a shrug. Practice feels formless from the inside, which makes progress hard to see and easy to doubt.",
+        "A log fixes that. Two or three honest lines per session create a record you can trust: the piece that finally clicked, the drill that is not working, the pattern in your best days."
+      ]
+    },
+    {
+      "heading": "Three lines are enough",
+      "paragraphs": [
+        "After each session, write: what I did, what got easier or clearer, and what I will start with next time. That last line is the treasure: it removes the cold start from your next session entirely.",
+        "Review the log every few weeks. You will spot plateaus earlier, notice which practice actually pays off, and have solid evidence, on doubtful days, that the work is adding up."
+      ]
+    }
+  ],
+  "takeaway": "Three lines after each session: what you did, what improved, what comes next.",
+  "fiction": false
+}

@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-117",
+  "slug": "messages-that-travel-as-light",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Messages that travel as light",
+  "description": "Most of the world's internet traffic crosses oceans not by satellite but as flashes of light inside glass threads thinner than hairs.",
+  "publishedAt": "2026-08-02",
+  "updatedAt": "2026-08-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "technology",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Fiber-optic communication",
+      "url": "https://en.wikipedia.org/wiki/Fiber-optic_communication",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Charles K. Kao",
+      "url": "https://en.wikipedia.org/wiki/Charles_K._Kao",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Light that cannot escape",
+      "paragraphs": [
+        "An optical fibre is a strand of glass so pure and thin that light shone into one end stays trapped inside, bouncing along its walls by total internal reflection — the same effect that makes a swimming pool's surface look like a mirror from underwater. The light can travel tens of kilometres before it needs a boost.",
+        "A single fibre can carry many signals at once, each on a different colour of light, and modern cables bundle hundreds of fibres. The result: a cable no thicker than a garden hose can carry a large share of a continent's conversations."
+      ]
+    },
+    {
+      "heading": "The man who cleaned the glass",
+      "paragraphs": [
+        "In the 1960s, fibres lost their light within metres, and most engineers blamed the idea itself. Charles Kao argued the problem was not the principle but the impurities in the glass, and calculated that pure enough glass would let light travel for kilometres. Manufacturers proved him right within a few years, and Kao later received the Nobel Prize for the insight.",
+        "The first transatlantic telephone cable using fibres entered service in 1988. Today well over a million kilometres of submarine fibre cables web the ocean floors, carrying more than 95 percent of intercontinental data traffic."
+      ]
+    },
+    {
+      "heading": "Why light wins",
+      "paragraphs": [
+        "Light in glass is fast, capacious and frugal with energy compared with electrical signals in copper, which fade and interfere over distance. That is why the backbone of the internet is glass, and why your video call to another continent feels instant.",
+        "Somewhere beneath the ocean, as you read this, pulses of light are racing through the dark — letters, songs and faces, all turned into flashes and back again."
+      ]
+    }
+  ],
+  "takeaway": "Optical fibres trap light by internal reflection, and Kao's insight about pure glass turned them into the backbone of the world's internet.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "own-the-mistake-307",
+  "scheduledDate": "2026-04-21",
+  "brand": "together",
+  "prompt": "You made a mistake that let your team down. What builds the most trust?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hide it and hope nobody notices"
+    },
+    {
+      "id": "b",
+      "text": "Blame the person next to you"
+    },
+    {
+      "id": "c",
+      "text": "Own it, apologise and help put it right"
+    },
+    {
+      "id": "d",
+      "text": "Quit the team before anyone finds out"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Owning a mistake honestly, then helping to fix it, shows the team they can rely on you even when things go wrong.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

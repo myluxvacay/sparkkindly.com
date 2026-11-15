@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-81",
+  "slug": "palindromes-backwards-forwards",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Palindromes: the words that read the same backwards",
+  "description": "Racecar, kayak and level look the same in a mirror of letters. Here is how palindromes work and how to hunt for your own.",
+  "publishedAt": "2026-06-01",
+  "updatedAt": "2026-06-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Palindrome — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Palindrome",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Words that refuse to pick a direction",
+      "paragraphs": [
+        "A palindrome reads the same forwards and backwards. Racecar is the classic: spell it from the back and you still get racecar. Level, civic, radar, kayak and refer all do the same trick, quietly hiding in everyday English.",
+        "Numbers can join in too. 121, 1331 and 12321 are palindromes, and the date 02/02/2020 read the same both ways in several date formats, which made it a small celebration for word lovers."
+      ]
+    },
+    {
+      "heading": "From words to whole sentences",
+      "paragraphs": [
+        "With spaces and punctuation ignored, whole sentences can fold back on themselves. The most famous is “A man, a plan, a canal: Panama”, written about the building of the Panama Canal. Another favourite is “Was it a car or a cat I saw?”",
+        "The longest single-word palindrome in the Oxford English Dictionary is often said to be tattarrattat, a made-up word for a knock on the door coined by James Joyce in his novel Ulysses. It runs to twelve letters, all arranged around a centre that never changes."
+      ]
+    },
+    {
+      "heading": "Try it: build your own",
+      "paragraphs": [
+        "Start small. Take a short word, write its reverse next to it, and see how close you are: if the two match, you have found one. Then try names — Anna, Hannah, Otto and Eve are palindromes already, which is why they appear in so many puzzles.",
+        "For a bigger challenge, try to write a sentence that works both ways. Pick a short pivot word for the middle, build matching pairs of words around it, and be patient. It is fiddly, satisfying, and a lovely way to feel how letters balance."
+      ]
+    }
+  ],
+  "takeaway": "A palindrome is a small act of symmetry: build one yourself and you will start spotting them everywhere.",
+  "fiction": false
+}

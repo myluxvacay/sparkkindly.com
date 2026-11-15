@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-52",
+  "slug": "grid-logic-puzzles-einstein",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Grid Logic Puzzles: Solve Them Like a Detective (Mini Zebra Included)",
+  "description": "The famous Zebra Puzzle looks impossible until you draw a grid - try a three-house version and learn the method.",
+  "publishedAt": "2026-10-03",
+  "updatedAt": "2026-10-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "brain-teasers"
+  ],
+  "sources": [
+    {
+      "title": "Zebra Puzzle - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zebra_Puzzle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The puzzle that made grids famous",
+      "paragraphs": [
+        "In 1962 a magazine published the Zebra Puzzle: five houses, five colours, five nationalities, five pets, drinks and cigarette brands, and fifteen tangled clues, ending with the questions 'Who drinks water? Who owns the zebra?' It is often attributed to Einstein, with a claim that only 2 percent of people can solve it - a great story, but there is no evidence Einstein wrote it, and the '2 percent' figure is folklore too.",
+        "What the puzzle really teaches is a method, not genius: the logic grid. Draw a table with one category down the side and another across the top. A tick marks a confirmed match; a cross marks an impossibility. Every clue fills cells, and every filled cell forces crosses elsewhere - matches in a row or column rule out all rivals. The grid remembers everything, so your brain only has to do one deduction at a time."
+      ]
+    },
+    {
+      "heading": "A mini zebra to solve now",
+      "paragraphs": [
+        "Three houses stand in a row, numbered 1 to 3. One is red, one blue, one green. Their owners keep a cat, a dog and a fish, and drink tea, milk and juice - one of each per house. Clues: (1) The dog lives in the blue house. (2) The green house drinks juice. (3) The red house is immediately left of the green house. (4) The cat's owner drinks tea. (5) The fish lives in house 3. Question: who drinks the milk?",
+        "Work it through. From clue 3, red and green sit side by side as (1,2) or (2,3). Try red at 1 and green at 2: then blue is house 3, so by clue 1 the dog is in house 3 - but clue 5 puts the fish there. Contradiction. So blue is house 1, red is house 2, green is house 3. The dog is in house 1; the fish is in house 3, so the cat is in house 2, and by clue 4 house 2 drinks tea. By clue 2 house 3 drinks juice. Only milk is left, so the milk drinker is house 1 - the blue house, with the dog. Every step was forced; that is the grid method's quiet pleasure."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Redraw the mini zebra as an actual grid - houses across the top, colours, pets and drinks down the side - and solve it again by ticks and crosses alone. Then graduate: add a fourth house and a fourth item in each category, and write your own clue set.",
+        "Writing clues is the advanced skill: include the clues in an order that mixes easy anchors ('the fish lives in house 3') with relational clues ('immediately left of'), then solve your own puzzle from scratch to check it has exactly one solution. If two solutions survive, add one more clue and test again."
+      ]
+    }
+  ],
+  "takeaway": "A grid turns a wall of clues into bookkeeping: mark what must be true, cross out what cannot, and the answer assembles itself.",
+  "fiction": false
+}

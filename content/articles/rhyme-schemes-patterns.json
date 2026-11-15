@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-129",
+  "slug": "rhyme-schemes-patterns",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Rhyme schemes: the secret patterns inside poems",
+  "description": "Poets label rhymes with letters — ABAB, AABB, AABBA — and suddenly the skeleton of a poem becomes visible. Learn the code and you can X-ray any verse, from limericks to rap.",
+  "publishedAt": "2026-08-29",
+  "updatedAt": "2026-08-29",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "word-games"
+  ],
+  "sources": [
+    {
+      "title": "Rhyme scheme — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rhyme_scheme",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Letters for sounds",
+      "paragraphs": [
+        "A rhyme scheme describes which lines of a poem rhyme with each other. Give the first line's ending sound the letter A. Every later line that rhymes with it is also A; the first line with a new sound becomes B, and so on. “Twinkle, twinkle, little star / How I wonder what you are” is AABB — star pairs with are (near enough for a nursery), and the pattern repeats in couplets.",
+        "An ABAB verse alternates: line one rhymes with line three, line two with line four, like two conversations woven together. Sonnets, hymns and most pop choruses live in these two patterns, because the ear loves both the hug of a couplet and the weave of an alternation."
+      ]
+    },
+    {
+      "heading": "The limerick's fingerprint",
+      "paragraphs": [
+        "The limerick has the most recognisable scheme of all: AABBA. Five lines, the long first, second and fifth lines rhyming together, with a short rhyming pair squeezed in the middle. Edward Lear popularised the form in his Book of Nonsense in 1846, and the bouncy rhythm — da-da-DUM da-da-DUM da-da-DUM — is unmistakable even before the joke lands.",
+        "Try scanning a song you love. Choruses often run ABAB or AAAA (every line the same rhyme — harder than it looks), and rappers layer internal rhymes inside lines, schemes within schemes, like patterned tiles in a floor."
+      ]
+    },
+    {
+      "heading": "Try it: X-ray and build",
+      "paragraphs": [
+        "Take any short poem or song chorus and write its scheme in the margin, letter by letter. Disagreements about whether two words truly rhyme are traditional and enjoyable — settle them by reading aloud.",
+        "Then build: write four lines in ABAB about your breakfast, your street or your cat. The scheme is a trellis; your words are the vine. Even a wobbly vine looks better with something to climb."
+      ]
+    }
+  ],
+  "takeaway": "A rhyme scheme is a poem's floor plan: once you can read ABAB, you can see how every verse in the world is built.",
+  "fiction": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-60",
+  "slug": "questions-for-grandparents",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Questions for grandparents",
+  "description": "Your grandparents are libraries that lend for a limited season; here is how to borrow well.",
+  "publishedAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "traditions"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Ask about the ordinary, not the famous",
+      "paragraphs": [
+        "“What was an ordinary Tuesday when you were twelve?” often unlocks more than “Tell me about the war” or “the old days.” Ordinary details — prices, songs, the walk to school, what was for tea — are the parts of history that vanish first and fascinate most.",
+        "Ask what they played, what they were afraid of, what made their parents laugh. You are collecting a person, not a timeline."
+      ]
+    },
+    {
+      "heading": "Let the stories wander",
+      "paragraphs": [
+        "Stories from older people travel by association, not by agenda. The detour about a neighbour’s goat may be the route to the best story of the afternoon. Resist editing; your only jobs are appetite and patience.",
+        "If they are willing, record the audio on a phone, with permission. Voices are the first thing families wish they had kept."
+      ]
+    },
+    {
+      "heading": "Write down three things",
+      "paragraphs": [
+        "Afterwards, write down just three things you heard — a name, a place, a phrase they used. Memory is a leaky bucket, but three written lines will hold a surprising amount of a person.",
+        "One day you may be the oldest library in the family. What you borrow now, carefully, is what there will be to lend."
+      ]
+    }
+  ],
+  "takeaway": "Ask about ordinary days, let stories wander, record the voice, and write down three things.",
+  "fiction": false
+}

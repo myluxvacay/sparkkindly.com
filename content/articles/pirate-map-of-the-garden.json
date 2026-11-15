@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-124",
+  "slug": "pirate-map-of-the-garden",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Pirate Map of the Garden",
+  "description": "For ages 6–9 with an adult: draw a treasure map of your garden and follow it to find hidden treasure.",
+  "publishedAt": "2026-07-25",
+  "updatedAt": "2026-07-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Draw the map",
+      "paragraphs": [
+        "Draw your garden from above: the tree, the path, the flower pots. Pirates keep maps simple.",
+        "Draw a dotted line for the path and a big X where the treasure will hide."
+      ]
+    },
+    {
+      "heading": "Follow the map",
+      "paragraphs": [
+        "Your adult hides the treasure and gives you the map. Follow the dotted line step by step.",
+        "When you find the X, dig with your hands or just peek: treasure! Being a map reader feels powerful."
+      ]
+    }
+  ],
+  "takeaway": "X marks the spot, and the hunt is even better than the treasure.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Pencils",
+    "A small treasure to hide, like a painted stone"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Stay in the garden with your adult; an adult hides the treasure in a safe, easy place."
+  ],
+  "screenFreeExtension": "Swap roles: draw a new map and let your adult be the treasure hunter."
+}

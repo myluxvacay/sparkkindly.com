@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-101",
+  "slug": "echo-reading-game",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Echo Reading",
+  "description": "For ages 6–9 with an adult: listen as your adult reads a line, then echo it back in the same funny voice.",
+  "publishedAt": "2026-06-22",
+  "updatedAt": "2026-06-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Listen and echo",
+      "paragraphs": [
+        "Your adult reads one short line in a squeaky mouse voice. You echo it back, copying the voice.",
+        "Swap voices each page: a giant voice, a robot voice, a whisper voice."
+      ]
+    },
+    {
+      "heading": "Swap the leader",
+      "paragraphs": [
+        "Now you read or say a line first, and your adult has to echo you.",
+        "The leader picks the voice. The echo copies it as closely as they can."
+      ]
+    }
+  ],
+  "takeaway": "Echoing a line helps your ears learn how stories sound.",
+  "fiction": false,
+  "materials": [
+    "A favourite picture book",
+    "A comfy reading spot"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Choose books everyone enjoys; stop whenever you are tired."
+  ],
+  "screenFreeExtension": "Echo a song together: your adult sings a line, and you sing it back."
+}

@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-71",
+  "slug": "free-trial-calendar-trick",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Free trials and the date that matters",
+  "description": "A free trial is a future payment wearing a friendly costume. The only date that matters is the one it turns into a charge.",
+  "publishedAt": "2026-10-19",
+  "updatedAt": "2026-10-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "understanding-offers",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "How trials make money",
+      "paragraphs": [
+        "Trials work because of a polite fiction: that you will remember, in fourteen busy days, to cancel a service you are barely using. Companies know most people forget, and the first charge often arrives before the service has earned a place in your life.",
+        "Some trials also ask for card details up front \"for verification.\" That is the tell: the card is there so the conversion to paid needs no further action from you."
+      ]
+    },
+    {
+      "heading": "The two-minute defence",
+      "paragraphs": [
+        "The moment you start a trial, set a reminder for two days before it ends — not the day it ends, when a time-zone quirk or a busy afternoon can cost you a month. Name the reminder with the service and the amount it will charge.",
+        "If the service allows it, cancel immediately after signing up. Many trials continue until the end date even after cancellation, so you keep the free period and remove the risk entirely."
+      ]
+    },
+    {
+      "heading": "Decide like a subscriber",
+      "paragraphs": [
+        "When the reminder fires, judge the service as if you were subscribing today at full price, because that is exactly what is about to happen. \"I might use it\" is not a subscription reason; it is how unused months accumulate.",
+        "If you do keep a service after its trial, add it to your subscriptions list with its renewal date and price. Trials that survive the reminder test have earned their place; the list simply keeps them honest afterwards."
+      ]
+    }
+  ],
+  "takeaway": "Start every free trial with a cancellation reminder set two days early — and where possible, cancel at once and keep the free days without the risk.",
+  "fiction": false
+}

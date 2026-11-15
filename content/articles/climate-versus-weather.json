@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-85",
+  "slug": "climate-versus-weather",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Climate is not weather",
+  "description": "A snowy day does not disprove a warming trend, and a heatwave does not prove one. The difference is time.",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "climate",
+    "weather"
+  ],
+  "sources": [
+    {
+      "title": "NASA Climate Kids: What's the difference between weather and climate?",
+      "url": "https://climatekids.nasa.gov/climate-weather-difference/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Two different questions",
+      "paragraphs": [
+        "Weather is the state of the atmosphere over hours to days: rain on Tuesday, a frost tonight, a storm this weekend. Climate is the pattern that weather follows over decades — the typical conditions of a place across thirty years or more, including its averages and its extremes.",
+        "NASA's comparison is handy: weather is like the clothes you choose each morning; climate is the wardrobe you own. One cold day in a warming climate is like wearing a coat in July — unusual for the wardrobe, but a single choice proves nothing about the collection."
+      ]
+    },
+    {
+      "heading": "Why the distinction matters",
+      "paragraphs": [
+        "Because climate is a long pattern, scientists measure it with long records: thermometer networks, satellites, ice cores and ocean measurements spanning decades to millennia. A trend is judged by the whole record, not by any single day, season, or storm.",
+        "The distinction cuts both ways. A single record-breaking heatwave does not, by itself, demonstrate climate change either — but a rising count of such heatwaves across decades is exactly the kind of pattern that does. Weather asks 'what is happening?'; climate asks 'what has been happening, and which way is it heading?'"
+      ]
+    }
+  ],
+  "takeaway": "Weather is short-term atmosphere; climate is the decades-long pattern, and only the long record reveals the trend.",
+  "fiction": false
+}

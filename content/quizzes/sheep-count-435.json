@@ -1,0 +1,32 @@
+{
+  "id": "sheep-count-435",
+  "scheduledDate": "2026-08-27",
+  "brand": "play",
+  "prompt": "A farmer has 17 sheep and all but 9 run away. How many sheep are left?",
+  "options": [
+    {
+      "id": "a",
+      "text": "8"
+    },
+    {
+      "id": "b",
+      "text": "9"
+    },
+    {
+      "id": "c",
+      "text": "17"
+    },
+    {
+      "id": "d",
+      "text": "0"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "'All but 9' means 9 sheep stayed behind. The other 8 ran away, so 9 are left.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-113",
+  "slug": "glass-made-from-sand-and-fire",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Glass: made from sand and fire",
+  "description": "Heat ordinary sand hot enough and it transforms into one of humanity's most useful materials — windows, lenses, bottles and the screens of science.",
+  "publishedAt": "2026-07-24",
+  "updatedAt": "2026-07-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "inventions",
+    "ancient-history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Glass",
+      "url": "https://en.wikipedia.org/wiki/Glass",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: History of glass",
+      "url": "https://en.wikipedia.org/wiki/History_of_glass",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A material born in furnaces",
+      "paragraphs": [
+        "Glass begins as sand — mostly silica — heated with soda ash and lime until, at around 1,300 to 1,600 degrees Celsius, it melts into a glowing liquid that cools into a hard, transparent solid. Nature makes it too, where lightning strikes sand or volcanoes erupt, but deliberate glassmaking began about 3,600 years ago in Mesopotamia and Egypt.",
+        "The earliest glass was a luxury, coloured like gemstones and shaped by wrapping molten strands around a core of clay. A single small bottle could be a treasure, traded across the ancient world."
+      ]
+    },
+    {
+      "heading": "The blowpipe changes everything",
+      "paragraphs": [
+        "Around the 1st century BC, craftspeople on the Syro-Palestinian coast discovered glassblowing: gather a blob of molten glass on a hollow pipe, blow, and a vessel inflates like a bubble. Glass became fast and cheap to shape, and for the first time ordinary Roman households could own glass cups and bottles.",
+        "Glassmakers guarded their recipes fiercely. Venice moved its furnaces to the island of Murano in 1291 — officially against fire risk, and conveniently keeping its masters of crystal-clear glass where rivals could not easily hire them away."
+      ]
+    },
+    {
+      "heading": "The material science looks through",
+      "paragraphs": [
+        "Clear, flat glass remade daily life: windows that admit light but not weather, mirrors, spectacles that gave ageing scholars back their reading, and lenses that opened two new worlds — the telescope's planets and the microscope's microbes.",
+        "Today glass carries our messages as optical fibres and faces us in every screen. Sand, soda, lime and fire: still the recipe, still astonishing."
+      ]
+    }
+  ],
+  "takeaway": "Glassblowing turned a luxury of kings into an everyday material, and its clarity went on to power telescopes, microscopes and modern screens.",
+  "fiction": false
+}

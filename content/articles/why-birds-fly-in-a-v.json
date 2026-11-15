@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-48",
+  "slug": "why-birds-fly-in-a-v",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why birds fly in a V",
+  "description": "The V shape trailing across the autumn sky is not decoration. It is teamwork you can measure.",
+  "publishedAt": "2026-09-04",
+  "updatedAt": "2026-09-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: V formation",
+      "url": "https://en.wikipedia.org/wiki/V_formation",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Riding each other's air",
+      "paragraphs": [
+        "As a bird flaps, its wingtips stir the air into swirling trails. Just behind and to the side of those wingtips, the swirls push air upward. A bird that positions itself in that rising air gets a little free lift with every flap, like a cyclist tucked into the slipstream of the rider ahead.",
+        "Studies of migrating ibises showed that birds time their flapping to catch these updrafts, and that the birds in a flock take turns at the front, where the work is hardest. The V is a shared arrangement: everyone saves energy, and the lead is passed around."
+      ]
+    },
+    {
+      "heading": "Keeping in touch",
+      "paragraphs": [
+        "The formation has a second benefit. From a V, each bird can see its neighbours and keep visual contact with the whole flock, which helps the group stay together and change direction smoothly.",
+        "The savings matter on journeys of thousands of kilometres. A flock flying in formation can travel considerably farther on the same stored energy than the same birds flying alone."
+      ]
+    }
+  ],
+  "takeaway": "Birds fly in a V to borrow lift from each other's wingtips, share the hardest work, and stay in sight of the flock.",
+  "fiction": false
+}

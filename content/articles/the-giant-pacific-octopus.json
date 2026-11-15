@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-81",
+  "slug": "the-giant-pacific-octopus",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The giant Pacific octopus",
+  "description": "It can taste with its arms, vanish into a gap the size of a lemon, and solve puzzles for fun. Meet the largest octopus on Earth.",
+  "publishedAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Giant Pacific octopus",
+      "url": "https://en.wikipedia.org/wiki/Giant_Pacific_octopus",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Big, soft and boneless",
+      "paragraphs": [
+        "The giant Pacific octopus is the largest octopus species, commonly reaching 15 kilograms or more, with the biggest individuals reported far heavier and spanning several metres from arm tip to arm tip. It has no bones at all — its only hard part is a parrot-like beak — so the whole animal can squeeze through any opening the beak fits through.",
+        "Each of its eight arms carries rows of suckers lined with taste receptors, so the octopus tastes whatever it touches. Two-thirds of its neurons are in its arms, which explore and manipulate with a degree of independence, while three hearts keep its blue, copper-based blood moving."
+      ]
+    },
+    {
+      "heading": "A short, intense life",
+      "paragraphs": [
+        "For all its size and cleverness, this octopus lives only about three to five years. The female lays tens of thousands of eggs in a den and guards them without eating for months, fanning them with oxygen-rich water, until they hatch — after which she dies.",
+        "In aquariums, these octopuses learn to open jars, recognise individual people and dismantle plumbing, which is why keepers give them puzzles. Intelligence this bright, in a life this brief, is one of evolution's more surprising bargains."
+      ]
+    }
+  ],
+  "takeaway": "The giant Pacific octopus combines size, squeezing power and problem-solving intelligence in a life of just a few years.",
+  "fiction": false
+}

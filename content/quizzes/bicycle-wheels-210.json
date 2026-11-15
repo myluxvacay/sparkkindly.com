@@ -1,0 +1,32 @@
+{
+  "id": "bicycle-wheels-210",
+  "scheduledDate": "2026-01-14",
+  "brand": "kids",
+  "prompt": "How many wheels does a bicycle have?",
+  "options": [
+    {
+      "id": "a",
+      "text": "One"
+    },
+    {
+      "id": "b",
+      "text": "Two"
+    },
+    {
+      "id": "c",
+      "text": "Three"
+    },
+    {
+      "id": "d",
+      "text": "Four"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "'Bi' means two - a bicycle has two wheels, one at the front and one at the back!",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

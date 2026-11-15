@@ -1,0 +1,32 @@
+{
+  "id": "word-review-418",
+  "scheduledDate": "2026-08-10",
+  "brand": "grow",
+  "prompt": "You are learning 100 new words in another language for a test in a month. Which study style works best?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Read the whole list once, the night before"
+    },
+    {
+      "id": "b",
+      "text": "Review a few words often, spread over the month"
+    },
+    {
+      "id": "c",
+      "text": "Only study the words you already like"
+    },
+    {
+      "id": "d",
+      "text": "Write each word 50 times in one sitting"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Spaced review, a little and often, helps your memory hold on to words far longer than one big cramming session.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

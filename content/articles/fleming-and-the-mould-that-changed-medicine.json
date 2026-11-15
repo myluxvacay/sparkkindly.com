@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-130",
+  "slug": "fleming-and-the-mould-that-changed-medicine",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Fleming and the mould that changed medicine",
+  "description": "A stray spore landed on a dish in a London laboratory in 1928 — and a prepared mind noticed that the bacteria around it were dying.",
+  "publishedAt": "2026-08-31",
+  "updatedAt": "2026-08-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "inventions"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Penicillin",
+      "url": "https://en.wikipedia.org/wiki/Penicillin",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Alexander Fleming",
+      "url": "https://en.wikipedia.org/wiki/Alexander_Fleming",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The untidy dish",
+      "paragraphs": [
+        "In September 1928, Alexander Fleming returned to his laboratory at St Mary's Hospital in London after a holiday and sorted through a stack of dishes where he had been growing staphylococcus bacteria. On one dish, something odd: a spot of mould had contaminated the culture — and around the mould, the bacteria had died, while colonies further away thrived.",
+        "Many researchers would have cursed the contamination and thrown the dish away. Fleming instead asked why the bacteria were dying. The mould, a Penicillium strain, was releasing a substance that killed them. He named it penicillin."
+      ]
+    },
+    {
+      "heading": "A discovery waits for its team",
+      "paragraphs": [
+        "Fleming published his finding in 1929, but penicillin was unstable and hard to produce in quantity, and the discovery stalled for a decade. In 1939, a team at Oxford led by Howard Florey and Ernst Chain — with Norman Heatley's ingenious improvisation — turned it into a usable medicine, proving its power first in mice and then in desperately ill patients.",
+        "By the later years of the Second World War, industrial production, much of it in the United States, was saving soldiers and civilians from infections that had been death sentences for all of human history."
+      ]
+    },
+    {
+      "heading": "Luck favours the prepared mind",
+      "paragraphs": [
+        "The discovery is often told as pure accident, but the accident had visited many laboratories; only Fleming recognised it. He had spent years hunting antibacterial substances, so his eye was trained to see a clear ring around a mould as a clue rather than a spoiled experiment.",
+        "Penicillin also carries a warning Fleming himself gave: use antibiotics carelessly and bacteria evolve resistance. The mould's gift is precious, and keeping it working is now part of the gift."
+      ]
+    }
+  ],
+  "takeaway": "Penicillin began as contamination that Fleming recognised as a clue — and became medicine through a team's decade of work.",
+  "fiction": false
+}

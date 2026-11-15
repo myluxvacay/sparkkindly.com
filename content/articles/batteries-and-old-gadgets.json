@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-111",
+  "slug": "batteries-and-old-gadgets",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Batteries and old gadgets: safer ways to let go",
+  "description": "Batteries and electronics do not belong in household bins, and the safer routes are usually free and nearby.",
+  "publishedAt": "2026-07-08",
+  "updatedAt": "2026-07-08",
+  "tags": [
+    "recycling",
+    "green"
+  ],
+  "sources": [
+    {
+      "title": "epa.gov",
+      "url": "https://www.epa.gov/recycle/used-household-batteries",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "Why batteries need special handling",
+      "paragraphs": [
+        "Batteries contain metals and chemicals that should be recovered rather than buried, and some types can spark or catch fire if crushed in a collection truck or sorting plant. That is why waste services are firm about keeping them out of both the rubbish and the recycling bin.",
+        "Old phones, laptops and toys often hide batteries inside, so treat the whole gadget as e-waste rather than trying to prize a sealed battery out yourself."
+      ]
+    },
+    {
+      "heading": "Where they can go instead",
+      "paragraphs": [
+        "Many supermarkets and DIY stores host battery collection tubes near the entrance, and household waste recycling centres take batteries and electronics free of charge. Retailers that sell electrical goods often accept old items for recycling when you buy a replacement, and some take them any time.",
+        "Keep a small box or jar for spent batteries by the door or in a drawer, out of reach of small children, and drop it off when it fills. Covering the terminals of lithium and button batteries with a strip of tape is a simple extra precaution in storage and transport."
+      ]
+    },
+    {
+      "heading": "Before a gadget leaves the house",
+      "paragraphs": [
+        "Back up anything you need, sign out of accounts, and restore phones, tablets and computers to factory settings so your personal information does not travel with them. Remove memory cards and SIMs, which are easy to forget.",
+        "If a gadget still works, passing it on or selling it beats recycling: reuse keeps its value longest. Charities and school schemes often welcome working laptops and phones, and wiping them properly makes the gift a safe one."
+      ]
+    }
+  ],
+  "takeaway": "Keep a battery box, use shop and council collection points, and wipe old gadgets before they go anywhere."
+}

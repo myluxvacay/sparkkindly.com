@@ -1,0 +1,59 @@
+{
+  "id": "discover-bulk-79",
+  "slug": "why-the-sea-is-salty",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why the sea is salty",
+  "description": "Rivers taste fresh, yet they are the reason the ocean is salt. The sea has been collecting the evidence for billions of years.",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "earth-science"
+  ],
+  "sources": [
+    {
+      "title": "NOAA: Why is the ocean salty?",
+      "url": "https://oceanservice.noaa.gov/facts/whysalty.html",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Seawater",
+      "url": "https://en.wikipedia.org/wiki/Seawater",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Rivers deliver, the sea keeps",
+      "paragraphs": [
+        "Rain is slightly acidic, and as it flows over rocks it dissolves tiny amounts of mineral salts. Rivers carry those dissolved salts to the sea — far too dilute to taste. At the ocean, water evaporates and leaves the salt behind, so over hundreds of millions of years the salt has concentrated to today's roughly 35 grams per litre of seawater.",
+        "Underwater volcanoes and vents on the sea floor add and exchange minerals too. The ocean's saltiness is the balance point of all these deliveries and removals, and it has been roughly stable for a very long time."
+      ]
+    },
+    {
+      "heading": "Not all seas are equal",
+      "paragraphs": [
+        "Warm, enclosed seas with high evaporation, like the Red Sea, are saltier than average. Seas diluted by great rivers and rain, like the Baltic, are noticeably fresher. The Dead Sea — actually a lake — is so salty, around ten times the ocean's concentration, that swimmers float high and almost nothing can live in it.",
+        "If all the ocean's salt could be dried and spread over the land, it would form a layer more than a hundred metres thick: the accumulated memory of every river that ever ran."
+      ]
+    }
+  ],
+  "takeaway": "The sea is salty because rivers deliver dissolved minerals that evaporation leaves behind, concentrated over immense time.",
+  "fiction": false
+}

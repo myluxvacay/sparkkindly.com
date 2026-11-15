@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-129",
+  "slug": "galileo-and-the-tower-story",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Galileo and the tower story",
+  "description": "Did Galileo really drop balls from the Leaning Tower of Pisa? The famous tale is probably a legend — and the true story is better.",
+  "publishedAt": "2026-08-30",
+  "updatedAt": "2026-08-30",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Galileo Galilei",
+      "url": "https://en.wikipedia.org/wiki/Galileo_Galilei",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Leaning Tower of Pisa",
+      "url": "https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The story everyone knows",
+      "paragraphs": [
+        "The tale goes like this: around 1590, Galileo Galilei climbed the Leaning Tower of Pisa and dropped two balls of different weights before a crowd of professors. Both struck the ground together, demolishing Aristotle's claim that heavy objects fall faster, in a single dramatic moment.",
+        "It is a wonderful story. The trouble is the evidence: Galileo never described doing it. The account comes from his last student, Vincenzo Viviani, writing years after Galileo's death — and other scholars of the era did perform similar drops, with messier results than the legend admits."
+      ]
+    },
+    {
+      "heading": "What Galileo actually did",
+      "paragraphs": [
+        "Galileo's real method was subtler and more powerful. Falling objects move too fast to time with 17th-century clocks, so he slowed the fall: rolling bronze balls down a gently sloped, polished groove, timing them with a water clock and his own pulse.",
+        "From these patient experiments he found the rule: the distance a falling object travels grows with the square of the time. Double the time, quadruple the distance. That mathematical pattern — not a tower stunt — is what overturned the old physics and founded the science of motion."
+      ]
+    },
+    {
+      "heading": "Why the legend survives",
+      "paragraphs": [
+        "The tower story endures because it dramatises a real truth: Galileo insisted that nature, not authority, settles questions. He pointed his telescope at Jupiter in 1610 and saw moons circling another world — evidence anyone could check, and many did.",
+        "Science keeps the legend as a parable and the experiments as the proof. It is a good arrangement: let the story inspire you, then do what Galileo did, and measure."
+      ]
+    }
+  ],
+  "takeaway": "The tower drop is likely legend; Galileo's real breakthrough was rolling balls down ramps and finding the mathematics of falling.",
+  "fiction": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "save-bulk-88",
+  "slug": "splitting-costs-with-housemates",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Splitting costs fairly with housemates",
+  "description": "Shared houses run on shared money. A simple, agreed system for bills and basics prevents the small resentments that spoil good houses.",
+  "publishedAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "student-money",
+    "budgeting",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Agree the system before the first bill",
+      "paragraphs": [
+        "The conversation is easiest before any money is owed. Decide together: which costs are shared (rent, utilities, cleaning basics, shared staples like oil and foil), which are personal, and how the shared ones are divided — equally is usual, but rooms of very different sizes sometimes justify different shares.",
+        "Write it down, even in a shared note. Agreements made in good humour in September are hard to reconstruct from memory in February."
+      ]
+    },
+    {
+      "heading": "One pot or an app, but one system",
+      "paragraphs": [
+        "A shared kitty — a jar or account everyone pays a fixed amount into monthly — suits regular shared costs: when the bill arrives, the pot pays it, and nobody chases anybody. Splitting apps work well for irregular shared purchases, settling up in one transfer rather than twelve.",
+        "Whichever you choose, choose one. Money scattered across favours, loans, and half-remembered rounds is where housemate friction breeds."
+      ]
+    },
+    {
+      "heading": "Handle problems early and lightly",
+      "paragraphs": [
+        "If someone is struggling, a quiet word early is kinder than silence followed by an explosion. Most houses can flex for a month; what they cannot survive is surprise. Fairness maintained openly is a form of kindness, and good houses are worth the small awkwardness of talking about money plainly.",
+        "It helps to schedule a five-minute money chat once a term, before anything is wrong. Houses that talk about money routinely rarely have to talk about it urgently."
+      ]
+    }
+  ],
+  "takeaway": "Agree what is shared, how it is split, and which single system tracks it — before the first bill arrives, while everyone is still friends with the idea.",
+  "fiction": false
+}

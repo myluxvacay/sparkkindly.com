@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-95",
+  "slug": "work-with-what-you-have",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Make it with what you already have",
+  "description": "You do not need new supplies to start. The materials already around you are enough for a first version of almost anything.",
+  "publishedAt": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "creativity",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The supply trap",
+      "paragraphs": [
+        "It is tempting to believe the project will begin once you own the right notebook, the better camera, the proper tools. Sometimes that is true. More often it is a comfortable way to postpone starting.",
+        "Look around first. Scrap paper, a phone camera, leftover yarn, a borrowed instrument: most first versions can be made from what is already within reach."
+      ]
+    },
+    {
+      "heading": "Scraps have their own charm",
+      "paragraphs": [
+        "Working with limited materials forces inventive choices. A collage from old magazines, a meal from what is in the fridge, a garden in reused pots: constraints often produce the most personal results.",
+        "If the first version works, you will know exactly which upgrade would actually help, and you can save for that one thing instead of everything."
+      ]
+    }
+  ],
+  "takeaway": "Start with what is in the drawer; upgrade later, on evidence.",
+  "fiction": false
+}

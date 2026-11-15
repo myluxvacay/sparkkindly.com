@@ -1,0 +1,32 @@
+{
+  "id": "shrinking-drops-415",
+  "scheduledDate": "2026-08-07",
+  "brand": "play",
+  "prompt": "What number comes next in this pattern: 60, 55, 45, 30, ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "20"
+    },
+    {
+      "id": "b",
+      "text": "15"
+    },
+    {
+      "id": "c",
+      "text": "10"
+    },
+    {
+      "id": "d",
+      "text": "5"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The drops grow each time: 60-5=55, 55-10=45, 45-15=30, so the next drop is 20: 30-20 = 10.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

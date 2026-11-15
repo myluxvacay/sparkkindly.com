@@ -1,0 +1,32 @@
+{
+  "id": "caught-in-middle-407",
+  "scheduledDate": "2026-07-30",
+  "brand": "together",
+  "prompt": "Two of your friends have fallen out, and each one complains to you about the other. What is the fairest approach?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Take the side of whoever told you first"
+    },
+    {
+      "id": "b",
+      "text": "Carry messages between them"
+    },
+    {
+      "id": "c",
+      "text": "Listen to both, but don't take sides or pass things on"
+    },
+    {
+      "id": "d",
+      "text": "Stop talking to both of them"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Listening without taking sides or carrying tales keeps you trustworthy to both friends and avoids making the argument bigger.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

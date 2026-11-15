@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-125",
+  "slug": "saving-together-as-a-family",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Saving together as a family",
+  "description": "A shared savings goal, talked about openly and tracked visibly, turns saving from a private worry into a team project.",
+  "publishedAt": "2026-08-03",
+  "updatedAt": "2026-08-03",
+  "tags": [
+    "saving",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Choose a goal everyone can picture",
+      "paragraphs": [
+        "Family saving works best aimed at something concrete and shared: a day out, a holiday, a new bike, a garden project. A goal with a picture beats a number, especially for children, who save far more willingly toward something they can imagine enjoying.",
+        "Let everyone help choose it. A goal imposed from above feels like a cut; a goal chosen together feels like a plan."
+      ]
+    },
+    {
+      "heading": "Make progress visible",
+      "paragraphs": [
+        "A simple chart on the fridge, a jar that fills with coins, or a thermometer poster coloured in week by week keeps the goal present between paydays. Visible progress is the reward that carries a family through the middle weeks when enthusiasm fades.",
+        "Contributions can be many shapes: a parent adding the regular amount, children adding a coin from pocket money, everyone agreeing that the money saved by a home movie night goes into the pot."
+      ]
+    },
+    {
+      "heading": "Talk about trade-offs without fear",
+      "paragraphs": [
+        "Saving together is also a gentle education in choosing: we are having takeaway less often because the trip matters more. Framed that way, a skipped treat is a vote for the goal, not a punishment.",
+        "Keep the amounts age-appropriate and the tone light. Children should feel included and proud, never anxious about household money. The goal is a family that can talk about money calmly, which is worth more than any single total."
+      ]
+    }
+  ],
+  "takeaway": "Pick a goal with a picture, track it where everyone can see, and let each small contribution feel like a vote for it."
+}

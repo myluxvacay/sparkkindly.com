@@ -1,0 +1,65 @@
+{
+  "id": "kids-bulk-66",
+  "slug": "shape-hunt-indoors",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Indoor Shape Hunt",
+  "description": "For ages 6–9 with an adult: hunt your home for circles, squares, triangles, and rectangles hiding in everyday things.",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Shapes are hiding",
+      "paragraphs": [
+        "Shapes are not just in maths books. A clock is a circle. A window is a rectangle. A pizza slice is nearly a triangle.",
+        "Write four shapes on your paper: circle, square, triangle, rectangle. Your hunt is to find three of each."
+      ]
+    },
+    {
+      "heading": "Hunt room by room",
+      "paragraphs": [
+        "Start in the kitchen. Plates are circles, tiles are squares, and the fridge door is a tall rectangle.",
+        "Triangles are the shyest shape. Look at roof pictures, folded napkins, and the slice lines on a cheese or a cake."
+      ]
+    },
+    {
+      "heading": "Count and crown",
+      "paragraphs": [
+        "Count your finds for each shape. Which shape lives in your home the most? Rectangles usually win — doors, books, screens, and bricks.",
+        "Once you start shape hunting, you cannot stop. The whole world is built from shapes pretending to be things."
+      ]
+    }
+  ],
+  "takeaway": "Circles, squares, triangles, and rectangles hide in everyday things, and hunting them changes how you see your home.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only hunt in rooms your adult says are fine. Do not touch anything hot, sharp, or breakable."
+  ],
+  "screenFreeExtension": "Draw a picture of your house using only the shapes you found."
+}

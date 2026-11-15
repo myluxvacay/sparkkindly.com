@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-120",
+  "slug": "tag-around-the-world",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Tag around the world: one game, a hundred names",
+  "description": "Every playground on Earth seems to have tag — and every culture has bent it into new shapes, from India's ancient kho kho to freeze tag and shadow tag.",
+  "publishedAt": "2026-08-12",
+  "updatedAt": "2026-08-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Tag (game) — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tag_(game)",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The simplest game there is",
+      "paragraphs": [
+        "Tag needs no equipment, no pitch and no explanation: one player is “it”, and if they touch you, you are it. Variants of chasing-and-touching games appear in cultures across the world and deep into history — it may be the oldest game format humans have.",
+        "Its endless variations are local inventions. Freeze tag turns tagged players into statues until a teammate's touch frees them. Shadow tag is played by stepping on shadows, which makes it a game of sunshine and angles. TV tag lets you dodge a tag by crouching and naming a show — no repeats allowed."
+      ]
+    },
+    {
+      "heading": "Kho kho: tag as a team sport",
+      "paragraphs": [
+        "India's kho kho takes tag to another level entirely. A chasing team sits in a line, alternating the way they face; only one chaser is active at a time, and they can tag a seated teammate — shouting “kho!” — to hand over the chase in a new direction. Three defenders dodge, dive and double back against the whole relay.",
+        "Kho kho is one of India's oldest traditional games and is now played in organised leagues — proof that a playground chase, refined over centuries, becomes a sport of split-second strategy."
+      ]
+    },
+    {
+      "heading": "Try it: invent your local variant",
+      "paragraphs": [
+        "Start a family tournament of classic tag, then let each player add one rule for the next round: a safe base, a hopping-only zone, a statue rescue. Write the winning rules down — you are doing what playgrounds have done for a thousand years.",
+        "If you have nine or more players and some space, try a gentle kho kho: seat the chasers in a line and let them pass the chase with a shout. The first time the relay cuts off a runner's escape, you will feel the genius of it."
+      ]
+    }
+  ],
+  "takeaway": "Tag is humanity's default game — and each culture that touches it leaves a new rule, a new name and a better chase.",
+  "fiction": false
+}

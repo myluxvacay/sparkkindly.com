@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-65",
+  "slug": "compare-the-unit-price",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Unit prices: comparing fairly",
+  "description": "Big packs are not always cheaper and small packs are not always a rip-off. The unit price — cost per 100 grams, per litre, per item — tells you the truth.",
+  "publishedAt": "2026-10-11",
+  "updatedAt": "2026-10-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "spending-wisely",
+    "money-basics"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The small print on the shelf edge",
+      "paragraphs": [
+        "Many supermarkets print a unit price on the shelf label: the cost per 100 grams or per litre, in smaller type beneath the main price. It exists precisely because pack sizes are designed to be hard to compare at a glance.",
+        "Try it: 500 grams of pasta at $4 is 80 cents per 100 grams. A 1-kilogram bag at $7 is 70 cents per 100 grams. The big bag wins — but only by 10 cents a unit, and only if you will actually use it all."
+      ]
+    },
+    {
+      "heading": "When the bigger pack loses",
+      "paragraphs": [
+        "Unit price is not the whole story. A cheaper-per-gram pack that goes stale in the cupboard is expensive rubbish. Storage space, shelf life, and your real rate of use all belong in the decision.",
+        "Offers complicate it further: a smaller pack on promotion can beat the big pack's unit price for a week. That is why the habit is checking, not assuming in either direction."
+      ]
+    },
+    {
+      "heading": "Beyond the supermarket",
+      "paragraphs": [
+        "The same thinking applies anywhere quantities hide: data plans priced per gigabyte, cleaning products per wash, printer paper per sheet. Whenever a seller emphasises the pack price, quietly ask \"per what?\"",
+        "Unit pricing also exposes the shrinking pack trick, where the price stays the same but the contents quietly get smaller. The unit price rises even when the tag does not — another reason the small print on the shelf edge deserves your attention."
+      ]
+    }
+  ],
+  "takeaway": "Compare cost per 100 grams, per litre, or per use — never just the pack price — and let your storage and appetite have the final vote.",
+  "fiction": false
+}

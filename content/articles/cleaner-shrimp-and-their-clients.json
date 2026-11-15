@@ -1,0 +1,59 @@
+{
+  "id": "discover-bulk-49",
+  "slug": "cleaner-shrimp-and-their-clients",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Cleaner shrimp and their patient clients",
+  "description": "On a coral reef, some of the busiest workers are tiny shrimp running a cleaning service for fish many times their size.",
+  "publishedAt": "2026-09-06",
+  "updatedAt": "2026-09-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "oceans"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Cleaner shrimp",
+      "url": "https://en.wikipedia.org/wiki/Cleaner_shrimp",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Symbiosis",
+      "url": "https://en.wikipedia.org/wiki/Symbiosis",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "An open sign on the reef",
+      "paragraphs": [
+        "Cleaner shrimp set up at regular spots on the reef, sometimes called cleaning stations, and advertise with slow, waving movements of their white antennae. Fish that would normally eat a shrimp instead hover quietly and wait their turn.",
+        "The shrimp climb over their clients, picking off dead skin, mucus and tiny parasites. They will even venture inside an open mouth or under the gill covers of large fish, places where a small creature would expect to become lunch."
+      ]
+    },
+    {
+      "heading": "A deal both sides keep",
+      "paragraphs": [
+        "This partnership is a form of symbiosis: a close, lasting relationship between two different species. The shrimp get a reliable food supply delivered to their door. The fish get grooming that removes parasites and damaged tissue, which helps keep them healthy.",
+        "Trust is the whole system. A predator that ate its cleaner would lose the service forever, and fish that cheat are rare. The arrangement works because, over many visits, honesty pays better than a single meal."
+      ]
+    }
+  ],
+  "takeaway": "Cleaner shrimp and reef fish trade food for grooming in a partnership built on repeated trust.",
+  "fiction": false
+}

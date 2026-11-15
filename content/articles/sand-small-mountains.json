@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-67",
+  "slug": "sand-small-mountains",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Sand: mountains, worn to grains",
+  "description": "Every grain of sand is a fragment of somewhere else — a cliff, a shell, a volcano — delivered by water, wind or ice.",
+  "publishedAt": "2026-10-06",
+  "updatedAt": "2026-10-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "earth-science",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Sand",
+      "url": "https://en.wikipedia.org/wiki/Sand",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "What counts as sand",
+      "paragraphs": [
+        "To a geologist, sand is a size, not a substance: grains between about 0.06 and 2 millimetres across. Smaller is silt, larger is gravel. Most beach and desert sand is quartz, simply because quartz is hard, common and stubborn — it survives journeys that grind softer minerals to dust.",
+        "But sand can be almost anything small and durable. Tropical white beaches are often ground-up coral and shell. Hawaiian black sand is shattered volcanic glass and lava. There are green sands of olivine and pink sands tinted by garnet."
+      ]
+    },
+    {
+      "heading": "Reading a handful",
+      "paragraphs": [
+        "The grains tell their own travel story. Rounded, frosted grains suggest long tumbling by wind in a desert. Sharp, angular grains are freshly broken, close to their source rock. Geologists read sand the way you might read a postmark.",
+        "Sand is also surprisingly precious. It is the raw material of concrete, glass and computer chips, and the world uses it in staggering quantities — tens of billions of tonnes a year. The humblest handful on the beach is part of one of Earth's great recycling systems."
+      ]
+    }
+  ],
+  "takeaway": "Sand is defined by grain size, and each handful records a journey of breaking, travelling and sorting.",
+  "fiction": false
+}

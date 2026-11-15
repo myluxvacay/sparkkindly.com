@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-88",
+  "slug": "spoonerisms-swapped-sounds",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Spoonerisms: when your tongue swaps the sounds",
+  "description": "A “shoving leopard” instead of a “loving shepherd” — spoonerisms swap the starting sounds of words, and they have delighted listeners for over a century.",
+  "publishedAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Spoonerism — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Spoonerism",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The reverend who swapped his sounds",
+      "paragraphs": [
+        "The Reverend William Archibald Spooner was a lecturer at Oxford in the late 1800s, famous for mixing up the opening sounds of words when he spoke. Whether or not he truly said all the lines credited to him — like telling a student he had “hissed all my mystery lectures” — the swap itself took his name: the spoonerism.",
+        "The pattern is simple. Take the first sounds of two words and trade them: “tons of soil” becomes “sons of toil”, and “a blushing crow” becomes “a crushing blow”. Your tongue plans words slightly ahead of your mouth, and occasionally the plan and the delivery collide."
+      ]
+    },
+    {
+      "heading": "Why spoonerisms make us laugh",
+      "paragraphs": [
+        "Part of the pleasure is that the swapped version often still makes a kind of sense, just the wrong kind. “The Lord is a shoving leopard” paints a picture nobody expected in church. Our brains enjoy spotting the two versions at once, the intended one and the accidental one.",
+        "Radio and comedy performers later turned the accident into an art form, writing sketches where every line is carefully spoonerised. It is harder than it sounds: a good deliberate spoonerism must be decodable, or the joke gets lost."
+      ]
+    },
+    {
+      "heading": "Try it: spoonerise a sentence",
+      "paragraphs": [
+        "Start with two-word phrases: “jelly beans” becomes “belly jeans”, and “popcorn” phrases like “hot popcorn” become “pot hopcorn”. Then try a whole instruction, like “please pass the salt”, and see what arrives.",
+        "Play it as a guessing game: one player reads a spoonerised phrase aloud, slowly, and everyone else races to swap the sounds back. Award a bonus point to anyone who can spoonerise their own name."
+      ]
+    }
+  ],
+  "takeaway": "A spoonerism is your tongue dealing the cards in the wrong order — swap the sounds back and the sentence reappears.",
+  "fiction": false
+}

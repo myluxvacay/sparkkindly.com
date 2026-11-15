@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-62",
+  "slug": "fossils-messages-in-stone",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Fossils: messages in stone",
+  "description": "Almost everything that ever lived vanished without a trace. Fossils are the rare exceptions — and they rewrote our story.",
+  "publishedAt": "2026-09-28",
+  "updatedAt": "2026-09-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "earth-science",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Fossil",
+      "url": "https://en.wikipedia.org/wiki/Fossil",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A race against decay",
+      "paragraphs": [
+        "For a creature to fossilise, it must escape the usual fate of being eaten, rotted and scattered. The lucky few are buried quickly — by river mud, volcanic ash or drifting sand — before scavengers and bacteria finish their work. Burial slows decay and starts the long chemistry of preservation.",
+        "Over thousands to millions of years, minerals seep into buried bone, shell or wood and harden it to stone, or the remains dissolve away leaving a mould that later fills with sediment. What reaches us is usually the hard parts: shells, teeth, bones. Soft bodies survive only in exceptional deposits."
+      ]
+    },
+    {
+      "heading": "Reading the message carefully",
+      "paragraphs": [
+        "Fossils are not limited to bodies. Footprints, burrows, eggs and even droppings fossilise too, recording behaviour: how an animal walked, grouped, fed. These trace fossils can tell stories that skeletons cannot.",
+        "Because fossilisation is so rare and so biased toward hard parts in wet places, the fossil record is a sample, not a census. Whole worlds of soft, small or dry-land life are missing — which makes each well-preserved find a message that very nearly was never sent."
+      ]
+    }
+  ],
+  "takeaway": "Fossils form when remains are buried quickly and turned to stone, preserving rare, precious evidence of past life.",
+  "fiction": false
+}

@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-38",
+  "slug": "bird-song-listening",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Birdsong Listening Game",
+  "description": "For ages 6–9 with an adult: sit quietly outdoors and count how many different bird songs you can hear.",
+  "publishedAt": "2026-09-21",
+  "updatedAt": "2026-09-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Sit and listen",
+      "paragraphs": [
+        "Find a quiet outdoor spot with your adult and sit down together. Close your eyes if you like — ears work wonderfully on their own.",
+        "Birds sing to talk to each other. A song can mean this is my tree, or it can be a call to a friend. Every kind of bird has its own tune."
+      ]
+    },
+    {
+      "heading": "Count the songs",
+      "paragraphs": [
+        "Listen for one minute. Every time you hear a new kind of song, make a mark on your paper. A whistle, a chirp, and a trill are three different songs.",
+        "Some birds repeat their song like a stuck record. Others sing a whole jumbled concert. Which singer is the loudest? Which is the quietest?"
+      ]
+    },
+    {
+      "heading": "Morning is best",
+      "paragraphs": [
+        "Birds sing most in the early morning. Scientists call it the dawn chorus — a whole orchestra warming up as the sun rises.",
+        "Try listening at different times of day. Your marks will show you when your garden is at its most musical."
+      ]
+    }
+  ],
+  "takeaway": "Every bird species sings its own song, and careful listening lets you count singers you cannot even see.",
+  "fiction": false,
+  "materials": [
+    "A cushion to sit on",
+    "Paper",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Stay close to your adult and sit in a safe spot away from roads. Never try to touch birds or nests."
+  ],
+  "screenFreeExtension": "Try to copy your favourite bird sound with your voice and see if your family can guess it."
+}

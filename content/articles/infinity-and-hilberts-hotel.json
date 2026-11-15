@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-75",
+  "slug": "infinity-and-hilberts-hotel",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Hilbert's Hotel: Always Full, Always Room",
+  "description": "A hotel with infinitely many rooms is completely full - and yet it can fit one more guest, or infinitely many. Welcome to infinity.",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "maths-and-logic",
+    "brain-teasers"
+  ],
+  "sources": [
+    {
+      "title": "Hilbert's paradox of the Grand Hotel - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Full, but not full",
+      "paragraphs": [
+        "Imagine a hotel with infinitely many rooms, numbered 1, 2, 3 and so on forever - and every single room occupied. A new guest arrives at reception. In any ordinary hotel, this is a short conversation. Here, the manager simply asks every guest to move to the room with the next number up: the guest in room 1 moves to room 2, room 2 to room 3, and so on. Every guest still has a room - and room 1 is now free.",
+        "This is Hilbert's hotel, a thought experiment popularised by the mathematician David Hilbert in the 1920s. It is not a trick about hotels; it is a precise demonstration that infinity does not behave like a very large number. 'All rooms taken' and 'room available' can both be true when the hotel never ends."
+      ]
+    },
+    {
+      "heading": "An infinite bus arrives",
+      "paragraphs": [
+        "Now a bus arrives carrying infinitely many new guests, numbered by their seats. Can the hotel cope? Yes: ask every current guest to move from room n to room 2n. All the even rooms are now filled and all the odd rooms - infinitely many of them - stand empty for the bus passengers. The hotel absorbed infinity into infinity and still had infinitely much room to spare.",
+        "And there is a deeper surprise waiting beyond the hotel. The mathematician Georg Cantor showed that some infinities are genuinely bigger than others: the counting numbers can be listed forever, but the real numbers cannot be listed at all - any attempt leaves some out. Infinity comes in sizes, and Hilbert's hotel is the friendly front door to that strange landscape."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Test the manager's method with a finite model: take rooms 1 to 10, all full, and try the 'move up one' trick - it fails at the top room, which shows exactly why the hotel must be infinite for the trick to work. Infinity is not a big number; it is the absence of a top room.",
+        "Then take the classic challenge: infinitely many buses arrive, each carrying infinitely many guests. Can the hotel fit them all? It can - one classic solution assigns rooms using prime numbers. Sketching even a rough version of that scheme is a genuine taste of research-level thinking."
+      ]
+    }
+  ],
+  "takeaway": "Infinity plus one is still infinity: in Hilbert's hotel, 'full' and 'room available' can both be true, because infinite sets can match up one-to-one with a part of themselves.",
+  "fiction": false
+}

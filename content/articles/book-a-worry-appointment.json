@@ -1,0 +1,56 @@
+{
+  "id": "grow-bulk-80",
+  "slug": "book-a-worry-appointment",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Book a worry appointment",
+  "description": "Giving worries a scheduled time of day sounds odd, but many people find the rest of the day gets quieter in return.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "stress",
+    "focus"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Worries are persistent because they feel urgent",
+      "paragraphs": [
+        "A worry interrupts because it is afraid of being forgotten. It pops up in the shower, in meetings, at 3 a.m., always with the same argument: think about me now, or something terrible might slip. Answering every interruption trains the mind to interrupt more.",
+        "A worry appointment flips the arrangement. You promise the worry a real time — fifteen minutes, same time each day, not near bedtime — and in exchange, you ask it to wait until then."
+      ]
+    },
+    {
+      "heading": "How the appointment works",
+      "paragraphs": [
+        "When a worry arrives outside its slot, acknowledge it in a word or two — “money, noted” — write it on the day’s worry list if you need to, and return to what you were doing. This is postponement, not suppression: the worry has genuinely been given a time, and part of the mind seems to accept the booking.",
+        "At the appointment itself, sit with the list and a pen. Work through the items properly: which are problems with actions, which are fears about things you cannot control, which have quietly solved themselves or stopped mattering since they were written down. That last category is usually surprisingly large."
+      ]
+    },
+    {
+      "heading": "What it can and cannot do",
+      "paragraphs": [
+        "The appointment will not empty your life of worry, and some worries will still break the rules — especially at first, and especially at night. Practise returning them to the list kindly, the way you would guide a child back to bed.",
+        "It is a tool for ordinary, everyday worrying. If anxiety is intense, constant or interfering with your life, it deserves real support from a doctor or mental-health professional. An appointment with your worries is a good habit; an appointment with a professional is sometimes the necessary one."
+      ]
+    }
+  ],
+  "takeaway": "Give worries a daily appointment, and ask them — kindly, in writing — to wait for it.",
+  "fiction": false
+}

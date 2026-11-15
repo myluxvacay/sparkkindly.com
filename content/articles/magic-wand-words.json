@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-129",
+  "slug": "magic-wand-words",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Magic Wand Words",
+  "description": "For ages 6–9 with an adult: wave a wand and turn grumpy words into kind ones, as if by magic.",
+  "publishedAt": "2026-08-01",
+  "updatedAt": "2026-08-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "kindness"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make your wand",
+      "paragraphs": [
+        "Your adult helps tape a paper star to a stick. Decorate it until it looks properly magical.",
+        "Practise your swish. Every wand needs a good swish."
+      ]
+    },
+    {
+      "heading": "Transform the words",
+      "paragraphs": [
+        "Your adult says a grumpy sentence: I hate waiting. Wave your wand and change it: Waiting is hard, but I can sing while I wait.",
+        "Take turns. The wand works on any grumpy words it meets."
+      ]
+    }
+  ],
+  "takeaway": "Kind words are the real magic: they change how a whole room feels.",
+  "fiction": false,
+  "materials": [
+    "A paper star",
+    "A stick or straw",
+    "Sticky tape"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult helps make the wand; wands are for waving in the air, never for poking."
+  ],
+  "screenFreeExtension": "Use your wand at breakfast to turn the whole day's first words into kind ones."
+}

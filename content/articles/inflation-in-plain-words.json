@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-42",
+  "slug": "inflation-in-plain-words",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Why prices creep up: inflation in plain words",
+  "description": "Inflation means the same money buys a little less over time — and understanding it helps you judge savings and pay rises more wisely.",
+  "publishedAt": "2026-09-09",
+  "updatedAt": "2026-09-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-basics",
+    "saving"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Inflation",
+      "url": "https://en.wikipedia.org/wiki/Inflation",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The shrinking basket",
+      "paragraphs": [
+        "Imagine a basket of everyday things — bread, milk, a bus ticket — that costs $100 this year. If prices rise by 3% over the year, the same basket costs about $103 next year. Nothing about the basket changed; the money simply stretches a little less far.",
+        "Inflation is measured as an average across thousands of prices, so your personal experience will differ. If the things you buy most rise faster than average, inflation will feel stronger than the headline number."
+      ]
+    },
+    {
+      "heading": "What it means for savings",
+      "paragraphs": [
+        "Money kept as cash slowly loses buying power while prices rise. Savings accounts pay interest partly to compensate, though the interest does not always keep up with inflation.",
+        "That is not a reason to chase risky schemes promising to beat inflation. It is a reason to keep long-term savings somewhere that pays a fair rate, and to review that rate now and then."
+      ]
+    },
+    {
+      "heading": "What it means for pay",
+      "paragraphs": [
+        "When prices rise but wages stand still, you are effectively paid less. That is why pay rises are often compared with the inflation rate: a 2% rise while inflation is 4% means your pay buys less than before, even though the number went up.",
+        "None of this requires you to become an economist. It simply means that when you compare this year's money with last year's, a small adjustment for rising prices turns a guess into a fair comparison."
+      ]
+    }
+  ],
+  "takeaway": "Inflation quietly shrinks what money can buy, so compare savings interest and pay rises against it before deciding whether you are really ahead.",
+  "fiction": false
+}

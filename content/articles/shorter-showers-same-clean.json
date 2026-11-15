@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-119",
+  "slug": "shorter-showers-same-clean",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Shorter showers, same clean feeling",
+  "description": "Trimming a couple of minutes from a shower saves water and the energy that heated it, and most people stop noticing within a week.",
+  "publishedAt": "2026-07-23",
+  "updatedAt": "2026-07-23",
+  "tags": [
+    "green",
+    "energy-saving"
+  ],
+  "sources": [
+    {
+      "title": "epa.gov",
+      "url": "https://www.epa.gov/watersense",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "Where shower water goes",
+      "paragraphs": [
+        "A shower uses water twice over: the water itself, and the energy that heated it. Long showers are therefore one of the bigger daily uses in many homes, especially with powerful shower heads that deliver far more per minute than older models.",
+        "None of this makes showers the enemy. It simply means a small change in minutes, repeated every day by everyone in the house, adds up to a surprisingly large saving over a year."
+      ]
+    },
+    {
+      "heading": "Find your minutes",
+      "paragraphs": [
+        "Time yourself once, honestly, on an ordinary day. Most people underestimate by several minutes, and knowing the real number makes the goal concrete: if you shower for ten minutes, try eight, not three.",
+        "A song-length timer works better than willpower. Pick a track of the right length and aim to be out by the final chorus; it turns restraint into a small game rather than a cold exercise in discipline."
+      ]
+    },
+    {
+      "heading": "Keep the comfort",
+      "paragraphs": [
+        "Turning the water off while you shampoo or soap, sometimes called a navy shower, saves the most water of all while keeping a full rinse at both ends. A water-saving shower head can also keep pressure feeling strong while using less, by mixing in air.",
+        "Warm bathroom, towel within reach, shower at a comfortable temperature: protect the pleasant parts, and the shorter routine stops feeling like a sacrifice almost immediately."
+      ]
+    }
+  ],
+  "takeaway": "Time it once, trim two minutes with a song as your timer, and keep every part of the shower you actually enjoy."
+}

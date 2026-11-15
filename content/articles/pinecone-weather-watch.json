@@ -1,0 +1,67 @@
+{
+  "id": "kids-bulk-23",
+  "slug": "pinecone-weather-watch",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Pinecone Weather Watch",
+  "description": "For ages 6–9 with an adult: hang up a pinecone and watch it open and close as the air changes.",
+  "publishedAt": "2026-09-03",
+  "updatedAt": "2026-09-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "science"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Find your pinecone",
+      "paragraphs": [
+        "Look on the ground under a pine tree for a dry, open pinecone. Your adult can tie a string to the top so you can hang it near a door or window.",
+        "Pinecones are not just decorations. They hold the tree's seeds, and they can move all by themselves — very, very slowly."
+      ]
+    },
+    {
+      "heading": "Watch it change",
+      "paragraphs": [
+        "On a dry, sunny day, look at your pinecone. Its scales spread wide open. On a wet, rainy day, look again. The scales close up tight.",
+        "The cone closes when the air is wet to keep its seeds dry and safe. When the air dries, it opens again to let the seeds fly away."
+      ]
+    },
+    {
+      "heading": "Be a weather watcher",
+      "paragraphs": [
+        "Check your pinecone every morning. Draw what it looks like in your notebook and write down the weather too.",
+        "Soon you may spot the pattern before you even look out of the window. Your pinecone is a tiny weather station."
+      ]
+    }
+  ],
+  "takeaway": "A pinecone opens in dry air and closes in wet air, so it can tell you about the weather.",
+  "fiction": false,
+  "materials": [
+    "A dry fallen pinecone",
+    "String",
+    "A notebook",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only pick up pinecones from the ground. Wash your hands after handling things from outdoors."
+  ],
+  "screenFreeExtension": "Keep a pinecone weather diary for a week and draw the cone each day next to the real weather."
+}

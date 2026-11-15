@@ -1,0 +1,32 @@
+{
+  "id": "fibonacci-next-285",
+  "scheduledDate": "2026-03-30",
+  "brand": "play",
+  "prompt": "What comes next in this famous sequence: 1, 1, 2, 3, 5, 8, …?",
+  "options": [
+    {
+      "id": "a",
+      "text": "10"
+    },
+    {
+      "id": "b",
+      "text": "11"
+    },
+    {
+      "id": "c",
+      "text": "13"
+    },
+    {
+      "id": "d",
+      "text": "16"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Each number is the sum of the two before it: 5 + 8 = 13. This is the Fibonacci sequence.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

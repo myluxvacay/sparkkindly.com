@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-84",
+  "slug": "weather-presenter-show",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Be the Weather Presenter",
+  "description": "For ages 6–9 with an adult: look at the sky, check the weather clues, and present your own weather report show.",
+  "publishedAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Collect the clues",
+      "paragraphs": [
+        "Weather presenters start with clues. Look at the clouds, feel the wind, and check whether the ground is wet or dry.",
+        "Draw today's weather on a big paper map: a sun, clouds, arrows for the wind. Your map is the presenter's most important tool."
+      ]
+    },
+    {
+      "heading": "Present the show",
+      "paragraphs": [
+        "Stand tall, hold your pretend microphone, and point to your map. Tell your audience what the weather is doing now and what it might do tomorrow.",
+        "Use presenter words: Today we can expect... Later on... Tomorrow will bring... A good guess is fine — real presenters use clever guesses too."
+      ]
+    },
+    {
+      "heading": "Check your forecast",
+      "paragraphs": [
+        "Tomorrow, look back. Did your forecast come true? Weather is tricky, and even real forecasts miss sometimes.",
+        "Keeping score of your guesses makes you a better forecaster, one show at a time."
+      ]
+    }
+  ],
+  "takeaway": "A weather presenter reads clues from the sky and turns them into a forecast — and checks it the next day.",
+  "fiction": false,
+  "materials": [
+    "A pretend microphone",
+    "Paper for a weather map",
+    "Coloured pencils"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Only observe the weather from safe places — never go outside in thunder, lightning, or storms to check the sky."
+  ],
+  "screenFreeExtension": "Present the report again in the morning and check whether yesterday's forecast came true."
+}

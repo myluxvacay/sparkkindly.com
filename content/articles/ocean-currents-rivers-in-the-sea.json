@@ -1,0 +1,59 @@
+{
+  "id": "discover-bulk-82",
+  "slug": "ocean-currents-rivers-in-the-sea",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Ocean currents: rivers in the sea",
+  "description": "The ocean is not still water. Great currents circle the globe, carrying heat, nutrients and drifting life with them.",
+  "publishedAt": "2026-11-01",
+  "updatedAt": "2026-11-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "climate"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ocean current",
+      "url": "https://en.wikipedia.org/wiki/Ocean_current",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "NOAA: What is a current?",
+      "url": "https://oceanservice.noaa.gov/facts/current.html",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Wind at the surface, density below",
+      "paragraphs": [
+        "Surface currents are driven mainly by wind. The great wind belts drag the top layer of the sea along, and Earth's rotation deflects the flow until it settles into huge circular gyres in each ocean basin. The Gulf Stream, part of the Atlantic gyre, carries warm water from the tropics toward northern Europe at rates dwarfing all the world's rivers combined.",
+        "Beneath the surface, a slower global circulation runs on density: cold, salty water in the North Atlantic and around Antarctica sinks and creeps along the deep floor, while warmer water rises elsewhere. A full circuit of this 'conveyor belt' can take around a thousand years."
+      ]
+    },
+    {
+      "heading": "Why currents matter on land",
+      "paragraphs": [
+        "Currents are climate machinery. They move heat from the tropics toward the poles, softening winters in places like Britain that sit at latitudes as cold as Canada's. They also drive upwelling, where deep water rises and fertilises surface life, creating some of the richest fisheries on Earth.",
+        "Anything that drifts — turtle hatchlings, coconuts, lost cargo, spilled plastic — rides these rivers. To predict where something at sea will go, you start with the currents."
+      ]
+    }
+  ],
+  "takeaway": "Ocean currents are wind-driven surface gyres and a slow deep conveyor that together move heat and life around the planet.",
+  "fiction": false
+}

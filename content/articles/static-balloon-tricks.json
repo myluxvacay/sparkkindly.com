@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-75",
+  "slug": "static-balloon-tricks",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Balloon Static Tricks",
+  "description": "For ages 6–9 with an adult: rub a balloon on your hair and use its invisible static power to move paper and lift hair.",
+  "publishedAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Charge the balloon",
+      "paragraphs": [
+        "Ask your adult to blow up and tie a balloon. Rub it quickly on a woollen jumper or on clean, dry hair, about ten times.",
+        "Rubbing gives the balloon an invisible electric charge called static. You cannot see it, but you are about to see what it can do."
+      ]
+    },
+    {
+      "heading": "Paper jumping beans",
+      "paragraphs": [
+        "Hold the balloon just above tiny bits of tissue paper. The paper leaps up and sticks to the balloon as if it were alive.",
+        "The charge pulls the light paper towards it. Static electricity is a real force — the same force that makes lightning, in a tiny, safe size."
+      ]
+    },
+    {
+      "heading": "Hair-raising fun",
+      "paragraphs": [
+        "Hold the charged balloon near your head. Your hair stands up and reaches for the balloon, strand by strand.",
+        "On dry days, you might feel tiny static crackles when you take off a jumper. Now you know what that is."
+      ]
+    }
+  ],
+  "takeaway": "Rubbing a balloon gives it a static charge that can pull paper and lift hair like invisible fingers.",
+  "fiction": false,
+  "materials": [
+    "A balloon (an adult inflates it)",
+    "Small bits of tissue paper",
+    "A woollen jumper"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult should inflate and tie the balloon. Keep balloons away from very young children, and tidy up any popped balloon pieces straight away, as they are a choking hazard."
+  ],
+  "screenFreeExtension": "Charge the balloon and hold it near a family member's hair to give them a mad scientist hairstyle."
+}

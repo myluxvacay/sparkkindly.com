@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-137",
+  "slug": "ask-someone-about-their-work",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Ask someone about their work",
+  "description": "Most people have never been asked, properly, about what they do all day. A few kind questions can make an ordinary conversation memorable.",
+  "publishedAt": "2026-08-25",
+  "updatedAt": "2026-08-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "curiosity",
+    "writing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Beyond 'what do you do?'",
+      "paragraphs": [
+        "The standard question gets a standard answer: a job title. The interesting material is one layer down, in the details of the day and the skills nobody sees.",
+        "Try: What does a good day at your work look like? What is the part nobody understands about it? What took you longest to learn? Each one invites a story instead of a label."
+      ]
+    },
+    {
+      "heading": "Listen like it matters",
+      "paragraphs": [
+        "Put the phone away, let silences happen, and follow up on the answer you actually got rather than the one you expected. People open up when they sense the question was real.",
+        "You will collect more than information. Asking well is a kindness in itself: it tells someone their ordinary expertise is worth an audience, which is true far more often than it is said."
+      ]
+    }
+  ],
+  "takeaway": "Ask about the day, the hidden skill and the hardest part, then really listen.",
+  "fiction": false
+}

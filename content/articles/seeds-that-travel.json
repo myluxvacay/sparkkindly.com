@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-59",
+  "slug": "seeds-that-travel",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Seeds that travel",
+  "description": "Plants cannot walk, so they pack their children for the journey: wings, parachutes, hooks and even tiny catapults.",
+  "publishedAt": "2026-09-23",
+  "updatedAt": "2026-09-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Seed dispersal",
+      "url": "https://en.wikipedia.org/wiki/Seed_dispersal",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Wind and water couriers",
+      "paragraphs": [
+        "A seed that lands beside its parent must compete with it for light, water and space, in soil where the parent's pests and diseases already live. Dispersal solves this. Dandelion seeds ride parachutes of fine hairs; maple seeds spin like helicopter rotors, slowing their fall so the wind can carry them; coconuts simply float, crossing oceans to new beaches.",
+        "Each design trades cargo for range. Tiny, light seeds travel far but carry little food for the seedling. Heavy seeds like acorns land close unless something carries them."
+      ]
+    },
+    {
+      "heading": "Animals, hired and tricked",
+      "paragraphs": [
+        "Many plants pay animals in fruit: eat the meal, deposit the seed elsewhere, wrapped in fertiliser. Others hitchhike free — burdock burrs hook onto fur and feathers, the inspiration for hook-and-loop fasteners. Ants carry seeds with fatty handles to their nests, eat the handle, and discard the seed in a rich, safe midden.",
+        "Some plants need no courier at all. Touch-me-not balsam pods coil under tension and fling their seeds metres away when brushed. However they travel, the principle is the same: the next generation starts best somewhere new."
+      ]
+    }
+  ],
+  "takeaway": "Seeds travel by wind, water, animals and tiny explosions so seedlings can start life away from the parent's shadow.",
+  "fiction": false
+}

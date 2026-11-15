@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-46",
+  "slug": "how-bats-see-with-sound",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How bats see with sound",
+  "description": "Bats fly through the dark by shouting at the world and listening to what comes back.",
+  "publishedAt": "2026-09-01",
+  "updatedAt": "2026-09-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Animal echolocation",
+      "url": "https://en.wikipedia.org/wiki/Animal_echolocation",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Shouts too high to hear",
+      "paragraphs": [
+        "A flying bat sends out a stream of short, sharp calls as it travels. Most of these sounds are ultrasonic, pitched far above anything the human ear can detect, so a swooping bat can seem silent even while it is calling again and again.",
+        "Each call races outward until it meets something: a moth, a branch, a wall. Part of the sound bounces back as an echo, and the bat's ears are tuned to catch those returning whispers."
+      ]
+    },
+    {
+      "heading": "Reading the echoes",
+      "paragraphs": [
+        "The time an echo takes to return tells the bat how far away an object is. Tiny differences between the echo in the left and right ear reveal which side it sits on, and the way the echo's pitch shifts can show whether a target is moving, and in which direction.",
+        "This is echolocation, and it is detailed enough for a bat to track a flying insect and snatch it from the air mid-flight. The bat is not seeing with its eyes at all in those moments; it is building a picture out of sound."
+      ]
+    },
+    {
+      "heading": "Not just bats",
+      "paragraphs": [
+        "Dolphins and toothed whales use a version of the same trick underwater, where sound travels well and light fades quickly. Even a few birds that nest in dark caves echolocate, though their clicks are simpler than a bat's calls.",
+        "People can learn a modest version too. Some blind people navigate by making clicking sounds with their tongues and listening to the echoes, and brain scans show the echoes being processed in the visual parts of the brain. The equipment differs, but the principle is the bat's: build the world out of returning sound."
+      ]
+    }
+  ],
+  "takeaway": "Echolocation lets bats map the dark with sound, judging distance, direction and movement from returning echoes.",
+  "fiction": false
+}

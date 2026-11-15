@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-112",
+  "slug": "butterfly-fold-painting",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Butterfly Fold Painting",
+  "description": "For ages 6–9 with an adult: paint one side of the paper, fold it, and open it to find a butterfly.",
+  "publishedAt": "2026-07-08",
+  "updatedAt": "2026-07-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Paint one side",
+      "paragraphs": [
+        "Fold your paper in half, then open it. Paint blobs and swirls on one side only.",
+        "Work fairly quickly so the paint stays wet and ready to print."
+      ]
+    },
+    {
+      "heading": "Fold and peek",
+      "paragraphs": [
+        "Fold the clean side over the paint and press gently all over with your hands.",
+        "Open it slowly. Your painting has doubled itself into wings."
+      ]
+    }
+  ],
+  "takeaway": "Folding paint in half makes both sides match, like a butterfly's wings.",
+  "fiction": false,
+  "materials": [
+    "Paper",
+    "Washable paint",
+    "A brush or fingers"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult helps with the folding while the paint is wet; wash hands afterwards."
+  ],
+  "screenFreeExtension": "Fold-paint a flower, a face, or a whole row of butterflies."
+}

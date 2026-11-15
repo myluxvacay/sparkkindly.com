@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-110",
+  "slug": "monty-hall-problem",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Monty Hall problem: why switching doors doubles your chances",
+  "description": "Three doors, one car, two goats. You pick a door; the host opens a different door to reveal a goat — and offers you the chance to switch. Your instincts say it makes no difference. Your instincts are wrong.",
+  "publishedAt": "2026-07-25",
+  "updatedAt": "2026-07-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Monty Hall problem — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Monty_Hall_problem",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The set-up",
+      "paragraphs": [
+        "The puzzle is named after Monty Hall, host of the television show Let's Make a Deal. Behind one of three doors is a car; behind the other two, goats. You choose door 1. The host, who knows where the car is, opens door 3 to reveal a goat, and asks: do you want to switch to door 2?",
+        "Most people feel the remaining doors are a coin flip — fifty-fifty. In 1990, columnist Marilyn vos Savant answered “switch” in her magazine column and received thousands of angry letters, including some from mathematicians. She was right."
+      ]
+    },
+    {
+      "heading": "Why switching wins",
+      "paragraphs": [
+        "Your first pick had a 1-in-3 chance of being the car — and a 2-in-3 chance of being a goat. The host's reveal does not change your door's odds; it concentrates all of that 2-in-3 chance onto the one unopened door, because the host can never open the car door by accident.",
+        "Say it plainly: if your first pick was a goat (which happens two times out of three), the host is forced to leave the car as the only other closed door — so switching wins. Only when your first pick was already the car (one time in three) does switching lose."
+      ]
+    },
+    {
+      "heading": "Try it: play fifty rounds",
+      "paragraphs": [
+        "Do not argue — experiment. Use three cups and a coin, with one player as host who always reveals a goat after the guess. Play 25 rounds always staying and 25 always switching, and tally the wins. The switch column should pull ahead convincingly.",
+        "Then scale the intuition: imagine 100 doors, you pick one, and the host opens 98 goat doors. Would you switch then? Almost everyone would — and it is the same decision, wearing a bigger coat."
+      ]
+    }
+  ],
+  "takeaway": "The Monty Hall problem is a trap for intuition: the host's knowledge changes the odds, and switching quietly doubles your chance of the car.",
+  "fiction": false
+}

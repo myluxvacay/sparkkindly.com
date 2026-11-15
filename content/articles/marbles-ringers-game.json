@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-118",
+  "slug": "marbles-ringers-game",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Marbles: how to play the classic ring game",
+  "description": "Chalk a circle, line up your marbles, and knuckle down. Marbles has been played since Roman times — here is the classic ring game, plus the slang that comes with it.",
+  "publishedAt": "2026-08-09",
+  "updatedAt": "2026-08-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "patterns"
+  ],
+  "sources": [
+    {
+      "title": "Marbles — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Marbles",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "An ancient pocket game",
+      "paragraphs": [
+        "Children in ancient Egypt and Rome played with marbles of stone, clay and nuts; the game has been reinvented in every century since, in glass, steel and plastic. Its genius is portability: a whole stadium fits in a pocket, and the pitch is a chalk circle on any flat ground.",
+        "The classic game is Ringers. Draw a ring about three metres across (smaller for young players). Place thirteen target marbles in the centre, often in a cross. Players shoot from the ring's edge, trying to knock targets out of the circle while keeping their own shooter inside play."
+      ]
+    },
+    {
+      "heading": "Knuckle down: the shot",
+      "paragraphs": [
+        "The classic shot gave us the phrase “knuckle down”. Rest your knuckle on the ground, curl your shooter marble in your index finger, and flick it with your thumb. A marble that leaves the ring counts; a shooter that flies out of the circle may cost you your turn — agree the local law before you begin.",
+        "Before the game, agree the most important rule of all: are you playing “for fair” (everyone keeps their own marbles) or “for keeps” (won marbles change owners)? Generations of playground diplomacy have turned on that single sentence."
+      ]
+    },
+    {
+      "heading": "Try it: set up a family ring",
+      "paragraphs": [
+        "No marbles? Buttons, bottle caps and smooth pebbles all substitute bravely. Mark targets in the centre, shoot in turns, and keep score by marbles knocked out rather than marbles owned — the friendliest scoring of all.",
+        "Add a championship touch: name your shooter, keep a season table on the fridge, and let the youngest player choose the ring size. Marbles rewards touch more than strength, which is why grandparents are so often its champions."
+      ]
+    }
+  ],
+  "takeaway": "Marbles is the original pocket game: a chalk circle, a steady knuckle, and rules your grandparents would recognise.",
+  "fiction": false
+}

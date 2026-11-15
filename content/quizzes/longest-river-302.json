@@ -1,0 +1,38 @@
+{
+  "id": "longest-river-302",
+  "scheduledDate": "2026-04-16",
+  "brand": "discover",
+  "prompt": "Which river is traditionally listed as the longest in the world?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Amazon"
+    },
+    {
+      "id": "b",
+      "text": "Nile"
+    },
+    {
+      "id": "c",
+      "text": "Yangtze"
+    },
+    {
+      "id": "d",
+      "text": "Danube"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The Nile flows about 6,650 kilometres through north-eastern Africa, slightly longer than the Amazon by most measurements.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Nile",
+      "url": "https://en.wikipedia.org/wiki/Nile",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

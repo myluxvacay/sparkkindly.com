@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-72",
+  "slug": "matchstick-puzzles-roman-numerals",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Matchstick Puzzles: Move One Match, Fix the Sum",
+  "description": "A wrong equation, a handful of matches, and one rule - move exactly one. Roman numerals make the neatest versions.",
+  "publishedAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "patterns"
+  ],
+  "sources": [
+    {
+      "title": "Matchstick puzzle - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Matchstick_puzzle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Eleven plus one equals ten?",
+      "paragraphs": [
+        "Lay out this equation in matches, using Roman numerals: XI + I = X. It claims 11 + 1 = 10, which is false. Your task: move exactly one matchstick to make a true equation. Take a moment - the answer is in the next paragraph, and matchstick puzzles are ruined by peeking.",
+        "Here is the move: take one match from the XI, turning it into X, and place it after the X on the right-hand side, turning that into XI. The equation now reads X + I = XI - 10 + 1 = 11, which is true. Notice that the moved match changed two numbers at once, one on each side of the equals sign. That double effect is what makes the puzzle feel impossible until it suddenly is not."
+      ]
+    },
+    {
+      "heading": "Digits work too",
+      "paragraphs": [
+        "With ordinary digits made of matches, try 6 + 4 = 4. The fix: take the middle match of the 6 and slide it to the upper right, turning the 6 into a 0. Now the sum reads 0 + 4 = 4 - true. The lesson generalises: in matchstick puzzles a 'number' is not a fixed thing, it is a small pile of sticks that can become a different number, a plus can lose a stick and become a minus, and an equals sign is not sacred either.",
+        "The most beloved matchstick puzzle of all needs no numbers: a cocktail glass built from matches, with a coin 'cherry' inside it. Move exactly two matches so the cherry ends up outside the glass. The secret is that you may rebuild the glass pointing a different way - the glass moves, the cherry never does."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Set the Roman puzzle for a friend with real matches or toothpicks and time how long the 'impossible' feeling lasts. Then challenge each other to invent one-move puzzles: write a false equation, find your own fix, and swap. Half of invented puzzles turn out to have a second, unintended solution - finding those is a game in itself.",
+        "For a sterner test, try VI = III + III with the instruction 'move one match to make the equation false in a new way, or prove it is already perfect'. Sometimes the setter's trick is that the equation was right all along, and the real puzzle is having the confidence to say so."
+      ]
+    }
+  ],
+  "takeaway": "Matchstick puzzles reward re-seeing: a numeral is just matches, and moving one can change a number, a sign, or the whole picture.",
+  "fiction": false
+}

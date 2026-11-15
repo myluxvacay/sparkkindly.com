@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-110",
+  "slug": "celebrate-tiny-progress",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Celebrate tiny progress",
+  "description": "Progress is usually too small to see day by day. Noticing it on purpose keeps motivation alive between big milestones.",
+  "publishedAt": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "motivation",
+    "wellbeing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Small wins are real wins",
+      "paragraphs": [
+        "Finished the boring email. Practised for ten minutes. Cooked instead of ordering in. These moments feel too minor to mention, yet they are exactly what a good week is made of.",
+        "When you only count large achievements, most days register as failures, which is both untrue and discouraging. A fairer scoreboard changes how the whole project feels."
+      ]
+    },
+    {
+      "heading": "Keep the evidence where you can see it",
+      "paragraphs": [
+        "Try a simple ritual: at the end of the day, write down one thing that moved forward, however slightly. Some people keep a jar of folded notes, a line in a journal, or a photo album of works in progress.",
+        "On a discouraging day, read a few entries back. You are not inflating your achievements; you are correcting the bias that makes slow progress invisible."
+      ]
+    }
+  ],
+  "takeaway": "Write down one small forward step each day, and let the list argue with your doubts.",
+  "fiction": false
+}

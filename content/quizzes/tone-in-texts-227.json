@@ -1,0 +1,32 @@
+{
+  "id": "tone-in-texts-227",
+  "scheduledDate": "2026-01-31",
+  "brand": "together",
+  "prompt": "A friend's one-line text message sounds rude, but they might just be busy. What is the wisest first step?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Send an angry reply immediately"
+    },
+    {
+      "id": "b",
+      "text": "Assume good intent and ask a friendly clarifying question"
+    },
+    {
+      "id": "c",
+      "text": "Stop speaking to them"
+    },
+    {
+      "id": "d",
+      "text": "Show the message to everyone and ask them to judge it"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Texts carry no tone of voice, so checking kindly first stops a misunderstanding from becoming a real falling-out.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

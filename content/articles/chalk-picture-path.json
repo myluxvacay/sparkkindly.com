@@ -1,0 +1,58 @@
+{
+  "id": "kids-bulk-118",
+  "slug": "chalk-picture-path",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Chalk Picture Path",
+  "description": "For ages 6–9 with an adult: draw a path of pictures on the ground that tells people where to hop, tiptoe, and twirl.",
+  "publishedAt": "2026-07-17",
+  "updatedAt": "2026-07-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "family-activities"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Draw the path",
+      "paragraphs": [
+        "With your adult, choose a safe paved place. Draw a winding path of stepping-stone circles.",
+        "Add picture instructions along the way: a star means twirl, a moon means tiptoe, a sun means hop."
+      ]
+    },
+    {
+      "heading": "Walk your path",
+      "paragraphs": [
+        "Follow your own path, doing what each picture says. Then let your adult try, and be the judge.",
+        "Chalk washes away in the rain, so your path is a picture that only lasts a little while."
+      ]
+    }
+  ],
+  "takeaway": "A plain path can become a game board as big as your garden.",
+  "fiction": false,
+  "materials": [
+    "Chunky chalks",
+    "A safe paved area"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Draw only where your adult says it is allowed, away from roads; wash hands after chalk play."
+  ],
+  "screenFreeExtension": "Draw a chalk hopscotch and teach a friend or a grandparent how to play."
+}

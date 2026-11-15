@@ -1,0 +1,54 @@
+{
+  "id": "grow-bulk-130",
+  "slug": "try-a-focus-timer",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Try a focus timer",
+  "description": "A simple timer turns 'work for a while' into a game with edges: focus until it rings, then take a real break.",
+  "publishedAt": "2026-08-12",
+  "updatedAt": "2026-08-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "motivation"
+  ],
+  "sources": [
+    {
+      "title": "Pomodoro Technique — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pomodoro_Technique",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "How the rhythm goes",
+      "paragraphs": [
+        "The best-known version, the Pomodoro Technique, uses twenty-five minutes of focused work followed by a five-minute break, with a longer break after four rounds. The numbers are not magic; the rhythm is the point.",
+        "Knowing a break is coming makes it easier to park distractions: write the stray thought on paper and return to it in the break, rather than chasing it now."
+      ]
+    },
+    {
+      "heading": "Adjust it to your task",
+      "paragraphs": [
+        "Some work wants longer stretches: writing or coding may settle better at forty or fifty minutes. Some days only manage fifteen. Experiment and keep the version you actually use.",
+        "Protect the breaks as fiercely as the focus. Stand up, look at something far away, get water. A break spent scrolling is a poor trade, and you will feel the difference by the third round."
+      ]
+    }
+  ],
+  "takeaway": "Focus in timed rounds with real breaks, and tune the lengths to your work.",
+  "fiction": false
+}

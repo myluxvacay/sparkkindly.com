@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-64",
+  "slug": "paper-chain-patterns",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Paper Chain Patterns",
+  "description": "For ages 6–9 with an adult: make a paper chain where the colours follow a pattern you design.",
+  "publishedAt": "2026-10-21",
+  "updatedAt": "2026-10-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "art"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Choose your pattern",
+      "paragraphs": [
+        "A pattern is something that repeats in order. Choose a colour pattern for your chain — red, blue, red, blue is the simplest. Red, red, blue is trickier.",
+        "Lay your strips out in pattern order before you glue anything. Planning first saves unpicking later."
+      ]
+    },
+    {
+      "heading": "Loop and glue",
+      "paragraphs": [
+        "Curl the first strip into a loop and glue the ends. Thread the next strip through the loop before gluing it. Your chain grows link by link.",
+        "Check your pattern as you go. If a wrong colour sneaks in, your chain will tell the story — and mistakes can be unglued or kept as surprises."
+      ]
+    },
+    {
+      "heading": "How long can it grow?",
+      "paragraphs": [
+        "Count your links. Ten? Twenty? A chain long enough to cross the whole room is a family project.",
+        "Patterns are everywhere once you start looking — in chains, in songs, in days of the week. You built one with your own hands."
+      ]
+    }
+  ],
+  "takeaway": "A paper chain built in a colour pattern turns repeating order into something you can hold.",
+  "fiction": false,
+  "materials": [
+    "Strips of coloured paper",
+    "A glue stick",
+    "Scissors (an adult helps)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult should help with cutting the strips. Glue sticks only — no hot glue."
+  ],
+  "screenFreeExtension": "Hang your chain and read its pattern out loud like a song: red, blue, blue, red, blue, blue."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-73",
+  "slug": "bubble-blowing-science",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Bubble Blowing Science",
+  "description": "For ages 6–9 with an adult: blow bubbles with an adult and find out why every bubble is round.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Blow a bubble",
+      "paragraphs": [
+        "Dip your wand, blow gently, and watch a bubble float away. Look closely — every bubble you blow is a ball, never a cube or a star.",
+        "A bubble is a thin skin of soapy water wrapped around air. The skin pulls itself into the smallest, tightest shape it can — and that shape is a sphere."
+      ]
+    },
+    {
+      "heading": "Colours on the skin",
+      "paragraphs": [
+        "Hold a bubble up to the light. Colours slide and swirl on its surface, like oil on a puddle.",
+        "The colours come from light bouncing around in the bubble's thin skin. As the skin gets thinner, the colours change — then, pop."
+      ]
+    },
+    {
+      "heading": "Bubble tricks",
+      "paragraphs": [
+        "Blow a bubble onto a wet plate and it can sit there like a glass dome. Wet your wand and you can poke it gently into the bubble without popping it.",
+        "Dry things pop bubbles. Wet things let them live a little longer. That is the bubble-blower's secret."
+      ]
+    }
+  ],
+  "takeaway": "Bubbles are always round because their soapy skin pulls tight into the smallest shape — a sphere.",
+  "fiction": false,
+  "materials": [
+    "Bubble mixture and wands (an adult provides)",
+    "A plate",
+    "A straw (an adult helps)"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "An adult should handle the bubble mixture. Blow bubbles away from faces, wipe up spills so nobody slips, and never drink bubble mixture."
+  ],
+  "screenFreeExtension": "Try to catch a bubble on a wet hand without popping it."
+}

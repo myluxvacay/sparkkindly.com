@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-97",
+  "slug": "the-reflex-that-moves-before-you-think",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The reflex that moves before you think",
+  "description": "Touch something hot and your hand pulls away before you even feel the heat — your spinal cord answers first and tells your brain later.",
+  "publishedAt": "2026-06-16",
+  "updatedAt": "2026-06-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Reflex arc",
+      "url": "https://en.wikipedia.org/wiki/Reflex_arc",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Reflex",
+      "url": "https://en.wikipedia.org/wiki/Reflex",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A shortcut in the wiring",
+      "paragraphs": [
+        "Most messages in your body travel to the brain, which decides what to do. A reflex takes a shortcut. When sensors in your skin detect something harmful, the signal races along a nerve to your spinal cord — and the spinal cord sends back an order to move immediately, without waiting for the brain.",
+        "This loop is called a reflex arc, and it can complete in a fraction of a second. The signal still reaches your brain, which is why you feel the pain and think 'that was hot' — but by then, your hand is already safe."
+      ]
+    },
+    {
+      "heading": "The famous knee tap",
+      "paragraphs": [
+        "Doctors test this wiring with a small hammer tap just below the kneecap. The tap stretches a tendon, sensors report the stretch, and the spinal cord orders the thigh muscle to contract. The lower leg kicks, all by itself.",
+        "The point of that reflex is everyday balance: it constantly corrects small stretches in your muscles so you can stand and walk without thinking about every adjustment."
+      ]
+    },
+    {
+      "heading": "Built-in first aid",
+      "paragraphs": [
+        "You are born with many reflexes: blinking when something flies at your eyes, coughing when something irritates your throat, and pulling away from pain. They are not clever, and they are not always right — but they are fast, and in an emergency, fast is what matters.",
+        "Thinking is your brain's great gift. Reflexes are its humble bodyguards, standing watch while the thinking catches up."
+      ]
+    }
+  ],
+  "takeaway": "A reflex is a spinal-cord shortcut that moves your body first and lets your brain hear about it afterwards.",
+  "fiction": false
+}

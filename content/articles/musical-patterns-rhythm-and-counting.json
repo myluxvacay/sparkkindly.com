@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-45",
+  "slug": "musical-patterns-rhythm-and-counting",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Patterns in Music: Counting Your Way Into Rhythm",
+  "description": "Music is patterns you can hear - beats group, rhythms repeat, and a little maths explains why some grooves feel so good.",
+  "publishedAt": "2026-09-22",
+  "updatedAt": "2026-09-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "play-and-games"
+  ],
+  "sources": [
+    {
+      "title": "Rhythm - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rhythm",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Beats come in groups",
+      "paragraphs": [
+        "Most songs you know group their beats in fours - count 1-2-3-4, 1-2-3-4 - which musicians write as 4/4 time. A waltz groups in threes, and some folk and progressive music delights in fives or sevens, which is why it can feel like the floor keeps shifting pleasantly under your feet.",
+        "Inside each bar, rhythm is pattern: which beats get a hit and which get silence. A pattern that repeats becomes a groove, and a groove is really just a short number pattern wearing sound. Change one hit and the whole feel changes - drummers spend years learning exactly where those changes matter most."
+      ]
+    },
+    {
+      "heading": "Patterns layered on patterns",
+      "paragraphs": [
+        "Layer two patterns and things get delicious. Clap three evenly spaced claps in the time a friend taps two, and the combined pattern lines up again every six beats - musicians call this a polyrhythm, 3 against 2, and it is a building block of West African drumming and much jazz.",
+        "Pitch has patterns too. A note's octave - the 'same' note higher up - vibrates at exactly double the frequency, and the interval called a perfect fifth has the simple frequency ratio 3:2. Simple ratios tend to sound smooth together, which is one reason these intervals anchor so much of the world's music."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Try the 3-against-2 pattern: tap two beats with your left hand and three with your right, both starting together. It feels impossible for a minute, then suddenly clicks - say 'hot cup of tea' and tap on 'hot', 'cup' and 'tea' with one hand while the other taps on 'hot' and 'tea' only.",
+        "Then build a four-bar body-percussion loop with friends: stomp, clap, snap, rest - assign each person one sound, repeat until it grooves, and change exactly one element per round to hear how small edits steer the whole pattern."
+      ]
+    }
+  ],
+  "takeaway": "Rhythm is arithmetic you can hear: group beats, layer patterns, and the places they line up are where the groove lives.",
+  "fiction": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "kids-bulk-115",
+  "slug": "mirror-smile-portrait",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Mirror Smile Portrait",
+  "description": "For ages 6–9 with an adult: look in a mirror, pull your happiest face, and draw the face you see.",
+  "publishedAt": "2026-07-12",
+  "updatedAt": "2026-07-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Look closely",
+      "paragraphs": [
+        "Sit in front of the mirror. Where are your eyes? Halfway down your head, which surprises most people.",
+        "Notice the shapes: your eyes are ovals, your nose is lines and shadows, your smile is a curve."
+      ]
+    },
+    {
+      "heading": "Draw what you see",
+      "paragraphs": [
+        "Draw slowly, looking up often. Portraits do not need to be perfect; they need to be yours.",
+        "Finish with your happiest smile. Sign your name like a real artist."
+      ]
+    }
+  ],
+  "takeaway": "Your own face is the first portrait every artist learns to draw.",
+  "fiction": false,
+  "materials": [
+    "A mirror",
+    "Paper",
+    "Pencils or crayons"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "Hold the mirror carefully with your adult, or use one fixed to a wall."
+  ],
+  "screenFreeExtension": "Draw a portrait of someone in your family while they pull a funny face."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-53",
+  "slug": "arctic-terns-the-longest-commute",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Arctic terns: the longest commute on Earth",
+  "description": "The Arctic tern chases summer around the planet, flying farther each year than any other animal we know.",
+  "publishedAt": "2026-09-13",
+  "updatedAt": "2026-09-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Arctic tern",
+      "url": "https://en.wikipedia.org/wiki/Arctic_tern",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Two summers a year",
+      "paragraphs": [
+        "Arctic terns breed in the far north during the northern summer, then fly the length of the globe to spend the southern summer in Antarctic waters. Because they follow the season of long days, they experience more daylight each year than almost any other creature.",
+        "Tracking studies have recorded round trips of around 70,000 kilometres or more in a single year. Over a lifetime that can span 30 years, a tern may fly well over two million kilometres — several trips to the Moon and back."
+      ]
+    },
+    {
+      "heading": "A winding road, on purpose",
+      "paragraphs": [
+        "The route is not a straight line. Terns curve with the continents and pause at rich feeding areas, riding favourable winds and refuelling on fish and krill along the way. The detours cost distance but save energy, which is the currency that matters.",
+        "Young terns make the journey alongside experienced adults and learn the route. What begins as one of the longest migrations on Earth becomes, for them, simply the way home is shaped."
+      ]
+    }
+  ],
+  "takeaway": "Arctic terns migrate between the poles each year, following summer and flying farther than any other known animal.",
+  "fiction": false
+}

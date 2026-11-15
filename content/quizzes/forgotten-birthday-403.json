@@ -1,0 +1,32 @@
+{
+  "id": "forgotten-birthday-403",
+  "scheduledDate": "2026-07-26",
+  "brand": "together",
+  "prompt": "A close friend forgot your birthday and you feel hurt. What is the healthiest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ignore them for a month"
+    },
+    {
+      "id": "b",
+      "text": "Forget their birthday on purpose next year"
+    },
+    {
+      "id": "c",
+      "text": "Tell them kindly that it mattered to you"
+    },
+    {
+      "id": "d",
+      "text": "Tell everyone else they are a bad friend"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Speaking honestly and kindly gives your friend the chance to understand and make it right, instead of letting the hurt grow quietly.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

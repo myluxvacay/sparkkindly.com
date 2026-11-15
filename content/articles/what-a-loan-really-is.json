@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-37",
+  "slug": "what-a-loan-really-is",
+  "brand": "save",
+  "contentType": "article",
+  "title": "What a loan really is",
+  "description": "A loan is borrowed time as much as borrowed money — you get funds now and hand back more, in pieces, later.",
+  "publishedAt": "2026-09-02",
+  "updatedAt": "2026-09-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-basics",
+    "understanding-offers"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The three parts of every loan",
+      "paragraphs": [
+        "Every loan has the same skeleton. The principal is the amount you borrow. The term is how long you take to repay it. And the interest is the extra you pay on top, charged for the use of the money over that time.",
+        "If you borrow $200 and repay $220 over a year, the principal was $200 and the interest was $20. Looking at the total repaid — not just the monthly payment — is the honest way to see what borrowing costs."
+      ]
+    },
+    {
+      "heading": "Why monthly payments can mislead",
+      "paragraphs": [
+        "Stretching a loan over a longer term makes each monthly payment smaller, which feels gentler. But more months of interest usually means a higher total cost. A smaller monthly figure is not the same as a cheaper loan.",
+        "Before borrowing, ask three questions: how much am I borrowing, what will I repay in total, and what happens if I miss a payment? If a lender cannot answer clearly, that is information too."
+      ]
+    },
+    {
+      "heading": "Borrowing is a tool, not a trap or a treat",
+      "paragraphs": [
+        "Loans can be sensible for things that last or that help you earn — education, essential equipment, a reliable car for work. They are riskier for things that are gone in a week, because the payments remain long after the pleasure has faded.",
+        "This is general education, not advice about your situation. The lasting habit is simply to read the total cost and the term before signing anything."
+      ]
+    }
+  ],
+  "takeaway": "Judge any loan by the total you will repay and how long it lasts — not by the size of the monthly payment.",
+  "fiction": false
+}

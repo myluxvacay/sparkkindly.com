@@ -1,0 +1,32 @@
+{
+  "id": "peak-time-task-318",
+  "scheduledDate": "2026-05-02",
+  "brand": "grow",
+  "prompt": "You notice you concentrate best in the late morning. How can you use that knowledge?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Save all hard tasks for midnight"
+    },
+    {
+      "id": "b",
+      "text": "Schedule your hardest task for late morning"
+    },
+    {
+      "id": "c",
+      "text": "Do your hardest task when you feel most tired"
+    },
+    {
+      "id": "d",
+      "text": "Ignore the pattern — timing makes no difference"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Matching demanding work to your natural peak focus time gets more done with less struggle.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

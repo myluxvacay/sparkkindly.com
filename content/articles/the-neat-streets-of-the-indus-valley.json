@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-104",
+  "slug": "the-neat-streets-of-the-indus-valley",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The neat streets of the Indus Valley",
+  "description": "Four and a half thousand years ago, the cities of the Indus Valley had grid streets, covered drains and indoor bathrooms — then quietly faded from memory for millennia.",
+  "publishedAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "ancient-history",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Mohenjo-daro",
+      "url": "https://en.wikipedia.org/wiki/Mohenjo-daro",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Indus Valley Civilisation",
+      "url": "https://en.wikipedia.org/wiki/Indus_Valley_Civilisation",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Cities planned from the start",
+      "paragraphs": [
+        "Around 2600 BC, in what is now Pakistan and north-west India, the people of the Indus Valley built cities that look planned rather than grown. Mohenjo-daro, the best known, laid its streets in a grid, built with baked bricks of standard sizes used across the whole civilisation.",
+        "Most remarkably, the houses connected to covered drains that carried wastewater away — a level of civic plumbing that many later cities would not match for thousands of years. Many homes had their own wells and bathing rooms."
+      ]
+    },
+    {
+      "heading": "A civilisation without obvious kings",
+      "paragraphs": [
+        "Archaeologists have found no great palaces, royal tombs or towering monuments to rulers in Indus cities. There is a large, carefully built bath at Mohenjo-daro, granaries and workshops — but power, if it existed, left few boasts behind.",
+        "The Indus people traded widely, sending beads, cotton and timber as far as Mesopotamia, whose texts mention a rich land called Meluhha. Their craftspeople produced exquisite tiny seals, carved with animals and signs."
+      ]
+    },
+    {
+      "heading": "The script that will not speak",
+      "paragraphs": [
+        "Those signs are the civilisation's great unsolved puzzle. The Indus script survives only in short inscriptions, mostly a handful of characters long, with no bilingual text to unlock it. Despite a century of attempts and many claimed solutions, it remains undeciphered.",
+        "Around 1900 BC the cities emptied, likely as rivers shifted and trade faltered, and the civilisation was forgotten until excavations in the 1920s revealed it again — a reminder that even the best-plumbed cities depend on water, and that history can misplace a whole civilisation for four thousand years."
+      ]
+    }
+  ],
+  "takeaway": "Indus cities pioneered urban planning and drains, left no obvious kings, and kept one secret: a script nobody has yet learned to read.",
+  "fiction": false
+}

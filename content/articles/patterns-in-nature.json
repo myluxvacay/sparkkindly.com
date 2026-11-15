@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-130",
+  "slug": "patterns-in-nature",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Patterns in nature: spirals, hexagons and six-fold snow",
+  "description": "Sunflowers count in Fibonacci numbers, bees build in hexagons, and every snowflake keeps six-fold symmetry. Nature is the oldest pattern designer of all.",
+  "publishedAt": "2026-08-31",
+  "updatedAt": "2026-08-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Fibonacci sequence — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fibonacci_sequence",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The sunflower's arithmetic",
+      "paragraphs": [
+        "Look at the face of a sunflower and you will see seeds arranged in spirals — some curving clockwise, some anti-clockwise. Count them and the two numbers are very often neighbours in the Fibonacci sequence: 34 and 55, or 55 and 89. Pinecones and pineapples play the same game with smaller numbers, like 8 and 13.",
+        "This is not decoration. Packing each new seed at a fixed angle (about 137.5 degrees, the “golden angle”) fills the head with no gaps and no wasted space. The Fibonacci counts are what that angle naturally produces — arithmetic growing in a flowerbed."
+      ]
+    },
+    {
+      "heading": "Hexagons and snowflakes",
+      "paragraphs": [
+        "Bees build honeycomb from hexagons, the most economical tiling shape, while snowflakes grow with six-fold symmetry because of the way water molecules bond as they freeze. Each snowflake's six arms experience the same air at the same moments, so they grow in near-perfect matching — symmetry written by physics, not by an artist.",
+        "Zebra stripes, leopard spots and the ripples on a sand dune are patterns too, made by growth and chemistry rather than by rulers. The deep lesson of natural patterns: simple rules, repeated faithfully, generate endless variety."
+      ]
+    },
+    {
+      "heading": "Try it: a pattern safari",
+      "paragraphs": [
+        "Go on a pattern safari with a camera or sketchbook: find a spiral, a hexagon, a branching pattern (trees, rivers, lightning-shaped cracks), and stripes or spots. For each one, guess the simple rule that might have grown it.",
+        "Finish with the sunflower test: find a pinecone and count its spirals in both directions. If you land on 5 and 8, or 8 and 13, you have caught mathematics in the wild."
+      ]
+    }
+  ],
+  "takeaway": "Nature builds by simple rules repeated faithfully — count a sunflower's spirals and you will find a number sequence staring back.",
+  "fiction": false
+}

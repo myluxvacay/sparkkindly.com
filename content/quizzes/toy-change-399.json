@@ -1,0 +1,32 @@
+{
+  "id": "toy-change-399",
+  "scheduledDate": "2026-07-22",
+  "brand": "save",
+  "prompt": "A toy costs $18 and you have saved $25. How much money will you have left after buying it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$5"
+    },
+    {
+      "id": "b",
+      "text": "$6"
+    },
+    {
+      "id": "c",
+      "text": "$7"
+    },
+    {
+      "id": "d",
+      "text": "$8"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "$25 - $18 = $7 left over, and that $7 can go straight back into your savings for the next goal.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

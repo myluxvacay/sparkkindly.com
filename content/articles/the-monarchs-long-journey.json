@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-47",
+  "slug": "the-monarchs-long-journey",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The monarch's long journey",
+  "description": "Each autumn, monarch butterflies cross a continent — and the ones who arrive are generations removed from the ones who left.",
+  "publishedAt": "2026-09-03",
+  "updatedAt": "2026-09-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Monarch butterfly migration",
+      "url": "https://en.wikipedia.org/wiki/Monarch_butterfly_migration",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A trip no single butterfly completes",
+      "paragraphs": [
+        "Eastern monarch butterflies travel up to about 4,800 kilometres from Canada and the United States down to a small region of mountain forest in Mexico. No single butterfly makes the whole round trip. Instead, the journey unfolds across several generations, like a relay race run by a family.",
+        "The generation that flies south is special. It lives far longer than the quick summer generations — up to eight months instead of a few weeks — and it pauses breeding for the journey, saving its energy for the flight and the winter wait."
+      ]
+    },
+    {
+      "heading": "Finding a place they have never seen",
+      "paragraphs": [
+        "The most astonishing part is the navigation. The butterflies that arrive in Mexico have never been there, and neither had their parents. They appear to steer using the position of the Sun, an internal body clock, and possibly Earth's magnetic field.",
+        "In spring, the survivors head north and lay eggs on milkweed plants along the way. Their descendants continue the journey in stages, repopulating the north before the cycle turns again in autumn."
+      ]
+    }
+  ],
+  "takeaway": "Monarch migration is a multi-generation relay, guided by the Sun and an inherited sense of direction.",
+  "fiction": false
+}

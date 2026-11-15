@@ -1,0 +1,32 @@
+{
+  "id": "calm-breathing-298",
+  "scheduledDate": "2026-04-12",
+  "brand": "grow",
+  "prompt": "You feel stressed just before an exam. Which step is most likely to calm you in the moment?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hold your breath as long as you can"
+    },
+    {
+      "id": "b",
+      "text": "Breathe slowly, making each out-breath a little longer"
+    },
+    {
+      "id": "c",
+      "text": "Skip sleep the night before to cram more"
+    },
+    {
+      "id": "d",
+      "text": "Drink two energy drinks"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Slow breathing with longer out-breaths signals safety to your body and can steady nerves within a minute or two.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

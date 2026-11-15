@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-48",
+  "slug": "knights-and-knaves",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Knights and Knaves: The Island Where Lies Are Logical",
+  "description": "On this island, knights always tell the truth and knaves always lie - and with careful questions, you can still find the truth.",
+  "publishedAt": "2026-09-27",
+  "updatedAt": "2026-09-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "brain-teasers"
+  ],
+  "sources": [
+    {
+      "title": "Knights and Knaves - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Knights_and_Knaves",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Meet the islanders",
+      "paragraphs": [
+        "On the island of Knights and Knaves, every inhabitant is one of two types: a knight, who always tells the truth, or a knave, who always lies. You meet two islanders, A and B. A says: 'B is a knave.' B says: 'A and I are the same type.' Who is what?",
+        "Try the cases. Suppose B is telling the truth: then A and B really are the same type, so A is a truth-teller too - but A says B is a knave, which would make B a liar. Contradiction. So B is lying, which means A and B are different types, which makes A a knight - and A's statement checks out: B is indeed a knave. Case closed."
+      ]
+    },
+    {
+      "heading": "The question that defeats lying",
+      "paragraphs": [
+        "The island's most famous puzzle puts you at a fork: one road leads to the village, one to the swamp, and a single islander stands by - type unknown. You may ask one yes-or-no question. The classic solution: ask, 'What would the other type of islander say is the road to the village?' - or, when two islanders stand there, ask one what the other would say.",
+        "Either way the answer passes through exactly one truth and one lie. A knight truthfully reports the knave's lie; a knave lies about the knight's truth. Both give you the wrong road - so you simply take the other one. Perfect lying turns out to be perfectly informative, once you route it through itself."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Write your own two-islander puzzle: pick types for A and B, write statements that fit, then erase your notes and solve it fresh by testing cases. If both type-assignments survive your checks, your statements are too weak - strengthen one and test again.",
+        "A good starter: A says 'We are both knaves.' That single statement cannot come from a knight (it would be false) nor from a knave whose partner is also a knave (it would be true) - so the speaker must be a knave with a knight for a partner. See if you can find a second statement that pins down the partner too."
+      ]
+    }
+  ],
+  "takeaway": "Perfect liars are as informative as truth-tellers once you ask about what the other would say - the two distortions cancel out.",
+  "fiction": false
+}

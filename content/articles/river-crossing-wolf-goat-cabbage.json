@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-49",
+  "slug": "river-crossing-wolf-goat-cabbage",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Wolf, the Goat and the Cabbage: A 1,200-Year-Old Puzzle",
+  "description": "A farmer, a boat that holds one item, and two hungry problems - this classic river puzzle is still the perfect first logic challenge.",
+  "publishedAt": "2026-09-28",
+  "updatedAt": "2026-09-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "play-and-games"
+  ],
+  "sources": [
+    {
+      "title": "Wolf, goat and cabbage problem - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The setup",
+      "paragraphs": [
+        "A farmer must ferry a wolf, a goat and a cabbage across a river. The boat holds the farmer and just one item at a time. Leave the wolf alone with the goat and the goat is eaten; leave the goat alone with the cabbage and the cabbage is eaten. Everything else is safe. This puzzle appears in a collection from the court of Charlemagne, around the year 800, and it has been trapping beginners ever since.",
+        "The first move is forced. Take the wolf first and the goat eats the cabbage while you row. Take the cabbage first and the wolf eats the goat. Only the goat can cross first, because the goat is the troublemaker in both dangerous pairs."
+      ]
+    },
+    {
+      "heading": "The backward step",
+      "paragraphs": [
+        "Here is the full crossing. Take the goat over. Row back alone. Take the wolf over - and here comes the move beginners resist: bring the goat back. Now take the cabbage over, leaving the goat safely behind you. Row back alone, fetch the goat, and you are done in seven crossings, with everyone uneaten.",
+        "The goat's return trip feels like failure, and that feeling is the puzzle's real lesson. Some problems cannot be solved by moves that all look like progress; sometimes you must temporarily undo a good position to unlock the next one. Chess players, programmers and anyone who has ever reorganised a cupboard will recognise the shape of that idea."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Act it out with toys or labelled cups on a table edge 'river' - physically moving the pieces makes the backward step much easier to discover, and much harder to forget. Then try the harder classic variant: two couples crossing where nobody may be left with a stranger... or invent your own trio with new dangers.",
+        "Inventing your own version is the deeper game: choose three items and two forbidden pairs that share a middle item, and your puzzle will have the same skeleton as the original - forced first move, backward step and all."
+      ]
+    }
+  ],
+  "takeaway": "The trick of the river puzzle is the backward step: bringing the goat back looks like failure but it is the only way forward.",
+  "fiction": false
+}

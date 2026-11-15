@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-124",
+  "slug": "how-computers-remember",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How computers remember",
+  "description": "Your computer keeps two kinds of memory: a fast notebook it forgets when the power dies, and a patient library that keeps everything.",
+  "publishedAt": "2026-08-19",
+  "updatedAt": "2026-08-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "computing",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Computer memory",
+      "url": "https://en.wikipedia.org/wiki/Computer_memory",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Random-access memory",
+      "url": "https://en.wikipedia.org/wiki/Random-access_memory",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The desk and the filing cabinet",
+      "paragraphs": [
+        "Imagine a scholar working at a desk. The desk holds the few papers in use right now; the filing cabinets hold everything else, but fetching from them is slow. A computer organises memory the same way. RAM — random-access memory — is the desk: quick to reach, modest in size, and wiped clean when the power goes off.",
+        "Storage — a hard drive or solid-state drive — is the filing cabinet: slower, vastly larger, and permanent. When you open a photo, the computer carries it from storage onto the desk of RAM; when you save, it files the changed version back."
+      ]
+    },
+    {
+      "heading": "Why forgetting is a feature",
+      "paragraphs": [
+        "RAM forgets because of how it is built: each bit is a tiny electrical charge or a miniature switch that must be constantly powered or refreshed. That design makes it fast and cheap per quick grab — and useless as an archive, by design.",
+        "Storage media keep their patterns without power: magnetic regions on a spinning disc, or trapped charges in the cells of a solid-state drive. The trade is speed. RAM answers in billionths of a second; even the fastest storage is a slowcoach beside it, which is why computers juggle both."
+      ]
+    },
+    {
+      "heading": "Layers all the way down",
+      "paragraphs": [
+        "In truth there are more layers: tiny, even faster memories sit inside the processor itself, holding the numbers needed this very instant. Engineers call the whole arrangement the memory hierarchy — a pyramid of speed versus size.",
+        "Every freeze, every 'not enough memory' warning, every quick-loading game is this pyramid at work: a machine forever tidying its desk so the next task has room."
+      ]
+    }
+  ],
+  "takeaway": "Computers remember in layers — fast, forgetful RAM for work in progress, and slower, permanent storage for everything worth keeping.",
+  "fiction": false
+}

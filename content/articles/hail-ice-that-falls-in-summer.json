@@ -1,0 +1,54 @@
+{
+  "id": "discover-bulk-75",
+  "slug": "hail-ice-that-falls-in-summer",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Hail: ice that falls in summer",
+  "description": "Hailstones are built in the cold heart of a summer thunderstorm, riding updrafts like a lift until they grow too heavy to fly.",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "weather",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Hail",
+      "url": "https://en.wikipedia.org/wiki/Hail",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Layers of ice, one trip at a time",
+      "paragraphs": [
+        "A hailstone begins as a small ice pellet in a thunderstorm's powerful updraft — rising air that can exceed 100 kilometres per hour in severe storms. As the pellet is carried upward through a region of supercooled water droplets, the droplets freeze onto it, adding a layer of ice.",
+        "If the stone falls into weaker air and is caught by the updraft again, it may make several trips, gaining a new layer each time. Slice a large hailstone and you can count the journeys in its rings, alternating clear and milky ice laid down under different conditions. The stone falls for good only when its weight beats the updraft."
+      ]
+    },
+    {
+      "heading": "From peas to grapefruits",
+      "paragraphs": [
+        "Most hail is pea- to marble-sized and more nuisance than danger. But the strongest storms grow stones the size of golf balls, tennis balls, and in rare recorded cases far larger — the heaviest reliably measured hailstone, from Bangladesh, weighed about a kilogram.",
+        "Hail is a summer phenomenon precisely because it needs violent warm-season thunderstorms with towering updrafts reaching into sub-zero air. The ice at your feet on a hot afternoon fell from a part of the sky where it is always winter."
+      ]
+    }
+  ],
+  "takeaway": "Hail grows layer by layer inside thunderstorm updrafts until the stones are too heavy for the rising air to hold.",
+  "fiction": false
+}

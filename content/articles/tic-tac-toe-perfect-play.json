@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-59",
+  "slug": "tic-tac-toe-perfect-play",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Tic-Tac-Toe, Solved: How to Never Lose",
+  "description": "This childhood game is fully solved - learn the few rules that guarantee at least a draw, and why the first move matters most.",
+  "publishedAt": "2026-10-13",
+  "updatedAt": "2026-10-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "maths-and-logic"
+  ],
+  "sources": [
+    {
+      "title": "Tic-tac-toe - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tic-tac-toe",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A game with a known ending",
+      "paragraphs": [
+        "Tic-tac-toe (or noughts and crosses) is one of the few games humans have completely solved: if both players play perfectly, the game is always a draw. The first player has exactly three meaningfully different opening moves - centre, corner or edge - and they are not equal. Centre and corner are strong; an edge opening is the weakest and gives the second player the best chance to force at least a draw and punish mistakes.",
+        "The second player's replies follow one rule each. If the first player takes the centre, answer with a corner - answering with an edge loses against perfect play. If the first player takes a corner, take the centre. Those two responses, memorised, already make you very hard to beat."
+      ]
+    },
+    {
+      "heading": "Beware the fork",
+      "paragraphs": [
+        "Since perfect defence draws, real games are lost through one weapon: the fork, a move that creates two separate threats of completing a line at once. You can block only one. Forks are the whole attacking game, so the defensive skill is smelling them a move early.",
+        "The classic trap: your opponent holds two opposite corners and you hold the centre. It feels natural to grab another corner - and that loses, because the opponent takes the last corner and forks you. The correct defence is to play an edge, which quietly removes the fork. Knowing that single position rescues more games than any other fact about tic-tac-toe."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Play ten games as the second player using only the reply rules above, and see how rarely you lose. Then swap roles and try to construct a fork deliberately: aim for two corners and watch how the threat builds.",
+        "For a sense of scale, consider that tic-tac-toe has 255,168 possible complete games when you count every sequence of moves - yet the perfect strategy fits in this article. That contrast is why solved games are so satisfying: enormous possibility, tiny secret."
+      ]
+    }
+  ],
+  "takeaway": "Perfect tic-tac-toe always draws: take the centre or a corner, answer corners with the centre, and beware the fork.",
+  "fiction": false
+}

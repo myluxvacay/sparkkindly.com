@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-78",
+  "slug": "helping-a-neighbour-you-barely-know",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Helping a neighbour you barely know",
+  "description": "Between stranger and friend there is a whole country called neighbour, and it has its own customs of help.",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "helping-others",
+    "friendship"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start with the low doors",
+      "paragraphs": [
+        "Neighbourly help begins at ankle height: the bin brought in, the parcel taken in, the ladder lent without a form in triplicate. These small exchanges are how streets quietly audit each other and decide who can be trusted with the bigger things.",
+        "You do not need to know their story to start. You need only to be visibly, mildly useful over time."
+      ]
+    },
+    {
+      "heading": "Make help easy to repay — or not",
+      "paragraphs": [
+        "The genius of neighbour-help is its loose accounting. The ladder comes back with biscuits; the parcel favour returns as a watched house during holidays. Keep the ledger deliberately fuzzy. Precise accounting between neighbours converts a community into a market, and markets are colder.",
+        "If someone insists on repaying formally, accept graciously. Refusing all repayment can be its own kind of pride."
+      ]
+    },
+    {
+      "heading": "Be there before the emergency",
+      "paragraphs": [
+        "The time to learn a neighbour’s name is not during the flood, the blackout, or the ambulance visit — though those moments will come, and streets that know themselves cope with them entirely differently from streets that do not.",
+        "A name, a wave, one small favour banked: that is the whole infrastructure. Build it in peacetime."
+      ]
+    }
+  ],
+  "takeaway": "Start with bins and ladders, keep the accounting fuzzy, and learn names before you need them.",
+  "fiction": false
+}

@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-129",
+  "slug": "let-your-phone-nap-elsewhere",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Let your phone nap in another room",
+  "description": "Your phone does not need to be off or locked away forever. It just needs to not be on the desk while you are trying to think.",
+  "publishedAt": "2026-08-11",
+  "updatedAt": "2026-08-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "wellbeing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Presence is the problem",
+      "paragraphs": [
+        "A phone face-down on the desk still makes quiet demands: the urge to check, the half-heard buzz, the thought of what might be happening elsewhere. Many people find their focus improves simply when the phone is physically elsewhere.",
+        "This is not about discipline. It is about distance. Willpower is a fair fight against a craving; it is an unfair one against a glowing rectangle within arm's reach."
+      ]
+    },
+    {
+      "heading": "Try the nap, notice the difference",
+      "paragraphs": [
+        "For one work session, charge your phone in another room and tell anyone who might urgently need you how else to reach you. Then work, and pay attention to the first ten minutes, which are the itchiest.",
+        "Afterwards, compare honestly: how much did you get done, and how did it feel? Most people keep the habit in some form, not because a rule says so, but because the quieter sessions are simply nicer."
+      ]
+    }
+  ],
+  "takeaway": "Charge the phone in another room for one session, and enjoy the quieter mind.",
+  "fiction": false
+}

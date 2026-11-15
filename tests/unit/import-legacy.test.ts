@@ -10,6 +10,8 @@ type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
 const articles: Article[] = readFolder('articles').map((a) => articleSchema.parse(a));
 const quizzes: Quiz[] = readFolder('quizzes').map((q) => quizSchema.parse(q));
+const totalItems = articles.length + quizzes.length;
+const kidsItems = articles.filter((a) => a.brand === 'kids').length + quizzes.filter((q) => q.brand === 'kids').length;
 
 const count = async (sql: string) => Number((await db.query<{ n: string }>(sql)).rows[0].n);
 
@@ -45,17 +47,17 @@ describe('seedReference', () => {
 });
 
 describe('importLegacy', () => {
-  it('imports 10 articles and 14 quizzes as 24 published items', async () => {
+  it('imports every article and quiz as a published item', async () => {
     const result = await importLegacy(db, articles, quizzes);
-    expect(result).toEqual({ items: 24, answers: 14 });
-    expect(await count("SELECT count(*) n FROM items WHERE status = 'published'")).toBe(24);
-    expect(await count("SELECT count(*) n FROM items WHERE kind = 'article'")).toBe(10);
-    expect(await count("SELECT count(*) n FROM items WHERE kind = 'quiz'")).toBe(14);
+    expect(result).toEqual({ items: totalItems, answers: quizzes.length });
+    expect(await count("SELECT count(*) n FROM items WHERE status = 'published'")).toBe(totalItems);
+    expect(await count("SELECT count(*) n FROM items WHERE kind = 'article'")).toBe(articles.length);
+    expect(await count("SELECT count(*) n FROM items WHERE kind = 'quiz'")).toBe(quizzes.length);
   });
 
   it('gives every item a world, an audience and a risk tier, and Kids items the Kids tier', async () => {
-    expect(await count('SELECT count(*) n FROM items i JOIN worlds w ON w.id = i.world_id WHERE i.audience IS NOT NULL AND i.risk_tier IS NOT NULL')).toBe(24);
-    expect(await count("SELECT count(*) n FROM items i JOIN worlds w ON w.id = i.world_id WHERE w.slug = 'kids' AND i.audience = 'kids' AND i.risk_tier = 'kids'")).toBe(4);
+    expect(await count('SELECT count(*) n FROM items i JOIN worlds w ON w.id = i.world_id WHERE i.audience IS NOT NULL AND i.risk_tier IS NOT NULL')).toBe(totalItems);
+    expect(await count("SELECT count(*) n FROM items i JOIN worlds w ON w.id = i.world_id WHERE w.slug = 'kids' AND i.audience = 'kids' AND i.risk_tier = 'kids'")).toBe(kidsItems);
     expect(await count("SELECT count(*) n FROM items i JOIN worlds w ON w.id = i.world_id WHERE w.slug <> 'kids' AND i.audience = 'kids'")).toBe(0);
   });
 
@@ -65,13 +67,13 @@ describe('importLegacy', () => {
 
   it('never stores the correct answer inside a quiz body', async () => {
     const bodies = await db.query<{ body: Record<string, unknown> }>("SELECT body FROM items WHERE kind = 'quiz'");
-    expect(bodies.rows).toHaveLength(14);
+    expect(bodies.rows).toHaveLength(quizzes.length);
     for (const { body } of bodies.rows) {
       expect(Object.keys(body)).not.toEqual(expect.arrayContaining(['correctOptionId']));
       expect(JSON.stringify(body)).not.toMatch(/correctOptionId|"answer"|"correct"/);
       expect(body.mechanic).toBe('multiple_choice');
     }
-    expect(await count('SELECT count(*) n FROM item_answers')).toBe(14);
+    expect(await count('SELECT count(*) n FROM item_answers')).toBe(quizzes.length);
   });
 
   it('stores the correct option id and the explanation in item_answers', async () => {
@@ -84,8 +86,8 @@ describe('importLegacy', () => {
   });
 
   it('records image origin and licence for every article, and a template origin for quizzes', async () => {
-    expect(await count("SELECT count(*) n FROM items WHERE kind = 'article' AND image->>'origin' IS NOT NULL AND image->>'licence' IS NOT NULL")).toBe(10);
-    expect(await count("SELECT count(*) n FROM items WHERE kind = 'quiz' AND image->>'origin' = 'template'")).toBe(14);
+    expect(await count("SELECT count(*) n FROM items WHERE kind = 'article' AND image->>'origin' IS NOT NULL AND image->>'licence' IS NOT NULL")).toBe(articles.length);
+    expect(await count("SELECT count(*) n FROM items WHERE kind = 'quiz' AND image->>'origin' = 'template'")).toBe(quizzes.length);
   });
 
   it('keeps Kids article safety fields and the legacy content type in the body', async () => {
@@ -102,7 +104,7 @@ describe('importLegacy', () => {
   });
 
   it('writes a first revision for every item', async () => {
-    expect(await count('SELECT count(*) n FROM item_revisions WHERE revision = 1')).toBe(24);
+    expect(await count('SELECT count(*) n FROM item_revisions WHERE revision = 1')).toBe(totalItems);
   });
 
   it('re-running the import changes no row count', async () => {

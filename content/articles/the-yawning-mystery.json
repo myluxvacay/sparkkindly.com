@@ -1,0 +1,66 @@
+{
+  "id": "kids-bulk-71",
+  "slug": "the-yawning-mystery",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Why Do We Yawn?",
+  "description": "For ages 6–9 with an adult: explore the mystery of yawning — and why seeing a yawn makes you yawn too.",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "ageGuidance": "Ages 6–9, with an adult",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A big open mouth",
+      "paragraphs": [
+        "A yawn is a slow, wide opening of the mouth with a deep breath in. It lasts about six seconds, and it is very hard to stop once it starts.",
+        "People yawn when they are tired or bored, but scientists say that is not the whole story. Even babies yawn before they are born."
+      ]
+    },
+    {
+      "heading": "The cooling idea",
+      "paragraphs": [
+        "One idea is that yawning helps cool the brain. The big breath brings in cooler air, and the stretch helps blood flow around the head.",
+        "A cool brain works better. So a yawn might be your brain's way of waking itself up and staying alert."
+      ]
+    },
+    {
+      "heading": "Catchy yawns",
+      "paragraphs": [
+        "Yawns are catching. Seeing someone yawn, hearing a yawn, or even reading about yawns can start one. You might be yawning right now.",
+        "Catching yawns seems to be linked to caring about others. Dogs can even catch yawns from their owners."
+      ]
+    }
+  ],
+  "takeaway": "Yawning may help cool the brain and wake it up, and yawns spread from person to person like a friendly echo.",
+  "fiction": false,
+  "materials": [
+    "A mirror",
+    "Paper",
+    "A pencil"
+  ],
+  "supervision": "An adult stays alongside throughout.",
+  "safetyNotes": [
+    "This is a reading and watching activity — no special safety needs beyond normal care."
+  ],
+  "screenFreeExtension": "Count yawns in your family for one evening and see who yawns first."
+}

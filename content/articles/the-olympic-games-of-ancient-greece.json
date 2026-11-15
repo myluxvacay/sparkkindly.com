@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-106",
+  "slug": "the-olympic-games-of-ancient-greece",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Olympic Games of ancient Greece",
+  "description": "For nearly twelve centuries, Greek athletes gathered at Olympia every four years to run, wrestle and race chariots in honour of Zeus.",
+  "publishedAt": "2026-07-07",
+  "updatedAt": "2026-07-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "ancient-history",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ancient Olympic Games",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Olympia, Greece",
+      "url": "https://en.wikipedia.org/wiki/Olympia,_Greece",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "One race, then many",
+      "paragraphs": [
+        "The ancient Games began, by tradition, in 776 BC with a single event: a sprint down the length of the stadium at Olympia, a distance of about 192 metres. The first recorded winner was a cook named Coroebus.",
+        "Over the centuries the programme grew — longer races, wrestling, boxing, the pentathlon, and chariot racing — and the festival stretched to five days. Victors received no medals, only a wreath of wild olive leaves, but at home they were heroes, sometimes rewarded with free meals for life."
+      ]
+    },
+    {
+      "heading": "A truce in a quarrelsome world",
+      "paragraphs": [
+        "The Greek world was a patchwork of city-states that frequently warred with one another. For the Games, heralds travelled from city to city proclaiming a sacred truce, so athletes and spectators could journey to Olympia in safety.",
+        "The truce did not end wars, and the Games were not open to everyone — competitors were free Greek men, and married women were barred even from watching. Even so, for a few weeks every four years, shared ritual mattered more than rivalry."
+      ]
+    },
+    {
+      "heading": "A long echo",
+      "paragraphs": [
+        "The Games ran for nearly 1,200 years before ending in the late 4th century AD as the Roman Empire turned Christian. Olympia's ruins were buried by river floods and forgotten until excavations in the 19th century uncovered the stadium.",
+        "Those discoveries helped inspire the modern Olympics, first held in Athens in 1896. The flame, the four-year rhythm and even the marathon's legend all reach back to that dusty valley in Greece."
+      ]
+    }
+  ],
+  "takeaway": "The ancient Olympics ran for nearly twelve centuries under a sacred truce, and their revival in 1896 still shapes sport today.",
+  "fiction": false
+}

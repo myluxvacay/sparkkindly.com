@@ -1,0 +1,55 @@
+{
+  "id": "together-bulk-55",
+  "slug": "the-friend-who-includes",
+  "brand": "together",
+  "contentType": "article",
+  "title": "The friend who includes",
+  "description": "Inclusion is rarely a speech. It is a chair moved, a name remembered, an invitation repeated.",
+  "publishedAt": "2026-09-27",
+  "updatedAt": "2026-09-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "friendship",
+    "empathy"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Watch the edges",
+      "paragraphs": [
+        "Every group has edges: the person standing slightly outside the circle, the colleague eating alone, the cousin nobody has briefed on the family joke. Including them starts with simply noticing — a skill that improves the moment you decide to practise it.",
+        "You were on an edge once, or will be. Memory is a good teacher here."
+      ]
+    },
+    {
+      "heading": "Make the invitation specific",
+      "paragraphs": [
+        "“You should join us sometime” is kind but weightless. “We’re walking to the market at twelve — come” can actually be accepted. Specific invitations name a time, a place, and an easy exit, which is exactly what an uncertain person needs.",
+        "And invite twice. A first refusal often means “I wasn’t sure I was really wanted,” not “no.” The second invitation is the one that proves the first was real."
+      ]
+    },
+    {
+      "heading": "Share the map",
+      "paragraphs": [
+        "Inside jokes, unwritten rules, who is who — newcomers lack the map everyone else navigates by. Narrating it lightly (“We always order too much; it’s tradition”) turns an audience into participants.",
+        "The friend who includes rarely gets thanked dramatically. They get something better: rooms that relax when they enter them."
+      ]
+    }
+  ],
+  "takeaway": "Notice the edges, invite specifically and twice, and hand newcomers the map.",
+  "fiction": false
+}
