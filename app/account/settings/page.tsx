@@ -2,9 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { requireAdult } from '@/lib/accounts/next';
 import { hasPin } from '@/lib/accounts/pin';
-import { consentPending } from '@/lib/accounts/policy';
+import { can, consentPending } from '@/lib/accounts/policy';
 import { getSettings, TIME_ZONES } from '@/lib/accounts/settings';
-import { circlesEnabled } from '@/lib/config';
+import { getLeaderboardProfile, type LeaderboardProfile } from '@/lib/accounts/leaderboard';
+import { AVATARS } from '@/lib/avatars';
+import Avatar from '@/components/Avatar';
+import { circlesEnabled, leaderboardEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
 import { PinInput } from '@/components/PinInput';
 
@@ -14,10 +17,22 @@ export const metadata: Metadata = { title: 'Settings' };
 type Props = { searchParams: Promise<{ r?: string }> };
 
 // Outcome codes from the POSTs, and which form an error belongs to.
-const RESULTS: Record<string, { text: string; ok: boolean; form?: 'prefs' | 'pin' }> = {
+const RESULTS: Record<string, { text: string; ok: boolean; form?: 'prefs' | 'pin' | 'leaderboard' }> = {
   saved: { text: 'Your settings are saved.', ok: true },
   pending: { text: 'These settings are available after your parent or guardian confirms.', ok: false, form: 'prefs' },
   invalid: { text: 'Please choose a time zone from the list, then save again.', ok: false, form: 'prefs' },
+  'lb-saved': { text: 'Your leaderboard settings are saved.', ok: true },
+  'lb-ineligible': { text: 'The public leaderboard is for members aged 16 and over.', ok: false, form: 'leaderboard' },
+  'lb-blocked': {
+    text: 'That public name includes a word we do not allow. Please choose another name.',
+    ok: false,
+    form: 'leaderboard',
+  },
+  'lb-invalid': {
+    text: 'Please add a public name (up to 30 characters) and pick an avatar, then save again.',
+    ok: false,
+    form: 'leaderboard',
+  },
   'pin-reset': { text: 'Your new PIN is set.', ok: true },
   'pin-stale': {
     text: 'For safety, sign in again with an email link, then set a new PIN straight away.',
@@ -83,6 +98,54 @@ function PrefsForm({ settings, error, pending }: { settings: Prefs; error: boole
   );
 }
 
+// The public leaderboard section (Project 4.11, ADR 0004): rendered only with the feature on and the member
+// holding the public_leaderboard capability (16+). The board shows the public name, the avatar and points from
+// the member's own correct answers — never an email, a real name or a child's activity.
+function LeaderboardForm({ profile, error }: { profile: LeaderboardProfile; error: boolean }) {
+  return (
+    <form method="post" action="/account/settings/leaderboard/" className="prose admin-form">
+      <h2>Public leaderboard</h2>
+      <p>
+        The leaderboard shows your public name, your avatar and the points from your own correct answers. It is
+        only for members aged 16 and over, and you can leave at any time by unticking the box.
+      </p>
+      <label className="admin-radio">
+        <input type="checkbox" name="opt_in" defaultChecked={profile.optIn} /> Show me on the public leaderboard
+      </label>
+      <p>
+        <label htmlFor="public_name">Public name</label>
+        <input
+          id="public_name"
+          name="public_name"
+          type="text"
+          maxLength={30}
+          defaultValue={profile.publicName ?? ''}
+          aria-describedby={error ? 'result' : undefined}
+          aria-invalid={error || undefined}
+        />
+      </p>
+      <fieldset>
+        <legend>Your avatar</legend>
+        {AVATARS.map((a) => (
+          <label className="admin-radio avatar-choice" key={a.key}>
+            <input
+              type="radio"
+              name="avatar_key"
+              value={a.key}
+              defaultChecked={(profile.avatarKey ?? 'spark') === a.key}
+            />
+            <Avatar avatarKey={a.key} size={44} />
+            <span>{a.label}</span>
+          </label>
+        ))}
+      </fieldset>
+      <button type="submit" className="button">
+        Save leaderboard settings
+      </button>
+    </form>
+  );
+}
+
 function PinResetForm({ error }: { error: boolean }) {
   const described = error ? 'result' : undefined;
   return (
@@ -106,6 +169,10 @@ export default async function SettingsPage({ searchParams }: Props) {
   const { r } = await searchParams;
   const db = getDb();
   const [settings, pinSet] = await Promise.all([getSettings(db, account.id), hasPin(db, account.id)]);
+  const lbProfile =
+    leaderboardEnabled() && can(account.ageGroup, account.consent, 'public_leaderboard')
+      ? await getLeaderboardProfile(db, account.id)
+      : null;
   const errorFor = r ? RESULTS[r]?.form : undefined;
   return (
     <>
@@ -118,6 +185,7 @@ export default async function SettingsPage({ searchParams }: Props) {
           pending={consentPending(account.ageGroup, account.consent)}
         />
       )}
+      {lbProfile && <LeaderboardForm profile={lbProfile} error={errorFor === 'leaderboard'} />}
       <form method="post" action="/account/settings/export/" className="prose admin-form">
         <h2>Your data</h2>
         <p>Download everything we hold about your account and its child profiles, as one JSON file.</p>

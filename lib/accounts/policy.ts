@@ -16,7 +16,8 @@ export type Capability =
   | 'essential_email'
   | 'marketing_email'
   | 'invite'
-  | 'profile_page';
+  | 'profile_page'
+  | 'public_leaderboard';
 
 export type Consent = 'none' | 'pending' | 'confirmed';
 
@@ -85,6 +86,9 @@ const ALL: readonly Capability[] = [
   'see_sponsorship',
   'marketing_email',
   'profile_page',
+  // ADR 0004: the public leaderboard is 16+ only, so the capability sits in ALL (and so in OLDER_TEEN, which is ALL
+  // minus two) and never in the 13-15 lists.
+  'public_leaderboard',
 ];
 const OLDER_TEEN: readonly Capability[] = ALL.filter((c) => c !== 'create_child_profile' && c !== 'see_sponsorship');
 

@@ -1,6 +1,12 @@
 // Circle invites (plan 4B, spec Project 4 "Invites" and "Circle rules"). A link invite is reusable until revoked; each
 // member has at most one active link per circle and making a new one revokes theirs (regenerate). An email invite is
-// single use and expires 14 days after creation. Tokens are 32 random bytes (base64url), stored only as sha256 hashes.
+// single use and expires 14 days after creation. An account invite (Project 4.11, ADR 0004) is addressed to one
+// member's account — sent from the public leaderboard — and answered from the member's own dashboard within 14
+// days of creation. The 015 shape CHECKs stay exactly as they are (only IN-list CHECKs are ever replaced in
+// place), so an account row carries no expires_at and is never marked used_at: its window runs from created_at
+// and its acceptance is recorded in used_by, both enforced in the functions below. Its token is minted only to
+// keep the row's shape uniform; it is never sent anywhere, and the token path refuses anyone but the addressee.
+// Tokens are 32 random bytes (base64url), stored only as sha256 hashes.
 // An invite works only while its circle is open and visible and its creator is still a member. Reading an invite
 // (previewInvite) changes nothing; only acceptInvite, a signed-in POST, uses one up. A token decides the circle: no
 // circle id from a request is ever read. No Next.js imports. Verified by tests/unit/circles-invites.test.ts.
@@ -23,6 +29,7 @@ export const INVITE_LIMITS = {
   emailsPerDay: 10,
   perAddress: 3,
   emailDays: 14,
+  accountDays: 14,
   keepDays: 14,
 } as const;
 
@@ -230,9 +237,10 @@ export async function revokeInvite(
 
 export type ListedInvite = {
   id: string;
-  kind: 'link' | 'email';
+  kind: 'link' | 'email' | 'account';
   by: string;
   email: string | null;
+  invitee: string | null;
   expiresAt: Date | null;
 };
 export type InviteSection = {
@@ -270,19 +278,24 @@ export async function listInvites(
   const canInvite = circle.status === 'open' && !ownerOnly && group !== null && can(group, who.rows[0].consent_state, 'invite');
   const r = await db.query<{
     id: string;
-    kind: 'link' | 'email';
+    kind: 'link' | 'email' | 'account';
     created_by: string;
     token_hash: string;
     dn: string;
     invited_email: string | null;
+    invitee: string | null;
     expires_at: Date | null;
+    created_at: Date;
+    used_by: string | null;
   }>(
-    `SELECT i.id, i.kind, i.created_by, i.token_hash, m.display_name AS dn, i.invited_email, i.expires_at
+    `SELECT i.id, i.kind, i.created_by, i.token_hash, m.display_name AS dn, i.invited_email, a.public_name AS invitee, i.expires_at, i.created_at, i.used_by
      FROM circle_invites i JOIN circles c ON c.id = i.circle_id
      JOIN circle_members m ON m.circle_id = i.circle_id AND m.account_id = i.created_by AND m.profile_id IS NULL
+     LEFT JOIN accounts a ON a.id = i.invited_account_id
      WHERE i.circle_id = $1 AND (i.created_by = $3 OR $4) AND ${USABLE}
+       AND (i.kind <> 'account' OR (i.used_by IS NULL AND i.created_at > $5::timestamptz))
      ORDER BY i.created_at, i.id`,
-    [circle.id, iso(now), accountId, role === 'owner'],
+    [circle.id, iso(now), accountId, role === 'owner', iso(new Date(now.getTime() - INVITE_LIMITS.accountDays * DAY))],
   );
   const mine = r.rows.filter((i) => i.created_by === accountId && i.kind === 'link');
   const shown = isInviteToken(flash) && mine.some((i) => i.token_hash === hash(flash)) ? flash : null;
@@ -295,7 +308,9 @@ export async function listInvites(
       kind: i.kind,
       by: i.dn,
       email: i.created_by === accountId ? i.invited_email : null,
-      expiresAt: i.expires_at,
+      invitee: i.invitee,
+      // An account invite's window runs from its creation (the row carries no expires_at; see the header).
+      expiresAt: i.kind === 'account' ? new Date(new Date(i.created_at).getTime() + INVITE_LIMITS.accountDays * DAY) : i.expires_at,
     })),
   };
 }
@@ -362,23 +377,180 @@ export async function acceptInvite(
     ]);
     const c = found.rows[0] ? await lockCircleById(tx, found.rows[0].circle_id) : null;
     const r = c
-      ? await tx.query<{ id: string; kind: 'link' | 'email' }>(
-          `SELECT i.id, i.kind FROM circle_invites i JOIN circles c ON c.id = i.circle_id
+      ? await tx.query<{ id: string; kind: 'link' | 'email' | 'account'; invited_account_id: string | null; used_by: string | null; created_at: Date }>(
+          `SELECT i.id, i.kind, i.invited_account_id, i.used_by, i.created_at FROM circle_invites i JOIN circles c ON c.id = i.circle_id
            WHERE i.token_hash = $1 AND ${USABLE} FOR UPDATE OF i`,
           [h, iso(now)],
         )
       : null;
     const invite = r?.rows[0];
     if (!c || !invite) return { status: 'invalid' as const };
+    // An account invite answers only to its addressee, only once, and only inside its 14-day window — even on
+    // the token path (its token is never sent anywhere, but the rule does not depend on that).
+    if (
+      invite.kind === 'account' &&
+      (invite.invited_account_id !== accountId ||
+        invite.used_by !== null ||
+        new Date(invite.created_at).getTime() <= now.getTime() - INVITE_LIMITS.accountDays * DAY)
+    ) {
+      return { status: 'invalid' as const };
+    }
     const joined = await joinLocked(tx, accountId, c, name, true, now);
     if (joined.status !== 'joined') return joined;
-    if (invite.kind === 'email') {
+    if (invite.kind === 'account') {
+      await tx.query('UPDATE circle_invites SET used_by = $2 WHERE id = $1', [invite.id, accountId]);
+    } else if (invite.kind === 'email') {
       await tx.query('UPDATE circle_invites SET used_at = $2, used_by = $3, invited_email = NULL WHERE id = $1', [
         invite.id,
         iso(now),
         accountId,
       ]);
     }
+    await recordReferral(tx, invite.id, accountId, c.id, now);
+    return joined;
+  });
+}
+
+// --- Account-addressed invites (Project 4.11, ADR 0004) ---
+
+export type AccountInviteOutcome = 'invalid' | 'not_allowed' | 'closed' | 'limit' | 'duplicate' | 'already_member';
+
+// Sends an invite to one member's account from the public leaderboard. The inviter passes the same gate as every
+// invite (asInviter: member, capability, owner-only in a circle holding a child). The caps mirror the email ones:
+// at most INVITE_LIMITS.emailsPerDay account invites a day per sender, and one active invite per circle and
+// addressee. Nothing is emailed and no address changes hands: the invite waits on the addressee's dashboard.
+export async function createAccountInvite(
+  db: Db,
+  accountId: string,
+  slug: string,
+  invitedAccountId: string,
+  now: Date,
+): Promise<'sent' | AccountInviteOutcome> {
+  if (!isUuid(invitedAccountId) || invitedAccountId === accountId) return 'invalid';
+  return db.transaction(async (tx) => {
+    const who = await asInviter(tx, accountId, slug, now, 'UPDATE');
+    if (typeof who === 'string') return who;
+    const target = await tx.query('SELECT 1 FROM accounts WHERE id = $1', [invitedAccountId]);
+    if (!target.rows.length) return 'invalid' as const;
+    const member = await tx.query(
+      'SELECT 1 FROM circle_members WHERE circle_id = $1 AND account_id = $2 AND profile_id IS NULL AND left_at IS NULL',
+      [who.circle.id, invitedAccountId],
+    );
+    if (member.rows.length) return 'already_member' as const;
+    const counts = await tx.query<{ today: number; active: number }>(
+      `SELECT
+         (SELECT count(*)::int FROM circle_invites WHERE created_by = $1 AND kind = 'account' AND created_at > $3::timestamptz) AS today,
+         (SELECT count(*)::int FROM circle_invites WHERE circle_id = $2 AND invited_account_id = $4
+            AND revoked_at IS NULL AND used_by IS NULL AND created_at > $5::timestamptz) AS active`,
+      [accountId, who.circle.id, iso(new Date(now.getTime() - DAY)), invitedAccountId, iso(new Date(now.getTime() - INVITE_LIMITS.accountDays * DAY))],
+    );
+    if (counts.rows[0].today >= INVITE_LIMITS.emailsPerDay) return 'limit' as const;
+    if (counts.rows[0].active > 0) return 'duplicate' as const;
+    await tx.query(
+      `INSERT INTO circle_invites (circle_id, created_by, kind, token_hash, invited_account_id, created_at, expires_at)
+       VALUES ($1, $2, 'account', $3, $4, $5, NULL)`,
+      [who.circle.id, accountId, hash(newInviteToken()), invitedAccountId, iso(now)],
+    );
+    return 'sent' as const;
+  });
+}
+
+// The circles the member could invite someone into, for the leaderboard invite page: their open, visible circles
+// where the invite rules would let them send (the send re-checks under lock, so this read only shapes the page).
+export async function listInvitableCircles(
+  db: Queryable,
+  accountId: string,
+  now: Date,
+): Promise<{ slug: string; name: string }[]> {
+  if (!isUuid(accountId)) return [];
+  const r = await db.query<{ slug: string; name: string; id: string; owner: string; dob: string; consent: Consent }>(
+    `SELECT c.slug, c.name, c.id, c.owner_account_id AS owner, to_char(a.date_of_birth, 'YYYY-MM-DD') AS dob,
+            a.consent_state AS consent
+     FROM circle_members m JOIN circles c ON c.id = m.circle_id JOIN accounts a ON a.id = m.account_id
+     WHERE m.account_id = $1 AND m.profile_id IS NULL AND m.left_at IS NULL AND c.status = 'open' AND c.hidden_at IS NULL
+     ORDER BY c.name, c.slug`,
+    [accountId],
+  );
+  const out: { slug: string; name: string }[] = [];
+  for (const row of r.rows) {
+    const group = ageGroupFor(row.dob, now);
+    if (!group || !can(group, row.consent, 'invite')) continue;
+    if (row.owner !== accountId && (await circleHasChild(db, row.id))) continue;
+    out.push({ slug: row.slug, name: row.name });
+  }
+  return out;
+}
+
+export type PendingAccountInvite = {
+  id: string;
+  circleName: string;
+  inviterName: string;
+  expiresAt: Date | null;
+};
+
+// The usable account invites waiting for this member, newest first: circle name and the inviter's name in that
+// circle — never an email address (none is stored for this kind). The shown expiry is created_at + accountDays:
+// the row itself carries no expires_at (the 015 CHECKs), so the window is enforced here and on accept.
+export async function listAccountInvites(db: Queryable, accountId: string, now: Date): Promise<PendingAccountInvite[]> {
+  if (!isUuid(accountId)) return [];
+  const r = await db.query<{ id: string; circle_name: string; inviter_name: string; created_at: Date }>(
+    `SELECT i.id, c.name AS circle_name, m.display_name AS inviter_name, i.created_at
+     FROM circle_invites i JOIN circles c ON c.id = i.circle_id
+     JOIN circle_members m ON m.circle_id = i.circle_id AND m.account_id = i.created_by AND m.profile_id IS NULL
+     WHERE i.kind = 'account' AND i.invited_account_id = $1 AND i.used_by IS NULL AND i.created_at > $3::timestamptz AND ${USABLE}
+     ORDER BY i.created_at DESC, i.id`,
+    [accountId, iso(now), iso(new Date(now.getTime() - INVITE_LIMITS.accountDays * DAY))],
+  );
+  return r.rows.map((row) => ({
+    id: row.id,
+    circleName: row.circle_name,
+    inviterName: row.inviter_name,
+    expiresAt: new Date(new Date(row.created_at).getTime() + INVITE_LIMITS.accountDays * DAY),
+  }));
+}
+
+// Declining sets revoked_at (the row stays for the purge, like every spent invite). False when nothing changed.
+export async function declineAccountInvite(db: Db, accountId: string, inviteId: string, now: Date): Promise<boolean> {
+  if (!isUuid(accountId) || !isUuid(inviteId)) return false;
+  const r = await db.query(
+    `UPDATE circle_invites SET revoked_at = $3
+     WHERE id = $1 AND invited_account_id = $2 AND revoked_at IS NULL AND used_at IS NULL`,
+    [inviteId, accountId, iso(now)],
+  );
+  return (r.rowCount ?? 0) > 0;
+}
+
+// Accepts an account invite by its id: the row must be addressed to the caller and usable, then the shared join
+// rules decide, exactly as on the token path. A successful join uses the invite up.
+export async function acceptAccountInvite(
+  db: Db,
+  accountId: string,
+  inviteId: string,
+  yourName: unknown,
+  now: Date,
+): Promise<JoinResult | { status: 'invalid' }> {
+  const name = cleanMemberName(yourName);
+  if (!name) return { status: 'name' };
+  if (!isUuid(accountId) || !isUuid(inviteId)) return { status: 'invalid' };
+  return db.transaction(async (tx) => {
+    const found = await tx.query<{ circle_id: string }>(
+      'SELECT circle_id FROM circle_invites WHERE id = $1 AND invited_account_id = $2',
+      [inviteId, accountId],
+    );
+    const c = found.rows[0] ? await lockCircleById(tx, found.rows[0].circle_id) : null;
+    const r = c
+      ? await tx.query<{ id: string }>(
+          `SELECT i.id FROM circle_invites i JOIN circles c ON c.id = i.circle_id
+           WHERE i.id = $1 AND i.invited_account_id = $3 AND i.used_by IS NULL AND i.created_at > $4::timestamptz AND ${USABLE} FOR UPDATE OF i`,
+          [inviteId, iso(now), accountId, iso(new Date(now.getTime() - INVITE_LIMITS.accountDays * DAY))],
+        )
+      : null;
+    const invite = r?.rows[0];
+    if (!c || !invite) return { status: 'invalid' as const };
+    const joined = await joinLocked(tx, accountId, c, name, true, now);
+    if (joined.status !== 'joined') return joined;
+    // Acceptance is recorded in used_by only: the 015 CHECKs bar a used_at on this kind.
+    await tx.query('UPDATE circle_invites SET used_by = $2 WHERE id = $1', [invite.id, accountId]);
     await recordReferral(tx, invite.id, accountId, c.id, now);
     return joined;
   });
@@ -396,7 +568,8 @@ export async function purgeExpiredInvites(db: Queryable, now: Date, cap = 500): 
   );
   const deleted = await db.query(
     `DELETE FROM circle_invites WHERE id IN (
-       SELECT i.id FROM circle_invites i WHERE LEAST(i.revoked_at, i.used_at, i.expires_at) < $1::timestamptz
+       SELECT i.id FROM circle_invites i WHERE (LEAST(i.revoked_at, i.used_at, i.expires_at) < $1::timestamptz
+         OR (i.kind = 'account' AND i.created_at < $1::timestamptz))
          AND NOT EXISTS (SELECT 1 FROM referrals r WHERE r.invite_id = i.id) LIMIT $2)`,
     [iso(new Date(now.getTime() - INVITE_LIMITS.keepDays * DAY)), cap],
   );

@@ -10,3 +10,4 @@ decisions get their own records as they are made.
 | [0001](0001-postgresql-over-mongodb.md) | PostgreSQL replaces MongoDB as SparkKindly's database | Accepted | 2026-10-30 |
 | [0002](0002-systemd-releases-not-docker.md) | Plain systemd services with release directories, not Docker | Accepted | 2026-10-30 |
 | [0003](0003-content-agents-on-owner-machine.md) | Content agents run as scheduled Claude Code tasks on the owner's machine | Accepted | 2026-10-30 |
+| [0004](0004-public-leaderboard-and-avatars.md) | A public, opt-in leaderboard with chosen avatars (reverses the public half of the in-circle-only rule) | Accepted | 2026-11-15 |

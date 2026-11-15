@@ -229,6 +229,7 @@ describe('childCan', () => {
     marketing_email: false,
     invite: false,
     profile_page: false,
+    public_leaderboard: false,
   };
   for (const [cap, expected] of Object.entries(table) as [Capability, boolean][]) {
     it(`${cap} -> ${expected}`, () => {

@@ -849,6 +849,9 @@ What gets built:
 - **Leaderboards** are visible only inside the circle. No site-wide public
   leaderboard of individuals. **[my call]** This keeps children's activity
   private to their family and avoids pressure mechanics.
+  **[Amended 2026-11-15: the owner reversed the public half of this call —
+  an opt-in public leaderboard for 16+ account holders is being added; see
+  ADR 0004. In-circle boards are unchanged.]**
 - **Growth loop.** After answering, members are prompted to invite someone or
   share the day's game (a share image with the SparkKindly brand and no
   personal data). A `referrals` table tracks which invites brought new members.

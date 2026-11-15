@@ -49,7 +49,12 @@ export function InviteControls({ slug, section, base }: { slug: string; section:
                 <form method="post" action={action('revoke')} className="admin-actions">
                   <input type="hidden" name="invite_id" value={i.id} />
                   <p>
-                    {i.kind === 'link' ? 'Invite link' : `Email invite${i.email ? ` to ${i.email}` : ''}`} by {i.by}
+                    {i.kind === 'link'
+                      ? 'Invite link'
+                      : i.kind === 'email'
+                        ? `Email invite${i.email ? ` to ${i.email}` : ''}`
+                        : `Leaderboard invite${i.invitee ? ` to ${i.invitee}` : ''}`}{' '}
+                    by {i.by}
                     {i.expiresAt ? `, expires ${new Date(i.expiresAt).toISOString().slice(0, 10)}` : ''}
                   </p>
                   <button type="submit" className="button">
