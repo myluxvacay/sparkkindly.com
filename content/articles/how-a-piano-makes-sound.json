@@ -1,0 +1,62 @@
+{
+  "id": "discover-bulk-40",
+  "slug": "how-a-piano-makes-sound",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How a Piano Turns a Key Press Into Music",
+  "description": "A piano is secretly a percussion instrument: eighty-eight keys, hundreds of strings, and tiny hammers doing all the singing.",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "music",
+    "technology",
+    "inventions"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Piano",
+      "url": "https://en.wikipedia.org/wiki/Piano",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Hammers, not plucks",
+      "paragraphs": [
+        "When you press a piano key, you are not directly touching a string. The key works as a lever that launches a small felt-covered hammer toward a string; the hammer strikes the string and immediately falls back, letting the string ring freely.",
+        "That is why the piano belongs to the percussion family in spirit, even though it sits with the keyboards. Earlier keyboard instruments plucked their strings, like the harpsichord, which made it hard to control how loud each note was."
+      ]
+    },
+    {
+      "heading": "Loud and soft in the name",
+      "paragraphs": [
+        "The piano was developed in Italy around 1700 by Bartolomeo Cristofori. Its full original name, in Italian, described its party trick: a keyboard that could play soft and loud — piano e forte — depending on how hard the player struck the keys.",
+        "A harder press sends the hammer faster, the string vibrates more strongly, and the note is louder. That simple link between touch and volume changed what composers could ask for, and waves of piano music followed."
+      ]
+    },
+    {
+      "heading": "A harp in a wooden case",
+      "paragraphs": [
+        "Inside the case lies a cast-iron frame holding more than two hundred strings under enormous total tension. Low notes use long, thick, wound strings; high notes use short, thin ones, and most notes have two or three strings tuned together for richness.",
+        "Pressing the right pedal lifts the dampers from all the strings at once, letting them ring and blend — including strings that vibrate in sympathy with the notes played. The piano's glow is partly an echo it gives itself."
+      ]
+    }
+  ],
+  "takeaway": "A piano works by hammers striking strings and bouncing clear — an invention from around 1700 that let one keyboard play both soft and loud, just as its name promises.",
+  "fiction": false
+}

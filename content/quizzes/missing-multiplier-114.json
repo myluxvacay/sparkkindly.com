@@ -1,0 +1,32 @@
+{
+  "id": "missing-multiplier-114",
+  "scheduledDate": "2026-11-20",
+  "brand": "play",
+  "prompt": "Which number completes this multiplication: 7 x ? = 56",
+  "options": [
+    {
+      "id": "a",
+      "text": "6"
+    },
+    {
+      "id": "b",
+      "text": "7"
+    },
+    {
+      "id": "c",
+      "text": "8"
+    },
+    {
+      "id": "d",
+      "text": "9"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Since 7 x 8 = 56, the missing number that completes the multiplication is 8.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

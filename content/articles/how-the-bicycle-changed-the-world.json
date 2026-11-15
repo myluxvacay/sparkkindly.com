@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-45",
+  "slug": "how-the-bicycle-changed-the-world",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Bicycle: The Simple Invention That Set People Free",
+  "description": "Two wheels, a chain, and a frame — the bicycle gave ordinary people, especially women, a new kind of freedom in the 1890s.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "inventions",
+    "technology",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Bicycle",
+      "url": "https://en.wikipedia.org/wiki/Bicycle",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Safety bicycle",
+      "url": "https://en.wikipedia.org/wiki/Safety_bicycle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "From wooden horse to penny-farthing",
+      "paragraphs": [
+        "The earliest ancestor, in 1817, was a wooden machine you pushed along with your feet — no pedals at all. Pedals were added to the front wheel in later decades, and to make the machine faster, that front wheel grew enormous, creating the towering 'penny-farthing.'",
+        "Penny-farthings were fast, expensive, and genuinely dangerous: a rider sat high above the road, and a sudden stop could pitch them over the handlebars. The bicycle needed a redesign before everyone could ride."
+      ]
+    },
+    {
+      "heading": "The safety bicycle changes everything",
+      "paragraphs": [
+        "In the 1880s the modern design arrived: two equal wheels, pedals driving the rear wheel by a chain, and a diamond-shaped frame. It was called the safety bicycle, and with the addition of air-filled tyres it was comfortable, affordable, and learnable by almost anyone.",
+        "Factories could produce them cheaply, and in the 1890s cycling boomed. Repair shops, maps, road improvements, and even the young car industry borrowed people, parts, and ideas from the bicycle trade."
+      ]
+    },
+    {
+      "heading": "Freedom on two wheels",
+      "paragraphs": [
+        "The bicycle's biggest effect was social. For women in particular, it offered independent travel without a horse, a carriage, or a chaperone, and it helped change expectations about dress and mobility. The American campaigner Susan B. Anthony said in 1896 that bicycling had done more to emancipate women than anything else in the world.",
+        "More than a century later, the design is barely changed and the bicycle remains one of the most efficient machines ever made for turning human effort into distance. Simple, it turns out, can be revolutionary."
+      ]
+    }
+  ],
+  "takeaway": "The bicycle became world-changing only when the 1880s safety design made it affordable and rideable by everyone — and it quietly widened freedom, especially for women.",
+  "fiction": false
+}

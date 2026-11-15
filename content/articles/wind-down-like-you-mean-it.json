@@ -1,0 +1,54 @@
+{
+  "id": "grow-bulk-21",
+  "slug": "wind-down-like-you-mean-it",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Wind Down Like You Mean It",
+  "description": "A short, repeatable wind-down routine tells your body that sleep is coming — long before your head reaches the pillow.",
+  "publishedAt": "2026-11-03",
+  "updatedAt": "2026-11-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "sleep",
+    "habits"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Sleep hygiene",
+      "url": "https://en.wikipedia.org/wiki/Sleep_hygiene",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Sleep likes a runway",
+      "paragraphs": [
+        "You would not expect a plane to land without descending first, yet many of us try to go from bright screens and busy thoughts straight into sleep. Sleep hygiene — the habits and environment around sleep — is a well-established part of healthy sleep advice.",
+        "A wind-down routine is simply a descent path: thirty to sixty minutes of gradually dimmer, slower, quieter activity that your body learns to associate with sleep."
+      ]
+    },
+    {
+      "heading": "Build your descent",
+      "paragraphs": [
+        "Pick three or four steps you can repeat most nights: dim the lights, change into night clothes, wash up, read a few pages, set out tomorrow's things. The order matters less than the repetition — routine is the signal.",
+        "Keep screens out of the last stretch if you can, or at least switch them to something calm and finite. A chapter ends; a feed never does."
+      ]
+    }
+  ],
+  "takeaway": "Give sleep a runway: the same few calm steps, in the same order, most nights.",
+  "fiction": false
+}

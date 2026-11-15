@@ -1,0 +1,32 @@
+{
+  "id": "broken-pencil-328",
+  "scheduledDate": "2026-05-12",
+  "brand": "together",
+  "prompt": "You accidentally break a classmate's pencil. What is the best thing to do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hide it and say nothing"
+    },
+    {
+      "id": "b",
+      "text": "Blame someone else"
+    },
+    {
+      "id": "c",
+      "text": "Say sorry and offer to replace it"
+    },
+    {
+      "id": "d",
+      "text": "Laugh it off"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Owning up and making it right, with an apology and a replacement, rebuilds trust far better than hiding the mistake.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

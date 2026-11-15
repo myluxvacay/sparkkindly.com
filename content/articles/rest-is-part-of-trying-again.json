@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-17",
+  "slug": "rest-is-part-of-trying-again",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Rest Is Part of Trying Again",
+  "description": "Recovery is not the opposite of effort — it is the half of the cycle that makes the next effort possible.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "resilience",
+    "sleep"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The cycle, not the grind",
+      "paragraphs": [
+        "Muscles are not built during exercise; they are built during the recovery afterwards. The same pattern shows up in learning and creative work: effort stresses the system, and rest is when the system adapts and consolidates.",
+        "Treating rest as laziness breaks the cycle in the middle. People who push without pause do not usually get more done over a season — they get tired, make more errors, and often stop altogether."
+      ]
+    },
+    {
+      "heading": "Rest on purpose",
+      "paragraphs": [
+        "Real rest is more than collapsing with a phone. It might be sleep, a walk without headphones, an undemanding hobby, or simply an evening with nothing scheduled. The test is whether you return with something restored.",
+        "If you are picking yourself up after a setback, build the rest in first and the retry second. Trying again works much better on a recovered mind than on an exhausted one."
+      ]
+    }
+  ],
+  "takeaway": "Plan the rest as seriously as the retry — they are one cycle.",
+  "fiction": false
+}

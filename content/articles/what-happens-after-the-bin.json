@@ -1,0 +1,60 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-28",
+  "slug": "what-happens-after-the-bin",
+  "title": "What happens after the bin",
+  "description": "Your recycling goes on a journey of sorting machines, magnets, and second lives — a peek inside.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "tags": [
+    "recycling",
+    "reducing-waste"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Recycling",
+      "url": "https://en.wikipedia.org/wiki/Recycling",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "The sorting journey",
+      "paragraphs": [
+        "After collection, mixed recycling usually travels to a sorting facility. Machines and people separate it: magnets pull out steel, spinning screens sort cardboard and paper, and air jets and sensors help sort plastics by type.",
+        "That is why clean, dry, loose items matter — they are far easier for both machines and people to sort correctly and safely."
+      ]
+    },
+    {
+      "heading": "Second lives",
+      "paragraphs": [
+        "Sorted materials become new products: aluminium cans can return as cans remarkably quickly, glass can be recycled again and again, and paper fibres can be reused several times before they wear out.",
+        "Recycling saves energy compared with making many materials from scratch — aluminium recycling is a famous example, using far less energy than producing new aluminium."
+      ]
+    },
+    {
+      "heading": "Why reducing still wins",
+      "paragraphs": [
+        "Even good recycling uses transport and energy. That is why the order matters: reduce first, reuse next, and recycle what remains. Your bin is the last step, not the first."
+      ]
+    }
+  ],
+  "takeaway": "Recycling sorts and remakes materials — valuable, but reducing and reusing come first."
+}

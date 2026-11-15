@@ -1,0 +1,32 @@
+{
+  "id": "digit-riddle-113",
+  "scheduledDate": "2026-11-16",
+  "brand": "play",
+  "prompt": "I am an even number between 20 and 30. My two digits add up to 6. What number am I?",
+  "options": [
+    {
+      "id": "a",
+      "text": "22"
+    },
+    {
+      "id": "b",
+      "text": "24"
+    },
+    {
+      "id": "c",
+      "text": "26"
+    },
+    {
+      "id": "d",
+      "text": "28"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "24 is even and sits between 20 and 30, and its digits add up to 2+4=6; the other choices have digit sums of 4, 8 and 10.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

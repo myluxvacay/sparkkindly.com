@@ -1,0 +1,32 @@
+{
+  "id": "fair-disagreement-358",
+  "scheduledDate": "2026-06-11",
+  "brand": "together",
+  "prompt": "You and a friend strongly disagree about something. What is the most respectful approach?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Raise your voice until they give in"
+    },
+    {
+      "id": "b",
+      "text": "Explain your view calmly and listen to theirs"
+    },
+    {
+      "id": "c",
+      "text": "Stop speaking to them"
+    },
+    {
+      "id": "d",
+      "text": "Get others to take your side"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "You can disagree and stay friends: calm words and real listening let both people keep their dignity.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

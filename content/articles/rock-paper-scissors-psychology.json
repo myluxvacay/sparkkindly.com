@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-20",
+  "slug": "rock-paper-scissors-psychology",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Rock, Paper, Scissors: Beating the Human, Not the Game",
+  "description": "Against a truly random opponent, nobody can win at rock paper scissors. Against a human, patterns leak — and research has watched them leak.",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "probability"
+  ],
+  "sources": [
+    {
+      "title": "Rock paper scissors",
+      "url": "https://en.wikipedia.org/wiki/Rock_paper_scissors",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Perfectly random is unbeatable",
+      "paragraphs": [
+        "Rock paper scissors is balanced by design: each throw beats one, loses to one and ties one. If your opponent chose purely at random, no strategy in the world could beat them over time — every throw you make wins a third, loses a third and ties a third.",
+        "But humans are terrible at being random. We have favourites (rock feels strong, and beginners — especially men in studies of first throws — reach for it often), we avoid repeating ourselves, and our last result tugs at our next choice."
+      ]
+    },
+    {
+      "heading": "But humans aren't random",
+      "paragraphs": [
+        "In one large study, researchers at Zhejiang University recorded hundreds of players over hundreds of rounds and found a clear rhythm: players who won a round tended to repeat their winning throw, while players who lost tended to switch — often cycling to the next throw in the rock-paper-scissors order.",
+        "That gives you a gentle counter-strategy. If you just lost, your opponent is likelier to repeat the throw that beat you — so play the throw that beats theirs. If you just won, expect a switch, and be ready for what their switched throw loses to."
+      ]
+    },
+    {
+      "heading": "Three gentle tips",
+      "paragraphs": [
+        "First, watch more than you theorise: two or three rounds of observation tell you more about your specific opponent than any general study. Second, decide your throw before the chant starts, so your face and hands do not negotiate with you mid-game.",
+        "Third, keep it kind. This is a game used to decide who washes up or who kicks off. The real prize is noticing how predictable we all are — yourself included — and laughing about it together."
+      ]
+    }
+  ],
+  "takeaway": "You can't out-throw randomness, but people tend to repeat winning throws and abandon losing ones — so play the person, gently.",
+  "fiction": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-39",
+  "slug": "why-songs-get-stuck-in-your-head",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why Some Songs Get Stuck in Your Head",
+  "description": "An earworm is not a bug in your brain — it is your memory doing its job a little too enthusiastically.",
+  "publishedAt": "2026-11-07",
+  "updatedAt": "2026-11-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "music",
+    "human-body"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Earworm",
+      "url": "https://en.wikipedia.org/wiki/Earworm",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Meet the earworm",
+      "paragraphs": [
+        "An earworm is a short piece of music — often just a chorus or a jingle — that repeats in your mind without you choosing it. Researchers who study them call the experience involuntary musical imagery, and surveys suggest most people experience it regularly.",
+        "The songs that stick tend to be simple, repetitive, and familiar, with a melody that rises and falls in an easy-to-follow shape. Advertising jingles are engineered to be exactly that, which is why they are champion earworms."
+      ]
+    },
+    {
+      "heading": "Why the loop will not stop",
+      "paragraphs": [
+        "One explanation is that the brain treats an unfinished pattern as an open task. A half-remembered chorus is incomplete, so the mind keeps replaying it, the way it returns to an unsolved problem or an interrupted job.",
+        "Earworms are more likely when you are tired, stressed, or doing something automatic like walking or washing up — moments when the mind has spare capacity and a musical memory can wander in and take the stage."
+      ]
+    },
+    {
+      "heading": "How to evict a stubborn song",
+      "paragraphs": [
+        "Researchers and sufferers suggest a few tricks: listen to the whole song once, since finishing it can close the loop; switch to a different, absorbing tune; or occupy the verbal part of your mind with conversation, reading aloud, or a word puzzle.",
+        "Most earworms fade on their own within hours. Far from being a flaw, they show how powerfully music is stored — your brain kept the song safe enough to replay it without asking."
+      ]
+    }
+  ],
+  "takeaway": "Earworms happen when your brain loops an unfinished, catchy fragment of music — hearing the full song or giving your mind another task usually closes the loop.",
+  "fiction": false
+}

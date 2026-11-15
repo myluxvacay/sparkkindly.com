@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-96",
+  "slug": "fridge-and-freezer-habits-that-save",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Fridge and freezer habits that save energy",
+  "description": "Your fridge runs all day, every day, so small habits around temperature, seals and loading add up.",
+  "publishedAt": "2026-06-10",
+  "updatedAt": "2026-06-10",
+  "tags": [
+    "energy-saving",
+    "reducing-waste"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Set temperatures that protect food, not icebergs",
+      "paragraphs": [
+        "A fridge kept around 3 to 5 degrees Celsius keeps food safe without working harder than it needs to. A freezer at about minus 18 degrees is the usual recommendation. Colder than that mostly buys extra electricity use, not extra safety.",
+        "If your fridge has no temperature display, an inexpensive fridge thermometer removes the guesswork. Check it after a day, adjust the dial a little, and check again rather than making big swings."
+      ]
+    },
+    {
+      "heading": "Seals, space and warm food",
+      "paragraphs": [
+        "Door seals do quiet, important work. Clean them occasionally and test them by closing the door on a banknote: if it slides out easily, the seal may be worn and cold air could be leaking.",
+        "Let hot food cool before refrigerating it, so the fridge does not have to remove all that heat. At the same time, a reasonably full freezer runs more steadily than an empty one, because the frozen food itself holds the cold."
+      ]
+    },
+    {
+      "heading": "Placement and patience",
+      "paragraphs": [
+        "A fridge squeezed against an oven or sitting in direct sun works harder than one with air space around it. When you next move things around the kitchen, a few centimetres of breathing room behind the appliance helps it shed heat.",
+        "Try to decide what you need before opening the door, especially for children raiding snacks. Every long, thoughtful stare into the fridge is paid for twice: once in cold air lost, and once in the energy to chill the replacement air."
+      ]
+    }
+  ],
+  "takeaway": "Keep temperatures sensible, seals clean and doors closed, and the hardest-working appliance in the house will cost less to run."
+}

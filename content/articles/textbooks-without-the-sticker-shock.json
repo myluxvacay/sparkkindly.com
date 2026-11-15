@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-19",
+  "slug": "textbooks-without-the-sticker-shock",
+  "title": "Textbooks without the sticker shock",
+  "description": "New textbooks can cost a fortune — here are the legal, cheaper routes students actually use.",
+  "publishedAt": "2026-11-07",
+  "updatedAt": "2026-11-07",
+  "tags": [
+    "student-money",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Check before you buy",
+      "paragraphs": [
+        "Before buying anything, check the reading list carefully: some books are needed for one chapter, and the library may hold copies or an e-book version included in your course.",
+        "Ask students from the year above which books they actually used. Honest answers can save you from the classic mistake — buying every listed book in week one."
+      ]
+    },
+    {
+      "heading": "Second-hand and sharing",
+      "paragraphs": [
+        "Used copies, older editions, and library reserve shelves cover most needs at a fraction of the price. Check with your teacher whether an older edition is acceptable; often the changes are minor.",
+        "Sharing a copy with a study partner, or splitting a set between a small group, works well for reference books you consult rather than read cover to cover."
+      ]
+    },
+    {
+      "heading": "Sell on when done",
+      "paragraphs": [
+        "If you do buy, keep books in good condition and sell them on when the course ends. Your discount this year becomes someone else's next year."
+      ]
+    }
+  ],
+  "takeaway": "Check the library and older students first — most textbook needs have a cheaper route."
+}

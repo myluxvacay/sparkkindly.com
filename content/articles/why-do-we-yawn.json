@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-24",
+  "slug": "why-do-we-yawn",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why Do We Yawn — and Why Is It Catching?",
+  "description": "A yawn feels simple, but scientists are still untangling why we do it and why seeing one can set off another.",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "language"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Yawn",
+      "url": "https://en.wikipedia.org/wiki/Yawn",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "More than just being tired",
+      "paragraphs": [
+        "A yawn is a reflex: your mouth opens wide, you take a slow, deep breath in, and then you breathe out. People often link yawning with sleepiness or boredom, and it does tend to happen more when we are tired or under-stimulated.",
+        "But tiredness is not the whole story. People also yawn when they wake up, before a big moment, and sometimes when they are concentrating. That mix is why researchers treat yawning as a clue about the brain, not just a sign of needing bed."
+      ]
+    },
+    {
+      "heading": "Cooling the brain, waking the body",
+      "paragraphs": [
+        "One leading idea is that yawning helps regulate the temperature of the brain. A deep breath brings in cooler air and changes blood flow, which may help the brain stay in its comfortable working range.",
+        "Yawning also seems to raise alertness for a short while. Stretching the jaw and taking in more air can make a drowsy person feel briefly more awake, which may be why a yawn often arrives right when you are trying to pay attention."
+      ]
+    },
+    {
+      "heading": "Why yawns spread",
+      "paragraphs": [
+        "Seeing, hearing, or even reading about a yawn can trigger one — this is called contagious yawning. It tends to appear in children around the age of four or five, and it is stronger between people who know each other well.",
+        "Some researchers connect contagious yawning with empathy and social communication: we unconsciously mirror the people around us. The link is still debated, but the effect is real enough that you may have yawned while reading this."
+      ]
+    }
+  ],
+  "takeaway": "Yawning is a built-in reflex that may help cool the brain and sharpen alertness — and catching one from someone else is a normal part of being social.",
+  "fiction": false
+}

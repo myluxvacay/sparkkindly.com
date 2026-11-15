@@ -1,0 +1,55 @@
+{
+  "id": "grow-bulk-47",
+  "slug": "work-in-sprints-rest-on-purpose",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Work in sprints, rest on purpose",
+  "description": "Short, timed bursts of work with real breaks between them suit how attention actually behaves.",
+  "publishedAt": "2026-09-16",
+  "updatedAt": "2026-09-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "focus"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Attention works in waves",
+      "paragraphs": [
+        "Focus is not a tap that runs at one steady pressure all day. It rises, peaks and fades, and most people find somewhere between twenty and fifty minutes is a natural stretch before quality quietly drops.",
+        "Working in sprints means honouring that rhythm instead of fighting it: a defined burst of single-tasking, then a genuine break, then another burst if needed."
+      ]
+    },
+    {
+      "heading": "Make the sprint concrete",
+      "paragraphs": [
+        "Set a timer you can see, choose exactly what the sprint is for, and work only on that until the timer ends. When distracting thoughts arrive, note them on your later list and keep going — the sprint is short enough that almost everything can wait.",
+        "Start shorter than you think you should. A fifteen-minute sprint you actually do beats a heroic two-hour block you keep postponing. You can always run another sprint after the break."
+      ]
+    },
+    {
+      "heading": "The break is part of the method",
+      "paragraphs": [
+        "A break means standing up, looking at something distant, getting water, stepping outside. Scrolling a feed is not a break; it feeds your attention more of the same kind of input and leaves it just as tired.",
+        "If you return from breaks feeling no fresher, the break is too short or too screen-shaped. Adjust the break before you blame the sprint."
+      ]
+    }
+  ],
+  "takeaway": "Work in honest bursts, rest like you mean it, and let the rhythm carry you.",
+  "fiction": false
+}

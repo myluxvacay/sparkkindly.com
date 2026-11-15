@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-12",
+  "slug": "motivation-follows-action",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Motivation Follows Action",
+  "description": "You do not have to feel like it before you start; starting is often what creates the feeling.",
+  "publishedAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "motivation",
+    "habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Waiting to feel ready",
+      "paragraphs": [
+        "The common picture of motivation is a spark that arrives first and makes work easy. In practice, for most people and most tasks, the order runs the other way: a small action comes first, and the feeling of motivation trails behind it.",
+        "Think of the last time you did not want to go for a walk or start an assignment, but felt better five minutes in. The feeling was produced by the doing, not required before it."
+      ]
+    },
+    {
+      "heading": "Start embarrassingly small",
+      "paragraphs": [
+        "Use that order deliberately. When motivation is missing, shrink the first action until it is almost laughable: open the document, put on the shoes, write one sentence. Tiny starts bypass the argument in your head.",
+        "This is not a trick that works every time — tiredness, illness and genuinely hard seasons are real. But on an ordinary unmotivated day, action first is the most reliable lever you have."
+      ]
+    }
+  ],
+  "takeaway": "Do not wait to feel like it. Start tiny, and let the feeling catch up.",
+  "fiction": false
+}

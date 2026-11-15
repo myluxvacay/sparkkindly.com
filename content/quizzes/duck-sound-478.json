@@ -1,0 +1,32 @@
+{
+  "id": "duck-sound-478",
+  "scheduledDate": "2026-12-22",
+  "brand": "kids",
+  "prompt": "What sound does a duck make?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Woof"
+    },
+    {
+      "id": "b",
+      "text": "Quack"
+    },
+    {
+      "id": "c",
+      "text": "Meow"
+    },
+    {
+      "id": "d",
+      "text": "Oink"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A duck says quack; dogs say woof, cats say meow and pigs say oink.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

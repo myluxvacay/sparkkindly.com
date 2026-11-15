@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-110",
+  "slug": "rinsing-jars-and-tins-for-recycling",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "To rinse or not to rinse: jars, tins and tubs",
+  "description": "Recycling containers do not need to be spotless, but a quick rinse protects the rest of the load and your kitchen too.",
+  "publishedAt": "2026-07-06",
+  "updatedAt": "2026-07-06",
+  "tags": [
+    "recycling",
+    "reducing-waste"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Clean enough is the standard",
+      "paragraphs": [
+        "Sorting plants ask for containers that are empty and reasonably clean, not washed like dinner dishes. A quick rinse or a wipe with used dishwater removes the food residue that causes smells and attracts pests, and that is enough.",
+        "A jar with a smear of jam is fine. A tub still holding half its soup is not, because that food ends up smeared across paper and cardboard that then cannot be recycled."
+      ]
+    },
+    {
+      "heading": "Rinse without wasting water",
+      "paragraphs": [
+        "Use the end of the washing-up water, or rinse several containers together in a small amount of water rather than running each under a hot tap. The goal is clean recycling without undoing the good with a flood of heated water.",
+        "Greasy pizza boxes and takeaway trays are a special case: the cardboard fibres absorb oil and cannot be separated, so most services ask for them in general waste or food-waste composting instead. Clean sections can sometimes be torn off and recycled."
+      ]
+    },
+    {
+      "heading": "Lids, labels and pumps",
+      "paragraphs": [
+        "Labels can stay on; sorting plants handle them. Metal lids can usually go in the bin loose or placed inside the can, but rules differ, so check your local list once.",
+        "Pump and spray tops are mixed materials and are often not accepted, while the bottle beneath them is. Removing the top takes a second and keeps a good bottle from being rejected with a bad lid."
+      ]
+    }
+  ],
+  "takeaway": "Aim for empty and rinsed, not sparkling, and use leftover dishwater so the rinse itself wastes nothing."
+}

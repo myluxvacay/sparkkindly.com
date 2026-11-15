@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-13",
+  "slug": "why-the-sky-is-blue",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why the Sky Is Blue",
+  "description": "Sunlight looks white, but the air scatters its blue part in every direction — and that scattered light is the sky you see.",
+  "publishedAt": "2026-11-05",
+  "updatedAt": "2026-11-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Rayleigh scattering",
+      "url": "https://en.wikipedia.org/wiki/Rayleigh_scattering",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Sunlight is a rainbow in disguise",
+      "paragraphs": [
+        "The light arriving from the Sun looks white, but it is really a mixture of all the colours of the rainbow, each travelling as waves of a different length. Reds are long waves; blues and violets are short ones.",
+        "On its way to your eyes, that light has to cross the whole atmosphere — and the air itself has opinions about which colours get through easily."
+      ]
+    },
+    {
+      "heading": "Scattering: the sky’s trick",
+      "paragraphs": [
+        "Air is made of molecules far smaller than the wavelength of light. When sunlight meets them, the short blue waves are scattered — bounced off in all directions — far more strongly than the long red ones. This is called Rayleigh scattering, after the physicist who explained it.",
+        "So wherever you look, some of that scattered blue light is raining down into your eyes from every part of the sky. The sky is blue because the air is, in effect, glowing faintly blue with borrowed sunlight. Violet is scattered even more, but our eyes are less sensitive to it, so blue wins."
+      ]
+    },
+    {
+      "heading": "Sunsets are the flip side",
+      "paragraphs": [
+        "At sunset, sunlight crosses much more air to reach you. By the time it arrives, most of its blue has been scattered away along the path — leaving the reds and oranges behind.",
+        "Blue noon and red sunset are the same physics seen from two angles: the sky keeps the short waves, and lets the long ones travel."
+      ]
+    }
+  ],
+  "takeaway": "The sky is blue because air scatters blue sunlight in every direction — the sky is sunlight, redirected.",
+  "fiction": false
+}

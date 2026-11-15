@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-11",
+  "slug": "pay-yourself-first",
+  "title": "Pay yourself first",
+  "description": "Move a little to savings when money arrives, before spending starts — here is the gentle version.",
+  "publishedAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "tags": [
+    "saving",
+    "budgeting"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The order matters",
+      "paragraphs": [
+        "Many people save what is left after spending — and often nothing is left. 'Pay yourself first' flips the order: when money arrives, move a small amount to savings straight away, then live on the rest.",
+        "Start tiny. The habit of moving money first matters more than the amount, and you can raise it when income grows or costs fall."
+      ]
+    },
+    {
+      "heading": "Be realistic, stay kind",
+      "paragraphs": [
+        "If you move too much and have to pull it back for essentials every month, the system — not you — needs adjusting. Lower the amount until it sticks.",
+        "Some months, paying yourself first might mean $1 or even pausing. A flexible habit you keep beats a strict one you quit."
+      ]
+    },
+    {
+      "heading": "Pair it with payday",
+      "paragraphs": [
+        "Attach the transfer to the moment money lands: payday, allowance day, or the day a payment clears. Same trigger, same small action, every time."
+      ]
+    }
+  ],
+  "takeaway": "When money arrives, move a small amount to savings first — then spend the rest without guilt."
+}

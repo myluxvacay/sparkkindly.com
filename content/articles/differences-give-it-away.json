@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-13",
+  "slug": "differences-give-it-away",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Spot the Pattern: Differences Give It Away",
+  "description": "When a sequence will not talk, subtract. The gaps between terms are where number patterns keep their secrets.",
+  "publishedAt": "2026-11-01",
+  "updatedAt": "2026-11-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "number-puzzles"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Staring doesn't work — subtracting does",
+      "paragraphs": [
+        "Consider 2, 5, 10, 17, 26. The numbers themselves look moody and irregular. But write the gaps underneath: 3, 5, 7, 9. Suddenly the sequence is behaving beautifully — the gaps are simply the odd numbers, so the next gap is 11 and the next term is 26 + 11 = 37.",
+        "This is the single most useful move in pattern-spotting: when the terms hide the rule, examine the differences. A steady gap means adding; a growing gap means the rule itself is growing."
+      ]
+    },
+    {
+      "heading": "The squares in disguise",
+      "paragraphs": [
+        "There is a second way to see the same sequence. Each term is one more than a square: 1 + 1 = 2, 4 + 1 = 5, 9 + 1 = 10, 16 + 1 = 17, 25 + 1 = 26. So the next term is 36 + 1 = 37 — the same answer by a completely different road.",
+        "That agreement is worth noticing. Patterns often have several descriptions, and when two descriptions give the same next term, your confidence should rise. When they disagree, you have found the interesting puzzles — the ones where the intended rule matters."
+      ]
+    },
+    {
+      "heading": "Your turn",
+      "paragraphs": [
+        "Try this one: 3, 6, 11, 18, 27. Compute the gaps first — do not reach for the answer. Then, for a harder variant, ask what the gaps of the gaps are doing.",
+        "The answer is in the takeaway. And once differences become a habit, you will start applying them everywhere: to bus timetables, to scores in a game, to the prices of things that creep upward month by month."
+      ]
+    }
+  ],
+  "takeaway": "The gaps 3, 5, 7, 9 point to 37 — and the same trick cracks the practice sequence 3, 6, 11, 18, 27, whose next term is 38.",
+  "fiction": false
+}

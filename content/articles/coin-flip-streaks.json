@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-17",
+  "slug": "coin-flip-streaks",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Five Heads in a Row: Lucky, or Just Tuesday?",
+  "description": "A coin that lands heads five times running feels rigged. It isn't — and understanding why will sharpen how you read every streak in life.",
+  "publishedAt": "2026-11-05",
+  "updatedAt": "2026-11-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "probability",
+    "brain-teasers"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The streak that feels impossible",
+      "paragraphs": [
+        "Flip a coin five times and get heads, heads, heads, heads, heads. It feels like a glitch — surely the coin is bent, or luck is running hot, or tails is now 'due'. In fact, the chance of five heads in a specified run of five flips is 1 in 32: uncommon, but nothing like impossible.",
+        "Here is the reframe that dissolves the mystery. The sequence HHHHH is exactly as likely as HTHTH, or HHTTH, or any other specific order you care to name — each one also has a chance of 1 in 32. We only gasp at the tidy ones. The coin dealt an ordinary hand; we are the ones who framed it."
+      ]
+    },
+    {
+      "heading": "Every sequence is equally unlikely",
+      "paragraphs": [
+        "Each flip is independent: the coin has no memory of the last result and no plan for the next. After five heads, the chance the next flip is tails is still one half — not higher, because the coin is not keeping score or restoring balance.",
+        "Believing tails becomes more likely after a run of heads is called the gambler's fallacy, and it has emptied a great many pockets. Its mirror image — believing a winning streak will continue because someone is 'hot' — is the same error wearing a smile."
+      ]
+    },
+    {
+      "heading": "Try it yourself",
+      "paragraphs": [
+        "Flip a coin twenty times and write down the results honestly, in order. Then look for streaks. You will almost certainly find runs of three or four identical results hiding in there — because in twenty flips, streaks are not surprises. They are what randomness actually looks like.",
+        "That is the deeper lesson: real randomness is clumpy. Perfectly alternating, evenly spread results would be the truly suspicious pattern."
+      ]
+    }
+  ],
+  "takeaway": "The coin has no memory: five heads is exactly as likely as any other exact sequence — it just looks more meaningful.",
+  "fiction": false
+}

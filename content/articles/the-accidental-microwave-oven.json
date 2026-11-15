@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-32",
+  "slug": "the-accidental-microwave-oven",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Microwave Oven Was an Accident in a Lab Coat Pocket",
+  "description": "A melted chocolate bar and a radar engineer's curiosity turned wartime technology into the fastest way to reheat lunch.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "inventions",
+    "technology",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Microwave oven",
+      "url": "https://en.wikipedia.org/wiki/Microwave_oven",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Percy Spencer",
+      "url": "https://en.wikipedia.org/wiki/Percy_Spencer",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A chocolate bar melts at the wrong moment",
+      "paragraphs": [
+        "In 1945, American engineer Percy Spencer was working on magnetrons — vacuum tubes that generate microwaves for radar. Standing near an active magnetron, he noticed that a chocolate bar in his pocket had melted.",
+        "Plenty of people would have just been annoyed. Spencer got curious. He experimented deliberately, placing popcorn kernels near the tube — they popped — and an egg, which cooked so fast it burst. The microwaves were cooking food."
+      ]
+    },
+    {
+      "heading": "From radar room to restaurant kitchen",
+      "paragraphs": [
+        "Spencer's employer, Raytheon, filed a patent in 1945 and built the first commercial microwave oven, the Radarange, in 1947. It was the size of a refrigerator, weighed around 340 kilograms, and cost thousands of dollars, so it went to restaurants and ships, not homes.",
+        "Home models shrank over the following decades. A countertop version arrived in 1967, and by the late twentieth century the microwave had become one of the most common kitchen appliances in many countries."
+      ]
+    },
+    {
+      "heading": "How microwaves actually cook",
+      "paragraphs": [
+        "Microwaves are a form of electromagnetic radiation. Inside the oven they make water molecules in food vibrate, and that vibration produces heat. The food warms from within the surface layers rather than only from hot air around it.",
+        "That is also why microwaves heat unevenly and why metal, which reflects them, does not belong inside. A wartime radar part, a melted snack, and a good question — that is the whole origin story."
+      ]
+    }
+  ],
+  "takeaway": "The microwave oven began in 1945 when Percy Spencer noticed a magnetron had melted his chocolate bar — and, instead of shrugging, started experimenting.",
+  "fiction": false
+}

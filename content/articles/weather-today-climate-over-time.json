@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-21",
+  "slug": "weather-today-climate-over-time",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Weather Is Today; Climate Is the Pattern",
+  "description": "A rainy Tuesday is weather. Thirty years of rainy Tuesdays is climate — and keeping the two apart clears up a lot of confusion.",
+  "publishedAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "climate",
+    "weather"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Climate",
+      "url": "https://en.wikipedia.org/wiki/Climate",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Two different questions",
+      "paragraphs": [
+        "Weather is what the atmosphere is doing right now and over the next few days: this storm, this heatwave, this frost. It is changeable, local and sometimes chaotic.",
+        "Climate is the long-term pattern — the average of weather over decades, conventionally thirty years, along with how much it varies. One describes the moment; the other describes the habit."
+      ]
+    },
+    {
+      "heading": "Why one cold day proves nothing",
+      "paragraphs": [
+        "Because climate is statistics, a single event — one snowy week, one hot summer — is a data point, not a verdict. A team can lose one match and still be having a winning season.",
+        "A useful saying sums it up: weather is what you get, climate is what you expect. You dress for the weather, but you choose your wardrobe for the climate."
+      ]
+    },
+    {
+      "heading": "How scientists keep the record",
+      "paragraphs": [
+        "Climate records blend thermometer measurements going back more than a century with satellites, ocean buoys, tree rings and ice cores, each checking the others.",
+        "With records that long, patterns stand out from the noise — and slow changes that no single season could reveal become visible."
+      ]
+    }
+  ],
+  "takeaway": "Weather is what you get today; climate is what you expect over decades — one is a moment, the other is the pattern the moments make.",
+  "fiction": false
+}

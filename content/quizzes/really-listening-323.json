@@ -1,0 +1,32 @@
+{
+  "id": "really-listening-323",
+  "scheduledDate": "2026-05-07",
+  "brand": "together",
+  "prompt": "A friend is telling you about a tough day. What is the kindest thing to do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Check your phone while they talk"
+    },
+    {
+      "id": "b",
+      "text": "Listen fully and ask how they are feeling"
+    },
+    {
+      "id": "c",
+      "text": "Tell them others have it much worse"
+    },
+    {
+      "id": "d",
+      "text": "Change the subject to something funnier"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Listening without interrupting shows your friend they matter, and asking how they feel invites them to share more.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

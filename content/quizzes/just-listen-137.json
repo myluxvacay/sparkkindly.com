@@ -1,0 +1,32 @@
+{
+  "id": "just-listen-137",
+  "scheduledDate": "2026-11-06",
+  "brand": "together",
+  "prompt": "A friend says: I do not need advice, I just need to vent. What is the best response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Give them your best advice anyway"
+    },
+    {
+      "id": "b",
+      "text": "Listen, nod along, and ask how they are feeling"
+    },
+    {
+      "id": "c",
+      "text": "Tell them their problem is small"
+    },
+    {
+      "id": "d",
+      "text": "Walk away because there is nothing to fix"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "They told you exactly what they need: to be heard. Listening without fixing makes people feel understood and supported.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

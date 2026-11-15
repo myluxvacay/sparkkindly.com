@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-25",
+  "slug": "shrink-the-list-when-overwhelmed",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Shrink the List When Overwhelmed",
+  "description": "When everything feels urgent, the kindest move is to make the list smaller, not yourself faster.",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "stress",
+    "focus"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The everything-at-once feeling",
+      "paragraphs": [
+        "Overwhelm often comes less from the amount of work than from holding all of it in your head at once, where every item shouts at the same volume. The list feels infinite because, in your mind, it has no order and no end.",
+        "Getting it out of your head and onto paper is the first relief. Seeing nine actual items is almost always less frightening than the vague sense of endless tasks."
+      ]
+    },
+    {
+      "heading": "Three piles, one next step",
+      "paragraphs": [
+        "Sort the list into three piles: must happen today, can wait until tomorrow, and — be honest — can be dropped or delegated. Most lists shrink surprisingly fast under that third question.",
+        "Then pick exactly one item from today's pile and make it the only job until it is done or the timer runs out. Overwhelm fades fastest when you give your attention a single place to stand."
+      ]
+    }
+  ],
+  "takeaway": "Write it all down, sort it into three piles, and do one thing.",
+  "fiction": false
+}

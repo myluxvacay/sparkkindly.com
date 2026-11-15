@@ -1,0 +1,32 @@
+{
+  "id": "mystery-number-346",
+  "scheduledDate": "2026-05-30",
+  "brand": "play",
+  "prompt": "I am thinking of a number. If you double it and add 6, you get 20. What is my number?",
+  "options": [
+    {
+      "id": "a",
+      "text": "6"
+    },
+    {
+      "id": "b",
+      "text": "7"
+    },
+    {
+      "id": "c",
+      "text": "8"
+    },
+    {
+      "id": "d",
+      "text": "9"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Work backwards: 20 minus 6 is 14, and half of 14 is 7. Check: 7 doubled is 14, plus 6 makes 20.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

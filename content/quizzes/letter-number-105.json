@@ -1,0 +1,32 @@
+{
+  "id": "letter-number-105",
+  "scheduledDate": "2026-10-01",
+  "brand": "play",
+  "prompt": "Following the pattern A=1, B=2, C=3, what number matches the letter D?",
+  "options": [
+    {
+      "id": "a",
+      "text": "5"
+    },
+    {
+      "id": "b",
+      "text": "4"
+    },
+    {
+      "id": "c",
+      "text": "26"
+    },
+    {
+      "id": "d",
+      "text": "3"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Each letter matches its position in the alphabet: A is 1st, B is 2nd, C is 3rd, so D, the 4th letter, matches 4.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

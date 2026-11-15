@@ -1,0 +1,32 @@
+{
+  "id": "letter-leaps-341",
+  "scheduledDate": "2026-05-25",
+  "brand": "play",
+  "prompt": "What letter comes next in this pattern: A, C, F, J, O, ?",
+  "options": [
+    {
+      "id": "a",
+      "text": "S"
+    },
+    {
+      "id": "b",
+      "text": "T"
+    },
+    {
+      "id": "c",
+      "text": "U"
+    },
+    {
+      "id": "d",
+      "text": "V"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The letters jump forward by 2, then 3, then 4, then 5 places. The next jump is 6 places from O, which lands on U.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-08",
+  "slug": "why-leaves-change-colour",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why Leaves Change Colour in Autumn",
+  "description": "The reds and golds of autumn were hiding in the leaf all along — revealed when the green steps aside.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Autumn leaf color",
+      "url": "https://en.wikipedia.org/wiki/Autumn_leaf_color",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Green is chlorophyll’s colour",
+      "paragraphs": [
+        "A summer leaf is green because it is packed with chlorophyll, the pigment that captures sunlight for photosynthesis. Chlorophyll is so strong a colour that it masks everything else in the leaf.",
+        "But the leaf was never only green. All summer long it also holds yellow and orange pigments called carotenoids — the same family of pigments that colours carrots. You just cannot see them under the green."
+      ]
+    },
+    {
+      "heading": "The great reveal",
+      "paragraphs": [
+        "As days shorten and nights cool, trees begin to withdraw from their leaves. Chlorophyll breaks down and is not replaced, the green drains away, and the yellows and oranges finally show through.",
+        "The reds and purples are a different story: many trees make those pigments, called anthocyanins, fresh in autumn. Scientists think they may act as a kind of sunscreen, protecting the leaf while the tree reclaims valuable nutrients from it."
+      ]
+    },
+    {
+      "heading": "Why trees bother",
+      "paragraphs": [
+        "Before a leaf falls, the tree salvages what it can — especially nitrogen and other nutrients that are costly to gather from the soil. The colour change is part of an orderly retreat.",
+        "Then the leaves drop, and the tree rests through winter with its savings banked in trunk and roots, ready for spring."
+      ]
+    }
+  ],
+  "takeaway": "Autumn colour is partly an unveiling: when green chlorophyll fades, the yellows and oranges that were always there shine through.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "test-study-plan-480",
+  "scheduledDate": "2026-12-24",
+  "brand": "grow",
+  "prompt": "You have a big test next week. Which study plan is most likely to help?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Study everything the night before"
+    },
+    {
+      "id": "b",
+      "text": "Study a little each day"
+    },
+    {
+      "id": "c",
+      "text": "Do not study at all"
+    },
+    {
+      "id": "d",
+      "text": "Just worry about it all week"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Studying a little each day helps your brain remember, and it feels much less stressful.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

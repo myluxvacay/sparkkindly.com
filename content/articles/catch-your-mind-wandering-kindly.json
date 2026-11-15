@@ -1,0 +1,56 @@
+{
+  "id": "grow-bulk-49",
+  "slug": "catch-your-mind-wandering-kindly",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Catch your mind wandering, kindly",
+  "description": "A wandering mind is not a failed mind; noticing the wander and returning is the whole exercise of focus.",
+  "publishedAt": "2026-09-19",
+  "updatedAt": "2026-09-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "focus",
+    "mindfulness"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Wandering is normal, not a flaw",
+      "paragraphs": [
+        "Every mind wanders, including the minds of people who look serenely focused. Attention drifts to plans, memories and small worries because that is part of what brains do between tasks. The drift itself is not the problem.",
+        "What matters is what happens next. If noticing the drift triggers a burst of self-criticism — “I have no discipline, I have wasted ten minutes” — the criticism itself becomes the bigger distraction."
+      ]
+    },
+    {
+      "heading": "Notice, name, return",
+      "paragraphs": [
+        "Practise a three-step return: notice that your mind has wandered, name it briefly (“planning”, “remembering”, “worrying”), and gently bring your attention back to the task or the breath. That is one full repetition of the focus exercise.",
+        "Each return makes the next noticing a little quicker. Over weeks, people often find they catch drifts earlier — not because the mind wanders less, but because the noticing muscle is stronger."
+      ]
+    },
+    {
+      "heading": "Make the return easy",
+      "paragraphs": [
+        "Keep your place visibly marked so returning costs nothing: a finger on the line, the cursor in the right paragraph, the sticky note naming the task. The easier the return, the less drama the drift causes.",
+        "Be as patient with your attention as you would be with a puppy on a lead. You do not scold it for wandering towards something interesting. You just guide it back, kindly, as many times as it takes."
+      ]
+    }
+  ],
+  "takeaway": "Focus is not never wandering — it is noticing, and returning, without the scolding.",
+  "fiction": false
+}

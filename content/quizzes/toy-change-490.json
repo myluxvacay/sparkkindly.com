@@ -1,0 +1,32 @@
+{
+  "id": "toy-change-490",
+  "scheduledDate": "2027-01-03",
+  "brand": "save",
+  "prompt": "You pay for a $16 toy with a $20 bill. How much change do you get?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$2"
+    },
+    {
+      "id": "b",
+      "text": "$4"
+    },
+    {
+      "id": "c",
+      "text": "$6"
+    },
+    {
+      "id": "d",
+      "text": "$36"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "$20 minus $16 is $4, so your change is $4.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

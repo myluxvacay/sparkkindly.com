@@ -1,0 +1,55 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-33",
+  "slug": "greener-choices-on-a-budget",
+  "title": "Greener choices on a budget",
+  "description": "Being greener does not require expensive products — the cheapest changes are often the greenest.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "tags": [
+    "green",
+    "energy-saving",
+    "saving"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Free and green overlap",
+      "paragraphs": [
+        "Using less energy, wasting less food, walking short journeys, and keeping things longer are all free — and they are among the most effective green actions available to anyone.",
+        "Beware the idea that green living means buying a new set of special products. Replacing working things with 'eco' versions usually costs money and resources for little gain."
+      ]
+    },
+    {
+      "heading": "Spend where it counts",
+      "paragraphs": [
+        "If you do spend, spend on durability and repair: a bottle that lasts years, shoes that can be resoled, a bike that gets maintained. Cost per use applies to green choices too.",
+        "Second-hand is a green superpower: clothes, furniture, books, and electronics all carry a much smaller footprint when they are pre-loved."
+      ]
+    },
+    {
+      "heading": "Progress, not perfection",
+      "paragraphs": [
+        "Nobody lives a zero-impact life, and guilt is a poor motivator. Pick the green habits that fit your life and budget, keep them, and add another when you are ready."
+      ]
+    }
+  ],
+  "takeaway": "The greenest choices are usually the free ones: use less, keep things longer, buy second-hand."
+}

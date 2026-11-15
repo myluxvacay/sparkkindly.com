@@ -1,0 +1,55 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-32",
+  "slug": "fixing-before-replacing",
+  "title": "Fixing before replacing",
+  "description": "A repair is often cheaper, faster, and greener than a replacement — here is how to judge.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "tags": [
+    "reducing-waste",
+    "spending-wisely",
+    "green"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The repair question",
+      "paragraphs": [
+        "When something breaks, pause before replacing. Ask: What exactly is broken? Is it a part that can be replaced, a skill I can learn, or a job for a local repairer? Many failures are small parts wearing out, not whole products dying.",
+        "Online repair guides and videos cover an enormous range of common fixes, and community repair cafés in many towns will help you fix items free or cheaply."
+      ]
+    },
+    {
+      "heading": "Do the honest maths",
+      "paragraphs": [
+        "Compare the repair cost with replacement, but include the hidden costs of new: delivery, setup, disposing of the old item, and learning a new device. Repair often wins by more than the sticker comparison suggests.",
+        "Safety first, though: electrical, gas, and structural repairs belong to qualified professionals. A wise fix knows its limits."
+      ]
+    },
+    {
+      "heading": "Care prevents repairs",
+      "paragraphs": [
+        "Cleaning filters, descaling, updating software, and storing things dry prevent many breakdowns entirely. Ten minutes of care beats a weekend of repair."
+      ]
+    }
+  ],
+  "takeaway": "When something breaks, diagnose first — many fixes are small, cheap, and satisfying."
+}

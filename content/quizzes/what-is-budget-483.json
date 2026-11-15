@@ -1,0 +1,32 @@
+{
+  "id": "what-is-budget-483",
+  "scheduledDate": "2026-12-27",
+  "brand": "save",
+  "prompt": "What is a budget?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A plan for how to use your money"
+    },
+    {
+      "id": "b",
+      "text": "A type of coin"
+    },
+    {
+      "id": "c",
+      "text": "A game about shopping"
+    },
+    {
+      "id": "d",
+      "text": "A building where money is kept"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A budget is a plan that decides in advance how your money will be spent and saved.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

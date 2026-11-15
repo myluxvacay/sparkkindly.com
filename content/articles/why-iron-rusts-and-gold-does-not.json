@@ -1,0 +1,65 @@
+{
+  "id": "discover-bulk-15",
+  "slug": "why-iron-rusts-and-gold-does-not",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why Iron Rusts and Gold Doesn’t",
+  "description": "Rust is iron slowly turning back into rock, while gold sits out the whole reaction — unchanged for thousands of years.",
+  "publishedAt": "2026-11-07",
+  "updatedAt": "2026-11-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chemistry"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Rust",
+      "url": "https://en.wikipedia.org/wiki/Rust",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Corrosion",
+      "url": "https://en.wikipedia.org/wiki/Corrosion",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Rust needs three things",
+      "paragraphs": [
+        "Leave an iron nail outside and chemistry gets to work. Rust forms when iron meets both oxygen and water; remove any one of the three and the process stops. That is why iron survives for centuries in dry deserts and decays quickly by the sea.",
+        "Rust itself is iron oxide — iron returning, atom by atom, toward the kind of compound it was when miners dug it from the ground. Worse, rust flakes and crumbles, constantly exposing fresh metal underneath, so the damage keeps going."
+      ]
+    },
+    {
+      "heading": "Why gold is different",
+      "paragraphs": [
+        "Gold is famously unreactive. It holds its electrons tightly and refuses to combine with oxygen under ordinary conditions, so there is no gold equivalent of rust.",
+        "That is why gold objects pulled from ancient tombs and shipwrecks can still shine. Chemists place metals on a reactivity scale, and gold sits at the very bottom — the metal least interested in reacting with anything."
+      ]
+    },
+    {
+      "heading": "Fighting rust",
+      "paragraphs": [
+        "Because rust never sleeps, neither do engineers. Paint seals iron away from air and water. Galvanising coats it in zinc, which corrodes first and sacrifices itself. Stainless steel mixes in chromium, which forms an invisible, self-repairing protective skin.",
+        "Every bridge, ship and car is a quiet argument with chemistry — and rust is always looking for a way back in."
+      ]
+    }
+  ],
+  "takeaway": "Rust is a slow chemical conversation between iron, oxygen and water — and gold simply refuses to join in.",
+  "fiction": false
+}

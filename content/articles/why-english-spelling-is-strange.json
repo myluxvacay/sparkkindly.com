@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-42",
+  "slug": "why-english-spelling-is-strange",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why English Spelling Is So Strange",
+  "description": "Knight, through, island, debt — English spelling looks chaotic because it is a museum of invasions, sound changes, and printing habits.",
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "language",
+    "etymology",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Great Vowel Shift",
+      "url": "https://en.wikipedia.org/wiki/Great_Vowel_Shift",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: English orthography",
+      "url": "https://en.wikipedia.org/wiki/English_orthography",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The sounds moved; the spelling stayed",
+      "paragraphs": [
+        "Between roughly 1400 and 1700, English pronunciation went through the Great Vowel Shift: the long vowels of the language systematically changed their sounds. Words were spelled one way and, over generations, came to be pronounced another.",
+        "Printing arrived in England in the late 1400s, right in the middle of the shift. Printers fixed spellings in books while pronunciation was still moving, freezing a moving target. Much of English spelling is a photograph taken mid-jump."
+      ]
+    },
+    {
+      "heading": "Layers of borrowed words",
+      "paragraphs": [
+        "English has absorbed vocabulary from Norse, French, Latin, Greek, and many other languages, and it often kept the donor language's spelling habits. That is why similar sounds are written so many different ways across different word families.",
+        "Some odd spellings were deliberate edits. Scribes and scholars added letters to show off Latin roots — the 'b' in debt was inserted to point back to the Latin debitum, even though nobody had ever pronounced it in English. The 's' in island was added by a similar mistake about its origins."
+      ]
+    },
+    {
+      "heading": "Chaos with patterns inside",
+      "paragraphs": [
+        "English spelling is irregular, but it is not random. It often preserves information about a word's family and meaning — the silent letter in sign reappears, pronounced, in signal — which can help readers even when it torments spellers.",
+        "Reformers have tried to simplify it for centuries and mostly failed, because hundreds of millions of readers, books, and now databases are invested in the current system. The strangeness is, by now, load-bearing."
+      ]
+    }
+  ],
+  "takeaway": "English spelling is strange because pronunciation shifted after printing froze the spellings, borrowed words kept foreign habits, and scholars inserted silent letters to show off Latin roots.",
+  "fiction": false
+}

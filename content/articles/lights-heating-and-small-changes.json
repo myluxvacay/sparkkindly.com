@@ -1,0 +1,60 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-25",
+  "slug": "lights-heating-and-small-changes",
+  "title": "Lights, heating, and small changes",
+  "description": "LEDs, timers, and draught-proofing: the unglamorous changes that pay for themselves.",
+  "publishedAt": "2026-11-12",
+  "updatedAt": "2026-11-12",
+  "tags": [
+    "energy-saving",
+    "reducing-waste"
+  ],
+  "sources": [
+    {
+      "title": "ENERGY STAR",
+      "url": "https://www.energystar.gov/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "Light smarter",
+      "paragraphs": [
+        "LED bulbs use far less electricity than old incandescent bulbs and last much longer. Replace the bulbs you use most first — the kitchen and living room — where the savings per bulb are biggest.",
+        "Daylight is free light. Open curtains during the day, arrange desks near windows, and switch off lights in empty rooms until it becomes a household reflex."
+      ]
+    },
+    {
+      "heading": "Stop heating the outdoors",
+      "paragraphs": [
+        "Draughts around doors and windows leak warmed air. Simple seals, a draught excluder, and closing doors to unused rooms keep heat where you paid for it.",
+        "Bleeding radiators, keeping them unblocked by furniture, and using heating timers so warmth arrives when you are home all make the same energy go further."
+      ]
+    },
+    {
+      "heading": "Small, stacked, permanent",
+      "paragraphs": [
+        "None of these changes is dramatic alone. Stacked together and left in place, they quietly lower every bill that follows — the best kind of saving."
+      ]
+    }
+  ],
+  "takeaway": "Swap the most-used bulbs to LED, seal the draughts, and time heating for when you are home."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "fastest-runner-367",
+  "scheduledDate": "2026-06-20",
+  "brand": "discover",
+  "prompt": "Which is the fastest land animal?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Lion"
+    },
+    {
+      "id": "b",
+      "text": "Horse"
+    },
+    {
+      "id": "c",
+      "text": "Cheetah"
+    },
+    {
+      "id": "d",
+      "text": "Greyhound"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A cheetah can sprint at around 60 to 70 km/h in short bursts, faster than any other land animal.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Cheetah - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cheetah",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "friends-good-news-348",
+  "scheduledDate": "2026-06-01",
+  "brand": "together",
+  "prompt": "Your friend shares some exciting good news. What is the kindest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Top it with your own bigger news"
+    },
+    {
+      "id": "b",
+      "text": "Celebrate with them and ask for details"
+    },
+    {
+      "id": "c",
+      "text": "Say 'lucky you' and move on"
+    },
+    {
+      "id": "d",
+      "text": "Point out what could go wrong"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Sharing someone's joy - asking questions and celebrating with them - is one of the strongest ways to build a friendship.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

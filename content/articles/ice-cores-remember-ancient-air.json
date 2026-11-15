@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-22",
+  "slug": "ice-cores-remember-ancient-air",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Ice Cores: Cylinders of Ancient Air",
+  "description": "Drill deep into Antarctic ice and you can hold bubbles of air trapped before farming existed.",
+  "publishedAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "climate",
+    "earth-science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ice core",
+      "url": "https://en.wikipedia.org/wiki/Ice_core",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Snow that never melts",
+      "paragraphs": [
+        "In Greenland and Antarctica, snow falls on snow that fell last year, and the year before, going back hundreds of thousands of years. Buried deeper and deeper, the snow compresses into ice.",
+        "As it compresses, it traps tiny bubbles — actual samples of the air that was blowing over the ice sheet when that snow fell. An ice core, a cylinder drilled from the depths, is a stack of ancient atmospheres."
+      ]
+    },
+    {
+      "heading": "Reading the layers",
+      "paragraphs": [
+        "Like tree rings, the ice holds annual layers, so scientists can count back through time. The deepest Antarctic cores reach ice about 800,000 years old.",
+        "Melting a bubble’s worth of that ancient air and measuring it shows, among other things, how much carbon dioxide the atmosphere held. For most of that long record it stayed between about 180 and 300 parts per million. Today it stands above 420 — measured directly, by instruments, and by the newest ice at the top of the core."
+      ]
+    },
+    {
+      "heading": "Volcanoes sign their work",
+      "paragraphs": [
+        "The ice also keeps receipts of eruptions. Thin layers of volcanic ash and acid in the core match known eruptions, letting scientists date both the ice and the historical events that followed the eruptions.",
+        "Few archives on Earth are this patient. The ice simply kept everything, one winter at a time."
+      ]
+    }
+  ],
+  "takeaway": "Ice cores are time capsules — their trapped bubbles let scientists measure the air of worlds hundreds of thousands of years old.",
+  "fiction": false
+}

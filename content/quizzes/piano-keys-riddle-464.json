@@ -1,0 +1,32 @@
+{
+  "id": "piano-keys-riddle-464",
+  "scheduledDate": "2026-12-08",
+  "brand": "play",
+  "prompt": "I have many keys, but I cannot open a single lock. What am I?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A piano"
+    },
+    {
+      "id": "b",
+      "text": "A map"
+    },
+    {
+      "id": "c",
+      "text": "A backpack"
+    },
+    {
+      "id": "d",
+      "text": "A door"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A piano has keys that you press to make music, not keys that open locks.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

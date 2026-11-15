@@ -1,0 +1,32 @@
+{
+  "id": "thirty-goal-459",
+  "scheduledDate": "2026-12-03",
+  "brand": "save",
+  "prompt": "Your goal is to save $30. If you save $3 each week, how many weeks will it take?",
+  "options": [
+    {
+      "id": "a",
+      "text": "3 weeks"
+    },
+    {
+      "id": "b",
+      "text": "6 weeks"
+    },
+    {
+      "id": "c",
+      "text": "9 weeks"
+    },
+    {
+      "id": "d",
+      "text": "10 weeks"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "30 divided by 3 is 10, so saving $3 a week reaches $30 in 10 weeks.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

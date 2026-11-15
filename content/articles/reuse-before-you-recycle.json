@@ -1,0 +1,55 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-29",
+  "slug": "reuse-before-you-recycle",
+  "title": "Reuse before you recycle",
+  "description": "A jar, a shirt, a box: most things can live a second life before they become recycling.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "tags": [
+    "recycling",
+    "reducing-waste",
+    "green"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Second-life thinking",
+      "paragraphs": [
+        "Before binning anything, ask: Could this hold something, become something, or serve someone else? Glass jars become storage, old t-shirts become cleaning cloths, and sturdy boxes become organisers.",
+        "Repair is reuse too. A sewn button, a glued handle, or a replaced phone battery can add years to an item at a fraction of the cost and footprint of a new one."
+      ]
+    },
+    {
+      "heading": "Pass it on",
+      "paragraphs": [
+        "Things you no longer need may be exactly what someone else is looking for. Donate, swap, sell, or give away usable items through local groups, charity shops, or school exchanges.",
+        "Keeping items in use is one of the simplest environmental wins: no new manufacture, no disposal, and someone else saves money too."
+      ]
+    },
+    {
+      "heading": "Buy with a second life in mind",
+      "paragraphs": [
+        "When you do buy, favour things that are repairable, refillable, or useful in more than one way. Their second life is decided on the day you choose them."
+      ]
+    }
+  ],
+  "takeaway": "Ask of everything: can it be reused, repaired, or passed on before it is recycled?"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-04",
+  "slug": "track-the-streak-not-the-score",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Track the Streak, Not the Score",
+  "description": "Marking each day you show up is more encouraging — and more honest — than judging how well you did.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "habits",
+    "motivation"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A cross on the calendar",
+      "paragraphs": [
+        "A simple streak tracker asks only one question: did you show up today? A cross, a tick, a dot in a notebook. It does not grade the quality of the effort, and that is its strength — a rough, tired ten minutes still earns the mark.",
+        "Grading yourself every day turns a habit into an exam, and exams create avoidance. Showing up, by contrast, is almost always within your control, even on the worst days."
+      ]
+    },
+    {
+      "heading": "When a day gets missed",
+      "paragraphs": [
+        "Streaks break. Travel, illness and plain forgetfulness happen to everyone. The useful rule is simple: never miss twice in a row if you can help it. One missed day is an event; the second is the start of a new pattern.",
+        "If you do miss, restart with the smallest version of the habit the very next day. The streak that matters most is not the longest one — it is the one you are willing to begin again."
+      ]
+    }
+  ],
+  "takeaway": "Count the days you showed up, and forgive the rest.",
+  "fiction": false
+}

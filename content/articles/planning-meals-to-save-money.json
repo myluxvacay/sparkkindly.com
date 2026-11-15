@@ -1,0 +1,55 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-31",
+  "slug": "planning-meals-to-save-money",
+  "title": "Planning meals to save money",
+  "description": "A loose weekly meal plan cuts the shopping bill, the waste, and the 6pm panic.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "tags": [
+    "reducing-waste",
+    "budgeting",
+    "saving"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Plan loosely, not rigidly",
+      "paragraphs": [
+        "A meal plan does not need to be a strict timetable. List four or five dinners for the week, shop for those, and let the order flex with your energy and appetite. Loose plans survive real life; rigid ones get abandoned.",
+        "Build the plan around overlapping ingredients — the vegetables, grains, and proteins that appear in several meals — so nothing is bought for a single use and forgotten."
+      ]
+    },
+    {
+      "heading": "One shop, fewer top-ups",
+      "paragraphs": [
+        "Midweek top-up shops are where budgets leak: you go in for milk and leave with snacks, offers, and extras. A good list from a loose plan makes one main shop realistic.",
+        "Keep a running note of things as they run out. Writing it down in the moment beats reconstructing it in the shop aisle."
+      ]
+    },
+    {
+      "heading": "Batch and freeze",
+      "paragraphs": [
+        "Cooking double and freezing half turns one effort into two meals, and future busy-you gets a homemade ready meal for almost no extra cost."
+      ]
+    }
+  ],
+  "takeaway": "Plan four or five flexible dinners around shared ingredients, shop once, and freeze the extras."
+}

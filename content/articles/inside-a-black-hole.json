@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-23",
+  "slug": "inside-a-black-hole",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Black Holes: Where Gravity Wins Completely",
+  "description": "A black hole is what happens when so much mass squeezes into so little space that not even light can climb out.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "physics"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Black hole",
+      "url": "https://en.wikipedia.org/wiki/Black_hole",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "NASA Science: Black Holes",
+      "url": "https://science.nasa.gov/universe/black-holes/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The point of no return",
+      "paragraphs": [
+        "Everything with mass has an escape velocity — the speed needed to leave it forever. For Earth it is about 11 kilometres per second. Squeeze a mass into a small enough space, and that speed rises past the speed of light itself.",
+        "That is a black hole. Its boundary, the event horizon, is the point of no return: cross it, and every path leads inward. Most black holes are born when a massive star collapses at the end of its life. Others, the supermassive ones, weigh millions or billions of Suns and sit at the centres of galaxies — including Sagittarius A*, the four-million-solar-mass black hole at the heart of our own Milky Way."
+      ]
+    },
+    {
+      "heading": "Seeing the invisible",
+      "paragraphs": [
+        "A black hole emits no light, so astronomers study it by its effects: stars whipping around an unseen mass, and gas heating to a brilliant glow as it spirals in.",
+        "In 2019 the Event Horizon Telescope — a planet-wide network of radio dishes working as one — produced the first image of a black hole’s shadow, in the galaxy M87. In 2022 it did the same for our own Sagittarius A*. We cannot see the hole, but we can photograph its silhouette against the fire around it."
+      ]
+    },
+    {
+      "heading": "Not cosmic vacuum cleaners",
+      "paragraphs": [
+        "Despite the popular image, a black hole does not suck things in from afar. Far away, its gravity behaves like the gravity of anything else with the same mass — if the Sun were replaced by a black hole of equal mass, Earth’s orbit would not change at all.",
+        "The danger is only up close, past the point where light itself gives up. The rest is just gravity, doing what gravity does."
+      ]
+    }
+  ],
+  "takeaway": "A black hole is not a hole at all — it is mass packed so tightly that its gravity traps light itself, and we study it by the glow of everything around it.",
+  "fiction": false
+}

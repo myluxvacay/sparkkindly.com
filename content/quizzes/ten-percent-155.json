@@ -1,0 +1,32 @@
+{
+  "id": "ten-percent-155",
+  "scheduledDate": "2026-11-22",
+  "brand": "save",
+  "prompt": "You earn $50 and decide to save 10% of it. How much do you put aside?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$1"
+    },
+    {
+      "id": "b",
+      "text": "$5"
+    },
+    {
+      "id": "c",
+      "text": "$10"
+    },
+    {
+      "id": "d",
+      "text": "$15"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "10% means one tenth, and $50 divided by 10 is $5, so you put five dollars aside.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

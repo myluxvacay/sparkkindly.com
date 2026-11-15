@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-09",
+  "slug": "how-a-caterpillar-becomes-a-butterfly",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How a Caterpillar Becomes a Butterfly",
+  "description": "Inside a quiet chrysalis, a caterpillar’s body is rebuilt almost from scratch into something that flies.",
+  "publishedAt": "2026-11-01",
+  "updatedAt": "2026-11-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Metamorphosis",
+      "url": "https://en.wikipedia.org/wiki/Metamorphosis",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Four acts, one animal",
+      "paragraphs": [
+        "A butterfly’s life runs in four acts: egg, larva, pupa and adult. The larva — the caterpillar — has one overwhelming job: eat and grow. It sheds its skin several times as it outgrows it.",
+        "When it is ready, it forms a pupa, called a chrysalis in butterflies. From the outside, almost nothing seems to happen for days or weeks. Inside, it is the busiest time of the animal’s life."
+      ]
+    },
+    {
+      "heading": "The great rebuild",
+      "paragraphs": [
+        "Within the chrysalis, much of the caterpillar’s body breaks down into a kind of living soup. But not everything dissolves. Small clusters of cells, called imaginal discs, survive — and each one grows into a part of the adult: a wing, a leg, an antenna.",
+        "Remarkably, experiments suggest that some learning can survive the rebuild: moths trained as caterpillars to avoid a smell have been shown to avoid it as adults. A memory, carried through a near-total reconstruction."
+      ]
+    },
+    {
+      "heading": "Why live two lives?",
+      "paragraphs": [
+        "The two stages barely resemble each other, and that is the point. Caterpillars are eating machines specialised for growth; butterflies are flying machines specialised for mating and spreading eggs across many plants.",
+        "Because the stages eat different foods, parents and offspring never compete for the same meal. Two lives, one animal, no rivalry."
+      ]
+    }
+  ],
+  "takeaway": "Metamorphosis lets one animal live two different lives — an eating machine first, then a flying one — rebuilt from small clusters of patient cells.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "hallway-help-470",
+  "scheduledDate": "2026-12-14",
+  "brand": "together",
+  "prompt": "You accidentally bump into someone in the hallway and they drop their books. What should you do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keep walking quickly"
+    },
+    {
+      "id": "b",
+      "text": "Say sorry and help pick the books up"
+    },
+    {
+      "id": "c",
+      "text": "Blame them for standing there"
+    },
+    {
+      "id": "d",
+      "text": "Laugh with your friends"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Saying sorry and helping pick up the books fixes the accident and shows you care.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

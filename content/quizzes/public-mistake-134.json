@@ -1,0 +1,32 @@
+{
+  "id": "public-mistake-134",
+  "scheduledDate": "2026-10-07",
+  "brand": "together",
+  "prompt": "You spot a mistake in a colleague's work during a big meeting. What is the kindest helpful move?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Announce it loudly so everyone learns"
+    },
+    {
+      "id": "b",
+      "text": "Say nothing ever, even if it causes problems later"
+    },
+    {
+      "id": "c",
+      "text": "Mention it to them privately afterwards, unless it must be fixed right now"
+    },
+    {
+      "id": "d",
+      "text": "Fix it secretly and take the credit"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A private word protects their dignity while still getting the mistake fixed; calling it out publicly usually embarrasses more than it helps.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

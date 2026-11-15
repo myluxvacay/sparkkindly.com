@@ -1,0 +1,60 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-03",
+  "slug": "how-interest-works-simply",
+  "title": "How interest works, simply",
+  "description": "Interest can help savings grow or make borrowing cost more — here is the idea in plain language.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "tags": [
+    "money-basics",
+    "saving"
+  ],
+  "sources": [
+    {
+      "title": "Consumer Financial Protection Bureau",
+      "url": "https://www.consumerfinance.gov/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "Interest when you save",
+      "paragraphs": [
+        "When you keep money in a savings account, the bank may pay you interest — a small extra amount — for keeping it there. If you save $100 and the interest for a year is 2%, you would have about $102 after a year, before any fees or tax.",
+        "Over time, you can also earn interest on the interest you already earned. That snowball idea is called compound interest, and it is why starting early, even with small amounts, can help."
+      ]
+    },
+    {
+      "heading": "Interest when you borrow",
+      "paragraphs": [
+        "Borrowing works the other way. If you borrow money, interest is part of what you pay back on top of the amount borrowed. Borrowing $100 at 20% interest for a year could mean paying back about $120 if nothing is repaid during that year.",
+        "That is why reading the interest rate and the total cost matters before borrowing. A low monthly payment can still mean a high total cost if it stretches over a long time."
+      ]
+    },
+    {
+      "heading": "No promises, just maths",
+      "paragraphs": [
+        "Interest rates change, accounts have different rules, and this article is education only — not a recommendation for any account or loan. The lasting lesson is simple: interest rewards patience when you save, and adds cost when you borrow."
+      ]
+    }
+  ],
+  "takeaway": "Interest is a small percentage with big effects over time — in your favour when saving, against you when borrowing."
+}

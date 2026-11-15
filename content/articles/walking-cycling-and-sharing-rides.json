@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-34",
+  "slug": "walking-cycling-and-sharing-rides",
+  "title": "Walking, cycling, and sharing rides",
+  "description": "Short journeys are where transport money and emissions quietly pile up — and where change is easiest.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "tags": [
+    "green",
+    "saving"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The short-journey habit",
+      "paragraphs": [
+        "A large share of car journeys are surprisingly short — distances that are walkable or cyclable in 10–20 minutes. Swapping even some of them saves fuel, parking costs, and wear, while adding movement to your day.",
+        "Start with one regular journey: the school run, the station, the local shop. One swapped trip, repeated weekly, becomes a habit with real totals by the end of a year."
+      ]
+    },
+    {
+      "heading": "Sharing the rest",
+      "paragraphs": [
+        "For journeys that need a vehicle, sharing lifts with friends, neighbours, or colleagues splits costs and emissions. Public transport turns travel time into reading or rest time, which has its own value.",
+        "If you cycle, basic maintenance — pumped tyres, working brakes, a little chain oil — keeps it safe and pleasant, and a second-hand bike in good condition is one of the cheapest vehicles there is."
+      ]
+    },
+    {
+      "heading": "Safety and realism",
+      "paragraphs": [
+        "Choose routes you feel safe on, be visible in the dark, and skip the swap in dangerous weather. A sustainable habit is one that still feels sensible in February."
+      ]
+    }
+  ],
+  "takeaway": "Swap one regular short journey to walking or cycling, and share the rides that remain."
+}

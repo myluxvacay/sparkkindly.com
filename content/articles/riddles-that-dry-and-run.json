@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-08",
+  "slug": "riddles-that-dry-and-run",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Five Riddles to Carry in Your Pocket",
+  "description": "A towel, a piano, a river and some footsteps — five classic riddles to try on friends, with the answers kept safely at the end.",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "words"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Try these first",
+      "paragraphs": [
+        "One: what gets wetter the more it dries? Two: what has many keys but cannot open a single lock? Three: what runs but never walks, has a mouth but never talks, and has a bed but never sleeps?",
+        "Four: the more of me you take, the more you leave behind — what am I? Five: what has a head and a tail, but no body at all? Give each one a fair minute of thought before peeking; riddles reward the pause."
+      ]
+    },
+    {
+      "heading": "The answers",
+      "paragraphs": [
+        "One is a towel: drying you is exactly what makes it wet. Two is a piano, whose keys make music instead of openings. Three is a river — it runs, it has a mouth where it meets the sea, and it rests in its bed.",
+        "Four is footsteps: every step you take leaves another print behind you. Five is a coin, with a head on one side and a tail on the other. Notice the shared trick — each riddle uses an everyday word (bed, mouth, keys) in its second, quieter meaning."
+      ]
+    },
+    {
+      "heading": "Make one of your own",
+      "paragraphs": [
+        "You can build a riddle from any object in the room. Pick something with a part that shares a name with something else — the hands of a clock, the teeth of a comb, the eye of a needle — then describe only the confusing meaning and let your listener untangle it.",
+        "Test it on a friend and listen to their wrong guesses with interest: a good riddle makes the wrong answers feel close, and the right one feel obvious the moment it lands."
+      ]
+    }
+  ],
+  "takeaway": "Riddles hide ordinary things behind literal words — once you see the trick, you can build your own from any object in the room.",
+  "fiction": false
+}

@@ -1,0 +1,62 @@
+{
+  "id": "play-bulk-15",
+  "slug": "when-patterns-break",
+  "brand": "play",
+  "contentType": "article",
+  "title": "When Patterns Break: The Circle That Refused to Double",
+  "description": "1, 2, 4, 8, 16… the next number is not 32. A famous puzzle about why confident pattern-spotting can still be wrong.",
+  "publishedAt": "2026-11-03",
+  "updatedAt": "2026-11-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "maths-and-logic",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Dividing a circle into areas",
+      "url": "https://en.wikipedia.org/wiki/Dividing_a_circle_into_areas",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A sequence everyone 'knows'",
+      "paragraphs": [
+        "Draw a circle and put points on its edge. Connect every point to every other point with straight lines, and count the regions the circle is cut into. With 1 point there is 1 region. With 2 points, 2 regions. With 3 points, 4 regions. With 4, there are 8. With 5 — draw it carefully — there are 16.",
+        "One, two, four, eight, sixteen. The next number is obviously 32. Except it is not. It is 31."
+      ]
+    },
+    {
+      "heading": "Draw it and count",
+      "paragraphs": [
+        "Put 6 points on a circle, spaced as evenly as you can, join every pair, and count the regions one by one, ticking them off on the drawing. You will reach 31 — one region short of the doubling pattern's promise. The sequence was never doubling; it was following a subtler rule that merely agrees with doubling for the first five terms.",
+        "This is not a trick played on you. It is a genuine piece of geometry, and it shows something deep: any short list of numbers fits many rules. The first five terms cannot tell you which rule nature — or the puzzle-setter — is using."
+      ]
+    },
+    {
+      "heading": "The lesson",
+      "paragraphs": [
+        "Pattern-spotting is a wonderful instinct, and this puzzle is not a reason to abandon it. It is a reason to hold patterns the right way: as hypotheses to test, not certainties to trust. One more term checked is worth ten terms assumed.",
+        "Keep this circle in mind the next time a chart, a headline or a lucky streak shows you four or five points marching in a line. Ask the pattern-spotter's best question: what would the next one look like if I am wrong?"
+      ]
+    }
+  ],
+  "takeaway": "Five terms are never a promise — the circle sequence doubles four times, then lands on 31, and checking beats assuming.",
+  "fiction": false
+}

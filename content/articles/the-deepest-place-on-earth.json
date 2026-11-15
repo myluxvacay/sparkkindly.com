@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-03",
+  "slug": "the-deepest-place-on-earth",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Deepest Place on Earth",
+  "description": "At the bottom of the Mariana Trench it is pitch dark, near freezing, and the pressure is more than a thousand times what you feel at the surface.",
+  "publishedAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "earth-science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Challenger Deep",
+      "url": "https://en.wikipedia.org/wiki/Challenger_Deep",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Mariana Trench",
+      "url": "https://en.wikipedia.org/wiki/Mariana_Trench",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Down in the Mariana Trench",
+      "paragraphs": [
+        "In the western Pacific, near the island of Guam, the sea floor plunges into a crescent-shaped gash called the Mariana Trench. Its lowest point, the Challenger Deep, lies nearly 11 kilometres below the surface.",
+        "Here is a comparison that helps: Mount Everest is about 8.8 kilometres tall. If you stood Everest in the trench, its summit would still be roughly two kilometres underwater."
+      ]
+    },
+    {
+      "heading": "A world of pressure and darkness",
+      "paragraphs": [
+        "No sunlight reaches the Challenger Deep, the water hovers just above freezing, and the pressure is more than a thousand times greater than at sea level. It sounds like a place where nothing could live.",
+        "Yet expeditions keep finding life: pale snailfish, shrimp-like amphipods and microbes, all adapted to conditions that would crush ordinary animals. The deep ocean is extreme, but it is not empty."
+      ]
+    },
+    {
+      "heading": "Visiting the bottom",
+      "paragraphs": [
+        "Only a handful of people have ever been there. The first were Jacques Piccard and Don Walsh, who descended in the bathyscaphe Trieste in 1960 — a journey that took nearly five hours, down into the dark.",
+        "More visitors have followed in modern submersibles, but the Challenger Deep remains harder to reach than the surface of the Moon. In some ways, the least explored place on the map is on our own planet."
+      ]
+    }
+  ],
+  "takeaway": "The Challenger Deep sits nearly 11 kilometres below the waves — deeper than Everest is tall — and life still finds a way there.",
+  "fiction": false
+}

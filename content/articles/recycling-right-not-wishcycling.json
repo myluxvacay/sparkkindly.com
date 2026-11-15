@@ -1,0 +1,60 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-27",
+  "slug": "recycling-right-not-wishcycling",
+  "title": "Recycling right, not wishcycling",
+  "description": "Putting the wrong things in the recycling bin can spoil the whole batch — here is how to get it right.",
+  "publishedAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "tags": [
+    "recycling",
+    "green"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Recycling",
+      "url": "https://en.wikipedia.org/wiki/Recycling",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "What wishcycling is",
+      "paragraphs": [
+        "Wishcycling is tossing something into recycling because you hope it can be recycled — greasy pizza boxes, coffee cups, plastic bags. Contamination can make whole loads harder or impossible to process.",
+        "Local rules differ, so the golden rule is: check your local list. Most councils and cities publish a simple guide of what goes in which bin."
+      ]
+    },
+    {
+      "heading": "Clean, dry, and loose",
+      "paragraphs": [
+        "In most places, recycling should be clean, dry, and loose — rinse food from containers, let them dry, and do not bag recyclables unless your local rules say to.",
+        "Keep lids and labels as your local guide directs; rules vary because processing equipment varies. When in doubt, the local list beats a general guess."
+      ]
+    },
+    {
+      "heading": "The unsure pile",
+      "paragraphs": [
+        "For items you are unsure about — batteries, electronics, textiles — look for dedicated drop-off points. Many shops and recycling centres take them free, keeping hazardous parts out of general waste."
+      ]
+    }
+  ],
+  "takeaway": "Check your local list, keep recycling clean and dry, and use drop-off points for batteries and electronics."
+}

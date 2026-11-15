@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-27",
+  "slug": "homophones-sound-alike",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Homophones: Same Sound, Different Story",
+  "description": "Their, there, they're. Knight and night. The words that sound identical and behave completely differently — and how to play with them.",
+  "publishedAt": "2026-11-12",
+  "updatedAt": "2026-11-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "words",
+    "word-games"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The troublemaker trio",
+      "paragraphs": [
+        "Homophones are words that sound the same but differ in meaning and usually in spelling. The most famous troublemakers in English are their, there and they're — one word for belonging, one for place, one squeezed from 'they are'. Spell-checkers sail past all three, because each is a perfectly good word in the wrong sentence.",
+        "They exist because English spelling froze centuries ago while pronunciation kept drifting. Words that once sounded different slid together in the mouth but stayed apart on the page, leaving us a permanent spelling obstacle course."
+      ]
+    },
+    {
+      "heading": "Sound-alike pairs to play with",
+      "paragraphs": [
+        "Gather some pairs: knight and night, flour and flower, write and right, peace and piece, sea and see, bare and bear. Each pair is a tiny joke waiting for a sentence. 'The knight rode through the night' uses both halves of a pair and is deeply satisfying to say.",
+        "Do not confuse homophones with homographs — words spelled the same but pronounced differently, like 'lead' the metal and 'lead' the verb. Homophones match in sound; homographs match in spelling; a few unfortunates like 'read' (present) and 'read' (past) manage to be both confusing and the same word."
+      ]
+    },
+    {
+      "heading": "Write a trap sentence",
+      "paragraphs": [
+        "Here is the game: write a sentence that is correct but sounds completely wrong, loading it with homophones. 'I see the sea from here' is a gentle start. Aim for a sentence a friend must read twice — once with their ears, once with their eyes.",
+        "Teachers use these pairs to teach spelling, but they are just as good as play. A language that lets 'flower' hide inside 'flour' is a language that wants to be played with."
+      ]
+    }
+  ],
+  "takeaway": "Homophones sound identical and spell differently — context is the only referee, which is exactly what makes them fun.",
+  "fiction": false
+}

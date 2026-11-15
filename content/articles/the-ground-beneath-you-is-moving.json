@@ -1,0 +1,60 @@
+{
+  "id": "discover-bulk-18",
+  "slug": "the-ground-beneath-you-is-moving",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Ground Beneath You Is Moving",
+  "description": "Your continent is drifting right now — at about the speed your fingernails grow.",
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "earth-science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Plate tectonics",
+      "url": "https://en.wikipedia.org/wiki/Plate_tectonics",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A jigsaw in slow motion",
+      "paragraphs": [
+        "Earth’s hard outer shell is not one piece. It is a set of enormous plates — continents and ocean floor together — and they are all in motion, creeping along at a few centimetres a year.",
+        "The movement is driven from below, where hot rock in the mantle churns extremely slowly, like an unimaginably thick soup on a stove. The plates ride, collide, dive beneath each other and pull apart."
+      ]
+    },
+    {
+      "heading": "The evidence is everywhere",
+      "paragraphs": [
+        "Alfred Wegener noticed a century ago that South America and Africa fit together like torn paper, with matching fossils and rock layers on both sides of the Atlantic. He was ridiculed for suggesting the continents had drifted — and he was right.",
+        "Today there is no need to infer it. Satellites and GPS stations measure the drift directly, year by year, as surely as a ruler measures a table."
+      ]
+    },
+    {
+      "heading": "When plates push and slip",
+      "paragraphs": [
+        "Where plates collide, mountains rise: the Himalayas are still growing by several millimetres a year as India presses into Asia. Where they grind past each other or suddenly slip, earthquakes release the strain.",
+        "It is a strange and steadying thought. The solid ground of everyday life is a raft on a slow river of rock — and it has been travelling for billions of years."
+      ]
+    }
+  ],
+  "takeaway": "Continents drift a few centimetres a year — imperceptible in a day, but enough to open oceans and build mountain ranges over deep time.",
+  "fiction": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-92",
+  "slug": "led-bulbs-room-by-room",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "LED bulbs, room by room",
+  "description": "Replacing bulbs gradually, starting where lights burn longest, is a calm way to cut lighting costs.",
+  "publishedAt": "2026-06-03",
+  "updatedAt": "2026-06-03",
+  "tags": [
+    "energy-saving",
+    "saving"
+  ],
+  "sources": [
+    {
+      "title": "ENERGY STAR",
+      "url": "https://www.energystar.gov/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "Why LEDs use less",
+      "paragraphs": [
+        "Older incandescent bulbs turn most of their energy into heat rather than light. LED bulbs produce the same brightness using far less electricity, and they typically last much longer too, so you buy replacements far less often.",
+        "Because LEDs cost more upfront than old-style bulbs, swapping every bulb in the house at once can feel expensive. There is no need. A room-by-room approach spreads the cost and still captures most of the saving."
+      ]
+    },
+    {
+      "heading": "Start where lights burn longest",
+      "paragraphs": [
+        "The kitchen, living room and hallway lights are usually on for the most hours each day. Replacing those bulbs first gives the quickest payback, because every hour they run is an hour at the lower rate.",
+        "Bedrooms and spare rooms used briefly each day can wait until a bulb fails naturally. When it does, replace it with an LED then, rather than keeping a stock of old bulbs to use up."
+      ]
+    },
+    {
+      "heading": "Choosing a bulb you will like",
+      "paragraphs": [
+        "Brightness is measured in lumens, not watts: roughly 800 lumens matches an old 60-watt bulb. Colour temperature matters for comfort too. Warm white, around 2700K, suits living spaces, while cooler white can feel clearer in a kitchen or study.",
+        "Check the fitting and whether you need a dimmable version before you buy. Keeping the receipt for the first bulb in each room makes it easy to match the rest later."
+      ]
+    }
+  ],
+  "takeaway": "Swap the bulbs in your busiest rooms first, and let the rest follow as old bulbs fail."
+}

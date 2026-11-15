@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-35",
+  "slug": "growing-something-green",
+  "title": "Growing something green",
+  "description": "Herbs on a windowsill teach patience, seasons, and where food comes from — for pennies.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "tags": [
+    "green",
+    "reducing-waste"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Start with herbs",
+      "paragraphs": [
+        "You do not need a garden to grow food. Basil, mint, coriander, and spring onions grow happily in pots on a sunny windowsill, and herbs are among the most expensive supermarket items per gram — so homegrown ones genuinely save money.",
+        "Seeds cost very little, and some plants regrow from kitchen scraps: spring onion roots in a glass of water will sprout fresh greens more than once."
+      ]
+    },
+    {
+      "heading": "Care is the curriculum",
+      "paragraphs": [
+        "A plant teaches a daily rhythm: light, water, patience, and noticing small changes. For young people especially, growing something is a calm counterweight to instant everything.",
+        "Failures are part of it. A wilted pot is a lesson about water or light, not a verdict on you as a gardener. Try again with what you learned."
+      ]
+    },
+    {
+      "heading": "Share the harvest",
+      "paragraphs": [
+        "A handful of homegrown herbs given to a neighbour or stirred into a shared meal turns a small pot into a small kindness — which is rather the point of SparkKindly."
+      ]
+    }
+  ],
+  "takeaway": "Grow herbs on a windowsill: cheap, calming, and quietly educational."
+}

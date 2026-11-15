@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-31",
+  "slug": "collect-ideas-like-stones",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Collect Ideas Like Stones",
+  "description": "Creative people are not idea machines — they are idea collectors, with a pocket to put them in.",
+  "publishedAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "creativity",
+    "habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Ideas arrive at odd times",
+      "paragraphs": [
+        "Ideas rarely turn up during scheduled “thinking time.” They arrive in showers, on buses, mid-conversation — and they leave quickly, usually within minutes, if nothing catches them.",
+        "The difference between people who “have ideas” and people who don't is often just a capture habit: a notebook, a notes app, a voice memo — one trusted place where every fragment goes, however small or silly."
+      ]
+    },
+    {
+      "heading": "Collect now, judge later",
+      "paragraphs": [
+        "Write the idea down in a few words, exactly as it arrived, without evaluating it. Judgement during collection kills the supply; there will be plenty of time to sort the stones later.",
+        "Review your collection every week or two. Most entries will stay stones — but combinations appear, and one dull fragment plus another dull fragment sometimes makes the thing you were looking for all along."
+      ]
+    }
+  ],
+  "takeaway": "One notebook, every fragment, no judging — that is an idea system.",
+  "fiction": false
+}

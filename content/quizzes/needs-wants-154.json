@@ -1,0 +1,32 @@
+{
+  "id": "needs-wants-154",
+  "scheduledDate": "2026-11-10",
+  "brand": "save",
+  "prompt": "Your shoes are worn out, and you also want a new game. With limited money, which choice is wisest first?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Buy the game - shoes can wait forever"
+    },
+    {
+      "id": "b",
+      "text": "Buy the shoes you need, then save up for the game"
+    },
+    {
+      "id": "c",
+      "text": "Buy neither and hide all the money under your mattress"
+    },
+    {
+      "id": "d",
+      "text": "Buy both using borrowed money"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Covering needs first keeps you comfortable and safe; wants are more fun when you have saved for them without going short on essentials.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

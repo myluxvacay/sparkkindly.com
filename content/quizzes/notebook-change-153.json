@@ -1,0 +1,32 @@
+{
+  "id": "notebook-change-153",
+  "scheduledDate": "2026-10-15",
+  "brand": "save",
+  "prompt": "You buy 3 notebooks at $4 each and pay with a $20 bill. How much change should you get?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$4"
+    },
+    {
+      "id": "b",
+      "text": "$6"
+    },
+    {
+      "id": "c",
+      "text": "$8"
+    },
+    {
+      "id": "d",
+      "text": "$12"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "3 x $4 = $12 spent, and $20 - $12 = $8, so your change is eight dollars.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

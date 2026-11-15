@@ -1,0 +1,32 @@
+{
+  "id": "quarter-past-110",
+  "scheduledDate": "2026-11-04",
+  "brand": "play",
+  "prompt": "A clock shows quarter past three. What is the time in digital form?",
+  "options": [
+    {
+      "id": "a",
+      "text": "3:05"
+    },
+    {
+      "id": "b",
+      "text": "3:15"
+    },
+    {
+      "id": "c",
+      "text": "3:30"
+    },
+    {
+      "id": "d",
+      "text": "3:45"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A quarter of an hour is 15 minutes, so quarter past three is written as 3:15.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

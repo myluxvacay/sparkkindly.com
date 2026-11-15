@@ -1,0 +1,32 @@
+{
+  "id": "seven-multiples-366",
+  "scheduledDate": "2026-06-19",
+  "brand": "play",
+  "prompt": "How many numbers between 1 and 50 are multiples of 7?",
+  "options": [
+    {
+      "id": "a",
+      "text": "6"
+    },
+    {
+      "id": "b",
+      "text": "7"
+    },
+    {
+      "id": "c",
+      "text": "8"
+    },
+    {
+      "id": "d",
+      "text": "9"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The multiples of 7 up to 50 are 7, 14, 21, 28, 35, 42 and 49 - that is 7 numbers.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

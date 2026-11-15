@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-12",
+  "slug": "pause-before-you-buy",
+  "title": "Pause before you buy",
+  "description": "A 24-hour pause on non-essential buys can save more than any coupon.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "tags": [
+    "spending-wisely",
+    "money-habits"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The wishlist trick",
+      "paragraphs": [
+        "When you want something non-essential, add it to a wishlist with the date instead of buying it. If you still want it after 24 hours — or a week for bigger items — and it fits your budget, buy it with a clear head.",
+        "Many urges fade overnight. The item was often about the moment: boredom, stress, or a clever advert. A pause lets the moment pass and keeps your money for things that last."
+      ]
+    },
+    {
+      "heading": "Ask three questions",
+      "paragraphs": [
+        "Before buying, ask: Do I need it or just want it right now? Do I already own something similar? Where will it live? Honest answers stop a surprising number of purchases.",
+        "For online shopping, removing saved payment details adds a helpful bit of friction — you have to type the card number, which gives your brain time to catch up."
+      ]
+    },
+    {
+      "heading": "Enjoy the saves",
+      "paragraphs": [
+        "Add up what your pauses saved in a month. Seeing that number grow is its own reward, and you can move some of it to a goal you care about."
+      ]
+    }
+  ],
+  "takeaway": "Put non-essentials on a dated wishlist and let a 24-hour pause do the saving."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "piano-keys-376",
+  "scheduledDate": "2026-06-29",
+  "brand": "play",
+  "prompt": "What has keys but cannot open a single lock?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A map"
+    },
+    {
+      "id": "b",
+      "text": "A piano"
+    },
+    {
+      "id": "c",
+      "text": "A door"
+    },
+    {
+      "id": "d",
+      "text": "A backpack"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A piano has dozens of keys that you press to play music, but none of them can unlock a door.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

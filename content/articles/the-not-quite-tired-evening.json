@@ -1,0 +1,54 @@
+{
+  "id": "grow-bulk-23",
+  "slug": "the-not-quite-tired-evening",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "The Not-Quite-Tired Evening",
+  "description": "Lying awake feeling frustrated helps nothing. Here is what sleep guidance usually suggests instead.",
+  "publishedAt": "2026-11-05",
+  "updatedAt": "2026-11-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "sleep",
+    "stress"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Sleep hygiene",
+      "url": "https://en.wikipedia.org/wiki/Sleep_hygiene",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The wide-awake bed problem",
+      "paragraphs": [
+        "If you spend long stretches lying in bed awake and annoyed, your brain starts linking the bed itself with being alert and frustrated — the opposite of what you want. Sleep guidance commonly suggests breaking that link.",
+        "The classic advice: if you have been awake for roughly twenty minutes and feel nowhere near sleep, get up. Go somewhere dim and do something dull — a boring book, quiet tidying — until sleepiness returns, then go back to bed."
+      ]
+    },
+    {
+      "heading": "Lower the stakes of tonight",
+      "paragraphs": [
+        "One short night is unpleasant but not a disaster; most people function better the next day than their 2 a.m. predictions suggest. Treating tonight's sleep as a test you must pass adds exactly the pressure that keeps you awake.",
+        "If sleeplessness becomes your normal pattern for several weeks, or tiredness is affecting school, work or safety, please see a health professional. Persistent sleep problems are common, treatable, and worth proper attention."
+      ]
+    }
+  ],
+  "takeaway": "If sleep won't come, get up gently — and lower the pressure on tonight.",
+  "fiction": false
+}

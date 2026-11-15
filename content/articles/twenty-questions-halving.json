@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-21",
+  "slug": "twenty-questions-halving",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Twenty Questions: How Twenty Yeses Find Anything",
+  "description": "One person thinks of something; everyone else gets twenty yes-or-no questions. The maths of halving makes the game winnable.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "maths-and-logic"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The power of halving",
+      "paragraphs": [
+        "In Twenty Questions, one player thinks of a person, place or thing, and the others may ask twenty questions that can only be answered yes or no. It sounds hopeless — the world is a big place. But a yes-or-no answer carries exactly one bit of information, and bits add up fast.",
+        "Every perfect question cuts the possibilities in half. After one question, half the world is gone. After ten questions, you have narrowed things by a factor of about a thousand. After twenty, you have sorted through 2 to the power 20 — 1,048,576 possibilities. A million things, found with twenty careful questions."
+      ]
+    },
+    {
+      "heading": "Ask big questions first",
+      "paragraphs": [
+        "The art is in asking questions that split the remaining possibilities near the middle. 'Is it alive?' halves the world. 'Is it bigger than a house?' is useful. 'Is it a specific celebrity I happen to be thinking of?' wastes a question on a one-in-a-million guess.",
+        "Work from the general to the particular: alive or not, then animal or plant or person, then wild or tame, then size, then habitat — and save the naming guess for the very end, when the space is small enough to see across."
+      ]
+    },
+    {
+      "heading": "Play it this week",
+      "paragraphs": [
+        "Play a round tonight with one rule upgrade: after each answer, the guessers must say out loud roughly how many possibilities they think remain. It turns a party game into a visible demonstration of halving — the numbers collapse faster than anyone expects.",
+        "Computers search the same way, in a method called binary search: guess the middle, halve, repeat. You have been doing it since childhood, one yes at a time."
+      ]
+    }
+  ],
+  "takeaway": "Every yes-or-no answer can halve the search space — twenty good questions can find one thing in a million.",
+  "fiction": false
+}

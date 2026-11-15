@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-30",
+  "slug": "give-yourself-permission-to-make-bad-drafts",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Give Yourself Permission to Make Bad Drafts",
+  "description": "The first version is supposed to be rough. Letting it be rough is what allows a second version to exist.",
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "creativity",
+    "writing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The draft is not the thing",
+      "paragraphs": [
+        "Almost everything good you have ever read, watched or listened to began as an embarrassing draft. The creators were not more talented at first attempts; they were simply more willing to have a first attempt at all.",
+        "Judging a draft by finished-work standards is a category error — like criticising scaffolding for not being a house. The draft's only job is to exist so you have something real to improve."
+      ]
+    },
+    {
+      "heading": "Lower the bar on purpose",
+      "paragraphs": [
+        "Set a deliberately low target for first versions: “a messy page,” “the ugly sketch,” “the version where the song is just humming.” Some people even label the file BAD DRAFT 1, which makes its roughness official and oddly freeing.",
+        "Revision is where quality is made, and revision is a far kinder process than creation-from-nothing. You cannot edit a blank page — so make the non-blank page first, however badly."
+      ]
+    }
+  ],
+  "takeaway": "Let the first draft be bad. Editing needs material, not perfection.",
+  "fiction": false
+}

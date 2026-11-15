@@ -1,0 +1,38 @@
+{
+  "id": "great-wall-372",
+  "scheduledDate": "2026-06-25",
+  "brand": "discover",
+  "prompt": "The Great Wall is a famous landmark in which country?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Japan"
+    },
+    {
+      "id": "b",
+      "text": "China"
+    },
+    {
+      "id": "c",
+      "text": "India"
+    },
+    {
+      "id": "d",
+      "text": "Mongolia"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The Great Wall of China stretches for thousands of kilometres across northern China and was built and rebuilt over many centuries.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Great Wall of China - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

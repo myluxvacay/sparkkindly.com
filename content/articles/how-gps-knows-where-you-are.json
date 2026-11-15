@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-33",
+  "slug": "how-gps-knows-where-you-are",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How GPS Knows Where You Are",
+  "description": "Your phone finds you by listening to clocks in space and doing a little geometry — here is the trick, step by step.",
+  "publishedAt": "2026-11-01",
+  "updatedAt": "2026-11-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "technology",
+    "computing"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Global Positioning System",
+      "url": "https://en.wikipedia.org/wiki/Global_Positioning_System",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Satellites that shout the time",
+      "paragraphs": [
+        "GPS is a system of satellites orbiting Earth, operated by the United States. Each satellite carries very precise atomic clocks and constantly broadcasts a signal saying, in effect, 'I am here, and the time is exactly this.'",
+        "Your phone is only a listener. It never transmits to the satellites; it receives their signals and works out its position from them, which is why checking a map does not tell the satellites anything about you."
+      ]
+    },
+    {
+      "heading": "Distance from timing",
+      "paragraphs": [
+        "Radio signals travel at the speed of light, so your phone can calculate its distance from a satellite by measuring how long the signal took to arrive. A tiny delay means a huge distance, which is why the clocks must be so exact.",
+        "Knowing your distance from one satellite puts you somewhere on a giant sphere around it. Distances from more satellites narrow the spot down — this is called trilateration. In practice a receiver uses signals from at least four satellites, with the fourth helping to correct timing errors."
+      ]
+    },
+    {
+      "heading": "Why it sometimes gets it wrong",
+      "paragraphs": [
+        "Signals can be blocked or bounced by tall buildings, tunnels, and dense tree cover, which is why your dot on the map sometimes jumps across the street in a city centre. Weather in space and small errors in satellite positions add their own wobble.",
+        "Even so, ordinary GPS is typically accurate to within a few metres in open sky — remarkable for a system built from clocks twenty thousand kilometres overhead."
+      ]
+    }
+  ],
+  "takeaway": "GPS works by timing signals from satellites with atomic clocks and using trilateration to turn those timings into a position — your phone only listens, it never transmits.",
+  "fiction": false
+}

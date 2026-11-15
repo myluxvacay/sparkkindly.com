@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-32",
+  "slug": "change-the-scene-change-the-idea",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Change the Scene, Change the Idea",
+  "description": "Stuck on something creative? Your brain may not need more effort — it may need different input.",
+  "publishedAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "creativity",
+    "focus"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Same desk, same thoughts",
+      "paragraphs": [
+        "Thinking happens in a context. Sit in the same place, with the same view and the same sounds, and your mind tends to serve up the same associations it served yesterday. That is efficient for routine work and terrible for fresh ideas.",
+        "A change of scene is new raw material: a different room, a library, a bench outside, even facing a different wall. Novel surroundings give your brain novel combinations to work with."
+      ]
+    },
+    {
+      "heading": "Cheap ways to change the input",
+      "paragraphs": [
+        "You do not need a cabin in the woods. Work in a café for an hour. Walk a street you never take. Swap your usual music for silence, or silence for music. Read something from a field that has nothing to do with your project.",
+        "When you return to the desk, notice what followed you back. Very often the “stuck” feeling was never about ability — it was about a mind that had run out of new ingredients."
+      ]
+    }
+  ],
+  "takeaway": "Feed your brain a new scene, and it will feed you new combinations.",
+  "fiction": false
+}

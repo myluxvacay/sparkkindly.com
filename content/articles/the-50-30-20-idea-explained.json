@@ -1,0 +1,55 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-05",
+  "slug": "the-50-30-20-idea-explained",
+  "title": "The 50/30/20 idea, explained",
+  "description": "One popular rule of thumb splits money into needs, wants, and saving — here is how to use it loosely, not rigidly.",
+  "publishedAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "tags": [
+    "budgeting",
+    "saving",
+    "money-habits"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The basic split",
+      "paragraphs": [
+        "The 50/30/20 idea suggests aiming for about 50% of your after-tax income on needs, 30% on wants, and 20% on saving and extra debt payments. It is a starting sketch, not a law, and many households cannot match it exactly.",
+        "Housing costs alone can push needs well above 50% in expensive areas. That does not mean you have failed; it means the sketch needs adapting to your real life."
+      ]
+    },
+    {
+      "heading": "Use it as a mirror",
+      "paragraphs": [
+        "Try calculating your current split and just look at it. If wants are 45% and saving is 2%, the mirror is showing you where a small shift could happen — perhaps moving 3% from wants to saving.",
+        "Small shifts matter. Moving a little at a time is more sustainable than a dramatic overhaul you abandon in two weeks."
+      ]
+    },
+    {
+      "heading": "Make your own version",
+      "paragraphs": [
+        "Students might use a simpler version: cover needs, save something — even a tiny amount — then enjoy the rest without guilt. The best budget rule is the one you will actually keep using."
+      ]
+    }
+  ],
+  "takeaway": "Use 50/30/20 as a mirror for your spending, then adapt it to your real life."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "dinosaur-ending-129",
+  "scheduledDate": "2026-11-21",
+  "brand": "discover",
+  "prompt": "About how long ago did the non-bird dinosaurs become extinct?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 6,600 years ago"
+    },
+    {
+      "id": "b",
+      "text": "About 66,000 years ago"
+    },
+    {
+      "id": "c",
+      "text": "About 66 million years ago"
+    },
+    {
+      "id": "d",
+      "text": "About 660 million years ago"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "An asteroid impact about 66 million years ago caused a mass extinction that wiped out the non-bird dinosaurs.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Dinosaur",
+      "url": "https://en.wikipedia.org/wiki/Dinosaur",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

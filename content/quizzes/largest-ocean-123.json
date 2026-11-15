@@ -1,0 +1,38 @@
+{
+  "id": "largest-ocean-123",
+  "scheduledDate": "2026-10-14",
+  "brand": "discover",
+  "prompt": "Which is the largest and deepest ocean on Earth?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Atlantic Ocean"
+    },
+    {
+      "id": "b",
+      "text": "Indian Ocean"
+    },
+    {
+      "id": "c",
+      "text": "Arctic Ocean"
+    },
+    {
+      "id": "d",
+      "text": "Pacific Ocean"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The Pacific Ocean covers more area than all of Earth's land combined and contains the deepest place on the planet, the Mariana Trench.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Pacific Ocean",
+      "url": "https://en.wikipedia.org/wiki/Pacific_Ocean",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

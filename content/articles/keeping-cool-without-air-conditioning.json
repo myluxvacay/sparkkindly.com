@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-94",
+  "slug": "keeping-cool-without-air-conditioning",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Keeping cool without blasting the air conditioning",
+  "description": "Shading, timing and moving air can keep rooms comfortable on many warm days before the cooling needs to run.",
+  "publishedAt": "2026-06-07",
+  "updatedAt": "2026-06-07",
+  "tags": [
+    "energy-saving",
+    "green"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Keep the heat out first",
+      "paragraphs": [
+        "Sunshine through glass warms a room quickly. Closing curtains or blinds on sun-facing windows during the hottest part of the day stops much of that heat before it gets in, which is far cheaper than removing it afterwards.",
+        "If your home has shutters or external shading, they work even better, because the heat never reaches the glass. Indoors, light-coloured curtains reflect more sunlight than dark ones."
+      ]
+    },
+    {
+      "heading": "Use cooler hours wisely",
+      "paragraphs": [
+        "On many warm days the early morning and late evening air is noticeably cooler than the afternoon. Opening windows on opposite sides of the home at those times creates a through-breeze that flushes out the day's warmth.",
+        "Close windows again once the outside air heats up. It feels odd at first, but keeping hot air out during the middle of the day helps the house hold on to the morning cool."
+      ]
+    },
+    {
+      "heading": "Fans and small comforts",
+      "paragraphs": [
+        "A fan uses far less electricity than air conditioning because it does not cool the room; it cools people, by moving air across skin. Run fans only in rooms being used, and switch them off when you leave.",
+        "Cool drinks, lighter bedding and a lukewarm shower before bed all help sleep on warm nights. If you do use air conditioning, setting it a degree or two warmer than usual and pairing it with a fan often feels just as comfortable."
+      ]
+    }
+  ],
+  "takeaway": "Shade the glass, borrow the morning breeze and let fans cool people rather than empty rooms."
+}

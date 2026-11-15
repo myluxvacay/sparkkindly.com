@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-30",
+  "slug": "how-many-holes-in-a-straw",
+  "brand": "play",
+  "contentType": "article",
+  "title": "How Many Holes Does a Straw Have?",
+  "description": "Zero, one or two? A simple question that starts arguments among mathematicians — and teaches something real about definitions.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "curiosity",
+    "brain-teasers"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Ask a room, start an argument",
+      "paragraphs": [
+        "Hold up a drinking straw and ask: how many holes does this have? Some people say two — one at each end. Some say one — a single tunnel running through it. A few say zero, arguing a hole must be punched through something, and a straw was made this way.",
+        "This question became famous because intelligent people defend different answers with complete confidence. The disagreement is not really about the straw. It is about what the word 'hole' means."
+      ]
+    },
+    {
+      "heading": "Openings or tunnels?",
+      "paragraphs": [
+        "If a hole means an opening, the straw has two. If a hole means a passage through an object — the tunnel itself — the straw has one: the same tunnel you sip through, entered from either end. A mug handle, counted this second way, also has one hole, which is why mathematicians who study shapes, topologists, often answer 'one' for the straw too.",
+        "In topology, what matters is the tunnel, not the entrances. A straw's surface can be stretched and squashed in the imagination without tearing, and the count of tunnels survives every stretch. That is the deep idea hiding in the silly question: some properties of a shape do not depend on its size or squishiness at all."
+      ]
+    },
+    {
+      "heading": "Why the argument is the point",
+      "paragraphs": [
+        "Most everyday arguments are straw arguments: people using the same word for different things, each certain the other is wrong about the facts. The fix is boring and magical — define the word first, then count.",
+        "So settle it your way, but settle it explicitly: 'counting tunnels, one; counting openings, two'. You have not dodged the question. You have answered it twice, precisely — which is more than most arguments ever manage."
+      ]
+    }
+  ],
+  "takeaway": "The straw doesn't change — the definition does: two openings, one tunnel, and a reminder to define your terms before arguing.",
+  "fiction": false
+}

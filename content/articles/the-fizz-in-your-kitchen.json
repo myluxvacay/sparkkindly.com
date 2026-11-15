@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-16",
+  "slug": "the-fizz-in-your-kitchen",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Fizz in Your Kitchen: Baking Soda Meets Vinegar",
+  "description": "Mix two humble kitchen staples and you get a volcano of bubbles — here is the chemistry doing the work.",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Sodium bicarbonate",
+      "url": "https://en.wikipedia.org/wiki/Sodium_bicarbonate",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "An acid meets a base",
+      "paragraphs": [
+        "Vinegar is a mild acid — acetic acid in water. Baking soda is a gentle base, sodium bicarbonate. Put them together and they do what acids and bases do: they neutralise each other.",
+        "The drama comes from a by-product. The reaction releases carbon dioxide gas, and that gas is the fizz — thousands of bubbles racing to escape. What is left behind is mostly water and a harmless salt called sodium acetate."
+      ]
+    },
+    {
+      "heading": "The same gas lifts your cakes",
+      "paragraphs": [
+        "This is not just a party trick; it is how baking works. In a cake batter, baking soda meets something acidic — buttermilk, yoghurt, lemon juice, cocoa — and the carbon dioxide bubbles inflate the mixture as it sets in the oven.",
+        "Baking powder is the self-contained version: it carries its own powdered acid, so it only needs moisture and heat to start bubbling."
+      ]
+    },
+    {
+      "heading": "A fair test to try",
+      "paragraphs": [
+        "The classic volcano hides a good experiment. Fix the amount of baking soda and vary the vinegar, and the fizz grows — but only up to a point. Past that point, extra vinegar changes nothing, because the soda has run out.",
+        "Chemists call the ingredient that runs out first the limiting reactant. Your kitchen volcano just demonstrated a concept that runs factories and pharmacies alike."
+      ]
+    }
+  ],
+  "takeaway": "The famous fizz is carbon dioxide escaping as an acid and a base neutralise each other — the same gas that lifts your cakes.",
+  "fiction": false
+}

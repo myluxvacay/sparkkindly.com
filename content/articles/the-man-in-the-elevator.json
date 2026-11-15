@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-07",
+  "slug": "the-man-in-the-elevator",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Man Who Only Rode to the Seventh Floor",
+  "description": "Every morning he rides down from the tenth floor. Every evening he rides up to the seventh — then walks. A lateral-thinking classic.",
+  "publishedAt": "2026-10-26",
+  "updatedAt": "2026-10-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "curiosity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A strange routine",
+      "paragraphs": [
+        "A man lives on the tenth floor of a building. Every morning he takes the elevator all the way down to the ground floor and goes to work. Every evening he comes home, steps into the elevator, rides to the seventh floor — and walks up the last three flights.",
+        "Stranger still: on rainy days, he rides all the way to the tenth floor. The elevator works perfectly. He is not exercising, not superstitious, and not avoiding anyone. So why the stairs?"
+      ]
+    },
+    {
+      "heading": "Think smaller",
+      "paragraphs": [
+        "Lateral-thinking puzzles are solved by questioning an assumption you did not notice making. Here, the hidden assumption is about the man himself. What could make the tenth floor reachable on some days and not others?",
+        "The clue is in the rainy days. What does a person carry on a rainy day that they do not carry on a dry one — and how could that object change what they can do inside an elevator?"
+      ]
+    },
+    {
+      "heading": "The answer",
+      "paragraphs": [
+        "The man is short — short enough that in the elevator he can only reach as high as the seventh-floor button. In the morning this does not matter: going down, he only needs the ground-floor button, which is low. Coming home, he presses the highest button he can reach, the seventh, and walks the rest.",
+        "On rainy days he carries an umbrella, and with it he can stretch up and press the tenth-floor button. The routine was never strange at all — it was a small person quietly solving a design problem, every single day."
+      ]
+    }
+  ],
+  "takeaway": "He was not forgetful or superstitious — he simply could not reach the tenth-floor button, except on rainy days, with his umbrella.",
+  "fiction": false
+}

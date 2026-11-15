@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-20",
+  "slug": "breathe-before-you-reply",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Breathe Before You Reply",
+  "description": "One slow breath between reading a message and answering it can change the whole conversation.",
+  "publishedAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "mindfulness",
+    "stress"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The instant reply trap",
+      "paragraphs": [
+        "Messages arrive with built-in urgency, and a reply typed in the first flash of irritation or anxiety often says more than we meant. The sender cannot see your face, so words carry everything — including the mood you were in for ten seconds.",
+        "A single slow breath is a surprisingly effective gap. It is long enough for the first reaction to peak and start fading, and short enough that nobody notices the pause."
+      ]
+    },
+    {
+      "heading": "A tiny routine for tricky messages",
+      "paragraphs": [
+        "Read the message. Breathe in slowly, and out even more slowly. Read it once more, as if it were written by someone having a hard day. Then reply to the message itself, not to your first interpretation of it.",
+        "And some messages deserve more than a breath — they deserve an hour, or a conversation in person instead. “Let me think about that and come back to you” is a complete and respectable reply."
+      ]
+    }
+  ],
+  "takeaway": "One breath before you type: the smallest pause that changes replies.",
+  "fiction": false
+}

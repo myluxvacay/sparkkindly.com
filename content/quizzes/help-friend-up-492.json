@@ -1,0 +1,32 @@
+{
+  "id": "help-friend-up-492",
+  "scheduledDate": "2027-01-05",
+  "brand": "kids",
+  "prompt": "Your friend falls down on the playground. What is a kind thing to do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Laugh at them"
+    },
+    {
+      "id": "b",
+      "text": "Walk away"
+    },
+    {
+      "id": "c",
+      "text": "Help them up"
+    },
+    {
+      "id": "d",
+      "text": "Tell everyone"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Helping your friend up shows you care and makes them feel better right away.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-12",
+  "slug": "anagrams-letters-rearranged",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Anagrams: Old Letters, New Words",
+  "description": "Every letter used exactly once, nothing added, nothing taken away — the quiet rules behind listen/silent and other perfect rearrangements.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "words"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Same letters, different story",
+      "paragraphs": [
+        "An anagram rearranges all the letters of a word or phrase to make a new one, using every letter exactly once. Some feel like fate: 'listen' becomes 'silent'. 'The eyes' becomes 'they see'. It is hard to believe those are accidents of spelling, which is exactly why anagrams delight us.",
+        "The rules matter. A true anagram adds nothing and drops nothing — if a letter is left over, it does not count. Spaces and punctuation are usually allowed to move or vanish; the letters are the law."
+      ]
+    },
+    {
+      "heading": "Three to solve",
+      "paragraphs": [
+        "Try these before reading the takeaway. First: 'triangle' — a shape hiding a word from maths class. Second: 'astronomer' — a person hiding what they watch, in two words. Third, an easy warm-up: 'night' hides a small object.",
+        "Work by fixing the vowels first, or by writing the letters in a circle and reading around it in different directions. Anagram solvers online exist, but the pleasure is in the moment the letters suddenly click into their second shape."
+      ]
+    },
+    {
+      "heading": "Start your own anagram hunt",
+      "paragraphs": [
+        "Names are the richest hunting ground — your own name may rearrange into something funny, grand or mysterious. Write the letters on separate slips of paper so you can slide them around; the hands often find what the eyes miss.",
+        "If you find a great one, you have a party trick for life. Just remember the golden rule when showing off: every letter, exactly once, or it is only a near-anagram wearing a costume."
+      ]
+    }
+  ],
+  "takeaway": "An anagram uses every letter exactly once — 'triangle' becomes 'integral', 'astronomer' becomes 'moon starer', and 'night' becomes 'thing'.",
+  "fiction": false
+}

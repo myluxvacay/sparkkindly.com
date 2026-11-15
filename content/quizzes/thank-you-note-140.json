@@ -1,0 +1,32 @@
+{
+  "id": "thank-you-note-140",
+  "scheduledDate": "2026-11-26",
+  "brand": "together",
+  "prompt": "A neighbour watered your plants while you were away. Which thank-you means the most?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A specific note: thank you for watering the plants - they all survived the heat because of you"
+    },
+    {
+      "id": "b",
+      "text": "A vague thanks if you happen to bump into them"
+    },
+    {
+      "id": "c",
+      "text": "Nothing - neighbours should help for free"
+    },
+    {
+      "id": "d",
+      "text": "A text message saying just the letter k"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A specific thank-you shows you noticed exactly what they did, which makes people feel genuinely appreciated.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

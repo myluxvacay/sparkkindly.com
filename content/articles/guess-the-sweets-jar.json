@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-23",
+  "slug": "guess-the-sweets-jar",
+  "brand": "play",
+  "contentType": "article",
+  "title": "How Many Sweets in the Jar? Estimate Like a Scientist",
+  "description": "The fairground guessing jar is beatable — not by luck, but by breaking one impossible question into several easy ones.",
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "maths-and-logic",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Wisdom of the crowd",
+      "url": "https://en.wikipedia.org/wiki/Wisdom_of_the_crowd",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Break the impossible into pieces",
+      "paragraphs": [
+        "Nobody can look at a jar of 800 sweets and simply see the number. But you can estimate the jar's volume, estimate one sweet's volume, and divide. Or count the sweets visible in one layer across the bottom and multiply by the number of layers. Each small estimate is rough, but rough answers multiplied together often land surprisingly near the truth.",
+        "This is the heart of a Fermi estimate — named after physicist Enrico Fermi, who loved questions like 'how many piano tuners are in Chicago?' The method: replace one impossible question with a chain of possible ones, and be honest about each guess."
+      ]
+    },
+    {
+      "heading": "The crowd that weighed an ox",
+      "paragraphs": [
+        "In 1906, the scientist Francis Galton visited a country fair where about 800 people had guessed the weight of an ox for a competition. Individually the guesses were all over the place. But Galton checked the middle value of all the guesses — the median — and found it was 1,207 pounds. The ox's true weight was 1,198 pounds.",
+        "The crowd's middle guess was within one percent. Errors cancelled: overestimates balanced underestimates, and what survived was signal. This is the famous 'wisdom of crowds' — it works when guesses are independent, which is why you should always write yours down before hearing anyone else's."
+      ]
+    },
+    {
+      "heading": "Your turn at the fair",
+      "paragraphs": [
+        "Next time you meet a guessing jar, work in pieces: layers, or volume, or a counted sample of one corner scaled up. Then, if friends are guessing too, collect everyone's number privately and take the middle one as your joint entry.",
+        "And keep your own record. Estimation is a trainable skill, and the people who practise it on jars, crowds and journey times quietly become the people whose rough numbers can be trusted."
+      ]
+    }
+  ],
+  "takeaway": "Estimate in pieces, then trust the crowd's middle guess — a roomful of rough answers often lands surprisingly close.",
+  "fiction": false
+}

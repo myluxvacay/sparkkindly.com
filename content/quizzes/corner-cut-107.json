@@ -1,0 +1,32 @@
+{
+  "id": "corner-cut-107",
+  "scheduledDate": "2026-10-09",
+  "brand": "play",
+  "prompt": "A square piece of paper has 4 corners. If you snip off one corner with scissors, how many corners does the paper have now?",
+  "options": [
+    {
+      "id": "a",
+      "text": "3"
+    },
+    {
+      "id": "b",
+      "text": "4"
+    },
+    {
+      "id": "c",
+      "text": "5"
+    },
+    {
+      "id": "d",
+      "text": "6"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Cutting off one corner removes that corner, but the cut creates two new corners along the new edge, so 4 - 1 + 2 = 5 corners.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

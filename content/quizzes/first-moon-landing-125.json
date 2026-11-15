@@ -1,0 +1,38 @@
+{
+  "id": "first-moon-landing-125",
+  "scheduledDate": "2026-11-05",
+  "brand": "discover",
+  "prompt": "Who was the first person to walk on the Moon, in 1969?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Buzz Aldrin"
+    },
+    {
+      "id": "b",
+      "text": "Yuri Gagarin"
+    },
+    {
+      "id": "c",
+      "text": "Neil Armstrong"
+    },
+    {
+      "id": "d",
+      "text": "Michael Collins"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Neil Armstrong stepped onto the Moon on 20 July 1969 during Apollo 11; Buzz Aldrin followed him, while Michael Collins stayed in orbit.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Apollo 11",
+      "url": "https://en.wikipedia.org/wiki/Apollo_11",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

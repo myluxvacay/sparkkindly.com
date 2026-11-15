@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-15",
+  "slug": "after-a-bad-day",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "After a Bad Day",
+  "description": "One bad day is an event, not a verdict — here is a gentle way to close it and start the next one.",
+  "publishedAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "resilience",
+    "wellbeing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Let the day end",
+      "paragraphs": [
+        "Bad days have a way of following us to bed, replaying on a loop. A small closing ritual helps your mind accept that the day is over: a shower, a changed set of clothes, a short walk around the block, a page of unfiltered writing.",
+        "You are not pretending it went well. You are just marking a boundary between then and now, so one rough day does not automatically leak into the next."
+      ]
+    },
+    {
+      "heading": "Be careful with the story",
+      "paragraphs": [
+        "Notice the jump from “today went badly” to “everything always goes badly.” That jump is understandable when you are tired, but it is a story, not a fact. Try the smaller, truer sentence: “Today was hard, and some specific things went wrong.”",
+        "If hard days start stringing together into hard weeks, or low feelings stop lifting, that deserves more than an article — please talk to a trusted adult, counsellor or health professional. Asking for support is a strength, not a detour."
+      ]
+    }
+  ],
+  "takeaway": "Close the day deliberately, and let tomorrow start as its own day.",
+  "fiction": false
+}

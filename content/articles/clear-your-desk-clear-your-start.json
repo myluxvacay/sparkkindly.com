@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-08",
+  "slug": "clear-your-desk-clear-your-start",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Clear Your Desk, Clear Your Start",
+  "description": "A two-minute tidy before you begin can save twenty minutes of distracted rummaging.",
+  "publishedAt": "2026-10-25",
+  "updatedAt": "2026-10-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "creativity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Your desk is a to-do list",
+      "paragraphs": [
+        "Everything left on your desk is a small open loop: the form to sign, the charger to return, yesterday's snack wrapper. Each one quietly asks for a decision, and decisions drain the same energy you wanted for your actual work.",
+        "A clear desk is not about being a tidy person. It is about removing competing requests so the one task in front of you gets your full attention."
+      ]
+    },
+    {
+      "heading": "The two-minute reset",
+      "paragraphs": [
+        "Before starting, set a timer for two minutes and clear everything that does not belong to the task at hand. Things can go in a drawer, a box, or another room — “away” matters more than “perfectly organised.”",
+        "End the reset by placing the one thing you are working on in the centre. It sounds almost too simple, but starting is measurably easier when there is visibly only one thing to start."
+      ]
+    }
+  ],
+  "takeaway": "Two minutes of clearing buys a calmer, faster start.",
+  "fiction": false
+}

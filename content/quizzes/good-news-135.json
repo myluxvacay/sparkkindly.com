@@ -1,0 +1,32 @@
+{
+  "id": "good-news-135",
+  "scheduledDate": "2026-10-11",
+  "brand": "together",
+  "prompt": "A friend tells you they passed a test they worked hard for. Which response best shares their joy?",
+  "options": [
+    {
+      "id": "a",
+      "text": "That is nothing - I passed a harder one"
+    },
+    {
+      "id": "b",
+      "text": "Well done! You worked so hard for that - tell me more"
+    },
+    {
+      "id": "c",
+      "text": "Change the subject to your own plans"
+    },
+    {
+      "id": "d",
+      "text": "It was probably an easy test"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Celebrating with them and inviting them to say more shows their effort mattered to you, which strengthens the friendship.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

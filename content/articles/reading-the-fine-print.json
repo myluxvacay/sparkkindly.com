@@ -1,0 +1,60 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-21",
+  "slug": "reading-the-fine-print",
+  "title": "Reading the fine print",
+  "description": "The small text is where prices change — a five-minute guide to spotting what matters.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "tags": [
+    "understanding-offers",
+    "spending-wisely"
+  ],
+  "sources": [
+    {
+      "title": "Consumer Financial Protection Bureau",
+      "url": "https://www.consumerfinance.gov/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "What to hunt for",
+      "paragraphs": [
+        "In any offer, look for four things: the total price including fees, how long the price lasts, what happens when an introductory period ends, and how you cancel. Those four answers reveal most surprises in advance.",
+        "Watch for words like 'from', 'up to', and 'introductory'. They usually mean the headline price is the best case, temporary, or both."
+      ]
+    },
+    {
+      "heading": "Contracts and commitments",
+      "paragraphs": [
+        "Check the minimum term and any early-exit charges before signing. A cheap monthly price tied to a long contract can cost far more than a flexible option if your life changes.",
+        "If you cannot find a clear answer, ask the seller directly and keep their reply. A trustworthy seller explains terms plainly; pressure to sign quickly is itself information."
+      ]
+    },
+    {
+      "heading": "Slow is smart",
+      "paragraphs": [
+        "Fine print rewards the unhurried. Reading for five minutes before you commit is one of the highest-paid activities in everyday money life."
+      ]
+    }
+  ],
+  "takeaway": "In any offer, find the total price, how long it lasts, what happens next, and how to cancel."
+}

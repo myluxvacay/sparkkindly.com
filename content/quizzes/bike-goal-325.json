@@ -1,0 +1,32 @@
+{
+  "id": "bike-goal-325",
+  "scheduledDate": "2026-05-09",
+  "brand": "save",
+  "prompt": "You have $50 saved and want a bike that costs $110. You save $15 each week. How many weeks until you can afford the bike?",
+  "options": [
+    {
+      "id": "a",
+      "text": "3 weeks"
+    },
+    {
+      "id": "b",
+      "text": "4 weeks"
+    },
+    {
+      "id": "c",
+      "text": "5 weeks"
+    },
+    {
+      "id": "d",
+      "text": "6 weeks"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "You need $110 - $50 = $60 more. Saving $15 a week, $60 divided by $15 = 4 weeks.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

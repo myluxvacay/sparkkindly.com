@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-29",
+  "slug": "make-time-for-people",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Make Time for People",
+  "description": "Feeling connected is not a luxury extra; a few minutes of real contact can steady a whole week.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "wellbeing",
+    "mindfulness"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Small contact, real effect",
+      "paragraphs": [
+        "Wellbeing advice often sounds like a shopping list of solo habits, but people are one of the basics too. A short conversation with someone you like — properly listening, not half-scrolling — does something a quiet evening alone sometimes cannot.",
+        "It does not require a big social life. One friend, one grandparent, one neighbour you chat with at the gate. Depth beats quantity here; a five-minute real exchange outranks an hour of parallel scrolling in the same room."
+      ]
+    },
+    {
+      "heading": "Schedule it like it matters",
+      "paragraphs": [
+        "Connection often loses to urgency: it is important but never the loudest item on the list. So give it a slot — the Tuesday call, the walk with a friend, the family meal that stays in the calendar.",
+        "And on the days you feel least like seeing anyone, a small dose may help most. Send the message. You rarely have to be in the mood before contact; the mood often arrives during it."
+      ]
+    }
+  ],
+  "takeaway": "Put people in the calendar, not just in the gaps.",
+  "fiction": false
+}

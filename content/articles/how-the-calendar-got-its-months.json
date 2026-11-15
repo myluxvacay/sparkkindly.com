@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-29",
+  "slug": "how-the-calendar-got-its-months",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How the Calendar Got Its Months",
+  "description": "January honours a two-faced god, September's name means 'seventh' even though it is ninth — the calendar is a fossil of Roman history.",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "history",
+    "ancient-history",
+    "language"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Julian calendar",
+      "url": "https://en.wikipedia.org/wiki/Julian_calendar",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Gregorian calendar",
+      "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A year that started in March",
+      "paragraphs": [
+        "In the early Roman calendar, the year began in March, the month of Mars, the god of war, when armies could march again. That is why September, October, November, and December carry Latin number names — seventh, eighth, ninth, tenth — that no longer match their places.",
+        "January, named for Janus, the god of doorways and beginnings who faces both ways, later became the first month. February, the shortest month, ended up last in the old arrangement, which is one reason it still collects the calendar's leftover days."
+      ]
+    },
+    {
+      "heading": "Julius Caesar fixes the drift",
+      "paragraphs": [
+        "By the time of Julius Caesar, the Roman calendar had drifted badly out of step with the seasons. In 45 BCE, Caesar introduced the Julian calendar: a 365-day year with an extra day every four years — the leap year idea we still use.",
+        "The Julian year was very close to the real solar year, but not exact. It ran about eleven minutes too long each year, and over centuries those minutes added up to days."
+      ]
+    },
+    {
+      "heading": "The Gregorian tidy-up",
+      "paragraphs": [
+        "In 1582, Pope Gregory XIII introduced a corrected calendar. It kept leap years but skipped them in most century years, and countries adopted it at different times over the following centuries, which is why old dates can be confusing.",
+        "The Gregorian calendar is now the civil calendar used almost everywhere. Its month names, though, are still the Roman originals — a two-thousand-year-old naming system hiding in plain sight on every phone screen."
+      ]
+    }
+  ],
+  "takeaway": "Our calendar is a Roman artefact: month names from gods and Latin numbers, a leap-year fix from Julius Caesar, and a precision tune-up from 1582.",
+  "fiction": false
+}

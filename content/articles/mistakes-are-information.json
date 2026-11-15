@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-16",
+  "slug": "mistakes-are-information",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Mistakes Are Information",
+  "description": "A mistake tells you something specific about what to try next — if you look before you judge.",
+  "publishedAt": "2026-10-31",
+  "updatedAt": "2026-10-31",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "resilience",
+    "creativity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Separate the data from the drama",
+      "paragraphs": [
+        "A wrong answer, a failed audition, a burnt first attempt: each contains a specific piece of information. The note was sharp. The timing was off. The pan was too hot. Specifics point somewhere useful.",
+        "What blocks the information is the drama layered on top — “I'm hopeless at this.” That sentence feels like a conclusion but contains no usable detail. Ask instead: what exactly happened, and what is one thing I could change?"
+      ]
+    },
+    {
+      "heading": "Keep a “learned” list",
+      "paragraphs": [
+        "Some people keep a short list of things mistakes have taught them. It sounds odd, but watching that list grow reframes errors as tuition you have already paid — wasteful only if you refuse the lesson.",
+        "Not every mistake needs a deep analysis; some days you just fix it and move on. Save the reflection for the mistakes that repeat, because repeated ones usually guard the most useful information."
+      ]
+    }
+  ],
+  "takeaway": "Ask what the mistake is telling you, before you decide what it says about you.",
+  "fiction": false
+}

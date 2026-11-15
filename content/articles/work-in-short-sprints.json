@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-07",
+  "slug": "work-in-short-sprints",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Work in Short Sprints",
+  "description": "A timer and a clear finish line can turn a dreaded task into a manageable game.",
+  "publishedAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "goals"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Why a finish line helps",
+      "paragraphs": [
+        "“Study until it's done” has no visible end, so your brain treats it as endless and resists starting. A twenty-five minute sprint is different: the end is close enough to see, and almost anything is bearable for twenty-five minutes.",
+        "Set a timer, work on one thing until it rings, then take a real break — stand up, get water, look out of a window. The break is part of the method, not a reward you have to earn."
+      ]
+    },
+    {
+      "heading": "Adjust the length to fit you",
+      "paragraphs": [
+        "Twenty-five minutes is a starting suggestion, not a law. Difficult or boring tasks might suit fifteen; work you enjoy might flow for forty. Experiment for a week and keep the length that leaves you willing to start again tomorrow.",
+        "Count sprints, not hours, when you review your day. “I did three sprints” is concrete and encouraging in a way that “I studied for ages” never is."
+      ]
+    }
+  ],
+  "takeaway": "Short, timed sprints make starting easier and stopping guilt-free.",
+  "fiction": false
+}

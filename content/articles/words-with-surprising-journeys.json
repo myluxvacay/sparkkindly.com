@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-44",
+  "slug": "words-with-surprising-journeys",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Quarantine, Robot, and Other Words With Surprising Journeys",
+  "description": "Some everyday words carry whole stories in their luggage — a Venetian harbour rule, a Czech play, and a forced-labour word turned metal.",
+  "publishedAt": "2026-11-12",
+  "updatedAt": "2026-11-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "etymology",
+    "language",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Quarantine",
+      "url": "https://en.wikipedia.org/wiki/Quarantine",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Robot",
+      "url": "https://en.wikipedia.org/wiki/Robot",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Quarantine: forty days at anchor",
+      "paragraphs": [
+        "Quarantine comes from Italian words for 'forty days.' In the late Middle Ages, the port of Venice and other cities required ships arriving from places with plague to wait at anchor — at first thirty days, later forty — before unloading, to see whether disease appeared aboard.",
+        "The exact number forty may have mixed practical observation with older traditions of forty-day periods. Either way, the word outlived the harbour rule and now means any period of isolation to stop illness spreading, long or short."
+      ]
+    },
+    {
+      "heading": "Robot: a word from a stage play",
+      "paragraphs": [
+        "Robot is unusually young for an English word and unusually well documented. It entered the language from the 1920 play R.U.R. by the Czech writer Karel Čapek, about artificial workers; the word was suggested by his brother Josef.",
+        "It comes from the Czech word robota, meaning forced labour or drudgery. The play's robots were not metal machines but manufactured people — the clanking metal image came later, as real machines borrowed the name."
+      ]
+    },
+    {
+      "heading": "Why word journeys matter",
+      "paragraphs": [
+        "Etymology is not just trivia. A word's journey records what people feared, traded, invented, and argued about: plague ports, factory labour, and a hundred other moments folded into sounds we use without thinking.",
+        "Handle etymology with one caution, though: a word's origin is not its current meaning. Quarantine no longer requires forty days, and a robot vacuum is nobody's forced labourer. Origins explain the luggage, not the destination."
+      ]
+    }
+  ],
+  "takeaway": "Quarantine began as a forty-day wait for ships in Venetian waters, and robot arrived from a 1920 Czech play — everyday words are souvenirs of real history.",
+  "fiction": false
+}

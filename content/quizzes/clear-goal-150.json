@@ -1,0 +1,32 @@
+{
+  "id": "clear-goal-150",
+  "scheduledDate": "2026-11-27",
+  "brand": "grow",
+  "prompt": "Which goal is set up best for success?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Get better at maths someday"
+    },
+    {
+      "id": "b",
+      "text": "Practise maths problems for 15 minutes after dinner on weekdays"
+    },
+    {
+      "id": "c",
+      "text": "Become perfect at maths"
+    },
+    {
+      "id": "d",
+      "text": "Do more maths, somehow"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A specific goal with a time, a place and a small size is easy to start and easy to check; vague wishes rarely turn into action.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}
