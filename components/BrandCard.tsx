@@ -13,7 +13,7 @@ export default function BrandCard({ world, index }: { world: World; index: numbe
       </div>
       <h3>{world.name}</h3>
       <p>{blurb}</p>
-      <span className="world-link">Step inside <span aria-hidden="true">↗</span></span>
+      <span className="world-link">Explore <span aria-hidden="true">↗</span></span>
     </Link>
   );
 }

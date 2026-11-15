@@ -9,6 +9,7 @@ import { recordableRequest, recordPlay, type AnswerNote } from '@/lib/accounts/r
 import { clueCount, hasResponse, toParams, type SearchParams } from '@/lib/public/play-params';
 import PlayForm from './PlayForm';
 import PlayResult from './PlayResult';
+import PlayEnhancer from './PlayEnhancer';
 import SharePrompt from './SharePrompt';
 import DifficultyMeter from './DifficultyMeter';
 
@@ -31,39 +32,37 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
   const another = item.kind === 'quiz' ? '/quiz/archive/' : `/${item.world}/`;
 
   return (
-    <div className="quiz-panel">
-      <DifficultyMeter level={play.difficulty} />
-      {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} />}
-      {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
-      <Note note={note} />
-      {result?.status === 'ok' && <SharePrompt itemId={item.id} />}
-    </div>
+    <PlayEnhancer>
+      <div className="quiz-panel">
+        <DifficultyMeter level={play.difficulty} />
+        {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} />}
+        {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
+        <Note note={note} />
+        {result?.status === 'ok' && <SharePrompt itemId={item.id} />}
+      </div>
+    </PlayEnhancer>
   );
 }
 
 const privacy = <Link href="/privacy/">privacy guide</Link>;
 
 function Note({ note }: { note: AnswerNote }) {
+  // One short line on the play surface (teen UI pass, 15 Nov 2026); the detail lives in the privacy guide.
   switch (note) {
     case 'saved':
-      return <p className="quiz-note">No timer. No scores to share. Your answer is saved to your profile; see the {privacy}.</p>;
+      return <p className="quiz-note">No timer. Your answer is saved to your profile; see the {privacy}.</p>;
     case 'unsaved':
       return (
         <p className="quiz-note">
-          No timer. No scores to share. Your answer is not saved this time. Use the answer form on this page to save it to your
-          profile; see the {privacy}.
+          No timer. This answer was not saved — answer with the form above to save it; see the {privacy}.
         </p>
       );
     case 'before':
-      return (
-        <p className="quiz-note">
-          No timer. No scores to share. An answer you check with this form is saved to your profile; see the {privacy}.
-        </p>
-      );
+      return <p className="quiz-note">No timer. Answers you check here are saved to your profile; see the {privacy}.</p>;
     default:
       return (
         <p className="quiz-note">
-          No timer. No scores to share. SparkKindly does not save your answer; see the <Link href="/privacy/">privacy guide</Link>.
+          No timer. SparkKindly does not save your answer; see the <Link href="/privacy/">privacy guide</Link>.
         </p>
       );
   }

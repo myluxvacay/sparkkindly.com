@@ -71,3 +71,50 @@ export function inviteImage(): ImageResponse {
     { width: 1200, height: 630, headers: { 'cache-control': 'public, max-age=86400' } },
   );
 }
+
+// The result card (teen UI pass, 15 Nov 2026): a portrait card a reader can save or post after answering.
+// It carries the world colour, the question's title and one fixed line — never whether the answer was
+// right, never a score or a rank, so sharing it cannot become a comparison. Same renderer rules as the
+// template image: bundled-font characters only, via plainTitle.
+export function resultCardImage(item: PublicItem, world: { name: string; color: string | null }): ImageResponse {
+  const accent = worldHex(world.color ?? '');
+  const lines = wrapTitle(plainTitle(item.title), 16, 5);
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          background: accent,
+          padding: 84,
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', fontSize: 44, fontWeight: 700, color: INK }}>SparkKindly</div>
+          <div
+            style={{ display: 'flex', fontSize: 30, fontWeight: 700, color: CREAM, background: PLUM, padding: '10px 26px', borderRadius: 40 }}
+          >
+            {world.name}
+          </div>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div style={{ display: 'flex', fontSize: 34, fontWeight: 700, letterSpacing: 4, color: PLUM, marginBottom: 36 }}>
+            {"I ANSWERED TODAY'S SPARK"}
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', fontSize: 88, lineHeight: 1.12, fontWeight: 700, color: INK }}>
+            {lines.map((l, i) => (
+              <div key={i} style={{ display: 'flex' }}>
+                {l}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div style={{ display: 'flex', fontSize: 30, color: INK }}>Think sharp. Be kind. · sparkkindly.com</div>
+      </div>
+    ),
+    { width: 1080, height: 1350, headers: { 'cache-control': 'public, max-age=86400' } },
+  );
+}
