@@ -40,9 +40,9 @@ export default async function ContributorPage({ params }: Props) {
         </p>
       )}
       <h2>Published pieces</h2>
-      <div className="content-grid two-col">
+      <div className="card-list">
         {page.items.map((i) => (
-          <ItemCard item={i} world={worlds.get(i.world)} key={i.id} />
+          <ItemCard item={i} world={worlds.get(i.world)} key={i.id} variant="text" />
         ))}
       </div>
     </div>

@@ -38,8 +38,8 @@ export default async function SearchPage({ searchParams }: Props) {
       {trimmed.length > MAX_Q && <p>We used the first {MAX_Q} characters of your search.</p>}
       {!q && <p>Type a word or two to look through titles and summaries.</p>}
       {q && !items.length && <p>{page > 1 ? <>Nothing on this page. <Link href={href(1)}>Back to the first page</Link>.</> : 'Nothing matched. Try a simpler word.'}</p>}
-      <div className="content-grid two-col">
-        {items.map((i) => <ItemCard item={i} world={worlds.get(i.world)} key={i.id} headingLevel={2} />)}
+      <div className="card-list">
+        {items.map((i) => <ItemCard item={i} world={worlds.get(i.world)} key={i.id} headingLevel={2} variant="text" />)}
       </div>
       <Pager
         prev={page > 1 ? href(page - 1) : undefined}

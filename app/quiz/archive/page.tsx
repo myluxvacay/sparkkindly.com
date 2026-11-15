@@ -35,7 +35,7 @@ export default async function Archive({ searchParams }: Props) {
       <h1>The quiz archive</h1>
       <p className="intro-text">Explore our collection, newest first. There’s no clock to beat.</p>
       <div className="content-grid two-col">
-        {items.map((q) => <ItemCard item={q} world={worlds.get(q.world)} key={q.id} headingLevel={2} />)}
+        {items.map((q) => <ItemCard item={q} world={worlds.get(q.world)} key={q.id} headingLevel={2} variant="strip" />)}
       </div>
       {!items.length && <p>Our first questions are still being checked. Please visit again soon. <Link href="/quiz/">Back to today’s quiz</Link></p>}
       <Pager
