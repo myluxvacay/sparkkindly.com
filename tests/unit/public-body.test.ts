@@ -24,4 +24,10 @@ describe('public body readers', () => {
     expect(p.options).toEqual([{ id: 'a', text: 'A' }]);
     expect(p.items).toEqual([]);
   });
+
+  it('keep a valid difficulty and drop an invalid one', () => {
+    expect(readPlay({ prompt: 'P', difficulty: 'medium' }).difficulty).toBe('medium');
+    expect(readPlay({ prompt: 'P', difficulty: 'extreme' }).difficulty).toBeUndefined();
+    expect(readPlay({ prompt: 'P' }).difficulty).toBeUndefined();
+  });
 });

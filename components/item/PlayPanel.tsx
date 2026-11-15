@@ -10,6 +10,7 @@ import { clueCount, hasResponse, toParams, type SearchParams } from '@/lib/publi
 import PlayForm from './PlayForm';
 import PlayResult from './PlayResult';
 import SharePrompt from './SharePrompt';
+import DifficultyMeter from './DifficultyMeter';
 
 // One playable item: the answer form until a response arrives, then the server's verdict. Shared by the item page and
 // /quiz/, so both behave the same. A signed-in context allowed to save answers gets its first answer recorded, only for
@@ -31,6 +32,7 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
 
   return (
     <div className="quiz-panel">
+      <DifficultyMeter level={play.difficulty} />
       {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} />}
       {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
       <Note note={note} />
