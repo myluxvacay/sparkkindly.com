@@ -191,44 +191,45 @@ h1,h2,h3{font-family:var(--sans);font-weight:800;letter-spacing:-.6px}
 /* Dark scheme: the same brand after dark. Plum deepens, cream becomes the text colour, gold stays
    the accent. Light cards that carry dark text by design (options, verdicts, form inputs, the
    grown-ups panels) keep their light ground with their text colour pinned. */
-@media (prefers-color-scheme: dark){
-  :root{--paper:#1e1326;--ink:#f4edf3;--muted:#c9b6cb;--line:#483259;--plum:#dfaef0;--cream:#2a1a36}
-  .site-header{background:var(--paper);border-color:var(--line)}
-  .main-nav{background:var(--paper)}
-  .menu-toggle{border-color:var(--line);color:var(--plum)}
-  .button{background:#7a4495;border-color:#7a4495;color:#fff}
-  .button:hover{background:#8f56ab}
-  .quiz-panel .button{background:var(--gold);border-color:var(--gold);color:#3a2444}
-  .world-card{background:#2a1a36;border-color:var(--line)}
-  .world-card p{color:var(--muted)}
-  .world-number{color:var(--muted)}
-  .latest-section{background:#241529;border-color:var(--line)}
-  .footer{background:#180d20;border-color:var(--line)}
-  .footer-bottom{border-color:var(--line)}
-  .footer-bottom p,.footer-top p{color:var(--muted)}
-  .quiz-feature{background:#2a1a36;border-color:var(--line)}
-  .quiz-preview{background:#1e1326}
-  .board-row{background:#2a1a36}
-  .board-row.you{background:#3a2350;border-color:var(--plum)}
-  .board-name{color:var(--ink)}
-  .score-table th,.score-table td{background:#2a1a36}
-  .score-table thead th{background:transparent}
-  .score-table tbody tr.you th,.score-table tbody tr.you td{background:#3a2350}
-  .score-periods a{background:#2a1a36}
-  .score-periods a[aria-current]{background:#7a4495;border-color:#7a4495;color:#fff}
-  .score-you{background:#7a4495}
-  .circles-feature{background:#1d2a24;border-color:#33503f}
-  .circles-feature p{color:#c4d6cc}
-  .circles-points li{background:#26362d;border-color:#33503f;color:#c4d6cc}
-  .archive-grid article{background:#2a1a36}
-  .grown-ups,.takeaway,.activity-info,.money-disclaimer{color:#302438}
-  .grown-ups p,.takeaway p,.activity-info p{color:#302438}
-  .option,.quiz-result{color:#302438}
-  .admin-form input,.admin-form select,.admin-form textarea,.admin-inline input{color:#302438;background:#fff}
-  .share-buttons a{background:#2a1a36;color:var(--plum)}
-  .preview-notice{background:#120818}
-  .topic-index a{color:var(--plum)}
-}
+/* Dark scheme: applied when the reader's toggle (or, before any choice, their system setting, resolved
+   by the inline script in the root layout) puts data-theme="dark" on <html>. The toggle remembers the
+   choice in localStorage ('sk-theme'); nothing is stored until a reader actually toggles. */
+html[data-theme="dark"]{color-scheme:dark;--paper:#1e1326;--ink:#f4edf3;--muted:#c9b6cb;--line:#483259;--plum:#dfaef0;--cream:#2a1a36}
+html[data-theme="dark"] .site-header{background:var(--paper);border-color:var(--line)}
+html[data-theme="dark"] .main-nav{background:var(--paper)}
+html[data-theme="dark"] .menu-toggle{border-color:var(--line);color:var(--plum)}
+html[data-theme="dark"] .button{background:#7a4495;border-color:#7a4495;color:#fff}
+html[data-theme="dark"] .button:hover{background:#8f56ab}
+html[data-theme="dark"] .quiz-panel .button{background:var(--gold);border-color:var(--gold);color:#3a2444}
+html[data-theme="dark"] .world-card{background:#2a1a36;border-color:var(--line)}
+html[data-theme="dark"] .world-card p{color:var(--muted)}
+html[data-theme="dark"] .world-number{color:var(--muted)}
+html[data-theme="dark"] .latest-section{background:#241529;border-color:var(--line)}
+html[data-theme="dark"] .footer{background:#180d20;border-color:var(--line)}
+html[data-theme="dark"] .footer-bottom{border-color:var(--line)}
+html[data-theme="dark"] .footer-bottom p,html[data-theme="dark"] .footer-top p{color:var(--muted)}
+html[data-theme="dark"] .quiz-feature{background:#2a1a36;border-color:var(--line)}
+html[data-theme="dark"] .quiz-preview{background:#1e1326}
+html[data-theme="dark"] .board-row{background:#2a1a36}
+html[data-theme="dark"] .board-row.you{background:#3a2350;border-color:var(--plum)}
+html[data-theme="dark"] .board-name{color:var(--ink)}
+html[data-theme="dark"] .score-table th,html[data-theme="dark"] .score-table td{background:#2a1a36}
+html[data-theme="dark"] .score-table thead th{background:transparent}
+html[data-theme="dark"] .score-table tbody tr.you th,html[data-theme="dark"] .score-table tbody tr.you td{background:#3a2350}
+html[data-theme="dark"] .score-periods a{background:#2a1a36}
+html[data-theme="dark"] .score-periods a[aria-current]{background:#7a4495;border-color:#7a4495;color:#fff}
+html[data-theme="dark"] .score-you{background:#7a4495}
+html[data-theme="dark"] .circles-feature{background:#1d2a24;border-color:#33503f}
+html[data-theme="dark"] .circles-feature p{color:#c4d6cc}
+html[data-theme="dark"] .circles-points li{background:#26362d;border-color:#33503f;color:#c4d6cc}
+html[data-theme="dark"] .archive-grid article{background:#2a1a36}
+html[data-theme="dark"] .grown-ups,html[data-theme="dark"] .takeaway,html[data-theme="dark"] .activity-info,html[data-theme="dark"] .money-disclaimer{color:#302438}
+html[data-theme="dark"] .grown-ups p,html[data-theme="dark"] .takeaway p,html[data-theme="dark"] .activity-info p{color:#302438}
+html[data-theme="dark"] .option,html[data-theme="dark"] .quiz-result{color:#302438}
+html[data-theme="dark"] .admin-form input,html[data-theme="dark"] .admin-form select,html[data-theme="dark"] .admin-form textarea,html[data-theme="dark"] .admin-inline input{color:#302438;background:#fff}
+html[data-theme="dark"] .share-buttons a{background:#2a1a36;color:var(--plum)}
+html[data-theme="dark"] .preview-notice{background:#120818}
+html[data-theme="dark"] .topic-index a{color:var(--plum)}
 
 /* Header nav glyphs sit beside the world name (aria-hidden; the link name is the world alone). */
 .nav-glyph{margin-right:7px;font-size:15px}
@@ -250,4 +251,23 @@ h1,h2,h3{font-family:var(--sans);font-weight:800;letter-spacing:-.6px}
 
 /* Dark-scheme correction: the panel's plum is a surface, not an accent — the dark scheme lightens
    --plum for text, so the panel pins the deep plum it was designed on. */
-@media (prefers-color-scheme:dark){.quiz-panel{background:#5b2c6f}}
+html[data-theme="dark"] .quiz-panel{background:#5b2c6f}
+
+/* Theme toggle: both icons ship; the active scheme's CSS shows the one that switches away from it. */
+.theme-toggle{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--plum);cursor:pointer;flex:none}
+.theme-toggle:hover{border-color:var(--plum)}
+.theme-toggle svg{width:19px;height:19px}
+.theme-toggle .icon-sun{display:none}
+html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
+html[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+
+/* Header room for the theme toggle: tighter gaps keep every width on one row — the 320px
+   reflow rule leaves no slack, and at desktop widths the nav was already nearly full. */
+.header-inner{gap:16px}
+.main-nav{gap:12px}
+.theme-toggle{width:36px;height:36px}
+@media(max-width:800px){.header-inner{gap:10px;width:calc(100% - 32px)}.menu-toggle{padding:8px 10px}.header-signin{padding-inline:0;font-size:13px}.wordmark .brand-badge{width:46px;height:46px}}
+@media(min-width:801px) and (max-width:1150px){.nav-glyph{display:none}}
+@media(max-width:400px){.header-inner{width:calc(100% - 24px);gap:8px}.wordmark{gap:6px}.brand-name{font-size:22px}.theme-toggle{width:34px;height:34px}}
+@media(min-width:801px) and (max-width:1000px){.nav-families{display:none}.main-nav{gap:8px}.header-inner{gap:10px}.wordmark .brand-badge{width:48px;height:48px}}
+@media(max-width:400px){.menu-toggle{padding:8px;font-size:11px}.wordmark .brand-badge{width:40px;height:40px}.brand-name{font-size:20px}}
