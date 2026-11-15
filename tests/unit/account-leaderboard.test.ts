@@ -59,4 +59,28 @@ describe('leaderboard profile', () => {
     expect(await saveLeaderboardProfile(db, id, { optIn: false })).toBe('ok');
     expect(await getLeaderboardProfile(db, id)).toEqual({ optIn: false, publicName: 'Sam', avatarKey: 'leaf' });
   });
+
+  it('refuses a name another member already holds, in any casing, without writing', async () => {
+    const first = await adult();
+    const second = await adult();
+    expect(await saveLeaderboardProfile(db, first, { optIn: true, publicName: 'Sunny Sam', avatarKey: 'wave' })).toBe('ok');
+    expect(await saveLeaderboardProfile(db, second, { optIn: true, publicName: 'sunny sam', avatarKey: 'leaf' })).toBe('taken');
+    expect(await saveLeaderboardProfile(db, second, { optIn: true, publicName: 'SUNNY SAM', avatarKey: 'leaf' })).toBe('taken');
+    expect(await getLeaderboardProfile(db, second)).toEqual({ optIn: false, publicName: null, avatarKey: null });
+  });
+
+  it('lets a member re-save or re-case their own name', async () => {
+    const id = await adult();
+    expect(await saveLeaderboardProfile(db, id, { optIn: true, publicName: 'Sunny Sam', avatarKey: 'wave' })).toBe('ok');
+    expect(await saveLeaderboardProfile(db, id, { optIn: true, publicName: 'SUNNY SAM', avatarKey: 'leaf' })).toBe('ok');
+    expect(await getLeaderboardProfile(db, id)).toEqual({ optIn: true, publicName: 'SUNNY SAM', avatarKey: 'leaf' });
+  });
+
+  it("keeps an opted-out member's name reserved", async () => {
+    const first = await adult();
+    const second = await adult();
+    await saveLeaderboardProfile(db, first, { optIn: true, publicName: 'Sunny Sam', avatarKey: 'wave' });
+    await saveLeaderboardProfile(db, first, { optIn: false });
+    expect(await saveLeaderboardProfile(db, second, { optIn: true, publicName: 'Sunny Sam', avatarKey: 'leaf' })).toBe('taken');
+  });
 });

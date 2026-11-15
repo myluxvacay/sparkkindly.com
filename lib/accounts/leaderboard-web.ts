@@ -21,5 +21,5 @@ export const saveLeaderboardRequest = (request: Request, d: LeaderboardDeps) =>
       publicName: form.get('public_name') ?? undefined,
       avatarKey: form.get('avatar_key') ?? undefined,
     });
-    return result(r === 'ok' ? 'lb-saved' : r === 'blocked' ? 'lb-blocked' : 'lb-invalid');
+    return result(r === 'ok' ? 'lb-saved' : r === 'blocked' ? 'lb-blocked' : r === 'taken' ? 'lb-taken' : 'lb-invalid');
   });
