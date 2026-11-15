@@ -12,10 +12,11 @@ export const metadata = seo(
   '/topics/',
 );
 
-// The topic index (SEO audit H1): every curated topic with its count of items the viewer may see. A topic with
-// nothing yet is listed without a link, so no link leads to an empty page.
+// The topic index (SEO audit H1): every curated topic that has items the viewer may see, with its count. A topic
+// with nothing yet is omitted entirely (teen UI pass, 15 Nov 2026): a dead "(0)" entry reads as a broken promise,
+// and the topic joins the index on its own when its first item publishes.
 export default async function TopicsPage() {
-  const topics = await topicCounts(getDb(), await currentScope());
+  const topics = (await topicCounts(getDb(), await currentScope())).filter((t) => t.count > 0);
   return (
     <div className="container section">
       <Breadcrumb trail={[{ name: 'Home', href: '/' }, { name: 'Topics' }]} />
@@ -24,7 +25,7 @@ export default async function TopicsPage() {
       <ul className="topic-index">
         {topics.map((t) => (
           <li key={t.slug}>
-            {t.count > 0 ? <Link href={`/topics/${t.slug}/`}>{`${t.name} (${t.count})`}</Link> : `${t.name} (0)`}
+            <Link href={`/topics/${t.slug}/`}>{`${t.name} (${t.count})`}</Link>
           </li>
         ))}
       </ul>

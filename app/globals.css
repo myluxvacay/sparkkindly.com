@@ -228,3 +228,7 @@ h1,h2,h3{font-family:var(--sans);font-weight:800;letter-spacing:-.6px}
   .preview-notice{background:#120818}
   .topic-index a{color:var(--plum)}
 }
+
+/* Header nav glyphs sit beside the world name (aria-hidden; the link name is the world alone). */
+.nav-glyph{margin-right:7px;font-size:15px}
+.nav-families{color:var(--muted);font-weight:400}

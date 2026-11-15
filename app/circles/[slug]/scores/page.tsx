@@ -22,7 +22,7 @@ type Period = (typeof PERIODS)[number]['key'];
 
 function ScoreTable({ board, caption }: { board: Board; caption: string }) {
   return (
-    <table>
+    <table className="score-table">
       <caption>{caption}</caption>
       <thead>
         <tr>
@@ -33,11 +33,13 @@ function ScoreTable({ board, caption }: { board: Board; caption: string }) {
       </thead>
       <tbody>
         {board.map((r, i) => (
-          <tr key={i}>
-            <td>{r.rank}</td>
+          <tr key={i} className={r.you ? 'you' : undefined}>
+            <td>
+              <span className={r.rank <= 3 ? 'score-rank top' : 'score-rank'}>{r.rank}</span>
+            </td>
             <th scope="row">
               {r.name}
-              {r.you && ' (you)'}
+              {r.you && <span className="score-you">You</span>}
             </th>
             <td>{r.points}</td>
           </tr>
@@ -61,7 +63,7 @@ export default async function CircleScoresPage({ params, searchParams }: Props) 
     <>
       <h1>Scores: {page.circle.name}</h1>
       <nav aria-label="Score period">
-        <ul>
+        <ul className="score-periods">
           {PERIODS.map((x) => (
             <li key={x.key}>
               <Link href={`${base}?p=${x.key}`} aria-current={x.key === period ? 'page' : undefined}>
