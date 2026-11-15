@@ -241,3 +241,8 @@ h1,h2,h3{font-family:var(--sans);font-weight:800;letter-spacing:-.6px}
 .spark-hero .quiz-panel{margin-block:28px 18px;max-width:850px}
 .spark-archive-link{color:#ffe087;font-weight:600}
 @media(max-width:580px){.spark-hero{padding:44px 0 52px}}
+
+/* Play island: the tap-to-rank badge on ordering rows (created by PlayEnhancer; the select stays the control). */
+.order-badge{position:absolute;top:10px;right:12px;min-width:30px;height:30px;border-radius:50%;background:var(--gold);color:#3a2444;font-weight:800;font-size:14px;display:grid;place-items:center;padding-inline:4px}
+.order-badge:empty{display:none}
+.quiz-panel[aria-busy="true"]{opacity:.75}

@@ -9,6 +9,7 @@ import { recordableRequest, recordPlay, type AnswerNote } from '@/lib/accounts/r
 import { clueCount, hasResponse, toParams, type SearchParams } from '@/lib/public/play-params';
 import PlayForm from './PlayForm';
 import PlayResult from './PlayResult';
+import PlayEnhancer from './PlayEnhancer';
 import SharePrompt from './SharePrompt';
 import DifficultyMeter from './DifficultyMeter';
 
@@ -31,13 +32,15 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
   const another = item.kind === 'quiz' ? '/quiz/archive/' : `/${item.world}/`;
 
   return (
-    <div className="quiz-panel">
-      <DifficultyMeter level={play.difficulty} />
-      {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} />}
-      {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
-      <Note note={note} />
-      {result?.status === 'ok' && <SharePrompt itemId={item.id} />}
-    </div>
+    <PlayEnhancer>
+      <div className="quiz-panel">
+        <DifficultyMeter level={play.difficulty} />
+        {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} />}
+        {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
+        <Note note={note} />
+        {result?.status === 'ok' && <SharePrompt itemId={item.id} />}
+      </div>
+    </PlayEnhancer>
   );
 }
 
