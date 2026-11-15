@@ -32,6 +32,13 @@ export default function PlayResult({ result, again, another, invalidHint }: Prop
           Try this one again ↺
         </Link>
       </p>
+      <div className="result-card">
+        <img src={`/api/result-card${again}`} alt="" width={150} height={188} loading="lazy" />
+        <p>
+          Your card for this one — save it or post it. It shows the question, never a score.{' '}
+          <a href={`/api/result-card${again}`}>Open the full-size card ↗</a>
+        </p>
+      </div>
     </>
   );
 }
