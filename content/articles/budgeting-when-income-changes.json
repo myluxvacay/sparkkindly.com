@@ -1,0 +1,55 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-06",
+  "slug": "budgeting-when-income-changes",
+  "title": "Budgeting when income changes",
+  "description": "Freelance, part-time, and seasonal work rarely pay the same each month — here is how to budget anyway.",
+  "publishedAt": "2026-10-25",
+  "updatedAt": "2026-10-25",
+  "tags": [
+    "budgeting",
+    "student-money",
+    "money-habits"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Budget from your low month",
+      "paragraphs": [
+        "If your income varies, base your essential budget on a low month, not your best month. List the must-pay costs that fit inside that low figure. That way, even a quiet month is covered.",
+        "In better months, the extra is not a surprise party — it is your chance to build a buffer, save, or pay for irregular costs like annual fees or repairs."
+      ]
+    },
+    {
+      "heading": "Build a buffer first",
+      "paragraphs": [
+        "A buffer is a small cushion of money kept for lean weeks. Start with a modest goal, like covering one week of essentials, and grow it slowly. A buffer turns an irregular income from stressful into manageable.",
+        "Keep the buffer separate from everyday spending money if you can, so it is still there when you need it."
+      ]
+    },
+    {
+      "heading": "Review monthly",
+      "paragraphs": [
+        "Variable income means a monthly five-minute review matters more, not less. Look at what came in, what is due soon, and move money to the buffer or bills before spending the rest."
+      ]
+    }
+  ],
+  "takeaway": "When income varies, budget from your low month and let good months build your buffer."
+}

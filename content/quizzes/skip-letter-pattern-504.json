@@ -1,0 +1,32 @@
+{
+  "id": "skip-letter-pattern-504",
+  "scheduledDate": "2027-01-17",
+  "brand": "play",
+  "prompt": "Which letter comes next in the pattern: A, C, E, G, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "H"
+    },
+    {
+      "id": "b",
+      "text": "I"
+    },
+    {
+      "id": "c",
+      "text": "J"
+    },
+    {
+      "id": "d",
+      "text": "K"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The pattern skips one letter each time - A, C, E, G - so the next letter is I.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

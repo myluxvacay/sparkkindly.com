@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-19",
+  "slug": "tic-tac-toe-never-lose",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Tic-Tac-Toe: The Game You Can Solve",
+  "description": "Small enough to master completely, tic-tac-toe hides one sharp idea — the fork — that will win you games against anyone who hasn't met it.",
+  "publishedAt": "2026-11-07",
+  "updatedAt": "2026-11-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "play-and-games",
+    "logic-puzzles"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A solved game",
+      "paragraphs": [
+        "Tic-tac-toe is what game theorists call solved: if both players play perfectly, every game ends in a draw. That is not a disappointment — it makes the game a perfect laboratory. When you lose at tic-tac-toe, you made a specific, findable mistake, and you can learn to never make it again.",
+        "A few reliable guidelines: the centre is the strongest opening square, because it touches four lines. A corner is next best. If your opponent opens in the centre, answer in a corner — answering on an edge against a centre opening is the classic way to lose."
+      ]
+    },
+    {
+      "heading": "The fork: two threats at once",
+      "paragraphs": [
+        "The winning weapon is the fork: a move that creates two separate lines, each one move from completion. Your opponent can block only one line per turn, so the other completes on your next move. Every tic-tac-toe victory against a decent player is a fork or the threat of one.",
+        "Defence is the mirror image: watch for squares where your opponent could create two threats at once, and spoil the fork before it exists — sometimes by making a threat of your own that forces them to defend instead."
+      ]
+    },
+    {
+      "heading": "A strategy to borrow",
+      "paragraphs": [
+        "Here is the practical summary. Open centre or corner. Block any line where your opponent has two. Take any line where you have two. And always glance one move ahead for forks — yours to make, theirs to prevent.",
+        "Then teach the fork to someone else and enjoy the brief arms race that follows. Games this small are not really about winning; they are about how quickly a complete understanding can spread around a table."
+      ]
+    }
+  ],
+  "takeaway": "With best play from both sides, tic-tac-toe always ends in a draw — and the fork, two threats at once, is how you punish a mistake.",
+  "fiction": false
+}

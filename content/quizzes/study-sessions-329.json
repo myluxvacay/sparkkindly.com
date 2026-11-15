@@ -1,0 +1,32 @@
+{
+  "id": "study-sessions-329",
+  "scheduledDate": "2026-05-13",
+  "brand": "grow",
+  "prompt": "Which study approach usually helps you remember more?",
+  "options": [
+    {
+      "id": "a",
+      "text": "One long, exhausted all-night session"
+    },
+    {
+      "id": "b",
+      "text": "Short, focused sessions with breaks"
+    },
+    {
+      "id": "c",
+      "text": "Reading notes once while watching TV"
+    },
+    {
+      "id": "d",
+      "text": "Highlighting everything in the book"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Spaced, focused practice with breaks helps memory far more than cramming, which mostly creates tiredness.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

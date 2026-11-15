@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-35",
+  "slug": "how-the-internet-finds-a-website",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How the Internet Finds a Website in a Blink",
+  "description": "You type a name, and a computer somewhere answers. The phone book that makes that possible is called DNS.",
+  "publishedAt": "2026-11-03",
+  "updatedAt": "2026-11-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "computing",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Domain Name System",
+      "url": "https://en.wikipedia.org/wiki/Domain_Name_System",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Names for humans, numbers for machines",
+      "paragraphs": [
+        "Computers on the internet reach each other using numerical addresses called IP addresses. Numbers work well for machines and badly for human memory, so we mostly use names instead — the words you type into a browser's address bar.",
+        "The Domain Name System, DNS, is the service that translates a name into the matching numerical address. It is often described as the internet's phone book, and almost every visit to a website begins with a DNS question."
+      ]
+    },
+    {
+      "heading": "Asking around, in milliseconds",
+      "paragraphs": [
+        "When you type a name, your device first checks whether it already knows the answer from a recent lookup. If not, it asks a resolver, usually run by your internet provider or another service, which goes looking on your behalf.",
+        "The resolver may ask a chain of servers: one that knows about endings like .com, then the organisation's own name server, which gives the final answer. The whole conversation usually finishes in a small fraction of a second, and the answer is remembered for a while to save repeating it."
+      ]
+    },
+    {
+      "heading": "Why DNS matters more than it looks",
+      "paragraphs": [
+        "Because DNS sits at the start of almost everything online, its design choices matter. If a name is typed slightly wrong, or a record is changed, visitors can end up somewhere unexpected — which is why checking web addresses carefully is good advice.",
+        "DNS was designed in the 1980s, when the internet was a small, trusting research network. It has been extended and made more secure ever since, but its basic idea — ask around until someone authoritative answers — still runs the modern web."
+      ]
+    }
+  ],
+  "takeaway": "DNS is the internet's translator: it turns the names humans remember into the numerical IP addresses computers need, usually in a fraction of a second.",
+  "fiction": false
+}

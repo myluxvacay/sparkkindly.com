@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-95",
+  "slug": "a-warmer-house-for-less-heating",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "A warmer house for less heating",
+  "description": "Feeling warm at home is about stopping heat escaping and warming the rooms you actually use.",
+  "publishedAt": "2026-06-08",
+  "updatedAt": "2026-06-08",
+  "tags": [
+    "energy-saving",
+    "saving"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Heat the rooms you live in",
+      "paragraphs": [
+        "Many homes heat every room to the same temperature all day, including bedrooms standing empty until bedtime. Turning radiators down, not fully off, in rarely used rooms reduces wasted heat while still protecting pipes and preventing damp corners.",
+        "A programmable thermostat or simple timer helps the heating follow your routine: warmer when people are up and about, cooler overnight and while the house is empty."
+      ]
+    },
+    {
+      "heading": "One degree makes a difference",
+      "paragraphs": [
+        "Lowering the thermostat by a single degree is barely noticeable day to day, especially if you adjust gradually, but over a whole heating season it can trim a meaningful amount from the bill.",
+        "Pair the change with warm layers and a throw on the sofa. Comfort is about how warm you feel, not only about the number on the wall."
+      ]
+    },
+    {
+      "heading": "Stop warmth leaking away",
+      "paragraphs": [
+        "Warm air escapes through gaps around doors, letterboxes, loft hatches and chimneys that are no longer used. Thick curtains, closed doors between heated and unheated spaces, and rugs on bare floors all slow the loss down.",
+        "If one room always feels cold while others overheat, the system may need balancing or a radiator may have trapped air. Those are small maintenance jobs that make the whole system work more evenly."
+      ]
+    }
+  ],
+  "takeaway": "Warm the rooms you use, nudge the thermostat down a degree, and slow the heat's escape routes."
+}

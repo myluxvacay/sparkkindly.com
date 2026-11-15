@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-14",
+  "slug": "fibonacci-in-pinecones",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Number Trail in Pinecones and Sunflowers",
+  "description": "1, 1, 2, 3, 5, 8, 13… a sequence built by adding turns up in seed heads and spiral shells. Go outside and count for yourself.",
+  "publishedAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "patterns",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Phyllotaxis",
+      "url": "https://en.wikipedia.org/wiki/Phyllotaxis",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A sequence built by adding",
+      "paragraphs": [
+        "The Fibonacci sequence starts 1, 1, and then every new number is the sum of the two before it: 2, 3, 5, 8, 13, 21, 34. It is one of the easiest sequences to extend and one of the hardest to stop thinking about.",
+        "It is named after Leonardo of Pisa, known as Fibonacci, who described it in 1202 in a puzzle about breeding rabbits. The sequence turned out to matter far beyond rabbits — especially where living things grow by adding new parts at a steady angle."
+      ]
+    },
+    {
+      "heading": "Where the numbers show up",
+      "paragraphs": [
+        "Look at a pinecone from below and you will see spirals running in two directions. Count them, and the counts are very often neighbouring Fibonacci numbers — 8 spirals one way and 13 the other is a common find. Sunflower heads do the same on a grander scale, often with 34 and 55, or 55 and 89 spirals.",
+        "This pattern in plant growth is called phyllotaxis. Packing seeds at a particular angle — about 137.5 degrees, the 'golden angle' — lets a flower fit the most seeds with the least waste, and Fibonacci numbers fall out of that geometry naturally."
+      ]
+    },
+    {
+      "heading": "Go and count",
+      "paragraphs": [
+        "On your next walk, collect a pinecone and count its spirals both ways, marking each spiral with a dot of pen as you count it so you do not chase the same one twice. Write down what you find, even if it is not a Fibonacci number — honest counting beats a good story.",
+        "Then try a pineapple: its diamond pattern spirals in three directions, and the counts are often 8, 13 and 21. Nature is not following a rule book; it is solving a packing problem, and the same solution keeps appearing."
+      ]
+    }
+  ],
+  "takeaway": "Add the last two numbers to get the next — then go outside and count spirals: growing things keep using the same shortlist.",
+  "fiction": false
+}

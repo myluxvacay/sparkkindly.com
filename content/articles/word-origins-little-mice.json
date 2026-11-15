@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-28",
+  "slug": "word-origins-little-mice",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Word Origins: Little Mice, Forced Labour and Broken Legs",
+  "description": "Three everyday words with surprising pasts — a mouse in your arm, a robot born in a play, and the strangest good-luck wish in theatre.",
+  "publishedAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "curiosity",
+    "words"
+  ],
+  "sources": [
+    {
+      "title": "Robot",
+      "url": "https://en.wikipedia.org/wiki/Robot",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A mouse in your arm",
+      "paragraphs": [
+        "The word 'muscle' comes from the Latin musculus, meaning 'little mouse'. The Romans thought a flexed muscle — especially the biceps, bulging and shifting under the skin — looked like a small mouse moving beneath a cloth.",
+        "It is a strange image that becomes impossible to unsee. Etymology is full of these: words are fossils of what people noticed, and what people noticed, centuries ago, was often funny, practical and vivid all at once."
+      ]
+    },
+    {
+      "heading": "The word that came from a play",
+      "paragraphs": [
+        "'Robot' is barely a century old. It comes from the Czech word robota, meaning forced labour or drudgery, and it entered the world through Karel Čapek's 1920 play R.U.R., about artificial workers who eventually rebel against their makers.",
+        "Čapek himself credited his brother Josef with suggesting the word. Within a few years it had escaped the theatre and attached itself to real machines — carrying its warning from the play along with it, all the way into modern headlines."
+      ]
+    },
+    {
+      "heading": "Why actors break legs",
+      "paragraphs": [
+        "Before a performance, actors traditionally wish each other 'break a leg' instead of 'good luck'. One popular explanation is theatre superstition: saying 'good luck' outright was thought to tempt fate, so performers wished for the opposite and let luck sneak in the back door.",
+        "Nobody knows the phrase's true origin for certain — several theories compete, including bows taken so deeply they bent the leg. That uncertainty is itself a good lesson in word origins: some stories about words are as theatrical as the stage that produced them, and honest tellers say so."
+      ]
+    }
+  ],
+  "takeaway": "Words carry tiny histories — a muscle is a 'little mouse', and a robot began as a word for forced work.",
+  "fiction": false
+}

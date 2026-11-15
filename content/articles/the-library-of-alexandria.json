@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-27",
+  "slug": "the-library-of-alexandria",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Library of Alexandria: A City That Loved Questions",
+  "description": "In ancient Egypt, one library tried to gather all the world's knowledge in a single place — and scholars still dream about it.",
+  "publishedAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "ancient-history",
+    "language"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Library of Alexandria",
+      "url": "https://en.wikipedia.org/wiki/Library_of_Alexandria",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Britannica: Library of Alexandria",
+      "url": "https://www.britannica.com/topic/Library-of-Alexandria-Egypt",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A library with a big ambition",
+      "paragraphs": [
+        "The Library of Alexandria stood in the Egyptian city of Alexandria, founded by Alexander the Great. The library was built in the third century BCE under the Ptolemaic rulers, who wanted their city to be a centre of learning for the whole Mediterranean world.",
+        "Its ambition was enormous: to collect copies of every book that existed. In that age, books were handwritten scrolls, so collecting meant sending agents to buy texts, and reportedly copying scrolls brought into the harbour by visiting ships."
+      ]
+    },
+    {
+      "heading": "Scholars, scrolls, and first drafts of science",
+      "paragraphs": [
+        "The library was part of a larger research community called the Mouseion, where scholars lived, ate, and worked together. Euclid, associated with the famous geometry text the Elements, is linked with Alexandria's scholarly world.",
+        "Librarians there did serious organising work. Callimachus produced an enormous catalogue of the collection, an early attempt to map who had written what — a distant ancestor of the library catalogues and search tools we use today."
+      ]
+    },
+    {
+      "heading": "How it faded",
+      "paragraphs": [
+        "Popular stories often blame a single fire, but historians describe a slower decline over centuries: funding shrank, scholars were expelled at one point, and parts of the collection were damaged in conflicts, including a fire during Julius Caesar's time in the city in 48 BCE.",
+        "The lesson of Alexandria is less about one dramatic ending and more about care. Knowledge survives when people keep copying, funding, and sharing it — a job every generation has to choose to do again."
+      ]
+    }
+  ],
+  "takeaway": "The Library of Alexandria tried to hold all the world's knowledge in one place, and its slow fading is a reminder that knowledge survives only when people keep caring for it.",
+  "fiction": false
+}

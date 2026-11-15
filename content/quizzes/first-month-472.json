@@ -1,0 +1,32 @@
+{
+  "id": "first-month-472",
+  "scheduledDate": "2026-12-16",
+  "brand": "kids",
+  "prompt": "Which month comes first in the year?",
+  "options": [
+    {
+      "id": "a",
+      "text": "December"
+    },
+    {
+      "id": "b",
+      "text": "June"
+    },
+    {
+      "id": "c",
+      "text": "January"
+    },
+    {
+      "id": "d",
+      "text": "March"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "January is the very first month of the year, and December is the last.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

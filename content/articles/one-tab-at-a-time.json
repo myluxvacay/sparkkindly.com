@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-05",
+  "slug": "one-tab-at-a-time",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "One Tab at a Time",
+  "description": "Doing one thing at a time feels slower, but it usually finishes faster and feels calmer.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "mindfulness"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The switching tax",
+      "paragraphs": [
+        "Every time you jump between homework, messages and a video, your brain pays a small switching cost to reload what it was doing. Researchers who study attention describe this leftover pull as attention residue — part of your mind stays stuck on the previous thing.",
+        "You can feel it yourself: after checking a message mid-task, the next sentence or sum takes longer to come back. Nothing is wrong with you. That is simply how attention works."
+      ]
+    },
+    {
+      "heading": "Try single-tasking in small doses",
+      "paragraphs": [
+        "Pick one task and give it a short, protected window — fifteen or twenty minutes. Close the other tabs, or at least mute them. When an unrelated thought pops up, jot it on paper instead of acting on it, then return.",
+        "Single-tasking is a skill, not a personality trait. Short, regular practice windows build it far better than one heroic afternoon of forced concentration."
+      ]
+    }
+  ],
+  "takeaway": "One thing, briefly and fully, beats five things at once.",
+  "fiction": false
+}

@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-33",
+  "slug": "journal-without-rules",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Journal Without Rules",
+  "description": "No prompts, no streaks, no audience: a journal works best when nobody — including you — grades it.",
+  "publishedAt": "2026-11-12",
+  "updatedAt": "2026-11-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "writing",
+    "mindfulness"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Why rules ruin journals",
+      "paragraphs": [
+        "Many journals die of good intentions: write every day, fill a page, be insightful, keep it forever. Each rule is another way to fail, and within a fortnight the notebook becomes a small monument to guilt.",
+        "The alternative is a journal with no rules at all. Write when there is something to offload or explore. Three lines or three pages. Legible or not. The journal serves you; you do not serve the journal."
+      ]
+    },
+    {
+      "heading": "What to write when you do",
+      "paragraphs": [
+        "Whatever is loudest: the thing you keep rehearsing, the decision going in circles, the good moment you want to keep. Writing slows thought to handwriting speed, which is often slow enough to finally hear it properly.",
+        "Keep it private — genuinely private, somewhere others will not read. Honesty on the page depends on it, and honesty is the entire point."
+      ]
+    }
+  ],
+  "takeaway": "No schedule, no standards, no audience: just write when it helps.",
+  "fiction": false
+}

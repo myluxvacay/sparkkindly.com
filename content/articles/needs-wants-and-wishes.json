@@ -1,0 +1,55 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-02",
+  "slug": "needs-wants-and-wishes",
+  "title": "Needs, wants, and wishes",
+  "description": "A simple three-way sort that makes everyday spending decisions much clearer.",
+  "publishedAt": "2026-10-21",
+  "updatedAt": "2026-10-21",
+  "tags": [
+    "money-basics",
+    "spending-wisely",
+    "budgeting"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The three buckets",
+      "paragraphs": [
+        "Needs are things you must have to live, learn, and get around safely. Wants are things that make life nicer but that you could delay or do differently. Wishes are bigger dreams that need time and saving.",
+        "Try sorting a week of spending into the three buckets. Most people are surprised by how many small wants quietly add up — not because wants are bad, but because they were invisible."
+      ]
+    },
+    {
+      "heading": "Wants are not the enemy",
+      "paragraphs": [
+        "The point is not to ban wants. Enjoying things is part of life. The point is choosing wants on purpose, within what you can afford, instead of letting every small impulse decide for you.",
+        "A good question before buying a want is: will I still be glad about this next week? If the answer is unsure, waiting a day often gives a clearer answer."
+      ]
+    },
+    {
+      "heading": "Wishes need a plan",
+      "paragraphs": [
+        "Wishes — a bike, a trip, a course — become real when they get a name, a rough price, and a small regular saving habit. Even tiny amounts, saved steadily, move a wish closer."
+      ]
+    }
+  ],
+  "takeaway": "Sort spending into needs, wants, and wishes, and choose your wants on purpose."
+}

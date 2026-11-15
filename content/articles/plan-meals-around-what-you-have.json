@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-103",
+  "slug": "plan-meals-around-what-you-have",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Plan meals around what you already have",
+  "description": "Starting the weekly plan from the cupboard and freezer, rather than from a recipe book, quietly prevents most food waste.",
+  "publishedAt": "2026-06-23",
+  "updatedAt": "2026-06-23",
+  "tags": [
+    "reducing-waste",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Shop your own kitchen first",
+      "paragraphs": [
+        "Before writing a shopping list, take five minutes with the fridge, freezer and cupboard doors open. There is almost always the beginning of two or three meals already there: frozen peas and pasta, tinned beans, eggs, the last of the cheese.",
+        "Build the week's plan around those starting points and shop only for the missing pieces. The list gets shorter, the bill gets smaller, and the food you already paid for actually gets eaten."
+      ]
+    },
+    {
+      "heading": "Use a loose framework, not a strict script",
+      "paragraphs": [
+        "A rigid plan collapses the first time a day runs late. A looser framework survives real life: a soup day, a pasta day, a tray-bake day, with ingredients that can swap between them.",
+        "Keep one or two genuinely effortless backups, like frozen pizza or beans on toast, for the evenings when cooking was never going to happen. Planning for tired days is part of the plan, not a failure of it."
+      ]
+    },
+    {
+      "heading": "First in, first out",
+      "paragraphs": [
+        "When new shopping arrives, move older items to the front of shelves and fridge so they get used first. This simple rotation, borrowed from professional kitchens, prevents the slow drift of food to the forgotten back.",
+        "A small whiteboard or note listing what needs eating soon turns good intentions into visible reminders that the whole household can act on."
+      ]
+    }
+  ],
+  "takeaway": "Let the cupboard write the first draft of the meal plan, and shopping becomes topping up instead of starting over."
+}

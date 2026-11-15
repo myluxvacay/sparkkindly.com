@@ -1,0 +1,56 @@
+{
+  "id": "play-bulk-09",
+  "slug": "counterfeit-coin-two-weighings",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Find the Heavy Coin in Just Two Weighings",
+  "description": "Nine coins look identical, but one is heavier. With a balance scale and only two weighings, you can point straight at it.",
+  "publishedAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "brain-teasers",
+    "maths-and-logic",
+    "number-puzzles"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Nine coins, one secret",
+      "paragraphs": [
+        "Nine coins sit in a row, identical to the eye. One of them is slightly heavier than the rest. You have a balance scale — the old-fashioned kind with two pans — and you may use it exactly twice. No guessing: your method must guarantee finding the heavy coin.",
+        "Weighing coins one against one would take far too many tries. The breakthrough is realising that a balance gives you three outcomes, not two: left side down, right side down, or perfectly level. Every weighing can sort coins into three stories at once."
+      ]
+    },
+    {
+      "heading": "Think in threes",
+      "paragraphs": [
+        "Split the nine coins into three groups of three. Weigh group A against group B. If A sinks, the heavy coin is in A. If B sinks, it is in B. If the pans balance, it must be in group C, the group you left off the scale. One weighing, and nine suspects have become three.",
+        "Now repeat the trick inside the guilty group: weigh one coin against another. If one side sinks, that coin is the heavy one. If they balance, the third coin — the one still in your hand — is the heavy one. Two weighings, case closed."
+      ]
+    },
+    {
+      "heading": "Why two weighings are enough",
+      "paragraphs": [
+        "Each weighing has three possible outcomes, so two weighings can tell apart 3 × 3 = 9 situations — exactly the nine coins that might be heavy. The maths and the method fit each other perfectly.",
+        "That is also why the trick extends: three weighings could find one heavy coin among 27. If you enjoy this, set the puzzle for a friend with nine identical-looking coins or bottle caps and one secretly marked underneath — and watch them discover the power of three."
+      ]
+    }
+  ],
+  "takeaway": "Split into threes, weigh, and let the scale point at the guilty group — two weighings, nine suspects, one heavy coin.",
+  "fiction": false
+}

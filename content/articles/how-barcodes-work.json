@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-34",
+  "slug": "how-barcodes-work",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How Barcodes Talk to Computers",
+  "description": "Those black stripes are a font that machines can read at the speed of a beep — and the last digit is a built-in lie detector.",
+  "publishedAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "technology",
+    "computing",
+    "inventions"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Barcode",
+      "url": "https://en.wikipedia.org/wiki/Barcode",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Universal Product Code",
+      "url": "https://en.wikipedia.org/wiki/Universal_Product_Code",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Stripes that are really numbers",
+      "paragraphs": [
+        "A standard product barcode, the UPC, encodes twelve digits. The black bars and white spaces come in different widths, and the scanner reads the pattern of widths as a sequence of numbers — the bars are the digits, written in a machine-readable font.",
+        "Importantly, the barcode usually does not contain the price. It contains an identifying number, and the shop's computer looks that number up in a database to find the name and current price. Change the price in the database, and every item updates at once."
+      ]
+    },
+    {
+      "heading": "The first scan and the checkout beep",
+      "paragraphs": [
+        "The barcode idea was patented in 1952, inspired in part by Morse code stretched into lines. It took lasers and cheaper computers to make it practical, and the first product scanned in a shop — a pack of chewing gum in Ohio — was in 1974.",
+        "That beep you hear is not the sound of the price being found. It is simply the scanner confirming it read the code successfully, so the cashier knows the item registered."
+      ]
+    },
+    {
+      "heading": "The clever last digit",
+      "paragraphs": [
+        "The twelfth digit of a UPC is a check digit. The scanner's computer does a small calculation with the other eleven digits and compares the answer with the check digit. If they do not match, the code was probably misread and the scan is rejected.",
+        "It is a tiny piece of built-in self-checking, the same basic idea — add a number whose only job is to catch errors — that appears in bank cards, book ISBNs, and many other codes."
+      ]
+    }
+  ],
+  "takeaway": "A barcode is a number written in stripes: the till looks the number up in a database for the price, and the final digit exists purely to catch scanning mistakes.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "apple-fruit-370",
+  "scheduledDate": "2026-06-23",
+  "brand": "kids",
+  "prompt": "Which of these is a fruit?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Carrot"
+    },
+    {
+      "id": "b",
+      "text": "Potato"
+    },
+    {
+      "id": "c",
+      "text": "Apple"
+    },
+    {
+      "id": "d",
+      "text": "Bread"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "An apple is a fruit that grows on a tree - and it has little seeds inside.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

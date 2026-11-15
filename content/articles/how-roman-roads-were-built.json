@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-28",
+  "slug": "how-roman-roads-were-built",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How Roman Roads Connected a Continent",
+  "description": "Roman roads were built in layers, drained like clockwork, and so well made that parts of them are still in use today.",
+  "publishedAt": "2026-10-26",
+  "updatedAt": "2026-10-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "ancient-history",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Roman roads",
+      "url": "https://en.wikipedia.org/wiki/Roman_roads",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Appian Way",
+      "url": "https://en.wikipedia.org/wiki/Appian_Way",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Built in layers, not just laid down",
+      "paragraphs": [
+        "A Roman road was not a pile of stones scattered on dirt. Builders dug a trench and filled it in layers: large stones at the bottom, then smaller stones and gravel, then a surface of tightly fitted slabs or packed gravel on top.",
+        "The surface was often slightly curved, higher in the middle than at the edges, so rainwater ran off into drainage ditches on either side. Keeping water out was the secret to keeping the road solid."
+      ]
+    },
+    {
+      "heading": "Straight lines and long journeys",
+      "paragraphs": [
+        "Roman surveyors liked to build in straight stretches, sighting from high point to high point, even if that meant cutting through a hill or bridging a marsh. The famous Appian Way, begun in 312 BCE, linked Rome with the south of Italy.",
+        "At its height, the Roman road network stretched for tens of thousands of kilometres of paved road across Europe, North Africa, and the Near East. Milestones along the way told travellers the distance to the next city — and which emperor to thank."
+      ]
+    },
+    {
+      "heading": "Why roads mattered",
+      "paragraphs": [
+        "Roads let soldiers move quickly, but they also carried grain, olive oil, letters, and ideas. A shared road network helped turn separate regions into one connected empire where goods and news could travel predictably.",
+        "Many modern roads still follow Roman routes, and some Roman surfaces survive underneath or beside them. Good infrastructure, it turns out, can outlast the empire that built it."
+      ]
+    }
+  ],
+  "takeaway": "Roman roads lasted because they were engineered in layers with drainage and straight surveyed lines — infrastructure designed to be boring, solid, and shared.",
+  "fiction": false
+}

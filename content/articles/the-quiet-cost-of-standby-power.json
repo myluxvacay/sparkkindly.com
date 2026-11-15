@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-91",
+  "slug": "the-quiet-cost-of-standby-power",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "The quiet cost of standby power",
+  "description": "Many devices sip electricity while they look switched off, and a few simple habits can trim that hidden use.",
+  "publishedAt": "2026-06-01",
+  "updatedAt": "2026-06-01",
+  "tags": [
+    "energy-saving",
+    "green"
+  ],
+  "sources": [
+    {
+      "title": "ENERGY STAR",
+      "url": "https://www.energystar.gov/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "Power that flows while nothing happens",
+      "paragraphs": [
+        "A television on standby, a charger left in the socket and a games console waiting for a signal all draw a small amount of electricity. Each one is tiny on its own, but together, running all day and all night, they can add up to a noticeable slice of a household bill.",
+        "This is sometimes called standby power or vampire power. The good news is that you do not need special equipment to reduce it. You only need to know which devices are the main culprits."
+      ]
+    },
+    {
+      "heading": "Finding the main culprits",
+      "paragraphs": [
+        "Devices with a little glowing light, a clock display or a remote-control sensor are usually drawing power while they wait. Set-top boxes, older chargers and anything that feels warm to the touch are good places to start looking.",
+        "Try one experiment: for a week, switch entertainment equipment off at the wall when nobody is using it, and charge phones and tablets only while someone is awake. Then compare how the routine felt. Most households find only a couple of changes are worth keeping, and that is fine."
+      ]
+    },
+    {
+      "heading": "Make it easy to switch off",
+      "paragraphs": [
+        "A multi-socket strip with its own switch lets you turn a television, console and speaker off together with one click. Grouping devices this way removes the friction that makes people give up.",
+        "Be sensible about exceptions. Routers, fridges and anything medical or safety-related should stay on. The aim is to cut the idle trickle from entertainment and charging gear, not to make daily life awkward."
+      ]
+    }
+  ],
+  "takeaway": "Switching idle devices off at the wall is a small habit that quietly trims the bill."
+}

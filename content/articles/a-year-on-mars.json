@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-02",
+  "slug": "a-year-on-mars",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "A Year on Mars Lasts Almost Two of Ours",
+  "description": "Mars takes 687 Earth days to circle the Sun — so birthdays there would be few and far between.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Mars",
+      "url": "https://en.wikipedia.org/wiki/Mars",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "NASA Science: Mars",
+      "url": "https://science.nasa.gov/mars/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "One long trip around the Sun",
+      "paragraphs": [
+        "A year is simply the time a planet takes to complete one orbit, and Mars has farther to travel than we do. Its lap takes 687 Earth days — about 1.88 Earth years.",
+        "A single Martian day, called a sol, is friendlier: 24 hours and about 37 minutes. Mission controllers on Earth once lived on “Mars time”, shifting their schedules roughly 40 minutes later each day to match the rovers they were driving."
+      ]
+    },
+    {
+      "heading": "Seasons, but stranger",
+      "paragraphs": [
+        "Mars is tilted on its axis by about 25 degrees, close to Earth’s 23.5 degrees, so it has spring, summer, autumn and winter much as we do. Each season simply lasts about twice as long.",
+        "There is a twist: Mars follows a noticeably oval orbit, so it speeds up and draws closer to the Sun during part of the year. Southern summers there are shorter and warmer than northern ones — the seasons are not only longer than ours, they are uneven too."
+      ]
+    },
+    {
+      "heading": "Half as many birthdays",
+      "paragraphs": [
+        "If people ever settle on Mars, the calendar will feel spacious. A child born there would celebrate a tenth birthday at an age when an Earth child is nearly nineteen.",
+        "It is a useful reminder that a “year” is not a law of nature. It is a local habit — one orbit of whichever world you happen to call home."
+      ]
+    }
+  ],
+  "takeaway": "A Martian year is 687 Earth days, so seasons there stretch about twice as long as ours — and birthdays come half as often.",
+  "fiction": false
+}

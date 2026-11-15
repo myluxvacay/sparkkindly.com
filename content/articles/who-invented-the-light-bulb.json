@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-31",
+  "slug": "who-invented-the-light-bulb",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Who Invented the Light Bulb? More People Than You Think",
+  "description": "Edison gets the headline, but the light bulb was a team effort stretching across decades, countries, and dozens of experiments.",
+  "publishedAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "inventions",
+    "technology",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Incandescent light bulb",
+      "url": "https://en.wikipedia.org/wiki/Incandescent_light_bulb",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Joseph Swan",
+      "url": "https://en.wikipedia.org/wiki/Joseph_Swan",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "An idea many hands shaped",
+      "paragraphs": [
+        "Long before a bulb lit a home, experimenters in the early 1800s showed that electricity could make a wire glow. The challenge was making that glow last: early filaments burned up in minutes because oxygen in the air let them catch fire.",
+        "The breakthrough pieces arrived gradually — better vacuum pumps to remove air from the glass, and better filament materials that could glow for hours without breaking. Inventors in several countries were racing toward the same goal."
+      ]
+    },
+    {
+      "heading": "Swan, Edison, and the patent race",
+      "paragraphs": [
+        "In Britain, Joseph Swan demonstrated working incandescent lamps in the late 1870s and lit his own home with them. In the United States, Thomas Edison tested thousands of filament materials and, in 1880, produced a bulb that could burn for many hundreds of hours.",
+        "Edison's real genius may have been the system around the bulb: generators, wiring, switches, and meters, so whole streets and buildings could be lit, not just one lamp on a laboratory bench. Edison and Swan eventually combined their British interests in a joint company."
+      ]
+    },
+    {
+      "heading": "Why single-inventor stories mislead",
+      "paragraphs": [
+        "We like inventions to have one hero and one 'eureka' date, but most technology arrives the way the bulb did — step by step, with rivals, lawsuits, dead ends, and improvements borrowed from each other.",
+        "Remembering the crowd behind the bulb is not unfair to Edison. It is a more useful story for anyone who wants to invent something: progress is usually a relay, not a solo sprint."
+      ]
+    }
+  ],
+  "takeaway": "The light bulb had no single inventor — Swan, Edison, and many others each added a piece, and Edison's lasting contribution was the whole electric lighting system.",
+  "fiction": false
+}

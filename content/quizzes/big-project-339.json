@@ -1,0 +1,32 @@
+{
+  "id": "big-project-339",
+  "scheduledDate": "2026-05-23",
+  "brand": "grow",
+  "prompt": "A big project feels overwhelming. What is the best first step?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Wait for the deadline to force you"
+    },
+    {
+      "id": "b",
+      "text": "Break it down and do the smallest first step"
+    },
+    {
+      "id": "c",
+      "text": "Do the hardest part first, always"
+    },
+    {
+      "id": "d",
+      "text": "Think about the whole thing until it feels easy"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Shrinking the task to one small, clear action makes starting possible, and starting builds momentum.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

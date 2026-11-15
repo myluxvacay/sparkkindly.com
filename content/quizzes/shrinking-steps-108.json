@@ -1,0 +1,32 @@
+{
+  "id": "shrinking-steps-108",
+  "scheduledDate": "2026-10-13",
+  "brand": "play",
+  "prompt": "What number comes next: 100, 90, 81, 73, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "64"
+    },
+    {
+      "id": "b",
+      "text": "65"
+    },
+    {
+      "id": "c",
+      "text": "66"
+    },
+    {
+      "id": "d",
+      "text": "67"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The steps shrink by 1 each time: -10, -9, -8, so the next step is -7, giving 73-7=66.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

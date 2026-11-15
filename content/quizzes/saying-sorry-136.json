@@ -1,0 +1,32 @@
+{
+  "id": "saying-sorry-136",
+  "scheduledDate": "2026-11-02",
+  "brand": "together",
+  "prompt": "You interrupted a friend several times while they were talking. What makes a good apology?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Sorry, but you talk too slowly"
+    },
+    {
+      "id": "b",
+      "text": "Sorry I kept interrupting - I want to hear what you were saying"
+    },
+    {
+      "id": "c",
+      "text": "Sorry not sorry"
+    },
+    {
+      "id": "d",
+      "text": "Say nothing and hope they forget"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A good apology names what you did without excuses and shows you value what the other person has to say.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

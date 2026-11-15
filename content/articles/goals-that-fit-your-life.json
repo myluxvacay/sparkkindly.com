@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-09",
+  "slug": "goals-that-fit-your-life",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Goals That Fit Your Life",
+  "description": "A good goal fits the life you actually have — your time, energy and responsibilities — not an imaginary one.",
+  "publishedAt": "2026-10-25",
+  "updatedAt": "2026-10-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "goals",
+    "motivation"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Start from your real week",
+      "paragraphs": [
+        "Goals copied from someone else's highlight reel often assume free evenings, endless energy and no obligations. When they collide with a real week, we blame ourselves instead of the fit.",
+        "Before setting a goal, look honestly at your week: school or work, family, rest, the commitments that are not moving. Then choose a goal that fits into the gaps that genuinely exist."
+      ]
+    },
+    {
+      "heading": "Specific beats impressive",
+      "paragraphs": [
+        "“Get fit” is a wish; “walk for twenty minutes after lunch on weekdays” is a plan. A fitting goal names what you will do, when you will do it, and how you will know it happened.",
+        "Small and specific is not a lack of ambition. It is how ambition survives contact with an ordinary Tuesday — and ordinary Tuesdays are where goals are actually won or lost."
+      ]
+    }
+  ],
+  "takeaway": "Choose goals sized for your real life, and they stand a chance.",
+  "fiction": false
+}

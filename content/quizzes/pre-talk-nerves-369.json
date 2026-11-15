@@ -1,0 +1,32 @@
+{
+  "id": "pre-talk-nerves-369",
+  "scheduledDate": "2026-06-22",
+  "brand": "grow",
+  "prompt": "You feel nervous before giving a short talk. Which strategy is most helpful?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Skip practising so it feels fresh"
+    },
+    {
+      "id": "b",
+      "text": "Drink lots of coffee for energy"
+    },
+    {
+      "id": "c",
+      "text": "Prepare well and breathe slowly"
+    },
+    {
+      "id": "d",
+      "text": "Imagine the audience judging you"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Preparation gives you something solid to stand on, and slow breathing calms the body's stress response.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

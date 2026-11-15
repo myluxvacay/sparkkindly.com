@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-30",
+  "slug": "mail-before-email",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Mail Before Email: Letters That Took Months",
+  "description": "Before instant messages, a letter could travel by horse, ship, and stagecoach for months — and people wrote like it mattered.",
+  "publishedAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "history",
+    "technology",
+    "language"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Mail",
+      "url": "https://en.wikipedia.org/wiki/Mail",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Pony Express",
+      "url": "https://en.wikipedia.org/wiki/Pony_Express",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Slow journeys, careful words",
+      "paragraphs": [
+        "For most of history, a message could move no faster than a horse or a ship. A letter crossing an ocean might take weeks or months, and the writer knew there would be no quick reply, so letters were often long, news-packed, and carefully composed.",
+        "Because paper and postage could be expensive, people filled every space. Some writers even 'crossed' their letters, turning the page sideways and writing over the first layer in a second direction to save a sheet."
+      ]
+    },
+    {
+      "heading": "Relays that shrank the world",
+      "paragraphs": [
+        "Organised postal systems used relay stations where riders swapped tired horses for fresh ones, keeping mail moving day and night. The famous Pony Express in the United States, which ran in 1860 and 1861, carried mail across the country in about ten days.",
+        "The Pony Express lasted only about eighteen months. The telegraph, which could send a message along a wire almost instantly, made it obsolete almost as soon as it became legendary."
+      ]
+    },
+    {
+      "heading": "What changed when messages became instant",
+      "paragraphs": [
+        "Each new technology — telegraph, telephone, email, chat — shortened the wait between sending and hearing back. What used to take a season now takes a second, and we send far more messages, most of them far shorter.",
+        "Something was gained and something was lost. The old letter's slowness forced thoughtfulness; the new message's speed allows kindness to arrive exactly when it is needed. Both are worth noticing."
+      ]
+    }
+  ],
+  "takeaway": "Before email, distance shaped how people wrote: slow, expensive mail produced long, careful letters — until relays, wires, and finally the internet shrank the wait to seconds.",
+  "fiction": false
+}

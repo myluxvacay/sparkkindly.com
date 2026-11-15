@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-109",
+  "slug": "what-actually-gets-recycled",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "What actually gets recycled",
+  "description": "Not everything with a recycling symbol becomes something new, and knowing what really does helps you sort with confidence.",
+  "publishedAt": "2026-07-04",
+  "updatedAt": "2026-07-04",
+  "tags": [
+    "recycling",
+    "green"
+  ],
+  "sources": [
+    {
+      "title": "epa.gov",
+      "url": "https://www.epa.gov/recycle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "The reliable regulars",
+      "paragraphs": [
+        "Metal cans, glass bottles and jars, paper and cardboard, and most rigid plastic bottles and tubs are the backbone of household recycling. Metals and glass can be recycled again and again without losing quality, which is why they are so valuable to collect.",
+        "Plastic is more limited: bottles and sturdy tubs are widely recycled, while thin films, bags and wrappers usually are not accepted in home bins, even when they carry a recycling symbol."
+      ]
+    },
+    {
+      "heading": "Why the symbol can mislead",
+      "paragraphs": [
+        "The numbered triangle on plastic tells you the type of resin the item is made from; it does not promise your local service can recycle it. Councils and contractors differ in what their sorting plants can handle, which is why rules vary between towns.",
+        "The trustworthy source is always your own council or waste service's list, not the packaging. Checking it once, and keeping a photo of it on the fridge, ends most kitchen debates."
+      ]
+    },
+    {
+      "heading": "Sorting well matters",
+      "paragraphs": [
+        "Recycling only works if someone can sell the material to a maker. Clean, dry, correctly sorted items become bales that factories want; contaminated loads can be rejected entirely.",
+        "That is why the small habits, rinsing containers, keeping paper dry and leaving out the doubtful items, protect the value of everything else in the bin. Recycling is a team effort, and your kitchen is the first player."
+      ]
+    }
+  ],
+  "takeaway": "Cans, glass, paper and rigid plastics are the reliable regulars; when in doubt, your local list outranks any symbol."
+}

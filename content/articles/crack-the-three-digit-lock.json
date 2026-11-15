@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-03",
+  "slug": "crack-the-three-digit-lock",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Crack the Lock: A Three-Digit Logic Puzzle",
+  "description": "Five clues, one three-digit code. Work through them in the right order and the lock opens with pure reasoning.",
+  "publishedAt": "2026-10-22",
+  "updatedAt": "2026-10-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "logic-puzzles"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The clues",
+      "paragraphs": [
+        "A lock has a three-digit code. You do not know whether digits repeat — the clues will settle everything. Here they are. 682: one digit is correct and in the right place. 614: one digit is correct but in the wrong place. 206: two digits are correct but both in the wrong places. 738: nothing is correct. 780: one digit is correct but in the wrong place.",
+        "Resist the urge to guess. This puzzle is fully solvable by elimination, and the most powerful clue is the one that tells you nothing is there."
+      ]
+    },
+    {
+      "heading": "Solving it step by step",
+      "paragraphs": [
+        "Start with 738: the digits 7, 3 and 8 appear nowhere in the code. Now look at 780 — its one correct digit cannot be 7 or 8, so it is 0, and since it is in the wrong place, 0 is not the third digit. In 206, two of 2, 0, 6 are correct but misplaced; 0 sits in the middle there and is misplaced, so 0 is not the second digit either. A digit that is neither second nor third must be first: the code starts with 0.",
+        "Next, 682 has exactly one correct digit in the right place, and 8 is already eliminated. If 6 were correct in first place, that would clash with our 0 — so the correct one is 2, sitting third. Now 206 has its two correct digits accounted for: 2 and 0, both misplaced, which means 6 is not in the code at all. Finally 614 needs one correct digit in the wrong place; 6 is out, and the digit that fits is 4, which cannot sit third (that place belongs to 2), so it goes in the middle."
+      ]
+    },
+    {
+      "heading": "The code, and how to make your own",
+      "paragraphs": [
+        "The code is 042. Run it back through all five clues and each one checks out exactly — that final verification is part of the puzzle, not an optional extra.",
+        "To build your own, pick a code, then write clues that are each true of it, mixing 'right place', 'wrong place' and 'nothing' types. Test it on a friend: if they reach a single answer by reasoning alone, your clue set is complete."
+      ]
+    }
+  ],
+  "takeaway": "The code is 042 — and notice how the 'nothing is correct' clue did the heavy lifting first. Elimination is a superpower.",
+  "fiction": false
+}

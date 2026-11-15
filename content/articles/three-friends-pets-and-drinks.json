@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-06",
+  "slug": "three-friends-pets-and-drinks",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Three Friends, Three Pets, Three Drinks",
+  "description": "A small logic-grid puzzle with a full worked solution — the gentle way to learn a method that cracks much bigger puzzles.",
+  "publishedAt": "2026-10-25",
+  "updatedAt": "2026-10-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "brain-teasers"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The puzzle",
+      "paragraphs": [
+        "Three friends — Ana, Ben and Cleo — each own one pet and favour one drink. The pets are a cat, a dog and a fish. The drinks are tea, juice and milk. No two friends share a pet or a drink. Your clues: (1) Ana does not have the cat. (2) The dog's owner drinks juice. (3) Ben drinks tea. (4) Cleo has the fish.",
+        "Draw a grid: friends down the side, pets and drinks across the top. Every clue will either tick a box or cross one out, and crossed-out boxes are information too."
+      ]
+    },
+    {
+      "heading": "Working it through",
+      "paragraphs": [
+        "Clue 4 is a gift: Cleo has the fish, so cross out cat and dog for Cleo, and cross out fish for Ana and Ben. Clue 3 says Ben drinks tea; the dog's owner drinks juice (clue 2), so Ben cannot own the dog. Ben's pet is not the fish either — so Ben has the cat.",
+        "That leaves the dog for Ana (clue 1 agrees — she does not have the cat). By clue 2, Ana drinks juice. Cleo's drink is the one left over: milk. Every box is now decided, and each clue was used exactly as much as it needed to be."
+      ]
+    },
+    {
+      "heading": "Why the grid works",
+      "paragraphs": [
+        "A grid turns memory into paper. Instead of juggling 'if Ben has the cat then…' in your head, you record each fact once and let the empty boxes speak. The same method scales to five friends, five jobs and five house colours — the famous zebra-style puzzles are this puzzle with more rows.",
+        "Try writing a four-clue puzzle of your own with three invented friends. The craft is in the clues: enough to force one answer, none wasted."
+      ]
+    }
+  ],
+  "takeaway": "Ana has the dog and drinks juice; Ben has the cat and drinks tea; Cleo has the fish and drinks milk — a grid turns a tangle into a checklist.",
+  "fiction": false
+}

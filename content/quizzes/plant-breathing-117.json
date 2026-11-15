@@ -1,0 +1,38 @@
+{
+  "id": "plant-breathing-117",
+  "scheduledDate": "2026-09-20",
+  "brand": "discover",
+  "prompt": "Which gas do green plants take in from the air to make their food by photosynthesis?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Oxygen"
+    },
+    {
+      "id": "b",
+      "text": "Nitrogen"
+    },
+    {
+      "id": "c",
+      "text": "Carbon dioxide"
+    },
+    {
+      "id": "d",
+      "text": "Hydrogen"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Plants absorb carbon dioxide and, using sunlight and water, turn it into sugars for food, releasing oxygen as a by-product.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Photosynthesis",
+      "url": "https://en.wikipedia.org/wiki/Photosynthesis",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

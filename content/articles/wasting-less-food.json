@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-30",
+  "slug": "wasting-less-food",
+  "title": "Wasting less food",
+  "description": "Food waste costs money and the planet — the fridge habits that cut both.",
+  "publishedAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "tags": [
+    "reducing-waste",
+    "saving"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Shop your kitchen first",
+      "paragraphs": [
+        "Before shopping, look at what you already have and plan around it. The most wasted food is often the food bought twice, or bought for a meal that never happened.",
+        "A short list, written after that kitchen check, is the single best defence against both waste and overspending."
+      ]
+    },
+    {
+      "heading": "Store it like you mean it",
+      "paragraphs": [
+        "Learn the few storage rules that matter: keep the fridge cold, store herbs and salads with a dry paper towel, freeze bread and leftovers you will not reach in time. Freezing is a pause button, not a bin.",
+        "An 'eat me first' shelf or box in the fridge gathers soon-to-expire items into one visible place, so they get used in time."
+      ]
+    },
+    {
+      "heading": "Love your leftovers",
+      "paragraphs": [
+        "Cook once, eat twice: make extra portions deliberately and lunch is sorted. Odd leftovers become soup, fried rice, omelettes, or wraps — flexible dishes that welcome whatever needs using."
+      ]
+    }
+  ],
+  "takeaway": "Plan from what you have, freeze what you cannot reach, and give leftovers a starring role."
+}

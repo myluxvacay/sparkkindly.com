@@ -1,0 +1,62 @@
+{
+  "id": "grow-bulk-41",
+  "slug": "anchor-sentences-that-hold",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Anchor sentences that hold",
+  "description": "“After I …, I will …” is a small sentence with unusual power: it decides the when and where before the day gets busy.",
+  "publishedAt": "2026-09-08",
+  "updatedAt": "2026-09-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "habits",
+    "goals"
+  ],
+  "sources": [
+    {
+      "title": "Implementation intention",
+      "url": "https://en.wikipedia.org/wiki/Implementation_intention",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A plan with a hook in it",
+      "paragraphs": [
+        "Researchers call this an implementation intention: a plan that links a specific situation to a specific action. “I will exercise more” is a wish. “After I eat lunch, I will walk around the block” is a plan with a hook in it — and studies find such plans noticeably improve follow-through.",
+        "The hook matters because it removes the moment of decision. You do not have to feel ready at lunchtime; lunch itself is the signal."
+      ]
+    },
+    {
+      "heading": "Write yours carefully",
+      "paragraphs": [
+        "Choose a trigger that happens every day, at a predictable time, in a place where the action is possible. “After I sit down on the train” works for reading. “After I hang up my coat” works for a stretch. Vague triggers like “in the evening” rarely fire.",
+        "Keep the action small and exact: one page, five squats, one message to a friend. Then say the sentence out loud or write it where you will see it. It sounds almost too simple, and that is rather the point."
+      ]
+    },
+    {
+      "heading": "Review the sentence, not yourself",
+      "paragraphs": [
+        "If a week passes and the plan is not firing, treat the sentence as the thing to fix. Maybe the trigger is unreliable, or the action is slightly too big, or the place is wrong. Edit the sentence and test the new version.",
+        "This keeps the experiment friendly. You are not failing a test of character; you are tuning a small machine until it runs."
+      ]
+    }
+  ],
+  "takeaway": "Give your habit a trigger and a sentence: after this, I will do that.",
+  "fiction": false
+}

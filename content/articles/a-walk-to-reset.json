@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-26",
+  "slug": "a-walk-to-reset",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "A Walk to Reset",
+  "description": "Ten minutes of walking is the oldest reset button there is — no equipment, no app, no plan required.",
+  "publishedAt": "2026-11-07",
+  "updatedAt": "2026-11-07",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "stress",
+    "wellbeing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Why walking works",
+      "paragraphs": [
+        "Walking changes several things at once: your location, your breathing, the rhythm of your body, and the input to your eyes. After twenty minutes staring at a problem at close range, distance — literal and mental — is often what was missing.",
+        "It does not need to be a “proper” walk. Around the block, to the shop and back, or a loop of the school field all count. The point is movement plus a change of scene, not exercise targets."
+      ]
+    },
+    {
+      "heading": "Make it your default pause",
+      "paragraphs": [
+        "When you notice yourself re-reading the same line, snapping at small things, or refreshing feeds without seeing them, treat it as a signal: walk first, then decide. Many problems are smaller after ten minutes of daylight.",
+        "Leave the headphones off sometimes, if it is safe to do so. The unaccompanied version lets your mind wander, and wandering minds are famously where solutions turn up."
+      ]
+    }
+  ],
+  "takeaway": "Stuck or wound up? Ten minutes of walking before you decide anything.",
+  "fiction": false
+}

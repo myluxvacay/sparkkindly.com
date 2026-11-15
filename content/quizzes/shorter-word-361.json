@@ -1,0 +1,32 @@
+{
+  "id": "shorter-word-361",
+  "scheduledDate": "2026-06-14",
+  "brand": "play",
+  "prompt": "Which word becomes shorter when you add two letters to it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "long"
+    },
+    {
+      "id": "b",
+      "text": "tall"
+    },
+    {
+      "id": "c",
+      "text": "short"
+    },
+    {
+      "id": "d",
+      "text": "big"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Add the letters 'er' to 'short' and you get 'shorter' - the word that means more short!",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "grow-bulk-37",
+  "slug": "make-the-good-choice-the-easy-choice",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Make the good choice the easy choice",
+  "description": "Your surroundings quietly vote on your habits all day; arrange them so they vote for what you want.",
+  "publishedAt": "2026-09-02",
+  "updatedAt": "2026-09-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "habits",
+    "focus"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Your environment is always suggesting something",
+      "paragraphs": [
+        "The biscuit tin on the counter suggests biscuits. The book on the pillow suggests reading. Most of the time we do not choose between options after careful thought — we drift towards whatever is closest, easiest and most visible.",
+        "This is not a weakness. It is simply how attention and energy work, and it means a small rearrangement can do more than a large amount of willpower."
+      ]
+    },
+    {
+      "heading": "Move things closer or further away",
+      "paragraphs": [
+        "For a habit you want, remove a step. Lay out the walking shoes by the door. Put the guitar on a stand instead of in its case. Keep a glass of water where you work so drinking it needs no trip to the kitchen.",
+        "For a habit you want less of, add a step. Put the phone to charge in another room. Keep snacks in a tin, in a cupboard, instead of in a bowl in plain sight. Even twenty seconds of extra effort is often enough to let the urge pass."
+      ]
+    },
+    {
+      "heading": "Change one thing at a time",
+      "paragraphs": [
+        "Pick the single most annoying friction in a habit you care about and fix only that. Then live with it for a week and notice what changes.",
+        "Environment design is never finished, because your life keeps changing. Treat it as gentle tinkering rather than a one-time overhaul, and it stays enjoyable instead of becoming another chore."
+      ]
+    }
+  ],
+  "takeaway": "Do not fight your surroundings — rearrange them, one small thing at a time.",
+  "fiction": false
+}

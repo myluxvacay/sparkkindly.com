@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-06",
+  "slug": "the-phone-in-another-room",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "The Phone in Another Room",
+  "description": "You do not need more willpower to check your phone less — you need a little distance.",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Near is enough",
+      "paragraphs": [
+        "A phone does not need to ring to distract you. Studies of attention suggest that even a silent phone sitting face-down nearby can take up some of your mental space, because part of you is quietly monitoring it.",
+        "That is why “I'll just ignore it” so often fails. Ignoring something within reach is work. Moving it out of reach is a one-time decision that keeps working for free."
+      ]
+    },
+    {
+      "heading": "Make distance a routine",
+      "paragraphs": [
+        "Choose one daily situation — homework, dinner, the first hour after waking — and put the phone in another room for it. Tell people who might need you where you will be, so the arrangement feels safe rather than dramatic.",
+        "Notice what the first few minutes feel like. The mild restlessness usually fades quickly, and what replaces it is often a surprising amount of getting things done."
+      ]
+    }
+  ],
+  "takeaway": "Distance beats willpower: move the phone, keep the focus.",
+  "fiction": false
+}

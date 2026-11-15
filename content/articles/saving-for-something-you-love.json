@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-10",
+  "slug": "saving-for-something-you-love",
+  "title": "Saving for something you love",
+  "description": "A named goal, a picture, and a progress bar can make saving feel surprisingly good.",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "tags": [
+    "saving",
+    "money-habits"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Name it and price it",
+      "paragraphs": [
+        "Saving 'for the future' is vague. Saving for 'the blue bike, about $180' is vivid. Write the goal, a realistic price, and a date you would love to reach it by.",
+        "Divide the price by the weeks until your date. That weekly number is your plan. If it is too big, extend the date or look for a good second-hand option — adjusting the plan is smart, not weak."
+      ]
+    },
+    {
+      "heading": "Make progress visible",
+      "paragraphs": [
+        "Draw a simple progress bar and colour it in as you save, or track it in an app. Visible progress is a quiet motivator, especially in the middle weeks when the goal feels far away.",
+        "Celebrate milestones cheaply: halfway there deserves a happy note to yourself, not a spending spree that undoes the work."
+      ]
+    },
+    {
+      "heading": "Protect the goal",
+      "paragraphs": [
+        "Keep goal money separate from daily spending if you can, even in a labelled envelope or sub-account. Money with a name is harder to spend by accident."
+      ]
+    }
+  ],
+  "takeaway": "Give your saving a name, a price, and a visible progress bar."
+}

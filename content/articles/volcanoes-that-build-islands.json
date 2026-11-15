@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-17",
+  "slug": "volcanoes-that-build-islands",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Volcanoes That Build Islands",
+  "description": "Some islands were not always there — they rose from the sea floor, eruption by eruption, within living memory.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "earth-science",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Volcano",
+      "url": "https://en.wikipedia.org/wiki/Volcano",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Fire under the sea",
+      "paragraphs": [
+        "Most of Earth’s volcanoes are hidden. They erupt on the sea floor, where lava cools in dark pillows and piles up, layer on layer, over thousands of years.",
+        "Sometimes the pile wins. When an undersea volcano grows tall enough to break the surface, a new island stands where charts used to show only water."
+      ]
+    },
+    {
+      "heading": "Islands people watched being born",
+      "paragraphs": [
+        "The Hawaiian Islands formed this way, one after another, as the Pacific Plate drifted slowly over a hot spot in Earth’s mantle. The youngest island is still growing at its south-eastern edge today.",
+        "In 1963, off the coast of Iceland, the sea itself began to boil and steam, and within days a brand-new island — Surtsey — stood above the waves. Scientists have watched it ever since: first bare rock, then seeds arriving on the wind, then plants, birds and seals colonising land younger than the researchers studying it."
+      ]
+    },
+    {
+      "heading": "Builders and destroyers",
+      "paragraphs": [
+        "Volcanoes have a fearsome reputation, and they have earned it. But the same forces also build: new land, rich volcanic soils that farmers prize, and whole ecosystems from scratch.",
+        "An island is a reminder that Earth’s surface is not finished. It is still under construction."
+      ]
+    }
+  ],
+  "takeaway": "Islands like Hawaii and Surtsey began as underwater eruptions — volcanoes are Earth’s land-building machines.",
+  "fiction": false
+}

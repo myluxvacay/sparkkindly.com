@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-14",
+  "slug": "free-and-cheap-fun",
+  "title": "Free and cheap fun",
+  "description": "Good days do not have to cost much — ideas for fun that leave your budget intact.",
+  "publishedAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "tags": [
+    "spending-wisely",
+    "green"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Rethink what fun costs",
+      "paragraphs": [
+        "Many of the best memories — a picnic, a long walk with a friend, a library find, a home movie night — cost little or nothing. Spending and enjoyment are linked far less tightly than adverts suggest.",
+        "Try listing ten free things you genuinely enjoy. Keep the list on your phone for the moments when 'there is nothing to do' really means 'I usually pay for entertainment.'"
+      ]
+    },
+    {
+      "heading": "Libraries and community gems",
+      "paragraphs": [
+        "Libraries lend far more than books: films, games, tools, and sometimes passes to local attractions. Parks, community centres, and school or university events often run free activities worth discovering.",
+        "Swapping is fun too: a clothes swap, a book swap, or a skills swap with friends gives everyone something new without anyone spending."
+      ]
+    },
+    {
+      "heading": "Plan one paid treat",
+      "paragraphs": [
+        "Cheap fun works better when it is not a punishment. Budget one paid treat you truly look forward to, and enjoy the free days around it without feeling deprived."
+      ]
+    }
+  ],
+  "takeaway": "Keep a list of free fun you love, and save paid treats for the ones that matter most."
+}

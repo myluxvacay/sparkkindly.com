@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-17",
+  "slug": "learning-from-a-money-mistake",
+  "title": "Learning from a money mistake",
+  "description": "Everyone has bought the wrong thing or missed a payment — the useful part is what you change next.",
+  "publishedAt": "2026-11-05",
+  "updatedAt": "2026-11-05",
+  "tags": [
+    "money-habits",
+    "money-basics"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Mistakes are data",
+      "paragraphs": [
+        "An impulse buy, a forgotten bill, a loan that cost more than expected — these are common, human, and full of information. Shame hides the lesson; curiosity finds it.",
+        "Ask what was happening around the mistake: Were you tired, rushed, pressured, or missing information? The pattern usually points to a fixable situation, not a character flaw."
+      ]
+    },
+    {
+      "heading": "Build a guardrail",
+      "paragraphs": [
+        "Turn the lesson into one small guardrail: a calendar reminder for that bill, a pause rule for late-night shopping, a checklist before signing anything with payments.",
+        "Guardrails work because they act at the moment of risk, not in a burst of motivation weeks earlier."
+      ]
+    },
+    {
+      "heading": "Share the lesson",
+      "paragraphs": [
+        "Talking about money mistakes — with family, friends, or a trusted teacher — makes them less powerful and helps others avoid the same trap. Most people are relieved to hear they are not the only one."
+      ]
+    }
+  ],
+  "takeaway": "Treat a money mistake as data, add one guardrail, and move on without shame."
+}

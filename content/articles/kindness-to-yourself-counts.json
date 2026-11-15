@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-28",
+  "slug": "kindness-to-yourself-counts",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Kindness to Yourself Counts",
+  "description": "The way you talk to yourself after a failure is a habit — and habits can be changed.",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "wellbeing",
+    "resilience"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The inner commentator",
+      "paragraphs": [
+        "Most of us have an inner voice that would be fired from any coaching job: it generalises (“I always mess up”), it predicts (“everyone will think I'm stupid”), and it never mentions the nine things that went fine.",
+        "That voice feels like honesty, but it is usually just habit — an old recording. Noticing it is the first step: you cannot argue with a commentary you have not realised is playing."
+      ]
+    },
+    {
+      "heading": "Borrow a friend's voice",
+      "paragraphs": [
+        "A practical trick: ask what you would say to a friend in the same situation. Almost nobody tells a friend “you're hopeless” over a failed test or an awkward message. We offer perspective, proportion and a next step.",
+        "Write that friend-version down if you need to, and read it back. It may feel artificial at first — most new habits do. Artificial and kinder beats automatic and cruel."
+      ]
+    }
+  ],
+  "takeaway": "Talk to yourself the way you'd talk to a friend — it is a learnable habit.",
+  "fiction": false
+}

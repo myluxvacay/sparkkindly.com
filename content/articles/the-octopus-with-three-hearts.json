@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-06",
+  "slug": "the-octopus-with-three-hearts",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Octopus Has Three Hearts — and Blue Blood",
+  "description": "Three hearts, blue blood, and most of its brain spread through its arms: the octopus is wonderfully unlike us.",
+  "publishedAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "oceans"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Octopus",
+      "url": "https://en.wikipedia.org/wiki/Octopus",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Three hearts, two jobs",
+      "paragraphs": [
+        "An octopus runs on three hearts. Two of them, the branchial hearts, pump blood through the gills to pick up oxygen. The third, the systemic heart, sends that blood around the body.",
+        "Oddly, the main heart stops beating when the octopus swims. Swimming is tiring work for an octopus, which may be one reason they so often prefer to crawl along the sea floor instead."
+      ]
+    },
+    {
+      "heading": "Blue blood",
+      "paragraphs": [
+        "Our blood is red because it carries oxygen using haemoglobin, built around iron. Octopus blood uses a different molecule, haemocyanin, built around copper — and copper-based blood is blue.",
+        "Haemocyanin is less efficient than haemoglobin in warm, oxygen-rich water, but it keeps working well in the cold, oxygen-poor depths where many octopuses live. Different problem, different solution."
+      ]
+    },
+    {
+      "heading": "Smart arms",
+      "paragraphs": [
+        "Roughly two-thirds of an octopus’s neurons are not in its head at all — they are in its arms. Each arm can taste what it touches and make simple decisions about movement on its own.",
+        "Add puzzle-solving, jar-opening and famous escape artistry, and you get an animal built on a genuinely different plan from ours. Intelligence, it turns out, has more than one blueprint."
+      ]
+    }
+  ],
+  "takeaway": "An octopus runs on three hearts and blue, copper-based blood — a different blueprint for being an animal, and a very successful one.",
+  "fiction": false
+}

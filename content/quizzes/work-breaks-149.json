@@ -1,0 +1,32 @@
+{
+  "id": "work-breaks-149",
+  "scheduledDate": "2026-11-19",
+  "brand": "grow",
+  "prompt": "During a long afternoon of desk work, which break best refreshes your brain?",
+  "options": [
+    {
+      "id": "a",
+      "text": "No breaks - powering through is always fastest"
+    },
+    {
+      "id": "b",
+      "text": "A short walk and some water every hour or so"
+    },
+    {
+      "id": "c",
+      "text": "Checking stressful emails during your break"
+    },
+    {
+      "id": "d",
+      "text": "A two-hour nap at your desk"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Brief movement and hydration restore attention, while long unbroken stretches steadily drain focus and accuracy.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

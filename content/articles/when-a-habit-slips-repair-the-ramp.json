@@ -1,0 +1,56 @@
+{
+  "id": "grow-bulk-43",
+  "slug": "when-a-habit-slips-repair-the-ramp",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "When a habit slips, repair the ramp",
+  "description": "A habit that keeps failing usually has a broken step somewhere; find the awkward moment and fix that, not yourself.",
+  "publishedAt": "2026-09-11",
+  "updatedAt": "2026-09-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "habits",
+    "resilience"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Look for the exact moment it goes wrong",
+      "paragraphs": [
+        "“I never manage to practise” is too big to fix. But habits rarely fail everywhere at once. They fail at one particular moment: the shoes are upstairs, the app needs an update, the chosen time collides with the school run.",
+        "Replay the last few attempts slowly and find the precise point where it unravelled. That point — not your motivation — is the thing to repair."
+      ]
+    },
+    {
+      "heading": "Common breaks and simple repairs",
+      "paragraphs": [
+        "If the habit depends on something being ready, prepare it the night before or keep a spare: spare headphones, a second notebook, the mat already unrolled. If the time keeps getting eaten, move the habit earlier or attach it to something immovable, like a meal.",
+        "If the habit is simply too big for your current life, that is a design fault too. Halve it without ceremony. A smaller habit that happens beats a grand one that exists mainly as a source of guilt."
+      ]
+    },
+    {
+      "heading": "Test the repair like a scientist",
+      "paragraphs": [
+        "Change one thing, then give it a week. If the habit flows again, you found the break. If not, look for the next awkward moment. Each repair teaches you something true about how your days actually run.",
+        "Over time this way of thinking becomes the habit underneath all the others: when something slips, you reach for a spanner, not for self-criticism."
+      ]
+    }
+  ],
+  "takeaway": "A slipping habit usually needs a repair, not a reprimand.",
+  "fiction": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "habit-anchor-141",
+  "scheduledDate": "2026-09-18",
+  "brand": "grow",
+  "prompt": "You want to build a habit of reading for 10 minutes a day. Which plan is most likely to stick?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Read whenever you happen to remember"
+    },
+    {
+      "id": "b",
+      "text": "Read right after breakfast every day, with the book left by the table"
+    },
+    {
+      "id": "c",
+      "text": "Read for 3 hours once a month instead"
+    },
+    {
+      "id": "d",
+      "text": "Wait until you feel motivated"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Linking a new habit to an existing daily routine, called an anchor, and making it easy to start is far more reliable than waiting for motivation.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

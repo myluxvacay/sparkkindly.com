@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-38",
+  "slug": "how-painters-made-blue-from-stone",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Blue From a Stone: The Most Precious Colour in Old Paintings",
+  "description": "For centuries, the finest blue paint cost more than gold and crossed deserts from a single region of Afghanistan.",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "history",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ultramarine",
+      "url": "https://en.wikipedia.org/wiki/Ultramarine",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Lapis lazuli",
+      "url": "https://en.wikipedia.org/wiki/Lapis_lazuli",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A colour that travelled farther than the artists",
+      "paragraphs": [
+        "The deep blue called ultramarine takes its name from Latin words meaning 'beyond the sea.' It was made by grinding lapis lazuli, a blue stone mined for thousands of years in what is now Afghanistan, and painstakingly separating the blue pigment from the rock.",
+        "The process was slow and wasteful — a lot of stone produced very little pure blue — and the finished pigment could cost more than gold. Painters and patrons treated it as a luxury material, not an ordinary colour."
+      ]
+    },
+    {
+      "heading": "Reserved for the most important figure",
+      "paragraphs": [
+        "In medieval and Renaissance contracts, patrons sometimes specified exactly how much ultramarine a painter must use, and where. In many religious paintings, the Virgin Mary's robe is a brilliant ultramarine blue partly because the colour itself was an offering of the best material available.",
+        "Artists used cheaper blues — such as azurite or, later, smalt — for skies, underlayers, and less important draperies, saving the true ultramarine for the focal point of the picture. Once you know this, old paintings become partly readable as budgets."
+      ]
+    },
+    {
+      "heading": "Chemistry hands blue to everyone",
+      "paragraphs": [
+        "In the 1820s, a synthetic version of ultramarine was developed in Europe, chemically similar to the natural pigment but vastly cheaper. Blue escaped the luxury market, and artists could finally use it freely and experimentally.",
+        "The Impressionists and the painters who followed splashed blue everywhere — skies, shadows, water — in a way earlier artists, counting out pigment by the gram, could rarely afford. A colour's price tag had quietly shaped art history."
+      ]
+    }
+  ],
+  "takeaway": "Ultramarine blue was ground from Afghan lapis lazuli and could cost more than gold, so old masters rationed it — until a synthetic version in the 1820s set blue free.",
+  "fiction": false
+}

@@ -1,0 +1,67 @@
+{
+  "id": "discover-bulk-41",
+  "slug": "how-sign-languages-work",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Sign Languages Are Full Languages, Built in the Air",
+  "description": "Sign languages are not gestures or translations of spoken words — they are complete languages with their own grammar, poetry, and jokes.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "language",
+    "human-body",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Sign language",
+      "url": "https://en.wikipedia.org/wiki/Sign_language",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: American Sign Language",
+      "url": "https://en.wikipedia.org/wiki/American_Sign_Language",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Not one language, and not pantomime",
+      "paragraphs": [
+        "There is no single universal sign language. Communities around the world have developed their own — American Sign Language, British Sign Language, and many others — and they are not mutually understandable, any more than spoken languages are.",
+        "Sign languages are also not simply spoken language on the hands. American Sign Language, for example, has its own grammar and word order, and it developed separately from English. Fingerspelling exists for names and borrowed words, but everyday signing is its own system."
+      ]
+    },
+    {
+      "heading": "Grammar you can see",
+      "paragraphs": [
+        "A sign is built from ingredients: handshape, location, movement, palm orientation, and facial expression. Change one ingredient and you can change the meaning, much as changing one sound changes a spoken word.",
+        "Facial expressions and body shifts do grammatical work — marking questions, showing who said what in a story, or indicating size and intensity. The space around the signer becomes part of the sentence, with people and places 'set up' in positions and pointed back to later."
+      ]
+    },
+    {
+      "heading": "Languages with literature",
+      "paragraphs": [
+        "Sign languages carry everything spoken languages do: storytelling traditions, poetry that plays with handshapes the way spoken poetry plays with rhyme, humour, slang, and new signs coined for new technology.",
+        "Learning even a little about them changes how you see language itself. Meaning does not need sound; it needs a community, a structure, and something worth saying."
+      ]
+    }
+  ],
+  "takeaway": "Sign languages are complete, distinct languages with their own grammar — built from handshape, movement, space, and facial expression, not from gestures or translated English.",
+  "fiction": false
+}

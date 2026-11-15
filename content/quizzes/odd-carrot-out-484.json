@@ -1,0 +1,32 @@
+{
+  "id": "odd-carrot-out-484",
+  "scheduledDate": "2026-12-28",
+  "brand": "play",
+  "prompt": "Which of these is the odd one out?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Apple"
+    },
+    {
+      "id": "b",
+      "text": "Banana"
+    },
+    {
+      "id": "c",
+      "text": "Carrot"
+    },
+    {
+      "id": "d",
+      "text": "Grape"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Apples, bananas and grapes are fruits, while a carrot is a vegetable that grows underground.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

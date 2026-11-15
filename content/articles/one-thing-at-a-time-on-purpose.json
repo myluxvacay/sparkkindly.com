@@ -1,0 +1,55 @@
+{
+  "id": "grow-bulk-44",
+  "slug": "one-thing-at-a-time-on-purpose",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "One thing at a time, on purpose",
+  "description": "Single-tasking feels slower and usually is not: it is the gentle art of finishing one thing before touching the next.",
+  "publishedAt": "2026-09-12",
+  "updatedAt": "2026-09-12",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "focus"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The switch is more expensive than it looks",
+      "paragraphs": [
+        "Jumping between messages, tabs and tasks feels efficient because something is always moving. But each switch costs a little re-loading time: where was I, what was I about to do, what did that email actually say? Those small costs add up across a day.",
+        "Single-tasking is the alternative: one thing, given your full attention, until a chosen stopping point. It can feel strangely quiet at first, especially if your days are usually noisy."
+      ]
+    },
+    {
+      "heading": "How to actually do it",
+      "paragraphs": [
+        "Pick one task and give it a container: twenty-five minutes, one page, this pile of emails. Write the task on a sticky note where you can see it, so when your mind offers you five other things, the note answers for you.",
+        "Keep a “later” list beside you. When an unrelated thought pops up — and it will — jot it down in two seconds and return. The list holds the thought safely so your mind can let it go."
+      ]
+    },
+    {
+      "heading": "Start with easy wins",
+      "paragraphs": [
+        "Practise single-tasking where it is pleasant: one song listened to properly, one cup of tea drunk without a screen, one walk without a podcast. These small reps teach your attention that staying is allowed to feel good.",
+        "Then borrow the skill for work, one container at a time. You do not need a monk’s discipline. You need a sticky note, a later list, and a little patience with the quiet."
+      ]
+    }
+  ],
+  "takeaway": "One thing, one container of time, and a list to catch everything else.",
+  "fiction": false
+}

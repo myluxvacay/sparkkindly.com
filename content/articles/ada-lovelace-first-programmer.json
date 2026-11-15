@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-36",
+  "slug": "ada-lovelace-first-programmer",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Ada Lovelace Wrote the First Computer Program — Before Computers",
+  "description": "In the 1840s, Ada Lovelace described how a machine that did not yet exist could follow instructions — and imagined it making music.",
+  "publishedAt": "2026-11-04",
+  "updatedAt": "2026-11-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "computing",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ada Lovelace",
+      "url": "https://en.wikipedia.org/wiki/Ada_Lovelace",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Britannica: Ada Lovelace",
+      "url": "https://www.britannica.com/biography/Ada-Lovelace",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A mathematician in a poet's family",
+      "paragraphs": [
+        "Ada Lovelace was born in 1815, the daughter of the poet Lord Byron, whom she never really knew. Her mother encouraged mathematics instead of poetry, and Ada turned out to be gifted at it, studying with some of the leading mathematicians of the day.",
+        "She became fascinated by the work of Charles Babbage, who designed a mechanical computer called the Analytical Engine. It was never fully built, but on paper it had the essential parts of a modern computer: memory, a processor, and instructions on punched cards."
+      ]
+    },
+    {
+      "heading": "Notes that became a program",
+      "paragraphs": [
+        "In 1843, Lovelace translated an article about the Analytical Engine from French and added her own extensive notes — labelled A to G — which ended up far longer than the article itself. In those notes she set out a step-by-step method for the machine to calculate a sequence of numbers called Bernoulli numbers.",
+        "That method is widely regarded as the first computer program: instructions written for a machine, published decades before any electronic computer existed. She wrote it for hardware that had never run a single calculation."
+      ]
+    },
+    {
+      "heading": "Seeing further than the machine's inventor",
+      "paragraphs": [
+        "Lovelace also saw possibilities Babbage had not emphasised. She wrote that if the relationships between musical notes could be expressed in numbers, the engine might one day compose music — an early glimpse of computers as creative tools, not just calculators.",
+        "She died young, in 1852, and her notes were largely overlooked for a century. Today a programming language, Ada, carries her name, and her story is a reminder that imagination is a technical skill."
+      ]
+    }
+  ],
+  "takeaway": "Ada Lovelace published the first computer program in 1843 for a machine that was never built — and foresaw computers composing music long before they existed.",
+  "fiction": false
+}

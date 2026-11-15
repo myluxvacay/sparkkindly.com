@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-26",
+  "slug": "why-you-get-goosebumps",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "What Is Happening When You Get Goosebumps?",
+  "description": "Cold air, a creepy story, a favourite song — goosebumps are an old survival reflex still running on modern skin.",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "ancient-history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Goose bumps",
+      "url": "https://en.wikipedia.org/wiki/Goose_bumps",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Tiny muscles at work",
+      "paragraphs": [
+        "Each hair on your skin sits in a small pocket called a follicle, and attached to many follicles is a tiny muscle, the arrector pili. When that muscle contracts, it pulls the hair upright and dimples the skin around it — that bump is a goosebump.",
+        "The signal to contract usually comes from your autonomic nervous system, the same automatic system that speeds up your heart when you are startled. You cannot order goosebumps to appear; they arrive on their own."
+      ]
+    },
+    {
+      "heading": "A leftover from furrier ancestors",
+      "paragraphs": [
+        "In animals covered with fur, raised hair traps a thicker layer of air next to the skin, which helps hold in warmth. A cat or dog with raised fur also looks bigger, which can discourage an attacker.",
+        "Humans kept the reflex but lost most of the fur that made it useful. Our goosebumps are a quiet reminder that our bodies still run some very old software written for a much hairier life."
+      ]
+    },
+    {
+      "heading": "Why music can trigger them too",
+      "paragraphs": [
+        "Goosebumps are not only about cold. Strong emotions — fear, awe, or a moving piece of music — can set them off, because the same automatic system responds to excitement and surprise, not just temperature.",
+        "Researchers sometimes call the pleasant version 'frisson,' the shiver some people feel at a powerful moment in a song. Not everyone experiences it, and that difference is normal."
+      ]
+    }
+  ],
+  "takeaway": "Goosebumps happen when tiny muscles pull your hairs upright — an ancient warming and warning reflex that strong feelings can still trigger.",
+  "fiction": false
+}

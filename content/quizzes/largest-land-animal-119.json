@@ -1,0 +1,38 @@
+{
+  "id": "largest-land-animal-119",
+  "scheduledDate": "2026-09-28",
+  "brand": "discover",
+  "prompt": "Which is the largest land animal alive today?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hippopotamus"
+    },
+    {
+      "id": "b",
+      "text": "African elephant"
+    },
+    {
+      "id": "c",
+      "text": "Giraffe"
+    },
+    {
+      "id": "d",
+      "text": "White rhinoceros"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The African elephant is the largest land animal, with large males weighing around six tonnes, more than a hippo, giraffe or rhino.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "African elephant",
+      "url": "https://en.wikipedia.org/wiki/African_elephant",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

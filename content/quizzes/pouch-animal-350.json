@@ -1,0 +1,32 @@
+{
+  "id": "pouch-animal-350",
+  "scheduledDate": "2026-06-03",
+  "brand": "kids",
+  "prompt": "Which animal carries its baby in a pouch?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Elephant"
+    },
+    {
+      "id": "b",
+      "text": "Duck"
+    },
+    {
+      "id": "c",
+      "text": "Kangaroo"
+    },
+    {
+      "id": "d",
+      "text": "Fish"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A baby kangaroo, called a joey, grows up safe and warm inside its mother's pouch.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "grow-bulk-22",
+  "slug": "keep-your-wake-up-time-steady",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Keep Your Wake-Up Time Steady",
+  "description": "Of all the sleep advice in the world, a regular wake-up time may be the simplest one that actually works.",
+  "publishedAt": "2026-11-04",
+  "updatedAt": "2026-11-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "sleep",
+    "wellbeing"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Circadian rhythm",
+      "url": "https://en.wikipedia.org/wiki/Circadian_rhythm",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Your body runs on a clock",
+      "paragraphs": [
+        "Your body keeps time with an internal circadian rhythm — a roughly 24-hour cycle that influences sleepiness, alertness and even body temperature. Light, meals and sleep all help set it, and a regular wake-up time is one of the strongest anchors.",
+        "Wildly different wake-up times — six on weekdays, ten-thirty on weekends — leave that clock permanently confused, a bit like living with low-grade jet lag that never quite clears."
+      ]
+    },
+    {
+      "heading": "Steady within an hour",
+      "paragraphs": [
+        "You do not need a monk's schedule. Aim to wake within about an hour of the same time most days, weekends included. Most people find their bedtime then starts to regulate itself, because genuine sleepiness arrives on schedule.",
+        "Change gradually if your current times are far apart — fifteen minutes earlier every few days is kinder than a sudden leap. And if sleep problems persist for weeks despite steady habits, a doctor is the right next step, not another tip."
+      ]
+    }
+  ],
+  "takeaway": "Anchor the morning, and the night starts looking after itself.",
+  "fiction": false
+}

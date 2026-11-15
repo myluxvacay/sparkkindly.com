@@ -1,0 +1,61 @@
+{
+  "id": "play-bulk-10",
+  "slug": "word-ladders-cat-to-dog",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Word Ladders: Turn CAT into DOG",
+  "description": "Change one letter at a time, keep every step a real word, and watch one word climb into another.",
+  "publishedAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "word-games",
+    "words"
+  ],
+  "sources": [
+    {
+      "title": "Word ladder",
+      "url": "https://en.wikipedia.org/wiki/Word_ladder",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "One letter at a time",
+      "paragraphs": [
+        "A word ladder starts with one word and ends with another, changing exactly one letter per step, with every in-between step a real word. CAT becomes DOG like this: CAT, COT, COG, DOG. Three small climbs, no jumps.",
+        "The game was invented by Lewis Carroll — the author of Alice's Adventures in Wonderland — who devised it in the 1870s and published it for readers of Vanity Fair. It survives because the rules fit in one sentence and the puzzles can still sting."
+      ]
+    },
+    {
+      "heading": "A classic to try",
+      "paragraphs": [
+        "Here is a famous one: turn COLD into WARM. Four steps will do it. The middle is the hard part — changing the first letter is easy, but every step must remain a word someone could use in a sentence.",
+        "Stuck? A good strategy is to work from both ends: find a word one step from COLD, and a word one step from WARM, and try to make the two lists meet in the middle. The answer is waiting in the takeaway."
+      ]
+    },
+    {
+      "heading": "House rules for fair play",
+      "paragraphs": [
+        "Agree the rules before you start: no proper names, no plurals made just by adding S (too easy), and every step must be a word you could look up. Some players allow four-letter words only; others climb from three letters to five by allowing a step that adds a letter.",
+        "Race a friend on the same ladder, or cooperate on one together. Either way, keep a notebook of ladders you have solved — you will start seeing one-letter friendships between words everywhere."
+      ]
+    }
+  ],
+  "takeaway": "Change one letter, keep a real word, repeat: CAT, COT, COG, DOG — and COLD reaches WARM in four steps: CORD, CARD, WARD, WARM.",
+  "fiction": false
+}

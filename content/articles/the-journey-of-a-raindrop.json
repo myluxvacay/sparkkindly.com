@@ -1,0 +1,62 @@
+{
+  "id": "discover-bulk-10",
+  "slug": "the-journey-of-a-raindrop",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Journey of a Raindrop Never Really Ends",
+  "description": "The water in your glass today may once have rained on a dinosaur — water is never used up, only borrowed.",
+  "publishedAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "weather",
+    "earth-science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Water cycle",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The great cycle",
+      "paragraphs": [
+        "Water on Earth is always on the move. The Sun warms the oceans, lakes and land, and water evaporates into the air. High above us it cools and condenses into clouds, then falls again as rain or snow.",
+        "Some of that water runs into rivers and back to the sea. Some soaks deep into the ground. Some is drunk by roots, carried up stems and released from leaves. Then the wheel turns again."
+      ]
+    },
+    {
+      "heading": "Old water, new trips",
+      "paragraphs": [
+        "Here is the wonderful part: Earth’s water is ancient, and it is recycled endlessly. The water in your glass has been ocean, cloud, river and rain more times than anyone could count. Some of it very plausibly fell as rain in the age of the dinosaurs.",
+        "Different parts of the journey run at different speeds. A water molecule may spend only about nine days in the atmosphere, but thousands of years in the deep ocean or locked in groundwater far below your feet."
+      ]
+    },
+    {
+      "heading": "Every drink is borrowed",
+      "paragraphs": [
+        "Because water is never created or destroyed on Earth, we never truly use it up. We borrow it, use it, and return it to the cycle for the next traveller.",
+        "That is also why what we put into water matters. The cycle connects everyone downstream — and eventually, everyone is downstream."
+      ]
+    }
+  ],
+  "takeaway": "Water is never created or destroyed on Earth — it just keeps travelling, and every living thing borrows it for a while.",
+  "fiction": false
+}

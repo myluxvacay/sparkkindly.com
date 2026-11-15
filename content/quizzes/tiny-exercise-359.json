@@ -1,0 +1,32 @@
+{
+  "id": "tiny-exercise-359",
+  "scheduledDate": "2026-06-12",
+  "brand": "grow",
+  "prompt": "You want to exercise more but keep quitting. What is the smartest way to restart?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Start tiny - a daily 10-minute walk"
+    },
+    {
+      "id": "b",
+      "text": "Sign up for the hardest class available"
+    },
+    {
+      "id": "c",
+      "text": "Exercise only when you feel like it"
+    },
+    {
+      "id": "d",
+      "text": "Wait for January"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Small, repeatable actions build the habit first; the intensity can grow later, once the routine is part of your life.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

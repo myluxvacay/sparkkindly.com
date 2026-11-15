@@ -1,0 +1,32 @@
+{
+  "id": "empty-seat-333",
+  "scheduledDate": "2026-05-17",
+  "brand": "together",
+  "prompt": "A new student is eating lunch alone. What is a kind thing to do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Invite them to sit with you"
+    },
+    {
+      "id": "b",
+      "text": "Point them out to your friends"
+    },
+    {
+      "id": "c",
+      "text": "Ignore them - it is not your problem"
+    },
+    {
+      "id": "d",
+      "text": "Wait to see if someone else helps"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A simple invitation can turn a lonely first week into the start of a friendship; small welcomes make a big difference.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

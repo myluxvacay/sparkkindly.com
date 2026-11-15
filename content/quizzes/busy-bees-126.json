@@ -1,0 +1,38 @@
+{
+  "id": "busy-bees-126",
+  "scheduledDate": "2026-11-09",
+  "brand": "discover",
+  "prompt": "What sweet food do honey bees make and store in their hive?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Honey"
+    },
+    {
+      "id": "b",
+      "text": "Milk"
+    },
+    {
+      "id": "c",
+      "text": "Cheese"
+    },
+    {
+      "id": "d",
+      "text": "Bread"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Bees turn nectar from flowers into honey and store it in wax honeycomb as food for the hive.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Honey bee",
+      "url": "https://en.wikipedia.org/wiki/Honey_bee",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

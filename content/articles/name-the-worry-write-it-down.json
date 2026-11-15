@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-24",
+  "slug": "name-the-worry-write-it-down",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Name the Worry, Write It Down",
+  "description": "A worry written in plain words on paper is smaller than the same worry circling in your head.",
+  "publishedAt": "2026-11-05",
+  "updatedAt": "2026-11-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "stress",
+    "writing"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Circling versus written",
+      "paragraphs": [
+        "An unnamed worry expands to fill your whole mind, because it has no edges. Writing it down forces edges onto it: one sentence, in plain words, about one specific thing. “I'm stressed” becomes “I'm worried I'll forget my lines in Friday's assembly.”",
+        "The written version may still be a real problem, but it is now a problem with a shape — and shaped problems can be planned for, asked about, or deliberately set aside until Friday."
+      ]
+    },
+    {
+      "heading": "The five-minute worry page",
+      "paragraphs": [
+        "Set a timer for five minutes and write everything on your mind without tidying it up. Then close the notebook. Giving worries a scheduled place and time makes them less likely to interrupt the rest of the day.",
+        "This is a self-help habit, not a treatment. If worry is constant, overwhelming, or stopping you sleeping or functioning, a trusted adult or professional can offer far more than a notebook can."
+      ]
+    }
+  ],
+  "takeaway": "Write the worry in one plain sentence, and it becomes a problem with edges.",
+  "fiction": false
+}

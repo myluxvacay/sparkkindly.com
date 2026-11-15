@@ -1,0 +1,60 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-09",
+  "slug": "why-an-emergency-fund-matters",
+  "title": "Why an emergency fund matters",
+  "description": "A small cushion turns a broken phone from a crisis into an inconvenience.",
+  "publishedAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "tags": [
+    "saving",
+    "money-basics"
+  ],
+  "sources": [
+    {
+      "title": "Consumer Financial Protection Bureau",
+      "url": "https://www.consumerfinance.gov/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "What it is for",
+      "paragraphs": [
+        "An emergency fund is money set aside for genuine surprises: a repair, a lost shift, an urgent trip. It is not for sales or holidays — those deserve their own saving goals.",
+        "Without a cushion, a surprise often means borrowing at high cost or skipping something essential. With even a small cushion, you have time to think and choose."
+      ]
+    },
+    {
+      "heading": "How big is big enough?",
+      "paragraphs": [
+        "Guides often suggest starting with a small first goal — for example $100 or one week of essentials — and building from there over time. The right size depends on your life, and any amount is better than none.",
+        "This is general education, not personal advice. If money is very tight, building a cushion slowly, alongside essentials, is a reasonable and kind approach."
+      ]
+    },
+    {
+      "heading": "Refill without guilt",
+      "paragraphs": [
+        "Using the fund for a real emergency is success, not failure — that is what it was for. Afterwards, refill it gradually, the same small way you built it."
+      ]
+    }
+  ],
+  "takeaway": "An emergency fund is a small cushion that gives you time and choices when life surprises you."
+}

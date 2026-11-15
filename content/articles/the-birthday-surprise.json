@@ -1,0 +1,62 @@
+{
+  "id": "play-bulk-16",
+  "slug": "the-birthday-surprise",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Birthday Surprise: 23 People, One Big Coincidence?",
+  "description": "Put 23 people in a room and the odds that two share a birthday are better than half. Here is the friendly maths behind a famous surprise.",
+  "publishedAt": "2026-11-04",
+  "updatedAt": "2026-11-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "probability",
+    "maths-and-logic",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Birthday problem",
+      "url": "https://en.wikipedia.org/wiki/Birthday_problem",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Make a bet",
+      "paragraphs": [
+        "Imagine a classroom, team or office party with 23 people in it. What is the chance that at least two of them share a birthday — same day and month, year irrelevant? Most people guess something small, like one in ten. The true answer is just over half: about 50.7 percent.",
+        "With 50 people the chance climbs to about 97 percent, and with 70 people it is above 99.9 percent. It feels wrong, which is why it is called the birthday paradox — not a true paradox, just a place where intuition and arithmetic disagree loudly."
+      ]
+    },
+    {
+      "heading": "Count pairs, not people",
+      "paragraphs": [
+        "The mistake is imagining the question as 'does anyone share MY birthday?' That really is unlikely. But the puzzle asks about any pair at all — and pairs multiply fast. Among 23 people there are 23 × 22 ÷ 2 = 253 pairs, each one a fresh chance to match.",
+        "It is easier to compute the opposite: the chance that nobody matches. The second person must avoid the first person's birthday (364 chances out of 365), the third must avoid both (363 out of 365), and so on. Multiply those shrinking fractions for 23 people and the chance of no match is about 49.3 percent — leaving 50.7 percent for at least one match."
+      ]
+    },
+    {
+      "heading": "Try it with your class or team",
+      "paragraphs": [
+        "Test it for real: collect the birthdays of any group of 25 to 30 people — a class, a club, a family gathering — and look for a match. Statisticians would want many trials, but even one room makes the point vividly when two people discover they share a day.",
+        "Bonus surprise: shared birthdays are only the start. In a group of 23, the chance that two people share a birthday within a day or two of each other is higher still. Coincidence is much more common than it feels."
+      ]
+    }
+  ],
+  "takeaway": "With 23 people there are 253 pairs who might match — which is why a shared birthday is more likely than not.",
+  "fiction": false
+}

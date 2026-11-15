@@ -1,0 +1,32 @@
+{
+  "id": "saving-shortfall-152",
+  "scheduledDate": "2026-10-03",
+  "brand": "save",
+  "prompt": "A game costs $60. You have saved $45. How much more do you need to save?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$5"
+    },
+    {
+      "id": "b",
+      "text": "$10"
+    },
+    {
+      "id": "c",
+      "text": "$15"
+    },
+    {
+      "id": "d",
+      "text": "$25"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "$60 minus $45 equals $15, so you need fifteen more dollars to reach the price.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

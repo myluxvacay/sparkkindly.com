@@ -1,0 +1,56 @@
+{
+  "id": "grow-bulk-48",
+  "slug": "clear-the-desk-clear-the-start",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Clear the desk, clear the start",
+  "description": "A two-minute reset of your workspace before you begin removes a dozen tiny distractions in advance.",
+  "publishedAt": "2026-09-17",
+  "updatedAt": "2026-09-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "grow",
+    "focus",
+    "habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Clutter is a queue of small decisions",
+      "paragraphs": [
+        "Every object on your desk is silently asking a question: file me, answer me, finish me, throw me away. You may ignore the questions, but part of your attention keeps hearing them, and it shows up as a vague reluctance to start.",
+        "A clear desk does not make you a better person. It simply lowers the number of things competing with the one thing you chose."
+      ]
+    },
+    {
+      "heading": "The two-minute reset",
+      "paragraphs": [
+        "Before a focused session, set a timer for two minutes and move everything unrelated to this task out of sight: into a drawer, a box, a pile behind you. Not sorted, not dealt with — just gone from view. Sorting is a different job for a different time.",
+        "Leave only what the task needs: the document, the notebook, water, perhaps the later list. When the timer ends, begin. The reset is a doorway ritual, and its sameness is what makes it work."
+      ]
+    },
+    {
+      "heading": "A landing strip for afterwards",
+      "paragraphs": [
+        "Things will land on the desk during the day; that is what desks are for. The reset is not about keeping the desk empty forever. It is about starting each session from clear rather than from cluttered.",
+        "If a full reset feels impossible in a shared or busy space, shrink it: clear one square — the space directly in front of you, roughly the size of a placemat. Attention mostly lives in that square anyway."
+      ]
+    }
+  ],
+  "takeaway": "Two minutes of clearing buys a calmer start; the desk serves the task, not the reverse.",
+  "fiction": false
+}

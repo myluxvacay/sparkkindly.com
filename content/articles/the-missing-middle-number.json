@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-01",
+  "slug": "the-missing-middle-number",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Missing Middle Number",
+  "description": "A sequence with a hole in it — and a simple trick, looking at the gaps, that fills it in.",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A sequence with a gap",
+      "paragraphs": [
+        "Here is a sequence with one term hiding: 3, 6, 11, ?, 27, 38. Staring at the numbers themselves rarely helps, because the rule is not in the numbers — it is in how they change.",
+        "Most sequence puzzles are built from a simple engine: add a growing amount, multiply by something, or combine the two. Your job is to find the engine, not to guess the answer."
+      ]
+    },
+    {
+      "heading": "Look at the gaps, not the numbers",
+      "paragraphs": [
+        "Write down the gaps between neighbours: 6 − 3 = 3, 11 − 6 = 5, then a gap we cannot compute yet, then 27 up to 38 gives a final gap of 11. The gaps we know are 3, 5, ?, 11 — and they look like odd numbers marching upward.",
+        "If the gaps are 3, 5, 7, 9, 11, the missing gap is 7. Add it to 11 and the hidden term is 18. Check the next step: 18 + 9 = 27, exactly the term we were given. The rule holds on both sides of the hole, which is how you know the answer is right and not just plausible."
+      ]
+    },
+    {
+      "heading": "Try one yourself",
+      "paragraphs": [
+        "Here is one to try before you scroll to the takeaway: 5, 9, 17, ?, 65. The gaps start 4, 8 — see if you can spot what they are doing before reading the answer below.",
+        "The habit to keep is this: when numbers will not talk, subtract. Differences are the fingerprints of the rule that made them."
+      ]
+    }
+  ],
+  "takeaway": "When a sequence hides its rule, look at the gaps between terms — the missing number here is 18, and in the try-it puzzle (gaps doubling: 4, 8, 16, 32) it is 33.",
+  "fiction": false
+}

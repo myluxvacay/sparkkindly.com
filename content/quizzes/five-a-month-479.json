@@ -1,0 +1,32 @@
+{
+  "id": "five-a-month-479",
+  "scheduledDate": "2026-12-23",
+  "brand": "save",
+  "prompt": "You save $5 every month. How much will you have saved after 4 months?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$9"
+    },
+    {
+      "id": "b",
+      "text": "$15"
+    },
+    {
+      "id": "c",
+      "text": "$20"
+    },
+    {
+      "id": "d",
+      "text": "$25"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Saving $5 a month for 4 months gives 5 x 4 = $20.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

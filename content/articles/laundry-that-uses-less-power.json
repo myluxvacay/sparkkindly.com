@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-97",
+  "slug": "laundry-that-uses-less-power",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Laundry that uses less power",
+  "description": "Most laundry energy goes into heating water and drying, so cooler washes and air-drying do the heavy lifting.",
+  "publishedAt": "2026-06-12",
+  "updatedAt": "2026-06-12",
+  "tags": [
+    "energy-saving",
+    "green"
+  ],
+  "sources": [
+    {
+      "title": "U.S. Department of Energy",
+      "url": "https://www.energy.gov/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "Wash cooler, wash full",
+      "paragraphs": [
+        "Modern detergents are designed to clean well at lower temperatures, and many everyday loads come out perfectly fresh at 30 degrees. Saving the hotter washes for bedding, towels and illness keeps hygiene where it matters while cutting the energy used on ordinary clothes.",
+        "A full load uses roughly the same energy as a half load, so waiting until the drum is sensibly full, without cramming, roughly halves the cost per garment."
+      ]
+    },
+    {
+      "heading": "The dryer is the expensive part",
+      "paragraphs": [
+        "Tumble dryers are among the hungriest appliances in the home. Drying on a rack or line when the weather allows is one of the largest single savings a household can make without buying anything.",
+        "When the dryer is necessary, a high spin cycle first removes more water in the washer, which is cheaper than evaporating it with heat. Cleaning the lint filter keeps air flowing and drying times shorter."
+      ]
+    },
+    {
+      "heading": "Small habits around the edges",
+      "paragraphs": [
+        "Sorting by drying time helps: lightweight clothes dry fast, while jeans and towels take far longer. Mixing them means the whole load waits for the slowest item.",
+        "None of this requires perfection. Even shifting half your drying to a rack, or most washes to a cooler setting, changes the yearly total in a way you can see on the bill."
+      ]
+    }
+  ],
+  "takeaway": "Cool washes, full loads and air-drying whenever the weather allows will do most of the work."
+}

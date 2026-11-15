@@ -1,0 +1,56 @@
+{
+  "id": "play-bulk-18",
+  "slug": "why-seven-wins-at-dice",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Why Seven Is the Busiest Number on Two Dice",
+  "description": "Roll two dice and seven turns up more than any other total. The reason is a small table you can draw — and a tally you can test.",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "probability",
+    "play-and-games",
+    "number-puzzles"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Thirty-six little futures",
+      "paragraphs": [
+        "Two dice make 36 equally likely combinations, if you keep the dice distinct — imagine one red, one blue. The totals run from 2 to 12, but they are not equally likely, because some totals can be built in many more ways than others.",
+        "Twelve can only happen one way: 6 + 6. So can two: 1 + 1. But seven is a social number — 1 + 6, 2 + 5, 3 + 4, 4 + 3, 5 + 2, 6 + 1. Six combinations out of 36, a one-in-six chance on every roll, more than any other total."
+      ]
+    },
+    {
+      "heading": "The hill in the middle",
+      "paragraphs": [
+        "Count the combinations for every total and a hill appears: 2 and 12 have 1 way each; 3 and 11 have 2; 4 and 10 have 3; 5 and 9 have 4; 6 and 8 have 5; and 7 stands at the top with 6. The hill is perfectly symmetrical, because every pair of faces has a mirror pair that sums to 14 minus itself.",
+        "This is why board games and casino games treat seven as special, and why 'lucky seven' is not pure superstition — it is the hardest-working total on the dice. Games designers use this hill constantly, whether players notice it or not."
+      ]
+    },
+    {
+      "heading": "Run your own tally",
+      "paragraphs": [
+        "Test it: roll two dice 36 times and tally the totals in a table. Your results will not match the theory exactly — 36 rolls is a small sample — but seven should already be near the front of the pack, and the hill shape should be peeking through.",
+        "Roll another 36 and add the tallies together. Watching a wobbly small sample settle toward the true pattern, roll by roll, is the closest thing probability has to a magic trick — and you are performing it yourself."
+      ]
+    }
+  ],
+  "takeaway": "Seven wins because it has the most ways to happen — six of the thirty-six — not because the dice favour it.",
+  "fiction": false
+}

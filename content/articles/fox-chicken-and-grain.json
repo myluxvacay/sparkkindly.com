@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-05",
+  "slug": "fox-chicken-and-grain",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Fox, the Chicken and the Bag of Grain",
+  "description": "A river, a small boat, and three passengers who cannot be left alone together. The classic crossing puzzle, solved kindly.",
+  "publishedAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "logic-puzzles",
+    "play-and-games"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The problem",
+      "paragraphs": [
+        "A farmer must ferry a fox, a chicken and a bag of grain across a river. The boat holds the farmer and just one passenger at a time. Leave the fox alone with the chicken and the chicken is lunch. Leave the chicken alone with the grain and the grain is gone.",
+        "Try it on paper first: draw two banks, move one item per trip, and check both banks after every crossing. Most first attempts strand someone within three moves — which is exactly what makes the solution satisfying."
+      ]
+    },
+    {
+      "heading": "The trick: a backwards step",
+      "paragraphs": [
+        "The chicken is the troublemaker — it is both predator (of grain) and prey (of fox). So the chicken crosses first, leaving the fox safely with the inedible grain. The farmer returns alone.",
+        "Now the insight most people miss: sometimes you must bring something back. Take the fox across next — but you cannot leave it with the chicken, so the chicken rides back with you. A backwards step that feels like failure is actually the key move of the whole puzzle."
+      ]
+    },
+    {
+      "heading": "The full crossing",
+      "paragraphs": [
+        "With the chicken back on the starting bank, take the grain across and leave it with the fox — a safe pairing. Return alone one last time, collect the chicken, and cross. Everything arrives, uneaten, in seven crossings.",
+        "River puzzles like this one are centuries old, and they teach a genuinely useful habit: when a plan jams, do not just push forward. Ask what could safely move backwards to unjam it."
+      ]
+    }
+  ],
+  "takeaway": "Sometimes the way forward includes carrying something back — in this puzzle, the chicken rides the boat three times.",
+  "fiction": false
+}

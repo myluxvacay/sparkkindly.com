@@ -1,0 +1,38 @@
+{
+  "id": "largest-hot-desert-477",
+  "scheduledDate": "2026-12-21",
+  "brand": "discover",
+  "prompt": "What is the largest hot desert in the world?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Gobi"
+    },
+    {
+      "id": "b",
+      "text": "The Sahara"
+    },
+    {
+      "id": "c",
+      "text": "The Mojave"
+    },
+    {
+      "id": "d",
+      "text": "The Kalahari"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The Sahara in Africa is the largest hot desert, almost as big as the whole United States.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sahara - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sahara",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

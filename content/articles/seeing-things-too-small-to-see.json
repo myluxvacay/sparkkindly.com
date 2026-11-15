@@ -1,0 +1,65 @@
+{
+  "id": "discover-bulk-11",
+  "slug": "seeing-things-too-small-to-see",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Seeing Things Too Small to See",
+  "description": "From the first microscopes to electron beams, scientists keep finding ways to look closer — and every closer look changes the world.",
+  "publishedAt": "2026-11-03",
+  "updatedAt": "2026-11-03",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Microscope",
+      "url": "https://en.wikipedia.org/wiki/Microscope",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Electron microscope",
+      "url": "https://en.wikipedia.org/wiki/Electron_microscope",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The first close look",
+      "paragraphs": [
+        "In the 1600s, simple microscopes opened a door nobody knew existed. Antonie van Leeuwenhoek, a Dutch draper with a gift for grinding lenses, looked at pond water and found it full of tiny swimming creatures — the first bacteria ever seen.",
+        "Around the same time, Robert Hooke examined cork under a microscope and saw a honeycomb of little boxes. He called them “cells” — the word biologists still use today."
+      ]
+    },
+    {
+      "heading": "Beams instead of light",
+      "paragraphs": [
+        "Optical microscopes have a hard limit: light itself. Once details are smaller than the wavelength of light, no lens can separate them. The way past the limit was to stop using light at all.",
+        "Electron microscopes, developed in the 1930s, illuminate samples with beams of electrons, whose effective wavelength is far shorter. Suddenly viruses, cell machinery and the surfaces of materials stood revealed — in black and white, and often only after careful preparation, but unmistakably there."
+      ]
+    },
+    {
+      "heading": "Why smaller matters",
+      "paragraphs": [
+        "Almost everything in modern medicine leans on these tools. Germ theory, antibiotics, vaccines and microchips all began with someone seeing something that had always been too small to see.",
+        "The lesson repeats at every scale: when a new instrument arrives, a new world tends to follow."
+      ]
+    }
+  ],
+  "takeaway": "Each new way of seeing — lenses, then electron beams — opened a smaller world that changed medicine and science.",
+  "fiction": false
+}

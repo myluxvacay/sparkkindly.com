@@ -1,0 +1,38 @@
+{
+  "id": "darwin-theory-357",
+  "scheduledDate": "2026-06-10",
+  "brand": "discover",
+  "prompt": "Which scientist is famous for the theory of evolution by natural selection?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Isaac Newton"
+    },
+    {
+      "id": "b",
+      "text": "Charles Darwin"
+    },
+    {
+      "id": "c",
+      "text": "Albert Einstein"
+    },
+    {
+      "id": "d",
+      "text": "Marie Curie"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Charles Darwin set out his theory in his 1859 book 'On the Origin of Species', after years of carefully observing wildlife.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Charles Darwin - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Charles_Darwin",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

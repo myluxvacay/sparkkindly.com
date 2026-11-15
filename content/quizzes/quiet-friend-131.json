@@ -1,0 +1,32 @@
+{
+  "id": "quiet-friend-131",
+  "scheduledDate": "2026-09-17",
+  "brand": "together",
+  "prompt": "A friend who is usually cheerful has gone very quiet. Which response is most kind?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ignore them until they cheer up"
+    },
+    {
+      "id": "b",
+      "text": "Gently ask if they are okay and whether they want to talk"
+    },
+    {
+      "id": "c",
+      "text": "Tell everyone else that they are in a mood"
+    },
+    {
+      "id": "d",
+      "text": "Cheer up! It cannot be that bad."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A gentle, private check-in shows you noticed and care, and it leaves the choice to talk, or not, with your friend.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

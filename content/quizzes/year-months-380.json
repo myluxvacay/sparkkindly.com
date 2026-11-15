@@ -1,0 +1,32 @@
+{
+  "id": "year-months-380",
+  "scheduledDate": "2026-07-03",
+  "brand": "kids",
+  "prompt": "How many months are there in a year?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Six"
+    },
+    {
+      "id": "b",
+      "text": "Ten"
+    },
+    {
+      "id": "c",
+      "text": "Twelve"
+    },
+    {
+      "id": "d",
+      "text": "Twenty"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "There are 12 months in a year, from January all the way to December.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

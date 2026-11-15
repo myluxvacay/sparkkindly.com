@@ -1,0 +1,61 @@
+{
+  "id": "save-bulk-106",
+  "slug": "composting-in-a-small-kitchen",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Composting in a small kitchen",
+  "description": "Even without a garden, food scraps can become compost instead of landfill with a caddy, a freezer or a community scheme.",
+  "publishedAt": "2026-06-29",
+  "updatedAt": "2026-06-29",
+  "tags": [
+    "reducing-waste",
+    "green"
+  ],
+  "sources": [
+    {
+      "title": "epa.gov",
+      "url": "https://www.epa.gov/recycle/composting-home",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "body": [
+    {
+      "heading": "Why scraps are worth saving",
+      "paragraphs": [
+        "Vegetable peelings, coffee grounds, eggshells and stale bread are not rubbish; they are ingredients. In a compost heap they become food for soil. In landfill, buried without air, the same scraps produce methane, a powerful greenhouse gas.",
+        "Many councils now collect food waste separately, which is the easiest route of all: your only job is a caddy on the counter and a bag emptied regularly."
+      ]
+    },
+    {
+      "heading": "Small-space options that work",
+      "paragraphs": [
+        "If you have a balcony or a corner of a garden, a compact compost bin or a wormery handles scraps in very little space and, kept balanced with dry material like shredded paper, smells surprisingly mild.",
+        "With no outdoor space at all, try the freezer trick: keep a container of scraps in the freezer, which stops smells completely, and drop it at a community garden or collection point when full. Some neighbourhoods also run shared compost schemes where members take turns."
+      ]
+    },
+    {
+      "heading": "What goes in, what stays out",
+      "paragraphs": [
+        "Fruit and vegetable scraps, coffee grounds and filters, tea leaves, eggshells and plain cardboard make a good mix. Keep meat, fish, dairy and cooked oils out of a home heap, as they attract pests and smell as they break down.",
+        "Balance is the whole secret: roughly equal handfuls of wet green scraps and dry brown material like paper or dead leaves. If a heap smells, it almost always needs more dry material and a stir."
+      ]
+    }
+  ],
+  "takeaway": "A counter caddy and a weekly drop-off are enough to turn scraps into soil instead of landfill gas."
+}

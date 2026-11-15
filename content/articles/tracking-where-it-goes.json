@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-07",
+  "slug": "tracking-where-it-goes",
+  "title": "Tracking where it goes",
+  "description": "For one week, write down every spend — most people find one surprise.",
+  "publishedAt": "2026-10-26",
+  "updatedAt": "2026-10-26",
+  "tags": [
+    "budgeting",
+    "spending-wisely"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The one-week experiment",
+      "paragraphs": [
+        "For seven days, note every purchase, however small: the snack, the app, the bus top-up. Use your phone notes or a scrap of paper. Do not judge as you go; just collect the facts.",
+        "At the end of the week, add it up by type. Small daily spends often total more than one big purchase, which is useful to know — you cannot adjust what you cannot see."
+      ]
+    },
+    {
+      "heading": "Spot the patterns",
+      "paragraphs": [
+        "Look for patterns rather than mistakes. Spending often clusters around tiredness, boredom, or routine — the same shop on the way home, the same delivery app on Friday night.",
+        "Pick just one pattern to experiment with. Maybe you bring a snack from home twice a week, or delete a saved card from a shopping app. One change, tested for a month, teaches you more than ten resolutions."
+      ]
+    },
+    {
+      "heading": "Keep it light",
+      "paragraphs": [
+        "Tracking forever can feel like homework. Many people track for a week every few months, like taking a photo of their habits, and that is enough to stay aware."
+      ]
+    }
+  ],
+  "takeaway": "Track every spend for one week, spot one pattern, and test one small change."
+}

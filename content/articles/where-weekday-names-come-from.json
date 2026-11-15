@@ -1,0 +1,62 @@
+{
+  "id": "discover-bulk-43",
+  "slug": "where-weekday-names-come-from",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Where the Days of the Week Got Their Names",
+  "description": "Your week is a parade of gods and planets: the Moon, Mars, Odin, Thor, and Saturn all still have a day named after them.",
+  "publishedAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "etymology",
+    "language",
+    "ancient-history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Names of the days of the week",
+      "url": "https://en.wikipedia.org/wiki/Names_of_the_days_of_the_week",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The Moon and the Sun start the week",
+      "paragraphs": [
+        "Monday is the Moon's day — the name comes from Old English for 'day of the Moon' — and Sunday is plainly the Sun's day. Both follow an ancient pattern of naming days after the seven visible 'wanderers' of the sky: the Sun, the Moon, and the five planets visible to the naked eye.",
+        "That seven-day pattern travelled widely in the ancient world. The Romans named days for the Sun, Moon, Mars, Mercury, Jupiter, Venus, and Saturn, and versions of that scheme spread across Europe."
+      ]
+    },
+    {
+      "heading": "When Roman gods became Norse gods",
+      "paragraphs": [
+        "As the names passed into Germanic languages, speakers swapped in their own gods for the Roman ones. Mars, the Roman god of war, became Tiw (Tyr) — giving Tuesday. Mercury's day became Woden's, or Odin's, day: Wednesday.",
+        "Jupiter, the Roman thunder god, was matched with Thor, the Norse thunder god — Thursday. Venus's day became Frigg's or Freyja's day: Friday. Only Saturn kept his Roman name in English, which is why Saturday sounds different from the rest."
+      ]
+    },
+    {
+      "heading": "Other languages kept other clues",
+      "paragraphs": [
+        "In French, Spanish, and Italian, the Roman originals are easier to spot: mardi and martes still carry Mars, and mercredi and miércoles still carry Mercury. In those languages, Sunday often became 'the Lord's day' instead of the Sun's.",
+        "So an ordinary week quietly preserves ancient astronomy and two pantheons of gods. Every calendar appointment you make is scheduled, in part, by mythology."
+      ]
+    }
+  ],
+  "takeaway": "Weekday names preserve an ancient sky-watchers' system: Sun and Moon days, Roman planet-gods, and Norse swaps that gave us Tiw's, Woden's, Thor's, and Frigg's days.",
+  "fiction": false
+}

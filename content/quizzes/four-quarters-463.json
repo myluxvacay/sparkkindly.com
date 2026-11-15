@@ -1,0 +1,32 @@
+{
+  "id": "four-quarters-463",
+  "scheduledDate": "2026-12-07",
+  "brand": "save",
+  "prompt": "Four quarters make how much money?",
+  "options": [
+    {
+      "id": "a",
+      "text": "25 cents"
+    },
+    {
+      "id": "b",
+      "text": "50 cents"
+    },
+    {
+      "id": "c",
+      "text": "75 cents"
+    },
+    {
+      "id": "d",
+      "text": "$1"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Each quarter is 25 cents, and 25 x 4 = 100 cents, which is $1.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

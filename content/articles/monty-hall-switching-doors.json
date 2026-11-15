@@ -1,0 +1,62 @@
+{
+  "id": "play-bulk-22",
+  "slug": "monty-hall-switching-doors",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Monty Hall Problem: Always Switch?",
+  "description": "Three doors, one car, two goats — and a game-show puzzle that once fooled thousands of readers, including people with PhDs.",
+  "publishedAt": "2026-11-10",
+  "updatedAt": "2026-11-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "maths-and-logic",
+    "probability",
+    "brain-teasers"
+  ],
+  "sources": [
+    {
+      "title": "Monty Hall problem",
+      "url": "https://en.wikipedia.org/wiki/Monty_Hall_problem",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The game show trap",
+      "paragraphs": [
+        "The puzzle is named after Monty Hall, host of the TV show Let's Make a Deal. You face three doors. Behind one is a car; behind the other two, goats. You pick a door — say door 1. The host, who knows where the car is, opens a different door — say door 3 — always revealing a goat, and offers you the chance to switch to door 2.",
+        "Most people feel the remaining two doors must be fifty-fifty, so switching gains nothing. It is one of the most natural feelings in all of probability — and it is wrong. Switching wins two times out of three."
+      ]
+    },
+    {
+      "heading": "The hundred-door version",
+      "paragraphs": [
+        "Still doubtful? Stretch the game. Now there are 100 doors, one car and 99 goats. You pick a door. The host, who knows everything, opens 98 of the other doors, all goats, leaving just one unopened door besides yours. Do you switch now?",
+        "Of course you do — your first pick had a 1-in-100 chance, so the surviving door carries the other 99 chances in 100. The three-door game is the same shape, just smaller: your pick was right one time in three, and the host's careful reveal concentrates the other two-thirds onto the single door he left closed."
+      ]
+    },
+    {
+      "heading": "The honest maths",
+      "paragraphs": [
+        "The key is that the host never opens the car door and never opens yours. His choice is not random — it is informed, and information is what moves the odds. If your first pick was a goat (which happens two times in three), the host is forced: there is only one goat door left for him to open, so the remaining door must hide the car, and switching wins.",
+        "Only when your first pick was the car itself — one time in three — does switching lose. Try it with three cups and a coin, twenty rounds, always switching, and tally the result. The cups will convince you faster than the argument did."
+      ]
+    }
+  ],
+  "takeaway": "Switching wins two times out of three — your first guess didn't get better; the other door inherited the odds.",
+  "fiction": false
+}

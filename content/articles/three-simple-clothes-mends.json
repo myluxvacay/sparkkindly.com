@@ -1,0 +1,55 @@
+{
+  "id": "save-bulk-104",
+  "slug": "three-simple-clothes-mends",
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "title": "Three simple clothes mends anyone can learn",
+  "description": "A loose button, a small hole and a sagging hem cover most clothing repairs, and each takes minutes to fix.",
+  "publishedAt": "2026-06-25",
+  "updatedAt": "2026-06-25",
+  "tags": [
+    "reducing-waste",
+    "saving"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "The button, sewn to stay",
+      "paragraphs": [
+        "Thread a needle, knot the end, and pass it through the fabric and each hole of the button several times, keeping a matchstick's worth of slack under the button so it can sit over the fabric layers. Wrap thread around the little stem you have made, knot off, and it will outlast the original stitching.",
+        "Sewing a spare button inside a hem when you first do the repair means the matching button is always there if one is lost later."
+      ]
+    },
+    {
+      "heading": "Small holes and worn patches",
+      "paragraphs": [
+        "A tiny hole in a knit can be caught early with a few stitches that mimic the surrounding loops, stopping it before it ladders. For worn elbows, heels of socks and the inner thigh of favourite jeans, an iron-on patch inside adds strength invisibly.",
+        "Visible mending is also a style of its own: a contrasting patch or a row of bright stitches turns a repair into a small piece of personality, and many people find they like the garment more afterwards."
+      ]
+    },
+    {
+      "heading": "Hems that come back down",
+      "paragraphs": [
+        "A dropped hem usually needs only a line of small, slanted stitches catching a thread or two of the outer fabric so they barely show. Iron-on hemming tape is a no-sew alternative for a quick fix before an event.",
+        "Keep a tiny kit ready: needles, thread in black, white and navy, spare buttons and safety pins. Repairs done in the moment take five minutes; repairs that wait for equipment tend to wait forever."
+      ]
+    }
+  ],
+  "takeaway": "Button, hole and hem: learn these three small repairs and most of your wardrobe lasts noticeably longer."
+}

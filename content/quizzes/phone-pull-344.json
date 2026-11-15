@@ -1,0 +1,32 @@
+{
+  "id": "phone-pull-344",
+  "scheduledDate": "2026-05-28",
+  "brand": "grow",
+  "prompt": "Your phone keeps pulling your attention away while you work. What helps most?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keep it face-up beside you"
+    },
+    {
+      "id": "b",
+      "text": "Check it 'just once' every few minutes"
+    },
+    {
+      "id": "c",
+      "text": "Put it in another room on Do Not Disturb"
+    },
+    {
+      "id": "d",
+      "text": "Use willpower alone"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Distance works: a phone out of sight and silenced removes most temptations before willpower is even needed.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

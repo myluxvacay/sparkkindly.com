@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-02",
+  "slug": "always-three-number-trick",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The Trick That Always Ends at Three",
+  "description": "Ask a friend to think of any number and follow four steps — you can promise them the answer before they start.",
+  "publishedAt": "2026-10-21",
+  "updatedAt": "2026-10-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "number-puzzles",
+    "maths-and-logic"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Amaze someone in thirty seconds",
+      "paragraphs": [
+        "Ask a friend to think of a number — any number at all, but keep it secret. Then give the steps one at a time: double it, add 6, halve the result, and finally subtract the number you first thought of.",
+        "Now announce, calmly, that they are holding the number 3. They will check with a different starting number. It will still be 3. It is always 3, and this piece explains why — no sleight of hand involved."
+      ]
+    },
+    {
+      "heading": "Why it always works",
+      "paragraphs": [
+        "Call the secret number x. Doubling gives 2x. Adding 6 gives 2x + 6. Halving gives x + 3 — notice the doubling and halving have cancelled each other out, and the 6 has quietly become a 3.",
+        "The final step subtracts the original x, which removes the last trace of the secret number. All that survives is the 3. The trick works because the steps are designed so the unknown cancels itself; the performance is just algebra wearing a costume."
+      ]
+    },
+    {
+      "heading": "Build your own version",
+      "paragraphs": [
+        "You can retune the trick to land on any number you like. To finish on 5 instead: double the secret number, add 10, halve, subtract the original. The added number is always halved by the middle step, so add twice your target.",
+        "Try inventing a longer chain — add a 'multiply by 3, then divide by 3' detour for showmanship — and test it on three different starting numbers before performing it. If it survives your tests, it is ready for an audience."
+      ]
+    }
+  ],
+  "takeaway": "The trick is algebra in disguise: the steps quietly cancel the secret number out, leaving only half of what you added — so add 10 and you can promise a finish of 5.",
+  "fiction": false
+}

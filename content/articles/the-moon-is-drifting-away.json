@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-01",
+  "slug": "the-moon-is-drifting-away",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The Moon Is Drifting Away From Us",
+  "description": "The Moon is slowly slipping farther from Earth — by about the width of a fingernail every year.",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Moon",
+      "url": "https://en.wikipedia.org/wiki/Moon",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "NASA Science: Moon",
+      "url": "https://science.nasa.gov/moon/",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A tiny step back, every year",
+      "paragraphs": [
+        "The Moon is not as fixed as it looks. Precise measurements show it is moving away from Earth at about 3.8 centimetres a year — roughly the rate your fingernails grow.",
+        "We know this because Apollo astronauts left special mirrors, called retroreflectors, on the lunar surface. Scientists on Earth bounce laser beams off those mirrors and time how long the light takes to return. The answer creeps upward, year after year."
+      ]
+    },
+    {
+      "heading": "Why it happens",
+      "paragraphs": [
+        "The engine of the drift is the tide. The Moon’s gravity pulls the oceans into a slight bulge, and Earth’s rotation drags that bulge a little ahead of the Moon. The bulge, in turn, tugs the Moon forward in its orbit.",
+        "A forward tug gives the Moon more orbital energy, and more energy means a wider orbit. The energy has to come from somewhere, so Earth pays for it: our planet’s spin slows by a tiny amount, and days lengthen almost imperceptibly over millions of years."
+      ]
+    },
+    {
+      "heading": "Long ago, and far ahead",
+      "paragraphs": [
+        "Run the film backwards and the Moon was once much closer. In the age of the dinosaurs it loomed larger in the sky, and tides were stronger than the ones we know.",
+        "Run it forwards and, hundreds of millions of years from now, the Moon will appear too small to cover the Sun completely. Total solar eclipses — one of nature’s great coincidences — will quietly come to an end."
+      ]
+    }
+  ],
+  "takeaway": "The Moon moves about 3.8 centimetres farther away each year — slow, steady, and measured with lasers bounced off mirrors left on its surface.",
+  "fiction": false
+}

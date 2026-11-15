@@ -1,0 +1,66 @@
+{
+  "id": "discover-bulk-25",
+  "slug": "your-heart-never-rests",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Your Heart: A Pump That Never Takes a Day Off",
+  "description": "About the size of your fist, your heart beats roughly one hundred thousand times a day — here is how it keeps time.",
+  "publishedAt": "2026-10-21",
+  "updatedAt": "2026-10-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "technology"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Heart",
+      "url": "https://en.wikipedia.org/wiki/Heart",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Cardiac cycle",
+      "url": "https://en.wikipedia.org/wiki/Cardiac_cycle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A fist-sized pump",
+      "paragraphs": [
+        "Your heart sits slightly left of the centre of your chest and is about the size of your own fist. It is mostly muscle — a special kind called cardiac muscle that can contract again and again without getting tired the way your arm muscles do.",
+        "Inside, the heart has four chambers. The two upper chambers, the atria, receive blood, and the two lower chambers, the ventricles, pump it out. Valves between them open and close so blood keeps moving in one direction."
+      ]
+    },
+    {
+      "heading": "One hundred thousand beats a day",
+      "paragraphs": [
+        "At a typical resting rate of around seventy beats a minute, your heart beats about one hundred thousand times a day. Each beat pushes blood carrying oxygen and nutrients to every part of you, then brings it back to the lungs to pick up more oxygen.",
+        "The heartbeat has two main sounds, often written as 'lub-dub.' Those sounds are not the muscle squeezing — they are the valves snapping shut, first between the chambers and then at the exits to the arteries."
+      ]
+    },
+    {
+      "heading": "An electric metronome",
+      "paragraphs": [
+        "The rhythm starts in a small patch of cells in the upper right chamber called the sinoatrial node — the heart's natural pacemaker. It sends out a tiny electrical signal that spreads through the heart muscle and tells it when to contract.",
+        "Doctors can read that electrical pattern with a machine called an electrocardiogram, or ECG. When the heart's own pacemaker struggles, a small implanted device, an artificial pacemaker, can take over the timing job."
+      ]
+    }
+  ],
+  "takeaway": "Your heart is a self-timing muscle pump: four chambers, one-way valves, and an electrical spark about one hundred thousand times a day.",
+  "fiction": false
+}

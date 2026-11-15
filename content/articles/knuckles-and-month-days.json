@@ -1,0 +1,55 @@
+{
+  "id": "play-bulk-29",
+  "slug": "knuckles-and-month-days",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Never Forget a Month Again: The Knuckle Trick",
+  "description": "Thirty-one days or thirty? Your own hand holds the answer, in a calendar trick people have used for centuries.",
+  "publishedAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "curiosity",
+    "patterns"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Your hand is a calendar",
+      "paragraphs": [
+        "Make a fist and look at your knuckles. Starting at the first knuckle (your index finger's), count the months across the bumps and dips: knuckle, dip, knuckle, dip. Every month that lands on a knuckle has 31 days. Every month in a dip has 30 — with one famous exception.",
+        "January is a knuckle: 31 days. February is a dip — and it is the exception, with 28 days (29 in a leap year). March is a knuckle again: 31. Continue across one hand to July, then start again on the first knuckle for August — which is why July and August, two knuckles in a row if you use both fists side by side, both have 31 days."
+      ]
+    },
+    {
+      "heading": "The rhyme that backs it up",
+      "paragraphs": [
+        "If knuckles are not handy, the old rhyme does the same job: 'Thirty days hath September, April, June and November; all the rest have thirty-one…' — except February, which the rhyme treats as the special case it is.",
+        "Between the knuckles and the rhyme you have two independent memory systems — one in your body, one in your ears. Facts stored in two places are facts you actually keep."
+      ]
+    },
+    {
+      "heading": "February, the rule-breaker",
+      "paragraphs": [
+        "February's shortness is a souvenir of the Roman calendar, and its leap day follows a rule worth knowing precisely: a year is a leap year if it divides by 4 — except century years, which are leap years only if they divide by 400. So 2000 was a leap year, but 1900 was not.",
+        "Teach the knuckle trick to someone younger this week. It takes thirty seconds, it works forever, and it needs no battery — the best kind of technology there is."
+      ]
+    }
+  ],
+  "takeaway": "Knuckles are 31-day months and the dips are the short ones — your hand has carried a calendar all along.",
+  "fiction": false
+}

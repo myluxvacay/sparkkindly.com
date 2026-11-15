@@ -1,0 +1,38 @@
+{
+  "id": "fastest-land-animal-507",
+  "scheduledDate": "2027-01-20",
+  "brand": "discover",
+  "prompt": "Which is the fastest land animal in the world?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A lion"
+    },
+    {
+      "id": "b",
+      "text": "A horse"
+    },
+    {
+      "id": "c",
+      "text": "A cheetah"
+    },
+    {
+      "id": "d",
+      "text": "A gazelle"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A cheetah can sprint at about 60 to 70 kilometres per hour, faster than any other land animal.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Cheetah - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cheetah",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

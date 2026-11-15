@@ -1,0 +1,60 @@
+{
+  "id": "discover-bulk-12",
+  "slug": "what-makes-a-good-experiment",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "What Makes a Good Experiment?",
+  "description": "A good experiment is a fair question asked of nature: change one thing, measure honestly, and be ready to repeat it.",
+  "publishedAt": "2026-11-04",
+  "updatedAt": "2026-11-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Scientific method",
+      "url": "https://en.wikipedia.org/wiki/Scientific_method",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Change one thing at a time",
+      "paragraphs": [
+        "Imagine you want to know whether music helps plants grow. If the plants by the speaker also get more sunlight, you will never know which made the difference. A good experiment changes exactly one thing — the variable being tested — and keeps everything else as equal as possible.",
+        "Scientists name the parts carefully: the thing you change, the thing you measure, and everything you hold steady. It sounds fussy, but it is what separates an answer from a guess."
+      ]
+    },
+    {
+      "heading": "Controls and repeats",
+      "paragraphs": [
+        "A control group is the comparison that keeps you honest: plants grown in silence, treated identically in every other way. Without it, “the music plants grew taller” has nothing to stand on.",
+        "Repetition matters just as much. One result might be luck; the same result, in many trials and in other people’s laboratories, becomes something you can build on. That is why scientists publish their methods in detail — so others can try to prove them wrong."
+      ]
+    },
+    {
+      "heading": "When results surprise you",
+      "paragraphs": [
+        "An experiment that disproves your idea has not failed. It has done its job: it told you something true about the world that you did not know before.",
+        "Science advances by this loop — question, test, revise, test again. The method is less a set of rules than a habit of honesty: report what actually happened, especially when it is not what you hoped."
+      ]
+    }
+  ],
+  "takeaway": "A good experiment changes one thing, keeps the rest fair, and reports what actually happened — even when the answer is surprising.",
+  "fiction": false
+}

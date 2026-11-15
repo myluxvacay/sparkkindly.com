@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-34",
+  "slug": "three-sentences-a-day",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Three Sentences a Day",
+  "description": "Too busy to journal? Three sentences still capture a day — and three sentences is a habit anyone can keep.",
+  "publishedAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "writing",
+    "habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Small enough to survive busy days",
+      "paragraphs": [
+        "Full-page journaling is lovely and, for most people, unsustainable. Three sentences is the minimum viable diary: one about what happened, one about how it felt, one about anything at all.",
+        "That tiny record turns out to be surprisingly rich. Months later, three honest sentences bring a day back more vividly than a calendar full of appointments ever will."
+      ]
+    },
+    {
+      "heading": "Attach it to an existing moment",
+      "paragraphs": [
+        "Write your three sentences at the same point each day — in bed before sleep works well, or with morning tea. Anchoring the habit to an existing moment means you rarely have to remember it deliberately.",
+        "Missed a day? Write three sentences about yesterday, or simply start again today. A record with gaps is still a record; a perfect streak abandoned in week two is not."
+      ]
+    }
+  ],
+  "takeaway": "One event, one feeling, one anything: three sentences is a diary that lasts.",
+  "fiction": false
+}

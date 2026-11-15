@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-08",
+  "slug": "start-small-save-often",
+  "title": "Start small, save often",
+  "description": "Saving $2 regularly beats waiting to save $50 someday — here is why small wins.",
+  "publishedAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "tags": [
+    "saving",
+    "money-habits"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Small is not pointless",
+      "paragraphs": [
+        "It is easy to think saving only counts in big amounts. But $2 a week is over $100 in a year, and more importantly it builds the habit and the identity of someone who saves.",
+        "Choose an amount so small you will not miss it, and move it on a set day. When it feels easy, nudge it up a little."
+      ]
+    },
+    {
+      "heading": "Make it automatic",
+      "paragraphs": [
+        "Saving works best when you do not have to remember or decide each time. If your account allows an automatic transfer on payday, even a tiny one, the habit runs itself.",
+        "If automatic is not an option, pair saving with an existing routine — after your shift, on Sunday evening, whenever you check your balance."
+      ]
+    },
+    {
+      "heading": "Watch it grow",
+      "paragraphs": [
+        "Check your savings occasionally and enjoy the progress. Seeing a balance climb from $10 to $60 is motivating in a way that advice alone never is."
+      ]
+    }
+  ],
+  "takeaway": "Save a tiny amount on a regular day, make it automatic if you can, and let it grow."
+}

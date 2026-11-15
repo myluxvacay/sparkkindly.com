@@ -1,0 +1,32 @@
+{
+  "id": "penny-value-496",
+  "scheduledDate": "2027-01-09",
+  "brand": "save",
+  "prompt": "How many cents is a penny worth?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1 cent"
+    },
+    {
+      "id": "b",
+      "text": "5 cents"
+    },
+    {
+      "id": "c",
+      "text": "10 cents"
+    },
+    {
+      "id": "d",
+      "text": "25 cents"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A penny is worth exactly 1 cent, the smallest United States coin value in everyday use.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

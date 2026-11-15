@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-19",
+  "slug": "a-slower-first-five-minutes",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "A Slower First Five Minutes",
+  "description": "The pace of your first five minutes quietly sets the tone for the whole morning.",
+  "publishedAt": "2026-11-02",
+  "updatedAt": "2026-11-02",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "mindfulness",
+    "habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The rushed start",
+      "paragraphs": [
+        "Many mornings begin at full speed: alarm, phone, headlines, messages, a small spike of urgency before your feet touch the floor. Your body takes the hint and stays braced for the rest of the day.",
+        "Five slower minutes will not fix a genuinely overloaded schedule, but they change the starting conditions. Beginning calm makes it easier to return to calm later."
+      ]
+    },
+    {
+      "heading": "Design a gentler opening",
+      "paragraphs": [
+        "Choose a tiny morning sequence and protect it: make the bed, drink a glass of water, look out of the window while the kettle boils, stretch while the shower warms up. Keep the phone out of the first five minutes if you can.",
+        "The exact contents matter less than the pace. Slow, ordinary actions done in order tell your nervous system that there is no emergency yet — and most mornings, there isn't one."
+      ]
+    }
+  ],
+  "takeaway": "Protect the first five minutes, and the day starts on your side.",
+  "fiction": false
+}

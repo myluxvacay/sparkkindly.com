@@ -1,0 +1,48 @@
+{
+  "id": "grow-bulk-01",
+  "slug": "start-with-two-minutes",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Start With Two Minutes",
+  "description": "A tiny two-minute version of a habit is much easier to begin than the full thing.",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "habits",
+    "goals"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Shrink the starting line",
+      "paragraphs": [
+        "Big plans often fail at the very first step. Reading a whole book feels heavy; reading for two minutes feels almost too easy to skip. That is exactly the point — make the start so small that saying no feels sillier than starting.",
+        "Pick the smallest honest version of what you want to do: two minutes of stretching, one page of notes, a single paragraph of writing. You are not cheating. You are building the doorway, and doorways are what habits walk through."
+      ]
+    },
+    {
+      "heading": "Let two minutes grow on their own",
+      "paragraphs": [
+        "Most days, once you have started, continuing feels natural and the two minutes quietly become ten. Some days they will not, and that is fine too. The two minutes still count, because the habit you are really training is showing up.",
+        "Keep the two-minute version as your official minimum even as the habit grows. On busy or tired days it protects the streak, and a protected streak is much easier to restart than a broken one."
+      ]
+    }
+  ],
+  "takeaway": "Make the start tiny, and let momentum do the rest.",
+  "fiction": false
+}

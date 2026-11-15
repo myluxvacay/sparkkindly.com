@@ -1,0 +1,54 @@
+{
+  "brand": "save",
+  "contentType": "article",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/hero.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "fiction": false,
+  "id": "save-bulk-20",
+  "slug": "part-time-work-and-study-balance",
+  "title": "Part-time work and study balance",
+  "description": "A job can fund student life and build experience — as long as it does not quietly eat the degree.",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-08",
+  "tags": [
+    "student-money",
+    "money-habits"
+  ],
+  "sources": [],
+  "body": [
+    {
+      "heading": "Protect study first",
+      "paragraphs": [
+        "The course is the investment; the job supports it. Decide your maximum weekly work hours before job hunting, and be honest about deadlines and exam periods when term gets intense.",
+        "Many students find that a modest, steady number of hours beats intense bursts that collide with assignments. Consistency protects both your grades and your energy."
+      ]
+    },
+    {
+      "heading": "Choose work that gives more",
+      "paragraphs": [
+        "Campus jobs, tutoring, and roles related to your subject can pay in experience as well as money. Even unrelated work builds reliability, teamwork, and references.",
+        "Check the rules that apply to you: your course, visa, or funding may limit hours, and your employer should follow local rules on pay and breaks. If something feels off, your student advice service can help you check."
+      ]
+    },
+    {
+      "heading": "Budget the wages, rest properly",
+      "paragraphs": [
+        "Give part-time wages a simple plan — essentials, a little saving, guilt-free fun — and protect sleep like it is part of the job. Tired students earn less and learn less."
+      ]
+    }
+  ],
+  "takeaway": "Set your maximum work hours first, choose steady work, and protect study and sleep."
+}

@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-04",
+  "slug": "why-tides-follow-the-moon",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why the Tides Follow the Moon",
+  "description": "Twice a day the sea climbs the shore and slips away again — and the Moon is quietly in charge of the rhythm.",
+  "publishedAt": "2026-10-25",
+  "updatedAt": "2026-10-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "earth-science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Tide",
+      "url": "https://en.wikipedia.org/wiki/Tide",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A gentle pull on the oceans",
+      "paragraphs": [
+        "The Moon’s gravity tugs on everything on Earth, but the oceans answer most visibly. Water on the side of Earth facing the Moon is pulled a little more strongly, and it gathers into a shallow bulge.",
+        "A second bulge forms on the far side of the planet, where the Moon’s pull is weakest and the water is, in effect, left behind. As Earth rotates, coastal places pass through the bulges — and each passage is a high tide. Most shores get two a day."
+      ]
+    },
+    {
+      "heading": "The Sun lends a hand",
+      "paragraphs": [
+        "The Sun is vastly bigger than the Moon but also vastly farther away, so its effect on the tides is smaller — though far from nothing. When the Sun, Moon and Earth line up, at new moon and full moon, the pulls add together.",
+        "Those are spring tides, with higher highs and lower lows. When the Sun and Moon pull at right angles to each other, the effects partly cancel, giving the gentler neap tides."
+      ]
+    },
+    {
+      "heading": "Why the times keep shifting",
+      "paragraphs": [
+        "If the Moon stayed still, tides would arrive at the same time every day. But the Moon is moving along its orbit, so Earth has to rotate a little extra to bring it overhead again.",
+        "That is why high tide comes about 50 minutes later from one day to the next — a small daily delay written into every tide table at every harbour on Earth."
+      ]
+    }
+  ],
+  "takeaway": "Tides are the ocean’s response to the Moon’s gravity — two gentle bulges of water that our spinning Earth carries us through each day.",
+  "fiction": false
+}

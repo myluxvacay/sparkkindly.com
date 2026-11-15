@@ -1,0 +1,32 @@
+{
+  "id": "spider-web-468",
+  "scheduledDate": "2026-12-12",
+  "brand": "kids",
+  "prompt": "What do spiders build to catch their food?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Nests"
+    },
+    {
+      "id": "b",
+      "text": "Webs"
+    },
+    {
+      "id": "c",
+      "text": "Dams"
+    },
+    {
+      "id": "d",
+      "text": "Tunnels"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Spiders spin sticky webs, and insects that fly into the web get caught.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

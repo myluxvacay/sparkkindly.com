@@ -1,0 +1,32 @@
+{
+  "id": "setback-response-145",
+  "scheduledDate": "2026-10-12",
+  "brand": "grow",
+  "prompt": "You practised hard but did not make the team. Which response helps you grow most?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Decide you are just not good at this"
+    },
+    {
+      "id": "b",
+      "text": "Ask the coach what to improve, and keep practising those things"
+    },
+    {
+      "id": "c",
+      "text": "Blame the selection process and quit"
+    },
+    {
+      "id": "d",
+      "text": "Hide it from everyone and feel ashamed"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Specific feedback plus continued practice is how skills actually improve; a setback describes one result, not your ability.",
+  "difficulty": "easy",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

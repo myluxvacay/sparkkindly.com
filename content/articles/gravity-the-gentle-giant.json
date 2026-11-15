@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-14",
+  "slug": "gravity-the-gentle-giant",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Gravity: Weak, Patient, and in Charge of Everything",
+  "description": "Gravity is the weakest of the fundamental forces — yet it builds stars, holds galaxies together, and never takes a day off.",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "physics",
+    "space"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Gravity",
+      "url": "https://en.wikipedia.org/wiki/Gravity",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A surprisingly gentle force",
+      "paragraphs": [
+        "Here is a humbling thought: a small fridge magnet can lift a paperclip against the gravitational pull of the entire planet Earth. By the standards of physics, gravity is astonishingly weak.",
+        "But gravity has two superpowers. It always attracts, never cancels out, and it works over unlimited distances. Every speck of mass adds its pull to every other speck, and given enough mass, the feeble force becomes irresistible."
+      ]
+    },
+    {
+      "heading": "From apples to orbits",
+      "paragraphs": [
+        "Newton realised that the force pulling an apple to the ground is the same force holding the Moon in orbit around Earth. One law, working in the orchard and in the heavens alike.",
+        "Einstein later gave us a deeper picture: mass bends the space around it, and objects follow those bends. On that view, Earth does not so much pull the Moon as guide it along a curved path — a description that predicts things Newton’s version cannot, and that your phone’s GPS quietly relies on."
+      ]
+    },
+    {
+      "heading": "Gravity the builder",
+      "paragraphs": [
+        "Left to itself, gravity gathers. It pulls thin gas into clouds, clouds into stars, stars into galaxies, and it is still sculpting the universe’s largest structures today.",
+        "The weakest force turns out to be the great architect — not because it is strong, but because it is patient, universal, and never switches off."
+      ]
+    }
+  ],
+  "takeaway": "Gravity is feeble between small things but unstoppable at cosmic scale — the universe’s patient builder.",
+  "fiction": false
+}

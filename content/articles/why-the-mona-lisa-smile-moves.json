@@ -1,0 +1,61 @@
+{
+  "id": "discover-bulk-37",
+  "slug": "why-the-mona-lisa-smile-moves",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why the Mona Lisa's Smile Seems to Move",
+  "description": "Look straight at her mouth and the smile fades; look at her eyes and it returns. Leonardo built that trick on purpose — sort of.",
+  "publishedAt": "2026-11-05",
+  "updatedAt": "2026-11-05",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "art",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Mona Lisa",
+      "url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A painting five centuries famous",
+      "paragraphs": [
+        "Leonardo da Vinci began the Mona Lisa in 1503, painting a portrait believed to be of Lisa del Giocondo, the wife of a Florentine silk merchant. Today it hangs in the Louvre Museum in Paris, behind protective glass, and is often called the most famous painting in the world.",
+        "Part of its fame is the expression. Visitors have argued for centuries about whether she is smiling at all — and the odd thing is that the answer seems to change depending on where you look."
+      ]
+    },
+    {
+      "heading": "The blur at the edges of your vision",
+      "paragraphs": [
+        "Leonardo used a technique called sfumato, building up many thin, soft layers of paint so that edges — especially around the mouth and eyes — have no hard outlines. The corners of the mouth are deliberately blurred.",
+        "Your eyes pick up fine detail best at the centre of your vision, while the edges are better at soft shapes and shadows. So when you look at her eyes, you 'see' her mouth with your peripheral vision, which reads the blurred shadows as a smile. Look directly at the mouth, and the detail vision takes over — and the smile seems to melt away."
+      ]
+    },
+    {
+      "heading": "Accident, genius, or both",
+      "paragraphs": [
+        "Whether Leonardo understood the science of vision in modern terms is unknown, but he studied optics and the eye closely, and sfumato was his signature technique across many works. The effect is consistent enough that scientists still use this painting to explain how vision works.",
+        "Next time you see a reproduction, try it: eyes first, then mouth. The world's most famous smile is partly painted by Leonardo — and partly painted by your own eyes."
+      ]
+    }
+  ],
+  "takeaway": "The Mona Lisa's shifting smile comes from sfumato — Leonardo blurred the mouth's corners, so your peripheral vision sees a smile that direct looking dissolves.",
+  "fiction": false
+}
