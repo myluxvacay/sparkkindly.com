@@ -132,7 +132,7 @@ export const leaderInviteRequest = (request: Request, d: InviteDeps, key: string
 // binds it to this account, so an id from anywhere else answers neutrally.
 export const answerAccountInviteRequest = (request: Request, d: InviteDeps, inviteId: string) =>
   asAdult(request, d, async (ctx, form) => {
-    if (!circlesEnabled()) return notFound();
+    if (!circlesEnabled() || !leaderboardEnabled()) return notFound();
     if (form.get('intent') === 'decline') {
       const done = await declineAccountInvite(d.db, ctx.account.id, inviteId, d.now);
       return seeOther(done ? '/me/?r=invite-declined#result' : '/me/?r=invite-gone#result');

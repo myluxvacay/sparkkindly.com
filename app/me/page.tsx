@@ -3,7 +3,7 @@ import ItemCard from '@/components/item/ItemCard';
 import { dashboardFor, type Dashboard } from '@/lib/accounts/dashboard';
 import { PLAYING_PAGE, requireContext } from '@/lib/accounts/next';
 import { can } from '@/lib/accounts/policy';
-import { circlesEnabled, contributorsEnabled } from '@/lib/config';
+import { circlesEnabled, contributorsEnabled, leaderboardEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
 import { listAccountInvites, type PendingAccountInvite } from '@/lib/circles/invites';
 import type { PublicItem } from '@/lib/items/repo';
@@ -93,8 +93,9 @@ export default async function MePage({ searchParams }: Props) {
   const { r } = await searchParams;
   const db = getDb();
   const [d, worldList] = await Promise.all([dashboardFor(db, ctx, new Date()), listWorlds(db)]);
+  // Account-kind invites are a leaderboard-feature surface (migration 036): hidden while the leaderboard is off (SF-1).
   const pendingInvites =
-    !ctx.profile && circlesEnabled() ? await listAccountInvites(db, ctx.account.id, new Date()) : [];
+    !ctx.profile && circlesEnabled() && leaderboardEnabled() ? await listAccountInvites(db, ctx.account.id, new Date()) : [];
   const result = r ? RESULTS[r] : undefined;
   const worlds = new Map(worldList.map((w) => [w.slug, w]));
   const savesAnswers = ctx.profile !== null || can(ctx.account.ageGroup, ctx.account.consent, 'save_answers');
