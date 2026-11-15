@@ -763,7 +763,14 @@ test('an adult picks interests from the keyboard; /me lists matching items and a
     }
     await expect(page.getByRole('listitem').filter({ hasText: `Quillfeather answered fixture ${stamp}` })).toContainText('correct');
     await expect(page.getByText('You have answered 1 item, 1 correct.')).toBeVisible();
-    await expect(page.getByText(/streak|missed|target/i)).toHaveCount(0);
+    // The no-pressure rule binds the page's own copy (plain counts only), not library content: item cards in the
+    // matching lists legitimately carry titles like "A streak is a tool, not a judge", so they are excluded here.
+    const pressureCopy = await page.evaluate(() => {
+      const main = document.querySelector('main')!.cloneNode(true) as HTMLElement;
+      main.querySelectorAll('.card-list').forEach((el) => el.remove());
+      return /streak|missed|target/i.test(main.textContent ?? '');
+    });
+    expect(pressureCopy).toBe(false);
     await expect(page.getByRole('link', { name: 'Your account' })).toBeVisible();
     await axeBothWidths(page);
     expect((await page.context().cookies(BASE)).map((c) => c.name)).toEqual(['__Host-sk_account']);

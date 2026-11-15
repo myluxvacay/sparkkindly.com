@@ -10,12 +10,26 @@ const starterArticles = fs
   .map((f) => JSON.parse(fs.readFileSync(`content/articles/${f}`, 'utf8')) as { brand: string; slug: string; title: string; reviewStatus: string })
   .filter((a) => a.reviewStatus === 'approved');
 
-test('every approved starter article renders its title from the database', async ({ page }) => {
+test('every approved starter article renders its title from the database', async ({ request }) => {
+  test.setTimeout(300_000);
   expect(starterArticles.length).toBeGreaterThan(0);
+  // At library scale (800+ articles) a browser sweep outruns the test timeout, so the sweep goes over HTTP:
+  // every article page must still answer 200 with its own title as the page heading.
   for (const a of starterArticles) {
-    const res = await page.goto(`/${a.brand}/${a.slug}/`);
-    expect(res?.status(), a.slug).toBe(200);
-    await expect(page.getByRole('heading', { level: 1 }), a.slug).toHaveText(a.title);
+    const res = await request.get(`/${a.brand}/${a.slug}/`);
+    expect(res.status(), a.slug).toBe(200);
+    const html = await res.text();
+    // Raw HTML carries React's entity escaping (a title's apostrophe arrives as &#x27;); the browser original
+    // compared textContent, which decodes, so decode the standard entities before comparing.
+    const h1 = html
+      .match(/<h1[^>]*>(.*?)<\/h1>/s)?.[1]
+      .replace(/<[^>]+>/g, '')
+      .replace(/&#x27;|&#39;/g, "'")
+      .replace(/&quot;/g, '"')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&amp;/g, '&');
+    expect(h1, a.slug).toBe(a.title);
   }
 });
 

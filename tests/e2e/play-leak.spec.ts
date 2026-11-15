@@ -39,8 +39,11 @@ async function addFixtures() {
 
 const starterQuizzes = fs
   .readdirSync('content/quizzes')
-  .map((f) => JSON.parse(fs.readFileSync(`content/quizzes/${f}`, 'utf8')) as { id: string; brand: string; explanation: string; reviewStatus: string })
-  .filter((q) => q.reviewStatus === 'approved');
+  .map((f) => JSON.parse(fs.readFileSync(`content/quizzes/${f}`, 'utf8')) as { id: string; brand: string; explanation: string; reviewStatus: string; scheduledDate: string })
+  .filter((q) => q.reviewStatus === 'approved')
+  // A quiz goes live on its scheduled date; before that its page is a 404 by design, so the leak sweep only
+  // covers quizzes already due (the seed library now schedules quizzes months ahead).
+  .filter((q) => q.scheduledDate <= new Date().toISOString().slice(0, 10));
 
 test('before answering, no page text, meta tag or payload carries the answer', async ({ request }) => {
   await addFixtures();
@@ -52,7 +55,10 @@ test('before answering, no page text, meta tag or payload carries the answer', a
     const res = await request.get(`/${q.brand}/${q.id}/`);
     expect(res.status(), q.id).toBe(200);
     const html = await res.text();
-    const marker = q.explanation.split(/['"&<>]/)[0].slice(0, 40);
+    // The marker is a distinctive run of the explanation with no quote characters (quotes arrive entity-escaped
+    // in raw HTML). Seed-library explanations often open by quoting a word ('Bi' means two...), which made the
+    // first run empty or a few letters, so take the first run long enough to be distinctive.
+    const marker = (q.explanation.split(/['"&<>]/).find((s) => s.trim().length >= 12) ?? q.explanation.replace(/['"&<>]/g, '')).trim().slice(0, 40);
     expect(html, q.id).not.toContain(marker);
     // A starter quiz's own option text may say "correctly", so look for the verdict wording and the answer key instead.
     for (const s of ['Correct', 'Not quite', 'correctOptionId', '"correct"']) expect(html, `${q.id}: ${s}`).not.toContain(s);
