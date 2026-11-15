@@ -316,3 +316,8 @@ html[data-theme="dark"] .content-card{background:#2e2138;border-color:#4a3a56}
 .card-list{display:grid;grid-template-columns:1fr;gap:0;max-width:880px}
 html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 @media(max-width:580px){.strip-thumb{width:88px;height:66px}}
+
+/* Share-card images are text artwork, not photos: never cover-crop them (their
+   words slice off at the edges). Show the whole card on its own cream ground. */
+.brand-feature>img.feature-template{object-fit:contain;background:#fff7eb}
+.article-media img.media-template{object-fit:contain;background:#fff7eb}

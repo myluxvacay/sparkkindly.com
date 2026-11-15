@@ -123,7 +123,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
           {image.src ? (
             <Picture src={image.src} width={image.width ?? 1200} height={image.height ?? 800} alt={image.alt} priority />
           ) : (
-            <img src={`/api/template-image/${item.world}/${item.slug}/`} width={1200} height={630} alt="" />
+            <img className="media-template" src={`/api/template-image/${item.world}/${item.slug}/`} width={1200} height={630} alt="" />
           )}
         </div>
       )}

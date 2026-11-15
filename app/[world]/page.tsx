@@ -9,6 +9,7 @@ import { accountSessionToken, currentScope } from '@/lib/accounts/scope-next';
 import SponsorCard from '@/components/sponsorship/SponsorCard';
 import { loadWorldSponsor } from '@/lib/sponsorship/web';
 import { getWorld } from '@/lib/public/worlds';
+import { readImage } from '@/lib/public/body';
 import { listPublic } from '@/lib/public/reads';
 import { PAGE_SIZE, pageCanonical, parsePage } from '@/lib/public/paging';
 import { metadata as seo } from '@/lib/seo';
@@ -36,6 +37,7 @@ export default async function WorldPage({ params, searchParams }: Props) {
   if (page > 1 && !items.length) notFound(); // SEO audit M3: no empty, indexable page past the end
   const hasNext = rows.length > PAGE_SIZE;
   const feature = page === 1 ? items[0] : undefined;
+  const featureImage = feature ? readImage(feature.image) : null;
   const rest = feature ? items.slice(1) : items;
   const here = `/${w.slug}/`;
   // The world's own sponsorship (Save, Grow and Discover only; null elsewhere, with the flag off and for viewers who may not see it).
@@ -63,7 +65,11 @@ export default async function WorldPage({ params, searchParams }: Props) {
       )}
       {feature && (
         <section className="brand-feature feature-card">
-          <img src={`/api/template-image/${feature.world}/${feature.slug}/`} width={800} height={420} alt="" />
+          {featureImage?.src ? (
+            <img src={featureImage.src} width={featureImage.width ?? 800} height={featureImage.height ?? 420} alt="" />
+          ) : (
+            <img className="feature-template" src={`/api/template-image/${feature.world}/${feature.slug}/`} width={800} height={420} alt="" />
+          )}
           <div>
             <p className="eyebrow">FEATURED {feature.kind === 'article' ? 'READ' : feature.kind.toUpperCase()}</p>
             <h2><Link href={`/${feature.world}/${feature.slug}/`}>{feature.title}</Link></h2>
