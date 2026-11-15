@@ -90,7 +90,8 @@ describe('getPublicBoards', () => {
     await recordAnswer(db, { accountId: a, profileId: child.rows[0].id }, p1, true, NOW);
     const boards = await getPublicBoards(db, NOW);
     expect(boards.allTime).toEqual([
-      { rank: 1, name: 'Alpha', avatarKey: 'sunny', points: 10, correct: 1, you: false },
+      { rank: 1, name: 'Alpha', avatarKey: 'sunny', points: 10, correct: 1, you: false, inviteKey: expect.any(String) },
     ]);
+    expect(boards.allTime[0].inviteKey).toMatch(/^[0-9a-f]{16}$/);
   });
 });

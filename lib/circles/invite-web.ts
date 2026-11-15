@@ -22,9 +22,12 @@ import { flashCookie } from './invite-flash';
 import { addressHash, addressSendable, claimAddressSend, readSuppressToken, releaseAddressSend, suppressAddress, suppressToken } from './invite-guard';
 import { inviteEmail } from './invite-email';
 import {
+  acceptAccountInvite,
   acceptInvite,
+  createAccountInvite,
   createEmailInvite,
   createLinkInvite,
+  declineAccountInvite,
   inviteReturnPath,
   previewInvite,
   recordOpen,
@@ -32,6 +35,8 @@ import {
   type InviteMail,
   type InvitePreview,
 } from './invites';
+import { getLeaderByKey } from '@/lib/public/leaderboard';
+import { leaderboardEnabled } from '@/lib/config';
 import { scoped, type CircleDeps } from './web';
 
 export type InviteDeps = CircleDeps & { network?: (ip: string) => boolean; send?: (m: InviteMail) => Promise<unknown> };
@@ -103,6 +108,39 @@ export const createLinkRequest = (request: Request, d: InviteDeps, slug: string)
     const r = await createLinkInvite(d.db, accountId, slug, d.now);
     if (r.status === 'created') return seeOther(`/circles/${slug}/?r=link#invites`, flashCookie(r.token));
     return toInvites(slug, r.status === 'closed' ? 'read-only' : 'invite-no');
+  });
+
+// The leaderboard "invite to a circle" POST (Project 4.11, ADR 0004): the leader is named by their public key
+// only, resolved server-side to an opted-in, eligible account; the circle comes from the form and the inviter
+// gate runs again inside createAccountInvite. Outcome codes ride the redirect back to the invite page.
+export const leaderInviteRequest = (request: Request, d: InviteDeps, key: string) =>
+  asAdult(request, d, async (ctx, form) => {
+    if (!circlesEnabled() || !leaderboardEnabled()) return notFound();
+    const leader = await getLeaderByKey(d.db, key, d.now);
+    if (!leader) return seeOther('/leaderboard/?r=invite-gone#result');
+    const slug = form.get('circle');
+    if (typeof slug !== 'string' || !slug) return seeOther(`/leaderboard/invite/${key}/?r=invalid#result`);
+    const r = await createAccountInvite(d.db, ctx.account.id, slug, leader.accountId, d.now);
+    if (r === 'sent') return seeOther('/leaderboard/?r=invited#result');
+    const code =
+      r === 'duplicate' ? 'invite-duplicate' : r === 'limit' ? 'invite-limit' : r === 'already_member' ? 'invite-member' : 'invite-gone';
+    return seeOther(`/leaderboard/invite/${key}/?r=${code}#result`);
+  });
+
+// The dashboard answer to an account invite (Project 4.11): accept joins under the shared rules with the name
+// the member types; decline revokes the row. The invite id names the row; the addressee check inside the lib
+// binds it to this account, so an id from anywhere else answers neutrally.
+export const answerAccountInviteRequest = (request: Request, d: InviteDeps, inviteId: string) =>
+  asAdult(request, d, async (ctx, form) => {
+    if (!circlesEnabled()) return notFound();
+    if (form.get('intent') === 'decline') {
+      const done = await declineAccountInvite(d.db, ctx.account.id, inviteId, d.now);
+      return seeOther(done ? '/me/?r=invite-declined#result' : '/me/?r=invite-gone#result');
+    }
+    const r = await acceptAccountInvite(d.db, ctx.account.id, inviteId, form.get('your_name'), d.now);
+    if (r.status === 'joined') return seeOther(`/circles/${r.slug}/?r=joined#result`);
+    if (r.status === 'name') return seeOther('/me/?r=invite-name#result');
+    return seeOther(ACCEPT_CODES.has(r.status) ? '/me/?r=invite-refused#result' : '/me/?r=invite-gone#result');
   });
 
 export const emailInviteRequest = (request: Request, d: InviteDeps, slug: string) =>

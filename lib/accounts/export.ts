@@ -63,6 +63,9 @@ export const EXPORTED_COLUMNS = {
     'notify_weekly_circle',
     'notify_invites',
     'inactivity_notice_at',
+    'leaderboard_opt_in',
+    'public_name',
+    'avatar_key',
   ],
   child_profiles: ['display_name', 'age_band', 'created_at'],
   comments: ['body', 'status', 'created_at', 'updated_at'],
@@ -99,6 +102,7 @@ export const EXPORTED_COLUMNS = {
 export const EXCLUDED_COLUMNS: Readonly<Record<keyof typeof EXPORTED_COLUMNS, Readonly<Record<string, string>>>> = {
   accounts: {
     id: 'internal identifier; meaningless outside the service and not needed to read the export',
+    public_key: 'opaque handle for leaderboard invite links; an internal identifier, meaningless outside the service',
     pin_hash: 'credential: salted scrypt hash of the adult PIN',
     pin_failures: 'security counter for PIN lockout; exposing it helps guessing',
     pin_lock_count: 'security counter for PIN lockout escalation',
@@ -236,6 +240,7 @@ export type AccountExport = {
     lastSignInAt: string | null;
     lastSeenAt: string | null;
     notify: { dailySet: boolean; weeklyCircle: boolean; invites: boolean };
+    leaderboard: { optIn: boolean; publicName: string | null; avatarKey: string | null };
   };
   interests: ExportInterests;
   answers: ExportAnswer[];
@@ -269,6 +274,9 @@ type AccountRow = {
   d: boolean;
   w: boolean;
   i: boolean;
+  leaderboard_opt_in: boolean;
+  public_name: string | null;
+  avatar_key: string | null;
 };
 
 const iso = (d: Date | null): string | null => (d ? new Date(d).toISOString() : null);
@@ -291,6 +299,7 @@ function accountSection(a: AccountRow): AccountExport['account'] {
     lastSignInAt: iso(a.last_sign_in_at),
     lastSeenAt: iso(a.last_seen_at),
     notify: { dailySet: a.d, weeklyCircle: a.w, invites: a.i },
+    leaderboard: { optIn: a.leaderboard_opt_in, publicName: a.public_name, avatarKey: a.avatar_key },
   };
 }
 
@@ -514,7 +523,8 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
   const a = await tx.query<AccountRow>(
     `SELECT email, to_char(date_of_birth, 'YYYY-MM-DD') AS dob, time_zone, consent_state, consent_at,
             consent_reminded_at, parent_email, guardian_confirmed_at, inactivity_notice_at, created_at, verified_at,
-            last_sign_in_at, last_seen_at, notify_daily_set AS d, notify_weekly_circle AS w, notify_invites AS i
+            last_sign_in_at, last_seen_at, notify_daily_set AS d, notify_weekly_circle AS w, notify_invites AS i,
+            leaderboard_opt_in, public_name, avatar_key
      FROM accounts WHERE id = $1`,
     [accountId],
   );
