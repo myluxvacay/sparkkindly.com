@@ -1,0 +1,54 @@
+{
+  "id": "pipeline-proof-two-minute-reset",
+  "slug": "the-two-minute-reset",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "The Two-Minute Reset: Restart a Stuck Afternoon",
+  "description": "When your focus stalls, a short, deliberate pause can restart it. A tiny ritual borrowed from focus techniques: stop, move, breathe, and pick one next step.",
+  "publishedAt": "2026-11-16",
+  "updatedAt": "2026-11-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent (staging proof)",
+  "reviewedAt": "2026-11-16",
+  "reviewNote": "Staging proof item for the automated content-publishing pipeline, published under the site owner's standing authorization of 16 November 2026. Not a production library item.",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "Green shoots growing in soft light",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "focus",
+    "habits",
+    "breaks"
+  ],
+  "sources": [
+    {
+      "title": "Pomodoro Technique",
+      "url": "https://en.wikipedia.org/wiki/Pomodoro_Technique",
+      "accessedAt": "2026-11-16"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-16",
+  "aiDisclosure": "Created with AI assistance as a staging pipeline proof on 16 November 2026.",
+  "body": [
+    {
+      "heading": "Why a short pause works",
+      "paragraphs": [
+        "Focus rarely fails all at once. It frays: you re-read the same line, check your phone, and feel busier while getting less done. A short, deliberate pause interrupts that slide far better than pushing through on willpower alone.",
+        "Structured focus methods build this in. The Pomodoro Technique, for example, alternates timed periods of focused work with short breaks, on the idea that attention recovers during the pause instead of draining away."
+      ]
+    },
+    {
+      "heading": "The two-minute version",
+      "paragraphs": [
+        "Stand up and move for a few seconds — stretch, get water, look out of a window at something far away. Then breathe slowly for four or five breaths, and name exactly one next step, small enough to start immediately: the first sentence, the first email, the first problem.",
+        "The trick is that the reset is planned, not earned. You take it when the timer or the fraying feeling says so, not when you feel you have deserved it. Two minutes is short enough that it never feels like quitting, and long enough for your attention to come back."
+      ]
+    }
+  ],
+  "takeaway": "When focus frays, take a planned two-minute reset: move, breathe, and choose one small next step."
+}

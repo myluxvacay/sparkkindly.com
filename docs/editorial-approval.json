@@ -21806,6 +21806,20 @@
         "reviewedAt": "2026-11-15",
         "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
       }
+    },
+    {
+      "kind": "article",
+      "id": "pipeline-proof-two-minute-reset",
+      "priorHash": "4ba784f54cbc646646122ed8908a6b4fd4039229f8f0adedda3bfcb697a32da7",
+      "approvedHash": "c161ee8f2e571c0599e3da0261278bb4cab1807cc85333782b1fb01bc1104ca8",
+      "fields": {
+        "publishedAt": "2026-11-16",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent (staging proof)",
+        "reviewedAt": "2026-11-16",
+        "factualClaimsReviewedAt": "2026-11-16",
+        "reviewNote": "Staging proof item for the automated content-publishing pipeline, published under the site owner's standing authorization of 16 November 2026. Not a production library item."
+      }
     }
   ]
 }
