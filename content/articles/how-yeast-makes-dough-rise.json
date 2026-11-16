@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A living ingredient","paragraphs":["Yeast is not a powder invented in a factory; it is a living single-celled fungus, a relative of the mushrooms. Mixed into dough, the cells wake up in the warm, damp mixture and begin to feed on sugars in the flour. To release the sugars' energy without oxygen, yeast uses fermentation — and fermentation's waste products are ethanol and carbon dioxide gas.","It is the gas that matters to a baker. Released inside a sticky dough, each bubble of carbon dioxide is trapped where it forms, and millions of them together inflate the dough from inside, the way air inflates thousands of tiny balloons at once."]},{"heading":"From mixing bowl to oven","paragraphs":["The sequence matters. Mixing and kneading come first, because kneading develops gluten — long, stretchy proteins in wheat flour that link into an elastic net. Without that net, the gas would simply bubble out; with it, the dough can stretch and hold the bubbles as they grow.","Then the dough rests somewhere warm to prove: too cold and the yeast works at a crawl, too hot — above about 60 °C — and it dies. In the oven the trapped bubbles expand in the heat and the yeast has a final burst of activity before the heat kills it; the ethanol it made evaporates away, and the crust sets, freezing the bubble structure in place as the crumb of the loaf."]},{"heading":"One fungus, many jobs","paragraphs":["The same organism, in different conditions, makes beer and wine — there the ethanol is the point and the gas mostly escapes, though in champagne and bottle-conditioned beer it is deliberately trapped to make the drink fizzy. Sourdough bakers cultivate wild yeasts together with bacteria, whose acids give the bread its tang.","Yeast is also astonishingly numerous: a small sachet of dried yeast holds tens of billions of individual living cells, each one a microscopic gas factory waiting for sugar, warmth and water."]}],"brand":"discover","contentType":"article","description":"Yeast is a living fungus that eats sugar and gives off carbon dioxide — and those trapped gas bubbles are what puff up bread dough.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-73","publishedAt":"2026-10-18","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-yeast-makes-dough-rise","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Yeast","url":"https://en.wikipedia.org/wiki/Yeast"},{"accessedAt":"2026-11-15","title":"Wikipedia: Fermentation","url":"https://en.wikipedia.org/wiki/Fermentation"}],"tags":["chemistry","science"],"takeaway":"Yeast is a living fungus that ferments sugars in dough and releases carbon dioxide; the dough's stretchy gluten traps the gas, and the loaf rises.","title":"How yeast makes bread dough rise","updatedAt":"2026-10-18"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A living ingredient",
+      "paragraphs": [
+        "Yeast is not a powder invented in a factory; it is a living single-celled fungus, a relative of the mushrooms. Mixed into dough, the cells wake up in the warm, damp mixture and begin to feed on sugars in the flour. To release the sugars' energy without oxygen, yeast uses fermentation — and fermentation's waste products are ethanol and carbon dioxide gas.",
+        "It is the gas that matters to a baker. Released inside a sticky dough, each bubble of carbon dioxide is trapped where it forms, and millions of them together inflate the dough from inside, the way air inflates thousands of tiny balloons at once."
+      ]
+    },
+    {
+      "heading": "From mixing bowl to oven",
+      "paragraphs": [
+        "The sequence matters. Mixing and kneading come first, because kneading develops gluten — long, stretchy proteins in wheat flour that link into an elastic net. Without that net, the gas would simply bubble out; with it, the dough can stretch and hold the bubbles as they grow.",
+        "Then the dough rests somewhere warm to prove: too cold and the yeast works at a crawl, too hot — above about 60 °C — and it dies. In the oven the trapped bubbles expand in the heat and the yeast has a final burst of activity before the heat kills it; the ethanol it made evaporates away, and the crust sets, freezing the bubble structure in place as the crumb of the loaf."
+      ]
+    },
+    {
+      "heading": "One fungus, many jobs",
+      "paragraphs": [
+        "The same organism, in different conditions, makes beer and wine — there the ethanol is the point and the gas mostly escapes, though in champagne and bottle-conditioned beer it is deliberately trapped to make the drink fizzy. Sourdough bakers cultivate wild yeasts together with bacteria, whose acids give the bread its tang.",
+        "Yeast is also astonishingly numerous: a small sachet of dried yeast holds tens of billions of individual living cells, each one a microscopic gas factory waiting for sugar, warmth and water."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Yeast is a living fungus that eats sugar and gives off carbon dioxide — and those trapped gas bubbles are what puff up bread dough.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-73",
+  "publishedAt": "2026-10-18",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-yeast-makes-dough-rise",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Yeast",
+      "url": "https://en.wikipedia.org/wiki/Yeast"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Fermentation",
+      "url": "https://en.wikipedia.org/wiki/Fermentation"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Yeast is a living fungus that ferments sugars in dough and releases carbon dioxide; the dough's stretchy gluten traps the gas, and the loaf rises.",
+  "title": "How yeast makes bread dough rise",
+  "updatedAt": "2026-10-18"
+}

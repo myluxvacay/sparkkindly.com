@@ -65,6 +65,63 @@ describe('getPublicBoards', () => {
       [1, 'Alpha', 10],
       [1, 'Beta', 10],
     ]);
+    // NOW is a Sunday and both in-month answers are this week; the October answer is neither month nor week.
+    expect(boards.week.map((r) => [r.rank, r.name, r.points])).toEqual([
+      [1, 'Alpha', 10],
+      [1, 'Beta', 10],
+    ]);
+  });
+
+  it('week board counts only answers since Monday 00:00 UTC', async () => {
+    const a = await account('1990-05-05');
+    const b = await account('1988-01-01');
+    await optIn(a, 'Alpha');
+    await optIn(b, 'Beta');
+    const p1 = await item(db, { world: playWorld });
+    const p2 = await item(db, { world: playWorld });
+    const p3 = await item(db, { world: playWorld });
+    // NOW is Sunday 2026-11-15; the week started Monday 2026-11-09T00:00:00Z.
+    await answer(a, p1, new Date('2026-11-09T00:00:00Z')); // Monday boundary: counts.
+    await answer(b, p2, new Date('2026-11-08T23:59:59Z')); // Previous Sunday night: last week, still this month.
+    await answer(b, p3, NOW);
+    const boards = await getPublicBoards(db, NOW, a);
+    expect(boards.week.map((r) => [r.rank, r.name, r.points])).toEqual([
+      [1, 'Alpha', 10],
+      [1, 'Beta', 10],
+    ]);
+    expect(boards.month.map((r) => [r.rank, r.name, r.points])).toEqual([
+      [1, 'Beta', 20],
+      [2, 'Alpha', 10],
+    ]);
+    expect(boards.allTime.map((r) => [r.rank, r.name, r.points])).toEqual([
+      [1, 'Beta', 20],
+      [2, 'Alpha', 10],
+    ]);
+  });
+
+  it('week board is right when now is a Monday', async () => {
+    const a = await account('1990-05-05');
+    await optIn(a, 'Alpha');
+    const p1 = await item(db, { world: playWorld });
+    const p2 = await item(db, { world: playWorld });
+    // Monday 2026-11-16 at noon: yesterday (Sunday) is last week; Monday 00:00 exactly is this week.
+    await answer(a, p1, new Date('2026-11-15T12:00:00Z'));
+    await answer(a, p2, new Date('2026-11-16T00:00:00Z'));
+    const monday = await getPublicBoards(db, new Date('2026-11-16T12:00:00Z'));
+    expect(monday.week.map((r) => [r.name, r.points])).toEqual([['Alpha', 10]]);
+    expect(monday.month.map((r) => [r.name, r.points])).toEqual([['Alpha', 20]]);
+  });
+
+  it('week board spans a month boundary: late last month can be this week', async () => {
+    const a = await account('1990-05-05');
+    await optIn(a, 'Alpha');
+    const p1 = await item(db, { world: playWorld });
+    // Sunday 2026-11-01: the week began Monday 2026-10-26, so the Oct 27 answer is this week, not this month.
+    await answer(a, p1, new Date('2026-10-27T12:00:00Z'));
+    const spanning = await getPublicBoards(db, new Date('2026-11-01T12:00:00Z'));
+    expect(spanning.week.map((r) => [r.name, r.points])).toEqual([['Alpha', 10]]);
+    expect(spanning.month).toEqual([]);
+    expect(spanning.allTime.map((r) => [r.name, r.points])).toEqual([['Alpha', 10]]);
   });
 
   it('never shows the not-opted-in, the under-age, child answers or Kids items', async () => {
@@ -92,6 +149,8 @@ describe('getPublicBoards', () => {
     expect(boards.allTime).toEqual([
       { rank: 1, name: 'Alpha', avatarKey: 'sunny', points: 10, correct: 1, you: false, inviteKey: expect.any(String) },
     ]);
+    // The week board draws on the same eligible set: nothing extra leaks through the new window.
+    expect(boards.week).toEqual(boards.allTime);
     expect(boards.allTime[0].inviteKey).toMatch(/^[0-9a-f]{16}$/);
   });
 });

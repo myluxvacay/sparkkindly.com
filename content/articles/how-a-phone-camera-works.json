@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A chip that counts light","paragraphs":["Behind the tiny lens sits an image sensor — a chip covered in millions of microscopic light detectors called pixels. When you take a photo, the lens focuses the scene onto this grid, and each pixel measures how much light landed on it during the exposure.","Pixels alone would see only brightness, so each one sits under a coloured filter — red, green or blue, in a checkerboard pattern with twice as many green as red or blue, matching our eyes' sensitivity. The camera's processor blends the grid into a full-colour image."]},{"heading":"Decisions in a fraction of a second","paragraphs":["Before you press the button, the camera is already working: it adjusts focus by shifting the lens until edges look sharpest, and meters the light to choose an exposure time and sensitivity. In dim scenes it may raise the sensitivity, trading a grainier image for a brighter one.","Phone sensors are tiny — far smaller than a fingernail — which limits how much light they can gather. Phones compensate with computation: many take several frames in a burst and merge them, averaging out noise and rescuing detail from shadows and highlights."]},{"heading":"Millions of measurements, one picture","paragraphs":["A 12-megapixel photo is twelve million separate light measurements, each converted to numbers and compressed into a file a few megabytes in size. Modern phones go further, recognising faces, skies and food to tune colours and sharpness region by region.","The photograph you see is therefore part measurement, part interpretation — the sensor's honest count of the light, finished by software that guesses how the scene should look. The optics have barely changed in a century; the computing is what is new."]}],"brand":"discover","contentType":"article","description":"A phone camera focuses light onto a chip of millions of light sensors, counts what each one catches, and computes a photo.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-18","publishedAt":"2026-10-18","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-a-phone-camera-works","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Digital camera","url":"https://en.wikipedia.org/wiki/Digital_camera"},{"accessedAt":"2026-11-15","title":"Wikipedia: Image sensor","url":"https://en.wikipedia.org/wiki/Image_sensor"}],"tags":["technology","computing"],"takeaway":"A phone camera turns light into numbers: millions of filtered pixels measure the scene, and the processor assembles their readings into a photograph.","title":"How a phone camera turns light into a photograph","updatedAt":"2026-10-18"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A chip that counts light",
+      "paragraphs": [
+        "Behind the tiny lens sits an image sensor — a chip covered in millions of microscopic light detectors called pixels. When you take a photo, the lens focuses the scene onto this grid, and each pixel measures how much light landed on it during the exposure.",
+        "Pixels alone would see only brightness, so each one sits under a coloured filter — red, green or blue, in a checkerboard pattern with twice as many green as red or blue, matching our eyes' sensitivity. The camera's processor blends the grid into a full-colour image."
+      ]
+    },
+    {
+      "heading": "Decisions in a fraction of a second",
+      "paragraphs": [
+        "Before you press the button, the camera is already working: it adjusts focus by shifting the lens until edges look sharpest, and meters the light to choose an exposure time and sensitivity. In dim scenes it may raise the sensitivity, trading a grainier image for a brighter one.",
+        "Phone sensors are tiny — far smaller than a fingernail — which limits how much light they can gather. Phones compensate with computation: many take several frames in a burst and merge them, averaging out noise and rescuing detail from shadows and highlights."
+      ]
+    },
+    {
+      "heading": "Millions of measurements, one picture",
+      "paragraphs": [
+        "A 12-megapixel photo is twelve million separate light measurements, each converted to numbers and compressed into a file a few megabytes in size. Modern phones go further, recognising faces, skies and food to tune colours and sharpness region by region.",
+        "The photograph you see is therefore part measurement, part interpretation — the sensor's honest count of the light, finished by software that guesses how the scene should look. The optics have barely changed in a century; the computing is what is new."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "A phone camera focuses light onto a chip of millions of light sensors, counts what each one catches, and computes a photo.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A green computer motherboard close-up",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/tech.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-18",
+  "publishedAt": "2026-10-18",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-a-phone-camera-works",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Digital camera",
+      "url": "https://en.wikipedia.org/wiki/Digital_camera"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Image sensor",
+      "url": "https://en.wikipedia.org/wiki/Image_sensor"
+    }
+  ],
+  "tags": [
+    "technology",
+    "computing"
+  ],
+  "takeaway": "A phone camera turns light into numbers: millions of filtered pixels measure the scene, and the processor assembles their readings into a photograph.",
+  "title": "How a phone camera turns light into a photograph",
+  "updatedAt": "2026-10-18"
+}

@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Small units, giant molecules","paragraphs":["A polymer is a very large molecule built by joining many small molecules — monomers — into a long chain, the way beads thread onto a string. Link a few thousand copies of the gas ethene together and you get polythene, the plastic of bags and bottles. Change the monomer and you change the material entirely: chains can be stiff or floppy, clear or opaque, stretchy or brittle.","Plastics are simply the synthetic branch of this family, shaped by heat and pressure into everything from phone cases to water pipes. Their useful secret is that the chains are long enough to tangle like a bowl of noodles, and tangled chains are tough, light and hard to pull apart."]},{"heading":"Two families of plastic","paragraphs":["Thermoplastics soften when heated, because their chains are separate and can slide past each other once warm. Polythene, PET and PVC belong here, which is why they can be melted and remoulded — the basis of plastic recycling. A drinks bottle can, in principle, become another bottle.","Thermosets behave oppositely: as they form, their chains grow chemical cross-links tying them into one giant network. Heat cannot melt a network, only burn it — which is why the handles of saucepans and the casings of plugs, made from thermosets, survive the stove but cannot be recycled by melting. Nature, meanwhile, got there first: rubber, starch, cellulose, proteins and DNA are all polymers too."]},{"heading":"The blessing that became a curse","paragraphs":["Plastics conquered the world because they are cheap, light, waterproof and nearly indestructible. That last quality is the problem: the same chemical stubbornness that keeps a plastic bottle intact on a beach means it may persist in the environment for hundreds of years, breaking into ever-smaller fragments rather than disappearing.","The numbers explain both sides. Humanity now produces hundreds of millions of tonnes of plastic a year, and only a minority is recycled — the rest is burned, buried or leaked into nature. Chemistry made a material that barely ages; what to do with it afterwards is the problem chemistry is now asked to solve."]}],"brand":"discover","contentType":"article","description":"Plastics are polymers: giant molecules built from thousands of small units linked into chains, like beads on a very long string.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-81","publishedAt":"2026-11-07","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"plastics-and-polymers","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Polymer","url":"https://en.wikipedia.org/wiki/Polymer"},{"accessedAt":"2026-11-15","title":"Wikipedia: Plastic","url":"https://en.wikipedia.org/wiki/Plastic"}],"tags":["chemistry","science"],"takeaway":"Polymers are giant chain molecules built from small repeating units. Plastics are their synthetic branch — tough and light because the chains tangle, and persistent for the same reason.","title":"Plastics and polymers: chains of molecules everywhere","updatedAt":"2026-11-07"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Small units, giant molecules",
+      "paragraphs": [
+        "A polymer is a very large molecule built by joining many small molecules — monomers — into a long chain, the way beads thread onto a string. Link a few thousand copies of the gas ethene together and you get polythene, the plastic of bags and bottles. Change the monomer and you change the material entirely: chains can be stiff or floppy, clear or opaque, stretchy or brittle.",
+        "Plastics are simply the synthetic branch of this family, shaped by heat and pressure into everything from phone cases to water pipes. Their useful secret is that the chains are long enough to tangle like a bowl of noodles, and tangled chains are tough, light and hard to pull apart."
+      ]
+    },
+    {
+      "heading": "Two families of plastic",
+      "paragraphs": [
+        "Thermoplastics soften when heated, because their chains are separate and can slide past each other once warm. Polythene, PET and PVC belong here, which is why they can be melted and remoulded — the basis of plastic recycling. A drinks bottle can, in principle, become another bottle.",
+        "Thermosets behave oppositely: as they form, their chains grow chemical cross-links tying them into one giant network. Heat cannot melt a network, only burn it — which is why the handles of saucepans and the casings of plugs, made from thermosets, survive the stove but cannot be recycled by melting. Nature, meanwhile, got there first: rubber, starch, cellulose, proteins and DNA are all polymers too."
+      ]
+    },
+    {
+      "heading": "The blessing that became a curse",
+      "paragraphs": [
+        "Plastics conquered the world because they are cheap, light, waterproof and nearly indestructible. That last quality is the problem: the same chemical stubbornness that keeps a plastic bottle intact on a beach means it may persist in the environment for hundreds of years, breaking into ever-smaller fragments rather than disappearing.",
+        "The numbers explain both sides. Humanity now produces hundreds of millions of tonnes of plastic a year, and only a minority is recycled — the rest is burned, buried or leaked into nature. Chemistry made a material that barely ages; what to do with it afterwards is the problem chemistry is now asked to solve."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Plastics are polymers: giant molecules built from thousands of small units linked into chains, like beads on a very long string.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-81",
+  "publishedAt": "2026-11-07",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "plastics-and-polymers",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Polymer",
+      "url": "https://en.wikipedia.org/wiki/Polymer"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Plastic",
+      "url": "https://en.wikipedia.org/wiki/Plastic"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Polymers are giant chain molecules built from small repeating units. Plastics are their synthetic branch — tough and light because the chains tangle, and persistent for the same reason.",
+  "title": "Plastics and polymers: chains of molecules everywhere",
+  "updatedAt": "2026-11-07"
+}

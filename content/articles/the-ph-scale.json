@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A ruler for acidity","paragraphs":["The pH scale measures how acidic or basic a water-based liquid is, and it runs from 0 to 14. In the middle sits 7, the pH of pure water, which is neutral — neither acidic nor basic. Numbers below 7 are acids; numbers above 7 are bases, also called alkalis when they dissolve in water.","The scale hides a twist: it is logarithmic, meaning each step is ten times bigger than the last. Lemon juice at pH 2 is not slightly more acidic than a pH 4 tomato — it carries about a hundred times the concentration of hydrogen ions. Small steps on this ruler are big jumps in strength."]},{"heading":"From battery acid to soap","paragraphs":["At the bottom of the scale, the acid inside a car battery sits near pH 0, and your stomach acid — strong enough to dissolve food — measures around 1.5 to 2. Lemon juice is near 2, vinegar around 2.5 to 3, and ordinary rainwater is mildly acidic at about 5.6, thanks to carbon dioxide dissolved from the air.","Crossing 7, the numbers climb through soap at around 9 to 10, household bleach near 13, and heavy-duty oven cleaner up at 14. The liquid in the middle of your day — drinking water, milk, blood — stays close to neutral, and blood is guarded especially tightly, at about 7.4."]},{"heading":"Why the number matters","paragraphs":["pH quietly decides real outcomes. Swimming pools are kept near 7.2 to 7.8: too acidic and the water stings eyes, too basic and the disinfectant stops working well. Acid rain, made stronger by pollution, slowly eats limestone buildings and statues that stood for centuries.","Gardeners may know the prettiest demonstration: hydrangea flowers bloom blue in acidic soil and pink in alkaline soil, because the pH changes how the plant handles aluminium. One flower bed, two colours — set by a number on a scale."]}],"brand":"discover","contentType":"article","description":"The pH scale runs from 0 to 14 and measures how acidic or basic a liquid is — and each single step is ten times stronger than the last.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-64","publishedAt":"2026-09-26","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"the-ph-scale","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: pH","url":"https://en.wikipedia.org/wiki/PH"},{"accessedAt":"2026-11-15","title":"Wikipedia: pH indicator","url":"https://en.wikipedia.org/wiki/PH_indicator"}],"tags":["chemistry","science"],"takeaway":"pH runs from 0 (strongly acidic) through 7 (neutral) to 14 (strongly basic), and because the scale is logarithmic, each step means ten times the strength.","title":"The pH scale: from battery acid to soap","updatedAt":"2026-09-26"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A ruler for acidity",
+      "paragraphs": [
+        "The pH scale measures how acidic or basic a water-based liquid is, and it runs from 0 to 14. In the middle sits 7, the pH of pure water, which is neutral — neither acidic nor basic. Numbers below 7 are acids; numbers above 7 are bases, also called alkalis when they dissolve in water.",
+        "The scale hides a twist: it is logarithmic, meaning each step is ten times bigger than the last. Lemon juice at pH 2 is not slightly more acidic than a pH 4 tomato — it carries about a hundred times the concentration of hydrogen ions. Small steps on this ruler are big jumps in strength."
+      ]
+    },
+    {
+      "heading": "From battery acid to soap",
+      "paragraphs": [
+        "At the bottom of the scale, the acid inside a car battery sits near pH 0, and your stomach acid — strong enough to dissolve food — measures around 1.5 to 2. Lemon juice is near 2, vinegar around 2.5 to 3, and ordinary rainwater is mildly acidic at about 5.6, thanks to carbon dioxide dissolved from the air.",
+        "Crossing 7, the numbers climb through soap at around 9 to 10, household bleach near 13, and heavy-duty oven cleaner up at 14. The liquid in the middle of your day — drinking water, milk, blood — stays close to neutral, and blood is guarded especially tightly, at about 7.4."
+      ]
+    },
+    {
+      "heading": "Why the number matters",
+      "paragraphs": [
+        "pH quietly decides real outcomes. Swimming pools are kept near 7.2 to 7.8: too acidic and the water stings eyes, too basic and the disinfectant stops working well. Acid rain, made stronger by pollution, slowly eats limestone buildings and statues that stood for centuries.",
+        "Gardeners may know the prettiest demonstration: hydrangea flowers bloom blue in acidic soil and pink in alkaline soil, because the pH changes how the plant handles aluminium. One flower bed, two colours — set by a number on a scale."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "The pH scale runs from 0 to 14 and measures how acidic or basic a liquid is — and each single step is ten times stronger than the last.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-64",
+  "publishedAt": "2026-09-26",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "the-ph-scale",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: pH",
+      "url": "https://en.wikipedia.org/wiki/PH"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: pH indicator",
+      "url": "https://en.wikipedia.org/wiki/PH_indicator"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "pH runs from 0 (strongly acidic) through 7 (neutral) to 14 (strongly basic), and because the scale is logarithmic, each step means ten times the strength.",
+  "title": "The pH scale: from battery acid to soap",
+  "updatedAt": "2026-09-26"
+}

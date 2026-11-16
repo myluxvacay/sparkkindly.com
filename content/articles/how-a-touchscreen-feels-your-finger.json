@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A field that feels fingers","paragraphs":["Most modern touchscreens are capacitive. Beneath the glass lies a transparent grid of electrodes holding a tiny electrical charge, creating a faint electrostatic field at the surface. Your body conducts electricity, so when a finger touches the glass it steals a minute amount of charge at that spot.","Circuits at the edges measure exactly how much charge each row and column lost, and from those changes the controller calculates the touch point — often tracking ten fingers at once, many times a second, for pinches, swipes and two-handed typing."]},{"heading":"Why gloves defeat it","paragraphs":["The system relies on your finger's conductivity. An ordinary glove insulates the finger, the charge theft stops, and the screen sees nothing — which is why special gloves have conductive thread woven into the fingertips. A stylus with a soft conductive tip works for the same reason: it couples your body's charge through to the glass, while a plain plastic pen, electrically invisible, does nothing at all.","Older resistive screens worked differently, by pressure: two flexible layers were pushed into contact. They responded to any stylus or gloved hand but needed a firmer press and dulled the display — one reason capacitive glass took over on phones."]},{"heading":"Glass that only pretends to be simple","paragraphs":["The sensing grid is made from indium tin oxide, a material that is both electrically conductive and nearly transparent — a rare combination that lets the screen watch your fingers without blocking the picture beneath.","Water confuses the system, since droplets conduct too; phone software works hard to tell raindrops and wet palms from real touches. The screen you tap so casually is solving a small electrical puzzle with every contact."]}],"brand":"discover","contentType":"article","description":"Most touchscreens sense your finger electrically: your body disturbs a faint field, and the screen spots where.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-19","publishedAt":"2026-10-21","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-a-touchscreen-feels-your-finger","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Touchscreen","url":"https://en.wikipedia.org/wiki/Touchscreen"},{"accessedAt":"2026-11-15","title":"Wikipedia: Capacitive sensing","url":"https://en.wikipedia.org/wiki/Capacitive_sensing"}],"tags":["computing","technology"],"takeaway":"A capacitive touchscreen locates your finger by sensing where your conductive body disturbs the faint electric field in its electrode grid.","title":"How a touchscreen feels your finger","updatedAt":"2026-10-21"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A field that feels fingers",
+      "paragraphs": [
+        "Most modern touchscreens are capacitive. Beneath the glass lies a transparent grid of electrodes holding a tiny electrical charge, creating a faint electrostatic field at the surface. Your body conducts electricity, so when a finger touches the glass it steals a minute amount of charge at that spot.",
+        "Circuits at the edges measure exactly how much charge each row and column lost, and from those changes the controller calculates the touch point — often tracking ten fingers at once, many times a second, for pinches, swipes and two-handed typing."
+      ]
+    },
+    {
+      "heading": "Why gloves defeat it",
+      "paragraphs": [
+        "The system relies on your finger's conductivity. An ordinary glove insulates the finger, the charge theft stops, and the screen sees nothing — which is why special gloves have conductive thread woven into the fingertips. A stylus with a soft conductive tip works for the same reason: it couples your body's charge through to the glass, while a plain plastic pen, electrically invisible, does nothing at all.",
+        "Older resistive screens worked differently, by pressure: two flexible layers were pushed into contact. They responded to any stylus or gloved hand but needed a firmer press and dulled the display — one reason capacitive glass took over on phones."
+      ]
+    },
+    {
+      "heading": "Glass that only pretends to be simple",
+      "paragraphs": [
+        "The sensing grid is made from indium tin oxide, a material that is both electrically conductive and nearly transparent — a rare combination that lets the screen watch your fingers without blocking the picture beneath.",
+        "Water confuses the system, since droplets conduct too; phone software works hard to tell raindrops and wet palms from real touches. The screen you tap so casually is solving a small electrical puzzle with every contact."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Most touchscreens sense your finger electrically: your body disturbs a faint field, and the screen spots where.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A green computer motherboard close-up",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/tech.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-19",
+  "publishedAt": "2026-10-21",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-a-touchscreen-feels-your-finger",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Touchscreen",
+      "url": "https://en.wikipedia.org/wiki/Touchscreen"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Capacitive sensing",
+      "url": "https://en.wikipedia.org/wiki/Capacitive_sensing"
+    }
+  ],
+  "tags": [
+    "computing",
+    "technology"
+  ],
+  "takeaway": "A capacitive touchscreen locates your finger by sensing where your conductive body disturbs the faint electric field in its electrode grid.",
+  "title": "How a touchscreen feels your finger",
+  "updatedAt": "2026-10-21"
+}

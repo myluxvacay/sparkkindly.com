@@ -4,7 +4,9 @@
 // count (profile_id IS NULL, so a child profile's answers can never appear), and Kids-world items are excluded.
 // Eligibility is re-derived on every read from the stored date of birth through the account policy, so an
 // account that was never eligible cannot appear even if its opt-in flag was set by hand. Ranks are competition
-// ranks: ties share, the next rank skips. Imported only by the /leaderboard page.
+// ranks: ties share, the next rank skips. Three windows over the same eligible set: this week (from Monday
+// 00:00 UTC, the owner's addition of 15 Nov 2026, so a new member is never buried under the all-time board),
+// this month, and all time. Imported only by the /leaderboard page.
 // Verified by tests/unit/public-leaderboard.test.ts.
 import type { Db } from '@/lib/db';
 import { ageGroupFor, can, type Consent } from '@/lib/accounts/policy';
@@ -21,7 +23,7 @@ export type PublicBoardRow = {
   // the board never carries an account id.
   inviteKey: string;
 };
-export type PublicBoards = { month: PublicBoardRow[]; allTime: PublicBoardRow[] };
+export type PublicBoards = { week: PublicBoardRow[]; month: PublicBoardRow[]; allTime: PublicBoardRow[] };
 
 export const BOARD_LIMIT = 50;
 
@@ -37,6 +39,7 @@ type Row = {
   public_key: string;
   dob: string;
   consent: Consent;
+  week: number;
   month: number;
   allTime: number;
 };
@@ -44,9 +47,14 @@ type Row = {
 export async function getPublicBoards(db: Db, now: Date, viewerAccountId?: string | null): Promise<PublicBoards> {
   const per = await pointsCorrect(db);
   const monthStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1)).toISOString();
+  // The week window starts Monday 00:00 UTC of the week containing `now` (ISO week), the same UTC-boundary
+  // convention as the month window.
+  const dayStart = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const weekStart = new Date(dayStart - ((now.getUTCDay() + 6) % 7) * 86_400_000).toISOString();
   const r = await db.query<Row>(
     `SELECT a.id, a.public_name AS name, a.avatar_key AS avatar, a.public_key, a.date_of_birth::text AS dob,
             a.consent_state AS consent,
+            (count(*) FILTER (WHERE r.answered_at >= $2::timestamptz))::int AS week,
             (count(*) FILTER (WHERE r.answered_at >= $1::timestamptz))::int AS month,
             (count(*))::int AS "allTime"
      FROM accounts a
@@ -55,7 +63,7 @@ export async function getPublicBoards(db: Db, now: Date, viewerAccountId?: strin
      JOIN worlds w ON w.id = i.world_id AND w.slug <> 'kids'
      WHERE a.leaderboard_opt_in AND a.public_name IS NOT NULL
      GROUP BY a.id`,
-    [monthStart],
+    [monthStart, weekStart],
   );
   const eligible = r.rows.filter((row) => {
     const group = ageGroupFor(String(row.dob), now);
@@ -76,7 +84,7 @@ export async function getPublicBoards(db: Db, now: Date, viewerAccountId?: strin
       inviteKey: row.public_key,
     }));
   };
-  return { month: board((row) => row.month), allTime: board((row) => row.allTime) };
+  return { week: board((row) => row.week), month: board((row) => row.month), allTime: board((row) => row.allTime) };
 }
 
 export type Leader = { accountId: string; name: string; avatarKey: string | null };

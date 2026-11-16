@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"One rule: angle in equals angle out","paragraphs":["Light travels in straight lines until it meets a surface. When it strikes a smooth, polished surface — a mirror — it reflects, and it obeys one exact rule: the angle at which it arrives equals the angle at which it leaves, both measured from the perpendicular to the surface. A ball bouncing off a wall follows the same geometry.","Because the rule is exact and predictable, mirrors let us redirect light deliberately. Your eye, receiving the reflected rays, assumes they travelled straight and constructs an image behind the mirror — same size as you, but with left and right swapped, which is why mirror writing looks wrong and ambulance lettering is printed reversed."]},{"heading":"Two mirrors and a stolen view","paragraphs":["A periscope chains two mirrors together. The top mirror catches light from the scene ahead and reflects it straight down a tube; the bottom mirror catches that light and reflects it into the viewer's eye. Both mirrors sit at 45 degrees, and the view emerges shifted — higher or lower — but otherwise unchanged.","Submarines made the periscope famous: the boat stays hidden below the surface while only the slim head of the periscope breaks the water to look around. Soldiers in the First World War used simple trench periscopes to observe no-man's-land without raising their heads above the parapet."]},{"heading":"Bounced light at work everywhere","paragraphs":["The same one-rule reflection is working all around you. A dentist's small mirror views the backs of your teeth; a car's rear-view and side mirrors fold the road behind into your forward gaze; supermarket aisles hide security mirrors in their corners for seeing around shelving.","Scale the idea up and it becomes a telescope: large curved mirrors gather light from faint, distant objects and reflect it to a focus. The biggest telescope mirrors, over eight metres across, are still just the bathroom mirror's principle — angle in equals angle out — executed to perfection."]}],"brand":"discover","contentType":"article","description":"Mirrors obey one exact rule — angle in equals angle out — and two mirrors at 45 degrees build a periscope that sees over walls.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-43","publishedAt":"2026-10-12","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"mirrors-and-periscopes","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Mirror","url":"https://en.wikipedia.org/wiki/Mirror"},{"accessedAt":"2026-11-15","title":"Wikipedia: Periscope","url":"https://en.wikipedia.org/wiki/Periscope"}],"tags":["physics","science"],"takeaway":"Reflection follows one rule — the angle in equals the angle out — and that single rule explains mirror images, periscopes, dentist's mirrors and the great telescopes alike.","title":"Mirrors and periscopes: light bouncing in straight lines","updatedAt":"2026-10-12"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "One rule: angle in equals angle out",
+      "paragraphs": [
+        "Light travels in straight lines until it meets a surface. When it strikes a smooth, polished surface — a mirror — it reflects, and it obeys one exact rule: the angle at which it arrives equals the angle at which it leaves, both measured from the perpendicular to the surface. A ball bouncing off a wall follows the same geometry.",
+        "Because the rule is exact and predictable, mirrors let us redirect light deliberately. Your eye, receiving the reflected rays, assumes they travelled straight and constructs an image behind the mirror — same size as you, but with left and right swapped, which is why mirror writing looks wrong and ambulance lettering is printed reversed."
+      ]
+    },
+    {
+      "heading": "Two mirrors and a stolen view",
+      "paragraphs": [
+        "A periscope chains two mirrors together. The top mirror catches light from the scene ahead and reflects it straight down a tube; the bottom mirror catches that light and reflects it into the viewer's eye. Both mirrors sit at 45 degrees, and the view emerges shifted — higher or lower — but otherwise unchanged.",
+        "Submarines made the periscope famous: the boat stays hidden below the surface while only the slim head of the periscope breaks the water to look around. Soldiers in the First World War used simple trench periscopes to observe no-man's-land without raising their heads above the parapet."
+      ]
+    },
+    {
+      "heading": "Bounced light at work everywhere",
+      "paragraphs": [
+        "The same one-rule reflection is working all around you. A dentist's small mirror views the backs of your teeth; a car's rear-view and side mirrors fold the road behind into your forward gaze; supermarket aisles hide security mirrors in their corners for seeing around shelving.",
+        "Scale the idea up and it becomes a telescope: large curved mirrors gather light from faint, distant objects and reflect it to a focus. The biggest telescope mirrors, over eight metres across, are still just the bathroom mirror's principle — angle in equals angle out — executed to perfection."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Mirrors obey one exact rule — angle in equals angle out — and two mirrors at 45 degrees build a periscope that sees over walls.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-43",
+  "publishedAt": "2026-10-12",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "mirrors-and-periscopes",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Mirror",
+      "url": "https://en.wikipedia.org/wiki/Mirror"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Periscope",
+      "url": "https://en.wikipedia.org/wiki/Periscope"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "Reflection follows one rule — the angle in equals the angle out — and that single rule explains mirror images, periscopes, dentist's mirrors and the great telescopes alike.",
+  "title": "Mirrors and periscopes: light bouncing in straight lines",
+  "updatedAt": "2026-10-12"
+}

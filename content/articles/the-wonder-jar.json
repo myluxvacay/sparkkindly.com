@@ -1,1 +1,66 @@
-{"ageGuidance":"Ages 6–9, with an adult","aiDisclosure":"Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Wonder out loud","paragraphs":["Find a clean empty jar. Every time you wonder about something this week, say it out loud: “Why is the sky blue?” “Where do ants sleep?”","Your adult writes each question on a slip of paper and drops it in the jar. No question is too small or too strange."]},{"heading":"Pick one together","paragraphs":["Once a week, tip the jar out and pick one question together. Talk about what you already think the answer might be.","Some questions have answers you can test, like whether ice melts faster in the sun or the shade. Some are just wonderful to think about."]},{"heading":"Wondering is the point","paragraphs":["You do not have to answer every question. Wondering is a skill, and scientists practise it their whole lives.","When the jar gets full, celebrate. A full wonder jar means your curiosity has been working hard."]}],"brand":"kids","contentType":"activity","description":"For ages 6–9 with an adult: collect your biggest and smallest wonderings in a jar and explore one each week.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/kids.webp","width":1200},"id":"kids-bulk-19","materials":["A clean empty jar","Slips of paper","A pencil"],"publishedAt":"2026-11-13","reviewNote":"Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","safetyNotes":["An adult handles the jar if it is glass, or choose a plastic tub instead; keep question slips about wondering, not private family details."],"screenFreeExtension":"Take the jar to the park or the dinner table and invite everyone to add one wondering of their own.","slug":"the-wonder-jar","sources":[],"supervision":"An adult stays alongside throughout.","tags":["curiosity","family-activities"],"takeaway":"Questions are treasures, and a jar is a good place to keep them.","title":"The wonder jar","updatedAt":"2026-11-13"}
+{
+  "ageGuidance": "Ages 6–9, with an adult",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Wonder out loud",
+      "paragraphs": [
+        "Find a clean empty jar. Every time you wonder about something this week, say it out loud: “Why is the sky blue?” “Where do ants sleep?”",
+        "Your adult writes each question on a slip of paper and drops it in the jar. No question is too small or too strange."
+      ]
+    },
+    {
+      "heading": "Pick one together",
+      "paragraphs": [
+        "Once a week, tip the jar out and pick one question together. Talk about what you already think the answer might be.",
+        "Some questions have answers you can test, like whether ice melts faster in the sun or the shade. Some are just wonderful to think about."
+      ]
+    },
+    {
+      "heading": "Wondering is the point",
+      "paragraphs": [
+        "You do not have to answer every question. Wondering is a skill, and scientists practise it their whole lives.",
+        "When the jar gets full, celebrate. A full wonder jar means your curiosity has been working hard."
+      ]
+    }
+  ],
+  "brand": "kids",
+  "contentType": "activity",
+  "description": "For ages 6–9 with an adult: collect your biggest and smallest wonderings in a jar and explore one each week.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A family holding hands while walking",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/family.webp",
+    "width": 1200
+  },
+  "id": "kids-bulk-19",
+  "materials": [
+    "A clean empty jar",
+    "Slips of paper",
+    "A pencil"
+  ],
+  "publishedAt": "2026-11-13",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "safetyNotes": [
+    "An adult handles the jar if it is glass, or choose a plastic tub instead; keep question slips about wondering, not private family details."
+  ],
+  "screenFreeExtension": "Take the jar to the park or the dinner table and invite everyone to add one wondering of their own.",
+  "slug": "the-wonder-jar",
+  "sources": [],
+  "supervision": "An adult stays alongside throughout.",
+  "tags": [
+    "curiosity",
+    "family-activities"
+  ],
+  "takeaway": "Questions are treasures, and a jar is a good place to keep them.",
+  "title": "The wonder jar",
+  "updatedAt": "2026-11-13"
+}

@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"One kind of atom, one element","paragraphs":["An element is a substance that contains only one kind of atom — every atom in it has the same number of protons in its nucleus. Gold is an element because every gold atom has 79 protons. Mix two kinds of atoms together in a fixed recipe, like the hydrogen and oxygen in water, and you no longer have an element but a compound.","So far, 118 elements are known. Ninety-four of them occur naturally on Earth; the rest have been made in laboratories, atom by atom, and some survive for only fractions of a second before breaking apart."]},{"heading":"Reading the map","paragraphs":["The periodic table arranges the elements in order of proton number, in rows called periods. When Dmitri Mendeleev published his version in 1869, he left gaps for elements nobody had found yet — and correctly predicted their properties, which is why chemists trusted the pattern long before anyone understood atoms.","The columns, called groups, are the table's real treasure. Elements stacked in a group behave in similar ways: the far-left column holds soft metals that react fiercely with water, while the far-right column holds the noble gases, which barely react with anything at all."]},{"heading":"Patterns you can use","paragraphs":["Each box on the table gives an element's symbol, its proton number and its average atomic mass, but the position alone tells a chemist a great deal. Sodium sits in the same group as potassium, so a chemist expects both to fizz violently in water — and both do.","The elements are not spread evenly through the universe. Hydrogen and helium together make up about 98 percent of all ordinary matter; the oxygen, carbon and iron we are built from are, cosmically speaking, rare seasoning."]}],"brand":"discover","contentType":"article","description":"An element is a substance made from just one kind of atom, and the periodic table arranges all of them into a map full of patterns.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-58","publishedAt":"2026-09-11","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"elements-and-the-periodic-table","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Periodic table","url":"https://en.wikipedia.org/wiki/Periodic_table"},{"accessedAt":"2026-11-15","title":"Wikipedia: Chemical element","url":"https://en.wikipedia.org/wiki/Chemical_element"}],"tags":["chemistry","science"],"takeaway":"There are 118 known elements, each a single kind of atom, and the periodic table lines them up so that elements in the same column behave alike.","title":"Elements and the periodic table: chemistry's map","updatedAt":"2026-09-11"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "One kind of atom, one element",
+      "paragraphs": [
+        "An element is a substance that contains only one kind of atom — every atom in it has the same number of protons in its nucleus. Gold is an element because every gold atom has 79 protons. Mix two kinds of atoms together in a fixed recipe, like the hydrogen and oxygen in water, and you no longer have an element but a compound.",
+        "So far, 118 elements are known. Ninety-four of them occur naturally on Earth; the rest have been made in laboratories, atom by atom, and some survive for only fractions of a second before breaking apart."
+      ]
+    },
+    {
+      "heading": "Reading the map",
+      "paragraphs": [
+        "The periodic table arranges the elements in order of proton number, in rows called periods. When Dmitri Mendeleev published his version in 1869, he left gaps for elements nobody had found yet — and correctly predicted their properties, which is why chemists trusted the pattern long before anyone understood atoms.",
+        "The columns, called groups, are the table's real treasure. Elements stacked in a group behave in similar ways: the far-left column holds soft metals that react fiercely with water, while the far-right column holds the noble gases, which barely react with anything at all."
+      ]
+    },
+    {
+      "heading": "Patterns you can use",
+      "paragraphs": [
+        "Each box on the table gives an element's symbol, its proton number and its average atomic mass, but the position alone tells a chemist a great deal. Sodium sits in the same group as potassium, so a chemist expects both to fizz violently in water — and both do.",
+        "The elements are not spread evenly through the universe. Hydrogen and helium together make up about 98 percent of all ordinary matter; the oxygen, carbon and iron we are built from are, cosmically speaking, rare seasoning."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "An element is a substance made from just one kind of atom, and the periodic table arranges all of them into a map full of patterns.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-58",
+  "publishedAt": "2026-09-11",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "elements-and-the-periodic-table",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Periodic table",
+      "url": "https://en.wikipedia.org/wiki/Periodic_table"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Chemical element",
+      "url": "https://en.wikipedia.org/wiki/Chemical_element"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "There are 118 known elements, each a single kind of atom, and the periodic table lines them up so that elements in the same column behave alike.",
+  "title": "Elements and the periodic table: chemistry's map",
+  "updatedAt": "2026-09-11"
+}

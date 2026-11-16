@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"One power stroke in four","paragraphs":["Inside each cylinder, a piston slides up and down, driven by burning fuel. The full cycle takes four strokes of the piston: intake, compression, power and exhaust. Only one of them — the power stroke — actually pushes the car along.","The other three strokes are preparation and clearing-up, powered by the flywheel's momentum and by the other cylinders firing in turn. That is why engines have several cylinders: so that power strokes overlap and the turning stays smooth."]},{"heading":"The strokes in order","paragraphs":["First, intake: the inlet valve opens and the piston moves down, drawing in a mixture of air and fuel vapour. Then compression: both valves close and the piston rises, squeezing the mixture into a small space at the top.","A spark plug then ignites the mixture for the power stroke — the burning gases expand fiercely and drive the piston down. Finally, the exhaust valve opens and the rising piston pushes the spent gases out, ready for the cycle to repeat."]},{"heading":"Twice round for one bang","paragraphs":["Because the piston must go down and up twice per cycle, the crankshaft turns two full revolutions for every power stroke in each cylinder. An engine idling at 900 revolutions per minute is still firing each of its cylinders roughly seven times a second. Multiply that by four or six cylinders and the crankshaft receives a near-continuous stream of pushes, hundreds of them every second at speed.","At fast road speeds the figure climbs to about twenty-five firings a second per cylinder, yet each burn is a small, controlled explosion lasting a few thousandths of a second. The smoothness you feel is thousands of tiny pushes averaged out."]}],"brand":"discover","contentType":"article","description":"One cylinder makes power in only one of four piston strokes — intake, compression, power, exhaust.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-03","publishedAt":"2026-09-09","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"the-four-strokes-of-a-petrol-engine","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Four-stroke engine","url":"https://en.wikipedia.org/wiki/Four-stroke_engine"},{"accessedAt":"2026-11-15","title":"Wikipedia: Internal combustion engine","url":"https://en.wikipedia.org/wiki/Internal_combustion_engine"}],"tags":["technology","science"],"takeaway":"A petrol engine cycles through intake, compression, power and exhaust; only the power stroke pushes, so flywheels and extra cylinders keep the motion smooth.","title":"Inside a petrol engine: the four strokes","updatedAt":"2026-09-09"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "One power stroke in four",
+      "paragraphs": [
+        "Inside each cylinder, a piston slides up and down, driven by burning fuel. The full cycle takes four strokes of the piston: intake, compression, power and exhaust. Only one of them — the power stroke — actually pushes the car along.",
+        "The other three strokes are preparation and clearing-up, powered by the flywheel's momentum and by the other cylinders firing in turn. That is why engines have several cylinders: so that power strokes overlap and the turning stays smooth."
+      ]
+    },
+    {
+      "heading": "The strokes in order",
+      "paragraphs": [
+        "First, intake: the inlet valve opens and the piston moves down, drawing in a mixture of air and fuel vapour. Then compression: both valves close and the piston rises, squeezing the mixture into a small space at the top.",
+        "A spark plug then ignites the mixture for the power stroke — the burning gases expand fiercely and drive the piston down. Finally, the exhaust valve opens and the rising piston pushes the spent gases out, ready for the cycle to repeat."
+      ]
+    },
+    {
+      "heading": "Twice round for one bang",
+      "paragraphs": [
+        "Because the piston must go down and up twice per cycle, the crankshaft turns two full revolutions for every power stroke in each cylinder. An engine idling at 900 revolutions per minute is still firing each of its cylinders roughly seven times a second. Multiply that by four or six cylinders and the crankshaft receives a near-continuous stream of pushes, hundreds of them every second at speed.",
+        "At fast road speeds the figure climbs to about twenty-five firings a second per cylinder, yet each burn is a small, controlled explosion lasting a few thousandths of a second. The smoothness you feel is thousands of tiny pushes averaged out."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "One cylinder makes power in only one of four piston strokes — intake, compression, power, exhaust.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-03",
+  "publishedAt": "2026-09-09",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "the-four-strokes-of-a-petrol-engine",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Four-stroke engine",
+      "url": "https://en.wikipedia.org/wiki/Four-stroke_engine"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Internal combustion engine",
+      "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine"
+    }
+  ],
+  "tags": [
+    "technology",
+    "science"
+  ],
+  "takeaway": "A petrol engine cycles through intake, compression, power and exhaust; only the power stroke pushes, so flywheels and extra cylinders keep the motion smooth.",
+  "title": "Inside a petrol engine: the four strokes",
+  "updatedAt": "2026-09-09"
+}

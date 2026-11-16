@@ -1,1 +1,65 @@
-{"ageGuidance":"Ages 6–9, with an adult","aiDisclosure":"Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"What is a pattern?","paragraphs":["A pattern is something that repeats in an order you can predict: stripes on a shirt, tiles on a floor, steps on a staircase.","Once you can guess what comes next, you have found a pattern. Your home is full of them, hiding in plain sight."]},{"heading":"Hunt together","paragraphs":["Walk around one room with your adult and point at every pattern you can find. Check curtains, carpets, blankets, books, and even the fruit bowl.","Draw your favourite pattern in your notebook. Try to copy the repeating part exactly."]},{"heading":"Make a pattern trap","paragraphs":["Make a pattern with spoons and forks, or with coloured socks: spoon, fork, spoon, fork. Then secretly remove one piece.","Can your adult spot the gap? Swap roles and let them set a pattern trap for you."]}],"brand":"kids","contentType":"activity","description":"For ages 6–9 with an adult: hunt for repeating patterns hiding in your home, then set pattern traps.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/kids.webp","width":1200},"id":"kids-bulk-16","materials":["Notebook and pencil","Everyday things for making patterns, like spoons, forks, or socks"],"publishedAt":"2026-11-10","reviewNote":"Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","safetyNotes":["Walk, do not run, on your pattern hunt, and only use safe everyday objects your adult agrees to."],"screenFreeExtension":"Look for patterns outside too: fences, bricks, leaves, and paving stones all repeat in their own way.","slug":"pattern-hunt-at-home","sources":[],"supervision":"An adult stays alongside throughout.","tags":["patterns","curiosity"],"takeaway":"When you can predict what comes next, you have found a pattern.","title":"Pattern hunt at home","updatedAt":"2026-11-10"}
+{
+  "ageGuidance": "Ages 6–9, with an adult",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "What is a pattern?",
+      "paragraphs": [
+        "A pattern is something that repeats in an order you can predict: stripes on a shirt, tiles on a floor, steps on a staircase.",
+        "Once you can guess what comes next, you have found a pattern. Your home is full of them, hiding in plain sight."
+      ]
+    },
+    {
+      "heading": "Hunt together",
+      "paragraphs": [
+        "Walk around one room with your adult and point at every pattern you can find. Check curtains, carpets, blankets, books, and even the fruit bowl.",
+        "Draw your favourite pattern in your notebook. Try to copy the repeating part exactly."
+      ]
+    },
+    {
+      "heading": "Make a pattern trap",
+      "paragraphs": [
+        "Make a pattern with spoons and forks, or with coloured socks: spoon, fork, spoon, fork. Then secretly remove one piece.",
+        "Can your adult spot the gap? Swap roles and let them set a pattern trap for you."
+      ]
+    }
+  ],
+  "brand": "kids",
+  "contentType": "activity",
+  "description": "For ages 6–9 with an adult: hunt for repeating patterns hiding in your home, then set pattern traps.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "Colourful wooden abacus beads",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/maths.webp",
+    "width": 1200
+  },
+  "id": "kids-bulk-16",
+  "materials": [
+    "Notebook and pencil",
+    "Everyday things for making patterns, like spoons, forks, or socks"
+  ],
+  "publishedAt": "2026-11-10",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "safetyNotes": [
+    "Walk, do not run, on your pattern hunt, and only use safe everyday objects your adult agrees to."
+  ],
+  "screenFreeExtension": "Look for patterns outside too: fences, bricks, leaves, and paving stones all repeat in their own way.",
+  "slug": "pattern-hunt-at-home",
+  "sources": [],
+  "supervision": "An adult stays alongside throughout.",
+  "tags": [
+    "patterns",
+    "curiosity"
+  ],
+  "takeaway": "When you can predict what comes next, you have found a pattern.",
+  "title": "Pattern hunt at home",
+  "updatedAt": "2026-11-10"
+}

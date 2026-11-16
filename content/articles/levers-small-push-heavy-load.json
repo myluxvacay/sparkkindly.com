@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A bar, a pivot, and a balance of turning","paragraphs":["A lever is a stiff bar that turns around a fixed point called the fulcrum. What matters is not just how hard you push, but where: a force applied far from the fulcrum has much more turning effect than the same force applied close to it. Physicists call that turning effect torque.","The lever balances when the torques on the two sides match. If your side of the bar is four times longer than the load's side, you need only a quarter of the load's weight as force to hold it level — the geometry of the bar multiplies your effort."]},{"heading":"The trade you always pay","paragraphs":["Nothing comes free. When the lever multiplies your force by four, the load moves only a quarter as far as your end of the bar travels. You pay in distance what you save in force, and the total work done stays the same. Every simple machine obeys this bargain.","Levers come in three arrangements. A see-saw and crowbar put the fulcrum in the middle; a wheelbarrow puts the load in the middle, so your arms lift only part of the weight; tweezers and your own forearm put the effort in the middle, sacrificing force to gain speed and range of movement."]},{"heading":"Levers everywhere, including you","paragraphs":["Archimedes is said to have boasted that with a lever long enough and a place to stand, he could move the Earth. He would also have needed an impossibly long push: multiplying force that much means moving your end an astronomical distance to shift the planet by a centimetre.","Closer to home, bottle openers, nail clippers, scissors and fishing rods are all levers, and so is your arm. Your elbow is the fulcrum, your biceps pull a few centimetres from it, and your hand — far away at the other end — moves fast and wide in exchange for strength."]}],"brand":"discover","contentType":"article","description":"A crowbar lets one person shift a boulder. The secret is a pivot point and a simple trade: force for distance.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-32","publishedAt":"2026-09-14","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"levers-small-push-heavy-load","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Lever","url":"https://en.wikipedia.org/wiki/Lever"},{"accessedAt":"2026-11-15","title":"Wikipedia: Mechanical advantage","url":"https://en.wikipedia.org/wiki/Mechanical_advantage"}],"tags":["physics","science"],"takeaway":"A lever multiplies force by applying it far from the fulcrum, but the load then moves a shorter distance — force and distance are always traded, never created.","title":"Levers: how a small push moves a heavy load","updatedAt":"2026-09-14"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A bar, a pivot, and a balance of turning",
+      "paragraphs": [
+        "A lever is a stiff bar that turns around a fixed point called the fulcrum. What matters is not just how hard you push, but where: a force applied far from the fulcrum has much more turning effect than the same force applied close to it. Physicists call that turning effect torque.",
+        "The lever balances when the torques on the two sides match. If your side of the bar is four times longer than the load's side, you need only a quarter of the load's weight as force to hold it level — the geometry of the bar multiplies your effort."
+      ]
+    },
+    {
+      "heading": "The trade you always pay",
+      "paragraphs": [
+        "Nothing comes free. When the lever multiplies your force by four, the load moves only a quarter as far as your end of the bar travels. You pay in distance what you save in force, and the total work done stays the same. Every simple machine obeys this bargain.",
+        "Levers come in three arrangements. A see-saw and crowbar put the fulcrum in the middle; a wheelbarrow puts the load in the middle, so your arms lift only part of the weight; tweezers and your own forearm put the effort in the middle, sacrificing force to gain speed and range of movement."
+      ]
+    },
+    {
+      "heading": "Levers everywhere, including you",
+      "paragraphs": [
+        "Archimedes is said to have boasted that with a lever long enough and a place to stand, he could move the Earth. He would also have needed an impossibly long push: multiplying force that much means moving your end an astronomical distance to shift the planet by a centimetre.",
+        "Closer to home, bottle openers, nail clippers, scissors and fishing rods are all levers, and so is your arm. Your elbow is the fulcrum, your biceps pull a few centimetres from it, and your hand — far away at the other end — moves fast and wide in exchange for strength."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "A crowbar lets one person shift a boulder. The secret is a pivot point and a simple trade: force for distance.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-32",
+  "publishedAt": "2026-09-14",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "levers-small-push-heavy-load",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Lever",
+      "url": "https://en.wikipedia.org/wiki/Lever"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Mechanical advantage",
+      "url": "https://en.wikipedia.org/wiki/Mechanical_advantage"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "A lever multiplies force by applying it far from the fulcrum, but the load then moves a shorter distance — force and distance are always traded, never created.",
+  "title": "Levers: how a small push moves a heavy load",
+  "updatedAt": "2026-09-14"
+}

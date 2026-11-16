@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A swing that keeps its own time","paragraphs":["Release a pendulum and it falls toward the bottom of its arc, speeds up, climbs the other side, and returns — over and over, each full swing taking almost exactly the same time as the last. Galileo is said to have noticed this as a teenager, timing a swinging lamp in Pisa cathedral against his own pulse.","The surprise is what the timing does not depend on. Make the bob heavier or lighter and the period barely changes. Swing it wider or narrower (within reason) and the period stays nearly the same. Almost the only thing that matters is the length of the pendulum itself."]},{"heading":"Length is the whole secret","paragraphs":["A longer pendulum swings more slowly; a shorter one ticks faster. The relationship is precise: the period grows with the square root of the length, so a pendulum four times as long takes twice as long per swing. A pendulum about one metre long completes a full swing in roughly two seconds — one second each way.","Gravity is the other partner in the formula, which is why the same pendulum would swing more slowly on the Moon. On Earth, though, gravity is steady everywhere that matters, so a well-made pendulum became the most reliable timekeeper humanity had ever owned."]},{"heading":"Three centuries of ticking","paragraphs":["In 1656 the Dutch scientist Christiaan Huygens built the first pendulum clock, and accuracy leapt from perhaps fifteen minutes a day to about fifteen seconds a day. For nearly 300 years, until quartz clocks arrived in the twentieth century, the pendulum was the heartbeat of the world's best clocks.","Clockmakers fine-tune with the length rule: a nut under the bob raises or lowers it by a fraction of a millimetre, shortening the pendulum to speed a slow clock or lengthening it to calm a fast one. The tall case of a grandfather clock exists simply to house a long, slow, stately swing."]}],"brand":"discover","contentType":"article","description":"A pendulum's swing takes the same time whether the bob is heavy or light — only its length matters, and that made clocks accurate.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-37","publishedAt":"2026-09-26","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-a-pendulum-keeps-time","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Pendulum","url":"https://en.wikipedia.org/wiki/Pendulum"},{"accessedAt":"2026-11-15","title":"Wikipedia: Pendulum clock","url":"https://en.wikipedia.org/wiki/Pendulum_clock"}],"tags":["physics","science"],"takeaway":"A pendulum's period depends almost entirely on its length — a metre-long pendulum swings in about two seconds — and that steady beat powered the world's best clocks for three centuries.","title":"How a pendulum swings time into equal pieces","updatedAt":"2026-09-26"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A swing that keeps its own time",
+      "paragraphs": [
+        "Release a pendulum and it falls toward the bottom of its arc, speeds up, climbs the other side, and returns — over and over, each full swing taking almost exactly the same time as the last. Galileo is said to have noticed this as a teenager, timing a swinging lamp in Pisa cathedral against his own pulse.",
+        "The surprise is what the timing does not depend on. Make the bob heavier or lighter and the period barely changes. Swing it wider or narrower (within reason) and the period stays nearly the same. Almost the only thing that matters is the length of the pendulum itself."
+      ]
+    },
+    {
+      "heading": "Length is the whole secret",
+      "paragraphs": [
+        "A longer pendulum swings more slowly; a shorter one ticks faster. The relationship is precise: the period grows with the square root of the length, so a pendulum four times as long takes twice as long per swing. A pendulum about one metre long completes a full swing in roughly two seconds — one second each way.",
+        "Gravity is the other partner in the formula, which is why the same pendulum would swing more slowly on the Moon. On Earth, though, gravity is steady everywhere that matters, so a well-made pendulum became the most reliable timekeeper humanity had ever owned."
+      ]
+    },
+    {
+      "heading": "Three centuries of ticking",
+      "paragraphs": [
+        "In 1656 the Dutch scientist Christiaan Huygens built the first pendulum clock, and accuracy leapt from perhaps fifteen minutes a day to about fifteen seconds a day. For nearly 300 years, until quartz clocks arrived in the twentieth century, the pendulum was the heartbeat of the world's best clocks.",
+        "Clockmakers fine-tune with the length rule: a nut under the bob raises or lowers it by a fraction of a millimetre, shortening the pendulum to speed a slow clock or lengthening it to calm a fast one. The tall case of a grandfather clock exists simply to house a long, slow, stately swing."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "A pendulum's swing takes the same time whether the bob is heavy or light — only its length matters, and that made clocks accurate.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-37",
+  "publishedAt": "2026-09-26",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-a-pendulum-keeps-time",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Pendulum",
+      "url": "https://en.wikipedia.org/wiki/Pendulum"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Pendulum clock",
+      "url": "https://en.wikipedia.org/wiki/Pendulum_clock"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "A pendulum's period depends almost entirely on its length — a metre-long pendulum swings in about two seconds — and that steady beat powered the world's best clocks for three centuries.",
+  "title": "How a pendulum swings time into equal pieces",
+  "updatedAt": "2026-09-26"
+}

@@ -1,1 +1,68 @@
-{"ageGuidance":"Ages 6–9, with an adult","aiDisclosure":"Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Guess first","paragraphs":["Collect a few safe, washable things with your adult: a wooden spoon, a coin, a cork, a leaf, a plastic lid, a small stone.","Before you test anything, guess. Hold each thing and say “float” or “sink.” Write your guesses on the paper."]},{"heading":"Test in the water","paragraphs":["Your adult fills a big bowl or the sink with water. Gently place one thing at a time on the water. No dropping or splashing.","Watch what happens. Some things surprise you. A big wooden spoon can float, and a tiny coin can sink. Size is not the whole story."]},{"heading":"Sort your results","paragraphs":["Dry your things and sort them into two groups: floaters and sinkers. Were your guesses right?","Things float when they are light for their size and push the water aside in the right way. You can just enjoy the surprise for now; the full story comes later."]}],"brand":"kids","contentType":"activity","description":"For ages 6–9 with an adult: guess, test, and find out which everyday things float and which sink.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/kids.webp","width":1200},"id":"kids-bulk-05","materials":["A big bowl of water or a sink filled by an adult","Safe washable objects like a wooden spoon, cork, coin, leaf, and stone","Paper and pencil","A towel for drips"],"publishedAt":"2026-10-28","reviewNote":"Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","safetyNotes":["An adult fills and empties the water and stays close; children should never be left alone around water, even a bowl.","Only test objects your adult says are safe to get wet; nothing electrical and nothing sharp."],"screenFreeExtension":"At bath time, test one more safe bath toy and add it to your floater or sinker list.","slug":"sink-or-float","sources":[],"supervision":"An adult stays alongside throughout.","tags":["science","curiosity"],"takeaway":"Guessing, testing, and being surprised is exactly how scientists work.","title":"Sink or float?","updatedAt":"2026-10-28"}
+{
+  "ageGuidance": "Ages 6–9, with an adult",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Guess first",
+      "paragraphs": [
+        "Collect a few safe, washable things with your adult: a wooden spoon, a coin, a cork, a leaf, a plastic lid, a small stone.",
+        "Before you test anything, guess. Hold each thing and say “float” or “sink.” Write your guesses on the paper."
+      ]
+    },
+    {
+      "heading": "Test in the water",
+      "paragraphs": [
+        "Your adult fills a big bowl or the sink with water. Gently place one thing at a time on the water. No dropping or splashing.",
+        "Watch what happens. Some things surprise you. A big wooden spoon can float, and a tiny coin can sink. Size is not the whole story."
+      ]
+    },
+    {
+      "heading": "Sort your results",
+      "paragraphs": [
+        "Dry your things and sort them into two groups: floaters and sinkers. Were your guesses right?",
+        "Things float when they are light for their size and push the water aside in the right way. You can just enjoy the surprise for now; the full story comes later."
+      ]
+    }
+  ],
+  "brand": "kids",
+  "contentType": "activity",
+  "description": "For ages 6–9 with an adult: guess, test, and find out which everyday things float and which sink.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "kids-bulk-05",
+  "materials": [
+    "A big bowl of water or a sink filled by an adult",
+    "Safe washable objects like a wooden spoon, cork, coin, leaf, and stone",
+    "Paper and pencil",
+    "A towel for drips"
+  ],
+  "publishedAt": "2026-10-28",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "safetyNotes": [
+    "An adult fills and empties the water and stays close; children should never be left alone around water, even a bowl.",
+    "Only test objects your adult says are safe to get wet; nothing electrical and nothing sharp."
+  ],
+  "screenFreeExtension": "At bath time, test one more safe bath toy and add it to your floater or sinker list.",
+  "slug": "sink-or-float",
+  "sources": [],
+  "supervision": "An adult stays alongside throughout.",
+  "tags": [
+    "science",
+    "curiosity"
+  ],
+  "takeaway": "Guessing, testing, and being surprised is exactly how scientists work.",
+  "title": "Sink or float?",
+  "updatedAt": "2026-10-28"
+}

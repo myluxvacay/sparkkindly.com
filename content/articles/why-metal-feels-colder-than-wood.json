@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Your skin measures flow, not temperature","paragraphs":["Leave a metal railing and a wooden bench side by side on a cold morning and both settle to exactly the same temperature. Yet the railing feels bitterly cold and the bench merely cool. A thermometer says your senses are lying — in fact, your senses are measuring something different from temperature.","Skin does not detect how hot an object is; it detects how fast heat is flowing out of (or into) your hand. A fast flow reads as intense cold or intense heat. A slow flow reads as mild, whatever the actual temperature of the object may be."]},{"heading":"Metal is a heat highway, wood is a country lane","paragraphs":["Metal conducts heat superbly. The instant your warm hand touches cold metal, heat rushes out of your skin into the railing, and keeps rushing, because the metal carries it away into the whole structure. Your skin cools fast, and your nerves report: very cold.","Wood is a poor conductor — an insulator. Heat leaves your hand slowly, and the thin surface layer of the wood warms up to nearly skin temperature within moments. With the flow reduced to a trickle, the bench feels almost neutral, though it started at exactly the railing's temperature."]},{"heading":"The same trick, all over the house","paragraphs":["Step out of a shower onto a tiled floor and then onto a bath mat: same room, same temperature, same illusion in reverse roles. The tiles conduct heat from your feet quickly and feel cold; the mat insulates and feels warm. Carpet over concrete works the same way all winter.","The effect also explains why a metal spoon in hot soup becomes dangerous while a wooden spoon stays comfortable, and why steel playground slides can feel scorching in summer sun: metal does not get hotter than the wood beside it — it just hands the heat to you much faster."]}],"brand":"discover","contentType":"article","description":"A metal railing and a wooden bench can be the same temperature, yet one feels freezing. Your skin senses heat flow, not heat itself.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-40","publishedAt":"2026-10-04","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"why-metal-feels-colder-than-wood","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Thermal conductivity","url":"https://en.wikipedia.org/wiki/Thermal_conductivity"},{"accessedAt":"2026-11-15","title":"Wikipedia: Thermal conduction","url":"https://en.wikipedia.org/wiki/Thermal_conduction"}],"tags":["physics","science"],"takeaway":"Objects at the same temperature feel different because skin senses the rate of heat flow: metal conducts heat away from your hand quickly and feels cold, while insulating wood barely lets it leave.","title":"Why metal feels colder than wood at the same temperature","updatedAt":"2026-10-04"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Your skin measures flow, not temperature",
+      "paragraphs": [
+        "Leave a metal railing and a wooden bench side by side on a cold morning and both settle to exactly the same temperature. Yet the railing feels bitterly cold and the bench merely cool. A thermometer says your senses are lying — in fact, your senses are measuring something different from temperature.",
+        "Skin does not detect how hot an object is; it detects how fast heat is flowing out of (or into) your hand. A fast flow reads as intense cold or intense heat. A slow flow reads as mild, whatever the actual temperature of the object may be."
+      ]
+    },
+    {
+      "heading": "Metal is a heat highway, wood is a country lane",
+      "paragraphs": [
+        "Metal conducts heat superbly. The instant your warm hand touches cold metal, heat rushes out of your skin into the railing, and keeps rushing, because the metal carries it away into the whole structure. Your skin cools fast, and your nerves report: very cold.",
+        "Wood is a poor conductor — an insulator. Heat leaves your hand slowly, and the thin surface layer of the wood warms up to nearly skin temperature within moments. With the flow reduced to a trickle, the bench feels almost neutral, though it started at exactly the railing's temperature."
+      ]
+    },
+    {
+      "heading": "The same trick, all over the house",
+      "paragraphs": [
+        "Step out of a shower onto a tiled floor and then onto a bath mat: same room, same temperature, same illusion in reverse roles. The tiles conduct heat from your feet quickly and feel cold; the mat insulates and feels warm. Carpet over concrete works the same way all winter.",
+        "The effect also explains why a metal spoon in hot soup becomes dangerous while a wooden spoon stays comfortable, and why steel playground slides can feel scorching in summer sun: metal does not get hotter than the wood beside it — it just hands the heat to you much faster."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "A metal railing and a wooden bench can be the same temperature, yet one feels freezing. Your skin senses heat flow, not heat itself.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-40",
+  "publishedAt": "2026-10-04",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "why-metal-feels-colder-than-wood",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Thermal conductivity",
+      "url": "https://en.wikipedia.org/wiki/Thermal_conductivity"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Thermal conduction",
+      "url": "https://en.wikipedia.org/wiki/Thermal_conduction"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "Objects at the same temperature feel different because skin senses the rate of heat flow: metal conducts heat away from your hand quickly and feels cold, while insulating wood barely lets it leave.",
+  "title": "Why metal feels colder than wood at the same temperature",
+  "updatedAt": "2026-10-04"
+}

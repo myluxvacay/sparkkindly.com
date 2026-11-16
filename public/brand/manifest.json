@@ -20,7 +20,7 @@
     {
       "file": "source/banner.png",
       "originalFilename": "SparkKindly_ Brighter Minds, Kinder Tomorrows.png",
-      "sha256": "fec25088f0cadcd167e688a8eae7decc801497e53bbcdba7bad783cd239f494d",
+      "sha256": "a81e6c1e0d91cdc45feac18c92f8395f0c0ca6ef5eb5159083cd3ff2d5efb16f",
       "width": 1983,
       "height": 793
     }
@@ -28,11 +28,7 @@
   "derivatives": {
     "logo": "Badge resized proportionally, full circle and lettering retained.",
     "icon": "Heart and spark crop x=300 y=125 width=650 height=575; outer-ring corner remnants excluded with white corner masks; centered within a white square.",
-    "banner": "Full artwork, uncropped, responsive WebP sizes. Social derivative contains the whole image within 1200\u00d7630 cream canvas."
+    "banner": "Full artwork, uncropped, responsive WebP sizes. Social derivative contains the whole image within 1200×630 cream canvas."
   },
-  "previousStatus": "awaiting-owner-assets",
-  "publicationAuthorization": {
-    "date": "2026-10-19",
-    "scope": "Owner explicitly requested full public launch with supplied assets. Independent ownership/release verification is not asserted."
-  }
+  "previousStatus": "awaiting-owner-assets"
 }

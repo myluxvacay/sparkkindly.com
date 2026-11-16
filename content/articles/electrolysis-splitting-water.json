@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Electricity as a crowbar","paragraphs":["Some compounds hold together too strongly to split by heating or stirring, but an electric current can prise them apart. Electrolysis passes a direct current through a liquid containing the compound. The electrical energy forces a chemical change that would not happen on its own — the reverse, in a sense, of a battery, where a chemical change produces electricity.","The classic demonstration splits water. Water contains hydrogen and oxygen locked together as H₂O. Connect two electrodes to a power supply, lower them into the water, and bubbles begin to rise from both: hydrogen collects at the negative electrode, oxygen at the positive one."]},{"heading":"What happens, step by step","paragraphs":["Inside the liquid, the current is carried by charged particles called ions moving between the electrodes. At the negative electrode — the cathode — hydrogen ions gain electrons and join up in pairs as hydrogen gas. At the positive electrode — the anode — oxygen is released instead.","The volumes tell the story of the formula: you collect about twice as much hydrogen as oxygen, matching the two-to-one ratio of atoms in every water molecule. School tests confirm the gases — hydrogen gives a squeaky pop with a lit splint, while oxygen relights a glowing one. A little dissolved salt or acid is usually added, because pure water conducts electricity only very weakly."]},{"heading":"Splitting things industry needs","paragraphs":["Electrolysis is far more than a classroom trick. Aluminium, one of the world's most used metals, is won by passing enormous currents through molten aluminium ore — the metal simply cannot be extracted any cheaper way, which is why aluminium smelters are built beside big power stations.","The same method splits brine to make chlorine for disinfectants, and it is now being scaled up to make 'green' hydrogen: water split using renewable electricity, giving a fuel whose only waste product, when burned, is water again."]}],"brand":"discover","contentType":"article","description":"Pass electricity through water and it splits into hydrogen and oxygen — electrolysis uses electrical energy to force a reaction.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-67","publishedAt":"2026-10-03","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"electrolysis-splitting-water","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Electrolysis","url":"https://en.wikipedia.org/wiki/Electrolysis"},{"accessedAt":"2026-11-15","title":"Wikipedia: Electrolysis of water","url":"https://en.wikipedia.org/wiki/Electrolysis_of_water"}],"tags":["chemistry","science"],"takeaway":"Electrolysis uses an electric current to split compounds apart — water becomes hydrogen and oxygen in a two-to-one ratio, exactly matching its formula.","title":"Electrolysis: splitting water with electricity","updatedAt":"2026-10-03"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Electricity as a crowbar",
+      "paragraphs": [
+        "Some compounds hold together too strongly to split by heating or stirring, but an electric current can prise them apart. Electrolysis passes a direct current through a liquid containing the compound. The electrical energy forces a chemical change that would not happen on its own — the reverse, in a sense, of a battery, where a chemical change produces electricity.",
+        "The classic demonstration splits water. Water contains hydrogen and oxygen locked together as H₂O. Connect two electrodes to a power supply, lower them into the water, and bubbles begin to rise from both: hydrogen collects at the negative electrode, oxygen at the positive one."
+      ]
+    },
+    {
+      "heading": "What happens, step by step",
+      "paragraphs": [
+        "Inside the liquid, the current is carried by charged particles called ions moving between the electrodes. At the negative electrode — the cathode — hydrogen ions gain electrons and join up in pairs as hydrogen gas. At the positive electrode — the anode — oxygen is released instead.",
+        "The volumes tell the story of the formula: you collect about twice as much hydrogen as oxygen, matching the two-to-one ratio of atoms in every water molecule. School tests confirm the gases — hydrogen gives a squeaky pop with a lit splint, while oxygen relights a glowing one. A little dissolved salt or acid is usually added, because pure water conducts electricity only very weakly."
+      ]
+    },
+    {
+      "heading": "Splitting things industry needs",
+      "paragraphs": [
+        "Electrolysis is far more than a classroom trick. Aluminium, one of the world's most used metals, is won by passing enormous currents through molten aluminium ore — the metal simply cannot be extracted any cheaper way, which is why aluminium smelters are built beside big power stations.",
+        "The same method splits brine to make chlorine for disinfectants, and it is now being scaled up to make 'green' hydrogen: water split using renewable electricity, giving a fuel whose only waste product, when burned, is water again."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Pass electricity through water and it splits into hydrogen and oxygen — electrolysis uses electrical energy to force a reaction.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-67",
+  "publishedAt": "2026-10-03",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "electrolysis-splitting-water",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Electrolysis",
+      "url": "https://en.wikipedia.org/wiki/Electrolysis"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Electrolysis of water",
+      "url": "https://en.wikipedia.org/wiki/Electrolysis_of_water"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Electrolysis uses an electric current to split compounds apart — water becomes hydrogen and oxygen in a two-to-one ratio, exactly matching its formula.",
+  "title": "Electrolysis: splitting water with electricity",
+  "updatedAt": "2026-10-03"
+}

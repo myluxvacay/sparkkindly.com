@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Sabotaging the ice lattice","paragraphs":["Salt does not melt ice by warming it — a pinch of salt is at the same temperature as the path it lands on. It works by sabotage. Ice is water molecules locked into an orderly crystal, and there is always a microscopically thin film of liquid water on its surface. Salt dissolves into that film, and the dissolved particles get in the way of water molecules trying to join the crystal.","The result is freezing-point depression: salty water refuses to freeze at 0 °C and stays liquid to lower temperatures the more salt it holds — down to about −21 °C for a fully saturated salt solution. Ice sitting in salty water that cannot refreeze simply melts, and the meltwater dissolves more salt and continues the work."]},{"heading":"Salt on the winter roads","paragraphs":["This is why gritting lorries go out before the frost, not after: a layer of salt on a damp road means the water on the surface cannot turn to ice until the temperature falls well below freezing. It is also why the trick has limits. On a bitterly cold night, near or below −10 °C, salt works so slowly that road crews in very cold countries switch to sand, which melts nothing but gives tyres something to grip.","Seawater shows the same physics on a planetary scale: loaded with dissolved salts, the ocean does not freeze until about −1.8 °C, and the ice that does form pushes most of its salt back out into the water as it crystallises."]},{"heading":"Salt on the tongue","paragraphs":["In the kitchen, salt's talents are different but related to the same personality: it dissolves readily and interacts strongly with its surroundings. Saltiness is one of the basic tastes, detected directly by channels in your taste buds that let sodium ions through — a small electrical signal your brain reads as 'salt'.","A little salt does more than add its own flavour: it suppresses bitterness and makes sweet and savoury flavours register more strongly, which is why a pinch improves everything from soup to chocolate. And by drawing water out of food — and out of the microbes that would spoil it — salt preserved meat and fish for centuries before refrigeration existed."]}],"brand":"discover","contentType":"article","description":"Salt melts ice by making it harder for water to freeze, and it transforms food by changing how your taste buds report flavour.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-80","publishedAt":"2026-11-05","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"why-salt-melts-ice","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Sodium chloride","url":"https://en.wikipedia.org/wiki/Sodium_chloride"},{"accessedAt":"2026-11-15","title":"Wikipedia: Freezing-point depression","url":"https://en.wikipedia.org/wiki/Freezing-point_depression"}],"tags":["chemistry","science"],"takeaway":"Salt melts ice by lowering water's freezing point — dissolved salt blocks ice crystals from forming — and on the tongue it adds saltiness while suppressing bitterness and drawing out water.","title":"Salt: why it melts ice and makes food taste more","updatedAt":"2026-11-05"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Sabotaging the ice lattice",
+      "paragraphs": [
+        "Salt does not melt ice by warming it — a pinch of salt is at the same temperature as the path it lands on. It works by sabotage. Ice is water molecules locked into an orderly crystal, and there is always a microscopically thin film of liquid water on its surface. Salt dissolves into that film, and the dissolved particles get in the way of water molecules trying to join the crystal.",
+        "The result is freezing-point depression: salty water refuses to freeze at 0 °C and stays liquid to lower temperatures the more salt it holds — down to about −21 °C for a fully saturated salt solution. Ice sitting in salty water that cannot refreeze simply melts, and the meltwater dissolves more salt and continues the work."
+      ]
+    },
+    {
+      "heading": "Salt on the winter roads",
+      "paragraphs": [
+        "This is why gritting lorries go out before the frost, not after: a layer of salt on a damp road means the water on the surface cannot turn to ice until the temperature falls well below freezing. It is also why the trick has limits. On a bitterly cold night, near or below −10 °C, salt works so slowly that road crews in very cold countries switch to sand, which melts nothing but gives tyres something to grip.",
+        "Seawater shows the same physics on a planetary scale: loaded with dissolved salts, the ocean does not freeze until about −1.8 °C, and the ice that does form pushes most of its salt back out into the water as it crystallises."
+      ]
+    },
+    {
+      "heading": "Salt on the tongue",
+      "paragraphs": [
+        "In the kitchen, salt's talents are different but related to the same personality: it dissolves readily and interacts strongly with its surroundings. Saltiness is one of the basic tastes, detected directly by channels in your taste buds that let sodium ions through — a small electrical signal your brain reads as 'salt'.",
+        "A little salt does more than add its own flavour: it suppresses bitterness and makes sweet and savoury flavours register more strongly, which is why a pinch improves everything from soup to chocolate. And by drawing water out of food — and out of the microbes that would spoil it — salt preserved meat and fish for centuries before refrigeration existed."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Salt melts ice by making it harder for water to freeze, and it transforms food by changing how your taste buds report flavour.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-80",
+  "publishedAt": "2026-11-05",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "why-salt-melts-ice",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Sodium chloride",
+      "url": "https://en.wikipedia.org/wiki/Sodium_chloride"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Freezing-point depression",
+      "url": "https://en.wikipedia.org/wiki/Freezing-point_depression"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Salt melts ice by lowering water's freezing point — dissolved salt blocks ice crystals from forming — and on the tongue it adds saltiness while suppressing bitterness and drawing out water.",
+  "title": "Salt: why it melts ice and makes food taste more",
+  "updatedAt": "2026-11-05"
+}

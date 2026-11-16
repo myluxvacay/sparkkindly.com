@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A lever you turn","paragraphs":["Bicycle gears do the same job as a lever: they trade distance for force. The chain connects a toothed ring at the pedals to a smaller or larger sprocket at the back wheel, and the sizes of the two decide how many times the wheel turns for each turn of the pedals.","In a high gear, one pedal turn spins the wheel several times — fast on flat ground, but each push must be hard. In a low gear the wheel turns barely once per pedal turn, so each push is easier but the bike advances less."]},{"heading":"Counting teeth","paragraphs":["The ratio is simple arithmetic. If the front ring has 44 teeth and the rear sprocket 22, the wheel turns twice for every pedal turn. Swap to a rear sprocket with 34 teeth and the wheel turns only about 1.3 times — but your legs feel the hill shrink.","A derailleur makes the swap while moving: a spring-loaded arm pushes the chain sideways onto a neighbouring sprocket and takes up the slack. Modern bikes offer twenty or more combinations, though neighbouring gears overlap so much that the useful range is what matters, not the count."]},{"heading":"Why low gear wins hills","paragraphs":["Climbing demands power against gravity, and your legs deliver power best at a comfortable pedalling rhythm. Low gears let you keep that rhythm — spinning easily at, say, 80 pedal turns a minute — while the bike crawls upward at walking pace.","It feels like cheating because the trade is invisible: you pedal more times to cover the same ground. The energy used is the same; the gears simply let you pay it in small, comfortable instalments instead of a few exhausting pushes."]}],"brand":"discover","contentType":"article","description":"Gears trade speed for force: a low gear turns the wheel less per pedal stroke, but with far more push.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-11","publishedAt":"2026-09-30","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-bicycle-gears-work","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Bicycle gearing","url":"https://en.wikipedia.org/wiki/Bicycle_gearing"},{"accessedAt":"2026-11-15","title":"Wikipedia: Derailleur","url":"https://en.wikipedia.org/wiki/Derailleur"}],"tags":["technology","science"],"takeaway":"Bicycle gears trade wheel turns for pedalling force: low gears spin the wheel less per pedal stroke, making hills easier at the cost of speed.","title":"How bicycle gears make hills feel flatter","updatedAt":"2026-09-30"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A lever you turn",
+      "paragraphs": [
+        "Bicycle gears do the same job as a lever: they trade distance for force. The chain connects a toothed ring at the pedals to a smaller or larger sprocket at the back wheel, and the sizes of the two decide how many times the wheel turns for each turn of the pedals.",
+        "In a high gear, one pedal turn spins the wheel several times — fast on flat ground, but each push must be hard. In a low gear the wheel turns barely once per pedal turn, so each push is easier but the bike advances less."
+      ]
+    },
+    {
+      "heading": "Counting teeth",
+      "paragraphs": [
+        "The ratio is simple arithmetic. If the front ring has 44 teeth and the rear sprocket 22, the wheel turns twice for every pedal turn. Swap to a rear sprocket with 34 teeth and the wheel turns only about 1.3 times — but your legs feel the hill shrink.",
+        "A derailleur makes the swap while moving: a spring-loaded arm pushes the chain sideways onto a neighbouring sprocket and takes up the slack. Modern bikes offer twenty or more combinations, though neighbouring gears overlap so much that the useful range is what matters, not the count."
+      ]
+    },
+    {
+      "heading": "Why low gear wins hills",
+      "paragraphs": [
+        "Climbing demands power against gravity, and your legs deliver power best at a comfortable pedalling rhythm. Low gears let you keep that rhythm — spinning easily at, say, 80 pedal turns a minute — while the bike crawls upward at walking pace.",
+        "It feels like cheating because the trade is invisible: you pedal more times to cover the same ground. The energy used is the same; the gears simply let you pay it in small, comfortable instalments instead of a few exhausting pushes."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Gears trade speed for force: a low gear turns the wheel less per pedal stroke, but with far more push.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-11",
+  "publishedAt": "2026-09-30",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-bicycle-gears-work",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Bicycle gearing",
+      "url": "https://en.wikipedia.org/wiki/Bicycle_gearing"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Derailleur",
+      "url": "https://en.wikipedia.org/wiki/Derailleur"
+    }
+  ],
+  "tags": [
+    "technology",
+    "science"
+  ],
+  "takeaway": "Bicycle gears trade wheel turns for pedalling force: low gears spin the wheel less per pedal stroke, making hills easier at the cost of speed.",
+  "title": "How bicycle gears make hills feel flatter",
+  "updatedAt": "2026-09-30"
+}

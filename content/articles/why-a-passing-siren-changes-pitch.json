@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Waves bunched and waves stretched","paragraphs":["A siren emits sound waves at a steady rate, each wave spreading out from wherever the ambulance was at the moment it was made. If the ambulance is standing still, the waves are evenly spaced in every direction, and everyone hears the siren's true pitch.","Once the ambulance moves, the picture changes. Each new wave is launched from a point closer to you than the last one, so the waves ahead of the ambulance are bunched closer together. Closer spacing means the waves arrive at your ears more often — a higher frequency, which you hear as a higher pitch."]},{"heading":"The drop as it passes","paragraphs":["Behind the ambulance the opposite happens: each wave starts farther back, the spacing stretches, and the pitch drops. That is why the siren's note falls suddenly at the moment the vehicle passes you — you switch in an instant from receiving bunched waves to receiving stretched ones.","The siren itself never changed. Its pitch at the source stayed constant the whole time; only the spacing of the waves in the air changed, because the source was moving through its own sound. The same effect happens if the source is still and you are the one moving toward it."]},{"heading":"Doppler beyond the roadside","paragraphs":["Light is a wave too, so the effect reaches into astronomy. Light from galaxies moving away from us is stretched toward the red end of the spectrum — redshift — and measuring it revealed that the universe is expanding. Light from something approaching shifts toward blue.","Nearer home, weather radar uses the Doppler effect on radio waves bounced off raindrops to measure how fast storm winds are moving toward or away from the radar, and hospital scanners bounce ultrasound off flowing blood to check circulation without breaking the skin."]}],"brand":"discover","contentType":"article","description":"The siren never changes its note — the motion squeezes and stretches its own waves. That is the Doppler effect, and astronomers use it too.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-42","publishedAt":"2026-10-09","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"why-a-passing-siren-changes-pitch","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Doppler effect","url":"https://en.wikipedia.org/wiki/Doppler_effect"},{"accessedAt":"2026-11-15","title":"Wikipedia: Frequency","url":"https://en.wikipedia.org/wiki/Frequency"}],"tags":["physics","science"],"takeaway":"A moving source bunches its waves ahead and stretches them behind, so pitch rises on approach and drops as it passes — the Doppler effect, which also reads storm winds and the expansion of the universe.","title":"Why a passing siren changes pitch (the Doppler effect)","updatedAt":"2026-10-09"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Waves bunched and waves stretched",
+      "paragraphs": [
+        "A siren emits sound waves at a steady rate, each wave spreading out from wherever the ambulance was at the moment it was made. If the ambulance is standing still, the waves are evenly spaced in every direction, and everyone hears the siren's true pitch.",
+        "Once the ambulance moves, the picture changes. Each new wave is launched from a point closer to you than the last one, so the waves ahead of the ambulance are bunched closer together. Closer spacing means the waves arrive at your ears more often — a higher frequency, which you hear as a higher pitch."
+      ]
+    },
+    {
+      "heading": "The drop as it passes",
+      "paragraphs": [
+        "Behind the ambulance the opposite happens: each wave starts farther back, the spacing stretches, and the pitch drops. That is why the siren's note falls suddenly at the moment the vehicle passes you — you switch in an instant from receiving bunched waves to receiving stretched ones.",
+        "The siren itself never changed. Its pitch at the source stayed constant the whole time; only the spacing of the waves in the air changed, because the source was moving through its own sound. The same effect happens if the source is still and you are the one moving toward it."
+      ]
+    },
+    {
+      "heading": "Doppler beyond the roadside",
+      "paragraphs": [
+        "Light is a wave too, so the effect reaches into astronomy. Light from galaxies moving away from us is stretched toward the red end of the spectrum — redshift — and measuring it revealed that the universe is expanding. Light from something approaching shifts toward blue.",
+        "Nearer home, weather radar uses the Doppler effect on radio waves bounced off raindrops to measure how fast storm winds are moving toward or away from the radar, and hospital scanners bounce ultrasound off flowing blood to check circulation without breaking the skin."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "The siren never changes its note — the motion squeezes and stretches its own waves. That is the Doppler effect, and astronomers use it too.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-42",
+  "publishedAt": "2026-10-09",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "why-a-passing-siren-changes-pitch",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Doppler effect",
+      "url": "https://en.wikipedia.org/wiki/Doppler_effect"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Frequency",
+      "url": "https://en.wikipedia.org/wiki/Frequency"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "A moving source bunches its waves ahead and stretches them behind, so pitch rises on approach and drops as it passes — the Doppler effect, which also reads storm winds and the expansion of the universe.",
+  "title": "Why a passing siren changes pitch (the Doppler effect)",
+  "updatedAt": "2026-10-09"
+}

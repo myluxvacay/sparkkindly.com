@@ -1,1 +1,65 @@
-{"ageGuidance":"Ages 6–9, with an adult","aiDisclosure":"Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"It looks small, but it is not","paragraphs":["The Moon looks like a small coin in the sky. That is because it is very, very far away. Things far away always look smaller than they are.","The Moon is really about 3,474 kilometres wide. That is like driving across a whole country. Four Moons side by side would nearly stretch across the Earth."]},{"heading":"Big or small next to Earth?","paragraphs":["The Earth is much bigger than the Moon. If the Earth were a beach ball, the Moon would be about the size of a tennis ball next to it.","But the Moon is still huge compared to you. Astronauts who walked on it found mountains, wide flat plains, and craters made by crashing space rocks."]},{"heading":"Why it looks different sizes","paragraphs":["Some nights the Moon looks bigger, especially when it is low near the rooftops. That is a trick your eyes and brain play on you.","High in the sky, the same Moon looks smaller. It has not changed at all. Your brain is just comparing it with different things."]}],"brand":"kids","contentType":"article","description":"For ages 6–9 with an adult: the Moon looks tiny in the sky, so how big is it really?","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/kids.webp","width":1200},"id":"kids-bulk-12","materials":["A clear night to look at the Moon","A beach ball and a tennis ball if you have them, for comparing sizes"],"publishedAt":"2026-11-06","reviewNote":"Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","safetyNotes":["Look at the Moon only with your adult beside you in a safe spot; it is safe to look at the Moon, but never stare at the Sun."],"screenFreeExtension":"Hold a coin up at arm's length next to the Moon and see how something small and close can cover something huge and far away.","slug":"how-big-is-the-moon","sources":[],"supervision":"An adult stays alongside throughout.","tags":["space","curiosity"],"takeaway":"The Moon is enormous; it only looks small because it is so far away.","title":"How big is the Moon?","updatedAt":"2026-11-06"}
+{
+  "ageGuidance": "Ages 6–9, with an adult",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "It looks small, but it is not",
+      "paragraphs": [
+        "The Moon looks like a small coin in the sky. That is because it is very, very far away. Things far away always look smaller than they are.",
+        "The Moon is really about 3,474 kilometres wide. That is like driving across a whole country. Four Moons side by side would nearly stretch across the Earth."
+      ]
+    },
+    {
+      "heading": "Big or small next to Earth?",
+      "paragraphs": [
+        "The Earth is much bigger than the Moon. If the Earth were a beach ball, the Moon would be about the size of a tennis ball next to it.",
+        "But the Moon is still huge compared to you. Astronauts who walked on it found mountains, wide flat plains, and craters made by crashing space rocks."
+      ]
+    },
+    {
+      "heading": "Why it looks different sizes",
+      "paragraphs": [
+        "Some nights the Moon looks bigger, especially when it is low near the rooftops. That is a trick your eyes and brain play on you.",
+        "High in the sky, the same Moon looks smaller. It has not changed at all. Your brain is just comparing it with different things."
+      ]
+    }
+  ],
+  "brand": "kids",
+  "contentType": "article",
+  "description": "For ages 6–9 with an adult: the Moon looks tiny in the sky, so how big is it really?",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A starry sky over snowy mountains",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/space.webp",
+    "width": 1200
+  },
+  "id": "kids-bulk-12",
+  "materials": [
+    "A clear night to look at the Moon",
+    "A beach ball and a tennis ball if you have them, for comparing sizes"
+  ],
+  "publishedAt": "2026-11-06",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "safetyNotes": [
+    "Look at the Moon only with your adult beside you in a safe spot; it is safe to look at the Moon, but never stare at the Sun."
+  ],
+  "screenFreeExtension": "Hold a coin up at arm's length next to the Moon and see how something small and close can cover something huge and far away.",
+  "slug": "how-big-is-the-moon",
+  "sources": [],
+  "supervision": "An adult stays alongside throughout.",
+  "tags": [
+    "space",
+    "curiosity"
+  ],
+  "takeaway": "The Moon is enormous; it only looks small because it is so far away.",
+  "title": "How big is the Moon?",
+  "updatedAt": "2026-11-06"
+}

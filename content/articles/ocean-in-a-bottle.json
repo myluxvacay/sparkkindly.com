@@ -1,1 +1,68 @@
-{"ageGuidance":"Ages 6–9, with an adult","aiDisclosure":"Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Fill your ocean","paragraphs":["Ask your adult to help you fill a clear plastic bottle about one third full of water. Add a drop or two of blue food colouring and swirl it gently.","Slowly pour in cooking oil until the bottle is nearly full. Watch closely: the oil and the water do not mix. They stay in two layers."]},{"heading":"Make waves","paragraphs":["Your adult screws the lid on tightly and checks it twice. Now tip the bottle slowly from side to side.","The blue water rolls and splashes like waves under the oil. Tip it gently for calm seas and a little faster for a storm. Put the bottle down if you want the sea to settle."]},{"heading":"Why they stay apart","paragraphs":["Oil and water never mix, however hard you shake them. They always separate again, with the oil floating on top.","That is why rainbows can shine on puddles with oil in them, and why ducks' feathers stay dry. Oil and water like to keep to themselves."]}],"brand":"kids","contentType":"activity","description":"For ages 6–9 with an adult: layer water and oil in a bottle and tip it to make rolling waves.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/kids.webp","width":1200},"id":"kids-bulk-18","materials":["A clear plastic bottle with a lid","Water","Cooking oil","Blue food colouring (optional)"],"publishedAt":"2026-11-12","reviewNote":"Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","safetyNotes":["An adult pours the oil, screws the lid on tightly, and checks it before any wave-making, so nothing spills.","Use a plastic bottle, never glass, and wipe up any spills straight away because oil makes floors slippery."],"screenFreeExtension":"Shake the bottle hard, then time how long the sea takes to become calm again; try to beat your own calm-down record.","slug":"ocean-in-a-bottle","sources":[],"supervision":"An adult stays alongside throughout.","tags":["oceans","science"],"takeaway":"Oil and water always separate, and you can watch them do it.","title":"Ocean in a bottle","updatedAt":"2026-11-12"}
+{
+  "ageGuidance": "Ages 6–9, with an adult",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Fill your ocean",
+      "paragraphs": [
+        "Ask your adult to help you fill a clear plastic bottle about one third full of water. Add a drop or two of blue food colouring and swirl it gently.",
+        "Slowly pour in cooking oil until the bottle is nearly full. Watch closely: the oil and the water do not mix. They stay in two layers."
+      ]
+    },
+    {
+      "heading": "Make waves",
+      "paragraphs": [
+        "Your adult screws the lid on tightly and checks it twice. Now tip the bottle slowly from side to side.",
+        "The blue water rolls and splashes like waves under the oil. Tip it gently for calm seas and a little faster for a storm. Put the bottle down if you want the sea to settle."
+      ]
+    },
+    {
+      "heading": "Why they stay apart",
+      "paragraphs": [
+        "Oil and water never mix, however hard you shake them. They always separate again, with the oil floating on top.",
+        "That is why rainbows can shine on puddles with oil in them, and why ducks' feathers stay dry. Oil and water like to keep to themselves."
+      ]
+    }
+  ],
+  "brand": "kids",
+  "contentType": "activity",
+  "description": "For ages 6–9 with an adult: layer water and oil in a bottle and tip it to make rolling waves.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A sea turtle swimming underwater",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/oceans.webp",
+    "width": 1200
+  },
+  "id": "kids-bulk-18",
+  "materials": [
+    "A clear plastic bottle with a lid",
+    "Water",
+    "Cooking oil",
+    "Blue food colouring (optional)"
+  ],
+  "publishedAt": "2026-11-12",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "safetyNotes": [
+    "An adult pours the oil, screws the lid on tightly, and checks it before any wave-making, so nothing spills.",
+    "Use a plastic bottle, never glass, and wipe up any spills straight away because oil makes floors slippery."
+  ],
+  "screenFreeExtension": "Shake the bottle hard, then time how long the sea takes to become calm again; try to beat your own calm-down record.",
+  "slug": "ocean-in-a-bottle",
+  "sources": [],
+  "supervision": "An adult stays alongside throughout.",
+  "tags": [
+    "oceans",
+    "science"
+  ],
+  "takeaway": "Oil and water always separate, and you can watch them do it.",
+  "title": "Ocean in a bottle",
+  "updatedAt": "2026-11-12"
+}

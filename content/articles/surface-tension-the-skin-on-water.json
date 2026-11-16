@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Molecules that hold hands","paragraphs":["Water molecules attract each other. Deep inside a drop, every molecule is pulled equally in all directions by its neighbours, and the pulls cancel out. At the surface, there are no neighbours above — so surface molecules are pulled inward and sideways only, and the surface tightens like a stretched elastic sheet.","That tightening is surface tension. It makes water behave as if it wears a thin skin, and it constantly pulls a body of water toward the shape with the least surface: a sphere. It is why small amounts of water form beads and droplets instead of spreading into nothing."]},{"heading":"Walking on the skin","paragraphs":["The skin is weak but real. A pond skater insect spreads its weight on long, water-repellent legs, dimpling the surface without breaking it, and rows itself across the dimples. A carefully lowered paperclip or sewing needle can rest on the surface the same way, even though steel is far denser than water — it is held up by the skin, not by floating.","Surface tension also drives capillary action: water climbing up a narrow tube, because the attraction between water and the tube's walls, combined with the surface's pull, drags the column upward. It is how water rises through soil and through the fibres of a paper towel."]},{"heading":"Breaking the skin on purpose","paragraphs":["Soap and detergents are surface-tension saboteurs. Their molecules wedge into the surface and weaken the attraction, so water stops beading and instead spreads and soaks into fabric, carrying dirt away with it. Washing works largely because the skin is broken.","Temperature matters too: hot water has lower surface tension than cold, another reason hot washes clean better. And in the lungs, a substance called surfactant lowers surface tension in the tiny air sacs so they can inflate easily — premature babies who cannot yet make it struggle to breathe, a medical emergency with surface tension at its heart."]}],"brand":"discover","contentType":"article","description":"Water's surface tightens like a skin because its molecules pull inward — strong enough for insects to walk on and drops to bead.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-55","publishedAt":"2026-11-11","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"surface-tension-the-skin-on-water","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Surface tension","url":"https://en.wikipedia.org/wiki/Surface_tension"},{"accessedAt":"2026-11-15","title":"Wikipedia: Capillary action","url":"https://en.wikipedia.org/wiki/Capillary_action"}],"tags":["physics","science"],"takeaway":"Surface tension is the inward pull on water's surface molecules, tightening it into a skin that beads droplets, floats pond skaters and lifts water up narrow tubes — until soap breaks it.","title":"Surface tension: the skin on water","updatedAt":"2026-11-11"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Molecules that hold hands",
+      "paragraphs": [
+        "Water molecules attract each other. Deep inside a drop, every molecule is pulled equally in all directions by its neighbours, and the pulls cancel out. At the surface, there are no neighbours above — so surface molecules are pulled inward and sideways only, and the surface tightens like a stretched elastic sheet.",
+        "That tightening is surface tension. It makes water behave as if it wears a thin skin, and it constantly pulls a body of water toward the shape with the least surface: a sphere. It is why small amounts of water form beads and droplets instead of spreading into nothing."
+      ]
+    },
+    {
+      "heading": "Walking on the skin",
+      "paragraphs": [
+        "The skin is weak but real. A pond skater insect spreads its weight on long, water-repellent legs, dimpling the surface without breaking it, and rows itself across the dimples. A carefully lowered paperclip or sewing needle can rest on the surface the same way, even though steel is far denser than water — it is held up by the skin, not by floating.",
+        "Surface tension also drives capillary action: water climbing up a narrow tube, because the attraction between water and the tube's walls, combined with the surface's pull, drags the column upward. It is how water rises through soil and through the fibres of a paper towel."
+      ]
+    },
+    {
+      "heading": "Breaking the skin on purpose",
+      "paragraphs": [
+        "Soap and detergents are surface-tension saboteurs. Their molecules wedge into the surface and weaken the attraction, so water stops beading and instead spreads and soaks into fabric, carrying dirt away with it. Washing works largely because the skin is broken.",
+        "Temperature matters too: hot water has lower surface tension than cold, another reason hot washes clean better. And in the lungs, a substance called surfactant lowers surface tension in the tiny air sacs so they can inflate easily — premature babies who cannot yet make it struggle to breathe, a medical emergency with surface tension at its heart."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Water's surface tightens like a skin because its molecules pull inward — strong enough for insects to walk on and drops to bead.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-55",
+  "publishedAt": "2026-11-11",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "surface-tension-the-skin-on-water",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Surface tension",
+      "url": "https://en.wikipedia.org/wiki/Surface_tension"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Capillary action",
+      "url": "https://en.wikipedia.org/wiki/Capillary_action"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "Surface tension is the inward pull on water's surface molecules, tightening it into a skin that beads droplets, floats pond skaters and lifts water up narrow tubes — until soap breaks it.",
+  "title": "Surface tension: the skin on water",
+  "updatedAt": "2026-11-11"
+}

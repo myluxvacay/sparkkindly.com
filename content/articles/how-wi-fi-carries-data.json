@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Writing on radio waves","paragraphs":["Wi-Fi carries data on radio waves, the same kind of energy as light but with much longer wavelengths, in bands around 2.4 and 5 billion cycles per second. To send information, the transmitter tweaks the wave — its strength, timing or phase — in patterns that stand for ones and zeros.","The receiving device watches for those patterns and translates them back into data. Both sides switch between sending and listening many times a second, following shared rules — the Wi-Fi standards — so that laptops, phones and routers from different makers understand each other."]},{"heading":"Why walls and distance matter","paragraphs":["Radio waves at these frequencies pass through wood, plaster and glass reasonably well, but brick, concrete and metal weaken or reflect them. Every wall between you and the router dims the signal, like a voice through closed doors.","The 2.4 gigahertz band travels farther and penetrates walls better; the 5 gigahertz band offers more room and higher speeds but fades sooner. Routers use both, steering devices to whichever serves them best — speed near the router, reach far from it."]},{"heading":"A crowded room, politely shared","paragraphs":["Radio space is shared with neighbours' networks, baby monitors and microwave ovens, which leak a little energy in the same 2.4 band. Wi-Fi handles the crowd like polite conversation: each device listens before speaking and waits if someone else is mid-sentence.","The newest standards squeeze more data into each transmission by packing the wave's changes more densely — hundreds of millions of bits per second through thin air. All of it rides on energy you cannot see, passing through you harmlessly every day. It is, in effect, radio with manners."]}],"brand":"discover","contentType":"article","description":"Wi-Fi writes data onto radio waves — billions of tiny changes per second that other devices read back as bits.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-16","publishedAt":"2026-10-13","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-wi-fi-carries-data","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Wi-Fi","url":"https://en.wikipedia.org/wiki/Wi-Fi"},{"accessedAt":"2026-11-15","title":"Wikipedia: Radio wave","url":"https://en.wikipedia.org/wiki/Radio_wave"}],"tags":["computing","technology"],"takeaway":"Wi-Fi encodes data as rapid changes in radio waves at 2.4 and 5 gigahertz; devices take turns transmitting and decode each other's patterns back into bits.","title":"How Wi-Fi carries data on radio waves","updatedAt":"2026-10-13"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Writing on radio waves",
+      "paragraphs": [
+        "Wi-Fi carries data on radio waves, the same kind of energy as light but with much longer wavelengths, in bands around 2.4 and 5 billion cycles per second. To send information, the transmitter tweaks the wave — its strength, timing or phase — in patterns that stand for ones and zeros.",
+        "The receiving device watches for those patterns and translates them back into data. Both sides switch between sending and listening many times a second, following shared rules — the Wi-Fi standards — so that laptops, phones and routers from different makers understand each other."
+      ]
+    },
+    {
+      "heading": "Why walls and distance matter",
+      "paragraphs": [
+        "Radio waves at these frequencies pass through wood, plaster and glass reasonably well, but brick, concrete and metal weaken or reflect them. Every wall between you and the router dims the signal, like a voice through closed doors.",
+        "The 2.4 gigahertz band travels farther and penetrates walls better; the 5 gigahertz band offers more room and higher speeds but fades sooner. Routers use both, steering devices to whichever serves them best — speed near the router, reach far from it."
+      ]
+    },
+    {
+      "heading": "A crowded room, politely shared",
+      "paragraphs": [
+        "Radio space is shared with neighbours' networks, baby monitors and microwave ovens, which leak a little energy in the same 2.4 band. Wi-Fi handles the crowd like polite conversation: each device listens before speaking and waits if someone else is mid-sentence.",
+        "The newest standards squeeze more data into each transmission by packing the wave's changes more densely — hundreds of millions of bits per second through thin air. All of it rides on energy you cannot see, passing through you harmlessly every day. It is, in effect, radio with manners."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Wi-Fi writes data onto radio waves — billions of tiny changes per second that other devices read back as bits.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A green computer motherboard close-up",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/tech.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-16",
+  "publishedAt": "2026-10-13",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-wi-fi-carries-data",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Wi-Fi",
+      "url": "https://en.wikipedia.org/wiki/Wi-Fi"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Radio wave",
+      "url": "https://en.wikipedia.org/wiki/Radio_wave"
+    }
+  ],
+  "tags": [
+    "computing",
+    "technology"
+  ],
+  "takeaway": "Wi-Fi encodes data as rapid changes in radio waves at 2.4 and 5 gigahertz; devices take turns transmitting and decode each other's patterns back into bits.",
+  "title": "How Wi-Fi carries data on radio waves",
+  "updatedAt": "2026-10-13"
+}
