@@ -68,8 +68,9 @@ export async function listPublishingDays(db: Queryable, limit = 30): Promise<Pub
 
   // Fallback days: distinct import days with published items and no reviewer report for that date. Items that
   // any reported batch already lists (same world + slug) are excluded, so a batch whose import landed on a
-  // different day is not counted twice. (Reported quizzes carry no slug, so a quiz can still appear on its
-  // import day as well as in its batch; the batch entry is the one without a link.)
+  // different day is not counted twice. Reported entries always carry a slug (for a quiz it is the quiz id,
+  // which is also its items-table slug), so the exclusion covers quizzes as well; an entry reported without a
+  // slug could still double-list, which is why the report contract asks for one.
   const fallbackDays = await db.query<DayRow>(
     `SELECT DISTINCT (i.created_at AT TIME ZONE 'America/New_York')::date::text AS date
      FROM items i

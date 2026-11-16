@@ -135,7 +135,10 @@ that one. Endpoints, all with a trailing slash: `GET /api/agent/brief/?world=`, 
 neither can forge the other's part of a day's record; both are idempotent per batch date (a retry replaces the
 caller's own part and leaves the other part untouched). `POST /api/agent/publishing/report/` (reviewer-role key):
 `{date, published: [{world, kind, title, slug}], rejections: [{title, world, kind, reason}]}` — the reviewer job
-sends it after the batch's import is confirmed live; slug is null for quizzes, as in the digest queue.
+sends it after the batch's import is confirmed live. Every published entry carries a slug: the article slug, or
+for a quiz its content id (a quiz's items-table slug and public path use the id). Unlike the digest queue, which
+leaves quiz slugs null because the digest post does not link quizzes, the report always includes it so each
+entry links to its live page.
 `POST /api/agent/publishing/digest/` (promoter-role key): `{date, postUrl, externalId}` (either field may be
 omitted, not both; postUrl must be a facebook.com or fb.watch https URL) — the social job sends it once the batch's
 Facebook digest post exists, once per batch date the post covers, always with the full known state of the post:

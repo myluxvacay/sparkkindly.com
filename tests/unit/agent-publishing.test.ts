@@ -27,7 +27,7 @@ const report = (over: Record<string, unknown> = {}) => ({
   date: D2,
   published: [
     { world: 'play', kind: 'article', title: 'How to fly a kite', slug: 'how-to-fly-a-kite' },
-    { world: 'discover', kind: 'quiz', title: 'How many moons does Mars have?', slug: null },
+    { world: 'discover', kind: 'quiz', title: 'How many moons does Mars have?', slug: 'discover-quiz-mars-moons-701' },
   ],
   rejections: [{ title: 'A volcano, explained', world: 'discover', kind: 'article', reason: 'custom hero needed: volcano' }],
   ...over,
