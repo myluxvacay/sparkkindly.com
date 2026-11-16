@@ -66,7 +66,8 @@ function DaySection({ day }: { day: PublishingDay }) {
 }
 
 export default async function AdminPublishingPage() {
-  await requireAdmin();
+  const admin = await requireAdmin();
+  void admin;
   const days = await listPublishingDays(getDb());
   return (
     <>
