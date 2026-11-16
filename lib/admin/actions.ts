@@ -449,7 +449,7 @@ const handlers: Record<string, Handler> = {
   // Sponsorship (plan 6): the confirmation is recorded in the audit row; clicks are never written by an action.
   async 'sponsor.create'({ tx, form, now }) {
     const r = await createSponsor(tx, form, now);
-    if (!r.ok) throw new ActionError(400, 'sponsor_rules');
+    if (!r.ok) throw new ActionError(400, r.reason === 'category' ? 'sponsor_category_taken' : 'sponsor_rules');
     const { id, name, category } = r.value;
     return { code: 'sponsor_created', target: `sponsor:${id}`, detail: { name, category, confirmed: true } };
   },

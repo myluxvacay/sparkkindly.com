@@ -8,7 +8,7 @@ import type { Queryable } from '@/lib/db';
 import { itemMayCarrySponsorship } from './eligibility';
 import { validateSponsor, validateSponsorship, type SponsorInput, type SponsorshipInput } from './rules';
 
-type Fail = { ok: false; reason: 'rules' | 'invalid' | 'target' | 'missing' };
+type Fail = { ok: false; reason: 'rules' | 'invalid' | 'target' | 'missing' | 'category' };
 type Outcome<T> = { ok: true; value: T } | Fail;
 const fail = (reason: Fail['reason']): Fail => ({ ok: false, reason });
 
@@ -18,6 +18,12 @@ export async function createSponsor(tx: Queryable, form: URLSearchParams, now: D
   const v = validateSponsor({ ...formObject(form), confirmed: form.get('confirmed') === 'on' });
   if (!v.ok) {
     return fail('rules');
+  }
+  // Owner policy (15 November 2026): one sponsor per category. A second sponsor in a taken category is
+  // refused here, at the only door in, so the public list can never show two in one category.
+  const taken = await tx.query<{ id: number }>('SELECT id FROM sponsors WHERE category = $1 LIMIT 1', [v.value.category]);
+  if (taken.rows[0]) {
+    return fail('category');
   }
   const r = await tx.query<{ id: number }>(
     'INSERT INTO sponsors (name, link, category, confirmed_at) VALUES ($1, $2, $3, $4) RETURNING id',

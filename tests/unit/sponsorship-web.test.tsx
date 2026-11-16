@@ -60,10 +60,19 @@ async function item(audience = 'adults', world = 'grow', topic?: string): Promis
   return { id, path: `${world}/${slug}` };
 }
 
+// One sponsor per category (owner policy, 15 November 2026): a sponsor holds any number of sponsorships,
+// so the fixtures create one sponsor per name and reuse it ('books' is left for the route test below).
+const FIXTURE_CATEGORIES = ['finance-education', 'education', 'software', 'services', 'health-and-wellbeing-general', 'travel', 'food', 'other-approved'];
+let fixtureCategory = 0;
+const fixtureSponsors = new Map<string, string>();
 async function sponsorId(name = 'Acme Money'): Promise<string> {
-  const r = await act('sponsor.create', { name, link: LINK, category: 'finance-education', confirmed: 'on' });
+  const existing = fixtureSponsors.get(name);
+  if (existing) return existing;
+  const r = await act('sponsor.create', { name, link: LINK, category: FIXTURE_CATEGORIES[fixtureCategory++ % FIXTURE_CATEGORIES.length], confirmed: 'on' });
   expect(r).toMatchObject({ ok: true, code: 'sponsor_created' });
-  return String((await db.query<{ id: number }>('SELECT max(id) AS id FROM sponsors')).rows[0].id);
+  const id = String((await db.query<{ id: number }>('SELECT max(id) AS id FROM sponsors')).rows[0].id);
+  fixtureSponsors.set(name, id);
+  return id;
 }
 
 async function topicSponsorship(): Promise<{ topic: string; id: number }> {
@@ -197,9 +206,10 @@ describe('clickRequest', () => {
 describe('admin actions', () => {
   it('sponsor.create records the confirmation in the audit row', async () => {
     await sponsorId('Audited Books');
+    const created = (await db.query<{ category: string }>('SELECT category FROM sponsors WHERE name = $1', ['Audited Books'])).rows[0];
     const a = (await db.query<{ action: string; detail: Record<string, unknown> }>('SELECT action, detail FROM audit_log ORDER BY id DESC LIMIT 1')).rows[0];
     expect(a.action).toBe('sponsor.create');
-    expect(a.detail).toMatchObject({ name: 'Audited Books', category: 'finance-education', confirmed: true });
+    expect(a.detail).toMatchObject({ name: 'Audited Books', category: created.category, confirmed: true });
     const row = (await db.query<{ confirmed_at: Date }>('SELECT confirmed_at FROM sponsors WHERE name = $1', ['Audited Books'])).rows[0];
     expect(row.confirmed_at).toEqual(NOW);
   });

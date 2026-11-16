@@ -17,6 +17,20 @@ export const ALLOWED_CATEGORIES = [
   'other-approved',
 ] as const;
 
+// Public labels for the allowed categories, used on the /sponsorship/ sponsors list.
+export const CATEGORY_LABELS: Record<Category, string> = {
+  education: 'Education',
+  books: 'Books',
+  software: 'Software',
+  services: 'Services',
+  'health-and-wellbeing-general': 'Health & wellbeing',
+  'finance-education': 'Finance education',
+  travel: 'Travel',
+  food: 'Food',
+  'other-approved': 'Other',
+};
+export const categoryLabel = (c: string): string => CATEGORY_LABELS[c as Category] ?? 'Other';
+
 // Spec 4a.3, shown in /admin as the list a sponsor must not belong to; never selectable.
 export const EXCLUDED_CATEGORIES = [
   'gambling',
