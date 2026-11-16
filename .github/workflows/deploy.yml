@@ -5,6 +5,9 @@ name: Deploy
 on:
   push:
     branches: [main, staging]
+  # Manual re-runs retry a failed content publish (the receiver's import is idempotent); the branch picked in the
+  # UI decides the environment exactly as a push to that branch would.
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -22,7 +25,10 @@ jobs:
       DEPLOY_USER: ${{ github.ref_name == 'main' && 'sparkkindly' || 'sparkkindly-staging' }}
       SITE_RELEASE: ${{ github.ref_name == 'main' && 'true' || 'false' }}
     steps:
+      # Full history so the content-change detection below can diff against the push's "before" commit.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
@@ -33,6 +39,25 @@ jobs:
       - run: npm run typecheck
       - run: npm test -- --run
       - run: npm run build
+
+      - name: Detect content changes
+        id: content
+        run: |
+          # The receiver publishes library content only when the release carries the PUBLISH_CONTENT marker.
+          # Diff the push range for content/ and public/images/ (hero files ship in the release; their database
+          # rows are refreshed by the same step). When the base commit is unavailable — a branch's first push or
+          # a manual dispatch — publish anyway: the import is idempotent, so an unnecessary run is harmless.
+          before='${{ github.event.before }}'
+          if [ -n "$before" ] && [ "$before" != "0000000000000000000000000000000000000000" ] && git cat-file -e "$before^{commit}" 2>/dev/null; then
+            if git diff --name-only "$before" '${{ github.sha }}' -- content public/images | grep -q .; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          echo "Content publish marker: $(grep '^changed=' "$GITHUB_OUTPUT")"
 
       - name: Assemble release
         run: |
@@ -48,6 +73,19 @@ jobs:
           npm run worker:build
           # The video poster (its own systemd timer, 5B review M4) runs release/video-worker.mjs.
           npm run worker:video:build
+          # Content publishing (owner-authorized automation, 16 Nov 2026): the receiver runs
+          # release/content-publish.mjs after a healthy deploy when the PUBLISH_CONTENT marker is present.
+          # The library snapshot ships in every release so the step is self-contained and re-runnable.
+          npm run content:publish:build
+          cp deploy/content-publish.sh release/content-publish.sh
+          chmod +x release/content-publish.sh
+          mkdir -p release/content
+          cp -r content/articles content/quizzes release/content/
+          if [ '${{ steps.content.outputs.changed }}' = 'true' ]; then
+            touch release/PUBLISH_CONTENT
+          fi
+          ls -lh release/content-publish.mjs
+          ls release/PUBLISH_CONTENT 2>/dev/null || echo "No content changes in this push; receiver will skip the content publish."
           chmod +x release/migrate.sh
           printf '%s' "$GITHUB_SHA" > release/RELEASE
           tar -czf release.tgz -C release .

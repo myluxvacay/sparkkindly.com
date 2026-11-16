@@ -1,0 +1,66 @@
+{
+  "id": "grow-draft-2026-11-16-03",
+  "slug": "skill-swap-afternoon",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "A Skill-Swap Afternoon",
+  "description": "Trade twenty minutes of something you can do for twenty minutes of something a friend can do. Both of you leave knowing more than you arrived with — and it costs nothing.",
+  "publishedAt": "2026-11-16",
+  "updatedAt": "2026-11-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-16",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "Two people sharing time and learning together",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "learning",
+    "community",
+    "skills"
+  ],
+  "sources": [
+    {
+      "title": "The Protégé Effect: Hit Your Learning Goals By Teaching Others",
+      "url": "https://elearningindustry.com/the-protege-effect-hit-your-learning-goals-by-teaching-others",
+      "accessedAt": "2026-11-16"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-16",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 16 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "How it works",
+      "paragraphs": [
+        "Find one person who knows something you would like to learn — mending a hem, pruning a rose, playing three chords, folding a fitted sheet, cooking one good curry. Offer something you can show them in return. Agree a time, a place, and one small, specific thing each of you will teach.",
+        "Each teacher gets twenty minutes. The learner does the doing, not just the watching: hands on the guitar, hands in the dough. The teacher explains each step out loud as it happens, which is exactly what makes teaching such a powerful way to learn — the teacher has to organise what they know, and the gaps show up fast."
+      ]
+    },
+    {
+      "heading": "Make the swap kind",
+      "paragraphs": [
+        "Keep the goal tiny. One dish, one song, one seam — not a whole cuisine or instrument. End each turn by swapping one honest note: what worked, and what to practise next. Then swap roles and do it again.",
+        "If it goes well, make it a monthly habit and invite someone new each time. A neighbourhood where people trade skills is a neighbourhood where everyone keeps growing, and the price of a lesson is simply the willingness to share one."
+      ]
+    }
+  ],
+  "takeaway": "Everyone knows something worth teaching — and teaching it is how you learn it twice.",
+  "fiction": false,
+  "materials": [
+    "A notebook and pen for each person",
+    "Whatever everyday tools the chosen skills need, for example a guitar, a mixing bowl, or a needle and thread",
+    "A quiet table and two chairs"
+  ],
+  "supervision": "Both swappers agree the time, place, and skill in advance; meet in a public or familiar place, and tell someone where you will be.",
+  "safetyNotes": [
+    "Meet somewhere public or familiar for a first swap",
+    "Agree what tools are needed before you meet, so nothing is improvised on the spot",
+    "Use tools you already know how to handle safely, and show the learner the safe way first"
+  ],
+  "reviewNote": "Approved by the site owner in chat on 16 November 2026 (daily content batch 2026-11-16). AI-generated content; this records owner publication approval, not an independent specialist review."
+}

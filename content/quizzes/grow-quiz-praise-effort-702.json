@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-praise-effort-702",
+  "scheduledDate": "2027-05-02",
+  "brand": "grow",
+  "prompt": "Your friend finishes a hard puzzle and says, “I did it! I must be really smart.” Which reply best helps them keep growing?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Yes, you are a natural — some people just have it."
+    },
+    {
+      "id": "b",
+      "text": "Nice — what strategy helped you crack the tough part?"
+    },
+    {
+      "id": "c",
+      "text": "You just got lucky this time."
+    },
+    {
+      "id": "d",
+      "text": "Stick to easy puzzles next time so you do not fail."
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "In Mueller and Dweck's 1998 experiments, children praised for their effort and strategy chose harder tasks afterwards and kept going when things got difficult, while children praised for being smart chose easier tasks to protect their image and gave up sooner. Praising the process — the strategy tried, the effort made, the persistence shown — points to something a person can choose to do again, whatever the last result was.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Carol Dweck on growth mindset: why the word ‘yet’ changes what happens next",
+      "url": "https://thedvtd.com/blog/carol-dweck-growth-mindset/",
+      "accessedAt": "2026-11-16"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-16",
+  "reviewNote": "Approved by the site owner in chat on 16 November 2026 (daily content batch 2026-11-16). AI-generated content; this records owner publication approval, not an independent specialist review."
+}

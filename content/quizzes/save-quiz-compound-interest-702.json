@@ -1,0 +1,38 @@
+{
+  "id": "save-quiz-compound-interest-702",
+  "scheduledDate": "2027-05-04",
+  "brand": "save",
+  "prompt": "You put $100 in a savings account that pays 5% interest a year, and you leave the interest in the account. After two years, how much will you have?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Exactly $110"
+    },
+    {
+      "id": "b",
+      "text": "More than $110"
+    },
+    {
+      "id": "c",
+      "text": "Less than $110"
+    },
+    {
+      "id": "d",
+      "text": "Exactly $100"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "In the first year you earn 5% of $100, which is $5, so your balance becomes $105. In the second year you earn 5% of $105, which is $5.25, giving $110.25. That extra 25 cents is compound interest: interest earned on interest already added. Over many years, that snowball is what makes saving early so powerful.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "The Power of Compound Interest: Calculations and Examples — Investopedia",
+      "url": "https://www.investopedia.com/terms/c/compoundinterest.asp",
+      "accessedAt": "2026-11-16"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-16",
+  "reviewNote": "Approved by the site owner in chat on 16 November 2026 (daily content batch 2026-11-16). AI-generated content; this records owner publication approval, not an independent specialist review."
+}
