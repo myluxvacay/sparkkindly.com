@@ -131,6 +131,21 @@ stores only its hash. The key goes in the `X-Agent-Key` header, never `Authoriza
 that one. Endpoints, all with a trailing slash: `GET /api/agent/brief/?world=`, `POST /api/agent/items/`,
 `GET /api/agent/items/<id>/`. Shapes are in `docs/item-format.md`. Limits: 60 requests a minute per agent, 200 KB bodies.
 
+**Publishing reports (the admin Publishing page).** Two narrow agent writes feed `/admin/publishing/`, one per job so
+neither can forge the other's part of a day's record; both are idempotent per batch date (a retry replaces the
+caller's own part and leaves the other part untouched). `POST /api/agent/publishing/report/` (reviewer-role key):
+`{date, published: [{world, kind, title, slug}], rejections: [{title, world, kind, reason}]}` — the reviewer job
+sends it after the batch's import is confirmed live. Every published entry carries a slug: the article slug, or
+for a quiz its content id (a quiz's items-table slug and public path use the id). Unlike the digest queue, which
+leaves quiz slugs null because the digest post does not link quizzes, the report always includes it so each
+entry links to its live page.
+`POST /api/agent/publishing/digest/` (promoter-role key): `{date, postUrl, externalId}` (either field may be
+omitted, not both; postUrl must be a facebook.com or fb.watch https URL) — the social job sends it once the batch's
+Facebook digest post exists, once per batch date the post covers, always with the full known state of the post:
+a later write replaces the date's digest fields as a whole, so a repost never leaves a mismatched URL/id pair.
+Days before these reports existed are shown on the page from the items table (import day, America/New_York),
+with no rejections, because they were never recorded anywhere the site can read.
+
 **Publishing.** Items the policy schedules publish when due. `npm run job:publish-due` runs the same job once by hand (the
 worker service that runs it on a schedule is Project 1B). Kids content, and anything in a world set to review mode, never
 reaches `scheduled` or `published` without `approved_by`. The database enforces this itself (constraint
