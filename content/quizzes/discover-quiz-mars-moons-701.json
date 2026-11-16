@@ -1,0 +1,38 @@
+{
+  "brand": "discover",
+  "correctOptionId": "c",
+  "difficulty": "easy",
+  "explanation": "Mars has two small moons, Phobos and Deimos — both named after the Greek gods of fear and panic who rode with Ares, the god of war. They are lumpy, cratered rocks, far smaller and rougher than Earth's single round Moon.",
+  "id": "discover-quiz-mars-moons-701",
+  "options": [
+    {
+      "id": "a",
+      "text": "None — Mars has no moons"
+    },
+    {
+      "id": "b",
+      "text": "One"
+    },
+    {
+      "id": "c",
+      "text": "Two"
+    },
+    {
+      "id": "d",
+      "text": "Four"
+    }
+  ],
+  "prompt": "How many moons does Mars have?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-16",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-05-03",
+  "sources": [
+    {
+      "accessedAt": "2026-11-16",
+      "title": "Mars Moons | NASA Science",
+      "url": "https://science.nasa.gov/mars/moons/"
+    }
+  ],
+  "reviewNote": "Approved by the site owner in chat on 16 November 2026 (daily content batch 2026-11-16). AI-generated content; this records owner publication approval, not an independent specialist review."
+}

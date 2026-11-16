@@ -1,0 +1,67 @@
+{
+  "id": "save-draft-2026-11-16-03",
+  "slug": "savings-thermometer-poster",
+  "brand": "save",
+  "contentType": "activity",
+  "title": "A Savings Thermometer Poster",
+  "description": "Turn a savings goal into a picture you can see every day: a big thermometer on the wall that fills up, one coloured-in step at a time, until the goal is reached.",
+  "publishedAt": "2026-11-16",
+  "updatedAt": "2026-11-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-16",
+  "hero": {
+    "src": "/images/focus.webp",
+    "alt": "A clear view ahead",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "saving",
+    "goals",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "The Power of Compound Interest: Calculations and Examples — Investopedia",
+      "url": "https://www.investopedia.com/terms/c/compoundinterest.asp",
+      "accessedAt": "2026-11-16"
+    }
+  ],
+  "factualClaimsReviewedAt": null,
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 16 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "How it works",
+      "paragraphs": [
+        "Pick one goal and one number: say, $200 for a new bike, or $500 for a holiday fund. Draw a tall thermometer shape on a large sheet of paper, mark it in ten equal steps, and write the amount next to each step. Stick it somewhere the household will see it every day — the fridge, or the hallway wall.",
+        "Every time money goes into the savings, colour in the matching part of the thermometer. A $20 deposit on a $200 goal fills two steps. Watching the red climb is the whole point: a goal you can see is a goal you keep feeding, and children who colour in the steps learn that saving is something you do, not just something adults talk about."
+      ]
+    },
+    {
+      "heading": "Keep it honest and visible",
+      "paragraphs": [
+        "Colour in only what has truly been saved, even when progress is slow. A half-filled thermometer that tells the truth is more motivating than a finished one that does not. If progress stalls for a while, add a small step — a coin jar, a no-spend day — rather than lowering the goal.",
+        "When the thermometer is full, celebrate the moment before you spend it: take a photo, mark the date, and then start a fresh poster for the next goal. The habit of seeing savings grow is worth more than any single target."
+      ]
+    }
+  ],
+  "takeaway": "A goal you can see is a goal you keep feeding.",
+  "fiction": false,
+  "materials": [
+    "A large sheet of paper or card",
+    "A marker pen and a ruler",
+    "Coloured pencils, crayons, or stickers",
+    "Sticky tape or magnets to hang the poster"
+  ],
+  "supervision": "A household member agrees the goal amount and the target date together before the poster goes up, and checks the coloured-in total against the real savings each week.",
+  "safetyNotes": [
+    "Keep the poster where only your household sees it if the amounts feel private",
+    "Colour in only what you have truly saved, so the picture stays honest",
+    "Use child-safe scissors if a younger helper cuts out decorations"
+  ],
+  "reviewNote": "Approved by the site owner in chat on 16 November 2026 (daily content batch 2026-11-16). AI-generated content; this records owner publication approval, not an independent specialist review."
+}

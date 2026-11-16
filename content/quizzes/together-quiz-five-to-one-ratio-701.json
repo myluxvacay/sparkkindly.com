@@ -1,0 +1,38 @@
+{
+  "brand": "together",
+  "correctOptionId": "b",
+  "difficulty": "medium",
+  "explanation": "Relationship researcher John Gottman found that in stable, happy relationships, positive interactions outnumber negative ones by about five to one. It is not about never arguing — it is about keeping the balance of kindness well in the black.",
+  "id": "together-quiz-five-to-one-ratio-701",
+  "options": [
+    {
+      "id": "a",
+      "text": "About one to one"
+    },
+    {
+      "id": "b",
+      "text": "About five to one"
+    },
+    {
+      "id": "c",
+      "text": "About ten to one"
+    },
+    {
+      "id": "d",
+      "text": "About twenty to one"
+    }
+  ],
+  "prompt": "Relationship researcher John Gottman found that in stable, happy relationships, positive interactions outnumber negative ones by roughly what ratio?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-16",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-05-05",
+  "sources": [
+    {
+      "accessedAt": "2026-11-16",
+      "title": "The Magic Relationship Ratio, According to Science | The Gottman Institute",
+      "url": "https://www.gottman.com/blog/the-magic-relationship-ratio/"
+    }
+  ],
+  "reviewNote": "Approved by the site owner in chat on 16 November 2026 (daily content batch 2026-11-16). AI-generated content; this records owner publication approval, not an independent specialist review."
+}

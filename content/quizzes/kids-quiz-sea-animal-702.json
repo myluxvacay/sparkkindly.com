@@ -1,0 +1,38 @@
+{
+  "id": "kids-quiz-sea-animal-702",
+  "scheduledDate": "2027-05-06",
+  "brand": "kids",
+  "prompt": "Which of these animals lives in the sea?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A dog"
+    },
+    {
+      "id": "b",
+      "text": "A blue whale"
+    },
+    {
+      "id": "c",
+      "text": "A robin"
+    },
+    {
+      "id": "d",
+      "text": "A rabbit"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The blue whale lives in the ocean. It is the largest animal that has ever lived on Earth — as long as about three school buses and as heavy as 200 tons — yet it eats tiny sea creatures called krill. Dogs, robins, and rabbits all live on land.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Animals 101: Blue Whales — National Geographic Education",
+      "url": "https://education.nationalgeographic.org/resource/animals-101-blue-whales/",
+      "accessedAt": "2026-11-16"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-16",
+  "reviewNote": "Approved by the site owner in chat on 16 November 2026 (daily content batch 2026-11-16). AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,38 @@
+{
+  "brand": "play",
+  "correctOptionId": "b",
+  "difficulty": "easy",
+  "explanation": "Hide and seek needs only players and somewhere to hide — no board, cards, ball or pieces of any kind. Chess needs a board and pieces, a jigsaw needs its pieces, and darts needs a board and darts.",
+  "id": "play-quiz-no-equipment-games-701",
+  "options": [
+    {
+      "id": "a",
+      "text": "Chess"
+    },
+    {
+      "id": "b",
+      "text": "Hide and seek"
+    },
+    {
+      "id": "c",
+      "text": "A jigsaw puzzle"
+    },
+    {
+      "id": "d",
+      "text": "Darts"
+    }
+  ],
+  "prompt": "Which of these games can you play with no equipment at all — no board, no cards, no ball?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-16",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-05-01",
+  "sources": [
+    {
+      "accessedAt": "2026-11-16",
+      "title": "Hide-and-seek | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hide-and-seek"
+    }
+  ],
+  "reviewNote": "Approved by the site owner in chat on 16 November 2026 (daily content batch 2026-11-16). AI-generated content; this records owner publication approval, not an independent specialist review."
+}
