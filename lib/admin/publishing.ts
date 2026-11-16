@@ -46,7 +46,7 @@ export type PublishingGrid = {
   total: number; // rows matching the filters before the cap
   publishedCount: number;
   heldCount: number;
-  days: PublishingDayMeta[]; // the days present in `rows`, newest first
+  days: PublishingDayMeta[]; // reported days, digest days and days present in `rows`, newest first
   range: string; // the effective range key
   window: PublishingWindow; // the effective window applied
 };
