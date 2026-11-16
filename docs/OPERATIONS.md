@@ -105,6 +105,27 @@ given `--allow-production`, which is a cut-over step that needs a verified backu
 tunnel (`ssh -N -L 55432:127.0.0.1:5432 root@2.25.121.2`) with `DATABASE_URL` built from
 `/opt/sparkkindly/shared/db-staging.pass`, and close the tunnel afterwards.
 
+**Automated library publishing (owner standing authorization, 16 November 2026).** The owner instructed in chat that
+daily content publishing is fully automated and that he runs no server commands: the daily content job drafts the
+batch, a reviewer agent critically checks it (schema, duplicates, sources, quiz answers, Kids safety, hero
+relevance) and is the quality gate in place of per-batch owner approval, then commits the approved items — together
+with their entries in `docs/editorial-approval.json`, fingerprinted with `lib/editorial-approval` over the final
+published content — and pushes to `main`. The Deploy workflow diffs the push: when `content/` or `public/images/`
+changed it adds a `PUBLISH_CONTENT` marker to the release (the library snapshot and the bundled
+`content-publish.mjs` ship in every release). After the release passes its health gate, the receiver
+(`/opt/sparkkindly/bin/deploy-receive.sh`) runs the release's `content-publish.sh` from the new release with that
+target's env file loaded — staging gets no flag, prod gets `--allow-production`, mirroring the manual commands it
+replaces (`content:import` then `content:update-heroes`, same library code; see `scripts/content-publish.ts`). The
+healthy release is never rolled back for a content failure; the step exits non-zero so the workflow run shows red,
+and because both steps are idempotent the retry is simply re-running the Deploy workflow (Actions → Deploy → Run
+workflow on the branch) or pushing the next content change. Hero image files under `public/images/` reach the site
+through the deploy itself; the publish step only refreshes the database rows. **One-time install:** the receiver
+change reaches the VM only when root re-installs it once —
+`install -m 755 -o root -g root deploy/bin/deploy-receive.sh /opt/sparkkindly/bin/deploy-receive.sh` from a current
+checkout; until then, releases carrying the marker deploy normally and the publish step is silently skipped. The
+reviewer agent pauses entirely while a file named `AUTOMATION_PAUSED` exists in the goal workspace's
+`hidden_files/` folder.
+
 **Agents.** `npm run agent:create -- <name> [--world <slug>]` (no `--world` makes the master agent) prints a key once and
 stores only its hash. The key goes in the `X-Agent-Key` header, never `Authorization`, because staging's basic auth uses
 that one. Endpoints, all with a trailing slash: `GET /api/agent/brief/?world=`, `POST /api/agent/items/`,

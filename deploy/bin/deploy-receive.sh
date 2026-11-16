@@ -73,6 +73,28 @@ if [ "$healthy" -eq 1 ]; then
     [ "$release" = "$keep_current" ] || [ "$release" = "$keep_previous" ] || rm -rf "${ROOT:?}/releases/$release"
   done
   echo "Healthy: $TARGET $SHA7"
+
+  # 5. Automated content publish (owner standing authorization, 16 November 2026 — see docs/OPERATIONS.md).
+  #    When the release carries the PUBLISH_CONTENT marker, the deploy workflow saw content/ or public/images/
+  #    change in this push, so import the new library items and refresh hero images into this target's database.
+  #    Runs exactly like the migration hook (release directory, this target's env file loaded), except the
+  #    production flag is passed only for the prod target, mirroring the manual commands it replaces.
+  #    The release above is already healthy and is NOT rolled back if this step fails: both steps are
+  #    idempotent, so the next content push (or a manual Deploy workflow re-run) retries them. A failure still
+  #    exits non-zero so the workflow run shows red and the failure cannot pass silently.
+  if [ -f "$NEW/PUBLISH_CONTENT" ]; then
+    echo "Content changes in this release; publishing library content to the $TARGET database..."
+    if [ "$TARGET" = "prod" ]; then
+      CONTENT_PUBLISH_CMD=(bash ./content-publish.sh --allow-production)
+    else
+      CONTENT_PUBLISH_CMD=(bash ./content-publish.sh)
+    fi
+    if ! (cd "$NEW" && set -a && . "/opt/sparkkindly/shared/$ENVFILE" && set +a && "${CONTENT_PUBLISH_CMD[@]}"); then
+      echo "CONTENT PUBLISH FAILED for $TARGET: the release above is live and healthy, but the library import did not complete. It is idempotent — re-run the Deploy workflow or push the next content change to retry." >&2
+      exit 1
+    fi
+    echo "Content publish complete for $TARGET."
+  fi
 else
   echo "Health check failed, rolling back" >&2
   if [ -n "$OLD" ]; then
