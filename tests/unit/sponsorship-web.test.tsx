@@ -65,20 +65,20 @@ async function item(audience = 'adults', world = 'grow', topic?: string): Promis
 const FIXTURE_CATEGORIES = ['finance-education', 'education', 'software', 'services', 'health-and-wellbeing-general', 'travel', 'food', 'other-approved'];
 let fixtureCategory = 0;
 const fixtureSponsors = new Map<string, string>();
-async function sponsorId(name = 'Acme Money'): Promise<string> {
+async function sponsorId(name = 'Acme Money', category?: string): Promise<string> {
   const existing = fixtureSponsors.get(name);
   if (existing) return existing;
-  const r = await act('sponsor.create', { name, link: LINK, category: FIXTURE_CATEGORIES[fixtureCategory++ % FIXTURE_CATEGORIES.length], confirmed: 'on' });
+  const r = await act('sponsor.create', { name, link: LINK, category: category ?? FIXTURE_CATEGORIES[fixtureCategory++ % FIXTURE_CATEGORIES.length], confirmed: 'on' });
   expect(r).toMatchObject({ ok: true, code: 'sponsor_created' });
   const id = String((await db.query<{ id: number }>('SELECT max(id) AS id FROM sponsors')).rows[0].id);
   fixtureSponsors.set(name, id);
   return id;
 }
 
-async function topicSponsorship(): Promise<{ topic: string; id: number }> {
+async function topicSponsorship(sponsorName?: string): Promise<{ topic: string; id: number }> {
   const topic = `sw-topic-${n++}`;
   await db.query("INSERT INTO topics (slug, name) VALUES ($1, 'Money')", [topic]);
-  const r = await act('sponsorship.attach', { sponsor: await sponsorId(), target: 'topic', ref: topic, label: 'Budget with Acme', kind: 'supported' });
+  const r = await act('sponsorship.attach', { sponsor: await sponsorId(sponsorName), target: 'topic', ref: topic, label: 'Budget with Acme', kind: 'supported' });
   expect(r).toMatchObject({ ok: true, code: 'sponsorship_attached' });
   return { topic, id: (await db.query<{ id: number }>('SELECT max(id) AS id FROM sponsorships')).rows[0].id };
 }
@@ -176,7 +176,7 @@ describe('clickRequest', () => {
   });
 
   it('a stored non-ASCII link becomes an ASCII Location header (never a thrown header error)', async () => {
-    const { id } = await topicSponsorship();
+    const { id } = await topicSponsorship('Non ASCII Books');
     await db.query("UPDATE sponsors SET link = 'https://bücher.example/ä' WHERE id = (SELECT sponsor_id FROM sponsorships WHERE id = $1)", [id]);
     const r = await clickRequest(go(id, undefined, '203.0.113.77'), { db, now: NOW }, String(id));
     expect(r.status).toBe(302);
@@ -205,13 +205,17 @@ describe('clickRequest', () => {
 
 describe('admin actions', () => {
   it('sponsor.create records the confirmation in the audit row', async () => {
-    await sponsorId('Audited Books');
-    const created = (await db.query<{ category: string }>('SELECT category FROM sponsors WHERE name = $1', ['Audited Books'])).rows[0];
+    await sponsorId('Audited Books', 'software');
     const a = (await db.query<{ action: string; detail: Record<string, unknown> }>('SELECT action, detail FROM audit_log ORDER BY id DESC LIMIT 1')).rows[0];
     expect(a.action).toBe('sponsor.create');
-    expect(a.detail).toMatchObject({ name: 'Audited Books', category: created.category, confirmed: true });
+    expect(a.detail).toMatchObject({ name: 'Audited Books', category: 'software', confirmed: true });
     const row = (await db.query<{ confirmed_at: Date }>('SELECT confirmed_at FROM sponsors WHERE name = $1', ['Audited Books'])).rows[0];
     expect(row.confirmed_at).toEqual(NOW);
+  });
+
+  it('a second sponsor in a taken category is refused with the category code (one per category)', async () => {
+    expect(await act('sponsor.create', { name: 'First Travel', link: LINK, category: 'travel', confirmed: 'on' })).toMatchObject({ ok: true, code: 'sponsor_created' });
+    expect(await act('sponsor.create', { name: 'Second Travel', link: LINK, category: 'travel', confirmed: 'on' })).toMatchObject({ ok: false, status: 400, code: 'sponsor_category_taken' });
   });
 
   it('refuses an excluded or unknown category, a missing confirmation and an unsafe link', async () => {

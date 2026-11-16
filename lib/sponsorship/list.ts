@@ -9,7 +9,7 @@ import type { Db } from '@/lib/db';
 import { sponsorViewerForSession, viewerMaySeeSponsorship } from './eligibility';
 import { categoryLabel } from './rules';
 
-export type PublicSponsor = { name: string; link: string; category: string; categoryLabel: string };
+export type PublicSponsor = { id: number; name: string; link: string; category: string; categoryLabel: string };
 
 // Null means "this viewer does not see the list at all" (flag off, or a viewer sponsorship is hidden from);
 // an empty array means the list is visible and simply has no sponsors yet.
@@ -21,8 +21,8 @@ export async function listPublicSponsors(db: Db, token: string | undefined, now:
   if (!viewerMaySeeSponsorship(viewer)) {
     return null;
   }
-  const r = await db.query<{ name: string; link: string; category: string }>(
-    `SELECT name, link, category FROM sponsors
+  const r = await db.query<{ id: number; name: string; link: string; category: string }>(
+    `SELECT id, name, link, category FROM sponsors
      WHERE confirmed_at IS NOT NULL AND category IS NOT NULL
      ORDER BY category, name`,
   );

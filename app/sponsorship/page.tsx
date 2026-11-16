@@ -62,7 +62,7 @@ export default async function Page() {
               {sponsors.length ? (
                 <ul>
                   {sponsors.map((s) => (
-                    <li key={s.name}>
+                    <li key={s.id}>
                       <a href={s.link} rel="sponsored noopener noreferrer" target="_blank">
                         {s.name}
                       </a>{' '}
