@@ -1,4 +1,4 @@
-name: Verify static MVP
+name: Verify SparkKindly platform
 on: [push, pull_request]
 permissions:
   contents: read
