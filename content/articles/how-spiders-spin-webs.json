@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-103",
+  "slug": "how-spiders-spin-webs",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How spiders spin and use their webs",
+  "description": "Spider silk starts as liquid protein and is drawn into threads for webs, lifelines and egg cases — each type with its own job.",
+  "publishedAt": "2026-10-25",
+  "updatedAt": "2026-10-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Spider web",
+      "url": "https://en.wikipedia.org/wiki/Spider_web",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Spider silk",
+      "url": "https://en.wikipedia.org/wiki/Spider_silk",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Silk made to order",
+      "paragraphs": [
+        "Spider silk begins as a liquid protein stored in glands inside the spider's abdomen. It is drawn out through tiny spigots on organs called spinnerets at the rear of the body, and the pulling itself turns the liquid into a solid thread — the spider literally spins its building material into existence.",
+        "A spider is not limited to one silk. Many species make up to seven kinds: tough silk for the web's frame, stretchy silk for its core, sticky silk for the catching spiral, silk for wrapping prey, silk for egg cases, and a dragline safety rope the spider trails wherever it walks."
+      ]
+    },
+    {
+      "heading": "Building the trap",
+      "paragraphs": [
+        "An orb-weaver builds its wheel-shaped web in under an hour, often at dusk. It lays the frame and spokes with dry silk, then adds a temporary spiral to hold the shape, then the sticky catching spiral — eating the temporary one as it goes.",
+        "The finished web is a trap tuned to its owner. The spider waits at the hub or nearby, feet on signal threads, feeling for the vibration of a struggling insect. Many orb-weavers eat the whole web at dawn and rebuild it the next night, recycling the protein."
+      ]
+    },
+    {
+      "heading": "Not all spiders wait",
+      "paragraphs": [
+        "Webs are only one strategy. Jumping spiders hunt by sight and stalk their prey, using silk only as a safety line. Wolf spiders chase prey down on the ground. Trapdoor spiders build a camouflaged burrow with a silk hinge and ambush whatever walks past.",
+        "Whatever the strategy, silk itself is the marvel: by weight it is stronger than steel and can stretch far without snapping, which is why engineers still study how spiders make it at room temperature, from flies and water."
+      ]
+    }
+  ],
+  "takeaway": "Spiders produce several kinds of silk from spinnerets, building webs that trap prey, while using other silks as lifelines, wrappings and egg cases.",
+  "fiction": false
+}

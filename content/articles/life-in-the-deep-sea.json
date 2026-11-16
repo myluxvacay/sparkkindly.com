@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-104",
+  "slug": "life-in-the-deep-sea",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Life in the deep sea, where sunlight never reaches",
+  "description": "Below the sunlit surface lies the largest habitat on Earth — cold, dark and pressurised, yet full of life.",
+  "publishedAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Deep sea",
+      "url": "https://en.wikipedia.org/wiki/Deep_sea",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Hydrothermal vent",
+      "url": "https://en.wikipedia.org/wiki/Hydrothermal_vent",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The dark majority of the ocean",
+      "paragraphs": [
+        "Sunlight fades quickly in seawater. By about 200 metres down only a dim blue twilight remains, and below 1,000 metres the water is completely dark — yet this black, cold region is the largest habitat on Earth, holding most of the ocean's volume.",
+        "Conditions are harsh: temperatures hover a few degrees above freezing, and pressure grows by roughly one atmosphere every ten metres, reaching hundreds of times surface pressure in the deep trenches. Still, life is everywhere — it has simply adapted to a world without sun."
+      ]
+    },
+    {
+      "heading": "Dinner falls from above",
+      "paragraphs": [
+        "Most deep-sea food is imported. A slow rain of debris — dead plankton, waste and bodies, called marine snow — drifts down from the sunlit surface, and deep animals graze on it or on each other. Meals are scarce, so many deep fish have huge mouths, expandable stomachs and slow metabolisms.",
+        "Light still matters, but the animals make their own: bioluminescence is everywhere in the deep sea. The anglerfish dangles a glowing lure grown from its own fin; other fish use flashes to signal, startle predators or hide their silhouette."
+      ]
+    },
+    {
+      "heading": "Oases built on chemicals",
+      "paragraphs": [
+        "In 1977 scientists found something nobody expected: around hydrothermal vents, where superheated water rich in chemicals pours from the seabed, whole communities thrive in total darkness — giant tube worms, clams and crabs, none of them fed by sunlight.",
+        "Their foundation is bacteria that make food from chemicals such as hydrogen sulfide, a process called chemosynthesis. The vent animals farm or host these bacteria, proving that ecosystems can run on the Earth's chemistry alone — a clue for where life might exist on other worlds."
+      ]
+    }
+  ],
+  "takeaway": "Deep-sea life survives without sunlight on food falling from above or, near vents, on energy from chemicals — in cold, darkness and crushing pressure.",
+  "fiction": false
+}

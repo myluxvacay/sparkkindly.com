@@ -1,0 +1,38 @@
+{
+  "id": "most-bacteria-harmless-585",
+  "scheduledDate": "2027-04-08",
+  "brand": "discover",
+  "prompt": "Which statement about bacteria is true?",
+  "options": [
+    {
+      "id": "a",
+      "text": "All bacteria cause disease"
+    },
+    {
+      "id": "b",
+      "text": "Bacteria are a kind of virus"
+    },
+    {
+      "id": "c",
+      "text": "Bacteria can only live inside people"
+    },
+    {
+      "id": "d",
+      "text": "Most bacteria are harmless, and many are helpful"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Only a small fraction of bacteria cause illness. The rest are harmless or useful, recycling nutrients, fermenting food and helping digestion.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Wikipedia: Bacteria",
+      "url": "https://en.wikipedia.org/wiki/Bacteria",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

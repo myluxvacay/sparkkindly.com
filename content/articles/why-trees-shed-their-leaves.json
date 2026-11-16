@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-110",
+  "slug": "why-trees-shed-their-leaves",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why trees shed their leaves for winter",
+  "description": "Broad leaves are a liability in winter — trees cut their losses, reclaim the nutrients and drop them before the cold arrives.",
+  "publishedAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Deciduous",
+      "url": "https://en.wikipedia.org/wiki/Deciduous",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Abscission",
+      "url": "https://en.wikipedia.org/wiki/Abscission",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Leaves are summer equipment",
+      "paragraphs": [
+        "A broad, thin leaf is a superb solar panel, but it is also fragile and thirsty: it loses water constantly and is easily killed by frost. In winter, when soil water may be frozen and storms batter bare branches, keeping leaves would cost a tree more than they earn.",
+        "So deciduous trees — oaks, maples, birches — treat leaves as disposable summer equipment. As days shorten in autumn, the tree begins an orderly shutdown, recovering what it can before letting go."
+      ]
+    },
+    {
+      "heading": "Salvage first, then cut",
+      "paragraphs": [
+        "The tree first withdraws valuable nutrients from each leaf, including the green pigment chlorophyll. As the green fades, yellow and orange pigments that were there all along are unmasked — autumn colour is partly a salvage operation revealed.",
+        "Then a layer of corky cells, the abscission layer, forms across the base of the leaf stalk, weakening it and sealing the tree's side against water loss and infection. A gust of wind finishes the job, and the leaf falls, leaving a sealed scar."
+      ]
+    },
+    {
+      "heading": "Nothing wasted",
+      "paragraphs": [
+        "The fallen leaves are not litter but a resource: they insulate the soil, shelter insects and worms, and rot down into food for the tree's own roots — a slow refund of minerals. Gardeners who rake every leaf away are exporting the tree's savings.",
+        "Evergreens play the opposite strategy. Pines and hollies keep narrow, waxy, tough leaves that sip water and shrug off frost, ready to photosynthesise on any mild winter day — slower, steadier, and in no need of an annual rebuild. Their leaves are pre-fitted for the slow lane too: built to last several years, then dropped a few at a time rather than all at once."
+      ]
+    }
+  ],
+  "takeaway": "Deciduous trees shed leaves to survive winter's cold and drought, first reclaiming nutrients, then sealing off each leaf with a corky abscission layer.",
+  "fiction": false
+}

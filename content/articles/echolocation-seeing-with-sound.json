@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-101",
+  "slug": "echolocation-seeing-with-sound",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Echolocation: how bats and dolphins see with sound",
+  "description": "Bats and dolphins navigate in darkness by shouting at the world and listening to the echoes that bounce back.",
+  "publishedAt": "2026-10-20",
+  "updatedAt": "2026-10-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "oceans"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Animal echolocation",
+      "url": "https://en.wikipedia.org/wiki/Animal_echolocation",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Bat",
+      "url": "https://en.wikipedia.org/wiki/Bat",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Shouting to see",
+      "paragraphs": [
+        "Echolocation is a way of sensing the world with sound. The animal makes a short, sharp click and listens to the echo. The time the echo takes to return tells it how far away the object is; differences between its two ears give direction; the echo's tone reveals size and texture.",
+        "Most bats call in ultrasound, at frequencies far above human hearing — which is why a summer evening can be full of hunting bats in apparent silence. As a bat closes on a moth, its calls speed up into a rapid buzz, updating the picture many times a second. In the final moment before contact, that buzz can reach hundreds of calls per second."
+      ]
+    },
+    {
+      "heading": "Dolphins and the melon",
+      "paragraphs": [
+        "Toothed whales and dolphins echolocate underwater, where sound travels well but light fades fast. A dolphin makes clicks in its nasal passages and focuses them into a beam using the melon, a fatty dome on its forehead that works like a lens for sound.",
+        "The returning echoes are picked up through the jaw and give a remarkably detailed picture: dolphins can find a small fish buried in sand, and can tell apart objects that differ only in the material they are made from."
+      ]
+    },
+    {
+      "heading": "Countermeasures in the dark",
+      "paragraphs": [
+        "The system is so effective that prey have evolved defences. Many moths have ears tuned exactly to bat frequencies, and dive or loop when they hear a call. Some tiger moths answer with clicks of their own that jam the bat's sonar, scrambling its picture.",
+        "Humans borrowed the idea: sonar on ships and ultrasound scans in hospitals both work by sending out sound and reading the echoes — echolocation, rebuilt in electronics."
+      ]
+    }
+  ],
+  "takeaway": "Echolocating animals emit clicks and read the returning echoes to judge distance, direction and texture, building a sound-picture of their surroundings.",
+  "fiction": false
+}

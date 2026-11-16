@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-109",
+  "slug": "your-microbiome",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Your microbiome: the trillions of microbes that live on you",
+  "description": "You are an ecosystem: trillions of bacteria, fungi and viruses live on your skin and in your gut, and many work for you.",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Human microbiome",
+      "url": "https://en.wikipedia.org/wiki/Human_microbiome",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Gut microbiota",
+      "url": "https://en.wikipedia.org/wiki/Gut_microbiota",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "You are an ecosystem",
+      "paragraphs": [
+        "Your body is home to trillions of microorganisms — bacteria, fungi and viruses — collectively called the microbiome. They live on your skin, in your mouth and above all in your gut. By cell count they are roughly as numerous as your own cells: you are about half microbial.",
+        "Each body site has its own community, adapted to local conditions like a biome. The dry forearm, the oily forehead and the warm, dark gut host quite different species, and your mix is as individual as a fingerprint."
+      ]
+    },
+    {
+      "heading": "What the tenants do for you",
+      "paragraphs": [
+        "Gut microbes earn their keep. They digest fibres your own enzymes cannot touch, releasing nutrients and producing vitamins, including vitamin K and some B vitamins. They also crowd out harmful germs simply by occupying the space and food first.",
+        "They tutor the immune system too. Exposure to the right microbes early in life helps the immune system learn what to attack and what to tolerate — one reason scientists link very sterile childhoods with higher rates of allergy."
+      ]
+    },
+    {
+      "heading": "Handle with care",
+      "paragraphs": [
+        "The community is resilient but not invincible. Antibiotics, taken for an infection, also kill helpful gut bacteria, and the community can take weeks to recover — sometimes allowing troublemakers to bloom in the gap.",
+        "Your microbiome is assembled from birth onwards, shaped by diet, environment and the people and animals around you. Feeding it fibre — vegetables, beans, whole grains — feeds the species that feed you back. Researchers are now testing whether carefully chosen microbes can be given as medicine, seeding or restoring communities that have gone wrong. It is a young science, and its boldest claims are still being tested."
+      ]
+    }
+  ],
+  "takeaway": "The microbiome is the community of trillions of microbes living on and in the body; they aid digestion, make vitamins and help train the immune system.",
+  "fiction": false
+}

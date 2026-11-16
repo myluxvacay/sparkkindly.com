@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-98",
+  "slug": "taste-and-smell-your-chemical-senses",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Taste and smell: your two chemical senses",
+  "description": "Taste and smell both detect chemicals — one in food, one in air — and together they create what you experience as flavour.",
+  "publishedAt": "2026-10-13",
+  "updatedAt": "2026-10-13",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Taste",
+      "url": "https://en.wikipedia.org/wiki/Taste",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Olfaction",
+      "url": "https://en.wikipedia.org/wiki/Olfaction",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Five tastes on the tongue",
+      "paragraphs": [
+        "Taste is a chemical sense: your tongue samples molecules dissolved in saliva and reports what it finds. It detects just five basic qualities — sweet, sour, salty, bitter and umami, the savoury taste of foods like cheese, mushrooms and cooked meat.",
+        "The detectors are taste buds, clusters of cells mostly packed into bumps on the tongue, each bud living only a week or two before being replaced. There are several thousand of them, and contrary to the famous tongue map, all regions can detect all five tastes."
+      ]
+    },
+    {
+      "heading": "Smell does the detail work",
+      "paragraphs": [
+        "Smell is the same kind of sense pointed at the air. High in the nose, a patch of receptors catches odor molecules, and humans can distinguish thousands of different smells — far more variety than the tongue's five notes.",
+        "Smell reaches food by two routes: through the nostrils as you sniff, and from the back of the mouth as you chew, which is why chewing releases waves of flavour. What you call the taste of a strawberry is mostly its smell, plus sweet and sour from the tongue. Pinching your nose while eating a jelly sweet is the classic test: without smell, only its sweetness survives."
+      ]
+    },
+    {
+      "heading": "Why a cold ruins dinner",
+      "paragraphs": [
+        "Block the nose with a cold and smell drops away, leaving only the tongue's five basics. Food becomes flat and dull — a live demonstration that most of flavour is smell. Chefs and perfumers both exploit the partnership, building experiences mainly for the nose.",
+        "The two senses are also guards. Bitter tastes warn of many poisons, sourness flags unripe or spoiled food, and the smell of smoke or gas can wake you and save your life."
+      ]
+    }
+  ],
+  "takeaway": "Taste detects five basic qualities on the tongue, while smell detects thousands of airborne chemicals; flavour is the brain's blend of both.",
+  "fiction": false
+}

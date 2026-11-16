@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-108",
+  "slug": "why-fireflies-glow",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why fireflies glow (bioluminescence)",
+  "description": "A firefly's lantern runs a chemical reaction that turns energy into light with almost no heat, in each species' own code.",
+  "publishedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Firefly",
+      "url": "https://en.wikipedia.org/wiki/Firefly",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Bioluminescence",
+      "url": "https://en.wikipedia.org/wiki/Bioluminescence",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Cold light from chemistry",
+      "paragraphs": [
+        "A firefly is a beetle with a lantern in its abdomen. The light comes from a chemical reaction: a substance called luciferin combines with oxygen, guided by an enzyme called luciferase, and the energy released comes out as light rather than heat.",
+        "The reaction is astonishingly efficient — nearly all the energy becomes light, where an old filament bulb wasted most of its energy as heat. Because the glow is cold, the firefly can carry its lantern inside its own body without cooking itself."
+      ]
+    },
+    {
+      "heading": "Flashing in code",
+      "paragraphs": [
+        "The firefly controls its light by controlling the oxygen supply to the lantern, switching the glow on and off in precise patterns. Each species has its own code — a number of flashes, a rhythm, a flight path drawn in light — and males advertise while females answer from the grass.",
+        "The conversation is species-specific for good reason: a female only replies to the pattern of her own kind. Even the larvae glow, probably as a warning — fireflies taste bitter, and the light tells predators to remember the lesson."
+      ]
+    },
+    {
+      "heading": "A signal that can be faked",
+      "paragraphs": [
+        "Not every answering flash is honest. Females of the firefly genus Photuris cannot make some defensive chemicals themselves, so they imitate the reply flashes of other species. When a hopeful male lands beside them, they eat him — and absorb his protective chemicals.",
+        "Artificial light is now jamming the whole conversation. In brightly lit areas, fireflies struggle to see each other's signals, one reason their numbers are falling in many places. A dark garden is a genuine help. Where skies stay dark, a summer field can hold thousands of these conversations at once, each pair flashing in the black."
+      ]
+    }
+  ],
+  "takeaway": "Fireflies glow by mixing a fuel called luciferin with oxygen under the control of an enzyme, producing cold light used as a mating signal.",
+  "fiction": false
+}

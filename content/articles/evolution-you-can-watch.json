@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-106",
+  "slug": "evolution-you-can-watch",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Evolution you can watch: moths, finches and bacteria",
+  "description": "Evolution is usually slow, but with strong selection it can be watched in years — in moths, finches and hospital bacteria.",
+  "publishedAt": "2026-11-01",
+  "updatedAt": "2026-11-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Peppered moth evolution",
+      "url": "https://en.wikipedia.org/wiki/Peppered_moth_evolution",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Darwin's finches",
+      "url": "https://en.wikipedia.org/wiki/Darwin%27s_finches",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Change, measured in years",
+      "paragraphs": [
+        "Evolution — change in the inherited traits of a population over generations — is usually too slow to watch. But when the environment changes suddenly and selection is strong, it can move within a human lifetime, and scientists have measured it happening.",
+        "The ingredients are simple: variation within a population, traits that pass to offspring, and some individuals surviving to breed more than others. Given those, the population's average traits shift — no plan or direction required."
+      ]
+    },
+    {
+      "heading": "Moths and finches",
+      "paragraphs": [
+        "In nineteenth-century England, the peppered moth was mostly pale and speckled, matching lichen-covered bark. As factory soot blackened the trees, a dark form — previously rare — was better camouflaged from birds and became common. When clean-air laws let the bark pale again, the pale form returned.",
+        "On the Galápagos, researchers Peter and Rosemary Grant measured Darwin's finches for decades. After a severe drought in 1977, only birds with deeper beaks could crack the surviving hard seeds — and the next generation's beaks were measurably deeper. Evolution, recorded with calipers."
+      ]
+    },
+    {
+      "heading": "The fastest evolution on Earth",
+      "paragraphs": [
+        "Bacteria evolve fastest of all, because their generations last minutes and their populations are astronomical. Antibiotics impose brutal selection: the few bacteria with resistance genes survive, multiply, and within years a drug that once worked can fail.",
+        "That is evolution with consequences for everyone, and it follows the same rules as the moths and finches — variation, inheritance and selection. Watching it happen has turned evolution from a historical inference into a measurable, ongoing process. The same watching brief now runs in real time in hospitals and on farms, where resistance to drugs and pesticides is tracked season by season, almost like weather."
+      ]
+    }
+  ],
+  "takeaway": "When conditions change fast, evolution can be measured within years: moth colour, finch beaks and bacterial drug resistance have all shifted in living memory.",
+  "fiction": false
+}

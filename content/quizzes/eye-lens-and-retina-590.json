@@ -1,0 +1,38 @@
+{
+  "id": "eye-lens-and-retina-590",
+  "scheduledDate": "2027-04-13",
+  "brand": "discover",
+  "prompt": "In the eye, which part changes shape to focus light sharply onto the retina?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The iris"
+    },
+    {
+      "id": "b",
+      "text": "The lens"
+    },
+    {
+      "id": "c",
+      "text": "The optic nerve"
+    },
+    {
+      "id": "d",
+      "text": "The pupil"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The cornea does most of the bending of light, but the lens fine-tunes it: small muscles make it rounder for near objects and flatter for distant ones.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Wikipedia: Human eye",
+      "url": "https://en.wikipedia.org/wiki/Human_eye",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

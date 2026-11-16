@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-96",
+  "slug": "how-your-eyes-turn-light-into-sight",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How your eyes turn light into sight",
+  "description": "Your eye is a camera that focuses light onto a living sensor — and the picture it forms there is upside down.",
+  "publishedAt": "2026-10-09",
+  "updatedAt": "2026-10-09",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Human eye",
+      "url": "https://en.wikipedia.org/wiki/Human_eye",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Retina",
+      "url": "https://en.wikipedia.org/wiki/Retina",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A camera made of living tissue",
+      "paragraphs": [
+        "The eye works like a camera. Light enters through the clear cornea at the front, which does most of the bending of the rays, then passes through the pupil — the hole whose size the coloured iris adjusts, widening in dim light and narrowing in bright light.",
+        "Behind the pupil sits the lens. It fine-tunes the focus: tiny muscles pull it flatter for distant objects and let it round up for near ones, so the image lands sharply on the back of the eye."
+      ]
+    },
+    {
+      "heading": "The retina catches the picture",
+      "paragraphs": [
+        "The image is projected onto the retina, a thin layer of light-sensitive cells — and it arrives upside down. The retina holds two kinds of sensors: rods, which work in dim light but see no colour, and cones, which need brighter light and come in three types for colour vision.",
+        "Each sensor converts light into electrical signals that travel down the optic nerve to the brain. Where the nerve leaves the eye there are no sensors at all, leaving a blind spot your brain silently fills in."
+      ]
+    },
+    {
+      "heading": "The brain builds the view",
+      "paragraphs": [
+        "Seeing is done by the brain, not the eye. It flips the upside-down image the right way up, merges the slightly different pictures from two eyes into one with depth, and corrects for colour under different lighting.",
+        "That construction work explains optical illusions: they are cases where the brain's shortcuts — assuming light comes from above, or that lines continue — are fooled by a drawing designed to trip them. It also explains why you never notice your blind spot, and why two eyes beat one: each covers the other's gaps, while their overlap measures the world in depth."
+      ]
+    }
+  ],
+  "takeaway": "The cornea and lens focus light onto the retina, where rods and cones turn it into nerve signals; the brain assembles those signals into sight.",
+  "fiction": false
+}

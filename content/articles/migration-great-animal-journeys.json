@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-102",
+  "slug": "migration-great-animal-journeys",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Migration: the great journeys animals make",
+  "description": "Each year billions of animals travel vast distances between feeding and breeding grounds — and find their way unerringly.",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Animal migration",
+      "url": "https://en.wikipedia.org/wiki/Animal_migration",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Bird migration",
+      "url": "https://en.wikipedia.org/wiki/Bird_migration",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Journeys written into the year",
+      "paragraphs": [
+        "Migration is the regular, seasonal movement of animals between two habitats — typically to feed where food is plentiful and breed where conditions suit their young. It is one of the great spectacles of nature: billions of birds, fish, insects and mammals on the move each year.",
+        "The champion is the Arctic tern, which flies from the Arctic to the Antarctic and back each year — a round trip of roughly 70,000 kilometres, chasing an endless summer and living, in effect, through two summers a year."
+      ]
+    },
+    {
+      "heading": "How they find the way",
+      "paragraphs": [
+        "Migrants navigate with a toolkit no single sense explains. Birds use the Sun and stars as compasses, follow coastlines, rivers and other landmarks, and can sense Earth's magnetic field — an inbuilt compass that works even under cloud. Salmon add smell, homing to the exact river where they were born.",
+        "The fuel is fat. Before departure, migrants gorge and may nearly double their weight; some small birds then fly for days without stopping. Monarch butterflies do the trip in relays — no single butterfly makes the whole return journey; its grandchildren finish it."
+      ]
+    },
+    {
+      "heading": "Why the effort pays",
+      "paragraphs": [
+        "Migration is dangerous and exhausting, so the payoff must be large: rich seasonal food, safer breeding grounds, escape from winter cold or drought. The Serengeti's wildebeest herds — over a million animals — follow the rains and the fresh grass they bring.",
+        "The journeys also connect ecosystems. Salmon carry ocean nutrients into forests; migrant birds move seeds and insects' eggs between continents. A migrant is a thread stitching distant habitats together. Break one link in the route — a drained wetland, a blocked river — and the whole journey can fail."
+      ]
+    }
+  ],
+  "takeaway": "Migration is the seasonal movement of animals between habitats, guided by the Sun, stars, landmarks and Earth's magnetic field, and powered by stored fat.",
+  "fiction": false
+}

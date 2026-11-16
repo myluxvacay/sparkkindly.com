@@ -1,0 +1,38 @@
+{
+  "id": "nucleus-stores-dna-578",
+  "scheduledDate": "2027-04-01",
+  "brand": "discover",
+  "prompt": "Which part of a cell contains its DNA and acts as the control centre?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The mitochondrion"
+    },
+    {
+      "id": "b",
+      "text": "The nucleus"
+    },
+    {
+      "id": "c",
+      "text": "The cell membrane"
+    },
+    {
+      "id": "d",
+      "text": "The ribosome"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The nucleus stores the cell's DNA and coordinates its activities; mitochondria release energy and ribosomes build proteins instead.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Wikipedia: Cell nucleus",
+      "url": "https://en.wikipedia.org/wiki/Cell_nucleus",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

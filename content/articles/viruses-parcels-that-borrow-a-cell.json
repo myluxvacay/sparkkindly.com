@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-92",
+  "slug": "viruses-parcels-that-borrow-a-cell",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Viruses: parcels that borrow a cell to copy themselves",
+  "description": "A virus is not a cell but a parcel of instructions in a protein coat — it can only multiply by borrowing a living cell.",
+  "publishedAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "human-body"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Virus",
+      "url": "https://en.wikipedia.org/wiki/Virus",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Viral replication",
+      "url": "https://en.wikipedia.org/wiki/Viral_replication",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Not quite alive",
+      "paragraphs": [
+        "A virus is a parcel: a short set of genetic instructions, DNA or RNA, packed inside a protein coat, sometimes wrapped in a fatty membrane. It has no machinery for making energy or building proteins, which is why scientists debate whether viruses count as alive at all.",
+        "Viruses are also far smaller than bacteria — most are tens of millionths of a millimetre across, invisible even under ordinary microscopes. The parcel drifts inert, like a seed, until it meets the right kind of cell."
+      ]
+    },
+    {
+      "heading": "Borrowing the factory",
+      "paragraphs": [
+        "To multiply, a virus must get its instructions inside a living cell. It attaches to a matching lock on the cell surface, slips its genetic material in, and the cell's own machinery — tricked into following the new instructions — builds virus parts instead of its usual products.",
+        "The parts assemble into new virus particles, which escape, sometimes bursting the cell open, and go on to infect more cells. A single infected cell can release hundreds or thousands of copies, which is how a cold takes hold so quickly."
+      ]
+    },
+    {
+      "heading": "Viruses for every kind of life",
+      "paragraphs": [
+        "Almost everything living has viruses: there are viruses of bacteria, of fungi, of plants and of every animal. The viruses that infect bacteria, called bacteriophages, are the most abundant biological things in the oceans.",
+        "Most viruses never trouble humans — each kind usually fits one host and one type of cell. The few that do cause illness, like influenza and the common cold, succeed because they spread between people faster than immune systems can stop them. Some change their coats fast enough that last year's version is a poor match for this year's defences."
+      ]
+    }
+  ],
+  "takeaway": "Viruses are parcels of genetic material in a protein coat; unable to copy themselves, they hijack living cells and turn them into virus factories.",
+  "fiction": false
+}

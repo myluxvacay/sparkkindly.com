@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-89",
+  "slug": "pollination-flowers-bees-and-wind",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Pollination: how flowers recruit bees and wind",
+  "description": "Pollination moves pollen so plants can make seeds — and flowers pay bees in nectar to carry it for them.",
+  "publishedAt": "2026-09-22",
+  "updatedAt": "2026-09-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Pollination",
+      "url": "https://en.wikipedia.org/wiki/Pollination",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Pollinator",
+      "url": "https://en.wikipedia.org/wiki/Pollinator",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A delivery plants cannot make themselves",
+      "paragraphs": [
+        "Pollination is the transfer of pollen — a flower's male cells — to the female part of a flower, where it can fertilise an egg cell and start a seed. Plants cannot walk to each other, so they need a courier, and evolution has hired two main ones: animals and the wind.",
+        "Animal-pollinated flowers advertise. They offer nectar, a sugary drink, and pollen itself as food, and they signal with colour, scent and patterns — including ultraviolet guides visible to bees but not to us."
+      ]
+    },
+    {
+      "heading": "How a bee becomes a courier",
+      "paragraphs": [
+        "A bee visiting a flower for nectar brushes against its pollen-producing anthers. Pollen grains stick to the bee's hairy body — static electricity helps them jump across — and when the bee visits the next flower, some grains rub off onto its sticky stigma. Delivery complete.",
+        "Wind-pollinated plants play a numbers game instead. Grasses, maize and many trees make huge amounts of light, dusty pollen and release it to the air, trusting the wind to land a few grains on the right flower. Their flowers are usually small and dull — no advertising needed."
+      ]
+    },
+    {
+      "heading": "Dinner depends on it",
+      "paragraphs": [
+        "About a third of the food people eat benefits from insect pollination: apples, almonds, strawberries, coffee and many more crops set far more fruit when bees visit. Farmers near orchards sometimes rent hives during blossom season purely as a delivery service.",
+        "The partnership is ancient and precise. Some orchids are pollinated by a single insect species, shaped over millions of years to fit each other like a lock and key. When pollinators decline, the effects travel the same route in reverse, from flower to fruit to the animals that eat both."
+      ]
+    }
+  ],
+  "takeaway": "Pollination delivers pollen to a flower's stigma so seeds can form; insects carry it for food rewards, while wind-pollinated plants release clouds of light pollen.",
+  "fiction": false
+}

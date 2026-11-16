@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-93",
+  "slug": "how-the-immune-system-remembers",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How your immune system remembers invaders",
+  "description": "Your immune system keeps a memory of germs it has beaten, so the second attack is stopped faster than the first.",
+  "publishedAt": "2026-10-01",
+  "updatedAt": "2026-10-01",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Immune system",
+      "url": "https://en.wikipedia.org/wiki/Immune_system",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Immunological memory",
+      "url": "https://en.wikipedia.org/wiki/Immunological_memory",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "An army that learns",
+      "paragraphs": [
+        "Your immune system defends you with white blood cells that patrol the blood and tissues. When a germ gets in, some of these cells learn to recognise it by its surface markers, called antigens — like identifying an intruder by a face.",
+        "B cells respond by making antibodies, proteins shaped to lock onto that specific invader and tag it for destruction. The first time, this learning is slow: it can take a week or more to build a full response, and meanwhile you feel ill."
+      ]
+    },
+    {
+      "heading": "Memory cells stay on guard",
+      "paragraphs": [
+        "Once the infection is beaten, most of the responding cells die off, but a few become memory cells, which can survive for years or even decades. They hold the invader's description, ready for instant use.",
+        "If the same germ returns, memory cells trigger a response that is faster, stronger and often finishes the job before you notice any symptoms. That is the whole reason most people catch chickenpox only once, though the virus itself never leaves the world."
+      ]
+    },
+    {
+      "heading": "Memory can fade or be fooled",
+      "paragraphs": [
+        "The system is powerful but not perfect. Influenza changes its surface markers every year, so last year's memory only partly matches — one reason flu returns each winter while measles, which barely changes, usually does not. Memory length varies too: protection from some infections lasts a lifetime, while other memories fade over the years, which is why booster vaccinations exist to refresh the guard.",
+        "Memory also explains allergies' opposite problem: sometimes the immune system remembers something harmless, like pollen, as if it were dangerous, and mounts a needless defence. The memory is specific — it recognises shapes, not general danger — which is why one illness rarely protects against a different one."
+      ]
+    }
+  ],
+  "takeaway": "After an infection, memory cells keep a record of the invader for years, letting the immune system respond faster and more strongly if it returns.",
+  "fiction": false
+}

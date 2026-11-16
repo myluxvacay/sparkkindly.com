@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-88",
+  "slug": "food-chains-and-food-webs",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Food chains and food webs: who eats whom",
+  "description": "Food chains map who eats whom in nature — and show how energy from sunlight passes from one living thing to the next.",
+  "publishedAt": "2026-09-20",
+  "updatedAt": "2026-09-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "nature",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Food chain",
+      "url": "https://en.wikipedia.org/wiki/Food_chain",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Food web",
+      "url": "https://en.wikipedia.org/wiki/Food_web",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Energy on the move",
+      "paragraphs": [
+        "A food chain is a simple map of who eats whom. It starts with producers — plants and algae that capture sunlight — followed by herbivores that eat them, then carnivores that eat the herbivores. The arrows in a food-chain diagram point the way energy flows: from the food to the eater.",
+        "Take a meadow: grass is eaten by a grasshopper, the grasshopper by a frog, the frog by a snake, and the snake by a hawk. Each link depends on the one before it, which is why removing one species can ripple through a whole habitat."
+      ]
+    },
+    {
+      "heading": "Why chains stay short",
+      "paragraphs": [
+        "At every step, most of the energy is lost. An animal uses much of its food just to move, grow and stay warm, so only about a tenth of the energy passes on to whatever eats it. That steady loss is why food chains rarely have more than four or five links.",
+        "It also explains the shape of nature: there is far more grass than grasshoppers, more grasshoppers than frogs, and only a few hawks. Big fierce animals are rare because the energy reaching the top is thin."
+      ]
+    },
+    {
+      "heading": "Chains join into webs",
+      "paragraphs": [
+        "Real life is messier than a chain. A frog eats flies and beetles as well as grasshoppers; owls and snakes both hunt mice. Link all the chains in a habitat together and you get a food web — a fairer picture of who depends on whom. A change anywhere in the web — a drought, a new predator, a vanished plant — is felt along every chain that touches it.",
+        "Decomposers close the loop. Fungi and bacteria break down dead plants and animals, returning nutrients to the soil so producers can start the whole flow again."
+      ]
+    }
+  ],
+  "takeaway": "Food chains trace energy from producers to consumers; linked together they form food webs, and only about a tenth of the energy survives each step.",
+  "fiction": false
+}

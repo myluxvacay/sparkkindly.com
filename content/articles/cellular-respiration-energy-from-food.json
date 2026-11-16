@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-87",
+  "slug": "cellular-respiration-energy-from-food",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Cellular respiration: releasing energy from food",
+  "description": "Every cell burns food in a controlled way to release energy — a process called cellular respiration.",
+  "publishedAt": "2026-09-17",
+  "updatedAt": "2026-09-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "human-body"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Cellular respiration",
+      "url": "https://en.wikipedia.org/wiki/Cellular_respiration",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Adenosine triphosphate",
+      "url": "https://en.wikipedia.org/wiki/Adenosine_triphosphate",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Burning food without flames",
+      "paragraphs": [
+        "Cellular respiration is how cells release the energy locked inside food. In most organisms it uses oxygen to break glucose down completely, producing carbon dioxide and water — the same overall reaction as burning sugar, but done in small, controlled steps so the energy can be captured instead of lost as heat.",
+        "The captured energy is stored in a molecule called ATP, the cell's spendable energy currency. Whenever a cell does work — contracting, building, transporting — it spends ATP and later recharges it by respiring more food."
+      ]
+    },
+    {
+      "heading": "Where it happens",
+      "paragraphs": [
+        "Respiration begins in the cytoplasm, where glucose is split into smaller pieces, releasing a little energy. In animals, plants and most other complex cells, the main event then moves into mitochondria, where oxygen finishes the job and most of the ATP is made.",
+        "Plants respire too, day and night: photosynthesis only stores energy while the sun shines, but a plant's cells need energy around the clock. The carbon dioxide you breathe out is the waste gas of your own mitochondria at work."
+      ]
+    },
+    {
+      "heading": "When oxygen runs short",
+      "paragraphs": [
+        "If oxygen cannot keep up — in hard-working muscles during a sprint — cells fall back on fermentation, which releases only a fraction of the energy and leaves lactic acid behind. It buys time, but the debt shows up as burning, tired muscles.",
+        "Yeast ferments differently, producing alcohol and carbon dioxide instead. That single-celled workaround is why bread rises and beer foams: human industries run on the respiration shortcuts of a fungus. Athletes train the system deliberately: endurance exercise grows more mitochondria in muscle cells, so more ATP can be made each minute. Breathing and heartbeat rise during exercise precisely to feed this chemistry with oxygen and clear away its carbon dioxide."
+      ]
+    }
+  ],
+  "takeaway": "Cellular respiration breaks down glucose with oxygen to release energy, stored briefly in ATP, the molecule cells spend to do work.",
+  "fiction": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "virus-needs-a-cell-586",
+  "scheduledDate": "2027-04-09",
+  "brand": "discover",
+  "prompt": "Why must a virus enter a living cell to make copies of itself?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It needs the cell's water to swim in"
+    },
+    {
+      "id": "b",
+      "text": "It has no copying machinery of its own"
+    },
+    {
+      "id": "c",
+      "text": "It is too large to copy itself outside"
+    },
+    {
+      "id": "d",
+      "text": "It can only copy in darkness"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A virus is just instructions in a protein coat. It carries no machinery for building proteins or copying genes, so it hijacks a cell's machinery instead.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Wikipedia: Virus",
+      "url": "https://en.wikipedia.org/wiki/Virus",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

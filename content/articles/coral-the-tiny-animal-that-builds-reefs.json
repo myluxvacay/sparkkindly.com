@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-105",
+  "slug": "coral-the-tiny-animal-that-builds-reefs",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Coral: the tiny animal that builds whole reefs",
+  "description": "A coral reef is built by colonies of tiny animals, each in a stone cup of its own making, fed by algae living in their tissues.",
+  "publishedAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Coral reef",
+      "url": "https://en.wikipedia.org/wiki/Coral_reef",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Coral",
+      "url": "https://en.wikipedia.org/wiki/Coral",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "An animal that builds with stone",
+      "paragraphs": [
+        "Coral looks like rock or underwater plant, but it is an animal — a colony of tiny polyps, each related to jellyfish and sea anemones. A polyp is a soft tube with a mouth ringed by stinging tentacles, and it sits in a cup of limestone it secretes beneath itself.",
+        "As polyps divide, the colony grows, layer upon layer of limestone cups, the living tissue only a thin skin over a skeleton built by generations before it. Given centuries, colonies merge into reefs — the Great Barrier Reef stretches about 2,300 kilometres."
+      ]
+    },
+    {
+      "heading": "Farming algae in their own flesh",
+      "paragraphs": [
+        "Reef corals carry a partner inside them: microscopic algae called zooxanthellae live within the polyp's tissues. The algae photosynthesise, and share much of the sugar they make with the polyp; in return they get shelter and nutrients from the polyp's waste.",
+        "The partnership explains both the corals' colours — the algae tint them green, gold and brown — and their limits. Reef corals need warm, clear, sunlit water because their inner farmers need light, and they grow where food in the water is scarce precisely because they farm their own."
+      ]
+    },
+    {
+      "heading": "Cities under stress",
+      "paragraphs": [
+        "A reef is a city: its structure shelters roughly a quarter of all ocean species at some stage of their lives, from sharks to shrimps, though reefs cover less than one per cent of the ocean floor. That is why divers are taught to touch nothing: the living surface is tissue-thin over centuries of accumulated stone.",
+        "The partnership is fragile. When water stays too warm, polyps expel their algae and turn white — coral bleaching. Without their farmers the polyps starve, and unless the water cools and the algae return, the colony dies."
+      ]
+    }
+  ],
+  "takeaway": "Coral reefs are built by colonies of tiny animals called polyps, which secrete limestone skeletons and share food with algae living inside their tissues.",
+  "fiction": false
+}

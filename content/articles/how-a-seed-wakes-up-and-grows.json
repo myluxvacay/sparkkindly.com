@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-90",
+  "slug": "how-a-seed-wakes-up-and-grows",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How a seed wakes up and becomes a plant",
+  "description": "A seed is a packed lunch and a sleeping embryo — water is the alarm clock that wakes it into growth.",
+  "publishedAt": "2026-09-24",
+  "updatedAt": "2026-09-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Germination",
+      "url": "https://en.wikipedia.org/wiki/Germination",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Seed",
+      "url": "https://en.wikipedia.org/wiki/Seed",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A plant in a packed lunch",
+      "paragraphs": [
+        "A seed is an embryo plant packed with supplies and wrapped in a protective coat. Inside are the beginnings of a root and shoot, plus a food store — in a bean, the two fat halves you can split open — enough to power the young plant until it can make its own food.",
+        "Seeds can wait. Kept dry and cool, many stay alive but dormant for years, and some seeds in a herbarium have germinated after more than a century of sleep. Dormancy is a strategy: wait for conditions worth growing in."
+      ]
+    },
+    {
+      "heading": "Water is the alarm clock",
+      "paragraphs": [
+        "Germination begins when the seed absorbs water, a step called imbibition. The seed swells, its coat splits, and the water switches on enzymes that start digesting the food store into sugars the embryo can use. Oxygen and a suitable warmth are needed too — frozen or airless soil will not do.",
+        "The first structure out is the root, which grows downward, anchors the plant and starts drinking. Only then does the shoot push upward, unfolding its first leaves into the light, where photosynthesis can take over from the seed's packed lunch."
+      ]
+    },
+    {
+      "heading": "Some seeds wait for fire",
+      "paragraphs": [
+        "Not every seed wakes for water alone. Some need a spell of winter cold first, so they do not sprout just before frosts. Others, including some pines, keep their seeds sealed in resin inside cones that open only in the heat of a forest fire.",
+        "That timing is survival logic: after a fire, the ground is clear, sunny and fertilised with ash — exactly the open nursery a young pine needs, with no competitors shading it."
+      ]
+    }
+  ],
+  "takeaway": "A seed germinates when water soaks in and switches the embryo on; the root emerges first, anchoring the plant and drinking before the shoot seeks light.",
+  "fiction": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "respiration-releases-energy-581",
+  "scheduledDate": "2027-04-04",
+  "brand": "discover",
+  "prompt": "What does cellular respiration do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Stores light energy in leaves"
+    },
+    {
+      "id": "b",
+      "text": "Builds new cells from DNA"
+    },
+    {
+      "id": "c",
+      "text": "Turns food into carbon dioxide for plants"
+    },
+    {
+      "id": "d",
+      "text": "Releases energy stored in food"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Respiration breaks down food, usually glucose with oxygen, and captures the released energy in ATP, the molecule cells spend to do work.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Wikipedia: Cellular respiration",
+      "url": "https://en.wikipedia.org/wiki/Cellular_respiration",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-91",
+  "slug": "bacteria-mostly-helpful-neighbours",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Bacteria: mostly helpful neighbours",
+  "description": "Bacteria have a bad reputation from a harmful few — most are harmless, and many quietly keep us and the planet running.",
+  "publishedAt": "2026-09-27",
+  "updatedAt": "2026-09-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Bacteria",
+      "url": "https://en.wikipedia.org/wiki/Bacteria",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Prokaryote",
+      "url": "https://en.wikipedia.org/wiki/Prokaryote",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The smallest self-run lives",
+      "paragraphs": [
+        "Bacteria are single-celled organisms, each one a complete living thing small enough that thousands could fit on a pinhead. Unlike your cells, a bacterium has no nucleus: its DNA floats in a loop inside the cell, and it copies itself by simply dividing in two.",
+        "Under perfect conditions some bacteria divide every twenty minutes, so one cell can become millions in a day. In real life food runs out and waste builds up, but the maths explains why milk left warm sours so fast."
+      ]
+    },
+    {
+      "heading": "The helpful majority",
+      "paragraphs": [
+        "Only a small fraction of bacteria cause disease. The rest are harmless or actively useful. Bacteria in soil and water break down dead organisms and waste, recycling nutrients that plants need. Others in the roots of beans and peas pull nitrogen from the air and turn it into fertiliser.",
+        "Bacteria also work in our kitchens and our bodies. They ferment milk into yogurt and cheese, and the bacteria in your gut help digest food and crowd out troublemakers. Life on Earth ran on bacteria alone for well over a billion years."
+      ]
+    },
+    {
+      "heading": "Why antibiotics miss viruses",
+      "paragraphs": [
+        "Antibiotics attack machinery that bacteria have and human cells mostly do not, such as their cell walls. That precision is also their limit: viruses are built completely differently, so antibiotics do nothing against colds or flu.",
+        "Bacteria can evolve fast, and overusing antibiotics lets resistant strains survive and spread — one reason doctors save these medicines for when they are truly needed. The same speed makes bacteria the workhorses of the laboratory, where their fast generations let scientists watch heredity and mutation happen in days rather than years — and why one resistant cell in a hospital can become a ward-wide problem within a week."
+      ]
+    }
+  ],
+  "takeaway": "Bacteria are single-celled organisms without a nucleus; the great majority are harmless or helpful, from digesting food to recycling dead matter.",
+  "fiction": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "muscles-pull-in-pairs-589",
+  "scheduledDate": "2027-04-12",
+  "brand": "discover",
+  "prompt": "Why do muscles work in pairs, such as the biceps and triceps in your arm?",
+  "options": [
+    {
+      "id": "a",
+      "text": "One muscle rests while the other grows"
+    },
+    {
+      "id": "b",
+      "text": "Pairs keep the arm warm"
+    },
+    {
+      "id": "c",
+      "text": "Pairs stop the bones from moving"
+    },
+    {
+      "id": "d",
+      "text": "A muscle can only pull, so its partner pulls the bone back"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Muscles can only contract and pull; they cannot push. The triceps straightens the elbow that the biceps bent, each pulling the bone its own way.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Wikipedia: Muscle",
+      "url": "https://en.wikipedia.org/wiki/Muscle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

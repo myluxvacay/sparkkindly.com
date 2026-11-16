@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-86",
+  "slug": "photosynthesis-how-plants-eat-sunlight",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Photosynthesis: how plants eat sunlight",
+  "description": "Plants use sunlight to turn water and air into food — and the oxygen we breathe is their leftover.",
+  "publishedAt": "2026-09-15",
+  "updatedAt": "2026-09-15",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Photosynthesis",
+      "url": "https://en.wikipedia.org/wiki/Photosynthesis",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Chloroplast",
+      "url": "https://en.wikipedia.org/wiki/Chloroplast",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Food made from light, air and water",
+      "paragraphs": [
+        "Photosynthesis is how green plants make their own food. Using energy from sunlight, a plant joins water taken up by its roots with carbon dioxide taken from the air, and builds glucose, a sugar it can store or burn for energy. Oxygen is released as a leftover.",
+        "The full exchange runs: carbon dioxide plus water, powered by light, becomes glucose plus oxygen. Nearly every living thing on Earth depends on this one reaction — either by doing it, or by eating something that did."
+      ]
+    },
+    {
+      "heading": "Inside the green workshops",
+      "paragraphs": [
+        "Photosynthesis happens inside chloroplasts, tiny green compartments packed into leaf cells. Their green colour comes from chlorophyll, a pigment that absorbs mostly blue and red light and reflects green — which is why leaves look green to us.",
+        "The process runs in two stages. First, light energy splits water molecules, releasing the oxygen we breathe. Then the captured energy is spent joining carbon dioxide into sugar. It is worth noting the oxygen in the air came from water, not from the carbon dioxide."
+      ]
+    },
+    {
+      "heading": "The reaction that feeds the world",
+      "paragraphs": [
+        "Almost all life runs on photosynthesis, past or present. The bread in a sandwich began as wheat photosynthesis; the cow that made the cheese ate grass that photosynthesised; even coal and oil are the stored sunlight of ancient plants and plankton.",
+        "It also built the air. Billions of years ago, photosynthesising bacteria slowly filled the atmosphere with oxygen, transforming the planet and making animal life — including us — possible. Farmers measure their success in photosynthesis: every harvest is bottled sunlight. It is also why clearing forests matters twice over — the world loses both a store of carbon and the machinery that draws more down."
+      ]
+    }
+  ],
+  "takeaway": "Photosynthesis uses sunlight to build sugar from water and carbon dioxide, releasing oxygen — the base of almost all food and air on Earth.",
+  "fiction": false
+}

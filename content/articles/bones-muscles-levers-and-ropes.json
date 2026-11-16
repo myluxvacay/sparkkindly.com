@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-95",
+  "slug": "bones-muscles-levers-and-ropes",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Bones and muscles: the body's levers and ropes",
+  "description": "Bones are levers, joints are hinges and muscles are ropes that can only pull — movement is the three working together.",
+  "publishedAt": "2026-10-06",
+  "updatedAt": "2026-10-06",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Bone",
+      "url": "https://en.wikipedia.org/wiki/Bone",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Skeletal muscle",
+      "url": "https://en.wikipedia.org/wiki/Skeletal_muscle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A frame that can move",
+      "paragraphs": [
+        "Your skeleton is a frame of 206 bones in an adult, light, strong and jointed so it can move. Bones are the levers of the body: rigid bars that swing around joints, which act as hinges or pivots. But bones cannot move themselves — they need engines.",
+        "The engines are more than 600 skeletal muscles, attached to bones by tough cords called tendons. When a muscle receives its signal, it contracts — it shortens and thickens — and pulls the bone it is attached to."
+      ]
+    },
+    {
+      "heading": "Muscles can only pull",
+      "paragraphs": [
+        "Here is the key limitation: a muscle can pull but it cannot push. Once your biceps has contracted to bend your elbow, it cannot straighten the arm again by relaxing. Something must pull the bone back the other way.",
+        "So muscles are arranged in opposing pairs. The biceps bends the elbow; the triceps, on the opposite side of the upper arm, straightens it. While one contracts, the nervous system relaxes its partner. Walking, smiling and typing all run on pairs taking turns."
+      ]
+    },
+    {
+      "heading": "Levers trade force for speed",
+      "paragraphs": [
+        "Most limb levers trade strength for speed and range. Your elbow is built so a small contraction of the biceps swings your hand through a large, fast arc — ideal for throwing, poor for lifting a car. Other joints, like the ankle when you rise on tiptoe, favour force instead.",
+        "The same lever logic explains tools: a crowbar is an artificial bone-and-joint system, arranged the other way round, sacrificing movement to multiply force. Engineers copy the same arrangements: cranes, robot arms and prosthetic limbs all pair a rigid lever with something that can only pull, exactly like tendon and bone."
+      ]
+    }
+  ],
+  "takeaway": "Muscles can only contract and pull, so they work in opposing pairs across joints, moving bones that act as levers.",
+  "fiction": false
+}

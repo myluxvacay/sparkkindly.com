@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-107",
+  "slug": "metamorphosis-how-a-caterpillar-becomes-a-butterfly",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Metamorphosis: how a caterpillar becomes a butterfly",
+  "description": "Inside a chrysalis, a caterpillar's body is largely dismantled and rebuilt as a butterfly — the deepest makeover in nature.",
+  "publishedAt": "2026-11-04",
+  "updatedAt": "2026-11-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Metamorphosis",
+      "url": "https://en.wikipedia.org/wiki/Metamorphosis",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Holometabolism",
+      "url": "https://en.wikipedia.org/wiki/Holometabolism",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Four lives in one animal",
+      "paragraphs": [
+        "Metamorphosis means change of form, and in butterflies it is total. The life cycle runs through four stages: egg, larva (the caterpillar), pupa (the chrysalis) and adult (the butterfly). Each stage is the same animal with the same DNA, rebuilt for a different job.",
+        "The caterpillar is an eating machine, devoted to growth; the butterfly is a flying, reproducing machine that may barely feed. Splitting the jobs between two bodies lets each be excellent at one thing."
+      ]
+    },
+    {
+      "heading": "What happens inside the chrysalis",
+      "paragraphs": [
+        "Inside the pupa, the caterpillar's body largely breaks down. Enzymes digest most of its tissues into a nutrient soup. But the rebuild is not from nothing: small clusters of cells called imaginal discs, present since the caterpillar stage, survive and grow rapidly into wings, legs, antennae and eyes.",
+        "After days or weeks — some species overwinter as pupae — the adult splits the case and emerges with soft, crumpled wings, pumps fluid into them to expand them, and lets them harden before its first flight. A moth does the same, but spins a silk cocoon around the pupa first. The pupa is no resting stage but the busiest of the four — a demolition and construction site inside a sealed case."
+      ]
+    },
+    {
+      "heading": "Other ways to change",
+      "paragraphs": [
+        "Butterflies, beetles, bees and flies use this complete metamorphosis. Grasshoppers and dragonflies use the incomplete kind: their young, called nymphs, look like small wingless adults and simply grow, moulting their skins, until wings appear at the final moult.",
+        "Frogs metamorphose too — a tadpole absorbs its tail, grows legs and switches from gills to lungs. In every case the logic is the same: one genome, several bodies, each fitted to a stage of life."
+      ]
+    }
+  ],
+  "takeaway": "Complete metamorphosis rebuilds an animal through four stages — egg, larva, pupa, adult — letting the young and adult forms live entirely different lives.",
+  "fiction": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "deep-sea-chemosynthesis-598",
+  "scheduledDate": "2027-04-21",
+  "brand": "discover",
+  "prompt": "At hydrothermal vents in the dark deep sea, whole food webs are powered by what?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Sunlight stored in the vent water"
+    },
+    {
+      "id": "b",
+      "text": "Bacteria that make food from chemicals in the vent water"
+    },
+    {
+      "id": "c",
+      "text": "Electricity crackling from the vents"
+    },
+    {
+      "id": "d",
+      "text": "Heat feeding large animals directly"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Vent communities run on chemosynthesis: bacteria build food from chemicals such as hydrogen sulfide, and animals graze on or host those bacteria.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Wikipedia: Chemosynthesis",
+      "url": "https://en.wikipedia.org/wiki/Chemosynthesis",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}

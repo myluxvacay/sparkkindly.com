@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-94",
+  "slug": "vaccines-training-drills-for-the-immune-system",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Vaccines: training drills for the immune system",
+  "description": "A vaccine is a practice run: it shows the immune system a harmless version of a germ so it can learn to beat the real one.",
+  "publishedAt": "2026-10-04",
+  "updatedAt": "2026-10-04",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Vaccine",
+      "url": "https://en.wikipedia.org/wiki/Vaccine",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Vaccination",
+      "url": "https://en.wikipedia.org/wiki/Vaccination",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Practise without the danger",
+      "paragraphs": [
+        "A vaccine gives your immune system a safe rehearsal. It contains a germ that has been killed or weakened, a single piece of one, or — in newer vaccines — instructions that make a few of your own cells display one harmless piece of the germ's surface.",
+        "Your immune system treats the rehearsal seriously. It builds antibodies and, most importantly, memory cells, exactly as it would for a real infection — but without the illness the real germ could cause."
+      ]
+    },
+    {
+      "heading": "Ready before the real attack",
+      "paragraphs": [
+        "If the real germ arrives later, memory cells recognise it at once and the response is fast and strong, usually stopping the infection before symptoms start. This is why vaccination is given before exposure: it is training scheduled ahead of the match.",
+        "Vaccines also protect people who cannot be vaccinated — newborns, or patients whose immune systems are weak from treatment. When enough people around them are immune, the germ cannot find a path to them. That community shield is called herd immunity."
+      ]
+    },
+    {
+      "heading": "A drill that emptied hospitals",
+      "paragraphs": [
+        "The results are written in history. Smallpox, which killed hundreds of millions of people, was declared eradicated worldwide in 1980 after a global vaccination campaign. Polio survives today in only a couple of districts on Earth.",
+        "The idea is older than the science: in 1796 Edward Jenner showed that infection with mild cowpox protected against deadly smallpox. The word vaccine still honours his experiment — vacca is Latin for cow. Modern vaccines are far more precise, but the principle he demonstrated is unchanged. The pattern repeats wherever vaccination spreads: diseases that once filled children's wards — diphtheria, whooping cough, measles — become rare enough that many doctors never see a case."
+      ]
+    }
+  ],
+  "takeaway": "Vaccines present the immune system with a harmless version or piece of a germ, building memory without the dangers of the real disease.",
+  "fiction": false
+}

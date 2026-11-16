@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-99",
+  "slug": "why-we-sleep",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why we sleep: what the brain does overnight",
+  "description": "Sleep is not the brain switching off — it is a night shift of repair, memory filing and cleaning that waking hours cannot do.",
+  "publishedAt": "2026-10-16",
+  "updatedAt": "2026-10-16",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Sleep",
+      "url": "https://en.wikipedia.org/wiki/Sleep",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Rapid eye movement sleep",
+      "url": "https://en.wikipedia.org/wiki/Rapid_eye_movement_sleep",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "A night shift, not a shutdown",
+      "paragraphs": [
+        "Sleep looks like rest, but the brain is doing scheduled work it cannot do while you are awake. Through the night you cycle roughly every ninety minutes between light sleep, deep sleep and REM sleep — the stage named for the rapid eye movements beneath closed lids, when most vivid dreaming happens.",
+        "Each stage has its own jobs. Deep sleep is the body's repair shift: growth hormone is released, tissues are maintained, and the immune system is tuned. REM sleep is busier for the mind."
+      ]
+    },
+    {
+      "heading": "Filing the day's memories",
+      "paragraphs": [
+        "During sleep the brain replays and sorts the day's experiences, strengthening important memories and letting unimportant details fade. Students who sleep after studying consistently remember more than those who pull an all-nighter — the filing happens overnight, not at the desk.",
+        "Sleep also appears to clean the brain. During deep sleep, fluid washes through brain tissue more freely, carrying away waste products that build up during waking hours — housekeeping that may protect the brain across a lifetime."
+      ]
+    },
+    {
+      "heading": "How much is enough",
+      "paragraphs": [
+        "The need is real and measurable. Teenagers need about eight to ten hours a night, adults seven to nine, and the bill for cheating is paid in attention, mood and reaction time the next day — driving while very tired slows reactions much like alcohol does.",
+        "Animals underline the point: every creature studied sleeps in some form, even though sleep leaves them vulnerable. A behaviour that costly, kept by evolution everywhere, must be doing something essential. Even fruit flies sleep, and dolphins sleep with one half of the brain at a time so they can keep swimming and breathing."
+      ]
+    }
+  ],
+  "takeaway": "Sleep cycles between deep and dreaming stages in which the body repairs itself and the brain sorts memories and clears waste.",
+  "fiction": false
+}

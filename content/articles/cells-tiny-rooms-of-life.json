@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-84",
+  "slug": "cells-tiny-rooms-of-life",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Cells: the tiny rooms all life is built from",
+  "description": "Every living thing — from a single bacterium to a blue whale — is built from cells, the tiny rooms where life happens.",
+  "publishedAt": "2026-09-10",
+  "updatedAt": "2026-09-10",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "science",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Cell (biology)",
+      "url": "https://en.wikipedia.org/wiki/Cell_(biology)",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Organelle",
+      "url": "https://en.wikipedia.org/wiki/Organelle",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "The smallest unit of life",
+      "paragraphs": [
+        "A cell is the smallest building block of life: a tiny compartment wrapped in a thin membrane, inside which the chemistry of living takes place. Some organisms are just one cell — bacteria and yeasts live complete lives that way — while a human body is a community of roughly 37 trillion cells.",
+        "The name comes from the Latin cella, a small room. In 1665 Robert Hooke looked at cork through an early microscope and saw rows of empty boxes that reminded him of monks' rooms, and the word stuck. Most cells are far too small to see: many measure only a few thousandths of a millimetre across."
+      ]
+    },
+    {
+      "heading": "What is inside a cell",
+      "paragraphs": [
+        "Near the centre of most cells sits the nucleus, a compartment holding DNA, the instruction set the cell follows. Around it is cytoplasm, a jelly-like fluid where most of the cell's work happens, dotted with small structures called organelles, each with its own job.",
+        "Mitochondria release energy from food, ribosomes build proteins, and the outer membrane acts as a gatekeeper, controlling what enters and leaves. Plant cells have extra equipment: a stiff outer wall for support and chloroplasts, where photosynthesis captures sunlight."
+      ]
+    },
+    {
+      "heading": "One cell, many jobs",
+      "paragraphs": [
+        "In a large organism, cells specialise. Muscle cells contract, nerve cells carry electrical signals, and skin cells form a tough, replaceable surface. A single nerve cell in your leg can stretch more than a metre, while red blood cells are tiny discs just eight thousandths of a millimetre wide.",
+        "The largest single cell in nature is an unfertilised ostrich egg — the whole yolk is one cell. From that giant to the smallest bacterium, every living thing runs on the same basic design: a membrane, instructions, and chemistry inside."
+      ]
+    }
+  ],
+  "takeaway": "Cells are the smallest units of life: membrane-wrapped compartments, each holding the machinery that keeps an organism alive.",
+  "fiction": false
+}

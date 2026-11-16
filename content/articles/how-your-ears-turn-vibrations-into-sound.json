@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-97",
+  "slug": "how-your-ears-turn-vibrations-into-sound",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How your ears turn vibrations into sound",
+  "description": "Sound is moving air — your ear catches the vibrations, amplifies them with tiny bones and turns them into signals.",
+  "publishedAt": "2026-10-11",
+  "updatedAt": "2026-10-11",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "human-body",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ear",
+      "url": "https://en.wikipedia.org/wiki/Ear",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Cochlea",
+      "url": "https://en.wikipedia.org/wiki/Cochlea",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Catching moving air",
+      "paragraphs": [
+        "Sound is vibration travelling through the air in waves of squeezing and stretching. Your outer ear is a funnel shaped to catch those waves and guide them down the ear canal to the eardrum, a taut sheet of skin no wider than a fingernail.",
+        "When sound waves arrive, the eardrum vibrates in step with them — fast for high notes, slow for low ones. That vibration is still far too weak to work with directly, so the middle ear amplifies it."
+      ]
+    },
+    {
+      "heading": "Three tiny bones and a snail",
+      "paragraphs": [
+        "Behind the eardrum sit the ossicles, the three smallest bones in the body — the hammer, anvil and stirrup. Acting as a chain of levers, they pass the eardrum's movement to a much smaller window, concentrating the force so it can move fluid. The stirrup, the last of the three, is only about three millimetres long — smaller than a grain of rice.",
+        "Beyond that window lies the cochlea, a coiled tube shaped like a snail shell and filled with fluid. The vibration sets the fluid moving, and thousands of hair cells lining the tube bend as it passes, each responding best to a particular pitch."
+      ]
+    },
+    {
+      "heading": "From bending hairs to hearing",
+      "paragraphs": [
+        "When a hair cell bends, it fires an electrical signal along the auditory nerve to the brain, which reads the pattern — which hairs, how fast they fire — as pitch and volume. Loudness is measured in the size of the vibration, pitch in its speed.",
+        "The system is delicate. Very loud sounds can flatten hair cells permanently, and unlike many body cells they do not grow back — the reason hearing damage from noise is cumulative and irreversible."
+      ]
+    }
+  ],
+  "takeaway": "The eardrum and three tiny bones pass sound vibrations to the cochlea, where hair cells convert them into nerve signals the brain hears as sound.",
+  "fiction": false
+}

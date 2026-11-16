@@ -1,0 +1,66 @@
+{
+  "id": "discover-sci-100",
+  "slug": "camouflage-hiding-in-plain-sight",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Camouflage: hiding in plain sight",
+  "description": "Camouflage hides animals by matching their surroundings — or by breaking up their outline so predators cannot pick them out.",
+  "publishedAt": "2026-10-18",
+  "updatedAt": "2026-10-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Camouflage",
+      "url": "https://en.wikipedia.org/wiki/Camouflage",
+      "accessedAt": "2026-11-15"
+    },
+    {
+      "title": "Wikipedia: Animal coloration",
+      "url": "https://en.wikipedia.org/wiki/Animal_coloration",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-15",
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "body": [
+    {
+      "heading": "Blending with the background",
+      "paragraphs": [
+        "Camouflage is the art of not being noticed. The simplest method is matching: a green caterpillar on a green leaf, a sandy-coloured lizard on desert ground, a snow-white Arctic hare in winter. Predators hunt largely by sight, so an animal that merges with its background may simply never be seen.",
+        "Many animals are countershaded — dark on top, pale underneath, like sharks, penguins and deer. Seen from above they match the dark depths or ground; from below, the pale belly matches bright surface light. The shading also cancels the shadows that would reveal a solid body."
+      ]
+    },
+    {
+      "heading": "Breaking the outline",
+      "paragraphs": [
+        "Matching colour is not the only trick. Bold stripes and blotches can work by disruption: they break up the animal's outline so the eye cannot assemble it into a recognisable shape. A zebra's stripes may serve this purpose in a herd, where outlines dissolve into a shifting pattern.",
+        "Some animals go further and change. Chameleons shift colour by adjusting pigment cells in their skin, and cuttlefish — though colour-blind themselves — can repaint their skin with moving patterns in a second, copying the seabed they hover over."
+      ]
+    },
+    {
+      "heading": "An arms race of eyes and disguises",
+      "paragraphs": [
+        "Camouflage serves hunters as well as the hunted: a tiger's stripes vanish into tall grass light, letting it approach unseen. And disguises keep evolving against sharper eyes — some moths match not just colour but the texture of bark, complete with fake lichen patches.",
+        "Seasonal costume changes show the stakes. The snowshoe hare turns white for winter and brown for summer; if snow comes late, a white hare on dark ground is dangerously visible — camouflage only works when it matches the calendar too."
+      ]
+    }
+  ],
+  "takeaway": "Camouflage hides animals by matching background colours and patterns or breaking up their outline; some animals can even change their appearance to suit a new background.",
+  "fiction": false
+}

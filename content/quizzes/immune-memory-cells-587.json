@@ -1,0 +1,38 @@
+{
+  "id": "immune-memory-cells-587",
+  "scheduledDate": "2027-04-10",
+  "brand": "discover",
+  "prompt": "Why do most people catch a disease like chickenpox only once?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Memory cells remember the invader and respond faster next time"
+    },
+    {
+      "id": "b",
+      "text": "The skin becomes thicker after an illness"
+    },
+    {
+      "id": "c",
+      "text": "The virus vanishes from the world"
+    },
+    {
+      "id": "d",
+      "text": "Antibodies stay at full strength forever"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "After the first infection, memory B and T cells keep the invader's description for years, so a second attack is beaten quickly, often before symptoms appear.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Wikipedia: Immunological memory",
+      "url": "https://en.wikipedia.org/wiki/Immunological_memory",
+      "accessedAt": "2026-11-15"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly site owner",
+  "reviewedAt": "2026-11-15",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review."
+}
