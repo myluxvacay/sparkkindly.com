@@ -145,6 +145,9 @@ Facebook digest post exists, once per batch date the post covers, always with th
 a later write replaces the date's digest fields as a whole, so a repost never leaves a mismatched URL/id pair.
 Days before these reports existed are shown on the page from the items table (import day, America/New_York),
 with no rejections, because they were never recorded anywhere the site can read.
+The page itself is a filterable grid (date, world, type, title, status, reason) rather than day-by-day sections;
+it loads the last 7 days by default and pulls older batches on demand via its range control (last 30 days, all,
+or a custom span), with the same report/import semantics inside whichever window is selected.
 
 **Publishing.** Items the policy schedules publish when due. `npm run job:publish-due` runs the same job once by hand (the
 worker service that runs it on a schedule is Project 1B). Kids content, and anything in a world set to review mode, never
