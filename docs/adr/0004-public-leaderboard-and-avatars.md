@@ -50,3 +50,12 @@ resolving the pre-launch review's open question about duplicate names). The sett
 colliding name as "taken" without writing, and the partial unique index in migration 037 is the
 backstop. An opted-out member's stored name stays reserved, matching the keep-name-on-opt-out
 behavior above.
+
+## Addendum — 15 November 2026 (weekly board)
+
+The board gains a third window at the owner's direction: "This week", counting the same eligible
+members' correct answers since Monday 00:00 UTC, shown ahead of "This month" and "All time". The
+point is freshness — a member who joins later is never buried under the all-time totals. Nothing
+about eligibility, opt-in, or what is displayed changes; the week board reads the same re-derived
+eligible set as the other two. This also closes the earlier open question above: the monthly board
+did join the all-time board, and the weekly board now joins both.

@@ -67,7 +67,7 @@ export default async function LeaderboardPage({ searchParams }: Props) {
   const boards = await getPublicBoards(db, new Date(), youId);
   const canInvite =
     youId !== null && circlesEnabled() ? (await listInvitableCircles(db, youId, new Date())).length > 0 : false;
-  const empty = !boards.month.length && !boards.allTime.length;
+  const empty = !boards.week.length && !boards.month.length && !boards.allTime.length;
   return (
     <div className="container section">
       <Breadcrumb trail={[{ name: 'Home', href: '/' }, { name: 'Leaderboard' }]} />
@@ -99,6 +99,7 @@ export default async function LeaderboardPage({ searchParams }: Props) {
         </p>
       ) : (
         <>
+          <Board title="This week" rows={boards.week} canInvite={canInvite} />
           <Board title="This month" rows={boards.month} canInvite={canInvite} />
           <Board title="All time" rows={boards.allTime} canInvite={canInvite} />
         </>
