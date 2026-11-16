@@ -12,8 +12,8 @@ import { matchTotp } from './totp';
 const MIN = 60_000;
 const LINK_TTL = 15 * MIN;
 const CODE_STAGE_TTL = 10 * MIN;
-const ACTIVE_TTL = 12 * 60 * MIN;
-const IDLE_LIMIT = 60 * MIN;
+const ACTIVE_TTL = 24 * 60 * MIN;
+const IDLE_LIMIT = 24 * 60 * MIN;
 const MAX_CODE_FAILURES = 5;
 
 const later = (now: Date, ms: number) => new Date(now.getTime() + ms).toISOString();

@@ -87,7 +87,7 @@ account or a child profile removes its points everywhere. A consent-pending
 | --- | --- | --- | --- | --- |
 | `problem_reports` | item, reason, up to 1000 characters of optional free text, status, time. Nothing about the sender | site operators | no automatic deletion in the code | `004_problem_reports.sql` |
 | `events` | the site's own server-side counts. Has a `profile_id` column, but today the only writer records `item_published` with no profile id | site operators | no automatic deletion in the code; **not** covered by account deletion | `001_core.sql`, `lib/jobs/publish-due.ts` |
-| `admin_users`, `admin_login_tokens`, `admin_sessions`, `audit_log` | operator email addresses, sealed authenticator secrets, token hashes, admin actions | site operators | admin sessions at most 12 hours; others until removed | `005_admin.sql`, `001_core.sql`, OPERATIONS 1C |
+| `admin_users`, `admin_login_tokens`, `admin_sessions`, `audit_log` | operator email addresses, sealed authenticator secrets, token hashes, admin actions | site operators | admin sessions at most 24 hours; others until removed | `005_admin.sql`, `001_core.sql`, OPERATIONS 1C |
 | `failed_jobs`, `job_runs` | job names, counts and error names. The account jobs write counts only, never an address | site operators | no automatic deletion in the code | `001_core.sql`, `005_admin.sql`, `lib/accounts/inactivity.ts` |
 
 `sponsors` and `sponsorships` (Project 6, behind `SPONSORSHIP_ENABLED`) hold sponsor names, links, categories,

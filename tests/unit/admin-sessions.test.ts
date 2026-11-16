@@ -1,6 +1,7 @@
 // @vitest-environment node
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
+import { hash } from '@/lib/tokens';
 import { newTotpSecret, totpAt } from '@/lib/admin/totp';
 import { sealSecret, TEST_SECRET_KEY } from '@/lib/admin/secret-box';
 import {
@@ -176,23 +177,36 @@ describe('second factor (1C review fixes)', () => {
 });
 
 describe('active sessions', () => {
-  it('end when the address leaves the allow-list, or after 60 idle minutes', async () => {
+  it('end when the address leaves the allow-list, or after 24 idle hours', async () => {
     const at = plus(T0, 60 * MIN);
     const s = await signIn(at);
     expect(await getAdmin(db, s, { ADMIN_EMAILS: 'second@example.test' }, at)).toBeNull();
-    expect(await getAdmin(db, s, env, plus(at, 61 * MIN))).toBeNull();
+    // Still valid after 3 idle hours: one sign-in covers a full day of going back and forth.
+    expect(await getAdmin(db, s, env, plus(at, 3 * 60 * MIN))).toEqual({ email: OWNER });
+    const later = plus(at, 2 * MIN);
+    const untouched = await signIn(later);
+    expect(await getAdmin(db, untouched, env, plus(later, 24 * 60 * MIN + MIN))).toBeNull();
   });
 
-  it('end after 12 hours even when used every 50 minutes', async () => {
+  it('end after 24 hours even when used every 50 minutes', async () => {
     const at = plus(T0, 120 * MIN);
     const busy = await signIn(at);
     let t = at;
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 30; i++) {
       t = plus(t, 50 * MIN);
       const ok = await getAdmin(db, busy, env, t);
-      if (t.getTime() - at.getTime() <= 12 * 60 * MIN) expect(ok).toEqual({ email: OWNER });
+      if (t.getTime() - at.getTime() <= 24 * 60 * MIN) expect(ok).toEqual({ email: OWNER });
       else expect(ok).toBeNull();
     }
+  });
+
+  it('end on idle alone, before the absolute cap, when last seen is backdated', async () => {
+    const at = plus(T0, 180 * MIN);
+    const s = await signIn(at);
+    // Idle and absolute are both 24 hours, so an untouched session reaches both deadlines at the same moment;
+    // backdating last_seen_at is the only way to watch the idle limit act while the absolute expiry is still ahead.
+    await db.query('UPDATE admin_sessions SET last_seen_at = $1 WHERE token_hash = $2', [plus(at, -2 * 60 * MIN).toISOString(), hash(s)]);
+    expect(await getAdmin(db, s, env, plus(at, 23 * 60 * MIN))).toBeNull();
   });
 
   it('end on sign-out; junk tokens are nobody', async () => {
