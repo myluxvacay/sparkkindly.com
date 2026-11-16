@@ -23,12 +23,12 @@
   "factualClaimsReviewedAt": "2026-11-16",
   "fiction": false,
   "hero": {
-    "alt": "Fireflies glowing in a dark green meadow at dusk",
-    "credit": "Development reference photograph · Unsplash",
-    "height": 800,
-    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
-    "src": "/images/green.webp",
-    "width": 1200
+    "src": "/images/fireflies.webp",
+    "alt": "Fireflies glowing over a meadow at dusk",
+    "width": 1600,
+    "height": 1067,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
   },
   "id": "discover-draft-2026-11-16-02",
   "publishedAt": "2026-11-16",

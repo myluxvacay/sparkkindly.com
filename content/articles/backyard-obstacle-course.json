@@ -23,12 +23,12 @@
   "factualClaimsReviewedAt": "2026-11-16",
   "fiction": false,
   "hero": {
-    "alt": "Children playing an obstacle course in a sunny garden",
-    "credit": "Development reference photograph · Unsplash",
-    "height": 800,
-    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
-    "src": "/images/games.webp",
-    "width": 1200
+    "src": "/images/obstacle.webp",
+    "alt": "Children playing on a backyard obstacle course with cones, hoops and a balance beam",
+    "width": 1600,
+    "height": 1067,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
   },
   "id": "play-draft-2026-11-16-04",
   "materials": [
