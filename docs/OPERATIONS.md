@@ -137,9 +137,11 @@ caller's own part and leaves the other part untouched). `POST /api/agent/publish
 `{date, published: [{world, kind, title, slug}], rejections: [{title, world, kind, reason}]}` — the reviewer job
 sends it after the batch's import is confirmed live; slug is null for quizzes, as in the digest queue.
 `POST /api/agent/publishing/digest/` (promoter-role key): `{date, postUrl, externalId}` (either field may be
-omitted, not both) — the social job sends it once the batch's Facebook digest post exists, once per batch date the
-post covers. Days before these reports existed are shown on the page from the items table (import day,
-America/New_York) with no rejections or digest post, because neither was recorded anywhere the site can read.
+omitted, not both; postUrl must be a facebook.com or fb.watch https URL) — the social job sends it once the batch's
+Facebook digest post exists, once per batch date the post covers, always with the full known state of the post:
+a later write replaces the date's digest fields as a whole, so a repost never leaves a mismatched URL/id pair.
+Days before these reports existed are shown on the page from the items table (import day, America/New_York),
+with no rejections, because they were never recorded anywhere the site can read.
 
 **Publishing.** Items the policy schedules publish when due. `npm run job:publish-due` runs the same job once by hand (the
 worker service that runs it on a schedule is Project 1B). Kids content, and anything in a world set to review mode, never

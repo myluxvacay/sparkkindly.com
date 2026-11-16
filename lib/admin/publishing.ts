@@ -1,10 +1,12 @@
 import type { Queryable } from '@/lib/db';
 
 // The admin publishing summary (/admin/publishing/): one entry per day, newest first.
-// Days with a publishing report (written by the reviewer and promoter agents through /api/agent/publishing/*)
-// show exactly what those jobs reported. Days before reports existed fall back to the items table: what was
-// imported that day (created_at in America/New_York, the jobs' business timezone), with no rejections or
-// digest post, because neither was recorded anywhere the site can read.
+// A day counts as "reported" only when the reviewer agent's report landed (publishing_batches.report_received_at);
+// its items and rejections are then exactly what the jobs reported, and a digest post recorded for the day — by
+// either kind of day — is shown alongside. Days without a report fall back to the items table: what was imported
+// that day (created_at in America/New_York, the jobs' business timezone), minus anything already listed in a
+// reported batch (a batch's import can land on a different day than its report). A digest-only batch row never
+// suppresses a day's import history.
 
 export type PublishedEntry = { world: string; kind: string; title: string; slug: string | null };
 export type RejectionEntry = { title: string; world: string | null; kind: string | null; reason: string };
@@ -23,7 +25,7 @@ export type PublishingDay = {
 // a day). The page lists at most this many and reports the rest as a count.
 const MAX_LISTED = 100;
 
-type BatchRow = { date: string; digestPostUrl: string | null; digestExternalId: string | null };
+type BatchRow = { date: string; hasReport: boolean; digestPostUrl: string | null; digestExternalId: string | null };
 type ItemRow = PublishedEntry & { date: string };
 type RejectionRow = RejectionEntry & { date: string };
 type DayRow = { date: string };
@@ -33,11 +35,13 @@ const byWorldThenTitle = (a: PublishedEntry, b: PublishedEntry) =>
 
 export async function listPublishingDays(db: Queryable, limit = 30): Promise<PublishingDay[]> {
   const batches = await db.query<BatchRow>(
-    `SELECT batch_date::text AS date, digest_post_url AS "digestPostUrl", digest_external_id AS "digestExternalId"
+    `SELECT batch_date::text AS date, report_received_at IS NOT NULL AS "hasReport",
+            digest_post_url AS "digestPostUrl", digest_external_id AS "digestExternalId"
      FROM publishing_batches ORDER BY batch_date DESC LIMIT $1`,
-    [limit],
+    [Math.max(limit * 2, 60)],
   );
-  const reportDates = batches.rows.map((b) => b.date);
+  const batchByDate = new Map(batches.rows.map((b) => [b.date, b]));
+  const reportDates = batches.rows.filter((b) => b.hasReport).map((b) => b.date).slice(0, limit);
 
   const itemsByDate = new Map<string, PublishedEntry[]>();
   const rejectionsByDate = new Map<string, RejectionEntry[]>();
@@ -62,14 +66,16 @@ export async function listPublishingDays(db: Queryable, limit = 30): Promise<Pub
     }
   }
 
-  // Fallback days: distinct import days with published items and no report for that date. Heuristic: if a
-  // reported batch's import landed on a later day, that later day can also appear here with the same items;
-  // for the pre-report history this fallback exists for, import day and batch day are the same day.
+  // Fallback days: distinct import days with published items and no reviewer report for that date. Items that
+  // any reported batch already lists (same world + slug) are excluded, so a batch whose import landed on a
+  // different day is not counted twice. (Reported quizzes carry no slug, so a quiz can still appear on its
+  // import day as well as in its batch; the batch entry is the one without a link.)
   const fallbackDays = await db.query<DayRow>(
-    `SELECT DISTINCT (created_at AT TIME ZONE 'America/New_York')::date::text AS date
-     FROM items
-     WHERE status = 'published'
-       AND (created_at AT TIME ZONE 'America/New_York')::date NOT IN (SELECT batch_date FROM publishing_batches)
+    `SELECT DISTINCT (i.created_at AT TIME ZONE 'America/New_York')::date::text AS date
+     FROM items i
+     WHERE i.status = 'published'
+       AND (i.created_at AT TIME ZONE 'America/New_York')::date NOT IN (
+         SELECT batch_date FROM publishing_batches WHERE report_received_at IS NOT NULL)
      ORDER BY date DESC LIMIT $1`,
     [limit],
   );
@@ -80,7 +86,9 @@ export async function listPublishingDays(db: Queryable, limit = 30): Promise<Pub
               w.slug AS world, i.kind, i.title, i.slug
        FROM items i JOIN worlds w ON w.id = i.world_id
        WHERE i.status = 'published'
-         AND (i.created_at AT TIME ZONE 'America/New_York')::date = ANY($1::date[])`,
+         AND (i.created_at AT TIME ZONE 'America/New_York')::date = ANY($1::date[])
+         AND NOT EXISTS (
+           SELECT 1 FROM publishing_items pi WHERE pi.world = w.slug AND pi.slug = i.slug)`,
       [fallbackDates],
     );
     for (const r of items.rows) {
@@ -91,24 +99,27 @@ export async function listPublishingDays(db: Queryable, limit = 30): Promise<Pub
 
   const listed = (date: string) => (itemsByDate.get(date) ?? []).sort(byWorldThenTitle).slice(0, MAX_LISTED);
   const days: PublishingDay[] = [
-    ...batches.rows.map((b) => ({
-      date: b.date,
-      source: 'report' as const,
-      published: listed(b.date),
-      publishedTotal: (itemsByDate.get(b.date) ?? []).length,
-      rejections: rejectionsByDate.get(b.date) ?? [],
-      digestPostUrl: b.digestPostUrl,
-      digestExternalId: b.digestExternalId,
-    })),
-    ...fallbackDates.map((date) => ({
+    ...reportDates.map((date) => ({
       date,
-      source: 'import' as const,
+      source: 'report' as const,
       published: listed(date),
       publishedTotal: (itemsByDate.get(date) ?? []).length,
-      rejections: [],
-      digestPostUrl: null,
-      digestExternalId: null,
+      rejections: rejectionsByDate.get(date) ?? [],
+      digestPostUrl: batchByDate.get(date)?.digestPostUrl ?? null,
+      digestExternalId: batchByDate.get(date)?.digestExternalId ?? null,
     })),
+    ...fallbackDates
+      // A fallback date whose items were all claimed by reported batches has nothing of its own to show.
+      .filter((date) => (itemsByDate.get(date) ?? []).length > 0)
+      .map((date) => ({
+        date,
+        source: 'import' as const,
+        published: listed(date),
+        publishedTotal: (itemsByDate.get(date) ?? []).length,
+        rejections: [],
+        digestPostUrl: batchByDate.get(date)?.digestPostUrl ?? null,
+        digestExternalId: batchByDate.get(date)?.digestExternalId ?? null,
+      })),
   ];
   days.sort((a, b) => b.date.localeCompare(a.date));
   return days.slice(0, limit);

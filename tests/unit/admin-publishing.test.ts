@@ -10,6 +10,16 @@ import { listPublishingDays } from '@/lib/admin/publishing';
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
 
+// Dates relative to today in America/New_York, matching the reporting window the endpoints enforce.
+const etDay = (offset: number) => {
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' }).format(new Date());
+  const d = new Date(`${today}T12:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + offset);
+  return d.toISOString().slice(0, 10);
+};
+const REPORT = etDay(-2);
+const IMPORT = etDay(-4);
+
 async function insertItem(slug: string, title: string, world: string, createdAt: string) {
   await db.query(
     `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, created_by, risk_tier, created_at)
@@ -26,18 +36,20 @@ beforeAll(async () => {
   const p = await createAgent(db, 'publishing-promoter', null, 'promoter');
   const promoter = (await authenticate(db, p.key))!;
 
-  // A reported day: 2026-11-14, with a digest post.
+  // A reported day, with a digest post.
   await recordReviewReport(db, reviewer, {
-    date: '2026-11-14',
+    date: REPORT,
     published: [{ world: 'play', kind: 'article', title: 'How to fly a kite', slug: 'how-to-fly-a-kite' }],
     rejections: [{ title: 'A volcano, explained', world: 'discover', kind: 'article', reason: 'custom hero needed: volcano' }],
   });
-  await recordDigestPost(db, promoter, { date: '2026-11-14', postUrl: 'https://www.facebook.com/page/posts/123', externalId: '123' });
+  await recordDigestPost(db, promoter, { date: REPORT, postUrl: 'https://www.facebook.com/page/posts/123', externalId: '123' });
 
-  // An unreported import day: 2026-11-12 (15:00 UTC = 10:00 in America/New_York).
-  await insertItem('an-old-article', 'An old article', 'grow', '2026-11-12T15:00:00Z');
-  // An item imported on the reported day itself must not duplicate the report day as an import day.
-  await insertItem('how-to-fly-a-kite', 'How to fly a kite', 'play', '2026-11-14T15:00:00Z');
+  // An unreported import day (15:00 UTC is the same calendar day in America/New_York). It holds one item of its
+  // own and one item that a later reported batch also lists (its import landed on the earlier day).
+  await insertItem('an-old-article', 'An old article', 'grow', `${IMPORT}T15:00:00Z`);
+  await insertItem('how-to-fly-a-kite', 'How to fly a kite', 'play', `${IMPORT}T15:00:00Z`);
+  // A digest write alone for the import day: the day must stay an import day, with the digest shown alongside.
+  await recordDigestPost(db, promoter, { date: IMPORT, postUrl: 'https://www.facebook.com/page/posts/456', externalId: '456' });
 });
 afterAll(async () => {
   await db.close();
@@ -46,7 +58,7 @@ afterAll(async () => {
 describe('listPublishingDays', () => {
   it('shows the reported day with its items, rejection and digest link', async () => {
     const days = await listPublishingDays(db);
-    const day = days.find((d) => d.date === '2026-11-14');
+    const day = days.find((d) => d.date === REPORT);
     expect(day).toBeDefined();
     expect(day!.source).toBe('report');
     expect(day!.published).toEqual([{ world: 'play', kind: 'article', title: 'How to fly a kite', slug: 'how-to-fly-a-kite' }]);
@@ -56,20 +68,21 @@ describe('listPublishingDays', () => {
     expect(day!.digestPostUrl).toContain('facebook.com');
   });
 
-  it('falls back to imported items for days before reports existed', async () => {
+  it('falls back to imported items for days without a report, and a digest-only row changes nothing but the link', async () => {
     const days = await listPublishingDays(db);
-    const day = days.find((d) => d.date === '2026-11-12');
+    const day = days.find((d) => d.date === IMPORT);
     expect(day).toBeDefined();
     expect(day!.source).toBe('import');
+    // Only the day's own item: the kite item is claimed by the reported batch, so it is not counted twice.
     expect(day!.published.map((p) => p.title)).toEqual(['An old article']);
     expect(day!.published[0].slug).toBe('an-old-article');
     expect(day!.rejections).toEqual([]);
-    expect(day!.digestPostUrl).toBeNull();
+    expect(day!.digestPostUrl).toBe('https://www.facebook.com/page/posts/456');
   });
 
   it('does not list a reported day twice and orders newest first', async () => {
     const days = await listPublishingDays(db);
-    expect(days.filter((d) => d.date === '2026-11-14')).toHaveLength(1);
+    expect(days.filter((d) => d.date === REPORT)).toHaveLength(1);
     const dates = days.map((d) => d.date);
     expect(dates).toEqual([...dates].sort().reverse());
   });

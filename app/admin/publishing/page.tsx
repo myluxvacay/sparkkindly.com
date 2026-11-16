@@ -18,7 +18,7 @@ function DaySection({ day }: { day: PublishingDay }) {
     <section aria-labelledby={headingId}>
       <h2 id={headingId}>{dayTitle(day.date)}</h2>
       {day.source === 'import' && (
-        <p className="muted">From the item imports — daily publishing reports were not kept yet, so held-back items and the digest post are not recorded for this day.</p>
+        <p className="muted">From the item imports — no reviewer report was recorded for this day, so held-back items are not listed.</p>
       )}
       <h3>Published ({day.publishedTotal})</h3>
       {day.publishedTotal === 0 && <p>Nothing was published.</p>}
