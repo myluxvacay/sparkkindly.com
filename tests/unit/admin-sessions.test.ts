@@ -1,6 +1,7 @@
 // @vitest-environment node
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
+import { hash } from '@/lib/tokens';
 import { newTotpSecret, totpAt } from '@/lib/admin/totp';
 import { sealSecret, TEST_SECRET_KEY } from '@/lib/admin/secret-box';
 import {
@@ -197,6 +198,15 @@ describe('active sessions', () => {
       if (t.getTime() - at.getTime() <= 24 * 60 * MIN) expect(ok).toEqual({ email: OWNER });
       else expect(ok).toBeNull();
     }
+  });
+
+  it('end on idle alone, before the absolute cap, when last seen is backdated', async () => {
+    const at = plus(T0, 180 * MIN);
+    const s = await signIn(at);
+    // Idle and absolute are both 24 hours, so an untouched session reaches both deadlines at the same moment;
+    // backdating last_seen_at is the only way to watch the idle limit act while the absolute expiry is still ahead.
+    await db.query('UPDATE admin_sessions SET last_seen_at = $1 WHERE token_hash = $2', [plus(at, -2 * 60 * MIN).toISOString(), hash(s)]);
+    expect(await getAdmin(db, s, env, plus(at, 23 * 60 * MIN))).toBeNull();
   });
 
   it('end on sign-out; junk tokens are nobody', async () => {
