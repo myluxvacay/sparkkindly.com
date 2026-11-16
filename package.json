@@ -23,7 +23,8 @@
     "build:preview": "SITE_RELEASE=false npm run build",
     "admin:totp": "tsx scripts/admin-totp.ts",
     "worker:build": "esbuild worker/main.ts --bundle --platform=node --format=esm --target=node24 --external:pg --outfile=release/worker.mjs",
-    "worker:video:build": "esbuild worker/video.ts --bundle --platform=node --format=esm --target=node24 --external:pg --outfile=release/video-worker.mjs"
+    "worker:video:build": "esbuild worker/video.ts --bundle --platform=node --format=esm --target=node24 --external:pg --outfile=release/video-worker.mjs",
+    "content:update-heroes": "tsx scripts/update-hero-images.ts"
   },
   "keywords": [],
   "author": "",
