@@ -10,6 +10,12 @@ A padded, uncropped 1200×630 derivative is used for social sharing. Independent
 license/model-release verification is not asserted; final rights records remain
 part of owner launch review. See public/brand/README.md.
 
+Banner refresh, 15 November 2026: the owner supplied a revised banner whose world
+strip adds Save (the original artwork pre-dated the Save world). source/banner.png
+was replaced and all derivatives (banner-640/1280/1983.webp, social-banner.jpg) were
+regenerated with scripts/prepare-brand.ts; the brand manifest hashes were updated by
+that run. Homepage and social-share alt text now name all six worlds.
+
 Development reference photography is downloaded and self-hosted, with original
 URLs and license link in public/images/manifest.json. Unsplash’s license was read
 on 17 October 2026. Photographer identity, original photo page, subject/property
