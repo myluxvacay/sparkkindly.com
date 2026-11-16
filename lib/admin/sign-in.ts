@@ -73,7 +73,7 @@ export async function submitSignInCode(request: Request, d: Deps): Promise<Respo
   const { result, session: active } = await submitCode(d.db, session, form.get('code')?.trim() ?? '', d.env, d.now);
   if (result === 'ok' && active) {
     await audit(d.db, email, 'sign_in_code_ok', null);
-    return seeOther('/admin/', sessionCookie(active, 12 * 60 * 60));
+    return seeOther('/admin/', sessionCookie(active, 24 * 60 * 60));
   }
   if (result === 'bad') {
     await audit(d.db, email, 'sign_in_code_bad', null);

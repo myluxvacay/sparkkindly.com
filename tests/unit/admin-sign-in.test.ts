@@ -168,6 +168,7 @@ describe('confirmLink and submitSignInCode', () => {
     expect(r.headers.get('location')).toBe('/admin/');
     const active = cookieValue(r);
     expect(active).not.toBe(session);
+    expect(r.headers.get('set-cookie')).toContain('Max-Age=86400');
     expect(await getAdmin(db, session, env, NOW)).toBeNull();
     expect(await getAdmin(db, active, env, NOW)).toEqual({ email: OWNER });
     expect(await auditCount('sign_in_code_ok')).toBe(1);

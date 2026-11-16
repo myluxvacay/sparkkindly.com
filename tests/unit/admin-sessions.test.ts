@@ -176,21 +176,25 @@ describe('second factor (1C review fixes)', () => {
 });
 
 describe('active sessions', () => {
-  it('end when the address leaves the allow-list, or after 60 idle minutes', async () => {
+  it('end when the address leaves the allow-list, or after 24 idle hours', async () => {
     const at = plus(T0, 60 * MIN);
     const s = await signIn(at);
     expect(await getAdmin(db, s, { ADMIN_EMAILS: 'second@example.test' }, at)).toBeNull();
-    expect(await getAdmin(db, s, env, plus(at, 61 * MIN))).toBeNull();
+    // Still valid after 3 idle hours: one sign-in covers a full day of going back and forth.
+    expect(await getAdmin(db, s, env, plus(at, 3 * 60 * MIN))).toEqual({ email: OWNER });
+    const later = plus(at, 2 * MIN);
+    const untouched = await signIn(later);
+    expect(await getAdmin(db, untouched, env, plus(later, 24 * 60 * MIN + MIN))).toBeNull();
   });
 
-  it('end after 12 hours even when used every 50 minutes', async () => {
+  it('end after 24 hours even when used every 50 minutes', async () => {
     const at = plus(T0, 120 * MIN);
     const busy = await signIn(at);
     let t = at;
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 30; i++) {
       t = plus(t, 50 * MIN);
       const ok = await getAdmin(db, busy, env, t);
-      if (t.getTime() - at.getTime() <= 12 * 60 * MIN) expect(ok).toEqual({ email: OWNER });
+      if (t.getTime() - at.getTime() <= 24 * 60 * MIN) expect(ok).toEqual({ email: OWNER });
       else expect(ok).toBeNull();
     }
   });

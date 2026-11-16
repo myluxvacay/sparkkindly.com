@@ -249,7 +249,9 @@ The disk job reported 10 percent used, and restoring over `sparkkindly_staging` 
 **Admin sign-in.** `/admin/` is for the addresses in `ADMIN_EMAILS` (comma-separated, in the root-owned env file
 `/opt/sparkkindly/shared/<env>.env`; never in the repository). Sign-in is an emailed link (15 minutes, single use, used
 by pressing Continue so mail scanners cannot spend it) and then the code from an authenticator app. Sessions last at most
-12 hours and end after 60 idle minutes; five wrong codes end the attempt. Every admin action and sign-in step is in
+24 hours and end after 24 idle hours; five wrong codes end the attempt. The 24-hour limits are an owner
+decision of 2026-11-16 (previously 12 hours and 60 idle minutes), so one sign-in covers a full day of returning to
+the admin area. Every admin action and sign-in step is in
 `audit_log`. Staging sets `ADMIN_LINK_BASE=https://staging.sparkkindly.com` so its links point at staging.
 - **Add or remove an approver:** edit `ADMIN_EMAILS` and `sudo systemctl restart sparkkindly-web` (or `-staging`).
   Removing an address ends its sessions on the next request. This is also the recovery path if sign-in links are
