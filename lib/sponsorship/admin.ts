@@ -8,9 +8,12 @@ import type { Queryable } from '@/lib/db';
 import { itemMayCarrySponsorship } from './eligibility';
 import { validateSponsor, validateSponsorship, type SponsorInput, type SponsorshipInput } from './rules';
 
-type Fail = { ok: false; reason: 'rules' | 'invalid' | 'target' | 'missing' };
+type Fail = { ok: false; reason: 'rules' | 'invalid' | 'target' | 'missing' | 'category' };
 type Outcome<T> = { ok: true; value: T } | Fail;
 const fail = (reason: Fail['reason']): Fail => ({ ok: false, reason });
+
+// Serializes sponsor creation across transactions (see createSponsor). Any stable bigint works; this one is ours alone.
+const SPONSOR_CREATE_LOCK_KEY = 727_2026;
 
 const formObject = (f: URLSearchParams) => Object.fromEntries([...f.keys()].map((k) => [k, f.get(k)]));
 
@@ -18,6 +21,17 @@ export async function createSponsor(tx: Queryable, form: URLSearchParams, now: D
   const v = validateSponsor({ ...formObject(form), confirmed: form.get('confirmed') === 'on' });
   if (!v.ok) {
     return fail('rules');
+  }
+  // Owner policy (15 November 2026): one sponsor per category, enforced here at the only door in. The
+  // transaction-scoped advisory lock serializes sponsor creation, so the check below cannot race: a
+  // concurrent create waits for this transaction to commit, then sees its row and is refused. (A unique
+  // index on category was considered and rejected: the sponsor-line suites legitimately hold several
+  // sponsors per category in their fixtures, and the policy governs what the admin creates, not the
+  // table's shape.)
+  await tx.query('SELECT pg_advisory_xact_lock($1)', [SPONSOR_CREATE_LOCK_KEY]);
+  const taken = await tx.query<{ id: number }>('SELECT id FROM sponsors WHERE category = $1 LIMIT 1', [v.value.category]);
+  if (taken.rows[0]) {
+    return fail('category');
   }
   const r = await tx.query<{ id: number }>(
     'INSERT INTO sponsors (name, link, category, confirmed_at) VALUES ($1, $2, $3, $4) RETURNING id',
