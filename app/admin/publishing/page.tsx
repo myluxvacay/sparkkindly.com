@@ -30,9 +30,12 @@ const shortDate = (date: string) =>
   );
 
 // One compact line per day that has something beyond its rows: the batch's Facebook digest post, a note for
-// pre-report import days, and the overflow count on bulk import days.
+// pre-report import days, the overflow count on bulk days, and a trace for a reported day whose batch has no
+// rows in the current view (an empty report, or filters that exclude all of it).
 function DayNotes({ days }: { days: PublishingDayMeta[] }) {
-  const noted = days.filter((d) => d.digestPostUrl || d.digestExternalId || d.source === 'import' || d.unlisted > 0);
+  const noted = days.filter(
+    (d) => d.digestPostUrl || d.digestExternalId || d.source === 'import' || d.unlisted > 0 || (d.source === 'report' && d.rowCount === 0),
+  );
   if (noted.length === 0) return null;
   return (
     <div>
@@ -41,13 +44,14 @@ function DayNotes({ days }: { days: PublishingDayMeta[] }) {
           {shortDate(d.date)} —{' '}
           {d.digestPostUrl ? (
             <>
-              Facebook digest: <a href={d.digestPostUrl} target="_blank" rel="noreferrer">view the post</a>.{' '}
+              Facebook digest: <a href={d.digestPostUrl} target="_blank" rel="noreferrer">View the digest post on Facebook</a>.{' '}
             </>
           ) : d.digestExternalId ? (
             <>Facebook digest posted (post id {d.digestExternalId}); no link was recorded. </>
           ) : null}
           {d.source === 'import' && <>Import day — no reviewer report was recorded, so held-back items are not listed. </>}
-          {d.unlisted > 0 && <>{d.unlisted} more published items not listed (bulk import day; see Items for the full list).</>}
+          {d.source === 'report' && d.rowCount === 0 && <>A batch was reported for this day; no items from it are in this view. </>}
+          {d.unlisted > 0 && <>{d.unlisted} more published items from this day not listed; see Items for the full list.</>}
         </p>
       ))}
     </div>
@@ -137,35 +141,39 @@ export default async function AdminPublishingPage({ searchParams }: Props) {
         </p>
       )}
       <DayNotes days={grid.days} />
-      <div className="admin-table">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Date</th>
-              <th scope="col">World</th>
-              <th scope="col">Type</th>
-              <th scope="col">Title</th>
-              <th scope="col">Status</th>
-              <th scope="col">Reason</th>
-            </tr>
-          </thead>
-          <tbody>
-            {grid.rows.map((r, i) => (
-              <tr key={`${r.date}-${r.status}-${r.slug ?? r.title}-${i}`}>
-                <td>{shortDate(r.date)}</td>
-                <td>{r.world ?? '—'}</td>
-                <td>{r.kind ?? '—'}</td>
-                <td>{r.slug && r.world ? <Link href={`/${r.world}/${r.slug}/`}>{r.title}</Link> : r.title}</td>
-                <td>{r.status === 'published' ? 'Published' : 'Held back'}</td>
-                <td>{r.reason ?? '—'}</td>
+      {grid.total > 0 && (
+        <div className="admin-table">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">World</th>
+                <th scope="col">Type</th>
+                <th scope="col">Title</th>
+                <th scope="col">Status</th>
+                <th scope="col">Reason</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {grid.rows.map((r, i) => (
+                <tr key={`${r.date}-${r.status}-${r.slug ?? r.title}-${i}`}>
+                  <td>{shortDate(r.date)}</td>
+                  <td>{r.world ?? '—'}</td>
+                  <td>{r.kind ?? '—'}</td>
+                  <td>{r.slug && r.world ? <Link href={`/${r.world}/${r.slug}/`}>{r.title}</Link> : r.title}</td>
+                  <td>{r.status === 'published' ? 'Published' : 'Held back'}</td>
+                  <td>{r.reason ?? '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
       {grid.total === 0 &&
         (filtered ? (
           <p>No items match these filters.</p>
+        ) : grid.range === 'all' ? (
+          <p>Nothing has been recorded yet. Batches will appear here as the daily jobs report in.</p>
         ) : (
           <p>
             Nothing to show for this range yet. Batches will appear here as the daily jobs report in — widen the range above to see older

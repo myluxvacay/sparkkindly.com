@@ -18,9 +18,11 @@ const etDay = (offset: number) => {
   return d.toISOString().slice(0, 10);
 };
 const REPORT = etDay(-2); // reported day inside the default 7-day window
+const EMPTY_REPORT = etDay(-3); // reported day with no items at all
 const IMPORT = etDay(-4); // import day inside the default window
 const OLD_REPORT = etDay(-10); // reported day outside the default window, inside 30 days
 const OLD_IMPORT = etDay(-12); // import day outside the default window
+const OLDER_IMPORT = etDay(-40); // import day outside even the 30-day range
 
 async function insertItem(slug: string, title: string, world: string, createdAt: string, kind = 'article') {
   await db.query(
@@ -57,13 +59,17 @@ beforeAll(async () => {
   // A digest write alone for the import day: the day must stay an import day, with the digest shown alongside.
   await recordDigestPost(db, promoter, { date: IMPORT, postUrl: 'https://www.facebook.com/page/posts/456', externalId: '456' });
 
-  // An older reported day and an older import day, both outside the default window.
+  // A reported day whose batch was empty: it must still leave a trace in the day meta.
+  await recordReviewReport(db, reviewer, { date: EMPTY_REPORT, published: [], rejections: [] });
+
+  // An older reported day and older import days, outside the default window.
   await recordReviewReport(db, reviewer, {
     date: OLD_REPORT,
     published: [{ world: 'grow', kind: 'article', title: 'An older batch article', slug: 'an-older-batch-article' }],
     rejections: [{ title: 'A shaky savings claim', world: 'save', kind: 'article', reason: 'source does not support the claim' }],
   });
   await insertItem('a-very-old-article', 'A very old article', 'together', `${OLD_IMPORT}T15:00:00Z`);
+  await insertItem('an-ancient-article', 'An ancient article', 'play', `${OLDER_IMPORT}T15:00:00Z`);
 });
 afterAll(async () => {
   await db.close();
@@ -84,7 +90,14 @@ describe('resolvePublishingWindow', () => {
       from: etDay(-9),
       to: etDay(-2),
     });
-    expect(resolvePublishingWindow({ range: 'custom', from: 'not-a-date' }).window).toEqual({ from: null, to: null });
+  });
+
+  it('falls back to the default window when a custom date is unparseable, instead of widening to all', () => {
+    const today = etToday();
+    const { range, window } = resolvePublishingWindow({ range: 'custom', from: 'not-a-date' }, today);
+    expect(range).toBe('7');
+    expect(window).toEqual({ from: etDay(-6), to: today });
+    expect(resolvePublishingWindow({ range: 'custom', to: '2026-02-30' }, today).range).toBe('7');
   });
 });
 
@@ -146,10 +159,85 @@ describe('listPublishingGrid', () => {
     expect((await listPublishingGrid(db, { kind: 'quiz' })).rows.map((r) => r.title)).toEqual(['How many moons does Mars have?']);
     const held = await listPublishingGrid(db, { status: 'held' });
     expect(held.rows.map((r) => r.title)).toEqual(['A volcano, explained']);
-    expect(held.days.map((d) => d.date)).toEqual([REPORT]);
+    // Day meta is per day, not per row: the reported days and the digest day stay listed under any filter.
+    expect(held.days.map((d) => d.date)).toEqual([REPORT, EMPTY_REPORT, IMPORT]);
+    expect(held.days.find((d) => d.date === REPORT)).toMatchObject({ rowCount: 1 });
     expect((await listPublishingGrid(db, { q: 'KITE' })).rows.map((r) => r.title)).toEqual(['How to fly a kite']);
     expect((await listPublishingGrid(db, { q: 'no such title' })).total).toBe(0);
     // An unrecognized filter value is ignored, as on the Items page, rather than erroring.
     expect((await listPublishingGrid(db, { world: 'nope' })).total).toBe(4);
+    expect((await listPublishingGrid(db, { kind: 'nope' })).total).toBe(4);
+    expect((await listPublishingGrid(db, { status: 'nope' })).total).toBe(4);
+  });
+
+  it('composes filters, and treats the title search as literal text', async () => {
+    const both = await listPublishingGrid(db, { world: 'discover', status: 'held' });
+    expect(both.rows.map((r) => r.title)).toEqual(['A volcano, explained']);
+    expect((await listPublishingGrid(db, { world: 'discover', status: 'published' })).total).toBe(1);
+    // '%' is a literal character here, not a wildcard: no title contains one.
+    expect((await listPublishingGrid(db, { q: '%' })).total).toBe(0);
+  });
+
+  it('keeps day meta for reported and digest days even when filters hide all their rows', async () => {
+    const grid = await listPublishingGrid(db, { world: 'play' });
+    const report = grid.days.find((d) => d.date === REPORT);
+    expect(report).toMatchObject({ source: 'report', digestPostUrl: 'https://www.facebook.com/page/posts/123', rowCount: 1 });
+    // The empty reported day leaves a trace: present in the meta, with no rows.
+    const empty = grid.days.find((d) => d.date === EMPTY_REPORT);
+    expect(empty).toMatchObject({ source: 'report', rowCount: 0 });
+    const unfiltered = await listPublishingGrid(db);
+    expect(unfiltered.days.find((d) => d.date === EMPTY_REPORT)).toMatchObject({ source: 'report', rowCount: 0 });
+    expect(unfiltered.total).toBe(4);
+  });
+
+  it('de-duplicates claimed items even when the window holds the import day but not the report day', async () => {
+    // A single-day custom range on the import day itself (also pinning both window bounds as inclusive for
+    // fallback items): the reported batch is outside the window, yet its claimed items stay suppressed.
+    const grid = await listPublishingGrid(db, { range: 'custom', from: IMPORT, to: IMPORT });
+    expect(grid.total).toBe(1);
+    expect(grid.rows.map((r) => r.title)).toEqual(['An old article']);
+  });
+
+  it('reaches beyond 30 days only with the all range', async () => {
+    expect((await listPublishingGrid(db, { range: '30' })).rows.map((r) => r.title)).not.toContain('An ancient article');
+    const all = await listPublishingGrid(db, { range: 'all' });
+    expect(all.total).toBe(8);
+    expect(all.rows.map((r) => r.title)).toContain('An ancient article');
+    expect(all.days.find((d) => d.date === OLDER_IMPORT)).toMatchObject({ source: 'import' });
+  });
+});
+
+describe('listPublishingGrid on a bulk import day', () => {
+  let bulkDb: TestDb;
+  const BULK_DAY = etDay(-1);
+  beforeAll(async () => {
+    bulkDb = await newTestDb();
+    await seedReference(bulkDb);
+    for (let n = 1; n <= 105; n++) {
+      const nn = String(n).padStart(3, '0');
+      await bulkDb.query(
+        `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, created_by, risk_tier, created_at)
+         VALUES ((SELECT id FROM worlds WHERE slug = 'grow'), 'article', $1, $2, 'summary', '[]'::jsonb, 'all', 'published', 'legacy-import', 'sourced', $3::timestamptz)`,
+        [`bulk-item-${nn}`, `Bulk item ${nn}`, `${BULK_DAY}T15:00:00Z`],
+      );
+    }
+  });
+  afterAll(async () => {
+    await bulkDb.close();
+  });
+
+  it('counts exactly and renders only the per-day cap, reporting the rest as unlisted', async () => {
+    const grid = await listPublishingGrid(bulkDb);
+    expect(grid.total).toBe(105);
+    expect(grid.publishedCount).toBe(105);
+    expect(grid.rows).toHaveLength(100);
+    expect(grid.days.find((d) => d.date === BULK_DAY)).toMatchObject({ source: 'import', unlisted: 5 });
+  });
+
+  it('searches past the per-day cap', async () => {
+    const grid = await listPublishingGrid(bulkDb, { q: 'Bulk item 105' });
+    expect(grid.total).toBe(1);
+    expect(grid.rows.map((r) => r.title)).toEqual(['Bulk item 105']);
+    expect(grid.days.find((d) => d.date === BULK_DAY)).toMatchObject({ unlisted: 0 });
   });
 });

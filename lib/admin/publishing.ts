@@ -25,7 +25,8 @@ export type PublishingDayMeta = {
   source: 'report' | 'import';
   digestPostUrl: string | null;
   digestExternalId: string | null;
-  unlisted: number; // published items of the day past the per-day listing cap (bulk import days)
+  unlisted: number; // published items matching the filters that the listing caps left out (bulk import days)
+  rowCount: number; // rows of this day in the grid (0 for a reported day with nothing in the current view)
 };
 
 export type PublishingWindow = { from: string | null; to: string | null };
@@ -50,11 +51,12 @@ export type PublishingGrid = {
   window: PublishingWindow; // the effective window applied
 };
 
-// A daily batch is ~24 items. The grid caps the rendered rows; the counts stay exact so the admin can narrow
-// the filters when a view is truncated.
+// A daily batch is ~24 items. The grid caps the rendered rows (per day and overall); filtering and the counts
+// run over the full set first, so a title search reaches every item and the totals stay exact — the caps only
+// bound what is rendered, and the difference is reported per day as `unlisted`.
 const MAX_ROWS = 500;
 // A fallback day can be a bulk import (the launch library was ~1,400 items in a day). At most this many of a
-// day's published items are listed; the rest are reported in the day's `unlisted` count.
+// day's published items are rendered.
 const MAX_LISTED_PER_DAY = 100;
 
 const WORLDS = ['play', 'discover', 'together', 'grow', 'save', 'kids'];
@@ -84,14 +86,22 @@ export function resolvePublishingWindow(
     case 'all':
       return { range: 'all', window: { from: null, to: null } };
     case 'custom': {
-      let from = isDate(f.from) ? f.from : null;
-      let to = isDate(f.to) ? f.to : null;
-      if (from && to && from > to) [from, to] = [to, from];
-      return { range: 'custom', window: { from, to } };
+      // A provided but unparseable date falls back to the default window (after the switch) rather than
+      // silently widening the view to everything; an absent side is simply unbounded on that side.
+      if (!f.from || isDate(f.from)) {
+        if (!f.to || isDate(f.to)) {
+          let from = isDate(f.from) ? f.from : null;
+          let to = isDate(f.to) ? f.to : null;
+          if (from && to && from > to) [from, to] = [to, from];
+          return { range: 'custom', window: { from, to } };
+        }
+      }
+      break;
     }
     default:
-      return { range: '7', window: { from: shiftDate(today, -6), to: today } };
+      break;
   }
+  return { range: '7', window: { from: shiftDate(today, -6), to: today } };
 }
 
 type BatchRow = { date: string; hasReport: boolean; digestPostUrl: string | null; digestExternalId: string | null };
@@ -146,7 +156,7 @@ export async function listPublishingGrid(db: Queryable, filters: PublishingGridF
          SELECT batch_date FROM publishing_batches WHERE report_received_at IS NOT NULL)
        AND ($1::date IS NULL OR (i.created_at AT TIME ZONE 'America/New_York')::date >= $1::date)
        AND ($2::date IS NULL OR (i.created_at AT TIME ZONE 'America/New_York')::date <= $2::date)
-     ORDER BY date DESC LIMIT 366`,
+     ORDER BY date DESC`,
     [window.from, window.to],
   );
   const fallbackDates = fallbackDays.rows.map((d) => d.date);
@@ -167,14 +177,12 @@ export async function listPublishingGrid(db: Queryable, filters: PublishingGridF
   // Flatten to rows: days newest first; within a day the published rows (world, then title), then the held.
   const reportDateSet = new Set(reportDates);
   const allDates = [...new Set([...reportDates, ...fallbackDates])].sort().reverse();
-  const unlistedByDate = new Map<string, number>();
   const sourceByDate = new Map<string, 'report' | 'import'>();
   const allRows: PublishingRow[] = [];
   for (const date of allDates) {
-    const published = (publishedByDate.get(date) ?? []).sort(byWorldThenTitle);
-    unlistedByDate.set(date, Math.max(0, published.length - MAX_LISTED_PER_DAY));
     sourceByDate.set(date, reportDateSet.has(date) ? 'report' : 'import');
-    for (const p of published.slice(0, MAX_LISTED_PER_DAY)) {
+    const published = (publishedByDate.get(date) ?? []).sort(byWorldThenTitle);
+    for (const p of published) {
       allRows.push({ date, world: p.world, kind: p.kind, title: p.title, slug: p.slug, status: 'published', reason: null });
     }
     const held = (rejectionsByDate.get(date) ?? []).sort(byWorldThenTitle);
@@ -195,13 +203,42 @@ export async function listPublishingGrid(db: Queryable, filters: PublishingGridF
       (!q || r.title.toLowerCase().includes(q)),
   );
 
-  const rows = filtered.slice(0, MAX_ROWS);
-  const days: PublishingDayMeta[] = [...new Set(rows.map((r) => r.date))].map((date) => ({
+  // Render caps, applied after filtering: at most MAX_LISTED_PER_DAY published rows of a day, then MAX_ROWS
+  // overall. What the caps leave out is counted per day as `unlisted`, so the totals above stay exact.
+  const displayedPublishedByDate = new Map<string, number>();
+  const capped: PublishingRow[] = [];
+  for (const r of filtered) {
+    if (r.status === 'published') {
+      const n = displayedPublishedByDate.get(r.date) ?? 0;
+      if (n >= MAX_LISTED_PER_DAY) continue;
+      displayedPublishedByDate.set(r.date, n + 1);
+    }
+    capped.push(r);
+  }
+  const rows = capped.slice(0, MAX_ROWS);
+  const shownPublishedByDate = new Map<string, number>();
+  const shownRowsByDate = new Map<string, number>();
+  for (const r of rows) {
+    shownRowsByDate.set(r.date, (shownRowsByDate.get(r.date) ?? 0) + 1);
+    if (r.status === 'published') shownPublishedByDate.set(r.date, (shownPublishedByDate.get(r.date) ?? 0) + 1);
+  }
+  const filteredPublishedByDate = new Map<string, number>();
+  for (const r of filtered) {
+    if (r.status === 'published') filteredPublishedByDate.set(r.date, (filteredPublishedByDate.get(r.date) ?? 0) + 1);
+  }
+
+  // Day context is per day, not per row: every reported day in the window and every day with a recorded
+  // digest keeps its meta (and so its digest line) even when the current filters show none of its rows —
+  // a reported day with no items at all still leaves a trace — alongside the days the rows cover.
+  const digestDates = batches.rows.filter((b) => b.digestPostUrl || b.digestExternalId).map((b) => b.date);
+  const metaDates = [...new Set([...reportDates, ...digestDates, ...rows.map((r) => r.date)])].sort().reverse();
+  const days: PublishingDayMeta[] = metaDates.map((date) => ({
     date,
     source: sourceByDate.get(date) ?? 'import',
     digestPostUrl: batchByDate.get(date)?.digestPostUrl ?? null,
     digestExternalId: batchByDate.get(date)?.digestExternalId ?? null,
-    unlisted: unlistedByDate.get(date) ?? 0,
+    unlisted: Math.max(0, (filteredPublishedByDate.get(date) ?? 0) - (shownPublishedByDate.get(date) ?? 0)),
+    rowCount: shownRowsByDate.get(date) ?? 0,
   }));
   return {
     rows,
