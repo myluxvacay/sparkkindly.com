@@ -1,1 +1,65 @@
-{"ageGuidance":"Ages 6–9, with an adult","aiDisclosure":"Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Words that sound the same at the end","paragraphs":["Some words rhyme: cat and hat, sun and fun, bear and chair. Rhyming words end with the same sound.","Say a word out loud. Can your adult find a word that rhymes? Then swap. Silly made-up rhymes count too, and they are often the funniest."]},{"heading":"The rhyming chain game","paragraphs":["Start with one word, like “cake.” Take turns adding a rhyming word: cake, bake, lake, snake, shake.","Keep going until nobody can think of another one. Then start a new chain with a different word. There is no winner; the chain belongs to everyone."]},{"heading":"Make a two-line poem","paragraphs":["Pick two rhyming words and put one at the end of each line. “I saw a cat / wearing a hat” is a whole poem already.","Say your poem out loud together. Poems are allowed to be very short and very silly."]}],"brand":"kids","contentType":"activity","description":"For ages 6–9 with an adult: play with words that rhyme and build a tiny poem together.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/kids.webp","width":1200},"id":"kids-bulk-15","materials":["Just your voices","Paper and pencil if you want to keep your poem"],"publishedAt":"2026-11-09","reviewNote":"Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","safetyNotes":["Keep rhymes kind: no rhyming games that make fun of anyone's name or how they speak."],"screenFreeExtension":"Play the rhyming chain game in the car, in a queue, or while waiting for dinner to cook.","slug":"rhyme-time","sources":[],"supervision":"An adult stays alongside throughout.","tags":["words","family-activities"],"takeaway":"Rhymes are sounds holding hands, and you can collect them anywhere.","title":"Rhyme time","updatedAt":"2026-11-09"}
+{
+  "ageGuidance": "Ages 6–9, with an adult",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Words that sound the same at the end",
+      "paragraphs": [
+        "Some words rhyme: cat and hat, sun and fun, bear and chair. Rhyming words end with the same sound.",
+        "Say a word out loud. Can your adult find a word that rhymes? Then swap. Silly made-up rhymes count too, and they are often the funniest."
+      ]
+    },
+    {
+      "heading": "The rhyming chain game",
+      "paragraphs": [
+        "Start with one word, like “cake.” Take turns adding a rhyming word: cake, bake, lake, snake, shake.",
+        "Keep going until nobody can think of another one. Then start a new chain with a different word. There is no winner; the chain belongs to everyone."
+      ]
+    },
+    {
+      "heading": "Make a two-line poem",
+      "paragraphs": [
+        "Pick two rhyming words and put one at the end of each line. “I saw a cat / wearing a hat” is a whole poem already.",
+        "Say your poem out loud together. Poems are allowed to be very short and very silly."
+      ]
+    }
+  ],
+  "brand": "kids",
+  "contentType": "activity",
+  "description": "For ages 6–9 with an adult: play with words that rhyme and build a tiny poem together.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A family holding hands while walking",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/family.webp",
+    "width": 1200
+  },
+  "id": "kids-bulk-15",
+  "materials": [
+    "Just your voices",
+    "Paper and pencil if you want to keep your poem"
+  ],
+  "publishedAt": "2026-11-09",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "safetyNotes": [
+    "Keep rhymes kind: no rhyming games that make fun of anyone's name or how they speak."
+  ],
+  "screenFreeExtension": "Play the rhyming chain game in the car, in a queue, or while waiting for dinner to cook.",
+  "slug": "rhyme-time",
+  "sources": [],
+  "supervision": "An adult stays alongside throughout.",
+  "tags": [
+    "words",
+    "family-activities"
+  ],
+  "takeaway": "Rhymes are sounds holding hands, and you can collect them anywhere.",
+  "title": "Rhyme time",
+  "updatedAt": "2026-11-09"
+}

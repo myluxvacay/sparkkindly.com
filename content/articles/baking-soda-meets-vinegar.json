@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"An acid meets a base","paragraphs":["The famous fizz is a neutralisation. Vinegar is a dilute solution of acetic acid; baking soda — sodium bicarbonate — is a mild base. Put them together and the acid hands some of its hydrogen ions to the base, and the pair rearrange into new substances: sodium acetate, water, and carbon dioxide gas. It is the carbon dioxide, produced faster than it can dissolve, that boils out of the mixture as foam.","For a moment, an in-between substance called carbonic acid forms, but it is unstable and instantly falls apart into water and carbon dioxide. If you put your hand on the container afterwards, you may notice it feels slightly cool: this reaction absorbs a little heat from its surroundings as it runs."]},{"heading":"Why it erupts so eagerly","paragraphs":["The drama is about speed, not power. Both ingredients are mild and the quantities of gas are modest, but gas takes up far more room than the liquids that made it — the carbon dioxide from a single spoonful of baking soda would fill a bottle. Produced all at once in a narrow-necked model volcano, it has nowhere to go but up, dragging coloured liquid with it.","Real volcanic eruptions, it should be said, work completely differently — they are driven by gas dissolved in molten rock under enormous pressure. The kitchen volcano is a fine demonstration of gas production, just not of geology."]},{"heading":"What the fizz is actually good for","paragraphs":["Bakers use the same reaction more gently: baking soda in a batter meets acidic ingredients like yoghurt or lemon juice and releases bubbles that raise the cake as it sets in the oven. Bicarbonate in fizzy bath bombs and in some cleaning products works the same way.","One honest note about cleaning: the fizz can lift loose dirt, but the acid and base mostly cancel each other out, leaving mildly salty water. For a blocked drain or a greasy pan, each ingredient on its own — or plain hot water and detergent — usually does more than the two mixed together."]}],"brand":"discover","contentType":"article","description":"Baking soda and vinegar fizz because an acid and a base swap partners and release carbon dioxide gas — here is the reaction, step by step.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-72","publishedAt":"2026-10-16","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"baking-soda-meets-vinegar","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Sodium bicarbonate","url":"https://en.wikipedia.org/wiki/Sodium_bicarbonate"},{"accessedAt":"2026-11-15","title":"Wikipedia: Acetic acid","url":"https://en.wikipedia.org/wiki/Acetic_acid"}],"tags":["chemistry","science"],"takeaway":"Vinegar (an acid) and baking soda (a base) neutralise each other and release carbon dioxide — the gas, made faster than it can dissolve, is the fizz.","title":"Baking soda meets vinegar: a gentle eruption, explained","updatedAt":"2026-10-16"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "An acid meets a base",
+      "paragraphs": [
+        "The famous fizz is a neutralisation. Vinegar is a dilute solution of acetic acid; baking soda — sodium bicarbonate — is a mild base. Put them together and the acid hands some of its hydrogen ions to the base, and the pair rearrange into new substances: sodium acetate, water, and carbon dioxide gas. It is the carbon dioxide, produced faster than it can dissolve, that boils out of the mixture as foam.",
+        "For a moment, an in-between substance called carbonic acid forms, but it is unstable and instantly falls apart into water and carbon dioxide. If you put your hand on the container afterwards, you may notice it feels slightly cool: this reaction absorbs a little heat from its surroundings as it runs."
+      ]
+    },
+    {
+      "heading": "Why it erupts so eagerly",
+      "paragraphs": [
+        "The drama is about speed, not power. Both ingredients are mild and the quantities of gas are modest, but gas takes up far more room than the liquids that made it — the carbon dioxide from a single spoonful of baking soda would fill a bottle. Produced all at once in a narrow-necked model volcano, it has nowhere to go but up, dragging coloured liquid with it.",
+        "Real volcanic eruptions, it should be said, work completely differently — they are driven by gas dissolved in molten rock under enormous pressure. The kitchen volcano is a fine demonstration of gas production, just not of geology."
+      ]
+    },
+    {
+      "heading": "What the fizz is actually good for",
+      "paragraphs": [
+        "Bakers use the same reaction more gently: baking soda in a batter meets acidic ingredients like yoghurt or lemon juice and releases bubbles that raise the cake as it sets in the oven. Bicarbonate in fizzy bath bombs and in some cleaning products works the same way.",
+        "One honest note about cleaning: the fizz can lift loose dirt, but the acid and base mostly cancel each other out, leaving mildly salty water. For a blocked drain or a greasy pan, each ingredient on its own — or plain hot water and detergent — usually does more than the two mixed together."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Baking soda and vinegar fizz because an acid and a base swap partners and release carbon dioxide gas — here is the reaction, step by step.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-72",
+  "publishedAt": "2026-10-16",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "baking-soda-meets-vinegar",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Sodium bicarbonate",
+      "url": "https://en.wikipedia.org/wiki/Sodium_bicarbonate"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Acetic acid",
+      "url": "https://en.wikipedia.org/wiki/Acetic_acid"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Vinegar (an acid) and baking soda (a base) neutralise each other and release carbon dioxide — the gas, made faster than it can dissolve, is the fizz.",
+  "title": "Baking soda meets vinegar: a gentle eruption, explained",
+  "updatedAt": "2026-10-16"
+}

@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"One substance, three behaviours","paragraphs":["Everything around you is made of particles in constant motion, and temperature is really a measure of how energetically they move. In a solid, the particles are held in fixed positions by strong attractions; they cannot travel, only vibrate on the spot, which is why solids keep their own shape and volume.","Give the particles more energy and the attractions loosen. In a liquid they stay close but slide past one another, so a liquid keeps its volume but takes the shape of its container. Give them more energy still and they break free entirely: a gas's particles fly in straight lines, bouncing off each other and the walls, spreading to fill any space they are given."]},{"heading":"Changing state, step by step","paragraphs":["Heating a solid melts it once its particles vibrate hard enough to escape their fixed positions. Keep heating the liquid and its fastest particles escape from the surface — evaporation — until, at boiling point, bubbles of gas form throughout the liquid. Cooling runs the film backwards: gas condenses to liquid, and liquid freezes to solid.","Notice what does not change: the particles themselves. Ice, water and steam are all H₂O. Melting and boiling are physical changes — rearrangements of movement, not new substances — which is why they can be reversed simply by cooling."]},{"heading":"Water, the odd one out","paragraphs":["Most substances shrink steadily as they freeze, but water expands. Its molecules lock into an open, spaced-out crystal pattern in ice, so ice is less dense than liquid water and floats — which is why lakes freeze from the top down and fish can survive the winter underneath.","There is also a fourth state worth meeting: heat a gas hard enough and its atoms lose electrons, becoming a plasma. Lightning, the Sun and the glowing gas inside a neon sign are all plasma — by far the most common state of ordinary matter in the universe, even if it is rare in your kitchen."]}],"brand":"discover","contentType":"article","description":"Ice, water and steam are the same particles behaving differently — what changes between them is how much energy they have to move.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-60","publishedAt":"2026-09-16","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"solids-liquids-and-gases","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: State of matter","url":"https://en.wikipedia.org/wiki/State_of_matter"},{"accessedAt":"2026-11-15","title":"Wikipedia: Kinetic theory of gases","url":"https://en.wikipedia.org/wiki/Kinetic_theory_of_gases"}],"tags":["chemistry","science"],"takeaway":"Solids, liquids and gases differ only in how their particles move: locked and vibrating, sliding past each other, or flying freely apart.","title":"Solids, liquids and gases: particles on the move","updatedAt":"2026-09-16"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "One substance, three behaviours",
+      "paragraphs": [
+        "Everything around you is made of particles in constant motion, and temperature is really a measure of how energetically they move. In a solid, the particles are held in fixed positions by strong attractions; they cannot travel, only vibrate on the spot, which is why solids keep their own shape and volume.",
+        "Give the particles more energy and the attractions loosen. In a liquid they stay close but slide past one another, so a liquid keeps its volume but takes the shape of its container. Give them more energy still and they break free entirely: a gas's particles fly in straight lines, bouncing off each other and the walls, spreading to fill any space they are given."
+      ]
+    },
+    {
+      "heading": "Changing state, step by step",
+      "paragraphs": [
+        "Heating a solid melts it once its particles vibrate hard enough to escape their fixed positions. Keep heating the liquid and its fastest particles escape from the surface — evaporation — until, at boiling point, bubbles of gas form throughout the liquid. Cooling runs the film backwards: gas condenses to liquid, and liquid freezes to solid.",
+        "Notice what does not change: the particles themselves. Ice, water and steam are all H₂O. Melting and boiling are physical changes — rearrangements of movement, not new substances — which is why they can be reversed simply by cooling."
+      ]
+    },
+    {
+      "heading": "Water, the odd one out",
+      "paragraphs": [
+        "Most substances shrink steadily as they freeze, but water expands. Its molecules lock into an open, spaced-out crystal pattern in ice, so ice is less dense than liquid water and floats — which is why lakes freeze from the top down and fish can survive the winter underneath.",
+        "There is also a fourth state worth meeting: heat a gas hard enough and its atoms lose electrons, becoming a plasma. Lightning, the Sun and the glowing gas inside a neon sign are all plasma — by far the most common state of ordinary matter in the universe, even if it is rare in your kitchen."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Ice, water and steam are the same particles behaving differently — what changes between them is how much energy they have to move.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-60",
+  "publishedAt": "2026-09-16",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "solids-liquids-and-gases",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: State of matter",
+      "url": "https://en.wikipedia.org/wiki/State_of_matter"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Kinetic theory of gases",
+      "url": "https://en.wikipedia.org/wiki/Kinetic_theory_of_gases"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Solids, liquids and gases differ only in how their particles move: locked and vibrating, sliding past each other, or flying freely apart.",
+  "title": "Solids, liquids and gases: particles on the move",
+  "updatedAt": "2026-09-16"
+}

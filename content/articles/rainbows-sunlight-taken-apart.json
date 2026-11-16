@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"One raindrop, three tricks","paragraphs":["A rainbow is sunlight processed by millions of raindrops, but each drop performs the same three steps. First, light entering the drop refracts — bends — and because each colour bends by a slightly different amount, the white light fans out into a spectrum, as it would in a prism.","Second, the light reflects once off the inside back of the drop. Third, leaving the drop, it refracts again, bending further and separating the colours more. What returns toward the ground is a sorted fan of colour: red on one edge, violet on the other, every shade between in its fixed order."]},{"heading":"Why the bow stands where it stands","paragraphs":["The geometry is strict. The returning light leaves the drops at a fixed angle — about 42 degrees for red light, about 40 for violet — measured from the direction exactly opposite the Sun. So you can only see a rainbow when the Sun is behind you, low in the sky, and rain is falling in front of you.","Every observer sees their own bow, built from the drops at the right angle from their own eyes; walk toward a rainbow's end and it retreats, because new drops take over the job. That is also why the legendary pot of gold is safe — the end of the rainbow is a direction, not a place."]},{"heading":"Doubles and second chances","paragraphs":["Sometimes a second, fainter bow appears outside the first, with its colours reversed. Its light has reflected twice inside each raindrop instead of once, losing brightness at every bounce but gaining a wider angle — about 51 degrees — and the extra reflection flips the colour order.","Between the two bows lies a noticeably darker band of sky, where drops send almost no light back at all. It has a name — Alexander's band, after the Greek philosopher who described it some 1,800 years ago — a reminder that sharp-eyed people were taking rainbows apart long before anyone could explain them."]}],"brand":"discover","contentType":"article","description":"Each raindrop bends sunlight, splits it into colours and reflects it back — millions of drops together draw the bow at a fixed angle.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-46","publishedAt":"2026-10-19","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"rainbows-sunlight-taken-apart","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Rainbow","url":"https://en.wikipedia.org/wiki/Rainbow"},{"accessedAt":"2026-11-15","title":"Wikipedia: Dispersion (optics)","url":"https://en.wikipedia.org/wiki/Dispersion_(optics)"}],"tags":["physics","earth-science"],"takeaway":"A rainbow is sunlight refracted, split into colours, reflected once inside raindrops and refracted again — which fixes the bow at about 42 degrees, always opposite the Sun.","title":"Rainbows: sunlight taken apart by raindrops","updatedAt":"2026-10-19"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "One raindrop, three tricks",
+      "paragraphs": [
+        "A rainbow is sunlight processed by millions of raindrops, but each drop performs the same three steps. First, light entering the drop refracts — bends — and because each colour bends by a slightly different amount, the white light fans out into a spectrum, as it would in a prism.",
+        "Second, the light reflects once off the inside back of the drop. Third, leaving the drop, it refracts again, bending further and separating the colours more. What returns toward the ground is a sorted fan of colour: red on one edge, violet on the other, every shade between in its fixed order."
+      ]
+    },
+    {
+      "heading": "Why the bow stands where it stands",
+      "paragraphs": [
+        "The geometry is strict. The returning light leaves the drops at a fixed angle — about 42 degrees for red light, about 40 for violet — measured from the direction exactly opposite the Sun. So you can only see a rainbow when the Sun is behind you, low in the sky, and rain is falling in front of you.",
+        "Every observer sees their own bow, built from the drops at the right angle from their own eyes; walk toward a rainbow's end and it retreats, because new drops take over the job. That is also why the legendary pot of gold is safe — the end of the rainbow is a direction, not a place."
+      ]
+    },
+    {
+      "heading": "Doubles and second chances",
+      "paragraphs": [
+        "Sometimes a second, fainter bow appears outside the first, with its colours reversed. Its light has reflected twice inside each raindrop instead of once, losing brightness at every bounce but gaining a wider angle — about 51 degrees — and the extra reflection flips the colour order.",
+        "Between the two bows lies a noticeably darker band of sky, where drops send almost no light back at all. It has a name — Alexander's band, after the Greek philosopher who described it some 1,800 years ago — a reminder that sharp-eyed people were taking rainbows apart long before anyone could explain them."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Each raindrop bends sunlight, splits it into colours and reflects it back — millions of drops together draw the bow at a fixed angle.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A volcano erupting under a daytime sky",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/earth.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-46",
+  "publishedAt": "2026-10-19",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "rainbows-sunlight-taken-apart",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Rainbow",
+      "url": "https://en.wikipedia.org/wiki/Rainbow"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Dispersion (optics)",
+      "url": "https://en.wikipedia.org/wiki/Dispersion_(optics)"
+    }
+  ],
+  "tags": [
+    "physics",
+    "earth-science"
+  ],
+  "takeaway": "A rainbow is sunlight refracted, split into colours, reflected once inside raindrops and refracted again — which fixes the bow at about 42 degrees, always opposite the Sun.",
+  "title": "Rainbows: sunlight taken apart by raindrops",
+  "updatedAt": "2026-10-19"
+}

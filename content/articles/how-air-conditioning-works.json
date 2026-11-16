@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A fridge for a whole room","paragraphs":["An air conditioner is a refrigerator whose cold side faces the room. The same refrigerant loop — evaporate inside to absorb heat, compress, condense outside to release it — runs continuously, carrying heat from the indoor air to the outdoors.","In a common split system, the noisy parts — compressor and hot coil — sit in a box outside, while a quiet indoor unit holds the cold coil and a fan. Pipes between them carry the refrigerant on its endless round trip."]},{"heading":"Cooling and drying together","paragraphs":["Room air blown over the cold indoor coil gives up its heat to the refrigerant. But the coil is usually colder than the dew point of the air, so water vapour also condenses on it, exactly like droplets forming on a cold drink can.","That water drips into a tray and drains away — a litre or more on a humid day — leaving the room air drier as well as cooler. Much of the comfort of air conditioning is this dryness: dry air lets sweat evaporate from skin properly."]},{"heading":"Heat moved, at a bargain","paragraphs":["Because the system moves heat rather than creating cold, it is strikingly efficient: a typical unit shifts three or more units of heat for every unit of electricity it consumes. No heater can beat that trick in reverse — which is why the same loop, reversed, heats homes as a heat pump.","Set the thermostat a degree or two higher and the saving is real, because the compressor — the hungry part — runs less. The physics rewards modest settings: every degree of extra cooling must be pumped uphill against the outdoor heat."]}],"brand":"discover","contentType":"article","description":"Air conditioning pumps heat out of a room like a fridge with the door open — and wrings moisture from the air too.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-13","publishedAt":"2026-10-05","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-air-conditioning-works","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Air conditioning","url":"https://en.wikipedia.org/wiki/Air_conditioning"},{"accessedAt":"2026-11-15","title":"Wikipedia: Dehumidifier","url":"https://en.wikipedia.org/wiki/Dehumidifier"}],"tags":["technology","inventions"],"takeaway":"Air conditioning runs the refrigerator's loop at room scale, pumping heat outside; as a bonus, moisture condenses on the cold coil, so the air ends up drier too.","title":"How air conditioning cools and dries a room","updatedAt":"2026-10-05"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A fridge for a whole room",
+      "paragraphs": [
+        "An air conditioner is a refrigerator whose cold side faces the room. The same refrigerant loop — evaporate inside to absorb heat, compress, condense outside to release it — runs continuously, carrying heat from the indoor air to the outdoors.",
+        "In a common split system, the noisy parts — compressor and hot coil — sit in a box outside, while a quiet indoor unit holds the cold coil and a fan. Pipes between them carry the refrigerant on its endless round trip."
+      ]
+    },
+    {
+      "heading": "Cooling and drying together",
+      "paragraphs": [
+        "Room air blown over the cold indoor coil gives up its heat to the refrigerant. But the coil is usually colder than the dew point of the air, so water vapour also condenses on it, exactly like droplets forming on a cold drink can.",
+        "That water drips into a tray and drains away — a litre or more on a humid day — leaving the room air drier as well as cooler. Much of the comfort of air conditioning is this dryness: dry air lets sweat evaporate from skin properly."
+      ]
+    },
+    {
+      "heading": "Heat moved, at a bargain",
+      "paragraphs": [
+        "Because the system moves heat rather than creating cold, it is strikingly efficient: a typical unit shifts three or more units of heat for every unit of electricity it consumes. No heater can beat that trick in reverse — which is why the same loop, reversed, heats homes as a heat pump.",
+        "Set the thermostat a degree or two higher and the saving is real, because the compressor — the hungry part — runs less. The physics rewards modest settings: every degree of extra cooling must be pumped uphill against the outdoor heat."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Air conditioning pumps heat out of a room like a fridge with the door open — and wrings moisture from the air too.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A green computer motherboard close-up",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/tech.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-13",
+  "publishedAt": "2026-10-05",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-air-conditioning-works",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Air conditioning",
+      "url": "https://en.wikipedia.org/wiki/Air_conditioning"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Dehumidifier",
+      "url": "https://en.wikipedia.org/wiki/Dehumidifier"
+    }
+  ],
+  "tags": [
+    "technology",
+    "inventions"
+  ],
+  "takeaway": "Air conditioning runs the refrigerator's loop at room scale, pumping heat outside; as a bonus, moisture condenses on the cold coil, so the air ends up drier too.",
+  "title": "How air conditioning cools and dries a room",
+  "updatedAt": "2026-10-05"
+}

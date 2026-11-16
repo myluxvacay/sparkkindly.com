@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A vibration that travels by crowding","paragraphs":["Sound begins with something vibrating — a guitar string, a loudspeaker cone, your vocal cords. The vibration shoves the air next to it, squeezing the air particles into a crowded layer, then swings back and leaves a thinned-out layer behind. Each layer shoves its neighbour in turn, and the pattern of squeeze and stretch travels outward.","That travelling pattern is the sound. No air actually journeys from the speaker to your ear; the disturbance does, passed from particle to particle like a Mexican wave passing around a stadium while everyone stays in their seat."]},{"heading":"Pitch, loudness and speed","paragraphs":["Two features of the wave become the sound you hear. How often the squeezes arrive — the frequency, set by how fast the source vibrates — becomes pitch: fast vibrations sound high, slow ones low. How hard the particles are squeezed — the size of the vibration — becomes loudness.","Sound's speed depends on the material doing the carrying. It manages about 343 metres per second in air, roughly 1,480 metres per second in water, and around 5,000 metres per second in steel, where the particles are packed tightly and pass the shove along briskly. In a vacuum there are no particles at all, so sound cannot travel — space is silent."]},{"heading":"Echoes that do work","paragraphs":["Because sound bounces off hard surfaces, its travel time becomes a measuring tool. Ships use sonar: a pulse of sound dives to the seabed, reflects, and returns, and half the travel time multiplied by the speed of sound in water gives the depth. Fishing boats find shoals of fish the same way.","On land, a shout across a valley returns as an echo after travelling to the cliff and back. Even your own hearing uses tiny timing differences between your two ears to work out where a sound came from — your brain is a small sonar computer of its own."]}],"brand":"discover","contentType":"article","description":"Sound is not stuff that flies through the air — it is a pattern of squeezes and stretches passed from particle to particle.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-41","publishedAt":"2026-10-07","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"sound-a-travelling-squeeze","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Sound","url":"https://en.wikipedia.org/wiki/Sound"},{"accessedAt":"2026-11-15","title":"Wikipedia: Longitudinal wave","url":"https://en.wikipedia.org/wiki/Longitudinal_wave"}],"tags":["physics","science"],"takeaway":"Sound is a travelling wave of compressions and rarefactions in a material: frequency becomes pitch, amplitude becomes loudness, and with no material — in a vacuum — there can be no sound at all.","title":"Sound is a travelling squeeze and stretch","updatedAt":"2026-10-07"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A vibration that travels by crowding",
+      "paragraphs": [
+        "Sound begins with something vibrating — a guitar string, a loudspeaker cone, your vocal cords. The vibration shoves the air next to it, squeezing the air particles into a crowded layer, then swings back and leaves a thinned-out layer behind. Each layer shoves its neighbour in turn, and the pattern of squeeze and stretch travels outward.",
+        "That travelling pattern is the sound. No air actually journeys from the speaker to your ear; the disturbance does, passed from particle to particle like a Mexican wave passing around a stadium while everyone stays in their seat."
+      ]
+    },
+    {
+      "heading": "Pitch, loudness and speed",
+      "paragraphs": [
+        "Two features of the wave become the sound you hear. How often the squeezes arrive — the frequency, set by how fast the source vibrates — becomes pitch: fast vibrations sound high, slow ones low. How hard the particles are squeezed — the size of the vibration — becomes loudness.",
+        "Sound's speed depends on the material doing the carrying. It manages about 343 metres per second in air, roughly 1,480 metres per second in water, and around 5,000 metres per second in steel, where the particles are packed tightly and pass the shove along briskly. In a vacuum there are no particles at all, so sound cannot travel — space is silent."
+      ]
+    },
+    {
+      "heading": "Echoes that do work",
+      "paragraphs": [
+        "Because sound bounces off hard surfaces, its travel time becomes a measuring tool. Ships use sonar: a pulse of sound dives to the seabed, reflects, and returns, and half the travel time multiplied by the speed of sound in water gives the depth. Fishing boats find shoals of fish the same way.",
+        "On land, a shout across a valley returns as an echo after travelling to the cliff and back. Even your own hearing uses tiny timing differences between your two ears to work out where a sound came from — your brain is a small sonar computer of its own."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Sound is not stuff that flies through the air — it is a pattern of squeezes and stretches passed from particle to particle.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-41",
+  "publishedAt": "2026-10-07",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "sound-a-travelling-squeeze",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Sound",
+      "url": "https://en.wikipedia.org/wiki/Sound"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Longitudinal wave",
+      "url": "https://en.wikipedia.org/wiki/Longitudinal_wave"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "Sound is a travelling wave of compressions and rarefactions in a material: frequency becomes pitch, amplitude becomes loudness, and with no material — in a vacuum — there can be no sound at all.",
+  "title": "Sound is a travelling squeeze and stretch",
+  "updatedAt": "2026-10-07"
+}

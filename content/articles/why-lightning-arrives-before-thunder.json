@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Two messengers at very different speeds","paragraphs":["A lightning bolt and its thunder are born at the same instant, in the same place. The flash heats the air so violently that the air explodes outward as a pressure wave — thunder. But the two signals then travel to you at wildly different speeds.","Light moves at about 300,000 kilometres per second, so fast that the flash of a storm ten kilometres away reaches you in a tiny fraction of a millisecond — effectively instantly. Sound dawdles along at about 343 metres per second in air. The race is no contest: your eyes always get the news first."]},{"heading":"Counting the gap measures the storm","paragraphs":["Because sound takes about three seconds to cover one kilometre, the delay between flash and thunder is a built-in rangefinder. Count the seconds, divide by three, and you have the storm's distance in kilometres. A nine-second gap means the lightning struck about three kilometres away.","Watch the gap over successive flashes and you also learn the storm's direction of travel: if the delay shrinks, the storm is coming closer; if it grows, it is moving away. Generations of sailors, farmers and shepherds have used exactly this arithmetic, because it needs nothing but eyes, ears and counting."]},{"heading":"What the delay should tell you to do","paragraphs":["The same physics carries a safety warning. If thunder follows a flash within about thirty seconds, the storm is within roughly ten kilometres — close enough that the next bolt could reach you, since lightning can strike well ahead of the rain, out of an apparently clear sky. The standard advice is to get indoors and wait thirty minutes after the last thunder.","And if you can hear thunder at all, the light from that same bolt has already passed you by. The gap is never a mystery of timing at the source — it is purely the difference between the fastest messenger in nature and a comparatively pedestrian one."]}],"brand":"discover","contentType":"article","description":"Flash and thunder are born together, but light travels nearly a million times faster than sound — the gap between them measures the storm.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-56","publishedAt":"2026-11-14","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"why-lightning-arrives-before-thunder","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Thunder","url":"https://en.wikipedia.org/wiki/Thunder"},{"accessedAt":"2026-11-15","title":"Wikipedia: Lightning","url":"https://en.wikipedia.org/wiki/Lightning"}],"tags":["physics","earth-science"],"takeaway":"Light from a lightning bolt arrives almost instantly while sound takes about three seconds per kilometre, so counting the flash-to-thunder gap tells you the storm's distance — and when to take shelter.","title":"Why you see lightning before you hear thunder","updatedAt":"2026-11-14"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Two messengers at very different speeds",
+      "paragraphs": [
+        "A lightning bolt and its thunder are born at the same instant, in the same place. The flash heats the air so violently that the air explodes outward as a pressure wave — thunder. But the two signals then travel to you at wildly different speeds.",
+        "Light moves at about 300,000 kilometres per second, so fast that the flash of a storm ten kilometres away reaches you in a tiny fraction of a millisecond — effectively instantly. Sound dawdles along at about 343 metres per second in air. The race is no contest: your eyes always get the news first."
+      ]
+    },
+    {
+      "heading": "Counting the gap measures the storm",
+      "paragraphs": [
+        "Because sound takes about three seconds to cover one kilometre, the delay between flash and thunder is a built-in rangefinder. Count the seconds, divide by three, and you have the storm's distance in kilometres. A nine-second gap means the lightning struck about three kilometres away.",
+        "Watch the gap over successive flashes and you also learn the storm's direction of travel: if the delay shrinks, the storm is coming closer; if it grows, it is moving away. Generations of sailors, farmers and shepherds have used exactly this arithmetic, because it needs nothing but eyes, ears and counting."
+      ]
+    },
+    {
+      "heading": "What the delay should tell you to do",
+      "paragraphs": [
+        "The same physics carries a safety warning. If thunder follows a flash within about thirty seconds, the storm is within roughly ten kilometres — close enough that the next bolt could reach you, since lightning can strike well ahead of the rain, out of an apparently clear sky. The standard advice is to get indoors and wait thirty minutes after the last thunder.",
+        "And if you can hear thunder at all, the light from that same bolt has already passed you by. The gap is never a mystery of timing at the source — it is purely the difference between the fastest messenger in nature and a comparatively pedestrian one."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Flash and thunder are born together, but light travels nearly a million times faster than sound — the gap between them measures the storm.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A volcano erupting under a daytime sky",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/earth.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-56",
+  "publishedAt": "2026-11-14",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "why-lightning-arrives-before-thunder",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Thunder",
+      "url": "https://en.wikipedia.org/wiki/Thunder"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Lightning",
+      "url": "https://en.wikipedia.org/wiki/Lightning"
+    }
+  ],
+  "tags": [
+    "physics",
+    "earth-science"
+  ],
+  "takeaway": "Light from a lightning bolt arrives almost instantly while sound takes about three seconds per kilometre, so counting the flash-to-thunder gap tells you the storm's distance — and when to take shelter.",
+  "title": "Why you see lightning before you hear thunder",
+  "updatedAt": "2026-11-14"
+}

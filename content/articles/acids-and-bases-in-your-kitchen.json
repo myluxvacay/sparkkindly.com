@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Sour versus slippery","paragraphs":["Acids announce themselves with a sour taste — think of the sharpness of lemon juice or vinegar. Chemically, an acid is a substance that releases hydrogen ions when it dissolves in water, and it is those ions that do the work: stinging, reacting with metals, and turning indicator dyes particular colours.","Bases are the acids' opposites. Dissolved in water, the ones called alkalis feel slippery and soapy between your fingers, because they react with the oils on your skin — in effect, they begin turning those oils into soap. A base can cancel out an acid, a meeting called neutralisation, producing water and a salt."]},{"heading":"A tour of the kitchen shelves","paragraphs":["Your kitchen is stocked with both camps. Vinegar is a weak solution of acetic acid, lemon juice carries citric acid, and fizzy drinks owe their bite to carbonic acid formed from dissolved gas. Even your stomach uses hydrochloric acid, strong enough to dissolve food and kill germs.","On the other side: soap and washing-up liquid are mildly basic, baking soda is a gentle base used to calm the acidity of tomato sauces, and oven cleaner is a far stronger base — which is exactly why it carries warnings and demands gloves."]},{"heading":"Cancelling out, usefully","paragraphs":["Neutralisation earns its keep. Antacid tablets are mild bases that cancel excess stomach acid and relieve indigestion. Gardeners spread lime, another base, on soil that has become too acidic for their crops, and factories treat acidic waste water before releasing it.","You can even watch the balance tip at home: red cabbage juice is a natural indicator that turns pink in acids and greenish-blue in bases, so a single vegetable can map the chemistry of your whole kitchen."]}],"brand":"discover","contentType":"article","description":"Lemon juice, vinegar, soap and baking soda: your kitchen shelves hold both acids and bases, and you can tell the two apart.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-63","publishedAt":"2026-09-23","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"acids-and-bases-in-your-kitchen","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Acid","url":"https://en.wikipedia.org/wiki/Acid"},{"accessedAt":"2026-11-15","title":"Wikipedia: Base (chemistry)","url":"https://en.wikipedia.org/wiki/Base_(chemistry)"}],"tags":["chemistry","science"],"takeaway":"Acids taste sour and release hydrogen ions in water; bases feel soapy and cancel acids out — and your kitchen shelves are stocked with both.","title":"Acids and bases hiding in your kitchen","updatedAt":"2026-09-23"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Sour versus slippery",
+      "paragraphs": [
+        "Acids announce themselves with a sour taste — think of the sharpness of lemon juice or vinegar. Chemically, an acid is a substance that releases hydrogen ions when it dissolves in water, and it is those ions that do the work: stinging, reacting with metals, and turning indicator dyes particular colours.",
+        "Bases are the acids' opposites. Dissolved in water, the ones called alkalis feel slippery and soapy between your fingers, because they react with the oils on your skin — in effect, they begin turning those oils into soap. A base can cancel out an acid, a meeting called neutralisation, producing water and a salt."
+      ]
+    },
+    {
+      "heading": "A tour of the kitchen shelves",
+      "paragraphs": [
+        "Your kitchen is stocked with both camps. Vinegar is a weak solution of acetic acid, lemon juice carries citric acid, and fizzy drinks owe their bite to carbonic acid formed from dissolved gas. Even your stomach uses hydrochloric acid, strong enough to dissolve food and kill germs.",
+        "On the other side: soap and washing-up liquid are mildly basic, baking soda is a gentle base used to calm the acidity of tomato sauces, and oven cleaner is a far stronger base — which is exactly why it carries warnings and demands gloves."
+      ]
+    },
+    {
+      "heading": "Cancelling out, usefully",
+      "paragraphs": [
+        "Neutralisation earns its keep. Antacid tablets are mild bases that cancel excess stomach acid and relieve indigestion. Gardeners spread lime, another base, on soil that has become too acidic for their crops, and factories treat acidic waste water before releasing it.",
+        "You can even watch the balance tip at home: red cabbage juice is a natural indicator that turns pink in acids and greenish-blue in bases, so a single vegetable can map the chemistry of your whole kitchen."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Lemon juice, vinegar, soap and baking soda: your kitchen shelves hold both acids and bases, and you can tell the two apart.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-63",
+  "publishedAt": "2026-09-23",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "acids-and-bases-in-your-kitchen",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Acid",
+      "url": "https://en.wikipedia.org/wiki/Acid"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Base (chemistry)",
+      "url": "https://en.wikipedia.org/wiki/Base_(chemistry)"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Acids taste sour and release hydrogen ions in water; bases feel soapy and cancel acids out — and your kitchen shelves are stocked with both.",
+  "title": "Acids and bases hiding in your kitchen",
+  "updatedAt": "2026-09-23"
+}

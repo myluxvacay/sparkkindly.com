@@ -1,1 +1,49 @@
-{"aiDisclosure":"Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"More than dinner","paragraphs":["A shared meal feeds people once. Cooking it together feeds them twice: once with food, and once with the particular closeness that only happens when hands are busy and nobody is performing.","Kids who cook tend to eat more adventurously. Teenagers who cook often talk more, because chopping onions is a famously good place to confess things. Adults who cook together remember they are a team."]},{"heading":"How to start small","paragraphs":["Pick one meal a week — or a month — with a job for every person: washing, chopping, stirring, the playlist, setting the table like it matters. Jobs should be real; fake jobs fool no one over the age of six.","Let the food be imperfect and the kitchen be loud. The meal you remember in ten years will not be the flawless one; it will be the one with the smoke alarm and the story."]}],"brand":"together","contentType":"article","description":"Cooking one meal together — messily, with real jobs for everyone — feeds a family twice.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/together.webp","width":1200},"id":"together-bulk-32","publishedAt":"2026-11-05","reviewNote":"Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"one-meal-cooked-together","sources":[],"tags":["family-activities","family","traditions"],"takeaway":"Give everyone a real job in one shared meal, and let it be imperfect — that is the point.","title":"One Meal, Cooked Together","updatedAt":"2026-11-05"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "More than dinner",
+      "paragraphs": [
+        "A shared meal feeds people once. Cooking it together feeds them twice: once with food, and once with the particular closeness that only happens when hands are busy and nobody is performing.",
+        "Kids who cook tend to eat more adventurously. Teenagers who cook often talk more, because chopping onions is a famously good place to confess things. Adults who cook together remember they are a team."
+      ]
+    },
+    {
+      "heading": "How to start small",
+      "paragraphs": [
+        "Pick one meal a week — or a month — with a job for every person: washing, chopping, stirring, the playlist, setting the table like it matters. Jobs should be real; fake jobs fool no one over the age of six.",
+        "Let the food be imperfect and the kitchen be loud. The meal you remember in ten years will not be the flawless one; it will be the one with the smoke alarm and the story."
+      ]
+    }
+  ],
+  "brand": "together",
+  "contentType": "article",
+  "description": "Cooking one meal together — messily, with real jobs for everyone — feeds a family twice.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A family holding hands while walking",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/family.webp",
+    "width": 1200
+  },
+  "id": "together-bulk-32",
+  "publishedAt": "2026-11-05",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "one-meal-cooked-together",
+  "sources": [],
+  "tags": [
+    "family-activities",
+    "family",
+    "traditions"
+  ],
+  "takeaway": "Give everyone a real job in one shared meal, and let it be imperfect — that is the point.",
+  "title": "One Meal, Cooked Together",
+  "updatedAt": "2026-11-05"
+}

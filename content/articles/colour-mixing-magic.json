@@ -1,1 +1,68 @@
-{"ageGuidance":"Ages 6–9, with an adult","aiDisclosure":"Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Start with three colours","paragraphs":["You only need red, blue, and yellow paint to begin. Put a small blob of each on your plate or palette.","Paint three circles, one in each colour. These are called the primary colours. Every other colour can be made by mixing them."]},{"heading":"Mix and see","paragraphs":["Mix red and yellow together. What colour do you get? Now try blue and yellow, then red and blue.","Paint a circle for each new colour you make. You have just made orange, green, and purple. They are called the secondary colours."]},{"heading":"Invent your own colour","paragraphs":["Mix a tiny bit of one colour into another and see what happens. Add white to make it lighter, or a little black to make it darker.","Give your new colour a name, like “dinosaur green” or “midnight sky.” Artists invent new colours all the time, and now you have too."]}],"brand":"kids","contentType":"activity","description":"For ages 6–9 with an adult: mix red, blue, and yellow paint to discover brand-new colours.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/kids.webp","width":1200},"id":"kids-bulk-06","materials":["Washable red, blue, and yellow paint","Paper","A paintbrush and a cup of water","An old plate or palette for mixing"],"publishedAt":"2026-10-30","reviewNote":"Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","safetyNotes":["Use washable, child-safe paint, wear old clothes or an apron, and wash hands when you finish.","Paint is for paper, not for tasting; keep it away from mouths and eyes."],"screenFreeExtension":"Go on a colour hunt around your home and find something that matches each colour you mixed.","slug":"colour-mixing-magic","sources":[],"supervision":"An adult stays alongside throughout.","tags":["art","science"],"takeaway":"Three colours are enough to make a whole rainbow of new ones.","title":"Colour mixing magic","updatedAt":"2026-10-30"}
+{
+  "ageGuidance": "Ages 6–9, with an adult",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Start with three colours",
+      "paragraphs": [
+        "You only need red, blue, and yellow paint to begin. Put a small blob of each on your plate or palette.",
+        "Paint three circles, one in each colour. These are called the primary colours. Every other colour can be made by mixing them."
+      ]
+    },
+    {
+      "heading": "Mix and see",
+      "paragraphs": [
+        "Mix red and yellow together. What colour do you get? Now try blue and yellow, then red and blue.",
+        "Paint a circle for each new colour you make. You have just made orange, green, and purple. They are called the secondary colours."
+      ]
+    },
+    {
+      "heading": "Invent your own colour",
+      "paragraphs": [
+        "Mix a tiny bit of one colour into another and see what happens. Add white to make it lighter, or a little black to make it darker.",
+        "Give your new colour a name, like “dinosaur green” or “midnight sky.” Artists invent new colours all the time, and now you have too."
+      ]
+    }
+  ],
+  "brand": "kids",
+  "contentType": "activity",
+  "description": "For ages 6–9 with an adult: mix red, blue, and yellow paint to discover brand-new colours.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "kids-bulk-06",
+  "materials": [
+    "Washable red, blue, and yellow paint",
+    "Paper",
+    "A paintbrush and a cup of water",
+    "An old plate or palette for mixing"
+  ],
+  "publishedAt": "2026-10-30",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "safetyNotes": [
+    "Use washable, child-safe paint, wear old clothes or an apron, and wash hands when you finish.",
+    "Paint is for paper, not for tasting; keep it away from mouths and eyes."
+  ],
+  "screenFreeExtension": "Go on a colour hunt around your home and find something that matches each colour you mixed.",
+  "slug": "colour-mixing-magic",
+  "sources": [],
+  "supervision": "An adult stays alongside throughout.",
+  "tags": [
+    "art",
+    "science"
+  ],
+  "takeaway": "Three colours are enough to make a whole rainbow of new ones.",
+  "title": "Colour mixing magic",
+  "updatedAt": "2026-10-30"
+}

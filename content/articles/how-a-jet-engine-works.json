@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Suck, squeeze, burn, blow","paragraphs":["A jet engine works in four continuous steps, often summarised as suck, squeeze, burn, blow. A large fan at the front pulls in air, and spinning compressor blades squeeze that air to many times its outside pressure.","Fuel is sprayed into the compressed air and burned, making the gas expand violently. It rushes out of the back at high speed, and throwing all that mass backward pushes the aircraft forward — Newton's third law in action."]},{"heading":"The turbine that keeps it turning","paragraphs":["Before leaving, the hot gas passes through a turbine — another set of blades that the gas spins like a windmill. The turbine sits on the same shaft as the compressor and fan, so the escaping gas powers the machinery that feeds it.","In the turbofan engines used on airliners, the big front fan also pushes a much larger stream of air around the outside of the core. This bypass air moves slower but there is far more of it, giving most of the thrust, more quietly and with less fuel."]},{"heading":"Why jets like it high and fast","paragraphs":["Jet engines are most efficient at high altitude, where the thin, cold air offers less drag and the engine's exhaust can expand fully. That is why airliners climb to around 11 kilometres even for fairly short flights.","The numbers are large: a big airliner engine can swallow over a tonne of air every second and produce thrust roughly equal to the weight of ten family cars. All of it comes from the simple trick of throwing air backwards, faster than it arrived. None of that power comes from burning anything outside the engine — the fuel burns inside, in the airstream the engine has just swallowed."]}],"brand":"discover","contentType":"article","description":"A jet engine sucks air in, squeezes it, burns fuel in it and throws it out fast — the pushback is thrust.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-02","publishedAt":"2026-09-07","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-a-jet-engine-works","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Jet engine","url":"https://en.wikipedia.org/wiki/Jet_engine"},{"accessedAt":"2026-11-15","title":"Wikipedia: Turbofan","url":"https://en.wikipedia.org/wiki/Turbofan"}],"tags":["technology","inventions"],"takeaway":"A jet engine burns fuel in squeezed air and hurls the exhaust backwards; the reaction pushes the aircraft forward, while a turbine in the exhaust drives the compressor.","title":"How a jet engine pushes an aircraft forward","updatedAt":"2026-09-07"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Suck, squeeze, burn, blow",
+      "paragraphs": [
+        "A jet engine works in four continuous steps, often summarised as suck, squeeze, burn, blow. A large fan at the front pulls in air, and spinning compressor blades squeeze that air to many times its outside pressure.",
+        "Fuel is sprayed into the compressed air and burned, making the gas expand violently. It rushes out of the back at high speed, and throwing all that mass backward pushes the aircraft forward — Newton's third law in action."
+      ]
+    },
+    {
+      "heading": "The turbine that keeps it turning",
+      "paragraphs": [
+        "Before leaving, the hot gas passes through a turbine — another set of blades that the gas spins like a windmill. The turbine sits on the same shaft as the compressor and fan, so the escaping gas powers the machinery that feeds it.",
+        "In the turbofan engines used on airliners, the big front fan also pushes a much larger stream of air around the outside of the core. This bypass air moves slower but there is far more of it, giving most of the thrust, more quietly and with less fuel."
+      ]
+    },
+    {
+      "heading": "Why jets like it high and fast",
+      "paragraphs": [
+        "Jet engines are most efficient at high altitude, where the thin, cold air offers less drag and the engine's exhaust can expand fully. That is why airliners climb to around 11 kilometres even for fairly short flights.",
+        "The numbers are large: a big airliner engine can swallow over a tonne of air every second and produce thrust roughly equal to the weight of ten family cars. All of it comes from the simple trick of throwing air backwards, faster than it arrived. None of that power comes from burning anything outside the engine — the fuel burns inside, in the airstream the engine has just swallowed."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "A jet engine sucks air in, squeezes it, burns fuel in it and throws it out fast — the pushback is thrust.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A green computer motherboard close-up",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/tech.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-02",
+  "publishedAt": "2026-09-07",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-a-jet-engine-works",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Jet engine",
+      "url": "https://en.wikipedia.org/wiki/Jet_engine"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Turbofan",
+      "url": "https://en.wikipedia.org/wiki/Turbofan"
+    }
+  ],
+  "tags": [
+    "technology",
+    "inventions"
+  ],
+  "takeaway": "A jet engine burns fuel in squeezed air and hurls the exhaust backwards; the reaction pushes the aircraft forward, while a turbine in the exhaust drives the compressor.",
+  "title": "How a jet engine pushes an aircraft forward",
+  "updatedAt": "2026-09-07"
+}

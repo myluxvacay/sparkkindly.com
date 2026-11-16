@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Charge moved by rubbing","paragraphs":["Every object is full of electric charge — positive protons locked in atoms, and negative electrons that can sometimes be moved. Rub two different materials together and one of them tends to steal electrons from the other. The thief ends up negatively charged, the loser positively charged, and the imbalance is static electricity: charge built up in one place, going nowhere for the moment.","A balloon rubbed on a jumper collects electrons and turns negative. Hold it near a wall and it attracts the wall's surface charges into alignment, then sticks by that attraction. Comb dry hair and each strand, charged alike, repels its neighbours — like charges repel — and stands on end."]},{"heading":"Cling, sparks and small lightning","paragraphs":["Clothes tumbling in a dryer rub constantly, swapping electrons between fabrics, so they emerge charged and cling together. Shuffle across a carpet in socks and your body collects charge; touch a metal handle and it all escapes in one tiny spark — a miniature lightning bolt, complete with a snap of heated air.","Real lightning is the same process written enormous: charge separated within a storm cloud until the imbalance tears through the air. The static version is simply the household scale of the phenomenon, tamed to a tingle. Humid air bleeds charge away quietly, which is why static plagues dry winter days most."]},{"heading":"Putting the cling to work","paragraphs":["Industry uses static deliberately. Photocopiers and laser printers charge a drum in a pattern, let toner powder cling only to the charged image, then transfer it to paper. Spray painters charge the paint droplets so they wrap toward the earthed object being painted, coating even its hidden sides.","The same cling is a hazard where fuel vapour is present, so aircraft and fuel tankers are carefully earthed to drain charge away safely. Static electricity is neither toy nor terror — it is charge imbalance, and like most physics, it behaves exactly as well as you design for."]}],"brand":"discover","contentType":"article","description":"Rubbing moves electrons from one material to another, and the leftover imbalance makes balloons stick, hair rise and sparks jump.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-47","publishedAt":"2026-10-22","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"static-electricity-the-invisible-cling","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Static electricity","url":"https://en.wikipedia.org/wiki/Static_electricity"},{"accessedAt":"2026-11-15","title":"Wikipedia: Triboelectric effect","url":"https://en.wikipedia.org/wiki/Triboelectric_effect"}],"tags":["physics","science"],"takeaway":"Static electricity is charge imbalance: friction transfers electrons between materials, and the resulting opposite charges attract, like charges repel, and a spark is the imbalance escaping at once.","title":"Static electricity: the invisible cling","updatedAt":"2026-10-22"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Charge moved by rubbing",
+      "paragraphs": [
+        "Every object is full of electric charge — positive protons locked in atoms, and negative electrons that can sometimes be moved. Rub two different materials together and one of them tends to steal electrons from the other. The thief ends up negatively charged, the loser positively charged, and the imbalance is static electricity: charge built up in one place, going nowhere for the moment.",
+        "A balloon rubbed on a jumper collects electrons and turns negative. Hold it near a wall and it attracts the wall's surface charges into alignment, then sticks by that attraction. Comb dry hair and each strand, charged alike, repels its neighbours — like charges repel — and stands on end."
+      ]
+    },
+    {
+      "heading": "Cling, sparks and small lightning",
+      "paragraphs": [
+        "Clothes tumbling in a dryer rub constantly, swapping electrons between fabrics, so they emerge charged and cling together. Shuffle across a carpet in socks and your body collects charge; touch a metal handle and it all escapes in one tiny spark — a miniature lightning bolt, complete with a snap of heated air.",
+        "Real lightning is the same process written enormous: charge separated within a storm cloud until the imbalance tears through the air. The static version is simply the household scale of the phenomenon, tamed to a tingle. Humid air bleeds charge away quietly, which is why static plagues dry winter days most."
+      ]
+    },
+    {
+      "heading": "Putting the cling to work",
+      "paragraphs": [
+        "Industry uses static deliberately. Photocopiers and laser printers charge a drum in a pattern, let toner powder cling only to the charged image, then transfer it to paper. Spray painters charge the paint droplets so they wrap toward the earthed object being painted, coating even its hidden sides.",
+        "The same cling is a hazard where fuel vapour is present, so aircraft and fuel tankers are carefully earthed to drain charge away safely. Static electricity is neither toy nor terror — it is charge imbalance, and like most physics, it behaves exactly as well as you design for."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Rubbing moves electrons from one material to another, and the leftover imbalance makes balloons stick, hair rise and sparks jump.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-47",
+  "publishedAt": "2026-10-22",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "static-electricity-the-invisible-cling",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Static electricity",
+      "url": "https://en.wikipedia.org/wiki/Static_electricity"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Triboelectric effect",
+      "url": "https://en.wikipedia.org/wiki/Triboelectric_effect"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "Static electricity is charge imbalance: friction transfers electrons between materials, and the resulting opposite charges attract, like charges repel, and a spark is the imbalance escaping at once.",
+  "title": "Static electricity: the invisible cling",
+  "updatedAt": "2026-10-22"
+}

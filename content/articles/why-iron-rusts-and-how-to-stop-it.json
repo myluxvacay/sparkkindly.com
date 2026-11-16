@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A slow electrical leak","paragraphs":["Rust is what forms when iron reacts with oxygen in the presence of water, making a flaky brown substance called hydrated iron oxide. The process is quietly electrical: tiny regions of the metal act like the two ends of a battery, electrons flow from iron to oxygen through the metal, and water — especially salty water, which conducts well — lets the circuit run.","This is why rust needs both partners. Iron left in perfectly dry air, or sealed away from oxygen under oil, stays bright for years. Add damp air and the reaction begins; add sea spray or road salt and it races."]},{"heading":"Why rust spreads instead of protecting","paragraphs":["Some metals defend themselves. Aluminium reacts with oxygen too, but it forms a thin, tough, invisible skin of aluminium oxide that seals the surface and stops the attack. Rust does the opposite: it is porous and flakes away, constantly exposing fresh iron underneath.","So a rust spot is never finished. It swells as it forms, cracking paint and forcing joints apart, and it keeps eating inward until the iron is weakened through — the reason a small blister on a car panel can hide a hole."]},{"heading":"Keeping oxygen and water out","paragraphs":["Every defence works by breaking the partnership. Paint, grease and plastic coatings are barriers that keep air and water from the surface. Galvanising goes further: a coating of zinc corrodes in the iron's place, sacrificing itself first, which is why galvanised buckets and fences survive decades outdoors.","Stainless steel builds the defence into the metal itself — chromium mixed into the alloy forms that same invisible, self-repairing oxide skin aluminium enjoys. Ships use a cruder version of the zinc trick, bolting on blocks of zinc that rot away so the hull does not. The stakes are large: corrosion is estimated to cost several percent of the entire world's economic output every year."]}],"brand":"discover","contentType":"article","description":"Rust is iron slowly reacting with oxygen and water together — and every way of stopping it works by keeping one of the two away.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-65","publishedAt":"2026-09-28","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"why-iron-rusts-and-how-to-stop-it","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Rust","url":"https://en.wikipedia.org/wiki/Rust"},{"accessedAt":"2026-11-15","title":"Wikipedia: Corrosion","url":"https://en.wikipedia.org/wiki/Corrosion"}],"tags":["chemistry","science"],"takeaway":"Rust forms only when oxygen and water reach iron together, and it keeps spreading because it flakes instead of sealing — so every protection works by keeping the pair apart or sacrificing another metal.","title":"Why iron rusts and how to stop it","updatedAt":"2026-09-28"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A slow electrical leak",
+      "paragraphs": [
+        "Rust is what forms when iron reacts with oxygen in the presence of water, making a flaky brown substance called hydrated iron oxide. The process is quietly electrical: tiny regions of the metal act like the two ends of a battery, electrons flow from iron to oxygen through the metal, and water — especially salty water, which conducts well — lets the circuit run.",
+        "This is why rust needs both partners. Iron left in perfectly dry air, or sealed away from oxygen under oil, stays bright for years. Add damp air and the reaction begins; add sea spray or road salt and it races."
+      ]
+    },
+    {
+      "heading": "Why rust spreads instead of protecting",
+      "paragraphs": [
+        "Some metals defend themselves. Aluminium reacts with oxygen too, but it forms a thin, tough, invisible skin of aluminium oxide that seals the surface and stops the attack. Rust does the opposite: it is porous and flakes away, constantly exposing fresh iron underneath.",
+        "So a rust spot is never finished. It swells as it forms, cracking paint and forcing joints apart, and it keeps eating inward until the iron is weakened through — the reason a small blister on a car panel can hide a hole."
+      ]
+    },
+    {
+      "heading": "Keeping oxygen and water out",
+      "paragraphs": [
+        "Every defence works by breaking the partnership. Paint, grease and plastic coatings are barriers that keep air and water from the surface. Galvanising goes further: a coating of zinc corrodes in the iron's place, sacrificing itself first, which is why galvanised buckets and fences survive decades outdoors.",
+        "Stainless steel builds the defence into the metal itself — chromium mixed into the alloy forms that same invisible, self-repairing oxide skin aluminium enjoys. Ships use a cruder version of the zinc trick, bolting on blocks of zinc that rot away so the hull does not. The stakes are large: corrosion is estimated to cost several percent of the entire world's economic output every year."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Rust is iron slowly reacting with oxygen and water together — and every way of stopping it works by keeping one of the two away.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-65",
+  "publishedAt": "2026-09-28",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "why-iron-rusts-and-how-to-stop-it",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Rust",
+      "url": "https://en.wikipedia.org/wiki/Rust"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Corrosion",
+      "url": "https://en.wikipedia.org/wiki/Corrosion"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Rust forms only when oxygen and water reach iron together, and it keeps spreading because it flakes instead of sealing — so every protection works by keeping the pair apart or sacrificing another metal.",
+  "title": "Why iron rusts and how to stop it",
+  "updatedAt": "2026-09-28"
+}

@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Conduction: heat passed hand to hand","paragraphs":["Heat always flows from hotter to colder, and it has three ways to travel. The first is conduction: direct transfer through a material. In a hot pan, the particles at the heated end jiggle violently and batter their neighbours, which batter theirs, passing the energy along like a rumour through a crowd.","Materials differ hugely at this. Metals conduct eagerly — their free electrons ferry energy quickly — which is why a spoon in hot soup burns your fingers. Wood, plastic and air conduct feebly, which is why pan handles, oven gloves and the trapped air in a duvet keep heat where it belongs."]},{"heading":"Convection and radiation: heat that rides and heat that flies","paragraphs":["Convection moves heat by moving the material itself. Warm air or water expands, becomes less dense and rises, while cooler fluid sinks to take its place — a circulating current that carries heat with it. Radiators heat rooms this way, and so do sea breezes, thunderstorms and the slow churn of Earth's mantle.","Radiation needs no material at all. Hot objects emit infrared radiation — invisible light that carries energy across empty space. It is the only one of the three that can cross a vacuum, and it is how the Sun warms the Earth across 150 million kilometres of nothing."]},{"heading":"One flask that defeats all three","paragraphs":["A vacuum flask is a small masterpiece of applied physics, with a defence against each journey. The vacuum between its double walls blocks conduction and convection, since there is almost nothing there to conduct or to flow. Silvered surfaces reflect radiation back instead of absorbing it.","The result is coffee still hot hours later, or ice water still cold on a summer afternoon. Spacecraft use the same layered defence — shiny insulation blankets that fight radiation, because in the vacuum of space radiation is the only journey heat can make."]}],"brand":"discover","contentType":"article","description":"Heat travels by conduction through solids, convection in flowing fluids, and radiation across empty space — a flask defeats all three.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-39","publishedAt":"2026-10-02","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-heat-travels-three-ways","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Heat transfer","url":"https://en.wikipedia.org/wiki/Heat_transfer"},{"accessedAt":"2026-11-15","title":"Wikipedia: Thermal conduction","url":"https://en.wikipedia.org/wiki/Thermal_conduction"}],"tags":["physics","science"],"takeaway":"Heat moves by conduction through materials, convection in flowing fluids, and radiation as infrared waves — the only route that crosses empty space, and the one that brings us sunlight's warmth.","title":"Heat's three journeys: conduction, convection, radiation","updatedAt":"2026-10-02"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Conduction: heat passed hand to hand",
+      "paragraphs": [
+        "Heat always flows from hotter to colder, and it has three ways to travel. The first is conduction: direct transfer through a material. In a hot pan, the particles at the heated end jiggle violently and batter their neighbours, which batter theirs, passing the energy along like a rumour through a crowd.",
+        "Materials differ hugely at this. Metals conduct eagerly — their free electrons ferry energy quickly — which is why a spoon in hot soup burns your fingers. Wood, plastic and air conduct feebly, which is why pan handles, oven gloves and the trapped air in a duvet keep heat where it belongs."
+      ]
+    },
+    {
+      "heading": "Convection and radiation: heat that rides and heat that flies",
+      "paragraphs": [
+        "Convection moves heat by moving the material itself. Warm air or water expands, becomes less dense and rises, while cooler fluid sinks to take its place — a circulating current that carries heat with it. Radiators heat rooms this way, and so do sea breezes, thunderstorms and the slow churn of Earth's mantle.",
+        "Radiation needs no material at all. Hot objects emit infrared radiation — invisible light that carries energy across empty space. It is the only one of the three that can cross a vacuum, and it is how the Sun warms the Earth across 150 million kilometres of nothing."
+      ]
+    },
+    {
+      "heading": "One flask that defeats all three",
+      "paragraphs": [
+        "A vacuum flask is a small masterpiece of applied physics, with a defence against each journey. The vacuum between its double walls blocks conduction and convection, since there is almost nothing there to conduct or to flow. Silvered surfaces reflect radiation back instead of absorbing it.",
+        "The result is coffee still hot hours later, or ice water still cold on a summer afternoon. Spacecraft use the same layered defence — shiny insulation blankets that fight radiation, because in the vacuum of space radiation is the only journey heat can make."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Heat travels by conduction through solids, convection in flowing fluids, and radiation across empty space — a flask defeats all three.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-39",
+  "publishedAt": "2026-10-02",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-heat-travels-three-ways",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Heat transfer",
+      "url": "https://en.wikipedia.org/wiki/Heat_transfer"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Thermal conduction",
+      "url": "https://en.wikipedia.org/wiki/Thermal_conduction"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "Heat moves by conduction through materials, convection in flowing fluids, and radiation as infrared waves — the only route that crosses empty space, and the one that brings us sunlight's warmth.",
+  "title": "Heat's three journeys: conduction, convection, radiation",
+  "updatedAt": "2026-10-02"
+}

@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Surfaces that catch on each other","paragraphs":["No surface is perfectly smooth. Under a microscope, even polished metal is a landscape of tiny peaks and valleys, and when two surfaces press together those peaks catch, stick and tear apart as the surfaces slide. That resistance to sliding is friction, and it always acts opposite to the movement — or the attempted movement.","Friction comes in two strengths. Static friction holds still objects in place and adjusts itself up to a limit; it is what keeps a parked car from rolling and a book from sliding off a tilted desk. Once sliding starts, kinetic friction takes over, usually a little weaker, which is why a heavy box is hardest to get moving and slightly easier to keep moving."]},{"heading":"The force you cannot live without","paragraphs":["Walking, driving and holding a pencil all depend on friction. Your shoe grips the ground so the ground can push you forward; a car's tyres grip the road so the car can accelerate, steer and brake. Brake pads work by deliberately creating huge friction, turning the car's movement energy into heat.","A match lights because friction between the match head and the striking strip generates enough heat in one quick scrape to start a chemical reaction. Climbers, gymnasts and weightlifters dust their hands with chalk for the same reason in reverse: more grip, more friction, fewer slips."]},{"heading":"The force engineers fight","paragraphs":["Inside engines and machines, friction is mostly an enemy. It wastes energy as heat, wears surfaces down and can overheat moving parts. Engineers fight it with smooth bearings, careful design and lubricants — oil or grease that keeps a thin film between surfaces so they slide on liquid instead of grinding on each other.","The trick is balance. A hovercraft floats on air to escape friction almost entirely, while a Formula 1 tyre is engineered for maximum stickiness. Friction is neither good nor bad: it is a tool, and skilled design means having exactly as much of it as the job requires."]}],"brand":"discover","contentType":"article","description":"Friction stops your feet slipping and wears out machine parts — the same force is both the hero and the villain.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-31","publishedAt":"2026-09-11","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"friction-the-gripping-force","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Friction","url":"https://en.wikipedia.org/wiki/Friction"},{"accessedAt":"2026-11-15","title":"Wikipedia: Lubricant","url":"https://en.wikipedia.org/wiki/Lubricant"}],"tags":["physics","science"],"takeaway":"Friction is the resistance between surfaces that catch on each other: it makes walking, braking and gripping possible, and engineers spend much of their time either using it or defeating it.","title":"Friction: the force that grips and resists","updatedAt":"2026-09-11"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Surfaces that catch on each other",
+      "paragraphs": [
+        "No surface is perfectly smooth. Under a microscope, even polished metal is a landscape of tiny peaks and valleys, and when two surfaces press together those peaks catch, stick and tear apart as the surfaces slide. That resistance to sliding is friction, and it always acts opposite to the movement — or the attempted movement.",
+        "Friction comes in two strengths. Static friction holds still objects in place and adjusts itself up to a limit; it is what keeps a parked car from rolling and a book from sliding off a tilted desk. Once sliding starts, kinetic friction takes over, usually a little weaker, which is why a heavy box is hardest to get moving and slightly easier to keep moving."
+      ]
+    },
+    {
+      "heading": "The force you cannot live without",
+      "paragraphs": [
+        "Walking, driving and holding a pencil all depend on friction. Your shoe grips the ground so the ground can push you forward; a car's tyres grip the road so the car can accelerate, steer and brake. Brake pads work by deliberately creating huge friction, turning the car's movement energy into heat.",
+        "A match lights because friction between the match head and the striking strip generates enough heat in one quick scrape to start a chemical reaction. Climbers, gymnasts and weightlifters dust their hands with chalk for the same reason in reverse: more grip, more friction, fewer slips."
+      ]
+    },
+    {
+      "heading": "The force engineers fight",
+      "paragraphs": [
+        "Inside engines and machines, friction is mostly an enemy. It wastes energy as heat, wears surfaces down and can overheat moving parts. Engineers fight it with smooth bearings, careful design and lubricants — oil or grease that keeps a thin film between surfaces so they slide on liquid instead of grinding on each other.",
+        "The trick is balance. A hovercraft floats on air to escape friction almost entirely, while a Formula 1 tyre is engineered for maximum stickiness. Friction is neither good nor bad: it is a tool, and skilled design means having exactly as much of it as the job requires."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Friction stops your feet slipping and wears out machine parts — the same force is both the hero and the villain.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-31",
+  "publishedAt": "2026-09-11",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "friction-the-gripping-force",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Friction",
+      "url": "https://en.wikipedia.org/wiki/Friction"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Lubricant",
+      "url": "https://en.wikipedia.org/wiki/Lubricant"
+    }
+  ],
+  "tags": [
+    "physics",
+    "science"
+  ],
+  "takeaway": "Friction is the resistance between surfaces that catch on each other: it makes walking, braking and gripping possible, and engineers spend much of their time either using it or defeating it.",
+  "title": "Friction: the force that grips and resists",
+  "updatedAt": "2026-09-11"
+}

@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A chain, not a single filter","paragraphs":["River water carries silt, leaves, bacteria and dissolved chemicals, and no single process removes them all. A water treatment plant is therefore a chain of steps, each aimed at a different size of problem: big debris first, then fine particles, then the invisible germs. Miss out the order and the later steps fail — a disinfectant cannot work well in cloudy water.","The first steps are physical. Screens and grilles catch sticks, plastic and fish. Then the water flows into mixing tanks where the real chemistry begins, because the tiniest particles of clay and dirt are too small and too light ever to settle out on their own."]},{"heading":"Clump, settle, filter, disinfect","paragraphs":["Operators add a coagulant such as aluminium sulfate — alum — which makes the fine particles clump together into soft flakes called floc. In the next tank the flow slows almost to a standstill, and the heavy floc sinks as sediment, taking most of the dirt and many microbes with it. The clearer water then passes through beds of sand, which strain out what remains, much as sand on a beach filters the sea.","Last comes disinfection: a carefully measured dose of chlorine, or treatment with ultraviolet light or ozone, kills the bacteria and viruses that survived the journey. A trace of chlorine is usually left in the water on purpose, standing guard against germs picked up in the pipes on the way to your tap."]},{"heading":"Billions of litres, tested constantly","paragraphs":["The scale is industrial. A large city can treat billions of litres a day, and the water is sampled and tested at every stage — for cloudiness, acidity, chlorine levels and bacteria — because the plant's customers drink the product unboiled, straight from the tap.","It is worth remembering what the plant does not do: it does not make water perfectly pure, and it does not need to. It makes river water reliably safe, which is a different and harder achievement — one of the quietest triumphs of modern chemistry and engineering."]}],"brand":"discover","contentType":"article","description":"A treatment plant turns muddy river water into safe tap water through a chain of physical and chemical steps — no single magic filter.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-77","publishedAt":"2026-10-28","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-water-treatment-plants-work","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Water treatment","url":"https://en.wikipedia.org/wiki/Water_treatment"},{"accessedAt":"2026-11-15","title":"Wikipedia: Drinking water","url":"https://en.wikipedia.org/wiki/Drinking_water"}],"tags":["chemistry","science"],"takeaway":"Treatment plants clean water in stages — screens, clumping chemicals, settling, sand filtration, then disinfection — each step removing what the others cannot.","title":"How a water treatment plant makes river water drinkable","updatedAt":"2026-10-28"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A chain, not a single filter",
+      "paragraphs": [
+        "River water carries silt, leaves, bacteria and dissolved chemicals, and no single process removes them all. A water treatment plant is therefore a chain of steps, each aimed at a different size of problem: big debris first, then fine particles, then the invisible germs. Miss out the order and the later steps fail — a disinfectant cannot work well in cloudy water.",
+        "The first steps are physical. Screens and grilles catch sticks, plastic and fish. Then the water flows into mixing tanks where the real chemistry begins, because the tiniest particles of clay and dirt are too small and too light ever to settle out on their own."
+      ]
+    },
+    {
+      "heading": "Clump, settle, filter, disinfect",
+      "paragraphs": [
+        "Operators add a coagulant such as aluminium sulfate — alum — which makes the fine particles clump together into soft flakes called floc. In the next tank the flow slows almost to a standstill, and the heavy floc sinks as sediment, taking most of the dirt and many microbes with it. The clearer water then passes through beds of sand, which strain out what remains, much as sand on a beach filters the sea.",
+        "Last comes disinfection: a carefully measured dose of chlorine, or treatment with ultraviolet light or ozone, kills the bacteria and viruses that survived the journey. A trace of chlorine is usually left in the water on purpose, standing guard against germs picked up in the pipes on the way to your tap."
+      ]
+    },
+    {
+      "heading": "Billions of litres, tested constantly",
+      "paragraphs": [
+        "The scale is industrial. A large city can treat billions of litres a day, and the water is sampled and tested at every stage — for cloudiness, acidity, chlorine levels and bacteria — because the plant's customers drink the product unboiled, straight from the tap.",
+        "It is worth remembering what the plant does not do: it does not make water perfectly pure, and it does not need to. It makes river water reliably safe, which is a different and harder achievement — one of the quietest triumphs of modern chemistry and engineering."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "A treatment plant turns muddy river water into safe tap water through a chain of physical and chemical steps — no single magic filter.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-77",
+  "publishedAt": "2026-10-28",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-water-treatment-plants-work",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Water treatment",
+      "url": "https://en.wikipedia.org/wiki/Water_treatment"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Drinking water",
+      "url": "https://en.wikipedia.org/wiki/Drinking_water"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Treatment plants clean water in stages — screens, clumping chemicals, settling, sand filtration, then disinfection — each step removing what the others cannot.",
+  "title": "How a water treatment plant makes river water drinkable",
+  "updatedAt": "2026-10-28"
+}

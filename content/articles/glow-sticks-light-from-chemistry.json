@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Light without a flame","paragraphs":["Most light you know comes with heat: the Sun, a candle, an old-style bulb all glow because they are hot. A glow stick does something rarer — chemiluminescence, light produced directly by a chemical reaction, with almost no heat at all. The reaction's energy is handed to a dye, and the dye sheds the energy as light of a particular colour.","Inside the plastic tube are two liquids kept apart. The outer tube holds an oxalate compound dissolved with the coloured dye; sealed inside that, in a fragile glass vial, is hydrogen peroxide — the same mild bleach sold in pharmacies, here in a stronger supporting role."]},{"heading":"Bend, snap, shake, glow","paragraphs":["Bending the stick snaps the glass vial, and the two liquids mix. The peroxide reacts with the oxalate compound, forming a short-lived, energy-rich intermediate. That intermediate cannot hold its energy, so it passes it to the dye molecules floating nearby — and each dye molecule, settling back down, releases the energy as a photon of light. Choose a different dye and you choose a different colour: the chemistry is the same, the paint is not.","Temperature steers the speed. Warm the stick and the reaction races — brighter light, shorter life. Chill it in a freezer and the reaction crawls, so a spent-looking stick can be coaxed into glowing faintly for hours longer. Either way, once the ingredients are used up, the light ends for good: a glow stick cannot be recharged."]},{"heading":"Cold light at work","paragraphs":["Because they need no batteries, sparks or wiring, glow sticks are standard emergency kit: safe around fuel and water, and happy to work in the rain. Divers carry them, soldiers use them as markers, and deep-sea fishing boats dangle them as lures in the dark water.","Nature invented the trick first. Fireflies and many deep-ocean animals run their own chemiluminescent reactions — the same strategy of turning reaction energy straight into light, refined by evolution long before it was packed in plastic."]}],"brand":"discover","contentType":"article","description":"A glow stick makes light with no heat and no battery: bend it, two chemicals mix, and the energy of their reaction comes out as light.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-76","publishedAt":"2026-10-26","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"glow-sticks-light-from-chemistry","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Glow stick","url":"https://en.wikipedia.org/wiki/Glow_stick"},{"accessedAt":"2026-11-15","title":"Wikipedia: Chemiluminescence","url":"https://en.wikipedia.org/wiki/Chemiluminescence"}],"tags":["chemistry","science"],"takeaway":"A glow stick's light is chemiluminescence: a reaction between hydrogen peroxide and an oxalate compound energises a dye, which releases the energy as coloured light.","title":"Glow sticks: light made by a chemical reaction","updatedAt":"2026-10-26"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Light without a flame",
+      "paragraphs": [
+        "Most light you know comes with heat: the Sun, a candle, an old-style bulb all glow because they are hot. A glow stick does something rarer — chemiluminescence, light produced directly by a chemical reaction, with almost no heat at all. The reaction's energy is handed to a dye, and the dye sheds the energy as light of a particular colour.",
+        "Inside the plastic tube are two liquids kept apart. The outer tube holds an oxalate compound dissolved with the coloured dye; sealed inside that, in a fragile glass vial, is hydrogen peroxide — the same mild bleach sold in pharmacies, here in a stronger supporting role."
+      ]
+    },
+    {
+      "heading": "Bend, snap, shake, glow",
+      "paragraphs": [
+        "Bending the stick snaps the glass vial, and the two liquids mix. The peroxide reacts with the oxalate compound, forming a short-lived, energy-rich intermediate. That intermediate cannot hold its energy, so it passes it to the dye molecules floating nearby — and each dye molecule, settling back down, releases the energy as a photon of light. Choose a different dye and you choose a different colour: the chemistry is the same, the paint is not.",
+        "Temperature steers the speed. Warm the stick and the reaction races — brighter light, shorter life. Chill it in a freezer and the reaction crawls, so a spent-looking stick can be coaxed into glowing faintly for hours longer. Either way, once the ingredients are used up, the light ends for good: a glow stick cannot be recharged."
+      ]
+    },
+    {
+      "heading": "Cold light at work",
+      "paragraphs": [
+        "Because they need no batteries, sparks or wiring, glow sticks are standard emergency kit: safe around fuel and water, and happy to work in the rain. Divers carry them, soldiers use them as markers, and deep-sea fishing boats dangle them as lures in the dark water.",
+        "Nature invented the trick first. Fireflies and many deep-ocean animals run their own chemiluminescent reactions — the same strategy of turning reaction energy straight into light, refined by evolution long before it was packed in plastic."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "A glow stick makes light with no heat and no battery: bend it, two chemicals mix, and the energy of their reaction comes out as light.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-76",
+  "publishedAt": "2026-10-26",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "glow-sticks-light-from-chemistry",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Glow stick",
+      "url": "https://en.wikipedia.org/wiki/Glow_stick"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Chemiluminescence",
+      "url": "https://en.wikipedia.org/wiki/Chemiluminescence"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "A glow stick's light is chemiluminescence: a reaction between hydrogen peroxide and an oxalate compound energises a dye, which releases the energy as coloured light.",
+  "title": "Glow sticks: light made by a chemical reaction",
+  "updatedAt": "2026-10-26"
+}

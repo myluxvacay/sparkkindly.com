@@ -32,3 +32,13 @@ publication instruction is recorded in docs/launch-approval.json and reflected
 in the asset manifests. It does not convert incomplete provenance/independent
 rights checks into completed checks; the earlier inventory notes describe those
 remaining limitations. Do not claim independent clearance or documentary proof.
+
+## Topic hero images — 15 November 2026
+
+Twenty topic-matched reference photographs (science, space, earth, body, animals, plants, oceans,
+weather, maths, money, family, mind, focus, art, words, history, tech, kindness, games, green) were
+added at the owner's direction and assigned to articles by tag; 936 of 948 articles now carry a
+topic image instead of a world image. Source URLs and photographer names are recorded per file in
+public/images/manifest.json. They carry the same status as the earlier reference photography:
+owner-authorized publication, with detailed provenance and independent final rights review still
+incomplete.

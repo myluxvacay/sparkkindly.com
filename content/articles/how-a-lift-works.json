@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A car on a rope, balanced","paragraphs":["Most lifts are traction lifts: the car hangs from steel cables that pass over a large wheel, called a sheave, at the top of the shaft. On the other end of the cables hangs a counterweight — a stack of heavy plates that balances the car plus roughly half of a full load.","Because the two sides nearly balance, the motor turning the sheave only has to lift the difference. A car full of people going up needs a push; the same car coming down may need braking more than power, as the heavier side tries to fall."]},{"heading":"Stopping exactly at the floor","paragraphs":["The control system tracks the car's position continuously and slows it as it nears the chosen floor, creeping the last few centimetres so the floor of the car aligns with the landing. Only then do the doors — driven by a motor on the car — open, dragging the shaft doors with them.","If the power fails, spring-loaded brakes clamp the sheave automatically; the car does not need electricity to stay put. That fail-safe habit — brakes on unless power releases them — runs through all lift safety design."]},{"heading":"The brake that changed cities","paragraphs":["In the 1850s Elisha Otis demonstrated a safety gear that transformed trust in lifts: if the cable breaks, spring-loaded teeth or rollers jam against the guide rails and grip the car. He proved it by having his own platform's rope cut at a New York exhibition in 1854.","Modern lifts add an overspeed governor: a spinning device that trips if the car descends too fast, triggering the safety gear. With several independent cables, each able to hold the car alone, a free-falling lift is essentially a problem the design has already solved."]}],"brand":"discover","contentType":"article","description":"A lift hangs from cables balanced by a counterweight, so the motor only lifts the difference.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-10","publishedAt":"2026-09-27","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-a-lift-works","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Elevator","url":"https://en.wikipedia.org/wiki/Elevator"},{"accessedAt":"2026-11-15","title":"Wikipedia: Counterweight","url":"https://en.wikipedia.org/wiki/Counterweight"}],"tags":["technology","inventions"],"takeaway":"A lift is a balanced see-saw: cables over a wheel link car and counterweight, so the motor lifts only the difference — and layered brakes make falling almost impossible.","title":"How a lift (elevator) rises, stops and stays safe","updatedAt":"2026-09-27"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A car on a rope, balanced",
+      "paragraphs": [
+        "Most lifts are traction lifts: the car hangs from steel cables that pass over a large wheel, called a sheave, at the top of the shaft. On the other end of the cables hangs a counterweight — a stack of heavy plates that balances the car plus roughly half of a full load.",
+        "Because the two sides nearly balance, the motor turning the sheave only has to lift the difference. A car full of people going up needs a push; the same car coming down may need braking more than power, as the heavier side tries to fall."
+      ]
+    },
+    {
+      "heading": "Stopping exactly at the floor",
+      "paragraphs": [
+        "The control system tracks the car's position continuously and slows it as it nears the chosen floor, creeping the last few centimetres so the floor of the car aligns with the landing. Only then do the doors — driven by a motor on the car — open, dragging the shaft doors with them.",
+        "If the power fails, spring-loaded brakes clamp the sheave automatically; the car does not need electricity to stay put. That fail-safe habit — brakes on unless power releases them — runs through all lift safety design."
+      ]
+    },
+    {
+      "heading": "The brake that changed cities",
+      "paragraphs": [
+        "In the 1850s Elisha Otis demonstrated a safety gear that transformed trust in lifts: if the cable breaks, spring-loaded teeth or rollers jam against the guide rails and grip the car. He proved it by having his own platform's rope cut at a New York exhibition in 1854.",
+        "Modern lifts add an overspeed governor: a spinning device that trips if the car descends too fast, triggering the safety gear. With several independent cables, each able to hold the car alone, a free-falling lift is essentially a problem the design has already solved."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "A lift hangs from cables balanced by a counterweight, so the motor only lifts the difference.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A green computer motherboard close-up",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/tech.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-10",
+  "publishedAt": "2026-09-27",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-a-lift-works",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Elevator",
+      "url": "https://en.wikipedia.org/wiki/Elevator"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Counterweight",
+      "url": "https://en.wikipedia.org/wiki/Counterweight"
+    }
+  ],
+  "tags": [
+    "technology",
+    "inventions"
+  ],
+  "takeaway": "A lift is a balanced see-saw: cables over a wheel link car and counterweight, so the motor lifts only the difference — and layered brakes make falling almost impossible.",
+  "title": "How a lift (elevator) rises, stops and stays safe",
+  "updatedAt": "2026-09-27"
+}

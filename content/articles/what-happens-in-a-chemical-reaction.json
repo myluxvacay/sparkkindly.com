@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Same atoms, new arrangements","paragraphs":["Here is the single most useful idea in chemistry: in a chemical reaction, no atoms appear or vanish. The starting substances, called reactants, contain atoms joined in particular arrangements. During the reaction, those bonds break and the atoms join up in new arrangements, forming different substances called products.","Burn methane and the atoms simply swap partners: the carbon ends up in carbon dioxide, the hydrogen in water. Because atoms are only rearranged, the total mass of the products equals the total mass of the reactants — which is why chemical equations must balance, with the same count of each atom on both sides."]},{"heading":"Getting a reaction started","paragraphs":["Most reactions need a push. Bonds must be broken before new ones can form, and breaking them costs energy — the activation energy. A spark supplies it for a gas flame; a match supplies it for a candle. Once started, many reactions release more energy than the push cost, and that released energy keeps the reaction going.","You can spot reactions by their clues: a colour change, bubbles of a new gas, a temperature rise or fall, a solid forming in a liquid, or light being given off. None of these alone is proof, but together they are the visible surface of atoms rearranging."]},{"heading":"Reactions running your life","paragraphs":["Two of the most important reactions on Earth are mirror images. In photosynthesis, plants use sunlight to build glucose and oxygen from carbon dioxide and water. In respiration, your cells run the equation the other way, releasing the stored energy to power everything you do.","Reactions also differ wildly in speed. An explosion rearranges its atoms in a fraction of a second, while the rusting of a gate takes years — same basic process, very different pace. Temperature, concentration and catalysts are the dials chemists use to speed reactions up or slow them down."]}],"brand":"discover","contentType":"article","description":"In a chemical reaction, atoms rearrange themselves: old bonds break, new bonds form, and entirely new substances appear.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-61","publishedAt":"2026-09-18","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"what-happens-in-a-chemical-reaction","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Chemical reaction","url":"https://en.wikipedia.org/wiki/Chemical_reaction"},{"accessedAt":"2026-11-15","title":"Wikipedia: Chemical equation","url":"https://en.wikipedia.org/wiki/Chemical_equation"}],"tags":["chemistry","science"],"takeaway":"A chemical reaction rearranges atoms — breaking old bonds and forming new ones — so the starting substances turn into different substances, while no atoms are created or destroyed.","title":"What actually happens in a chemical reaction","updatedAt":"2026-09-18"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Same atoms, new arrangements",
+      "paragraphs": [
+        "Here is the single most useful idea in chemistry: in a chemical reaction, no atoms appear or vanish. The starting substances, called reactants, contain atoms joined in particular arrangements. During the reaction, those bonds break and the atoms join up in new arrangements, forming different substances called products.",
+        "Burn methane and the atoms simply swap partners: the carbon ends up in carbon dioxide, the hydrogen in water. Because atoms are only rearranged, the total mass of the products equals the total mass of the reactants — which is why chemical equations must balance, with the same count of each atom on both sides."
+      ]
+    },
+    {
+      "heading": "Getting a reaction started",
+      "paragraphs": [
+        "Most reactions need a push. Bonds must be broken before new ones can form, and breaking them costs energy — the activation energy. A spark supplies it for a gas flame; a match supplies it for a candle. Once started, many reactions release more energy than the push cost, and that released energy keeps the reaction going.",
+        "You can spot reactions by their clues: a colour change, bubbles of a new gas, a temperature rise or fall, a solid forming in a liquid, or light being given off. None of these alone is proof, but together they are the visible surface of atoms rearranging."
+      ]
+    },
+    {
+      "heading": "Reactions running your life",
+      "paragraphs": [
+        "Two of the most important reactions on Earth are mirror images. In photosynthesis, plants use sunlight to build glucose and oxygen from carbon dioxide and water. In respiration, your cells run the equation the other way, releasing the stored energy to power everything you do.",
+        "Reactions also differ wildly in speed. An explosion rearranges its atoms in a fraction of a second, while the rusting of a gate takes years — same basic process, very different pace. Temperature, concentration and catalysts are the dials chemists use to speed reactions up or slow them down."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "In a chemical reaction, atoms rearrange themselves: old bonds break, new bonds form, and entirely new substances appear.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-61",
+  "publishedAt": "2026-09-18",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "what-happens-in-a-chemical-reaction",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Chemical reaction",
+      "url": "https://en.wikipedia.org/wiki/Chemical_reaction"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Chemical equation",
+      "url": "https://en.wikipedia.org/wiki/Chemical_equation"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "A chemical reaction rearranges atoms — breaking old bonds and forming new ones — so the starting substances turn into different substances, while no atoms are created or destroyed.",
+  "title": "What actually happens in a chemical reaction",
+  "updatedAt": "2026-09-18"
+}

@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"A molecule with two loyalties","paragraphs":["Grease is soap's great problem: it refuses to mix with water, so rinsing a greasy plate under the tap just slides the water over the top. Soap defeats it with a split personality. Each soap molecule is a tadpole shape with two opposite ends — a head that is attracted to water, and a tail that is repelled by water but attracted to oils and grease.","Chemicals with this two-faced structure are called surfactants, and soap is the oldest of them, made for thousands of years by boiling fats with an alkali such as wood-ash lye or caustic soda. That reaction, saponification, is what turns slippery fat into something that can wash fat away."]},{"heading":"Surround, lift, rinse","paragraphs":["Add soap to greasy water and the molecules go to work in formation. Their tails burrow into the grease while their heads stay out in the water, until the grease is coated in a layer of molecules all pointing the same way. Agitation — scrubbing, rubbing, the churn of a washing machine — breaks the grease into tiny droplets, each wrapped in its soapy coat: a sphere called a micelle.","The micelle is the trick's payoff. Its outside is water-loving, so the whole droplet, grease and all, happily mixes into the rinse water and flows down the drain. Warm water helps by softening grease, and hard water hinders, because its calcium ions react with soap to form the grey scum that rings a bath."]},{"heading":"More than clean plates","paragraphs":["The same mechanism explains why washing your hands with soap works so well against germs: many viruses and bacteria are wrapped in fatty coatings, and soap molecules prise those coatings apart, inactivating the germ while the micelles carry the remains away.","Detergents are soap's engineered descendants — surfactants designed to keep working in hard water and cold washes. Different surfactant, same ancient idea: a molecule loyal to both water and grease, ferrying one away inside the other."]}],"brand":"discover","contentType":"article","description":"Soap molecules are double agents: one end loves water, the other hates it — and that split personality is what lifts grease away.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/shadows.webp","width":1200},"id":"discover-sci-70","publishedAt":"2026-10-11","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-soap-lifts-grease","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Soap","url":"https://en.wikipedia.org/wiki/Soap"},{"accessedAt":"2026-11-15","title":"Wikipedia: Micelle","url":"https://en.wikipedia.org/wiki/Micelle"}],"tags":["chemistry","science"],"takeaway":"Soap works because each molecule has a water-loving head and a grease-loving tail: the tails trap grease inside spheres called micelles, and the water carries them away.","title":"How soap lifts grease off skin and plates","updatedAt":"2026-10-11"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "A molecule with two loyalties",
+      "paragraphs": [
+        "Grease is soap's great problem: it refuses to mix with water, so rinsing a greasy plate under the tap just slides the water over the top. Soap defeats it with a split personality. Each soap molecule is a tadpole shape with two opposite ends — a head that is attracted to water, and a tail that is repelled by water but attracted to oils and grease.",
+        "Chemicals with this two-faced structure are called surfactants, and soap is the oldest of them, made for thousands of years by boiling fats with an alkali such as wood-ash lye or caustic soda. That reaction, saponification, is what turns slippery fat into something that can wash fat away."
+      ]
+    },
+    {
+      "heading": "Surround, lift, rinse",
+      "paragraphs": [
+        "Add soap to greasy water and the molecules go to work in formation. Their tails burrow into the grease while their heads stay out in the water, until the grease is coated in a layer of molecules all pointing the same way. Agitation — scrubbing, rubbing, the churn of a washing machine — breaks the grease into tiny droplets, each wrapped in its soapy coat: a sphere called a micelle.",
+        "The micelle is the trick's payoff. Its outside is water-loving, so the whole droplet, grease and all, happily mixes into the rinse water and flows down the drain. Warm water helps by softening grease, and hard water hinders, because its calcium ions react with soap to form the grey scum that rings a bath."
+      ]
+    },
+    {
+      "heading": "More than clean plates",
+      "paragraphs": [
+        "The same mechanism explains why washing your hands with soap works so well against germs: many viruses and bacteria are wrapped in fatty coatings, and soap molecules prise those coatings apart, inactivating the germ while the micelles carry the remains away.",
+        "Detergents are soap's engineered descendants — surfactants designed to keep working in hard water and cold washes. Different surfactant, same ancient idea: a molecule loyal to both water and grease, ferrying one away inside the other."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Soap molecules are double agents: one end loves water, the other hates it — and that split personality is what lifts grease away.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-70",
+  "publishedAt": "2026-10-11",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-soap-lifts-grease",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Soap",
+      "url": "https://en.wikipedia.org/wiki/Soap"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Micelle",
+      "url": "https://en.wikipedia.org/wiki/Micelle"
+    }
+  ],
+  "tags": [
+    "chemistry",
+    "science"
+  ],
+  "takeaway": "Soap works because each molecule has a water-loving head and a grease-loving tail: the tails trap grease inside spheres called micelles, and the water carries them away.",
+  "title": "How soap lifts grease off skin and plates",
+  "updatedAt": "2026-10-11"
+}

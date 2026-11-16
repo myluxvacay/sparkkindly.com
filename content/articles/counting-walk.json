@@ -1,1 +1,66 @@
-{"ageGuidance":"Ages 6–9, with an adult","aiDisclosure":"Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"Pick what to count","paragraphs":["Before your walk, choose one thing to count together: red doors, round windows, dogs, bicycles, or anything you like.","Make a guess first. How many do you think you will find? Write the guess down or just remember it."]},{"heading":"Walk and tally","paragraphs":["Walk your usual route with your adult. Every time you spot your thing, make a tally mark on your paper or count on your fingers.","Take turns spotting. If you both see one at the same time, it still counts once. Teamwork makes the counting fair."]},{"heading":"Compare at the end","paragraphs":["At the end of the walk, count up your tally marks. Was your guess close? Guesses do not have to be right to be fun.","Next time, walk the same route and count the same thing. Did the number change? Some things change every day, and some stay the same."]}],"brand":"kids","contentType":"activity","description":"For ages 6–9 with an adult: turn a short walk into a counting game you invent together.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/kids.webp","width":1200},"id":"kids-bulk-04","materials":["Paper and pencil for tally marks, or just your fingers","A familiar walking route"],"publishedAt":"2026-10-26","reviewNote":"Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","safetyNotes":["Stay on pavements and paths, hold hands near roads, and let your adult be in charge of crossing streets.","Watch where you are walking, not just at your paper, so you do not trip."],"screenFreeExtension":"Count something inside your home instead: stairs, spoons, cushions, or books on one shelf.","slug":"counting-walk","sources":[],"supervision":"An adult stays alongside throughout.","tags":["patterns","family-activities"],"takeaway":"Counting the same thing on the same walk can give a different answer every day.","title":"Counting walk","updatedAt":"2026-10-26"}
+{
+  "ageGuidance": "Ages 6–9, with an adult",
+  "aiDisclosure": "Created with AI assistance as part of a bulk seed pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "Pick what to count",
+      "paragraphs": [
+        "Before your walk, choose one thing to count together: red doors, round windows, dogs, bicycles, or anything you like.",
+        "Make a guess first. How many do you think you will find? Write the guess down or just remember it."
+      ]
+    },
+    {
+      "heading": "Walk and tally",
+      "paragraphs": [
+        "Walk your usual route with your adult. Every time you spot your thing, make a tally mark on your paper or count on your fingers.",
+        "Take turns spotting. If you both see one at the same time, it still counts once. Teamwork makes the counting fair."
+      ]
+    },
+    {
+      "heading": "Compare at the end",
+      "paragraphs": [
+        "At the end of the walk, count up your tally marks. Was your guess close? Guesses do not have to be right to be fun.",
+        "Next time, walk the same route and count the same thing. Did the number change? Some things change every day, and some stay the same."
+      ]
+    }
+  ],
+  "brand": "kids",
+  "contentType": "activity",
+  "description": "For ages 6–9 with an adult: turn a short walk into a counting game you invent together.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "Colourful wooden abacus beads",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/maths.webp",
+    "width": 1200
+  },
+  "id": "kids-bulk-04",
+  "materials": [
+    "Paper and pencil for tally marks, or just your fingers",
+    "A familiar walking route"
+  ],
+  "publishedAt": "2026-10-26",
+  "reviewNote": "Bulk seed pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "safetyNotes": [
+    "Stay on pavements and paths, hold hands near roads, and let your adult be in charge of crossing streets.",
+    "Watch where you are walking, not just at your paper, so you do not trip."
+  ],
+  "screenFreeExtension": "Count something inside your home instead: stairs, spoons, cushions, or books on one shelf.",
+  "slug": "counting-walk",
+  "sources": [],
+  "supervision": "An adult stays alongside throughout.",
+  "tags": [
+    "patterns",
+    "family-activities"
+  ],
+  "takeaway": "Counting the same thing on the same walk can give a different answer every day.",
+  "title": "Counting walk",
+  "updatedAt": "2026-10-26"
+}

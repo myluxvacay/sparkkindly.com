@@ -1,1 +1,66 @@
-{"aiDisclosure":"Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.","author":"SparkKindly · AI-assisted","body":[{"heading":"The motor in reverse","paragraphs":["A generator is an electric motor run backwards. Instead of feeding in electricity to get turning, you feed in turning and get electricity out. Spin a coil of wire inside a magnetic field, and a voltage appears in the wire — the effect Michael Faraday demonstrated in 1831.","The voltage is induced because the magnetic field through the coil keeps changing as it rotates. Connect a circuit, and current flows. Push the coil around faster, or use stronger magnets and more turns of wire, and you generate more."]},{"heading":"From bicycle lamps to power stations","paragraphs":["A bicycle dynamo is a pocket generator: the wheel spins a small magnet inside coils, making just enough electricity for the lamps. At the other extreme, power-station generators are metres across and produce electricity for whole cities.","What spins them varies — steam heated by coal, gas or nuclear reactions, falling water in a dam, wind turning a turbine, or a diesel engine in an emergency backup unit. The generator itself does not care; it simply converts whatever turning it receives. The conversion is silent, has no exhaust of its own, and works identically at every scale."]},{"heading":"Why the grid hums","paragraphs":["Because the coil's voltage rises, falls and reverses as it spins, generators naturally produce alternating current — AC. Grid generators are carefully kept spinning in step, so the current everywhere alternates at a steady 50 or 60 times a second depending on the country.","That shared rhythm is a balancing act: at every moment, the electricity being generated must match what people are using. Grid operators watch demand constantly, spinning generators up or down to keep the frequency — and your lights — steady."]}],"brand":"discover","contentType":"article","description":"Move a coil through a magnetic field and electricity appears — the generator is a motor run backwards.","factualClaimsReviewedAt":"2026-11-15","fiction":false,"hero":{"alt":"","credit":"Development reference photograph · Unsplash","height":800,"rights":"Reference use; provenance and final image approval pending; see public/images/manifest.json","src":"/images/ocean.webp","width":1200},"id":"discover-sci-05","publishedAt":"2026-09-14","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","slug":"how-a-generator-works","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Electric generator","url":"https://en.wikipedia.org/wiki/Electric_generator"},{"accessedAt":"2026-11-15","title":"Wikipedia: Electromagnetic induction","url":"https://en.wikipedia.org/wiki/Electromagnetic_induction"}],"tags":["technology","science"],"takeaway":"A generator converts turning into electricity by spinning coils through a magnetic field, inducing a voltage — Faraday's discovery behind nearly all grid power.","title":"How a generator turns motion into electricity","updatedAt":"2026-09-14"}
+{
+  "aiDisclosure": "Created with AI assistance as part of a science pack approved by the SparkKindly site owner on 15 November 2026. No independent specialist review is claimed.",
+  "author": "SparkKindly · AI-assisted",
+  "body": [
+    {
+      "heading": "The motor in reverse",
+      "paragraphs": [
+        "A generator is an electric motor run backwards. Instead of feeding in electricity to get turning, you feed in turning and get electricity out. Spin a coil of wire inside a magnetic field, and a voltage appears in the wire — the effect Michael Faraday demonstrated in 1831.",
+        "The voltage is induced because the magnetic field through the coil keeps changing as it rotates. Connect a circuit, and current flows. Push the coil around faster, or use stronger magnets and more turns of wire, and you generate more."
+      ]
+    },
+    {
+      "heading": "From bicycle lamps to power stations",
+      "paragraphs": [
+        "A bicycle dynamo is a pocket generator: the wheel spins a small magnet inside coils, making just enough electricity for the lamps. At the other extreme, power-station generators are metres across and produce electricity for whole cities.",
+        "What spins them varies — steam heated by coal, gas or nuclear reactions, falling water in a dam, wind turning a turbine, or a diesel engine in an emergency backup unit. The generator itself does not care; it simply converts whatever turning it receives. The conversion is silent, has no exhaust of its own, and works identically at every scale."
+      ]
+    },
+    {
+      "heading": "Why the grid hums",
+      "paragraphs": [
+        "Because the coil's voltage rises, falls and reverses as it spins, generators naturally produce alternating current — AC. Grid generators are carefully kept spinning in step, so the current everywhere alternates at a steady 50 or 60 times a second depending on the country.",
+        "That shared rhythm is a balancing act: at every moment, the electricity being generated must match what people are using. Grid operators watch demand constantly, spinning generators up or down to keep the frequency — and your lights — steady."
+      ]
+    }
+  ],
+  "brand": "discover",
+  "contentType": "article",
+  "description": "Move a coil through a magnetic field and electricity appears — the generator is a motor run backwards.",
+  "factualClaimsReviewedAt": "2026-11-15",
+  "fiction": false,
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "id": "discover-sci-05",
+  "publishedAt": "2026-09-14",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "slug": "how-a-generator-works",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Electric generator",
+      "url": "https://en.wikipedia.org/wiki/Electric_generator"
+    },
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Electromagnetic induction",
+      "url": "https://en.wikipedia.org/wiki/Electromagnetic_induction"
+    }
+  ],
+  "tags": [
+    "technology",
+    "science"
+  ],
+  "takeaway": "A generator converts turning into electricity by spinning coils through a magnetic field, inducing a voltage — Faraday's discovery behind nearly all grid power.",
+  "title": "How a generator turns motion into electricity",
+  "updatedAt": "2026-09-14"
+}
