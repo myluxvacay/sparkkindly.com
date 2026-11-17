@@ -22354,20 +22354,6 @@
       }
     },
     {
-      "kind": "article",
-      "id": "pipeline-proof-two-minute-reset",
-      "priorHash": "4ba784f54cbc646646122ed8908a6b4fd4039229f8f0adedda3bfcb697a32da7",
-      "approvedHash": "416e108a0f887c05af115635acadbcbb113e06943f8ab60c7e9ec7dfe0c767c3",
-      "fields": {
-        "publishedAt": "2026-11-16",
-        "reviewStatus": "approved",
-        "reviewer": "SparkKindly reviewer agent (staging proof)",
-        "reviewedAt": "2026-11-16",
-        "factualClaimsReviewedAt": "2026-11-16",
-        "reviewNote": "Staging proof item for the automated content-publishing pipeline, published under the site owner's standing authorization of 16 November 2026. Not a production library item."
-      }
-    },
-    {
       "kind": "quiz",
       "id": "discover-quiz-alveoli-diffusion-gradient-800",
       "priorHash": "c6436ed09ac45cb567f0b5f04845f68d860b3b6d5ad7fafc40dcb13dd1592573",
