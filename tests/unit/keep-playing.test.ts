@@ -128,4 +128,10 @@ describe('buildModel', () => {
     expect(anon.accountSeen).toEqual([]);
     expect(anon.signedIn).toBe(false);
   });
+
+  it('trackSeen defaults on and is switched off for Kids / daily-question surfaces', () => {
+    const p = pools({ medium: [c('m')] });
+    expect(buildModel('me', 'easy', p).trackSeen).toBe(true);
+    expect(buildModel('me', 'easy', p, { trackSeen: false }).trackSeen).toBe(false);
+  });
 });
