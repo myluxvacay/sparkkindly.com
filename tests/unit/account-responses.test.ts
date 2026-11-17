@@ -5,7 +5,7 @@ import { seedReference } from '@/db/seed';
 import { signUp } from '@/lib/accounts/signup';
 import { deleteAccount } from '@/lib/accounts/delete';
 import { createChildProfile, deleteChildProfile } from '@/lib/accounts/children';
-import { countAnswered, listAnswered, recordAnswer } from '@/lib/accounts/responses';
+import { countAnswered, listAnswered, listAnsweredIds, recordAnswer } from '@/lib/accounts/responses';
 import type { Owner } from '@/lib/accounts/interests';
 import type { Scope } from '@/lib/public/scope';
 
@@ -130,6 +130,30 @@ describe('listAnswered / countAnswered', () => {
     const b = await adult();
     await recordAnswer(db, { accountId: a, profileId: null }, items[0], true, T0);
     expect(await listAnswered(db, { accountId: b, profileId: null }, ALLOWED, page)).toEqual([]);
+  });
+});
+
+describe('listAnsweredIds (the keep-playing account seen-set)', () => {
+  it('returns exactly the asked ids this profile has answered — nothing else leaks in', async () => {
+    const o: Owner = { accountId: await adult(), profileId: null };
+    await recordAnswer(db, o, items[0], true, T0);
+    await recordAnswer(db, o, items[2], false, T0);
+    expect((await listAnsweredIds(db, o, ALLOWED, [items[0], items[1], items[2]])).sort()).toEqual(
+      [items[0], items[2]].sort(),
+    );
+    expect(await listAnsweredIds(db, o, ALLOWED, [])).toEqual([]);
+    expect(await listAnsweredIds(db, o, ALLOWED, ['nope'])).toEqual([]);
+    expect(await listAnsweredIds(db, o, NONE, [items[0]])).toEqual([]);
+  });
+
+  it('is per-profile and per-account: Start-fresh semantics never touch another profile’s history', async () => {
+    const acc = await adult();
+    const kid = await child(acc);
+    await recordAnswer(db, { accountId: acc, profileId: null }, items[0], true, T0);
+    expect(await listAnsweredIds(db, { accountId: acc, profileId: kid }, ALLOWED, [items[0]])).toEqual([]);
+    expect(await listAnsweredIds(db, { accountId: await adult(), profileId: null }, ALLOWED, [items[0]])).toEqual([]);
+    // The holder's history is untouched by the child's (empty) view of it.
+    expect(await listAnsweredIds(db, { accountId: acc, profileId: null }, ALLOWED, [items[0]])).toEqual([items[0]]);
   });
 });
 
