@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-marbles-give-and-find-984",
+  "scheduledDate": "2027-12-02",
+  "brand": "kids",
+  "prompt": "You have 8 marbles. You give 3 marbles to a friend, then you find 4 more marbles. How many marbles do you have now?",
+  "options": [
+    {
+      "id": "a",
+      "text": "5"
+    },
+    {
+      "id": "b",
+      "text": "9"
+    },
+    {
+      "id": "c",
+      "text": "8"
+    },
+    {
+      "id": "d",
+      "text": "12"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "First, 8 take away 3 is 5 marbles. Then 5 and 4 more makes 9 marbles. Great two-step counting!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

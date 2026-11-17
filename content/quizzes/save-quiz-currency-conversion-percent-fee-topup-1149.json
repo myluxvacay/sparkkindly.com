@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-currency-conversion-percent-fee-topup-1149",
+  "scheduledDate": "2028-05-15",
+  "brand": "save",
+  "prompt": "You exchange $500 into euros. The exchange rate is $1 = €0.80, and the bureau charges a fee of 5% of the euros you receive, taken off before you are paid. How many euros do you actually receive?",
+  "options": [
+    {
+      "id": "a",
+      "text": "€400"
+    },
+    {
+      "id": "b",
+      "text": "€375"
+    },
+    {
+      "id": "c",
+      "text": "€380"
+    },
+    {
+      "id": "d",
+      "text": "€420"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Before the fee: $500 x 0.80 = €400. Fee: 5% of €400 = €20. You receive: €400 - €20 = €380. The €400 option forgets the fee; €375 wrongly works out the fee as 5% of 500 (€25) instead of 5% of the €400 being converted (€20); €420 adds a fee instead of subtracting it.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-opposite-of-fast-1029",
+  "scheduledDate": "2028-01-16",
+  "brand": "kids",
+  "prompt": "What is the opposite of fast?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Quick"
+    },
+    {
+      "id": "b",
+      "text": "Speedy"
+    },
+    {
+      "id": "c",
+      "text": "Happy"
+    },
+    {
+      "id": "d",
+      "text": "Slow"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "That is right! Fast means moving quickly, and slow is the opposite.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

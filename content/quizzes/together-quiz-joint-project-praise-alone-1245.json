@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-joint-project-praise-alone-1245",
+  "scheduledDate": "2028-08-19",
+  "brand": "together",
+  "prompt": "You and a quieter classmate did a joint project together, but your teacher praises you alone in class as if it was mainly your work. What response is fairest to your partner?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Accept all the praise and enjoy it, since the teacher chose to give it to you"
+    },
+    {
+      "id": "b",
+      "text": "Whisper to your partner that you will mention them later, then let the moment pass"
+    },
+    {
+      "id": "c",
+      "text": "Thank the teacher and clearly name the specific parts your partner led or contributed in front of the class"
+    },
+    {
+      "id": "d",
+      "text": "Refuse all the credit and say you did nothing, so your partner gets everything"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Naming your partner's real contributions in the moment corrects the record while it matters. False modesty erases your own work, and a private promise to mention them later rarely fixes a public misunderstanding.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-bulk-pods-expiry-effective-cost-topup-1184",
+  "scheduledDate": "2028-06-19",
+  "brand": "save",
+  "prompt": "A box of 50 coffee pods costs $30, but the pods expire in 6 weeks. You use 5 pods a week, so some pods will expire unused. What is the effective cost per pod that you actually use?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$0.60"
+    },
+    {
+      "id": "b",
+      "text": "$1.00"
+    },
+    {
+      "id": "c",
+      "text": "$1.50"
+    },
+    {
+      "id": "d",
+      "text": "$0.75"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Pods you actually use before the expiry date: 5 per week x 6 weeks = 30 pods. Effective cost per used pod: $30 / 30 = $1.00. The $0.60 option divides by all 50 pods in the box ($30 / 50) and ignores the 20 pods that expire unused.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

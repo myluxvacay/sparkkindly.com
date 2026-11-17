@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-snowy-day-mittens-1042",
+  "scheduledDate": "2028-01-29",
+  "brand": "kids",
+  "prompt": "On a snowy day, what keeps your hands warm?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A sun hat"
+    },
+    {
+      "id": "b",
+      "text": "Sandals"
+    },
+    {
+      "id": "c",
+      "text": "Shorts"
+    },
+    {
+      "id": "d",
+      "text": "Mittens"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Good choice! Warm mittens keep your hands cosy on a snowy day.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

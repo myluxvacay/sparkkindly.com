@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-project-plan-no-buffer-911",
+  "scheduledDate": "2027-09-20",
+  "brand": "grow",
+  "prompt": "Sofia's four-week project plan fills every day exactly, with each stage starting the day the previous one ends and no slack. In week two one task takes two extra days and the whole plan collapses. What planning error does this show?",
+  "options": [
+    {
+      "id": "a",
+      "text": "She planned the project in too much detail"
+    },
+    {
+      "id": "b",
+      "text": "She should have worked weekends from the start"
+    },
+    {
+      "id": "c",
+      "text": "Estimates are usually optimistic, so a workable plan needs buffer time and a decision about what can be dropped if things slip"
+    },
+    {
+      "id": "d",
+      "text": "A four-week project should never be split into stages"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "This is the planning fallacy in action: single-point optimistic estimates with zero slack. Buffers and a pre-chosen drop-list turn a slip into an adjustment instead of a collapse.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Planning fallacy",
+      "url": "https://en.wikipedia.org/wiki/Planning_fallacy",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

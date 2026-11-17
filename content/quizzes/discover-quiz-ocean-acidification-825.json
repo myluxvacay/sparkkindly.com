@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-ocean-acidification-825",
+  "scheduledDate": "2027-06-26",
+  "brand": "discover",
+  "prompt": "As the oceans absorb more carbon dioxide from the air, seawater becomes more acidic. What is the direct chemical reason?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Dissolved carbon dioxide reacts with water to form carbonic acid, which releases hydrogen ions and lowers the pH"
+    },
+    {
+      "id": "b",
+      "text": "Carbon dioxide kills the plankton that normally keep seawater alkaline"
+    },
+    {
+      "id": "c",
+      "text": "Warmer water always has a lower pH, whatever gases it holds"
+    },
+    {
+      "id": "d",
+      "text": "Carbon dioxide displaces oxygen, and oxygen was keeping the water alkaline"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "CO2 + water forms carbonic acid, which partly splits into hydrogen ions and bicarbonate. More hydrogen ions means a lower pH — the process called ocean acidification.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Ocean acidification",
+      "url": "https://en.wikipedia.org/wiki/Ocean_acidification",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

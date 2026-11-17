@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-marine-snow-food-823",
+  "scheduledDate": "2027-06-24",
+  "brand": "discover",
+  "prompt": "Away from hydrothermal vents, most animals in the deep ocean ultimately depend for food on 'marine snow'. What is marine snow?",
+  "options": [
+    {
+      "id": "a",
+      "text": "White mineral crystals that form on the seabed and are eaten directly"
+    },
+    {
+      "id": "b",
+      "text": "A steady fall of dead plankton, faecal pellets and other organic debris from the sunlit surface waters above"
+    },
+    {
+      "id": "c",
+      "text": "Frozen seawater that sinks when surface water gets very cold"
+    },
+    {
+      "id": "d",
+      "text": "Fine white sand stirred up from the continental shelves"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "With no sunlight for local photosynthesis, deep-sea communities largely run on organic matter produced in surface waters that dies or is egested and slowly sinks as marine snow.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Marine snow",
+      "url": "https://en.wikipedia.org/wiki/Marine_snow",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

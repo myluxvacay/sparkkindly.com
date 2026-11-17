@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-food-bank-friend-asks-set-aside-1277",
+  "scheduledDate": "2028-09-20",
+  "brand": "together",
+  "prompt": "You volunteer at a community food bank where parcels are shared out equally by a fixed list. A friend who volunteers with you asks you to quietly set aside extra items for their own family, who are struggling at the moment. What is the most caring and fair response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Follow the same list as everyone, explain you cannot set extras aside, and help your friend ask the coordinator about the proper routes for extra support for their family"
+    },
+    {
+      "id": "b",
+      "text": "Set the extras aside just this once, because their family's need is real and nobody will notice"
+    },
+    {
+      "id": "c",
+      "text": "Tell the coordinator what your friend asked, so the team knows to watch them"
+    },
+    {
+      "id": "d",
+      "text": "Give your friend your own volunteer meal and say nothing more about it"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Bending the list would quietly take from other families waiting for the same parcels. Sticking to the shared rules while actively helping your friend find the official extra support treats both their need and everyone else's fairly.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

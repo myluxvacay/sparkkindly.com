@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-which-number-is-prime-hard-1092",
+  "scheduledDate": "2028-03-19",
+  "brand": "play",
+  "prompt": "Which one of these numbers is a prime number?",
+  "options": [
+    {
+      "id": "a",
+      "text": "97"
+    },
+    {
+      "id": "b",
+      "text": "91"
+    },
+    {
+      "id": "c",
+      "text": "87"
+    },
+    {
+      "id": "d",
+      "text": "57"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The others all divide: 91 = 7 x 13, 87 = 3 x 29 and 57 = 3 x 19. But 97 has no divisors other than 1 and itself, so 97 is prime.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

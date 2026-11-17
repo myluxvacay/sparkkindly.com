@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-draw-a-king-chance-1108",
+  "scheduledDate": "2028-04-04",
+  "brand": "play",
+  "prompt": "A standard pack has 52 cards, including 4 kings. You shuffle and draw one card at random. What is the chance it is a king?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1 in 4"
+    },
+    {
+      "id": "b",
+      "text": "1 in 13"
+    },
+    {
+      "id": "c",
+      "text": "1 in 52"
+    },
+    {
+      "id": "d",
+      "text": "1 in 26"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "There are 4 kings among 52 cards, so the chance is 4 out of 52. Dividing top and bottom by 4 simplifies this to 1 in 13.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

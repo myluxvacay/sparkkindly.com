@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-red-face-card-chance-1122",
+  "scheduledDate": "2028-04-18",
+  "brand": "play",
+  "prompt": "A standard pack has 52 cards. Half the cards are red, and each suit has three face cards: jack, queen and king. You draw one card at random. What is the probability that it is a red face card?",
+  "options": [
+    {
+      "id": "a",
+      "text": "3/52"
+    },
+    {
+      "id": "b",
+      "text": "3/26"
+    },
+    {
+      "id": "c",
+      "text": "1/4"
+    },
+    {
+      "id": "d",
+      "text": "6/13"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Only the two red suits count, and each has a jack, queen and king, so there are 2 x 3 = 6 red face cards out of 52. That gives 6/52, which simplifies to 3/26.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

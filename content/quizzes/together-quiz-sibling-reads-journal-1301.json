@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-sibling-reads-journal-1301",
+  "scheduledDate": "2028-10-14",
+  "brand": "together",
+  "prompt": "You discover your younger sibling has read a private journal page you left in a shared room and has been joking about one line from it. What is the most constructive response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Read something private of theirs so you are even"
+    },
+    {
+      "id": "b",
+      "text": "Tell them calmly that private writing is out of bounds, ask them to stop the jokes, and keep the journal somewhere private in future"
+    },
+    {
+      "id": "c",
+      "text": "Never write anything personal down again"
+    },
+    {
+      "id": "d",
+      "text": "Shout at them in front of the whole family until they cry"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Setting a clear, calm boundary and securing the journal protects your privacy without turning a sibling mistake into a family war.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

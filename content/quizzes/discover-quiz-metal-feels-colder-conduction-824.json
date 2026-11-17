@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-metal-feels-colder-conduction-824",
+  "scheduledDate": "2027-06-25",
+  "brand": "discover",
+  "prompt": "On a cold morning a metal park bench and a wooden bench are both at exactly 10°C, yet the metal one feels much colder to sit on. Why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The metal is actually at a lower temperature than the wood because it radiates more heat overnight"
+    },
+    {
+      "id": "b",
+      "text": "Metal conducts heat away from your warmer body much faster than wood does, so your skin cools faster where it touches metal"
+    },
+    {
+      "id": "c",
+      "text": "Wood generates a small amount of heat of its own, which metal cannot do"
+    },
+    {
+      "id": "d",
+      "text": "Metal feels colder only because it is smoother, so more of your skin touches it"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "How cold something feels depends on how fast it draws heat from your skin, not just its temperature. At the same 10°C, metal's high thermal conductivity pulls heat away quickly, while wood is a poor conductor and lets your skin stay warmer.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Thermal conductivity",
+      "url": "https://en.wikipedia.org/wiki/Thermal_conductivity"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

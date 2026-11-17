@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-discount-compare-120-1151",
+  "scheduledDate": "2028-05-17",
+  "brand": "save",
+  "prompt": "The same $120 item is sold two ways. Store A offers 25% off. Store B offers $35 off. Which store is cheaper, and by how much?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Store A, by $5"
+    },
+    {
+      "id": "b",
+      "text": "Store B, by $5"
+    },
+    {
+      "id": "c",
+      "text": "Store A, by $30"
+    },
+    {
+      "id": "d",
+      "text": "They are exactly the same price"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Store A: $120 x 0.75 = $90. Store B: $120 - $35 = $85. Store B is cheaper by $90 - $85 = $5. A percentage off and a fixed amount off must each be worked out in money before comparing.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

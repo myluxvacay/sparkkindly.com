@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-feedback-noise-single-comment-894",
+  "scheduledDate": "2027-09-03",
+  "brand": "grow",
+  "prompt": "One anonymous commenter calls a student's project 'a waste of time', while her teacher and two peers gave specific, mostly positive feedback with one shared suggestion. How should she weigh the comment?",
+  "options": [
+    {
+      "id": "a",
+      "text": "As the most honest feedback, because it is the harshest"
+    },
+    {
+      "id": "b",
+      "text": "As equal to all the other feedback combined"
+    },
+    {
+      "id": "c",
+      "text": "By abandoning the project, since any strong criticism proves failure"
+    },
+    {
+      "id": "d",
+      "text": "As low-weight noise: it is unspecific, single-source and uncheckable, unlike the repeated specific point, which is worth acting on"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Feedback should be weighted by specificity, expertise and repetition. A lone vague insult carries almost no usable information compared with a point several informed reviewers independently raised.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

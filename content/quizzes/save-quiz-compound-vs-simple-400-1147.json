@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-compound-vs-simple-400-1147",
+  "scheduledDate": "2028-05-13",
+  "brand": "save",
+  "prompt": "You put $400 away for 2 years at 10% interest a year. How much MORE do you end up with if the interest is compounded (left in the account) than if you take the interest out each year so it never earns interest itself?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$0"
+    },
+    {
+      "id": "b",
+      "text": "$4"
+    },
+    {
+      "id": "c",
+      "text": "$40"
+    },
+    {
+      "id": "d",
+      "text": "$44"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Compounded: $400 x 1.10 = $440 after year 1, then $440 x 1.10 = $484. Not compounded: $400 + $40 + $40 = $480. Difference: $484 - $480 = $4, the interest on the first year's $40.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-saving-automation-payday-914",
+  "scheduledDate": "2027-09-23",
+  "brand": "grow",
+  "prompt": "As a general learning example, why does moving a small set amount into savings automatically on payday usually beat 'saving whatever is left at month-end'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Because the transfer happens before everyday spending can absorb the money, removing a monthly willpower decision"
+    },
+    {
+      "id": "b",
+      "text": "Because banks pay extra interest only on payday transfers"
+    },
+    {
+      "id": "c",
+      "text": "Because month-end saving is against most banks' rules"
+    },
+    {
+      "id": "d",
+      "text": "Because the amount automatically grows each month"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "'Whatever is left' is usually close to nothing, because spending expands into available money. Automating the transfer first makes saving the default rather than a leftover.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-new-starter-mistake-laughed-1292",
+  "scheduledDate": "2028-10-05",
+  "brand": "together",
+  "prompt": "A new colleague in their first week makes an obvious mistake, and two coworkers laugh about it in the kitchen where the new person can hear. What is the kindest useful response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Steer the chat elsewhere and quietly show the new colleague how that task is usually done"
+    },
+    {
+      "id": "b",
+      "text": "Laugh along briefly so you do not seem uptight"
+    },
+    {
+      "id": "c",
+      "text": "Tell the new colleague exactly who laughed at them"
+    },
+    {
+      "id": "d",
+      "text": "Say nothing, because everyone has a rough first week"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Redirecting the laughter and offering practical help makes the workplace safer for the newcomer without creating a new conflict.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

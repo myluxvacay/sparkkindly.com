@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-filtering-conflicting-feedback-895",
+  "scheduledDate": "2027-09-04",
+  "brand": "grow",
+  "prompt": "Two people comment on Sam's presentation draft: one says vaguely 'it felt boring', another who teaches presenting notes that the opening has no clear question and the middle repeats one point three times. Which response uses feedback best?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Act first on the specific, checkable points from the knowledgeable source, and test whether fixing them also fixes the 'boring' feeling"
+    },
+    {
+      "id": "b",
+      "text": "Average the two comments and change half of everything mentioned"
+    },
+    {
+      "id": "c",
+      "text": "Ignore both, because conflicting feedback cancels itself out"
+    },
+    {
+      "id": "d",
+      "text": "Act on the harshest comment first, whatever it says"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Useful feedback is specific, checkable and informed. The vague reaction is still a signal, but the detailed diagnosis gives testable changes to make first.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

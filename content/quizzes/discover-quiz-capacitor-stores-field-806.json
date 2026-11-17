@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-capacitor-stores-field-806",
+  "scheduledDate": "2027-06-07",
+  "brand": "discover",
+  "prompt": "A capacitor is charged by connecting it to a battery, then disconnected. Where is the energy it stores mainly held?",
+  "options": [
+    {
+      "id": "a",
+      "text": "As chemical energy in the capacitor's plates"
+    },
+    {
+      "id": "b",
+      "text": "As heat in the wires that charged it"
+    },
+    {
+      "id": "c",
+      "text": "As a magnetic field around the capacitor"
+    },
+    {
+      "id": "d",
+      "text": "In the electric field between its plates, created by separated positive and negative charge"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Charging separates charge onto the two plates. The stored energy resides in the electric field in the insulating gap between them, and it is released when the plates are allowed to discharge.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Capacitor",
+      "url": "https://en.wikipedia.org/wiki/Capacitor",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

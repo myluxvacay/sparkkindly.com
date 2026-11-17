@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-shells-on-beach-1040",
+  "scheduledDate": "2028-01-27",
+  "brand": "kids",
+  "prompt": "Mia finds 7 shells in the morning and 5 shells in the afternoon. How many shells does she have altogether?",
+  "options": [
+    {
+      "id": "a",
+      "text": "12"
+    },
+    {
+      "id": "b",
+      "text": "11"
+    },
+    {
+      "id": "c",
+      "text": "13"
+    },
+    {
+      "id": "d",
+      "text": "10"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Well done! 7 + 5 = 12. Count on from 7 and you reach 12 shells.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

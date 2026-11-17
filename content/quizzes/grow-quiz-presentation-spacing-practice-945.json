@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-presentation-spacing-practice-945",
+  "scheduledDate": "2027-10-24",
+  "brand": "grow",
+  "prompt": "You have to give a five-minute class presentation in ten days. Which rehearsal plan makes best use of spacing?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Rehearse once for two hours on the night before"
+    },
+    {
+      "id": "b",
+      "text": "Read the slides silently every day without ever speaking them aloud"
+    },
+    {
+      "id": "c",
+      "text": "Practise speaking it aloud for about 15 minutes on four separate days, improving one part each time"
+    },
+    {
+      "id": "d",
+      "text": "Memorise the whole script word for word in one long session"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Short practice sessions spread over several days are remembered better than the same time crammed into one session, and speaking aloud practises the actual skill you will need.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Spaced repetition",
+      "url": "https://en.wikipedia.org/wiki/Spaced_repetition",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

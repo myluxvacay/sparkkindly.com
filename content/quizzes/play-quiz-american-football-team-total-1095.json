@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-american-football-team-total-1095",
+  "scheduledDate": "2028-03-22",
+  "brand": "play",
+  "prompt": "In American football, a converted touchdown scores 7 points in total, a field goal scores 3 points and a safety scores 2 points. A team scores two converted touchdowns, one field goal and one safety. How many points does it score?",
+  "options": [
+    {
+      "id": "a",
+      "text": "19"
+    },
+    {
+      "id": "b",
+      "text": "17"
+    },
+    {
+      "id": "c",
+      "text": "21"
+    },
+    {
+      "id": "d",
+      "text": "16"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Two converted touchdowns give 2x7=14 points. Adding the field goal makes 17, and adding the safety makes 14+3+2=19 points.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

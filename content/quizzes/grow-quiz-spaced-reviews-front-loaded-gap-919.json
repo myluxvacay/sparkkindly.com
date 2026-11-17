@@ -1,0 +1,43 @@
+{
+  "id": "grow-quiz-spaced-reviews-front-loaded-gap-919",
+  "scheduledDate": "2027-09-28",
+  "brand": "grow",
+  "prompt": "Arun learns 40 new words on Monday and reviews them on Tuesday, Wednesday and Thursday evenings, scoring 38 out of 40 on Friday. He then does no review at all, and a surprise test three weeks later gives him 15 out of 40. For the next set of words he proposes reviewing every evening for five straight evenings, followed by the same three-week gap. What does the evidence from the first set point to instead?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Add the fifth consecutive evening, because more repetitions in the first week are what make a memory survive a long gap afterwards"
+    },
+    {
+      "id": "b",
+      "text": "Keep roughly the same number of reviews but spread them across the gap — for example after two days, after a week, and after three weeks — recalling the words from memory each time"
+    },
+    {
+      "id": "c",
+      "text": "Spend each first-week session re-reading the list more times per sitting, so the words feel completely fluent before the gap begins"
+    },
+    {
+      "id": "d",
+      "text": "Accept the drop as normal forgetting that no review schedule can change, since his Friday score already proved he had learned the words"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "His Friday score showed the words were fresh after closely packed reviews, but the loss happened during the long unreviewed gap. Spreading reviews over expanding intervals makes him retrieve the words after some forgetting has begun, which is what builds longer-lasting retention; extra same-week repetitions mostly repeat retrieval that is still easy.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Spacing effect",
+      "url": "https://en.wikipedia.org/wiki/Spacing_effect"
+    },
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Spaced repetition",
+      "url": "https://en.wikipedia.org/wiki/Spaced_repetition"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

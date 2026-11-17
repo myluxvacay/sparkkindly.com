@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-shorter-shower-water-month-1172",
+  "scheduledDate": "2028-06-07",
+  "brand": "save",
+  "prompt": "A shower uses 12 litres of water a minute. You cut your shower from 8 minutes to 5 minutes, once a day for 30 days. How much water do you save?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1,080 litres"
+    },
+    {
+      "id": "b",
+      "text": "36 litres"
+    },
+    {
+      "id": "c",
+      "text": "360 litres"
+    },
+    {
+      "id": "d",
+      "text": "540 litres"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Time saved per shower: 8 - 5 = 3 minutes. Water saved per shower: 3 x 12 = 36 litres. Over 30 days: 36 x 30 = 1,080 litres.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

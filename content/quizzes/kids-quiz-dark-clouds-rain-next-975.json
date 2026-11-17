@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-dark-clouds-rain-next-975",
+  "scheduledDate": "2027-11-23",
+  "brand": "kids",
+  "prompt": "Dark clouds fill the sky and a cool wind starts to blow. What may happen next?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Flowers turn into rocks"
+    },
+    {
+      "id": "b",
+      "text": "Trees fly away"
+    },
+    {
+      "id": "c",
+      "text": "The moon comes down"
+    },
+    {
+      "id": "d",
+      "text": "Rain may fall"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Dark clouds and wind often mean rain is coming. Rain helps plants and trees grow!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

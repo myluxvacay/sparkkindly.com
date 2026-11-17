@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-charger-drained-sibling-1271",
+  "scheduledDate": "2028-09-14",
+  "brand": "together",
+  "prompt": "You find your phone charger missing before a school trip, and your sibling admits they took it overnight and left your phone almost empty. What is the most constructive response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hide their charger in return so they learn the lesson"
+    },
+    {
+      "id": "b",
+      "text": "Shout until a parent takes your side"
+    },
+    {
+      "id": "c",
+      "text": "Charge what you can and say nothing about it ever"
+    },
+    {
+      "id": "d",
+      "text": "Say clearly that taking it without asking caused a real problem, and agree a simple rule for sharing chargers"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Naming the impact and agreeing a sharing rule fixes the practical problem and prevents a repeat better than revenge or silence.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

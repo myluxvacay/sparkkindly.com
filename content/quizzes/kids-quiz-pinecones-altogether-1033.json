@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-pinecones-altogether-1033",
+  "scheduledDate": "2028-01-20",
+  "brand": "kids",
+  "prompt": "Leo collects 9 pinecones and then finds 8 more. How many pinecones does he have altogether?",
+  "options": [
+    {
+      "id": "a",
+      "text": "16"
+    },
+    {
+      "id": "b",
+      "text": "17"
+    },
+    {
+      "id": "c",
+      "text": "18"
+    },
+    {
+      "id": "d",
+      "text": "15"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Great adding! 9 + 8 = 17, so Leo has 17 pinecones altogether.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

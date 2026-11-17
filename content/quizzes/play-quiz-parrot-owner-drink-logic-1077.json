@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-parrot-owner-drink-logic-1077",
+  "scheduledDate": "2028-03-04",
+  "brand": "play",
+  "prompt": "Maya, Noah, Priya and Sam each own a different pet (cat, dog, parrot, rabbit) and each drink a different drink (coffee, juice, milk, tea). Clues: the parrot owner drinks juice; the dog owner drinks tea; Priya owns the cat; Sam drinks milk; Maya does not own the dog. Who owns the parrot, and what do they drink?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Noah - tea"
+    },
+    {
+      "id": "b",
+      "text": "Maya - juice"
+    },
+    {
+      "id": "c",
+      "text": "Priya - coffee"
+    },
+    {
+      "id": "d",
+      "text": "Sam - milk"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Sam drinks milk, so Sam owns neither the parrot (juice) nor the dog (tea), and Priya owns the cat, so Sam must own the rabbit. Priya's cat means her drink is not juice, tea or milk, so she drinks coffee. That leaves the parrot and dog for Maya and Noah, paired with juice and tea. Maya does not own the dog, so Maya owns the parrot and drinks juice, leaving Noah with the dog and tea. The clues force this one arrangement.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

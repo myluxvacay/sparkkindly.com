@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-resonance-glass-830",
+  "scheduledDate": "2027-07-01",
+  "brand": "discover",
+  "prompt": "A singer can shatter a wine glass with a sustained note, but only if the note is exactly right. The note works when it matches the glass's:",
+  "options": [
+    {
+      "id": "a",
+      "text": "Loudness limit, beyond which any glass breaks"
+    },
+    {
+      "id": "b",
+      "text": "Natural resonant frequency, so each vibration adds to the last and the oscillation builds until the glass fails"
+    },
+    {
+      "id": "c",
+      "text": "Colour frequency, which the glass absorbs as heat"
+    },
+    {
+      "id": "d",
+      "text": "Echo delay, so reflections inside the glass add up"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "At resonance, a driving vibration at an object's natural frequency transfers energy efficiently cycle after cycle, so the amplitude grows large. A glass vibrated strongly enough at its resonant frequency can flex beyond its limit and shatter.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Resonance",
+      "url": "https://en.wikipedia.org/wiki/Resonance",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

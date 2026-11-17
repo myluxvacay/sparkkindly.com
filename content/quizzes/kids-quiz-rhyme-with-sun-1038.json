@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-rhyme-with-sun-1038",
+  "scheduledDate": "2028-01-25",
+  "brand": "kids",
+  "prompt": "Which word rhymes with sun?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Fun"
+    },
+    {
+      "id": "b",
+      "text": "Moon"
+    },
+    {
+      "id": "c",
+      "text": "Star"
+    },
+    {
+      "id": "d",
+      "text": "Rain"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Yes, sun and fun rhyme. They both end with the same un sound.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

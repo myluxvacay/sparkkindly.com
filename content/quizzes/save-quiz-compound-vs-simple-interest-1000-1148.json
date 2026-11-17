@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-compound-vs-simple-interest-1000-1148",
+  "scheduledDate": "2028-05-14",
+  "brand": "save",
+  "prompt": "You put $1,000 away for 3 years at 10% interest a year. How much MORE interest do you earn with compound interest (interest left in the account) than with simple interest (10% of the original $1,000 each year)?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$300"
+    },
+    {
+      "id": "b",
+      "text": "$331"
+    },
+    {
+      "id": "c",
+      "text": "$0"
+    },
+    {
+      "id": "d",
+      "text": "$31"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Simple interest: 3 x $100 = $300. Compound: $1,000 x 1.10 = $1,100, then $1,210, then $1,331, so compound interest is $331. Difference: $331 - $300 = $31.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

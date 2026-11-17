@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-snacking-cue-routine-diagnosis-917",
+  "scheduledDate": "2027-09-26",
+  "brand": "grow",
+  "prompt": "Every evening, Jamal sits in the same chair to watch a show and automatically gets crisps, even when he ate a full dinner. He wants to change this one habit. Which analysis is most accurate?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The crisps are the problem, so he should simply use more willpower in that chair"
+    },
+    {
+      "id": "b",
+      "text": "Evening hunger is always the real cause of snacking"
+    },
+    {
+      "id": "c",
+      "text": "Chair plus show is a strong cue paired with the routine; changing the routine for that cue, such as making tea when the show starts, targets the loop directly"
+    },
+    {
+      "id": "d",
+      "text": "He should stop watching shows entirely, forever"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The pattern is cue-driven, not hunger-driven: same place, same time, same routine. Keeping the cue and swapping in a different routine is a more precise fix than nightly willpower or total avoidance.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

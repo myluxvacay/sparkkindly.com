@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-coding-practice-no-feedback-889",
+  "scheduledDate": "2027-08-29",
+  "brand": "grow",
+  "prompt": "Dev practises coding problems daily but never checks solutions or test results, and repeats the same logical error for weeks. What is missing from his practice?",
+  "options": [
+    {
+      "id": "a",
+      "text": "More hours of the same practice each day"
+    },
+    {
+      "id": "b",
+      "text": "Harder problems, regardless of errors"
+    },
+    {
+      "id": "c",
+      "text": "A study partner to sit beside him"
+    },
+    {
+      "id": "d",
+      "text": "A feedback loop: comparing his solution with a correct one so errors are found and corrected"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Practice without feedback can entrench mistakes. Checking results and studying where his reasoning diverged turns repetition into deliberate practice.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

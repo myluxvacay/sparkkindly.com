@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-shampoo-better-value-1213",
+  "scheduledDate": "2028-07-18",
+  "brand": "save",
+  "prompt": "A 300 ml bottle of shampoo costs $6. A 600 ml bottle of the same shampoo costs $9. Which bottle is better value?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The 600 ml bottle"
+    },
+    {
+      "id": "b",
+      "text": "The 300 ml bottle"
+    },
+    {
+      "id": "c",
+      "text": "They are exactly the same value"
+    },
+    {
+      "id": "d",
+      "text": "It is impossible to compare them"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The small bottle costs $6 / 3 = $2 per 100 ml. The large bottle costs $9 / 6 = $1.50 per 100 ml, so the 600 ml bottle is better value.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-gentle-ramp-tradeoff-857",
+  "scheduledDate": "2027-07-28",
+  "brand": "discover",
+  "prompt": "Two ramps lead to the same loading platform: one short and steep, one long and gentle. Pushing a heavy crate up the long, gentle ramp is easier mainly because it trades what for what?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Less force, applied over a longer distance"
+    },
+    {
+      "id": "b",
+      "text": "Less distance, for a larger force"
+    },
+    {
+      "id": "c",
+      "text": "Less friction, for more speed"
+    },
+    {
+      "id": "d",
+      "text": "Less weight, for more height"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "An inclined plane spreads the work over a longer distance, so the force needed at any moment is smaller — the total work against gravity is the same.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Inclined plane",
+      "url": "https://en.wikipedia.org/wiki/Inclined_plane",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

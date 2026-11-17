@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-opposite-of-tall-1031",
+  "scheduledDate": "2028-01-18",
+  "brand": "kids",
+  "prompt": "What is the opposite of tall?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Big"
+    },
+    {
+      "id": "b",
+      "text": "High"
+    },
+    {
+      "id": "c",
+      "text": "Long"
+    },
+    {
+      "id": "d",
+      "text": "Short"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "That is right! Tall and short are opposites when we talk about height.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-dinner-embarrassing-story-1273",
+  "scheduledDate": "2028-09-16",
+  "brand": "together",
+  "prompt": "At a family dinner with guests, a parent tells a funny story about a mistake you made as a small child. Everyone laughs, but you feel embarrassed and wish they had stopped. What response best handles it later?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Laugh along loudly so nobody notices you minded"
+    },
+    {
+      "id": "b",
+      "text": "Refuse to come to the next family dinner"
+    },
+    {
+      "id": "c",
+      "text": "Tell them privately afterwards that the story embarrassed you and ask them not to retell it in front of guests"
+    },
+    {
+      "id": "d",
+      "text": "Tell an equally embarrassing story about them at the table"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A calm private word afterwards is honest about the embarrassment without spoiling the dinner or trading embarrassment for embarrassment.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

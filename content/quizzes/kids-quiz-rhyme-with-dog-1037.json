@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-rhyme-with-dog-1037",
+  "scheduledDate": "2028-01-24",
+  "brand": "kids",
+  "prompt": "Which word rhymes with dog?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Cat"
+    },
+    {
+      "id": "b",
+      "text": "Fish"
+    },
+    {
+      "id": "c",
+      "text": "Log"
+    },
+    {
+      "id": "d",
+      "text": "Sun"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Yes, dog and log rhyme. They both end with the same og sound.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-marbles-two-same-colour-1072",
+  "scheduledDate": "2028-02-28",
+  "brand": "play",
+  "prompt": "A bag holds 4 red marbles and 3 blue marbles, and nothing else. You draw two marbles one after the other without putting the first back. What is the probability that the two marbles are the same colour?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1/2"
+    },
+    {
+      "id": "b",
+      "text": "25/49"
+    },
+    {
+      "id": "c",
+      "text": "12/25"
+    },
+    {
+      "id": "d",
+      "text": "3/7"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Both red: 4/7 x 3/6 = 12/42. Both blue: 3/7 x 2/6 = 6/42. Adding the two cases gives 18/42, which simplifies to 3/7.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

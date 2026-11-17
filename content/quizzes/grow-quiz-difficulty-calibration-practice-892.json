@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-difficulty-calibration-practice-892",
+  "scheduledDate": "2027-09-01",
+  "brand": "grow",
+  "prompt": "A language learner chooses practice dialogues she can already complete perfectly, every time, because success feels motivating. Her level stays flat for months. What is the problem?",
+  "options": [
+    {
+      "id": "a",
+      "text": "She practises too regularly for progress to occur"
+    },
+    {
+      "id": "b",
+      "text": "Dialogues are not a valid way to learn a language at all"
+    },
+    {
+      "id": "c",
+      "text": "Practice set entirely inside current ability gives no new information; she needs material slightly beyond her level, where some errors occur and can be corrected"
+    },
+    {
+      "id": "d",
+      "text": "She should choose dialogues so hard she understands nothing"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "This is the desirable-difficulty balance: perfect success means the task is below her level, while total incomprehension gives nothing to build on. Slightly-too-hard, with feedback, is where learning happens.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

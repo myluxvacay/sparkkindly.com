@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-mental-contrasting-obstacle-plan-908",
+  "scheduledDate": "2027-09-17",
+  "brand": "grow",
+  "prompt": "Greta visualises her finished essay in detail and feels great, but never considers that her evenings are taken up by shifts, so she starts far too late. What is missing from her positive thinking?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Contrasting the goal with the real obstacle in her week, then making a plan for that obstacle, instead of only picturing success"
+    },
+    {
+      "id": "b",
+      "text": "More vivid visualisation, practised for longer each day"
+    },
+    {
+      "id": "c",
+      "text": "A larger, more ambitious goal to visualise"
+    },
+    {
+      "id": "d",
+      "text": "Visualising other people's essays for inspiration"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Picturing success alone can reduce the energy to act. Mental contrasting pairs the wish with the likely obstacle — her shifts — so she can plan around it, such as drafting on two mornings.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

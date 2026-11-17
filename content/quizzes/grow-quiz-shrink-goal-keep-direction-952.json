@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-shrink-goal-keep-direction-952",
+  "scheduledDate": "2027-10-31",
+  "brand": "grow",
+  "prompt": "Your goal of running 5k within a month turns out to be too much for your current fitness and schedule. What is the most helpful adjustment?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Shrink this month's target to running 2k comfortably, and build up from there"
+    },
+    {
+      "id": "b",
+      "text": "Give up running altogether, since the first goal failed"
+    },
+    {
+      "id": "c",
+      "text": "Keep the same deadline and force long runs every day, however exhausted you feel"
+    },
+    {
+      "id": "d",
+      "text": "Wait until you feel fitter before doing any running at all"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Shrinking the target keeps the direction of the goal while making the next step achievable, so you keep building fitness and confidence instead of quitting or overdoing it.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

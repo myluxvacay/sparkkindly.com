@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-tracker-gaps-move-slot-961",
+  "scheduledDate": "2027-11-09",
+  "brand": "grow",
+  "prompt": "Your practice tracker for learning to code shows you miss every Wednesday, when a club runs late. What is the best response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Scrap the tracker — the habit has clearly failed"
+    },
+    {
+      "id": "b",
+      "text": "Move Wednesday's practice to a free slot on Thursday morning and keep tracking"
+    },
+    {
+      "id": "c",
+      "text": "Do double practice on other days to make up for the misses"
+    },
+    {
+      "id": "d",
+      "text": "Fill in the Wednesdays as done so the streak looks unbroken"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The tracker is doing its job: it shows the slot, not the habit, is the problem. Moving practice to a time that actually exists keeps the routine honest and sustainable.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

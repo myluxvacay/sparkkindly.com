@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-wait-a-day-game-purchase-964",
+  "scheduledDate": "2027-11-12",
+  "brand": "grow",
+  "prompt": "You want to buy an in-game item the moment you see it advertised. Which rule is most likely to help you spend wisely?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Buy it instantly, before the offer ends"
+    },
+    {
+      "id": "b",
+      "text": "Ask a friend to buy it for you instead"
+    },
+    {
+      "id": "c",
+      "text": "Borrow the money so you do not miss out"
+    },
+    {
+      "id": "d",
+      "text": "Wait 24 hours, then check whether you still want it and what else that money would have to give up"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A short wait separates an impulse from a genuine want, and weighing what the money would otherwise buy makes the trade-off visible before you spend, not after.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

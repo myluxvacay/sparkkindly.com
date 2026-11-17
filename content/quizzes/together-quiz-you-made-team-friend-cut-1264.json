@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-you-made-team-friend-cut-1264",
+  "scheduledDate": "2028-09-07",
+  "brand": "together",
+  "prompt": "You have been selected for a school team and your close friend, who trained just as hard, has been cut and is trying to congratulate you through tears. What response honours both your achievement and their disappointment?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hide your joy completely and say the selection was all luck and unfair, so they feel better"
+    },
+    {
+      "id": "b",
+      "text": "Celebrate loudly in the moment and tell them in detail how excited you are about the season ahead"
+    },
+    {
+      "id": "c",
+      "text": "Thank them, acknowledge how hard they worked and how disappointing this must be, avoid bragging in the moment, and check in with them again in the days after"
+    },
+    {
+      "id": "d",
+      "text": "Avoid your friend until their feelings have settled down"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "You do not have to erase your achievement to care about their pain. Acknowledging their effort and checking in later shows the friendship matters more than one selection, without false modesty or rubbing it in.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

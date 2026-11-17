@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-fleming-penicillin-854",
+  "scheduledDate": "2027-07-25",
+  "brand": "discover",
+  "prompt": "In 1928, Alexander Fleming noticed that a mould growing on a dish had killed the bacteria around it. That mould led to which medicine?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Aspirin"
+    },
+    {
+      "id": "b",
+      "text": "Penicillin, the first widely used antibiotic"
+    },
+    {
+      "id": "c",
+      "text": "Insulin"
+    },
+    {
+      "id": "d",
+      "text": "The smallpox vaccine"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Fleming's mould was Penicillium, which produces penicillin — the discovery that launched the antibiotic era in medicine.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Penicillin",
+      "url": "https://en.wikipedia.org/wiki/Penicillin",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

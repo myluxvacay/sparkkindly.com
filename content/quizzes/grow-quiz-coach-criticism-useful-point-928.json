@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-coach-criticism-useful-point-928",
+  "scheduledDate": "2027-10-07",
+  "brand": "grow",
+  "prompt": "Your coach criticises your performance sharply after a match and you feel stung. Once you have cooled down, what is the most growth-focused next step?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Leave the team to avoid being criticised again"
+    },
+    {
+      "id": "b",
+      "text": "Decide the coach is always wrong about you"
+    },
+    {
+      "id": "c",
+      "text": "Ignore everything that was said because the tone was harsh"
+    },
+    {
+      "id": "d",
+      "text": "Pick out one specific, useful point from the feedback and ask for an example of what doing it well looks like"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Harsh delivery can hide a usable point. Extracting one specific thing to work on, and asking what good looks like, turns an unpleasant moment into a clear next practice target.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

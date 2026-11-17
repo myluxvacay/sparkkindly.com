@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-monthly-bus-pass-saving-1202",
+  "scheduledDate": "2028-07-07",
+  "brand": "save",
+  "prompt": "In one month you make 20 bus trips. A single ticket costs $2.50 and a monthly pass costs $40. How much do you save by buying the pass instead of single tickets?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$10"
+    },
+    {
+      "id": "b",
+      "text": "$5"
+    },
+    {
+      "id": "c",
+      "text": "$15"
+    },
+    {
+      "id": "d",
+      "text": "$20"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Single tickets cost 20 x $2.50 = $50 in total. The pass costs $40, so you save $50 - $40 = $10.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

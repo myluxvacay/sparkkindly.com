@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-bioluminescence-uses-804",
+  "scheduledDate": "2027-06-05",
+  "brand": "discover",
+  "prompt": "Many deep-sea animals produce their own light by bioluminescence in water where sunlight never reaches. Which of these is NOT a well-established use of that light?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Luring prey toward a predator, as an anglerfish does"
+    },
+    {
+      "id": "b",
+      "text": "Startling or distracting a predator to escape"
+    },
+    {
+      "id": "c",
+      "text": "Signalling to others of the same species"
+    },
+    {
+      "id": "d",
+      "text": "Photosynthesising to make food from the animal's own light"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Deep-sea bioluminescence is used for luring prey, defence and communication, but it is far too weak and localised to power photosynthesis, and deep-sea food webs there are not based on animals lighting their own food production.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Bioluminescence",
+      "url": "https://en.wikipedia.org/wiki/Bioluminescence",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

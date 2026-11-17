@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-setback-response-evidence-plan-915",
+  "scheduledDate": "2027-09-24",
+  "brand": "grow",
+  "prompt": "After months of progress, a runner has one terrible race and wants to quit her training plan entirely. Which response is best supported by the evidence of her own record?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Quit, because the latest result is always the truest one"
+    },
+    {
+      "id": "b",
+      "text": "Double training volume immediately to make up for the race"
+    },
+    {
+      "id": "c",
+      "text": "Ignore the race completely and never analyse it"
+    },
+    {
+      "id": "d",
+      "text": "Treat one race as one data point: check the months-long trend and any race-day factors, then adjust one thing if the data suggests it"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A single bad performance, influenced by sleep, weather or illness, does not outweigh a trend. Reviewing the record calmly separates a blip from a real pattern worth changing.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

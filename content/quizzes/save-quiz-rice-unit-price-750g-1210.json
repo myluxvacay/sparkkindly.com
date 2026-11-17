@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-rice-unit-price-750g-1210",
+  "scheduledDate": "2028-07-15",
+  "brand": "save",
+  "prompt": "A 750 g bag of rice costs $3.00. What is its price per kilogram?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$4.00 per kg"
+    },
+    {
+      "id": "b",
+      "text": "$3.00 per kg"
+    },
+    {
+      "id": "c",
+      "text": "$2.25 per kg"
+    },
+    {
+      "id": "d",
+      "text": "$0.40 per kg"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "750 g is 0.75 kg. Price per kg = $3.00 divided by 0.75 = $4.00 per kg. Dividing by the weight in kilograms, not grams, gives the unit price.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

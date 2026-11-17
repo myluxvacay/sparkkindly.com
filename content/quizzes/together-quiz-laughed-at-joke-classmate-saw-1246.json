@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-laughed-at-joke-classmate-saw-1246",
+  "scheduledDate": "2028-08-20",
+  "brand": "together",
+  "prompt": "In a group chat you laughed along with a joke about a classmate's appearance, and now you realise the classmate saw it and has gone quiet. What is the most responsible repair?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Delete your reaction and pretend it never happened, since you did not write the joke"
+    },
+    {
+      "id": "b",
+      "text": "Message the classmate to acknowledge you laughed, apologise without excuses, and in the chat itself stop laughing along and steer away from jokes like that next time"
+    },
+    {
+      "id": "c",
+      "text": "Send a long explanation that you did not mean anything by it, so they should not feel hurt"
+    },
+    {
+      "id": "d",
+      "text": "Publicly blame the person who wrote the joke to clear your own name"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Owning your small part, without excuses, is more healing than disappearing or shifting all blame. It also changes what you do next time, which is what makes an apology believable.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

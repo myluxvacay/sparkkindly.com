@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-venue-accessibility-group-celebration-1262",
+  "scheduledDate": "2028-09-05",
+  "brand": "together",
+  "prompt": "Your group is choosing a venue for a celebration, and the cheapest popular option is not accessible for one member who uses a wheelchair. Most of the group have not noticed. What is the most inclusive response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Stay quiet, because the majority choice should win"
+    },
+    {
+      "id": "b",
+      "text": "Announce that the group must change venue because of that member, putting the spotlight on them"
+    },
+    {
+      "id": "c",
+      "text": "Raise accessibility as a general planning point, suggest accessible alternatives in a similar budget, and check the member's preferences privately if you are unsure"
+    },
+    {
+      "id": "d",
+      "text": "Suggest the member joins by video call instead, so the group can keep its first choice"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Treating accessibility as a normal planning factor, with real alternatives, includes everyone without making one member the problem to be solved. Joining by video while everyone else is together is exclusion dressed as a compromise.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

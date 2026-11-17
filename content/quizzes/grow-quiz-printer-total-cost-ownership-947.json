@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-printer-total-cost-ownership-947",
+  "scheduledDate": "2027-10-26",
+  "brand": "grow",
+  "prompt": "A printer is on sale for much less than a rival model, but its replacement cartridges cost far more and last for fewer pages. Sam prints regularly for coursework. Which comparison helps Sam choose wisely?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Work out the total cost over the first year — printer plus the cartridges the expected printing will use — for both models, and compare those figures"
+    },
+    {
+      "id": "b",
+      "text": "Choose the cheaper shelf price, because running costs are too uncertain to think about"
+    },
+    {
+      "id": "c",
+      "text": "Choose the more expensive printer, because a higher price always means lower running costs"
+    },
+    {
+      "id": "d",
+      "text": "Ask which printer looks better on a desk, since the costs will even out anyway"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The shelf price is only part of what a printer costs. For a regular printer user, adding the cartridges a year of printing will actually use can easily reverse which model is cheaper overall.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Total cost of ownership",
+      "url": "https://en.wikipedia.org/wiki/Total_cost_of_ownership",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

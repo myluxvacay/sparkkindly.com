@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-count-back-by-tens-971",
+  "scheduledDate": "2027-11-19",
+  "brand": "kids",
+  "prompt": "Count back by tens: 40, 30, 20, ... What number comes next?",
+  "options": [
+    {
+      "id": "a",
+      "text": "15"
+    },
+    {
+      "id": "b",
+      "text": "25"
+    },
+    {
+      "id": "c",
+      "text": "5"
+    },
+    {
+      "id": "d",
+      "text": "10"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Counting back by tens takes away 10 each time. After 20 comes 10. Great counting back!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

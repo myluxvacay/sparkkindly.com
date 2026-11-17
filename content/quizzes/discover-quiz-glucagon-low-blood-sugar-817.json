@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-glucagon-low-blood-sugar-817",
+  "scheduledDate": "2027-06-18",
+  "brand": "discover",
+  "prompt": "Several hours after a meal, your blood glucose starts to fall. Which hormone response helps bring it back up, and how?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Insulin tells muscle cells to absorb more glucose from the blood"
+    },
+    {
+      "id": "b",
+      "text": "Adrenaline converts stored body fat directly into blood glucose in the blood itself"
+    },
+    {
+      "id": "c",
+      "text": "Insulin tells the liver to release its stored glucose"
+    },
+    {
+      "id": "d",
+      "text": "Glucagon tells the liver to break down stored glycogen and release glucose into the blood"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Glucagon, released by the pancreas when blood glucose is low, acts mainly on the liver, stimulating it to break glycogen down into glucose and release it — the opposite action to insulin.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Glucagon",
+      "url": "https://en.wikipedia.org/wiki/Glucagon",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

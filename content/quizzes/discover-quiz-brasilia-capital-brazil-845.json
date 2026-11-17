@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-brasilia-capital-brazil-845",
+  "scheduledDate": "2027-07-16",
+  "brand": "discover",
+  "prompt": "Rio de Janeiro was Brazil's capital until 1960. Which purpose-built city replaced it as the capital?",
+  "options": [
+    {
+      "id": "a",
+      "text": "São Paulo"
+    },
+    {
+      "id": "b",
+      "text": "Brasília"
+    },
+    {
+      "id": "c",
+      "text": "Salvador"
+    },
+    {
+      "id": "d",
+      "text": "Belo Horizonte"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Brasília, built from scratch in Brazil's interior and inaugurated in 1960, became the capital to encourage development away from the coast.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Brasília",
+      "url": "https://en.wikipedia.org/wiki/Bras%C3%ADlia",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

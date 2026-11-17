@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-two-cards-red-or-face-pair-1090",
+  "scheduledDate": "2028-03-17",
+  "brand": "play",
+  "prompt": "A standard pack has 52 cards: 26 are red, 12 are face cards (jack, queen or king), and 6 are both red and face cards. You draw two cards at random without putting the first back. What is the probability that the two cards are both red or both face cards (or both of those things)?",
+  "options": [
+    {
+      "id": "a",
+      "text": "25/102"
+    },
+    {
+      "id": "b",
+      "text": "23/78"
+    },
+    {
+      "id": "c",
+      "text": "188/663"
+    },
+    {
+      "id": "d",
+      "text": "11/221"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "There are C(52,2) = 1326 equally likely pairs. Both red: C(26,2) = 325 pairs. Both face cards: C(12,2) = 66 pairs. Pairs that are both red and both face cards, C(6,2) = 15, have been counted twice, so subtract them once: 325 + 66 - 15 = 376 winning pairs. The probability is 376/1326, which simplifies to 188/663.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

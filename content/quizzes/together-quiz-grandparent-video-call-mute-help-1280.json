@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-grandparent-video-call-mute-help-1280",
+  "scheduledDate": "2028-09-23",
+  "brand": "together",
+  "prompt": "On a family video call, your grandparent keeps accidentally muting themselves and missing their turn to speak, while a couple of relatives chat over the pauses and the call moves on without them. What response includes your grandparent best?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Unmute them yourself every time without mentioning it, so the call keeps flowing"
+    },
+    {
+      "id": "b",
+      "text": "Message them afterwards to say it was a shame they were so quiet on the call"
+    },
+    {
+      "id": "c",
+      "text": "Gently pause the chat, talk them through unmuting step by step without rushing, and make space for them to finish their news before the conversation moves on"
+    },
+    {
+      "id": "d",
+      "text": "Suggest they just listen in future and let everyone else do the talking"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Slowing down for a minute and guiding them through the button, then protecting their turn to speak, keeps your grandparent a real part of the family call instead of an audience for it.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

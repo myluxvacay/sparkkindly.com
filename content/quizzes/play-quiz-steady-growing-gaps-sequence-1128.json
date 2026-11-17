@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-steady-growing-gaps-sequence-1128",
+  "scheduledDate": "2028-04-24",
+  "brand": "play",
+  "prompt": "What number comes next in this sequence: 7, 10, 14, 19, 25, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "31"
+    },
+    {
+      "id": "b",
+      "text": "30"
+    },
+    {
+      "id": "c",
+      "text": "32"
+    },
+    {
+      "id": "d",
+      "text": "36"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The gaps between terms grow steadily: +3, +4, +5, +6. The next gap is +7, so the next term is 25 + 7 = 32.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

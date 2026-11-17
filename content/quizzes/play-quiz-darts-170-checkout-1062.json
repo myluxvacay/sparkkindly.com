@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-darts-170-checkout-1062",
+  "scheduledDate": "2028-02-18",
+  "brand": "play",
+  "prompt": "In 501 darts a leg must finish on a double or the bullseye. A player needs exactly 170 points with three darts. Which three-dart finish scores exactly 170?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Treble 20, treble 20, bullseye"
+    },
+    {
+      "id": "b",
+      "text": "Treble 20, treble 20, double 20"
+    },
+    {
+      "id": "c",
+      "text": "Treble 20, treble 19, bullseye"
+    },
+    {
+      "id": "d",
+      "text": "Treble 19, treble 19, bullseye"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Treble 20 scores 60, so 60 + 60 + 50 for the bullseye = 170 exactly, and the bullseye counts as a finishing double. The other finishes total 160, 167 and 164.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Darts",
+      "url": "https://en.wikipedia.org/wiki/Darts",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

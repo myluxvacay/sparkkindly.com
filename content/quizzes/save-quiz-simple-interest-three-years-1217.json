@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-simple-interest-three-years-1217",
+  "scheduledDate": "2028-07-22",
+  "brand": "save",
+  "prompt": "You put $200 in an account that pays 5% simple interest per year. How much interest do you earn in total over 3 years?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$10"
+    },
+    {
+      "id": "b",
+      "text": "$15"
+    },
+    {
+      "id": "c",
+      "text": "$25"
+    },
+    {
+      "id": "d",
+      "text": "$30"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Interest each year is $200 x 5 / 100 = $10. Over 3 years that is $10 x 3 = $30.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

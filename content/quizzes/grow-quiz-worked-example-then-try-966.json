@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-worked-example-then-try-966",
+  "scheduledDate": "2027-11-14",
+  "brand": "grow",
+  "prompt": "You are learning a new type of algebra problem. Which sequence is most likely to build real understanding?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Study a worked example, cover the solution, then try a similar problem yourself"
+    },
+    {
+      "id": "b",
+      "text": "Jump straight to the hardest exam questions you can find"
+    },
+    {
+      "id": "c",
+      "text": "Watch the teacher solve ten problems without trying any yourself"
+    },
+    {
+      "id": "d",
+      "text": "Memorise the formulas on their own, without any examples"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A worked example shows the method clearly, and immediately trying a similar problem yourself — without looking — is what turns watching into being able to do it.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

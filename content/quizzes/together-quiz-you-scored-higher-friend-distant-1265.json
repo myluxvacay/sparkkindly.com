@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-you-scored-higher-friend-distant-1265",
+  "scheduledDate": "2028-09-08",
+  "brand": "together",
+  "prompt": "You scored higher than a friend on an exam they worked even harder for, and they have gone distant. You feel guilty and unsure whether you are allowed to feel pleased. What response is most thoughtful?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Apologise for doing well and hide your results from them from now on"
+    },
+    {
+      "id": "b",
+      "text": "Tell them effort does not always matter and offer tips, disguised as encouragement"
+    },
+    {
+      "id": "c",
+      "text": "Give them space, acknowledge that the result must sting given how hard they worked, avoid making them comfort you about your guilt, and stay available without forcing a conversation"
+    },
+    {
+      "id": "d",
+      "text": "End the friendship, because competition has ruined it anyway"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Their distance is likely about disappointment, not a demand that you fail. Acknowledging their effort without making your guilt their job keeps the friendship intact while they process it.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

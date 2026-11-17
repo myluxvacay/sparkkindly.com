@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-count-by-fives-next-972",
+  "scheduledDate": "2027-11-20",
+  "brand": "kids",
+  "prompt": "Count by fives: 5, 10, 15, 20, ... What number comes next?",
+  "options": [
+    {
+      "id": "a",
+      "text": "22"
+    },
+    {
+      "id": "b",
+      "text": "30"
+    },
+    {
+      "id": "c",
+      "text": "25"
+    },
+    {
+      "id": "d",
+      "text": "21"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Counting by fives adds 5 each time. After 20 comes 25. You can count on your fingers to check!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-online-game-teammate-blamed-1252",
+  "scheduledDate": "2028-08-26",
+  "brand": "together",
+  "prompt": "After an online game loss, several teammates pile onto one player for a mistake, even though the whole team played poorly. What response best helps in the moment?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Join the pile-on so the group does not turn on you next"
+    },
+    {
+      "id": "b",
+      "text": "Stay silent and leave as quickly as you can, because it is not your fight"
+    },
+    {
+      "id": "c",
+      "text": "Defend the player by insulting the loudest critic, starting a bigger argument"
+    },
+    {
+      "id": "d",
+      "text": "Calmly point out the loss was shared, steer the chat towards what to try next game, and check in with the blamed player afterwards"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Redirecting to shared responsibility and the next game lowers the temperature without starting a counter-attack. Joining in is unfair, and insulting the critic just swaps the target of the pile-on.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

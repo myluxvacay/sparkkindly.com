@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-habit-loop-missing-cue-move-900",
+  "scheduledDate": "2027-09-09",
+  "brand": "grow",
+  "prompt": "Jon read every night after brushing his teeth. He moves house, his routine changes, and the reading stops even though he still enjoys it. Which part of the habit loop best explains the failure?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The reward was too small to ever work"
+    },
+    {
+      "id": "b",
+      "text": "He was relying on willpower instead of a system"
+    },
+    {
+      "id": "c",
+      "text": "The familiar cue that triggered the routine disappeared, so the routine was never prompted"
+    },
+    {
+      "id": "d",
+      "text": "Reading is not a habit that can become automatic"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The routine and reward did not change; the cue did. Re-attaching reading to a new stable cue in the new home, such as after locking the front door, restores the trigger.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Habit",
+      "url": "https://en.wikipedia.org/wiki/Habit",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

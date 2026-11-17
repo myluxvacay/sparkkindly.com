@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-tiered-postage-insurance-topup-1177",
+  "scheduledDate": "2028-06-12",
+  "brand": "save",
+  "prompt": "Posting a parcel costs $4 for the first kilogram and $2.50 for each extra kilogram. You also pay $3 for insurance. How much does it cost in total to post a parcel weighing 7 kg?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$19"
+    },
+    {
+      "id": "b",
+      "text": "$22"
+    },
+    {
+      "id": "c",
+      "text": "$21.50"
+    },
+    {
+      "id": "d",
+      "text": "$25"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "First kilogram: $4. Extra weight: 7 - 1 = 6 kg, at 6 x $2.50 = $15. Postage so far: $4 + $15 = $19. With insurance: $19 + $3 = $22. The $21.50 option charges all 7 kg at $2.50 plus the first-kilo fee again, and $19 forgets the insurance.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

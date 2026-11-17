@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-left-ventricle-thicker-822",
+  "scheduledDate": "2027-06-23",
+  "brand": "discover",
+  "prompt": "The muscular wall of the heart's left ventricle is much thicker than that of the right ventricle. Why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The left ventricle holds more blood because it is simply a bigger chamber in every dimension"
+    },
+    {
+      "id": "b",
+      "text": "The right ventricle does no pumping, so it needs no thick wall"
+    },
+    {
+      "id": "c",
+      "text": "The left ventricle must pump blood at higher pressure around the whole body, while the right ventricle only pumps it the short distance to the lungs"
+    },
+    {
+      "id": "d",
+      "text": "The left ventricle pumps blood uphill and the right pumps it downhill"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The systemic circuit to the whole body offers far more resistance than the short pulmonary circuit to the lungs, so the left ventricle needs a thicker, stronger wall to generate the higher pressure required.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Ventricle (heart)",
+      "url": "https://en.wikipedia.org/wiki/Ventricle_(heart)",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

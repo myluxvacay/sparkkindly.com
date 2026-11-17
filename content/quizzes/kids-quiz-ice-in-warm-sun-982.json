@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-ice-in-warm-sun-982",
+  "scheduledDate": "2027-11-30",
+  "brand": "kids",
+  "prompt": "What happens next when a piece of ice sits in the warm sun?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It turns into water"
+    },
+    {
+      "id": "b",
+      "text": "It turns into a stone"
+    },
+    {
+      "id": "c",
+      "text": "It grows bigger"
+    },
+    {
+      "id": "d",
+      "text": "It turns into sand"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Warm sun melts ice, and the ice turns into water, drip by drip. Good noticing!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

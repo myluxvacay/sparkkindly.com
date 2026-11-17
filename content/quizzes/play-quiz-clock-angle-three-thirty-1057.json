@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-clock-angle-three-thirty-1057",
+  "scheduledDate": "2028-02-13",
+  "brand": "play",
+  "prompt": "On an analogue clock, what is the smaller angle between the hour hand and the minute hand at exactly 3:30?",
+  "options": [
+    {
+      "id": "a",
+      "text": "90 degrees"
+    },
+    {
+      "id": "b",
+      "text": "75 degrees"
+    },
+    {
+      "id": "c",
+      "text": "82.5 degrees"
+    },
+    {
+      "id": "d",
+      "text": "60 degrees"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "At 3:30 the minute hand points at 6, which is 180 degrees from 12. The hour hand has moved halfway between 3 and 4, so it sits at 3 x 30 + 15 = 105 degrees. The difference is 180 - 105 = 75 degrees.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

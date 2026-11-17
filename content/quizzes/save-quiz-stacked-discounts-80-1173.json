@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-stacked-discounts-80-1173",
+  "scheduledDate": "2028-06-08",
+  "brand": "save",
+  "prompt": "An $80 item has 20% off, and then a further 10% is taken off the reduced price at the till. How much do you pay in total?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$56.00"
+    },
+    {
+      "id": "b",
+      "text": "$64.00"
+    },
+    {
+      "id": "c",
+      "text": "$72.00"
+    },
+    {
+      "id": "d",
+      "text": "$57.60"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "First discount: $80 x 0.80 = $64. Second discount applies to $64: $64 x 0.90 = $57.60. Stacked discounts are not the same as one 30% discount, which would give $56.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

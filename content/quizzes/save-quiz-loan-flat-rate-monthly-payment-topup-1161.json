@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-loan-flat-rate-monthly-payment-topup-1161",
+  "scheduledDate": "2028-05-27",
+  "brand": "save",
+  "prompt": "A loan of $2,400 charges flat interest of 15% of the original $2,400 for each year of the loan. The loan lasts 2 years and is repaid in equal monthly payments over 24 months. How much is each monthly payment?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$130"
+    },
+    {
+      "id": "b",
+      "text": "$100"
+    },
+    {
+      "id": "c",
+      "text": "$115"
+    },
+    {
+      "id": "d",
+      "text": "$145"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Interest: $2,400 x 15% = $360 per year, and $360 x 2 = $720. Total repaid: $2,400 + $720 = $3,120. Monthly payment: $3,120 / 24 months = $130. The $100 option forgets the interest ($2,400 / 24), and $115 adds only one year of interest.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

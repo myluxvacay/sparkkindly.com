@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-help-pick-up-crayons-981",
+  "scheduledDate": "2027-11-29",
+  "brand": "kids",
+  "prompt": "Your friend drops their crayons and the crayons roll on the floor. What is a kind thing to do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hide the crayons"
+    },
+    {
+      "id": "b",
+      "text": "Keep all the crayons"
+    },
+    {
+      "id": "c",
+      "text": "Step over the crayons"
+    },
+    {
+      "id": "d",
+      "text": "Help pick up the crayons"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Helping to pick up the crayons is kind. Your friend will feel happy that you helped!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

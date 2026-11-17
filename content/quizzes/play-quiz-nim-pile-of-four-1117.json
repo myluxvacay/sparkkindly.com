@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-nim-pile-of-four-1117",
+  "scheduledDate": "2028-04-13",
+  "brand": "play",
+  "prompt": "In this take-away game, there is a pile of 4 counters. Players take turns taking 1 or 2 counters, and whoever takes the last counter wins. You move first. How many counters should you take to be sure of winning, whatever the other player does?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Take 2"
+    },
+    {
+      "id": "b",
+      "text": "Take 1"
+    },
+    {
+      "id": "c",
+      "text": "It does not matter"
+    },
+    {
+      "id": "d",
+      "text": "There is no way to be sure of winning"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Take 1, leaving 3. If the other player takes 1, 2 remain and you take both to win. If they take 2, 1 remains and you take it to win. Taking 2 first would let them take the last 2 instead.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

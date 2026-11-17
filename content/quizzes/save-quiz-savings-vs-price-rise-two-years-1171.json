@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-savings-vs-price-rise-two-years-1171",
+  "scheduledDate": "2028-06-06",
+  "brand": "save",
+  "prompt": "You put $2,000 into an account that grows by 10% at the end of each year, with the growth left in the account. An item you are saving for costs $2,000 now, and its price rises by 5% at the end of each year, with each rise worked out on the new price. After 2 years, how much more is in the account than the item costs?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$215"
+    },
+    {
+      "id": "b",
+      "text": "$195"
+    },
+    {
+      "id": "c",
+      "text": "$200"
+    },
+    {
+      "id": "d",
+      "text": "$220"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Account after Year 1: $2,000 + 10% of $2,000 ($200) = $2,200. Account after Year 2: $2,200 + 10% of $2,200 ($220) = $2,420. Item price after Year 1: $2,000 + 5% of $2,000 ($100) = $2,100. Item price after Year 2: $2,100 + 5% of $2,100 ($105) = $2,205. Difference: $2,420 - $2,205 = $215. The other options come from common slips: $195 uses simple growth for the account but compound growth for the price ($2,400 - $2,205 = $195); $200 uses simple growth for both ($2,400 - $2,200 = $200); $220 uses compound growth for the account but simple growth for the price ($2,420 - $2,200 = $220).",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-group-chat-screenshot-leak-1242",
+  "scheduledDate": "2028-08-16",
+  "brand": "together",
+  "prompt": "Someone in a small group chat screenshots a private joke another friend made and wants you to share it in a bigger chat, where it will look bad out of context. What is the most trustworthy choice?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Share it, because everyone in the bigger chat will probably find it funny"
+    },
+    {
+      "id": "b",
+      "text": "Refuse to share it, explain it could embarrass your friend out of context, and suggest checking with them first"
+    },
+    {
+      "id": "c",
+      "text": "Share it but crop out the name, even though people who know them could still work out who it was"
+    },
+    {
+      "id": "d",
+      "text": "Share it privately with just one other person, so it does not really count as spreading it"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Private messages were shared for that audience, not a bigger one. Cropping a name or sharing with one person still spreads it, while checking first respects the friend who trusted the small chat.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

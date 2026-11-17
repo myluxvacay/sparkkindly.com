@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-marble-from-limestone-866",
+  "scheduledDate": "2027-08-06",
+  "brand": "discover",
+  "prompt": "Marble used for statues and buildings is a metamorphic rock. Which rock does it form from when heat and pressure act deep underground?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Sandstone"
+    },
+    {
+      "id": "b",
+      "text": "Granite"
+    },
+    {
+      "id": "c",
+      "text": "Shale"
+    },
+    {
+      "id": "d",
+      "text": "Limestone"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Marble forms when limestone is changed by heat and pressure, recrystallising its calcite into the interlocking grains that take a polish.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Marble",
+      "url": "https://en.wikipedia.org/wiki/Marble",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

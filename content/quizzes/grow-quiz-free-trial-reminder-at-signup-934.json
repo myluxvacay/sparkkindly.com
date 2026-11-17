@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-free-trial-reminder-at-signup-934",
+  "scheduledDate": "2027-10-13",
+  "brand": "grow",
+  "prompt": "Leo signs up for a free one-month trial of a music app he may not keep. Last time he tried this, he forgot and paid for three months. Which step, taken at sign-up, best protects him this time?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Set a reminder for a couple of days before the trial ends, with a note to cancel if he is not using the app, while the end date is right in front of him"
+    },
+    {
+      "id": "b",
+      "text": "Try to use the app as much as possible in the first week, so the decision makes itself"
+    },
+    {
+      "id": "c",
+      "text": "Rely on the app to warn him, since most services send plenty of warnings before charging"
+    },
+    {
+      "id": "d",
+      "text": "Write the end date on a sticky note and put it somewhere he might see it"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The failure last time was forgetting, not deciding. A dated reminder set at sign-up — when the trial end date is known — arrives while there is still time to cancel, unlike memory or a note he may never look at.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

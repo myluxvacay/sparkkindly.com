@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-transmission-voltage-losses-838",
+  "scheduledDate": "2027-07-09",
+  "brand": "discover",
+  "prompt": "Electricity is sent across a country at very high voltage and much lower current, rather than at household voltage. For the same delivered power, this mainly reduces:",
+  "options": [
+    {
+      "id": "a",
+      "text": "The speed at which electricity travels through the wires"
+    },
+    {
+      "id": "b",
+      "text": "The need for power stations to generate electricity at night"
+    },
+    {
+      "id": "c",
+      "text": "Energy wasted as heat in the wires, because heating losses rise with the square of the current"
+    },
+    {
+      "id": "d",
+      "text": "The frequency of the alternating current"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Power is voltage × current, so raising voltage lowers the current needed for the same power. Resistive heating loss is I²R, so a lower current cuts wasted heat in transmission lines dramatically.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Electric power transmission",
+      "url": "https://en.wikipedia.org/wiki/Electric_power_transmission",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

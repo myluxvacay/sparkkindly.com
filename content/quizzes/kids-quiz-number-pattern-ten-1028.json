@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-number-pattern-ten-1028",
+  "scheduledDate": "2028-01-15",
+  "brand": "kids",
+  "prompt": "2, 4, 6, 8. Which number comes next?",
+  "options": [
+    {
+      "id": "a",
+      "text": "10"
+    },
+    {
+      "id": "b",
+      "text": "9"
+    },
+    {
+      "id": "c",
+      "text": "12"
+    },
+    {
+      "id": "d",
+      "text": "7"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Nice counting! The numbers go up by twos, so 10 comes after 8.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

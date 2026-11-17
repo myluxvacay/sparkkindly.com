@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-foxes-removed-rabbits-856",
+  "scheduledDate": "2027-07-27",
+  "brand": "discover",
+  "prompt": "In a grassland food chain, grass is eaten by rabbits, and rabbits are eaten by foxes. If all the foxes are removed, what is the most likely result at first?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Rabbit numbers fall because foxes protected them"
+    },
+    {
+      "id": "b",
+      "text": "Grass increases because rabbits eat less of it"
+    },
+    {
+      "id": "c",
+      "text": "Nothing changes, because the populations are independent"
+    },
+    {
+      "id": "d",
+      "text": "Rabbit numbers rise, and the extra grazing reduces the grass"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "With their main predator gone, rabbits survive and breed more, and the larger rabbit population eats down more of the grass.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Food chain",
+      "url": "https://en.wikipedia.org/wiki/Food_chain",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-aurora-magnetosphere-803",
+  "scheduledDate": "2027-06-04",
+  "brand": "discover",
+  "prompt": "Auroras appear mainly near the magnetic poles rather than over the equator. Why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The air is colder near the poles, so gases glow more easily there"
+    },
+    {
+      "id": "b",
+      "text": "There is less light pollution near the poles, so auroras are only visible there"
+    },
+    {
+      "id": "c",
+      "text": "Earth's atmosphere is thinnest at the poles, letting sunlight in"
+    },
+    {
+      "id": "d",
+      "text": "Earth's magnetic field funnels charged particles from the solar wind toward the polar regions, where they strike upper-atmosphere gases and make them glow"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The magnetosphere guides energetic charged particles along field lines that converge near the magnetic poles. There the particles collide with oxygen and nitrogen high in the atmosphere, which then emit the light of the aurora.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Aurora",
+      "url": "https://en.wikipedia.org/wiki/Aurora",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

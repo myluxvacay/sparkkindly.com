@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-basketball-player-points-1097",
+  "scheduledDate": "2028-03-24",
+  "brand": "play",
+  "prompt": "In basketball, a normal basket scores 2 points, a long-range basket scores 3 points and a free throw scores 1 point. A player makes three 2-point baskets, two 3-point baskets and one free throw. How many points does the player score?",
+  "options": [
+    {
+      "id": "a",
+      "text": "11"
+    },
+    {
+      "id": "b",
+      "text": "12"
+    },
+    {
+      "id": "c",
+      "text": "10"
+    },
+    {
+      "id": "d",
+      "text": "13"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Add the parts: three 2-point baskets make 6, two 3-point baskets make 6, and the free throw adds 1. The total is 6+6+1=13 points.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

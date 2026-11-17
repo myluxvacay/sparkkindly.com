@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-friend-always-late-waiting-1231",
+  "scheduledDate": "2028-08-05",
+  "brand": "together",
+  "prompt": "A good friend is regularly 30 minutes late when you meet, leaving you waiting and feeling your time does not matter. What response best addresses it without starting a fight?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Start arriving 30 minutes late yourself to teach them how it feels"
+    },
+    {
+      "id": "b",
+      "text": "Pick a calm moment, say how the waiting affects you, and agree a clear plan together, such as a start time and what happens if someone is held up"
+    },
+    {
+      "id": "c",
+      "text": "Stop replying to them and let the friendship end without any explanation"
+    },
+    {
+      "id": "d",
+      "text": "Complain to mutual friends and hope the message gets back to them"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Naming the pattern calmly and agreeing a practical plan tackles the behaviour without attacking the person. Revenge lateness, silent withdrawal, and complaining through others never give your friend a fair chance to change.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-hygrometer-humidity-862",
+  "scheduledDate": "2027-08-02",
+  "brand": "discover",
+  "prompt": "A museum uses a hygrometer to protect old paintings from damp or overly dry air. What does a hygrometer measure?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Air temperature"
+    },
+    {
+      "id": "b",
+      "text": "Air pressure"
+    },
+    {
+      "id": "c",
+      "text": "Light levels in the room"
+    },
+    {
+      "id": "d",
+      "text": "The amount of water vapour in the air — humidity"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A hygrometer measures humidity, the amount of water vapour in the air, which museums control to stop artworks cracking or growing mould.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Hygrometer",
+      "url": "https://en.wikipedia.org/wiki/Hygrometer",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-gravity-assist-slingshot-818",
+  "scheduledDate": "2027-06-19",
+  "brand": "discover",
+  "prompt": "A space probe gains speed in a 'gravity assist' flyby of Jupiter without firing its engine. Where does the probe's extra energy relative to the Sun mainly come from?",
+  "options": [
+    {
+      "id": "a",
+      "text": "From Jupiter's heat, which the probe converts into motion"
+    },
+    {
+      "id": "b",
+      "text": "From nowhere — gravity assists only change direction, never speed relative to the Sun"
+    },
+    {
+      "id": "c",
+      "text": "From Jupiter's magnetic field pushing on the probe"
+    },
+    {
+      "id": "d",
+      "text": "From Jupiter's orbital motion around the Sun: the probe takes a tiny amount of the planet's orbital energy, far too small to affect Jupiter noticeably"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "In the planet's own frame the probe leaves about as fast as it arrived, but Jupiter itself is moving around the Sun. Adding that motion means the probe can leave the encounter faster relative to the Sun, gaining a minute fraction of Jupiter's orbital energy.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Gravity assist",
+      "url": "https://en.wikipedia.org/wiki/Gravity_assist",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

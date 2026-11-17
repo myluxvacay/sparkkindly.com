@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-name-mispronounced-colleague-1290",
+  "scheduledDate": "2028-10-03",
+  "brand": "together",
+  "prompt": "Colleagues keep mispronouncing a new team member's name in meetings, even after that person has politely corrected them once. What response best helps?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Use the shortened nickname others have started using instead"
+    },
+    {
+      "id": "b",
+      "text": "Correct them loudly every single time, even mid-sentence"
+    },
+    {
+      "id": "c",
+      "text": "Make a point of saying the name correctly yourself, and gently remind others of the right pronunciation when it slips"
+    },
+    {
+      "id": "d",
+      "text": "Say nothing, since pronunciation is a small thing"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Modelling the correct name and offering gentle reminders normalises getting it right, which matters more than it may seem to the person named.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

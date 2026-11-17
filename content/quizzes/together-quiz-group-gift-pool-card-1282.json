@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-group-gift-pool-card-1282",
+  "scheduledDate": "2028-09-25",
+  "brand": "together",
+  "prompt": "Friends are collecting equal amounts for a group birthday gift, but one friend quietly tells you they cannot afford that amount and feels ashamed. Others suggest leaving that friend's name off the card. What is the kindest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Suggest the group lowers the amount or covers names on the card for everyone who joins in, regardless of amount"
+    },
+    {
+      "id": "b",
+      "text": "Agree to leave the name off, since rules are rules"
+    },
+    {
+      "id": "c",
+      "text": "Pay the friend's share secretly and tell the others you did"
+    },
+    {
+      "id": "d",
+      "text": "Tell the friend to skip the birthday altogether to avoid awkwardness"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Adjusting the plan so contribution size does not decide inclusion protects your friend's dignity and keeps the gift a group gesture.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

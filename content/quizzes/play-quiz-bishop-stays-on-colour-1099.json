@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-bishop-stays-on-colour-1099",
+  "scheduledDate": "2028-03-26",
+  "brand": "play",
+  "prompt": "In chess, a bishop moves only diagonally. A bishop starts the game on a light-coloured square. Which statement about it is true for the whole game?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It can reach dark squares after two moves"
+    },
+    {
+      "id": "b",
+      "text": "It can reach any square on the board"
+    },
+    {
+      "id": "c",
+      "text": "It can only ever land on light-coloured squares"
+    },
+    {
+      "id": "d",
+      "text": "It switches colour every time it moves"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A diagonal move changes the row and column by the same amount, which always lands on a square of the same colour. So a bishop that starts on a light square stays on light squares forever.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Bishop (chess)",
+      "url": "https://en.wikipedia.org/wiki/Bishop_(chess)",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

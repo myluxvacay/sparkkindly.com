@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-preview-chapter-headings-946",
+  "scheduledDate": "2027-10-25",
+  "brand": "grow",
+  "prompt": "You are starting a dense textbook chapter. Which first step is most likely to improve your comprehension as you read?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Start at the first line and read straight through without pausing"
+    },
+    {
+      "id": "b",
+      "text": "Skim the headings and the end-of-chapter questions first, so you know what to look for"
+    },
+    {
+      "id": "c",
+      "text": "Read only the final summary and skip the chapter itself"
+    },
+    {
+      "id": "d",
+      "text": "Memorise the glossary before reading anything else"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Previewing the structure gives your reading a purpose: you know the main questions in advance, so key points stand out instead of arriving as an undifferentiated stream of text.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

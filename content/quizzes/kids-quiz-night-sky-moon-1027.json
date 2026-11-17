@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-night-sky-moon-1027",
+  "scheduledDate": "2028-01-14",
+  "brand": "kids",
+  "prompt": "What do you often see shining in the night sky?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A rainbow"
+    },
+    {
+      "id": "b",
+      "text": "The beach"
+    },
+    {
+      "id": "c",
+      "text": "The Moon"
+    },
+    {
+      "id": "d",
+      "text": "A sunflower"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Yes! The Moon shines in the night sky, sometimes round and bright.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

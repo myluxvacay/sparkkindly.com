@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-friend-gossips-mutual-private-news-1237",
+  "scheduledDate": "2028-08-11",
+  "brand": "together",
+  "prompt": "A friend starts telling you private details about a mutual friend's family difficulties that the mutual friend never shared with you themselves. What is the most respectful response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Listen eagerly and ask for more details, because your friend chose to tell you"
+    },
+    {
+      "id": "b",
+      "text": "Gently stop them, say that is your mutual friend's story to share, change the subject, and do not pass on what you have already heard"
+    },
+    {
+      "id": "c",
+      "text": "Listen to everything, then warn your mutual friend that this friend cannot be trusted"
+    },
+    {
+      "id": "d",
+      "text": "Share something private about the first friend in return, to keep things balanced"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Stopping the conversation protects the person who never consented to their story being shared. Listening first and warning later still spreads private information and creates a triangle of gossip.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

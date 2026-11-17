@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-deliberate-practice-easy-pieces-891",
+  "scheduledDate": "2027-08-31",
+  "brand": "grow",
+  "prompt": "A pianist practises an hour daily for months by playing pieces she already plays well, and her skill barely improves. What best describes the problem?",
+  "options": [
+    {
+      "id": "a",
+      "text": "She practises too often; less practice would improve her faster"
+    },
+    {
+      "id": "b",
+      "text": "She needs a more expensive instrument before progress is possible"
+    },
+    {
+      "id": "c",
+      "text": "An hour is always too short for any practice to count"
+    },
+    {
+      "id": "d",
+      "text": "This is repetition without deliberate practice: no work at the edge of her ability on a specific weakness, with feedback on errors"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Deliberate practice targets a specific sub-skill just beyond current ability, with attention and feedback. Comfortably replaying mastered material maintains it but rarely extends it.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-subduction-density-836",
+  "scheduledDate": "2027-07-07",
+  "brand": "discover",
+  "prompt": "When an oceanic plate collides with a continental plate, why is it usually the oceanic plate that sinks into the mantle?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Oceanic lithosphere is denser than the continental lithosphere and the underlying asthenosphere it sinks into"
+    },
+    {
+      "id": "b",
+      "text": "Oceanic plates are thinner, and thin plates always sink first"
+    },
+    {
+      "id": "c",
+      "text": "Seawater on top of the oceanic plate weighs it down below the continent"
+    },
+    {
+      "id": "d",
+      "text": "Continental plates are anchored to the core and cannot move downward"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Oceanic lithosphere is made of dense basaltic rock and, as it cools, becomes denser than the asthenosphere below, so it sinks in subduction while more buoyant continental crust resists sinking.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Subduction",
+      "url": "https://en.wikipedia.org/wiki/Subduction",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

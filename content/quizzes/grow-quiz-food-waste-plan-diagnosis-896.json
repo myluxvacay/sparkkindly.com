@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-food-waste-plan-diagnosis-896",
+  "scheduledDate": "2027-09-05",
+  "brand": "grow",
+  "prompt": "A household wants to waste less food. Their plan is 'buy less', but they shop hungry once a week with no list, overbuy perishables, and throw food away every Friday. What is the best first fix?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Feel more guilty each Friday when food is thrown away"
+    },
+    {
+      "id": "b",
+      "text": "Buy a bigger fridge so more food can be stored"
+    },
+    {
+      "id": "c",
+      "text": "Stop buying any perishable food at all"
+    },
+    {
+      "id": "d",
+      "text": "Plan a few meals first and shop from a list, so purchases match what will actually be eaten"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The waste is produced at the buying step, not the throwing-away step. A short meal plan and list target the decision that creates the surplus, which 'buy less' as a vague intention never reaches.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

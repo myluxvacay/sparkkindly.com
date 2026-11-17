@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-hexagon-diagonals-count-1111",
+  "scheduledDate": "2028-04-07",
+  "brand": "play",
+  "prompt": "A diagonal of a polygon joins two corners that are not next to each other. How many diagonals does a regular hexagon (a six-sided shape) have in total?",
+  "options": [
+    {
+      "id": "a",
+      "text": "9"
+    },
+    {
+      "id": "b",
+      "text": "12"
+    },
+    {
+      "id": "c",
+      "text": "18"
+    },
+    {
+      "id": "d",
+      "text": "6"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "From each of the 6 corners you can draw diagonals to 3 corners (every corner except itself and its two neighbours), giving 6 x 3 = 18. Each diagonal has been counted from both ends, so halve it: 9 diagonals.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Hexagon",
+      "url": "https://en.wikipedia.org/wiki/Hexagon",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

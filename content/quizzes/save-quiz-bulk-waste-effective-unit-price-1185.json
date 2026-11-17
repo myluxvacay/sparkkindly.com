@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-bulk-waste-effective-unit-price-1185",
+  "scheduledDate": "2028-06-20",
+  "brand": "save",
+  "prompt": "A 2 kg bulk bag costs $8, but a quarter of it is wasted before it gets used, so only 1.5 kg is actually used. What is the effective cost per kilogram actually used?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$4.00 per kg"
+    },
+    {
+      "id": "b",
+      "text": "$2.00 per kg"
+    },
+    {
+      "id": "c",
+      "text": "About $5.33 per kg"
+    },
+    {
+      "id": "d",
+      "text": "$8.00 per kg"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Effective unit price uses what is actually used: $8 divided by 1.5 kg = about $5.33 per kg. That is more than the headline $4 per kg ($8 divided by 2 kg), so wasted bulk can cost more than a smaller pack.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

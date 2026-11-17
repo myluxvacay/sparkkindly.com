@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-data-plan-overage-total-topup-1150",
+  "scheduledDate": "2028-05-16",
+  "brand": "save",
+  "prompt": "A phone plan costs $30 a month and includes 10 GB of data. Each extra GB costs $4. There is also a $10 monthly device fee. You use 17 GB in a month. What is your total bill for that month?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$58"
+    },
+    {
+      "id": "b",
+      "text": "$98"
+    },
+    {
+      "id": "c",
+      "text": "$44"
+    },
+    {
+      "id": "d",
+      "text": "$68"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Extra data: 17 - 10 = 7 GB, at 7 x $4 = $28. Total: $30 (plan) + $28 (extra data) + $10 (device fee) = $68. The $58 option forgets the device fee, and $98 wrongly charges for all 17 GB on top of the plan (17 x $4 = $68, plus $30).",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

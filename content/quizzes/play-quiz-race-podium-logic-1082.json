@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-race-podium-logic-1082",
+  "scheduledDate": "2028-03-09",
+  "brand": "play",
+  "prompt": "Ana, Ben and Cara finish a race in 1st, 2nd and 3rd place, with no ties. Ana did not finish last. Ben did not finish first. Cara finished immediately ahead of Ben. Who finished in 2nd place?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ana"
+    },
+    {
+      "id": "b",
+      "text": "Ben"
+    },
+    {
+      "id": "c",
+      "text": "Cara"
+    },
+    {
+      "id": "d",
+      "text": "It cannot be worked out from the clues"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Cara finished immediately ahead of Ben, so the pair is either 1st-2nd or 2nd-3rd. If they were 1st and 2nd, Ana would be 3rd, but Ana did not finish last. So Cara is 2nd and Ben is 3rd, leaving Ana in 1st.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

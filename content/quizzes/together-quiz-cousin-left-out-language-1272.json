@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-cousin-left-out-language-1272",
+  "scheduledDate": "2028-09-15",
+  "brand": "together",
+  "prompt": "At a family gathering, your visiting cousin understands only a little of the language everyone is chatting in, and has drifted to the edge of the room looking lost. What is the most welcoming response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Carry on, since they can join in if they really want to"
+    },
+    {
+      "id": "b",
+      "text": "Speak much louder and slower at them in front of everyone"
+    },
+    {
+      "id": "c",
+      "text": "Ask them to entertain everyone with something from their home town"
+    },
+    {
+      "id": "d",
+      "text": "Go over, include them in a smaller conversation, and translate the main jokes and stories as you go"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Joining them at the edge and bridging the language brings them into the gathering in a relaxed way instead of putting them on display.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

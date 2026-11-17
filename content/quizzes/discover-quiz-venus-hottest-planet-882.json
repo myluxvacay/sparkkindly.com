@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-venus-hottest-planet-882",
+  "scheduledDate": "2027-08-22",
+  "brand": "discover",
+  "prompt": "Mercury is the closest planet to the Sun, yet Venus is hotter at its surface. Why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Venus spins much faster, generating friction heat"
+    },
+    {
+      "id": "b",
+      "text": "Venus is covered in active volcanoes that heat the whole surface"
+    },
+    {
+      "id": "c",
+      "text": "Venus has a very thick carbon dioxide atmosphere that traps heat"
+    },
+    {
+      "id": "d",
+      "text": "Venus has a molten surface facing the Sun at all times"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Venus's thick carbon dioxide atmosphere creates a runaway greenhouse effect, trapping heat so the surface reaches about 465°C — hotter than Mercury's.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Venus",
+      "url": "https://en.wikipedia.org/wiki/Venus",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

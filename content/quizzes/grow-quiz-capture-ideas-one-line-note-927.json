@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-capture-ideas-one-line-note-927",
+  "scheduledDate": "2027-10-06",
+  "brand": "grow",
+  "prompt": "Ideas for poems and projects come to you while you are travelling, but they have vanished by the time you get home. Which habit best captures them?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keep one notebook or phone note for ideas and jot a one-line version down straight away"
+    },
+    {
+      "id": "b",
+      "text": "Trust that you will remember the best ideas anyway"
+    },
+    {
+      "id": "c",
+      "text": "Stop whatever you are doing and develop each idea fully on the spot"
+    },
+    {
+      "id": "d",
+      "text": "Only allow yourself ideas when you are sitting at a desk"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A single, always-available place for a one-line note takes seconds to use, so ideas are stored before they fade — without derailing whatever you were doing when they arrived.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

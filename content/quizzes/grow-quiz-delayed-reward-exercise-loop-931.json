@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-delayed-reward-exercise-loop-931",
+  "scheduledDate": "2027-10-10",
+  "brand": "grow",
+  "prompt": "Aisha plans to run at 6am because she values feeling fitter in three months, but she keeps skipping. Which change best strengthens the habit loop right now?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Add an immediate, enjoyable reward straight after the run, such as a favourite breakfast and ticking a visible calendar"
+    },
+    {
+      "id": "b",
+      "text": "Remind herself more strongly that fitness matters in three months"
+    },
+    {
+      "id": "c",
+      "text": "Make the run longer so the long-term benefit feels larger"
+    },
+    {
+      "id": "d",
+      "text": "Skip any reward so the habit becomes purely disciplined"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Distant benefits are weak motivators in the moment. An immediate reward after the routine helps the loop repeat until the behaviour itself becomes more familiar.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

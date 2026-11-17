@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-neighbour-returns-tool-damaged-1291",
+  "scheduledDate": "2028-10-04",
+  "brand": "together",
+  "prompt": "A neighbour returns a tool they borrowed and it is damaged, but they say nothing about it. You will need to pay to repair it. What is the most neighbourly and clear response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Mention the damage calmly soon afterwards, ask what happened, and discuss the repair cost fairly without accusing them of doing it on purpose"
+    },
+    {
+      "id": "b",
+      "text": "Say nothing, pay for it yourself, and quietly decide never to speak to them again"
+    },
+    {
+      "id": "c",
+      "text": "Tell other neighbours that this neighbour cannot be trusted with borrowed things"
+    },
+    {
+      "id": "d",
+      "text": "Demand on their doorstep that they buy you a brand new replacement that day"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Raising it calmly and soon gives them a fair chance to explain and share the cost. Silence followed by a grudge, gossip, or an angry demand all damage a relationship you still have to live next to.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

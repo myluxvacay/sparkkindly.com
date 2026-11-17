@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-guitar-chord-change-drill-936",
+  "scheduledDate": "2027-10-15",
+  "brand": "grow",
+  "prompt": "You say you want to get better at guitar, but your practice feels aimless. Which next step is most specific and useful?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Practise random songs for several hours at the weekend"
+    },
+    {
+      "id": "b",
+      "text": "Practise switching between two chords you use often, for ten minutes after dinner on weekdays, aiming for clean changes"
+    },
+    {
+      "id": "c",
+      "text": "Buy a better guitar before practising any more"
+    },
+    {
+      "id": "d",
+      "text": "Watch guitar videos without picking up the instrument"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A specific target (two chords), a small set time, and a clear standard (clean changes) turn a vague wish into practice you can start, repeat and measure.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Goal-setting theory",
+      "url": "https://en.wikipedia.org/wiki/Goal-setting_theory",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

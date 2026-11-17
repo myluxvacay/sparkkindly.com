@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-verbatim-notes-vs-summary-924",
+  "scheduledDate": "2027-10-03",
+  "brand": "grow",
+  "prompt": "Two students review the same lecture. One transcribes it word for word; the other writes short summaries in her own words and questions she still has. On a test asking them to apply the ideas, who is better prepared, and why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The summariser, because rephrasing forces her to process meaning and reveals what she does not yet understand"
+    },
+    {
+      "id": "b",
+      "text": "The transcriber, because more words of notes always means more learning"
+    },
+    {
+      "id": "c",
+      "text": "Both equally, because notes only matter if they are complete"
+    },
+    {
+      "id": "d",
+      "text": "Neither, because note-taking has no effect on understanding"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Verbatim copying can happen without thinking. Generative notes — summarising and questioning in your own words — require processing the ideas, which is what application questions test.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

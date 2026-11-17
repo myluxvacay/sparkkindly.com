@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-friend-drifting-new-group-1236",
+  "scheduledDate": "2028-08-10",
+  "brand": "together",
+  "prompt": "Your closest friend is spending much more time with a new group and you feel replaced and jealous. What response best protects the friendship?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Tell your friend honestly that you miss time together without accusing them, ask to plan something, and keep building your own other connections too"
+    },
+    {
+      "id": "b",
+      "text": "Talk badly about the new group whenever you can, so your friend chooses you instead"
+    },
+    {
+      "id": "c",
+      "text": "Message constantly demanding reassurance that you are still their best friend"
+    },
+    {
+      "id": "d",
+      "text": "Pretend you do not care and cut them off first before they can drift further"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Honesty about missing them, without trying to control who else they see, keeps the friendship open. Badmouthing, clinging, and pre-emptive cutting off all push a drifting friend further away.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

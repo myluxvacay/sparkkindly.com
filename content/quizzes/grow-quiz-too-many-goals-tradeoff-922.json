@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-too-many-goals-tradeoff-922",
+  "scheduledDate": "2027-10-01",
+  "brand": "grow",
+  "prompt": "Omar takes on five new goals at once — language, running, coding, saving, and a side project — and after a month none has moved. Which conclusion is best supported?",
+  "options": [
+    {
+      "id": "a",
+      "text": "He should add a sixth goal to increase motivation"
+    },
+    {
+      "id": "b",
+      "text": "Goals only work if they are all started on the same day"
+    },
+    {
+      "id": "c",
+      "text": "Time and attention are finite, so running five starts in parallel diluted effort; sequencing one or two first would give each a real chance"
+    },
+    {
+      "id": "d",
+      "text": "Five goals failed, so goal-setting itself does not work for him"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The constraint is not ambition but hours and attention. Choosing a lead goal for this season and parking the rest, with a review date, protects progress on something instead of thin progress on everything.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

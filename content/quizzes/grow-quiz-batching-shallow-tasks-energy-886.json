@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-batching-shallow-tasks-energy-886",
+  "scheduledDate": "2027-08-26",
+  "brand": "grow",
+  "prompt": "Elena's day is fragmented: deep project work is interrupted by forms, messages and scheduling scattered throughout. Which restructure best protects the deep work?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Answer every message the instant it arrives, to keep the list clear"
+    },
+    {
+      "id": "b",
+      "text": "Batch the shallow tasks into one or two set windows, leaving longer uninterrupted blocks for the project"
+    },
+    {
+      "id": "c",
+      "text": "Do shallow tasks first all morning, every day, regardless of energy"
+    },
+    {
+      "id": "d",
+      "text": "Abandon the project on days when any admin exists"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Scattered admin repeatedly breaks concentration and each restart costs focus. Batching confines those switches to set windows and preserves long stretches where deep work can actually build.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

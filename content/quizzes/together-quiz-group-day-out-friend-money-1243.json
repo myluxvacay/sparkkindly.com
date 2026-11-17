@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-group-day-out-friend-money-1243",
+  "scheduledDate": "2028-08-17",
+  "brand": "together",
+  "prompt": "Your friendship group is planning a day out at an expensive place. You know one friend is quietly struggling for money but would be embarrassed if that became the focus. What is the most inclusive approach?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Announce in the group chat that your friend cannot afford the plan, so everyone should pick somewhere cheaper"
+    },
+    {
+      "id": "b",
+      "text": "Pay for your friend without asking them and mention your generosity to the group"
+    },
+    {
+      "id": "c",
+      "text": "Leave your friend off the invitation to spare them the embarrassment of saying no"
+    },
+    {
+      "id": "d",
+      "text": "Privately check what budget works for your friend, then suggest a few lower-cost options to the group as your own preference without naming their situation"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Checking privately protects their dignity, and suggesting cheaper options as your own idea keeps them included without making them the reason. Announcing their finances or quietly excluding them both single them out.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

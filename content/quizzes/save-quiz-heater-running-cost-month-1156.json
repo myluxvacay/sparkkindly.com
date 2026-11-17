@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-heater-running-cost-month-1156",
+  "scheduledDate": "2028-05-22",
+  "brand": "save",
+  "prompt": "A 2,000 W electric heater runs for 3 hours a day for 30 days. Electricity costs $0.20 per kWh. How much does the heater cost to run over the 30 days?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$12.00"
+    },
+    {
+      "id": "b",
+      "text": "$36.00"
+    },
+    {
+      "id": "c",
+      "text": "$18.00"
+    },
+    {
+      "id": "d",
+      "text": "$360.00"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "2,000 W = 2 kW. Energy used: 2 kW x 3 hours x 30 days = 180 kWh. Cost: 180 x $0.20 = $36.00.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

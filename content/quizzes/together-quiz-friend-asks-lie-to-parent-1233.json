@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-friend-asks-lie-to-parent-1233",
+  "scheduledDate": "2028-08-07",
+  "brand": "together",
+  "prompt": "A friend asks you to tell their parent they were studying at your house when they were actually somewhere else. What is the most loyal and honest choice?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Refuse to lie, explain why you are uncomfortable, and offer to help them talk honestly to their parent or find a safer plan they can be open about"
+    },
+    {
+      "id": "b",
+      "text": "Lie for them, because loyalty means covering for a friend when they ask"
+    },
+    {
+      "id": "c",
+      "text": "Lie, but add extra details so the story sounds more convincing"
+    },
+    {
+      "id": "d",
+      "text": "Go straight to their parent and report where they really were before giving your friend a chance to sort it out"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Real loyalty does not require dishonesty that could put your friend at risk and drag you into it. Refusing to lie while offering help with an honest conversation protects both the friendship and your integrity.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

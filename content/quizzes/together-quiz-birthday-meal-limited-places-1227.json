@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-birthday-meal-limited-places-1227",
+  "scheduledDate": "2028-08-01",
+  "brand": "together",
+  "prompt": "You can invite only six people to a birthday meal because of cost, and two other close friends will hear about it and likely feel left out. What is the most honest and considerate approach?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Invite who you can, tell the others honestly before photos appear online that numbers were limited by cost not by worth, and arrange a separate catch-up with them"
+    },
+    {
+      "id": "b",
+      "text": "Tell the others there is no meal happening, then post photos from it anyway"
+    },
+    {
+      "id": "c",
+      "text": "Invite everyone anyway and hope the venue squeezes you in, even though you will resent the cost"
+    },
+    {
+      "id": "d",
+      "text": "Uninvite the friend least likely to complain to make room for the others, after already promising them a place"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Honesty before they hear it second-hand respects their feelings and separates the cost limit from how much you value them. Lying, overspending resentfully, or breaking a promise to someone else creates bigger hurts.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

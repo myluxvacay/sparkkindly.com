@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-if-then-homework-start-937",
+  "scheduledDate": "2027-10-16",
+  "brand": "grow",
+  "prompt": "You often intend to start homework after school but end up chatting online for an hour. Which if-then plan is most likely to help you start?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Try harder to be disciplined in the evenings in general"
+    },
+    {
+      "id": "b",
+      "text": "Feel guilty whenever you chat, until the guilt makes you stop"
+    },
+    {
+      "id": "c",
+      "text": "If it is 4:30 pm and I have had a snack, then I will open my homework at the kitchen table for 25 minutes before checking messages"
+    },
+    {
+      "id": "d",
+      "text": "Do all homework on Sunday so weekday evenings do not matter"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "An implementation intention links a specific cue (time, place, just-finished snack) to a specific action, so the start is decided in advance instead of relying on in-the-moment willpower.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Implementation intention",
+      "url": "https://en.wikipedia.org/wiki/Implementation_intention",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

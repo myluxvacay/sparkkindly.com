@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-genetic-drift-small-populations-815",
+  "scheduledDate": "2027-06-16",
+  "brand": "discover",
+  "prompt": "A storm leaves only 20 individuals of a beetle species on an island, and by chance most of them carry a rare colour variant. Generations later that variant is common, even though it gives no survival advantage. This change is an example of:",
+  "options": [
+    {
+      "id": "a",
+      "text": "Natural selection favouring the variant"
+    },
+    {
+      "id": "b",
+      "text": "Genetic drift, where random sampling in a small population changes variant frequencies"
+    },
+    {
+      "id": "c",
+      "text": "Mutation creating the variant again and again"
+    },
+    {
+      "id": "d",
+      "text": "Gene flow from beetles on the mainland"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "In small populations, which individuals happen to reproduce can shift gene frequencies by chance alone. This random process is genetic drift, and it is strongest when the population is small.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Genetic drift",
+      "url": "https://en.wikipedia.org/wiki/Genetic_drift",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

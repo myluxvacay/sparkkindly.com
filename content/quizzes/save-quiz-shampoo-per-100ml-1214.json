@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-shampoo-per-100ml-1214",
+  "scheduledDate": "2028-07-19",
+  "brand": "save",
+  "prompt": "A 750 ml bottle of shampoo costs $10.50. What is its price per 100 ml?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$1.50"
+    },
+    {
+      "id": "b",
+      "text": "$7.50"
+    },
+    {
+      "id": "c",
+      "text": "$1.40"
+    },
+    {
+      "id": "d",
+      "text": "$0.14"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "750 ml contains 7.5 lots of 100 ml. $10.50 divided by 7.5 = $1.40 per 100 ml.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

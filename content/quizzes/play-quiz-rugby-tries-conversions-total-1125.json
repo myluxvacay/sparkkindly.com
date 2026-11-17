@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-rugby-tries-conversions-total-1125",
+  "scheduledDate": "2028-04-21",
+  "brand": "play",
+  "prompt": "In rugby union, a try scores 5 points and a successful conversion kick after a try scores 2 extra points. A team scores 3 tries, and 2 of those tries are converted. How many points does it score?",
+  "options": [
+    {
+      "id": "a",
+      "text": "19"
+    },
+    {
+      "id": "b",
+      "text": "21"
+    },
+    {
+      "id": "c",
+      "text": "15"
+    },
+    {
+      "id": "d",
+      "text": "17"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The three tries give 3x5=15 points. The two conversions add 2x2=4 points, for a total of 15+4=19 points.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Rugby union",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-group-bill-discount-service-split-topup-1155",
+  "scheduledDate": "2028-05-21",
+  "brand": "save",
+  "prompt": "Four friends share a meal costing $96. The restaurant takes 25% off the meal price, then adds an $8 service charge to the discounted total. The four friends split the final bill equally. How much does each friend pay?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$26"
+    },
+    {
+      "id": "b",
+      "text": "$18"
+    },
+    {
+      "id": "c",
+      "text": "$20"
+    },
+    {
+      "id": "d",
+      "text": "$24"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Discounted meal: $96 x 0.75 = $72 (that is, $96 - 25% of $96 = $96 - $24 = $72). Add the service charge: $72 + $8 = $80. Split between 4 friends: $80 / 4 = $20 each. The $26 option adds the service charge before the discount and splits $104 / 4, and $18 forgets the service charge ($72 / 4).",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

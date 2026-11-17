@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-train-tickets-group-voucher-topup-1221",
+  "scheduledDate": "2028-07-26",
+  "brand": "save",
+  "prompt": "Train tickets cost $18 each. You buy tickets for 3 people, and you have a $9 voucher to take off the total cost. How much do you pay in total?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$51"
+    },
+    {
+      "id": "b",
+      "text": "$54"
+    },
+    {
+      "id": "c",
+      "text": "$45"
+    },
+    {
+      "id": "d",
+      "text": "$36"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Tickets first: 3 x $18 = $54. Then take the voucher off the total: $54 - $9 = $45. The $9 option is just the voucher, and $51 wrongly takes only $3 off the total instead of the full $9 voucher.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}
