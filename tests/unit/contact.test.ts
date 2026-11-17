@@ -64,11 +64,13 @@ describe('submitContactMessage', () => {
     expect(await count()).toBe(before);
   });
 
-  it('rejects markup in the name or the message', async () => {
+  it('rejects markup in the name, the email or the message, and newlines in the name', async () => {
     const before = await count();
     expect(await submitContactMessage(db, { ...ok, message: '<b>hello</b>' })).toEqual({ status: 'invalid' });
     expect(await submitContactMessage(db, { ...ok, message: 'a < b' })).toEqual({ status: 'invalid' });
     expect(await submitContactMessage(db, { ...ok, name: '<script>' })).toEqual({ status: 'invalid' });
+    expect(await submitContactMessage(db, { ...ok, email: '<b>@example.com' })).toEqual({ status: 'invalid' });
+    expect(await submitContactMessage(db, { ...ok, name: 'Jo\nBcc: x@y.z' })).toEqual({ status: 'invalid' });
     expect(await count()).toBe(before);
   });
 

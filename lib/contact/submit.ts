@@ -33,8 +33,8 @@ export async function submitContactMessage(db: Queryable, input: ContactInput): 
   if (typeof input.website === 'string' ? input.website !== '' : input.website != null) return { status: 'dropped' };
   const name = input.name == null ? '' : input.name;
   const { email, topic, message } = input;
-  if (typeof name !== 'string' || name.trim().length > MAX_NAME || MARKUP.test(name)) return { status: 'invalid' };
-  if (typeof email !== 'string' || email.trim().length > MAX_EMAIL || !EMAIL_RE.test(email.trim())) return { status: 'invalid' };
+  if (typeof name !== 'string' || name.trim().length > MAX_NAME || MARKUP.test(name) || /[\r\n]/.test(name)) return { status: 'invalid' };
+  if (typeof email !== 'string' || email.trim().length > MAX_EMAIL || MARKUP.test(email) || !EMAIL_RE.test(email.trim())) return { status: 'invalid' };
   if (typeof topic !== 'string' || !TOPIC_VALUES.includes(topic)) return { status: 'invalid' };
   if (typeof message !== 'string' || message.trim().length < 1 || message.trim().length > MAX_MESSAGE || MARKUP.test(message)) {
     return { status: 'invalid' };
