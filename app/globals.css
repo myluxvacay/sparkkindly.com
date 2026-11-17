@@ -420,3 +420,17 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .kp-done p:last-child{margin-bottom:0}
 .kp-done strong{font-size:18px}
 @media(max-width:580px){.kp-buttons{grid-template-columns:1fr}.quiz-panel .kp-btn{min-height:58px}}
+
+/* Quiz landing focus + flick zone (17 Nov 2026, owner phone report + iPhone gesture test).
+   Play-intent arrivals (keep-playing hops, quiz cards, retry links, Today's quiz) carry #play-panel,
+   the play panel's id, so the browser's native anchor scroll lands on the question itself; the panel
+   keeps a small scroll margin under the global scroll-padding. On quiz item pages the stacked section
+   padding + panel margin left a tall blank band between the byline and the panel — the quiz-item
+   wrapper collapses it (article pages keep their spacing; .quiz-item is only on the quiz branch).
+   The Spark band in the keep-playing block (.kp-flick) is the bounded flick zone: touch-action:none
+   means a flick starting on Spark is delivered to the gesture handler instead of becoming a page
+   scroll. It is the only no-scroll surface — touches anywhere else scroll exactly as before. */
+.quiz-panel{scroll-margin-top:12px}
+.section.quiz-item{padding-top:0}
+.quiz-item .quiz-panel{margin-top:12px}
+.kp-flick{touch-action:none}

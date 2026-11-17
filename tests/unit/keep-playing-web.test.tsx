@@ -5,9 +5,11 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { renderToStaticMarkup } from 'react-dom/server';
+import ItemCard from '@/components/item/ItemCard';
 import KeepPlaying from '@/components/item/KeepPlaying';
 import PlayResult from '@/components/item/PlayResult';
 import { buildModel, type CandidatePools } from '@/lib/play/keep-playing';
+import type { PublicItem } from '@/lib/items/repo';
 import type { PlayResult as Result } from '@/lib/play/answer';
 
 const enhancerSrc = readFileSync(`${process.cwd()}/components/item/PlayEnhancer.tsx`, 'utf8');
@@ -101,6 +103,82 @@ describe('KeepPlaying block', () => {
     const model = buildModel('me', 'hard', pools({ easy: [c('e1')], hard: [c('h1')] }));
     const html = renderToStaticMarkup(<KeepPlaying model={model} correct={true} />);
     expect(html).toContain('Easy — the nearest level with questions');
+  });
+});
+
+describe('landing focus + flick zone (owner phone report, 17 Nov 2026)', () => {
+  const itemPageSrc = readFileSync(`${process.cwd()}/app/[world]/[slug]/page.tsx`, 'utf8');
+  const headerSrc = readFileSync(`${process.cwd()}/components/Header.tsx`, 'utf8');
+  const card = (kind: PublicItem['kind']): PublicItem => ({
+    id: 'x1',
+    world: 'play',
+    kind,
+    slug: 'double-minus',
+    title: 'Double minus',
+    summary: 'A quick sum.',
+    body: {},
+    audience: 'all',
+    evergreen: false,
+    publishedAt: new Date('2026-10-05T00:00:00Z'),
+    updatedAt: new Date('2026-10-05T00:00:00Z'),
+    sources: [],
+    image: null,
+    topics: [],
+  });
+
+  it('the play panel carries the anchor id every play-intent link targets', () => {
+    expect(panelSrc).toContain('id="play-panel"');
+    expect(css).toMatch(/\.quiz-panel\{[^}]*scroll-margin-top/);
+  });
+
+  it('quiz item pages collapse the blank band under the byline (quiz-item wrapper), articles untouched', () => {
+    expect(itemPageSrc).toContain('quiz-page quiz-item');
+    expect(css).toMatch(/\.section\.quiz-item\{[^}]*padding-top:0/);
+    expect(css).toMatch(/\.quiz-item \.quiz-panel\{[^}]*margin-top:12px/);
+  });
+
+  it('the Spark band is the flick zone: marked in the markup, touch-action none in the CSS', () => {
+    const model = buildModel('me', 'medium', pools({ medium: [c('m1')] }));
+    const html = renderToStaticMarkup(<KeepPlaying model={model} correct={true} />);
+    expect(html).toContain('data-kp-flick');
+    expect(css).toMatch(/\.kp-flick\{[^}]*touch-action:none/);
+    // The hint points at Spark honestly — the zone, not the whole panel.
+    expect(html).toContain('flick Spark up for a harder one');
+    expect(html).toContain('double-tap Spark for the same level');
+  });
+
+  it('the flick zone holds no interactive elements — the buttons stay the only actions', () => {
+    const model = buildModel('me', 'medium', pools({ medium: [c('m1')] }));
+    const html = renderToStaticMarkup(<KeepPlaying model={model} correct={true} />);
+    const zone = html.match(/<div class="kp-head kp-flick"[^>]*>(.*?)<\/div>/)?.[1] ?? '';
+    expect(zone).toContain('kp-spark');
+    expect(zone).not.toMatch(/<a |<button|<input|<select/);
+  });
+
+  it('quiz and game cards land on the panel; article cards keep the plain reading URL', () => {
+    // The static test renderer normalizes the href to slug#fragment; the served page keeps the
+    // canonical /slug/#play-panel form (pinned by the archive sweep in tests/e2e/quiz-routes.spec.ts).
+    // The invariant here: playable cards carry the fragment, article cards never do.
+    expect(renderToStaticMarkup(<ItemCard item={card('quiz')} />)).toContain('href="/play/double-minus#play-panel"');
+    expect(renderToStaticMarkup(<ItemCard item={card('game')} />)).toContain('href="/play/double-minus#play-panel"');
+    const article = renderToStaticMarkup(<ItemCard item={card('article')} />);
+    // (Next renders the article href without its trailing slash, as it always has — no fragment.)
+    expect(article).toContain('href="/play/double-minus"');
+    expect(article).not.toContain('#play-panel');
+  });
+
+  it("today's-quiz entries carry the fragment: the header nav lands on the daily panel", () => {
+    expect(headerSrc).toContain('href="/quiz/#play-panel"');
+  });
+
+  it('the retry link lands on the panel, while the result-card paths keep the bare item URL', () => {
+    const html = renderToStaticMarkup(
+      <PlayResult result={ok} again="/discover/q1/" another="/quiz/archive/" keepPlaying={<p>KP BLOCK</p>} />,
+    );
+    expect(html).toContain('href="/discover/q1#play-panel"');
+    expect(html).toContain('src="/api/result-card/discover/q1/"');
+    expect(html).not.toContain('result-card/discover/q1/#play-panel');
+    expect(html).not.toContain('result-card/discover/q1#play-panel');
   });
 });
 

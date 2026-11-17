@@ -4,6 +4,7 @@ import { describe, it, expect } from 'vitest';
 import {
   buildModel,
   detectFlick,
+  DIFFICULTY_ORDER,
   pickCandidate,
   poolQuizzes,
   resolveDirection,
@@ -28,7 +29,22 @@ describe('poolQuizzes', () => {
     );
     expect(grouped.easy.map((x) => x.id)).toEqual(['a', 'b']);
     expect(grouped.medium).toEqual([]);
-    expect(grouped.hard).toEqual([{ id: 'd', href: '/grow/d/' }]);
+    expect(grouped.hard).toEqual([{ id: 'd', href: '/grow/d/#play-panel' }]);
+  });
+
+  it('candidate hrefs land on the play panel (#play-panel), not the page top', () => {
+    // A keep-playing hop is a play-intent arrival: the fragment is the play panel's id, so the
+    // browser's native anchor scroll lands on the question (owner phone report, 17 Nov 2026).
+    const grouped = poolQuizzes(
+      [
+        { id: 'a', world: 'discover', slug: 'a', difficulty: 'easy' },
+        { id: 'd', world: 'grow', slug: 'd', difficulty: 'hard' },
+      ],
+      'me',
+    );
+    for (const level of DIFFICULTY_ORDER) {
+      for (const cand of grouped[level]) expect(cand.href).toMatch(/#play-panel$/);
+    }
   });
 });
 

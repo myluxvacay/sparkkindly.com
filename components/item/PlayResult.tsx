@@ -17,6 +17,10 @@ type Props = {
 // The block is the target of the form's #result fragment and is focusable, so a keyboard or screen-reader user lands on
 // the verdict after submitting.
 export default function PlayResult({ result, again, another, invalidHint, keepPlaying }: Props) {
+  // Retrying this quiz is a play-intent arrival: land on the panel (#play-panel), not the page top.
+  // Only the retry links carry the fragment — `again` itself stays the bare item URL, which the
+  // result-card image/API paths below are built from.
+  const againPlay = `${again}#play-panel`;
   if (result.status === 'invalid') {
     return (
       <div role="status" id="result" tabIndex={-1} className="quiz-result">
@@ -37,7 +41,7 @@ export default function PlayResult({ result, again, another, invalidHint, keepPl
         <>
           {keepPlaying}
           <p>
-            <Link className="text-button" href={again}>
+            <Link className="text-button" href={againPlay}>
               Try this one again ↺
             </Link>{' '}
             <Link className="underlined" href={another}>
@@ -50,7 +54,7 @@ export default function PlayResult({ result, again, another, invalidHint, keepPl
           <Link className="button" href={another}>
             Try another <span aria-hidden="true">→</span>
           </Link>{' '}
-          <Link className="text-button" href={again}>
+          <Link className="text-button" href={againPlay}>
             Try this one again ↺
           </Link>
         </p>

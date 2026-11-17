@@ -133,7 +133,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
           <VideoPlayer id={videoId} poster={`/api/video-poster/${item.world}/${item.slug}/`} title={item.title} />
         </div>
       )}
-      {isArticle ? <ArticleBody article={article} /> : <div className="container section quiz-page"><PlayPanel item={item} searchParams={await searchParams} /></div>}
+      {isArticle ? <ArticleBody article={article} /> : <div className="container section quiz-page quiz-item"><PlayPanel item={item} searchParams={await searchParams} /></div>}
       {sponsor && (
         <div className="container">
           <SponsorCard line={sponsor} />
