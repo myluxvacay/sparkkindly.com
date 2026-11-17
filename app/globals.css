@@ -321,3 +321,54 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
    words slice off at the edges). Show the whole card on its own cream ground. */
 .brand-feature>img.feature-template{object-fit:contain;background:#fff7eb}
 .article-media img.media-template{object-fit:contain;background:#fff7eb}
+
+/* Spark assistant + picture games (#20/#21, 17 Nov 2026). The global reduced-motion rule at the top of this
+   file stills every animation below for visitors who ask for that. */
+.spark-assistant{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:8px;max-width:min(340px,calc(100vw - 32px))}
+.spark-figure-row{display:flex;align-items:flex-start;gap:2px}
+.spark-figure{background:none;border:0;padding:0;cursor:pointer;animation:spark-bob 3.2s ease-in-out infinite;transform-origin:50% 90%}
+.spark-figure img{width:76px;height:auto;display:block;filter:drop-shadow(0 6px 14px #24152933)}
+.spark-figure:hover img,.spark-figure:focus-visible img{animation:spark-wave .6s ease-in-out 2}
+@keyframes spark-bob{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-6px) rotate(1.5deg)}}
+@keyframes spark-wave{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-4deg)}}
+.spark-dismiss{background:#241529;color:#fdf6ec;border:0;border-radius:999px;width:24px;height:24px;line-height:1;cursor:pointer;font-size:15px}
+.spark-bubble{background:#fffdf8;color:#241529;border:1px solid #e7d7f2;border-radius:14px;padding:10px 34px 10px 12px;margin:0;box-shadow:0 8px 24px #24152922;position:relative;font-size:14px;animation:spark-bob 3.2s ease-in-out infinite}
+.spark-bubble-close{position:absolute;top:4px;right:6px;background:none;border:0;font-size:16px;cursor:pointer;color:#5a2d82}
+.spark-panel{background:#fffdf8;color:#241529;border:1px solid #e7d7f2;border-radius:16px;padding:16px;box-shadow:0 12px 32px #2415292e;max-height:min(70vh,560px);overflow:auto;font-size:14px}
+.spark-panel h2{margin:0 0 6px;font-size:20px}
+.spark-panel h3{margin:14px 0 4px;font-size:15px}
+.spark-tour{list-style:none;padding:0;margin:10px 0;display:grid;gap:6px}
+.spark-tour a{display:block;background:#f3eafd;border-radius:10px;padding:8px 10px;color:#3d1663;font-weight:600;text-decoration:none}
+.spark-tour a:hover,.spark-tour a:focus-visible{background:#e7d7f2}
+.spark-faq{padding-left:18px;margin:4px 0;display:grid;gap:6px}
+.spark-listen{cursor:pointer}
+@media(max-width:580px){.spark-figure img{width:60px}.spark-assistant{bottom:10px;right:10px}}
+
+.visual-games-tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:24px 0}
+.vg-tab{display:grid;gap:2px;text-align:left;background:#fffdf8;border:1px solid #e7d7f2;border-radius:12px;padding:12px;cursor:pointer;color:inherit}
+.vg-tab.selected{border-color:#5a2d82;background:#f3eafd}
+.vg-panel{margin-top:8px}
+.vg-spark{display:flex;gap:16px;align-items:center}
+.vg-spark img{width:64px;height:auto}
+.vg-round-count{margin:0;color:#5a2d82;font-weight:600;font-size:13px}
+.vg-spark-says{margin:4px 0 0}
+.vg-hero{max-width:420px;margin:16px auto}
+.vg-hero svg{width:100%;height:auto}
+.vg-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.vg-option{background:#fff;border:1px solid #e7d7f2;border-radius:14px;padding:10px;cursor:pointer;display:grid;gap:8px;justify-items:center;color:inherit;font-weight:600}
+.vg-option svg{width:100%;max-width:180px;height:auto}
+.vg-option:hover,.vg-option:focus-visible{border-color:#5a2d82}
+.vg-option.picked{border-color:#b97b0f;background:#fdf3d8}
+.vg-option.correct{border-color:#2e7d32;background:#e6f4e6}
+.vg-result{background:#f3eafd;border-radius:12px;padding:12px}
+.games-feature{padding-top:0}
+
+/* Review fix (17 Nov 2026): the new cards are light in BOTH themes by design, so their text colour is pinned
+   dark — inheriting the theme ink made labels near-white on near-white in dark mode (WCAG 1.4.3). */
+.spark-panel h2,.spark-panel h3{color:#241529}
+.vg-tab{color:#241529}
+.vg-tab span{color:#4a3a56}
+.vg-option{color:#241529}
+.vg-result{color:#241529}
+.spark-bubble-close{width:30px;height:30px;padding:0}
+.vg-panel:focus{outline:2px solid #5a2d82;outline-offset:2px}
