@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-friend-interview-outfit-honest-1238",
+  "scheduledDate": "2028-08-12",
+  "brand": "together",
+  "prompt": "A friend is proud of the outfit they chose for an important interview, but it is much more casual than that workplace expects and could count against them. They ask what you think. What is the kindest honest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Say it looks great exactly as it is, because protecting their confidence matters most"
+    },
+    {
+      "id": "b",
+      "text": "Say what works about it, be specific that this workplace tends to be formal, suggest one change such as smarter shoes or a jacket, and leave the final choice to them"
+    },
+    {
+      "id": "c",
+      "text": "Tell them they will definitely fail the interview if they wear that"
+    },
+    {
+      "id": "d",
+      "text": "Say it is fine to their face, then joke about the outfit with other friends"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Specific, gentle honesty before the interview can save them from an avoidable setback, and leaving the choice with them respects their autonomy. False reassurance and mockery both fail them in different ways.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

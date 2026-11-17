@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-family-trip-dates-clash-1276",
+  "scheduledDate": "2028-09-19",
+  "brand": "together",
+  "prompt": "Your family is excitedly fixing dates for a big shared trip in the group chat, but the chosen week clashes with an important course deadline you have. Everyone else has already agreed. What response best raises it fairly?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Say nothing in the chat and quietly plan not to go"
+    },
+    {
+      "id": "b",
+      "text": "Demand the whole trip moves, since your deadline matters most"
+    },
+    {
+      "id": "c",
+      "text": "Speak up promptly in the chat, explain the clash, and suggest one or two nearby alternative weeks that could work for everyone"
+    },
+    {
+      "id": "d",
+      "text": "Agree enthusiastically now and hope the deadline moves"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Speaking up early with alternatives gives the family a real chance to include you, instead of a late surprise or silent withdrawal.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

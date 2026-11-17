@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-triangle-third-angle-1134",
+  "scheduledDate": "2028-04-30",
+  "brand": "play",
+  "prompt": "The angles inside any triangle add up to 180 degrees. Two angles of a triangle are 50 degrees and 60 degrees. How big is the third angle?",
+  "options": [
+    {
+      "id": "a",
+      "text": "60 degrees"
+    },
+    {
+      "id": "b",
+      "text": "80 degrees"
+    },
+    {
+      "id": "c",
+      "text": "70 degrees"
+    },
+    {
+      "id": "d",
+      "text": "110 degrees"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The two known angles add to 50+60=110 degrees. The third angle is 180-110=70 degrees.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

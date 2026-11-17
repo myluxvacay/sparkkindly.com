@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-study-notes-not-returned-1304",
+  "scheduledDate": "2028-10-17",
+  "brand": "together",
+  "prompt": "When you were ill last week, a classmate happily used the study notes you had shared earlier, but now that you need their notes from the lessons you missed, they keep putting you off. What is the fairest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ask directly and calmly, reminding them you shared yours, and agree a time to copy the notes"
+    },
+    {
+      "id": "b",
+      "text": "Delete the shared notes folder so they lose access too"
+    },
+    {
+      "id": "c",
+      "text": "Say nothing and struggle through without the missed work"
+    },
+    {
+      "id": "d",
+      "text": "Tell other classmates they are selfish and never help anyone"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A direct, calm reminder of the earlier sharing asks for fairness without threats and gives them a clear chance to return the favour.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

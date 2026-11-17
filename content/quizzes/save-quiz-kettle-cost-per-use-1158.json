@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-kettle-cost-per-use-1158",
+  "scheduledDate": "2028-05-24",
+  "brand": "save",
+  "prompt": "A 1,500 W kettle runs for half an hour to heat water. Electricity costs $0.20 per kWh. How much does that half hour of use cost?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$0.15"
+    },
+    {
+      "id": "b",
+      "text": "$0.30"
+    },
+    {
+      "id": "c",
+      "text": "$1.50"
+    },
+    {
+      "id": "d",
+      "text": "$0.75"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "1,500 W = 1.5 kW. Energy used: 1.5 kW x 0.5 hours = 0.75 kWh. Cost: 0.75 x $0.20 = $0.15.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-prism-dispersion-827",
+  "scheduledDate": "2027-06-28",
+  "brand": "discover",
+  "prompt": "A prism splits white sunlight into a rainbow spectrum, with violet light bent more than red light. Why is violet bent more?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Violet light travels fastest through glass, so it deflects most"
+    },
+    {
+      "id": "b",
+      "text": "The prism absorbs red light and lets violet pass straight"
+    },
+    {
+      "id": "c",
+      "text": "Violet light is heavier than red light and is pulled down more"
+    },
+    {
+      "id": "d",
+      "text": "Glass refracts shorter wavelengths more strongly than longer wavelengths, and violet has a shorter wavelength than red"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Refractive index depends slightly on wavelength — dispersion. Shorter wavelengths such as violet are slowed and bent more in glass than longer wavelengths such as red, so white light fans out into a spectrum.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Dispersion (optics)",
+      "url": "https://en.wikipedia.org/wiki/Dispersion_(optics)",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

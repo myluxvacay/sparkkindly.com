@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-screw-is-inclined-plane-878",
+  "scheduledDate": "2027-08-18",
+  "brand": "discover",
+  "prompt": "A wood screw holds tightly and advances slowly as you turn it many times. A screw is best understood as which simple machine in disguise?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A lever bent into a circle"
+    },
+    {
+      "id": "b",
+      "text": "A pulley wrapped in thread"
+    },
+    {
+      "id": "c",
+      "text": "A wedge split in two"
+    },
+    {
+      "id": "d",
+      "text": "An inclined plane wrapped around a cylinder"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The thread of a screw is a ramp — an inclined plane — spiralling around a central cylinder, trading many turns for a strong forward force.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Screw (simple machine)",
+      "url": "https://en.wikipedia.org/wiki/Screw_(simple_machine)",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

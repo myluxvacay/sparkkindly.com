@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-phone-outside-bedroom-943",
+  "scheduledDate": "2027-10-22",
+  "brand": "grow",
+  "prompt": "You want to break the habit of scrolling in bed late at night. Which environment change is most likely to work?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Rely on willpower to put the phone down at a set time each night"
+    },
+    {
+      "id": "b",
+      "text": "Charge the phone in the kitchen overnight and use a simple alarm clock instead"
+    },
+    {
+      "id": "c",
+      "text": "Delete one social app but keep the rest on the phone in your bedroom"
+    },
+    {
+      "id": "d",
+      "text": "Turn the screen brightness down so scrolling feels less appealing"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Moving the phone out of reach removes the cue and adds friction, which changes the habit far more reliably than promising yourself you will resist it in the moment.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

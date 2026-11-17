@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-sunny-day-sun-hat-1046",
+  "scheduledDate": "2028-02-02",
+  "brand": "kids",
+  "prompt": "On a bright sunny day, what can shade your eyes?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Mittens"
+    },
+    {
+      "id": "b",
+      "text": "Rain boots"
+    },
+    {
+      "id": "c",
+      "text": "A sun hat"
+    },
+    {
+      "id": "d",
+      "text": "A warm scarf"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Good choice! A sun hat shades your eyes on a bright sunny day.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

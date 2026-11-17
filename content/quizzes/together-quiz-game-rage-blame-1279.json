@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-game-rage-blame-1279",
+  "scheduledDate": "2028-09-22",
+  "brand": "together",
+  "prompt": "During an online game, your friend loses a close round, angrily blames your mistake in the voice chat, and logs off. What response best protects the friendship?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Send a string of messages proving it was not your fault"
+    },
+    {
+      "id": "b",
+      "text": "Give it a little time, then message to say the blame stung and ask if they are okay"
+    },
+    {
+      "id": "c",
+      "text": "Remove them from your friends list before they do it to you"
+    },
+    {
+      "id": "d",
+      "text": "Tell the rest of the squad they always react like this"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Waiting until tempers cool and then naming how it felt honestly addresses the moment without escalating a heated game into a feud.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

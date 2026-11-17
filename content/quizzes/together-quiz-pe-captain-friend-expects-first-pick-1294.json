@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-pe-captain-friend-expects-first-pick-1294",
+  "scheduledDate": "2028-10-07",
+  "brand": "together",
+  "prompt": "You are a captain choosing teams in PE. Your best friend expects to be picked first, as usual, but another classmate is chosen last almost every week and is already looking at the floor. What is the fairest approach?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Pick your best friend first as promised, because loyalty matters more than one PE lesson"
+    },
+    {
+      "id": "b",
+      "text": "Pick the strongest players first every time, so your team wins and nobody can complain"
+    },
+    {
+      "id": "c",
+      "text": "Deliberately pick your friend last once, so they learn how the overlooked player feels"
+    },
+    {
+      "id": "d",
+      "text": "Pick to build a balanced team, give the player who is usually chosen last an early pick, and tell your friend honestly beforehand that you are picking for fairness, not favourites"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Choosing a balanced side and explaining your reasoning to your friend respects both the game and the player who is usually overlooked. Always picking your friend first teaches everyone else that the teams are fixed before anyone plays.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

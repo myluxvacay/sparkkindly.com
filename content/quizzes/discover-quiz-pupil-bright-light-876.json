@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-pupil-bright-light-876",
+  "scheduledDate": "2027-08-16",
+  "brand": "discover",
+  "prompt": "You step out of a dark cinema into bright sunshine, and your pupils quickly change size. What happens, and why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "They get larger, to gather more light for the retina"
+    },
+    {
+      "id": "b",
+      "text": "They get smaller, to limit the light entering the eye"
+    },
+    {
+      "id": "c",
+      "text": "They get larger, to cool the eye down"
+    },
+    {
+      "id": "d",
+      "text": "They stay the same size; only the lens changes"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "In bright light the iris makes the pupil smaller, reducing the light entering the eye and protecting the retina — the pupillary light reflex.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Pupillary light reflex",
+      "url": "https://en.wikipedia.org/wiki/Pupillary_light_reflex",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

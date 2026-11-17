@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-andes-longest-range-843",
+  "scheduledDate": "2027-07-14",
+  "brand": "discover",
+  "prompt": "Which mountain range is the longest continental mountain range on Earth, running down the western edge of South America?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Andes"
+    },
+    {
+      "id": "b",
+      "text": "The Himalayas"
+    },
+    {
+      "id": "c",
+      "text": "The Rockies"
+    },
+    {
+      "id": "d",
+      "text": "The Alps"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The Andes stretch about 8,900 kilometres along South America's west coast, making them the longest continental mountain range in the world.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Andes",
+      "url": "https://en.wikipedia.org/wiki/Andes",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

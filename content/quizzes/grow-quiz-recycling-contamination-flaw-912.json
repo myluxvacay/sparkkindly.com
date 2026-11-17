@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-recycling-contamination-flaw-912",
+  "scheduledDate": "2027-09-21",
+  "brand": "grow",
+  "prompt": "A flat shares one recycling bin. Their effort fails because food-soiled packaging and mixed materials keep contaminating the whole load. What is the best first improvement?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Recycle more items, including anything that looks like plastic"
+    },
+    {
+      "id": "b",
+      "text": "Learn the local rules for what is accepted, rinse food off containers, and sort at the bin rather than guessing"
+    },
+    {
+      "id": "c",
+      "text": "Give up recycling, since one mistake ruins everything forever"
+    },
+    {
+      "id": "d",
+      "text": "Put recycling in the general bin when unsure, to be safe"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Contamination is an information and routine problem, not an effort problem. Knowing the local accepted list and making clean sorting easy at the point of disposal fixes the actual failure point.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

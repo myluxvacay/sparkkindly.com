@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-double-add-three-sequence-1105",
+  "scheduledDate": "2028-04-01",
+  "brand": "play",
+  "prompt": "What number comes next in this pattern: 2, 4, 7, 14, 17, 34, ...? The steps alternate between doubling and adding 3.",
+  "options": [
+    {
+      "id": "a",
+      "text": "37"
+    },
+    {
+      "id": "b",
+      "text": "68"
+    },
+    {
+      "id": "c",
+      "text": "40"
+    },
+    {
+      "id": "d",
+      "text": "31"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Following the alternation: 2x2=4, 4+3=7, 7x2=14, 14+3=17 and 17x2=34. The next step is +3, giving 34+3=37.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-green-frog-hides-on-leaf-1022",
+  "scheduledDate": "2028-01-09",
+  "brand": "kids",
+  "prompt": "A small green frog sits on a big green leaf. It is hard to see. Why does its green colour help it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It helps it fly"
+    },
+    {
+      "id": "b",
+      "text": "It helps it sing loudly"
+    },
+    {
+      "id": "c",
+      "text": "It helps it hide on the leaf"
+    },
+    {
+      "id": "d",
+      "text": "It helps it hop higher"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The frog is the same green as the leaf, so it blends in and is hard to see. This hiding trick is called camouflage!",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

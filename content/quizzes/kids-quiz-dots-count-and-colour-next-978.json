@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-dots-count-and-colour-next-978",
+  "scheduledDate": "2027-11-26",
+  "brand": "kids",
+  "prompt": "Look at this pattern: 1 red dot, 2 blue dots, 3 red dots, 4 blue dots. What comes next in the pattern?",
+  "options": [
+    {
+      "id": "a",
+      "text": "5 red dots"
+    },
+    {
+      "id": "b",
+      "text": "5 blue dots"
+    },
+    {
+      "id": "c",
+      "text": "4 red dots"
+    },
+    {
+      "id": "d",
+      "text": "6 blue dots"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Two things change each time. The number of dots goes up by 1, and the colour swaps from red to blue and back. So next is 5 red dots!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

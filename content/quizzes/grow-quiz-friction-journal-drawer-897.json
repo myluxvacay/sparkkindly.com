@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-friction-journal-drawer-897",
+  "scheduledDate": "2027-09-06",
+  "brand": "grow",
+  "prompt": "Lena wants to journal before bed, but her notebook lives in a closed drawer in another room, while her phone charges on the pillow. She journals twice in a month. What is the best diagnosis?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Friction is backwards: the wanted behaviour is hard to start and the competing one is effortless, so she should put the notebook on the pillow and charge the phone elsewhere"
+    },
+    {
+      "id": "b",
+      "text": "She does not value journaling enough, so motivation is the whole problem"
+    },
+    {
+      "id": "c",
+      "text": "She should journal for an hour to make it worth starting"
+    },
+    {
+      "id": "d",
+      "text": "She needs a more expensive notebook to take it seriously"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Behaviour follows friction. Making the desired action the easiest one in the environment, and adding distance to the competing one, changes outcomes without relying on nightly willpower.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

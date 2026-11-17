@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-vague-if-then-plan-flaw-923",
+  "scheduledDate": "2027-10-02",
+  "brand": "grow",
+  "prompt": "Mina writes: 'If I feel distracted, then I will try harder to focus.' After two weeks it has not helped. What is the main flaw in this implementation intention?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It has too many steps to remember under pressure"
+    },
+    {
+      "id": "b",
+      "text": "The cue and the response are both vague, so in the moment she cannot tell exactly when to act or what to do"
+    },
+    {
+      "id": "c",
+      "text": "Implementation intentions only work if they are written by someone else"
+    },
+    {
+      "id": "d",
+      "text": "She should have planned for a whole hour instead of a moment"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "An if-then plan works when the cue is specific and observable and the response is a concrete action, such as 'If I reach for my phone, then I will put it in the hallway and restart a 10-minute timer.'",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Implementation intention",
+      "url": "https://en.wikipedia.org/wiki/Implementation_intention",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-goal-monthly-amount-remaining-1194",
+  "scheduledDate": "2028-06-29",
+  "brand": "save",
+  "prompt": "Your savings goal is $1,200. You have already saved $450 and you have 6 months left. How much do you need to save each month to reach the goal?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$200"
+    },
+    {
+      "id": "b",
+      "text": "$75"
+    },
+    {
+      "id": "c",
+      "text": "$125"
+    },
+    {
+      "id": "d",
+      "text": "$100"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Amount still needed: $1,200 - $450 = $750. Spread over 6 months: $750 divided by 6 = $125 a month.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

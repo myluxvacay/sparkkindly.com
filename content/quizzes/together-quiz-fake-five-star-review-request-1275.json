@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-fake-five-star-review-request-1275",
+  "scheduledDate": "2028-09-18",
+  "brand": "together",
+  "prompt": "A friend who has just started a small tutoring business asks you to post a glowing five-star review online, even though you have never actually used their tutoring. They say everyone does it when starting out. What is the most supportive and honest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Post the review as they wrote it, because helping a friend get started matters more than one review"
+    },
+    {
+      "id": "b",
+      "text": "Post a vague three-star review instead, so it looks balanced and nobody is really misled"
+    },
+    {
+      "id": "c",
+      "text": "Ignore the request and hope they forget they asked you"
+    },
+    {
+      "id": "d",
+      "text": "Decline to fake a review, but offer real help instead: try a session so you can review honestly, share their page, or give feedback on their advert"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A fake review misleads strangers who are trusting it with their money, but refusing does not have to mean refusing to help. Trying the service, sharing it or improving the advert supports your friend in ways that are actually true.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

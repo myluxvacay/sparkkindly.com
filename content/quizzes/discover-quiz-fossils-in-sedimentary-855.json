@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-fossils-in-sedimentary-855",
+  "scheduledDate": "2027-07-26",
+  "brand": "discover",
+  "prompt": "Fossils are almost always found in one particular type of rock. Which type, and why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Igneous rock, because lava preserves bodies quickly"
+    },
+    {
+      "id": "b",
+      "text": "Metamorphic rock, because heat hardens the remains"
+    },
+    {
+      "id": "c",
+      "text": "Sedimentary rock, because remains are buried gently in layers of sediment"
+    },
+    {
+      "id": "d",
+      "text": "All rock types contain fossils equally often"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Sedimentary rock forms from layers of sand, mud and silt that bury dead organisms gently. Igneous and metamorphic processes involve heat that would destroy the remains.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sedimentary rock",
+      "url": "https://en.wikipedia.org/wiki/Sedimentary_rock",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

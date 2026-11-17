@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-longest-ribbon-string-lace-983",
+  "scheduledDate": "2027-12-01",
+  "brand": "kids",
+  "prompt": "A ribbon is longer than a string. The string is longer than a shoelace. Which one is the longest?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The shoelace"
+    },
+    {
+      "id": "b",
+      "text": "The string"
+    },
+    {
+      "id": "c",
+      "text": "They are all the same length"
+    },
+    {
+      "id": "d",
+      "text": "The ribbon"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The ribbon is longer than the string, and the string is longer than the shoelace. So the ribbon is the longest of all. Clever thinking!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

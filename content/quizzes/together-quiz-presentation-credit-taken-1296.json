@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-presentation-credit-taken-1296",
+  "scheduledDate": "2028-10-09",
+  "brand": "together",
+  "prompt": "In a group project presentation, a classmate presents the section you researched as if it were entirely their own work, and the teacher praises them for it. What response best handles this honestly?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Interrupt the presentation to claim the work in front of everyone"
+    },
+    {
+      "id": "b",
+      "text": "Do all the work alone next time and tell no one"
+    },
+    {
+      "id": "c",
+      "text": "Afterwards, tell the classmate it hurt, and ask that you both clarify each person's part to the teacher"
+    },
+    {
+      "id": "d",
+      "text": "Say nothing now, then spread the word that they steal work"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Raising it privately first and clarifying contributions together corrects the record honestly without humiliating anyone in public.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

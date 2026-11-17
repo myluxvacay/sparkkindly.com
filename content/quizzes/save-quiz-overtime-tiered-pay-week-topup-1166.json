@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-overtime-tiered-pay-week-topup-1166",
+  "scheduledDate": "2028-06-01",
+  "brand": "save",
+  "prompt": "A job pays $12 an hour for the first 35 hours in a week, and $18 an hour for every hour after that. You work 42 hours in one week. How much do you earn that week?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$504"
+    },
+    {
+      "id": "b",
+      "text": "$630"
+    },
+    {
+      "id": "c",
+      "text": "$516"
+    },
+    {
+      "id": "d",
+      "text": "$546"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Normal hours: 35 x $12 = $420. Overtime hours: 42 - 35 = 7 hours, at 7 x $18 = $126. Total pay: $420 + $126 = $546. The $504 option pays all 42 hours at the normal rate (42 x $12), and $630 wrongly pays only the first 35 hours at the overtime rate (35 x $18) and forgets the extra 7 hours.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

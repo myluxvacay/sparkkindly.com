@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-annual-vs-monthly-plan-saving-1181",
+  "scheduledDate": "2028-06-16",
+  "brand": "save",
+  "prompt": "One plan costs $120 paid once for a year. The same plan paid monthly costs $12 a month. How much do you save in a year by paying annually?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$24"
+    },
+    {
+      "id": "b",
+      "text": "$12"
+    },
+    {
+      "id": "c",
+      "text": "$144"
+    },
+    {
+      "id": "d",
+      "text": "$0"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Paying monthly costs 12 x $12 = $144 a year. Annual payment is $120. Saving: $144 - $120 = $24.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

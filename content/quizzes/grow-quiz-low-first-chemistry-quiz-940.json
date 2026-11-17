@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-low-first-chemistry-quiz-940",
+  "scheduledDate": "2027-10-19",
+  "brand": "grow",
+  "prompt": "You score low on your first chemistry quiz of the term. Which sequence of steps is most likely to help?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Put the result out of your mind and avoid chemistry revision"
+    },
+    {
+      "id": "b",
+      "text": "Go through the quiz to find the topics you missed, ask the teacher one specific question, and schedule short reviews of those topics"
+    },
+    {
+      "id": "c",
+      "text": "Study only chemistry from now on and drop effort in other subjects"
+    },
+    {
+      "id": "d",
+      "text": "Decide the whole term is ruined"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "One early quiz is information, not a verdict. Finding the exact topics, asking a specific question, and reviewing those topics in short sessions targets the real gaps while the term is young.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

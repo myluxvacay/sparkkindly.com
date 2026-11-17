@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-ambiguous-task-procrastination-885",
+  "scheduledDate": "2027-08-25",
+  "brand": "grow",
+  "prompt": "For days, Felix avoids the task 'sort out the trip' on his list, though each part (checking dates, comparing two options, messaging his friend) is easy. What is the most likely cause and fix?",
+  "options": [
+    {
+      "id": "a",
+      "text": "He is lazy; the fix is to feel worse about it"
+    },
+    {
+      "id": "b",
+      "text": "The task is undefined, so his brain cannot start it; the fix is to replace it with the single next physical action and do that"
+    },
+    {
+      "id": "c",
+      "text": "The fix is to add more tasks to the list for pressure"
+    },
+    {
+      "id": "d",
+      "text": "Easy parts mean the whole task should take no planning at all"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Vague tasks stall because there is no obvious first move. Defining the next concrete action — 'open the calendar and check two dates' — converts avoidance into a startable step.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

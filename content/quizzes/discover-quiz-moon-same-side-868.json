@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-moon-same-side-868",
+  "scheduledDate": "2027-08-08",
+  "brand": "discover",
+  "prompt": "From Earth we always see the same face of the Moon, never its far side. Why is that?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Moon spins once in exactly the same time it takes to orbit Earth once"
+    },
+    {
+      "id": "b",
+      "text": "The Moon does not spin at all"
+    },
+    {
+      "id": "c",
+      "text": "The far side is always in darkness, so it cannot be seen"
+    },
+    {
+      "id": "d",
+      "text": "Earth's gravity hides the far side behind the near side"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The Moon is tidally locked: its rotation period equals its orbital period of about 27.3 days, so the same hemisphere always faces Earth.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Tidal locking",
+      "url": "https://en.wikipedia.org/wiki/Tidal_locking",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

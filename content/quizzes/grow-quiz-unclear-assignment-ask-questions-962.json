@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-unclear-assignment-ask-questions-962",
+  "scheduledDate": "2027-11-10",
+  "brand": "grow",
+  "prompt": "You keep putting off an assignment because the instructions feel unclear. Which step tackles the real cause of the delay?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Wait until the night before the deadline, when the pressure will force clarity"
+    },
+    {
+      "id": "b",
+      "text": "List what you do not understand and ask the teacher two specific questions before you start"
+    },
+    {
+      "id": "c",
+      "text": "Start writing at random and hope the meaning emerges, without ever checking"
+    },
+    {
+      "id": "d",
+      "text": "Copy the structure of a classmate's assignment"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "If confusion is what is stopping you, more pressure will not fix it. Naming the exact unknowns and asking specific questions removes the blockage so starting becomes straightforward.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

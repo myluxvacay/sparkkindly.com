@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-skin-largest-organ-879",
+  "scheduledDate": "2027-08-19",
+  "brand": "discover",
+  "prompt": "Which is the largest organ of the human body, by both surface area and weight?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The skin"
+    },
+    {
+      "id": "b",
+      "text": "The liver"
+    },
+    {
+      "id": "c",
+      "text": "The lungs together"
+    },
+    {
+      "id": "d",
+      "text": "The small intestine"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The skin is the body's largest organ, covering about two square metres in an adult and acting as a protective barrier.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Skin",
+      "url": "https://en.wikipedia.org/wiki/Skin",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

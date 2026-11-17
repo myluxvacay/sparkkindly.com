@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-holiday-packages-compare-total-topup-1157",
+  "scheduledDate": "2028-05-23",
+  "brand": "save",
+  "prompt": "Two people travel together for 5 nights and share one hotel room. Package A: flights cost $300 per person and the hotel costs $80 a night. Package B: flights cost $250 per person and the hotel costs $110 a night. Which package costs less in total, and by how much?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Package B is cheaper by $50"
+    },
+    {
+      "id": "b",
+      "text": "Package A is cheaper by $50"
+    },
+    {
+      "id": "c",
+      "text": "Package A is cheaper by $100"
+    },
+    {
+      "id": "d",
+      "text": "They cost exactly the same"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Package A: flights 2 x $300 = $600, plus hotel 5 x $80 = $400, total $1,000. Package B: flights 2 x $250 = $500, plus hotel 5 x $110 = $550, total $1,050. Difference: $1,050 - $1,000 = $50, so Package A is cheaper. The $100 option compares only the flights and misses that B's hotel costs $150 more over the 5 nights.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

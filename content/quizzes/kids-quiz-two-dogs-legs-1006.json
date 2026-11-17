@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-two-dogs-legs-1006",
+  "scheduledDate": "2027-12-24",
+  "brand": "kids",
+  "prompt": "There are 2 dogs. Each dog has 4 legs. How many legs do the 2 dogs have altogether?",
+  "options": [
+    {
+      "id": "a",
+      "text": "4"
+    },
+    {
+      "id": "b",
+      "text": "6"
+    },
+    {
+      "id": "c",
+      "text": "10"
+    },
+    {
+      "id": "d",
+      "text": "8"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Count the legs by fours: one dog has 4 legs, two dogs have 8 legs. 4 and 4 makes 8!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

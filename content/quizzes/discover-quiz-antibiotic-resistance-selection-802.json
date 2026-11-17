@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-antibiotic-resistance-selection-802",
+  "scheduledDate": "2027-06-03",
+  "brand": "discover",
+  "prompt": "A course of antibiotics kills almost all the bacteria causing an infection, but a few survive and the infection later returns, now resistant to that antibiotic. Which explanation is most accurate?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The antibiotic caused the surviving bacteria to mutate in order to resist it"
+    },
+    {
+      "id": "b",
+      "text": "Each bacterium gradually got used to the antibiotic during the course, like building up a tolerance"
+    },
+    {
+      "id": "c",
+      "text": "A few bacteria already carried resistance by chance before treatment; the antibiotic killed the others, leaving those resistant ones to multiply"
+    },
+    {
+      "id": "d",
+      "text": "The patient's body stopped absorbing the antibiotic, so it no longer reached the bacteria"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Resistance usually exists in a few bacteria by chance before treatment begins. The antibiotic does not create it; it selects for it, by killing susceptible bacteria and leaving the already-resistant survivors free to reproduce.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Antimicrobial resistance",
+      "url": "https://en.wikipedia.org/wiki/Antimicrobial_resistance"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

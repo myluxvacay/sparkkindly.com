@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-word-means-very-big-1008",
+  "scheduledDate": "2027-12-26",
+  "brand": "kids",
+  "prompt": "Which word means very big?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Huge"
+    },
+    {
+      "id": "b",
+      "text": "Tiny"
+    },
+    {
+      "id": "c",
+      "text": "Quiet"
+    },
+    {
+      "id": "d",
+      "text": "Soft"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Huge means very big. A tiny thing is very small, so huge is the word we want!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

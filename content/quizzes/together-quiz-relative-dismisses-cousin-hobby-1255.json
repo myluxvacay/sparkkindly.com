@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-relative-dismisses-cousin-hobby-1255",
+  "scheduledDate": "2028-08-29",
+  "brand": "together",
+  "prompt": "At a family meal, an older relative dismisses your younger cousin's hobby as a waste of time and your cousin goes quiet. What response supports your cousin without turning dinner into a fight?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Warmly ask your cousin about something specific in their hobby and say what you admire about it, giving them space to speak without attacking your relative"
+    },
+    {
+      "id": "b",
+      "text": "Laugh along with the comment to keep the peace at the table"
+    },
+    {
+      "id": "c",
+      "text": "Argue loudly and accuse your relative of being completely out of touch"
+    },
+    {
+      "id": "d",
+      "text": "Change the subject instantly, so the awkward moment passes and your cousin's feeling is ignored"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Genuine interest in the hobby restores your cousin's standing in the conversation without a confrontation. Laughing along endorses the put-down, and a loud argument makes your cousin the centre of a family clash.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

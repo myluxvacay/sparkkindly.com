@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-ball-over-fence-1266",
+  "scheduledDate": "2028-09-09",
+  "brand": "together",
+  "prompt": "Your younger brother keeps kicking his ball into a neighbour's garden, and the neighbour has now complained crossly at the fence. What response best sorts it out?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Tell your brother to climb over and fetch it faster next time"
+    },
+    {
+      "id": "b",
+      "text": "Argue that the neighbour is overreacting about a garden"
+    },
+    {
+      "id": "c",
+      "text": "Apologise to the neighbour, and agree with your brother on a lower, safer game or a different place to play"
+    },
+    {
+      "id": "d",
+      "text": "Ignore the complaint and hope the neighbour calms down"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Apologising and changing the game addresses the neighbour's real frustration instead of just retrieving the ball and repeating the problem.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

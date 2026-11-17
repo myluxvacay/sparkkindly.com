@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-dice-first-beats-second-1064",
+  "scheduledDate": "2028-02-20",
+  "brand": "play",
+  "prompt": "You roll one fair six-sided die twice in a row. What is the probability that the first roll is strictly greater than the second roll?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1/2"
+    },
+    {
+      "id": "b",
+      "text": "5/12"
+    },
+    {
+      "id": "c",
+      "text": "1/3"
+    },
+    {
+      "id": "d",
+      "text": "7/18"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "There are 36 equally likely pairs. Six of them are ties, leaving 30. By symmetry exactly half of those 30 have the first roll greater, so 15 pairs win: 15/36 = 5/12.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

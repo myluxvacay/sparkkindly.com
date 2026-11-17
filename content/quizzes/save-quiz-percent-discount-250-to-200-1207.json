@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-percent-discount-250-to-200-1207",
+  "scheduledDate": "2028-07-12",
+  "brand": "save",
+  "prompt": "A price falls from $250 to $200. What percentage discount is that?",
+  "options": [
+    {
+      "id": "a",
+      "text": "20%"
+    },
+    {
+      "id": "b",
+      "text": "25%"
+    },
+    {
+      "id": "c",
+      "text": "50%"
+    },
+    {
+      "id": "d",
+      "text": "5%"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The reduction is $250 - $200 = $50. As a percentage of the original price: $50 divided by $250 = 0.20, which is 20%. Dividing by the new price would wrongly give 25%.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

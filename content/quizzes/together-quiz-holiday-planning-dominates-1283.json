@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-holiday-planning-dominates-1283",
+  "scheduledDate": "2028-09-26",
+  "brand": "together",
+  "prompt": "On a video call planning a trip with friends, one confident friend decides every detail while the others go quiet and stop suggesting ideas. What response best rebalances the planning?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Let them plan everything and complain about the trip later"
+    },
+    {
+      "id": "b",
+      "text": "Announce you are planning your own separate trip instead"
+    },
+    {
+      "id": "c",
+      "text": "Pause and invite the quieter friends' ideas specifically, suggesting you decide the big choices together"
+    },
+    {
+      "id": "d",
+      "text": "Out-talk the confident friend and impose your own plan"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Actively inviting quieter voices makes the trip belong to the whole group and gently checks one person dominating without a clash.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

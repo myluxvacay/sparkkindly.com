@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-slow-practice-hard-passage-955",
+  "scheduledDate": "2027-11-03",
+  "brand": "grow",
+  "prompt": "A short piano passage keeps tripping you up when you play it at full speed. Which practice technique is most likely to fix it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Play the whole piece even faster to force your fingers to learn"
+    },
+    {
+      "id": "b",
+      "text": "Play just that passage slowly with a steady beat, speeding up gradually only when it is accurate"
+    },
+    {
+      "id": "c",
+      "text": "Avoid the passage and spend the time on the easy parts"
+    },
+    {
+      "id": "d",
+      "text": "Play the passage once a day at full speed and hope it improves"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Slow, accurate repetitions of just the difficult passage build the correct movement first; adding speed gradually then keeps the accuracy instead of rehearsing the same mistake faster.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

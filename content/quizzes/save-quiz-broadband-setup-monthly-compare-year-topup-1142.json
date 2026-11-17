@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-broadband-setup-monthly-compare-year-topup-1142",
+  "scheduledDate": "2028-05-08",
+  "brand": "save",
+  "prompt": "Provider A charges no setup fee and $45 a month. Provider B charges a $60 setup fee and $35 a month. What is the difference in total cost over 12 months, and which provider is cheaper?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Provider A is cheaper by $120"
+    },
+    {
+      "id": "b",
+      "text": "They cost exactly the same over 12 months"
+    },
+    {
+      "id": "c",
+      "text": "Provider B is cheaper by $60"
+    },
+    {
+      "id": "d",
+      "text": "Provider B is cheaper by $120"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Provider A: 12 x $45 = $540, with no setup fee. Provider B: $60 + (12 x $35 = $420) = $480. Difference: $540 - $480 = $60, so Provider B is cheaper. The $120 options come from comparing only the monthly fees (12 x $10) and forgetting B's $60 setup fee.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

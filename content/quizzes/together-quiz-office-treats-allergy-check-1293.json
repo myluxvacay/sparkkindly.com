@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-office-treats-allergy-check-1293",
+  "scheduledDate": "2028-10-06",
+  "brand": "together",
+  "prompt": "You have organised cakes and snacks for a small work celebration. As people start helping themselves, you notice a colleague with a serious nut allergy quietly skipping everything because nothing is labelled and they cannot tell what is safe. What is the most inclusive response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Check the ingredients, add a clearly labelled nut-free option alongside the rest, and let your colleague know privately where it is"
+    },
+    {
+      "id": "b",
+      "text": "Remove all the treats containing nuts from the table so there is no risk and no need to mention it"
+    },
+    {
+      "id": "c",
+      "text": "Announce to the room that everyone must be careful because one person has an allergy"
+    },
+    {
+      "id": "d",
+      "text": "Say nothing this time and just remember to think about allergies at the next celebration"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Adding a clearly labelled safe option means your colleague can join in like everyone else instead of sitting out quietly, and checking ingredients yourself avoids putting them on the spot in front of the whole office.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

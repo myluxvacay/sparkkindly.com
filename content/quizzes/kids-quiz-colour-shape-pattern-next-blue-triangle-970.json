@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-colour-shape-pattern-next-blue-triangle-970",
+  "scheduledDate": "2027-11-18",
+  "brand": "kids",
+  "prompt": "Look at this pattern: red circle, blue square, red triangle, blue circle, red square. What comes next?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Red triangle"
+    },
+    {
+      "id": "b",
+      "text": "Blue square"
+    },
+    {
+      "id": "c",
+      "text": "Red circle"
+    },
+    {
+      "id": "d",
+      "text": "Blue triangle"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The colours swap red, blue, red, blue, so next is blue. The shapes go circle, square, triangle, so next is triangle. Well done!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-percent-up-then-down-1078",
+  "scheduledDate": "2028-03-05",
+  "brand": "play",
+  "prompt": "A jacket costs $240. Its price is first increased by 25%, and the new price is then decreased by 20%. What is the final price?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$240"
+    },
+    {
+      "id": "b",
+      "text": "$252"
+    },
+    {
+      "id": "c",
+      "text": "$230"
+    },
+    {
+      "id": "d",
+      "text": "$300"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Increasing $240 by 25% gives 240 x 1.25 = $300. Decreasing $300 by 20% gives 300 x 0.80 = $240. The two changes cancel out exactly, because 1.25 x 0.80 = 1.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

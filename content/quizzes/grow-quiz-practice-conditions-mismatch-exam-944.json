@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-practice-conditions-mismatch-exam-944",
+  "scheduledDate": "2027-10-23",
+  "brand": "grow",
+  "prompt": "Tara practises for her exam untimed, with her notes open, and scores highly at home. In the real exam — timed and closed-book — her score drops sharply. Her knowledge has not changed between the two settings. What best explains the gap, and what is the best fix?",
+  "options": [
+    {
+      "id": "a",
+      "text": "She knows the material less well than she thought, so she should simply re-read all of it again"
+    },
+    {
+      "id": "b",
+      "text": "Exam nerves fully explain it, so the only fix is to try to feel calmer on the day"
+    },
+    {
+      "id": "c",
+      "text": "Her practice conditions did not match the test conditions, so she should gradually practise closed-book and timed, as the exam will be"
+    },
+    {
+      "id": "d",
+      "text": "Home practice scores are meaningless, so she should stop practising at home altogether"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Performance transfers best when practice resembles the test: retrieving without notes, under time pressure. Matching those conditions in stages exposes pacing and recall problems while there is still time to fix them.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Context-dependent memory",
+      "url": "https://en.wikipedia.org/wiki/Context-dependent_memory",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

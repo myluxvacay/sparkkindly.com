@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-lunch-mocked-canteen-1288",
+  "scheduledDate": "2028-10-01",
+  "brand": "together",
+  "prompt": "In the work canteen, a colleague wrinkles their nose at another colleague's homemade lunch and jokes loudly about the smell. The person with the lunch goes quiet. What is the kindest response in the moment?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Laugh, because it was only meant as a joke"
+    },
+    {
+      "id": "b",
+      "text": "Tell the person with the lunch to eat somewhere else next time"
+    },
+    {
+      "id": "c",
+      "text": "Remark that it looks homemade and tasty, and turn the conversation to something else"
+    },
+    {
+      "id": "d",
+      "text": "Lecture the joker about manners in front of everyone"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A warm redirect defends the embarrassed colleague and ends the mockery without turning lunch into a public telling-off.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

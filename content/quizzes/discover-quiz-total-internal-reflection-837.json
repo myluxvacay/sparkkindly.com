@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-total-internal-reflection-837",
+  "scheduledDate": "2027-07-08",
+  "brand": "discover",
+  "prompt": "Light travelling inside a glass optical fibre stays trapped and travels along the fibre, even around gentle bends. This works when light inside the glass:",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hits the glass surface at a very shallow, grazing angle and speeds up out of the fibre"
+    },
+    {
+      "id": "b",
+      "text": "Is absorbed and re-emitted by atoms along the fibre"
+    },
+    {
+      "id": "c",
+      "text": "Hits the boundary at an angle greater than the critical angle, so it reflects entirely back inside"
+    },
+    {
+      "id": "d",
+      "text": "Changes into an electrical signal at each bend"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "In total internal reflection, light in a denser medium striking the boundary at more than the critical angle cannot refract out and is reflected completely back inside, which is how optical fibres guide light.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Total internal reflection",
+      "url": "https://en.wikipedia.org/wiki/Total_internal_reflection",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

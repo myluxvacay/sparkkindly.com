@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-pebbles-share-two-boxes-992",
+  "scheduledDate": "2027-12-10",
+  "brand": "kids",
+  "prompt": "Sam has 9 pebbles. He finds 7 more pebbles. Then he shares all the pebbles fairly between 2 boxes. How many pebbles are in each box?",
+  "options": [
+    {
+      "id": "a",
+      "text": "7"
+    },
+    {
+      "id": "b",
+      "text": "8"
+    },
+    {
+      "id": "c",
+      "text": "16"
+    },
+    {
+      "id": "d",
+      "text": "9"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "First, 9 and 7 more makes 16 pebbles. Then share 16 fairly into 2 boxes, and each box gets 8. Great two-step work!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

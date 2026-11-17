@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-packed-lunch-saving-1204",
+  "scheduledDate": "2028-07-09",
+  "brand": "save",
+  "prompt": "Buying lunch costs $9 a day and a packed lunch costs $5 a day. How much do you save over 10 days by taking a packed lunch?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$40"
+    },
+    {
+      "id": "b",
+      "text": "$30"
+    },
+    {
+      "id": "c",
+      "text": "$50"
+    },
+    {
+      "id": "d",
+      "text": "$90"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Buying lunch costs 10 x $9 = $90. Packed lunches cost 10 x $5 = $50, so you save $90 - $50 = $40.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

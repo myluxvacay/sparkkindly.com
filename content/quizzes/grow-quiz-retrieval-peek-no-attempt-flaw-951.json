@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-retrieval-peek-no-attempt-flaw-951",
+  "scheduledDate": "2027-10-30",
+  "brand": "grow",
+  "prompt": "Kofi does practice questions every evening, but after about five seconds on each one he flips to the answer, nods, and moves on. A week later he can recognise the answers but cannot produce them in a test. Why is his 'testing' practice failing?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Practice questions only work if they are done in the morning, when memory is freshest"
+    },
+    {
+      "id": "b",
+      "text": "He never makes a genuine retrieval attempt before seeing the answer, so he practises recognising answers rather than recalling them"
+    },
+    {
+      "id": "c",
+      "text": "The questions are too easy, because he eventually understands every answer he reads"
+    },
+    {
+      "id": "d",
+      "text": "Testing only works for factual subjects, not for the kind of material he is studying"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The testing effect depends on trying to retrieve the answer from memory before feedback. Closing the book, writing an answer, and only then checking turns each question into real retrieval practice.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Testing effect",
+      "url": "https://en.wikipedia.org/wiki/Testing_effect",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

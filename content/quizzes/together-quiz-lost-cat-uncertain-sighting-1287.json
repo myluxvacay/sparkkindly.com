@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-lost-cat-uncertain-sighting-1287",
+  "scheduledDate": "2028-09-30",
+  "brand": "together",
+  "prompt": "A neighbour has put up posters about their lost cat. On your way home you think you saw a very similar cat two streets away, but it slipped under a fence before you could get a proper look, and it might have been a different cat. What is the most helpful response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Say nothing, because you are not certain it was their cat and you do not want to be wrong"
+    },
+    {
+      "id": "b",
+      "text": "Tell them confidently that you found their cat, so they feel hopeful straight away"
+    },
+    {
+      "id": "c",
+      "text": "Tell them you may have seen a similar cat, say exactly where and when, be clear you cannot be sure it was theirs, and offer to walk that way with them to look"
+    },
+    {
+      "id": "d",
+      "text": "Put your own post online saying the cat has been spotted, so more people start searching that area"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Sharing a possible sighting with the time, place and your uncertainty gives your neighbour something real to follow up without false hope, and offering to look with them turns a doubtful glimpse into genuine help.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

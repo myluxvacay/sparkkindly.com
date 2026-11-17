@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-great-red-spot-860",
+  "scheduledDate": "2027-07-31",
+  "brand": "discover",
+  "prompt": "Jupiter's Great Red Spot, visible in telescopes for centuries, is actually what?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A huge volcano erupting red lava"
+    },
+    {
+      "id": "b",
+      "text": "A solid island of red rock in a gas ocean"
+    },
+    {
+      "id": "c",
+      "text": "A shadow cast by one of Jupiter's moons"
+    },
+    {
+      "id": "d",
+      "text": "A giant storm, larger than Earth, that has raged for hundreds of years"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The Great Red Spot is an enormous anticyclonic storm in Jupiter's atmosphere, wider than Earth, observed since at least the 1800s.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Great Red Spot",
+      "url": "https://en.wikipedia.org/wiki/Great_Red_Spot",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

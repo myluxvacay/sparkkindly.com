@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-counting-numbers-initials-1058",
+  "scheduledDate": "2028-02-14",
+  "brand": "play",
+  "prompt": "What letter comes next in this sequence: O, T, T, F, F, S, S, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "N"
+    },
+    {
+      "id": "b",
+      "text": "T"
+    },
+    {
+      "id": "c",
+      "text": "E"
+    },
+    {
+      "id": "d",
+      "text": "S"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The letters are the first letters of the counting numbers: One, Two, Three, Four, Five, Six, Seven. The next number is Eight, which starts with E.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

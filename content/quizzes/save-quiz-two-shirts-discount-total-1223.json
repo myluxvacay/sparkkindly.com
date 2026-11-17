@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-two-shirts-discount-total-1223",
+  "scheduledDate": "2028-07-28",
+  "brand": "save",
+  "prompt": "Two shirts cost $20 each. A sale takes 25% off the whole purchase. How much do you pay for both shirts?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$30"
+    },
+    {
+      "id": "b",
+      "text": "$35"
+    },
+    {
+      "id": "c",
+      "text": "$25"
+    },
+    {
+      "id": "d",
+      "text": "$40"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The shirts cost 2 x $20 = $40 in total. The discount is $40 x 25 / 100 = $10, so you pay $40 - $10 = $30.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

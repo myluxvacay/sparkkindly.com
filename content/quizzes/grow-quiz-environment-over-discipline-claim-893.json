@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-environment-over-discipline-claim-893",
+  "scheduledDate": "2027-09-02",
+  "brand": "grow",
+  "prompt": "'I just need to become a more disciplined person' is Alex's plan for studying with his phone buzzing beside him, snacks on the desk, and friends chatting nearby. Which critique is strongest?",
+  "options": [
+    {
+      "id": "a",
+      "text": "His plan targets an identity he cannot act on directly, while the environment keeps generating the distractions; redesigning the setting is a lever he can pull today"
+    },
+    {
+      "id": "b",
+      "text": "Discipline is genetic, so no plan of any kind will help"
+    },
+    {
+      "id": "c",
+      "text": "He should study only when he feels fully disciplined"
+    },
+    {
+      "id": "d",
+      "text": "Friends are the sole problem, so he must drop them"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "You cannot directly do 'be disciplined', but you can move the phone, change rooms and agree on quiet time. System changes beat self-image resolutions because they work on tired days too.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

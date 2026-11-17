@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-hibernation-energy-saving-861",
+  "scheduledDate": "2027-08-01",
+  "brand": "discover",
+  "prompt": "A groundhog hibernates through winter, barely eating for months, yet survives on the fat it stored in autumn. How does hibernation make that possible?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Sleeping through winter keeps the animal hidden, and hiding is the whole point — energy use barely changes"
+    },
+    {
+      "id": "b",
+      "text": "The animal stops needing energy altogether, so its fat stores stay untouched until spring"
+    },
+    {
+      "id": "c",
+      "text": "Its body temperature and metabolic rate drop sharply, so it burns stored fat far more slowly and can survive months with little or no food"
+    },
+    {
+      "id": "d",
+      "text": "Cold winter air slows all animals down equally, so hibernators are simply animals that cannot stay awake in the cold"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Hibernation is an energy-saving state: by letting body temperature fall and metabolism slow right down, an animal burns its stored fat very slowly, which can carry it through months when food is too scarce to replace the energy it would use while active.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Hibernation",
+      "url": "https://en.wikipedia.org/wiki/Hibernation"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

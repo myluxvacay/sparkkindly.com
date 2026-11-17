@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-number-name-letter-counts-1119",
+  "scheduledDate": "2028-04-15",
+  "brand": "play",
+  "prompt": "Counting letters in number names gives: one=3, two=3, three=5, four=4, five=4, six=3. Following the counting numbers in order, how many letters are in the next number name?",
+  "options": [
+    {
+      "id": "a",
+      "text": "4"
+    },
+    {
+      "id": "b",
+      "text": "3"
+    },
+    {
+      "id": "c",
+      "text": "5"
+    },
+    {
+      "id": "d",
+      "text": "6"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The number names so far are one to six. The next counting number is seven, and s-e-v-e-n has 5 letters.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-missed-deadline-colleague-covered-1249",
+  "scheduledDate": "2028-08-23",
+  "brand": "together",
+  "prompt": "You missed a deadline that meant a colleague had to work late to cover for you. What apology is most likely to rebuild trust at work?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Own the miss without leading with excuses, acknowledge the impact on them, say what you have changed to stop it happening again, and offer to take on extra work to make it up"
+    },
+    {
+      "id": "b",
+      "text": "Explain at length how busy you were, so they understand it was not really your fault"
+    },
+    {
+      "id": "c",
+      "text": "Apologise repeatedly and keep asking them to reassure you that you are not a bad colleague"
+    },
+    {
+      "id": "d",
+      "text": "Send a quick generic sorry by message and avoid them afterwards"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Trust is rebuilt by ownership, a concrete change, and making amends, not by the number of sorries. Leading with excuses or seeking reassurance makes the apology about your feelings instead of their extra work.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

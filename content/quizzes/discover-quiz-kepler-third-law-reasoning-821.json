@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-kepler-third-law-reasoning-821",
+  "scheduledDate": "2027-06-22",
+  "brand": "discover",
+  "prompt": "Kepler's third law says a planet's orbital period squared is proportional to its average distance from the Sun cubed. A planet is 4 times as far from the Sun as Earth. How long is its year?",
+  "options": [
+    {
+      "id": "a",
+      "text": "4 Earth years"
+    },
+    {
+      "id": "b",
+      "text": "8 Earth years, because period is proportional to distance to the power of 3/2, and 4 to the power of 3/2 is 8"
+    },
+    {
+      "id": "c",
+      "text": "16 Earth years, because the period grows with the square of the distance"
+    },
+    {
+      "id": "d",
+      "text": "64 Earth years, because the period grows with the cube of the distance"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "From period² ∝ distance³, period ∝ distance^(3/2). For a distance ratio of 4, the period ratio is 4^(3/2) = 8, so the planet's year lasts 8 Earth years.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Kepler's laws of planetary motion",
+      "url": "https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

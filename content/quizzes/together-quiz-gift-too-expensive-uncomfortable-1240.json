@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-gift-too-expensive-uncomfortable-1240",
+  "scheduledDate": "2028-08-14",
+  "brand": "together",
+  "prompt": "A friend gives you a birthday gift that is far more expensive than anything you can return, and you feel uncomfortable and in debt. What is the most gracious and honest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Refuse the gift outright and tell them it is far too much, so they feel embarrassed for trying"
+    },
+    {
+      "id": "b",
+      "text": "Accept it silently, then quietly distance yourself because the friendship now feels awkward"
+    },
+    {
+      "id": "c",
+      "text": "Thank them warmly for the thought behind it, be honest that the cost leaves you feeling overwhelmed, and reassure them no gift is needed for you to value the friendship"
+    },
+    {
+      "id": "d",
+      "text": "Borrow money if you have to and buy them something equally expensive to even the score"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Gratitude plus gentle honesty clears the debt feeling without rejecting their kindness. Score-keeping purchases and silent distancing turn generosity into a burden neither of you intended.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

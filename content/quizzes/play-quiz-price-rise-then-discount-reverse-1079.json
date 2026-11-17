@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-price-rise-then-discount-reverse-1079",
+  "scheduledDate": "2028-03-06",
+  "brand": "play",
+  "prompt": "A game's price was first increased by 20%. Later the new price was reduced by 10% in a sale, and it now costs $54. What was the price before both changes?",
+  "options": [
+    {
+      "id": "a",
+      "text": "54 dollars"
+    },
+    {
+      "id": "b",
+      "text": "60 dollars"
+    },
+    {
+      "id": "c",
+      "text": "50 dollars"
+    },
+    {
+      "id": "d",
+      "text": "55 dollars"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Work backwards: before the 10% cut the price was 54 / 0.9 = 60 dollars. Before the 20% rise it was 60 / 1.2 = 50 dollars. Check forwards: 50 x 1.2 = 60, then 60 x 0.9 = 54.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

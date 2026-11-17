@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-trip-fuel-cost-120-miles-1222",
+  "scheduledDate": "2028-07-27",
+  "brand": "save",
+  "prompt": "A car travels 40 miles on one gallon of fuel. Fuel costs $3.60 per gallon. How much does the fuel cost for a 120-mile trip?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$12.00"
+    },
+    {
+      "id": "b",
+      "text": "$10.80"
+    },
+    {
+      "id": "c",
+      "text": "$3.60"
+    },
+    {
+      "id": "d",
+      "text": "$36.00"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Gallons needed: 120 divided by 40 = 3 gallons. Cost: 3 x $3.60 = $10.80.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

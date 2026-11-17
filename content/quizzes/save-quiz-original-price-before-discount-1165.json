@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-original-price-before-discount-1165",
+  "scheduledDate": "2028-05-31",
+  "brand": "save",
+  "prompt": "After a 20% discount, an item costs $64. What was its original price?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$76.80"
+    },
+    {
+      "id": "b",
+      "text": "$84"
+    },
+    {
+      "id": "c",
+      "text": "$80"
+    },
+    {
+      "id": "d",
+      "text": "$51.20"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "After 20% off you pay 80% of the original price, so original = $64 divided by 0.80 = $80. Check: 20% of $80 is $16, and $80 - $16 = $64.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

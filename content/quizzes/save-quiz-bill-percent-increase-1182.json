@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-bill-percent-increase-1182",
+  "scheduledDate": "2028-06-17",
+  "brand": "save",
+  "prompt": "A monthly bill rises from $80 to $92. What percentage increase is that?",
+  "options": [
+    {
+      "id": "a",
+      "text": "12%"
+    },
+    {
+      "id": "b",
+      "text": "92%"
+    },
+    {
+      "id": "c",
+      "text": "13%"
+    },
+    {
+      "id": "d",
+      "text": "15%"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The increase is $92 - $80 = $12. As a percentage of the original bill: $12 divided by $80 = 0.15, which is a 15% increase.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

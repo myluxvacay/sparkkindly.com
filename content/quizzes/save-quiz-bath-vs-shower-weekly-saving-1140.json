@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-bath-vs-shower-weekly-saving-1140",
+  "scheduledDate": "2028-05-06",
+  "brand": "save",
+  "prompt": "A bath uses 80 litres of water. A shower uses 9 litres a minute and you shower for 6 minutes. If you swap a bath for a shower 5 times in a week, how much water do you save that week?",
+  "options": [
+    {
+      "id": "a",
+      "text": "26 litres"
+    },
+    {
+      "id": "b",
+      "text": "130 litres"
+    },
+    {
+      "id": "c",
+      "text": "54 litres"
+    },
+    {
+      "id": "d",
+      "text": "400 litres"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Shower water: 9 x 6 = 54 litres. Saving each time: 80 - 54 = 26 litres. Over 5 swaps: 26 x 5 = 130 litres.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-habit-timeline-21-day-myth-902",
+  "scheduledDate": "2027-09-11",
+  "brand": "grow",
+  "prompt": "After 30 days of daily practice, Sam's new habit still needs effort, and he concludes he has 'failed at habit-building' because habits are supposed to form in 21 days. What is the most accurate correction?",
+  "options": [
+    {
+      "id": "a",
+      "text": "He is right: a habit not automatic by day 21 will never form"
+    },
+    {
+      "id": "b",
+      "text": "Habits form in exactly 66 days for everyone, so he should just wait"
+    },
+    {
+      "id": "c",
+      "text": "Research on everyday habits found automaticity took weeks to many months, with wide variation, so needing effort at day 30 is normal, not failure"
+    },
+    {
+      "id": "d",
+      "text": "Effort after 30 days means he picked the wrong habit"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The 21-day figure is a popular myth. Studies of real habits show a broad range of times to automaticity, so steady repetition beyond a month is expected.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Habit",
+      "url": "https://en.wikipedia.org/wiki/Habit",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

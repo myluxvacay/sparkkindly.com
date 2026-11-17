@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-wheelbarrow-lever-883",
+  "scheduledDate": "2027-08-23",
+  "brand": "discover",
+  "prompt": "A wheelbarrow lets one person lift a heavy load of soil with modest effort. Which simple machine is doing the main work?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A pulley"
+    },
+    {
+      "id": "b",
+      "text": "An inclined plane"
+    },
+    {
+      "id": "c",
+      "text": "A lever, with the wheel axle as the pivot"
+    },
+    {
+      "id": "d",
+      "text": "A screw"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A wheelbarrow is a second-class lever: the wheel axle is the fulcrum, the load sits between it and your hands, so your lift is multiplied.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Lever",
+      "url": "https://en.wikipedia.org/wiki/Lever",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

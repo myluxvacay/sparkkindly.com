@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-sibling-offers-take-blame-1257",
+  "scheduledDate": "2028-08-31",
+  "brand": "together",
+  "prompt": "You broke a household rule and your sibling offers to take the blame because they think they will be punished less than you. What is the most honest and caring choice?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Let them take the blame, because they offered freely and it was their idea"
+    },
+    {
+      "id": "b",
+      "text": "Let them take the blame, but promise you will owe them a favour in return"
+    },
+    {
+      "id": "c",
+      "text": "Refuse their help and suggest blaming a different household member instead"
+    },
+    {
+      "id": "d",
+      "text": "Thank them for offering, own up yourself, and accept the consequence rather than letting them carry yours"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "An offer made out of loyalty does not make it fair to accept. Owning up protects your sibling and your honesty, while score-keeping favours turn a kind offer into a transaction.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

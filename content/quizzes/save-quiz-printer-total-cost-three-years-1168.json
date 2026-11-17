@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-printer-total-cost-three-years-1168",
+  "scheduledDate": "2028-06-03",
+  "brand": "save",
+  "prompt": "Printer A costs $80 and uses $30 of ink a year. Printer B costs $120 and uses $15 of ink a year. Over 3 years, which printer costs less in total, and by how much?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Printer B, by $5"
+    },
+    {
+      "id": "b",
+      "text": "Printer A, by $5"
+    },
+    {
+      "id": "c",
+      "text": "Printer B, by $40"
+    },
+    {
+      "id": "d",
+      "text": "They cost exactly the same"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Printer A total: $80 + (3 x $30) = $80 + $90 = $170. Printer B total: $120 + (3 x $15) = $120 + $45 = $165. B costs $170 - $165 = $5 less overall, despite its higher shelf price.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

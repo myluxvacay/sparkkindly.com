@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-apology-mostly-excuses-promise-1225",
+  "scheduledDate": "2028-07-30",
+  "brand": "together",
+  "prompt": "A friend apologises for breaking a promise, but their apology is mostly excuses about why anyone would have done the same. You still feel hurt. What response is most constructive?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Accept it instantly and say everything is fine to end the discomfort, even though it is not"
+    },
+    {
+      "id": "b",
+      "text": "Thank them for coming to talk, say honestly that the excuses make it hard to trust the promise will hold, explain what you would need to see change, and listen to their reply"
+    },
+    {
+      "id": "c",
+      "text": "Use the moment to list every other time they have ever let you down"
+    },
+    {
+      "id": "d",
+      "text": "Go silent for several days so they feel how you felt"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Naming what is missing from an apology, calmly and specifically, gives your friend a real chance to repair trust. Pretending it is fine, score-keeping past failures, and silent punishment all leave the broken promise unresolved.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

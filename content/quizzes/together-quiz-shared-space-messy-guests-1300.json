@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-shared-space-messy-guests-1300",
+  "scheduledDate": "2028-10-13",
+  "brand": "together",
+  "prompt": "You share a bedroom with a sibling, and their clothes and books are spread everywhere an hour before relatives arrive to visit. You want the room to feel welcoming. What response best gets it sorted together?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Suggest a quick fifteen-minute tidy together with music on, each handling your own things first"
+    },
+    {
+      "id": "b",
+      "text": "Throw all their things into a pile on their bed"
+    },
+    {
+      "id": "c",
+      "text": "Tidy everything yourself while sighing loudly"
+    },
+    {
+      "id": "d",
+      "text": "Tell the relatives at the door that the mess is entirely your sibling's fault"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A short, shared tidy with a time limit turns a blame moment into teamwork and gets the room ready without a pre-visit argument.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

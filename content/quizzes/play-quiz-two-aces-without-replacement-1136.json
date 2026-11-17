@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-two-aces-without-replacement-1136",
+  "scheduledDate": "2028-05-02",
+  "brand": "play",
+  "prompt": "You draw two cards one after the other from a shuffled standard 52-card pack, without replacing the first card. What is the probability that both cards are aces?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1/169"
+    },
+    {
+      "id": "b",
+      "text": "1/221"
+    },
+    {
+      "id": "c",
+      "text": "2/13"
+    },
+    {
+      "id": "d",
+      "text": "1/26"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The first card is an ace with probability 4/52. With one ace gone, the second is an ace with probability 3/51. Multiply: 4/52 x 3/51 = 12/2652 = 1/221.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

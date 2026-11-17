@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-sum-and-difference-product-1129",
+  "scheduledDate": "2028-04-25",
+  "brand": "play",
+  "prompt": "Two whole numbers add up to 27, and the larger minus the smaller is 7. What is the product of the two numbers?",
+  "options": [
+    {
+      "id": "a",
+      "text": "170"
+    },
+    {
+      "id": "b",
+      "text": "180"
+    },
+    {
+      "id": "c",
+      "text": "161"
+    },
+    {
+      "id": "d",
+      "text": "189"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Adding the two facts: twice the larger number is 27 + 7 = 34, so the larger number is 17 and the smaller is 27 - 17 = 10. Their product is 17 x 10 = 170.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

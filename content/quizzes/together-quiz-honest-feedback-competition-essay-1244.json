@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-honest-feedback-competition-essay-1244",
+  "scheduledDate": "2028-08-18",
+  "brand": "together",
+  "prompt": "A friend asks for honest feedback on a competition essay they love, but a key section is confusing and would likely cost them marks. What response is both kind and honest?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Say it is perfect as it is, because they worked hard and need confidence"
+    },
+    {
+      "id": "b",
+      "text": "Point to what works, name the confusing section specifically, and offer to help them rework that part"
+    },
+    {
+      "id": "c",
+      "text": "Tell them bluntly that section is terrible and they will probably lose if they keep it"
+    },
+    {
+      "id": "d",
+      "text": "Give vague praise like it is really good and hope they notice the problem themselves"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Specific honesty helps them improve before the deadline, while vague praise or harsh bluntness either leaves the problem in place or knocks their confidence. Naming strengths as well keeps the feedback usable.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

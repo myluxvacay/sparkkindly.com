@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-sponsored-walk-friend-falling-behind-1302",
+  "scheduledDate": "2028-10-15",
+  "brand": "together",
+  "prompt": "You are doing a sponsored walk with a group of friends. One friend is much slower than they expected, keeps apologising and insists everyone should go on without them, though they look embarrassed about holding the group back. What response best keeps them part of the day?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Go on ahead as they asked, and send encouraging messages from the finish line"
+    },
+    {
+      "id": "b",
+      "text": "Tell them they should have trained more, but offer to wait this once"
+    },
+    {
+      "id": "c",
+      "text": "Walk ahead and ask the organisers at the next checkpoint to send someone back for them"
+    },
+    {
+      "id": "d",
+      "text": "Drop back and walk at their pace, let the faster group go ahead, and agree together when to check in with the organisers at the next checkpoint"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Walking with them at a pace they can manage keeps the day shared instead of leaving them to finish alone and embarrassed, and checking in at the checkpoint keeps it safe without making a drama of it.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

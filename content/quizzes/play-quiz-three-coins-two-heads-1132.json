@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-three-coins-two-heads-1132",
+  "scheduledDate": "2028-04-28",
+  "brand": "play",
+  "prompt": "You flip three fair coins at the same time. What is the probability that exactly two of them land on heads?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1/2"
+    },
+    {
+      "id": "b",
+      "text": "1/4"
+    },
+    {
+      "id": "c",
+      "text": "1/8"
+    },
+    {
+      "id": "d",
+      "text": "3/8"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "There are 8 equally likely outcomes. Exactly three of them have two heads: HHT, HTH and THH. So the probability is 3 out of 8, written 3/8.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

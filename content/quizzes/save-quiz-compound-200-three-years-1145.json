@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-compound-200-three-years-1145",
+  "scheduledDate": "2028-05-11",
+  "brand": "save",
+  "prompt": "You put $200 in a savings account that pays 10% interest a year, and you leave the interest in the account. How much will you have after 3 years?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$260.00"
+    },
+    {
+      "id": "b",
+      "text": "$242.00"
+    },
+    {
+      "id": "c",
+      "text": "$266.20"
+    },
+    {
+      "id": "d",
+      "text": "$220.00"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Year 1: $200 x 1.10 = $220. Year 2: $220 x 1.10 = $242. Year 3: $242 x 1.10 = $266.20. Simple interest would give only $260, because compound interest also earns interest on past interest.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

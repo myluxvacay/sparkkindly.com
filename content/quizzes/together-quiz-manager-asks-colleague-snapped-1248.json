@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-manager-asks-colleague-snapped-1248",
+  "scheduledDate": "2028-08-22",
+  "brand": "together",
+  "prompt": "Your manager asks you directly what happened after a customer complained that your colleague snapped at them. You saw it happen and your colleague is a friend. What is the most honest and fair response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Lie and say you saw nothing, because you do not get a friend in trouble"
+    },
+    {
+      "id": "b",
+      "text": "Describe the incident but add other complaints about your colleague to make sure action is taken"
+    },
+    {
+      "id": "c",
+      "text": "Refuse to answer at all and walk away from the conversation"
+    },
+    {
+      "id": "d",
+      "text": "Describe only what you actually saw, factually and without piling on, and leave space for your colleague to give their side"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Sticking to what you witnessed is honest to your manager and fair to your friend. Lying protects neither of you for long, and adding extra complaints turns a factual account into a pile-on.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

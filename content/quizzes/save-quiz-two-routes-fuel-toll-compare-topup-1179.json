@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-two-routes-fuel-toll-compare-topup-1179",
+  "scheduledDate": "2028-06-14",
+  "brand": "save",
+  "prompt": "Route A is 240 miles with a $6 toll. Route B is 160 miles with an $18 toll. Your car travels 40 miles on one gallon of fuel, and fuel costs $4 per gallon. Which route costs less in total (fuel plus toll), and by how much?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Route B is cheaper by $4"
+    },
+    {
+      "id": "b",
+      "text": "Route A is cheaper by $4"
+    },
+    {
+      "id": "c",
+      "text": "Route A is cheaper by $8"
+    },
+    {
+      "id": "d",
+      "text": "They cost exactly the same"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Route A fuel: 240 / 40 = 6 gallons, at 6 x $4 = $24, plus the $6 toll = $30. Route B fuel: 160 / 40 = 4 gallons, at 4 x $4 = $16, plus the $18 toll = $34. Difference: $34 - $30 = $4, so Route A is cheaper even though it is longer. Comparing fuel alone gives an $8 gap and misses the tolls.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-friend-forgot-lunch-share-plan-1278",
+  "scheduledDate": "2028-09-21",
+  "brand": "together",
+  "prompt": "At school lunch, a friend realises they have left both their lunch and their money at home. You have one packed lunch and just enough money for the afternoon snack you usually buy. What response is kindest without leaving either of you hungry?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Lend them your lunch money and go without yourself, then feel quietly resentful about it all afternoon"
+    },
+    {
+      "id": "b",
+      "text": "Suggest you pool what you have, share your lunch and split the cost of a snack, and agree they can cover you next time"
+    },
+    {
+      "id": "c",
+      "text": "Tell them it is a good lesson in remembering, and eat your lunch as planned"
+    },
+    {
+      "id": "d",
+      "text": "Ask classmates loudly if anyone can lend them money, so the problem gets solved quickly"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Splitting what you have and pooling what you can means neither of you goes hungry, and agreeing how it evens out later keeps it relaxed instead of turning a bad morning into a debt or an embarrassment.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

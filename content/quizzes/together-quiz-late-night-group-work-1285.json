@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-late-night-group-work-1285",
+  "scheduledDate": "2028-09-28",
+  "brand": "together",
+  "prompt": "A member of your group project sends their section at midnight before the deadline, full of gaps. The others want to remove their name from the submission entirely. What is the fairest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Suggest the group quickly fill the worst gaps, keep the name on, and talk honestly afterwards about the late timing"
+    },
+    {
+      "id": "b",
+      "text": "Agree to remove the name without telling that member"
+    },
+    {
+      "id": "c",
+      "text": "Rewrite their whole section yourself and say nothing"
+    },
+    {
+      "id": "d",
+      "text": "Submit it exactly as it is so everyone shares the low mark equally"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Fixing what you can for the deadline while addressing the lateness honestly afterwards is fairer than secretly erasing someone's contribution.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

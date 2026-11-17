@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-obstacle-if-then-phone-942",
+  "scheduledDate": "2027-10-21",
+  "brand": "grow",
+  "prompt": "Ruth keeps losing study time when a friend messages mid-session. Which if-then plan is strongest for this specific obstacle?",
+  "options": [
+    {
+      "id": "a",
+      "text": "'If a message arrives during my 25-minute block, then I will note it on paper and reply at the break'"
+    },
+    {
+      "id": "b",
+      "text": "'If I feel tempted, then I will be more disciplined'"
+    },
+    {
+      "id": "c",
+      "text": "'If my friend messages, then she should know better'"
+    },
+    {
+      "id": "d",
+      "text": "'If I study well this week, then I will treat myself on Sunday'"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The strongest plan names the exact obstacle as the cue and a small, doable response in that moment. Vague resolve and plans about other people do not control her next action.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Implementation intention",
+      "url": "https://en.wikipedia.org/wiki/Implementation_intention",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-group-project-quiet-member-935",
+  "scheduledDate": "2027-10-14",
+  "brand": "grow",
+  "prompt": "In a group project, one member has not done their section and the deadline is in three days. What is the most constructive first step?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Do their section yourself without telling them"
+    },
+    {
+      "id": "b",
+      "text": "Ask the teacher to remove them from the group immediately"
+    },
+    {
+      "id": "c",
+      "text": "Complain about them to the other members and wait"
+    },
+    {
+      "id": "d",
+      "text": "Ask them privately what is blocking them, and agree a smaller, dated next step together"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A private, curious conversation finds out what is actually in the way, and a smaller step with a date is far more likely to get done than blame or silently taking over.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

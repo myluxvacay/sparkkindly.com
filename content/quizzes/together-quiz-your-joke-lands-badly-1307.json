@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-your-joke-lands-badly-1307",
+  "scheduledDate": "2028-10-20",
+  "brand": "together",
+  "prompt": "You post a teasing joke about a friend in the group chat. Others react with laughing emojis, but that friend goes completely silent. What response best repairs it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Post another joke to lighten the mood again"
+    },
+    {
+      "id": "b",
+      "text": "Message the friend privately to check if it stung, apologise if it did, and offer to delete it"
+    },
+    {
+      "id": "c",
+      "text": "Wait to see if they bring it up first"
+    },
+    {
+      "id": "d",
+      "text": "Tell the group they are probably just busy and move on"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A private check-in lets the friend be honest without an audience, and offering to delete the post puts their feelings ahead of the laugh.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

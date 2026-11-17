@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-double-plus-one-sequence-1107",
+  "scheduledDate": "2028-04-03",
+  "brand": "play",
+  "prompt": "What number comes next in this pattern: 5, 11, 23, 47, ...? Each step doubles the number and adds 1.",
+  "options": [
+    {
+      "id": "a",
+      "text": "95"
+    },
+    {
+      "id": "b",
+      "text": "94"
+    },
+    {
+      "id": "c",
+      "text": "96"
+    },
+    {
+      "id": "d",
+      "text": "85"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Check the rule: 5x2+1=11, 11x2+1=23 and 23x2+1=47, so the next term is 47x2+1=95.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

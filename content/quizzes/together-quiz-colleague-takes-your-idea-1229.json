@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-colleague-takes-your-idea-1229",
+  "scheduledDate": "2028-08-03",
+  "brand": "together",
+  "prompt": "A colleague presents an idea you suggested in a team meeting as their own, and your manager loves it. What is the most constructive first response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Call them a liar in the meeting so everyone knows whose idea it was"
+    },
+    {
+      "id": "b",
+      "text": "Stay silent for good and stop sharing ideas in meetings from now on"
+    },
+    {
+      "id": "c",
+      "text": "Tell other colleagues about it afterwards so they turn against the presenter"
+    },
+    {
+      "id": "d",
+      "text": "Stay calm in the meeting, add your supporting detail naturally if useful, then speak privately to your colleague afterwards about sharing credit, raising it with your manager only if it keeps happening"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A calm private conversation gives your colleague a chance to correct the pattern without a public fight. Calling them out angrily, gossiping, or withdrawing your ideas all cost you more than they fix.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

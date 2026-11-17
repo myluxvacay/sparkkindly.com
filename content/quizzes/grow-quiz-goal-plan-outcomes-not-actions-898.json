@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-goal-plan-outcomes-not-actions-898",
+  "scheduledDate": "2027-09-07",
+  "brand": "grow",
+  "prompt": "Tom's plan to 'get a portfolio ready in six weeks' lists only outcomes: 'have a website, have three projects, be ready to apply.' Week three arrives and nothing is finished. What is the main flaw?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Six weeks is too long a deadline to motivate anyone"
+    },
+    {
+      "id": "b",
+      "text": "Portfolios cannot be planned in advance at all"
+    },
+    {
+      "id": "c",
+      "text": "He should have listed ten outcomes instead of three"
+    },
+    {
+      "id": "d",
+      "text": "The plan names results but no scheduled actions, order, or dependencies, so there is nothing specific to do on any given day"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Outcomes cannot be done directly; actions can. A workable plan converts each outcome into dated steps and notes what must come first, such as choosing projects before building the site around them.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

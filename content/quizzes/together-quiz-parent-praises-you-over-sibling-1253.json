@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-parent-praises-you-over-sibling-1253",
+  "scheduledDate": "2028-08-27",
+  "brand": "together",
+  "prompt": "At dinner a parent praises your result warmly in front of your sibling, who worked hard and did less well and has gone quiet. What response is fairest in the moment?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Enjoy the praise and tease your sibling lightly about their result"
+    },
+    {
+      "id": "b",
+      "text": "Thank your parent, then specifically acknowledge your sibling's effort and something they did well, so the spotlight is shared without making a scene"
+    },
+    {
+      "id": "c",
+      "text": "Reject the praise dramatically and criticise your parent in front of everyone"
+    },
+    {
+      "id": "d",
+      "text": "Stay silent, because it is not your place to say anything about your sibling's feelings"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A brief, specific acknowledgement shares the moment without embarrassing your sibling or starting a family argument. Teasing adds to the sting, and a dramatic rejection makes your sibling the centre of a scene they did not ask for.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

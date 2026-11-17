@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-greenhouse-infrared-819",
+  "scheduledDate": "2027-06-20",
+  "brand": "discover",
+  "prompt": "Greenhouse gases warm the planet not by blocking incoming sunlight, but mainly by interacting with a different kind of radiation. Which one, and how?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ultraviolet from the Sun, which they reflect back into space"
+    },
+    {
+      "id": "b",
+      "text": "Infrared radiation emitted by Earth's warmed surface, which they absorb and re-radiate in all directions, including back down"
+    },
+    {
+      "id": "c",
+      "text": "Visible light from the Sun, which they trap in the upper atmosphere"
+    },
+    {
+      "id": "d",
+      "text": "Microwaves from the Sun, which they convert into heat in the oceans"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Earth's surface absorbs sunlight and re-emits the energy as infrared. Greenhouse gases absorb some of that outgoing infrared and re-radiate it in all directions, reducing how efficiently Earth cools to space.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Greenhouse effect",
+      "url": "https://en.wikipedia.org/wiki/Greenhouse_effect",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

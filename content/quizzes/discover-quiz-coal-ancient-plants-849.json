@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-coal-ancient-plants-849",
+  "scheduledDate": "2027-07-20",
+  "brand": "discover",
+  "prompt": "Coal burned in power stations began, hundreds of millions of years ago, as what?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ancient sea shells crushed under the ocean floor"
+    },
+    {
+      "id": "b",
+      "text": "Volcanic ash buried by eruptions"
+    },
+    {
+      "id": "c",
+      "text": "Ancient plants buried in swamps and compressed over time"
+    },
+    {
+      "id": "d",
+      "text": "Dinosaur bones and remains buried in deserts"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Coal formed mainly from lush swamp plants of the Carboniferous period, buried before they could fully rot and transformed by heat and pressure.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Coal",
+      "url": "https://en.wikipedia.org/wiki/Coal",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-monthly-leftover-2000-1164",
+  "scheduledDate": "2028-05-30",
+  "brand": "save",
+  "prompt": "A monthly budget has income of $2,000 and spending of $900 on rent, $400 on food, $150 on transport and $250 on bills. How much is left over?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$1,700"
+    },
+    {
+      "id": "b",
+      "text": "$550"
+    },
+    {
+      "id": "c",
+      "text": "$250"
+    },
+    {
+      "id": "d",
+      "text": "$300"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Total spending: $900 + $400 + $150 + $250 = $1,700. Left over: $2,000 - $1,700 = $300.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

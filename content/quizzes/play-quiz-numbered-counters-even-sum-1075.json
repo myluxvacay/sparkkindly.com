@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-numbered-counters-even-sum-1075",
+  "scheduledDate": "2028-03-02",
+  "brand": "play",
+  "prompt": "Five counters are numbered 1, 2, 3, 4 and 5. You pick two different counters at random. What is the probability that the two numbers add up to an even total?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1/2"
+    },
+    {
+      "id": "b",
+      "text": "3/5"
+    },
+    {
+      "id": "c",
+      "text": "4/9"
+    },
+    {
+      "id": "d",
+      "text": "2/5"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "There are 10 possible pairs. A pair sums to an even total only if both numbers are odd or both are even: the odd counters 1, 3, 5 give 3 pairs, and the even counters 2, 4 give 1 pair. That is 4 winning pairs out of 10, which is 2/5.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

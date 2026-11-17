@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-sleep-before-test-morning-review-953",
+  "scheduledDate": "2027-11-01",
+  "brand": "grow",
+  "prompt": "You have a test tomorrow afternoon and by 10 pm you have covered the main topics. Which choice best supports your memory?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keep studying until 2 am to go over everything twice more"
+    },
+    {
+      "id": "b",
+      "text": "Use energy drinks and study through the whole night"
+    },
+    {
+      "id": "c",
+      "text": "Skip sleep and do all the revision in the morning instead"
+    },
+    {
+      "id": "d",
+      "text": "Stop for the night, get a full night's sleep, and do a brief review in the morning"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Sleep plays an important role in consolidating memories formed during the day, so a full night's sleep plus a short morning review usually serves recall better than exhausted extra hours.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sleep and memory",
+      "url": "https://en.wikipedia.org/wiki/Sleep_and_memory",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

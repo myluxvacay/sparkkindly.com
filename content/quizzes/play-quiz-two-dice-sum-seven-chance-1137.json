@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-two-dice-sum-seven-chance-1137",
+  "scheduledDate": "2028-05-03",
+  "brand": "play",
+  "prompt": "You roll two fair six-sided dice. What is the chance that the two numbers add up to exactly 7?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1 in 6"
+    },
+    {
+      "id": "b",
+      "text": "1 in 36"
+    },
+    {
+      "id": "c",
+      "text": "1 in 7"
+    },
+    {
+      "id": "d",
+      "text": "1 in 12"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "There are 36 equally likely pairs. Six of them make 7: (1,6), (2,5), (3,4), (4,3), (5,2) and (6,1). So the chance is 6 out of 36, which is 1 in 6.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

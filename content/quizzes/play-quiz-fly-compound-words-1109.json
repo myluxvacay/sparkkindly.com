@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-fly-compound-words-1109",
+  "scheduledDate": "2028-04-05",
+  "brand": "play",
+  "prompt": "Which word can go after FIRE, BUTTER and DRAGON to make three common compound words?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Fish"
+    },
+    {
+      "id": "b",
+      "text": "Bird"
+    },
+    {
+      "id": "c",
+      "text": "Fly"
+    },
+    {
+      "id": "d",
+      "text": "Wing"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Adding FLY gives firefly, butterfly and dragonfly, all common compound words. The other endings do not complete all three words.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

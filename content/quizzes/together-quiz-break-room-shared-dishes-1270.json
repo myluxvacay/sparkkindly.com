@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-break-room-shared-dishes-1270",
+  "scheduledDate": "2028-09-13",
+  "brand": "together",
+  "prompt": "At work, one colleague repeatedly leaves their unwashed mug and plate in the shared kitchen sink for others to deal with. What response best improves things without a row?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Wash their things every day and complain about it to everyone else"
+    },
+    {
+      "id": "b",
+      "text": "Leave your own dishes too, since the system has broken down"
+    },
+    {
+      "id": "c",
+      "text": "Hide their mug so they have to ask about it"
+    },
+    {
+      "id": "d",
+      "text": "Mention it lightly to them directly and suggest a simple wash-up-as-you-go habit for everyone"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A light, direct suggestion aimed at a shared habit is more likely to change the behaviour than silent washing, copying, or tricks.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

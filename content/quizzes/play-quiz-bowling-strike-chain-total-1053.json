@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-bowling-strike-chain-total-1053",
+  "scheduledDate": "2028-02-09",
+  "brand": "play",
+  "prompt": "In ten-pin bowling, a strike scores 10 plus your next two balls, and an open frame scores just its pins. Your first three frames are: frame 1 a strike, frame 2 a strike, frame 3 you knock down 7 then 2. What is your total score after three frames?",
+  "options": [
+    {
+      "id": "a",
+      "text": "46"
+    },
+    {
+      "id": "b",
+      "text": "55"
+    },
+    {
+      "id": "c",
+      "text": "48"
+    },
+    {
+      "id": "d",
+      "text": "57"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Frame 1 scores 10 + 10 (next strike) + 7 = 27. Frame 2 scores 10 + 7 + 2 = 19. Frame 3 is an open frame scoring 9. Total: 27 + 19 + 9 = 55.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Tenpin bowling",
+      "url": "https://en.wikipedia.org/wiki/Tenpin_bowling",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

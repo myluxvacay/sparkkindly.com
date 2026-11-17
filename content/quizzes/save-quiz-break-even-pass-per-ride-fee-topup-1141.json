@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-break-even-pass-per-ride-fee-topup-1141",
+  "scheduledDate": "2028-05-07",
+  "brand": "save",
+  "prompt": "A ride pass costs $120 to buy, and then $2 for each ride you take with it. Without a pass, each ride costs $10. How many rides do you need to take before the pass costs exactly the same as paying per ride?",
+  "options": [
+    {
+      "id": "a",
+      "text": "12 rides"
+    },
+    {
+      "id": "b",
+      "text": "10 rides"
+    },
+    {
+      "id": "c",
+      "text": "20 rides"
+    },
+    {
+      "id": "d",
+      "text": "15 rides"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Let n be the number of rides. Pass cost: $120 + $2n. Single-ticket cost: $10n. Set them equal: $120 + $2n = $10n, so $120 = $8n and n = 15. Check: pass = $120 + $30 = $150; singles = 15 x $10 = $150. The 12-ride option ($120 / $10) forgets the $2 per-ride fee on the pass.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

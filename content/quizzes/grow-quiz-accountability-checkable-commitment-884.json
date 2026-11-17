@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-accountability-checkable-commitment-884",
+  "scheduledDate": "2027-08-24",
+  "brand": "grow",
+  "prompt": "Two study partners agree to 'keep each other motivated' with encouraging messages, but neither checks whether work happened, and both drift. What would make the accountability actually work?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A specific, checkable commitment each shares proof of, such as sending a photo of completed problem sets every Friday"
+    },
+    {
+      "id": "b",
+      "text": "More frequent encouraging messages"
+    },
+    {
+      "id": "c",
+      "text": "Harsher criticism when one of them drifts"
+    },
+    {
+      "id": "d",
+      "text": "Keeping goals private so there is no pressure"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Encouragement without verification changes nothing. Accountability works when the commitment is specific and the other person can actually see whether it was kept.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

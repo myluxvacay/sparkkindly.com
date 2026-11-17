@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-compound-500-two-years-1146",
+  "scheduledDate": "2028-05-12",
+  "brand": "save",
+  "prompt": "You put $500 in a savings account that pays 4% interest a year, and you leave the interest in the account. How much will you have after 2 years?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$540.80"
+    },
+    {
+      "id": "b",
+      "text": "$540.00"
+    },
+    {
+      "id": "c",
+      "text": "$520.00"
+    },
+    {
+      "id": "d",
+      "text": "$504.00"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Year 1: $500 x 1.04 = $520. Year 2: $520 x 1.04 = $540.80. The extra $0.80 over simple interest ($540) is interest earned on the first year's interest.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

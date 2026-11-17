@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-square-gaps-sequence-1085",
+  "scheduledDate": "2028-03-12",
+  "brand": "play",
+  "prompt": "What number comes next in this sequence: 2, 3, 7, 16, 32, 57, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "82"
+    },
+    {
+      "id": "b",
+      "text": "89"
+    },
+    {
+      "id": "c",
+      "text": "99"
+    },
+    {
+      "id": "d",
+      "text": "93"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Look at the gaps between terms: 1, 4, 9, 16, 25. These are the square numbers 1, 4, 9, 16, 25, so the next gap is 36, giving 57 + 36 = 93.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

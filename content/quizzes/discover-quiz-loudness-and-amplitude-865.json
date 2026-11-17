@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-loudness-and-amplitude-865",
+  "scheduledDate": "2027-08-05",
+  "brand": "discover",
+  "prompt": "Two notes have the same pitch, but one sounds much louder than the other. What differs between the two sound waves?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The louder wave has a lower frequency"
+    },
+    {
+      "id": "b",
+      "text": "The louder wave travels much faster"
+    },
+    {
+      "id": "c",
+      "text": "The louder wave has a larger amplitude"
+    },
+    {
+      "id": "d",
+      "text": "The louder wave has a longer wavelength only"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Loudness is linked to amplitude — the size of the vibration. Bigger pressure swings carry more energy and are heard as a louder sound at the same pitch.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Amplitude",
+      "url": "https://en.wikipedia.org/wiki/Amplitude",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-rectangle-perimeter-seven-by-four-1121",
+  "scheduledDate": "2028-04-17",
+  "brand": "play",
+  "prompt": "A rectangle is 7 cm long and 4 cm wide. What is its perimeter, the distance all the way around it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "28 cm"
+    },
+    {
+      "id": "b",
+      "text": "22 cm"
+    },
+    {
+      "id": "c",
+      "text": "11 cm"
+    },
+    {
+      "id": "d",
+      "text": "14 cm"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A rectangle has two sides of 7 cm and two sides of 4 cm. The perimeter is 7+4+7+4=22 cm. The 28 cm option is the area, not the perimeter.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

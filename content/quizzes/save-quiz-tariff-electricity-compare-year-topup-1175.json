@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-tariff-electricity-compare-year-topup-1175",
+  "scheduledDate": "2028-06-10",
+  "brand": "save",
+  "prompt": "A home uses 4,000 kWh of electricity in a year. Tariff A charges a $120 yearly standing charge plus $0.25 per kWh. Tariff B charges a $60 yearly standing charge plus $0.30 per kWh. How much cheaper is Tariff A than Tariff B over the year?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$60"
+    },
+    {
+      "id": "b",
+      "text": "$140"
+    },
+    {
+      "id": "c",
+      "text": "$200"
+    },
+    {
+      "id": "d",
+      "text": "$260"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Tariff A: $120 + (4,000 x $0.25 = $1,000) = $1,120. Tariff B: $60 + (4,000 x $0.30 = $1,200) = $1,260. Difference: $1,260 - $1,120 = $140. The $60 option compares only the standing charges and the $200 option compares only the unit costs; you need both parts of each tariff.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

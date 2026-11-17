@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-galvanised-zinc-sacrificial-814",
+  "scheduledDate": "2027-06-15",
+  "brand": "discover",
+  "prompt": "Steel is galvanised by coating it with zinc to stop it rusting. Even if the coating is scratched and steel is exposed, the zinc still protects the steel. How?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Zinc paint-like pigment hides the scratch so water cannot find it"
+    },
+    {
+      "id": "b",
+      "text": "Zinc is harder than steel, so the scratch closes up"
+    },
+    {
+      "id": "c",
+      "text": "Zinc is more reactive than iron, so it corrodes preferentially — it is sacrificed while the exposed steel is protected"
+    },
+    {
+      "id": "d",
+      "text": "Zinc makes the steel magnetic, which repels oxygen"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "This is sacrificial protection: zinc is more reactive than iron, so when both are exposed and in electrical contact, the zinc oxidises instead of the iron, protecting the steel even at a scratch.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Galvanization",
+      "url": "https://en.wikipedia.org/wiki/Galvanization",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-friend-confides-bullying-secrecy-1235",
+  "scheduledDate": "2028-08-09",
+  "brand": "together",
+  "prompt": "A friend confides that they are being bullied at school and begs you to promise not to tell anyone. What is the most responsible and caring response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Say you cannot promise to keep something secret if it could keep them unsafe, encourage them to tell a trusted adult, and offer to go with them for support"
+    },
+    {
+      "id": "b",
+      "text": "Promise to keep it secret no matter what, so they keep trusting you"
+    },
+    {
+      "id": "c",
+      "text": "Confront the students bullying them yourself so your friend does not have to involve adults"
+    },
+    {
+      "id": "d",
+      "text": "Tell lots of other friends so more people can watch out for them"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "You can stay loyal without promising secrecy about safety. Encouraging a trusted adult and offering to be there gives your friend support and a real chance of help, while confronting others or spreading the story can make things worse.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

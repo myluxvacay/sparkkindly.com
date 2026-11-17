@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-guitar-plateau-targeted-fix-899",
+  "scheduledDate": "2027-09-08",
+  "brand": "grow",
+  "prompt": "After a year, Priya's guitar playing has plateaued. She can strum most chords but consistently stumbles on one fast chord change that appears in many songs. What is the best next practice plan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Play whole songs at full speed until the change fixes itself"
+    },
+    {
+      "id": "b",
+      "text": "Stop playing songs for a month and only read music theory"
+    },
+    {
+      "id": "c",
+      "text": "Isolate that one change, practise it slowly with a metronome, raise the speed gradually, then put it back into songs"
+    },
+    {
+      "id": "d",
+      "text": "Buy new strings, because equipment usually causes plateaus"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A plateau often hides one bottleneck sub-skill. Isolating it, slowing it down so errors are visible, and rebuilding speed is deliberate practice aimed at the actual limit.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

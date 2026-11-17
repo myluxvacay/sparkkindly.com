@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-lunch-group-freezes-new-colleague-1247",
+  "scheduledDate": "2028-08-21",
+  "brand": "together",
+  "prompt": "At work, your usual lunch group makes it clear they do not want a new colleague to join because it will change the dynamic. You can see the new colleague is being frozen out. What response balances loyalty to your group and inclusion?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Invite the new colleague to join sometimes and sit with them yourself, and tell your group calmly that you would like the table to be welcoming without forcing every lunch to be together"
+    },
+    {
+      "id": "b",
+      "text": "Go along with freezing them out, because keeping your place in the group matters more"
+    },
+    {
+      "id": "c",
+      "text": "Lecture your group publicly and call them mean, making the new colleague the cause of a conflict"
+    },
+    {
+      "id": "d",
+      "text": "Invite the new colleague in secret, but pretend to your group that you had nothing to do with it"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Including someone through your own actions, and saying so calmly, changes the norm without a public shaming. Going along, lecturing, or hiding your invitation all leave the freeze-out in place.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

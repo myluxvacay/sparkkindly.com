@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-shift-swap-boundary-guilt-1256",
+  "scheduledDate": "2028-08-30",
+  "brand": "together",
+  "prompt": "A work colleague has asked you to swap shifts for the third week in a row. You are tired, you need the day off you planned, and you feel guilty saying no. What response keeps both kindness and a healthy boundary?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Warmly decline this time, explain you need the day off, and offer to help them find other cover or swap on a future date if you can"
+    },
+    {
+      "id": "b",
+      "text": "Say yes again and push through, then feel resentful towards them all week"
+    },
+    {
+      "id": "c",
+      "text": "Say no coldly and complain to other colleagues about how often they ask"
+    },
+    {
+      "id": "d",
+      "text": "Ignore the message and hope they find someone else"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A clear, warm no protects your rest without punishing your colleague. Saying yes while resentful, going cold, or going silent all damage the working relationship more than an honest boundary does.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

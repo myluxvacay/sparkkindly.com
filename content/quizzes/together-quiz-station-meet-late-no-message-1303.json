@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-station-meet-late-no-message-1303",
+  "scheduledDate": "2028-10-16",
+  "brand": "together",
+  "prompt": "A friend promised to meet you at the station for a day trip, but arrives twenty minutes late with no message, leaving you worried and then annoyed. What response best starts the day well anyway?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Spend the first hour of the trip in pointed silence"
+    },
+    {
+      "id": "b",
+      "text": "Pretend you were not worried or annoyed at all, all day"
+    },
+    {
+      "id": "c",
+      "text": "Cancel the day trip on the spot to teach them a lesson"
+    },
+    {
+      "id": "d",
+      "text": "Say briefly that the silence worried you and a quick text would help next time, then let the day move on"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A brief, honest word about the worry, paired with a simple request for next time, clears the air without letting lateness spoil the whole day.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-unflattering-photo-refuses-remove-1261",
+  "scheduledDate": "2028-09-04",
+  "brand": "together",
+  "prompt": "A friend posts an unflattering photo of you that you dislike and refuses to take it down, saying you are overreacting and it is just a joke. What response best stands up for yourself without escalating?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Post an unflattering photo of them in return so they learn how it feels"
+    },
+    {
+      "id": "b",
+      "text": "Pretend to laugh along while quietly feeling upset and avoiding them"
+    },
+    {
+      "id": "c",
+      "text": "Speak to them privately and clearly, explain why it is not funny to you, ask again for it to be removed, and set a boundary about posting photos of you without checking first"
+    },
+    {
+      "id": "d",
+      "text": "Ask mutual friends to pile into the comments and shame them into removing it"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A private, clear request with a stated boundary gives them a fair chance to do the right thing without a public pile-on. Revenge posting escalates the harm, and laughing along leaves the boundary unstated.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-read-aloud-proofreading-draft-948",
+  "scheduledDate": "2027-10-27",
+  "brand": "grow",
+  "prompt": "Sofia reads her essay draft silently three times and finds nothing wrong, yet her teacher spots missing words and awkward sentences she somehow skipped over. Which change to her proofreading is most likely to catch these?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Read it silently a fourth time, more slowly, in the same place and format"
+    },
+    {
+      "id": "b",
+      "text": "Check only the spelling, since missing words are a spelling problem"
+    },
+    {
+      "id": "c",
+      "text": "Ask a friend to summarise the essay, and fix whatever the summary leaves out"
+    },
+    {
+      "id": "d",
+      "text": "Read the draft aloud, because hearing it forces her through every word in order and makes missing words and clumsy phrasing stand out"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Silent re-reading lets the brain supply the words it expects to see, which is how Sofia skipped her own errors three times. Reading aloud breaks that shortcut — every word has to be spoken, so gaps and awkward rhythms become obvious.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

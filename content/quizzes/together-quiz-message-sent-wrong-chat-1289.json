@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-message-sent-wrong-chat-1289",
+  "scheduledDate": "2028-10-02",
+  "brand": "together",
+  "prompt": "You accidentally send a mildly complaining message about a family gathering to the family group chat itself, instead of to your friend, and relatives start reacting. What response best repairs it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Claim your account was hacked and deny writing it"
+    },
+    {
+      "id": "b",
+      "text": "Own it quickly with a brief, honest apology in the chat and follow up privately with anyone most affected"
+    },
+    {
+      "id": "c",
+      "text": "Leave the group chat immediately and say nothing"
+    },
+    {
+      "id": "d",
+      "text": "Send a flood of unrelated messages to bury it"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Owning a mistake quickly and apologising briefly is braver and more trusted than excuses, and a private follow-up shows real care.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

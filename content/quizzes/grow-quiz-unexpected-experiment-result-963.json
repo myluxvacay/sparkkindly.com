@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-unexpected-experiment-result-963",
+  "scheduledDate": "2027-11-11",
+  "brand": "grow",
+  "prompt": "A science experiment gives a result you did not expect. Which step helps you learn the most from it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Repeat it until you get the expected answer, then report only that"
+    },
+    {
+      "id": "b",
+      "text": "Record exactly what you did and what differed, then suggest one variable to test next"
+    },
+    {
+      "id": "c",
+      "text": "Throw the results away and start a different topic"
+    },
+    {
+      "id": "d",
+      "text": "Copy another group's results, since theirs look right"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "An unexpected result is still data. Recording the method and the difference carefully, then planning one follow-up test, is how experiments actually build understanding.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Scientific method",
+      "url": "https://en.wikipedia.org/wiki/Scientific_method",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

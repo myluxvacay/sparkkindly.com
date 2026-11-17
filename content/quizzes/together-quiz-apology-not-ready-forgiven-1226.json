@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-apology-not-ready-forgiven-1226",
+  "scheduledDate": "2028-07-31",
+  "brand": "together",
+  "prompt": "You apologised sincerely for letting a friend down, but they say they are not ready to forgive you yet. What response most respects them while keeping the door open?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keep apologising every day until they give in and say it is fine"
+    },
+    {
+      "id": "b",
+      "text": "Tell them they are being unfair, since you have already said sorry properly"
+    },
+    {
+      "id": "c",
+      "text": "Cut them off completely for rejecting your apology"
+    },
+    {
+      "id": "d",
+      "text": "Accept their answer without pressure, say you understand and will be here when they are ready, then give them space"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Forgiveness cannot be demanded on your timetable. Accepting their pace shows the apology was about their hurt, not just easing your guilt, while repeated pressure makes an apology feel like another demand.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

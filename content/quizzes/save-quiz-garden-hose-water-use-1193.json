@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-garden-hose-water-use-1193",
+  "scheduledDate": "2028-06-28",
+  "brand": "save",
+  "prompt": "A garden hose flows at 12 litres per minute. How much water does it use in 15 minutes?",
+  "options": [
+    {
+      "id": "a",
+      "text": "180 litres"
+    },
+    {
+      "id": "b",
+      "text": "120 litres"
+    },
+    {
+      "id": "c",
+      "text": "150 litres"
+    },
+    {
+      "id": "d",
+      "text": "27 litres"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The water used is 12 litres per minute x 15 minutes = 180 litres.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}
