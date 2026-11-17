@@ -11,11 +11,15 @@ export const OWNER = 'owner@example.test';
 export const BASE = 'http://localhost:4173';
 export const ORIGIN = { origin: BASE };
 
-// Collects every request the page makes off the site (the privacy gate: no third-party requests); assert it is [].
+// Microsoft Clarity is the one approved third party (owner decision, 17 Nov 2026; disclosed on the privacy page).
+export const isClarityUrl = (url: string) => /^https:\/\/([\w-]+\.)*clarity\.ms\//.test(url);
+export const CLARITY_COOKIES = ['_clck', '_clsk'];
+
+// Collects every request the page makes off the site (the privacy gate: no third-party requests except Clarity); assert it is [].
 export const watchThirdParty = (page: Page) => {
   const seen: string[] = [];
   page.on('request', (r) => {
-    if (!r.url().startsWith(`${BASE}/`)) seen.push(r.url());
+    if (!r.url().startsWith(`${BASE}/`) && !isClarityUrl(r.url())) seen.push(r.url());
   });
   return seen;
 };

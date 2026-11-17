@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { addItem, addTopic, sql } from './helpers/fixtures';
-import { BASE } from './helpers/admin';
+import { BASE, isClarityUrl } from './helpers/admin';
 import { childSession, member } from './helpers/members';
 
 // Save world (plan 2026-11-07 Task 2). Every Save page carries the education-only disclaimer; other worlds do not.
@@ -55,7 +55,7 @@ test.afterAll(async () => {
 test('the disclaimer is on the Save world page and every Save item, and not on other worlds', async ({ page }) => {
   const thirdParty: string[] = [];
   page.on('request', (r) => {
-    if (!r.url().startsWith(BASE) && !r.url().startsWith('data:')) thirdParty.push(r.url());
+    if (!r.url().startsWith(BASE) && !r.url().startsWith('data:') && !isClarityUrl(r.url())) thirdParty.push(r.url());
   });
   await page.goto('/save/');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Spend smart. Keep more.');
