@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { test, expect, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { addItem, addTopic, sql } from './helpers/fixtures';
-import { BASE, FORM, ORIGIN, form, watchThirdParty } from './helpers/admin';
+import { BASE, CLARITY_COOKIES, FORM, ORIGIN, form, isClarityCookie, watchThirdParty } from './helpers/admin';
 
 // Member accounts (Project 3A, Task 4). The preview server on 4173 runs with ACCOUNTS_ENABLED=true; the server on
 // 4174 does not, so it covers the flag-off 404s. Only example.test addresses. There is no mail sink in this harness:
@@ -417,7 +417,7 @@ test('an adult creates a child profile with a PIN, plays as the child, and only 
   await page.getByRole('button', { name: 'Switch back' }).click();
   await expect(page).toHaveURL(/\/account\/children\/$/);
   expect(page.url()).not.toContain(PIN);
-  expect((await page.context().cookies(BASE)).map((c) => c.name)).toEqual(['__Host-sk_account']);
+  expect((await page.context().cookies(BASE)).filter((c) => !CLARITY_COOKIES.includes(c.name)).map((c) => c.name)).toEqual(['__Host-sk_account']);
 
   await page.getByLabel('Current PIN').fill(PIN);
   await page.getByLabel('New PIN (4 digits)').fill('1357');
@@ -673,9 +673,9 @@ test('an anonymous visitor answering a Kids quiz stores nothing, gets no cookie 
     await page.getByRole('radio', { name: 'True' }).check();
     await page.getByRole('button', { name: /Check answer/ }).click();
     await expect(page.getByRole('status')).toContainText('Correct');
-    expect(await page.evaluate(() => ({ local: localStorage.length, session: sessionStorage.length }))).toEqual({ local: 0, session: 0 });
-    // The site itself sets no cookie; Microsoft Clarity's own cookies (_clck/_clsk, owner decision 17 Nov 2026) are the one exception.
-    expect((await context.cookies()).filter((c) => !['_clck', '_clsk'].includes(c.name))).toEqual([]);
+    expect(await page.evaluate(() => ({ local: localStorage.length, session: Object.keys(sessionStorage).filter((k) => k !== '_cltk').length }))).toEqual({ local: 0, session: 0 });
+    // The site itself sets no cookie; Microsoft Clarity's own cookies (owner decision 17 Nov 2026) are the one exception.
+    expect((await context.cookies()).filter((c) => !isClarityCookie(c))).toEqual([]);
     expect(await responses(id)).toEqual([]);
   } finally {
     await context.close();
@@ -774,7 +774,7 @@ test('an adult picks interests from the keyboard; /me lists matching items and a
     expect(pressureCopy).toBe(false);
     await expect(page.getByRole('link', { name: 'Your account' })).toBeVisible();
     await axeBothWidths(page);
-    expect((await page.context().cookies(BASE)).map((c) => c.name)).toEqual(['__Host-sk_account']);
+    expect((await page.context().cookies(BASE)).filter((c) => !CLARITY_COOKIES.includes(c.name)).map((c) => c.name)).toEqual(['__Host-sk_account']);
     expect(thirdParty).toEqual([]);
   } finally {
     await sql('DELETE FROM items WHERE id = ANY($1::uuid[])', [ids]);

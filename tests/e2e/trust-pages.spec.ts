@@ -17,13 +17,13 @@ test('trust pages make no third-party request except Clarity and store nothing i
   const outside: string[] = [];
   page.on('request', (r) => {
     // Microsoft Clarity is the one approved third party (owner decision, 17 Nov 2026; disclosed on the privacy page).
-    if (!r.url().startsWith('http://localhost:4173/') && !/^https:\/\/([\w-]+\.)*clarity\.ms\//.test(r.url())) outside.push(r.url());
+    if (!r.url().startsWith('http://localhost:4173/') && !/^https:\/\/([\w-]+\.)*(clarity\.ms|bing\.com)\//.test(r.url())) outside.push(r.url());
   });
   for (const path of PAGES) {
     await page.goto(path);
-    expect(await page.evaluate(() => ({ local: localStorage.length, session: sessionStorage.length })), path).toEqual({ local: 0, session: 0 });
+    expect(await page.evaluate(() => ({ local: localStorage.length, session: Object.keys(sessionStorage).filter((k) => k !== '_cltk').length })), path).toEqual({ local: 0, session: 0 });
   }
-  expect((await context.cookies()).filter((c) => !['_clck', '_clsk'].includes(c.name))).toEqual([]);
+  expect((await context.cookies()).filter((c) => !['_clck', '_clsk'].includes(c.name) && !/(^|\.)(clarity\.ms|bing\.com)$/.test(c.domain.replace(/^\./, '')))).toEqual([]);
   expect(outside).toEqual([]);
 });
 

@@ -12,8 +12,13 @@ export const BASE = 'http://localhost:4173';
 export const ORIGIN = { origin: BASE };
 
 // Microsoft Clarity is the one approved third party (owner decision, 17 Nov 2026; disclosed on the privacy page).
-export const isClarityUrl = (url: string) => /^https:\/\/([\w-]+\.)*clarity\.ms\//.test(url);
+// Its script loads from clarity.ms and identity-syncs through c.bing.com (beacons carry RedC=c.clarity.ms).
+export const isClarityUrl = (url: string) => /^https:\/\/([\w-]+\.)*(clarity\.ms|bing\.com)\//.test(url);
 export const CLARITY_COOKIES = ['_clck', '_clsk'];
+export const CLARITY_SESSION_KEY = '_cltk';
+// Clarity's own cookies: _clck/_clsk on this site, plus third-party ones (CLID, MUID) on its sync domains.
+export const isClarityCookie = (c: { name: string; domain: string }) =>
+  CLARITY_COOKIES.includes(c.name) || /(^|\.)(clarity\.ms|bing\.com)$/.test(c.domain.replace(/^\./, ''));
 
 // Collects every request the page makes off the site (the privacy gate: no third-party requests except Clarity); assert it is [].
 export const watchThirdParty = (page: Page) => {
