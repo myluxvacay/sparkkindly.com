@@ -346,6 +346,9 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .vg-tab{display:grid;gap:2px;text-align:left;background:#fffdf8;border:1px solid #e7d7f2;border-radius:12px;padding:12px;cursor:pointer;color:inherit}
 .vg-tab.selected{border-color:#5a2d82;background:#f3eafd}
 .vg-panel{margin-top:8px}
+.vg-sound-row{display:flex;justify-content:flex-end;margin:0 0 4px}
+.vg-sound-toggle{background:#fffdf8;border:1px solid #e7d7f2;border-radius:999px;padding:8px 14px;cursor:pointer;color:#241529;font-weight:600;font-size:14px}
+.vg-sound-toggle:hover,.vg-sound-toggle:focus-visible{border-color:#5a2d82}
 .vg-spark{display:flex;gap:16px;align-items:center}
 .vg-spark img{width:64px;height:auto}
 .vg-round-count{margin:0;color:#ffe087;font-weight:600;font-size:13px}
