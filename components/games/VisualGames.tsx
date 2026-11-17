@@ -8,7 +8,49 @@ import { visualGameKinds, visualRounds, type VisualGameKind } from '@/lib/games/
 // no account, nothing is saved or shared — the same promise the daily quiz makes anonymous visitors.
 // Spark presents each round and reacts kindly either way; a wrong pick can be retried, and the explanation
 // appears once the round is answered correctly or the player chooses to see it.
+
+// Spark reaction slots (owner direction 17 Nov 2026; slot list in SPARK-ANIMATIONS.md): each slot is a
+// named file in public/brand/. When a slot's real GIF arrives, drop the file in under its slot name —
+// no logic change needed. Until then the fallbacks below apply (the <img> onError swap handles a missing
+// slot file). Reduced-motion visitors get the still Spark in every slot.
+export type SparkSlot = 'presenting' | 'victory' | 'encouraging';
+export const SPARK_SLOTS: Record<SparkSlot, { animated: string; fallback: string; still: string }> = {
+  presenting: { animated: '/brand/spark-waving.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp' },
+  victory: { animated: '/brand/spark-victory.gif', fallback: '/brand/spark-waving.gif', still: '/brand/spark.webp' },
+  encouraging: { animated: '/brand/spark-encouraging.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp' },
+};
+
+function SparkFigure({ slot, alt, reducedMotion }: { slot: SparkSlot; alt: string; reducedMotion: boolean }) {
+  // A failed slot file is remembered per slot (derived state, no reset effect): a new slot tries its
+  // own animated file first, a failed one swaps to that slot's fallback.
+  const [failedSlot, setFailedSlot] = useState<SparkSlot | null>(null);
+  const conf = SPARK_SLOTS[slot];
+  const failed = failedSlot === slot;
+  const src = reducedMotion ? conf.still : failed ? conf.fallback : conf.animated;
+  const gif = src.endsWith('.gif');
+  return (
+    <img
+      src={src}
+      width={gif ? 313 : 438}
+      height={gif ? 627 : 646}
+      alt={alt}
+      onError={() => setFailedSlot(slot)}
+    />
+  );
+}
+
 export default function VisualGames() {
+  const [reducedMotion, setReducedMotion] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => {
+      try {
+        setReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+      } catch {
+        setReducedMotion(false);
+      }
+    }, 0);
+    return () => clearTimeout(t);
+  }, []);
   const [kind, setKind] = useState<VisualGameKind>('odd-one-out');
   const rounds = visualRounds.filter((r) => r.kind === kind);
   const [index, setIndex] = useState(0);
@@ -77,7 +119,7 @@ export default function VisualGames() {
       {finished ? (
         <div className="quiz-panel vg-panel" ref={panelRef} tabIndex={-1}>
           <div className="vg-spark">
-            <img src="/brand/spark-220.webp" width={219} height={323} alt="Spark, the SparkKindly guide, celebrating" />
+            <SparkFigure slot="presenting" reducedMotion={reducedMotion} alt="Spark, the SparkKindly guide, waving hello" />
             <div>
               <h2>Spark says: lovely playing!</h2>
               <p>You solved {score} of {rounds.length} rounds. Play again, or try another picture game above.</p>
@@ -89,7 +131,7 @@ export default function VisualGames() {
         <div className="quiz-panel vg-panel" key={round.id} ref={panelRef} tabIndex={-1}>
           <DifficultyMeter level={round.difficulty} />
           <div className="vg-spark">
-            <img src="/brand/spark-220.webp" width={219} height={323} alt="Spark, the SparkKindly guide, presenting the round" />
+            <SparkFigure slot={solved ? 'victory' : picked ? 'encouraging' : 'presenting'} reducedMotion={reducedMotion} alt="Spark, the SparkKindly guide, presenting the round" />
             <div>
               <p className="vg-round-count">Round {index + 1} of {rounds.length}</p>
               <h2>{round.prompt}</h2>

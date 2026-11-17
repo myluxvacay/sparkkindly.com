@@ -1,7 +1,11 @@
 // Visual picture games (#21, 17 Nov 2026): the starter set must stay playable and verified — every round's
 // correct answer is one of its own options, every image carries alt text, and each game type has its rounds.
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { visualGameKinds, visualRounds } from '@/lib/games/visual-games';
+
+const gamesSrc = readFileSync(`${process.cwd()}/components/games/VisualGames.tsx`, 'utf8');
+const css = readFileSync(`${process.cwd()}/app/globals.css`, 'utf8');
 
 describe('visual games starter set', () => {
   it('has at least six rounds, at least two per game type', () => {
@@ -40,6 +44,28 @@ describe('visual games starter set', () => {
     const reverse = visualRounds.filter((r) => r.kind === 'flags-and-places' && !r.hero);
     expect(reverse.length).toBeGreaterThanOrEqual(1);
     expect(reverse[0].prompt.toLowerCase()).toContain('reverse');
+  });
+
+  it('Spark presenter uses the waving GIF and the named reaction slots with their fallbacks', () => {
+    expect(gamesSrc).not.toContain('spark-220.webp');
+    // Slot mapping: victory falls back to the waving GIF, encouraging to the still Spark (SPARK-ANIMATIONS.md).
+    expect(gamesSrc).toContain("victory: { animated: '/brand/spark-victory.gif', fallback: '/brand/spark-waving.gif', still: '/brand/spark.webp' }");
+    expect(gamesSrc).toContain("encouraging: { animated: '/brand/spark-encouraging.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp' }");
+    expect(gamesSrc).toContain("presenting: { animated: '/brand/spark-waving.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp' }");
+    // Correct pick shows the victory slot, a wrong pick the encouraging slot.
+    expect(gamesSrc).toContain("slot={solved ? 'victory' : picked ? 'encouraging' : 'presenting'}");
+    // Reduced motion: the still Spark in every slot.
+    expect(gamesSrc).toContain("window.matchMedia('(prefers-reduced-motion: reduce)')");
+    expect(gamesSrc).toContain('reducedMotion ? conf.still');
+  });
+
+  it('panel text is light on the dark plum panel (the prompt must never be dark-on-dark)', () => {
+    // The panel surface is .quiz-panel plum; global h2 colour is plum too, so the game rules must pin light text.
+    expect(css).toMatch(/\.vg-panel h2\{color:#fdf6ec\}/);
+    expect(css).toMatch(/\.vg-round-count\{[^}]*color:#ffe087/);
+    expect(css).not.toMatch(/\.vg-round-count\{[^}]*color:#5a2d82/);
+    expect(css).toMatch(/\.vg-spark-says\{[^}]*color:#fdf6ec/);
+    expect(css).toMatch(/\.vg-panel \.quiz-note\{color:#e7d7f2\}/);
   });
 
   it('the verified answers are the facts the explanations state', () => {
