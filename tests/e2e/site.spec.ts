@@ -26,10 +26,10 @@ test('mobile disclosure keyboard, Escape, focus and 320px reflow',async({page})=
 test('axe homepage, Kids, article and submitted quiz have no serious/critical violations',async({page})=>{
  for(const path of ['/','/kids/','/discover/a-day-in-shadows/','/quiz/']){await page.goto(path);if(path==='/quiz/'){await page.getByRole('radio').first().check();await page.getByRole('button',{name:/Check answer/}).click();await expect(page.getByRole('status')).toBeVisible();}const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(result.violations.filter(v=>v.impact==='serious'||v.impact==='critical'),JSON.stringify(result.violations)).toEqual([]);}
 });
-test('Kids navigation sends no third party requests, stores no identifiers',async({page,context})=>{
- const thirdParty:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://localhost:4173/'))thirdParty.push(r.url());});
+test('Kids navigation sends no third party requests except Clarity, stores no identifiers',async({page,context})=>{
+ const thirdParty:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://localhost:4173/')&&!/^https:\/\/([\w-]+\.)*clarity\.ms\//.test(r.url()))thirdParty.push(r.url());});
  for(const path of ['/kids/','/kids/words-that-help/','/quiz/','/kids/shadow-explorers/']){await page.goto(path);expect(await page.evaluate(()=>({local:localStorage.length,session:sessionStorage.length}))).toEqual({local:0,session:0});}
- expect(await context.cookies()).toEqual([]);expect(thirdParty).toEqual([]);
+ expect((await context.cookies()).filter(c=>!['_clck','_clsk'].includes(c.name))).toEqual([]);expect(thirdParty).toEqual([]);
 });
 test('without JavaScript, articles and dated answers remain readable',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();await page.goto('http://localhost:4173/kids/shadow-explorers/');await expect(page.getByRole('heading',{name:'Trace, wait, compare'})).toBeVisible();await page.goto('http://localhost:4173/play/number-detective-001/');await page.getByRole('radio',{name:/30/}).check();await page.getByRole('button',{name:/Check answer/}).click();await expect(page.getByText(/The terms are 1×2/)).toBeVisible();await context.close();

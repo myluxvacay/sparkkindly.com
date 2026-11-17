@@ -674,7 +674,8 @@ test('an anonymous visitor answering a Kids quiz stores nothing, gets no cookie 
     await page.getByRole('button', { name: /Check answer/ }).click();
     await expect(page.getByRole('status')).toContainText('Correct');
     expect(await page.evaluate(() => ({ local: localStorage.length, session: sessionStorage.length }))).toEqual({ local: 0, session: 0 });
-    expect(await context.cookies()).toEqual([]);
+    // The site itself sets no cookie; Microsoft Clarity's own cookies (_clck/_clsk, owner decision 17 Nov 2026) are the one exception.
+    expect((await context.cookies()).filter((c) => !['_clck', '_clsk'].includes(c.name))).toEqual([]);
     expect(await responses(id)).toEqual([]);
   } finally {
     await context.close();
