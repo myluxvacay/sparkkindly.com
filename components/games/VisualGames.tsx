@@ -207,9 +207,11 @@ export default function VisualGames() {
           <div className="vg-options" role="group" aria-label="Picture choices">
             {round.options.map((o) => {
               const state = done && o.id === round.correctId ? ' correct' : picked === o.id ? ' picked' : '';
+              // Text-only option (no art): the label alone is the card's content and accessible name.
+              const textOnly = o.art ? '' : ' vg-option-text';
               return (
-                <button key={o.id} className={`vg-option${state}`} onClick={() => pick(o.id)} disabled={done} aria-pressed={picked === o.id}>
-                  <GameArt art={o.art} alt={o.alt} />
+                <button key={o.id} className={`vg-option${textOnly}${state}`} onClick={() => pick(o.id)} disabled={done} aria-pressed={picked === o.id}>
+                  {o.art && <GameArt art={o.art} alt={o.alt ?? o.label} />}
                   <span>{o.label}</span>
                 </button>
               );

@@ -34,6 +34,9 @@ Built on `feat/spark-and-visual-games` (off `staging`): Spark homepage widget (#
    with a per-option image reference (art key or media reference + licence), teach `content:validate` and the
    reviewer pass to verify image–answer correctness, and add a `visual` mechanic or reuse `odd_one_out` /
    `multiple_choice` with image options. Until then, new rounds are code-reviewed edits to the data file.
+   Carry over the authoring rule from the in-repo rounds (owner report, 17 Nov 2026): an option must never
+   repeat the round's hero image — when the hero shows the answer's picture, options are text-only cards
+   (omit `art`/`alt`); a data-level test pins this for every round.
 2. **Recording/leaderboard:** wiring picture-game results into profile scoring needs the same closed-choice
    recording path as quizzes (`lib/accounts/record-play.ts`) — do it with the schema work, not before.
 3. **Spark poses:** the meet-sheet poses (guiding, celebrating, listening) can be cut into separate web assets
