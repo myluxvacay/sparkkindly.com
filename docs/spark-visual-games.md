@@ -15,6 +15,13 @@ Built on `feat/spark-and-visual-games` (off `staging`): Spark homepage widget (#
 - **Assets.** Canonical cape Spark, optimized: `public/brand/spark.webp` (27 KB) and `spark-220.webp` (12 KB),
   plus `spark-greeting.mp3` (140 KB, fetched only on tap). The 3 MB attention-loop MP4 was deliberately NOT
   shipped — CSS animation on the static image is lighter.
+- **Animation slots (updated later 17 Nov).** The owner-provided transparent waving GIF
+  `public/brand/spark-waving.gif` (313×627, 249 KB) replaced the CSS-animated static figure in the homepage
+  widget and the games presenter. `SPARK_SLOTS` in `components/games/VisualGames.tsx` names the reaction
+  slots — `presenting` (waving GIF), `victory` (`spark-victory.gif`, fallback waving GIF) and `encouraging`
+  (`spark-encouraging.gif`, fallback still Spark) — so a new reaction GIF is a file drop with no logic
+  change. Reduced-motion visitors get the still Spark in every slot (matchMedia check, not just the global
+  CSS rule, because a GIF animates itself).
 
 ## Follow-ups
 

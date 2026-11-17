@@ -31,4 +31,12 @@ describe('SparkAssistant', () => {
     expect(src).toContain('/brand/spark-greeting.mp3');
     expect(src).toContain('A warm and curious welcome to SparkKindly');
   });
+
+  it('waves with the transparent GIF, and serves the still Spark to reduced-motion visitors', () => {
+    expect(src).toContain('/brand/spark-waving.gif');
+    expect(src).toContain("window.matchMedia('(prefers-reduced-motion: reduce)')");
+    // The still is the reduced-motion branch, the GIF the default branch.
+    expect(src).toMatch(/reducedMotion \? \([\s\S]*?\/brand\/spark\.webp/);
+    expect(src).toMatch(/: \([\s\S]*?\/brand\/spark-waving\.gif/);
+  });
 });
