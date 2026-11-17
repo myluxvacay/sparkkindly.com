@@ -1,15 +1,20 @@
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import { headers } from 'next/headers';
 import { getDb } from '@/lib/db';
 import type { PublicItem } from '@/lib/items/repo';
 import { playResult } from '@/lib/play/answer';
+import { buildModel, poolQuizzes, rotateCandidates, DIFFICULTY_ORDER } from '@/lib/play/keep-playing';
 import { readPlay } from '@/lib/public/body';
+import { listQuizzes } from '@/lib/public/reads';
 import { currentViewer } from '@/lib/accounts/scope-next';
 import { recordableRequest, recordPlay, type AnswerNote } from '@/lib/accounts/record-play';
+import { listAnsweredIds } from '@/lib/accounts/responses';
 import { clueCount, hasResponse, toParams, type SearchParams } from '@/lib/public/play-params';
 import PlayForm from './PlayForm';
 import PlayResult from './PlayResult';
 import PlayEnhancer from './PlayEnhancer';
+import KeepPlaying from './KeepPlaying';
 import SharePrompt from './SharePrompt';
 import DifficultyMeter from './DifficultyMeter';
 
@@ -17,7 +22,20 @@ import DifficultyMeter from './DifficultyMeter';
 // /quiz/, so both behave the same. A signed-in context allowed to save answers gets its first answer recorded, only for
 // our own form's same-origin submit (lib/accounts/record-play.ts); the note says "saved" only when it was. A visitor
 // who cannot save sees exactly the page as before.
-export default async function PlayPanel({ item, searchParams }: { item: PublicItem; searchParams: SearchParams }) {
+export default async function PlayPanel({
+  item,
+  searchParams,
+  trackSeen = true,
+}: {
+  item: PublicItem;
+  searchParams: SearchParams;
+  /**
+   * Whether the keep-playing seen list may be kept on the visitor's device for this surface. The
+   * daily-question surfaces (/quiz/ and the home hero) pass false, and Kids-audience items are always
+   * excluded below: those journeys store nothing in the browser (child-safety rule, pinned by e2e).
+   */
+  trackSeen?: boolean;
+}) {
   const action = `/${item.world}/${item.slug}/`;
   const play = readPlay(item.body);
   const params = toParams(searchParams);
@@ -30,12 +48,63 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
       ? `Please give each item a different position from 1 to ${play.items.length}, then check again.`
       : undefined;
   const another = item.kind === 'quiz' ? '/quiz/archive/' : `/${item.world}/`;
+  const track = trackSeen && item.audience !== 'kids';
+
+  // "Keep playing" (owner request, 17 Nov 2026): after a quiz answer, offer an easier / same-level /
+  // harder next quiz from the same scope-filtered pool the archive lists, so the player stays in the
+  // flow. Candidates are rotated (seeded by this quiz) per level; the island re-picks against the
+  // merged seen-set (this device's memory ∪ the signed-in player's saved answers) at tap time. Built
+  // only for a checked quiz answer — never for the bare question.
+  let keepPlaying: ReactNode = null;
+  if (result?.status === 'ok' && item.kind === 'quiz' && play.difficulty) {
+    const db = getDb();
+    const items: PublicItem[] = [];
+    for (let page = 0; page < 6; page++) {
+      const rows = await listQuizzes(db, viewer.scope, { limit: 50, offset: page * 50 });
+      items.push(...rows);
+      if (rows.length < 50) break;
+    }
+    const pools = poolQuizzes(
+      items.map((q) => ({ id: q.id, world: q.world, slug: q.slug, difficulty: readPlay(q.body).difficulty })),
+      item.id,
+    );
+    for (const level of DIFFICULTY_ORDER) {
+      pools[level] = rotateCandidates(pools[level], item.id);
+    }
+    // A signed-in player's seen-set includes their saved answers (lib/accounts/responses): only the
+    // ids among these candidates are needed, and a failed read degrades to the device-only set —
+    // it never changes what the visitor sees beyond the deal.
+    let accountSeen: string[] = [];
+    if (viewer.owner) {
+      try {
+        const candidateIds = DIFFICULTY_ORDER.flatMap((level) => pools[level].map((cand) => cand.id));
+        accountSeen = await listAnsweredIds(db, viewer.owner, viewer.scope, candidateIds);
+      } catch (err) {
+        console.error('keep-playing history read failed:', (err as Error)?.name);
+      }
+    }
+    const model = buildModel(item.id, play.difficulty, pools, {
+      accountSeen,
+      signedIn: Boolean(viewer.owner),
+      trackSeen: track,
+    });
+    if (model.options.easier || model.options.same || model.options.harder) {
+      keepPlaying = <KeepPlaying model={model} correct={result.correct} />;
+    }
+  }
 
   return (
     <PlayEnhancer>
-      <div className="quiz-panel">
+      <div
+        className="quiz-panel"
+        id="play-panel"
+        data-kp-current={track && item.kind === 'quiz' ? item.id : undefined}
+        data-kp-level={track && item.kind === 'quiz' ? play.difficulty : undefined}
+      >
         <DifficultyMeter level={play.difficulty} />
-        {result && result.status !== 'not_found' && <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} />}
+        {result && result.status !== 'not_found' && (
+          <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} keepPlaying={keepPlaying ?? undefined} />
+        )}
         {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
         <Note note={note} />
         {result?.status === 'ok' && <SharePrompt itemId={item.id} />}

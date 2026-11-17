@@ -108,8 +108,8 @@ test('keyboard alone completes a multiple-choice item', async ({ page }) => {
   await expect(page.getByRole('button', { name: /Check answer/ })).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(page.getByRole('status')).toContainText('Not quite');
-  await page.getByRole('link', { name: 'Try another' }).focus();
-  await expect(page.getByRole('link', { name: 'Try another' })).toBeFocused();
+  await page.getByRole('link', { name: 'Browse all questions' }).focus();
+  await expect(page.getByRole('link', { name: 'Browse all questions' })).toBeFocused();
 });
 
 test('without JavaScript a starter quiz can be answered', async ({ browser }) => {

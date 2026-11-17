@@ -31,7 +31,7 @@ export default async function QuizPage({ searchParams }: { searchParams: Promise
       {quiz ? (
         <>
           {showsMoneyDisclaimer(quiz.world) && <MoneyDisclaimer />}
-          <PlayPanel item={quiz} searchParams={await searchParams} />
+          <PlayPanel item={quiz} searchParams={await searchParams} trackSeen={false} />
           <ShareButtons item={quiz} childContext={isChildScope(scope)} />
         </>
       ) : (
