@@ -40,5 +40,7 @@ test('rendering the image makes no request beyond localhost', async ({ page }) =
       }),
     url('play', 'img-net'),
   );
-  expect([...hosts].filter((h) => h !== 'localhost' && h !== '127.0.0.1')).toEqual([]);
+  // Microsoft Clarity (the site tag, owner decision 17 Nov 2026) may phone home while the page sits open;
+  // the gate's point stands: rendering the image itself fetches nothing from any third party.
+  expect([...hosts].filter((h) => h !== 'localhost' && h !== '127.0.0.1' && h !== 'clarity.ms' && !h.endsWith('.clarity.ms'))).toEqual([]);
 });
