@@ -107,11 +107,13 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
         return null;
       }
     };
-    const kpMarkHintSeen = (panel: Element) => {
-      try {
-        sessionStorage.setItem(KP_HINT_KEY, '1');
-      } catch {
-        // The hint simply stays; it is a one-line tip, not a gate.
+    const kpMarkHintSeen = (panel: Element, persist: boolean) => {
+      if (persist) {
+        try {
+          sessionStorage.setItem(KP_HINT_KEY, '1');
+        } catch {
+          // The hint simply stays; it is a one-line tip, not a gate.
+        }
       }
       panel.querySelector<HTMLElement>('[data-kp-hint]')?.setAttribute('hidden', '');
     };
@@ -127,8 +129,10 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
       saveSeen(backend, markSeen(loadSeen(backend), id, level as Difficulty, Date.now()));
     }
 
+    // On no-track surfaces (Kids questions, the daily-question pages) the device store is never even
+    // read — the merged set is the account history alone, which lives server-side already.
     const kpMergedSeen = (model: KeepPlayModel): Set<string> =>
-      mergeSeenIds(seenIds(loadSeen(kpStorage())), model.accountSeen);
+      model.trackSeen ? mergeSeenIds(seenIds(loadSeen(kpStorage())), model.accountSeen) : new Set(model.accountSeen);
 
     type KpDirState = 'ok' | 'exhausted' | 'cycle' | null;
     const kpDirState = (model: KeepPlayModel, dir: KeepPlayDirection, seen: ReadonlySet<string>): KpDirState => {
@@ -167,10 +171,11 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
       strong.textContent = 'You’ve played every question! 🎉';
       head.append(strong);
       const body = document.createElement('p');
-      body.textContent =
-        'That’s the whole shelf for now — new questions land every day. Browse the archive to replay any favourite, or start fresh below.';
+      body.textContent = model.trackSeen
+        ? 'That’s the whole shelf for now — new questions land every day. Browse the archive to replay any favourite, or start fresh below.'
+        : 'That’s the whole shelf for now — new questions land every day. Browse the archive to replay any favourite.';
       done.append(head, body);
-      if (model.signedIn) {
+      if (model.signedIn && model.trackSeen) {
         const note = document.createElement('p');
         note.textContent = 'Start fresh clears only this device’s list — your saved answers and scores stay.';
         done.append(note);
@@ -235,7 +240,7 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
       }
       // Otherwise there is an unseen candidate (pick), or the pool in hand was truncated so the level
       // cannot be proven finished and cycles — never a dead end.
-      kpMarkHintSeen(panel);
+      kpMarkHintSeen(panel, model.trackSeen);
       window.location.assign(pick.candidate.href);
     };
 

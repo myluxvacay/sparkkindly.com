@@ -117,6 +117,13 @@ export type KeepPlayModel = {
   currentLevel: Difficulty;
   signedIn: boolean;
   accountSeen: string[];
+  /**
+   * Whether the on-device seen list may be used at all on this surface. It is off for Kids-audience
+   * questions and on the daily-question surfaces (/quiz/ and the home hero): the site's child-safety
+   * rule is that those journeys store nothing in the browser. There the buttons and gestures simply
+   * follow the server's candidates, and no browser storage is read or written.
+   */
+  trackSeen: boolean;
   options: Record<KeepPlayDirection, KeepPlayOption>;
 };
 
@@ -124,7 +131,7 @@ export function buildModel(
   currentId: string,
   currentLevel: Difficulty,
   pools: CandidatePools,
-  extra: { accountSeen?: string[]; signedIn?: boolean } = {},
+  extra: { accountSeen?: string[]; signedIn?: boolean; trackSeen?: boolean } = {},
 ): KeepPlayModel {
   const options = {} as Record<KeepPlayDirection, KeepPlayOption>;
   for (const direction of ['easier', 'same', 'harder'] as KeepPlayDirection[]) {
@@ -143,6 +150,7 @@ export function buildModel(
     currentLevel,
     signedIn: extra.signedIn ?? false,
     accountSeen: extra.accountSeen ?? [],
+    trackSeen: extra.trackSeen ?? true,
     options,
   };
 }

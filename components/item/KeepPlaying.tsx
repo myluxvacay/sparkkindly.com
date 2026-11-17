@@ -71,13 +71,15 @@ export default function KeepPlaying({ model, correct }: { model: KeepPlayModel; 
         Tip: on a phone or tablet, flick up on this panel for a harder one, flick down for an easier one, or
         double-tap for the same level.
       </p>
-      <p className="kp-fresh">
-        <button type="button" className="text-button" data-kp-fresh>
-          Start fresh
-        </button>{' '}
-        — forget which questions you’ve seen on this device
-        {model.signedIn ? '; your saved answers and scores stay' : ''}.
-      </p>
+      {model.trackSeen && (
+        <p className="kp-fresh">
+          <button type="button" className="text-button" data-kp-fresh>
+            Start fresh
+          </button>{' '}
+          — forget which questions you’ve seen on this device
+          {model.signedIn ? '; your saved answers and scores stay' : ''}.
+        </p>
+      )}
     </div>
   );
 }

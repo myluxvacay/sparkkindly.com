@@ -22,7 +22,20 @@ import DifficultyMeter from './DifficultyMeter';
 // /quiz/, so both behave the same. A signed-in context allowed to save answers gets its first answer recorded, only for
 // our own form's same-origin submit (lib/accounts/record-play.ts); the note says "saved" only when it was. A visitor
 // who cannot save sees exactly the page as before.
-export default async function PlayPanel({ item, searchParams }: { item: PublicItem; searchParams: SearchParams }) {
+export default async function PlayPanel({
+  item,
+  searchParams,
+  trackSeen = true,
+}: {
+  item: PublicItem;
+  searchParams: SearchParams;
+  /**
+   * Whether the keep-playing seen list may be kept on the visitor's device for this surface. The
+   * daily-question surfaces (/quiz/ and the home hero) pass false, and Kids-audience items are always
+   * excluded below: those journeys store nothing in the browser (child-safety rule, pinned by e2e).
+   */
+  trackSeen?: boolean;
+}) {
   const action = `/${item.world}/${item.slug}/`;
   const play = readPlay(item.body);
   const params = toParams(searchParams);
@@ -35,6 +48,7 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
       ? `Please give each item a different position from 1 to ${play.items.length}, then check again.`
       : undefined;
   const another = item.kind === 'quiz' ? '/quiz/archive/' : `/${item.world}/`;
+  const track = trackSeen && item.audience !== 'kids';
 
   // "Keep playing" (owner request, 17 Nov 2026): after a quiz answer, offer an easier / same-level /
   // harder next quiz from the same scope-filtered pool the archive lists, so the player stays in the
@@ -69,7 +83,11 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
         console.error('keep-playing history read failed:', (err as Error)?.name);
       }
     }
-    const model = buildModel(item.id, play.difficulty, pools, { accountSeen, signedIn: Boolean(viewer.owner) });
+    const model = buildModel(item.id, play.difficulty, pools, {
+      accountSeen,
+      signedIn: Boolean(viewer.owner),
+      trackSeen: track,
+    });
     if (model.options.easier || model.options.same || model.options.harder) {
       keepPlaying = <KeepPlaying model={model} correct={result.correct} />;
     }
@@ -79,8 +97,8 @@ export default async function PlayPanel({ item, searchParams }: { item: PublicIt
     <PlayEnhancer>
       <div
         className="quiz-panel"
-        data-kp-current={item.kind === 'quiz' ? item.id : undefined}
-        data-kp-level={item.kind === 'quiz' ? play.difficulty : undefined}
+        data-kp-current={track && item.kind === 'quiz' ? item.id : undefined}
+        data-kp-level={track && item.kind === 'quiz' ? play.difficulty : undefined}
       >
         <DifficultyMeter level={play.difficulty} />
         {result && result.status !== 'not_found' && (
