@@ -18,5 +18,5 @@ export function anonymousScope(now: Date = new Date()): Scope {
 export const RESERVED_WORLD_SLUGS: readonly string[] = [
   'admin', 'account', 'api', 'about', 'privacy', 'terms', 'accessibility', 'contact', 'editorial-policy',
   'quiz', 'search', 'topics', 'me', 'circles', 'report', 'community', 'comments', 'contributors', 'go', 'sponsorship',
-  'leaderboard',
+  'leaderboard', 'games',
 ];
