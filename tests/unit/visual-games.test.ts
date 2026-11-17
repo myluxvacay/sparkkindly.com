@@ -49,14 +49,30 @@ describe('visual games starter set', () => {
   it('Spark presenter uses the waving GIF and the named reaction slots with their fallbacks', () => {
     expect(gamesSrc).not.toContain('spark-220.webp');
     // Slot mapping: victory falls back to the waving GIF, encouraging to the still Spark (SPARK-ANIMATIONS.md).
-    expect(gamesSrc).toContain("victory: { animated: '/brand/spark-victory.gif', fallback: '/brand/spark-waving.gif', still: '/brand/spark.webp' }");
-    expect(gamesSrc).toContain("encouraging: { animated: '/brand/spark-encouraging.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp' }");
+    expect(gamesSrc).toContain("victory: { animated: '/brand/spark-victory.gif', fallback: '/brand/spark-waving.gif', still: '/brand/spark.webp', voice: '/brand/spark-you-did-it.mp3' }");
+    expect(gamesSrc).toContain("encouraging: { animated: '/brand/spark-encouraging.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp', voice: '/brand/spark-you-got-this.mp3' }");
     expect(gamesSrc).toContain("presenting: { animated: '/brand/spark-waving.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp' }");
     // Correct pick shows the victory slot, a wrong pick the encouraging slot.
     expect(gamesSrc).toContain("slot={solved ? 'victory' : picked ? 'encouraging' : 'presenting'}");
     // Reduced motion: the still Spark in every slot.
     expect(gamesSrc).toContain("window.matchMedia('(prefers-reduced-motion: reduce)')");
     expect(gamesSrc).toContain('reducedMotion ? conf.still');
+  });
+
+  it("Spark's reaction voice plays only on the player's own answer click, behind a persisted toggle", () => {
+    // The two clips are wired to the pick handler — correct and wrong branches respectively.
+    expect(gamesSrc).toContain('playClip(SPARK_SLOTS.victory.voice)');
+    expect(gamesSrc).toContain('playClip(SPARK_SLOTS.encouraging.voice)');
+    // No autoplay anywhere, and play() rejections are guarded.
+    expect(gamesSrc).not.toContain('autoPlay');
+    expect(gamesSrc).toContain("void a.play().catch(() => {})");
+    // The clips are not in the markup (created lazily on first interaction, not preloaded on load).
+    expect(gamesSrc).not.toContain('<audio');
+    expect(gamesSrc).toContain("a.preload = 'auto'");
+    // Visible toggle, default on, persisted in localStorage.
+    expect(gamesSrc).toContain('aria-pressed={soundOn}');
+    expect(gamesSrc).toContain("localStorage.getItem(SOUND_KEY) !== 'off'");
+    expect(gamesSrc).toContain("localStorage.setItem(SOUND_KEY, on ? 'off' : 'on')");
   });
 
   it('panel text is light on the dark plum panel (the prompt must never be dark-on-dark)', () => {

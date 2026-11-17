@@ -21,7 +21,12 @@ Built on `feat/spark-and-visual-games` (off `staging`): Spark homepage widget (#
   slots — `presenting` (waving GIF), `victory` (`spark-victory.gif`, fallback waving GIF) and `encouraging`
   (`spark-encouraging.gif`, fallback still Spark) — so a new reaction GIF is a file drop with no logic
   change. Reduced-motion visitors get the still Spark in every slot (matchMedia check, not just the global
-  CSS rule, because a GIF animates itself).
+  CSS rule, because a GIF animates itself). The real victory/encouraging GIFs arrived the same day, with
+  voice lines (`spark-you-did-it.mp3`, `spark-you-got-this.mp3`): a correct pick plays the victory GIF +
+  "You did it!", a wrong pick the encouraging GIF + "You got this! Try again!". Sound plays ONLY from the
+  player's own answer click (never on load/round change/hover), behind a visible on/off toggle persisted
+  in `localStorage` (`sk-games-sound`, default on); clips are created and preloaded lazily on that first
+  interaction and `play()` rejections are swallowed.
 
 ## Follow-ups
 
