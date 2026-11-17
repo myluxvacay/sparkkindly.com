@@ -359,6 +359,8 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .vg-option{background:#fff;border:1px solid #e7d7f2;border-radius:14px;padding:10px;cursor:pointer;display:grid;gap:8px;justify-items:center;color:inherit;font-weight:600}
 .vg-option svg{width:100%;max-width:180px;height:auto}
 .vg-option:hover,.vg-option:focus-visible{border-color:#5a2d82}
+.vg-option-text{min-height:132px;align-content:center}
+.vg-option-text span{font-size:20px}
 .vg-option.picked{border-color:#b97b0f;background:#fdf3d8}
 .vg-option.correct{border-color:#2e7d32;background:#e6f4e6}
 .vg-result{background:#f3eafd;border-radius:12px;padding:12px}
@@ -380,4 +382,10 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
    (WCAG 2.2 AA against #5b2c6f); the light option/result cards inside the panel keep their pinned dark text. */
 .vg-panel h2{color:#fdf6ec}
 .vg-panel .quiz-note{color:#e7d7f2}
-.vg-panel .vg-give-up{color:#ffe087}
+/* Give-up control (17 Nov 2026, second owner screenshot): pinning only its text colour was not enough —
+   as a <button> with no background of its own it rendered on the UA default pale button face, so the pale
+   #ffe087 text sat on near-white and vanished. It is now a real button in the panel's own button pairing
+   (gold face, dark ink — the same pairing as .quiz-panel .button): #3a2444 on #f7c948 is 8.8:1, and the
+   gold face itself contrasts 6.6:1 with the plum panel, so it reads as a button, not a smudge. */
+.vg-panel .vg-give-up{background:#f7c948;border:1px solid #f7c948;border-radius:5px;color:#3a2444;font-size:14px;font-weight:600;min-height:44px;padding:10px 20px;text-decoration:none}
+.vg-panel .vg-give-up:hover{background:#ffe087;border-color:#ffe087}

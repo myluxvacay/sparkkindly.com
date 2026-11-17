@@ -16,9 +16,14 @@ export type VisualGameKind = 'odd-one-out' | 'pick-the-right-one' | 'flags-and-p
 export type GameOption = {
   id: string;
   label: string;
-  /** Artwork key rendered by GameArt; also the image's identity for alt text. */
-  art: string;
-  alt: string;
+  /**
+   * Artwork key rendered by GameArt, with its alt text. Omit BOTH for a text-only card (the label is
+   * then the card's content and its accessible name). Hero-led rounds use text-only options when the
+   * hero already shows the picture the answer would repeat — an option must never duplicate the hero
+   * image, or the round becomes picture-matching instead of knowledge (owner report, 17 Nov 2026).
+   */
+  art?: string;
+  alt?: string;
 };
 
 export type VisualRound = {
@@ -125,11 +130,13 @@ export const visualRounds: VisualRound[] = [
     difficulty: 'medium',
     prompt: 'This flag — green, with a yellow diamond and a blue globe — belongs to which country?',
     hero: { art: 'flag-br', alt: 'The flag of Brazil: green with a yellow diamond and a blue circle with white stars' },
+    // Text-only options on purpose: the hero already shows Brazil's flag, so flag cards would let the
+    // player picture-match the hero instead of knowing the country (owner report, 17 Nov 2026).
     options: [
-      { id: 'argentina', label: 'Argentina', art: 'flag-ar', alt: 'The flag of Argentina: light blue and white horizontal stripes with a golden sun' },
-      { id: 'mexico', label: 'Mexico', art: 'flag-mx', alt: 'The flag of Mexico: green, white and red vertical stripes' },
-      { id: 'brazil', label: 'Brazil', art: 'flag-br', alt: 'The flag of Brazil: green with a yellow diamond and a blue circle' },
-      { id: 'portugal', label: 'Portugal', art: 'flag-pt', alt: 'The flag of Portugal: green and red vertical bands with a yellow armillary sphere' },
+      { id: 'argentina', label: 'Argentina' },
+      { id: 'mexico', label: 'Mexico' },
+      { id: 'brazil', label: 'Brazil' },
+      { id: 'portugal', label: 'Portugal' },
     ],
     correctId: 'brazil',
     explanation: 'That is Brazil’s flag. The blue globe shows stars as they appeared over Rio de Janeiro on 15 November 1889.',
