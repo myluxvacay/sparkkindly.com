@@ -10,12 +10,13 @@ export default function Page() {
       crumb="Privacy and the grown-up guide"
       eyebrow="PRIVACY AND THE GROWN-UP GUIDE"
       title="Curiosity without a profile."
-      updated="1 November 2026"
+      updated="17 November 2026"
       sections={[
         {
           heading: 'What we collect today',
           paragraphs: [
-            'SparkKindly has no accounts, sign-in, comments, uploads, analytics, advertising, tracking cookies, local-storage identifiers, fingerprinting or location features. Your browser makes no requests to other companies’ servers while you read or play: fonts, images and scripts all come from SparkKindly itself.',
+            'SparkKindly has no accounts, sign-in, comments, uploads, advertising, local-storage identifiers, fingerprinting or location features. Fonts, images and the site’s own scripts all come from SparkKindly itself. The one outside service we use is Microsoft Clarity, described in the next paragraph.',
+            'We use Microsoft Clarity to understand how visitors use the site: which pages are read, and where people click, scroll and stop, shown to us as heatmaps and recorded browsing sessions. Clarity is run by Microsoft, which processes that information on our behalf, and it sets cookies (called _clck and _clsk) to tell one visit from another. The words on a page are hidden in Clarity’s recordings by default, and we do not send Clarity anything you type or your answers. Microsoft’s own privacy statement describes what Microsoft does with the information Clarity collects.',
             'A few articles carry a video from YouTube. Nothing is requested from YouTube until you press Play: the preview picture comes from SparkKindly. When you press Play, the video loads from YouTube (a Google service), which may set its own cookies. Kids pages never carry a video.',
             'The only thing a visitor can send us is a “Report a problem” form. It stores the kind of problem, the message you type (up to 1000 characters, optional), the page it is about and the time. It does not store your name, email address or any account, and we ask you not to type personal details into it.',
           ],
@@ -36,7 +37,7 @@ export default function Page() {
         {
           heading: 'Kids and shared devices',
           paragraphs: [
-            'Kids activities are meant for ages 6 to 9 with an adult beside them. The Kids pages follow the same rules as the rest of the site: no accounts, no stored answers, no tracking and no outside requests. Please do not type a child’s name, birthday, photo, location or other identifying detail into the problem form or anywhere else.',
+            'Kids activities are meant for ages 6 to 9 with an adult beside them. The Kids pages follow the same rules as the rest of the site: no accounts and no stored answers. The same Microsoft Clarity measurement described above runs on Kids pages too; it records how a page is used, and the words on the page are hidden in its recordings by default. Please do not type a child’s name, birthday, photo, location or other identifying detail into the problem form or anywhere else.',
           ],
         },
         {

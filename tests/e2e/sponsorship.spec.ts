@@ -1,7 +1,7 @@
 import { test, expect, type Browser, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { addItem, addTopic, sql } from './helpers/fixtures';
-import { BASE, session, signInContext } from './helpers/admin';
+import { BASE, isClarityUrl, session, signInContext } from './helpers/admin';
 import { hash, member as signedIn } from './helpers/members';
 
 // Sponsorship (plan 6 Task 2). The preview server on 4173 runs with SPONSORSHIP_ENABLED (and accounts); the server on
@@ -72,7 +72,7 @@ test('the owner attaches a sponsor to a Grow topic; an adults item shows one lin
 
   const thirdParty: string[] = [];
   page.on('request', (r) => {
-    if (!r.url().startsWith(BASE) && !r.url().startsWith('data:')) thirdParty.push(r.url());
+    if (!r.url().startsWith(BASE) && !r.url().startsWith('data:') && !isClarityUrl(r.url())) thirdParty.push(r.url());
   });
   await page.goto(`/grow/${ADULTS}/`);
   const line = page.locator('.sponsor-line');
