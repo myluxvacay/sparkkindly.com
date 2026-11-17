@@ -97,6 +97,7 @@ export default async function PlayPanel({
     <PlayEnhancer>
       <div
         className="quiz-panel"
+        id="play-panel"
         data-kp-current={track && item.kind === 'quiz' ? item.id : undefined}
         data-kp-level={track && item.kind === 'quiz' ? play.difficulty : undefined}
       >

@@ -17,7 +17,10 @@ export type CardVariant = 'rows' | 'strip' | 'text';
 // headingLevel is 2 when the card sits directly under the page's h1, 3 (default) under an h2.
 export default function ItemCard({ item, world, headingLevel = 3, variant = 'rows' }: { item: PublicItem; world?: World; headingLevel?: 2 | 3; variant?: CardVariant }) {
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
-  const href = `/${item.world}/${item.slug}/`;
+  // A card for a playable item (quiz/game) is a play-intent entry — the archive shelf above all — so
+  // its link carries the play panel's fragment and the visitor lands on the question, not the article
+  // header (owner phone report, 17 Nov 2026). Article cards keep the plain URL: reading starts at the top.
+  const href = item.kind === 'article' ? `/${item.world}/${item.slug}/` : `/${item.world}/${item.slug}/#play-panel`;
   const meta = (
     <div className="card-meta">
       <span className={`brand-label ${world?.color ?? 'gold'}`}>{world?.name ?? item.world}</span>

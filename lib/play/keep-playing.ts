@@ -17,7 +17,9 @@ export const emptyPools = (): CandidatePools => ({ easy: [], medium: [], hard: [
 
 // Group visible quizzes into per-level candidate pools, leaving out the quiz just played. Order is the
 // caller's (the server rotates before capping); quizzes without a readable difficulty cannot be offered
-// by level and are skipped.
+// by level and are skipped. Candidate hrefs carry the play panel's fragment (#play-panel, the id on
+// PlayPanel's panel): a keep-playing hop is a play-intent arrival, so the browser's native anchor scroll
+// lands the visitor on the question itself, not the article header (owner phone report, 17 Nov 2026).
 export function poolQuizzes(
   items: { id: string; world: string; slug: string; difficulty?: Difficulty }[],
   excludeId: string,
@@ -25,7 +27,7 @@ export function poolQuizzes(
   const pools = emptyPools();
   for (const item of items) {
     if (item.id === excludeId || !item.difficulty) continue;
-    pools[item.difficulty].push({ id: item.id, href: `/${item.world}/${item.slug}/` });
+    pools[item.difficulty].push({ id: item.id, href: `/${item.world}/${item.slug}/#play-panel` });
   }
   return pools;
 }

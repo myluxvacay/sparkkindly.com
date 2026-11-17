@@ -29,7 +29,12 @@ export default function KeepPlaying({ model, correct }: { model: KeepPlayModel; 
   const spark = correct ? KP_SPARK.victory : KP_SPARK.encouraging;
   return (
     <div className="keep-playing" data-kp data-kp-model={JSON.stringify(model)}>
-      <div className="kp-head">
+      {/* The Spark band is the flick zone (owner's iPhone test, 17 Nov 2026): a vertical flick anywhere
+          scrollable is a native scroll gesture the page wins, so the zone carries touch-action:none
+          (globals.css .kp-flick) and touches starting on Spark reach the island's flick detector
+          instead of scrolling. It holds no interactive elements — the buttons below stay the primary
+          path, and touches anywhere else on the panel scroll exactly as before. */}
+      <div className="kp-head kp-flick" data-kp-flick>
         <img
           className="kp-spark"
           src={spark.animated}
@@ -68,8 +73,8 @@ export default function KeepPlaying({ model, correct }: { model: KeepPlayModel; 
         })}
       </div>
       <p className="kp-hint" data-kp-hint>
-        Tip: on a phone or tablet, flick up on this panel for a harder one, flick down for an easier one, or
-        double-tap for the same level.
+        Tip: flick Spark up for a harder one, down for an easier one, or double-tap Spark for the same level —
+        or just tap the buttons.
       </p>
       {model.trackSeen && (
         <p className="kp-fresh">
