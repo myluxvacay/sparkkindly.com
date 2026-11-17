@@ -1,0 +1,67 @@
+{
+  "id": "kids-draft-2026-11-17-03",
+  "slug": "a-colour-walk",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "A colour walk: find something red, yellow, blue and green",
+  "description": "Take a walk and hunt with your eyes: something red, something yellow, something blue, something green. A simple game that makes a familiar street look brand new.",
+  "publishedAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "hero": {
+    "src": "/images/focus.webp",
+    "alt": "A sunlit path winding through a forest",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "outdoors",
+    "colours",
+    "walking"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-17",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 17 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "How to play",
+      "paragraphs": [
+        "Before you set off, say the colours out loud together: red, yellow, blue and green. Then walk slowly, and whenever you spot one of the colours, point and shout it out: “Red! A post box!” “Yellow! A flower!”",
+        "You do not pick anything up — your eyes do all the collecting. When you have found all four colours, start again and try to find each colour in a smaller thing than last time."
+      ]
+    },
+    {
+      "heading": "Harder hunts for champion spotters",
+      "paragraphs": [
+        "Found everything too fast? Add purple and orange. Still too easy? Hunt for two colours on the same thing — a stripy shirt, a painted door, a bird with a coloured chest.",
+        "On the way home, try to remember one thing for every colour without looking. Your brain will surprise you with how much it kept."
+      ]
+    },
+    {
+      "heading": "Rainy-day version",
+      "paragraphs": [
+        "No walk today? Play the same game in one room of your house, or with a picture book: turn the pages and hunt the colours there.",
+        "Colours are hiding everywhere. Once your eyes learn to hunt them, even a grey day has red, yellow, blue and green in it somewhere."
+      ]
+    }
+  ],
+  "takeaway": "Hunt colours with your eyes on a walk — red, yellow, blue, green — and a familiar street becomes a treasure map.",
+  "fiction": false,
+  "ageGuidance": "Ages 3–7, with an adult",
+  "materials": [
+    "Comfortable shoes for walking",
+    "A grown-up to walk with"
+  ],
+  "supervision": "An adult walks with the child at all times, holds hands near roads, and chooses a safe, familiar route.",
+  "safetyNotes": [
+    "Hold an adult's hand near roads and only cross at safe crossing places.",
+    "Look with your eyes only — do not pick flowers or touch animals, and stay on paths."
+  ],
+  "screenFreeExtension": "At home, sort your toys or crayons into colour piles and see which colour you own most of.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "play-draft-2026-11-17-03",
+  "slug": "story-chain-the-talking-game",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Story chain: the talking game where every sentence must connect",
+  "description": "One person starts a story with a single sentence. The next person must continue it — using something from the sentence before. A game for car rides, queues and rainy afternoons that needs nothing but voices.",
+  "publishedAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "hero": {
+    "src": "/images/words.webp",
+    "alt": "A grand library hall glowing warmly",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "storytelling",
+    "words",
+    "no-equipment"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-17",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 17 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The one rule",
+      "paragraphs": [
+        "The first player offers a single opening sentence: “Mina found a blue door at the bottom of her garden, where no door had been yesterday.” The next player must add one sentence that uses something already mentioned — the door, the garden, yesterday — and carries the story forward.",
+        "That single rule does all the work. Without it, every sentence wanders off and the story dissolves. With it, players have to listen hard to each other, because the detail they ignore may be the one they need."
+      ]
+    },
+    {
+      "heading": "How stories surprise you",
+      "paragraphs": [
+        "Because nobody controls the whole story, it swerves in ways no single storyteller would choose. The blue door leads to a post office for lost letters; the lost letters lead to a very apologetic dragon. The swerves are the fun, and they are also a small lesson: other people's imaginations are not a detour from yours — they are an extension of it.",
+        "If a sentence breaks the chain completely, the group can gently ask, “what does that connect to?” Nine times out of ten the player finds the link, and the link is funnier than the original idea."
+      ]
+    },
+    {
+      "heading": "Endings and variations",
+      "paragraphs": [
+        "Agree that anyone may say “and finally…” to signal the last sentence, which the next player must deliver as a proper ending. Or play the three-word version, where each player adds exactly three words — slower, stranger, and excellent for long journeys.",
+        "Try it at the dinner table with the rule that the story must include something that really happened today. Fact and invention braid together, and you will hear about everyone's day without asking a single question."
+      ]
+    }
+  ],
+  "takeaway": "One rule — every sentence must connect to the one before — turns listening into a game and a group into storytellers.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

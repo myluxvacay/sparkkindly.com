@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-soccer-players-703",
+  "scheduledDate": "2027-05-07",
+  "brand": "play",
+  "prompt": "How many players does each soccer team have on the field at one time, including the goalkeeper?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Nine"
+    },
+    {
+      "id": "b",
+      "text": "Ten"
+    },
+    {
+      "id": "c",
+      "text": "Eleven"
+    },
+    {
+      "id": "d",
+      "text": "Twelve"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Each soccer team fields eleven players at a time, including the goalkeeper. Teams can name substitutes on the bench, but only eleven from each side are on the field during play.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Association football | Britannica",
+      "url": "https://www.britannica.com/sports/football-soccer",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

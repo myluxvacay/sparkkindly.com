@@ -1,0 +1,56 @@
+{
+  "id": "save-draft-2026-11-17-02",
+  "slug": "the-use-it-up-week",
+  "brand": "save",
+  "contentType": "article",
+  "title": "The use-it-up week: meals planned from what you already have",
+  "description": "Once in a while, declare a use-it-up week: plan meals around the food already in your fridge, freezer and cupboards, and buy only the small fresh extras that unlock it. A week that empties shelves instead of filling them.",
+  "publishedAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "food",
+    "meal-planning",
+    "waste-less"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-17",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 17 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Start with a shelf census",
+      "paragraphs": [
+        "Before planning anything, list what you actually have: the half-bag of lentils, the frozen peas, the cheese ends, the tinned tomatoes, the pasta shapes. Most households discover the makings of four or five real meals hiding in plain sight.",
+        "Put anything that must be eaten soon at the front of the fridge and mark it as this week's headline ingredient. The census turns “nothing to eat” into a menu with a deadline, which is a much more interesting problem."
+      ]
+    },
+    {
+      "heading": "Plan meals backwards",
+      "paragraphs": [
+        "Ordinary meal planning starts with recipes and produces a shopping list. A use-it-up week runs backwards: start with the ingredients and ask what meal they are almost already. Lentils plus tinned tomatoes plus an onion is a soup waiting to happen; add bread from the freezer and it is dinner.",
+        "Allow yourself a small “unlock budget” for fresh extras — herbs, lemons, eggs, milk — that turn shelf stock into meals you genuinely want to eat. The week should feel like ingenuity, not penance, or it will not survive until Friday."
+      ]
+    },
+    {
+      "heading": "Count what it saved, then repeat rarely",
+      "paragraphs": [
+        "At the end of the week, note roughly what you did not spend and what did not get thrown away. Both numbers are usually startling, and together they are the best argument for doing this four times a year — often enough to stop the shelves silently stockpiling, rarely enough to stay fun.",
+        "Between use-it-up weeks, the habit leaves a trace: you start buying with the shelf in mind, which is where the real saving was hiding all along."
+      ]
+    }
+  ],
+  "takeaway": "Plan one week of meals backwards from your shelves, buy only small fresh extras to unlock them, and count what you saved and saved from the bin.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "discover-quiz-largest-ocean-703",
+  "scheduledDate": "2027-05-08",
+  "brand": "discover",
+  "prompt": "Which is the largest ocean on Earth?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Atlantic Ocean"
+    },
+    {
+      "id": "b",
+      "text": "The Indian Ocean"
+    },
+    {
+      "id": "c",
+      "text": "The Arctic Ocean"
+    },
+    {
+      "id": "d",
+      "text": "The Pacific Ocean"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The Pacific Ocean is by far the largest: it covers more of Earth's surface than all the land on the planet combined, stretching from Asia and Australia to the Americas. It holds more than half of the world's open ocean water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Ocean | Britannica",
+      "url": "https://www.britannica.com/science/ocean",
+      "accessedAt": "2026-11-17"
+    },
+    {
+      "title": "Pacific Ocean | Britannica",
+      "url": "https://www.britannica.com/place/Pacific-Ocean",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

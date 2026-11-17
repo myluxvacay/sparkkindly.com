@@ -1,0 +1,67 @@
+{
+  "id": "play-draft-2026-11-17-02",
+  "slug": "a-garden-scavenger-hunt",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "A garden scavenger hunt you can set up in ten minutes",
+  "description": "No prizes, no printing, no preparation beyond a list: find something rough, something smooth, something round, something red. A hunt that turns any garden or park into new territory.",
+  "publishedAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "hero": {
+    "src": "/images/focus.webp",
+    "alt": "A sunlit path winding through a forest",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "outdoors",
+    "nature",
+    "observation"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-17",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 17 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Write the list",
+      "paragraphs": [
+        "Take a piece of paper and write ten things to find — but describe them by feel, shape and colour rather than by name: something rough, something smooth, something round, something that smells good, something smaller than your thumb, something a bird would like.",
+        "Descriptions instead of names are the whole trick. “Something rough” could be bark, a stone, or a pine cone, so every hunter can succeed — and every hunter has to look at the garden properly, maybe for the first time."
+      ]
+    },
+    {
+      "heading": "Hunt kindly",
+      "paragraphs": [
+        "The rule is look, don't take: hunters point, sketch, or photograph each find instead of picking it. Flowers stay growing, creatures stay home, and the garden looks exactly the same when the game ends as when it began.",
+        "Work in pairs if you like, with one hunter and one checker who ticks the list. Swap roles halfway so everyone gets both jobs, and set a gentle time limit only if your hunters enjoy one."
+      ]
+    },
+    {
+      "heading": "Finish with the best find",
+      "paragraphs": [
+        "When the lists are done, gather and let each hunter present their favourite find and where it was hiding. The smallest thing usually wins the most admiration.",
+        "Keep the list. Next week, hunt the same garden again and notice what has changed — new flowers, fallen leaves, different visitors. The garden was never the same twice; you just needed a reason to look."
+      ]
+    }
+  ],
+  "takeaway": "Describe finds by feel, shape and colour, look without taking, and any garden becomes new territory.",
+  "fiction": false,
+  "materials": [
+    "A piece of paper and a pencil for the list",
+    "A pencil or crayons for each hunter, for sketching finds",
+    "A phone or camera (optional), for photographing finds"
+  ],
+  "supervision": "An adult writes or approves the list, sets the boundaries of the hunting area, and stays within sight throughout.",
+  "safetyNotes": [
+    "Stay inside the agreed area, away from roads, ponds and other people's gardens.",
+    "Look without picking: leave flowers, fungi and creatures exactly where they are, and wash hands after handling soil or bark.",
+    "Watch out for stinging plants and insects; if you are not sure what something is, admire it from a distance."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

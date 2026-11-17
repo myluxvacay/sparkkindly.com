@@ -1,0 +1,69 @@
+{
+  "id": "together-draft-2026-11-17-03",
+  "slug": "plant-a-seed-together",
+  "brand": "together",
+  "contentType": "activity",
+  "title": "Plant a seed together and take turns keeping it alive",
+  "description": "One pot, one seed, two or more caretakers. A shared plant turns looking after something into a small team project — with a rota, a windowsill, and a green reward.",
+  "publishedAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "hero": {
+    "src": "/images/plants.webp",
+    "alt": "Young green sprouts growing in soil",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "gardening",
+    "family",
+    "shared-projects"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-17",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 17 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Start together",
+      "paragraphs": [
+        "Choose a fast, forgiving seed: beans, sunflowers, or cress all sprout quickly enough to hold anyone's interest. Fill a pot with compost together, press the seed in about a fingertip deep, water it, and give the pot a name and the sunniest windowsill you have.",
+        "Write the names of the caretakers on a card and stick it in the soil. This plant has a team, and the card is its team sheet."
+      ]
+    },
+    {
+      "heading": "Share the care",
+      "paragraphs": [
+        "Make a simple rota: one person waters on Mondays and Thursdays, another checks the soil on other days and turns the pot a quarter-turn so it grows straight instead of leaning toward the light. Anyone who spots the first shoot gets to announce it, loudly, to the whole household.",
+        "Keep a tiny diary beside the pot — a line or a sketch every few days. Shared attention is the real crop here; the bean is almost a bonus."
+      ]
+    },
+    {
+      "heading": "Harvest, whatever it is",
+      "paragraphs": [
+        "If the plant thrives, celebrate the first flower or bean together and cook or display it like a trophy. If it struggles, troubleshoot as a team — more light? less water? — and plant again without blame.",
+        "Either way you will have practised the skill underneath every shared project: noticing something small, regularly, together, and caring what happens next."
+      ]
+    }
+  ],
+  "takeaway": "One seed, a named pot and a watering rota turn plant care into teamwork — and shared attention is the real harvest.",
+  "fiction": false,
+  "materials": [
+    "A pot with drainage holes and a saucer",
+    "Potting compost",
+    "Fast-growing seeds (beans, sunflower or cress)",
+    "A watering can or jug",
+    "A card and pencil for the team sheet and diary"
+  ],
+  "supervision": "An adult helps younger gardeners with compost and watering, and chooses a safe, stable spot for the pot.",
+  "safetyNotes": [
+    "Wash hands after handling compost and soil.",
+    "Keep seeds away from babies and toddlers, who may put them in their mouths.",
+    "Place the pot where it cannot be knocked off a sill onto anyone below."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
