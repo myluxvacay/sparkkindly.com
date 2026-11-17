@@ -73,6 +73,26 @@ export async function listAnswered(
   return r.rows.map((x) => ({ itemId: x.item_id, correct: x.correct, answeredAt: x.answered_at }));
 }
 
+// The subset of these item ids the owner has a saved answer for — the account half of the keep-playing
+// seen-set (lib/play/seen-quizzes), so a question answered on any device is not dealt again. Same
+// owner/visibility predicates as every read above; ids that are not uuids are ignored.
+export async function listAnsweredIds(
+  db: Db,
+  owner: Owner,
+  scope: Scope,
+  itemIds: string[],
+): Promise<string[]> {
+  if (!validOwner(owner) || scope.audiences.length === 0 || itemIds.length === 0) return [];
+  const ids = itemIds.filter(isUuid);
+  if (ids.length === 0) return [];
+  const r = await db.query<{ item_id: string }>(
+    `SELECT DISTINCT r.item_id ${FROM_SHOWN}
+     WHERE ${OWNER('r')} AND ${SHOWN} AND r.item_id = ANY($5::uuid[])`,
+    [owner.accountId, owner.profileId, scope.now, [...scope.audiences], ids],
+  );
+  return r.rows.map((x) => x.item_id);
+}
+
 export async function countAnswered(
   db: Db,
   owner: Owner,

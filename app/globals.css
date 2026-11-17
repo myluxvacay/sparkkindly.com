@@ -389,3 +389,34 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
    gold face itself contrasts 6.6:1 with the plum panel, so it reads as a button, not a smudge. */
 .vg-panel .vg-give-up{background:#f7c948;border:1px solid #f7c948;border-radius:5px;color:#3a2444;font-size:14px;font-weight:600;min-height:44px;padding:10px 20px;text-decoration:none}
 .vg-panel .vg-give-up:hover{background:#ffe087;border-color:#ffe087}
+
+/* Keep playing (17 Nov 2026): the next-quiz choices under a quiz verdict. The block sits directly on the
+   plum panel, so its text is pinned light (#fdf6ec / #e7d7f2, AA on #5b2c6f) and the buttons use the
+   panel's own gold/dark pairing (#3a2444 on #f7c948, 8.8:1) — panel-scoped selectors, because the
+   panel's pale link colour (.quiz-panel a) must never wash onto the gold faces. */
+.keep-playing{margin-top:24px}
+.kp-head{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+.kp-spark{width:56px;height:auto}
+.quiz-panel .kp-title{margin:0;color:#fdf6ec;font-size:16px}
+.kp-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.quiz-panel .kp-btn{display:flex;flex-direction:column;gap:2px;justify-content:center;background:#f7c948;border:1px solid #f7c948;border-radius:8px;color:#3a2444;text-decoration:none;min-height:64px;padding:12px 16px}
+.quiz-panel .kp-btn:hover{background:#ffe087;border-color:#ffe087}
+.kp-btn-label{font-weight:700;font-size:16px}
+.quiz-panel .kp-btn-sub{font-size:13px;color:#3a2444}
+.quiz-panel .kp-btn-off{background:#432052;border-color:#432052;color:#e7d7f2;cursor:default}
+.quiz-panel .kp-btn-off:hover{background:#432052;border-color:#432052}
+.quiz-panel .kp-btn-off .kp-btn-sub{color:#e7d7f2}
+.quiz-panel .kp-hint{margin:12px 0 0;font-size:13px;color:#e7d7f2}
+.quiz-panel .kp-fresh{margin:14px 0 0;font-size:13px;color:#e7d7f2}
+.quiz-panel .kp-fresh .text-button{min-height:44px;padding:6px 4px}
+/* A finished level replaces its button with a light completion card (the .quiz-result pairing: dark
+   ink on #fffdf9), and the way-onward button gets a light ring so the eye lands on it. */
+.quiz-panel .kp-btn-done{background:#fffdf9;border-color:#fffdf9;color:#302438;cursor:default}
+.quiz-panel .kp-btn-done:hover{background:#fffdf9;border-color:#fffdf9}
+.quiz-panel .kp-btn-done .kp-btn-sub{color:#685e6a}
+.quiz-panel .kp-btn-next{box-shadow:0 0 0 3px #fdf6ec,0 8px 20px #1d0f26}
+.kp-done{background:#fffdf9;border-radius:8px;padding:18px 20px;color:#302438}
+.kp-done p{margin:0 0 8px;font-size:14px}
+.kp-done p:last-child{margin-bottom:0}
+.kp-done strong{font-size:18px}
+@media(max-width:580px){.kp-buttons{grid-template-columns:1fr}.quiz-panel .kp-btn{min-height:58px}}
