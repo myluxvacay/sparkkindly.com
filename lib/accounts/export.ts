@@ -42,6 +42,7 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   circle_mail_log: 'circle data (which circle email period was claimed and when); no address, no account, nothing about one person',
   invite_address_log: 'keyed hash of an invited address and send times (anti-harassment cap); no address and no account link, pruned after 8 days',
   invite_suppressions: 'keyed hash of an address that refused invite emails; no address and no account link, kept so the refusal holds',
+  contact_messages: 'visitor contact-form messages (name, email, message) with no account link; a sender need not hold an account, and the owner answers them directly',
 };
 
 // Columns of the tables exported row by row: each is exported or deliberately excluded with its reason.
