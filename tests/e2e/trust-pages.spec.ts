@@ -13,16 +13,17 @@ test('every trust page has one h1, a current-page breadcrumb and a footer link',
   }
 });
 
-test('trust pages make no third-party request and store nothing in the browser', async ({ page, context }) => {
+test('trust pages make no third-party request except Clarity and store nothing in the browser', async ({ page, context }) => {
   const outside: string[] = [];
   page.on('request', (r) => {
-    if (!r.url().startsWith('http://localhost:4173/')) outside.push(r.url());
+    // Microsoft Clarity is the one approved third party (owner decision, 17 Nov 2026; disclosed on the privacy page).
+    if (!r.url().startsWith('http://localhost:4173/') && !/^https:\/\/([\w-]+\.)*clarity\.ms\//.test(r.url())) outside.push(r.url());
   });
   for (const path of PAGES) {
     await page.goto(path);
     expect(await page.evaluate(() => ({ local: localStorage.length, session: sessionStorage.length })), path).toEqual({ local: 0, session: 0 });
   }
-  expect(await context.cookies()).toEqual([]);
+  expect((await context.cookies()).filter((c) => !['_clck', '_clsk'].includes(c.name))).toEqual([]);
   expect(outside).toEqual([]);
 });
 
@@ -35,11 +36,12 @@ test('no trust page offers a feature that does not exist yet', async ({ page }) 
   }
 });
 
-test('the privacy page states what is true: no accounts, no outside requests, answers not saved, Kids rules', async ({ page }) => {
+test('the privacy page states what is true: no accounts, Clarity disclosed, answers not saved, Kids rules', async ({ page }) => {
   await page.goto('/privacy/');
   const text = await page.locator('main').innerText();
   expect(text).toMatch(/no accounts/i);
-  expect(text).toMatch(/no requests to other companies/i);
+  expect(text).toMatch(/Microsoft Clarity/);
+  expect(text).toMatch(/heatmaps and recorded browsing sessions/i);
   expect(text).toMatch(/does not save it/i);
   expect(text).toMatch(/13 to 15/);
   expect(text).toMatch(/under 13 cannot have an account/);
