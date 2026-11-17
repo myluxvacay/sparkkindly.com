@@ -46,6 +46,25 @@ describe('KeepPlaying block', () => {
     expect(html).toContain('Start fresh');
   });
 
+  it('on no-track surfaces (Kids questions, the daily question) there is no Start fresh row at all', () => {
+    const model = buildModel('me', 'medium', pools({ medium: [c('m1')] }), { trackSeen: false });
+    const html = renderToStaticMarkup(<KeepPlaying model={model} correct={true} />);
+    expect(html).not.toContain('data-kp-fresh');
+    expect(html).not.toContain('Start fresh');
+    // The choices themselves still render — only the device memory is off.
+    expect(html).toContain('data-kp-btn="same"');
+  });
+
+  it('the panel gates tracking off for Kids-audience items, and the daily surfaces opt out', () => {
+    expect(panelSrc).toContain("item.audience !== 'kids'");
+    const quizPage = readFileSync(`${process.cwd()}/app/quiz/page.tsx`, 'utf8');
+    const homePage = readFileSync(`${process.cwd()}/app/page.tsx`, 'utf8');
+    expect(quizPage).toContain('trackSeen={false}');
+    expect(homePage).toContain('trackSeen={false}');
+    // The island never touches the device store for a no-track model.
+    expect(enhancerSrc).toContain('model.trackSeen ? mergeSeenIds');
+  });
+
   it('tells a signed-in player that Start fresh leaves their saved answers alone', () => {
     const model = buildModel('me', 'medium', pools({ medium: [c('m1')] }), { signedIn: true });
     const html = renderToStaticMarkup(<KeepPlaying model={model} correct={true} />);
