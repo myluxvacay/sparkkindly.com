@@ -3,11 +3,12 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 // Spark, the SparkKindly guide (owner request #20, 17 Nov 2026; canonical cape design, owner-confirmed).
-// Behaviour the owner settled: NO autoplay sound — Spark first does a silent attention loop (CSS wave/bounce/
-// shimmer on the static image; the global reduced-motion rule in globals.css stills it), a greeting bubble
-// appears after a short delay, and only a tap opens the panel and can play the voice greeting. Dismissal is
-// remembered in localStorage. No third-party requests, no tracking, nothing is sent anywhere: the panel's
-// guidance is fixed text and links to existing routes only — there is no open-ended chat here.
+// Behaviour the owner settled: NO autoplay sound — Spark first attracts attention silently (the transparent
+// waving GIF, spark-waving.gif; visitors who prefer reduced motion get the static spark.webp instead, via the
+// matchMedia check below), a greeting bubble appears after a short delay, and only a tap opens the panel and
+// can play the voice greeting. Dismissal is remembered in localStorage. No third-party requests, no tracking,
+// nothing is sent anywhere: the panel's guidance is fixed text and links to existing routes only — there is
+// no open-ended chat here.
 const DISMISS_KEY = 'sk-spark-dismissed';
 const GREETING =
   'Hi, I’m Spark! A warm and curious welcome to SparkKindly. Think sharp. Be kind. Here you can play, discover, learn together, and grow, one small question at a time. Start with today’s question, try a quick quiz, or pick a world that catches your eye. Want me to show you around?';
@@ -16,19 +17,30 @@ export default function SparkAssistant() {
   const [hidden, setHidden] = useState(true); // stays hidden until the dismissal check runs, so a dismissed Spark never flashes
   const [bubble, setBubble] = useState(false);
   const [open, setOpen] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
+    // Reduced-motion visitors get the still Spark, never the animated GIF (deferred like the show
+    // timer below, so no state is set synchronously in the effect).
+    const motion = setTimeout(() => {
+      try {
+        setReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+      } catch {
+        setReducedMotion(false);
+      }
+    }, 0);
     let dismissed = false;
     try {
       dismissed = localStorage.getItem(DISMISS_KEY) === '1';
     } catch {
       dismissed = false;
     }
-    if (dismissed) return;
+    if (dismissed) return () => clearTimeout(motion);
     const show = setTimeout(() => setHidden(false), 0);
     const t = setTimeout(() => setBubble(true), 1200);
     return () => {
+      clearTimeout(motion);
       clearTimeout(show);
       clearTimeout(t);
     };
@@ -84,7 +96,11 @@ export default function SparkAssistant() {
       )}
       <div className="spark-figure-row">
         <button className="spark-figure" onClick={toggle} aria-expanded={open} aria-label={open ? 'Close Spark, your guide' : 'Open Spark, your guide'}>
-          <img src="/brand/spark.webp" width={438} height={646} alt="Spark, the SparkKindly guide, waving hello" />
+          {reducedMotion ? (
+            <img src="/brand/spark.webp" width={438} height={646} alt="Spark, the SparkKindly guide, waving hello" />
+          ) : (
+            <img src="/brand/spark-waving.gif" width={313} height={627} alt="Spark, the SparkKindly guide, waving hello" />
+          )}
         </button>
         <button className="spark-dismiss" aria-label="Dismiss Spark for good" onClick={dismiss}>×</button>
       </div>
