@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-rocket-staging-831",
+  "scheduledDate": "2027-07-02",
+  "brand": "discover",
+  "prompt": "Most launch rockets are built in stages that are dropped during ascent. Dropping an empty stage helps mainly because:",
+  "options": [
+    {
+      "id": "a",
+      "text": "The rocket becomes more aerodynamic once it is shorter"
+    },
+    {
+      "id": "b",
+      "text": "The remaining engines no longer work in thinner air without the stage"
+    },
+    {
+      "id": "c",
+      "text": "The rocket no longer has to accelerate the empty fuel tank's mass, so the remaining fuel produces more acceleration"
+    },
+    {
+      "id": "d",
+      "text": "Gravity stops acting on a rocket once the first stage falls away"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Acceleration depends on force divided by mass. Discarding an empty tank removes dead mass, so the thrust of the next stage accelerates a lighter vehicle and the remaining fuel goes much further.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Multistage rocket",
+      "url": "https://en.wikipedia.org/wiki/Multistage_rocket",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

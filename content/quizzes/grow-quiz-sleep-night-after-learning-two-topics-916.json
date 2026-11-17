@@ -1,0 +1,43 @@
+{
+  "id": "grow-quiz-sleep-night-after-learning-two-topics-916",
+  "scheduledDate": "2027-09-25",
+  "brand": "grow",
+  "prompt": "Beatriz studies Topic A on Monday from 8 to 9 p.m. using practice questions, then sleeps normally that night. She studies Topic B on Tuesday from 8 to 9 p.m. in exactly the same way, but that night she is up until 4 a.m. on a family airport trip — not studying — and then sleeps normally from Wednesday to Sunday. A test the following Monday covers both topics, and she recalls Topic A much better than Topic B, even though B was studied a day later. What best explains the difference?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Topic A had one extra day to be forgotten, so its advantage must mean Topic B was simply the harder material"
+    },
+    {
+      "id": "b",
+      "text": "Studying later in the week always produces weaker memory, regardless of what happens afterwards"
+    },
+    {
+      "id": "c",
+      "text": "Sleep in the period soon after learning supports consolidation of that material; losing most of the night right after studying B weakened its retention, and her later normal nights did not fully make up for that specific loss"
+    },
+    {
+      "id": "d",
+      "text": "She recalled A better because Monday studying is always more effective than Tuesday studying at the same time of day"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The deciding detail is when the lost sleep fell: on the night immediately after Topic B was studied, while Topic A was followed by a normal night. Sleep after learning is linked to memory consolidation, and the several normal nights before the test rule out her simply being tired on test day as the main explanation.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Sleep and memory",
+      "url": "https://en.wikipedia.org/wiki/Sleep_and_memory"
+    },
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Memory consolidation",
+      "url": "https://en.wikipedia.org/wiki/Memory_consolidation"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

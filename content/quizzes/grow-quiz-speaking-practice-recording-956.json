@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-speaking-practice-recording-956",
+  "scheduledDate": "2027-11-04",
+  "brand": "grow",
+  "prompt": "You understand a lot of spoken Spanish but freeze when you have to speak it yourself. Which small practice most directly targets speaking?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Do even more listening exercises"
+    },
+    {
+      "id": "b",
+      "text": "Learn another fifty vocabulary words from a list"
+    },
+    {
+      "id": "c",
+      "text": "Read through the grammar rules once more"
+    },
+    {
+      "id": "d",
+      "text": "Record yourself speaking for two minutes a day on a familiar topic, and listen back once"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Speaking is its own skill, so it improves with speaking practice. Short daily recordings on familiar topics give you regular, low-pressure speaking reps and a way to hear your own progress.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

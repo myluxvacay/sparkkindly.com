@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-track-small-purchases-week-960",
+  "scheduledDate": "2027-11-08",
+  "brand": "grow",
+  "prompt": "Dev is puzzled: no big purchases this month, yet money keeps running out before month-end. A friend suggests cutting back on 'unnecessary spending' in general. What is a more useful first step?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Stop all non-essential spending immediately for a month and see whether the problem disappears"
+    },
+    {
+      "id": "b",
+      "text": "Track and categorise every small purchase for a week, so the pattern — what, how often, and roughly how much it adds up to — is visible before deciding what to change"
+    },
+    {
+      "id": "c",
+      "text": "Assume the cause is food shopping and cut that category first, since it is the most common one"
+    },
+    {
+      "id": "d",
+      "text": "Check the balance daily, because watching the total fall will by itself change the pattern"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Vague advice to 'cut back' gives Dev nothing to act on. A week of categorised tracking turns a mystery into a pattern — for example, daily small purchases adding up to a large monthly sum — and shows exactly where a change would matter.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

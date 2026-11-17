@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-scrabble-double-word-cat-1126",
+  "scheduledDate": "2028-04-22",
+  "brand": "play",
+  "prompt": "In Scrabble, the letters in CAT are worth C=3, A=1 and T=1. You play CAT so that the whole word lands on a Double Word square, which doubles the word's total. How many points do you score for the word, before any other bonuses?",
+  "options": [
+    {
+      "id": "a",
+      "text": "5"
+    },
+    {
+      "id": "b",
+      "text": "8"
+    },
+    {
+      "id": "c",
+      "text": "10"
+    },
+    {
+      "id": "d",
+      "text": "6"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The letters add up to 3+1+1=5. The Double Word square doubles the whole word total, so the word scores 5x2=10 points.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Scrabble",
+      "url": "https://en.wikipedia.org/wiki/Scrabble",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

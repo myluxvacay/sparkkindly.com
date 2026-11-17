@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-coffee-bags-total-saving-1189",
+  "scheduledDate": "2028-06-24",
+  "brand": "save",
+  "prompt": "Coffee costs $5 for a 250 g bag or $18 for a 1 kg bag. How much do you save by buying one 1 kg bag instead of four 250 g bags?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$13"
+    },
+    {
+      "id": "b",
+      "text": "$7"
+    },
+    {
+      "id": "c",
+      "text": "$20"
+    },
+    {
+      "id": "d",
+      "text": "$2"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Four 250 g bags make 1 kg and cost 4 x $5 = $20. The 1 kg bag costs $18. Saving: $20 - $18 = $2.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

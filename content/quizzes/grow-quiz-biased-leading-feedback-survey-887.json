@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-biased-leading-feedback-survey-887",
+  "scheduledDate": "2027-08-27",
+  "brand": "grow",
+  "prompt": "A student podcaster asks twelve friends, 'Isn't my new intro much clearer than the old one?' All twelve say yes, yet her listening figures show most new listeners stop within the first minute. Why is the survey result mostly noise, and what should she weight more?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The question was leading and the sample was friendly and unrepresentative, so the drop-off behaviour of actual new listeners is the stronger evidence to act on"
+    },
+    {
+      "id": "b",
+      "text": "Twelve people is too small a sample for any survey, so she should ask fifty more friends the same question"
+    },
+    {
+      "id": "c",
+      "text": "Friends are always dishonest about creative work, so she should never ask anyone she knows anything"
+    },
+    {
+      "id": "d",
+      "text": "Listening figures are unreliable, so the unanimous survey should override them"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A leading question pushes people towards one answer, and friends are not the audience whose behaviour matters here. What new listeners actually do — stopping in the first minute — is less flattering but far more informative.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Sampling bias",
+      "url": "https://en.wikipedia.org/wiki/Sampling_bias",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-habit-stack-unstable-anchor-901",
+  "scheduledDate": "2027-09-10",
+  "brand": "grow",
+  "prompt": "Ben stacks 'after I make morning coffee, I will write for 10 minutes', but he only makes coffee at home on weekends, so weekday writing rarely happens. What is the flaw?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ten minutes is too short for a stacked habit"
+    },
+    {
+      "id": "b",
+      "text": "Coffee is a reward, so it can never be a cue"
+    },
+    {
+      "id": "c",
+      "text": "Writing should be stacked onto three habits at once"
+    },
+    {
+      "id": "d",
+      "text": "The anchor habit does not happen on the days the new habit is meant to happen, so the cue is missing on weekdays"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Habit stacking only works if the anchor is stable and frequent on the target days. Anchoring to something he does every weekday, such as after breakfast, fixes the missing cue.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

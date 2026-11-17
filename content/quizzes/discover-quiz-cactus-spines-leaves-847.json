@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-cactus-spines-leaves-847",
+  "scheduledDate": "2027-07-18",
+  "brand": "discover",
+  "prompt": "The sharp spines of a cactus are not just weapons. What are they, in botanical terms?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Thickened roots that grew above ground"
+    },
+    {
+      "id": "b",
+      "text": "Dried flower stalks left after blooming"
+    },
+    {
+      "id": "c",
+      "text": "Bundles of tiny branches"
+    },
+    {
+      "id": "d",
+      "text": "Modified leaves that lose very little water"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Cactus spines are modified leaves. Their tiny surface area cuts water loss, while photosynthesis happens in the thick green stem instead.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Cactus",
+      "url": "https://en.wikipedia.org/wiki/Cactus",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

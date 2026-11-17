@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-two-tidal-bulges-839",
+  "scheduledDate": "2027-07-10",
+  "brand": "discover",
+  "prompt": "Most coasts get roughly two high tides a day because there are two tidal bulges in the oceans. The second bulge, on the side of Earth facing away from the Moon, exists mainly because:",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Sun creates a second bulge on the opposite side"
+    },
+    {
+      "id": "b",
+      "text": "The Moon's gravitational pull is weakest on the far side, so the water there is pulled toward the Moon less than Earth itself is"
+    },
+    {
+      "id": "c",
+      "text": "Earth's rotation flings water outward on the far side like a centrifuge alone, with no role for the Moon"
+    },
+    {
+      "id": "d",
+      "text": "Winds pile water up on the far side each night"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Tides come from differences in the Moon's pull across Earth. On the far side the pull is weakest, so that water lags behind Earth's motion toward the Moon, forming a second bulge opposite the first.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Tide",
+      "url": "https://en.wikipedia.org/wiki/Tide",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-weekend-plan-three-things-965",
+  "scheduledDate": "2027-11-13",
+  "brand": "grow",
+  "prompt": "This weekend you have revision to do, a family lunch, and a friend's match you want to watch. Which planning approach is most realistic?",
+  "options": [
+    {
+      "id": "a",
+      "text": "List everything and just work until you drop on Sunday night"
+    },
+    {
+      "id": "b",
+      "text": "Cancel all the social plans and revise for the whole weekend"
+    },
+    {
+      "id": "c",
+      "text": "Block a specific time for each commitment, including breaks, and check the plan fits the hours available"
+    },
+    {
+      "id": "d",
+      "text": "Start with whichever you feel like and hope the rest fits around it"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Putting each commitment into a real time slot, breaks included, shows whether the weekend actually fits — and lets you adjust calmly in advance instead of running out of time.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

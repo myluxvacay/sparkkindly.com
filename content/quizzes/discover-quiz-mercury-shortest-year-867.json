@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-mercury-shortest-year-867",
+  "scheduledDate": "2027-08-07",
+  "brand": "discover",
+  "prompt": "Which planet completes an orbit around the Sun in the shortest time — about 88 Earth days?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Mercury"
+    },
+    {
+      "id": "b",
+      "text": "Venus"
+    },
+    {
+      "id": "c",
+      "text": "Mars"
+    },
+    {
+      "id": "d",
+      "text": "Earth"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Mercury, the closest planet to the Sun, has the shortest year: about 88 Earth days per orbit.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Mercury (planet)",
+      "url": "https://en.wikipedia.org/wiki/Mercury_(planet)",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

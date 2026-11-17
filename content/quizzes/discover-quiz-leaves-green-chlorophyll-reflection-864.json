@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-leaves-green-chlorophyll-reflection-864",
+  "scheduledDate": "2027-08-04",
+  "brand": "discover",
+  "prompt": "Most healthy leaves look green, even though sunlight contains all the colours of the rainbow. Why green?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Leaves contain a green dye that they make from minerals drawn up from the soil"
+    },
+    {
+      "id": "b",
+      "text": "Leaves absorb green light most strongly, and we see the colour a leaf absorbs most"
+    },
+    {
+      "id": "c",
+      "text": "Tiny green insects and algae living on the leaf surface give it its colour"
+    },
+    {
+      "id": "d",
+      "text": "The pigment chlorophyll absorbs mainly blue and red light for photosynthesis and reflects green light, which is what reaches our eyes"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Chlorophyll absorbs mainly blue and red light for photosynthesis and reflects much of the green light that falls on it. It is that reflected green light reaching your eyes that makes most healthy leaves look green.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Chlorophyll",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyll"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

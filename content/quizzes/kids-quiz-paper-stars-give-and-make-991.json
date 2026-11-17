@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-paper-stars-give-and-make-991",
+  "scheduledDate": "2027-12-09",
+  "brand": "kids",
+  "prompt": "You make 12 paper stars. You give 5 stars to a friend. Then you make 4 more stars. How many stars do you have now?",
+  "options": [
+    {
+      "id": "a",
+      "text": "9 stars"
+    },
+    {
+      "id": "b",
+      "text": "11 stars"
+    },
+    {
+      "id": "c",
+      "text": "10 stars"
+    },
+    {
+      "id": "d",
+      "text": "13 stars"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "First, 12 take away 5 is 7. Then 7 add 4 is 11. Great two-step thinking!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

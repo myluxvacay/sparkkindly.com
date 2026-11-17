@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-cheaper-store-comparison-1188",
+  "scheduledDate": "2028-06-23",
+  "brand": "save",
+  "prompt": "Store A sells a bag for $80 with 10% off. Store B sells the same bag for $70 with no discount. Which store is cheaper, and by how much?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Store A, by $2"
+    },
+    {
+      "id": "b",
+      "text": "Store A, by $10"
+    },
+    {
+      "id": "c",
+      "text": "Store B, by $10"
+    },
+    {
+      "id": "d",
+      "text": "Store B, by $2"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "At Store A you pay $80 - ($80 x 10 / 100) = $80 - $8 = $72. Store B charges $70, so Store B is cheaper by $72 - $70 = $2.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

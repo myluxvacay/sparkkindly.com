@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-nile-flows-mediterranean-870",
+  "scheduledDate": "2027-08-10",
+  "brand": "discover",
+  "prompt": "The River Nile flows generally northward through Egypt. Into which sea does it empty?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Red Sea"
+    },
+    {
+      "id": "b",
+      "text": "The Atlantic Ocean"
+    },
+    {
+      "id": "c",
+      "text": "The Mediterranean Sea"
+    },
+    {
+      "id": "d",
+      "text": "The Persian Gulf"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The Nile ends in a wide delta in northern Egypt and empties into the Mediterranean Sea.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Nile",
+      "url": "https://en.wikipedia.org/wiki/Nile",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

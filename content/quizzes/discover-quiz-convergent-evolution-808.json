@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-convergent-evolution-808",
+  "scheduledDate": "2027-06-09",
+  "brand": "discover",
+  "prompt": "Dolphins (mammals) and sharks (fish) have very similar streamlined bodies and fins, yet their common ancestor had neither shape. This resemblance is best explained by:",
+  "options": [
+    {
+      "id": "a",
+      "text": "Convergent evolution: unrelated lineages independently evolving similar solutions to the same challenge of moving fast in water"
+    },
+    {
+      "id": "b",
+      "text": "Dolphins evolving directly from sharks"
+    },
+    {
+      "id": "c",
+      "text": "Both species inheriting the shape unchanged from a recent shared ancestor"
+    },
+    {
+      "id": "d",
+      "text": "Individual dolphins reshaping their bodies during their lifetimes and passing that on"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Similar environments impose similar selection pressures. Dolphins and sharks independently converged on a streamlined form for efficient swimming, despite belonging to very different vertebrate lineages.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Convergent evolution",
+      "url": "https://en.wikipedia.org/wiki/Convergent_evolution",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

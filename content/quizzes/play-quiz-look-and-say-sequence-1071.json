@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-look-and-say-sequence-1071",
+  "scheduledDate": "2028-02-27",
+  "brand": "play",
+  "prompt": "What number comes next in this sequence: 1, 11, 21, 1211, 111221, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "312211"
+    },
+    {
+      "id": "b",
+      "text": "1112221"
+    },
+    {
+      "id": "c",
+      "text": "211221"
+    },
+    {
+      "id": "d",
+      "text": "312221"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Each term describes the digits of the one before, read in runs: 111221 is 'three 1s, two 2s, one 1', which is written 312211. The same reading turns 1 into 11, 11 into 21, and so on through the sequence.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Look-and-say sequence",
+      "url": "https://en.wikipedia.org/wiki/Look-and-say_sequence",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

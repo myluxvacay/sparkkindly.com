@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-rectangle-double-length-perimeter-1120",
+  "scheduledDate": "2028-04-16",
+  "brand": "play",
+  "prompt": "A rectangle's length is exactly twice its width, and the distance all the way around it (its perimeter) is 36 cm. How wide is the rectangle?",
+  "options": [
+    {
+      "id": "a",
+      "text": "6 cm"
+    },
+    {
+      "id": "b",
+      "text": "9 cm"
+    },
+    {
+      "id": "c",
+      "text": "4 cm"
+    },
+    {
+      "id": "d",
+      "text": "12 cm"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Call the width w, so the length is 2w. The perimeter is 2 x (w + 2w) = 6w, and 6w = 36 gives w = 6 cm. Check: the sides are 6 and 12, and 6 + 12 + 6 + 12 = 36.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

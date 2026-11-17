@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-laptop-news-blocker-homework-938",
+  "scheduledDate": "2027-10-17",
+  "brand": "grow",
+  "prompt": "On your laptop, news sites keep pulling you away during your homework hour. Which environment change is most likely to help?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Use a website blocker for those sites during your set homework hour, while keeping the laptop available for work"
+    },
+    {
+      "id": "b",
+      "text": "Remove the web browser from the laptop entirely"
+    },
+    {
+      "id": "c",
+      "text": "Do homework only on days when you feel strong-willed"
+    },
+    {
+      "id": "d",
+      "text": "Keep the news open in a smaller window alongside your homework"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Blocking the distracting sites for just that hour removes the temptation at the moment it usually strikes, instead of depending on resisting it repeatedly while you work.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

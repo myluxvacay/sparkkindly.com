@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-learning-goal-vs-score-goal-939",
+  "scheduledDate": "2027-10-18",
+  "brand": "grow",
+  "prompt": "Starting a difficult new subject, which framing is most likely to keep a learner improving after early low scores?",
+  "options": [
+    {
+      "id": "a",
+      "text": "'I must top the class on the first test to prove I can do this'"
+    },
+    {
+      "id": "b",
+      "text": "'My goal this term is to master the core methods; early scores are information about what to practise next'"
+    },
+    {
+      "id": "c",
+      "text": "'I should avoid hard problems until I am sure I can score highly'"
+    },
+    {
+      "id": "d",
+      "text": "'Scores are the only honest measure, so I will judge every session by them'"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A learning (mastery) goal treats early results as diagnostic information, which sustains practice after setbacks. A pure performance goal makes each low score feel like a verdict on ability.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

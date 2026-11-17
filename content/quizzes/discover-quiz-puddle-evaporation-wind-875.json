@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-puddle-evaporation-wind-875",
+  "scheduledDate": "2027-08-15",
+  "brand": "discover",
+  "prompt": "Two identical puddles form after rain — one on a calm, cool day and one on a warm, windy day. The second puddle vanishes much faster mainly because warmth and wind speed up what?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Evaporation of water from the puddle's surface"
+    },
+    {
+      "id": "b",
+      "text": "Condensation of vapour above the puddle"
+    },
+    {
+      "id": "c",
+      "text": "Freezing of the top layer of water"
+    },
+    {
+      "id": "d",
+      "text": "Absorption of water by sunlight"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Warmth gives water molecules more energy to escape, and wind sweeps the vapour away, so evaporation proceeds much faster on a warm, windy day.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Evaporation",
+      "url": "https://en.wikipedia.org/wiki/Evaporation",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

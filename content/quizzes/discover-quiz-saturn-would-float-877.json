@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-saturn-would-float-877",
+  "scheduledDate": "2027-08-17",
+  "brand": "discover",
+  "prompt": "Saturn is a giant planet, yet scientists say it would float if a big enough bathtub of water existed. Why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Saturn is hollow inside"
+    },
+    {
+      "id": "b",
+      "text": "Saturn's rings act like water wings"
+    },
+    {
+      "id": "c",
+      "text": "Saturn's average density is lower than the density of water"
+    },
+    {
+      "id": "d",
+      "text": "Saturn is mostly ice, and ice always floats"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Saturn's average density is about 0.69 grams per cubic centimetre — less than water's 1.0 — so, in principle, it would float.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Saturn",
+      "url": "https://en.wikipedia.org/wiki/Saturn",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

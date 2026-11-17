@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-new-neighbour-drops-by-boundary-1251",
+  "scheduledDate": "2028-08-25",
+  "brand": "together",
+  "prompt": "A new neighbour is friendly but now drops by unannounced most evenings and stays for hours, and you need quiet time to study and rest. What response welcomes them while keeping a healthy boundary?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Pretend you are not home and hide until they go away"
+    },
+    {
+      "id": "b",
+      "text": "Let them stay every time and say nothing, even though you are falling behind and feeling resentful"
+    },
+    {
+      "id": "c",
+      "text": "Enjoy a short chat, say warmly that you need most evenings for study, and suggest a specific planned catch-up instead of drop-ins"
+    },
+    {
+      "id": "d",
+      "text": "Tell them bluntly that they are too much and should stop coming round"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A warm limit plus a real alternative keeps the welcome genuine while protecting your time. Hiding, silent resentment, and a blunt rejection all make a new neighbour feel unwanted for the wrong reason.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

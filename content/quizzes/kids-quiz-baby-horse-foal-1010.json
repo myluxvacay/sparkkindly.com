@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-baby-horse-foal-1010",
+  "scheduledDate": "2027-12-28",
+  "brand": "kids",
+  "prompt": "What is a baby horse called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A kitten"
+    },
+    {
+      "id": "b",
+      "text": "A puppy"
+    },
+    {
+      "id": "c",
+      "text": "A chick"
+    },
+    {
+      "id": "d",
+      "text": "A foal"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Well done! A baby horse is called a foal. It stays close to its mother.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

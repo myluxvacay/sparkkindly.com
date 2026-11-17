@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-pen-pack-saving-per-pen-1206",
+  "scheduledDate": "2028-07-11",
+  "brand": "save",
+  "prompt": "A single pen costs 80 cents. In a pack, each pen works out at 50 cents. How much do you save on each pen by buying the pack?",
+  "options": [
+    {
+      "id": "a",
+      "text": "30 cents"
+    },
+    {
+      "id": "b",
+      "text": "20 cents"
+    },
+    {
+      "id": "c",
+      "text": "40 cents"
+    },
+    {
+      "id": "d",
+      "text": "50 cents"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The saving per pen is 80 cents - 50 cents = 30 cents.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

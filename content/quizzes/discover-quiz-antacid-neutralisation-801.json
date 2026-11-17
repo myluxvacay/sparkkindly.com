@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-antacid-neutralisation-801",
+  "scheduledDate": "2027-06-02",
+  "brand": "discover",
+  "prompt": "Indigestion remedies containing magnesium hydroxide relieve excess stomach acidity. What reaction is responsible?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The alkali dissolves food so the stomach empties faster"
+    },
+    {
+      "id": "b",
+      "text": "The hydroxide neutralises some hydrochloric acid in the stomach, forming a salt and water and raising the pH toward neutral"
+    },
+    {
+      "id": "c",
+      "text": "The remedy coats the stomach so acid can no longer be made"
+    },
+    {
+      "id": "d",
+      "text": "The magnesium absorbs acid into its crystals and carries it away unchanged"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Magnesium hydroxide is a base. It neutralises excess hydrochloric acid — base + acid gives a salt plus water — which raises stomach pH and relieves the burning sensation of excess acid.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Antacid",
+      "url": "https://en.wikipedia.org/wiki/Antacid",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

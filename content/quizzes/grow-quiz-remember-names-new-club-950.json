@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-remember-names-new-club-950",
+  "scheduledDate": "2027-10-29",
+  "brand": "grow",
+  "prompt": "You join a new club and struggle to remember people's names. Which strategy is most likely to help?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Avoid using anyone's name until you are sure you know them all"
+    },
+    {
+      "id": "b",
+      "text": "Speak to only one person each week, to keep it manageable"
+    },
+    {
+      "id": "c",
+      "text": "Link each name to a vivid image or rhyme when you first hear it, and use the name in conversation"
+    },
+    {
+      "id": "d",
+      "text": "Write all the names down once and never look at the list again"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A vivid link gives your memory something distinctive to hold on to, and actually using the name straight away turns a first hearing into a first practice.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Mnemonic",
+      "url": "https://en.wikipedia.org/wiki/Mnemonic",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

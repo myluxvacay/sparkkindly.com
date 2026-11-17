@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-hundred-days-weekday-1067",
+  "scheduledDate": "2028-02-23",
+  "brand": "play",
+  "prompt": "Today is a Friday. What day of the week will it be exactly 100 days from today?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Saturday"
+    },
+    {
+      "id": "b",
+      "text": "Sunday"
+    },
+    {
+      "id": "c",
+      "text": "Monday"
+    },
+    {
+      "id": "d",
+      "text": "Wednesday"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The weekday repeats every 7 days. 100 divided by 7 leaves a remainder of 2, since 98 is exactly 14 weeks. So 100 days later is 2 weekdays after Friday, which is Sunday.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

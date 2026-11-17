@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-monopoly-third-doubles-1116",
+  "scheduledDate": "2028-04-12",
+  "brand": "play",
+  "prompt": "In Monopoly, rolling a double lets you roll again, but rolling a double three times in a row on the same turn sends you somewhere instead of moving a third time. Where do you go?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Back to Go"
+    },
+    {
+      "id": "b",
+      "text": "To the nearest station"
+    },
+    {
+      "id": "c",
+      "text": "Nowhere - you just lose the extra roll"
+    },
+    {
+      "id": "d",
+      "text": "Directly to Jail"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Under Monopoly rules, a third consecutive double on the same turn means you go directly to Jail and do not take the third move.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Monopoly (game)",
+      "url": "https://en.wikipedia.org/wiki/Monopoly_(game)",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

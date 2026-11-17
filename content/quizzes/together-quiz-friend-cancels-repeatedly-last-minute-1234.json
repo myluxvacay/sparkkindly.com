@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-friend-cancels-repeatedly-last-minute-1234",
+  "scheduledDate": "2028-08-08",
+  "brand": "together",
+  "prompt": "A close friend has cancelled plans at the last minute three times in a row. You value them but are starting to feel devalued. What is the healthiest next step?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Tell them calmly about the pattern and how it lands, ask what is going on for them, and agree how you will plan differently if their life is hectic right now"
+    },
+    {
+      "id": "b",
+      "text": "Cancel on them at the last minute next time so they feel it too"
+    },
+    {
+      "id": "c",
+      "text": "Stop inviting them without any explanation and let the friendship fade silently"
+    },
+    {
+      "id": "d",
+      "text": "Say it is fine every time while resentment quietly builds up"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A calm conversation about the pattern gives your friend information and a chance to respond, whether the cause is overwhelm or thoughtlessness. Revenge cancelling, silent fading, and pretending it is fine all let the problem grow.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

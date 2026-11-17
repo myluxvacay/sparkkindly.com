@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-s-waves-liquid-core-832",
+  "scheduledDate": "2027-07-03",
+  "brand": "discover",
+  "prompt": "Seismologists conclude that Earth's outer core is liquid partly because S-waves from earthquakes do not pass through it. Why do S-waves fail in a liquid?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Liquids are too dense for any seismic wave to enter"
+    },
+    {
+      "id": "b",
+      "text": "S-waves are transverse waves that need a rigid material that can support sideways shear, which a liquid cannot provide"
+    },
+    {
+      "id": "c",
+      "text": "S-waves are absorbed by iron, and the outer core is mostly iron"
+    },
+    {
+      "id": "d",
+      "text": "S-waves travel only along Earth's surface, never through the interior"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "S-waves shake material side to side. A liquid has no shear strength and cannot spring back from that sideways motion, so S-waves cannot propagate through the liquid outer core, creating an S-wave shadow zone.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "S wave",
+      "url": "https://en.wikipedia.org/wiki/S_wave",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

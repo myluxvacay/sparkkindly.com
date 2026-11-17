@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-league-points-total-1113",
+  "scheduledDate": "2028-04-09",
+  "brand": "play",
+  "prompt": "In a soccer league, a team gets 3 points for a win, 1 point for a draw and 0 for a loss. A team has 2 wins, 3 draws and 1 loss. How many points does it have?",
+  "options": [
+    {
+      "id": "a",
+      "text": "7"
+    },
+    {
+      "id": "b",
+      "text": "8"
+    },
+    {
+      "id": "c",
+      "text": "9"
+    },
+    {
+      "id": "d",
+      "text": "10"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The wins give 2x3=6 points and the draws give 3x1=3 points. The loss adds nothing, so the total is 6+3=9 points.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

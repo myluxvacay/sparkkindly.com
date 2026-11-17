@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-interleaving-maths-types-906",
+  "scheduledDate": "2027-09-15",
+  "brand": "grow",
+  "prompt": "For a maths test covering three problem types, which practice schedule usually produces better performance on mixed test questions?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Practise type A for a week, then B for a week, then C for a week, never mixing"
+    },
+    {
+      "id": "b",
+      "text": "Practise only the type that feels easiest, to build confidence"
+    },
+    {
+      "id": "c",
+      "text": "Practise each type once, in the order they were taught"
+    },
+    {
+      "id": "d",
+      "text": "Mix the three types within each session, so every problem first requires choosing which method applies"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Blocked practice lets you repeat a method without recognising when to use it. Interleaving forces that recognition step, which is exactly what a mixed test demands.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

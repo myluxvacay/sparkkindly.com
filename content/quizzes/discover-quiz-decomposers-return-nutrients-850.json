@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-decomposers-return-nutrients-850",
+  "scheduledDate": "2027-07-21",
+  "brand": "discover",
+  "prompt": "A fallen tree in a forest slowly disappears over several years, and the soil beneath it becomes richer. Which organisms do most of this work?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Decomposers such as fungi and bacteria that break down dead matter"
+    },
+    {
+      "id": "b",
+      "text": "Herbivores that eat the wood for energy"
+    },
+    {
+      "id": "c",
+      "text": "Producers that absorb the wood through their roots"
+    },
+    {
+      "id": "d",
+      "text": "Predators hunting insects inside the trunk"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Fungi and bacteria decompose dead wood, releasing its nutrients back into the soil where living plants can use them again.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Decomposer",
+      "url": "https://en.wikipedia.org/wiki/Decomposer",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

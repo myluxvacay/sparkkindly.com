@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-paint-two-walls-two-coats-total-1167",
+  "scheduledDate": "2028-06-02",
+  "brand": "save",
+  "prompt": "You paint 2 identical walls. Each wall is 5 metres long and 3 metres high. You apply 2 coats of paint. One tin covers 10 square metres for one coat and costs $15. You also buy a roller set for $10. What is the total cost?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$55"
+    },
+    {
+      "id": "b",
+      "text": "$90"
+    },
+    {
+      "id": "c",
+      "text": "$100"
+    },
+    {
+      "id": "d",
+      "text": "$190"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Area of one wall: 5 x 3 = 15 square metres. Two walls: 2 x 15 = 30 square metres. Two coats: 2 x 30 = 60 square metres to cover. Tins needed: 60 / 10 = 6 tins. Paint cost: 6 x $15 = $90. Total with the roller set: $90 + $10 = $100. The other options come from common slips: $55 forgets the second coat (30 square metres, 3 tins, 3 x $15 + $10 = $55); $90 forgets the roller set (paint only, 6 x $15 = $90); $190 counts 4 walls instead of 2 (120 square metres, 12 tins, 12 x $15 + $10 = $190).",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

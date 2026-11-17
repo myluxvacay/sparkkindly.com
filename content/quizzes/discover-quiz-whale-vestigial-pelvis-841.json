@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-whale-vestigial-pelvis-841",
+  "scheduledDate": "2027-07-12",
+  "brand": "discover",
+  "prompt": "Whales have small pelvic bones embedded in their body wall that are not used for walking. Why do biologists treat these bones as evidence about whale ancestry?",
+  "options": [
+    {
+      "id": "a",
+      "text": "They show whales are closely related to fish, which also have pelvic fins"
+    },
+    {
+      "id": "b",
+      "text": "They are new bones that whales are evolving for future use on land"
+    },
+    {
+      "id": "c",
+      "text": "They are vestigial remains of the pelvis that supported hind legs in the land-dwelling ancestors of whales"
+    },
+    {
+      "id": "d",
+      "text": "They prove whales never had ancestors with legs, because the bones do nothing"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A reduced, functionless version of a structure that was fully functional in ancestors is a vestigial structure. The whale pelvis matches the hind-limb support of land mammals, consistent with whales descending from four-legged land ancestors.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Vestigiality",
+      "url": "https://en.wikipedia.org/wiki/Vestigiality",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

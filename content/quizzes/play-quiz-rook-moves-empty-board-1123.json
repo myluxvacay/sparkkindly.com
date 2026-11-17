@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-rook-moves-empty-board-1123",
+  "scheduledDate": "2028-04-19",
+  "brand": "play",
+  "prompt": "In chess, a rook moves any number of squares in a straight line along its row or column, without jumping over pieces. A rook sits alone on corner square a1 of an otherwise empty board. How many squares can it move to?",
+  "options": [
+    {
+      "id": "a",
+      "text": "7"
+    },
+    {
+      "id": "b",
+      "text": "14"
+    },
+    {
+      "id": "c",
+      "text": "16"
+    },
+    {
+      "id": "d",
+      "text": "21"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "From a1 the rook can reach the other 7 squares in its column and the other 7 squares in its row. That is 7+7=14 squares in total.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Rook (chess)",
+      "url": "https://en.wikipedia.org/wiki/Rook_(chess)",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

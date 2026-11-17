@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-monthly-deposits-plus-bonus-topup-1163",
+  "scheduledDate": "2028-05-29",
+  "brand": "save",
+  "prompt": "You save $80 a month for 12 months. At the end, the bank adds a bonus equal to 5% of the total amount you saved. How much do you have in total at the end?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$960"
+    },
+    {
+      "id": "b",
+      "text": "$964"
+    },
+    {
+      "id": "c",
+      "text": "$1,000"
+    },
+    {
+      "id": "d",
+      "text": "$1,008"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Total saved: 12 x $80 = $960. Bonus: 5% of $960 = $48. Total: $960 + $48 = $1,008. The $960 option forgets the bonus, and $964 wrongly works out 5% of one month's $80 ($4) instead of 5% of the whole $960.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

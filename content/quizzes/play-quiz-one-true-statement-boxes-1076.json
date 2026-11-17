@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-one-true-statement-boxes-1076",
+  "scheduledDate": "2028-03-03",
+  "brand": "play",
+  "prompt": "A coin is hidden in exactly one of three boxes: A, B or C. Three statements are written on the boxes: (1) 'The coin is in A.' (2) 'The coin is not in B.' (3) 'The coin is not in A.' Exactly one of the three statements is true. Which box holds the coin?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Box A"
+    },
+    {
+      "id": "b",
+      "text": "Box C"
+    },
+    {
+      "id": "c",
+      "text": "No box fits the clues"
+    },
+    {
+      "id": "d",
+      "text": "Box B"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Test each box. If the coin were in A, statements (1) and (2) would both be true. If it were in C, statements (2) and (3) would both be true. If it is in B, only statement (3) is true, which matches 'exactly one', so the coin is in B.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

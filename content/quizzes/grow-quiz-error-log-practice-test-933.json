@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-error-log-practice-test-933",
+  "scheduledDate": "2027-10-12",
+  "brand": "grow",
+  "prompt": "After a practice test, you lost marks in several different ways. Which review method is most likely to raise your next score?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Note the total score and move straight on to new topics"
+    },
+    {
+      "id": "b",
+      "text": "Re-do only the questions you got right, to build confidence"
+    },
+    {
+      "id": "c",
+      "text": "Sort your mistakes into careless slips and concepts you did not understand, then practise the concept gaps"
+    },
+    {
+      "id": "d",
+      "text": "Memorise the correct answers to that exact test"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Different mistakes need different fixes. Sorting them shows which marks were lost to slips and which to real gaps, so your practice time goes on the gaps that cost the most.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

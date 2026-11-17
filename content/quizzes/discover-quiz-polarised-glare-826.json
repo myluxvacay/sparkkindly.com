@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-polarised-glare-826",
+  "scheduledDate": "2027-06-27",
+  "brand": "discover",
+  "prompt": "Polarising sunglasses cut glare from a wet road much better than ordinary tinted lenses. Why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Light reflected from a flat surface is partly polarised horizontally, and the lenses are oriented to block that horizontal component"
+    },
+    {
+      "id": "b",
+      "text": "They block all blue light, and glare is mostly blue"
+    },
+    {
+      "id": "c",
+      "text": "They reflect the glare back because their surface is mirrored"
+    },
+    {
+      "id": "d",
+      "text": "They make the pupil contract, so less glare is noticed"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Reflection from horizontal surfaces polarises light mainly in the horizontal plane. Polarising lenses have a vertical transmission axis, so they selectively block that reflected horizontal glare while letting other light through.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Polarizer",
+      "url": "https://en.wikipedia.org/wiki/Polarizer",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

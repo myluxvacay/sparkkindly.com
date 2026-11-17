@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-drawing-plateau-new-challenges-932",
+  "scheduledDate": "2027-10-11",
+  "brand": "grow",
+  "prompt": "Your drawing has stopped improving even though you draw the same subjects every day. Which change is most likely to restart your progress?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Draw the same subjects for even longer each day"
+    },
+    {
+      "id": "b",
+      "text": "Stop drawing completely for six months"
+    },
+    {
+      "id": "c",
+      "text": "Add specific challenges, such as timed studies of hands or shadows, and get feedback on them"
+    },
+    {
+      "id": "d",
+      "text": "Buy more expensive pencils and paper"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A plateau often means practice has become comfortable repetition. Targeting specific weaknesses with new challenges, and getting feedback on them, pushes the exact skills that have stalled.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

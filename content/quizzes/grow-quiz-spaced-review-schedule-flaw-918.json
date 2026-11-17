@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-spaced-review-schedule-flaw-918",
+  "scheduledDate": "2027-09-27",
+  "brand": "grow",
+  "prompt": "Leo reviews vocabulary only when words already feel completely forgotten, cramming them all in one evening each fortnight. Why is this weaker than spaced retrieval?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Fortnightly study is always too infrequent to learn anything"
+    },
+    {
+      "id": "b",
+      "text": "Reviewing at expanding intervals, while he can still partly recall the word and must retrieve it, strengthens memory more efficiently"
+    },
+    {
+      "id": "c",
+      "text": "Vocabulary can only be learned by writing each word 20 times"
+    },
+    {
+      "id": "d",
+      "text": "He should review every word every day with no gaps at all"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Spaced repetition uses the effort of retrieving a partly-remembered item. Waiting until it is fully forgotten turns review into relearning, and massing it in one evening wastes that spacing benefit.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Spaced repetition",
+      "url": "https://en.wikipedia.org/wiki/Spaced_repetition",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

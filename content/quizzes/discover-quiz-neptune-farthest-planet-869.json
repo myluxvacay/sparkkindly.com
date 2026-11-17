@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-neptune-farthest-planet-869",
+  "scheduledDate": "2027-08-09",
+  "brand": "discover",
+  "prompt": "Since Pluto was reclassified as a dwarf planet in 2006, which planet is the most distant from the Sun?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Uranus"
+    },
+    {
+      "id": "b",
+      "text": "Neptune"
+    },
+    {
+      "id": "c",
+      "text": "Saturn"
+    },
+    {
+      "id": "d",
+      "text": "Jupiter"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Neptune is the eighth and farthest recognised planet from the Sun, orbiting at about 30 times Earth's distance.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Neptune",
+      "url": "https://en.wikipedia.org/wiki/Neptune",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

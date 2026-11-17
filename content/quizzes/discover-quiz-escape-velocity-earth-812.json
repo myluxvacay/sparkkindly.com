@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-escape-velocity-earth-812",
+  "scheduledDate": "2027-06-13",
+  "brand": "discover",
+  "prompt": "Earth's escape velocity is about 11.2 kilometres per second. What does that number actually mean for a projectile launched from Earth's surface, ignoring air resistance?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It is the speed a projectile needs so that Earth's gravity will never pull it back, even without any further push"
+    },
+    {
+      "id": "b",
+      "text": "It is the fastest speed any object is allowed to travel in space"
+    },
+    {
+      "id": "c",
+      "text": "It is the speed of a satellite in the lowest possible orbit"
+    },
+    {
+      "id": "d",
+      "text": "It depends strongly on the projectile's mass, so heavier craft need a much higher speed"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "At escape velocity a projectile's kinetic energy is enough for it to climb out of Earth's gravitational well indefinitely without extra thrust. Ignoring air resistance, the value does not depend on the projectile's own mass.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Escape velocity",
+      "url": "https://en.wikipedia.org/wiki/Escape_velocity",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

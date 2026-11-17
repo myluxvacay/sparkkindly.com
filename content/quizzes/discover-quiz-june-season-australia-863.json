@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-june-season-australia-863",
+  "scheduledDate": "2027-08-03",
+  "brand": "discover",
+  "prompt": "It is late June and people in Sydney, Australia, are wearing coats. Which season is it in Sydney, and why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Summer, because Australia is closer to the Sun in June"
+    },
+    {
+      "id": "b",
+      "text": "Spring, because seasons start later below the equator"
+    },
+    {
+      "id": "c",
+      "text": "Autumn, because the oceans cool the land in June"
+    },
+    {
+      "id": "d",
+      "text": "Winter, because the Southern Hemisphere is tilted away from the Sun in June"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "In June Earth's tilt points the Southern Hemisphere away from the Sun, so Australia gets weaker, lower sunlight and has winter while the north has summer.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Season",
+      "url": "https://en.wikipedia.org/wiki/Season",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-budget-leftover-goal-months-topup-1143",
+  "scheduledDate": "2028-05-09",
+  "brand": "save",
+  "prompt": "Your monthly income is $1,800. Each month you spend $700 on rent, $400 on food, $200 on transport and $100 on other costs. You put everything left over towards a $2,000 goal, and you have already saved $400 towards it. How many more months will it take to reach the goal?",
+  "options": [
+    {
+      "id": "a",
+      "text": "4 months"
+    },
+    {
+      "id": "b",
+      "text": "5 months"
+    },
+    {
+      "id": "c",
+      "text": "3 months"
+    },
+    {
+      "id": "d",
+      "text": "6 months"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Monthly spending: $700 + $400 + $200 + $100 = $1,400. Left over each month: $1,800 - $1,400 = $400. Still needed: $2,000 - $400 already saved = $1,600. Months needed: $1,600 / $400 = 4 months. The 5-month option forgets the $400 already saved ($2,000 / $400).",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

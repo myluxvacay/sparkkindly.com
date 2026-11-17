@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-brainstorm-judge-later-926",
+  "scheduledDate": "2027-10-05",
+  "brand": "grow",
+  "prompt": "Your group needs ideas for a school fundraiser, but every suggestion gets criticised the moment it is spoken. Which ground rule is most likely to produce more ideas?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only the group leader is allowed to suggest ideas"
+    },
+    {
+      "id": "b",
+      "text": "Vote on each idea as soon as it is spoken"
+    },
+    {
+      "id": "c",
+      "text": "List as many ideas as possible first without judging them, then evaluate the list together afterwards"
+    },
+    {
+      "id": "d",
+      "text": "Pick the first workable idea to save time"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Separating generating ideas from judging them stops early criticism from shutting people down, so the group ends up with a longer, more varied list to choose from.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

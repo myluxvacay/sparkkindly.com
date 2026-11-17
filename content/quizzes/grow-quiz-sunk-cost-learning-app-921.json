@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-sunk-cost-learning-app-921",
+  "scheduledDate": "2027-09-30",
+  "brand": "grow",
+  "prompt": "Marta paid for a year of a language app, but after two months her speaking has not improved and she dreads opening it. She keeps using it only because she paid. What is the best reasoning?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The payment makes the app more effective the longer she uses it"
+    },
+    {
+      "id": "b",
+      "text": "She must finish the year, otherwise the payment was wasted"
+    },
+    {
+      "id": "c",
+      "text": "Switching methods proves the first choice was foolish"
+    },
+    {
+      "id": "d",
+      "text": "The money is already spent either way, so she should choose the method that best builds speaking from now on"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "That is the sunk cost trap: a past payment should not dictate future time. The forward-looking question is which method actually practises speaking, regardless of what was paid.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Sunk cost",
+      "url": "https://en.wikipedia.org/wiki/Sunk_cost",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

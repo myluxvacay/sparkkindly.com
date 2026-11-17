@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-darts-121-legal-checkout-1061",
+  "scheduledDate": "2028-02-17",
+  "brand": "play",
+  "prompt": "In 501 darts a leg must finish on a double or the bullseye, and the finish must score exactly the points needed. A player needs exactly 121 with up to three darts. Which of these is a legal finish?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Treble 20, treble 20, single 1"
+    },
+    {
+      "id": "b",
+      "text": "Treble 20, treble 17, single 10"
+    },
+    {
+      "id": "c",
+      "text": "Treble 20, treble 17, double 5"
+    },
+    {
+      "id": "d",
+      "text": "Treble 20, treble 16, single 13"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Treble 20 is 60 and treble 17 is 51, leaving 10, which double 5 scores exactly while finishing on a double: 60 + 51 + 10 = 121. The other three also total 121, but each ends on a single, which is not a legal finish.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Darts",
+      "url": "https://en.wikipedia.org/wiki/Darts",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

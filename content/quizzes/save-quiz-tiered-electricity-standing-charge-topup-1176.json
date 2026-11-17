@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-tiered-electricity-standing-charge-topup-1176",
+  "scheduledDate": "2028-06-11",
+  "brand": "save",
+  "prompt": "An electricity bill has a $10 standing charge. The first 100 kWh cost $0.20 per kWh, and every kWh after that costs $0.30 per kWh. You use 250 kWh. What is your total bill?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$50"
+    },
+    {
+      "id": "b",
+      "text": "$65"
+    },
+    {
+      "id": "c",
+      "text": "$85"
+    },
+    {
+      "id": "d",
+      "text": "$75"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "First 100 kWh: 100 x $0.20 = $20. Remaining use: 250 - 100 = 150 kWh, at 150 x $0.30 = $45. Standing charge: $10. Total: $20 + $45 + $10 = $75. The $85 option charges all 250 kWh at the higher rate plus the standing charge, and $65 forgets the standing charge.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

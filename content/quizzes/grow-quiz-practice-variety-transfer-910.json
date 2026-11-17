@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-practice-variety-transfer-910",
+  "scheduledDate": "2027-09-19",
+  "brand": "grow",
+  "prompt": "A chess learner practises only one opening against the same app setting. In a real game, a different opening leaves him lost in the first ten moves. What practice change best builds transferable skill?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Practise that one opening for even more hours"
+    },
+    {
+      "id": "b",
+      "text": "Vary practice: different openings and positions, so he learns underlying principles rather than one memorised sequence"
+    },
+    {
+      "id": "c",
+      "text": "Only play games he is certain to win"
+    },
+    {
+      "id": "d",
+      "text": "Memorise a second single opening in exactly the same way"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Narrow, identical practice builds a fragile sequence that breaks when conditions change. Varied practice forces the learner to recognise principles across situations, which transfers to new games.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

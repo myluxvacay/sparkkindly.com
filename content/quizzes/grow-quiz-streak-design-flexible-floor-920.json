@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-streak-design-flexible-floor-920",
+  "scheduledDate": "2027-09-29",
+  "brand": "grow",
+  "prompt": "A habit tracker that demands a full 30-minute session daily collapses whenever life gets busy, even though the person happily does 5 minutes on those days when allowed. What design change best fits this evidence?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Raise the daily demand to 45 minutes to increase commitment"
+    },
+    {
+      "id": "b",
+      "text": "Delete the tracker, because tracking never helps"
+    },
+    {
+      "id": "c",
+      "text": "Count only perfect weeks and discard the rest"
+    },
+    {
+      "id": "d",
+      "text": "Set a small 'floor' version that counts on busy days, with the full session as the standard on normal days, so the chain survives hard weeks"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "An all-or-nothing target turns a busy day into a broken habit. A defined minimum keeps the cue-routine loop alive through hard periods, and full sessions resume when time returns.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

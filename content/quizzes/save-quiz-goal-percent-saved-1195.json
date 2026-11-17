@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-goal-percent-saved-1195",
+  "scheduledDate": "2028-06-30",
+  "brand": "save",
+  "prompt": "Your savings goal is $180 and you have saved $45 so far. What percentage of your goal have you saved?",
+  "options": [
+    {
+      "id": "a",
+      "text": "20%"
+    },
+    {
+      "id": "b",
+      "text": "30%"
+    },
+    {
+      "id": "c",
+      "text": "25%"
+    },
+    {
+      "id": "d",
+      "text": "45%"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The share saved is $45 / $180 = 0.25, which is 25% of the goal.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

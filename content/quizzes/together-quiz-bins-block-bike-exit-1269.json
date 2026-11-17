@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-bins-block-bike-exit-1269",
+  "scheduledDate": "2028-09-12",
+  "brand": "together",
+  "prompt": "A neighbour keeps leaving their bins blocking the narrow shared path you need to wheel your bike through each morning, and you have had to squeeze past all week. What is the kindest effective first step?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Move their bins into the middle of their own doorway"
+    },
+    {
+      "id": "b",
+      "text": "Knock politely, explain the squeeze in the morning, and ask if the bins could sit slightly to one side"
+    },
+    {
+      "id": "c",
+      "text": "Leave an anonymous angry note on the bins"
+    },
+    {
+      "id": "d",
+      "text": "Say nothing and start leaving much earlier to avoid the problem"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A polite, specific request explains the real difficulty and invites a simple fix, which works better than notes or silent resentment.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-home-coffee-weekly-saving-1197",
+  "scheduledDate": "2028-07-02",
+  "brand": "save",
+  "prompt": "A shop coffee costs $4 and a homemade coffee costs $1. If you have one coffee a day for 5 days, how much do you save by making it at home?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$15"
+    },
+    {
+      "id": "b",
+      "text": "$10"
+    },
+    {
+      "id": "c",
+      "text": "$20"
+    },
+    {
+      "id": "d",
+      "text": "$25"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Shop coffees cost 5 x $4 = $20. Homemade coffees cost 5 x $1 = $5, so you save $20 - $5 = $15.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

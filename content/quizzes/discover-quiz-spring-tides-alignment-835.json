@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-spring-tides-alignment-835",
+  "scheduledDate": "2027-07-06",
+  "brand": "discover",
+  "prompt": "The largest tidal ranges, called spring tides, occur at new moon and full moon. What alignment causes them?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Moon is at its closest point to Earth in its orbit"
+    },
+    {
+      "id": "b",
+      "text": "Earth is at its closest point to the Sun in its orbit"
+    },
+    {
+      "id": "c",
+      "text": "The Sun and Moon pull at right angles, cancelling each other out"
+    },
+    {
+      "id": "d",
+      "text": "The Sun, Moon and Earth line up, so the Sun's and Moon's tidal pulls reinforce each other"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "At new and full moon the Sun, Moon and Earth are in line, so solar and lunar tidal forces add together, producing higher high tides and lower low tides — a larger tidal range.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Tide",
+      "url": "https://en.wikipedia.org/wiki/Tide",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

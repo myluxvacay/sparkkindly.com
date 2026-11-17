@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-train-window-seat-travel-sick-swap-1306",
+  "scheduledDate": "2028-10-19",
+  "brand": "together",
+  "prompt": "On a long train journey, you booked the window seat because looking out helps the trip pass for you. An hour in, your friend in the aisle seat admits they feel travel sick and that watching the horizon is the only thing that helps, but they do not want to make a fuss. What response looks after you both?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keep your seat, since you booked it first and they can ask the conductor for help if it gets worse"
+    },
+    {
+      "id": "b",
+      "text": "Swap seats for the winding stretch of the journey, agree to swap back later, and check in with them rather than either of you suffering in silence"
+    },
+    {
+      "id": "c",
+      "text": "Give up your seat for the whole journey without saying you mind, even though you know you will feel awful by the end"
+    },
+    {
+      "id": "d",
+      "text": "Suggest they move to an empty seat in another carriage so you can both have a window"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Taking turns with the window seat shares the one thing that helps you both, and saying honestly that you would like it back later stops a kind gesture turning into quiet resentment.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

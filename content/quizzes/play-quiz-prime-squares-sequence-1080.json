@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-prime-squares-sequence-1080",
+  "scheduledDate": "2028-03-07",
+  "brand": "play",
+  "prompt": "What number comes next in this sequence: 4, 9, 25, 49, 121, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "169"
+    },
+    {
+      "id": "b",
+      "text": "144"
+    },
+    {
+      "id": "c",
+      "text": "143"
+    },
+    {
+      "id": "d",
+      "text": "225"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Each term is the square of a prime number: 2 squared = 4, 3 squared = 9, 5 squared = 25, 7 squared = 49, 11 squared = 121. The next prime is 13, and 13 squared = 169.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

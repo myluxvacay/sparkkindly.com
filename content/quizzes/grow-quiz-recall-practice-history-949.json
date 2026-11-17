@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-recall-practice-history-949",
+  "scheduledDate": "2027-10-28",
+  "brand": "grow",
+  "prompt": "You have a history test in two weeks and a chapter to learn. Which practice is most likely to make the facts stick?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Close the book, write down everything you can recall, then check what you missed"
+    },
+    {
+      "id": "b",
+      "text": "Re-read the chapter three times, highlighting the key lines each time"
+    },
+    {
+      "id": "c",
+      "text": "Copy the chapter summary out neatly by hand"
+    },
+    {
+      "id": "d",
+      "text": "Listen once while a classmate reads their notes aloud"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Trying to recall material from memory, then checking the gaps, strengthens retention far more than re-reading or copying, which can feel familiar without being well learned.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Testing effect",
+      "url": "https://en.wikipedia.org/wiki/Testing_effect",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

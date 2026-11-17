@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-four-runner-race-logic-1066",
+  "scheduledDate": "2028-02-22",
+  "brand": "play",
+  "prompt": "Ana, Ben, Cara and Dan finish a race in 1st, 2nd, 3rd and 4th place, with no ties. Cara finished immediately ahead of Dan. Ben finished ahead of Ana. Ana did not finish last. Who won the race?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ben"
+    },
+    {
+      "id": "b",
+      "text": "Ana"
+    },
+    {
+      "id": "c",
+      "text": "Cara"
+    },
+    {
+      "id": "d",
+      "text": "Dan"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Cara and Dan must sit in consecutive places. If they were 1st and 2nd, or 2nd and 3rd, then Ben ahead of Ana forces Ana into 4th place, which is ruled out. So Cara is 3rd and Dan 4th, leaving Ben 1st and Ana 2nd, which satisfies every clue.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

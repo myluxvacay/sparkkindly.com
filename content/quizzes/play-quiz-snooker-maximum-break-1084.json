@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-snooker-maximum-break-1084",
+  "scheduledDate": "2028-03-11",
+  "brand": "play",
+  "prompt": "In snooker there are 15 reds worth 1 point each. In a maximum break, each red is followed by the black (7 points), and after the last red and black the colours are cleared in order: yellow 2, green 3, brown 4, blue 5, pink 6, black 7. What is the maximum break?",
+  "options": [
+    {
+      "id": "a",
+      "text": "140"
+    },
+    {
+      "id": "b",
+      "text": "155"
+    },
+    {
+      "id": "c",
+      "text": "150"
+    },
+    {
+      "id": "d",
+      "text": "147"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The 15 red-black pairs score 15 x (1 + 7) = 120. The final colours add 2 + 3 + 4 + 5 + 6 + 7 = 27. The total is 120 + 27 = 147.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Maximum break",
+      "url": "https://en.wikipedia.org/wiki/Maximum_break",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

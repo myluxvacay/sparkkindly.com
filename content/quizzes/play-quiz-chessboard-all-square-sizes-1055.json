@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-chessboard-all-square-sizes-1055",
+  "scheduledDate": "2028-02-11",
+  "brand": "play",
+  "prompt": "Counting squares of every size, not just the small ones, how many squares are there in total on a standard 8 by 8 chessboard?",
+  "options": [
+    {
+      "id": "a",
+      "text": "64"
+    },
+    {
+      "id": "b",
+      "text": "200"
+    },
+    {
+      "id": "c",
+      "text": "129"
+    },
+    {
+      "id": "d",
+      "text": "204"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Count by size: 64 squares of 1x1, 49 of 2x2, 36 of 3x3, 25 of 4x4, 16 of 5x5, 9 of 6x6, 4 of 7x7 and 1 of 8x8. Adding them: 64 + 49 + 36 + 25 + 16 + 9 + 4 + 1 = 204.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

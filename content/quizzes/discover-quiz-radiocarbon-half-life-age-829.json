@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-radiocarbon-half-life-age-829",
+  "scheduledDate": "2027-06-30",
+  "brand": "discover",
+  "prompt": "A wooden artefact contains only one-eighth as much carbon-14 as a living tree of the same mass. Carbon-14 has a half-life of about 5,730 years. About how old is the artefact?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 17,190 years, because one-eighth is three halvings — after 5,730, 11,460 and then 17,190 years"
+    },
+    {
+      "id": "b",
+      "text": "About 5,730 years, because one-eighth disappears in a single half-life"
+    },
+    {
+      "id": "c",
+      "text": "About 11,460 years, because one-eighth is two halvings"
+    },
+    {
+      "id": "d",
+      "text": "About 45,840 years, because one-eighth is eight halvings"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Each half-life halves the carbon-14 that remains: 1 to 1/2 to 1/4 to 1/8 is three halvings. Three times 5,730 years is about 17,190 years since the wood died and stopped taking in new carbon-14.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Radiocarbon dating",
+      "url": "https://en.wikipedia.org/wiki/Radiocarbon_dating"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

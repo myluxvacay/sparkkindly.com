@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-el-nino-trade-winds-810",
+  "scheduledDate": "2027-06-11",
+  "brand": "discover",
+  "prompt": "During an El Niño event, the normally strong trade winds blowing westward across the tropical Pacific weaken. What is the main ocean effect that follows?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Warm surface water that usually piles up in the western Pacific spreads back eastward toward South America"
+    },
+    {
+      "id": "b",
+      "text": "Cold water from the deep ocean covers the whole Pacific surface"
+    },
+    {
+      "id": "c",
+      "text": "The Pacific's surface water all flows toward the poles"
+    },
+    {
+      "id": "d",
+      "text": "Sea level falls equally everywhere in the Pacific"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Trade winds normally push warm surface water westward. When they weaken during El Niño, that warm water sloshes eastward, warming the central and eastern Pacific and suppressing the usual cold upwelling off South America.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "El Niño",
+      "url": "https://en.wikipedia.org/wiki/El_Ni%C3%B1o",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

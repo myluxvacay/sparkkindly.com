@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-tennis-back-to-deuce-1131",
+  "scheduledDate": "2028-04-27",
+  "brand": "play",
+  "prompt": "In tennis, a tied score of 40-40 is called deuce. The player who wins the next point gets 'advantage', but if the other player wins the following point the score returns to deuce. The score is deuce, Player A wins a point, then Player B wins a point. What is the score now?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Advantage Player B"
+    },
+    {
+      "id": "b",
+      "text": "Deuce"
+    },
+    {
+      "id": "c",
+      "text": "Advantage Player A"
+    },
+    {
+      "id": "d",
+      "text": "Game Player B"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Starting at deuce, Player A's point gives Advantage A. Player B's next point cancels that advantage, so the score returns to deuce.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Tennis scoring",
+      "url": "https://en.wikipedia.org/wiki/Tennis_scoring",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

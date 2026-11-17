@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-scrabble-jazz-bonuses-1083",
+  "scheduledDate": "2028-03-10",
+  "brand": "play",
+  "prompt": "In Scrabble the letter values include J = 8, A = 1 and Z = 10. You play the word JAZZ so that the J lands on a Double Letter square and the whole word lands on a Triple Word square. Counting both bonuses, how many points does the word score?",
+  "options": [
+    {
+      "id": "a",
+      "text": "87"
+    },
+    {
+      "id": "b",
+      "text": "99"
+    },
+    {
+      "id": "c",
+      "text": "111"
+    },
+    {
+      "id": "d",
+      "text": "37"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The plain letter total is 8 + 1 + 10 + 10 = 29. The Double Letter square doubles the J to 16, lifting the word total to 37. The Triple Word square then triples that: 37 x 3 = 111.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Scrabble letter distributions",
+      "url": "https://en.wikipedia.org/wiki/Scrabble_letter_distributions",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

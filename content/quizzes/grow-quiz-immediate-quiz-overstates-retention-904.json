@@ -1,0 +1,43 @@
+{
+  "id": "grow-quiz-immediate-quiz-overstates-retention-904",
+  "scheduledDate": "2027-09-13",
+  "brand": "grow",
+  "prompt": "A teacher quizzes her class five minutes after teaching a topic and the average score is 92%, so she records the topic as learned and schedules no further practice on it. Three weeks later, an end-of-unit test with questions of similar difficulty on the same topic averages 54%. The class was not re-taught the topic in between. What is the best interpretation of the two scores?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The class must have stopped trying on the second test, because a 92% average proves the learning was secure"
+    },
+    {
+      "id": "b",
+      "text": "The first quiz was probably marked too generously, and re-marking it would close most of the gap between the scores"
+    },
+    {
+      "id": "c",
+      "text": "The topic was learned well but is the kind of material that can only ever be recalled on the day it is taught"
+    },
+    {
+      "id": "d",
+      "text": "A quiz taken minutes after teaching mainly measures what is still fresh in mind, not durable retention; only a delayed, closed-book check after a gap would show what was really retained and what needs review"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Performance straight after teaching overstates long-term learning, because the material has barely begun to be forgotten. A retrieval check delayed by days or weeks gives a far more honest picture of retention and tells the teacher which topics need spaced review before the final test.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Testing effect",
+      "url": "https://en.wikipedia.org/wiki/Testing_effect"
+    },
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Forgetting curve",
+      "url": "https://en.wikipedia.org/wiki/Forgetting_curve"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

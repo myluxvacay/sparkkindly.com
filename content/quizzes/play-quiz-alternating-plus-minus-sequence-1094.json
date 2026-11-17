@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-alternating-plus-minus-sequence-1094",
+  "scheduledDate": "2028-03-21",
+  "brand": "play",
+  "prompt": "What number comes next in this pattern: 4, 6, 5, 7, 6, 8, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "9"
+    },
+    {
+      "id": "b",
+      "text": "6"
+    },
+    {
+      "id": "c",
+      "text": "10"
+    },
+    {
+      "id": "d",
+      "text": "7"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The steps alternate +2, -1: 4+2=6, 6-1=5, 5+2=7, 7-1=6 and 6+2=8. The next step is -1, giving 8-1=7.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

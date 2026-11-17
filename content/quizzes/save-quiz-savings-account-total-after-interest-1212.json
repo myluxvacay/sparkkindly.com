@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-savings-account-total-after-interest-1212",
+  "scheduledDate": "2028-07-17",
+  "brand": "save",
+  "prompt": "You deposit $500 in an account and earn 2% interest after one year. How much is in the account in total?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$502"
+    },
+    {
+      "id": "b",
+      "text": "$520"
+    },
+    {
+      "id": "c",
+      "text": "$505"
+    },
+    {
+      "id": "d",
+      "text": "$510"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The interest is $500 x 2 / 100 = $10, so the total is $500 + $10 = $510.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-caldera-collapse-805",
+  "scheduledDate": "2027-06-06",
+  "brand": "discover",
+  "prompt": "Some volcanoes have a huge, broad crater many kilometres wide called a caldera. A caldera usually forms when:",
+  "options": [
+    {
+      "id": "a",
+      "text": "A large magma chamber empties during an eruption and the ground above it collapses down into the space left behind"
+    },
+    {
+      "id": "b",
+      "text": "An explosion simply blows the top off the mountain in one piece"
+    },
+    {
+      "id": "c",
+      "text": "Rainwater dissolves the summit rock over millions of years"
+    },
+    {
+      "id": "d",
+      "text": "Glaciers carve out the summit during an ice age"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Calderas are collapse features: when a magma chamber is partly emptied by a major eruption, the roof of rock above it is unsupported and sinks, leaving a broad depression much larger than an ordinary crater.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Caldera",
+      "url": "https://en.wikipedia.org/wiki/Caldera",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

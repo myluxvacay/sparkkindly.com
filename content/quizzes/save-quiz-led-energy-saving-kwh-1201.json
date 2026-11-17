@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-led-energy-saving-kwh-1201",
+  "scheduledDate": "2028-07-06",
+  "brand": "save",
+  "prompt": "An old bulb uses 100 watts and an LED bulb uses 20 watts. If the bulb is on for 50 hours, how many kilowatt-hours of electricity does the LED save?",
+  "options": [
+    {
+      "id": "a",
+      "text": "1 kWh"
+    },
+    {
+      "id": "b",
+      "text": "2 kWh"
+    },
+    {
+      "id": "c",
+      "text": "4 kWh"
+    },
+    {
+      "id": "d",
+      "text": "8 kWh"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The LED saves 100 - 20 = 80 watts per hour. Over 50 hours that is 80 x 50 = 4,000 watt-hours, which is 4 kWh.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

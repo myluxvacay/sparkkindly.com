@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-shield-volcano-shape-833",
+  "scheduledDate": "2027-07-04",
+  "brand": "discover",
+  "prompt": "Shield volcanoes such as those in Hawaii are very wide with gentle slopes, unlike steep cone volcanoes. The shape is mainly due to:",
+  "options": [
+    {
+      "id": "a",
+      "text": "Wind spreading the ash evenly over a wide area"
+    },
+    {
+      "id": "b",
+      "text": "The volcano erupting only once, long ago"
+    },
+    {
+      "id": "c",
+      "text": "Very runny, low-viscosity lava that flows a long way before solidifying, building up broad layers"
+    },
+    {
+      "id": "d",
+      "text": "Ocean water flattening the lava as it erupts"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Basaltic lava at shield volcanoes is fluid and flows far in thin sheets before hardening. Layer upon layer of these long flows builds a wide mountain with shallow slopes, like a warrior's shield lying on the ground.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Shield volcano",
+      "url": "https://en.wikipedia.org/wiki/Shield_volcano",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

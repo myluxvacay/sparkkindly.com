@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-if-then-matched-to-logged-obstacle-903",
+  "scheduledDate": "2027-09-12",
+  "brand": "grow",
+  "prompt": "Yuki logs why her planned 4 p.m. study sessions failed to start over two weeks. Of 11 missed starts, 9 began the same way: she picked up the phone lying on her desk to check the time and was still scrolling twenty minutes later. Library noise caused one missed start and tiredness one. Which if-then plan best targets the evidence in her log?",
+  "options": [
+    {
+      "id": "a",
+      "text": "If I sit down at my desk at 4 p.m., then I will put my phone in my bag across the room before I open my book, and begin with a ten-minute recall sheet"
+    },
+    {
+      "id": "b",
+      "text": "If the library gets noisy while I am studying, then I will put on headphones and move to a quieter floor"
+    },
+    {
+      "id": "c",
+      "text": "If I feel tired at 4 p.m., then I will make a coffee and promise myself an early night afterwards"
+    },
+    {
+      "id": "d",
+      "text": "If a friend invites me out after school, then I will ask whether we can meet at the weekend instead"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Nine of the eleven failures share one trigger at one moment: picking up the phone on the desk right at the start. An effective implementation intention links exactly that cue to a concrete action that removes the trigger before studying begins; the other plans target obstacles her log shows were rare or absent.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Implementation intention",
+      "url": "https://en.wikipedia.org/wiki/Implementation_intention"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

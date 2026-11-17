@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-ottawa-capital-canada-871",
+  "scheduledDate": "2027-08-11",
+  "brand": "discover",
+  "prompt": "Toronto is Canada's largest city, but it is not the capital. Which city is Canada's capital?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ottawa"
+    },
+    {
+      "id": "b",
+      "text": "Vancouver"
+    },
+    {
+      "id": "c",
+      "text": "Montreal"
+    },
+    {
+      "id": "d",
+      "text": "Quebec City"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Ottawa, in Ontario on the Ottawa River, is Canada's capital and seat of its federal parliament, even though Toronto is larger.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Ottawa",
+      "url": "https://en.wikipedia.org/wiki/Ottawa",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

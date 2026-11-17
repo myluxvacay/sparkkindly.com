@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-two-pipes-fill-together-1091",
+  "scheduledDate": "2028-03-18",
+  "brand": "play",
+  "prompt": "Pipe A on its own can fill a tank in 6 hours. Pipe B on its own can fill the same tank in 4 hours. With both pipes running together, how long does the tank take to fill?",
+  "options": [
+    {
+      "id": "a",
+      "text": "2 hours 30 minutes"
+    },
+    {
+      "id": "b",
+      "text": "2 hours 24 minutes"
+    },
+    {
+      "id": "c",
+      "text": "5 hours"
+    },
+    {
+      "id": "d",
+      "text": "2 hours"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "In one hour A fills 1/6 of the tank and B fills 1/4, so together they fill 1/6 + 1/4 = 5/12 per hour. The whole tank takes 12/5 hours, which is 2.4 hours, or 2 hours 24 minutes.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

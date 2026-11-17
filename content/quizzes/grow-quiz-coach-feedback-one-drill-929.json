@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-coach-feedback-one-drill-929",
+  "scheduledDate": "2027-10-08",
+  "brand": "grow",
+  "prompt": "At football training you keep mistiming your runs. Which response is most likely to improve that specific skill?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Practise everything harder for an extra hour every day"
+    },
+    {
+      "id": "b",
+      "text": "Watch full match replays and hope the timing sinks in"
+    },
+    {
+      "id": "c",
+      "text": "Put it down to the passes arriving too late"
+    },
+    {
+      "id": "d",
+      "text": "Ask the coach for one drill that targets timing, and repeat that drill in short sessions"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Improvement comes fastest from focused practice on the exact weak point, with feedback, rather than from simply doing more of everything or only watching others.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-emulsion-mayonnaise-811",
+  "scheduledDate": "2027-06-12",
+  "brand": "discover",
+  "prompt": "Mayonnaise is oil and water-based liquid beaten together into a stable, creamy mixture that does not separate, thanks to egg yolk. Egg yolk works because it acts as:",
+  "options": [
+    {
+      "id": "a",
+      "text": "An acid that dissolves the oil into the water"
+    },
+    {
+      "id": "b",
+      "text": "A preservative that stops the oil going off"
+    },
+    {
+      "id": "c",
+      "text": "A thickener that simply makes everything too stiff to separate"
+    },
+    {
+      "id": "d",
+      "text": "An emulsifier whose molecules coat tiny oil droplets and keep them dispersed in the water instead of joining back together"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Egg yolk contains lecithin, an emulsifier with a water-loving end and a fat-loving end. It coats small oil droplets and stops them coalescing, keeping the oil-in-water emulsion of mayonnaise stable.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Emulsion",
+      "url": "https://en.wikipedia.org/wiki/Emulsion",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

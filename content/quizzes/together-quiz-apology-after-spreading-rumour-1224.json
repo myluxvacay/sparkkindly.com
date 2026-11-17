@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-apology-after-spreading-rumour-1224",
+  "scheduledDate": "2028-07-29",
+  "brand": "together",
+  "prompt": "You repeated a rumour about a classmate that turned out to be untrue, and it has reached them and upset them. What apology would do the most to repair the harm?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Say sorry if they were offended and explain that other people started the rumour, not you"
+    },
+    {
+      "id": "b",
+      "text": "Be extra friendly to them for a while and hope they realise you feel bad without naming what happened"
+    },
+    {
+      "id": "c",
+      "text": "Apologise in front of everyone mainly so other people see you as the bigger person"
+    },
+    {
+      "id": "d",
+      "text": "Name what you did without excuses, say it was wrong, correct the rumour with the people you told, and accept they may need time"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Repair means owning your part, correcting the false story where you spread it, and not demanding instant forgiveness. An if-you-were-offended apology or quiet niceness leaves the rumour and the hurt unaddressed.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

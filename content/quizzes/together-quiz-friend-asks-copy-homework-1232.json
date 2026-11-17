@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-friend-asks-copy-homework-1232",
+  "scheduledDate": "2028-08-06",
+  "brand": "together",
+  "prompt": "The night before a deadline, a friend who has been struggling asks to copy your homework just this once. What is the most helpful response that does not cross a line?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Send them your work, because loyalty means helping a friend in a tight spot"
+    },
+    {
+      "id": "b",
+      "text": "Send it but tell them to change the wording so it looks different"
+    },
+    {
+      "id": "c",
+      "text": "Decline the copying, and offer to explain the ideas and work through a similar example with them that evening"
+    },
+    {
+      "id": "d",
+      "text": "Ignore the message and report them to the teacher first thing without speaking to them"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Copying puts you both at risk and teaches your friend nothing. Explaining and practising together is real help that respects the rules, whereas reporting them as a first step skips a direct conversation.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

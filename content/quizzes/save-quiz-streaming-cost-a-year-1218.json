@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-streaming-cost-a-year-1218",
+  "scheduledDate": "2028-07-23",
+  "brand": "save",
+  "prompt": "A streaming service costs $11 per month. How much does it cost over a full year of 12 months?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$121"
+    },
+    {
+      "id": "b",
+      "text": "$132"
+    },
+    {
+      "id": "c",
+      "text": "$110"
+    },
+    {
+      "id": "d",
+      "text": "$144"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The yearly cost is $11 x 12 = $132.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

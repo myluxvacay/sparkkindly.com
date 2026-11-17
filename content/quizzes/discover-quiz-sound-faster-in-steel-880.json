@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-sound-faster-in-steel-880",
+  "scheduledDate": "2027-08-20",
+  "brand": "discover",
+  "prompt": "Sound travels much faster through a steel rail than through air — roughly 5,000 metres per second instead of about 343. Why is it so much faster in steel?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Particles in steel are much closer together and tightly linked, so vibrations pass from one to the next far faster than in air"
+    },
+    {
+      "id": "b",
+      "text": "Steel is heavier than air, and heavier materials always carry sound faster"
+    },
+    {
+      "id": "c",
+      "text": "Sound in steel is carried by electric currents, which travel near light speed"
+    },
+    {
+      "id": "d",
+      "text": "Air slows sound down only because wind pushes against it"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Sound is a vibration passed from particle to particle. In steel the particles are packed tightly and held in a stiff, elastic solid, so each vibration is handed on much faster than in air, where molecules are far apart — about 5,000 metres per second versus about 343.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Speed of sound",
+      "url": "https://en.wikipedia.org/wiki/Speed_of_sound"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

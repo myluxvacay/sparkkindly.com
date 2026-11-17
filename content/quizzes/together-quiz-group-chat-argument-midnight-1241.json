@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-group-chat-argument-midnight-1241",
+  "scheduledDate": "2028-08-15",
+  "brand": "together",
+  "prompt": "A group chat argument between two friends is escalating late at night and others are taking sides in the thread. What response is most likely to help rather than fuel it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Suggest pausing until morning when everyone is calmer, make clear you care about both friends, and avoid taking a side in the public thread"
+    },
+    {
+      "id": "b",
+      "text": "Drop in a witty comment about the argument to lighten the mood"
+    },
+    {
+      "id": "c",
+      "text": "Publicly take the side of the friend you are closer to, so they feel supported"
+    },
+    {
+      "id": "d",
+      "text": "Leave the group dramatically without a word, so everyone notices your disapproval"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Tired, public arguments reward quick reactions over understanding. A pause protects both friendships and lets the two people involved sort it out properly, while side-taking and dramatic exits raise the stakes.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-cold-winter-climate-trend-807",
+  "scheduledDate": "2027-06-08",
+  "brand": "discover",
+  "prompt": "A town has one unusually cold, snowy winter during a period when its average temperature over 30 years has steadily risen. Which statement is most scientifically sound?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The cold winter proves the long-term warming trend is not happening"
+    },
+    {
+      "id": "b",
+      "text": "The long-term trend proves the cold winter cannot really have happened"
+    },
+    {
+      "id": "c",
+      "text": "Climate and weather are the same thing, so the two observations contradict each other"
+    },
+    {
+      "id": "d",
+      "text": "One winter is short-term weather, which varies a lot; climate is the long-term pattern, so a single cold season does not overturn it"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Weather describes short-term conditions that fluctuate widely from year to year, while climate is the long-term average pattern. A single cold winter sits within natural variability and does not by itself change a multi-decade trend.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Climate",
+      "url": "https://en.wikipedia.org/wiki/Climate",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

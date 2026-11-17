@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-discount-then-coupon-200-1152",
+  "scheduledDate": "2028-05-18",
+  "brand": "save",
+  "prompt": "A $200 jacket is reduced by 30%, and then a $10 coupon is taken off the reduced price. How much do you pay?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$140"
+    },
+    {
+      "id": "b",
+      "text": "$123"
+    },
+    {
+      "id": "c",
+      "text": "$190"
+    },
+    {
+      "id": "d",
+      "text": "$130"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "After 30% off: $200 x 0.70 = $140. Then the coupon: $140 - $10 = $130. The order matters: the coupon comes off the already-reduced price.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

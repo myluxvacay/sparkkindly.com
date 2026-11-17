@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-ferromagnetic-domains-813",
+  "scheduledDate": "2027-06-14",
+  "brand": "discover",
+  "prompt": "A paperclip is strongly attracted to a magnet, while an aluminium can is barely affected. The key difference inside the iron of the paperclip is that iron:",
+  "options": [
+    {
+      "id": "a",
+      "text": "Contains tiny permanent electric charges that magnets pull on"
+    },
+    {
+      "id": "b",
+      "text": "Is heavier, and magnets attract heavy metals"
+    },
+    {
+      "id": "c",
+      "text": "Has magnetic domains — regions whose atomic magnetic fields can line up together, reinforcing each other"
+    },
+    {
+      "id": "d",
+      "text": "Conducts electricity, and all good conductors are strongly magnetic"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Ferromagnetic materials such as iron have domains in which many atoms' magnetic moments are aligned. An external field rotates more domains into alignment, producing a strong combined attraction, unlike weakly magnetic aluminium.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Ferromagnetism",
+      "url": "https://en.wikipedia.org/wiki/Ferromagnetism",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

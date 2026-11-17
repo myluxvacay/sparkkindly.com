@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-pitch-and-frequency-873",
+  "scheduledDate": "2027-08-13",
+  "brand": "discover",
+  "prompt": "A guitarist tightens a string and plucks it again, and the note sounds higher. In sound terms, what has increased?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The amplitude of the vibration"
+    },
+    {
+      "id": "b",
+      "text": "The frequency of the vibration"
+    },
+    {
+      "id": "c",
+      "text": "The speed of sound in the air"
+    },
+    {
+      "id": "d",
+      "text": "The wavelength travelling to the ear only"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Pitch is set by frequency — how many vibrations happen per second. A tighter string vibrates faster, raising the frequency and therefore the pitch.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Frequency",
+      "url": "https://en.wikipedia.org/wiki/Frequency",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

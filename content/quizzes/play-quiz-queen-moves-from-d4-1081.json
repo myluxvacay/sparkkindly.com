@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-queen-moves-from-d4-1081",
+  "scheduledDate": "2028-03-08",
+  "brand": "play",
+  "prompt": "In chess, a queen moves any number of squares along its row, column or diagonals, without jumping over pieces. A queen sits alone on square d4 of an otherwise empty board. How many squares can it move to?",
+  "options": [
+    {
+      "id": "a",
+      "text": "21"
+    },
+    {
+      "id": "b",
+      "text": "27"
+    },
+    {
+      "id": "c",
+      "text": "28"
+    },
+    {
+      "id": "d",
+      "text": "25"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Along its row and column the queen reaches 7 + 7 = 14 squares. On the diagonals from d4 it reaches 4 + 3 + 3 + 3 = 13 squares. In total, 14 + 13 = 27 squares.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Queen (chess)",
+      "url": "https://en.wikipedia.org/wiki/Queen_(chess)",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

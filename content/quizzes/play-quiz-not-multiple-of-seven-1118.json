@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-not-multiple-of-seven-1118",
+  "scheduledDate": "2028-04-14",
+  "brand": "play",
+  "prompt": "Which of these numbers is NOT a multiple of 7?",
+  "options": [
+    {
+      "id": "a",
+      "text": "36"
+    },
+    {
+      "id": "b",
+      "text": "14"
+    },
+    {
+      "id": "c",
+      "text": "28"
+    },
+    {
+      "id": "d",
+      "text": "42"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The multiples of 7 here are 14 (7x2), 28 (7x4) and 42 (7x6). 36 is not divisible by 7, since 7x5=35 and 7x6=42.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

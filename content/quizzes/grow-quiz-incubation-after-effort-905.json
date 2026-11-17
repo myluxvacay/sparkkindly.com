@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-incubation-after-effort-905",
+  "scheduledDate": "2027-09-14",
+  "brand": "grow",
+  "prompt": "A writer works hard on a problem scene for an hour with no progress, takes a walk, and an idea arrives. Which claim about this is most careful and accurate?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Breaks magically solve problems with no prior effort needed"
+    },
+    {
+      "id": "b",
+      "text": "Walking always produces ideas within ten minutes"
+    },
+    {
+      "id": "c",
+      "text": "A break after sustained effort can help — stepping away sometimes allows a fresh approach — but it follows the work rather than replacing it"
+    },
+    {
+      "id": "d",
+      "text": "The idea proves effort was unnecessary all along"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Incubation effects are modest and depend on having first engaged seriously with the problem. The walk helped after effortful work; it is not a substitute for that work or a guaranteed fix.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-sonar-distance-calculation-834",
+  "scheduledDate": "2027-07-05",
+  "brand": "discover",
+  "prompt": "A ship's sonar sends out a pulse and hears the echo from the seabed 4 seconds later. Sound travels at about 1,500 metres per second in seawater. How deep is the water?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 3,000 metres, because the pulse travels down and back, so depth is 1,500 × 4 ÷ 2"
+    },
+    {
+      "id": "b",
+      "text": "About 6,000 metres, because depth is 1,500 × 4"
+    },
+    {
+      "id": "c",
+      "text": "About 750 metres, because depth is 1,500 ÷ 2"
+    },
+    {
+      "id": "d",
+      "text": "About 375 metres, because depth is 1,500 ÷ 4"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "In 4 seconds the sound covers 1,500 × 4 = 6,000 metres in total, but that is the round trip down and back. The one-way distance to the seabed is half of that: about 3,000 metres.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Speed of sound",
+      "url": "https://en.wikipedia.org/wiki/Speed_of_sound",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-one-bad-score-evidence-check-909",
+  "scheduledDate": "2027-09-18",
+  "brand": "grow",
+  "prompt": "Nadia switches to a new study method. Her first quiz score drops slightly, so she wants to abandon it immediately. What is the most evidence-based response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Check the trend over several quizzes and whether that quiz covered different material, before judging the method from one result"
+    },
+    {
+      "id": "b",
+      "text": "Abandon it, because a good method should improve the very first score"
+    },
+    {
+      "id": "c",
+      "text": "Keep it forever, because new methods always work eventually"
+    },
+    {
+      "id": "d",
+      "text": "Judge it by how enjoyable the first session felt"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "One score is a tiny, noisy sample affected by topic and difficulty. A fair test pre-decides a trial period and compares a trend, not a single data point.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

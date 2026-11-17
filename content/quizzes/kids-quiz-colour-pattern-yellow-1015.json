@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-colour-pattern-yellow-1015",
+  "scheduledDate": "2028-01-02",
+  "brand": "kids",
+  "prompt": "Red, blue, yellow, red, blue. Which colour comes next?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Red"
+    },
+    {
+      "id": "b",
+      "text": "Yellow"
+    },
+    {
+      "id": "c",
+      "text": "Green"
+    },
+    {
+      "id": "d",
+      "text": "Pink"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Nice spotting! The colours repeat red, blue, yellow, so yellow comes next.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-europa-icy-moon-852",
+  "scheduledDate": "2027-07-23",
+  "brand": "discover",
+  "prompt": "Europa, one of Jupiter's moons, is a top target in the search for life beyond Earth. What makes it so interesting?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It appears to hide a deep liquid-water ocean beneath its icy crust"
+    },
+    {
+      "id": "b",
+      "text": "It has a thick oxygen atmosphere like Earth's"
+    },
+    {
+      "id": "c",
+      "text": "Its surface is covered in green vegetation"
+    },
+    {
+      "id": "d",
+      "text": "It is the closest moon to Earth"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Evidence from spacecraft indicates Europa has a salty liquid ocean under its ice shell, and liquid water is a key ingredient for life as we know it.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Europa (moon)",
+      "url": "https://en.wikipedia.org/wiki/Europa_(moon)",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

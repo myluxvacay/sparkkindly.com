@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-new-manager-friend-performance-standard-1250",
+  "scheduledDate": "2028-08-24",
+  "brand": "together",
+  "prompt": "You have just become team leader at work, and one of your closest friends is on your team. Their handovers have been late or incomplete for several weeks, other teammates are quietly picking up the gaps, and your friend jokes that at least they now have 'a manager who understands'. Saying nothing feels disloyal to the team, but coming down hard feels disloyal to your friend. What is the most constructive approach?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Let it go for now and quietly redistribute their work, so the friendship stays intact and the team still copes"
+    },
+    {
+      "id": "b",
+      "text": "Be noticeably stricter with your friend than with anyone else, so nobody can accuse you of favouritism"
+    },
+    {
+      "id": "c",
+      "text": "Meet privately, name the pattern and its effect on the team, listen for what is behind it, and agree the same standard everyone is held to, with clear support and a time to review it together"
+    },
+    {
+      "id": "d",
+      "text": "Ask your own manager to move your friend to another team, so you never have to choose between the friendship and the job"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Holding a friend to the same standard as everyone else, in private and with real support, is fair to the team without being a betrayal. Quietly covering for them breeds resentment, extra strictness punishes them for the friendship, and handing the problem away avoids a conversation a good manager and a good friend can actually have.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

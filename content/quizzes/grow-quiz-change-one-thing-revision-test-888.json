@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-change-one-thing-revision-test-888",
+  "scheduledDate": "2027-08-28",
+  "brand": "grow",
+  "prompt": "After feedback on her talk, Ines rewrites the script, redesigns every slide, slows her pace, and practises in a different room — all at once. The next talk goes better, but she has no idea which change helped, and one change may even have hurt. What would have given her usable knowledge, not just a better talk?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Changing even more things next time, so the improvement is bigger and easier to see"
+    },
+    {
+      "id": "b",
+      "text": "Changing one or two linked things at a time and comparing the result, so she can tell what actually made the difference"
+    },
+    {
+      "id": "c",
+      "text": "Asking the audience afterwards which change they think helped most, and trusting that completely"
+    },
+    {
+      "id": "d",
+      "text": "Keeping a list of everything she changed, which on its own tells her which one worked"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "When everything changes at once, improvement cannot be attributed to any single change — and a harmful change can hide inside a good overall result. Testing changes in small steps builds knowledge she can reuse in every future talk.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

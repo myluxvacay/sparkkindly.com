@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-eggs-per-egg-difference-1153",
+  "scheduledDate": "2028-05-19",
+  "brand": "save",
+  "prompt": "Eggs cost $3.60 for 12 or $4.50 for 18. How much cheaper per egg is the pack of 18?",
+  "options": [
+    {
+      "id": "a",
+      "text": "90 cents"
+    },
+    {
+      "id": "b",
+      "text": "25 cents"
+    },
+    {
+      "id": "c",
+      "text": "30 cents"
+    },
+    {
+      "id": "d",
+      "text": "5 cents"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Pack of 12: $3.60 divided by 12 = 30 cents per egg. Pack of 18: $4.50 divided by 18 = 25 cents per egg. Difference: 30 - 25 = 5 cents per egg.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

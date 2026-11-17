@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-darts-visit-remaining-1102",
+  "scheduledDate": "2028-03-29",
+  "brand": "play",
+  "prompt": "A darts player starts a leg of 501 on exactly 501 points. In one visit of three darts she scores treble 20, treble 19 and double 16. How many points does she have left?",
+  "options": [
+    {
+      "id": "a",
+      "text": "352"
+    },
+    {
+      "id": "b",
+      "text": "342"
+    },
+    {
+      "id": "c",
+      "text": "362"
+    },
+    {
+      "id": "d",
+      "text": "351"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Treble 20 is 60, treble 19 is 57 and double 16 is 32, so the visit scores 60 + 57 + 32 = 149. Subtracting from 501 gives 501 - 149 = 352.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Darts",
+      "url": "https://en.wikipedia.org/wiki/Darts",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

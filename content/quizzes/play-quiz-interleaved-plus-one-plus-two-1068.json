@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-interleaved-plus-one-plus-two-1068",
+  "scheduledDate": "2028-02-24",
+  "brand": "play",
+  "prompt": "What number comes next in this sequence: 3, 5, 4, 7, 5, 9, 6, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "11"
+    },
+    {
+      "id": "b",
+      "text": "7"
+    },
+    {
+      "id": "c",
+      "text": "12"
+    },
+    {
+      "id": "d",
+      "text": "10"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Split the sequence into alternate terms. The 1st, 3rd, 5th and 7th terms run 3, 4, 5, 6, rising by 1. The 2nd, 4th and 6th terms run 5, 7, 9, rising by 2, so the next term, which belongs to the second run, is 11.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

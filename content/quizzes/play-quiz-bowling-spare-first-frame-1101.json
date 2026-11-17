@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-bowling-spare-first-frame-1101",
+  "scheduledDate": "2028-03-28",
+  "brand": "play",
+  "prompt": "In ten-pin bowling, a spare (knocking down all 10 pins with two balls in a frame) scores 10 plus the pins from your next ball. You bowl 7 then 3 for a spare in frame 1, and your next ball knocks down 4 pins. What is your score for frame 1?",
+  "options": [
+    {
+      "id": "a",
+      "text": "10"
+    },
+    {
+      "id": "b",
+      "text": "17"
+    },
+    {
+      "id": "c",
+      "text": "14"
+    },
+    {
+      "id": "d",
+      "text": "13"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The spare itself is worth 10 pins, and the bonus is the next ball's 4 pins. So frame 1 scores 10+4=14.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Ten-pin bowling",
+      "url": "https://en.wikipedia.org/wiki/Ten-pin_bowling",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

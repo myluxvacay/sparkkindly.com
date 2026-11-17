@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-queue-cut-request-1297",
+  "scheduledDate": "2028-10-10",
+  "brand": "together",
+  "prompt": "At a long lunch queue, a friend spots you near the front and asks you to let them and two others slip in with you. People behind are watching. What response best balances kindness and fairness?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Wave all three in, since friends come first"
+    },
+    {
+      "id": "b",
+      "text": "Pretend you did not hear them"
+    },
+    {
+      "id": "c",
+      "text": "Say you cannot add three people ahead of everyone waiting, but offer to order for them or save them a table"
+    },
+    {
+      "id": "d",
+      "text": "Give up your own place and go to the back with them in protest"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Refusing to push others back while offering a different help keeps loyalty to your friend without being unfair to strangers in the queue.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

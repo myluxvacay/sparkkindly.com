@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-earth-field-dynamo-809",
+  "scheduledDate": "2027-06-10",
+  "brand": "discover",
+  "prompt": "Earth has a magnetic field strong enough to turn compass needles worldwide. That field is generated mainly by:",
+  "options": [
+    {
+      "id": "a",
+      "text": "A giant permanent bar magnet frozen into Earth's solid inner core"
+    },
+    {
+      "id": "b",
+      "text": "Movement of electrically conducting liquid iron in Earth's outer core, acting as a dynamo"
+    },
+    {
+      "id": "c",
+      "text": "Static electricity built up in the atmosphere"
+    },
+    {
+      "id": "d",
+      "text": "Magnetised rocks in the crust all pointing the same way"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The geodynamo arises from convection and rotation of liquid iron alloy in the outer core. Moving conducting fluid sustains electric currents, and those currents generate Earth's magnetic field.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Dynamo theory",
+      "url": "https://en.wikipedia.org/wiki/Dynamo_theory",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

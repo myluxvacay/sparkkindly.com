@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-irregular-expenses-budget-flaw-907",
+  "scheduledDate": "2027-09-16",
+  "brand": "grow",
+  "prompt": "Jo's monthly budget balances in most months, yet roughly four times a year Jo is suddenly overdrawn — always in months containing an annual insurance payment, a term-time travel pass, or several family birthdays. Day-to-day spending in those months is no higher than usual. What is the flaw in the budget?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Jo spends too much on small daily items, and those months are when it finally catches up"
+    },
+    {
+      "id": "b",
+      "text": "A monthly budget cannot work at all; only a weekly budget can handle real life"
+    },
+    {
+      "id": "c",
+      "text": "Jo should stop paying for insurance and travel passes, since they keep breaking the budget"
+    },
+    {
+      "id": "d",
+      "text": "The budget only plans for regular monthly costs and ignores predictable irregular ones, which should be totalled for the year, divided by twelve, and set aside monthly"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The problem bills are not surprises — they arrive every year. Adding up predictable irregular costs, dividing by twelve, and putting that amount aside each month turns four crisis months into ordinary ones.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

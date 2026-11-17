@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-cubes-plus-one-sequence-1059",
+  "scheduledDate": "2028-02-15",
+  "brand": "play",
+  "prompt": "What number comes next in this sequence: 1, 2, 9, 28, 65, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "100"
+    },
+    {
+      "id": "b",
+      "text": "99"
+    },
+    {
+      "id": "c",
+      "text": "124"
+    },
+    {
+      "id": "d",
+      "text": "126"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Each term is a cube plus 1: 0 cubed + 1 = 1, 1 cubed + 1 = 2, 2 cubed + 1 = 9, 3 cubed + 1 = 28, 4 cubed + 1 = 65. The next is 5 cubed + 1 = 125 + 1 = 126.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

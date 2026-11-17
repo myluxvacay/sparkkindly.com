@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-blackjack-ace-goes-low-1100",
+  "scheduledDate": "2028-03-27",
+  "brand": "play",
+  "prompt": "In blackjack, an ace counts as 11 unless that would take the hand over 21, in which case it counts as 1. Your hand is Ace and 6, and you draw a 9. What is your hand total now?",
+  "options": [
+    {
+      "id": "a",
+      "text": "26, so you are bust"
+    },
+    {
+      "id": "b",
+      "text": "25, so you are bust"
+    },
+    {
+      "id": "c",
+      "text": "15"
+    },
+    {
+      "id": "d",
+      "text": "16"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Counting the ace as 11 would give 11+6+9=26, which is over 21. So the ace counts as 1 instead, giving 1+6+9=16, and the hand is not bust.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Blackjack",
+      "url": "https://en.wikipedia.org/wiki/Blackjack",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

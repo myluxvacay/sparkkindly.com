@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-fridge-total-cost-five-years-1154",
+  "scheduledDate": "2028-05-20",
+  "brand": "save",
+  "prompt": "Fridge A costs $600 and uses $60 of electricity a year. Fridge B costs $700 and uses $30 of electricity a year. What is Fridge B's total cost over 5 years?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$900"
+    },
+    {
+      "id": "b",
+      "text": "$730"
+    },
+    {
+      "id": "c",
+      "text": "$850"
+    },
+    {
+      "id": "d",
+      "text": "$550"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Fridge B total: $700 + (5 x $30) = $700 + $150 = $850. Fridge A totals $600 + (5 x $60) = $900, so B is cheaper overall despite costing more to buy.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

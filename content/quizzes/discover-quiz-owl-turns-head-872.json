@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-owl-turns-head-872",
+  "scheduledDate": "2027-08-12",
+  "brand": "discover",
+  "prompt": "An owl can turn its head around to about 270 degrees — far further than a human. Why does it need to do this?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Its ears are on the back of its head"
+    },
+    {
+      "id": "b",
+      "text": "Its eyes are fixed in their sockets and barely move"
+    },
+    {
+      "id": "c",
+      "text": "Its neck muscles are stronger than its wing muscles"
+    },
+    {
+      "id": "d",
+      "text": "It sleeps with its head facing backwards"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Owl eyes are tube-shaped and fixed in their sockets, giving excellent vision but almost no eye movement — so the whole head must swivel instead.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Owl",
+      "url": "https://en.wikipedia.org/wiki/Owl",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

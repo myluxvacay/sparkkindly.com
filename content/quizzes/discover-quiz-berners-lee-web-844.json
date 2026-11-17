@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-berners-lee-web-844",
+  "scheduledDate": "2027-07-15",
+  "brand": "discover",
+  "prompt": "The World Wide Web — pages linked by hyperlinks, viewed in a browser — was invented in 1989 by which scientist?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Alan Turing"
+    },
+    {
+      "id": "b",
+      "text": "Bill Gates"
+    },
+    {
+      "id": "c",
+      "text": "Tim Berners-Lee"
+    },
+    {
+      "id": "d",
+      "text": "Steve Jobs"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Tim Berners-Lee, working at CERN, invented the World Wide Web in 1989 and gave the technology away freely, which helped it spread worldwide.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "World Wide Web",
+      "url": "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

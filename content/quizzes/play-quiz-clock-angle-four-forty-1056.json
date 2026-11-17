@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-clock-angle-four-forty-1056",
+  "scheduledDate": "2028-02-12",
+  "brand": "play",
+  "prompt": "On an analogue clock, what is the smaller angle between the hour hand and the minute hand at exactly 4:40?",
+  "options": [
+    {
+      "id": "a",
+      "text": "120 degrees"
+    },
+    {
+      "id": "b",
+      "text": "90 degrees"
+    },
+    {
+      "id": "c",
+      "text": "130 degrees"
+    },
+    {
+      "id": "d",
+      "text": "100 degrees"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The minute hand at 40 minutes points at 240 degrees. The hour hand has moved past 4: it sits at 4 x 30 + 40 x 0.5 = 140 degrees. The difference is 240 - 140 = 100 degrees, which is the smaller angle.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Clock angle problem",
+      "url": "https://en.wikipedia.org/wiki/Clock_angle_problem",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

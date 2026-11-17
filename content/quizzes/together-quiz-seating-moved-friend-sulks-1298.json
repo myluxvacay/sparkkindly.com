@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-seating-moved-friend-sulks-1298",
+  "scheduledDate": "2028-10-11",
+  "brand": "together",
+  "prompt": "Your teacher moves the class seating plan and you are no longer next to your best friend, who now barely speaks to you as if it were your choice. What is the healthiest response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Complain to the teacher until the plan is changed back"
+    },
+    {
+      "id": "b",
+      "text": "Give them the silent treatment in return"
+    },
+    {
+      "id": "c",
+      "text": "Apologise over and over for something you did not decide"
+    },
+    {
+      "id": "d",
+      "text": "Tell them you miss sitting together too, that it was not your decision, and suggest catching up properly at break"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Naming that you miss them too, without taking blame for the teacher's decision, clears the misunderstanding and keeps the friendship warm.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

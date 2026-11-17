@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-stressed-anagram-desserts-1086",
+  "scheduledDate": "2028-03-13",
+  "brand": "play",
+  "prompt": "Which of these is an exact anagram of the word STRESSED, using every letter exactly once?",
+  "options": [
+    {
+      "id": "a",
+      "text": "DESSERT"
+    },
+    {
+      "id": "b",
+      "text": "DESERTSS"
+    },
+    {
+      "id": "c",
+      "text": "STRESDED"
+    },
+    {
+      "id": "d",
+      "text": "DESSERTS"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "STRESSED uses the letters S three times, E twice, and T, R and D once each. DESSERTS uses exactly the same letters: D once, E twice, S three times, R once and T once. DESSERT is one S short.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

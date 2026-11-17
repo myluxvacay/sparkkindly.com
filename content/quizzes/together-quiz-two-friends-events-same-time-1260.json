@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-two-friends-events-same-time-1260",
+  "scheduledDate": "2028-09-03",
+  "brand": "together",
+  "prompt": "Two close friends have important events at the exact same time in different places, and both expect you there. What is the fairest and most honest approach?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Promise both of them you will be there, then rush between the two and lie about why you are late"
+    },
+    {
+      "id": "b",
+      "text": "Secretly choose your favourite and tell the other friend you were ill that day"
+    },
+    {
+      "id": "c",
+      "text": "Flip a coin and give the friend you cannot support no explanation at all"
+    },
+    {
+      "id": "d",
+      "text": "Tell both friends honestly about the clash early, choose based on who you committed to first, and support the other in a different way that you actually follow through on"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Early honesty lets both friends plan without you, and a followed-through alternative shows the choice was about a clash, not about caring less. Double-promising and invented illness break trust when they surface, as they usually do.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

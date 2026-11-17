@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-grasshopper-primary-consumer-859",
+  "scheduledDate": "2027-07-30",
+  "brand": "discover",
+  "prompt": "In the food chain grass → grasshopper → frog → snake, the grasshopper is best described as what?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A producer"
+    },
+    {
+      "id": "b",
+      "text": "A primary consumer"
+    },
+    {
+      "id": "c",
+      "text": "A secondary consumer"
+    },
+    {
+      "id": "d",
+      "text": "A decomposer"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The grasshopper eats the producer (grass) directly, making it a primary consumer. The frog that eats it is the secondary consumer.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Food chain",
+      "url": "https://en.wikipedia.org/wiki/Food_chain",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

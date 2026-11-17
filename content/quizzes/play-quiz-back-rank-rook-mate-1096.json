@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-back-rank-rook-mate-1096",
+  "scheduledDate": "2028-03-23",
+  "brand": "play",
+  "prompt": "In chess, Black has only a king on g8 and pawns on f7, g7 and h7. White has a rook on d1 and a king far away. It is White to move, and Black has no other pieces that could block or capture. Which move is checkmate in one?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Rook to d7"
+    },
+    {
+      "id": "b",
+      "text": "Rook to d8"
+    },
+    {
+      "id": "c",
+      "text": "Rook to g1"
+    },
+    {
+      "id": "d",
+      "text": "Rook to d6"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Rook to d8 checks the king along the whole back rank, covering f8 and h8 as escape squares. The king cannot capture the rook, its own pawns on f7, g7 and h7 block the way down, and Black has nothing that can block the rank or take the rook.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Checkmate",
+      "url": "https://en.wikipedia.org/wiki/Checkmate",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

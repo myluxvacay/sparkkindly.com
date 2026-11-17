@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-count-by-threes-after-eighteen-1016",
+  "scheduledDate": "2028-01-03",
+  "brand": "kids",
+  "prompt": "Count by threes: 6, 9, 12, 15, 18, ... What number comes next?",
+  "options": [
+    {
+      "id": "a",
+      "text": "19"
+    },
+    {
+      "id": "b",
+      "text": "20"
+    },
+    {
+      "id": "c",
+      "text": "21"
+    },
+    {
+      "id": "d",
+      "text": "24"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Counting by threes adds 3 each time. After 18 comes 21. Keep going: 6, 9, 12, 15, 18, 21!",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

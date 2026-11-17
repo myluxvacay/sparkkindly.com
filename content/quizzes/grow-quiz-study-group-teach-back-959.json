@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-study-group-teach-back-959",
+  "scheduledDate": "2027-11-07",
+  "brand": "grow",
+  "prompt": "Your study group meets regularly, but sessions drift into general chat. Which structure would make the sessions useful for everyone?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Each person teaches one topic to the group for ten minutes and answers questions on it"
+    },
+    {
+      "id": "b",
+      "text": "Everyone silently reads the same chapter together for two hours"
+    },
+    {
+      "id": "c",
+      "text": "The strongest student talks for the whole session"
+    },
+    {
+      "id": "d",
+      "text": "Turn every session into a prize quiz and do nothing else"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Preparing to teach a topic forces you to organise and truly understand it, and the group's questions reveal gaps — so the teacher often learns as much as the listeners.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Learning by teaching",
+      "url": "https://en.wikipedia.org/wiki/Learning_by_teaching",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-binary-number-value-1098",
+  "scheduledDate": "2028-03-25",
+  "brand": "play",
+  "prompt": "In binary (base 2), each digit is worth a power of 2: from the right, 1, 2, 4, 8, 16, 32. What is the binary number 101101 worth in ordinary decimal numbers?",
+  "options": [
+    {
+      "id": "a",
+      "text": "44"
+    },
+    {
+      "id": "b",
+      "text": "45"
+    },
+    {
+      "id": "c",
+      "text": "46"
+    },
+    {
+      "id": "d",
+      "text": "37"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Read the 1 digits from the left: 101101 has 1s in the 32, 8, 4 and 1 places. Adding them gives 32 + 8 + 4 + 1 = 45.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

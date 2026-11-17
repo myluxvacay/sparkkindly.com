@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-geostationary-orbit-816",
+  "scheduledDate": "2027-06-17",
+  "brand": "discover",
+  "prompt": "A weather satellite in geostationary orbit appears to hover over the same spot on the equator day after day. What must be true of its orbit?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It is parked in space with engines holding it still above that spot"
+    },
+    {
+      "id": "b",
+      "text": "It orbits once per day in the same direction as Earth's rotation, at the altitude where that period is possible"
+    },
+    {
+      "id": "c",
+      "text": "It orbits once every 90 minutes, so it is over the spot at the same time daily"
+    },
+    {
+      "id": "d",
+      "text": "It sits beyond the Moon, where Earth looks stationary"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A geostationary satellite orbits over the equator in about 24 hours (one sidereal day), in the same direction Earth spins, at about 35,786 km altitude, so its position relative to the surface stays fixed.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Geostationary orbit",
+      "url": "https://en.wikipedia.org/wiki/Geostationary_orbit",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

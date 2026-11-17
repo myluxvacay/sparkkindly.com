@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-laptop-payment-plan-extra-cost-1159",
+  "scheduledDate": "2028-05-25",
+  "brand": "save",
+  "prompt": "A laptop costs $720 to buy outright. On a payment plan you pay a deposit of 25% of the $720, then 12 monthly payments of $50, plus a one-off $20 plan fee. How much more in total does the payment plan cost than buying outright?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$60"
+    },
+    {
+      "id": "b",
+      "text": "$80"
+    },
+    {
+      "id": "c",
+      "text": "$100"
+    },
+    {
+      "id": "d",
+      "text": "$130"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Deposit: 25% of $720 = $180. Monthly payments: 12 x $50 = $600. Plan total: $180 + $600 + $20 fee = $800. Extra over buying outright: $800 - $720 = $80. The other options come from common slips: $60 forgets the $20 fee ($780 total, $780 - $720 = $60); $100 counts the $20 fee twice ($820 total, $820 - $720 = $100); $130 counts 13 monthly payments instead of 12 ($180 + $650 + $20 = $850, $850 - $720 = $130).",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

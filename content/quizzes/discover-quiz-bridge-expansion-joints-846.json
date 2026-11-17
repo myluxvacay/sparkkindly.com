@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-bridge-expansion-joints-846",
+  "scheduledDate": "2027-07-17",
+  "brand": "discover",
+  "prompt": "Long bridges are built with small gaps, often covered by metal finger plates, at intervals along the road deck. What are those expansion joints for?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The gaps are drainage channels that let rainwater escape from the road surface"
+    },
+    {
+      "id": "b",
+      "text": "The deck expands in hot weather and contracts in cold; the gaps give it room to change length without buckling or cracking"
+    },
+    {
+      "id": "c",
+      "text": "The gaps separate sections built in different years, and serve no physical purpose now"
+    },
+    {
+      "id": "d",
+      "text": "The gaps let strong winds pass through the deck so the bridge is not pushed sideways"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Most building materials expand when heated and contract when cooled. Over a long bridge deck those small changes add up to centimetres, so gaps at the ends let the deck lengthen safely on hot days instead of buckling or cracking.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Thermal expansion",
+      "url": "https://en.wikipedia.org/wiki/Thermal_expansion"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-photo-day-left-out-1295",
+  "scheduledDate": "2028-10-08",
+  "brand": "together",
+  "prompt": "Your friends are arranging to arrive together and take a group photo before school, and you realise one friend from the group has not been told about it. What response best includes them fairly?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Tell the group you have noticed they are missing and suggest adding them before plans are final"
+    },
+    {
+      "id": "b",
+      "text": "Say nothing and enjoy the photo as planned"
+    },
+    {
+      "id": "c",
+      "text": "Tell the left-out friend afterwards that it was not your idea"
+    },
+    {
+      "id": "d",
+      "text": "Skip the photo yourself in protest without telling anyone why"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Speaking up before the plan is final gives the group a chance to fix the oversight without blame and stops the friend feeling deliberately excluded.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

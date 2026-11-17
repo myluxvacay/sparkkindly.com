@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-fixed-pulley-job-853",
+  "scheduledDate": "2027-07-24",
+  "brand": "discover",
+  "prompt": "A single pulley fixed to a beam above a well lets you pull down on a rope to lift a bucket. What does this fixed pulley actually do for you?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It halves the force needed to lift the bucket"
+    },
+    {
+      "id": "b",
+      "text": "It lifts the bucket twice as fast as you pull"
+    },
+    {
+      "id": "c",
+      "text": "It stores energy so the bucket rises on its own"
+    },
+    {
+      "id": "d",
+      "text": "It changes the direction of your pull, but not the size of the force needed"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A single fixed pulley only changes the direction of the force — you pull down and the load goes up. The force needed is about the same as the load's weight.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Pulley",
+      "url": "https://en.wikipedia.org/wiki/Pulley",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

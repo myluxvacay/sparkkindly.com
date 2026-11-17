@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-domino-matching-tile-1104",
+  "scheduledDate": "2028-03-31",
+  "brand": "play",
+  "prompt": "In dominoes, you can play a tile if one of its ends matches one of the open ends on the table. The open ends show 6 and 3. Which of these tiles can you play?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The 6-2 tile"
+    },
+    {
+      "id": "b",
+      "text": "The 4-5 tile"
+    },
+    {
+      "id": "c",
+      "text": "The 2-4 tile"
+    },
+    {
+      "id": "d",
+      "text": "The 5-5 tile"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Only the 6-2 tile has an end matching an open end: its 6 matches the open 6. The other tiles have no 6 and no 3 on either end.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

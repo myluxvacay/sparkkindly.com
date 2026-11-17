@@ -1,0 +1,32 @@
+{
+  "id": "kids-quiz-stickers-add-and-share-1004",
+  "scheduledDate": "2027-12-22",
+  "brand": "kids",
+  "prompt": "You have 6 stickers. You get 3 more stickers, then you give 2 stickers to a friend. How many stickers do you have now?",
+  "options": [
+    {
+      "id": "a",
+      "text": "6"
+    },
+    {
+      "id": "b",
+      "text": "8"
+    },
+    {
+      "id": "c",
+      "text": "7"
+    },
+    {
+      "id": "d",
+      "text": "9"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "First, 6 and 3 more makes 9 stickers. Then give away 2, and 9 take away 2 is 7. Nice work!",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

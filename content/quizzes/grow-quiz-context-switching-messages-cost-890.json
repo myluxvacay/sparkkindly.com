@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-context-switching-messages-cost-890",
+  "scheduledDate": "2027-08-30",
+  "brand": "grow",
+  "prompt": "While writing an essay, Zoe checks each incoming message 'for just a second'. Each check is brief, yet the essay takes twice as long and has more errors. What best explains this?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Messages contain information, so checking them cannot slow writing"
+    },
+    {
+      "id": "b",
+      "text": "Her essay topic must be boring, which is the only possible cause"
+    },
+    {
+      "id": "c",
+      "text": "Every switch carries a refocusing cost: after each check she must reload where she was and what she meant to say next"
+    },
+    {
+      "id": "d",
+      "text": "She would write faster if she checked messages even more often"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Attention does not switch for free. The seconds spent checking are minor compared with the repeated cost of reconstructing the thread of the work after each interruption.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

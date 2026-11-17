@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-rereading-vs-retrieval-two-weeks-913",
+  "scheduledDate": "2027-09-22",
+  "brand": "grow",
+  "prompt": "With a test in two weeks, Dan re-reads and highlights his notes and feels confident, but scores poorly on practice questions. Which change is best supported by learning research?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Highlight in more colours so the notes feel clearer"
+    },
+    {
+      "id": "b",
+      "text": "Close the notes and practise retrieving answers from memory, then check what he got wrong"
+    },
+    {
+      "id": "c",
+      "text": "Re-read the notes faster to fit in more passes"
+    },
+    {
+      "id": "d",
+      "text": "Only study the night before, when it feels most urgent"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Re-reading creates a feeling of familiarity that is often mistaken for knowledge. Retrieval practice — answering from memory and checking — exposes gaps and strengthens recall.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Testing effect",
+      "url": "https://en.wikipedia.org/wiki/Testing_effect",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

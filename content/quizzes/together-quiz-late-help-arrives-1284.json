@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-late-help-arrives-1284",
+  "scheduledDate": "2028-09-27",
+  "brand": "together",
+  "prompt": "A friend promised to arrive early to help you set up for a small gathering, but turns up just as guests arrive, after you have done nearly everything. What response best handles your frustration?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Pretend nothing happened and quietly resent it all evening"
+    },
+    {
+      "id": "b",
+      "text": "Later, when it is calm, say the late arrival left you stressed and ask for reliability next time"
+    },
+    {
+      "id": "c",
+      "text": "Make a pointed joke about their timing in front of the guests"
+    },
+    {
+      "id": "d",
+      "text": "Apologise to them for starting the setup without them"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Raising it calmly afterwards is honest about the impact without turning the gathering itself into an argument.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

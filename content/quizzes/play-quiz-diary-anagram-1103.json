@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-diary-anagram-1103",
+  "scheduledDate": "2028-03-30",
+  "brand": "play",
+  "prompt": "Which word uses exactly the same letters as DIARY, with no letters added or taken away?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Daisy"
+    },
+    {
+      "id": "b",
+      "text": "Dairy"
+    },
+    {
+      "id": "c",
+      "text": "Daily"
+    },
+    {
+      "id": "d",
+      "text": "Daring"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "DAIRY uses the same five letters as DIARY: D, A, I, R and Y, just rearranged. Daisy swaps R for S, Daily swaps R for L, and Daring has extra letters.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

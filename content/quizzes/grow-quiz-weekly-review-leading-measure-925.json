@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-weekly-review-leading-measure-925",
+  "scheduledDate": "2027-10-04",
+  "brand": "grow",
+  "prompt": "Hana's goal is a better exam result in eight weeks. For her weekly review, which measure is most useful to track week by week?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only the final exam grade, checked daily"
+    },
+    {
+      "id": "b",
+      "text": "How confident she feels, with no records"
+    },
+    {
+      "id": "c",
+      "text": "How many hours she sat at her desk, regardless of activity"
+    },
+    {
+      "id": "d",
+      "text": "A leading measure she controls, such as completed retrieval-practice sessions and the error types she fixed that week"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The final grade is a lagging measure she cannot change until the end. Weekly leading measures — sessions done and specific errors corrected — tell her what to adjust while there is still time.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

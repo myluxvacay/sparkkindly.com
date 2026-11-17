@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-command-word-exam-answer-930",
+  "scheduledDate": "2027-10-09",
+  "brand": "grow",
+  "prompt": "Ben revises the content for his science test thoroughly, but his teacher's comments keep saying the same thing: the question asked him to 'explain' and he only 'described'. What is the most useful change to his practice?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Revise the content for longer, since knowing more will automatically fix his answers"
+    },
+    {
+      "id": "b",
+      "text": "Write faster in the test, so he has time to add extra detail at the end"
+    },
+    {
+      "id": "c",
+      "text": "In practice questions, underline the command word first and plan an answer that does what it asks — reasons and links for 'explain', not just features"
+    },
+    {
+      "id": "d",
+      "text": "Memorise longer definitions, because 'explain' questions mainly reward length"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Ben's gap is not knowledge but matching his answer to the question. Noticing the command word and practising the type of answer it demands — explanation means saying why, not just what — targets the marks he is actually losing.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

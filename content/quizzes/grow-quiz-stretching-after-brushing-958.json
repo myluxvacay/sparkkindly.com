@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-stretching-after-brushing-958",
+  "scheduledDate": "2027-11-06",
+  "brand": "grow",
+  "prompt": "You want to stretch for two minutes every day but keep forgetting. Which setup makes best use of a routine you already have?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Do the stretches straight after brushing your teeth at night, with the mat already by the bathroom door"
+    },
+    {
+      "id": "b",
+      "text": "Stretch whenever you happen to remember during the day"
+    },
+    {
+      "id": "c",
+      "text": "Replace it with one 30-minute stretch once a week"
+    },
+    {
+      "id": "d",
+      "text": "Set six random phone alarms a day as reminders"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Attaching the new habit to an existing one — brushing your teeth — gives it a reliable daily cue, and having the mat ready removes the small friction that often stops a start.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Habit",
+      "url": "https://en.wikipedia.org/wiki/Habit",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

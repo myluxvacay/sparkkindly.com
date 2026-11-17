@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-amazon-flows-atlantic-842",
+  "scheduledDate": "2027-07-13",
+  "brand": "discover",
+  "prompt": "The Amazon River carries more water than any other river on Earth. Into which ocean does it flow?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Pacific Ocean"
+    },
+    {
+      "id": "b",
+      "text": "The Indian Ocean"
+    },
+    {
+      "id": "c",
+      "text": "The Arctic Ocean"
+    },
+    {
+      "id": "d",
+      "text": "The Atlantic Ocean"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The Amazon flows eastward across Brazil and empties into the Atlantic Ocean through a vast estuary near its mouth.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Amazon River",
+      "url": "https://en.wikipedia.org/wiki/Amazon_River",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

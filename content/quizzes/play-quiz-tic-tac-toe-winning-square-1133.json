@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-tic-tac-toe-winning-square-1133",
+  "scheduledDate": "2028-04-29",
+  "brand": "play",
+  "prompt": "In tic-tac-toe (noughts and crosses), X has the top-left and top-middle squares, and O has the centre and bottom-left squares. It is X's turn. Which square should X play to win at once?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bottom-right"
+    },
+    {
+      "id": "b",
+      "text": "Middle-right"
+    },
+    {
+      "id": "c",
+      "text": "Top-right"
+    },
+    {
+      "id": "d",
+      "text": "Bottom-middle"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "X already holds the top-left and top-middle squares. Playing the top-right square completes the whole top row of three X's, which wins the game.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

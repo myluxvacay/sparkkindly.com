@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-currency-flat-fee-before-conversion-topup-1190",
+  "scheduledDate": "2028-06-25",
+  "brand": "save",
+  "prompt": "You exchange $800 into euros. The bureau first takes a flat $20 fee off your dollars, then converts what is left at a rate of $1 = €0.75. How many euros do you receive?",
+  "options": [
+    {
+      "id": "a",
+      "text": "€585"
+    },
+    {
+      "id": "b",
+      "text": "€600"
+    },
+    {
+      "id": "c",
+      "text": "€580"
+    },
+    {
+      "id": "d",
+      "text": "€615"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "After the fee: $800 - $20 = $780. Converted: $780 x 0.75 = €585. The €600 option forgets the fee ($800 x 0.75), and €580 wrongly subtracts the $20 after converting instead of before.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

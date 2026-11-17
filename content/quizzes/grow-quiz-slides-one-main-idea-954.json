@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-slides-one-main-idea-954",
+  "scheduledDate": "2027-11-02",
+  "brand": "grow",
+  "prompt": "Your presentation slides are walls of text and classmates lose track as you talk. Which redesign best helps an audience follow you?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Add even more detail to each slide so nothing is left out"
+    },
+    {
+      "id": "b",
+      "text": "Put one main idea on each slide and keep the detailed points in your spoken notes"
+    },
+    {
+      "id": "c",
+      "text": "Read the slides word for word so nothing gets missed"
+    },
+    {
+      "id": "d",
+      "text": "Add an animation to every line of text"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "One idea per slide gives the audience a single thing to take in at a time, while your spoken notes carry the detail — so listening and reading stop competing with each other.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

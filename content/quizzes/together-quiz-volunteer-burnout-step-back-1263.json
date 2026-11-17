@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-volunteer-burnout-step-back-1263",
+  "scheduledDate": "2028-09-06",
+  "brand": "together",
+  "prompt": "You volunteered to run a weekly community activity, but your school and work load has grown and you are burning out. The group relies on you. What is the most responsible way to step back?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Just stop showing up, because they will figure something out eventually"
+    },
+    {
+      "id": "b",
+      "text": "Give as much notice as you can, explain honestly that you need to step back, and help hand over your notes and show a replacement the ropes before you leave"
+    },
+    {
+      "id": "c",
+      "text": "Keep going silently until you resent the whole group, then quit suddenly"
+    },
+    {
+      "id": "d",
+      "text": "Invent a dramatic excuse so nobody questions your decision or asks you to stay"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Notice plus a proper handover honours the commitment you made while still protecting your health. Disappearing, silently burning out, or inventing an excuse leaves the group stranded and the trust damaged.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-pyroclastic-flow-danger-828",
+  "scheduledDate": "2027-06-29",
+  "brand": "discover",
+  "prompt": "Volcanologists often call pyroclastic flows the most deadly volcanic hazard. What is a pyroclastic flow?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A slow river of molten lava that people can usually outwalk"
+    },
+    {
+      "id": "b",
+      "text": "A flood of melted snow and mud from the summit"
+    },
+    {
+      "id": "c",
+      "text": "A fall of ash from a high eruption cloud"
+    },
+    {
+      "id": "d",
+      "text": "A fast-moving avalanche of superheated gas and rock fragments that races downhill at highway speeds or faster"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A pyroclastic flow is a ground-hugging current of hot gas and volcanic debris, often several hundred degrees and moving tens to hundreds of kilometres per hour, which destroys nearly everything in its path.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Pyroclastic flow",
+      "url": "https://en.wikipedia.org/wiki/Pyroclastic_flow",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

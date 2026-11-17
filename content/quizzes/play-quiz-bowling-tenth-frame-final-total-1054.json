@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-bowling-tenth-frame-final-total-1054",
+  "scheduledDate": "2028-02-10",
+  "brand": "play",
+  "prompt": "In ten-pin bowling, a strike in frames 1 to 9 scores 10 plus your next two balls, but frame 10 scores only the total of its own balls: a strike or spare there earns extra balls, not a further bonus. Your score after eight frames is 120. Frame 9 is a strike. In frame 10 you bowl a strike, then 7, then 2. What is your total after frame 10?",
+  "options": [
+    {
+      "id": "a",
+      "text": "166"
+    },
+    {
+      "id": "b",
+      "text": "156"
+    },
+    {
+      "id": "c",
+      "text": "176"
+    },
+    {
+      "id": "d",
+      "text": "147"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Frame 9's strike scores 10 plus the first two balls of frame 10: 10 + 10 + 7 = 27, taking the total to 147. Frame 10 itself scores just its own balls, 10 + 7 + 2 = 19, with no extra strike bonus. Final total: 147 + 19 = 166.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "accessedAt": "2026-11-17",
+      "title": "Tenpin bowling",
+      "url": "https://en.wikipedia.org/wiki/Tenpin_bowling"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

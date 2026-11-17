@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-shrinking-gaps-sequence-1127",
+  "scheduledDate": "2028-04-23",
+  "brand": "play",
+  "prompt": "What number comes next in this pattern: 100, 97, 91, 82, ...?",
+  "options": [
+    {
+      "id": "a",
+      "text": "73"
+    },
+    {
+      "id": "b",
+      "text": "70"
+    },
+    {
+      "id": "c",
+      "text": "71"
+    },
+    {
+      "id": "d",
+      "text": "79"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The numbers shrink by gaps that grow: 100-3=97, 97-6=91 and 91-9=82. The gaps are 3, 6, 9, so the next gap is 12, giving 82-12=70.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

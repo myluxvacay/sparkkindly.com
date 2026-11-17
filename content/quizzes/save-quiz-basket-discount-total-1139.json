@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-basket-discount-total-1139",
+  "scheduledDate": "2028-05-05",
+  "brand": "save",
+  "prompt": "You buy three items costing $18, $24 and $13. The shop gives 10% off the whole basket at the till. How much do you pay?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$49.50"
+    },
+    {
+      "id": "b",
+      "text": "$55.00"
+    },
+    {
+      "id": "c",
+      "text": "$45.00"
+    },
+    {
+      "id": "d",
+      "text": "$52.25"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Basket total: $18 + $24 + $13 = $55. With 10% off you pay 90%: $55 x 0.90 = $49.50.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

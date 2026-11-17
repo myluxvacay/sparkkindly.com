@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-recommend-unreliable-friend-job-1254",
+  "scheduledDate": "2028-08-28",
+  "brand": "together",
+  "prompt": "A friend asks you to recommend them for a weekend babysitting job, but you have seen them be unreliable and distracted when looking after younger children. What response is honest without abandoning your friend?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Give a glowing recommendation anyway, because loyalty to a friend comes first"
+    },
+    {
+      "id": "b",
+      "text": "Refuse, and warn the employer behind your friend's back that they are terrible with children"
+    },
+    {
+      "id": "c",
+      "text": "Be honest with your friend that you cannot recommend them for this role in good faith, explain why, and offer to recommend them for a role they are better suited to instead"
+    },
+    {
+      "id": "d",
+      "text": "Give a deliberately vague recommendation and hope the employer reads between the lines"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A false recommendation risks children's safety and your own credibility. Being direct with your friend, while offering support towards a better-fitting role, is honest to everyone involved.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

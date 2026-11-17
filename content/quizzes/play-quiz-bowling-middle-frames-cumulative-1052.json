@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-bowling-middle-frames-cumulative-1052",
+  "scheduledDate": "2028-02-08",
+  "brand": "play",
+  "prompt": "In ten-pin bowling, a spare scores 10 plus your next ball and a strike scores 10 plus your next two balls. Your score after three frames is 42. Frame 4 is 9 then 1 for a spare, frame 5 is a strike, and frame 6 is 8 then 1. What is your total score after six frames?",
+  "options": [
+    {
+      "id": "a",
+      "text": "80"
+    },
+    {
+      "id": "b",
+      "text": "87"
+    },
+    {
+      "id": "c",
+      "text": "90"
+    },
+    {
+      "id": "d",
+      "text": "93"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Frame 4's spare scores 10 + 10 (the strike is the next ball) = 20, taking the total to 62. Frame 5's strike scores 10 + 8 + 1 = 19, taking it to 81. Frame 6 is an open frame scoring 9, for a total of 90.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Tenpin bowling",
+      "url": "https://en.wikipedia.org/wiki/Tenpin_bowling",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

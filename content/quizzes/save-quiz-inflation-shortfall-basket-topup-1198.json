@@ -1,0 +1,32 @@
+{
+  "id": "save-quiz-inflation-shortfall-basket-topup-1198",
+  "scheduledDate": "2028-07-03",
+  "brand": "save",
+  "prompt": "You keep $500 in an account that grows by 4% in a year, so it becomes $520. Over the same year, prices rise by 6%, so a basket of goods that cost $500 at the start now costs more. How much MORE than your $520 would you need to buy that same basket at the end of the year?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$0 — your savings exactly keep up"
+    },
+    {
+      "id": "b",
+      "text": "$10"
+    },
+    {
+      "id": "c",
+      "text": "$20"
+    },
+    {
+      "id": "d",
+      "text": "$30"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Savings after growth: $500 x 1.04 = $520. Basket after price rises: $500 x 1.06 = $530. Shortfall: $530 - $520 = $10. The $20 option is just the interest you earned, and $30 is just the price rise; the answer is the gap between the two grown amounts.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

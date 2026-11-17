@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-sum-one-to-one-hundred-1087",
+  "scheduledDate": "2028-03-14",
+  "brand": "play",
+  "prompt": "What is the sum of all the whole numbers from 1 to 100 added together?",
+  "options": [
+    {
+      "id": "a",
+      "text": "5000"
+    },
+    {
+      "id": "b",
+      "text": "4950"
+    },
+    {
+      "id": "c",
+      "text": "5050"
+    },
+    {
+      "id": "d",
+      "text": "5100"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Pair the numbers from the ends: 1 + 100 = 101, 2 + 99 = 101, and so on. There are 50 such pairs, so the total is 50 x 101 = 5050.",
+  "difficulty": "hard",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

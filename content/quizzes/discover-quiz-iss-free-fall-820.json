@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-iss-free-fall-820",
+  "scheduledDate": "2027-06-21",
+  "brand": "discover",
+  "prompt": "Astronauts aboard the International Space Station float, even though Earth's gravity at that altitude is still about 90% as strong as at the surface. Why do they float?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The station and the astronauts are in continuous free fall together as they orbit, so there is no supporting force pushing back on them"
+    },
+    {
+      "id": "b",
+      "text": "The station's engines constantly cancel out gravity"
+    },
+    {
+      "id": "c",
+      "text": "At that height the Moon's gravity exactly balances Earth's"
+    },
+    {
+      "id": "d",
+      "text": "The station's thick walls shield the crew from gravity"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Orbit is free fall that keeps missing Earth. The station and crew fall together under gravity with nothing pushing up against them, which produces the sensation and appearance of weightlessness.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Weightlessness",
+      "url": "https://en.wikipedia.org/wiki/Weightlessness",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

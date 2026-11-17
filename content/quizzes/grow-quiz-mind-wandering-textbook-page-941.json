@@ -1,0 +1,32 @@
+{
+  "id": "grow-quiz-mind-wandering-textbook-page-941",
+  "scheduledDate": "2027-10-20",
+  "brand": "grow",
+  "prompt": "Halfway down a textbook page you realise your mind wandered and you remember nothing of it. What is the most helpful response?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Give up on reading for the rest of the day"
+    },
+    {
+      "id": "b",
+      "text": "Start the page again and read it faster, to finish sooner"
+    },
+    {
+      "id": "c",
+      "text": "Pause, note in a few words what distracted you, then re-read the page in smaller sections, checking you understand each one"
+    },
+    {
+      "id": "d",
+      "text": "Highlight the whole page so it counts as studied"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Noting the distraction clears it from your mind, and reading in smaller sections with quick understanding checks catches wandering early instead of at the end of another lost page.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

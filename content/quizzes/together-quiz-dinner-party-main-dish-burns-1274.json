@@ -1,0 +1,32 @@
+{
+  "id": "together-quiz-dinner-party-main-dish-burns-1274",
+  "scheduledDate": "2028-09-17",
+  "brand": "together",
+  "prompt": "Your friend is hosting their first small dinner party and is proud of the main dish they planned. Half an hour before the other guests arrive, it burns badly and your friend is close to tears and talking about cancelling the whole evening. What response helps most?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Tell the arriving guests the full story of the disaster, so expectations are low when the food appears"
+    },
+    {
+      "id": "b",
+      "text": "Help them salvage the sides, order a simple replacement main together, put music on and greet guests warmly, so the evening becomes about being together rather than one dish"
+    },
+    {
+      "id": "c",
+      "text": "Agree that cancelling is probably best, since the evening cannot live up to what they planned"
+    },
+    {
+      "id": "d",
+      "text": "Take over the kitchen completely and redo the cooking yourself without asking what they want"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A practical rescue plus a calm welcome saves what your friend actually cared about, which was hosting people well. Cancelling abandons the evening, announcing the disaster makes it the story of the night, and taking over removes the host from their own party.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

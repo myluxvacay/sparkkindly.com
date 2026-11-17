@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-alveoli-diffusion-gradient-800",
+  "scheduledDate": "2027-06-01",
+  "brand": "discover",
+  "prompt": "In the lungs, oxygen passes from the air in the alveoli into the blood without any pump moving individual molecules. What drives that movement?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Oxygen is at higher partial pressure in the alveolar air than in the incoming blood, so it diffuses down that gradient across the thin alveolar wall"
+    },
+    {
+      "id": "b",
+      "text": "Red blood cells reach out through the alveolar wall and grab oxygen"
+    },
+    {
+      "id": "c",
+      "text": "The heart's suction pulls oxygen through the lung tissue"
+    },
+    {
+      "id": "d",
+      "text": "Breathing muscles squeeze oxygen directly into the blood vessels"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Gas exchange in alveoli is by diffusion: oxygen moves from where its partial pressure is higher (fresh air in the alveolus) to where it is lower (deoxygenated blood in the capillary), across a wall only about one cell thick.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Pulmonary alveolus",
+      "url": "https://en.wikipedia.org/wiki/Pulmonary_alveolus",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}

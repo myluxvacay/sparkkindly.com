@@ -1,0 +1,32 @@
+{
+  "id": "play-quiz-marbles-blue-chance-1115",
+  "scheduledDate": "2028-04-11",
+  "brand": "play",
+  "prompt": "A bag holds 3 red marbles and 2 blue marbles, and nothing else. You take one marble out without looking. What is the chance it is blue?",
+  "options": [
+    {
+      "id": "a",
+      "text": "2 out of 5"
+    },
+    {
+      "id": "b",
+      "text": "1 out of 2"
+    },
+    {
+      "id": "c",
+      "text": "2 out of 3"
+    },
+    {
+      "id": "d",
+      "text": "3 out of 5"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "There are 5 marbles in total and 2 of them are blue, so the chance of picking a blue one is 2 out of 5.",
+  "difficulty": "medium",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 and the owner's explicit direction of 17 November 2026 (bulk push of 250 hard + 250 medium quizzes). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, difficulty honesty. This records agent review under owner authorization, not per-item owner approval."
+}
