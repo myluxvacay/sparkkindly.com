@@ -14,10 +14,18 @@ import { visualGameKinds, visualRounds, type VisualGameKind } from '@/lib/games/
 // no logic change needed. Until then the fallbacks below apply (the <img> onError swap handles a missing
 // slot file). Reduced-motion visitors get the still Spark in every slot.
 export type SparkSlot = 'presenting' | 'victory' | 'encouraging';
-export const SPARK_SLOTS: Record<SparkSlot, { animated: string; fallback: string; still: string }> = {
+export const SPARK_SLOTS: Record<SparkSlot, { animated: string; fallback: string; still: string; voice?: string }> = {
   presenting: { animated: '/brand/spark-waving.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp' },
-  victory: { animated: '/brand/spark-victory.gif', fallback: '/brand/spark-waving.gif', still: '/brand/spark.webp' },
-  encouraging: { animated: '/brand/spark-encouraging.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp' },
+  victory: { animated: '/brand/spark-victory.gif', fallback: '/brand/spark-waving.gif', still: '/brand/spark.webp', voice: '/brand/spark-you-did-it.mp3' },
+  encouraging: { animated: '/brand/spark-encouraging.gif', fallback: '/brand/spark.webp', still: '/brand/spark.webp', voice: '/brand/spark-you-got-this.mp3' },
+};
+
+// Intrinsic sizes of the slot artwork, so the browser reserves the right shape for each file.
+const SPARK_DIMS: Record<string, { w: number; h: number }> = {
+  '/brand/spark-waving.gif': { w: 313, h: 627 },
+  '/brand/spark-victory.gif': { w: 418, h: 627 },
+  '/brand/spark-encouraging.gif': { w: 512, h: 527 },
+  '/brand/spark.webp': { w: 438, h: 646 },
 };
 
 function SparkFigure({ slot, alt, reducedMotion }: { slot: SparkSlot; alt: string; reducedMotion: boolean }) {
@@ -27,30 +35,69 @@ function SparkFigure({ slot, alt, reducedMotion }: { slot: SparkSlot; alt: strin
   const conf = SPARK_SLOTS[slot];
   const failed = failedSlot === slot;
   const src = reducedMotion ? conf.still : failed ? conf.fallback : conf.animated;
-  const gif = src.endsWith('.gif');
+  const dims = SPARK_DIMS[src] ?? SPARK_DIMS['/brand/spark.webp'];
   return (
     <img
       src={src}
-      width={gif ? 313 : 438}
-      height={gif ? 627 : 646}
+      width={dims.w}
+      height={dims.h}
       alt={alt}
       onError={() => setFailedSlot(slot)}
     />
   );
 }
 
+const SOUND_KEY = 'sk-games-sound';
+
 export default function VisualGames() {
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [soundOn, setSoundOn] = useState(true);
+  const audioRefs = useRef<Record<string, HTMLAudioElement>>({});
   useEffect(() => {
     const t = setTimeout(() => {
       try {
         setReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+        setSoundOn(localStorage.getItem(SOUND_KEY) !== 'off');
       } catch {
-        setReducedMotion(false);
+        // Keep the defaults (motion allowed by the CSS rule, sound on) if storage/media checks fail.
       }
     }, 0);
     return () => clearTimeout(t);
   }, []);
+
+  const toggleSound = () => {
+    setSoundOn((on) => {
+      try {
+        localStorage.setItem(SOUND_KEY, on ? 'off' : 'on');
+      } catch {
+        // Private-mode storage failure: the toggle still works for this visit.
+      }
+      return !on;
+    });
+  };
+
+  // Spark's reaction voice lines play ONLY here — as the direct result of the player's own click on an
+  // answer (a user gesture, never autoplay: nothing plays on load, round change or hover). Both clips are
+  // created and preloaded lazily on that first interaction; a rejected play() promise is swallowed.
+  const playClip = (src?: string) => {
+    if (!src || !soundOn) return;
+    try {
+      for (const s of [SPARK_SLOTS.victory.voice, SPARK_SLOTS.encouraging.voice]) {
+        if (s && !audioRefs.current[s]) {
+          const a = new Audio();
+          a.preload = 'auto';
+          a.src = s;
+          a.load();
+          audioRefs.current[s] = a;
+        }
+      }
+      const a = audioRefs.current[src];
+      a.currentTime = 0;
+      void a.play().catch(() => {});
+    } catch {
+      // Audio unavailable in this browser: the game plays on silently.
+    }
+  };
   const [kind, setKind] = useState<VisualGameKind>('odd-one-out');
   const rounds = visualRounds.filter((r) => r.kind === kind);
   const [index, setIndex] = useState(0);
@@ -91,6 +138,9 @@ export default function VisualGames() {
     if (id === round.correctId) {
       setSolved(true);
       setScore((s) => s + 1);
+      playClip(SPARK_SLOTS.victory.voice);
+    } else {
+      playClip(SPARK_SLOTS.encouraging.voice);
     }
   };
 
@@ -114,6 +164,12 @@ export default function VisualGames() {
             <span>{g.blurb}</span>
           </button>
         ))}
+      </div>
+
+      <div className="vg-sound-row">
+        <button className="vg-sound-toggle" aria-pressed={soundOn} onClick={toggleSound}>
+          {soundOn ? "🔊 Spark's voice: on" : "🔇 Spark's voice: off"}
+        </button>
       </div>
 
       {finished ? (
