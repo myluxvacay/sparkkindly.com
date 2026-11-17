@@ -2,10 +2,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 export type TrustSection = { heading: string; paragraphs: React.ReactNode[] };
 
-type Props = { crumb: string; eyebrow: string; title: string; updated: string; sections: TrustSection[] };
+type Props = { crumb: string; eyebrow: string; title: string; updated: string; sections: TrustSection[]; children?: React.ReactNode };
 
-// The shared shell for About, Privacy, Terms, Accessibility, Contact and Editorial policy.
-export default function TrustPage({ crumb, eyebrow, title, updated, sections }: Props) {
+// The shared shell for About, Privacy, Terms, Accessibility, Contact and Editorial policy. Children, when given,
+// render inside the page container after the prose sections (the Contact page's form).
+export default function TrustPage({ crumb, eyebrow, title, updated, sections, children }: Props) {
   return (
     <div className="container trust-page">
       <Breadcrumb trail={[{ name: 'Home', href: '/' }, { name: crumb }]} />
@@ -22,6 +23,7 @@ export default function TrustPage({ crumb, eyebrow, title, updated, sections }: 
           </section>
         ))}
       </div>
+      {children}
     </div>
   );
 }

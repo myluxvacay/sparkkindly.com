@@ -10,14 +10,15 @@ export default function Page() {
       crumb="Privacy and the grown-up guide"
       eyebrow="PRIVACY AND THE GROWN-UP GUIDE"
       title="Curiosity without a profile."
-      updated="1 November 2026"
+      updated="17 November 2026"
       sections={[
         {
           heading: 'What we collect today',
           paragraphs: [
             'SparkKindly has no accounts, sign-in, comments, uploads, analytics, advertising, tracking cookies, local-storage identifiers, fingerprinting or location features. Your browser makes no requests to other companies’ servers while you read or play: fonts, images and scripts all come from SparkKindly itself.',
             'A few articles carry a video from YouTube. Nothing is requested from YouTube until you press Play: the preview picture comes from SparkKindly. When you press Play, the video loads from YouTube (a Google service), which may set its own cookies. Kids pages never carry a video.',
-            'The only thing a visitor can send us is a “Report a problem” form. It stores the kind of problem, the message you type (up to 1000 characters, optional), the page it is about and the time. It does not store your name, email address or any account, and we ask you not to type personal details into it.',
+            'A visitor can send us two things. A “Report a problem” form on each page stores the kind of problem, the message you type (up to 1000 characters, optional), the page it is about and the time. It does not store your name, email address or any account, and we ask you not to type personal details into it.',
+            'The contact form is different, because its point is a reply: it stores your name (only if you give it), your email address, the topic you choose, your message (up to 2000 characters) and the time. The site owner reads it and uses your address only to reply; we never share it or use it for marketing.',
           ],
         },
         {
@@ -29,14 +30,14 @@ export default function Page() {
         {
           heading: 'Hosting and technical logs',
           paragraphs: [
-            'The site runs on a server managed by the site owner at Hostinger, behind the Caddy web server. The server and its software necessarily handle connection details such as your IP address, and may write them to technical logs. To stop abuse, the problem form limits how many reports one connection can send; that count is held in memory only and is cleared when the site restarts.',
+            'The site runs on a server managed by the site owner at Hostinger, behind the Caddy web server. The server and its software necessarily handle connection details such as your IP address, and may write them to technical logs. To stop abuse, the problem and contact forms limit how many messages one connection can send; those counts are held in memory only and are cleared when the site restarts.',
             'We have not yet independently reviewed how long the host and server keep logs, or which services the host uses to run its systems. We do not claim those details are final.',
           ],
         },
         {
           heading: 'Kids and shared devices',
           paragraphs: [
-            'Kids activities are meant for ages 6 to 9 with an adult beside them. The Kids pages follow the same rules as the rest of the site: no accounts, no stored answers, no tracking and no outside requests. Please do not type a child’s name, birthday, photo, location or other identifying detail into the problem form or anywhere else.',
+            'Kids activities are meant for ages 6 to 9 with an adult beside them. The Kids pages follow the same rules as the rest of the site: no accounts, no stored answers, no tracking and no outside requests. Please do not type a child’s name, birthday, photo, location or other identifying detail into the problem form, the contact form or anywhere else. The contact form is for grown-ups; a child should ask a parent or carer to send their question.',
           ],
         },
         {
