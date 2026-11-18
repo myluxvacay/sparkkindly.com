@@ -434,3 +434,26 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .section.quiz-item{padding-top:0}
 .quiz-item .quiz-panel{margin-top:12px}
 .kp-flick{touch-action:none}
+
+/* Kept quiz context + explanation panel in the result (user feedback, 17 Nov 2026): after an answer
+   the question and the player's own choice stay on screen inside the result card, and the answer and
+   its explanation sit in their own panel, so the verdict reads as part of the quiz rather than a
+   page the player was taken away to. The card is light in both themes, so these colours hold in both. */
+.quiz-review{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+.quiz-review-prompt{font-weight:600;margin-bottom:12px}
+.quiz-review-options{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.quiz-review-option{display:flex;gap:10px;align-items:center;justify-content:space-between;border:1px solid #9b869f;border-radius:5px;padding:10px 14px;background:#fff}
+.quiz-review-option.is-yours{border-color:#a33d54;box-shadow:inset 0 0 0 1px #a33d54}
+.quiz-review-option.is-correct{border-color:#517c73;box-shadow:inset 0 0 0 1px #517c73}
+.quiz-tag{font-size:12px;font-weight:700;white-space:nowrap}
+.quiz-tag-yours{color:#a33d54}
+.quiz-tag-correct{color:#40635c}
+.quiz-review-yours{margin-bottom:0}
+.quiz-explain{margin-top:18px;background:#edf2ec;border-left:3px solid #517c73;padding:16px 18px}
+.quiz-explain p:last-child{margin-bottom:0}
+.interests-count{font-size:15px;margin-bottom:14px}
+
+/* Signed-in header room (17 Nov 2026): "My Account" is wider than "Sign in", and the small-width
+   header had no slack left — at 320px a signed-in page overflowed sideways. The ≤400px row gives
+   the difference back: smaller badge and wordmark, tighter gaps and controls. One row, as designed. */
+@media(max-width:400px){.header-inner{gap:6px}.brand-name{font-size:19px}.wordmark .brand-badge{width:36px;height:36px}.header-signin{font-size:12px}.menu-toggle{padding:7px;font-size:10px}.theme-toggle{width:32px;height:32px}}

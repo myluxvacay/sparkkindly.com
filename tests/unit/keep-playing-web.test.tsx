@@ -25,6 +25,7 @@ const ok: Extract<Result, { status: 'ok' }> = {
   answerText: 'The Moon',
   explanation: 'Because of how sunlight falls on it.',
   choice: 'a',
+  answerChoice: 'a',
 };
 
 describe('KeepPlaying block', () => {

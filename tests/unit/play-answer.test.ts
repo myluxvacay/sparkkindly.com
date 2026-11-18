@@ -74,6 +74,7 @@ describe('playResult', () => {
       answerText: 'Beta',
       explanation: EXPL,
       choice: 'b',
+      answerChoice: 'b',
     });
     expect(await playResult(db, anon, 'play', 'good', p({ r: 'a' }))).toMatchObject({
       status: 'ok',
@@ -129,6 +130,7 @@ describe('4C review M1: only a closed response the item itself offers is kept as
     await item('m1-tf', { mechanic: 'true_false', prompt: 'True?', difficulty: 'easy' }, true);
     await item('m1-num', { mechanic: 'number', prompt: 'How many?', difficulty: 'easy' }, { value: 7, tolerance: 0 });
     await item('m1-order', { mechanic: 'put_in_order', prompt: 'Order?', items: four('Step').slice(0, 3), difficulty: 'easy' }, ['a', 'b', 'c']);
+    await item('m1-text', { mechanic: 'short_text', prompt: 'Say it', difficulty: 'easy' }, { accepted: ['hello world'] });
   });
 
   it('multiple choice: free text is scored wrong and not kept; an option id is kept', async () => {
@@ -148,5 +150,19 @@ describe('4C review M1: only a closed response the item itself offers is kept as
     expect(await play('m1-num', { r: '7' })).toMatchObject({ correct: true, choice: 7 });
     expect(await play('m1-order', { 'pos-a': '1', 'pos-b': '2', 'pos-c': '3', r: PHONE })).toMatchObject({ correct: true, choice: ['a', 'b', 'c'] });
     expect(await play('m1-order', { 'pos-a': PHONE, 'pos-b': '2', 'pos-c': '3' })).toEqual({ status: 'invalid' });
+  });
+
+  // The result panel marks the correct option from answerChoice (kept-context fix, 17 Nov 2026):
+  // it must be the stored answer in exactly the same closed form per mechanic — and for free text
+  // it must be null, never the accepted-answers list.
+  it('answerChoice mirrors the stored answer in closed form, and is null for free text', async () => {
+    expect(await play('good', { r: 'a' })).toMatchObject({ answerChoice: 'b' });
+    expect(await play('m1-odd', { r: 'a' })).toMatchObject({ answerChoice: 'c' });
+    expect(await play('m1-tf', { r: 'false' })).toMatchObject({ answerChoice: true });
+    expect(await play('m1-num', { r: '3' })).toMatchObject({ answerChoice: 7 });
+    expect(await play('m1-order', { 'pos-a': '2', 'pos-b': '1', 'pos-c': '3' })).toMatchObject({ answerChoice: ['a', 'b', 'c'] });
+    const text = await play('m1-text', { r: 'hello world' });
+    expect(text).toMatchObject({ status: 'ok', correct: true, choice: null, answerChoice: null });
+    expect(JSON.stringify(text)).not.toContain('accepted');
   });
 });

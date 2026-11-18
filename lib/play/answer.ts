@@ -6,7 +6,19 @@ import type { Scope } from '@/lib/public/scope';
 import { checkAnswer, describeAnswer, parseGiven } from './check';
 
 export type PlayResult =
-  | { status: 'ok'; itemId: string; correct: boolean; answerText: string; explanation: string; choice: unknown }
+  | {
+      status: 'ok';
+      itemId: string;
+      correct: boolean;
+      answerText: string;
+      explanation: string;
+      choice: unknown;
+      // The stored answer in the same closed form as `choice` (an option id, a boolean, an order of
+      // ids, a number), or null for the free-text mechanics — never the accepted-text list itself.
+      // The result panel uses it to mark the correct option in the kept quiz context; it is produced
+      // only after a response has been checked, alongside answerText, which already states it in words.
+      answerChoice: unknown;
+    }
   | { status: 'invalid' }
   | { status: 'not_found' };
 
@@ -26,6 +38,27 @@ function closedChoice(body: Body, given: unknown): unknown {
   if (body.mechanic === 'multiple_choice') return ids(body.options).includes(given) ? given : null;
   if (body.mechanic === 'odd_one_out') return [...ids(body.items), ...ids(body.options)].includes(given) ? given : null;
   return given;
+}
+
+// The stored answer in closed form, mirroring closedChoice: only the shapes a closed mechanic's key
+// legitimately takes, so a malformed key yields null rather than leaking an unexpected value.
+function closedAnswer(body: Body, stored: unknown): unknown {
+  if (!CLOSED.includes(body.mechanic)) return null;
+  switch (body.mechanic) {
+    case 'multiple_choice':
+    case 'odd_one_out':
+      return typeof stored === 'string' ? stored : null;
+    case 'true_false':
+      return typeof stored === 'boolean' ? stored : null;
+    case 'put_in_order':
+      return Array.isArray(stored) ? stored : null;
+    case 'number':
+      return typeof stored === 'object' && stored !== null && typeof (stored as { value?: unknown }).value === 'number'
+        ? (stored as { value: number }).value
+        : null;
+    default:
+      return null;
+  }
 }
 
 // Checks one response on the server. The item is loaded through getPublicItem so every visibility and audience rule
@@ -52,5 +85,6 @@ export async function playResult(db: Queryable, scope: Scope, world: string, slu
     answerText: describeAnswer(item.body, answer.value),
     explanation: answer.explanation,
     choice: closedChoice(body as Body, given),
+    answerChoice: closedAnswer(body as Body, answer.value),
   };
 }
