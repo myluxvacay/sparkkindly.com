@@ -452,3 +452,8 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .quiz-explain{margin-top:18px;background:#edf2ec;border-left:3px solid #517c73;padding:16px 18px}
 .quiz-explain p:last-child{margin-bottom:0}
 .interests-count{font-size:15px;margin-bottom:14px}
+
+/* Signed-in header room (17 Nov 2026): "My Account" is wider than "Sign in", and the small-width
+   header had no slack left — at 320px a signed-in page overflowed sideways. The ≤400px row gives
+   the difference back: smaller badge and wordmark, tighter gaps and controls. One row, as designed. */
+@media(max-width:400px){.header-inner{gap:6px}.brand-name{font-size:19px}.wordmark .brand-badge{width:36px;height:36px}.header-signin{font-size:12px}.menu-toggle{padding:7px;font-size:10px}.theme-toggle{width:32px;height:32px}}

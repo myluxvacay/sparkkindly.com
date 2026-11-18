@@ -41,7 +41,8 @@ async function member(browser: Browser, years: number): Promise<{ page: Page; id
   await page.getByLabel('Email address').fill(email);
   await page.getByLabel('Date of birth').fill(dobYearsAgo(years));
   await page.getByRole('button', { name: 'Create account' }).click();
-  await expect(page.getByRole('status')).toContainText('Check your email');
+  // Sign-up now lands on its own check-email screen (17 Nov 2026), not a banner over the form.
+  await expect(page).toHaveURL(/\/account\/sign-up\/check-email\/$/);
   const link = randomBytes(32).toString('hex');
   await sql("INSERT INTO account_login_tokens (token_hash, email, expires_at) VALUES ($1, $2, now() + interval '15 minutes')", [hash(link), email]);
   await page.goto(`/account/sign-in/link/?token=${link}`);
