@@ -138,7 +138,9 @@ export async function submitSignUp(request: Request, d: Deps): Promise<Response>
       const email = normalizeEmail(form.get('email'))!;
       const next = inviteReturnPath(form.get('next'));
       d.defer(() => emailLink(d, email, ip, d.links ?? accountLinkLimits, true, next));
-      return seeOther('/account/sign-up/?sent=1');
+      // A page of its own, not a banner over the form (user feedback, 17 Nov 2026): the confirmation
+      // screen carries the next steps and the what-if-it-never-arrives guidance.
+      return seeOther('/account/sign-up/check-email/');
     }
   }
 }

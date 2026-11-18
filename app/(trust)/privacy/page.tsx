@@ -15,7 +15,7 @@ export default function Page() {
         {
           heading: 'What we collect today',
           paragraphs: [
-            'SparkKindly has no accounts, sign-in, comments, uploads, advertising, fingerprinting or location features. Fonts, images and the site’s own scripts all come from SparkKindly itself. The one outside service we use is Microsoft Clarity, described below.',
+            'SparkKindly can be read and played without an account. It also offers optional accounts, with sign-in by a link we email you, for people who want their answers and interests kept; the “Accounts” section below says what that involves. SparkKindly has no comments, uploads, advertising, fingerprinting or location features. Fonts, images and the site’s own scripts all come from SparkKindly itself. The one outside service we use is Microsoft Clarity, described below.',
             'One thing is stored, and only on your own device: when you open a quiz question on a world or archive page — not in the Kids area, and not on the daily-question page — your browser remembers its name in local storage, so the “keep playing” choices after an answer do not deal you the same questions again. That list never leaves your device and is never sent to us. The “Start fresh” button under the quiz choices clears it whenever you like.',
             'We use Microsoft Clarity to understand how visitors use the site: which pages are read, and where people click, scroll and stop, shown to us as heatmaps and recorded browsing sessions. Clarity is run by Microsoft, which processes that information on our behalf, and it sets cookies (called _clck and _clsk) to tell one visit from another. The words on a page are hidden in Clarity’s recordings by default, and we do not send Clarity anything you type or your answers. Microsoft’s own privacy statement describes what Microsoft does with the information Clarity collects.',
             'A few articles carry a video from YouTube. Nothing is requested from YouTube until you press Play: the preview picture comes from SparkKindly. When you press Play, the video loads from YouTube (a Google service), which may set its own cookies. Kids pages never carry a video.',
@@ -26,7 +26,7 @@ export default function Page() {
         {
           heading: 'Your answers',
           paragraphs: [
-            'When you check an answer to a quiz or puzzle, your answer is sent to our server inside the page address so the server can check it and show the explanation. Our application does not save it, and nothing links it to you. Like any web request, the address can appear in the web server’s ordinary technical logs; see the next section.',
+            'When you check an answer to a quiz or puzzle, your answer is sent to our server inside the page address so the server can check it and show the explanation. If you are not signed in, our application does not save it, and nothing links it to you. If you are signed in, your first answer to each question is saved to your account instead, as the note under the question says. Like any web request, the address can appear in the web server’s ordinary technical logs; see the next section.',
           ],
         },
         {
@@ -43,9 +43,10 @@ export default function Page() {
           ],
         },
         {
-          heading: 'Accounts are not available yet',
+          heading: 'Accounts',
           paragraphs: [
-            'We plan to offer optional accounts later. The plan is that people under 13 cannot have an account, that 13 to 15 year olds need a parent or guardian’s confirmation, and that a parent can withdraw it. None of this is built, and this notice will be rewritten, and independently reviewed, before any account is offered.',
+            'Accounts are optional: everything on the site can be read and played without one. People under 13 cannot have an account. At 13 to 15, a parent or guardian’s confirmation is needed, and a parent or guardian can withdraw it at any time. Signing in is by a link we email you; there is no password.',
+            'If you are signed in, your first answer to each question and the interests you choose are saved to your account, so the site can show you what you have answered and match items to your interests. Your account pages show what is saved, and you can delete your account and everything in it from those pages.',
           ],
         },
         {

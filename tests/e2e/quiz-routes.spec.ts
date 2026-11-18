@@ -125,6 +125,57 @@ test('the Spark flick zone navigates on a flick, and a drag elsewhere still scro
   await context.close();
 });
 
+test('a wrong answer keeps the quiz on screen, and Next hops quiz to quiz without getting stuck', async ({ page, browser }) => {
+  // User feedback (17 Nov 2026): a wrong answer felt like being taken away to an explanation, and
+  // choosing Next sometimes left the quiz or stalled. Tested against the current build, JS and no-JS,
+  // at phone width: the verdict must arrive inside the same panel with the question and the player's
+  // own answer kept, and repeated keep-playing hops must keep landing on fresh questions.
+  await addItem(focusQuiz);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/play/fx-focus-quiz/');
+  await page.getByRole('radio').nth(1).check(); // the fixture's answer is True; this picks False
+  await page.getByRole('button', { name: /Check answer/ }).click();
+  const panel = page.locator('.quiz-panel');
+  await expect(panel.getByRole('status')).toContainText('Not quite');
+  // Still the same page, still the same panel: question, your pick and the correct one are all here.
+  await expect(page).toHaveURL(/\/play\/fx-focus-quiz\//);
+  await expect(panel.locator('.quiz-review-prompt')).toHaveText('A prompt that is long enough.');
+  await expect(panel.locator('.quiz-review-option.is-yours')).toContainText('False');
+  await expect(panel.locator('.quiz-review-option.is-yours')).toContainText('Your answer');
+  await expect(panel.locator('.quiz-review-option.is-correct')).toContainText('True');
+  await expect(panel.locator('.quiz-explain')).toContainText('An explanation that is long enough.');
+
+  // Hop twice with the keep-playing buttons: each time a different quiz, a fresh form, panel on top.
+  let here = page.url();
+  for (let hop = 0; hop < 2; hop++) {
+    await page.getByRole('link', { name: /Play another at this level/ }).click();
+    await page.waitForURL((url) => url.toString() !== here && url.hash === '#play-panel', { timeout: 10_000 });
+    here = page.url();
+    await expect(page.getByRole('radio').first()).toBeVisible();
+    await expect
+      .poll(() => page.evaluate(() => Math.round(document.querySelector('.quiz-panel')!.getBoundingClientRect().top)))
+      .toBeLessThan(160);
+    await page.getByRole('radio').first().check();
+    await page.getByRole('button', { name: /Check answer/ }).click();
+    await expect(page.locator('.quiz-panel').getByRole('status')).toContainText(/Correct|Not quite/);
+  }
+
+  // The no-JavaScript path: the form reloads the same item page, the kept context is server-rendered,
+  // and the keep-playing links (plain hrefs) hop onward the same way.
+  const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+  const plain = await noJs.newPage();
+  await plain.goto('/play/fx-focus-quiz/');
+  await plain.getByRole('radio').nth(1).check();
+  await plain.getByRole('button', { name: /Check answer/ }).click();
+  await expect(plain).toHaveURL(/\/play\/fx-focus-quiz\/\?r=false#result$/);
+  await expect(plain.locator('.quiz-review-option.is-yours')).toContainText('False');
+  await expect(plain.locator('.quiz-explain')).toContainText('An explanation that is long enough.');
+  await plain.getByRole('link', { name: /Play another at this level/ }).click();
+  await plain.waitForURL((url) => !url.pathname.endsWith('/play/fx-focus-quiz/') && url.hash === '#play-panel', { timeout: 10_000 });
+  await expect(plain.getByRole('radio').first()).toBeVisible();
+  await noJs.close();
+});
+
 test('the archive is newest first and tolerates bad page numbers', async ({ page }) => {
   await addItem({ world: 'play', slug: 'fx-newest-quiz', kind: 'quiz', title: 'Newest fixture quiz', publishedAt: 'now()', body: { mechanic: 'true_false', prompt: 'A prompt that is long enough.', difficulty: 'easy' }, answer: { value: true, explanation: 'An explanation that is long enough.' } });
   await page.goto('/quiz/archive/');

@@ -3,16 +3,16 @@ import type { ReactNode } from 'react';
 import { headers } from 'next/headers';
 import { getDb } from '@/lib/db';
 import type { PublicItem } from '@/lib/items/repo';
-import { playResult } from '@/lib/play/answer';
+import { playResult, type PlayResult as CheckedResult } from '@/lib/play/answer';
 import { buildModel, poolQuizzes, rotateCandidates, DIFFICULTY_ORDER } from '@/lib/play/keep-playing';
-import { readPlay } from '@/lib/public/body';
+import { readPlay, type PlayView } from '@/lib/public/body';
 import { listQuizzes } from '@/lib/public/reads';
 import { currentViewer } from '@/lib/accounts/scope-next';
 import { recordableRequest, recordPlay, type AnswerNote } from '@/lib/accounts/record-play';
 import { listAnsweredIds } from '@/lib/accounts/responses';
 import { clueCount, hasResponse, toParams, type SearchParams } from '@/lib/public/play-params';
 import PlayForm from './PlayForm';
-import PlayResult from './PlayResult';
+import PlayResult, { type PlayReview } from './PlayResult';
 import PlayEnhancer from './PlayEnhancer';
 import KeepPlaying from './KeepPlaying';
 import SharePrompt from './SharePrompt';
@@ -103,7 +103,14 @@ export default async function PlayPanel({
       >
         <DifficultyMeter level={play.difficulty} />
         {result && result.status !== 'not_found' && (
-          <PlayResult result={result} again={action} another={another} invalidHint={invalidHint} keepPlaying={keepPlaying ?? undefined} />
+          <PlayResult
+            result={result}
+            again={action}
+            another={another}
+            invalidHint={invalidHint}
+            review={result.status === 'ok' ? reviewFor(play, result, params) : undefined}
+            keepPlaying={keepPlaying ?? undefined}
+          />
         )}
         {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
         <Note note={note} />
@@ -111,6 +118,47 @@ export default async function PlayPanel({
       </div>
     </PlayEnhancer>
   );
+}
+
+// The kept quiz context for the result panel (user feedback, 17 Nov 2026): the question and the
+// player's own answer stay on screen with the verdict, the correct option marked alongside theirs
+// for the closed-choice mechanics; the other mechanics get a one-line "your answer" (for free text,
+// the words are echoed from this request's own parameters — they are never stored, see
+// lib/play/answer.ts — and handed back only to the person who typed them).
+function reviewFor(play: PlayView, result: Extract<CheckedResult, { status: 'ok' }>, params: URLSearchParams): PlayReview {
+  const mark = (list: { id: string; text: string }[], chosen: unknown, answer: unknown) =>
+    list.map((o) => ({ id: o.id, text: o.text, yours: chosen === o.id, correct: answer === o.id }));
+  switch (play.mechanic) {
+    case 'multiple_choice':
+      return { prompt: play.prompt, options: mark(play.options, result.choice, result.answerChoice) };
+    case 'odd_one_out':
+      return { prompt: play.prompt, options: mark(play.items, result.choice, result.answerChoice) };
+    case 'true_false': {
+      const asId = (v: unknown) => (v === true ? 'true' : v === false ? 'false' : null);
+      return {
+        prompt: play.prompt,
+        options: mark(
+          [
+            { id: 'true', text: 'True' },
+            { id: 'false', text: 'False' },
+          ],
+          asId(result.choice),
+          asId(result.answerChoice),
+        ),
+      };
+    }
+    case 'number':
+      return { prompt: play.prompt, yourAnswer: typeof result.choice === 'number' ? String(result.choice) : undefined };
+    case 'put_in_order': {
+      const text = new Map(play.items.map((i) => [i.id, i.text]));
+      const order = Array.isArray(result.choice)
+        ? result.choice.map((id) => text.get(String(id)) ?? String(id)).join(', ')
+        : undefined;
+      return { prompt: play.prompt, yourAnswer: order };
+    }
+    default:
+      return { prompt: play.prompt, yourAnswer: params.get('r') ?? undefined };
+  }
 }
 
 const privacy = <Link href="/privacy/">privacy guide</Link>;
