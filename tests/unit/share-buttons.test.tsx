@@ -109,6 +109,7 @@ describe('client components', () => {
       'components/item/PlayEnhancer.tsx', // the play island: in-place answer checking on the play page itself
       'components/item/ShareClient.tsx',
       'components/item/VideoPlayer.tsx', // owner-attached YouTube video: loads the player only after a press
+      'components/me/InterestsEnhancer.tsx', // the interests island: the live 30-cap counter on the picker (17 Nov 2026)
     ]);
   });
 
