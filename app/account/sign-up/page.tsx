@@ -4,7 +4,7 @@ import { inviteReturnPath } from '@/lib/circles/invites';
 
 export const dynamic = 'force-dynamic';
 
-type Props = { searchParams: Promise<{ next?: string; sent?: string; r?: string; invalid?: string }> };
+type Props = { searchParams: Promise<{ next?: string; r?: string; invalid?: string }> };
 
 export default async function AccountSignUpPage({ searchParams }: Props) {
   requireAccounts();
@@ -17,11 +17,6 @@ export default async function AccountSignUpPage({ searchParams }: Props) {
   return (
     <>
       <h1>Create an account</h1>
-      {q.sent === '1' && (
-        <div role="status" className="takeaway">
-          <p>Check your email to continue.</p>
-        </div>
-      )}
       {under13 && (
         <div role="status" className="takeaway">
           <p>

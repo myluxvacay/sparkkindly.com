@@ -140,6 +140,12 @@ describe('submitSignUp', () => {
     expect(await snapshot(a)).toEqual(await snapshot(b));
   });
 
+  it('a completed sign-up lands on the separate check-email screen, not back on the form', async () => {
+    const r = await signUpPost('check-email@example.test');
+    expect(r.status).toBe(303);
+    expect(r.headers.get('location')).toBe('/account/sign-up/check-email/');
+  });
+
   it('the under-13 and parent-required redirects use neutral codes that do not reveal an age in the URL', async () => {
     const dob = (years: number) => `${2026 - years}-01-01`;
     const kid = await run((d) => submitSignUp(post({ email: 'kid@example.test', dob: dob(10) }), d as never));

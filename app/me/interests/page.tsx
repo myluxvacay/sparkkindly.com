@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getInterests, interestChoices, MAX_INTERESTS, type Choice } from '@/lib/accounts/interests';
 import { requireContext } from '@/lib/accounts/next';
 import { getDb } from '@/lib/db';
+import InterestsEnhancer from '@/components/me/InterestsEnhancer';
 
 export const dynamic = 'force-dynamic';
 export const metadata: Metadata = { title: 'Your interests' };
@@ -46,7 +47,9 @@ export default async function InterestsPage({ searchParams }: Props) {
   const db = getDb();
   const owner = { accountId: ctx.account.id, profileId: ctx.profile?.id ?? null };
   const [choices, current] = await Promise.all([interestChoices(db), getInterests(db, owner)]);
-  const described = ['interests-hint', r && RESULTS[r] && !RESULTS[r].ok ? 'result' : undefined].filter(Boolean).join(' ');
+  const described = ['interests-hint', 'interests-count', r && RESULTS[r] && !RESULTS[r].ok ? 'result' : undefined]
+    .filter(Boolean)
+    .join(' ');
   return (
     <>
       <h1>Your interests</h1>
@@ -54,6 +57,7 @@ export default async function InterestsPage({ searchParams }: Props) {
       <p>
         <Link href="/me/">Back to your page</Link>
       </p>
+      <InterestsEnhancer max={MAX_INTERESTS} initial={current.worldIds.length + current.topicIds.length}>
       <form method="post" action="/me/interests/save/" className="prose admin-form">
         <p id="interests-hint">
           Choose the worlds and topics you like, up to {MAX_INTERESTS} in total. Items that match show on your page.
@@ -75,6 +79,7 @@ export default async function InterestsPage({ searchParams }: Props) {
           Save my interests
         </button>
       </form>
+      </InterestsEnhancer>
     </>
   );
 }

@@ -28,7 +28,9 @@ test('trust pages make no third-party request except Clarity and store nothing i
 });
 
 test('no trust page offers a feature that does not exist yet', async ({ page }) => {
-  const forbidden = [/sign up/i, /create an account/i, /log ?in/i, /sign ?in/i, /join (a|the) (circle|community)/i, /leave a comment/i];
+  // Accounts and sign-in are live (they were planned when this list was written), so they are no longer
+  // forbidden here; circles and comments are still not offered from the trust pages.
+  const forbidden = [/join (a|the) (circle|community)/i, /leave a comment/i];
   for (const path of PAGES) {
     await page.goto(path);
     const text = await page.locator('main').innerText();
@@ -36,10 +38,12 @@ test('no trust page offers a feature that does not exist yet', async ({ page }) 
   }
 });
 
-test('the privacy page states what is true: no accounts, Clarity disclosed, answers not saved, Kids rules', async ({ page }) => {
+test('the privacy page states what is true: optional accounts, Clarity disclosed, answers not saved, Kids rules', async ({ page }) => {
   await page.goto('/privacy/');
   const text = await page.locator('main').innerText();
-  expect(text).toMatch(/no accounts/i);
+  expect(text).toMatch(/optional accounts/i);
+  expect(text).not.toMatch(/no accounts, sign-in/i);
+  expect(text).not.toMatch(/Accounts are not available yet/i);
   expect(text).toMatch(/Microsoft Clarity/);
   expect(text).toMatch(/heatmaps and recorded browsing sessions/i);
   expect(text).toMatch(/does not save it/i);
