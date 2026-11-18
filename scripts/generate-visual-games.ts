@@ -795,17 +795,29 @@ function generate() {
     counters.set(type, n);
     g.id = `${type}-${String(n).padStart(3, '0')}`;
   });
-  const immediateCount = Math.floor(fresh.length * 0.4);
+  // The immediate share applies PER TYPE — a flat first-40% left whole types (counting, sequence,
+  // what-changed) with nothing playable at launch because they generate last.
   const dayMs = 86400000;
   const todayMs = Date.parse(`${TODAY}T00:00:00Z`);
-  fresh.forEach((g, i) => {
-    if (i < immediateCount) {
-      const back = Math.floor((i / Math.max(1, immediateCount)) * 10);
-      g.scheduledDate = new Date(todayMs - back * dayMs).toISOString().slice(0, 10);
-    } else {
-      const ahead = Math.floor((i - immediateCount) / 2) + 1;
-      g.scheduledDate = new Date(todayMs + ahead * dayMs).toISOString().slice(0, 10);
-    }
+  const byType = new Map<string, GameDraft[]>();
+  for (const g of fresh) {
+    const list = byType.get(String(g.gameType)) ?? [];
+    list.push(g);
+    byType.set(String(g.gameType), list);
+  }
+  const runway: GameDraft[] = [];
+  for (const list of byType.values()) {
+    const immediateCount = Math.floor(list.length * 0.4);
+    list.forEach((g, i) => {
+      if (i < immediateCount) {
+        const back = Math.floor((i / Math.max(1, immediateCount)) * 10);
+        g.scheduledDate = new Date(todayMs - back * dayMs).toISOString().slice(0, 10);
+      } else runway.push(g);
+    });
+  }
+  runway.forEach((g, i) => {
+    const ahead = Math.floor(i / 2) + 1;
+    g.scheduledDate = new Date(todayMs + ahead * dayMs).toISOString().slice(0, 10);
   });
 
   // Prove every game through the schema before it touches disk.
