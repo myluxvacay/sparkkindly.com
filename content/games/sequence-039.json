@@ -1,0 +1,65 @@
+{
+  "id": "sequence-039",
+  "scheduledDate": "2027-01-17",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came fourth?",
+  "prompt": "Spark showed some things in order. What came fourth?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the white star, second the brown owl, third the green train, fourth the yellow balloon, fifth the red apple. So the fourth one was the yellow balloon.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "yellow balloon"
+    },
+    {
+      "id": "b",
+      "text": "brown owl"
+    },
+    {
+      "id": "c",
+      "text": "white star"
+    },
+    {
+      "id": "d",
+      "text": "green train"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "star",
+        "label": "white star",
+        "color": "white"
+      },
+      {
+        "art": "owl",
+        "label": "brown owl",
+        "color": "brown"
+      },
+      {
+        "art": "train",
+        "label": "green train",
+        "color": "green"
+      },
+      {
+        "art": "balloon",
+        "label": "yellow balloon",
+        "color": "yellow"
+      },
+      {
+        "art": "apple",
+        "label": "red apple",
+        "color": "red"
+      }
+    ],
+    "askPosition": 4
+  }
+}

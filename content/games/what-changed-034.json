@@ -1,0 +1,134 @@
+{
+  "id": "what-changed-034",
+  "scheduledDate": "2027-02-17",
+  "brand": "grow",
+  "gameType": "what-changed",
+  "title": "What changed: classroom",
+  "prompt": "One thing changed between the before and after classroom pictures. What changed?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the purple cupcake changed colour from white to purple. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the purple cupcake changed colour from white to purple."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the pink house changed colour from pink to purple."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the pink house vanished."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: a green frog appeared."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "dog-2851",
+          "art": "dog",
+          "name": "dog",
+          "color": "black",
+          "x": 477,
+          "y": 505
+        },
+        {
+          "id": "orange-2852",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 714,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "cupcake-2853",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 636,
+          "y": 425
+        },
+        {
+          "id": "bird-2854",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 274,
+          "y": 500
+        },
+        {
+          "id": "house-2855",
+          "art": "house",
+          "name": "house",
+          "color": "pink",
+          "x": 193,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: black dog, orange orange, white cupcake, blue bird, pink house.",
+    "sceneAfter": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "dog-2851",
+          "art": "dog",
+          "name": "dog",
+          "color": "black",
+          "x": 477,
+          "y": 505
+        },
+        {
+          "id": "orange-2852",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 714,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "cupcake-2853",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "purple",
+          "x": 636,
+          "y": 425
+        },
+        {
+          "id": "bird-2854",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 274,
+          "y": 500
+        },
+        {
+          "id": "house-2855",
+          "art": "house",
+          "name": "house",
+          "color": "pink",
+          "x": 193,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAfterAlt": "A classroom scene. In the scene: black dog, orange orange, purple cupcake, blue bird, pink house.",
+    "expectedChanges": [
+      "cupcake-2853:color:white->purple"
+    ]
+  }
+}

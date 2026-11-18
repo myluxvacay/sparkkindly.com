@@ -1,0 +1,45 @@
+{
+  "id": "flags-and-places-006",
+  "scheduledDate": "2026-11-15",
+  "brand": "discover",
+  "gameType": "flags-and-places",
+  "title": "Flags & places: which flag is United Kingdom?",
+  "prompt": "Which flag belongs to United Kingdom?",
+  "difficulty": "medium",
+  "explanation": "The United Kingdom’s Union Jack layers red and white crosses on blue. The other flags belong to Mexico, Australia, Japan.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Flag A",
+      "art": "flag-gb",
+      "alt": "A flag: The United Kingdom’s Union Jack layers red and white crosses on blue."
+    },
+    {
+      "id": "b",
+      "text": "Flag B",
+      "art": "flag-mx",
+      "alt": "A flag: Mexico’s flag is green, white and red with an eagle emblem in the centre."
+    },
+    {
+      "id": "c",
+      "text": "Flag C",
+      "art": "flag-au",
+      "alt": "A flag: Australia’s flag is dark blue with a small Union Jack and white stars."
+    },
+    {
+      "id": "d",
+      "text": "Flag D",
+      "art": "flag-jp",
+      "alt": "A flag: Japan’s flag is white with a single red disc for the sun."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "flags-and-places"
+  }
+}

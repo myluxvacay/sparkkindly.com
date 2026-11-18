@@ -1,0 +1,169 @@
+{
+  "id": "spot-difference-054",
+  "scheduledDate": "2027-02-10",
+  "brand": "grow",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: classroom",
+  "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The turtle changed colour from green to plain, the pink flower vanished and the white cat vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The red ladybug changed colour from red to purple, the pink flower vanished and the white cat vanished."
+    },
+    {
+      "id": "b",
+      "text": "The turtle changed colour from green to plain, the pink flower vanished and the red ladybug vanished."
+    },
+    {
+      "id": "c",
+      "text": "The turtle changed colour from green to plain, a green frog appeared and the white cat vanished."
+    },
+    {
+      "id": "d",
+      "text": "The turtle changed colour from green to plain, the pink flower vanished and the white cat vanished."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "car-2603",
+          "art": "car",
+          "name": "car",
+          "color": "red",
+          "x": 420,
+          "y": 465
+        },
+        {
+          "id": "horse-2604",
+          "art": "horse",
+          "name": "horse",
+          "color": "brown",
+          "x": 203,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "flower-2605",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 122,
+          "y": 470
+        },
+        {
+          "id": "cat-2606",
+          "art": "cat",
+          "name": "cat",
+          "color": "white",
+          "x": 576,
+          "y": 500
+        },
+        {
+          "id": "turtle-2607",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 487,
+          "y": 505
+        },
+        {
+          "id": "ball-2608",
+          "art": "ball",
+          "name": "ball",
+          "color": "yellow",
+          "x": 644,
+          "y": 425
+        },
+        {
+          "id": "flower-2609",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 262,
+          "y": 500
+        },
+        {
+          "id": "ladybug-2610",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 708,
+          "y": 470,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: red car, brown horse, pink flower, white cat, green turtle, yellow ball, purple flower, red ladybug.",
+    "sceneAfter": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "car-2603",
+          "art": "car",
+          "name": "car",
+          "color": "red",
+          "x": 420,
+          "y": 465
+        },
+        {
+          "id": "horse-2604",
+          "art": "horse",
+          "name": "horse",
+          "color": "brown",
+          "x": 203,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "turtle-2607",
+          "art": "turtle",
+          "name": "turtle",
+          "x": 487,
+          "y": 505
+        },
+        {
+          "id": "ball-2608",
+          "art": "ball",
+          "name": "ball",
+          "color": "yellow",
+          "x": 644,
+          "y": 425
+        },
+        {
+          "id": "flower-2609",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 262,
+          "y": 500
+        },
+        {
+          "id": "ladybug-2610",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 708,
+          "y": 470,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAfterAlt": "A classroom scene. In the scene: red car, brown horse, turtle, yellow ball, purple flower, red ladybug.",
+    "expectedChanges": [
+      "turtle-2607:color:green->plain",
+      "flower-2605:removed",
+      "cat-2606:removed"
+    ]
+  }
+}

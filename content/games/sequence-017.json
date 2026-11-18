@@ -1,0 +1,60 @@
+{
+  "id": "sequence-017",
+  "scheduledDate": "2026-11-16",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the red book, second the blue planet, third the gray dog, fourth the red ball. So the third one was the gray dog.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "red book"
+    },
+    {
+      "id": "b",
+      "text": "gray dog"
+    },
+    {
+      "id": "c",
+      "text": "red ball"
+    },
+    {
+      "id": "d",
+      "text": "blue planet"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "book",
+        "label": "red book",
+        "color": "red"
+      },
+      {
+        "art": "planet",
+        "label": "blue planet",
+        "color": "blue"
+      },
+      {
+        "art": "dog",
+        "label": "gray dog",
+        "color": "gray"
+      },
+      {
+        "art": "ball",
+        "label": "red ball",
+        "color": "red"
+      }
+    ],
+    "askPosition": 3
+  }
+}

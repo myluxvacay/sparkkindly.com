@@ -1,0 +1,136 @@
+{
+  "id": "observation-024",
+  "scheduledDate": "2027-01-03",
+  "brand": "play",
+  "gameType": "observation",
+  "title": "Look closely: farm count",
+  "prompt": "How many butterflies are in the farm?",
+  "difficulty": "hard",
+  "explanation": "Count the butterflies one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "1"
+    },
+    {
+      "id": "b",
+      "text": "3"
+    },
+    {
+      "id": "c",
+      "text": "2"
+    },
+    {
+      "id": "d",
+      "text": "4"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "owl-520",
+          "art": "owl",
+          "name": "owl",
+          "color": "gray",
+          "x": 726,
+          "y": 450
+        },
+        {
+          "id": "orange-521",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 307,
+          "y": 470
+        },
+        {
+          "id": "cloud-522",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 695,
+          "y": 170
+        },
+        {
+          "id": "butterfly-523",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "purple",
+          "x": 568,
+          "y": 100
+        },
+        {
+          "id": "rabbit-524",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "white",
+          "x": 695,
+          "y": 500
+        },
+        {
+          "id": "chicken-525",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 429,
+          "y": 500
+        },
+        {
+          "id": "crab-526",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 376,
+          "y": 505
+        },
+        {
+          "id": "rabbit-527",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "white",
+          "x": 555,
+          "y": 465
+        },
+        {
+          "id": "ladybug-528",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 241,
+          "y": 430
+        },
+        {
+          "id": "butterfly-529",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "pink",
+          "x": 334,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "crab-530",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 627,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A farm scene. In the scene: gray owl, orange orange, white cloud, purple butterfly, white rabbit, white chicken, orange crab, white rabbit, red ladybug, pink butterfly, red crab.",
+    "fact": {
+      "type": "count",
+      "art": "butterfly"
+    }
+  }
+}

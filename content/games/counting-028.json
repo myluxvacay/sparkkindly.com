@@ -1,0 +1,72 @@
+{
+  "id": "counting-028",
+  "scheduledDate": "2026-11-21",
+  "brand": "kids",
+  "gameType": "counting",
+  "title": "Counting: flowers at the meadow",
+  "prompt": "How many flowers can you count in the meadow?",
+  "difficulty": "easy",
+  "explanation": "Count the flowers one by one: there are exactly 3.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 3,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "flower-3248",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 111,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "flower-3249",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 505,
+          "y": 495
+        },
+        {
+          "id": "flower-3250",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 184,
+          "y": 430
+        },
+        {
+          "id": "moon-3251",
+          "art": "moon",
+          "name": "moon",
+          "x": 427,
+          "y": 100,
+          "flip": true
+        },
+        {
+          "id": "butterfly-3252",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "blue",
+          "x": 645,
+          "y": 150
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: red flower, yellow flower, red flower, moon, blue butterfly.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

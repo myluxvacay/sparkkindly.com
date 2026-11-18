@@ -11,9 +11,9 @@ import {
 // adds the flick / double-tap gestures on the result panel.
 //
 // Spark presents the choices with the reaction artwork from the picture games (the slot files named in
-// SPARK-ANIMATIONS.md, mirrored from SPARK_SLOTS in components/games/VisualGames.tsx): the victory GIF
-// after a right answer, the encouraging GIF after a wrong one. The island swaps in the still image for
-// reduced-motion visitors (data-kp-still), matching the games.
+// SPARK-ANIMATIONS.md; the slots lived in the retired /games/ silo player and are kept here now): the
+// victory GIF after a right answer, the encouraging GIF after a wrong one. The island swaps in the
+// still image for reduced-motion visitors (data-kp-still), matching the games.
 const KP_SPARK = {
   victory: { animated: '/brand/spark-victory.gif', still: '/brand/spark.webp', alt: 'Spark, the SparkKindly guide, celebrating with you', w: 418, h: 627 },
   encouraging: { animated: '/brand/spark-encouraging.gif', still: '/brand/spark.webp', alt: 'Spark, the SparkKindly guide, cheering you on', w: 512, h: 527 },

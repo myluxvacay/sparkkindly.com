@@ -1,0 +1,86 @@
+{
+  "id": "memory-034",
+  "scheduledDate": "2026-12-21",
+  "brand": "discover",
+  "gameType": "memory",
+  "title": "Memory: space scene count",
+  "prompt": "From memory: how many rockets are in the space scene?",
+  "difficulty": "easy",
+  "explanation": "Count the rockets one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "2"
+    },
+    {
+      "id": "b",
+      "text": "3"
+    },
+    {
+      "id": "c",
+      "text": "4"
+    },
+    {
+      "id": "d",
+      "text": "1"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "space",
+      "elements": [
+        {
+          "id": "penguin-1716",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 624,
+          "y": 480
+        },
+        {
+          "id": "rocket-1717",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "white",
+          "x": 128,
+          "y": 200
+        },
+        {
+          "id": "butterfly-1718",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "orange",
+          "x": 554,
+          "y": 330
+        },
+        {
+          "id": "pumpkin-1719",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 170,
+          "y": 480
+        },
+        {
+          "id": "rocket-1720",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 473,
+          "y": 210
+        }
+      ]
+    },
+    "sceneAlt": "A space scene. In the scene: penguin, white rocket, orange butterfly, orange pumpkin, blue rocket.",
+    "fact": {
+      "type": "count",
+      "art": "rocket"
+    }
+  }
+}

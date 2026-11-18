@@ -1,0 +1,156 @@
+{
+  "id": "what-changed-029",
+  "scheduledDate": "2027-02-15",
+  "brand": "play",
+  "gameType": "what-changed",
+  "title": "What changed: meadow",
+  "prompt": "One thing changed between the before and after meadow pictures. What changed?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the purple kite vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the purple kite vanished."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the orange shell changed colour from orange to purple."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the orange shell vanished."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: a blue ball appeared."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "balloon-2814",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "green",
+          "x": 417,
+          "y": 100
+        },
+        {
+          "id": "star-2815",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 173,
+          "y": 140
+        },
+        {
+          "id": "tree-2816",
+          "art": "tree",
+          "name": "tree",
+          "color": "green",
+          "x": 562,
+          "y": 425
+        },
+        {
+          "id": "shell-2817",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 112,
+          "y": 470
+        },
+        {
+          "id": "banana-2818",
+          "art": "banana",
+          "name": "banana",
+          "x": 378,
+          "y": 460
+        },
+        {
+          "id": "kite-2819",
+          "art": "kite",
+          "name": "kite",
+          "color": "purple",
+          "x": 640,
+          "y": 150
+        },
+        {
+          "id": "umbrella-2820",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "red",
+          "x": 507,
+          "y": 495,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: green balloon, yellow star, green tree, orange shell, banana, purple kite, red umbrella.",
+    "sceneAfter": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "balloon-2814",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "green",
+          "x": 417,
+          "y": 100
+        },
+        {
+          "id": "star-2815",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 173,
+          "y": 140
+        },
+        {
+          "id": "tree-2816",
+          "art": "tree",
+          "name": "tree",
+          "color": "green",
+          "x": 562,
+          "y": 425
+        },
+        {
+          "id": "shell-2817",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 112,
+          "y": 470
+        },
+        {
+          "id": "banana-2818",
+          "art": "banana",
+          "name": "banana",
+          "x": 378,
+          "y": 460
+        },
+        {
+          "id": "umbrella-2820",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "red",
+          "x": 507,
+          "y": 495,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAfterAlt": "A meadow scene. In the scene: green balloon, yellow star, green tree, orange shell, banana, red umbrella.",
+    "expectedChanges": [
+      "kite-2819:removed"
+    ]
+  }
+}

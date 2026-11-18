@@ -1,0 +1,125 @@
+{
+  "id": "counting-002",
+  "scheduledDate": "2026-11-09",
+  "brand": "grow",
+  "gameType": "counting",
+  "title": "Counting: flowers at the garden",
+  "prompt": "How many flowers can you count in the garden?",
+  "difficulty": "medium",
+  "explanation": "Count the flowers one by one: there are exactly 8.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 8,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "flower-3003",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 300,
+          "y": 510
+        },
+        {
+          "id": "flower-3004",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 538,
+          "y": 405
+        },
+        {
+          "id": "flower-3005",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 266,
+          "y": 405,
+          "flip": true
+        },
+        {
+          "id": "flower-3006",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 115,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "flower-3007",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 646,
+          "y": 510
+        },
+        {
+          "id": "flower-3008",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 473,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "flower-3009",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 673,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "flower-3010",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 127,
+          "y": 505
+        },
+        {
+          "id": "star-3011",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 525,
+          "y": 110,
+          "flip": true
+        },
+        {
+          "id": "cloud-3012",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 234,
+          "y": 135,
+          "flip": true
+        },
+        {
+          "id": "ball-3013",
+          "art": "ball",
+          "name": "ball",
+          "color": "purple",
+          "x": 398,
+          "y": 430
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: white flower, white flower, yellow flower, white flower, yellow flower, red flower, yellow flower, pink flower, white star, white cloud, purple ball.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

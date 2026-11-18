@@ -1,0 +1,124 @@
+{
+  "id": "counting-056",
+  "scheduledDate": "2026-12-05",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: sheep at the farm",
+  "prompt": "How many sheep can you count in the farm?",
+  "difficulty": "medium",
+  "explanation": "Count the sheep one by one: there are exactly 8.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 8,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "sheep-3495",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 234,
+          "y": 430,
+          "flip": true
+        },
+        {
+          "id": "sheep-3496",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 305,
+          "y": 470
+        },
+        {
+          "id": "sheep-3497",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 617,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "sheep-3498",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 368,
+          "y": 505
+        },
+        {
+          "id": "sheep-3499",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 558,
+          "y": 465,
+          "flip": true
+        },
+        {
+          "id": "sheep-3500",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 422,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "sheep-3501",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 723,
+          "y": 450,
+          "flip": true
+        },
+        {
+          "id": "sheep-3502",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 688,
+          "y": 500
+        },
+        {
+          "id": "bee-3503",
+          "art": "bee",
+          "name": "bee",
+          "x": 706,
+          "y": 170
+        },
+        {
+          "id": "kite-3504",
+          "art": "kite",
+          "name": "kite",
+          "color": "purple",
+          "x": 329,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "kite-3505",
+          "art": "kite",
+          "name": "kite",
+          "color": "pink",
+          "x": 556,
+          "y": 100
+        }
+      ]
+    },
+    "sceneAlt": "A farm scene. In the scene: gray sheep, white sheep, gray sheep, gray sheep, black sheep, black sheep, white sheep, black sheep, bee, purple kite, pink kite.",
+    "countTarget": {
+      "art": "sheep"
+    }
+  }
+}

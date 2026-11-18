@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import { SPARK_VOICE, playSparkVoice } from '@/lib/games/spark-voice';
 
 // Spark, the SparkKindly guide (owner request #20, 17 Nov 2026; canonical cape design, owner-confirmed).
 // Behaviour the owner settled: NO autoplay sound — Spark first attracts attention silently (the transparent
@@ -49,6 +50,9 @@ export default function SparkAssistant() {
   if (hidden) return null;
 
   const dismiss = () => {
+    // Spark says goodbye on the way out (owner-recorded line, 18 Nov 2026): the dismissal tap is
+    // the gesture that plays it — never autoplay — and the shared sound toggle governs it.
+    playSparkVoice('goodbye');
     try {
       localStorage.setItem(DISMISS_KEY, '1');
     } catch {
@@ -68,9 +72,9 @@ export default function SparkAssistant() {
         <section className="spark-panel" aria-label="Spark, your SparkKindly guide">
           <h2>Hi, I’m Spark!</h2>
           <p>{GREETING}</p>
-          <p id="spark-listen-label">▶ Listen to Spark’s greeting — the words above are its full text:</p>
+          <p id="spark-listen-label">▶ Listen to Spark say hello — “Hi friends, it’s Spark! Are you ready?”</p>
           {/* preload="none": the audio is fetched only when a visitor chooses to listen; native controls give play/pause. */}
-          <audio ref={audioRef} controls src="/brand/spark-greeting.mp3" preload="none" aria-labelledby="spark-listen-label" />
+          <audio ref={audioRef} controls src={SPARK_VOICE.greeting} preload="none" aria-labelledby="spark-listen-label" />
           <nav aria-label="Spark’s tour">
             <ul className="spark-tour">
               <li><Link href="/quiz/">Today’s Question</Link></li>

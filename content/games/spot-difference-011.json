@@ -1,0 +1,156 @@
+{
+  "id": "spot-difference-011",
+  "scheduledDate": "2026-11-13",
+  "brand": "play",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: farm",
+  "prompt": "Three things changed between the two farm pictures. Which list names all three changes?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: The yellow star changed colour from white to yellow, the white sheep moved and the blue kite vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The yellow star changed colour from white to yellow, a red kite appeared and the blue kite vanished."
+    },
+    {
+      "id": "b",
+      "text": "The yellow star changed colour from white to yellow, the white sheep moved and the blue kite vanished."
+    },
+    {
+      "id": "c",
+      "text": "The pink pig changed colour from pink to purple, the white sheep moved and the blue kite vanished."
+    },
+    {
+      "id": "d",
+      "text": "The yellow star changed colour from white to yellow, the white sheep moved and the pink pig vanished."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "star-2306",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 563,
+          "y": 100
+        },
+        {
+          "id": "umbrella-2307",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "green",
+          "x": 622,
+          "y": 425
+        },
+        {
+          "id": "rabbit-2308",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "gray",
+          "x": 735,
+          "y": 450
+        },
+        {
+          "id": "kite-2309",
+          "art": "kite",
+          "name": "kite",
+          "color": "blue",
+          "x": 702,
+          "y": 170
+        },
+        {
+          "id": "banana-2310",
+          "art": "banana",
+          "name": "banana",
+          "x": 364,
+          "y": 505
+        },
+        {
+          "id": "pig-2311",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 688,
+          "y": 500
+        },
+        {
+          "id": "sheep-2312",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 246,
+          "y": 430
+        }
+      ]
+    },
+    "sceneAlt": "A farm scene. In the scene: white star, green umbrella, gray rabbit, blue kite, banana, pink pig, white sheep.",
+    "sceneAfter": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "star-2306",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 563,
+          "y": 100
+        },
+        {
+          "id": "umbrella-2307",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "green",
+          "x": 622,
+          "y": 425
+        },
+        {
+          "id": "rabbit-2308",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "gray",
+          "x": 735,
+          "y": 450
+        },
+        {
+          "id": "banana-2310",
+          "art": "banana",
+          "name": "banana",
+          "x": 364,
+          "y": 505
+        },
+        {
+          "id": "pig-2311",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 688,
+          "y": 500
+        },
+        {
+          "id": "sheep-2312",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 76,
+          "y": 430
+        }
+      ]
+    },
+    "sceneAfterAlt": "A farm scene. In the scene: yellow star, green umbrella, gray rabbit, banana, pink pig, white sheep.",
+    "expectedChanges": [
+      "star-2306:color:white->yellow",
+      "sheep-2312:moved",
+      "kite-2309:removed"
+    ]
+  }
+}

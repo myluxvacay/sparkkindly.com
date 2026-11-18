@@ -11,7 +11,7 @@
 // Owner authorization: standing instruction in chat, 16 November 2026 — daily publishing is automated with a
 // reviewer agent as the quality gate; the owner runs no server commands. See docs/OPERATIONS.md.
 import { getDb, getPool } from '../lib/db';
-import { articleSchema, quizSchema } from '../lib/schemas';
+import { articleSchema, gameSchema, quizSchema } from '../lib/schemas';
 import { readFolder } from '../lib/repository';
 import { seedReference } from '../db/seed';
 import { importLegacy } from '../lib/items/import-legacy';
@@ -34,10 +34,11 @@ try {
 
   const articles = readFolder('articles').map((a) => articleSchema.parse(a));
   const quizzes = readFolder('quizzes').map((q) => quizSchema.parse(q));
+  const games = readFolder('games').map((g) => gameSchema.parse(g));
 
   await seedReference(db);
-  const imported = await importLegacy(db, articles, quizzes);
-  console.log(`Imported ${imported.items} items (${imported.answers} answers) from ${articles.length} articles and ${quizzes.length} quizzes.`);
+  const imported = await importLegacy(db, articles, quizzes, games);
+  console.log(`Imported ${imported.items} items (${imported.answers} answers) from ${articles.length} articles, ${quizzes.length} quizzes and ${games.length} games.`);
 
   const heroes = await updateHeroImages(db, articles);
   console.log(`Hero images: ${heroes.updated} updated, ${heroes.unchanged} already current, ${heroes.missing} not in database.`);

@@ -1,0 +1,135 @@
+{
+  "id": "spot-difference-019",
+  "scheduledDate": "2026-11-18",
+  "brand": "grow",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: classroom",
+  "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: The pine tree changed colour from green to plain, the white duck changed colour from yellow to white and the black cat changed colour from orange to black. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The pine tree changed colour from green to plain, a yellow balloon appeared and the black cat changed colour from orange to black."
+    },
+    {
+      "id": "b",
+      "text": "The yellow flower changed colour from yellow to purple, the white duck changed colour from yellow to white and the black cat changed colour from orange to black."
+    },
+    {
+      "id": "c",
+      "text": "The pine tree changed colour from green to plain, the white duck changed colour from yellow to white and the black cat changed colour from orange to black."
+    },
+    {
+      "id": "d",
+      "text": "The pine tree changed colour from green to plain, the white duck changed colour from yellow to white and the yellow flower vanished."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "grapes-2363",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 428,
+          "y": 465
+        },
+        {
+          "id": "pine-2364",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 124,
+          "y": 470
+        },
+        {
+          "id": "flower-2365",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 203,
+          "y": 425
+        },
+        {
+          "id": "duck-2366",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 477,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "cat-2367",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 270,
+          "y": 500
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: purple bunch of grapes, green pine tree, yellow flower, yellow duck, orange cat.",
+    "sceneAfter": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "grapes-2363",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 428,
+          "y": 465
+        },
+        {
+          "id": "pine-2364",
+          "art": "pine",
+          "name": "pine tree",
+          "x": 124,
+          "y": 470
+        },
+        {
+          "id": "flower-2365",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 203,
+          "y": 425
+        },
+        {
+          "id": "duck-2366",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 477,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "cat-2367",
+          "art": "cat",
+          "name": "cat",
+          "color": "black",
+          "x": 270,
+          "y": 500
+        }
+      ]
+    },
+    "sceneAfterAlt": "A classroom scene. In the scene: purple bunch of grapes, pine tree, yellow flower, white duck, black cat.",
+    "expectedChanges": [
+      "pine-2364:color:green->plain",
+      "duck-2366:color:yellow->white",
+      "cat-2367:color:orange->black"
+    ]
+  }
+}

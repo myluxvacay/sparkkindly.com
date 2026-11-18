@@ -13,7 +13,7 @@ export function contentFingerprint(value: unknown): string {
 export const approvalRecordSchema=z.object({
   approvedBy:z.string().min(1),approvedAt:dateSchema,
   authorization:z.string().min(1),
-  entries:z.array(z.object({kind:z.enum(['article','quiz']),id:z.string(),priorHash:z.string().length(64),approvedHash:z.string().length(64),fields:z.record(z.string(),z.unknown())})).min(24)
+  entries:z.array(z.object({kind:z.enum(['article','quiz','game']),id:z.string(),priorHash:z.string().length(64),approvedHash:z.string().length(64),fields:z.record(z.string(),z.unknown())})).min(24)
 });
 export const launchApprovalSchema=z.object({
   approvedBy:z.string().min(1),approvedAt:dateSchema,

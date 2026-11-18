@@ -1,0 +1,65 @@
+{
+  "id": "sequence-033",
+  "scheduledDate": "2027-01-14",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the purple ball, second the orange orange, third the yellow balloon, fourth the pink cupcake, fifth the brown duck. So the third one was the yellow balloon.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "pink cupcake"
+    },
+    {
+      "id": "b",
+      "text": "purple ball"
+    },
+    {
+      "id": "c",
+      "text": "yellow balloon"
+    },
+    {
+      "id": "d",
+      "text": "orange orange"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "ball",
+        "label": "purple ball",
+        "color": "purple"
+      },
+      {
+        "art": "orange",
+        "label": "orange orange",
+        "color": "orange"
+      },
+      {
+        "art": "balloon",
+        "label": "yellow balloon",
+        "color": "yellow"
+      },
+      {
+        "art": "cupcake",
+        "label": "pink cupcake",
+        "color": "pink"
+      },
+      {
+        "art": "duck",
+        "label": "brown duck",
+        "color": "brown"
+      }
+    ],
+    "askPosition": 3
+  }
+}

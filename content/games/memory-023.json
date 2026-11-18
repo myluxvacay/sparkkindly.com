@@ -1,0 +1,112 @@
+{
+  "id": "memory-023",
+  "scheduledDate": "2026-12-17",
+  "brand": "grow",
+  "gameType": "memory",
+  "title": "Memory: classroom color",
+  "prompt": "From memory: what colour is the pig in the classroom?",
+  "difficulty": "medium",
+  "explanation": "The pig in the picture is pink — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "gray"
+    },
+    {
+      "id": "b",
+      "text": "purple"
+    },
+    {
+      "id": "c",
+      "text": "pink"
+    },
+    {
+      "id": "d",
+      "text": "brown"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "pig-1526",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 712,
+          "y": 470
+        },
+        {
+          "id": "snowman-1527",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 482,
+          "y": 505
+        },
+        {
+          "id": "book-1528",
+          "art": "book",
+          "name": "book",
+          "color": "green",
+          "x": 263,
+          "y": 500
+        },
+        {
+          "id": "cat-1529",
+          "art": "cat",
+          "name": "cat",
+          "color": "gray",
+          "x": 416,
+          "y": 465,
+          "flip": true
+        },
+        {
+          "id": "elephant-1530",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 571,
+          "y": 500
+        },
+        {
+          "id": "dog-1531",
+          "art": "dog",
+          "name": "dog",
+          "color": "black",
+          "x": 114,
+          "y": 470
+        },
+        {
+          "id": "owl-1532",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 646,
+          "y": 425
+        },
+        {
+          "id": "turtle-1533",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 196,
+          "y": 425,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: pink pig, snowman, green book, gray cat, gray elephant, black dog, brown owl, green turtle.",
+    "fact": {
+      "type": "color",
+      "elementId": "pig-1526"
+    }
+  }
+}

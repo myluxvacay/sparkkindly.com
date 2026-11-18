@@ -1,0 +1,126 @@
+{
+  "id": "counting-054",
+  "scheduledDate": "2026-12-04",
+  "brand": "grow",
+  "gameType": "counting",
+  "title": "Counting: red flowers at the garden",
+  "prompt": "How many red flowers can you count in the garden?",
+  "difficulty": "hard",
+  "explanation": "Count the red flowers one by one: there are exactly 9. Only the red ones count — the other colours are decoys.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 9,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "flower-3479",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 646,
+          "y": 510,
+          "flip": true
+        },
+        {
+          "id": "flower-3480",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 124,
+          "y": 425
+        },
+        {
+          "id": "flower-3481",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 130,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "flower-3482",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 301,
+          "y": 510
+        },
+        {
+          "id": "flower-3483",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 683,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "flower-3484",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 258,
+          "y": 405,
+          "flip": true
+        },
+        {
+          "id": "flower-3485",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 384,
+          "y": 430,
+          "flip": true
+        },
+        {
+          "id": "flower-3486",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 473,
+          "y": 505
+        },
+        {
+          "id": "flower-3487",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 537,
+          "y": 405,
+          "flip": true
+        },
+        {
+          "id": "star-3488",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 521,
+          "y": 110
+        },
+        {
+          "id": "bee-3489",
+          "art": "bee",
+          "name": "bee",
+          "x": 224,
+          "y": 135,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: red flower, red flower, red flower, red flower, red flower, red flower, red flower, red flower, red flower, white star, bee.",
+    "countTarget": {
+      "art": "flower",
+      "color": "red"
+    }
+  }
+}

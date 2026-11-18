@@ -1,0 +1,72 @@
+{
+  "id": "counting-010",
+  "scheduledDate": "2026-11-13",
+  "brand": "kids",
+  "gameType": "counting",
+  "title": "Counting: fish at the pond",
+  "prompt": "How many fish can you count in the pond?",
+  "difficulty": "easy",
+  "explanation": "Count the fish one by one: there are exactly 3.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 3,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "fish-3080",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 528,
+          "y": 470
+        },
+        {
+          "id": "fish-3081",
+          "art": "fish",
+          "name": "fish",
+          "color": "orange",
+          "x": 333,
+          "y": 495
+        },
+        {
+          "id": "fish-3082",
+          "art": "fish",
+          "name": "fish",
+          "color": "pink",
+          "x": 174,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "rocket-3083",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 185,
+          "y": 150
+        },
+        {
+          "id": "boat-3084",
+          "art": "boat",
+          "name": "boat",
+          "color": "white",
+          "x": 127,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAlt": "A pond scene. In the scene: blue fish, orange fish, pink fish, blue rocket, white boat.",
+    "countTarget": {
+      "art": "fish"
+    }
+  }
+}

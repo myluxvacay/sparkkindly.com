@@ -1,0 +1,130 @@
+{
+  "id": "counting-021",
+  "scheduledDate": "2026-11-18",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: purple flowers at the meadow",
+  "prompt": "How many purple flowers can you count in the meadow?",
+  "difficulty": "hard",
+  "explanation": "Count the purple flowers one by one: there are exactly 9. Only the purple ones count — the other colours are decoys.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 9,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "flower-3183",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 117,
+          "y": 470
+        },
+        {
+          "id": "flower-3184",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 715,
+          "y": 500
+        },
+        {
+          "id": "flower-3185",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 504,
+          "y": 495
+        },
+        {
+          "id": "flower-3186",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 373,
+          "y": 460
+        },
+        {
+          "id": "flower-3187",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 438,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "flower-3188",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 240,
+          "y": 495
+        },
+        {
+          "id": "flower-3189",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 561,
+          "y": 425
+        },
+        {
+          "id": "flower-3190",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 637,
+          "y": 465
+        },
+        {
+          "id": "flower-3191",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 184,
+          "y": 430
+        },
+        {
+          "id": "cloud-3192",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 639,
+          "y": 150
+        },
+        {
+          "id": "planet-3193",
+          "art": "planet",
+          "name": "planet",
+          "color": "blue",
+          "x": 425,
+          "y": 100,
+          "flip": true
+        },
+        {
+          "id": "planet-3194",
+          "art": "planet",
+          "name": "planet",
+          "color": "purple",
+          "x": 169,
+          "y": 140
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: purple flower, purple flower, purple flower, purple flower, purple flower, purple flower, purple flower, purple flower, purple flower, white cloud, blue planet, purple planet.",
+    "countTarget": {
+      "art": "flower",
+      "color": "purple"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "observation-055",
+  "scheduledDate": "2026-11-10",
+  "brand": "kids",
+  "gameType": "observation",
+  "title": "Look closely: meadow present",
+  "prompt": "Which of these can you see in the meadow?",
+  "difficulty": "easy",
+  "explanation": "The yellow star is right there in the picture. The other three choices are not in this scene at all.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "purple fish"
+    },
+    {
+      "id": "b",
+      "text": "red train"
+    },
+    {
+      "id": "c",
+      "text": "yellow star"
+    },
+    {
+      "id": "d",
+      "text": "gray sheep"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "star-992",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 646,
+          "y": 150
+        },
+        {
+          "id": "kite-993",
+          "art": "kite",
+          "name": "kite",
+          "color": "red",
+          "x": 425,
+          "y": 100
+        },
+        {
+          "id": "car-994",
+          "art": "car",
+          "name": "car",
+          "color": "green",
+          "x": 506,
+          "y": 495,
+          "flip": true
+        },
+        {
+          "id": "flower-995",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 564,
+          "y": 425
+        },
+        {
+          "id": "frog-996",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 726,
+          "y": 500
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: yellow star, red kite, green car, yellow flower, green frog.",
+    "fact": {
+      "type": "present",
+      "elementId": "star-992"
+    }
+  }
+}

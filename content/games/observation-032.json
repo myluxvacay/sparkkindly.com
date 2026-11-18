@@ -1,0 +1,112 @@
+{
+  "id": "observation-032",
+  "scheduledDate": "2027-01-05",
+  "brand": "discover",
+  "gameType": "observation",
+  "title": "Look closely: train station sign",
+  "prompt": "What does the sign in the train station say?",
+  "difficulty": "medium",
+  "explanation": "The sign in the picture reads \"Toys\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bakery"
+    },
+    {
+      "id": "b",
+      "text": "Museum"
+    },
+    {
+      "id": "c",
+      "text": "Post"
+    },
+    {
+      "id": "d",
+      "text": "Toys"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "train-600",
+          "art": "train",
+          "name": "train",
+          "color": "red",
+          "x": 535,
+          "y": 390
+        },
+        {
+          "id": "house-601",
+          "art": "house",
+          "name": "house",
+          "color": "pink",
+          "x": 115,
+          "y": 390
+        },
+        {
+          "id": "tree-602",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 692,
+          "y": 390,
+          "flip": true
+        },
+        {
+          "id": "duck-603",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 478,
+          "y": 505
+        },
+        {
+          "id": "sheep-604",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 179,
+          "y": 505
+        },
+        {
+          "id": "ball-605",
+          "art": "ball",
+          "name": "ball",
+          "color": "blue",
+          "x": 395,
+          "y": 390
+        },
+        {
+          "id": "tree-606",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 638,
+          "y": 500
+        },
+        {
+          "id": "gift-607",
+          "art": "gift",
+          "name": "gift box",
+          "color": "purple",
+          "x": 256,
+          "y": 390
+        }
+      ],
+      "signText": "Toys"
+    },
+    "sceneAlt": "A station scene. A sign reads \"Toys\". In the scene: red train, pink house, orange tree, white duck, black sheep, blue ball, orange tree, purple gift box.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "id": "what-changed-051",
+  "scheduledDate": "2027-02-26",
+  "brand": "together",
+  "gameType": "what-changed",
+  "title": "What changed: kitchen",
+  "prompt": "One thing changed between the before and after kitchen pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the gray cat moved. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the brown cow vanished."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: a yellow balloon appeared."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the brown cow changed colour from brown to purple."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the gray cat moved."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "kitchen",
+      "elements": [
+        {
+          "id": "cat-2968",
+          "art": "cat",
+          "name": "cat",
+          "color": "gray",
+          "x": 698,
+          "y": 396
+        },
+        {
+          "id": "hat-2969",
+          "art": "hat",
+          "name": "hat",
+          "color": "blue",
+          "x": 329,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "flower-2970",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 528,
+          "y": 508
+        },
+        {
+          "id": "orange-2971",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 113,
+          "y": 508
+        },
+        {
+          "id": "carrot-2972",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 609,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "tree-2973",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 687,
+          "y": 508
+        },
+        {
+          "id": "cow-2974",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 300,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "banana-2975",
+          "art": "banana",
+          "name": "banana",
+          "x": 464,
+          "y": 396
+        }
+      ]
+    },
+    "sceneAlt": "A kitchen scene. In the scene: gray cat, blue hat, pink flower, orange orange, carrot, orange tree, brown cow, banana.",
+    "sceneAfter": {
+      "template": "kitchen",
+      "elements": [
+        {
+          "id": "cat-2968",
+          "art": "cat",
+          "name": "cat",
+          "color": "gray",
+          "x": 528,
+          "y": 396
+        },
+        {
+          "id": "hat-2969",
+          "art": "hat",
+          "name": "hat",
+          "color": "blue",
+          "x": 329,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "flower-2970",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 528,
+          "y": 508
+        },
+        {
+          "id": "orange-2971",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 113,
+          "y": 508
+        },
+        {
+          "id": "carrot-2972",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 609,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "tree-2973",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 687,
+          "y": 508
+        },
+        {
+          "id": "cow-2974",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 300,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "banana-2975",
+          "art": "banana",
+          "name": "banana",
+          "x": 464,
+          "y": 396
+        }
+      ]
+    },
+    "sceneAfterAlt": "A kitchen scene. In the scene: gray cat, blue hat, pink flower, orange orange, carrot, orange tree, brown cow, banana.",
+    "expectedChanges": [
+      "cat-2968:moved"
+    ]
+  }
+}

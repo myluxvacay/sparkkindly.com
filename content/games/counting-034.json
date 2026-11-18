@@ -1,0 +1,88 @@
+{
+  "id": "counting-034",
+  "scheduledDate": "2026-11-24",
+  "brand": "kids",
+  "gameType": "counting",
+  "title": "Counting: flowers at the garden",
+  "prompt": "How many flowers can you count in the garden?",
+  "difficulty": "easy",
+  "explanation": "Count the flowers one by one: there are exactly 5.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 5,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "flower-3304",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 125,
+          "y": 425
+        },
+        {
+          "id": "flower-3305",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 392,
+          "y": 430
+        },
+        {
+          "id": "flower-3306",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 304,
+          "y": 510
+        },
+        {
+          "id": "flower-3307",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 538,
+          "y": 405,
+          "flip": true
+        },
+        {
+          "id": "flower-3308",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 263,
+          "y": 405
+        },
+        {
+          "id": "shell-3309",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 480,
+          "y": 505
+        },
+        {
+          "id": "horse-3310",
+          "art": "horse",
+          "name": "horse",
+          "color": "white",
+          "x": 678,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: purple flower, purple flower, yellow flower, yellow flower, pink flower, orange shell, white horse.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

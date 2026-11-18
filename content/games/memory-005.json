@@ -1,0 +1,109 @@
+{
+  "id": "memory-005",
+  "scheduledDate": "2026-12-08",
+  "brand": "play",
+  "gameType": "memory",
+  "title": "Memory: meadow absent",
+  "prompt": "From memory: which of these was NOT in the meadow?",
+  "difficulty": "medium",
+  "explanation": "The brown bear never appeared in the picture. The other three choices were all there to be spotted.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "yellow house"
+    },
+    {
+      "id": "b",
+      "text": "brown bear"
+    },
+    {
+      "id": "c",
+      "text": "green pine tree"
+    },
+    {
+      "id": "d",
+      "text": "red train"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "horse-1131",
+          "art": "horse",
+          "name": "horse",
+          "color": "brown",
+          "x": 631,
+          "y": 465
+        },
+        {
+          "id": "mushroom-1132",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "purple",
+          "x": 247,
+          "y": 495
+        },
+        {
+          "id": "carrot-1133",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 555,
+          "y": 425
+        },
+        {
+          "id": "shell-1134",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 505,
+          "y": 495
+        },
+        {
+          "id": "house-1135",
+          "art": "house",
+          "name": "house",
+          "color": "yellow",
+          "x": 426,
+          "y": 505
+        },
+        {
+          "id": "train-1136",
+          "art": "train",
+          "name": "train",
+          "color": "red",
+          "x": 112,
+          "y": 470
+        },
+        {
+          "id": "carrot-1137",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 185,
+          "y": 430
+        },
+        {
+          "id": "pine-1138",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 378,
+          "y": 460
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: brown horse, purple mushroom, carrot, orange shell, yellow house, red train, carrot, green pine tree.",
+    "fact": {
+      "type": "absent",
+      "label": "brown bear"
+    }
+  }
+}

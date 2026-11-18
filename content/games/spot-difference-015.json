@@ -1,0 +1,192 @@
+{
+  "id": "spot-difference-015",
+  "scheduledDate": "2026-11-16",
+  "brand": "play",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: meadow",
+  "prompt": "Three things changed between the two meadow pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The green pine tree turned around, the snowman turned around and the bee vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The green pine tree turned around, the snowman turned around and the blue train vanished."
+    },
+    {
+      "id": "b",
+      "text": "The blue train changed colour from blue to purple, the snowman turned around and the bee vanished."
+    },
+    {
+      "id": "c",
+      "text": "The green pine tree turned around, the snowman turned around and the bee vanished."
+    },
+    {
+      "id": "d",
+      "text": "The green pine tree turned around, a yellow balloon appeared and the bee vanished."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "train-2333",
+          "art": "train",
+          "name": "train",
+          "color": "blue",
+          "x": 714,
+          "y": 500
+        },
+        {
+          "id": "train-2334",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 247,
+          "y": 495
+        },
+        {
+          "id": "bee-2335",
+          "art": "bee",
+          "name": "bee",
+          "x": 172,
+          "y": 140
+        },
+        {
+          "id": "butterfly-2336",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "purple",
+          "x": 424,
+          "y": 100
+        },
+        {
+          "id": "apple-2337",
+          "art": "apple",
+          "name": "apple",
+          "color": "red",
+          "x": 556,
+          "y": 425
+        },
+        {
+          "id": "pine-2338",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 623,
+          "y": 465,
+          "flip": true
+        },
+        {
+          "id": "pine-2339",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 376,
+          "y": 460,
+          "flip": true
+        },
+        {
+          "id": "snowman-2340",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 116,
+          "y": 470
+        },
+        {
+          "id": "crab-2341",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 432,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: blue train, green train, bee, purple butterfly, red apple, green pine tree, green pine tree, snowman, orange crab.",
+    "sceneAfter": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "train-2333",
+          "art": "train",
+          "name": "train",
+          "color": "blue",
+          "x": 714,
+          "y": 500
+        },
+        {
+          "id": "train-2334",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 247,
+          "y": 495
+        },
+        {
+          "id": "butterfly-2336",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "purple",
+          "x": 424,
+          "y": 100
+        },
+        {
+          "id": "apple-2337",
+          "art": "apple",
+          "name": "apple",
+          "color": "red",
+          "x": 556,
+          "y": 425
+        },
+        {
+          "id": "pine-2338",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 623,
+          "y": 465,
+          "flip": false
+        },
+        {
+          "id": "pine-2339",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 376,
+          "y": 460,
+          "flip": true
+        },
+        {
+          "id": "snowman-2340",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 116,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "crab-2341",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 432,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAfterAlt": "A meadow scene. In the scene: blue train, green train, purple butterfly, red apple, green pine tree, green pine tree, snowman, orange crab.",
+    "expectedChanges": [
+      "pine-2338:turned",
+      "snowman-2340:turned",
+      "bee-2335:removed"
+    ]
+  }
+}

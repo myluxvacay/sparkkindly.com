@@ -1,0 +1,187 @@
+{
+  "id": "spot-difference-027",
+  "scheduledDate": "2027-01-27",
+  "brand": "play",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: meadow",
+  "prompt": "Three things changed between the two meadow pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The green train changed colour from red to green, the moon moved and the bee vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The green train changed colour from red to green, the moon moved and the gray rabbit vanished."
+    },
+    {
+      "id": "b",
+      "text": "The gray rabbit changed colour from gray to purple, the moon moved and the bee vanished."
+    },
+    {
+      "id": "c",
+      "text": "The green train changed colour from red to green, a yellow balloon appeared and the bee vanished."
+    },
+    {
+      "id": "d",
+      "text": "The green train changed colour from red to green, the moon moved and the bee vanished."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "rabbit-2417",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "gray",
+          "x": 114,
+          "y": 470
+        },
+        {
+          "id": "bee-2418",
+          "art": "bee",
+          "name": "bee",
+          "x": 162,
+          "y": 140
+        },
+        {
+          "id": "banana-2419",
+          "art": "banana",
+          "name": "banana",
+          "x": 712,
+          "y": 500
+        },
+        {
+          "id": "train-2420",
+          "art": "train",
+          "name": "train",
+          "color": "red",
+          "x": 629,
+          "y": 465
+        },
+        {
+          "id": "horse-2421",
+          "art": "horse",
+          "name": "horse",
+          "color": "gray",
+          "x": 507,
+          "y": 495
+        },
+        {
+          "id": "mushroom-2422",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "purple",
+          "x": 437,
+          "y": 505
+        },
+        {
+          "id": "duck-2423",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 371,
+          "y": 460
+        },
+        {
+          "id": "pine-2424",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 174,
+          "y": 430,
+          "flip": true
+        },
+        {
+          "id": "moon-2425",
+          "art": "moon",
+          "name": "moon",
+          "x": 638,
+          "y": 150
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: gray rabbit, bee, banana, red train, gray horse, purple mushroom, brown duck, green pine tree, moon.",
+    "sceneAfter": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "rabbit-2417",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "gray",
+          "x": 114,
+          "y": 470
+        },
+        {
+          "id": "banana-2419",
+          "art": "banana",
+          "name": "banana",
+          "x": 712,
+          "y": 500
+        },
+        {
+          "id": "train-2420",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 629,
+          "y": 465
+        },
+        {
+          "id": "horse-2421",
+          "art": "horse",
+          "name": "horse",
+          "color": "gray",
+          "x": 507,
+          "y": 495
+        },
+        {
+          "id": "mushroom-2422",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "purple",
+          "x": 437,
+          "y": 505
+        },
+        {
+          "id": "duck-2423",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 371,
+          "y": 460
+        },
+        {
+          "id": "pine-2424",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 174,
+          "y": 430,
+          "flip": true
+        },
+        {
+          "id": "moon-2425",
+          "art": "moon",
+          "name": "moon",
+          "x": 468,
+          "y": 150
+        }
+      ]
+    },
+    "sceneAfterAlt": "A meadow scene. In the scene: gray rabbit, banana, green train, gray horse, purple mushroom, brown duck, green pine tree, moon.",
+    "expectedChanges": [
+      "train-2420:color:red->green",
+      "moon-2425:moved",
+      "bee-2418:removed"
+    ]
+  }
+}

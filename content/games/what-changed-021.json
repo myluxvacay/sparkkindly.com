@@ -1,0 +1,202 @@
+{
+  "id": "what-changed-021",
+  "scheduledDate": "2026-11-18",
+  "brand": "save",
+  "gameType": "what-changed",
+  "title": "What changed: market stall",
+  "prompt": "One thing changed between the before and after market stall pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the purple hat moved. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the purple hat moved."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: a yellow balloon appeared."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the orange cat changed colour from orange to purple."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the orange cat vanished."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "hat-2760",
+          "art": "hat",
+          "name": "hat",
+          "color": "blue",
+          "x": 394,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "hat-2761",
+          "art": "hat",
+          "name": "hat",
+          "color": "purple",
+          "x": 663,
+          "y": 402
+        },
+        {
+          "id": "fox-2762",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 158,
+          "y": 508
+        },
+        {
+          "id": "apple-2763",
+          "art": "apple",
+          "name": "apple",
+          "color": "yellow",
+          "x": 245,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "car-2764",
+          "art": "car",
+          "name": "car",
+          "color": "purple",
+          "x": 337,
+          "y": 508
+        },
+        {
+          "id": "bear-2765",
+          "art": "bear",
+          "name": "bear",
+          "color": "black",
+          "x": 528,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "cat-2766",
+          "art": "cat",
+          "name": "cat",
+          "color": "white",
+          "x": 690,
+          "y": 508
+        },
+        {
+          "id": "ball-2767",
+          "art": "ball",
+          "name": "ball",
+          "color": "purple",
+          "x": 536,
+          "y": 402
+        },
+        {
+          "id": "cat-2768",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 112,
+          "y": 402
+        }
+      ]
+    },
+    "sceneAlt": "A market scene. In the scene: blue hat, purple hat, orange fox, yellow apple, purple car, black bear, white cat, purple ball, orange cat.",
+    "sceneAfter": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "hat-2760",
+          "art": "hat",
+          "name": "hat",
+          "color": "blue",
+          "x": 394,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "hat-2761",
+          "art": "hat",
+          "name": "hat",
+          "color": "purple",
+          "x": 740,
+          "y": 402
+        },
+        {
+          "id": "fox-2762",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 158,
+          "y": 508
+        },
+        {
+          "id": "apple-2763",
+          "art": "apple",
+          "name": "apple",
+          "color": "yellow",
+          "x": 245,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "car-2764",
+          "art": "car",
+          "name": "car",
+          "color": "purple",
+          "x": 337,
+          "y": 508
+        },
+        {
+          "id": "bear-2765",
+          "art": "bear",
+          "name": "bear",
+          "color": "black",
+          "x": 528,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "cat-2766",
+          "art": "cat",
+          "name": "cat",
+          "color": "white",
+          "x": 690,
+          "y": 508
+        },
+        {
+          "id": "ball-2767",
+          "art": "ball",
+          "name": "ball",
+          "color": "purple",
+          "x": 536,
+          "y": 402
+        },
+        {
+          "id": "cat-2768",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 112,
+          "y": 402
+        }
+      ]
+    },
+    "sceneAfterAlt": "A market scene. In the scene: blue hat, purple hat, orange fox, yellow apple, purple car, black bear, white cat, purple ball, orange cat.",
+    "expectedChanges": [
+      "hat-2761:moved"
+    ]
+  }
+}

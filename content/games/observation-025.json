@@ -1,0 +1,95 @@
+{
+  "id": "observation-025",
+  "scheduledDate": "2027-01-04",
+  "brand": "save",
+  "gameType": "observation",
+  "title": "Look closely: market stall present",
+  "prompt": "Which of these can you see in the market stall?",
+  "difficulty": "easy",
+  "explanation": "The banana is right there in the picture. The other three choices are not in this scene at all.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "gray rabbit"
+    },
+    {
+      "id": "b",
+      "text": "purple mushroom"
+    },
+    {
+      "id": "c",
+      "text": "pink flower"
+    },
+    {
+      "id": "d",
+      "text": "banana"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "bird-531",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 145,
+          "y": 508
+        },
+        {
+          "id": "sheep-532",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 520,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "carrot-533",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 103,
+          "y": 402
+        },
+        {
+          "id": "banana-534",
+          "art": "banana",
+          "name": "banana",
+          "x": 675,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "cat-535",
+          "art": "cat",
+          "name": "cat",
+          "color": "gray",
+          "x": 385,
+          "y": 402
+        },
+        {
+          "id": "orange-536",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 248,
+          "y": 402
+        }
+      ]
+    },
+    "sceneAlt": "A market scene. In the scene: yellow bird, black sheep, carrot, banana, gray cat, orange orange.",
+    "fact": {
+      "type": "present",
+      "elementId": "banana-534"
+    }
+  }
+}

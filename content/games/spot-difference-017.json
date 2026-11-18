@@ -1,0 +1,168 @@
+{
+  "id": "spot-difference-017",
+  "scheduledDate": "2026-11-17",
+  "brand": "save",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: market stall",
+  "prompt": "Three things changed between the two market stall pictures. Which list names all three changes?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: The black sheep changed colour from white to black, the green apple moved and the green bunch of grapes changed colour from purple to green. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The black sheep changed colour from white to black, a blue ball appeared and the green bunch of grapes changed colour from purple to green."
+    },
+    {
+      "id": "b",
+      "text": "The black sheep changed colour from white to black, the green apple moved and the green bunch of grapes changed colour from purple to green."
+    },
+    {
+      "id": "c",
+      "text": "The orange pumpkin changed colour from orange to purple, the green apple moved and the green bunch of grapes changed colour from purple to green."
+    },
+    {
+      "id": "d",
+      "text": "The black sheep changed colour from white to black, the green apple moved and the orange pumpkin vanished."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "sheep-2347",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 145,
+          "y": 508
+        },
+        {
+          "id": "pumpkin-2348",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 683,
+          "y": 508
+        },
+        {
+          "id": "grapes-2349",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 251,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "apple-2350",
+          "art": "apple",
+          "name": "apple",
+          "color": "green",
+          "x": 536,
+          "y": 402
+        },
+        {
+          "id": "snail-2351",
+          "art": "snail",
+          "name": "snail",
+          "color": "brown",
+          "x": 514,
+          "y": 508
+        },
+        {
+          "id": "hat-2352",
+          "art": "hat",
+          "name": "hat",
+          "color": "blue",
+          "x": 111,
+          "y": 402
+        },
+        {
+          "id": "grapes-2353",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 394,
+          "y": 402
+        }
+      ]
+    },
+    "sceneAlt": "A market scene. In the scene: white sheep, orange pumpkin, purple bunch of grapes, green apple, brown snail, blue hat, purple bunch of grapes.",
+    "sceneAfter": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "sheep-2347",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 145,
+          "y": 508
+        },
+        {
+          "id": "pumpkin-2348",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 683,
+          "y": 508
+        },
+        {
+          "id": "grapes-2349",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 251,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "apple-2350",
+          "art": "apple",
+          "name": "apple",
+          "color": "green",
+          "x": 366,
+          "y": 402
+        },
+        {
+          "id": "snail-2351",
+          "art": "snail",
+          "name": "snail",
+          "color": "brown",
+          "x": 514,
+          "y": 508
+        },
+        {
+          "id": "hat-2352",
+          "art": "hat",
+          "name": "hat",
+          "color": "blue",
+          "x": 111,
+          "y": 402
+        },
+        {
+          "id": "grapes-2353",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 394,
+          "y": 402
+        }
+      ]
+    },
+    "sceneAfterAlt": "A market scene. In the scene: black sheep, orange pumpkin, purple bunch of grapes, green apple, brown snail, blue hat, green bunch of grapes.",
+    "expectedChanges": [
+      "sheep-2347:color:white->black",
+      "apple-2350:moved",
+      "grapes-2353:color:purple->green"
+    ]
+  }
+}
