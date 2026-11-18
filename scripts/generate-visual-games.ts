@@ -799,14 +799,14 @@ function generate() {
   // what-changed) with nothing playable at launch because they generate last.
   const dayMs = 86400000;
   const todayMs = Date.parse(`${TODAY}T00:00:00Z`);
-  const byType = new Map<string, GameDraft[]>();
+  const freshByType = new Map<string, GameDraft[]>();
   for (const g of fresh) {
-    const list = byType.get(String(g.gameType)) ?? [];
+    const list = freshByType.get(String(g.gameType)) ?? [];
     list.push(g);
-    byType.set(String(g.gameType), list);
+    freshByType.set(String(g.gameType), list);
   }
   const runway: GameDraft[] = [];
-  for (const list of byType.values()) {
+  for (const list of freshByType.values()) {
     const immediateCount = Math.floor(list.length * 0.4);
     list.forEach((g, i) => {
       if (i < immediateCount) {
