@@ -1,0 +1,67 @@
+{
+  "id": "grow-draft-2026-11-18-01",
+  "slug": "procrastination-is-a-mood-problem",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Procrastination is a mood problem, not a time problem",
+  "description": "You do not put things off because you are lazy or disorganised. Research says you are avoiding a feeling — and that changes the cure completely.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/mind.webp",
+    "alt": "Resting on a bench at a mountain viewpoint",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "habits",
+    "psychology",
+    "focus"
+  ],
+  "sources": [
+    {
+      "title": "Procrastination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Procrastination",
+      "accessedAt": "2026-11-18"
+    },
+    {
+      "title": "Procrastination | Psychology Today",
+      "url": "https://www.psychologytoday.com/us/basics/procrastination",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The real reason we delay",
+      "paragraphs": [
+        "Psychologists who study procrastination, among them Fuschia Sirois and Timothy Pychyl, describe it as a problem of mood regulation: we avoid a task because of how the task makes us feel — bored, anxious, frustrated, unsure — and putting it off repairs the mood for a little while.",
+        "That is why time-management tips so often fail. A better diary does not fix a feeling. The delay was never really about the calendar."
+      ]
+    },
+    {
+      "heading": "Work with the feeling, not against yourself",
+      "paragraphs": [
+        "Start by naming the feeling honestly: “This report makes me anxious because it might be judged.” A named feeling is smaller than a vague dread, and it suggests its own remedy — a draft nobody will see, a smaller first piece, a question asked early.",
+        "Then shrink the task until the feeling shrinks with it. Five honest minutes of the real thing beats an afternoon of reorganising your desk to avoid it. Self-compassion helps too: people who forgive themselves for a delay are, in studies, less likely to delay the next task."
+      ]
+    },
+    {
+      "heading": "A kinder question",
+      "paragraphs": [
+        "Instead of “why am I so lazy?”, try “what is this task making me feel, and what is the smallest kind way through it?” The first question shames; the second one plans.",
+        "You are not a broken machine that needs stricter management. You are a person avoiding an unpleasant feeling — which is the most fixable problem in the world."
+      ]
+    }
+  ],
+  "takeaway": "Procrastination is short-term mood repair, not laziness: name the feeling, shrink the task, and forgive the delay.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "together-draft-2026-11-18-03",
+  "slug": "the-friendship-interview",
+  "brand": "together",
+  "contentType": "activity",
+  "title": "The friendship interview: ten questions, one good evening",
+  "description": "Sit someone you love down with ten surprising questions and a notebook. An interview that turns an ordinary evening into stories you will retell for years.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family holding hands while walking",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "conversation",
+    "stories"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Set the scene",
+      "paragraphs": [
+        "Choose your person: a parent, a grandparent, an old friend. Tell them the game in advance so they can look forward to it, and promise the rules: the interviewer asks and listens; the storyteller can pass on any question; nothing is recorded or shared without permission.",
+        "Make tea, sit somewhere comfortable, and keep a notebook for the answers you most want to keep."
+      ]
+    },
+    {
+      "heading": "Ask questions with stories inside them",
+      "paragraphs": [
+        "Skip the facts everyone knows and ask for scenes: What did your childhood kitchen smell like? Who taught you something you still use every week? What is the bravest thing you have seen someone do? What did you want to be at ten years old — and what happened to that plan?",
+        "Follow the interesting answer, not the list. The best question in any interview is usually “tell me more about that.”"
+      ]
+    },
+    {
+      "heading": "Finish by swapping roles",
+      "paragraphs": [
+        "Let your storyteller interview you with the same ten questions, and notice how different the generations' answers are. Read your notes back together at the end and choose one story to retell at the next family meal.",
+        "An hour of real questions can give you a version of someone you have known your whole life — and had never quite met."
+      ]
+    }
+  ],
+  "takeaway": "Ten story-shaped questions, asked with permission and listened to properly, can surface a lifetime of stories in one evening.",
+  "fiction": false,
+  "materials": [
+    "A notebook and pen",
+    "Ten questions written down in advance",
+    "A comfortable place to sit and something warm to drink"
+  ],
+  "supervision": "The host agrees the ground rules in advance — any question can be passed on, and nothing is recorded or shared without the storyteller's permission.",
+  "safetyNotes": [
+    "Respect a “pass” instantly and without teasing; the game only works when it feels safe.",
+    "Keep drinks away from the notebook and any recording device."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

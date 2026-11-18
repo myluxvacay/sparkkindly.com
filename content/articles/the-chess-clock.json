@@ -1,0 +1,67 @@
+{
+  "id": "play-draft-2026-11-18-01",
+  "slug": "the-chess-clock",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The chess clock: how one button changed chess forever",
+  "description": "Two clocks, one button, and a race against falling flags: how the chess clock turned a gentlemanly pastime into a sport of seconds.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/games.webp",
+    "alt": "Wooden chess pieces on a board",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chess",
+    "games",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Chess | Britannica",
+      "url": "https://www.britannica.com/topic/chess",
+      "accessedAt": "2026-11-18"
+    },
+    {
+      "title": "Chess clock | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chess_clock",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "A game that could last all day",
+      "paragraphs": [
+        "Before clocks, a serious chess game could drift on for hours while a player thought — and thought, and thought. Opponents had been known to fall asleep at the board, and tournaments struggled to finish on schedule.",
+        "The fix, introduced in the 1880s and standard by the end of that century, was beautifully simple: give each player their own clock and a fixed amount of time for the whole game. Thinking time became a resource, just like the pieces."
+      ]
+    },
+    {
+      "heading": "How the button works",
+      "paragraphs": [
+        "A chess clock is really two clocks side by side. When you make your move, you press the button on your side: your clock stops and your opponent's starts. Only one clock ever runs at a time — the clock of the player whose turn it is to think.",
+        "If your time runs out, your flag is said to fall, and in most rules you lose on time even if your position on the board looks wonderful. That single rule adds a whole second game on top of the first: not just finding good moves, but finding them fast enough."
+      ]
+    },
+    {
+      "heading": "A new kind of drama",
+      "paragraphs": [
+        "Clocks created speed chess: blitz games where each player may have only five minutes, or three, for every move of the game. Hands fly, pieces clatter, and the button gets slapped dozens of times a minute — which is why experienced players press it with the same hand that moved the piece.",
+        "Try it at home with a phone timer: give each player ten minutes, press after every move, and notice how the clock changes your choices. The board is the same. The game is completely different."
+      ]
+    }
+  ],
+  "takeaway": "The chess clock gave each player a time budget and a button to press — and turned thinking time into part of the game itself.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

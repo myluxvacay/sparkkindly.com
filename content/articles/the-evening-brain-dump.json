@@ -1,0 +1,66 @@
+{
+  "id": "grow-draft-2026-11-18-03",
+  "slug": "the-evening-brain-dump",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "The evening brain dump: five minutes to empty your head onto paper",
+  "description": "Loops of unfinished business keep the mind buzzing at bedtime. One page, five minutes, everything out — then close the notebook and let the paper remember for you.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "Green shoots growing in soft light",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "sleep",
+    "writing",
+    "stress"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Why the buzzing happens",
+      "paragraphs": [
+        "Unfinished tasks have a habit of circling. The mind replays them partly so they are not forgotten — which is kind of it, but exhausting at midnight. Writing them down gives the loop somewhere to live outside your head.",
+        "This is not journaling and there are no rules about quality. Nobody will ever read this page, including, probably, you."
+      ]
+    },
+    {
+      "heading": "The five-minute method",
+      "paragraphs": [
+        "Set a timer for five minutes. Write everything currently taking up space: tasks, worries, errands, half-formed ideas, the thing you meant to tell someone. No order, no sentences if fragments will do, no fixing anything yet.",
+        "When the timer rings, scan the page once and star the one or two items that genuinely belong to tomorrow. Everything else stays on the paper, officially remembered, officially not tonight's problem."
+      ]
+    },
+    {
+      "heading": "Close the notebook",
+      "paragraphs": [
+        "Put the notebook somewhere specific — the same drawer or shelf every night — and let that small ritual mean “stored”. If a new thought arrives in bed, you have two kind options: trust that it can wait until morning, or get up once, add it, and return.",
+        "Most nights, the page does the remembering and the mind, relieved of duty, finally clocks off."
+      ]
+    }
+  ],
+  "takeaway": "Five timed minutes of writing everything down — then star tomorrow's one or two items and let the paper do the remembering.",
+  "fiction": false,
+  "materials": [
+    "A notebook kept only for this, or a few sheets of paper",
+    "A pen",
+    "A timer"
+  ],
+  "supervision": "Each person keeps their own notebook private; nobody reads another person's brain dump, ever.",
+  "safetyNotes": [
+    "Keep the notebook somewhere private and treat its contents as confidential, even from family.",
+    "This is a practical wind-down habit, not a treatment for anxiety or insomnia; persistent sleep problems deserve a doctor's help."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

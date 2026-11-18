@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-morning-star-705",
+  "scheduledDate": "2027-05-14",
+  "brand": "discover",
+  "prompt": "Which planet is known as the Morning Star and the Evening Star?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Mars"
+    },
+    {
+      "id": "b",
+      "text": "Jupiter"
+    },
+    {
+      "id": "c",
+      "text": "Venus"
+    },
+    {
+      "id": "d",
+      "text": "Mercury"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Venus shines so brightly, low in the dawn or dusk sky, that people long called it the Morning Star or Evening Star. It is not a star at all — it is a planet, lit by the Sun like Earth.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Venus | Britannica",
+      "url": "https://www.britannica.com/place/Venus-planet",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

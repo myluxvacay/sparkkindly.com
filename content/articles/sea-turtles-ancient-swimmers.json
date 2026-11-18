@@ -1,0 +1,67 @@
+{
+  "id": "discover-draft-2026-11-18-02",
+  "slug": "sea-turtles-ancient-swimmers",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Sea turtles: the ancient swimmers who navigate by magnetism",
+  "description": "Sea turtles were crossing oceans before dinosaurs went extinct. How they live, how they find beaches they have never seen, and why they still need our help.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/oceans.webp",
+    "alt": "A sea turtle swimming underwater",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "ocean",
+    "animals",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Sea Turtles | NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/sea-turtles",
+      "accessedAt": "2026-11-18"
+    },
+    {
+      "title": "Sea turtle | Britannica",
+      "url": "https://www.britannica.com/animal/sea-turtle",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Older than the dinosaurs' fall",
+      "paragraphs": [
+        "There are seven species of sea turtle, and their family has been swimming the oceans for well over a hundred million years. They shared the seas with the last dinosaurs — and outlived them.",
+        "A sea turtle's shell is part of its skeleton, so it can never climb out of it. Instead of teeth it has a beak, and instead of feet it has flippers: the front pair row it through the water like wings."
+      ]
+    },
+    {
+      "heading": "A compass built into the animal",
+      "paragraphs": [
+        "Female sea turtles famously return to the region where they hatched to lay their own eggs, crossing whole oceans to do it. Research suggests they imprint on the magnetic signature of their home beach as hatchlings and use Earth's magnetic field as both map and compass as adults.",
+        "After digging a nest in the sand, a mother covers her eggs and returns to the sea. The hatchlings dig out together, usually at night, and hurry to the water — the most dangerous few metres of their lives."
+      ]
+    },
+    {
+      "heading": "Why they need help",
+      "paragraphs": [
+        "All sea turtle species face threats, from plastic mistaken for jellyfish food to lights that confuse hatchlings and draw them away from the sea. Many populations are protected by law, and beach communities dim lights and guard nests during hatching season.",
+        "If you ever see a nesting beach, the kindest rules are simple: stay back, stay quiet, keep lights off, and let the ancient swimmers do what they have done for a hundred million years."
+      ]
+    }
+  ],
+  "takeaway": "Sea turtles are ocean navigators older than the dinosaurs' extinction, guided home — scientists believe — by Earth's magnetic field.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

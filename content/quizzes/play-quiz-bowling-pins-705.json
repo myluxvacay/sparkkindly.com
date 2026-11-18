@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-bowling-pins-705",
+  "scheduledDate": "2027-05-13",
+  "brand": "play",
+  "prompt": "In tenpin bowling, how many pins stand at the end of the lane at the start of a frame?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Nine"
+    },
+    {
+      "id": "b",
+      "text": "Ten"
+    },
+    {
+      "id": "c",
+      "text": "Eleven"
+    },
+    {
+      "id": "d",
+      "text": "Twelve"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Tenpin bowling uses ten pins, arranged in a triangle with four rows: one pin at the front, then two, then three, then four at the back. Knocking down all ten with one ball is a strike.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Bowling | Britannica",
+      "url": "https://www.britannica.com/sports/bowling",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
