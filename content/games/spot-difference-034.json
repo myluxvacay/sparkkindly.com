@@ -1,0 +1,117 @@
+{
+  "id": "spot-difference-034",
+  "scheduledDate": "2026-12-01",
+  "brand": "discover",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: space scene",
+  "prompt": "Three things changed between the two space scene pictures. Which list names all three changes?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: The black sheep changed colour from white to black, the blue planet vanished and the bee vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The black sheep changed colour from white to black, the blue planet vanished and the purple kite vanished."
+    },
+    {
+      "id": "b",
+      "text": "The black sheep changed colour from white to black, the blue planet vanished and the bee vanished."
+    },
+    {
+      "id": "c",
+      "text": "The black sheep changed colour from white to black, a yellow balloon appeared and the bee vanished."
+    },
+    {
+      "id": "d",
+      "text": "The purple kite changed colour from purple to green, the blue planet vanished and the bee vanished."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "space",
+      "elements": [
+        {
+          "id": "kite-2467",
+          "art": "kite",
+          "name": "kite",
+          "color": "purple",
+          "x": 641,
+          "y": 160
+        },
+        {
+          "id": "moon-2468",
+          "art": "moon",
+          "name": "moon",
+          "x": 124,
+          "y": 200
+        },
+        {
+          "id": "planet-2469",
+          "art": "planet",
+          "name": "planet",
+          "color": "blue",
+          "x": 464,
+          "y": 210
+        },
+        {
+          "id": "bee-2470",
+          "art": "bee",
+          "name": "bee",
+          "x": 374,
+          "y": 300
+        },
+        {
+          "id": "sheep-2471",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 629,
+          "y": 480,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A space scene. In the scene: purple kite, moon, blue planet, bee, white sheep.",
+    "sceneAfter": {
+      "template": "space",
+      "elements": [
+        {
+          "id": "kite-2467",
+          "art": "kite",
+          "name": "kite",
+          "color": "purple",
+          "x": 641,
+          "y": 160
+        },
+        {
+          "id": "moon-2468",
+          "art": "moon",
+          "name": "moon",
+          "x": 124,
+          "y": 200
+        },
+        {
+          "id": "sheep-2471",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 629,
+          "y": 480,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAfterAlt": "A space scene. In the scene: purple kite, moon, black sheep.",
+    "expectedChanges": [
+      "sheep-2471:color:white->black",
+      "planet-2469:removed",
+      "bee-2470:removed"
+    ]
+  }
+}

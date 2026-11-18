@@ -1,0 +1,97 @@
+{
+  "id": "memory-055",
+  "scheduledDate": "2026-11-09",
+  "brand": "kids",
+  "gameType": "memory",
+  "title": "Memory: garden absent",
+  "prompt": "From memory: which of these was NOT in the garden?",
+  "difficulty": "easy",
+  "explanation": "The carrot never appeared in the picture. The other three choices were all there to be spotted.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "gray elephant"
+    },
+    {
+      "id": "b",
+      "text": "brown cow"
+    },
+    {
+      "id": "c",
+      "text": "green bunch of grapes"
+    },
+    {
+      "id": "d",
+      "text": "carrot"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "pumpkin-2209",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 267,
+          "y": 405,
+          "flip": true
+        },
+        {
+          "id": "grapes-2210",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 482,
+          "y": 505
+        },
+        {
+          "id": "elephant-2211",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 657,
+          "y": 510
+        },
+        {
+          "id": "snail-2212",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 687,
+          "y": 425
+        },
+        {
+          "id": "bird-2213",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 521,
+          "y": 110,
+          "flip": true
+        },
+        {
+          "id": "cow-2214",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 384,
+          "y": 430
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: orange pumpkin, green bunch of grapes, gray elephant, purple snail, blue bird, brown cow.",
+    "fact": {
+      "type": "absent",
+      "label": "carrot"
+    }
+  }
+}

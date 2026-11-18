@@ -1,0 +1,56 @@
+{
+  "id": "sequence-019",
+  "scheduledDate": "2027-02-15",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the gray owl, second the gray dog, third the green kite. So the third one was the green kite.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "green kite"
+    },
+    {
+      "id": "b",
+      "text": "green train"
+    },
+    {
+      "id": "c",
+      "text": "gray owl"
+    },
+    {
+      "id": "d",
+      "text": "gray dog"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "owl",
+        "label": "gray owl",
+        "color": "gray"
+      },
+      {
+        "art": "dog",
+        "label": "gray dog",
+        "color": "gray"
+      },
+      {
+        "art": "kite",
+        "label": "green kite",
+        "color": "green"
+      }
+    ],
+    "askPosition": 3,
+    "decoyLabel": "green train"
+  }
+}

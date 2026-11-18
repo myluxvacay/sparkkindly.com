@@ -1,0 +1,112 @@
+{
+  "id": "memory-038",
+  "scheduledDate": "2026-11-11",
+  "brand": "grow",
+  "gameType": "memory",
+  "title": "Memory: classroom color",
+  "prompt": "From memory: what colour is the mushroom in the classroom?",
+  "difficulty": "medium",
+  "explanation": "The mushroom in the picture is brown — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "purple"
+    },
+    {
+      "id": "b",
+      "text": "white"
+    },
+    {
+      "id": "c",
+      "text": "red"
+    },
+    {
+      "id": "d",
+      "text": "brown"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "flower-1742",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 120,
+          "y": 470
+        },
+        {
+          "id": "crab-1743",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 643,
+          "y": 425
+        },
+        {
+          "id": "umbrella-1744",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "purple",
+          "x": 572,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "ball-1745",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 422,
+          "y": 465
+        },
+        {
+          "id": "bird-1746",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 195,
+          "y": 425
+        },
+        {
+          "id": "mushroom-1747",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "brown",
+          "x": 263,
+          "y": 500
+        },
+        {
+          "id": "hat-1748",
+          "art": "hat",
+          "name": "hat",
+          "color": "yellow",
+          "x": 708,
+          "y": 470
+        },
+        {
+          "id": "mushroom-1749",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "brown",
+          "x": 481,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: white flower, red crab, purple umbrella, green ball, yellow bird, brown mushroom, yellow hat, brown mushroom.",
+    "fact": {
+      "type": "color",
+      "elementId": "mushroom-1749"
+    }
+  }
+}

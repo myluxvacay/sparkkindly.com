@@ -1,0 +1,129 @@
+{
+  "id": "memory-029",
+  "scheduledDate": "2026-11-11",
+  "brand": "play",
+  "gameType": "memory",
+  "title": "Memory: beach count",
+  "prompt": "From memory: how many stars are in the beach?",
+  "difficulty": "medium",
+  "explanation": "Count the stars one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "3"
+    },
+    {
+      "id": "b",
+      "text": "2"
+    },
+    {
+      "id": "c",
+      "text": "1"
+    },
+    {
+      "id": "d",
+      "text": "4"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "star-1644",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 513,
+          "y": 105
+        },
+        {
+          "id": "orange-1645",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 269,
+          "y": 505
+        },
+        {
+          "id": "balloon-1646",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "yellow",
+          "x": 683,
+          "y": 160
+        },
+        {
+          "id": "star-1647",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 219,
+          "y": 130
+        },
+        {
+          "id": "frog-1648",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 718,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "frog-1649",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 469,
+          "y": 325
+        },
+        {
+          "id": "turtle-1650",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 127,
+          "y": 330
+        },
+        {
+          "id": "cupcake-1651",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 356,
+          "y": 440
+        },
+        {
+          "id": "sheep-1652",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 569,
+          "y": 505
+        },
+        {
+          "id": "duck-1653",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 114,
+          "y": 480,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A beach scene. In the scene: white star, orange orange, yellow balloon, white star, green frog, green frog, green turtle, white cupcake, white sheep, brown duck.",
+    "fact": {
+      "type": "count",
+      "art": "star"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "sequence-001",
+  "scheduledDate": "2027-02-06",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came first?",
+  "prompt": "Spark showed some things in order. What came first?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the orange cat, second the brown chicken, third the purple book. So the first one was the orange cat.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "purple book"
+    },
+    {
+      "id": "b",
+      "text": "brown chicken"
+    },
+    {
+      "id": "c",
+      "text": "yellow car"
+    },
+    {
+      "id": "d",
+      "text": "orange cat"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "cat",
+        "label": "orange cat",
+        "color": "orange"
+      },
+      {
+        "art": "chicken",
+        "label": "brown chicken",
+        "color": "brown"
+      },
+      {
+        "art": "book",
+        "label": "purple book",
+        "color": "purple"
+      }
+    ],
+    "askPosition": 1,
+    "decoyLabel": "yellow car"
+  }
+}

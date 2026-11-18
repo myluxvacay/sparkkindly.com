@@ -1,0 +1,56 @@
+{
+  "id": "sequence-049",
+  "scheduledDate": "2027-03-02",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came first?",
+  "prompt": "Spark showed some things in order. What came first?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the yellow ball, second the pink shell, third the brown mushroom. So the first one was the yellow ball.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "pink shell"
+    },
+    {
+      "id": "b",
+      "text": "penguin"
+    },
+    {
+      "id": "c",
+      "text": "yellow ball"
+    },
+    {
+      "id": "d",
+      "text": "brown mushroom"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "ball",
+        "label": "yellow ball",
+        "color": "yellow"
+      },
+      {
+        "art": "shell",
+        "label": "pink shell",
+        "color": "pink"
+      },
+      {
+        "art": "mushroom",
+        "label": "brown mushroom",
+        "color": "brown"
+      }
+    ],
+    "askPosition": 1,
+    "decoyLabel": "penguin"
+  }
+}

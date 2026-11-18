@@ -1,0 +1,65 @@
+{
+  "id": "sequence-018",
+  "scheduledDate": "2027-02-14",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came fourth?",
+  "prompt": "Spark showed some things in order. What came fourth?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the brown owl, second the blue house, third the green train, fourth the red bird, fifth the blue car. So the fourth one was the red bird.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "green train"
+    },
+    {
+      "id": "b",
+      "text": "brown owl"
+    },
+    {
+      "id": "c",
+      "text": "red bird"
+    },
+    {
+      "id": "d",
+      "text": "blue house"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "owl",
+        "label": "brown owl",
+        "color": "brown"
+      },
+      {
+        "art": "house",
+        "label": "blue house",
+        "color": "blue"
+      },
+      {
+        "art": "train",
+        "label": "green train",
+        "color": "green"
+      },
+      {
+        "art": "bird",
+        "label": "red bird",
+        "color": "red"
+      },
+      {
+        "art": "car",
+        "label": "blue car",
+        "color": "blue"
+      }
+    ],
+    "askPosition": 4
+  }
+}

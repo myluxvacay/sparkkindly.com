@@ -1,0 +1,60 @@
+{
+  "id": "sequence-050",
+  "scheduledDate": "2027-03-02",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the blue fish, second the blue house, third the orange crab, fourth the white shell. So the third one was the orange crab.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "blue fish"
+    },
+    {
+      "id": "b",
+      "text": "orange crab"
+    },
+    {
+      "id": "c",
+      "text": "blue house"
+    },
+    {
+      "id": "d",
+      "text": "white shell"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "fish",
+        "label": "blue fish",
+        "color": "blue"
+      },
+      {
+        "art": "house",
+        "label": "blue house",
+        "color": "blue"
+      },
+      {
+        "art": "crab",
+        "label": "orange crab",
+        "color": "orange"
+      },
+      {
+        "art": "shell",
+        "label": "white shell",
+        "color": "white"
+      }
+    ],
+    "askPosition": 3
+  }
+}

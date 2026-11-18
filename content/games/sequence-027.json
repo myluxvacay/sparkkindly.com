@@ -1,0 +1,64 @@
+{
+  "id": "sequence-027",
+  "scheduledDate": "2027-02-19",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came fourth?",
+  "prompt": "Spark showed some things in order. What came fourth?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the moon, second the gray sheep, third the blue umbrella, fourth the white flower, fifth the green hat. So the fourth one was the white flower.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "white flower"
+    },
+    {
+      "id": "b",
+      "text": "moon"
+    },
+    {
+      "id": "c",
+      "text": "blue umbrella"
+    },
+    {
+      "id": "d",
+      "text": "gray sheep"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "moon",
+        "label": "moon"
+      },
+      {
+        "art": "sheep",
+        "label": "gray sheep",
+        "color": "gray"
+      },
+      {
+        "art": "umbrella",
+        "label": "blue umbrella",
+        "color": "blue"
+      },
+      {
+        "art": "flower",
+        "label": "white flower",
+        "color": "white"
+      },
+      {
+        "art": "hat",
+        "label": "green hat",
+        "color": "green"
+      }
+    ],
+    "askPosition": 4
+  }
+}

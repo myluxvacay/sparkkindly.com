@@ -1,0 +1,200 @@
+{
+  "id": "what-changed-042",
+  "scheduledDate": "2027-01-02",
+  "brand": "play",
+  "gameType": "what-changed",
+  "title": "What changed: beach",
+  "prompt": "One thing changed between the before and after beach pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the blue balloon changed colour from pink to blue. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: a red kite appeared."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the purple snail vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the blue balloon changed colour from pink to blue."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the purple snail changed colour from purple to green."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "cupcake-2905",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 576,
+          "y": 505
+        },
+        {
+          "id": "duck-2906",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 465,
+          "y": 325,
+          "flip": true
+        },
+        {
+          "id": "snail-2907",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 354,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "shell-2908",
+          "art": "shell",
+          "name": "shell",
+          "color": "pink",
+          "x": 702,
+          "y": 480
+        },
+        {
+          "id": "carrot-2909",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 271,
+          "y": 505
+        },
+        {
+          "id": "balloon-2910",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "pink",
+          "x": 518,
+          "y": 105
+        },
+        {
+          "id": "planet-2911",
+          "art": "planet",
+          "name": "planet",
+          "color": "purple",
+          "x": 687,
+          "y": 160,
+          "flip": true
+        },
+        {
+          "id": "boat-2912",
+          "art": "boat",
+          "name": "boat",
+          "color": "blue",
+          "x": 132,
+          "y": 330
+        },
+        {
+          "id": "turtle-2913",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 301,
+          "y": 345
+        }
+      ]
+    },
+    "sceneAlt": "A beach scene. In the scene: white cupcake, white duck, purple snail, pink shell, carrot, pink balloon, purple planet, blue boat, green turtle.",
+    "sceneAfter": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "cupcake-2905",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 576,
+          "y": 505
+        },
+        {
+          "id": "duck-2906",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 465,
+          "y": 325,
+          "flip": true
+        },
+        {
+          "id": "snail-2907",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 354,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "shell-2908",
+          "art": "shell",
+          "name": "shell",
+          "color": "pink",
+          "x": 702,
+          "y": 480
+        },
+        {
+          "id": "carrot-2909",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 271,
+          "y": 505
+        },
+        {
+          "id": "balloon-2910",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "blue",
+          "x": 518,
+          "y": 105
+        },
+        {
+          "id": "planet-2911",
+          "art": "planet",
+          "name": "planet",
+          "color": "purple",
+          "x": 687,
+          "y": 160,
+          "flip": true
+        },
+        {
+          "id": "boat-2912",
+          "art": "boat",
+          "name": "boat",
+          "color": "blue",
+          "x": 132,
+          "y": 330
+        },
+        {
+          "id": "turtle-2913",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 301,
+          "y": 345
+        }
+      ]
+    },
+    "sceneAfterAlt": "A beach scene. In the scene: white cupcake, white duck, purple snail, pink shell, carrot, blue balloon, purple planet, blue boat, green turtle.",
+    "expectedChanges": [
+      "balloon-2910:color:pink->blue"
+    ]
+  }
+}

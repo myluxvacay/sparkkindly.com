@@ -1,0 +1,111 @@
+{
+  "id": "observation-008",
+  "scheduledDate": "2026-11-17",
+  "brand": "grow",
+  "gameType": "observation",
+  "title": "Look closely: classroom color",
+  "prompt": "What colour is the tree in the classroom?",
+  "difficulty": "medium",
+  "explanation": "The tree in the picture is orange — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "yellow"
+    },
+    {
+      "id": "b",
+      "text": "orange"
+    },
+    {
+      "id": "c",
+      "text": "black"
+    },
+    {
+      "id": "d",
+      "text": "blue"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "tree-59",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 122,
+          "y": 470
+        },
+        {
+          "id": "umbrella-60",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "blue",
+          "x": 277,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "penguin-61",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 574,
+          "y": 500
+        },
+        {
+          "id": "snail-62",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 476,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "house-63",
+          "art": "house",
+          "name": "house",
+          "color": "pink",
+          "x": 637,
+          "y": 425
+        },
+        {
+          "id": "book-64",
+          "art": "book",
+          "name": "book",
+          "color": "green",
+          "x": 706,
+          "y": 470
+        },
+        {
+          "id": "penguin-65",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 428,
+          "y": 465
+        },
+        {
+          "id": "owl-66",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 197,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: orange tree, blue umbrella, penguin, purple snail, pink house, green book, penguin, brown owl.",
+    "fact": {
+      "type": "color",
+      "elementId": "tree-59"
+    }
+  }
+}

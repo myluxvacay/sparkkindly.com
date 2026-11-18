@@ -1,0 +1,56 @@
+{
+  "id": "sequence-016",
+  "scheduledDate": "2027-02-13",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the orange fish, second the purple gift box, third the yellow kite. So the second one was the purple gift box.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "purple gift box"
+    },
+    {
+      "id": "b",
+      "text": "green tree"
+    },
+    {
+      "id": "c",
+      "text": "yellow kite"
+    },
+    {
+      "id": "d",
+      "text": "orange fish"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "fish",
+        "label": "orange fish",
+        "color": "orange"
+      },
+      {
+        "art": "gift",
+        "label": "purple gift box",
+        "color": "purple"
+      },
+      {
+        "art": "kite",
+        "label": "yellow kite",
+        "color": "yellow"
+      }
+    ],
+    "askPosition": 2,
+    "decoyLabel": "green tree"
+  }
+}

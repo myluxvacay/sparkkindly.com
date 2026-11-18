@@ -1,0 +1,45 @@
+{
+  "id": "odd-one-out-002",
+  "scheduledDate": "2026-11-18",
+  "brand": "play",
+  "gameType": "odd-one-out",
+  "title": "Odd one out: three flowers and a fruit",
+  "prompt": "Three of these are flowers. Which one is not?",
+  "difficulty": "easy",
+  "explanation": "Roses, tulips and sunflowers are flowers. An apple is a fruit that grows on a tree.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "items": [
+    {
+      "id": "apple",
+      "text": "Apple",
+      "art": "apple",
+      "alt": "A red apple with a green leaf"
+    },
+    {
+      "id": "rose",
+      "text": "Rose",
+      "art": "rose",
+      "alt": "A red rose on a green stem"
+    },
+    {
+      "id": "sunflower",
+      "text": "Sunflower",
+      "art": "sunflower",
+      "alt": "A tall sunflower with a brown centre"
+    },
+    {
+      "id": "tulip",
+      "text": "Tulip",
+      "art": "tulip",
+      "alt": "A pink tulip on a green stem"
+    }
+  ],
+  "correctOptionId": "apple",
+  "visual": {
+    "gameType": "odd-one-out"
+  }
+}

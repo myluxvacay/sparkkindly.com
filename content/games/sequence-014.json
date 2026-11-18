@@ -1,0 +1,60 @@
+{
+  "id": "sequence-014",
+  "scheduledDate": "2027-02-12",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the red boat, second the brown bear, third the red ladybug, fourth the white flower. So the third one was the red ladybug.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "white flower"
+    },
+    {
+      "id": "b",
+      "text": "red ladybug"
+    },
+    {
+      "id": "c",
+      "text": "brown bear"
+    },
+    {
+      "id": "d",
+      "text": "red boat"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "boat",
+        "label": "red boat",
+        "color": "red"
+      },
+      {
+        "art": "bear",
+        "label": "brown bear",
+        "color": "brown"
+      },
+      {
+        "art": "ladybug",
+        "label": "red ladybug",
+        "color": "red"
+      },
+      {
+        "art": "flower",
+        "label": "white flower",
+        "color": "white"
+      }
+    ],
+    "askPosition": 3
+  }
+}

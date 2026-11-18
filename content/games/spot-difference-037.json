@@ -1,0 +1,127 @@
+{
+  "id": "spot-difference-037",
+  "scheduledDate": "2026-12-03",
+  "brand": "together",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: park",
+  "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: The frog changed colour from green to plain, the elephant changed colour from gray to plain and the moon vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The pink pig changed colour from pink to purple, the elephant changed colour from gray to plain and the moon vanished."
+    },
+    {
+      "id": "b",
+      "text": "The frog changed colour from green to plain, a blue ball appeared and the moon vanished."
+    },
+    {
+      "id": "c",
+      "text": "The frog changed colour from green to plain, the elephant changed colour from gray to plain and the moon vanished."
+    },
+    {
+      "id": "d",
+      "text": "The frog changed colour from green to plain, the elephant changed colour from gray to plain and the pink pig vanished."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "frog-2487",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 387,
+          "y": 495,
+          "flip": true
+        },
+        {
+          "id": "pig-2488",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 255,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "moon-2489",
+          "art": "moon",
+          "name": "moon",
+          "x": 667,
+          "y": 165
+        },
+        {
+          "id": "umbrella-2490",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "blue",
+          "x": 159,
+          "y": 440
+        },
+        {
+          "id": "elephant-2491",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 639,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: green frog, pink pig, moon, blue umbrella, gray elephant.",
+    "sceneAfter": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "frog-2487",
+          "art": "frog",
+          "name": "frog",
+          "x": 387,
+          "y": 495,
+          "flip": true
+        },
+        {
+          "id": "pig-2488",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 255,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "umbrella-2490",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "blue",
+          "x": 159,
+          "y": 440
+        },
+        {
+          "id": "elephant-2491",
+          "art": "elephant",
+          "name": "elephant",
+          "x": 639,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAfterAlt": "A park scene. In the scene: frog, pink pig, blue umbrella, elephant.",
+    "expectedChanges": [
+      "frog-2487:color:green->plain",
+      "elephant-2491:color:gray->plain",
+      "moon-2489:removed"
+    ]
+  }
+}

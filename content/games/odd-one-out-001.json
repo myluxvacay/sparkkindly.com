@@ -1,0 +1,45 @@
+{
+  "id": "odd-one-out-001",
+  "scheduledDate": "2026-11-18",
+  "brand": "play",
+  "gameType": "odd-one-out",
+  "title": "Odd one out: three birds and a fungus",
+  "prompt": "One of these does not belong. Can you spot it?",
+  "difficulty": "easy",
+  "explanation": "The owl, flamingo and duck are all birds. The mushroom is a fungus — it is the odd one out.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "items": [
+    {
+      "id": "mushroom",
+      "text": "Mushroom",
+      "art": "mushroom",
+      "alt": "A red toadstool mushroom with white spots"
+    },
+    {
+      "id": "flamingo",
+      "text": "Flamingo",
+      "art": "flamingo",
+      "alt": "A tall pink flamingo on one leg"
+    },
+    {
+      "id": "owl",
+      "text": "Owl",
+      "art": "owl",
+      "alt": "A brown owl with big round eyes"
+    },
+    {
+      "id": "duck",
+      "text": "Duck",
+      "art": "duck",
+      "alt": "A yellow duck with an orange bill"
+    }
+  ],
+  "correctOptionId": "mushroom",
+  "visual": {
+    "gameType": "odd-one-out"
+  }
+}

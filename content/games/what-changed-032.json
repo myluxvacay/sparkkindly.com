@@ -1,0 +1,164 @@
+{
+  "id": "what-changed-032",
+  "scheduledDate": "2026-12-28",
+  "brand": "grow",
+  "gameType": "what-changed",
+  "title": "What changed: classroom",
+  "prompt": "One thing changed between the before and after classroom pictures. What changed?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the brown owl moved. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the orange tree changed colour from orange to purple."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the orange tree vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the brown owl moved."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: a blue ball appeared."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "car-2835",
+          "art": "car",
+          "name": "car",
+          "color": "purple",
+          "x": 202,
+          "y": 425
+        },
+        {
+          "id": "ball-2836",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 707,
+          "y": 470
+        },
+        {
+          "id": "flower-2837",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 418,
+          "y": 465
+        },
+        {
+          "id": "dog-2838",
+          "art": "dog",
+          "name": "dog",
+          "color": "white",
+          "x": 645,
+          "y": 425
+        },
+        {
+          "id": "pine-2839",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 482,
+          "y": 505
+        },
+        {
+          "id": "owl-2840",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 124,
+          "y": 470
+        },
+        {
+          "id": "tree-2841",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 263,
+          "y": 500
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: purple car, green ball, yellow flower, white dog, green pine tree, brown owl, orange tree.",
+    "sceneAfter": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "car-2835",
+          "art": "car",
+          "name": "car",
+          "color": "purple",
+          "x": 202,
+          "y": 425
+        },
+        {
+          "id": "ball-2836",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 707,
+          "y": 470
+        },
+        {
+          "id": "flower-2837",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 418,
+          "y": 465
+        },
+        {
+          "id": "dog-2838",
+          "art": "dog",
+          "name": "dog",
+          "color": "white",
+          "x": 645,
+          "y": 425
+        },
+        {
+          "id": "pine-2839",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 482,
+          "y": 505
+        },
+        {
+          "id": "owl-2840",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 294,
+          "y": 470
+        },
+        {
+          "id": "tree-2841",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 263,
+          "y": 500
+        }
+      ]
+    },
+    "sceneAfterAlt": "A classroom scene. In the scene: purple car, green ball, yellow flower, white dog, green pine tree, brown owl, orange tree.",
+    "expectedChanges": [
+      "owl-2840:moved"
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "observation-054",
+  "scheduledDate": "2026-11-14",
+  "brand": "play",
+  "gameType": "observation",
+  "title": "Look closely: beach count",
+  "prompt": "How many penguins are in the beach?",
+  "difficulty": "hard",
+  "explanation": "Count the penguins one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "2"
+    },
+    {
+      "id": "b",
+      "text": "4"
+    },
+    {
+      "id": "c",
+      "text": "3"
+    },
+    {
+      "id": "d",
+      "text": "1"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "shell-979",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 266,
+          "y": 505
+        },
+        {
+          "id": "cow-980",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 709,
+          "y": 480
+        },
+        {
+          "id": "bird-981",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 684,
+          "y": 160
+        },
+        {
+          "id": "butterfly-982",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "orange",
+          "x": 513,
+          "y": 105
+        },
+        {
+          "id": "frog-983",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 637,
+          "y": 345
+        },
+        {
+          "id": "penguin-984",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 352,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "frog-985",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 471,
+          "y": 325
+        },
+        {
+          "id": "penguin-986",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 418,
+          "y": 475
+        },
+        {
+          "id": "sheep-987",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 568,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "fish-988",
+          "art": "fish",
+          "name": "fish",
+          "color": "pink",
+          "x": 300,
+          "y": 345
+        },
+        {
+          "id": "kite-989",
+          "art": "kite",
+          "name": "kite",
+          "color": "purple",
+          "x": 217,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "car-990",
+          "art": "car",
+          "name": "car",
+          "color": "yellow",
+          "x": 114,
+          "y": 480
+        },
+        {
+          "id": "crab-991",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 131,
+          "y": 330
+        }
+      ]
+    },
+    "sceneAlt": "A beach scene. In the scene: orange shell, white cow, yellow bird, orange butterfly, green frog, penguin, green frog, penguin, white sheep, pink fish, purple kite, yellow car, orange crab.",
+    "fact": {
+      "type": "count",
+      "art": "penguin"
+    }
+  }
+}

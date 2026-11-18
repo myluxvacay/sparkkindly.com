@@ -1,0 +1,89 @@
+{
+  "id": "memory-028",
+  "scheduledDate": "2026-11-11",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: kitchen color",
+  "prompt": "From memory: what colour is the gift box in the kitchen?",
+  "difficulty": "easy",
+  "explanation": "The gift box in the picture is green — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "gray"
+    },
+    {
+      "id": "b",
+      "text": "yellow"
+    },
+    {
+      "id": "c",
+      "text": "green"
+    },
+    {
+      "id": "d",
+      "text": "orange"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "kitchen",
+      "elements": [
+        {
+          "id": "carrot-1589",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 696,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "gift-1590",
+          "art": "gift",
+          "name": "gift box",
+          "color": "green",
+          "x": 463,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "pig-1591",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 522,
+          "y": 508
+        },
+        {
+          "id": "snail-1592",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 304,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "ball-1593",
+          "art": "ball",
+          "name": "ball",
+          "color": "purple",
+          "x": 329,
+          "y": 396
+        }
+      ]
+    },
+    "sceneAlt": "A kitchen scene. In the scene: carrot, green gift box, pink pig, purple snail, purple ball.",
+    "fact": {
+      "type": "color",
+      "elementId": "gift-1590"
+    }
+  }
+}

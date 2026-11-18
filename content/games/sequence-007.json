@@ -1,0 +1,55 @@
+{
+  "id": "sequence-007",
+  "scheduledDate": "2027-02-09",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the green train, second the yellow gift box, third the snowman. So the third one was the snowman.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "yellow gift box"
+    },
+    {
+      "id": "b",
+      "text": "yellow car"
+    },
+    {
+      "id": "c",
+      "text": "green train"
+    },
+    {
+      "id": "d",
+      "text": "snowman"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "train",
+        "label": "green train",
+        "color": "green"
+      },
+      {
+        "art": "gift",
+        "label": "yellow gift box",
+        "color": "yellow"
+      },
+      {
+        "art": "snowman",
+        "label": "snowman"
+      }
+    ],
+    "askPosition": 3,
+    "decoyLabel": "yellow car"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "observation-009",
+  "scheduledDate": "2026-11-17",
+  "brand": "together",
+  "gameType": "observation",
+  "title": "Look closely: park count",
+  "prompt": "How many birds are in the park?",
+  "difficulty": "hard",
+  "explanation": "Count the birds one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "4"
+    },
+    {
+      "id": "b",
+      "text": "1"
+    },
+    {
+      "id": "c",
+      "text": "3"
+    },
+    {
+      "id": "d",
+      "text": "2"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "cupcake-266",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "pink",
+          "x": 635,
+          "y": 440
+        },
+        {
+          "id": "bird-267",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 467,
+          "y": 105
+        },
+        {
+          "id": "fox-268",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 564,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "balloon-269",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "purple",
+          "x": 661,
+          "y": 165,
+          "flip": true
+        },
+        {
+          "id": "pine-270",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 707,
+          "y": 505
+        },
+        {
+          "id": "snail-271",
+          "art": "snail",
+          "name": "snail",
+          "color": "brown",
+          "x": 397,
+          "y": 495
+        },
+        {
+          "id": "train-272",
+          "art": "train",
+          "name": "train",
+          "color": "blue",
+          "x": 258,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "train-273",
+          "art": "train",
+          "name": "train",
+          "color": "blue",
+          "x": 103,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "bird-274",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 157,
+          "y": 440
+        },
+        {
+          "id": "moon-275",
+          "art": "moon",
+          "name": "moon",
+          "x": 204,
+          "y": 140
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: pink cupcake, green bird, orange fox, purple balloon, green pine tree, brown snail, blue train, blue train, blue bird, moon.",
+    "fact": {
+      "type": "count",
+      "art": "bird"
+    }
+  }
+}

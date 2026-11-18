@@ -1,0 +1,170 @@
+{
+  "id": "spot-difference-002",
+  "scheduledDate": "2026-11-09",
+  "brand": "grow",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: garden",
+  "prompt": "Three things changed between the two garden pictures. Which list names all three changes?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: The purple snail changed colour from brown to purple, the white horse moved and the white chicken changed colour from brown to white. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The purple snail changed colour from brown to purple, the white horse moved and the pink pig vanished."
+    },
+    {
+      "id": "b",
+      "text": "The pink pig changed colour from pink to purple, the white horse moved and the white chicken changed colour from brown to white."
+    },
+    {
+      "id": "c",
+      "text": "The purple snail changed colour from brown to purple, the white horse moved and the white chicken changed colour from brown to white."
+    },
+    {
+      "id": "d",
+      "text": "The purple snail changed colour from brown to purple, a red kite appeared and the white chicken changed colour from brown to white."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "pumpkin-2243",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 479,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "snail-2244",
+          "art": "snail",
+          "name": "snail",
+          "color": "brown",
+          "x": 681,
+          "y": 425
+        },
+        {
+          "id": "horse-2245",
+          "art": "horse",
+          "name": "horse",
+          "color": "white",
+          "x": 392,
+          "y": 430
+        },
+        {
+          "id": "chicken-2246",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 546,
+          "y": 405
+        },
+        {
+          "id": "kite-2247",
+          "art": "kite",
+          "name": "kite",
+          "color": "pink",
+          "x": 223,
+          "y": 135
+        },
+        {
+          "id": "pig-2248",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 300,
+          "y": 510
+        },
+        {
+          "id": "balloon-2249",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "green",
+          "x": 516,
+          "y": 110,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: orange pumpkin, brown snail, white horse, brown chicken, pink kite, pink pig, green balloon.",
+    "sceneAfter": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "pumpkin-2243",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 479,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "snail-2244",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 681,
+          "y": 425
+        },
+        {
+          "id": "horse-2245",
+          "art": "horse",
+          "name": "horse",
+          "color": "white",
+          "x": 562,
+          "y": 430
+        },
+        {
+          "id": "chicken-2246",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 546,
+          "y": 405
+        },
+        {
+          "id": "kite-2247",
+          "art": "kite",
+          "name": "kite",
+          "color": "pink",
+          "x": 223,
+          "y": 135
+        },
+        {
+          "id": "pig-2248",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 300,
+          "y": 510
+        },
+        {
+          "id": "balloon-2249",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "green",
+          "x": 516,
+          "y": 110,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAfterAlt": "A garden scene. In the scene: orange pumpkin, purple snail, white horse, white chicken, pink kite, pink pig, green balloon.",
+    "expectedChanges": [
+      "snail-2244:color:brown->purple",
+      "horse-2245:moved",
+      "chicken-2246:color:brown->white"
+    ]
+  }
+}

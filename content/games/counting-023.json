@@ -1,0 +1,104 @@
+{
+  "id": "counting-023",
+  "scheduledDate": "2027-01-20",
+  "brand": "discover",
+  "gameType": "counting",
+  "title": "Counting: stars at the space scene",
+  "prompt": "How many stars can you count in the space scene?",
+  "difficulty": "medium",
+  "explanation": "Count the stars one by one: there are exactly 6.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 6,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "space",
+      "elements": [
+        {
+          "id": "star-3201",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 381,
+          "y": 300
+        },
+        {
+          "id": "star-3202",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 467,
+          "y": 210
+        },
+        {
+          "id": "star-3203",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 209,
+          "y": 320,
+          "flip": true
+        },
+        {
+          "id": "star-3204",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 305,
+          "y": 150
+        },
+        {
+          "id": "star-3205",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 554,
+          "y": 330
+        },
+        {
+          "id": "star-3206",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 633,
+          "y": 160
+        },
+        {
+          "id": "cat-3207",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 172,
+          "y": 480
+        },
+        {
+          "id": "book-3208",
+          "art": "book",
+          "name": "book",
+          "color": "green",
+          "x": 635,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "moon-3209",
+          "art": "moon",
+          "name": "moon",
+          "x": 124,
+          "y": 200
+        }
+      ]
+    },
+    "sceneAlt": "A space scene. In the scene: yellow star, white star, yellow star, white star, white star, yellow star, orange cat, green book, moon.",
+    "countTarget": {
+      "art": "star"
+    }
+  }
+}

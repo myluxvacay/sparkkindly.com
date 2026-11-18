@@ -1,0 +1,45 @@
+{
+  "id": "odd-one-out-003",
+  "scheduledDate": "2026-11-18",
+  "brand": "play",
+  "gameType": "odd-one-out",
+  "title": "Odd one out: three fruits and a fungus",
+  "prompt": "One of these does not belong. Can you spot it?",
+  "difficulty": "easy",
+  "explanation": "Apples, bananas and oranges are fruits. A mushroom is a fungus, not a fruit.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "items": [
+    {
+      "id": "apple",
+      "text": "Apple",
+      "art": "apple",
+      "alt": "A red apple with a green leaf"
+    },
+    {
+      "id": "mushroom",
+      "text": "Mushroom",
+      "art": "mushroom",
+      "alt": "A red toadstool mushroom with white spots"
+    },
+    {
+      "id": "banana",
+      "text": "Banana",
+      "art": "banana",
+      "alt": "A bunch of yellow bananas"
+    },
+    {
+      "id": "orange",
+      "text": "Orange",
+      "art": "orange",
+      "alt": "A round orange with a leaf"
+    }
+  ],
+  "correctOptionId": "mushroom",
+  "visual": {
+    "gameType": "odd-one-out"
+  }
+}

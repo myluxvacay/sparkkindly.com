@@ -1,0 +1,170 @@
+{
+  "id": "what-changed-014",
+  "scheduledDate": "2026-12-19",
+  "brand": "together",
+  "gameType": "what-changed",
+  "title": "What changed: street",
+  "prompt": "One thing changed between the before and after street pictures. What changed?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the white chicken changed colour from brown to white. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: a green frog appeared."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the orange shell vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the orange shell changed colour from orange to purple."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the white chicken changed colour from brown to white."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "pine-2711",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 124,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "grapes-2712",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 324,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "owl-2713",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 658,
+          "y": 385
+        },
+        {
+          "id": "cloud-2714",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 243,
+          "y": 120
+        },
+        {
+          "id": "chicken-2715",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 682,
+          "y": 505
+        },
+        {
+          "id": "shell-2716",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 144,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "balloon-2717",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "pink",
+          "x": 567,
+          "y": 95
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: green pine tree, purple bunch of grapes, brown owl, white cloud, brown chicken, orange shell, pink balloon.",
+    "sceneAfter": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "pine-2711",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 124,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "grapes-2712",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 324,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "owl-2713",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 658,
+          "y": 385
+        },
+        {
+          "id": "cloud-2714",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 243,
+          "y": 120
+        },
+        {
+          "id": "chicken-2715",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 682,
+          "y": 505
+        },
+        {
+          "id": "shell-2716",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 144,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "balloon-2717",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "pink",
+          "x": 567,
+          "y": 95
+        }
+      ]
+    },
+    "sceneAfterAlt": "A street scene. In the scene: green pine tree, purple bunch of grapes, brown owl, white cloud, white chicken, orange shell, pink balloon.",
+    "expectedChanges": [
+      "chicken-2715:color:brown->white"
+    ]
+  }
+}

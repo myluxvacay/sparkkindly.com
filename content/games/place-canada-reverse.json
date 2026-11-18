@@ -1,0 +1,45 @@
+{
+  "id": "place-canada-reverse",
+  "scheduledDate": "2026-11-18",
+  "brand": "play",
+  "gameType": "flags-and-places",
+  "title": "Flags & places: which flag is Canada’s?",
+  "prompt": "Reverse round: which flag belongs to Canada?",
+  "difficulty": "medium",
+  "explanation": "Canada’s flag has a single red maple leaf in the centre, between two red bands. It was first flown in 1965.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "correctOptionId": "canada",
+  "visual": {
+    "gameType": "flags-and-places"
+  },
+  "options": [
+    {
+      "id": "usa",
+      "text": "Flag A",
+      "art": "flag-us",
+      "alt": "A flag with red and white stripes and white stars on a blue canton"
+    },
+    {
+      "id": "uk",
+      "text": "Flag B",
+      "art": "flag-gb",
+      "alt": "A blue flag with red and white crosses layered over each other"
+    },
+    {
+      "id": "canada",
+      "text": "Flag C",
+      "art": "flag-ca",
+      "alt": "A flag with a red maple leaf between two red bands on white"
+    },
+    {
+      "id": "australia",
+      "text": "Flag D",
+      "art": "flag-au",
+      "alt": "A dark blue flag with a small Union Jack in the corner and white stars"
+    }
+  ]
+}

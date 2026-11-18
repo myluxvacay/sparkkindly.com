@@ -1,0 +1,197 @@
+{
+  "id": "what-changed-039",
+  "scheduledDate": "2027-01-01",
+  "brand": "together",
+  "gameType": "what-changed",
+  "title": "What changed: park",
+  "prompt": "One thing changed between the before and after park pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the green turtle turned around. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the pink house vanished."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: a green frog appeared."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the pink house changed colour from pink to purple."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the green turtle turned around."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "house-2884",
+          "art": "house",
+          "name": "house",
+          "color": "pink",
+          "x": 645,
+          "y": 440
+        },
+        {
+          "id": "turtle-2885",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 112,
+          "y": 480
+        },
+        {
+          "id": "pig-2886",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 706,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "bird-2887",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 207,
+          "y": 140
+        },
+        {
+          "id": "rabbit-2888",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "gray",
+          "x": 386,
+          "y": 495
+        },
+        {
+          "id": "tree-2889",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 153,
+          "y": 440
+        },
+        {
+          "id": "tree-2890",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 246,
+          "y": 505
+        },
+        {
+          "id": "book-2891",
+          "art": "book",
+          "name": "book",
+          "color": "red",
+          "x": 559,
+          "y": 480
+        },
+        {
+          "id": "moon-2892",
+          "art": "moon",
+          "name": "moon",
+          "x": 655,
+          "y": 165
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: pink house, green turtle, pink pig, green bird, gray rabbit, orange tree, orange tree, red book, moon.",
+    "sceneAfter": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "house-2884",
+          "art": "house",
+          "name": "house",
+          "color": "pink",
+          "x": 645,
+          "y": 440
+        },
+        {
+          "id": "turtle-2885",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 112,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "pig-2886",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 706,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "bird-2887",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 207,
+          "y": 140
+        },
+        {
+          "id": "rabbit-2888",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "gray",
+          "x": 386,
+          "y": 495
+        },
+        {
+          "id": "tree-2889",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 153,
+          "y": 440
+        },
+        {
+          "id": "tree-2890",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 246,
+          "y": 505
+        },
+        {
+          "id": "book-2891",
+          "art": "book",
+          "name": "book",
+          "color": "red",
+          "x": 559,
+          "y": 480
+        },
+        {
+          "id": "moon-2892",
+          "art": "moon",
+          "name": "moon",
+          "x": 655,
+          "y": 165
+        }
+      ]
+    },
+    "sceneAfterAlt": "A park scene. In the scene: pink house, green turtle, pink pig, green bird, gray rabbit, orange tree, orange tree, red book, moon.",
+    "expectedChanges": [
+      "turtle-2885:turned"
+    ]
+  }
+}

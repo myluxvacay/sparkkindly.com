@@ -1,0 +1,200 @@
+{
+  "id": "spot-difference-051",
+  "scheduledDate": "2026-12-10",
+  "brand": "together",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: park",
+  "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The green frog turned around, the green car changed colour from yellow to green and the pine tree changed colour from green to plain. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The green frog turned around, a green frog appeared and the pine tree changed colour from green to plain."
+    },
+    {
+      "id": "b",
+      "text": "The snowman changed colour from brown to purple, the green car changed colour from yellow to green and the pine tree changed colour from green to plain."
+    },
+    {
+      "id": "c",
+      "text": "The green frog turned around, the green car changed colour from yellow to green and the pine tree changed colour from green to plain."
+    },
+    {
+      "id": "d",
+      "text": "The green frog turned around, the green car changed colour from yellow to green and the snowman vanished."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "frog-2582",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 107,
+          "y": 480
+        },
+        {
+          "id": "car-2583",
+          "art": "car",
+          "name": "car",
+          "color": "yellow",
+          "x": 562,
+          "y": 480
+        },
+        {
+          "id": "star-2584",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 476,
+          "y": 105
+        },
+        {
+          "id": "pine-2585",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 244,
+          "y": 505
+        },
+        {
+          "id": "house-2586",
+          "art": "house",
+          "name": "house",
+          "color": "pink",
+          "x": 389,
+          "y": 495,
+          "flip": true
+        },
+        {
+          "id": "bird-2587",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 693,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "butterfly-2588",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "blue",
+          "x": 668,
+          "y": 165
+        },
+        {
+          "id": "snowman-2589",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 645,
+          "y": 440
+        },
+        {
+          "id": "pine-2590",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 159,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: green frog, yellow car, white star, green pine tree, pink house, green bird, blue butterfly, snowman, green pine tree.",
+    "sceneAfter": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "frog-2582",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 107,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "car-2583",
+          "art": "car",
+          "name": "car",
+          "color": "green",
+          "x": 562,
+          "y": 480
+        },
+        {
+          "id": "star-2584",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 476,
+          "y": 105
+        },
+        {
+          "id": "pine-2585",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 244,
+          "y": 505
+        },
+        {
+          "id": "house-2586",
+          "art": "house",
+          "name": "house",
+          "color": "pink",
+          "x": 389,
+          "y": 495,
+          "flip": true
+        },
+        {
+          "id": "bird-2587",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 693,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "butterfly-2588",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "blue",
+          "x": 668,
+          "y": 165
+        },
+        {
+          "id": "snowman-2589",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 645,
+          "y": 440
+        },
+        {
+          "id": "pine-2590",
+          "art": "pine",
+          "name": "pine tree",
+          "x": 159,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAfterAlt": "A park scene. In the scene: green frog, green car, white star, green pine tree, pink house, green bird, blue butterfly, snowman, pine tree.",
+    "expectedChanges": [
+      "frog-2582:turned",
+      "car-2583:color:yellow->green",
+      "pine-2590:color:green->plain"
+    ]
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "id": "observation-030",
+  "scheduledDate": "2026-11-15",
+  "brand": "play",
+  "gameType": "observation",
+  "title": "Look closely: farm present",
+  "prompt": "Which of these can you see in the farm?",
+  "difficulty": "hard",
+  "explanation": "The yellow house is right there in the picture. The other three choices are not in this scene at all.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "pink cupcake"
+    },
+    {
+      "id": "b",
+      "text": "yellow house"
+    },
+    {
+      "id": "c",
+      "text": "purple cupcake"
+    },
+    {
+      "id": "d",
+      "text": "yellow kite"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "gift-584",
+          "art": "gift",
+          "name": "gift box",
+          "color": "blue",
+          "x": 374,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "star-585",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 695,
+          "y": 170
+        },
+        {
+          "id": "grapes-586",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 424,
+          "y": 500
+        },
+        {
+          "id": "pine-587",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 247,
+          "y": 430
+        },
+        {
+          "id": "owl-588",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 293,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "butterfly-589",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "pink",
+          "x": 338,
+          "y": 130
+        },
+        {
+          "id": "rocket-590",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 556,
+          "y": 100
+        },
+        {
+          "id": "frog-591",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 727,
+          "y": 450
+        },
+        {
+          "id": "penguin-592",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 556,
+          "y": 465
+        },
+        {
+          "id": "rabbit-593",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "white",
+          "x": 684,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "house-594",
+          "art": "house",
+          "name": "house",
+          "color": "yellow",
+          "x": 613,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A farm scene. In the scene: blue gift box, yellow star, green bunch of grapes, green pine tree, brown owl, pink butterfly, blue rocket, green frog, penguin, white rabbit, yellow house.",
+    "fact": {
+      "type": "present",
+      "elementId": "house-594"
+    }
+  }
+}

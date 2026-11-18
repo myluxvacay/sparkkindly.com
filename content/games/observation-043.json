@@ -1,0 +1,96 @@
+{
+  "id": "observation-043",
+  "scheduledDate": "2026-11-14",
+  "brand": "together",
+  "gameType": "observation",
+  "title": "Look closely: street color",
+  "prompt": "What colour is the pig in the street?",
+  "difficulty": "easy",
+  "explanation": "The pig in the picture is pink — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "white"
+    },
+    {
+      "id": "b",
+      "text": "pink"
+    },
+    {
+      "id": "c",
+      "text": "black"
+    },
+    {
+      "id": "d",
+      "text": "purple"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "rocket-795",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 557,
+          "y": 95
+        },
+        {
+          "id": "pig-796",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 121,
+          "y": 385
+        },
+        {
+          "id": "butterfly-797",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "purple",
+          "x": 245,
+          "y": 120
+        },
+        {
+          "id": "chicken-798",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 132,
+          "y": 490
+        },
+        {
+          "id": "mushroom-799",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "red",
+          "x": 690,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "frog-800",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 431,
+          "y": 460
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: blue rocket, pink pig, purple butterfly, brown chicken, red mushroom, green frog.",
+    "fact": {
+      "type": "color",
+      "elementId": "pig-796"
+    }
+  }
+}

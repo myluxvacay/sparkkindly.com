@@ -1,0 +1,131 @@
+{
+  "id": "counting-045",
+  "scheduledDate": "2027-01-31",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: yellow flowers at the meadow",
+  "prompt": "How many yellow flowers can you count in the meadow?",
+  "difficulty": "hard",
+  "explanation": "Count the yellow flowers one by one: there are exactly 9. Only the yellow ones count — the other colours are decoys.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 9,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "flower-3398",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 188,
+          "y": 430,
+          "flip": true
+        },
+        {
+          "id": "flower-3399",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 568,
+          "y": 425
+        },
+        {
+          "id": "flower-3400",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 505,
+          "y": 495
+        },
+        {
+          "id": "flower-3401",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 108,
+          "y": 470
+        },
+        {
+          "id": "flower-3402",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 623,
+          "y": 465,
+          "flip": true
+        },
+        {
+          "id": "flower-3403",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 425,
+          "y": 505
+        },
+        {
+          "id": "flower-3404",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 723,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "flower-3405",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 373,
+          "y": 460
+        },
+        {
+          "id": "flower-3406",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 247,
+          "y": 495
+        },
+        {
+          "id": "bird-3407",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 166,
+          "y": 140,
+          "flip": true
+        },
+        {
+          "id": "moon-3408",
+          "art": "moon",
+          "name": "moon",
+          "x": 643,
+          "y": 150
+        },
+        {
+          "id": "kite-3409",
+          "art": "kite",
+          "name": "kite",
+          "color": "pink",
+          "x": 415,
+          "y": 100
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: yellow flower, yellow flower, yellow flower, yellow flower, yellow flower, yellow flower, yellow flower, yellow flower, yellow flower, green bird, moon, pink kite.",
+    "countTarget": {
+      "art": "flower",
+      "color": "yellow"
+    }
+  }
+}

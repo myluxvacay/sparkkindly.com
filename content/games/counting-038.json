@@ -1,0 +1,107 @@
+{
+  "id": "counting-038",
+  "scheduledDate": "2027-01-27",
+  "brand": "grow",
+  "gameType": "counting",
+  "title": "Counting: flowers at the garden",
+  "prompt": "How many flowers can you count in the garden?",
+  "difficulty": "medium",
+  "explanation": "Count the flowers one by one: there are exactly 6.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 6,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "flower-3337",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 119,
+          "y": 425
+        },
+        {
+          "id": "flower-3338",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 475,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "flower-3339",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 391,
+          "y": 430,
+          "flip": true
+        },
+        {
+          "id": "flower-3340",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 263,
+          "y": 405
+        },
+        {
+          "id": "flower-3341",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 133,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "flower-3342",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 547,
+          "y": 405
+        },
+        {
+          "id": "cloud-3343",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 525,
+          "y": 110,
+          "flip": true
+        },
+        {
+          "id": "fox-3344",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 306,
+          "y": 510,
+          "flip": true
+        },
+        {
+          "id": "banana-3345",
+          "art": "banana",
+          "name": "banana",
+          "x": 678,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: purple flower, yellow flower, purple flower, red flower, yellow flower, purple flower, white cloud, orange fox, banana.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

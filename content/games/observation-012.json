@@ -1,0 +1,118 @@
+{
+  "id": "observation-012",
+  "scheduledDate": "2026-11-17",
+  "brand": "save",
+  "gameType": "observation",
+  "title": "Look closely: market stall sign",
+  "prompt": "What does the sign in the market stall say?",
+  "difficulty": "hard",
+  "explanation": "The sign in the picture reads \"Cafe\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Cafe"
+    },
+    {
+      "id": "b",
+      "text": "Post"
+    },
+    {
+      "id": "c",
+      "text": "Toys"
+    },
+    {
+      "id": "d",
+      "text": "Flowers"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "banana-290",
+          "art": "banana",
+          "name": "banana",
+          "x": 323,
+          "y": 508
+        },
+        {
+          "id": "carrot-291",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 692,
+          "y": 508
+        },
+        {
+          "id": "cupcake-292",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "purple",
+          "x": 253,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "gift-293",
+          "art": "gift",
+          "name": "gift box",
+          "color": "green",
+          "x": 157,
+          "y": 508
+        },
+        {
+          "id": "cat-294",
+          "art": "cat",
+          "name": "cat",
+          "color": "black",
+          "x": 395,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "carrot-295",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 526,
+          "y": 402
+        },
+        {
+          "id": "banana-296",
+          "art": "banana",
+          "name": "banana",
+          "x": 672,
+          "y": 402
+        },
+        {
+          "id": "apple-297",
+          "art": "apple",
+          "name": "apple",
+          "color": "green",
+          "x": 515,
+          "y": 508
+        },
+        {
+          "id": "cat-298",
+          "art": "cat",
+          "name": "cat",
+          "color": "black",
+          "x": 117,
+          "y": 402,
+          "flip": true
+        }
+      ],
+      "signText": "Cafe"
+    },
+    "sceneAlt": "A market scene. A sign reads \"Cafe\". In the scene: banana, carrot, purple cupcake, green gift box, black cat, carrot, banana, green apple, black cat.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

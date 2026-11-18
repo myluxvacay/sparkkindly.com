@@ -1,0 +1,79 @@
+{
+  "id": "counting-001",
+  "scheduledDate": "2027-01-09",
+  "brand": "discover",
+  "gameType": "counting",
+  "title": "Counting: planets at the space scene",
+  "prompt": "How many planets can you count in the space scene?",
+  "difficulty": "easy",
+  "explanation": "Count the planets one by one: there are exactly 4.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 4,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "space",
+      "elements": [
+        {
+          "id": "planet-2997",
+          "art": "planet",
+          "name": "planet",
+          "color": "blue",
+          "x": 560,
+          "y": 330
+        },
+        {
+          "id": "planet-2998",
+          "art": "planet",
+          "name": "planet",
+          "color": "blue",
+          "x": 301,
+          "y": 150
+        },
+        {
+          "id": "planet-2999",
+          "art": "planet",
+          "name": "planet",
+          "color": "blue",
+          "x": 471,
+          "y": 210
+        },
+        {
+          "id": "planet-3000",
+          "art": "planet",
+          "name": "planet",
+          "color": "purple",
+          "x": 639,
+          "y": 160
+        },
+        {
+          "id": "pine-3001",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 171,
+          "y": 480
+        },
+        {
+          "id": "bird-3002",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 213,
+          "y": 320
+        }
+      ]
+    },
+    "sceneAlt": "A space scene. In the scene: blue planet, blue planet, blue planet, purple planet, green pine tree, green bird.",
+    "countTarget": {
+      "art": "planet"
+    }
+  }
+}

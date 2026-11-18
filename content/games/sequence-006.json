@@ -1,0 +1,64 @@
+{
+  "id": "sequence-006",
+  "scheduledDate": "2027-02-08",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the red balloon, second the green hat, third the pink flower, fourth the white horse, fifth the snowman. So the second one was the green hat.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "white horse"
+    },
+    {
+      "id": "b",
+      "text": "pink flower"
+    },
+    {
+      "id": "c",
+      "text": "green hat"
+    },
+    {
+      "id": "d",
+      "text": "red balloon"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "balloon",
+        "label": "red balloon",
+        "color": "red"
+      },
+      {
+        "art": "hat",
+        "label": "green hat",
+        "color": "green"
+      },
+      {
+        "art": "flower",
+        "label": "pink flower",
+        "color": "pink"
+      },
+      {
+        "art": "horse",
+        "label": "white horse",
+        "color": "white"
+      },
+      {
+        "art": "snowman",
+        "label": "snowman"
+      }
+    ],
+    "askPosition": 2
+  }
+}

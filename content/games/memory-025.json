@@ -1,0 +1,89 @@
+{
+  "id": "memory-025",
+  "scheduledDate": "2026-11-11",
+  "brand": "save",
+  "gameType": "memory",
+  "title": "Memory: market stall absent",
+  "prompt": "From memory: which of these was NOT in the market stall?",
+  "difficulty": "easy",
+  "explanation": "The brown dog never appeared in the picture. The other three choices were all there to be spotted.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "pink gift box"
+    },
+    {
+      "id": "b",
+      "text": "orange orange"
+    },
+    {
+      "id": "c",
+      "text": "gray sheep"
+    },
+    {
+      "id": "d",
+      "text": "brown dog"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "gift-1566",
+          "art": "gift",
+          "name": "gift box",
+          "color": "pink",
+          "x": 525,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "umbrella-1567",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "green",
+          "x": 696,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "orange-1568",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 106,
+          "y": 402
+        },
+        {
+          "id": "sheep-1569",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 335,
+          "y": 508
+        },
+        {
+          "id": "hat-1570",
+          "art": "hat",
+          "name": "hat",
+          "color": "blue",
+          "x": 251,
+          "y": 402
+        }
+      ]
+    },
+    "sceneAlt": "A market scene. In the scene: pink gift box, green umbrella, orange orange, gray sheep, blue hat.",
+    "fact": {
+      "type": "absent",
+      "label": "brown dog"
+    }
+  }
+}

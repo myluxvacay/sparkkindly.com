@@ -1,0 +1,161 @@
+{
+  "id": "what-changed-038",
+  "scheduledDate": "2026-12-31",
+  "brand": "play",
+  "gameType": "what-changed",
+  "title": "What changed: beach",
+  "prompt": "One thing changed between the before and after beach pictures. What changed?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the bee vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the gray elephant changed colour from gray to purple."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: a blue ball appeared."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the bee vanished."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the gray elephant vanished."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "owl-2877",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 272,
+          "y": 505
+        },
+        {
+          "id": "bee-2878",
+          "art": "bee",
+          "name": "bee",
+          "x": 218,
+          "y": 130
+        },
+        {
+          "id": "sheep-2879",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 707,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "pumpkin-2880",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 563,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "duck-2881",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 642,
+          "y": 345,
+          "flip": true
+        },
+        {
+          "id": "elephant-2882",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 118,
+          "y": 480
+        },
+        {
+          "id": "cat-2883",
+          "art": "cat",
+          "name": "cat",
+          "color": "gray",
+          "x": 412,
+          "y": 475
+        }
+      ]
+    },
+    "sceneAlt": "A beach scene. In the scene: brown owl, bee, gray sheep, orange pumpkin, white duck, gray elephant, gray cat.",
+    "sceneAfter": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "owl-2877",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 272,
+          "y": 505
+        },
+        {
+          "id": "sheep-2879",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 707,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "pumpkin-2880",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 563,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "duck-2881",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 642,
+          "y": 345,
+          "flip": true
+        },
+        {
+          "id": "elephant-2882",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 118,
+          "y": 480
+        },
+        {
+          "id": "cat-2883",
+          "art": "cat",
+          "name": "cat",
+          "color": "gray",
+          "x": 412,
+          "y": 475
+        }
+      ]
+    },
+    "sceneAfterAlt": "A beach scene. In the scene: brown owl, gray sheep, orange pumpkin, white duck, gray elephant, gray cat.",
+    "expectedChanges": [
+      "bee-2878:removed"
+    ]
+  }
+}

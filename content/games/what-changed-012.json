@@ -1,0 +1,200 @@
+{
+  "id": "what-changed-012",
+  "scheduledDate": "2026-12-18",
+  "brand": "together",
+  "gameType": "what-changed",
+  "title": "What changed: park",
+  "prompt": "One thing changed between the before and after park pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the purple bunch of grapes changed colour from green to purple. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the white horse changed colour from white to purple."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the purple bunch of grapes changed colour from green to purple."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: a blue ball appeared."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the white horse vanished."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "bird-2697",
+          "art": "bird",
+          "name": "bird",
+          "color": "red",
+          "x": 168,
+          "y": 440
+        },
+        {
+          "id": "mushroom-2698",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "purple",
+          "x": 555,
+          "y": 480
+        },
+        {
+          "id": "chicken-2699",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 383,
+          "y": 495
+        },
+        {
+          "id": "book-2700",
+          "art": "book",
+          "name": "book",
+          "color": "green",
+          "x": 694,
+          "y": 505
+        },
+        {
+          "id": "bear-2701",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 645,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "rocket-2702",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 661,
+          "y": 165
+        },
+        {
+          "id": "grapes-2703",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 113,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "horse-2704",
+          "art": "horse",
+          "name": "horse",
+          "color": "white",
+          "x": 243,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "bee-2705",
+          "art": "bee",
+          "name": "bee",
+          "x": 195,
+          "y": 140
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: red bird, purple mushroom, white chicken, green book, brown bear, red rocket, green bunch of grapes, white horse, bee.",
+    "sceneAfter": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "bird-2697",
+          "art": "bird",
+          "name": "bird",
+          "color": "red",
+          "x": 168,
+          "y": 440
+        },
+        {
+          "id": "mushroom-2698",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "purple",
+          "x": 555,
+          "y": 480
+        },
+        {
+          "id": "chicken-2699",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 383,
+          "y": 495
+        },
+        {
+          "id": "book-2700",
+          "art": "book",
+          "name": "book",
+          "color": "green",
+          "x": 694,
+          "y": 505
+        },
+        {
+          "id": "bear-2701",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 645,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "rocket-2702",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 661,
+          "y": 165
+        },
+        {
+          "id": "grapes-2703",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 113,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "horse-2704",
+          "art": "horse",
+          "name": "horse",
+          "color": "white",
+          "x": 243,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "bee-2705",
+          "art": "bee",
+          "name": "bee",
+          "x": 195,
+          "y": 140
+        }
+      ]
+    },
+    "sceneAfterAlt": "A park scene. In the scene: red bird, purple mushroom, white chicken, green book, brown bear, red rocket, purple bunch of grapes, white horse, bee.",
+    "expectedChanges": [
+      "grapes-2703:color:green->purple"
+    ]
+  }
+}

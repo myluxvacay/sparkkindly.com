@@ -1,0 +1,111 @@
+{
+  "id": "counting-041",
+  "scheduledDate": "2027-01-29",
+  "brand": "together",
+  "gameType": "counting",
+  "title": "Counting: cars at the street",
+  "prompt": "How many cars can you count in the street?",
+  "difficulty": "medium",
+  "explanation": "Count the cars one by one: there are exactly 8.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 8,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "car-3364",
+          "art": "car",
+          "name": "car",
+          "color": "green",
+          "x": 143,
+          "y": 490
+        },
+        {
+          "id": "car-3365",
+          "art": "car",
+          "name": "car",
+          "color": "red",
+          "x": 332,
+          "y": 505
+        },
+        {
+          "id": "car-3366",
+          "art": "car",
+          "name": "car",
+          "color": "purple",
+          "x": 431,
+          "y": 460
+        },
+        {
+          "id": "car-3367",
+          "art": "car",
+          "name": "car",
+          "color": "blue",
+          "x": 304,
+          "y": 385
+        },
+        {
+          "id": "car-3368",
+          "art": "car",
+          "name": "car",
+          "color": "red",
+          "x": 519,
+          "y": 490
+        },
+        {
+          "id": "car-3369",
+          "art": "car",
+          "name": "car",
+          "color": "blue",
+          "x": 652,
+          "y": 385
+        },
+        {
+          "id": "car-3370",
+          "art": "car",
+          "name": "car",
+          "color": "purple",
+          "x": 682,
+          "y": 505
+        },
+        {
+          "id": "car-3371",
+          "art": "car",
+          "name": "car",
+          "color": "green",
+          "x": 117,
+          "y": 385
+        },
+        {
+          "id": "rocket-3372",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "white",
+          "x": 564,
+          "y": 95
+        },
+        {
+          "id": "rocket-3373",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "white",
+          "x": 237,
+          "y": 120
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: green car, red car, purple car, blue car, red car, blue car, purple car, green car, white rocket, white rocket.",
+    "countTarget": {
+      "art": "car"
+    }
+  }
+}

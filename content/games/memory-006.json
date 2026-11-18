@@ -1,0 +1,131 @@
+{
+  "id": "memory-006",
+  "scheduledDate": "2026-11-13",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: park clock",
+  "prompt": "From memory: what time does the clock in the park show?",
+  "difficulty": "hard",
+  "explanation": "The clock's short hand points past 2 and its long hand shows 35 minutes, so the clock reads 2:35.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "3:35"
+    },
+    {
+      "id": "b",
+      "text": "4:50"
+    },
+    {
+      "id": "c",
+      "text": "2:35"
+    },
+    {
+      "id": "d",
+      "text": "1:35"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "owl-1139",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 699,
+          "y": 505
+        },
+        {
+          "id": "ball-1140",
+          "art": "ball",
+          "name": "ball",
+          "color": "purple",
+          "x": 392,
+          "y": 495
+        },
+        {
+          "id": "car-1141",
+          "art": "car",
+          "name": "car",
+          "color": "green",
+          "x": 243,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "bee-1142",
+          "art": "bee",
+          "name": "bee",
+          "x": 477,
+          "y": 105
+        },
+        {
+          "id": "butterfly-1143",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "purple",
+          "x": 199,
+          "y": 140,
+          "flip": true
+        },
+        {
+          "id": "bird-1144",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 155,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "pine-1145",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 115,
+          "y": 480
+        },
+        {
+          "id": "ball-1146",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 567,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "butterfly-1147",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "purple",
+          "x": 666,
+          "y": 165
+        },
+        {
+          "id": "turtle-1148",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 648,
+          "y": 440,
+          "flip": true
+        }
+      ],
+      "clockTime": "2:35"
+    },
+    "sceneAlt": "A park scene. A clock shows 2:35. In the scene: brown owl, purple ball, green car, bee, purple butterfly, yellow bird, green pine tree, green ball, purple butterfly, green turtle.",
+    "fact": {
+      "type": "clock"
+    }
+  }
+}

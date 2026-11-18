@@ -1,0 +1,39 @@
+{
+  "id": "flags-and-places-010",
+  "scheduledDate": "2026-11-18",
+  "brand": "discover",
+  "gameType": "flags-and-places",
+  "title": "Flags & places: name this flag",
+  "prompt": "This flag belongs to which country?",
+  "difficulty": "medium",
+  "explanation": "Argentina’s flag is sky blue and white with a golden sun.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Switzerland"
+    },
+    {
+      "id": "b",
+      "text": "Argentina"
+    },
+    {
+      "id": "c",
+      "text": "Japan"
+    },
+    {
+      "id": "d",
+      "text": "Australia"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "flags-and-places",
+    "heroArt": "flag-ar",
+    "heroAlt": "A flag: Argentina’s flag is sky blue and white with a golden sun."
+  }
+}

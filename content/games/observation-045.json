@@ -1,0 +1,130 @@
+{
+  "id": "observation-045",
+  "scheduledDate": "2026-11-14",
+  "brand": "together",
+  "gameType": "observation",
+  "title": "Look closely: street present",
+  "prompt": "Which of these can you see in the street?",
+  "difficulty": "hard",
+  "explanation": "The white star is right there in the picture. The other three choices are not in this scene at all.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "blue butterfly"
+    },
+    {
+      "id": "b",
+      "text": "white rabbit"
+    },
+    {
+      "id": "c",
+      "text": "white star"
+    },
+    {
+      "id": "d",
+      "text": "purple hat"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "orange-817",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 135,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "shell-818",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 117,
+          "y": 385
+        },
+        {
+          "id": "rocket-819",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 562,
+          "y": 95
+        },
+        {
+          "id": "owl-820",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 667,
+          "y": 385
+        },
+        {
+          "id": "pig-821",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 513,
+          "y": 490
+        },
+        {
+          "id": "star-822",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 246,
+          "y": 120
+        },
+        {
+          "id": "duck-823",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 326,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "hat-824",
+          "art": "hat",
+          "name": "hat",
+          "color": "green",
+          "x": 293,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "train-825",
+          "art": "train",
+          "name": "train",
+          "color": "blue",
+          "x": 684,
+          "y": 505
+        },
+        {
+          "id": "gift-826",
+          "art": "gift",
+          "name": "gift box",
+          "color": "green",
+          "x": 434,
+          "y": 460
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: orange orange, orange shell, red rocket, brown owl, pink pig, white star, brown duck, green hat, blue train, green gift box.",
+    "fact": {
+      "type": "present",
+      "elementId": "star-822"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "sequence-042",
+  "scheduledDate": "2027-02-26",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the carrot, second the brown chicken, third the yellow ball, fourth the blue boat, fifth the purple planet. So the second one was the brown chicken.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "yellow ball"
+    },
+    {
+      "id": "b",
+      "text": "brown chicken"
+    },
+    {
+      "id": "c",
+      "text": "blue boat"
+    },
+    {
+      "id": "d",
+      "text": "carrot"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "carrot",
+        "label": "carrot"
+      },
+      {
+        "art": "chicken",
+        "label": "brown chicken",
+        "color": "brown"
+      },
+      {
+        "art": "ball",
+        "label": "yellow ball",
+        "color": "yellow"
+      },
+      {
+        "art": "boat",
+        "label": "blue boat",
+        "color": "blue"
+      },
+      {
+        "art": "planet",
+        "label": "purple planet",
+        "color": "purple"
+      }
+    ],
+    "askPosition": 2
+  }
+}

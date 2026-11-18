@@ -1,0 +1,131 @@
+{
+  "id": "memory-047",
+  "scheduledDate": "2026-11-10",
+  "brand": "play",
+  "gameType": "memory",
+  "title": "Memory: beach sign",
+  "prompt": "From memory: what does the sign in the beach say?",
+  "difficulty": "medium",
+  "explanation": "The sign in the picture reads \"Farm Shop\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Post"
+    },
+    {
+      "id": "b",
+      "text": "Harbour"
+    },
+    {
+      "id": "c",
+      "text": "Farm Shop"
+    },
+    {
+      "id": "d",
+      "text": "Bakery"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "bird-2095",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 514,
+          "y": 105
+        },
+        {
+          "id": "duck-2096",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 465,
+          "y": 325,
+          "flip": true
+        },
+        {
+          "id": "fish-2097",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 646,
+          "y": 345
+        },
+        {
+          "id": "frog-2098",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 342,
+          "y": 440
+        },
+        {
+          "id": "duck-2099",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 302,
+          "y": 345
+        },
+        {
+          "id": "balloon-2100",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "yellow",
+          "x": 692,
+          "y": 160
+        },
+        {
+          "id": "cupcake-2101",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "blue",
+          "x": 273,
+          "y": 505
+        },
+        {
+          "id": "bird-2102",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 570,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "turtle-2103",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 137,
+          "y": 330,
+          "flip": true
+        },
+        {
+          "id": "cow-2104",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 706,
+          "y": 480,
+          "flip": true
+        }
+      ],
+      "signText": "Farm Shop"
+    },
+    "sceneAlt": "A beach scene. A sign reads \"Farm Shop\". In the scene: green bird, yellow duck, blue fish, green frog, brown duck, yellow balloon, blue cupcake, yellow bird, green turtle, white cow.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

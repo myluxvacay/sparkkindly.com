@@ -1,0 +1,186 @@
+{
+  "id": "spot-difference-012",
+  "scheduledDate": "2026-11-20",
+  "brand": "together",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: kitchen",
+  "prompt": "Three things changed between the two kitchen pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The banana turned around, the black horse changed colour from white to black and the orange crab turned around. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The banana turned around, the black horse changed colour from white to black and the yellow hat vanished."
+    },
+    {
+      "id": "b",
+      "text": "The banana turned around, the black horse changed colour from white to black and the orange crab turned around."
+    },
+    {
+      "id": "c",
+      "text": "The yellow hat changed colour from yellow to purple, the black horse changed colour from white to black and the orange crab turned around."
+    },
+    {
+      "id": "d",
+      "text": "The banana turned around, a yellow balloon appeared and the orange crab turned around."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "kitchen",
+      "elements": [
+        {
+          "id": "banana-2313",
+          "art": "banana",
+          "name": "banana",
+          "x": 706,
+          "y": 396
+        },
+        {
+          "id": "horse-2314",
+          "art": "horse",
+          "name": "horse",
+          "color": "white",
+          "x": 517,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "cow-2315",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 113,
+          "y": 508
+        },
+        {
+          "id": "hat-2316",
+          "art": "hat",
+          "name": "hat",
+          "color": "yellow",
+          "x": 335,
+          "y": 396
+        },
+        {
+          "id": "crab-2317",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 294,
+          "y": 508
+        },
+        {
+          "id": "cat-2318",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 698,
+          "y": 508
+        },
+        {
+          "id": "grapes-2319",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 603,
+          "y": 396
+        },
+        {
+          "id": "hat-2320",
+          "art": "hat",
+          "name": "hat",
+          "color": "green",
+          "x": 473,
+          "y": 396,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A kitchen scene. In the scene: banana, white horse, brown cow, yellow hat, orange crab, orange cat, green bunch of grapes, green hat.",
+    "sceneAfter": {
+      "template": "kitchen",
+      "elements": [
+        {
+          "id": "banana-2313",
+          "art": "banana",
+          "name": "banana",
+          "x": 706,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "horse-2314",
+          "art": "horse",
+          "name": "horse",
+          "color": "black",
+          "x": 517,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "cow-2315",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 113,
+          "y": 508
+        },
+        {
+          "id": "hat-2316",
+          "art": "hat",
+          "name": "hat",
+          "color": "yellow",
+          "x": 335,
+          "y": 396
+        },
+        {
+          "id": "crab-2317",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 294,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "cat-2318",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 698,
+          "y": 508
+        },
+        {
+          "id": "grapes-2319",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 603,
+          "y": 396
+        },
+        {
+          "id": "hat-2320",
+          "art": "hat",
+          "name": "hat",
+          "color": "green",
+          "x": 473,
+          "y": 396,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAfterAlt": "A kitchen scene. In the scene: banana, black horse, brown cow, yellow hat, orange crab, orange cat, green bunch of grapes, green hat.",
+    "expectedChanges": [
+      "banana-2313:turned",
+      "horse-2314:color:white->black",
+      "crab-2317:turned"
+    ]
+  }
+}

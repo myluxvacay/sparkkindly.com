@@ -1,0 +1,101 @@
+{
+  "id": "counting-008",
+  "scheduledDate": "2027-01-12",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: sheeps at the farm",
+  "prompt": "How many sheeps can you count in the farm?",
+  "difficulty": "medium",
+  "explanation": "Count the sheeps one by one: there are exactly 6.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 6,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "sheep-3059",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 626,
+          "y": 425
+        },
+        {
+          "id": "sheep-3060",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 241,
+          "y": 430
+        },
+        {
+          "id": "sheep-3061",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 369,
+          "y": 505
+        },
+        {
+          "id": "sheep-3062",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 431,
+          "y": 500
+        },
+        {
+          "id": "sheep-3063",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 292,
+          "y": 470
+        },
+        {
+          "id": "sheep-3064",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 560,
+          "y": 465
+        },
+        {
+          "id": "cupcake-3065",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "purple",
+          "x": 733,
+          "y": 450
+        },
+        {
+          "id": "penguin-3066",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 689,
+          "y": 500
+        },
+        {
+          "id": "bee-3067",
+          "art": "bee",
+          "name": "bee",
+          "x": 708,
+          "y": 170
+        }
+      ]
+    },
+    "sceneAlt": "A farm scene. In the scene: black sheep, gray sheep, black sheep, white sheep, gray sheep, gray sheep, purple cupcake, penguin, bee.",
+    "countTarget": {
+      "art": "sheep"
+    }
+  }
+}

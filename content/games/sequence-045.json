@@ -1,0 +1,65 @@
+{
+  "id": "sequence-045",
+  "scheduledDate": "2027-02-28",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the blue train, second the purple umbrella, third the brown snail, fourth the red balloon, fifth the white chicken. So the second one was the purple umbrella.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "red balloon"
+    },
+    {
+      "id": "b",
+      "text": "blue train"
+    },
+    {
+      "id": "c",
+      "text": "purple umbrella"
+    },
+    {
+      "id": "d",
+      "text": "brown snail"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "train",
+        "label": "blue train",
+        "color": "blue"
+      },
+      {
+        "art": "umbrella",
+        "label": "purple umbrella",
+        "color": "purple"
+      },
+      {
+        "art": "snail",
+        "label": "brown snail",
+        "color": "brown"
+      },
+      {
+        "art": "balloon",
+        "label": "red balloon",
+        "color": "red"
+      },
+      {
+        "art": "chicken",
+        "label": "white chicken",
+        "color": "white"
+      }
+    ],
+    "askPosition": 2
+  }
+}

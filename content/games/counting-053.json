@@ -1,0 +1,104 @@
+{
+  "id": "counting-053",
+  "scheduledDate": "2027-02-04",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: crabs at the beach",
+  "prompt": "How many crabs can you count in the beach?",
+  "difficulty": "medium",
+  "explanation": "Count the crabs one by one: there are exactly 6.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 6,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "crab-3470",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 422,
+          "y": 475
+        },
+        {
+          "id": "crab-3471",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 574,
+          "y": 505
+        },
+        {
+          "id": "crab-3472",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 354,
+          "y": 440
+        },
+        {
+          "id": "crab-3473",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 702,
+          "y": 480
+        },
+        {
+          "id": "crab-3474",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 265,
+          "y": 505
+        },
+        {
+          "id": "crab-3475",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 122,
+          "y": 480
+        },
+        {
+          "id": "star-3476",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 218,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "butterfly-3477",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "purple",
+          "x": 691,
+          "y": 160
+        },
+        {
+          "id": "fish-3478",
+          "art": "fish",
+          "name": "fish",
+          "color": "pink",
+          "x": 474,
+          "y": 325
+        }
+      ]
+    },
+    "sceneAlt": "A beach scene. In the scene: orange crab, red crab, orange crab, red crab, red crab, orange crab, white star, purple butterfly, pink fish.",
+    "countTarget": {
+      "art": "crab"
+    }
+  }
+}

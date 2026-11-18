@@ -1,0 +1,95 @@
+{
+  "id": "memory-031",
+  "scheduledDate": "2026-11-11",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: kitchen clock",
+  "prompt": "From memory: what time does the clock in the kitchen show?",
+  "difficulty": "easy",
+  "explanation": "The clock's short hand points towards 9 and its long hand shows 0 minutes, so the clock reads 9:00.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "9:00"
+    },
+    {
+      "id": "b",
+      "text": "8:00"
+    },
+    {
+      "id": "c",
+      "text": "9:45"
+    },
+    {
+      "id": "d",
+      "text": "9:30"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "kitchen",
+      "elements": [
+        {
+          "id": "orange-1663",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 331,
+          "y": 396
+        },
+        {
+          "id": "penguin-1664",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 524,
+          "y": 508
+        },
+        {
+          "id": "cat-1665",
+          "art": "cat",
+          "name": "cat",
+          "color": "black",
+          "x": 463,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "sheep-1666",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 114,
+          "y": 508
+        },
+        {
+          "id": "apple-1667",
+          "art": "apple",
+          "name": "apple",
+          "color": "yellow",
+          "x": 700,
+          "y": 396
+        },
+        {
+          "id": "book-1668",
+          "art": "book",
+          "name": "book",
+          "color": "purple",
+          "x": 687,
+          "y": 508
+        }
+      ],
+      "clockTime": "9:00"
+    },
+    "sceneAlt": "A kitchen scene. A clock shows 9:00. In the scene: orange orange, penguin, black cat, gray sheep, yellow apple, purple book.",
+    "fact": {
+      "type": "clock"
+    }
+  }
+}

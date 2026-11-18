@@ -1,0 +1,56 @@
+{
+  "id": "sequence-031",
+  "scheduledDate": "2027-02-21",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the white cat, second the green balloon, third the white horse. So the second one was the green balloon.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "green balloon"
+    },
+    {
+      "id": "b",
+      "text": "white boat"
+    },
+    {
+      "id": "c",
+      "text": "white horse"
+    },
+    {
+      "id": "d",
+      "text": "white cat"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "cat",
+        "label": "white cat",
+        "color": "white"
+      },
+      {
+        "art": "balloon",
+        "label": "green balloon",
+        "color": "green"
+      },
+      {
+        "art": "horse",
+        "label": "white horse",
+        "color": "white"
+      }
+    ],
+    "askPosition": 2,
+    "decoyLabel": "white boat"
+  }
+}

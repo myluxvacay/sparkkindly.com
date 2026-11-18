@@ -1,0 +1,126 @@
+{
+  "id": "memory-048",
+  "scheduledDate": "2026-11-10",
+  "brand": "discover",
+  "gameType": "memory",
+  "title": "Memory: space scene color",
+  "prompt": "From memory: what colour is the hat in the space scene?",
+  "difficulty": "hard",
+  "explanation": "The hat in the picture is purple — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "pink"
+    },
+    {
+      "id": "b",
+      "text": "purple"
+    },
+    {
+      "id": "c",
+      "text": "yellow"
+    },
+    {
+      "id": "d",
+      "text": "brown"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "space",
+      "elements": [
+        {
+          "id": "kite-2105",
+          "art": "kite",
+          "name": "kite",
+          "color": "green",
+          "x": 293,
+          "y": 150
+        },
+        {
+          "id": "kite-2106",
+          "art": "kite",
+          "name": "kite",
+          "color": "pink",
+          "x": 208,
+          "y": 320,
+          "flip": true
+        },
+        {
+          "id": "mushroom-2107",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "red",
+          "x": 171,
+          "y": 480
+        },
+        {
+          "id": "planet-2108",
+          "art": "planet",
+          "name": "planet",
+          "color": "pink",
+          "x": 476,
+          "y": 210
+        },
+        {
+          "id": "moon-2109",
+          "art": "moon",
+          "name": "moon",
+          "x": 554,
+          "y": 330
+        },
+        {
+          "id": "kite-2110",
+          "art": "kite",
+          "name": "kite",
+          "color": "red",
+          "x": 135,
+          "y": 200
+        },
+        {
+          "id": "kite-2111",
+          "art": "kite",
+          "name": "kite",
+          "color": "green",
+          "x": 379,
+          "y": 300
+        },
+        {
+          "id": "bee-2112",
+          "art": "bee",
+          "name": "bee",
+          "x": 648,
+          "y": 160
+        },
+        {
+          "id": "hat-2113",
+          "art": "hat",
+          "name": "hat",
+          "color": "purple",
+          "x": 623,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "carrot-2114",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 395,
+          "y": 495
+        }
+      ]
+    },
+    "sceneAlt": "A space scene. In the scene: green kite, pink kite, red mushroom, pink planet, moon, red kite, green kite, bee, purple hat, carrot.",
+    "fact": {
+      "type": "color",
+      "elementId": "hat-2113"
+    }
+  }
+}

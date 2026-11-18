@@ -1,0 +1,128 @@
+{
+  "id": "observation-020",
+  "scheduledDate": "2026-11-16",
+  "brand": "play",
+  "gameType": "observation",
+  "title": "Look closely: beach present",
+  "prompt": "Which of these can you see in the beach?",
+  "difficulty": "medium",
+  "explanation": "The yellow balloon is right there in the picture. The other three choices are not in this scene at all.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "red gift box"
+    },
+    {
+      "id": "b",
+      "text": "yellow balloon"
+    },
+    {
+      "id": "c",
+      "text": "pink cupcake"
+    },
+    {
+      "id": "d",
+      "text": "purple mushroom"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "fish-378",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 305,
+          "y": 345
+        },
+        {
+          "id": "butterfly-379",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "pink",
+          "x": 694,
+          "y": 160
+        },
+        {
+          "id": "boat-380",
+          "art": "boat",
+          "name": "boat",
+          "color": "red",
+          "x": 136,
+          "y": 330
+        },
+        {
+          "id": "turtle-381",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 702,
+          "y": 480
+        },
+        {
+          "id": "balloon-382",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "yellow",
+          "x": 526,
+          "y": 105,
+          "flip": true
+        },
+        {
+          "id": "bird-383",
+          "art": "bird",
+          "name": "bird",
+          "color": "red",
+          "x": 220,
+          "y": 130
+        },
+        {
+          "id": "ladybug-384",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 273,
+          "y": 505
+        },
+        {
+          "id": "crab-385",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 473,
+          "y": 325
+        },
+        {
+          "id": "train-386",
+          "art": "train",
+          "name": "train",
+          "color": "blue",
+          "x": 566,
+          "y": 505
+        },
+        {
+          "id": "umbrella-387",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "red",
+          "x": 344,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAlt": "A beach scene. In the scene: blue fish, pink butterfly, red boat, green turtle, yellow balloon, red bird, red ladybug, orange crab, blue train, red umbrella.",
+    "fact": {
+      "type": "present",
+      "elementId": "balloon-382"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "sequence-038",
+  "scheduledDate": "2027-02-24",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came fourth?",
+  "prompt": "Spark showed some things in order. What came fourth?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the purple hat, second the green bird, third the purple flower, fourth the orange butterfly. So the fourth one was the orange butterfly.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "purple flower"
+    },
+    {
+      "id": "b",
+      "text": "orange butterfly"
+    },
+    {
+      "id": "c",
+      "text": "green bird"
+    },
+    {
+      "id": "d",
+      "text": "purple hat"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "hat",
+        "label": "purple hat",
+        "color": "purple"
+      },
+      {
+        "art": "bird",
+        "label": "green bird",
+        "color": "green"
+      },
+      {
+        "art": "flower",
+        "label": "purple flower",
+        "color": "purple"
+      },
+      {
+        "art": "butterfly",
+        "label": "orange butterfly",
+        "color": "orange"
+      }
+    ],
+    "askPosition": 4
+  }
+}

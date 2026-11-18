@@ -1,0 +1,56 @@
+{
+  "id": "sequence-040",
+  "scheduledDate": "2027-02-25",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the white boat, second the green car, third the orange orange. So the second one was the green car.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "green frog"
+    },
+    {
+      "id": "b",
+      "text": "green car"
+    },
+    {
+      "id": "c",
+      "text": "white boat"
+    },
+    {
+      "id": "d",
+      "text": "orange orange"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "boat",
+        "label": "white boat",
+        "color": "white"
+      },
+      {
+        "art": "car",
+        "label": "green car",
+        "color": "green"
+      },
+      {
+        "art": "orange",
+        "label": "orange orange",
+        "color": "orange"
+      }
+    ],
+    "askPosition": 2,
+    "decoyLabel": "green frog"
+  }
+}

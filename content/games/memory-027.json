@@ -1,0 +1,127 @@
+{
+  "id": "memory-027",
+  "scheduledDate": "2026-11-11",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: street sign",
+  "prompt": "From memory: what does the sign in the street say?",
+  "difficulty": "hard",
+  "explanation": "The sign in the picture reads \"Farm Shop\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bakery"
+    },
+    {
+      "id": "b",
+      "text": "Fruit"
+    },
+    {
+      "id": "c",
+      "text": "Farm Shop"
+    },
+    {
+      "id": "d",
+      "text": "Toys"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "moon-1579",
+          "art": "moon",
+          "name": "moon",
+          "x": 236,
+          "y": 120,
+          "flip": true
+        },
+        {
+          "id": "turtle-1580",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 696,
+          "y": 505
+        },
+        {
+          "id": "orange-1581",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 305,
+          "y": 385
+        },
+        {
+          "id": "frog-1582",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 660,
+          "y": 385
+        },
+        {
+          "id": "book-1583",
+          "art": "book",
+          "name": "book",
+          "color": "purple",
+          "x": 142,
+          "y": 490
+        },
+        {
+          "id": "elephant-1584",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 332,
+          "y": 505
+        },
+        {
+          "id": "pig-1585",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 435,
+          "y": 460
+        },
+        {
+          "id": "star-1586",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 557,
+          "y": 95
+        },
+        {
+          "id": "crab-1587",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 125,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "banana-1588",
+          "art": "banana",
+          "name": "banana",
+          "x": 523,
+          "y": 490
+        }
+      ],
+      "signText": "Farm Shop"
+    },
+    "sceneAlt": "A street scene. A sign reads \"Farm Shop\". In the scene: moon, green turtle, orange orange, green frog, purple book, gray elephant, pink pig, yellow star, red crab, banana.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

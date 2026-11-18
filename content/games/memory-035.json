@@ -1,0 +1,111 @@
+{
+  "id": "memory-035",
+  "scheduledDate": "2026-11-11",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: street absent",
+  "prompt": "From memory: which of these was NOT in the street?",
+  "difficulty": "medium",
+  "explanation": "The blue butterfly never appeared in the picture. The other three choices were all there to be spotted.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "brown bear"
+    },
+    {
+      "id": "b",
+      "text": "blue butterfly"
+    },
+    {
+      "id": "c",
+      "text": "black cat"
+    },
+    {
+      "id": "d",
+      "text": "white rocket"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "bear-1721",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 120,
+          "y": 385
+        },
+        {
+          "id": "cat-1722",
+          "art": "cat",
+          "name": "cat",
+          "color": "black",
+          "x": 145,
+          "y": 490
+        },
+        {
+          "id": "planet-1723",
+          "art": "planet",
+          "name": "planet",
+          "color": "purple",
+          "x": 558,
+          "y": 95
+        },
+        {
+          "id": "carrot-1724",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 519,
+          "y": 490
+        },
+        {
+          "id": "umbrella-1725",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "purple",
+          "x": 299,
+          "y": 385
+        },
+        {
+          "id": "snowman-1726",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 429,
+          "y": 460,
+          "flip": true
+        },
+        {
+          "id": "rocket-1727",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "white",
+          "x": 246,
+          "y": 120,
+          "flip": true
+        },
+        {
+          "id": "grapes-1728",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 697,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: brown bear, black cat, purple planet, carrot, purple umbrella, snowman, white rocket, purple bunch of grapes.",
+    "fact": {
+      "type": "absent",
+      "label": "blue butterfly"
+    }
+  }
+}

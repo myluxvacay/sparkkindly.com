@@ -1,0 +1,64 @@
+{
+  "id": "sequence-009",
+  "scheduledDate": "2027-02-10",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the purple ball, second the green gift box, third the bee, fourth the black bear, fifth the orange cat. So the second one was the green gift box.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "bee"
+    },
+    {
+      "id": "b",
+      "text": "purple ball"
+    },
+    {
+      "id": "c",
+      "text": "green gift box"
+    },
+    {
+      "id": "d",
+      "text": "black bear"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "ball",
+        "label": "purple ball",
+        "color": "purple"
+      },
+      {
+        "art": "gift",
+        "label": "green gift box",
+        "color": "green"
+      },
+      {
+        "art": "bee",
+        "label": "bee"
+      },
+      {
+        "art": "bear",
+        "label": "black bear",
+        "color": "black"
+      },
+      {
+        "art": "cat",
+        "label": "orange cat",
+        "color": "orange"
+      }
+    ],
+    "askPosition": 2
+  }
+}

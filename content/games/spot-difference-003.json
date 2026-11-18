@@ -1,0 +1,187 @@
+{
+  "id": "spot-difference-003",
+  "scheduledDate": "2026-11-09",
+  "brand": "discover",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: space scene",
+  "prompt": "Three things changed between the two space scene pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The moon moved, the yellow bird moved and the orange tree vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The moon moved, the yellow bird moved and the orange tree vanished."
+    },
+    {
+      "id": "b",
+      "text": "The white cow changed colour from white to purple, the yellow bird moved and the orange tree vanished."
+    },
+    {
+      "id": "c",
+      "text": "The moon moved, a green frog appeared and the orange tree vanished."
+    },
+    {
+      "id": "d",
+      "text": "The moon moved, the yellow bird moved and the white cow vanished."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "space",
+      "elements": [
+        {
+          "id": "tree-2250",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 402,
+          "y": 495,
+          "flip": true
+        },
+        {
+          "id": "balloon-2251",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "pink",
+          "x": 562,
+          "y": 330,
+          "flip": true
+        },
+        {
+          "id": "moon-2252",
+          "art": "moon",
+          "name": "moon",
+          "x": 471,
+          "y": 210
+        },
+        {
+          "id": "cow-2253",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 630,
+          "y": 480
+        },
+        {
+          "id": "house-2254",
+          "art": "house",
+          "name": "house",
+          "color": "white",
+          "x": 168,
+          "y": 480
+        },
+        {
+          "id": "bird-2255",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 215,
+          "y": 320
+        },
+        {
+          "id": "moon-2256",
+          "art": "moon",
+          "name": "moon",
+          "x": 297,
+          "y": 150
+        },
+        {
+          "id": "bird-2257",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 383,
+          "y": 300
+        },
+        {
+          "id": "moon-2258",
+          "art": "moon",
+          "name": "moon",
+          "x": 131,
+          "y": 200
+        }
+      ]
+    },
+    "sceneAlt": "A space scene. In the scene: orange tree, pink balloon, moon, white cow, white house, blue bird, moon, yellow bird, moon.",
+    "sceneAfter": {
+      "template": "space",
+      "elements": [
+        {
+          "id": "balloon-2251",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "pink",
+          "x": 562,
+          "y": 330,
+          "flip": true
+        },
+        {
+          "id": "moon-2252",
+          "art": "moon",
+          "name": "moon",
+          "x": 471,
+          "y": 210
+        },
+        {
+          "id": "cow-2253",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 630,
+          "y": 480
+        },
+        {
+          "id": "house-2254",
+          "art": "house",
+          "name": "house",
+          "color": "white",
+          "x": 168,
+          "y": 480
+        },
+        {
+          "id": "bird-2255",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 215,
+          "y": 320
+        },
+        {
+          "id": "moon-2256",
+          "art": "moon",
+          "name": "moon",
+          "x": 127,
+          "y": 150
+        },
+        {
+          "id": "bird-2257",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 213,
+          "y": 300
+        },
+        {
+          "id": "moon-2258",
+          "art": "moon",
+          "name": "moon",
+          "x": 131,
+          "y": 200
+        }
+      ]
+    },
+    "sceneAfterAlt": "A space scene. In the scene: pink balloon, moon, white cow, white house, blue bird, moon, yellow bird, moon.",
+    "expectedChanges": [
+      "moon-2256:moved",
+      "bird-2257:moved",
+      "tree-2250:removed"
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "id": "counting-009",
+  "scheduledDate": "2027-01-13",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: red flowers at the meadow",
+  "prompt": "How many red flowers can you count in the meadow?",
+  "difficulty": "hard",
+  "explanation": "Count the red flowers one by one: there are exactly 9. Only the red ones count — the other colours are decoys.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 9,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "flower-3068",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 178,
+          "y": 430,
+          "flip": true
+        },
+        {
+          "id": "flower-3069",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 108,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "flower-3070",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 240,
+          "y": 495
+        },
+        {
+          "id": "flower-3071",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 627,
+          "y": 465
+        },
+        {
+          "id": "flower-3072",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 375,
+          "y": 460
+        },
+        {
+          "id": "flower-3073",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 434,
+          "y": 505
+        },
+        {
+          "id": "flower-3074",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 503,
+          "y": 495
+        },
+        {
+          "id": "flower-3075",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 712,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "flower-3076",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 560,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "rocket-3077",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 169,
+          "y": 140
+        },
+        {
+          "id": "bee-3078",
+          "art": "bee",
+          "name": "bee",
+          "x": 427,
+          "y": 100,
+          "flip": true
+        },
+        {
+          "id": "bird-3079",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 643,
+          "y": 150
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: red flower, red flower, red flower, red flower, red flower, red flower, red flower, red flower, red flower, red rocket, bee, yellow bird.",
+    "countTarget": {
+      "art": "flower",
+      "color": "red"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "counting-017",
+  "scheduledDate": "2027-01-17",
+  "brand": "grow",
+  "gameType": "counting",
+  "title": "Counting: flowers at the garden",
+  "prompt": "How many flowers can you count in the garden?",
+  "difficulty": "medium",
+  "explanation": "Count the flowers one by one: there are exactly 9.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 9,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "flower-3142",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 267,
+          "y": 405
+        },
+        {
+          "id": "flower-3143",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 132,
+          "y": 505
+        },
+        {
+          "id": "flower-3144",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 115,
+          "y": 425
+        },
+        {
+          "id": "flower-3145",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 536,
+          "y": 405
+        },
+        {
+          "id": "flower-3146",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 674,
+          "y": 425
+        },
+        {
+          "id": "flower-3147",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 306,
+          "y": 510,
+          "flip": true
+        },
+        {
+          "id": "flower-3148",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 395,
+          "y": 430
+        },
+        {
+          "id": "flower-3149",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 651,
+          "y": 510
+        },
+        {
+          "id": "flower-3150",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 478,
+          "y": 505
+        },
+        {
+          "id": "rocket-3151",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 523,
+          "y": 110
+        },
+        {
+          "id": "bird-3152",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 228,
+          "y": 135
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: white flower, white flower, red flower, purple flower, purple flower, white flower, purple flower, red flower, red flower, red rocket, blue bird.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "sequence-035",
+  "scheduledDate": "2027-02-23",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the blue balloon, second the brown chicken, third the green bunch of grapes, fourth the red rocket. So the third one was the green bunch of grapes.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "brown chicken"
+    },
+    {
+      "id": "b",
+      "text": "red rocket"
+    },
+    {
+      "id": "c",
+      "text": "green bunch of grapes"
+    },
+    {
+      "id": "d",
+      "text": "blue balloon"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "balloon",
+        "label": "blue balloon",
+        "color": "blue"
+      },
+      {
+        "art": "chicken",
+        "label": "brown chicken",
+        "color": "brown"
+      },
+      {
+        "art": "grapes",
+        "label": "green bunch of grapes",
+        "color": "green"
+      },
+      {
+        "art": "rocket",
+        "label": "red rocket",
+        "color": "red"
+      }
+    ],
+    "askPosition": 3
+  }
+}

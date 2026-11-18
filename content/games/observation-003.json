@@ -1,0 +1,141 @@
+{
+  "id": "observation-003",
+  "scheduledDate": "2026-11-17",
+  "brand": "play",
+  "gameType": "observation",
+  "title": "Look closely: meadow color",
+  "prompt": "What colour is the turtle in the meadow?",
+  "difficulty": "hard",
+  "explanation": "The turtle in the picture is green — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "yellow"
+    },
+    {
+      "id": "b",
+      "text": "purple"
+    },
+    {
+      "id": "c",
+      "text": "gray"
+    },
+    {
+      "id": "d",
+      "text": "green"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "carrot-14",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 558,
+          "y": 425
+        },
+        {
+          "id": "turtle-15",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 240,
+          "y": 495
+        },
+        {
+          "id": "penguin-16",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 632,
+          "y": 465,
+          "flip": true
+        },
+        {
+          "id": "car-17",
+          "art": "car",
+          "name": "car",
+          "color": "purple",
+          "x": 498,
+          "y": 495
+        },
+        {
+          "id": "banana-18",
+          "art": "banana",
+          "name": "banana",
+          "x": 180,
+          "y": 430
+        },
+        {
+          "id": "star-19",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 166,
+          "y": 140
+        },
+        {
+          "id": "gift-20",
+          "art": "gift",
+          "name": "gift box",
+          "color": "blue",
+          "x": 378,
+          "y": 460
+        },
+        {
+          "id": "rocket-21",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 645,
+          "y": 150,
+          "flip": true
+        },
+        {
+          "id": "cloud-22",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 415,
+          "y": 100
+        },
+        {
+          "id": "cat-23",
+          "art": "cat",
+          "name": "cat",
+          "color": "gray",
+          "x": 720,
+          "y": 500
+        },
+        {
+          "id": "ball-24",
+          "art": "ball",
+          "name": "ball",
+          "color": "yellow",
+          "x": 111,
+          "y": 470
+        },
+        {
+          "id": "carrot-25",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 426,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: carrot, green turtle, penguin, purple car, banana, yellow star, blue gift box, blue rocket, white cloud, gray cat, yellow ball, carrot.",
+    "fact": {
+      "type": "color",
+      "elementId": "turtle-15"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "what-changed-044",
+  "scheduledDate": "2027-01-03",
+  "brand": "grow",
+  "gameType": "what-changed",
+  "title": "What changed: classroom",
+  "prompt": "One thing changed between the before and after classroom pictures. What changed?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the red crab changed colour from orange to red. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the white cupcake vanished."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the white cupcake changed colour from white to purple."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: a red kite appeared."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the red crab changed colour from orange to red."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "cupcake-2919",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 120,
+          "y": 470
+        },
+        {
+          "id": "flower-2920",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 481,
+          "y": 505
+        },
+        {
+          "id": "grapes-2921",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 197,
+          "y": 425
+        },
+        {
+          "id": "mushroom-2922",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "brown",
+          "x": 572,
+          "y": 500
+        },
+        {
+          "id": "dog-2923",
+          "art": "dog",
+          "name": "dog",
+          "color": "brown",
+          "x": 423,
+          "y": 465
+        },
+        {
+          "id": "tree-2924",
+          "art": "tree",
+          "name": "tree",
+          "color": "green",
+          "x": 262,
+          "y": 500
+        },
+        {
+          "id": "crab-2925",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 645,
+          "y": 425,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: white cupcake, yellow flower, purple bunch of grapes, brown mushroom, brown dog, green tree, orange crab.",
+    "sceneAfter": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "cupcake-2919",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 120,
+          "y": 470
+        },
+        {
+          "id": "flower-2920",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 481,
+          "y": 505
+        },
+        {
+          "id": "grapes-2921",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 197,
+          "y": 425
+        },
+        {
+          "id": "mushroom-2922",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "brown",
+          "x": 572,
+          "y": 500
+        },
+        {
+          "id": "dog-2923",
+          "art": "dog",
+          "name": "dog",
+          "color": "brown",
+          "x": 423,
+          "y": 465
+        },
+        {
+          "id": "tree-2924",
+          "art": "tree",
+          "name": "tree",
+          "color": "green",
+          "x": 262,
+          "y": 500
+        },
+        {
+          "id": "crab-2925",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 645,
+          "y": 425,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAfterAlt": "A classroom scene. In the scene: white cupcake, yellow flower, purple bunch of grapes, brown mushroom, brown dog, green tree, red crab.",
+    "expectedChanges": [
+      "crab-2925:color:orange->red"
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "memory-020",
+  "scheduledDate": "2026-11-12",
+  "brand": "play",
+  "gameType": "memory",
+  "title": "Memory: meadow absent",
+  "prompt": "From memory: which of these was NOT in the meadow?",
+  "difficulty": "medium",
+  "explanation": "The blue fish never appeared in the picture. The other three choices were all there to be spotted.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "yellow house"
+    },
+    {
+      "id": "b",
+      "text": "blue fish"
+    },
+    {
+      "id": "c",
+      "text": "white shell"
+    },
+    {
+      "id": "d",
+      "text": "yellow bird"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "crab-1503",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 635,
+          "y": 465,
+          "flip": true
+        },
+        {
+          "id": "cow-1504",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 240,
+          "y": 495
+        },
+        {
+          "id": "bird-1505",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 171,
+          "y": 140
+        },
+        {
+          "id": "cat-1506",
+          "art": "cat",
+          "name": "cat",
+          "color": "white",
+          "x": 428,
+          "y": 505
+        },
+        {
+          "id": "house-1507",
+          "art": "house",
+          "name": "house",
+          "color": "yellow",
+          "x": 503,
+          "y": 495
+        },
+        {
+          "id": "duck-1508",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 554,
+          "y": 425
+        },
+        {
+          "id": "chicken-1509",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 363,
+          "y": 460
+        },
+        {
+          "id": "shell-1510",
+          "art": "shell",
+          "name": "shell",
+          "color": "white",
+          "x": 113,
+          "y": 470,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: orange crab, brown cow, yellow bird, white cat, yellow house, brown duck, brown chicken, white shell.",
+    "fact": {
+      "type": "absent",
+      "label": "blue fish"
+    }
+  }
+}

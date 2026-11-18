@@ -1,0 +1,95 @@
+{
+  "id": "observation-052",
+  "scheduledDate": "2026-11-14",
+  "brand": "kids",
+  "gameType": "observation",
+  "title": "Look closely: garden sign",
+  "prompt": "What does the sign in the garden say?",
+  "difficulty": "easy",
+  "explanation": "The sign in the picture reads \"Flowers\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Fruit"
+    },
+    {
+      "id": "b",
+      "text": "Flowers"
+    },
+    {
+      "id": "c",
+      "text": "Tickets"
+    },
+    {
+      "id": "d",
+      "text": "Harbour"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "snowman-881",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 397,
+          "y": 430
+        },
+        {
+          "id": "butterfly-882",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "pink",
+          "x": 231,
+          "y": 135
+        },
+        {
+          "id": "house-883",
+          "art": "house",
+          "name": "house",
+          "color": "yellow",
+          "x": 132,
+          "y": 505
+        },
+        {
+          "id": "pine-884",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 305,
+          "y": 510
+        },
+        {
+          "id": "house-885",
+          "art": "house",
+          "name": "house",
+          "color": "yellow",
+          "x": 477,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "grapes-886",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 543,
+          "y": 405
+        }
+      ],
+      "signText": "Flowers"
+    },
+    "sceneAlt": "A garden scene. A sign reads \"Flowers\". In the scene: snowman, pink butterfly, yellow house, green pine tree, yellow house, green bunch of grapes.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

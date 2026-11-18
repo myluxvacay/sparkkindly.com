@@ -1,0 +1,128 @@
+{
+  "id": "memory-042",
+  "scheduledDate": "2026-11-10",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: street sign",
+  "prompt": "From memory: what does the sign in the street say?",
+  "difficulty": "hard",
+  "explanation": "The sign in the picture reads \"Post\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Farm Shop"
+    },
+    {
+      "id": "b",
+      "text": "Post"
+    },
+    {
+      "id": "c",
+      "text": "Flowers"
+    },
+    {
+      "id": "d",
+      "text": "Harbour"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "horse-2053",
+          "art": "horse",
+          "name": "horse",
+          "color": "white",
+          "x": 139,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "snail-2054",
+          "art": "snail",
+          "name": "snail",
+          "color": "brown",
+          "x": 656,
+          "y": 385
+        },
+        {
+          "id": "hat-2055",
+          "art": "hat",
+          "name": "hat",
+          "color": "blue",
+          "x": 525,
+          "y": 490
+        },
+        {
+          "id": "bird-2056",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 240,
+          "y": 120
+        },
+        {
+          "id": "umbrella-2057",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "purple",
+          "x": 423,
+          "y": 460
+        },
+        {
+          "id": "turtle-2058",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 325,
+          "y": 505
+        },
+        {
+          "id": "cow-2059",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 306,
+          "y": 385
+        },
+        {
+          "id": "house-2060",
+          "art": "house",
+          "name": "house",
+          "color": "pink",
+          "x": 113,
+          "y": 385
+        },
+        {
+          "id": "rocket-2061",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "white",
+          "x": 552,
+          "y": 95
+        },
+        {
+          "id": "pumpkin-2062",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 693,
+          "y": 505
+        }
+      ],
+      "signText": "Post"
+    },
+    "sceneAlt": "A street scene. A sign reads \"Post\". In the scene: white horse, brown snail, blue hat, yellow bird, purple umbrella, green turtle, white cow, pink house, white rocket, orange pumpkin.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

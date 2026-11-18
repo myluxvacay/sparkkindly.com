@@ -1,0 +1,196 @@
+{
+  "id": "what-changed-054",
+  "scheduledDate": "2027-01-08",
+  "brand": "together",
+  "gameType": "what-changed",
+  "title": "What changed: street",
+  "prompt": "One thing changed between the before and after street pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the pink cupcake moved. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the purple mushroom changed colour from purple to green."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the purple mushroom vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the pink cupcake moved."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: a red kite appeared."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "train-2988",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 656,
+          "y": 385
+        },
+        {
+          "id": "crab-2989",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 138,
+          "y": 490
+        },
+        {
+          "id": "pig-2990",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 691,
+          "y": 505
+        },
+        {
+          "id": "cow-2991",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 422,
+          "y": 460
+        },
+        {
+          "id": "bee-2992",
+          "art": "bee",
+          "name": "bee",
+          "x": 238,
+          "y": 120
+        },
+        {
+          "id": "cupcake-2993",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "pink",
+          "x": 113,
+          "y": 385
+        },
+        {
+          "id": "mushroom-2994",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "purple",
+          "x": 528,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "ladybug-2995",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 323,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "moon-2996",
+          "art": "moon",
+          "name": "moon",
+          "x": 561,
+          "y": 95
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: green train, red crab, pink pig, white cow, bee, pink cupcake, purple mushroom, red ladybug, moon.",
+    "sceneAfter": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "train-2988",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 656,
+          "y": 385
+        },
+        {
+          "id": "crab-2989",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 138,
+          "y": 490
+        },
+        {
+          "id": "pig-2990",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 691,
+          "y": 505
+        },
+        {
+          "id": "cow-2991",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 422,
+          "y": 460
+        },
+        {
+          "id": "bee-2992",
+          "art": "bee",
+          "name": "bee",
+          "x": 238,
+          "y": 120
+        },
+        {
+          "id": "cupcake-2993",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "pink",
+          "x": 60,
+          "y": 385
+        },
+        {
+          "id": "mushroom-2994",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "purple",
+          "x": 528,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "ladybug-2995",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 323,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "moon-2996",
+          "art": "moon",
+          "name": "moon",
+          "x": 561,
+          "y": 95
+        }
+      ]
+    },
+    "sceneAfterAlt": "A street scene. In the scene: green train, red crab, pink pig, white cow, bee, pink cupcake, purple mushroom, red ladybug, moon.",
+    "expectedChanges": [
+      "cupcake-2993:moved"
+    ]
+  }
+}

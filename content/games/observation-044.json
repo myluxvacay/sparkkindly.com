@@ -1,0 +1,115 @@
+{
+  "id": "observation-044",
+  "scheduledDate": "2026-11-14",
+  "brand": "discover",
+  "gameType": "observation",
+  "title": "Look closely: train station count",
+  "prompt": "How many mushrooms are in the train station?",
+  "difficulty": "medium",
+  "explanation": "Count the mushrooms one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "3"
+    },
+    {
+      "id": "b",
+      "text": "4"
+    },
+    {
+      "id": "c",
+      "text": "2"
+    },
+    {
+      "id": "d",
+      "text": "1"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "cat-809",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 182,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "rabbit-810",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "white",
+          "x": 695,
+          "y": 390,
+          "flip": true
+        },
+        {
+          "id": "carrot-811",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 643,
+          "y": 500
+        },
+        {
+          "id": "mushroom-812",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "brown",
+          "x": 244,
+          "y": 390,
+          "flip": true
+        },
+        {
+          "id": "mushroom-813",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "brown",
+          "x": 402,
+          "y": 390,
+          "flip": true
+        },
+        {
+          "id": "pine-814",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 537,
+          "y": 390
+        },
+        {
+          "id": "orange-815",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 475,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "horse-816",
+          "art": "horse",
+          "name": "horse",
+          "color": "brown",
+          "x": 104,
+          "y": 390
+        }
+      ]
+    },
+    "sceneAlt": "A station scene. In the scene: orange cat, white rabbit, carrot, brown mushroom, brown mushroom, green pine tree, orange orange, brown horse.",
+    "fact": {
+      "type": "count",
+      "art": "mushroom"
+    }
+  }
+}

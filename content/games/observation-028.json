@@ -1,0 +1,89 @@
+{
+  "id": "observation-028",
+  "scheduledDate": "2026-11-15",
+  "brand": "save",
+  "gameType": "observation",
+  "title": "Look closely: market stall color",
+  "prompt": "What colour is the apple in the market stall?",
+  "difficulty": "easy",
+  "explanation": "The apple in the picture is red — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "gray"
+    },
+    {
+      "id": "b",
+      "text": "orange"
+    },
+    {
+      "id": "c",
+      "text": "pink"
+    },
+    {
+      "id": "d",
+      "text": "red"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "hat-553",
+          "art": "hat",
+          "name": "hat",
+          "color": "yellow",
+          "x": 536,
+          "y": 402
+        },
+        {
+          "id": "ball-554",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 103,
+          "y": 402,
+          "flip": true
+        },
+        {
+          "id": "apple-555",
+          "art": "apple",
+          "name": "apple",
+          "color": "red",
+          "x": 393,
+          "y": 402
+        },
+        {
+          "id": "car-556",
+          "art": "car",
+          "name": "car",
+          "color": "red",
+          "x": 524,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "shell-557",
+          "art": "shell",
+          "name": "shell",
+          "color": "pink",
+          "x": 335,
+          "y": 508
+        }
+      ]
+    },
+    "sceneAlt": "A market scene. In the scene: yellow hat, green ball, red apple, red car, pink shell.",
+    "fact": {
+      "type": "color",
+      "elementId": "apple-555"
+    }
+  }
+}

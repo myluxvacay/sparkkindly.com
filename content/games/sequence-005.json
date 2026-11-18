@@ -1,0 +1,60 @@
+{
+  "id": "sequence-005",
+  "scheduledDate": "2027-02-08",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came fourth?",
+  "prompt": "Spark showed some things in order. What came fourth?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the yellow bird, second the green kite, third the black horse, fourth the brown mushroom. So the fourth one was the brown mushroom.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "black horse"
+    },
+    {
+      "id": "b",
+      "text": "green kite"
+    },
+    {
+      "id": "c",
+      "text": "yellow bird"
+    },
+    {
+      "id": "d",
+      "text": "brown mushroom"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "bird",
+        "label": "yellow bird",
+        "color": "yellow"
+      },
+      {
+        "art": "kite",
+        "label": "green kite",
+        "color": "green"
+      },
+      {
+        "art": "horse",
+        "label": "black horse",
+        "color": "black"
+      },
+      {
+        "art": "mushroom",
+        "label": "brown mushroom",
+        "color": "brown"
+      }
+    ],
+    "askPosition": 4
+  }
+}

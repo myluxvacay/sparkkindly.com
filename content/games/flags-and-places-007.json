@@ -1,0 +1,39 @@
+{
+  "id": "flags-and-places-007",
+  "scheduledDate": "2026-11-18",
+  "brand": "discover",
+  "gameType": "flags-and-places",
+  "title": "Flags & places: name this flag",
+  "prompt": "This flag belongs to which country?",
+  "difficulty": "medium",
+  "explanation": "Germany’s flag is black, red and gold in horizontal stripes.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Germany"
+    },
+    {
+      "id": "b",
+      "text": "Mexico"
+    },
+    {
+      "id": "c",
+      "text": "Portugal"
+    },
+    {
+      "id": "d",
+      "text": "United Kingdom"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "flags-and-places",
+    "heroArt": "flag-de",
+    "heroAlt": "A flag: Germany’s flag is black, red and gold in horizontal stripes."
+  }
+}

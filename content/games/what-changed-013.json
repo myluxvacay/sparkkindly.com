@@ -1,0 +1,133 @@
+{
+  "id": "what-changed-013",
+  "scheduledDate": "2026-12-19",
+  "brand": "together",
+  "gameType": "what-changed",
+  "title": "What changed: park",
+  "prompt": "One thing changed between the before and after park pictures. What changed?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the pine tree changed colour from green to plain. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the carrot vanished."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the pine tree changed colour from green to plain."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: a yellow balloon appeared."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the carrot changed colour from brown to purple."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "pine-2706",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 567,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "planet-2707",
+          "art": "planet",
+          "name": "planet",
+          "color": "pink",
+          "x": 194,
+          "y": 140,
+          "flip": true
+        },
+        {
+          "id": "shell-2708",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 395,
+          "y": 495
+        },
+        {
+          "id": "carrot-2709",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 249,
+          "y": 505
+        },
+        {
+          "id": "bear-2710",
+          "art": "bear",
+          "name": "bear",
+          "color": "black",
+          "x": 645,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: green pine tree, pink planet, orange shell, carrot, black bear.",
+    "sceneAfter": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "pine-2706",
+          "art": "pine",
+          "name": "pine tree",
+          "x": 567,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "planet-2707",
+          "art": "planet",
+          "name": "planet",
+          "color": "pink",
+          "x": 194,
+          "y": 140,
+          "flip": true
+        },
+        {
+          "id": "shell-2708",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 395,
+          "y": 495
+        },
+        {
+          "id": "carrot-2709",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 249,
+          "y": 505
+        },
+        {
+          "id": "bear-2710",
+          "art": "bear",
+          "name": "bear",
+          "color": "black",
+          "x": 645,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAfterAlt": "A park scene. In the scene: pine tree, pink planet, orange shell, carrot, black bear.",
+    "expectedChanges": [
+      "pine-2706:color:green->plain"
+    ]
+  }
+}

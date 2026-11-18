@@ -1,0 +1,114 @@
+{
+  "id": "memory-017",
+  "scheduledDate": "2026-11-12",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: street sign",
+  "prompt": "From memory: what does the sign in the street say?",
+  "difficulty": "medium",
+  "explanation": "The sign in the picture reads \"Fruit\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bakery"
+    },
+    {
+      "id": "b",
+      "text": "Fruit"
+    },
+    {
+      "id": "c",
+      "text": "Post"
+    },
+    {
+      "id": "d",
+      "text": "Flowers"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "gift-1360",
+          "art": "gift",
+          "name": "gift box",
+          "color": "red",
+          "x": 337,
+          "y": 505
+        },
+        {
+          "id": "flower-1361",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 296,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "hat-1362",
+          "art": "hat",
+          "name": "hat",
+          "color": "yellow",
+          "x": 515,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "banana-1363",
+          "art": "banana",
+          "name": "banana",
+          "x": 660,
+          "y": 385
+        },
+        {
+          "id": "cupcake-1364",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 436,
+          "y": 460,
+          "flip": true
+        },
+        {
+          "id": "cupcake-1365",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "blue",
+          "x": 139,
+          "y": 490
+        },
+        {
+          "id": "rocket-1366",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 245,
+          "y": 120
+        },
+        {
+          "id": "turtle-1367",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 692,
+          "y": 505,
+          "flip": true
+        }
+      ],
+      "signText": "Fruit"
+    },
+    "sceneAlt": "A street scene. A sign reads \"Fruit\". In the scene: red gift box, red flower, yellow hat, banana, white cupcake, blue cupcake, red rocket, green turtle.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

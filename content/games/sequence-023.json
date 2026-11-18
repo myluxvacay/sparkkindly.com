@@ -1,0 +1,60 @@
+{
+  "id": "sequence-023",
+  "scheduledDate": "2027-02-17",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came fourth?",
+  "prompt": "Spark showed some things in order. What came fourth?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the purple fish, second the yellow apple, third the white cow, fourth the black cat. So the fourth one was the black cat.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "black cat"
+    },
+    {
+      "id": "b",
+      "text": "white cow"
+    },
+    {
+      "id": "c",
+      "text": "purple fish"
+    },
+    {
+      "id": "d",
+      "text": "yellow apple"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "fish",
+        "label": "purple fish",
+        "color": "purple"
+      },
+      {
+        "art": "apple",
+        "label": "yellow apple",
+        "color": "yellow"
+      },
+      {
+        "art": "cow",
+        "label": "white cow",
+        "color": "white"
+      },
+      {
+        "art": "cat",
+        "label": "black cat",
+        "color": "black"
+      }
+    ],
+    "askPosition": 4
+  }
+}

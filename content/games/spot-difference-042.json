@@ -1,0 +1,205 @@
+{
+  "id": "spot-difference-042",
+  "scheduledDate": "2026-12-05",
+  "brand": "together",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: street",
+  "prompt": "Three things changed between the two street pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The white cow turned around, the yellow balloon turned around and the yellow car turned around. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The white cow turned around, a yellow balloon appeared and the yellow car turned around."
+    },
+    {
+      "id": "b",
+      "text": "The orange orange changed colour from orange to purple, the yellow balloon turned around and the yellow car turned around."
+    },
+    {
+      "id": "c",
+      "text": "The white cow turned around, the yellow balloon turned around and the yellow car turned around."
+    },
+    {
+      "id": "d",
+      "text": "The white cow turned around, the yellow balloon turned around and the orange orange vanished."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "cat-2520",
+          "art": "cat",
+          "name": "cat",
+          "color": "white",
+          "x": 525,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "cow-2521",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 437,
+          "y": 460
+        },
+        {
+          "id": "bee-2522",
+          "art": "bee",
+          "name": "bee",
+          "x": 556,
+          "y": 95,
+          "flip": true
+        },
+        {
+          "id": "balloon-2523",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "yellow",
+          "x": 241,
+          "y": 120
+        },
+        {
+          "id": "orange-2524",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 301,
+          "y": 385
+        },
+        {
+          "id": "car-2525",
+          "art": "car",
+          "name": "car",
+          "color": "yellow",
+          "x": 114,
+          "y": 385
+        },
+        {
+          "id": "crab-2526",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 323,
+          "y": 505
+        },
+        {
+          "id": "pumpkin-2527",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 694,
+          "y": 505
+        },
+        {
+          "id": "dog-2528",
+          "art": "dog",
+          "name": "dog",
+          "color": "black",
+          "x": 148,
+          "y": 490,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: white cat, white cow, bee, yellow balloon, orange orange, yellow car, red crab, orange pumpkin, black dog.",
+    "sceneAfter": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "cat-2520",
+          "art": "cat",
+          "name": "cat",
+          "color": "white",
+          "x": 525,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "cow-2521",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 437,
+          "y": 460,
+          "flip": true
+        },
+        {
+          "id": "bee-2522",
+          "art": "bee",
+          "name": "bee",
+          "x": 556,
+          "y": 95,
+          "flip": true
+        },
+        {
+          "id": "balloon-2523",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "yellow",
+          "x": 241,
+          "y": 120,
+          "flip": true
+        },
+        {
+          "id": "orange-2524",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 301,
+          "y": 385
+        },
+        {
+          "id": "car-2525",
+          "art": "car",
+          "name": "car",
+          "color": "yellow",
+          "x": 114,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "crab-2526",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 323,
+          "y": 505
+        },
+        {
+          "id": "pumpkin-2527",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 694,
+          "y": 505
+        },
+        {
+          "id": "dog-2528",
+          "art": "dog",
+          "name": "dog",
+          "color": "black",
+          "x": 148,
+          "y": 490,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAfterAlt": "A street scene. In the scene: white cat, white cow, bee, yellow balloon, orange orange, yellow car, red crab, orange pumpkin, black dog.",
+    "expectedChanges": [
+      "cow-2521:turned",
+      "balloon-2523:turned",
+      "car-2525:turned"
+    ]
+  }
+}

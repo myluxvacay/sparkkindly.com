@@ -1,0 +1,80 @@
+{
+  "id": "counting-031",
+  "scheduledDate": "2027-01-24",
+  "brand": "kids",
+  "gameType": "counting",
+  "title": "Counting: ducks at the pond",
+  "prompt": "How many ducks can you count in the pond?",
+  "difficulty": "easy",
+  "explanation": "Count the ducks one by one: there are exactly 4.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 4,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "duck-3275",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 188,
+          "y": 500
+        },
+        {
+          "id": "duck-3276",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 263,
+          "y": 465
+        },
+        {
+          "id": "duck-3277",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 654,
+          "y": 440
+        },
+        {
+          "id": "duck-3278",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 516,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "balloon-3279",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "purple",
+          "x": 401,
+          "y": 110
+        },
+        {
+          "id": "ball-3280",
+          "art": "ball",
+          "name": "ball",
+          "color": "red",
+          "x": 685,
+          "y": 348
+        }
+      ]
+    },
+    "sceneAlt": "A pond scene. In the scene: white duck, white duck, yellow duck, yellow duck, purple balloon, red ball.",
+    "countTarget": {
+      "art": "duck"
+    }
+  }
+}

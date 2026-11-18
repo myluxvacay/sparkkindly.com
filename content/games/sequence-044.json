@@ -1,0 +1,60 @@
+{
+  "id": "sequence-044",
+  "scheduledDate": "2027-02-27",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the gray sheep, second the brown horse, third the purple cupcake, fourth the green hat. So the third one was the purple cupcake.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "purple cupcake"
+    },
+    {
+      "id": "b",
+      "text": "brown horse"
+    },
+    {
+      "id": "c",
+      "text": "gray sheep"
+    },
+    {
+      "id": "d",
+      "text": "green hat"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "sheep",
+        "label": "gray sheep",
+        "color": "gray"
+      },
+      {
+        "art": "horse",
+        "label": "brown horse",
+        "color": "brown"
+      },
+      {
+        "art": "cupcake",
+        "label": "purple cupcake",
+        "color": "purple"
+      },
+      {
+        "art": "hat",
+        "label": "green hat",
+        "color": "green"
+      }
+    ],
+    "askPosition": 3
+  }
+}

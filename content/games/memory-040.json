@@ -1,0 +1,95 @@
+{
+  "id": "memory-040",
+  "scheduledDate": "2026-11-10",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: park absent",
+  "prompt": "From memory: which of these was NOT in the park?",
+  "difficulty": "easy",
+  "explanation": "The blue butterfly never appeared in the picture. The other three choices were all there to be spotted.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "moon"
+    },
+    {
+      "id": "b",
+      "text": "green gift box"
+    },
+    {
+      "id": "c",
+      "text": "green bunch of grapes"
+    },
+    {
+      "id": "d",
+      "text": "blue butterfly"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "moon-2038",
+          "art": "moon",
+          "name": "moon",
+          "x": 207,
+          "y": 140
+        },
+        {
+          "id": "ball-2039",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 555,
+          "y": 480
+        },
+        {
+          "id": "mushroom-2040",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "brown",
+          "x": 394,
+          "y": 495
+        },
+        {
+          "id": "grapes-2041",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 166,
+          "y": 440
+        },
+        {
+          "id": "moon-2042",
+          "art": "moon",
+          "name": "moon",
+          "x": 462,
+          "y": 105,
+          "flip": true
+        },
+        {
+          "id": "gift-2043",
+          "art": "gift",
+          "name": "gift box",
+          "color": "green",
+          "x": 640,
+          "y": 440,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: moon, green ball, brown mushroom, green bunch of grapes, moon, green gift box.",
+    "fact": {
+      "type": "absent",
+      "label": "blue butterfly"
+    }
+  }
+}

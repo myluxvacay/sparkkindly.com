@@ -1,0 +1,96 @@
+{
+  "id": "observation-022",
+  "scheduledDate": "2026-11-16",
+  "brand": "kids",
+  "gameType": "observation",
+  "title": "Look closely: beach sign",
+  "prompt": "What does the sign in the beach say?",
+  "difficulty": "easy",
+  "explanation": "The sign in the picture reads \"Toys\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Cafe"
+    },
+    {
+      "id": "b",
+      "text": "Toys"
+    },
+    {
+      "id": "c",
+      "text": "Books"
+    },
+    {
+      "id": "d",
+      "text": "Fruit"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "duck-396",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 472,
+          "y": 325
+        },
+        {
+          "id": "duck-397",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 422,
+          "y": 475
+        },
+        {
+          "id": "fish-398",
+          "art": "fish",
+          "name": "fish",
+          "color": "orange",
+          "x": 646,
+          "y": 345,
+          "flip": true
+        },
+        {
+          "id": "book-399",
+          "art": "book",
+          "name": "book",
+          "color": "blue",
+          "x": 350,
+          "y": 440
+        },
+        {
+          "id": "pumpkin-400",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 263,
+          "y": 505
+        },
+        {
+          "id": "butterfly-401",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "blue",
+          "x": 693,
+          "y": 160
+        }
+      ],
+      "signText": "Toys"
+    },
+    "sceneAlt": "A beach scene. A sign reads \"Toys\". In the scene: yellow duck, yellow duck, orange fish, blue book, orange pumpkin, blue butterfly.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

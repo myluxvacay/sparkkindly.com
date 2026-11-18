@@ -1,0 +1,127 @@
+{
+  "id": "spot-difference-004",
+  "scheduledDate": "2026-11-09",
+  "brand": "kids",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: garden",
+  "prompt": "Three things changed between the two garden pictures. Which list names all three changes?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: The frog changed colour from green to plain, the purple snail changed colour from brown to purple and the orange fox vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The frog changed colour from green to plain, the purple snail changed colour from brown to purple and the red apple vanished."
+    },
+    {
+      "id": "b",
+      "text": "The red apple changed colour from red to purple, the purple snail changed colour from brown to purple and the orange fox vanished."
+    },
+    {
+      "id": "c",
+      "text": "The frog changed colour from green to plain, a yellow balloon appeared and the orange fox vanished."
+    },
+    {
+      "id": "d",
+      "text": "The frog changed colour from green to plain, the purple snail changed colour from brown to purple and the orange fox vanished."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "apple-2259",
+          "art": "apple",
+          "name": "apple",
+          "color": "red",
+          "x": 474,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "frog-2260",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 653,
+          "y": 510
+        },
+        {
+          "id": "frog-2261",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 392,
+          "y": 430
+        },
+        {
+          "id": "snail-2262",
+          "art": "snail",
+          "name": "snail",
+          "color": "brown",
+          "x": 257,
+          "y": 405
+        },
+        {
+          "id": "fox-2263",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 113,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: red apple, green frog, green frog, brown snail, orange fox.",
+    "sceneAfter": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "apple-2259",
+          "art": "apple",
+          "name": "apple",
+          "color": "red",
+          "x": 474,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "frog-2260",
+          "art": "frog",
+          "name": "frog",
+          "x": 653,
+          "y": 510
+        },
+        {
+          "id": "frog-2261",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 392,
+          "y": 430
+        },
+        {
+          "id": "snail-2262",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 257,
+          "y": 405
+        }
+      ]
+    },
+    "sceneAfterAlt": "A garden scene. In the scene: red apple, frog, green frog, purple snail.",
+    "expectedChanges": [
+      "frog-2260:color:green->plain",
+      "snail-2262:color:brown->purple",
+      "fox-2263:removed"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "sequence-008",
+  "scheduledDate": "2027-02-09",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the pink balloon, second the pink shell, third the brown mushroom, fourth the green gift box. So the second one was the pink shell.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "pink balloon"
+    },
+    {
+      "id": "b",
+      "text": "pink shell"
+    },
+    {
+      "id": "c",
+      "text": "green gift box"
+    },
+    {
+      "id": "d",
+      "text": "brown mushroom"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "balloon",
+        "label": "pink balloon",
+        "color": "pink"
+      },
+      {
+        "art": "shell",
+        "label": "pink shell",
+        "color": "pink"
+      },
+      {
+        "art": "mushroom",
+        "label": "brown mushroom",
+        "color": "brown"
+      },
+      {
+        "art": "gift",
+        "label": "green gift box",
+        "color": "green"
+      }
+    ],
+    "askPosition": 2
+  }
+}

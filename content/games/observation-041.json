@@ -1,0 +1,112 @@
+{
+  "id": "observation-041",
+  "scheduledDate": "2026-11-14",
+  "brand": "together",
+  "gameType": "observation",
+  "title": "Look closely: kitchen clock",
+  "prompt": "What time does the clock in the kitchen show?",
+  "difficulty": "medium",
+  "explanation": "The clock's short hand points past 12 and its long hand shows 45 minutes, so the clock reads 12:45.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "12:45"
+    },
+    {
+      "id": "b",
+      "text": "11:45"
+    },
+    {
+      "id": "c",
+      "text": "12:15"
+    },
+    {
+      "id": "d",
+      "text": "1:45"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "kitchen",
+      "elements": [
+        {
+          "id": "hat-777",
+          "art": "hat",
+          "name": "hat",
+          "color": "purple",
+          "x": 117,
+          "y": 508
+        },
+        {
+          "id": "duck-778",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 519,
+          "y": 508
+        },
+        {
+          "id": "hat-779",
+          "art": "hat",
+          "name": "hat",
+          "color": "red",
+          "x": 464,
+          "y": 396
+        },
+        {
+          "id": "cat-780",
+          "art": "cat",
+          "name": "cat",
+          "color": "black",
+          "x": 616,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "book-781",
+          "art": "book",
+          "name": "book",
+          "color": "red",
+          "x": 698,
+          "y": 396
+        },
+        {
+          "id": "cow-782",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 293,
+          "y": 508
+        },
+        {
+          "id": "frog-783",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 685,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "banana-784",
+          "art": "banana",
+          "name": "banana",
+          "x": 325,
+          "y": 396
+        }
+      ],
+      "clockTime": "12:45"
+    },
+    "sceneAlt": "A kitchen scene. A clock shows 12:45. In the scene: purple hat, yellow duck, red hat, black cat, red book, white cow, green frog, banana.",
+    "fact": {
+      "type": "clock"
+    }
+  }
+}

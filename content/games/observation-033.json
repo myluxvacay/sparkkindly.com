@@ -1,0 +1,126 @@
+{
+  "id": "observation-033",
+  "scheduledDate": "2026-11-15",
+  "brand": "together",
+  "gameType": "observation",
+  "title": "Look closely: park color",
+  "prompt": "What colour is the fox in the park?",
+  "difficulty": "hard",
+  "explanation": "The fox in the picture is orange — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "red"
+    },
+    {
+      "id": "b",
+      "text": "orange"
+    },
+    {
+      "id": "c",
+      "text": "pink"
+    },
+    {
+      "id": "d",
+      "text": "blue"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "moon-608",
+          "art": "moon",
+          "name": "moon",
+          "x": 194,
+          "y": 140
+        },
+        {
+          "id": "apple-609",
+          "art": "apple",
+          "name": "apple",
+          "color": "yellow",
+          "x": 250,
+          "y": 505
+        },
+        {
+          "id": "flower-610",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 564,
+          "y": 480
+        },
+        {
+          "id": "fox-611",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 163,
+          "y": 440
+        },
+        {
+          "id": "moon-612",
+          "art": "moon",
+          "name": "moon",
+          "x": 469,
+          "y": 105
+        },
+        {
+          "id": "sheep-613",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 702,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "grapes-614",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 391,
+          "y": 495
+        },
+        {
+          "id": "fox-615",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 640,
+          "y": 440
+        },
+        {
+          "id": "cloud-616",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "gray",
+          "x": 660,
+          "y": 165
+        },
+        {
+          "id": "flower-617",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 117,
+          "y": 480
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: moon, yellow apple, yellow flower, orange fox, moon, black sheep, green bunch of grapes, orange fox, gray cloud, yellow flower.",
+    "fact": {
+      "type": "color",
+      "elementId": "fox-611"
+    }
+  }
+}

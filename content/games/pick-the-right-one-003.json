@@ -1,0 +1,45 @@
+{
+  "id": "pick-the-right-one-003",
+  "scheduledDate": "2026-11-17",
+  "brand": "play",
+  "gameType": "pick-the-right-one",
+  "title": "Pick the right one: the bird that cannot fly",
+  "prompt": "Which of these birds cannot fly?",
+  "difficulty": "easy",
+  "explanation": "Penguins cannot fly — their wings are flippers for swimming. Owls, flamingos and ducks all fly.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "penguin",
+      "text": "Penguin",
+      "art": "penguin",
+      "alt": "A black-and-white penguin"
+    },
+    {
+      "id": "owl",
+      "text": "Owl",
+      "art": "owl",
+      "alt": "A brown owl with big round eyes"
+    },
+    {
+      "id": "duck",
+      "text": "Duck",
+      "art": "duck",
+      "alt": "A yellow duck with an orange bill"
+    },
+    {
+      "id": "flamingo",
+      "text": "Flamingo",
+      "art": "flamingo",
+      "alt": "A tall pink flamingo on one leg"
+    }
+  ],
+  "correctOptionId": "penguin",
+  "visual": {
+    "gameType": "pick-the-right-one"
+  }
+}

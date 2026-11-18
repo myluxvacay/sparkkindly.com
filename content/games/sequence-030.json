@@ -1,0 +1,64 @@
+{
+  "id": "sequence-030",
+  "scheduledDate": "2027-02-20",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came fifth?",
+  "prompt": "Spark showed some things in order. What came fifth?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the banana, second the blue kite, third the brown cow, fourth the green pine tree, fifth the blue fish. So the fifth one was the blue fish.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "banana"
+    },
+    {
+      "id": "b",
+      "text": "blue fish"
+    },
+    {
+      "id": "c",
+      "text": "brown cow"
+    },
+    {
+      "id": "d",
+      "text": "blue kite"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "banana",
+        "label": "banana"
+      },
+      {
+        "art": "kite",
+        "label": "blue kite",
+        "color": "blue"
+      },
+      {
+        "art": "cow",
+        "label": "brown cow",
+        "color": "brown"
+      },
+      {
+        "art": "pine",
+        "label": "green pine tree",
+        "color": "green"
+      },
+      {
+        "art": "fish",
+        "label": "blue fish",
+        "color": "blue"
+      }
+    ],
+    "askPosition": 5
+  }
+}

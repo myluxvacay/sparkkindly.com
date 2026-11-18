@@ -1,0 +1,128 @@
+{
+  "id": "spot-difference-028",
+  "scheduledDate": "2026-11-28",
+  "brand": "kids",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: beach",
+  "prompt": "Three things changed between the two beach pictures. Which list names all three changes?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: The green book changed colour from red to green, the gray cloud changed colour from white to gray and the green turtle vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The green book changed colour from red to green, the gray cloud changed colour from white to gray and the green turtle vanished."
+    },
+    {
+      "id": "b",
+      "text": "The green book changed colour from red to green, the gray cloud changed colour from white to gray and the white boat vanished."
+    },
+    {
+      "id": "c",
+      "text": "The green book changed colour from red to green, a red kite appeared and the green turtle vanished."
+    },
+    {
+      "id": "d",
+      "text": "The white boat changed colour from white to purple, the gray cloud changed colour from white to gray and the green turtle vanished."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "turtle-2426",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 465,
+          "y": 325
+        },
+        {
+          "id": "book-2427",
+          "art": "book",
+          "name": "book",
+          "color": "red",
+          "x": 428,
+          "y": 475
+        },
+        {
+          "id": "cloud-2428",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 214,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "turtle-2429",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 301,
+          "y": 345
+        },
+        {
+          "id": "boat-2430",
+          "art": "boat",
+          "name": "boat",
+          "color": "white",
+          "x": 137,
+          "y": 330
+        }
+      ]
+    },
+    "sceneAlt": "A beach scene. In the scene: green turtle, red book, white cloud, green turtle, white boat.",
+    "sceneAfter": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "book-2427",
+          "art": "book",
+          "name": "book",
+          "color": "green",
+          "x": 428,
+          "y": 475
+        },
+        {
+          "id": "cloud-2428",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "gray",
+          "x": 214,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "turtle-2429",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 301,
+          "y": 345
+        },
+        {
+          "id": "boat-2430",
+          "art": "boat",
+          "name": "boat",
+          "color": "white",
+          "x": 137,
+          "y": 330
+        }
+      ]
+    },
+    "sceneAfterAlt": "A beach scene. In the scene: green book, gray cloud, green turtle, white boat.",
+    "expectedChanges": [
+      "book-2427:color:red->green",
+      "cloud-2428:color:white->gray",
+      "turtle-2426:removed"
+    ]
+  }
+}

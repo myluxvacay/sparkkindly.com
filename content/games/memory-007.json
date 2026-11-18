@@ -1,0 +1,86 @@
+{
+  "id": "memory-007",
+  "scheduledDate": "2026-11-13",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: street sign",
+  "prompt": "From memory: what does the sign in the street say?",
+  "difficulty": "easy",
+  "explanation": "The sign in the picture reads \"Fruit\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bakery"
+    },
+    {
+      "id": "b",
+      "text": "Fruit"
+    },
+    {
+      "id": "c",
+      "text": "Farm Shop"
+    },
+    {
+      "id": "d",
+      "text": "Cafe"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "frog-1149",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 429,
+          "y": 460
+        },
+        {
+          "id": "moon-1150",
+          "art": "moon",
+          "name": "moon",
+          "x": 233,
+          "y": 120
+        },
+        {
+          "id": "pumpkin-1151",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 133,
+          "y": 490
+        },
+        {
+          "id": "snail-1152",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 684,
+          "y": 505
+        },
+        {
+          "id": "car-1153",
+          "art": "car",
+          "name": "car",
+          "color": "yellow",
+          "x": 114,
+          "y": 385
+        }
+      ],
+      "signText": "Fruit"
+    },
+    "sceneAlt": "A street scene. A sign reads \"Fruit\". In the scene: green frog, moon, orange pumpkin, purple snail, yellow car.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

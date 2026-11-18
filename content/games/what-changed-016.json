@@ -1,0 +1,129 @@
+{
+  "id": "what-changed-016",
+  "scheduledDate": "2026-12-20",
+  "brand": "discover",
+  "gameType": "what-changed",
+  "title": "What changed: train station",
+  "prompt": "One thing changed between the before and after train station pictures. What changed?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the turtle changed colour from green to plain. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the turtle changed colour from green to plain."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: a blue ball appeared."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the penguin changed colour from brown to purple."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the penguin vanished."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "cow-2727",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 104,
+          "y": 390
+        },
+        {
+          "id": "bird-2728",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 543,
+          "y": 390
+        },
+        {
+          "id": "penguin-2729",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 691,
+          "y": 390
+        },
+        {
+          "id": "turtle-2730",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 395,
+          "y": 390
+        },
+        {
+          "id": "turtle-2731",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 636,
+          "y": 500
+        }
+      ]
+    },
+    "sceneAlt": "A station scene. In the scene: white cow, yellow bird, penguin, green turtle, green turtle.",
+    "sceneAfter": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "cow-2727",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 104,
+          "y": 390
+        },
+        {
+          "id": "bird-2728",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 543,
+          "y": 390
+        },
+        {
+          "id": "penguin-2729",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 691,
+          "y": 390
+        },
+        {
+          "id": "turtle-2730",
+          "art": "turtle",
+          "name": "turtle",
+          "x": 395,
+          "y": 390
+        },
+        {
+          "id": "turtle-2731",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 636,
+          "y": 500
+        }
+      ]
+    },
+    "sceneAfterAlt": "A station scene. In the scene: white cow, yellow bird, penguin, turtle, green turtle.",
+    "expectedChanges": [
+      "turtle-2730:color:green->plain"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "memory-022",
+  "scheduledDate": "2026-11-12",
+  "brand": "save",
+  "gameType": "memory",
+  "title": "Memory: market stall sign",
+  "prompt": "From memory: what does the sign in the market stall say?",
+  "difficulty": "easy",
+  "explanation": "The sign in the picture reads \"Toys\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Museum"
+    },
+    {
+      "id": "b",
+      "text": "Books"
+    },
+    {
+      "id": "c",
+      "text": "Toys"
+    },
+    {
+      "id": "d",
+      "text": "Bakery"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "book-1521",
+          "art": "book",
+          "name": "book",
+          "color": "blue",
+          "x": 397,
+          "y": 402
+        },
+        {
+          "id": "apple-1522",
+          "art": "apple",
+          "name": "apple",
+          "color": "red",
+          "x": 109,
+          "y": 402
+        },
+        {
+          "id": "cow-1523",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 143,
+          "y": 508
+        },
+        {
+          "id": "orange-1524",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 662,
+          "y": 402
+        },
+        {
+          "id": "banana-1525",
+          "art": "banana",
+          "name": "banana",
+          "x": 333,
+          "y": 508
+        }
+      ],
+      "signText": "Toys"
+    },
+    "sceneAlt": "A market scene. A sign reads \"Toys\". In the scene: blue book, red apple, white cow, orange orange, banana.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

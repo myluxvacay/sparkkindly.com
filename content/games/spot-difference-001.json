@@ -1,0 +1,107 @@
+{
+  "id": "spot-difference-001",
+  "scheduledDate": "2026-11-09",
+  "brand": "kids",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: meadow",
+  "prompt": "Three things changed between the two meadow pictures. Which list names all three changes?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: The white sheep vanished, the bee vanished and the gray sheep vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The white sheep vanished, the bee vanished and the moon vanished."
+    },
+    {
+      "id": "b",
+      "text": "The white sheep vanished, a yellow balloon appeared and the gray sheep vanished."
+    },
+    {
+      "id": "c",
+      "text": "The moon changed colour from brown to purple, the bee vanished and the gray sheep vanished."
+    },
+    {
+      "id": "d",
+      "text": "The white sheep vanished, the bee vanished and the gray sheep vanished."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "sheep-2238",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 433,
+          "y": 505
+        },
+        {
+          "id": "moon-2239",
+          "art": "moon",
+          "name": "moon",
+          "x": 647,
+          "y": 150
+        },
+        {
+          "id": "bee-2240",
+          "art": "bee",
+          "name": "bee",
+          "x": 414,
+          "y": 100
+        },
+        {
+          "id": "sheep-2241",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 113,
+          "y": 470
+        },
+        {
+          "id": "chicken-2242",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 559,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: white sheep, moon, bee, gray sheep, white chicken.",
+    "sceneAfter": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "moon-2239",
+          "art": "moon",
+          "name": "moon",
+          "x": 647,
+          "y": 150
+        },
+        {
+          "id": "chicken-2242",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 559,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAfterAlt": "A meadow scene. In the scene: moon, white chicken.",
+    "expectedChanges": [
+      "sheep-2238:removed",
+      "bee-2240:removed",
+      "sheep-2241:removed"
+    ]
+  }
+}

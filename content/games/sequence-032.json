@@ -1,0 +1,59 @@
+{
+  "id": "sequence-032",
+  "scheduledDate": "2027-02-21",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the bee, second the red hat, third the red mushroom, fourth the blue ball. So the second one was the red hat.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "red hat"
+    },
+    {
+      "id": "b",
+      "text": "blue ball"
+    },
+    {
+      "id": "c",
+      "text": "red mushroom"
+    },
+    {
+      "id": "d",
+      "text": "bee"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "bee",
+        "label": "bee"
+      },
+      {
+        "art": "hat",
+        "label": "red hat",
+        "color": "red"
+      },
+      {
+        "art": "mushroom",
+        "label": "red mushroom",
+        "color": "red"
+      },
+      {
+        "art": "ball",
+        "label": "blue ball",
+        "color": "blue"
+      }
+    ],
+    "askPosition": 2
+  }
+}

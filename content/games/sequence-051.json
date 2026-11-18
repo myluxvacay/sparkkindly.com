@@ -1,0 +1,65 @@
+{
+  "id": "sequence-051",
+  "scheduledDate": "2027-03-03",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the red rocket, second the brown mushroom, third the black sheep, fourth the black cat, fifth the purple snail. So the second one was the brown mushroom.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "black sheep"
+    },
+    {
+      "id": "b",
+      "text": "brown mushroom"
+    },
+    {
+      "id": "c",
+      "text": "red rocket"
+    },
+    {
+      "id": "d",
+      "text": "black cat"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "rocket",
+        "label": "red rocket",
+        "color": "red"
+      },
+      {
+        "art": "mushroom",
+        "label": "brown mushroom",
+        "color": "brown"
+      },
+      {
+        "art": "sheep",
+        "label": "black sheep",
+        "color": "black"
+      },
+      {
+        "art": "cat",
+        "label": "black cat",
+        "color": "black"
+      },
+      {
+        "art": "snail",
+        "label": "purple snail",
+        "color": "purple"
+      }
+    ],
+    "askPosition": 2
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "pick-the-right-one-002",
+  "scheduledDate": "2026-11-17",
+  "brand": "play",
+  "gameType": "pick-the-right-one",
+  "title": "Pick the right one: find the tulip",
+  "prompt": "Which flower is a tulip?",
+  "difficulty": "easy",
+  "explanation": "The tulip is the pink, cup-shaped flower. The mushroom beside it is not a flower at all.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "rose",
+      "text": "Rose",
+      "art": "rose",
+      "alt": "A red rose on a green stem"
+    },
+    {
+      "id": "sunflower",
+      "text": "Sunflower",
+      "art": "sunflower",
+      "alt": "A tall sunflower with a brown centre"
+    },
+    {
+      "id": "mushroom",
+      "text": "Mushroom",
+      "art": "mushroom",
+      "alt": "A red toadstool mushroom with white spots"
+    },
+    {
+      "id": "tulip",
+      "text": "Tulip",
+      "art": "tulip",
+      "alt": "A pink tulip with cup-shaped petals"
+    }
+  ],
+  "correctOptionId": "tulip",
+  "visual": {
+    "gameType": "pick-the-right-one"
+  }
+}

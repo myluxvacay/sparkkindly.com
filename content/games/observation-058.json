@@ -1,0 +1,96 @@
+{
+  "id": "observation-058",
+  "scheduledDate": "2026-11-13",
+  "brand": "grow",
+  "gameType": "observation",
+  "title": "Look closely: classroom color",
+  "prompt": "What colour is the car in the classroom?",
+  "difficulty": "easy",
+  "explanation": "The car in the picture is blue — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "blue"
+    },
+    {
+      "id": "b",
+      "text": "black"
+    },
+    {
+      "id": "c",
+      "text": "green"
+    },
+    {
+      "id": "d",
+      "text": "brown"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "cow-1015",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 704,
+          "y": 470
+        },
+        {
+          "id": "frog-1016",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 276,
+          "y": 500
+        },
+        {
+          "id": "car-1017",
+          "art": "car",
+          "name": "car",
+          "color": "blue",
+          "x": 646,
+          "y": 425
+        },
+        {
+          "id": "cupcake-1018",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "blue",
+          "x": 204,
+          "y": 425
+        },
+        {
+          "id": "apple-1019",
+          "art": "apple",
+          "name": "apple",
+          "color": "red",
+          "x": 487,
+          "y": 505
+        },
+        {
+          "id": "sheep-1020",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 113,
+          "y": 470,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: white cow, green frog, blue car, blue cupcake, red apple, gray sheep.",
+    "fact": {
+      "type": "color",
+      "elementId": "car-1017"
+    }
+  }
+}

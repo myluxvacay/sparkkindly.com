@@ -1,0 +1,56 @@
+{
+  "id": "sequence-034",
+  "scheduledDate": "2027-02-22",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the black horse, second the white star, third the orange fox. So the third one was the orange fox.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "orange fox"
+    },
+    {
+      "id": "b",
+      "text": "black horse"
+    },
+    {
+      "id": "c",
+      "text": "white star"
+    },
+    {
+      "id": "d",
+      "text": "yellow hat"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "horse",
+        "label": "black horse",
+        "color": "black"
+      },
+      {
+        "art": "star",
+        "label": "white star",
+        "color": "white"
+      },
+      {
+        "art": "fox",
+        "label": "orange fox",
+        "color": "orange"
+      }
+    ],
+    "askPosition": 3,
+    "decoyLabel": "yellow hat"
+  }
+}

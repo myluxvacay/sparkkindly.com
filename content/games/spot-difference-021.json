@@ -1,0 +1,196 @@
+{
+  "id": "spot-difference-021",
+  "scheduledDate": "2026-11-25",
+  "brand": "save",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: market stall",
+  "prompt": "Three things changed between the two market stall pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The green apple changed colour from red to green, the blue book changed colour from purple to blue and the penguin moved. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The green apple changed colour from red to green, the blue book changed colour from purple to blue and the green turtle vanished."
+    },
+    {
+      "id": "b",
+      "text": "The green turtle changed colour from green to purple, the blue book changed colour from purple to blue and the penguin moved."
+    },
+    {
+      "id": "c",
+      "text": "The green apple changed colour from red to green, a yellow balloon appeared and the penguin moved."
+    },
+    {
+      "id": "d",
+      "text": "The green apple changed colour from red to green, the blue book changed colour from purple to blue and the penguin moved."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "banana-2375",
+          "art": "banana",
+          "name": "banana",
+          "x": 142,
+          "y": 508
+        },
+        {
+          "id": "apple-2376",
+          "art": "apple",
+          "name": "apple",
+          "color": "red",
+          "x": 105,
+          "y": 402
+        },
+        {
+          "id": "turtle-2377",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 693,
+          "y": 508
+        },
+        {
+          "id": "duck-2378",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 526,
+          "y": 508
+        },
+        {
+          "id": "book-2379",
+          "art": "book",
+          "name": "book",
+          "color": "purple",
+          "x": 247,
+          "y": 402
+        },
+        {
+          "id": "ball-2380",
+          "art": "ball",
+          "name": "ball",
+          "color": "purple",
+          "x": 674,
+          "y": 402
+        },
+        {
+          "id": "orange-2381",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 395,
+          "y": 402
+        },
+        {
+          "id": "penguin-2382",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 333,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "cat-2383",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 523,
+          "y": 402
+        }
+      ]
+    },
+    "sceneAlt": "A market scene. In the scene: banana, red apple, green turtle, white duck, purple book, purple ball, orange orange, penguin, orange cat.",
+    "sceneAfter": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "banana-2375",
+          "art": "banana",
+          "name": "banana",
+          "x": 142,
+          "y": 508
+        },
+        {
+          "id": "apple-2376",
+          "art": "apple",
+          "name": "apple",
+          "color": "green",
+          "x": 105,
+          "y": 402
+        },
+        {
+          "id": "turtle-2377",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 693,
+          "y": 508
+        },
+        {
+          "id": "duck-2378",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 526,
+          "y": 508
+        },
+        {
+          "id": "book-2379",
+          "art": "book",
+          "name": "book",
+          "color": "blue",
+          "x": 247,
+          "y": 402
+        },
+        {
+          "id": "ball-2380",
+          "art": "ball",
+          "name": "ball",
+          "color": "purple",
+          "x": 674,
+          "y": 402
+        },
+        {
+          "id": "orange-2381",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 395,
+          "y": 402
+        },
+        {
+          "id": "penguin-2382",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 163,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "cat-2383",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 523,
+          "y": 402
+        }
+      ]
+    },
+    "sceneAfterAlt": "A market scene. In the scene: banana, green apple, green turtle, white duck, blue book, purple ball, orange orange, penguin, orange cat.",
+    "expectedChanges": [
+      "apple-2376:color:red->green",
+      "book-2379:color:purple->blue",
+      "penguin-2382:moved"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "flags-and-places-001",
+  "scheduledDate": "2026-11-18",
+  "brand": "discover",
+  "gameType": "flags-and-places",
+  "title": "Flags & places: which flag is Mexico?",
+  "prompt": "Which flag belongs to Mexico?",
+  "difficulty": "easy",
+  "explanation": "Mexico’s flag is green, white and red with an eagle emblem in the centre. The other flags belong to Germany, Italy, Australia.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Flag A",
+      "art": "flag-mx",
+      "alt": "A flag: Mexico’s flag is green, white and red with an eagle emblem in the centre."
+    },
+    {
+      "id": "b",
+      "text": "Flag B",
+      "art": "flag-au",
+      "alt": "A flag: Australia’s flag is dark blue with a small Union Jack and white stars."
+    },
+    {
+      "id": "c",
+      "text": "Flag C",
+      "art": "flag-it",
+      "alt": "A flag: Italy’s flag is green, white and red in vertical stripes."
+    },
+    {
+      "id": "d",
+      "text": "Flag D",
+      "art": "flag-de",
+      "alt": "A flag: Germany’s flag is black, red and gold in horizontal stripes."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "flags-and-places"
+  }
+}

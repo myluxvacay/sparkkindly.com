@@ -1,0 +1,125 @@
+{
+  "id": "spot-difference-043",
+  "scheduledDate": "2026-12-06",
+  "brand": "save",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: market stall",
+  "prompt": "Three things changed between the two market stall pictures. Which list names all three changes?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: The pink cupcake changed colour from white to pink, the blue car changed colour from green to blue and the banana vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The pink cupcake changed colour from white to pink, a blue ball appeared and the banana vanished."
+    },
+    {
+      "id": "b",
+      "text": "The pink cupcake changed colour from white to pink, the blue car changed colour from green to blue and the banana vanished."
+    },
+    {
+      "id": "c",
+      "text": "The brown owl changed colour from brown to purple, the blue car changed colour from green to blue and the banana vanished."
+    },
+    {
+      "id": "d",
+      "text": "The pink cupcake changed colour from white to pink, the blue car changed colour from green to blue and the brown owl vanished."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "cupcake-2529",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 668,
+          "y": 402
+        },
+        {
+          "id": "banana-2530",
+          "art": "banana",
+          "name": "banana",
+          "x": 527,
+          "y": 402
+        },
+        {
+          "id": "grapes-2531",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 391,
+          "y": 402
+        },
+        {
+          "id": "car-2532",
+          "art": "car",
+          "name": "car",
+          "color": "green",
+          "x": 157,
+          "y": 508
+        },
+        {
+          "id": "owl-2533",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 334,
+          "y": 508
+        }
+      ]
+    },
+    "sceneAlt": "A market scene. In the scene: white cupcake, banana, green bunch of grapes, green car, brown owl.",
+    "sceneAfter": {
+      "template": "market",
+      "elements": [
+        {
+          "id": "cupcake-2529",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "pink",
+          "x": 668,
+          "y": 402
+        },
+        {
+          "id": "grapes-2531",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 391,
+          "y": 402
+        },
+        {
+          "id": "car-2532",
+          "art": "car",
+          "name": "car",
+          "color": "blue",
+          "x": 157,
+          "y": 508
+        },
+        {
+          "id": "owl-2533",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 334,
+          "y": 508
+        }
+      ]
+    },
+    "sceneAfterAlt": "A market scene. In the scene: pink cupcake, green bunch of grapes, blue car, brown owl.",
+    "expectedChanges": [
+      "cupcake-2529:color:white->pink",
+      "car-2532:color:green->blue",
+      "banana-2530:removed"
+    ]
+  }
+}

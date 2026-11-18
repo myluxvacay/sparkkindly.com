@@ -1,0 +1,112 @@
+{
+  "id": "counting-029",
+  "scheduledDate": "2027-01-23",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: chickens at the farm",
+  "prompt": "How many chickens can you count in the farm?",
+  "difficulty": "medium",
+  "explanation": "Count the chickens one by one: there are exactly 7.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 7,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "chicken-3253",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 433,
+          "y": 500
+        },
+        {
+          "id": "chicken-3254",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 233,
+          "y": 430
+        },
+        {
+          "id": "chicken-3255",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 365,
+          "y": 505
+        },
+        {
+          "id": "chicken-3256",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 626,
+          "y": 425
+        },
+        {
+          "id": "chicken-3257",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 685,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "chicken-3258",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 565,
+          "y": 465
+        },
+        {
+          "id": "chicken-3259",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 735,
+          "y": 450
+        },
+        {
+          "id": "mushroom-3260",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "red",
+          "x": 302,
+          "y": 470
+        },
+        {
+          "id": "star-3261",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 331,
+          "y": 130
+        },
+        {
+          "id": "rocket-3262",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "white",
+          "x": 699,
+          "y": 170
+        }
+      ]
+    },
+    "sceneAlt": "A farm scene. In the scene: white chicken, brown chicken, white chicken, brown chicken, brown chicken, white chicken, brown chicken, red mushroom, white star, white rocket.",
+    "countTarget": {
+      "art": "chicken"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "memory-058",
+  "scheduledDate": "2026-11-09",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: street color",
+  "prompt": "From memory: what colour is the bird in the street?",
+  "difficulty": "easy",
+  "explanation": "The bird in the picture is yellow — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "blue"
+    },
+    {
+      "id": "b",
+      "text": "green"
+    },
+    {
+      "id": "c",
+      "text": "yellow"
+    },
+    {
+      "id": "d",
+      "text": "gray"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "bird-2233",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 143,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "dog-2234",
+          "art": "dog",
+          "name": "dog",
+          "color": "brown",
+          "x": 425,
+          "y": 460
+        },
+        {
+          "id": "gift-2235",
+          "art": "gift",
+          "name": "gift box",
+          "color": "green",
+          "x": 656,
+          "y": 385
+        },
+        {
+          "id": "train-2236",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 304,
+          "y": 385
+        },
+        {
+          "id": "frog-2237",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 330,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: yellow bird, brown dog, green gift box, green train, green frog.",
+    "fact": {
+      "type": "color",
+      "elementId": "bird-2233"
+    }
+  }
+}

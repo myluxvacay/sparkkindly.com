@@ -1,0 +1,136 @@
+{
+  "id": "spot-difference-022",
+  "scheduledDate": "2026-11-25",
+  "brand": "together",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: park",
+  "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: The white chicken changed colour from brown to white, the purple snail changed colour from brown to purple and the brown owl changed colour from gray to brown. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The yellow star changed colour from yellow to purple, the purple snail changed colour from brown to purple and the brown owl changed colour from gray to brown."
+    },
+    {
+      "id": "b",
+      "text": "The white chicken changed colour from brown to white, the purple snail changed colour from brown to purple and the brown owl changed colour from gray to brown."
+    },
+    {
+      "id": "c",
+      "text": "The white chicken changed colour from brown to white, the purple snail changed colour from brown to purple and the yellow star vanished."
+    },
+    {
+      "id": "d",
+      "text": "The white chicken changed colour from brown to white, a blue ball appeared and the brown owl changed colour from gray to brown."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "chicken-2384",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 701,
+          "y": 505
+        },
+        {
+          "id": "snail-2385",
+          "art": "snail",
+          "name": "snail",
+          "color": "brown",
+          "x": 155,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "book-2386",
+          "art": "book",
+          "name": "book",
+          "color": "red",
+          "x": 636,
+          "y": 440
+        },
+        {
+          "id": "star-2387",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 196,
+          "y": 140
+        },
+        {
+          "id": "owl-2388",
+          "art": "owl",
+          "name": "owl",
+          "color": "gray",
+          "x": 256,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: brown chicken, brown snail, red book, yellow star, gray owl.",
+    "sceneAfter": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "chicken-2384",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 701,
+          "y": 505
+        },
+        {
+          "id": "snail-2385",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 155,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "book-2386",
+          "art": "book",
+          "name": "book",
+          "color": "red",
+          "x": 636,
+          "y": 440
+        },
+        {
+          "id": "star-2387",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 196,
+          "y": 140
+        },
+        {
+          "id": "owl-2388",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 256,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAfterAlt": "A park scene. In the scene: white chicken, purple snail, red book, yellow star, brown owl.",
+    "expectedChanges": [
+      "chicken-2384:color:brown->white",
+      "snail-2385:color:brown->purple",
+      "owl-2388:color:gray->brown"
+    ]
+  }
+}

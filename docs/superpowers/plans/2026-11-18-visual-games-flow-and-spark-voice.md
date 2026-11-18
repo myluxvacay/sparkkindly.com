@@ -1,0 +1,43 @@
+# Visual games in the question flow + Spark's recorded voice (18 Nov 2026)
+
+Owner direction (chat, 18 Nov 2026): wire the five owner-recorded Spark voice lines into the site;
+build 300–400 visual games across six types (observation, memory, spot-the-difference, what-changed,
+counting, sequence recall) plus the existing three kinds, and load ALL of them inside the regular
+next-question flow — no separate picture-game silo. Push staging → prod authorized.
+
+## Design
+
+- **Content pipeline, like quizzes.** Games live in `content/games/*.json`, validated by a new
+  `gameSchema` (lib/schemas.ts), registered in `docs/editorial-approval.json` (kind `game`), loaded by
+  `lib/content.ts`, checked by `content:validate`, and imported to the database by the existing deploy
+  content-publish (`importLegacy` learns games → items of kind `game`). `scheduledDate` is the
+  publish date: a solid share dated ≤ today plays immediately, the rest join the daily runway.
+- **Provable answers.** Scenes are parametric data (`lib/games/scene.ts`): a template, fixtures
+  (clock time, sign text) and placed elements (art key, name, colour, position). Pure derivations —
+  count, scene diff, fact value, sequence position — are recomputed by the schema's proof checks, so a
+  game whose stored answer disagrees with its scene cannot validate, let alone deploy.
+- **Mechanics stay closed.** Scene games reuse `multiple_choice` / `number` / `odd_one_out`; the scene
+  payload rides in the play body as `visual`. Memory games are two-step: scene first, then a
+  `?stage=answer` hop hides it (works without JavaScript, like clue_reveal's extra-clue link).
+- **Flow integration.** PlayPanel builds keep-playing for quizzes AND games from one merged pool
+  (listPublic kind quiz + game); the seen-tracking Kids carve-out is unchanged. `/games/` becomes an
+  index of game items linking into the flow; the siloed VisualGames player is retired and its rounds
+  are converted to content items.
+- **Voice.** `lib/games/spark-voice.ts` is the single map: greeting (assistant tap-to-play),
+  praise (correct answers, games + quiz island), completion (finished game / all-done state),
+  encouragement (wrong answers), goodbye (assistant dismissal tap). All playback honours
+  `sk-games-sound` and only ever starts from a tap or the player's own answer submission — never
+  autoplay. Owner MP3s land in `public/brand/` under descriptive names.
+
+## Steps
+
+1. `lib/games/scene.ts` (types, catalogue, derivations) + unit tests.
+2. `components/games/SceneArt.tsx` + `SceneView.tsx` (parametric SVG scenes).
+3. Schema, content loading, validate-content, approval registry kind, import.
+4. `readPlay` visual support; PlayForm scene rendering + memory two-step; PlayPanel pool merge.
+5. Voice: files, spark-voice map, SparkAssistant, VisualGames slots, PlayEnhancer quiz voice.
+6. Generator script → ~340 new games + 7 legacy conversions; registry entries after review.
+7. `/games/` index rework; test updates (pins moved, not weakened).
+8. Independent reviewer pass over the collection; regenerate/drop rejects; flip approvals.
+9. Gates (content:validate, lint, typecheck, unit, targeted e2e), staging merge + CI + spot check,
+   cherry-pick to main, prod verify.

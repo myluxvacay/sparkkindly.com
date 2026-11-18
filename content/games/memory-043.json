@@ -1,0 +1,87 @@
+{
+  "id": "memory-043",
+  "scheduledDate": "2026-11-10",
+  "brand": "kids",
+  "gameType": "memory",
+  "title": "Memory: pond color",
+  "prompt": "From memory: what colour is the fish in the pond?",
+  "difficulty": "easy",
+  "explanation": "The fish in the picture is blue — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "blue"
+    },
+    {
+      "id": "b",
+      "text": "brown"
+    },
+    {
+      "id": "c",
+      "text": "gray"
+    },
+    {
+      "id": "d",
+      "text": "red"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "owl-2063",
+          "art": "owl",
+          "name": "owl",
+          "color": "gray",
+          "x": 672,
+          "y": 348
+        },
+        {
+          "id": "fish-2064",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 330,
+          "y": 495
+        },
+        {
+          "id": "planet-2065",
+          "art": "planet",
+          "name": "planet",
+          "color": "pink",
+          "x": 175,
+          "y": 150
+        },
+        {
+          "id": "rocket-2066",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 393,
+          "y": 110
+        },
+        {
+          "id": "boat-2067",
+          "art": "boat",
+          "name": "boat",
+          "color": "white",
+          "x": 522,
+          "y": 470
+        }
+      ]
+    },
+    "sceneAlt": "A pond scene. In the scene: gray owl, blue fish, pink planet, red rocket, white boat.",
+    "fact": {
+      "type": "color",
+      "elementId": "fish-2064"
+    }
+  }
+}

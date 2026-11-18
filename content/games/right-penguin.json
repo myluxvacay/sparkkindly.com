@@ -1,0 +1,45 @@
+{
+  "id": "right-penguin",
+  "scheduledDate": "2026-11-18",
+  "brand": "play",
+  "gameType": "pick-the-right-one",
+  "title": "Pick the right one: find the penguin",
+  "prompt": "Which animal is a penguin?",
+  "difficulty": "easy",
+  "explanation": "The penguin is the black-and-white bird with a white belly, orange beak and feet. Penguins cannot fly, but they swim beautifully.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "correctOptionId": "penguin",
+  "visual": {
+    "gameType": "pick-the-right-one"
+  },
+  "options": [
+    {
+      "id": "owl",
+      "text": "Owl",
+      "art": "owl",
+      "alt": "A brown owl with big round eyes perched upright"
+    },
+    {
+      "id": "flamingo",
+      "text": "Flamingo",
+      "art": "flamingo",
+      "alt": "A tall pink flamingo standing on one leg"
+    },
+    {
+      "id": "duck",
+      "text": "Duck",
+      "art": "duck",
+      "alt": "A yellow duck with an orange bill"
+    },
+    {
+      "id": "penguin",
+      "text": "Penguin",
+      "art": "penguin",
+      "alt": "A black-and-white penguin with an orange beak and feet"
+    }
+  ]
+}

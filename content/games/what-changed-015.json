@@ -1,0 +1,200 @@
+{
+  "id": "what-changed-015",
+  "scheduledDate": "2026-12-20",
+  "brand": "discover",
+  "gameType": "what-changed",
+  "title": "What changed: pond",
+  "prompt": "One thing changed between the before and after pond pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the blue boat moved. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the blue boat moved."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: a green frog appeared."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the blue rocket vanished."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the blue rocket changed colour from blue to purple."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "bird-2718",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 612,
+          "y": 160
+        },
+        {
+          "id": "turtle-2719",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 648,
+          "y": 440
+        },
+        {
+          "id": "duck-2720",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 126,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "turtle-2721",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 517,
+          "y": 470
+        },
+        {
+          "id": "penguin-2722",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 120,
+          "y": 348
+        },
+        {
+          "id": "duck-2723",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 388,
+          "y": 435
+        },
+        {
+          "id": "ball-2724",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 680,
+          "y": 348,
+          "flip": true
+        },
+        {
+          "id": "rocket-2725",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 185,
+          "y": 150,
+          "flip": true
+        },
+        {
+          "id": "boat-2726",
+          "art": "boat",
+          "name": "boat",
+          "color": "blue",
+          "x": 268,
+          "y": 465
+        }
+      ]
+    },
+    "sceneAlt": "A pond scene. In the scene: blue bird, green turtle, white duck, green turtle, penguin, brown duck, green ball, blue rocket, blue boat.",
+    "sceneAfter": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "bird-2718",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 612,
+          "y": 160
+        },
+        {
+          "id": "turtle-2719",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 648,
+          "y": 440
+        },
+        {
+          "id": "duck-2720",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 126,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "turtle-2721",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 517,
+          "y": 470
+        },
+        {
+          "id": "penguin-2722",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 120,
+          "y": 348
+        },
+        {
+          "id": "duck-2723",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 388,
+          "y": 435
+        },
+        {
+          "id": "ball-2724",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 680,
+          "y": 348,
+          "flip": true
+        },
+        {
+          "id": "rocket-2725",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 185,
+          "y": 150,
+          "flip": true
+        },
+        {
+          "id": "boat-2726",
+          "art": "boat",
+          "name": "boat",
+          "color": "blue",
+          "x": 98,
+          "y": 465
+        }
+      ]
+    },
+    "sceneAfterAlt": "A pond scene. In the scene: blue bird, green turtle, white duck, green turtle, penguin, brown duck, green ball, blue rocket, blue boat.",
+    "expectedChanges": [
+      "boat-2726:moved"
+    ]
+  }
+}

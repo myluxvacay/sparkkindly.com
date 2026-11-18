@@ -1,0 +1,112 @@
+{
+  "id": "observation-006",
+  "scheduledDate": "2026-11-17",
+  "brand": "discover",
+  "gameType": "observation",
+  "title": "Look closely: train station clock",
+  "prompt": "What time does the clock in the train station show?",
+  "difficulty": "hard",
+  "explanation": "The clock's short hand points past 11 and its long hand shows 40 minutes, so the clock reads 11:40.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "11:40"
+    },
+    {
+      "id": "b",
+      "text": "10:40"
+    },
+    {
+      "id": "c",
+      "text": "12:40"
+    },
+    {
+      "id": "d",
+      "text": "11:25"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "rabbit-45",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "white",
+          "x": 253,
+          "y": 390
+        },
+        {
+          "id": "crab-46",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 543,
+          "y": 390
+        },
+        {
+          "id": "elephant-47",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 685,
+          "y": 390
+        },
+        {
+          "id": "ladybug-48",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 403,
+          "y": 390
+        },
+        {
+          "id": "pine-49",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 106,
+          "y": 390
+        },
+        {
+          "id": "horse-50",
+          "art": "horse",
+          "name": "horse",
+          "color": "brown",
+          "x": 636,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "owl-51",
+          "art": "owl",
+          "name": "owl",
+          "color": "gray",
+          "x": 188,
+          "y": 505
+        },
+        {
+          "id": "flower-52",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 483,
+          "y": 505
+        }
+      ],
+      "clockTime": "11:40"
+    },
+    "sceneAlt": "A station scene. A clock shows 11:40. In the scene: white rabbit, red crab, gray elephant, red ladybug, green pine tree, brown horse, gray owl, red flower.",
+    "fact": {
+      "type": "clock"
+    }
+  }
+}

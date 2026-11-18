@@ -1,0 +1,56 @@
+{
+  "id": "sequence-025",
+  "scheduledDate": "2027-02-18",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came first?",
+  "prompt": "Spark showed some things in order. What came first?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the gray owl, second the red car, third the black horse. So the first one was the gray owl.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "black horse"
+    },
+    {
+      "id": "b",
+      "text": "gray owl"
+    },
+    {
+      "id": "c",
+      "text": "black cat"
+    },
+    {
+      "id": "d",
+      "text": "red car"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "owl",
+        "label": "gray owl",
+        "color": "gray"
+      },
+      {
+        "art": "car",
+        "label": "red car",
+        "color": "red"
+      },
+      {
+        "art": "horse",
+        "label": "black horse",
+        "color": "black"
+      }
+    ],
+    "askPosition": 1,
+    "decoyLabel": "black cat"
+  }
+}

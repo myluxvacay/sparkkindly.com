@@ -1,0 +1,134 @@
+{
+  "id": "what-changed-031",
+  "scheduledDate": "2026-12-28",
+  "brand": "grow",
+  "gameType": "what-changed",
+  "title": "What changed: classroom",
+  "prompt": "One thing changed between the before and after classroom pictures. What changed?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the white sheep changed colour from black to white. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the gray sheep vanished."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: a red kite appeared."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the gray sheep changed colour from gray to purple."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the white sheep changed colour from black to white."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "horse-2830",
+          "art": "horse",
+          "name": "horse",
+          "color": "brown",
+          "x": 421,
+          "y": 465
+        },
+        {
+          "id": "sheep-2831",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 115,
+          "y": 470
+        },
+        {
+          "id": "flower-2832",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 474,
+          "y": 505
+        },
+        {
+          "id": "turtle-2833",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 563,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "sheep-2834",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 193,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: brown horse, black sheep, red flower, green turtle, gray sheep.",
+    "sceneAfter": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "horse-2830",
+          "art": "horse",
+          "name": "horse",
+          "color": "brown",
+          "x": 421,
+          "y": 465
+        },
+        {
+          "id": "sheep-2831",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 115,
+          "y": 470
+        },
+        {
+          "id": "flower-2832",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 474,
+          "y": 505
+        },
+        {
+          "id": "turtle-2833",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 563,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "sheep-2834",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 193,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAfterAlt": "A classroom scene. In the scene: brown horse, white sheep, red flower, green turtle, gray sheep.",
+    "expectedChanges": [
+      "sheep-2831:color:black->white"
+    ]
+  }
+}

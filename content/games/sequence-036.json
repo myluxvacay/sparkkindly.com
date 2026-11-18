@@ -1,0 +1,64 @@
+{
+  "id": "sequence-036",
+  "scheduledDate": "2027-02-23",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the pink pig, second the white rocket, third the purple bunch of grapes, fourth the penguin, fifth the blue bird. So the second one was the white rocket.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "pink pig"
+    },
+    {
+      "id": "b",
+      "text": "white rocket"
+    },
+    {
+      "id": "c",
+      "text": "purple bunch of grapes"
+    },
+    {
+      "id": "d",
+      "text": "penguin"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "pig",
+        "label": "pink pig",
+        "color": "pink"
+      },
+      {
+        "art": "rocket",
+        "label": "white rocket",
+        "color": "white"
+      },
+      {
+        "art": "grapes",
+        "label": "purple bunch of grapes",
+        "color": "purple"
+      },
+      {
+        "art": "penguin",
+        "label": "penguin"
+      },
+      {
+        "art": "bird",
+        "label": "blue bird",
+        "color": "blue"
+      }
+    ],
+    "askPosition": 2
+  }
+}

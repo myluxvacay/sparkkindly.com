@@ -1,0 +1,118 @@
+{
+  "id": "counting-020",
+  "scheduledDate": "2027-01-18",
+  "brand": "discover",
+  "gameType": "counting",
+  "title": "Counting: fishs at the pond",
+  "prompt": "How many fishs can you count in the pond?",
+  "difficulty": "medium",
+  "explanation": "Count the fishs one by one: there are exactly 8.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 8,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "fish-3172",
+          "art": "fish",
+          "name": "fish",
+          "color": "purple",
+          "x": 513,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "fish-3173",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 186,
+          "y": 500
+        },
+        {
+          "id": "fish-3174",
+          "art": "fish",
+          "name": "fish",
+          "color": "pink",
+          "x": 657,
+          "y": 440
+        },
+        {
+          "id": "fish-3175",
+          "art": "fish",
+          "name": "fish",
+          "color": "purple",
+          "x": 254,
+          "y": 465
+        },
+        {
+          "id": "fish-3176",
+          "art": "fish",
+          "name": "fish",
+          "color": "pink",
+          "x": 125,
+          "y": 440
+        },
+        {
+          "id": "fish-3177",
+          "art": "fish",
+          "name": "fish",
+          "color": "purple",
+          "x": 588,
+          "y": 500
+        },
+        {
+          "id": "fish-3178",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 383,
+          "y": 435
+        },
+        {
+          "id": "fish-3179",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 338,
+          "y": 495
+        },
+        {
+          "id": "cloud-3180",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "gray",
+          "x": 613,
+          "y": 160
+        },
+        {
+          "id": "moon-3181",
+          "art": "moon",
+          "name": "moon",
+          "x": 185,
+          "y": 150
+        },
+        {
+          "id": "carrot-3182",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 115,
+          "y": 348
+        }
+      ]
+    },
+    "sceneAlt": "A pond scene. In the scene: purple fish, blue fish, pink fish, purple fish, pink fish, purple fish, blue fish, blue fish, gray cloud, moon, carrot.",
+    "countTarget": {
+      "art": "fish"
+    }
+  }
+}

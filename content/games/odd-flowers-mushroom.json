@@ -1,0 +1,45 @@
+{
+  "id": "odd-flowers-mushroom",
+  "scheduledDate": "2026-11-18",
+  "brand": "play",
+  "gameType": "odd-one-out",
+  "title": "Odd one out: the one that never blooms",
+  "prompt": "Three of these bloom as flowers. Which one never does?",
+  "difficulty": "easy",
+  "explanation": "Roses, sunflowers and tulips are flowers. A mushroom is a fungus — it grows, but it never blooms.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "correctOptionId": "mushroom",
+  "visual": {
+    "gameType": "odd-one-out"
+  },
+  "items": [
+    {
+      "id": "rose",
+      "text": "Rose",
+      "art": "rose",
+      "alt": "A red rose flower on a green stem"
+    },
+    {
+      "id": "mushroom",
+      "text": "Mushroom",
+      "art": "mushroom",
+      "alt": "A red toadstool mushroom with white spots"
+    },
+    {
+      "id": "sunflower",
+      "text": "Sunflower",
+      "art": "sunflower",
+      "alt": "A tall sunflower with a brown centre"
+    },
+    {
+      "id": "tulip",
+      "text": "Tulip",
+      "art": "tulip",
+      "alt": "A pink tulip flower on a green stem"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "counting-047",
+  "scheduledDate": "2027-02-01",
+  "brand": "grow",
+  "gameType": "counting",
+  "title": "Counting: flowers at the garden",
+  "prompt": "How many flowers can you count in the garden?",
+  "difficulty": "medium",
+  "explanation": "Count the flowers one by one: there are exactly 7.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 7,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "flower-3417",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 294,
+          "y": 510
+        },
+        {
+          "id": "flower-3418",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 130,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "flower-3419",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 672,
+          "y": 425
+        },
+        {
+          "id": "flower-3420",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 483,
+          "y": 505
+        },
+        {
+          "id": "flower-3421",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 254,
+          "y": 405
+        },
+        {
+          "id": "flower-3422",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 128,
+          "y": 425
+        },
+        {
+          "id": "flower-3423",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 385,
+          "y": 430
+        },
+        {
+          "id": "elephant-3424",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 645,
+          "y": 510,
+          "flip": true
+        },
+        {
+          "id": "moon-3425",
+          "art": "moon",
+          "name": "moon",
+          "x": 522,
+          "y": 110
+        },
+        {
+          "id": "rocket-3426",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 224,
+          "y": 135
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: purple flower, purple flower, white flower, white flower, pink flower, purple flower, yellow flower, gray elephant, moon, red rocket.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

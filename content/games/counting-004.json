@@ -1,0 +1,72 @@
+{
+  "id": "counting-004",
+  "scheduledDate": "2027-01-10",
+  "brand": "kids",
+  "gameType": "counting",
+  "title": "Counting: flowers at the garden",
+  "prompt": "How many flowers can you count in the garden?",
+  "difficulty": "easy",
+  "explanation": "Count the flowers one by one: there are exactly 3.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 3,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "flower-3025",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 473,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "flower-3026",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 126,
+          "y": 505
+        },
+        {
+          "id": "flower-3027",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 253,
+          "y": 405
+        },
+        {
+          "id": "apple-3028",
+          "art": "apple",
+          "name": "apple",
+          "color": "green",
+          "x": 393,
+          "y": 430
+        },
+        {
+          "id": "train-3029",
+          "art": "train",
+          "name": "train",
+          "color": "red",
+          "x": 117,
+          "y": 425
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: red flower, red flower, purple flower, green apple, red train.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

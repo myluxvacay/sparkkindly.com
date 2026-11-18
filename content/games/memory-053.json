@@ -1,0 +1,121 @@
+{
+  "id": "memory-053",
+  "scheduledDate": "2026-11-09",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: park color",
+  "prompt": "From memory: what colour is the frog in the park?",
+  "difficulty": "medium",
+  "explanation": "The frog in the picture is green — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "green"
+    },
+    {
+      "id": "b",
+      "text": "brown"
+    },
+    {
+      "id": "c",
+      "text": "black"
+    },
+    {
+      "id": "d",
+      "text": "pink"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "cow-2187",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 387,
+          "y": 495
+        },
+        {
+          "id": "kite-2188",
+          "art": "kite",
+          "name": "kite",
+          "color": "purple",
+          "x": 658,
+          "y": 165
+        },
+        {
+          "id": "balloon-2189",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "purple",
+          "x": 470,
+          "y": 105
+        },
+        {
+          "id": "frog-2190",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 251,
+          "y": 505
+        },
+        {
+          "id": "house-2191",
+          "art": "house",
+          "name": "house",
+          "color": "yellow",
+          "x": 106,
+          "y": 480
+        },
+        {
+          "id": "ladybug-2192",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 567,
+          "y": 480,
+          "flip": true
+        },
+        {
+          "id": "kite-2193",
+          "art": "kite",
+          "name": "kite",
+          "color": "purple",
+          "x": 202,
+          "y": 140
+        },
+        {
+          "id": "fox-2194",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 155,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "pumpkin-2195",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 696,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: brown cow, purple kite, purple balloon, green frog, yellow house, red ladybug, purple kite, orange fox, orange pumpkin.",
+    "fact": {
+      "type": "color",
+      "elementId": "frog-2190"
+    }
+  }
+}

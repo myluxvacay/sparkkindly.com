@@ -1,0 +1,113 @@
+{
+  "id": "memory-044",
+  "scheduledDate": "2026-11-10",
+  "brand": "play",
+  "gameType": "memory",
+  "title": "Memory: beach count",
+  "prompt": "From memory: how many frogs are in the beach?",
+  "difficulty": "medium",
+  "explanation": "Count the frogs one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "3"
+    },
+    {
+      "id": "b",
+      "text": "4"
+    },
+    {
+      "id": "c",
+      "text": "1"
+    },
+    {
+      "id": "d",
+      "text": "2"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "carrot-2068",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 355,
+          "y": 440
+        },
+        {
+          "id": "planet-2069",
+          "art": "planet",
+          "name": "planet",
+          "color": "purple",
+          "x": 220,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "frog-2070",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 297,
+          "y": 345
+        },
+        {
+          "id": "star-2071",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 520,
+          "y": 105
+        },
+        {
+          "id": "sheep-2072",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 577,
+          "y": 505
+        },
+        {
+          "id": "duck-2073",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 477,
+          "y": 325
+        },
+        {
+          "id": "frog-2074",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 632,
+          "y": 345,
+          "flip": true
+        },
+        {
+          "id": "book-2075",
+          "art": "book",
+          "name": "book",
+          "color": "purple",
+          "x": 123,
+          "y": 480,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A beach scene. In the scene: carrot, purple planet, green frog, yellow star, white sheep, white duck, green frog, purple book.",
+    "fact": {
+      "type": "count",
+      "art": "frog"
+    }
+  }
+}

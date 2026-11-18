@@ -1,0 +1,110 @@
+{
+  "id": "memory-032",
+  "scheduledDate": "2026-11-11",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: street sign",
+  "prompt": "From memory: what does the sign in the street say?",
+  "difficulty": "medium",
+  "explanation": "The sign in the picture reads \"Bakery\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Museum"
+    },
+    {
+      "id": "b",
+      "text": "Toys"
+    },
+    {
+      "id": "c",
+      "text": "Fruit"
+    },
+    {
+      "id": "d",
+      "text": "Bakery"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "turtle-1669",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 524,
+          "y": 490
+        },
+        {
+          "id": "bee-1670",
+          "art": "bee",
+          "name": "bee",
+          "x": 242,
+          "y": 120
+        },
+        {
+          "id": "tree-1671",
+          "art": "tree",
+          "name": "tree",
+          "color": "green",
+          "x": 667,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "bird-1672",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 116,
+          "y": 385
+        },
+        {
+          "id": "dog-1673",
+          "art": "dog",
+          "name": "dog",
+          "color": "gray",
+          "x": 689,
+          "y": 505
+        },
+        {
+          "id": "carrot-1674",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 326,
+          "y": 505
+        },
+        {
+          "id": "cloud-1675",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "gray",
+          "x": 560,
+          "y": 95
+        },
+        {
+          "id": "pig-1676",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 307,
+          "y": 385
+        }
+      ],
+      "signText": "Bakery"
+    },
+    "sceneAlt": "A street scene. A sign reads \"Bakery\". In the scene: green turtle, bee, green tree, green bird, gray dog, carrot, gray cloud, pink pig.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

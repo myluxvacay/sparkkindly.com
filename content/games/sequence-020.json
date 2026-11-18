@@ -1,0 +1,60 @@
+{
+  "id": "sequence-020",
+  "scheduledDate": "2027-02-15",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "medium",
+  "explanation": "The order was: first the white star, second the white chicken, third the white rabbit, fourth the green car. So the third one was the white rabbit.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "white rabbit"
+    },
+    {
+      "id": "b",
+      "text": "green car"
+    },
+    {
+      "id": "c",
+      "text": "white star"
+    },
+    {
+      "id": "d",
+      "text": "white chicken"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "star",
+        "label": "white star",
+        "color": "white"
+      },
+      {
+        "art": "chicken",
+        "label": "white chicken",
+        "color": "white"
+      },
+      {
+        "art": "rabbit",
+        "label": "white rabbit",
+        "color": "white"
+      },
+      {
+        "art": "car",
+        "label": "green car",
+        "color": "green"
+      }
+    ],
+    "askPosition": 3
+  }
+}

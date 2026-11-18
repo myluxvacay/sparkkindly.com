@@ -1,0 +1,65 @@
+{
+  "id": "sequence-021",
+  "scheduledDate": "2027-02-16",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "hard",
+  "explanation": "The order was: first the red car, second the gray elephant, third the gray cloud, fourth the blue house, fifth the purple umbrella. So the second one was the gray elephant.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "blue house"
+    },
+    {
+      "id": "b",
+      "text": "red car"
+    },
+    {
+      "id": "c",
+      "text": "gray cloud"
+    },
+    {
+      "id": "d",
+      "text": "gray elephant"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "car",
+        "label": "red car",
+        "color": "red"
+      },
+      {
+        "art": "elephant",
+        "label": "gray elephant",
+        "color": "gray"
+      },
+      {
+        "art": "cloud",
+        "label": "gray cloud",
+        "color": "gray"
+      },
+      {
+        "art": "house",
+        "label": "blue house",
+        "color": "blue"
+      },
+      {
+        "art": "umbrella",
+        "label": "purple umbrella",
+        "color": "purple"
+      }
+    ],
+    "askPosition": 2
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "odd-fruit-car",
+  "scheduledDate": "2026-11-18",
+  "brand": "play",
+  "gameType": "odd-one-out",
+  "title": "Odd one out: three fruits and a car",
+  "prompt": "One of these does not belong. Can you spot it?",
+  "difficulty": "easy",
+  "explanation": "The apple, banana and orange are all fruits. The car is a vehicle — it is the odd one out.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "correctOptionId": "car",
+  "visual": {
+    "gameType": "odd-one-out"
+  },
+  "items": [
+    {
+      "id": "apple",
+      "text": "Apple",
+      "art": "apple",
+      "alt": "A red apple with a green leaf"
+    },
+    {
+      "id": "banana",
+      "text": "Banana",
+      "art": "banana",
+      "alt": "A bunch of yellow bananas"
+    },
+    {
+      "id": "car",
+      "text": "Car",
+      "art": "car",
+      "alt": "A small blue car"
+    },
+    {
+      "id": "orange",
+      "text": "Orange",
+      "art": "orange",
+      "alt": "A round orange with a leaf"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "id": "spot-difference-020",
+  "scheduledDate": "2026-11-24",
+  "brand": "discover",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: train station",
+  "prompt": "Three things changed between the two train station pictures. Which list names all three changes?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: The green ball moved, the brown chicken vanished and the yellow duck vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The green ball moved, a yellow balloon appeared and the yellow duck vanished."
+    },
+    {
+      "id": "b",
+      "text": "The green ball moved, the brown chicken vanished and the red train vanished."
+    },
+    {
+      "id": "c",
+      "text": "The green ball moved, the brown chicken vanished and the yellow duck vanished."
+    },
+    {
+      "id": "d",
+      "text": "The red train changed colour from red to purple, the brown chicken vanished and the yellow duck vanished."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "train-2368",
+          "art": "train",
+          "name": "train",
+          "color": "red",
+          "x": 639,
+          "y": 500
+        },
+        {
+          "id": "chicken-2369",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 542,
+          "y": 390,
+          "flip": true
+        },
+        {
+          "id": "shell-2370",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 401,
+          "y": 390
+        },
+        {
+          "id": "ball-2371",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 687,
+          "y": 390
+        },
+        {
+          "id": "book-2372",
+          "art": "book",
+          "name": "book",
+          "color": "purple",
+          "x": 476,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "chicken-2373",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 258,
+          "y": 390
+        },
+        {
+          "id": "duck-2374",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 175,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A station scene. In the scene: red train, brown chicken, orange shell, green ball, purple book, white chicken, yellow duck.",
+    "sceneAfter": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "train-2368",
+          "art": "train",
+          "name": "train",
+          "color": "red",
+          "x": 639,
+          "y": 500
+        },
+        {
+          "id": "shell-2370",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 401,
+          "y": 390
+        },
+        {
+          "id": "ball-2371",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 517,
+          "y": 390
+        },
+        {
+          "id": "book-2372",
+          "art": "book",
+          "name": "book",
+          "color": "purple",
+          "x": 476,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "chicken-2373",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 258,
+          "y": 390
+        }
+      ]
+    },
+    "sceneAfterAlt": "A station scene. In the scene: red train, orange shell, green ball, purple book, white chicken.",
+    "expectedChanges": [
+      "ball-2371:moved",
+      "chicken-2369:removed",
+      "duck-2374:removed"
+    ]
+  }
+}

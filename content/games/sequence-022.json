@@ -1,0 +1,56 @@
+{
+  "id": "sequence-022",
+  "scheduledDate": "2027-02-16",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came second?",
+  "prompt": "Spark showed some things in order. What came second?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the white shell, second the red mushroom, third the purple umbrella. So the second one was the red mushroom.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "red rocket"
+    },
+    {
+      "id": "b",
+      "text": "purple umbrella"
+    },
+    {
+      "id": "c",
+      "text": "white shell"
+    },
+    {
+      "id": "d",
+      "text": "red mushroom"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "shell",
+        "label": "white shell",
+        "color": "white"
+      },
+      {
+        "art": "mushroom",
+        "label": "red mushroom",
+        "color": "red"
+      },
+      {
+        "art": "umbrella",
+        "label": "purple umbrella",
+        "color": "purple"
+      }
+    ],
+    "askPosition": 2,
+    "decoyLabel": "red rocket"
+  }
+}

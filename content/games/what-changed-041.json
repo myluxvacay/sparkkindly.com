@@ -1,0 +1,164 @@
+{
+  "id": "what-changed-041",
+  "scheduledDate": "2027-01-02",
+  "brand": "play",
+  "gameType": "what-changed",
+  "title": "What changed: meadow",
+  "prompt": "One thing changed between the before and after meadow pictures. What changed?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the gray cloud changed colour from white to gray. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: a red kite appeared."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the gray cloud changed colour from white to gray."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the gray sheep vanished."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the gray sheep changed colour from gray to purple."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "sheep-2898",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 565,
+          "y": 425
+        },
+        {
+          "id": "hat-2899",
+          "art": "hat",
+          "name": "hat",
+          "color": "purple",
+          "x": 625,
+          "y": 465
+        },
+        {
+          "id": "duck-2900",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 179,
+          "y": 430
+        },
+        {
+          "id": "cupcake-2901",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "blue",
+          "x": 115,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "cloud-2902",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 633,
+          "y": 150
+        },
+        {
+          "id": "banana-2903",
+          "art": "banana",
+          "name": "banana",
+          "x": 422,
+          "y": 505
+        },
+        {
+          "id": "crab-2904",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 503,
+          "y": 495
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: gray sheep, purple hat, brown duck, blue cupcake, white cloud, banana, orange crab.",
+    "sceneAfter": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "sheep-2898",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 565,
+          "y": 425
+        },
+        {
+          "id": "hat-2899",
+          "art": "hat",
+          "name": "hat",
+          "color": "purple",
+          "x": 625,
+          "y": 465
+        },
+        {
+          "id": "duck-2900",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 179,
+          "y": 430
+        },
+        {
+          "id": "cupcake-2901",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "blue",
+          "x": 115,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "cloud-2902",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "gray",
+          "x": 633,
+          "y": 150
+        },
+        {
+          "id": "banana-2903",
+          "art": "banana",
+          "name": "banana",
+          "x": 422,
+          "y": 505
+        },
+        {
+          "id": "crab-2904",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 503,
+          "y": 495
+        }
+      ]
+    },
+    "sceneAfterAlt": "A meadow scene. In the scene: gray sheep, purple hat, brown duck, blue cupcake, gray cloud, banana, orange crab.",
+    "expectedChanges": [
+      "cloud-2902:color:white->gray"
+    ]
+  }
+}

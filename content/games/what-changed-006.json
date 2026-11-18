@@ -1,0 +1,182 @@
+{
+  "id": "what-changed-006",
+  "scheduledDate": "2026-12-15",
+  "brand": "discover",
+  "gameType": "what-changed",
+  "title": "What changed: train station",
+  "prompt": "One thing changed between the before and after train station pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the brown bear moved. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: a red kite appeared."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the blue bird vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the blue bird changed colour from blue to purple."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the brown bear moved."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "gift-2656",
+          "art": "gift",
+          "name": "gift box",
+          "color": "yellow",
+          "x": 547,
+          "y": 390
+        },
+        {
+          "id": "bird-2657",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 106,
+          "y": 390,
+          "flip": true
+        },
+        {
+          "id": "owl-2658",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 687,
+          "y": 390
+        },
+        {
+          "id": "bird-2659",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 481,
+          "y": 505
+        },
+        {
+          "id": "owl-2660",
+          "art": "owl",
+          "name": "owl",
+          "color": "gray",
+          "x": 184,
+          "y": 505
+        },
+        {
+          "id": "bear-2661",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 648,
+          "y": 500
+        },
+        {
+          "id": "cupcake-2662",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 244,
+          "y": 390
+        },
+        {
+          "id": "duck-2663",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 400,
+          "y": 390
+        }
+      ]
+    },
+    "sceneAlt": "A station scene. In the scene: yellow gift box, blue bird, brown owl, blue bird, gray owl, brown bear, white cupcake, brown duck.",
+    "sceneAfter": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "gift-2656",
+          "art": "gift",
+          "name": "gift box",
+          "color": "yellow",
+          "x": 547,
+          "y": 390
+        },
+        {
+          "id": "bird-2657",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 106,
+          "y": 390,
+          "flip": true
+        },
+        {
+          "id": "owl-2658",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 687,
+          "y": 390
+        },
+        {
+          "id": "bird-2659",
+          "art": "bird",
+          "name": "bird",
+          "color": "blue",
+          "x": 481,
+          "y": 505
+        },
+        {
+          "id": "owl-2660",
+          "art": "owl",
+          "name": "owl",
+          "color": "gray",
+          "x": 184,
+          "y": 505
+        },
+        {
+          "id": "bear-2661",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 740,
+          "y": 500
+        },
+        {
+          "id": "cupcake-2662",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 244,
+          "y": 390
+        },
+        {
+          "id": "duck-2663",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 400,
+          "y": 390
+        }
+      ]
+    },
+    "sceneAfterAlt": "A station scene. In the scene: yellow gift box, blue bird, brown owl, blue bird, gray owl, brown bear, white cupcake, brown duck.",
+    "expectedChanges": [
+      "bear-2661:moved"
+    ]
+  }
+}

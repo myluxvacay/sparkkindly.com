@@ -1,0 +1,150 @@
+{
+  "id": "spot-difference-047",
+  "scheduledDate": "2026-12-08",
+  "brand": "together",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: park",
+  "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: The bee moved, the white star changed colour from yellow to white and the green turtle vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The bee moved, a blue ball appeared and the green turtle vanished."
+    },
+    {
+      "id": "b",
+      "text": "The bee moved, the white star changed colour from yellow to white and the green turtle vanished."
+    },
+    {
+      "id": "c",
+      "text": "The penguin changed colour from brown to purple, the white star changed colour from yellow to white and the green turtle vanished."
+    },
+    {
+      "id": "d",
+      "text": "The bee moved, the white star changed colour from yellow to white and the penguin vanished."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "penguin-2555",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 388,
+          "y": 495
+        },
+        {
+          "id": "elephant-2556",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 644,
+          "y": 440
+        },
+        {
+          "id": "penguin-2557",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 699,
+          "y": 505
+        },
+        {
+          "id": "bee-2558",
+          "art": "bee",
+          "name": "bee",
+          "x": 663,
+          "y": 165
+        },
+        {
+          "id": "banana-2559",
+          "art": "banana",
+          "name": "banana",
+          "x": 247,
+          "y": 505
+        },
+        {
+          "id": "star-2560",
+          "art": "star",
+          "name": "star",
+          "color": "yellow",
+          "x": 463,
+          "y": 105
+        },
+        {
+          "id": "turtle-2561",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 115,
+          "y": 480
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: penguin, gray elephant, penguin, bee, banana, yellow star, green turtle.",
+    "sceneAfter": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "penguin-2555",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 388,
+          "y": 495
+        },
+        {
+          "id": "elephant-2556",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 644,
+          "y": 440
+        },
+        {
+          "id": "penguin-2557",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 699,
+          "y": 505
+        },
+        {
+          "id": "bee-2558",
+          "art": "bee",
+          "name": "bee",
+          "x": 493,
+          "y": 165
+        },
+        {
+          "id": "banana-2559",
+          "art": "banana",
+          "name": "banana",
+          "x": 247,
+          "y": 505
+        },
+        {
+          "id": "star-2560",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 463,
+          "y": 105
+        }
+      ]
+    },
+    "sceneAfterAlt": "A park scene. In the scene: penguin, gray elephant, penguin, bee, banana, white star.",
+    "expectedChanges": [
+      "bee-2558:moved",
+      "star-2560:color:yellow->white",
+      "turtle-2561:removed"
+    ]
+  }
+}

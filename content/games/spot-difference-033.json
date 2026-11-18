@@ -1,0 +1,199 @@
+{
+  "id": "spot-difference-033",
+  "scheduledDate": "2026-12-01",
+  "brand": "play",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: beach",
+  "prompt": "Three things changed between the two beach pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The yellow duck turned around, the frog changed colour from green to plain and the orange pumpkin turned around. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The yellow duck turned around, the frog changed colour from green to plain and the white duck vanished."
+    },
+    {
+      "id": "b",
+      "text": "The yellow duck turned around, the frog changed colour from green to plain and the orange pumpkin turned around."
+    },
+    {
+      "id": "c",
+      "text": "The yellow duck turned around, a red kite appeared and the orange pumpkin turned around."
+    },
+    {
+      "id": "d",
+      "text": "The white duck changed colour from white to purple, the frog changed colour from green to plain and the orange pumpkin turned around."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "crab-2458",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 123,
+          "y": 330
+        },
+        {
+          "id": "fox-2459",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 274,
+          "y": 505
+        },
+        {
+          "id": "duck-2460",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 643,
+          "y": 345
+        },
+        {
+          "id": "balloon-2461",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "blue",
+          "x": 221,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "frog-2462",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 421,
+          "y": 475
+        },
+        {
+          "id": "pumpkin-2463",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 357,
+          "y": 440
+        },
+        {
+          "id": "butterfly-2464",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "orange",
+          "x": 522,
+          "y": 105
+        },
+        {
+          "id": "duck-2465",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 473,
+          "y": 325
+        },
+        {
+          "id": "bee-2466",
+          "art": "bee",
+          "name": "bee",
+          "x": 690,
+          "y": 160
+        }
+      ]
+    },
+    "sceneAlt": "A beach scene. In the scene: red crab, orange fox, yellow duck, blue balloon, green frog, orange pumpkin, orange butterfly, white duck, bee.",
+    "sceneAfter": {
+      "template": "beach",
+      "elements": [
+        {
+          "id": "crab-2458",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 123,
+          "y": 330
+        },
+        {
+          "id": "fox-2459",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 274,
+          "y": 505
+        },
+        {
+          "id": "duck-2460",
+          "art": "duck",
+          "name": "duck",
+          "color": "yellow",
+          "x": 643,
+          "y": 345,
+          "flip": true
+        },
+        {
+          "id": "balloon-2461",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "blue",
+          "x": 221,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "frog-2462",
+          "art": "frog",
+          "name": "frog",
+          "x": 421,
+          "y": 475
+        },
+        {
+          "id": "pumpkin-2463",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 357,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "butterfly-2464",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "orange",
+          "x": 522,
+          "y": 105
+        },
+        {
+          "id": "duck-2465",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 473,
+          "y": 325
+        },
+        {
+          "id": "bee-2466",
+          "art": "bee",
+          "name": "bee",
+          "x": 690,
+          "y": 160
+        }
+      ]
+    },
+    "sceneAfterAlt": "A beach scene. In the scene: red crab, orange fox, yellow duck, blue balloon, frog, orange pumpkin, orange butterfly, white duck, bee.",
+    "expectedChanges": [
+      "duck-2460:turned",
+      "frog-2462:color:green->plain",
+      "pumpkin-2463:turned"
+    ]
+  }
+}

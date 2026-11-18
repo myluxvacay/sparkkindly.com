@@ -1,0 +1,130 @@
+{
+  "id": "memory-002",
+  "scheduledDate": "2026-11-13",
+  "brand": "grow",
+  "gameType": "memory",
+  "title": "Memory: garden sign",
+  "prompt": "From memory: what does the sign in the garden say?",
+  "difficulty": "medium",
+  "explanation": "The sign in the picture reads \"Bakery\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Flowers"
+    },
+    {
+      "id": "b",
+      "text": "Harbour"
+    },
+    {
+      "id": "c",
+      "text": "Tickets"
+    },
+    {
+      "id": "d",
+      "text": "Bakery"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "pine-1026",
+          "art": "pine",
+          "name": "pine tree",
+          "color": "green",
+          "x": 648,
+          "y": 510
+        },
+        {
+          "id": "rabbit-1027",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "brown",
+          "x": 120,
+          "y": 425
+        },
+        {
+          "id": "mushroom-1028",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "purple",
+          "x": 123,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "gift-1029",
+          "art": "gift",
+          "name": "gift box",
+          "color": "pink",
+          "x": 256,
+          "y": 405
+        },
+        {
+          "id": "cloud-1030",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 516,
+          "y": 110,
+          "flip": true
+        },
+        {
+          "id": "train-1031",
+          "art": "train",
+          "name": "train",
+          "color": "red",
+          "x": 536,
+          "y": 405,
+          "flip": true
+        },
+        {
+          "id": "moon-1032",
+          "art": "moon",
+          "name": "moon",
+          "x": 230,
+          "y": 135,
+          "flip": true
+        },
+        {
+          "id": "hat-1033",
+          "art": "hat",
+          "name": "hat",
+          "color": "red",
+          "x": 677,
+          "y": 425
+        },
+        {
+          "id": "grapes-1034",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 294,
+          "y": 510
+        },
+        {
+          "id": "duck-1035",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 387,
+          "y": 430
+        }
+      ],
+      "signText": "Bakery"
+    },
+    "sceneAlt": "A garden scene. A sign reads \"Bakery\". In the scene: green pine tree, brown rabbit, purple mushroom, pink gift box, white cloud, red train, moon, red hat, green bunch of grapes, brown duck.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

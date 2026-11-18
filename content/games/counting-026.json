@@ -1,0 +1,113 @@
+{
+  "id": "counting-026",
+  "scheduledDate": "2027-01-21",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: sheeps at the farm",
+  "prompt": "How many sheeps can you count in the farm?",
+  "difficulty": "medium",
+  "explanation": "Count the sheeps one by one: there are exactly 7.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 7,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "sheep-3227",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 566,
+          "y": 465
+        },
+        {
+          "id": "sheep-3228",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 245,
+          "y": 430,
+          "flip": true
+        },
+        {
+          "id": "sheep-3229",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 436,
+          "y": 500
+        },
+        {
+          "id": "sheep-3230",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 374,
+          "y": 505
+        },
+        {
+          "id": "sheep-3231",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 293,
+          "y": 470
+        },
+        {
+          "id": "sheep-3232",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 618,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "sheep-3233",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 684,
+          "y": 500
+        },
+        {
+          "id": "rabbit-3234",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "brown",
+          "x": 724,
+          "y": 450
+        },
+        {
+          "id": "planet-3235",
+          "art": "planet",
+          "name": "planet",
+          "color": "purple",
+          "x": 694,
+          "y": 170
+        },
+        {
+          "id": "cloud-3236",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 326,
+          "y": 130
+        }
+      ]
+    },
+    "sceneAlt": "A farm scene. In the scene: black sheep, white sheep, white sheep, gray sheep, white sheep, black sheep, gray sheep, brown rabbit, purple planet, white cloud.",
+    "countTarget": {
+      "art": "sheep"
+    }
+  }
+}

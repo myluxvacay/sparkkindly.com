@@ -1,0 +1,63 @@
+{
+  "id": "counting-043",
+  "scheduledDate": "2027-01-30",
+  "brand": "kids",
+  "gameType": "counting",
+  "title": "Counting: flowers at the meadow",
+  "prompt": "How many flowers can you count in the meadow?",
+  "difficulty": "easy",
+  "explanation": "Count the flowers one by one: there are exactly 2.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 2,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "flower-3385",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 374,
+          "y": 460
+        },
+        {
+          "id": "flower-3386",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 718,
+          "y": 500
+        },
+        {
+          "id": "hat-3387",
+          "art": "hat",
+          "name": "hat",
+          "color": "green",
+          "x": 437,
+          "y": 505
+        },
+        {
+          "id": "bird-3388",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 642,
+          "y": 150
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: purple flower, pink flower, green hat, green bird.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

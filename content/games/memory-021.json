@@ -1,0 +1,127 @@
+{
+  "id": "memory-021",
+  "scheduledDate": "2026-11-12",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: park clock",
+  "prompt": "From memory: what time does the clock in the park show?",
+  "difficulty": "hard",
+  "explanation": "The clock's short hand points towards 4 and its long hand shows 25 minutes, so the clock reads 4:25.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "4:10"
+    },
+    {
+      "id": "b",
+      "text": "6:40"
+    },
+    {
+      "id": "c",
+      "text": "4:25"
+    },
+    {
+      "id": "d",
+      "text": "3:25"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "shell-1511",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 639,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "rabbit-1512",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "gray",
+          "x": 109,
+          "y": 480
+        },
+        {
+          "id": "house-1513",
+          "art": "house",
+          "name": "house",
+          "color": "yellow",
+          "x": 395,
+          "y": 495
+        },
+        {
+          "id": "sheep-1514",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "black",
+          "x": 159,
+          "y": 440
+        },
+        {
+          "id": "moon-1515",
+          "art": "moon",
+          "name": "moon",
+          "x": 196,
+          "y": 140
+        },
+        {
+          "id": "moon-1516",
+          "art": "moon",
+          "name": "moon",
+          "x": 467,
+          "y": 105
+        },
+        {
+          "id": "shell-1517",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 557,
+          "y": 480
+        },
+        {
+          "id": "planet-1518",
+          "art": "planet",
+          "name": "planet",
+          "color": "pink",
+          "x": 662,
+          "y": 165
+        },
+        {
+          "id": "pumpkin-1519",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 701,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "fox-1520",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 247,
+          "y": 505
+        }
+      ],
+      "clockTime": "4:25"
+    },
+    "sceneAlt": "A park scene. A clock shows 4:25. In the scene: orange shell, gray rabbit, yellow house, black sheep, moon, moon, orange shell, pink planet, orange pumpkin, orange fox.",
+    "fact": {
+      "type": "clock"
+    }
+  }
+}

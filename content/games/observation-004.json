@@ -1,0 +1,95 @@
+{
+  "id": "observation-004",
+  "scheduledDate": "2026-11-17",
+  "brand": "together",
+  "gameType": "observation",
+  "title": "Look closely: street count",
+  "prompt": "How many frogs are in the street?",
+  "difficulty": "easy",
+  "explanation": "Count the frogs one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "4"
+    },
+    {
+      "id": "b",
+      "text": "3"
+    },
+    {
+      "id": "c",
+      "text": "1"
+    },
+    {
+      "id": "d",
+      "text": "2"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "owl-31",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 659,
+          "y": 385
+        },
+        {
+          "id": "frog-32",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 334,
+          "y": 505
+        },
+        {
+          "id": "bird-33",
+          "art": "bird",
+          "name": "bird",
+          "color": "red",
+          "x": 553,
+          "y": 95
+        },
+        {
+          "id": "frog-34",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 143,
+          "y": 490
+        },
+        {
+          "id": "ball-35",
+          "art": "ball",
+          "name": "ball",
+          "color": "yellow",
+          "x": 683,
+          "y": 505
+        },
+        {
+          "id": "cow-36",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 297,
+          "y": 385
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: brown owl, green frog, red bird, green frog, yellow ball, white cow.",
+    "fact": {
+      "type": "count",
+      "art": "frog"
+    }
+  }
+}

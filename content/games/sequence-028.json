@@ -1,0 +1,56 @@
+{
+  "id": "sequence-028",
+  "scheduledDate": "2027-02-19",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the purple fish, second the green book, third the white star. So the third one was the white star.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "orange orange"
+    },
+    {
+      "id": "b",
+      "text": "white star"
+    },
+    {
+      "id": "c",
+      "text": "purple fish"
+    },
+    {
+      "id": "d",
+      "text": "green book"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "fish",
+        "label": "purple fish",
+        "color": "purple"
+      },
+      {
+        "art": "book",
+        "label": "green book",
+        "color": "green"
+      },
+      {
+        "art": "star",
+        "label": "white star",
+        "color": "white"
+      }
+    ],
+    "askPosition": 3,
+    "decoyLabel": "orange orange"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "sequence-013",
+  "scheduledDate": "2027-02-12",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came first?",
+  "prompt": "Spark showed some things in order. What came first?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the red mushroom, second the black sheep, third the purple ball. So the first one was the red mushroom.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "red mushroom"
+    },
+    {
+      "id": "b",
+      "text": "purple ball"
+    },
+    {
+      "id": "c",
+      "text": "pink planet"
+    },
+    {
+      "id": "d",
+      "text": "black sheep"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "mushroom",
+        "label": "red mushroom",
+        "color": "red"
+      },
+      {
+        "art": "sheep",
+        "label": "black sheep",
+        "color": "black"
+      },
+      {
+        "art": "ball",
+        "label": "purple ball",
+        "color": "purple"
+      }
+    ],
+    "askPosition": 1,
+    "decoyLabel": "pink planet"
+  }
+}

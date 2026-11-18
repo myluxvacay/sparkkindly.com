@@ -1,0 +1,112 @@
+{
+  "id": "observation-056",
+  "scheduledDate": "2026-11-13",
+  "brand": "discover",
+  "gameType": "observation",
+  "title": "Look closely: train station clock",
+  "prompt": "What time does the clock in the train station show?",
+  "difficulty": "medium",
+  "explanation": "The clock's short hand points past 1 and its long hand shows 45 minutes, so the clock reads 1:45.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "1:45"
+    },
+    {
+      "id": "b",
+      "text": "2:45"
+    },
+    {
+      "id": "c",
+      "text": "3:00"
+    },
+    {
+      "id": "d",
+      "text": "1:30"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "train-997",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 175,
+          "y": 505
+        },
+        {
+          "id": "pig-998",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 405,
+          "y": 390
+        },
+        {
+          "id": "grapes-999",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 107,
+          "y": 390
+        },
+        {
+          "id": "book-1000",
+          "art": "book",
+          "name": "book",
+          "color": "purple",
+          "x": 543,
+          "y": 390
+        },
+        {
+          "id": "rabbit-1001",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "white",
+          "x": 642,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "gift-1002",
+          "art": "gift",
+          "name": "gift box",
+          "color": "purple",
+          "x": 247,
+          "y": 390
+        },
+        {
+          "id": "apple-1003",
+          "art": "apple",
+          "name": "apple",
+          "color": "red",
+          "x": 482,
+          "y": 505
+        },
+        {
+          "id": "cat-1004",
+          "art": "cat",
+          "name": "cat",
+          "color": "white",
+          "x": 691,
+          "y": 390
+        }
+      ],
+      "clockTime": "1:45"
+    },
+    "sceneAlt": "A station scene. A clock shows 1:45. In the scene: green train, pink pig, purple bunch of grapes, purple book, white rabbit, purple gift box, red apple, white cat.",
+    "fact": {
+      "type": "clock"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "id": "spot-difference-014",
+  "scheduledDate": "2026-11-21",
+  "brand": "together",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: park",
+  "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: The bee moved, the moon moved and the pink pig vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The bee moved, the moon moved and the pink pig vanished."
+    },
+    {
+      "id": "b",
+      "text": "The green turtle changed colour from green to purple, the moon moved and the pink pig vanished."
+    },
+    {
+      "id": "c",
+      "text": "The bee moved, a blue ball appeared and the pink pig vanished."
+    },
+    {
+      "id": "d",
+      "text": "The bee moved, the moon moved and the green turtle vanished."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "pig-2326",
+          "art": "pig",
+          "name": "pig",
+          "color": "pink",
+          "x": 388,
+          "y": 495
+        },
+        {
+          "id": "cow-2327",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 153,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "turtle-2328",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 643,
+          "y": 440
+        },
+        {
+          "id": "bee-2329",
+          "art": "bee",
+          "name": "bee",
+          "x": 472,
+          "y": 105
+        },
+        {
+          "id": "ladybug-2330",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 103,
+          "y": 480
+        },
+        {
+          "id": "cloud-2331",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "gray",
+          "x": 196,
+          "y": 140,
+          "flip": true
+        },
+        {
+          "id": "moon-2332",
+          "art": "moon",
+          "name": "moon",
+          "x": 661,
+          "y": 165
+        }
+      ]
+    },
+    "sceneAlt": "A park scene. In the scene: pink pig, brown cow, green turtle, bee, red ladybug, gray cloud, moon.",
+    "sceneAfter": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "cow-2327",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 153,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "turtle-2328",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 643,
+          "y": 440
+        },
+        {
+          "id": "bee-2329",
+          "art": "bee",
+          "name": "bee",
+          "x": 642,
+          "y": 105
+        },
+        {
+          "id": "ladybug-2330",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 103,
+          "y": 480
+        },
+        {
+          "id": "cloud-2331",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "gray",
+          "x": 196,
+          "y": 140,
+          "flip": true
+        },
+        {
+          "id": "moon-2332",
+          "art": "moon",
+          "name": "moon",
+          "x": 491,
+          "y": 165
+        }
+      ]
+    },
+    "sceneAfterAlt": "A park scene. In the scene: brown cow, green turtle, bee, red ladybug, gray cloud, moon.",
+    "expectedChanges": [
+      "bee-2329:moved",
+      "moon-2332:moved",
+      "pig-2326:removed"
+    ]
+  }
+}

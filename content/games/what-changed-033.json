@@ -1,0 +1,203 @@
+{
+  "id": "what-changed-033",
+  "scheduledDate": "2026-12-29",
+  "brand": "play",
+  "gameType": "what-changed",
+  "title": "What changed: farm",
+  "prompt": "One thing changed between the before and after farm pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the fox changed colour from orange to plain. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the brown bear changed colour from brown to purple."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the brown bear vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: a blue ball appeared."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the fox changed colour from orange to plain."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "bee-2842",
+          "art": "bee",
+          "name": "bee",
+          "x": 564,
+          "y": 100
+        },
+        {
+          "id": "balloon-2843",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "red",
+          "x": 701,
+          "y": 170,
+          "flip": true
+        },
+        {
+          "id": "fox-2844",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 615,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "sheep-2845",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 433,
+          "y": 500
+        },
+        {
+          "id": "bird-2846",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 724,
+          "y": 450
+        },
+        {
+          "id": "tree-2847",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 692,
+          "y": 500
+        },
+        {
+          "id": "car-2848",
+          "art": "car",
+          "name": "car",
+          "color": "blue",
+          "x": 296,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "planet-2849",
+          "art": "planet",
+          "name": "planet",
+          "color": "purple",
+          "x": 332,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "bear-2850",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 365,
+          "y": 505,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A farm scene. In the scene: bee, red balloon, orange fox, gray sheep, yellow bird, orange tree, blue car, purple planet, brown bear.",
+    "sceneAfter": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "bee-2842",
+          "art": "bee",
+          "name": "bee",
+          "x": 564,
+          "y": 100
+        },
+        {
+          "id": "balloon-2843",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "red",
+          "x": 701,
+          "y": 170,
+          "flip": true
+        },
+        {
+          "id": "fox-2844",
+          "art": "fox",
+          "name": "fox",
+          "x": 615,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "sheep-2845",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 433,
+          "y": 500
+        },
+        {
+          "id": "bird-2846",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 724,
+          "y": 450
+        },
+        {
+          "id": "tree-2847",
+          "art": "tree",
+          "name": "tree",
+          "color": "orange",
+          "x": 692,
+          "y": 500
+        },
+        {
+          "id": "car-2848",
+          "art": "car",
+          "name": "car",
+          "color": "blue",
+          "x": 296,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "planet-2849",
+          "art": "planet",
+          "name": "planet",
+          "color": "purple",
+          "x": 332,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "bear-2850",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 365,
+          "y": 505,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAfterAlt": "A farm scene. In the scene: bee, red balloon, fox, gray sheep, yellow bird, orange tree, blue car, purple planet, brown bear.",
+    "expectedChanges": [
+      "fox-2844:color:orange->plain"
+    ]
+  }
+}

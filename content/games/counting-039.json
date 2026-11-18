@@ -1,0 +1,128 @@
+{
+  "id": "counting-039",
+  "scheduledDate": "2027-01-28",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: flowers at the meadow",
+  "prompt": "How many flowers can you count in the meadow?",
+  "difficulty": "hard",
+  "explanation": "Count the flowers one by one: there are exactly 9.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "numberAnswer": {
+    "value": 9,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "flower-3346",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 176,
+          "y": 430
+        },
+        {
+          "id": "flower-3347",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 716,
+          "y": 500
+        },
+        {
+          "id": "flower-3348",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 240,
+          "y": 495
+        },
+        {
+          "id": "flower-3349",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 104,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "flower-3350",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 437,
+          "y": 505
+        },
+        {
+          "id": "flower-3351",
+          "art": "flower",
+          "name": "flower",
+          "color": "yellow",
+          "x": 559,
+          "y": 425
+        },
+        {
+          "id": "flower-3352",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 634,
+          "y": 465
+        },
+        {
+          "id": "flower-3353",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 496,
+          "y": 495
+        },
+        {
+          "id": "flower-3354",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 377,
+          "y": 460
+        },
+        {
+          "id": "planet-3355",
+          "art": "planet",
+          "name": "planet",
+          "color": "pink",
+          "x": 427,
+          "y": 100
+        },
+        {
+          "id": "rocket-3356",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 163,
+          "y": 140
+        },
+        {
+          "id": "bird-3357",
+          "art": "bird",
+          "name": "bird",
+          "color": "green",
+          "x": 635,
+          "y": 150
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: yellow flower, white flower, purple flower, purple flower, pink flower, yellow flower, red flower, white flower, white flower, pink planet, red rocket, green bird.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

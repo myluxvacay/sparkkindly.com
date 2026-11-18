@@ -1,0 +1,55 @@
+{
+  "id": "sequence-010",
+  "scheduledDate": "2027-02-10",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came first?",
+  "prompt": "Spark showed some things in order. What came first?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the yellow umbrella, second the snowman, third the white horse. So the first one was the yellow umbrella.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "carrot"
+    },
+    {
+      "id": "b",
+      "text": "yellow umbrella"
+    },
+    {
+      "id": "c",
+      "text": "snowman"
+    },
+    {
+      "id": "d",
+      "text": "white horse"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "umbrella",
+        "label": "yellow umbrella",
+        "color": "yellow"
+      },
+      {
+        "art": "snowman",
+        "label": "snowman"
+      },
+      {
+        "art": "horse",
+        "label": "white horse",
+        "color": "white"
+      }
+    ],
+    "askPosition": 1,
+    "decoyLabel": "carrot"
+  }
+}

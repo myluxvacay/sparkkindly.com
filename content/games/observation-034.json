@@ -1,0 +1,88 @@
+{
+  "id": "observation-034",
+  "scheduledDate": "2026-11-15",
+  "brand": "together",
+  "gameType": "observation",
+  "title": "Look closely: kitchen count",
+  "prompt": "How many bears are in the kitchen?",
+  "difficulty": "easy",
+  "explanation": "Count the bears one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "2"
+    },
+    {
+      "id": "b",
+      "text": "3"
+    },
+    {
+      "id": "c",
+      "text": "4"
+    },
+    {
+      "id": "d",
+      "text": "1"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "kitchen",
+      "elements": [
+        {
+          "id": "bear-646",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 296,
+          "y": 508
+        },
+        {
+          "id": "carrot-647",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 520,
+          "y": 508
+        },
+        {
+          "id": "grapes-648",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "green",
+          "x": 330,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "bear-649",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 695,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "apple-650",
+          "art": "apple",
+          "name": "apple",
+          "color": "green",
+          "x": 607,
+          "y": 396
+        }
+      ]
+    },
+    "sceneAlt": "A kitchen scene. In the scene: brown bear, carrot, green bunch of grapes, brown bear, green apple.",
+    "fact": {
+      "type": "count",
+      "art": "bear"
+    }
+  }
+}

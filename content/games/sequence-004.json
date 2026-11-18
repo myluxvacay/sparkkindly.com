@@ -1,0 +1,56 @@
+{
+  "id": "sequence-004",
+  "scheduledDate": "2027-02-07",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came third?",
+  "prompt": "Spark showed some things in order. What came third?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the white cat, second the black cat, third the blue house. So the third one was the blue house.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "orange shell"
+    },
+    {
+      "id": "b",
+      "text": "blue house"
+    },
+    {
+      "id": "c",
+      "text": "white cat"
+    },
+    {
+      "id": "d",
+      "text": "black cat"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "cat",
+        "label": "white cat",
+        "color": "white"
+      },
+      {
+        "art": "cat",
+        "label": "black cat",
+        "color": "black"
+      },
+      {
+        "art": "house",
+        "label": "blue house",
+        "color": "blue"
+      }
+    ],
+    "askPosition": 3,
+    "decoyLabel": "orange shell"
+  }
+}

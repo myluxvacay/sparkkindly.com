@@ -1,0 +1,56 @@
+{
+  "id": "sequence-037",
+  "scheduledDate": "2027-02-24",
+  "brand": "play",
+  "gameType": "sequence",
+  "title": "Sequence recall: what came first?",
+  "prompt": "Spark showed some things in order. What came first?",
+  "difficulty": "easy",
+  "explanation": "The order was: first the red umbrella, second the black sheep, third the green car. So the first one was the red umbrella.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "green car"
+    },
+    {
+      "id": "b",
+      "text": "red umbrella"
+    },
+    {
+      "id": "c",
+      "text": "black sheep"
+    },
+    {
+      "id": "d",
+      "text": "yellow flower"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "sequence",
+    "sequence": [
+      {
+        "art": "umbrella",
+        "label": "red umbrella",
+        "color": "red"
+      },
+      {
+        "art": "sheep",
+        "label": "black sheep",
+        "color": "black"
+      },
+      {
+        "art": "car",
+        "label": "green car",
+        "color": "green"
+      }
+    ],
+    "askPosition": 1,
+    "decoyLabel": "yellow flower"
+  }
+}

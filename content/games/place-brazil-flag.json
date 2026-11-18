@@ -1,0 +1,39 @@
+{
+  "id": "place-brazil-flag",
+  "scheduledDate": "2026-11-18",
+  "brand": "play",
+  "gameType": "flags-and-places",
+  "title": "Flags & places: green, gold and a starry globe",
+  "prompt": "This flag — green, with a yellow diamond and a blue globe — belongs to which country?",
+  "difficulty": "medium",
+  "explanation": "That is Brazil’s flag. The blue globe shows stars as they appeared over Rio de Janeiro on 15 November 1889.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "correctOptionId": "brazil",
+  "visual": {
+    "gameType": "flags-and-places",
+    "heroArt": "flag-br",
+    "heroAlt": "The flag of Brazil: green with a yellow diamond and a blue circle with white stars"
+  },
+  "options": [
+    {
+      "id": "argentina",
+      "text": "Argentina"
+    },
+    {
+      "id": "mexico",
+      "text": "Mexico"
+    },
+    {
+      "id": "brazil",
+      "text": "Brazil"
+    },
+    {
+      "id": "portugal",
+      "text": "Portugal"
+    }
+  ]
+}

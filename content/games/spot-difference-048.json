@@ -1,0 +1,171 @@
+{
+  "id": "spot-difference-048",
+  "scheduledDate": "2026-12-08",
+  "brand": "discover",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: train station",
+  "prompt": "Three things changed between the two train station pictures. Which list names all three changes?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: The fox changed colour from orange to plain, the purple gift box changed colour from pink to purple and the purple snail vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The fox changed colour from orange to plain, the purple gift box changed colour from pink to purple and the pink shell vanished."
+    },
+    {
+      "id": "b",
+      "text": "The fox changed colour from orange to plain, a red kite appeared and the purple snail vanished."
+    },
+    {
+      "id": "c",
+      "text": "The pink shell changed colour from pink to purple, the purple gift box changed colour from pink to purple and the purple snail vanished."
+    },
+    {
+      "id": "d",
+      "text": "The fox changed colour from orange to plain, the purple gift box changed colour from pink to purple and the purple snail vanished."
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "sheep-2562",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 692,
+          "y": 390
+        },
+        {
+          "id": "carrot-2563",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 185,
+          "y": 505
+        },
+        {
+          "id": "shell-2564",
+          "art": "shell",
+          "name": "shell",
+          "color": "pink",
+          "x": 118,
+          "y": 390
+        },
+        {
+          "id": "fox-2565",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 401,
+          "y": 390
+        },
+        {
+          "id": "sheep-2566",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 479,
+          "y": 505
+        },
+        {
+          "id": "snail-2567",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 537,
+          "y": 390
+        },
+        {
+          "id": "gift-2568",
+          "art": "gift",
+          "name": "gift box",
+          "color": "pink",
+          "x": 249,
+          "y": 390
+        },
+        {
+          "id": "cupcake-2569",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 648,
+          "y": 500
+        }
+      ]
+    },
+    "sceneAlt": "A station scene. In the scene: gray sheep, carrot, pink shell, orange fox, gray sheep, purple snail, pink gift box, white cupcake.",
+    "sceneAfter": {
+      "template": "station",
+      "elements": [
+        {
+          "id": "sheep-2562",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 692,
+          "y": 390
+        },
+        {
+          "id": "carrot-2563",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 185,
+          "y": 505
+        },
+        {
+          "id": "shell-2564",
+          "art": "shell",
+          "name": "shell",
+          "color": "pink",
+          "x": 118,
+          "y": 390
+        },
+        {
+          "id": "fox-2565",
+          "art": "fox",
+          "name": "fox",
+          "x": 401,
+          "y": 390
+        },
+        {
+          "id": "sheep-2566",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 479,
+          "y": 505
+        },
+        {
+          "id": "gift-2568",
+          "art": "gift",
+          "name": "gift box",
+          "color": "purple",
+          "x": 249,
+          "y": 390
+        },
+        {
+          "id": "cupcake-2569",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 648,
+          "y": 500
+        }
+      ]
+    },
+    "sceneAfterAlt": "A station scene. In the scene: gray sheep, carrot, pink shell, fox, gray sheep, purple gift box, white cupcake.",
+    "expectedChanges": [
+      "fox-2565:color:orange->plain",
+      "gift-2568:color:pink->purple",
+      "snail-2567:removed"
+    ]
+  }
+}

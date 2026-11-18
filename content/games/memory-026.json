@@ -1,0 +1,116 @@
+{
+  "id": "memory-026",
+  "scheduledDate": "2026-11-11",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: kitchen clock",
+  "prompt": "From memory: what time does the clock in the kitchen show?",
+  "difficulty": "medium",
+  "explanation": "The clock's short hand points towards 8 and its long hand shows 15 minutes, so the clock reads 8:15.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "8:00"
+    },
+    {
+      "id": "b",
+      "text": "8:45"
+    },
+    {
+      "id": "c",
+      "text": "7:15"
+    },
+    {
+      "id": "d",
+      "text": "8:15"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "kitchen",
+      "elements": [
+        {
+          "id": "book-1571",
+          "art": "book",
+          "name": "book",
+          "color": "purple",
+          "x": 466,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "orange-1572",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 692,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "grapes-1573",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 120,
+          "y": 508
+        },
+        {
+          "id": "umbrella-1574",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "green",
+          "x": 694,
+          "y": 508
+        },
+        {
+          "id": "hat-1575",
+          "art": "hat",
+          "name": "hat",
+          "color": "blue",
+          "x": 307,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "hat-1576",
+          "art": "hat",
+          "name": "hat",
+          "color": "red",
+          "x": 521,
+          "y": 508,
+          "flip": true
+        },
+        {
+          "id": "apple-1577",
+          "art": "apple",
+          "name": "apple",
+          "color": "yellow",
+          "x": 329,
+          "y": 396,
+          "flip": true
+        },
+        {
+          "id": "cat-1578",
+          "art": "cat",
+          "name": "cat",
+          "color": "orange",
+          "x": 613,
+          "y": 396
+        }
+      ],
+      "clockTime": "8:15"
+    },
+    "sceneAlt": "A kitchen scene. A clock shows 8:15. In the scene: purple book, orange orange, purple bunch of grapes, green umbrella, blue hat, red hat, yellow apple, orange cat.",
+    "fact": {
+      "type": "clock"
+    }
+  }
+}

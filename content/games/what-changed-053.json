@@ -1,0 +1,166 @@
+{
+  "id": "what-changed-053",
+  "scheduledDate": "2027-01-08",
+  "brand": "together",
+  "gameType": "what-changed",
+  "title": "What changed: street",
+  "prompt": "One thing changed between the before and after street pictures. What changed?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the white cow changed colour from brown to white. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the green train changed colour from green to purple."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the green train vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the white cow changed colour from brown to white."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: a red kite appeared."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "sheep-2981",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 525,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "balloon-2982",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "blue",
+          "x": 236,
+          "y": 120
+        },
+        {
+          "id": "cow-2983",
+          "art": "cow",
+          "name": "cow",
+          "color": "brown",
+          "x": 334,
+          "y": 505
+        },
+        {
+          "id": "flower-2984",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 695,
+          "y": 505
+        },
+        {
+          "id": "train-2985",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 657,
+          "y": 385
+        },
+        {
+          "id": "owl-2986",
+          "art": "owl",
+          "name": "owl",
+          "color": "gray",
+          "x": 303,
+          "y": 385
+        },
+        {
+          "id": "ball-2987",
+          "art": "ball",
+          "name": "ball",
+          "color": "blue",
+          "x": 127,
+          "y": 385
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: white sheep, blue balloon, brown cow, purple flower, green train, gray owl, blue ball.",
+    "sceneAfter": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "sheep-2981",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 525,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "balloon-2982",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "blue",
+          "x": 236,
+          "y": 120
+        },
+        {
+          "id": "cow-2983",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 334,
+          "y": 505
+        },
+        {
+          "id": "flower-2984",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 695,
+          "y": 505
+        },
+        {
+          "id": "train-2985",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 657,
+          "y": 385
+        },
+        {
+          "id": "owl-2986",
+          "art": "owl",
+          "name": "owl",
+          "color": "gray",
+          "x": 303,
+          "y": 385
+        },
+        {
+          "id": "ball-2987",
+          "art": "ball",
+          "name": "ball",
+          "color": "blue",
+          "x": 127,
+          "y": 385
+        }
+      ]
+    },
+    "sceneAfterAlt": "A street scene. In the scene: white sheep, blue balloon, white cow, purple flower, green train, gray owl, blue ball.",
+    "expectedChanges": [
+      "cow-2983:color:brown->white"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "observation-007",
+  "scheduledDate": "2026-11-17",
+  "brand": "together",
+  "gameType": "observation",
+  "title": "Look closely: street sign",
+  "prompt": "What does the sign in the street say?",
+  "difficulty": "easy",
+  "explanation": "The sign in the picture reads \"Toys\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Museum"
+    },
+    {
+      "id": "b",
+      "text": "Harbour"
+    },
+    {
+      "id": "c",
+      "text": "Post"
+    },
+    {
+      "id": "d",
+      "text": "Toys"
+    }
+  ],
+  "correctOptionId": "d",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "shell-53",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 325,
+          "y": 505
+        },
+        {
+          "id": "elephant-54",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 691,
+          "y": 505
+        },
+        {
+          "id": "fox-55",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 659,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "banana-56",
+          "art": "banana",
+          "name": "banana",
+          "x": 516,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "hat-57",
+          "art": "hat",
+          "name": "hat",
+          "color": "red",
+          "x": 295,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "butterfly-58",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "purple",
+          "x": 243,
+          "y": 120,
+          "flip": true
+        }
+      ],
+      "signText": "Toys"
+    },
+    "sceneAlt": "A street scene. A sign reads \"Toys\". In the scene: orange shell, gray elephant, orange fox, banana, red hat, purple butterfly.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

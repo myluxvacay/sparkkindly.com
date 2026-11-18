@@ -1,0 +1,130 @@
+{
+  "id": "observation-042",
+  "scheduledDate": "2026-11-14",
+  "brand": "together",
+  "gameType": "observation",
+  "title": "Look closely: street sign",
+  "prompt": "What does the sign in the street say?",
+  "difficulty": "hard",
+  "explanation": "The sign in the picture reads \"Farm Shop\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "safety-review",
+  "reviewer": null,
+  "reviewedAt": null,
+  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bakery"
+    },
+    {
+      "id": "b",
+      "text": "Cafe"
+    },
+    {
+      "id": "c",
+      "text": "Farm Shop"
+    },
+    {
+      "id": "d",
+      "text": "Tickets"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "grapes-785",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 143,
+          "y": 490
+        },
+        {
+          "id": "carrot-786",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 667,
+          "y": 385
+        },
+        {
+          "id": "train-787",
+          "art": "train",
+          "name": "train",
+          "color": "blue",
+          "x": 123,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "butterfly-788",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "pink",
+          "x": 233,
+          "y": 120
+        },
+        {
+          "id": "bear-789",
+          "art": "bear",
+          "name": "bear",
+          "color": "brown",
+          "x": 428,
+          "y": 460
+        },
+        {
+          "id": "crab-790",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 689,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "rocket-791",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 566,
+          "y": 95,
+          "flip": true
+        },
+        {
+          "id": "apple-792",
+          "art": "apple",
+          "name": "apple",
+          "color": "green",
+          "x": 304,
+          "y": 385
+        },
+        {
+          "id": "crab-793",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 326,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "rabbit-794",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "gray",
+          "x": 512,
+          "y": 490
+        }
+      ],
+      "signText": "Farm Shop"
+    },
+    "sceneAlt": "A street scene. A sign reads \"Farm Shop\". In the scene: purple bunch of grapes, carrot, blue train, pink butterfly, brown bear, orange crab, blue rocket, green apple, red crab, gray rabbit.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}
