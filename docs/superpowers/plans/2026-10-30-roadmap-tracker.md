@@ -159,6 +159,12 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 
 ---
 
+## Visual games in the flow + Spark's recorded voice (owner direction, 18 November 2026)
+
+- [~] V.1 360 visual games as library content in the keep-playing flow (six scene types + flags/odd-one-out/pick-the-right-one), schema-proven answers, silo retired; owner's five recorded Spark lines wired to greeting/praise/completion/encouragement/goodbye — *branch `feat/spark-voice-visual-games-flow`; plan `2026-11-18-visual-games-flow-and-spark-voice.md`; independent review + staging/prod deploy in progress.*
+
+---
+
 ## Standing owner actions (not tied to one project)
 
 - [ ] Monthly budget ceiling: confirm about $150/month or set another figure.

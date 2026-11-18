@@ -41,3 +41,17 @@ next-question flow — no separate picture-game silo. Push staging → prod auth
 8. Independent reviewer pass over the collection; regenerate/drop rejects; flip approvals.
 9. Gates (content:validate, lint, typecheck, unit, targeted e2e), staging merge + CI + spot check,
    cherry-pick to main, prod verify.
+
+## Progress (18 Nov 2026, evening)
+
+- Engine, schema, import, flow integration, voice wiring, /games/ index: DONE, committed fe6b1d6 on
+  feat/spark-voice-visual-games-flow. Silo (VisualGames.tsx, lib/games/visual-games.ts) deleted.
+- Collection generated: 360 games (observation 58, memory 58, spot-difference 56, what-changed 54,
+  counting 56, sequence 54, flags 13, odd-one-out 6, pick-the-right-one 5; easy 129 / medium 121 /
+  hard 110; 32 kids). Dating: first 40% dated 2026-11-08..18, rest 2/day runway from 2026-11-19.
+- Targeted unit suites pass (scene, visual-games, games-content, spark-assistant, keep-playing);
+  content:validate passes in preview mode. Release-mode validation waits on approvals by design.
+- Independent reviewer pass RUNNING (separate agent, own verification logic) -> review-verdicts.json.
+- Next: scripts/approve-visual-games.ts (registry + flips; rejects deleted), release-mode
+  content:validate, targeted e2e (tests/e2e/visual-games-flow.spec.ts), merge to staging, verify CI,
+  then main, verify, spot-check prod.
