@@ -5,6 +5,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync, readdirSync } from 'node:fs';
 import { allGames } from '@/lib/content';
+import { gameSchema } from '@/lib/schemas';
 import { countInScene, type SceneSpec } from '@/lib/games/scene';
 
 const SIX = ['observation', 'memory', 'spot-difference', 'what-changed', 'counting', 'sequence'] as const;
@@ -51,6 +52,18 @@ describe('visual games collection', () => {
       checked += 1;
     }
     expect(checked).toBeGreaterThanOrEqual(50);
+  });
+
+  it('rejects a colour question whose object appears in two colours (review finding, 18 Nov 2026)', () => {
+    const source = allGames.find((g) => g.visual.fact?.type === 'color')!;
+    const clone = JSON.parse(JSON.stringify(source)) as typeof source;
+    const scene = clone.visual.scene!;
+    const target = scene.elements.find((e) => e.id === (clone.visual.fact as { elementId: string }).elementId)!;
+    const other = target.color === 'red' ? 'blue' : 'red';
+    scene.elements.push({ ...target, id: 'injected-twin', color: other, x: target.x + 60 });
+    clone.visual.sceneAlt = `${clone.visual.sceneAlt} Plus a ${other} ${target.name} nearby.`;
+    expect(gameSchema.safeParse(clone).success).toBe(false);
+    expect(gameSchema.safeParse(source).success).toBe(true);
   });
 
   it('has unique ids and no two games with identical scene payloads', () => {

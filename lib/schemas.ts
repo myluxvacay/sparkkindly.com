@@ -124,6 +124,15 @@ export const gameSchema = z.object({
           const text = correctText(g.options);
           if (!text || !sameText(text, value)) bad(`Correct option must be the fact value "${value}"`);
         }
+        // A colour question names only the object ("what colour is the duck?"), so it is only
+        // answerable when every scene element of that kind shares the one colour — two ducks of
+        // different colours make the marked answer arbitrary (independent review, 18 Nov 2026).
+        if (g.visual.fact.type === 'color') {
+          const target = scene.elements.find((e) => e.id === (g.visual.fact as { elementId?: string }).elementId);
+          if (target && scene.elements.some((e) => e.art === target.art && e.color !== target.color)) {
+            bad('Colour question is ambiguous: the scene holds that object in more than one colour');
+          }
+        }
       }
       break;
     }

@@ -306,7 +306,10 @@ function factGame(r: Rng, kind: 'observation' | 'memory', difficulty: string, n:
     wrongs = sample(r, SIGN_WORDS.filter((w) => w !== word), 3);
     explanation = `The sign in the picture reads "${word}" — it is written in big letters on the board.`;
   } else if (factKind === 'color') {
-    const colored = scene.elements.filter((e) => e.color);
+    // The prompt names only the object ("what colour is the duck?"), so the asked-about art must
+    // appear exactly once in the scene — with two ducks of different colours the question has no
+    // unique answer (independent review rejection, 18 Nov 2026: 4 games dropped for this).
+    const colored = scene.elements.filter((e) => e.color && scene.elements.filter((x) => x.art === e.art).length === 1);
     if (!colored.length) return null;
     const el = pick(r, colored);
     fact = { type: 'color', elementId: el.id };
@@ -321,11 +324,11 @@ function factGame(r: Rng, kind: 'observation' | 'memory', difficulty: string, n:
     const count = scene.elements.filter((e) => e.art === art).length;
     if (count < 2) return null;
     fact = { type: 'count', art };
-    prompt = `${lead}how many ${entry.name}s are in the ${place}?`;
+    prompt = `${lead}how many ${pluralize(entry.name)} are in the ${place}?`;
     correct = String(count);
     wrongs = [count + 1, count - 1, count + 2].filter((v) => v > 0).map(String);
     if (wrongs.length < 3) wrongs.push(String(count + 3));
-    explanation = `Count the ${entry.name}s one by one, pointing at each so none is counted twice: there are ${count}.`;
+    explanation = `Count the ${pluralize(entry.name)} one by one, pointing at each so none is counted twice: there are ${count}.`;
   } else if (factKind === 'present') {
     const el = pick(r, scene.elements);
     fact = { type: 'present', elementId: el.id };
@@ -399,6 +402,14 @@ function mutateScene(r: Rng, scene: SceneSpec, changesWanted: number, difficulty
     fakeParts.push(`the ${elementLabel(el)} vanished`);
   }
   return { after, fakeParts };
+}
+
+const IRREGULAR_PLURALS: Record<string, string> = { fish: 'fish', sheep: 'sheep', butterfly: 'butterflies' };
+function pluralize(phrase: string): string {
+  const words = phrase.split(' ');
+  const last = words[words.length - 1];
+  words[words.length - 1] = IRREGULAR_PLURALS[last] ?? `${last}s`;
+  return words.join(' ');
 }
 
 function joinParts(parts: string[]): string {
@@ -490,11 +501,11 @@ function countingGame(r: Rng, difficulty: string): GameDraft | null {
   const scene: SceneSpec = { template: setup.template, elements };
   const place = TEMPLATE_PLACE[setup.template];
   const counted = targetColor ? `${targetColor} ${entry.name}` : entry.name;
-  const prompt = `How many ${counted}s can you count in the ${place}?`;
-  const explanation = `Count the ${counted}s one by one: there are exactly ${target}.` +
+  const prompt = `How many ${pluralize(counted)} can you count in the ${place}?`;
+  const explanation = `Count the ${pluralize(counted)} one by one: there are exactly ${target}.` +
     (useColor ? ` Only the ${targetColor} ones count — the other colours are decoys.` : '');
   return {
-    ...baseGame('', 'counting', TEMPLATE_WORLD[setup.template], difficulty, `Counting: ${counted}s at the ${place}`, prompt, explanation),
+    ...baseGame('', 'counting', TEMPLATE_WORLD[setup.template], difficulty, `Counting: ${pluralize(counted)} at the ${place}`, prompt, explanation),
     numberAnswer: { value: target, tolerance: 0 },
     visual: { gameType: 'counting', scene, sceneAlt: describeScene(scene), countTarget: { art: setup.art, ...(targetColor ? { color: targetColor } : {}) } },
   };

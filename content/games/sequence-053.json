@@ -8,10 +8,10 @@
   "difficulty": "medium",
   "explanation": "The order was: first the moon, second the purple bunch of grapes, third the white cloud, fourth the gray rabbit. So the second one was the purple bunch of grapes.",
   "sources": [],
-  "reviewStatus": "safety-review",
-  "reviewer": null,
-  "reviewedAt": null,
-  "reviewNote": "Generated visual game (18 Nov 2026): the answer is derived from the scene data and proven by the content schema. Awaiting the independent review pass.",
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
   "options": [
     {
       "id": "a",
