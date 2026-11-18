@@ -446,8 +446,11 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .quiz-review-option.is-yours{border-color:#a33d54;box-shadow:inset 0 0 0 1px #a33d54}
 .quiz-review-option.is-correct{border-color:#517c73;box-shadow:inset 0 0 0 1px #517c73}
 .quiz-tag{font-size:12px;font-weight:700;white-space:nowrap}
-.quiz-tag-yours{color:#a33d54}
-.quiz-tag-correct{color:#40635c}
+/* Deep shades, not the mid-tone border colours: the result card pops in from opacity .4 (sk-pop),
+   and axe on a slow runner can sample mid-animation, blending the tag toward the panel behind it.
+   At rest these are ~9:1 on the white row, so every point of the fade stays above 4.5:1. */
+.quiz-tag-yours{color:#6d2443}
+.quiz-tag-correct{color:#1d4d33}
 .quiz-review-yours{margin-bottom:0}
 .quiz-explain{margin-top:18px;background:#edf2ec;border-left:3px solid #517c73;padding:16px 18px}
 .quiz-explain p:last-child{margin-bottom:0}
