@@ -13,13 +13,11 @@ export default function SignUpCheckEmailPage() {
     <>
       <h1>Check your email to continue</h1>
       <div role="status" className="takeaway">
-        <p>We have sent a sign-in link to the email address you gave us.</p>
+        <p>Creating an account here works by email: a sign-in link goes to the email address you gave us.</p>
       </div>
       <ol className="prose">
         <li>Open your inbox and find the email from SparkKindly — its subject is “Your SparkKindly sign-in link”.</li>
-        <li>
-          Choose the link within 15 minutes. It works once: it signs you in and finishes creating your account.
-        </li>
+        <li>Choose the link within 15 minutes. It works once, and it signs you in.</li>
         <li>That is all — there is no password to make or remember.</li>
       </ol>
       <h2>If the email does not arrive</h2>

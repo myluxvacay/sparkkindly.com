@@ -22,6 +22,13 @@ describe('Header account link', () => {
     expect(html).not.toContain('Sign in');
   });
 
+  it('a child-profile session points My Account at /me/, its own page, not the adult account area', () => {
+    const html = renderToStaticMarkup(<Header worlds={[]} signIn signedIn accountHref="/me/" />);
+    expect(html).toContain('My Account');
+    expect(html).toContain('href="/me"');
+    expect(html).not.toContain('href="/account"');
+  });
+
   it('accounts off: neither link, signed in or not', () => {
     for (const signedIn of [false, true]) {
       const html = renderToStaticMarkup(<Header worlds={[]} signIn={false} signedIn={signedIn} />);

@@ -26,7 +26,7 @@ export default function Page() {
         {
           heading: 'Your answers',
           paragraphs: [
-            'When you check an answer to a quiz or puzzle, your answer is sent to our server inside the page address so the server can check it and show the explanation. If you are not signed in, our application does not save it, and nothing links it to you. If you are signed in, your first answer to each question is saved to your account instead, as the note under the question says. Like any web request, the address can appear in the web server’s ordinary technical logs; see the next section.',
+            'When you check an answer to a quiz or puzzle, your answer is sent to our server inside the page address so the server can check it and show the explanation. If you are not signed in, our application does not save it, and nothing links it to you. If you are signed in, your first answer to each question is saved to your account instead, as the note under the question says — unless your account is still waiting for a parent or guardian’s confirmation, because an account in that state cannot save answers yet. Like any web request, the address can appear in the web server’s ordinary technical logs; see the next section.',
           ],
         },
         {
@@ -46,7 +46,7 @@ export default function Page() {
           heading: 'Accounts',
           paragraphs: [
             'Accounts are optional: everything on the site can be read and played without one. People under 13 cannot have an account. At 13 to 15, a parent or guardian’s confirmation is needed, and a parent or guardian can withdraw it at any time. Signing in is by a link we email you; there is no password.',
-            'If you are signed in, your first answer to each question and the interests you choose are saved to your account, so the site can show you what you have answered and match items to your interests. Your account pages show what is saved, and you can delete your account and everything in it from those pages.',
+            'If you are signed in, the interests you choose are saved to your account, and so is your first answer to each question once your account is fully set up — an account still waiting for a parent or guardian’s confirmation can save interests only. That is how the site can show you what you have answered and match items to your interests. Your account pages show what is saved, and you can delete your account and everything in it from those pages.',
           ],
         },
         {

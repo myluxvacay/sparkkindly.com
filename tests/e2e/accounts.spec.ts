@@ -63,6 +63,23 @@ test('sign-up lands on a separate check-email screen with next steps and the los
   await expect(page.getByRole('button', { name: 'Create account' })).toHaveCount(0);
 });
 
+test('the header follows the session: Sign in when out, My Account when in, on every page type', async ({ page }) => {
+  // Regression for the reported bug (17 Nov 2026): the layout passed only the accounts flag to the
+  // header, so a signed-in member saw "Sign in" everywhere, including their own account page.
+  const email = fresh();
+  await signUp(page, email, dobYearsAgo(30));
+  await expect(page.locator('.header-signin')).toHaveText('Sign in');
+  await signInWithLink(page, email);
+  await expect(page.locator('.header-signin')).toHaveText('My Account');
+  await expect(page.locator('.header-signin')).toHaveAttribute('href', '/account/');
+  // A public page shows the same state — the header is the layout's, not the account area's.
+  await page.goto('/');
+  await expect(page.locator('.header-signin')).toHaveText('My Account');
+  await page.goto('/account/');
+  await page.getByRole('button', { name: 'Sign out' }).click();
+  await expect(page.locator('.header-signin')).toHaveText('Sign in');
+});
+
 test('an unconfirmed account shows its age group and a masked parent email on the link page; a confirmed one does not', async ({ page }) => {
   const email = fresh();
   await signUp(page, email, dobYearsAgo(14), 'guardian@example.test');
