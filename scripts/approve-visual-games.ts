@@ -8,7 +8,8 @@
 //                   "approved": ["id", ...] | [{ "id": "...", "note": "..." }],
 //                   "rejected": [{ "id": "...", "reason": "..." }] }
 import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
-import { contentFingerprint, gameSchema } from '../lib/schemas';
+import { gameSchema } from '../lib/schemas';
+import { contentFingerprint } from '../lib/editorial-approval';
 
 const args = process.argv.slice(2);
 const verdictsPath = args[args.indexOf('--verdicts') + 1];
@@ -53,7 +54,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   }
   if (!approvedNotes.has(id)) continue;
   const priorHash = contentFingerprint(gameSchema.parse(raw));
-  const note = approvedNotes.get(id) ?? 'Independent review passed: answer re-derived from scene data, difficulty and safety checked.';
+  const note = approvedNotes.get(id) ?? 'Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner\'s 18 Nov 2026 direction.';
   const next = { ...raw, reviewStatus: 'approved', reviewer: verdicts.reviewer, reviewedAt, reviewNote: note };
   const approvedHash = contentFingerprint(gameSchema.parse(next));
   if (!dryRun) writeFileSync(path, `${JSON.stringify(next, null, 2)}\n`);
