@@ -108,7 +108,7 @@ test('with the flag off every account page and route is a 404 (server without AC
 test('a 20-year-old signs up, uses the emailed link, sees their account and signs out', async ({ page }) => {
   const email = fresh();
   await signUp(page, email, dobYearsAgo(20));
-  await expect(page.getByRole('status')).toContainText('Check your email to continue');
+  await expect(page.getByRole('heading', { name: 'Check your email to continue' })).toBeVisible();
   expect(await accountRows(email)).toBe(1);
 
   await signInWithLink(page, email);
@@ -165,7 +165,7 @@ test('a 14-year-old is asked for a parent email, and the account says consent is
   await expect(page.getByLabel(/Parent or guardian email/)).toHaveAttribute('aria-invalid', 'true');
 
   await signUp(page, email, dobYearsAgo(14), 'parent@example.test');
-  await expect(page.getByRole('status')).toContainText('Check your email to continue');
+  await expect(page.getByRole('heading', { name: 'Check your email to continue' })).toBeVisible();
   expect(await accountRows(email)).toBe(1);
   await signInWithLink(page, email);
   await expect(page.getByText('Age 13 to 15, consent pending')).toBeVisible();
