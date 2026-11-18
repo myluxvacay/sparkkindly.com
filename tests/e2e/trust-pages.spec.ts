@@ -38,12 +38,16 @@ test('no trust page offers a feature that does not exist yet', async ({ page }) 
   }
 });
 
-test('the privacy page states what is true: optional accounts, Clarity disclosed, answers not saved, Kids rules', async ({ page }) => {
+test('the privacy page states what is true: optional accounts, Clarity disclosed, who answers are saved for, Kids rules', async ({ page }) => {
   await page.goto('/privacy/');
   const text = await page.locator('main').innerText();
   expect(text).toMatch(/optional accounts/i);
   expect(text).not.toMatch(/no accounts, sign-in/i);
   expect(text).not.toMatch(/Accounts are not available yet/i);
+  // Both halves of the answers rule: anonymous answers are not saved; a signed-in member's first
+  // answers are, with the consent-pending exception stated.
+  expect(text).toMatch(/first answer to each question is saved to your account/i);
+  expect(text).toMatch(/cannot save answers yet/i);
   expect(text).toMatch(/Microsoft Clarity/);
   expect(text).toMatch(/heatmaps and recorded browsing sessions/i);
   expect(text).toMatch(/does not save it/i);
