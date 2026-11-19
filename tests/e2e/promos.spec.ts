@@ -125,6 +125,11 @@ test('the sitemap lists the promotions hub and the live promos', async ({ reques
   const res = await request.get('/sitemap.xml');
   expect(res.status()).toBe(200);
   const xml = await res.text();
+  // Preview builds (SITE_RELEASE=false) publish an empty sitemap by design; the entries land on release.
+  if (process.env.SITE_RELEASE === 'false') {
+    expect(xml).not.toContain('/promos/');
+    return;
+  }
   expect(xml).toContain('/promos/</loc>');
   expect(xml).toContain('/promos/spark-streak/</loc>');
 });
