@@ -1,0 +1,68 @@
+{
+  "id": "together-draft-2026-11-19-02",
+  "slug": "cook-one-recipe-together",
+  "brand": "together",
+  "contentType": "activity",
+  "title": "Cook one recipe together, start to finish",
+  "description": "One recipe, two cooks, no phones at the table. Pick something neither of you has mastered, divide the jobs, and eat whatever the experiment produces.",
+  "publishedAt": "2026-11-19",
+  "updatedAt": "2026-11-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-19",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family holding hands while walking",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "cooking",
+    "family",
+    "evenings"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-19",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 19 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Choose the recipe fairly",
+      "paragraphs": [
+        "Pick a dish that is new to both cooks — or at least new enough that neither gets to be the boss. Something with real jobs in it: dough to knead, vegetables to chop, a sauce that needs watching. One-pot wonders and flatbreads are perfect first collaborations.",
+        "Read the whole recipe aloud together before touching an ingredient. Most kitchen disasters are just surprises that a two-minute read would have prevented."
+      ]
+    },
+    {
+      "heading": "Divide, don't duplicate",
+      "paragraphs": [
+        "Split the jobs by task, not by seniority: one cook chops while the other stirs; one washes as the other plates. Agree who is in charge of the oven and the sharp knives, and let the cook who is not seasoning get the casting vote on salt.",
+        "Talk while you work — that is the point of the exercise. Cooking side by side produces the kind of conversation that sitting face to face often doesn't."
+      ]
+    },
+    {
+      "heading": "Eat the evidence",
+      "paragraphs": [
+        "Serve whatever comes out, exactly as it is, and eat it together at a table. Review it like friendly critics: what worked, what was odd, what you would change. Write the verdict on the recipe itself, in pencil.",
+        "The dish is the excuse. A shared hour, a small shared risk, and a meal that exists only because two people made it — that is the actual recipe."
+      ]
+    }
+  ],
+  "takeaway": "One new recipe, jobs divided fairly, verdict written in pencil: the dish is the excuse, the hour together is the meal.",
+  "fiction": false,
+  "materials": [
+    "One recipe, printed or written out",
+    "Its ingredients, checked before you start",
+    "Two aprons or tea towels",
+    "A pencil for the verdict"
+  ],
+  "supervision": "An adult leads on sharp knives, hot pans and the oven throughout; children help with washing, measuring, mixing and tearing.",
+  "safetyNotes": [
+    "Wash hands before cooking and tie back long hair and loose sleeves.",
+    "Keep pan handles turned inwards, and treat every hot dish as guilty until proven cool.",
+    "Check allergies for everyone who will eat, before choosing the recipe."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

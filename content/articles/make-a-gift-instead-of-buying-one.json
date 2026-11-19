@@ -1,0 +1,67 @@
+{
+  "id": "save-draft-2026-11-19-02",
+  "slug": "make-a-gift-instead-of-buying-one",
+  "brand": "save",
+  "contentType": "activity",
+  "title": "Make a gift instead of buying one",
+  "description": "A jar of something homemade, a playlist with a note, a framed page of memories. Three make-it gifts that cost little and are almost never regifted.",
+  "publishedAt": "2026-11-19",
+  "updatedAt": "2026-11-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-19",
+  "hero": {
+    "src": "/images/art.webp",
+    "alt": "Paintbrushes, a sketchbook and watercolour paints",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "gifts",
+    "making",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-19",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 19 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Why made gifts land differently",
+      "paragraphs": [
+        "A bought gift says you thought of someone. A made gift says you thought of them for an hour. The three ideas below use things most homes already have, take under an hour, and suit almost any occasion — the secret is matching the gift to the person, not to the price tag.",
+        "Choose one: the jar, the playlist, or the page. Then make it properly, with a label and a note. Presentation is what turns 'homemade' into 'handmade'."
+      ]
+    },
+    {
+      "heading": "The jar, the playlist, the page",
+      "paragraphs": [
+        "The jar: layer the dry ingredients of a favourite soup, cookie or hot chocolate recipe in a clean jar, and tie on a card with the simple finishing steps. The playlist: gather songs that mean something between you two, and write two lines about why each one earned its place. The page: copy out a poem, a recipe or a memory of a shared day in your best handwriting, and frame it in a frame you already own.",
+        "Each costs a fraction of its shop-bought cousin, and each is impossible to buy — which is exactly why it works."
+      ]
+    },
+    {
+      "heading": "Give it like you mean it",
+      "paragraphs": [
+        "Hand it over with one honest sentence: 'I made this because…' That sentence is the real gift wrapping. Keep a small stock of jars, cards and frames from things you already own, and the next occasion is already half solved.",
+        "Not every gift should be made — some people and moments deserve the exact thing they asked for. But when money is tight or inspiration is missing, your hands are a shop that is always open."
+      ]
+    }
+  ],
+  "takeaway": "A layered jar, a playlist with reasons, or a framed page: pick one, make it properly, and give it with one honest sentence.",
+  "fiction": false,
+  "materials": [
+    "A clean jar with a lid, or paper and a frame you already own",
+    "Ingredients or songs you already have",
+    "A card and pen for the note",
+    "Ribbon, string or tape for finishing"
+  ],
+  "supervision": "An adult handles hot jars, sharp lids and any cooking; children excel at layering, choosing songs and writing cards.",
+  "safetyNotes": [
+    "Check allergies and dietary needs before gifting food, and label every ingredient on the card.",
+    "Use only clean, food-safe jars for edible gifts, and gift them fresh."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

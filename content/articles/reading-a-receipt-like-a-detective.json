@@ -1,0 +1,62 @@
+{
+  "id": "save-draft-2026-11-18-01",
+  "slug": "reading-a-receipt-like-a-detective",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Reading a receipt like a detective",
+  "description": "A receipt is a tiny crime-scene report of your spending: quantities, prices, taxes, offers — and occasionally, mistakes in the shop's favour. Learn to read one properly.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-habits",
+    "shopping",
+    "budgeting"
+  ],
+  "sources": [
+    {
+      "title": "Receipt | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Receipt",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The thirty-second scan",
+      "paragraphs": [
+        "Before you leave the till, scan three things: the items you bought once but were charged for twice, the full-price item that should have been on offer, and the quantity line on anything sold by weight. Till errors are common, honest, and far easier to fix while you are still standing there.",
+        "Check the date, the total, and — if you paid by card — that the card total matches the receipt total. Two numbers that disagree are a question worth asking on the spot."
+      ]
+    },
+    {
+      "heading": "What the small print is telling you",
+      "paragraphs": [
+        "A receipt quietly records your real life: the tax you paid, the loyalty points earned, the return deadline, and sometimes a survey offer that is genuinely worth money off a future shop. The returns line matters most — many shops print the last return date right there, and it is shorter than people assume.",
+        "Photograph receipts for anything with a warranty. Paper fades; a photo in a folder called “Receipts 2026” will still be readable when the washing machine misbehaves in 2028."
+      ]
+    },
+    {
+      "heading": "The weekly five-minute habit",
+      "paragraphs": [
+        "Once a week, read one or two receipts properly and compare them with what you meant to spend. You are not auditing yourself for blame — you are collecting the facts a budget is supposed to be built from.",
+        "Most people discover the same thing: the plan in their head and the story on the paper differ by a handful of small, fixable surprises."
+      ]
+    }
+  ],
+  "takeaway": "Scan every receipt for double charges and missed offers before you leave the till, photograph the warranty ones, and review a couple each week.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

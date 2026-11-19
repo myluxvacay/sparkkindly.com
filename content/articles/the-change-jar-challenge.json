@@ -1,0 +1,66 @@
+{
+  "id": "save-draft-2026-11-18-03",
+  "slug": "the-change-jar-challenge",
+  "brand": "save",
+  "contentType": "activity",
+  "title": "The change jar challenge: one jar, one goal, thirty days",
+  "description": "Every coin and small note that reaches your pocket goes into the jar for a month. A tiny, visible savings habit with a goal written on the side.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "saving",
+    "money-habits",
+    "challenges"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Set up the jar",
+      "paragraphs": [
+        "Choose a clean jar with a lid and one specific goal small enough to reach: a family pizza night, a plant for the garden, a book you have wanted for months. Write the goal and the target amount on a label and stick it where everyone can see it.",
+        "Specific beats big. A jar for “savings” fills slowly and empties guiltily; a jar for “pizza night, $30” fills like it means it."
+      ]
+    },
+    {
+      "heading": "The thirty-day rule",
+      "paragraphs": [
+        "For thirty days, every coin that comes home in a pocket or purse goes into the jar that evening — no exceptions for the big coins, no borrowing back for parking. If your life is mostly card payments, use the digital version: round each purchase up to the nearest dollar in your banking app, or move a small fixed amount on coin days.",
+        "Empty pockets into the jar at the same moment each day — keys down, coins in — so the habit attaches itself to arriving home."
+      ]
+    },
+    {
+      "heading": "Count day",
+      "paragraphs": [
+        "On day thirty, tip the jar onto the table and count it together. Photograph the total, celebrate whatever it is, and spend it on the goal exactly as promised — the celebration is what makes the next jar fill faster.",
+        "Then choose the next goal while the jar is still empty and gleaming. Small money, visibly gathered, teaches more about saving than any lecture."
+      ]
+    }
+  ],
+  "takeaway": "One labelled jar, every coin for thirty days, and a goal small enough to celebrate: saving you can watch happening.",
+  "fiction": false,
+  "materials": [
+    "A clean jar with a lid",
+    "A label and pen for the goal and target amount",
+    "A notebook or phone note for the day-thirty count"
+  ],
+  "supervision": "The household agrees the rule together — what goes in, and that nothing comes out until count day.",
+  "safetyNotes": [
+    "Keep the jar somewhere visible but secure, and out of reach of small children, for whom coins are a choking hazard.",
+    "Count day spending follows the label: agree any change of goal together, out loud, before the jar is opened."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

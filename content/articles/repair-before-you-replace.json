@@ -1,0 +1,62 @@
+{
+  "id": "save-draft-2026-11-19-01",
+  "slug": "repair-before-you-replace",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Repair before you replace: the ten-minute check that saves a purchase",
+  "description": "A wobbly chair, a silent kettle, a torn seam. Before anything goes on the shopping list, give it ten minutes of diagnosis — many 'broken' things are one fix from fine.",
+  "publishedAt": "2026-11-19",
+  "updatedAt": "2026-11-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-19",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money-habits",
+    "repair",
+    "home"
+  ],
+  "sources": [
+    {
+      "title": "Right to repair | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Right_to_repair",
+      "accessedAt": "2026-11-19"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-19",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 19 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Most replacements are premature",
+      "paragraphs": [
+        "Households replace things for a short list of reasons, and genuine death is only one of them. Loose screws, clogged filters, flat batteries, perished seals and simple dirt account for a surprising share of 'broken' — and every one of those is a ten-minute fix wearing a price tag.",
+        "The repair-before-you-replace habit inserts one step between 'it stopped working' and 'buy a new one': a short, honest diagnosis. Not a restoration project. Just ten minutes of looking."
+      ]
+    },
+    {
+      "heading": "The ten-minute check",
+      "paragraphs": [
+        "Ask four questions. Is it clean — filters, vents, blades, contacts? Is it connected — plugs, batteries, cables, settings? Is anything visibly loose, cracked or missing that a screw, a stitch or a spare part would solve? And does the maker or a local repairer offer the part, which the growing right-to-repair movement has made far easier to find than it used to be?",
+        "If the answer to any question is a cheap fix, do the fix and set a calendar note: if it fails again within a month, replacement has earned its place. That note stops repair from becoming endless life support for things that truly are finished."
+      ]
+    },
+    {
+      "heading": "Know when to let go",
+      "paragraphs": [
+        "Some things should not be repaired at home: anything with damaged wiring, gas appliances, safety equipment, or electrical goods that smell of burning. Those go to professionals or to recycling, without debate.",
+        "Everything else gets its ten minutes. A repaired thing carries a small pride no delivery box can match — and the money it did not cost is the quietest saving there is."
+      ]
+    }
+  ],
+  "takeaway": "Before replacing anything, spend ten minutes asking whether it is dirty, disconnected, loose or one spare part from fine — and let safety faults go straight to the professionals.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

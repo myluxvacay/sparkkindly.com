@@ -1,0 +1,71 @@
+{
+  "id": "kids-draft-2026-11-18-03",
+  "slug": "the-fox-who-listens-to-snow",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "The fox who listens to snow",
+  "description": "Deep under the snow, a tiny mouse is moving — and the red fox can hear it. A true story about the cleverest ears in the winter woods.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/animals.webp",
+    "alt": "A red fox standing in snow",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "animals",
+    "winter",
+    "senses"
+  ],
+  "sources": [
+    {
+      "title": "Red fox | Britannica",
+      "url": "https://www.britannica.com/animal/red-fox",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Ears like satellites",
+      "paragraphs": [
+        "A red fox has very big, very clever ears. In winter, when snow covers the ground like a thick white blanket, the fox walks very slowly and listens, listens, listens.",
+        "Under the snow, a mouse is running through its tunnels. You could not hear it. I could not hear it. But the fox can — its ears can pick up the tiniest squeaks and scratchings, even through the snow."
+      ]
+    },
+    {
+      "heading": "The great pounce",
+      "paragraphs": [
+        "When the fox hears the mouse, it stands very still. It tilts its head this way and that way, listening hard to work out exactly where the mouse is hiding. Then — BOING! — it leaps high into the air and dives nose-first into the snow.",
+        "Sometimes the fox pops up with a mouse. Sometimes it pops up with just a face full of snow, and has to shake it off and try again. Even clever hunters miss sometimes."
+      ]
+    },
+    {
+      "heading": "A winter coat for a winter hunter",
+      "paragraphs": [
+        "In winter the fox's coat grows thick and warm, and its big bushy tail works like a scarf it can wrap around its nose when it sleeps.",
+        "So if you ever see a fox standing very still in a snowy field, head tilted, ears up — be very quiet. It is listening to a whole hidden world under the snow."
+      ]
+    }
+  ],
+  "takeaway": "A red fox can hear a mouse moving under deep snow — then it leaps, dives, and sometimes comes up with only a snowy face.",
+  "fiction": false,
+  "ageGuidance": "Ages 4–8, with an adult",
+  "materials": [
+    "No materials needed — just this story, read together"
+  ],
+  "supervision": "An adult reads with the child and talks through the story together.",
+  "safetyNotes": [
+    "This is a reading activity only. Wild foxes are not pets — if you see one, watch quietly from far away with your adult and never try to feed or touch it."
+  ],
+  "screenFreeExtension": "Play listening ears at home: close your eyes for one minute and count all the tiny sounds you can hear.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

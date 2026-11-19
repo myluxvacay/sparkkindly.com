@@ -1,0 +1,56 @@
+{
+  "id": "save-draft-2026-11-17-01",
+  "slug": "know-what-you-already-own",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Know what you already own: the one-hour home inventory",
+  "description": "Most homes contain duplicates bought in ignorance: the third bottle of the same spice, the cable that was already in a drawer. One hour with a notebook, room by room, stops you buying your own belongings back.",
+  "publishedAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "home",
+    "organisation",
+    "spending"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-17",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 17 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Walk the rooms with a notebook",
+      "paragraphs": [
+        "Take a notebook and walk your home slowly, listing what you own in the categories you actually buy: cleaning supplies, toiletries, cables and chargers, batteries, tools, stationery, pantry staples. You are not cataloguing every object — only the repeat-purchase zones where duplicates hide.",
+        "Open the backs of cupboards and the bottoms of drawers. Duplicates live at the back, behind the thing you bought to replace them."
+      ]
+    },
+    {
+      "heading": "What the list changes",
+      "paragraphs": [
+        "Shop from the list before you shop from the store. Half of “we need…” evaporates when a note on the fridge door says there are already two. The list also ends the emergency purchase — the full-price replacement bought in a panic for something sitting at home in a drawer.",
+        "Photograph the pages and keep them on your phone. An inventory you cannot check in the shop aisle is a diary, not a tool."
+      ]
+    },
+    {
+      "heading": "Keep it alive in five minutes a month",
+      "paragraphs": [
+        "Cross things off as they run out, and add a line when something new arrives. Five minutes a month keeps the list true, and a true list quietly pays for itself every single week.",
+        "There is a side effect people report with surprise: gratitude. A home you have actually counted looks less like a place that needs more, and more like a place that already has plenty."
+      ]
+    }
+  ],
+  "takeaway": "List the repeat-purchase zones of your home once, shop from the list, and stop buying duplicates of things you already own.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

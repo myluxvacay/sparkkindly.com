@@ -1,0 +1,67 @@
+{
+  "id": "discover-draft-2026-11-18-01",
+  "slug": "why-do-stars-twinkle",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why do stars twinkle (and planets mostly don't)?",
+  "description": "Twinkle, twinkle is not the star's fault. The wobble happens in the air above your head — and planets escape it for a simple reason.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/space.webp",
+    "alt": "A starry sky over snowy mountains",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "space",
+    "sky",
+    "light"
+  ],
+  "sources": [
+    {
+      "title": "Scintillation | Britannica",
+      "url": "https://www.britannica.com/science/scintillation-astronomy",
+      "accessedAt": "2026-11-18"
+    },
+    {
+      "title": "Twinkling | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Twinkling",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The star is steady; the air is not",
+      "paragraphs": [
+        "A star's light travels through space in a straight, steady beam. The trouble starts in the last few kilometres, in Earth's atmosphere, where layers of warm and cool air are always sliding over each other.",
+        "Each layer bends light slightly differently, so the beam gets jiggled thousands of times a second. Your eye sees the star brighten, dim and seem to jump — the effect astronomers call scintillation, and everyone else calls twinkling."
+      ]
+    },
+    {
+      "heading": "Why planets shine steadily",
+      "paragraphs": [
+        "Stars are so far away that even through a telescope they are points of light, and a point is easy to push around. Planets are much closer, so they appear as tiny discs. The air jiggles each part of the disc differently, and the jiggles average out — so planets usually shine with a calm, steady light.",
+        "That gives you a field test on any clear night: a bright “star” that refuses to twinkle is very likely a planet. Venus and Jupiter are the usual suspects."
+      ]
+    },
+    {
+      "heading": "Twinkle as a weather report",
+      "paragraphs": [
+        "Astronomers watch twinkling closely, because strong twinkling means turbulent air and blurry telescope views — they call it bad “seeing”. The steadiest skies sit above high, dry mountains and calm oceans, which is exactly where the great observatories are built.",
+        "Next time the stars are dancing, remember: you are not watching the stars misbehave. You are watching the air itself, made visible."
+      ]
+    }
+  ],
+  "takeaway": "Stars twinkle because turbulent air bends their pinpoint light; planets look steady because their tiny discs average the wobble out.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

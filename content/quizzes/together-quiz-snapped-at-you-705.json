@@ -1,0 +1,38 @@
+{
+  "id": "together-quiz-snapped-at-you-705",
+  "scheduledDate": "2027-05-15",
+  "brand": "together",
+  "prompt": "A friend snaps at you over something tiny, then tells you they have just had terrible news. What response best fits what you have learned?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Snap back — they started it"
+    },
+    {
+      "id": "b",
+      "text": "Pretend it never happened and avoid them for a week"
+    },
+    {
+      "id": "c",
+      "text": "Say you are sorry for their news, and that the snap hurt — both things can be true"
+    },
+    {
+      "id": "d",
+      "text": "Tell other friends what they did"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Empathy means holding two truths at once: your friend's behaviour had a reason, and it still landed on you. Naming both — care for their pain, honesty about yours — is what psychologists describe as an empathic, relationship-protecting response.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Empathy | Psychology Today",
+      "url": "https://www.psychologytoday.com/us/basics/empathy",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "save-draft-2026-11-18-02",
+  "slug": "the-list-that-saves-before-you-shop",
+  "brand": "save",
+  "contentType": "article",
+  "title": "The list that saves you money before you leave home",
+  "description": "The cheapest shopping trip is the one planned at the kitchen table. How a proper list — built from your shelves, not your cravings — quietly cuts the bill.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "budgeting",
+    "food",
+    "money-habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Start from the shelves, not the shop",
+      "paragraphs": [
+        "Most lists are written from memory and appetite, which is why homes contain three jars of the same spice and no pasta. Build the list the other way round: look in the cupboard, fridge and freezer first, plan meals around what is already there, and list only the gaps.",
+        "This one habit attacks the two biggest leaks at once — buying duplicates, and letting food you already paid for expire quietly at the back of a shelf."
+      ]
+    },
+    {
+      "heading": "Write it like you mean it",
+      "paragraphs": [
+        "Group the list by the shop's layout — produce, dairy, tins, frozen — so you walk each aisle once and are not led back past the tempting displays. Put quantities on it: “2 onions” is a plan; “onions” is an invitation.",
+        "Add one deliberate treat line. A list with a treat on it is a list you will keep; a list of pure virtue usually survives until the biscuit aisle."
+      ]
+    },
+    {
+      "heading": "The rule that makes it work",
+      "paragraphs": [
+        "In the shop, the rule is simple: if it is not on the list, it needs a reason out loud. Not a ban — a reason. “We are out of it at home” is a reason. “It looked nice” is information about the display designer, not about your needs.",
+        "Keep the lists for a month and read them together. They are the truest record of what your household actually eats — and the best foundation any food budget can have."
+      ]
+    }
+  ],
+  "takeaway": "Build the list from your shelves, group it by aisle, add quantities and one honest treat — then let anything unlisted argue its case out loud.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

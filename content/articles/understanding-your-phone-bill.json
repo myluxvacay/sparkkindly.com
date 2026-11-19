@@ -1,0 +1,62 @@
+{
+  "id": "save-draft-2026-11-19-03",
+  "slug": "understanding-your-phone-bill",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Understanding your phone bill: where the extra charges hide",
+  "description": "The headline price is rarely the bill. Taxes, fees, device payments and forgotten add-ons stack quietly — here is how to read the whole page and question the right lines.",
+  "publishedAt": "2026-11-19",
+  "updatedAt": "2026-11-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-19",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "bills",
+    "money-habits",
+    "household"
+  ],
+  "sources": [
+    {
+      "title": "Consumer Guides | Federal Communications Commission",
+      "url": "https://www.fcc.gov/consumers/guides",
+      "accessedAt": "2026-11-19"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-19",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 19 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Four bills in one envelope",
+      "paragraphs": [
+        "A phone bill is really four bills stapled together: the service plan itself, the device payment if you bought a handset in instalments, taxes and regulatory fees, and everything else — insurance, extra lines, streaming add-ons and one-off charges. Only the first of those is the price you remember agreeing to.",
+        "Read it in that order, and write the four subtotals in the margin. Most bill shock lives in category four, and most of category four was agreed to once, quickly, and forgotten."
+      ]
+    },
+    {
+      "heading": "The lines worth questioning",
+      "paragraphs": [
+        "Device insurance you no longer need on an old phone. Add-on subscriptions billed through the carrier. International or roaming charges from a trip months ago. A second line for a tablet nobody uses. Each is small; together they can rival the plan itself.",
+        "Consumer guides from regulators such as the FCC suggest checking bills line by line and querying anything you do not recognise — providers must be able to explain every charge, and unexplained or unauthorised charges can be disputed. A polite call with the bill in front of you and the lines numbered resolves most of them."
+      ]
+    },
+    {
+      "heading": "A ten-minute annual habit",
+      "paragraphs": [
+        "Once a year — renewal month is ideal — put your current bill beside the plan you would get as a new customer, and beside one rival's equivalent. Loyalty is rarely priced in; asking, with numbers in hand, often is.",
+        "You do not need a new provider. You need one honest page of numbers, four subtotals in the margin, and ten minutes. The bill you understand is the bill you control."
+      ]
+    }
+  ],
+  "takeaway": "Read a phone bill as four bills — plan, device, taxes and fees, and everything else — and question the forgotten fourth category first.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

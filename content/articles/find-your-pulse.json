@@ -1,0 +1,62 @@
+{
+  "id": "grow-draft-2026-11-18-02",
+  "slug": "find-your-pulse",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Find your pulse: a minute with your own heartbeat",
+  "description": "Two fingers, one quiet minute, and a number that tells a real story about your body. How to take your pulse properly — and what it can and cannot tell you.",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-18",
+  "hero": {
+    "src": "/images/body.webp",
+    "alt": "A stethoscope close-up",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "body",
+    "health",
+    "basics"
+  ],
+  "sources": [
+    {
+      "title": "Taking a pulse | MedlinePlus",
+      "url": "https://medlineplus.gov/ency/article/003399.htm",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-18",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 18 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Finding it",
+      "paragraphs": [
+        "Rest for a few minutes first. Place the tips of your index and middle fingers — not your thumb, which has a pulse of its own — on the inside of your other wrist, just below the base of the thumb, and press gently until you feel the beat.",
+        "Count the beats for thirty seconds and double the number, or count a full minute for the most reliable reading. That number is your pulse in beats per minute."
+      ]
+    },
+    {
+      "heading": "What the number means",
+      "paragraphs": [
+        "For most adults at rest, a pulse between about 60 and 100 beats per minute is considered typical, and people who are very fit often rest lower, because a stronger heart moves more blood with each beat. Your pulse rises with exercise, heat, illness, excitement and caffeine, and settles again as you recover.",
+        "A pulse reading is information, not a diagnosis. A single unusual number on an ordinary day is rarely a story; a pattern that worries you, or a racing, pounding or irregular beat with dizziness or chest pain, deserves a doctor promptly — and chest pain deserves urgent help."
+      ]
+    },
+    {
+      "heading": "A small experiment",
+      "paragraphs": [
+        "Take your pulse sitting quietly. Then walk briskly for two minutes and take it again. Sit down, and check every few minutes until it returns to your resting number.",
+        "You have just watched your cardiovascular system do its job: deliver more when asked, then settle. It does this thousands of times a day without being asked to."
+      ]
+    }
+  ],
+  "takeaway": "Two fingers and thirty seconds give you your pulse — a resting rate around 60–100 beats a minute is typical for adults, and patterns matter more than single readings.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

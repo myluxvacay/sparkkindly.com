@@ -1,0 +1,73 @@
+{
+  "id": "grow-draft-2026-11-19-02",
+  "slug": "stretch-for-five-minutes",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "Stretch for five minutes: a gentle start anywhere",
+  "description": "No mat, no kit, no floor work. Five standing stretches, one minute each, to unkink a body that has been sitting too long — at home, at work, anywhere.",
+  "publishedAt": "2026-11-19",
+  "updatedAt": "2026-11-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-19",
+  "hero": {
+    "src": "/images/body.webp",
+    "alt": "A stethoscope close-up",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "body",
+    "movement",
+    "routine"
+  ],
+  "sources": [
+    {
+      "title": "Exercise and Physical Fitness | MedlinePlus",
+      "url": "https://medlineplus.gov/exerciseandphysicalfitness.html",
+      "accessedAt": "2026-11-19"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-19",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 19 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Why five minutes works",
+      "paragraphs": [
+        "Long sitting leaves the neck, shoulders, back and hips quietly tightening, and the fix does not require a workout — it requires interruption. A few gentle stretches restore range of motion, wake up circulation, and give your eyes and mind a genuine break from the screen.",
+        "Set a timer for five minutes. Every stretch below is done standing, holding on to a chair or wall whenever balance feels uncertain."
+      ]
+    },
+    {
+      "heading": "The five stretches",
+      "paragraphs": [
+        "One: neck — drop your right ear slowly towards your right shoulder, hold for a slow count of ten, then swap sides. Two: shoulders — roll both shoulders in big slow circles, five forwards, five back. Three: chest — clasp your hands behind your back and lift them gently as you open your chest.",
+        "Four: side bend — one hand on the chair, the other arm reaching up and over, ten slow seconds each side. Five: calves — hands on the wall, one foot stepped back with the heel pressed down, ten seconds each leg. Breathe normally throughout; a stretch should feel like a pull, never like pain."
+      ]
+    },
+    {
+      "heading": "Make it a habit, not an event",
+      "paragraphs": [
+        "Attach the five minutes to something that already happens: the kettle boiling, a call ending, the top of the hour. Habits that ride on existing moments survive; habits that need their own ceremony rarely do.",
+        "If any movement hurts sharply, or you have an injury, a recent operation or a condition that affects movement, skip that stretch and ask a doctor or physiotherapist what suits your body. Gentle is the whole point."
+      ]
+    }
+  ],
+  "takeaway": "Five standing stretches, one minute each, attached to a moment that already happens — gentle movement, never pain.",
+  "fiction": false,
+  "materials": [
+    "A timer",
+    "A chair or wall for balance",
+    "Comfortable shoes or bare feet on a non-slip floor"
+  ],
+  "supervision": "Independent activity for adults; children copy a grown-up and keep every movement gentle.",
+  "safetyNotes": [
+    "Stop any stretch that causes sharp pain, dizziness or numbness.",
+    "Hold furniture for balance whenever you feel unsteady, and keep the floor around you clear.",
+    "If you have an injury, recent surgery or a health condition affecting movement, check with a doctor or physiotherapist before stretching."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

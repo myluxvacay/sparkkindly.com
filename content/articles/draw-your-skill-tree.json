@@ -1,0 +1,65 @@
+{
+  "id": "grow-draft-2026-11-17-03",
+  "slug": "draw-your-skill-tree",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "Draw your skill tree: map what you can do, choose your next branch",
+  "description": "Video games show a character's abilities as a branching tree. Draw your own — real skills you have, connected to the ones they unlock — and your next step stops being a guess.",
+  "publishedAt": "2026-11-17",
+  "updatedAt": "2026-11-17",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "Green shoots growing in soft light",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "skills",
+    "planning",
+    "creativity"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-17",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 17 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Draw the trunk and the branches you have",
+      "paragraphs": [
+        "Take a large sheet of paper. Near the bottom, draw a trunk and label it with a broad area of your life: cooking, music, work, making things. Now add branches for skills you genuinely have, however modest: “can season a soup”, “can play three songs”, “can fix a puncture”.",
+        "Be honest and be generous at once: modest skills count, because branches are built from them. Most people are startled by how much tree they already have."
+      ]
+    },
+    {
+      "heading": "Add the branches you could grow",
+      "paragraphs": [
+        "From each existing branch, sketch thinner, dashed branches for the skills it nearly unlocks. Three songs nearly unlock a fourth, and then playing with others. Seasoning a soup nearly unlocks stocks, and then sauces.",
+        "Look for the dashed branch that appears in several places, or the one you keep glancing back at. That is information about what you actually want, delivered without a single personality quiz."
+      ]
+    },
+    {
+      "heading": "Choose one branch for this season",
+      "paragraphs": [
+        "Circle exactly one dashed branch and write beside it the smallest first step: one lesson, one recipe, one phone call. Stick the tree where you will see it, and add to it in a different colour as skills land.",
+        "A year of seasons, one branch at a time, turns a drawing into a record of growth you can literally see — and a standing answer to the question “what should I learn next?”"
+      ]
+    }
+  ],
+  "takeaway": "Map the skills you have as branches, sketch the ones they unlock, and choose one branch per season to grow.",
+  "fiction": false,
+  "materials": [
+    "A large sheet of paper",
+    "Pens or pencils in two colours",
+    "A wall or door to display the finished tree"
+  ],
+  "supervision": "Independent activity for adults and older teens; younger children can draw a tree with an adult's help.",
+  "safetyNotes": [
+    "Use paper and pens safely; no personal information needs to leave the house — the tree is for your wall, not for posting with identifying details."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

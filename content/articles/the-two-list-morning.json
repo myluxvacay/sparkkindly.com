@@ -1,0 +1,56 @@
+{
+  "id": "grow-draft-2026-11-19-01",
+  "slug": "the-two-list-morning",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "The two-list morning: must and may",
+  "description": "One list for what truly must happen today, one for what may. A five-minute morning habit that ends the guilt of the endless to-do list.",
+  "publishedAt": "2026-11-19",
+  "updatedAt": "2026-11-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-19",
+  "hero": {
+    "src": "/images/focus.webp",
+    "alt": "A sunlit path winding through a forest",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "planning",
+    "focus",
+    "habits"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-19",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 19 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Why the long list fails",
+      "paragraphs": [
+        "A single long to-do list mixes the urgent with the imaginary: beside 'call the dentist' sit 'reorganise the garage' and 'learn Italian', all wearing the same importance. By evening, three things are done and seventeen are not, and the day feels like a failure that arithmetic created.",
+        "The problem is not your effort. It is that the list never told the truth about what a day can hold."
+      ]
+    },
+    {
+      "heading": "Must, then may",
+      "paragraphs": [
+        "Each morning, write two lists. The Must list gets at most three items — the things that genuinely have to happen today, small enough to be finishable. The May list gets everything else: welcome, visible, and carrying no guilt whatsoever. Mays are opportunities, not obligations.",
+        "Work the Musts first. When they are done — and on a well-built list, they usually are by mid-afternoon — the day is officially a success, and every May you touch afterwards is a bonus you chose, not a debt you serviced."
+      ]
+    },
+    {
+      "heading": "Keep the lists honest",
+      "paragraphs": [
+        "A Must that survives three mornings un-done is telling you something: it is too big (split it), it needs someone else (ask), or it does not actually matter (let it go, in writing, on purpose).",
+        "Five minutes, two lists, three Musts. The day stops being a verdict on your character and goes back to being a day."
+      ]
+    }
+  ],
+  "takeaway": "Three honest Musts and a guilt-free list of Mays: finish the Musts and the day counts as a success, whatever else happens.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
