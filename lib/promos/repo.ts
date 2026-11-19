@@ -20,6 +20,10 @@ export type Promo = {
   status: PromoStatus;
   startsOn: string | null;
   endsOn: string | null;
+  // Share/SEO overrides (migration 041): null falls back to title / short description / the hub share image.
+  shareTitle: string | null;
+  shareDescription: string | null;
+  shareImage: string | null;
   config: Record<string, unknown>;
   createdAt: Date;
   updatedAt: Date;
@@ -37,13 +41,17 @@ type Row = {
   status: PromoStatus;
   starts_on: string | null;
   ends_on: string | null;
+  share_title: string | null;
+  share_description: string | null;
+  share_image: string | null;
   config: Record<string, unknown>;
   created_at: Date;
   updated_at: Date;
 };
 
 const SELECT = `SELECT id, slug, type, title, short_description, body, rules, prize, status,
-  starts_on::text AS starts_on, ends_on::text AS ends_on, config, created_at, updated_at FROM promotions`;
+  starts_on::text AS starts_on, ends_on::text AS ends_on, share_title, share_description, share_image,
+  config, created_at, updated_at FROM promotions`;
 
 const toPromo = (r: Row): Promo => ({
   id: r.id,
@@ -57,10 +65,19 @@ const toPromo = (r: Row): Promo => ({
   status: r.status,
   startsOn: r.starts_on,
   endsOn: r.ends_on,
+  shareTitle: r.share_title,
+  shareDescription: r.share_description,
+  shareImage: r.share_image,
   config: r.config ?? {},
   createdAt: r.created_at,
   updatedAt: r.updated_at,
 });
+
+// The promotions hub's own share card (branded 1200x630 art in public/images/promos/), and the fallback
+// share image for any promo whose record does not name one.
+export const PROMO_HUB_SHARE_IMAGE = '/images/promos/share-hub.jpg';
+export const PROMO_SHARE_WIDTH = 1200;
+export const PROMO_SHARE_HEIGHT = 630;
 
 // A promo is publicly visible while it is live and today falls inside its dates (an unset bound is open).
 // Dates are calendar dates (UTC), the way the owner sets them in the admin form. `$n` is the parameter
@@ -77,6 +94,33 @@ export async function getLivePromo(q: Queryable, slug: string, now: Date): Promi
   if (!/^[a-z0-9-]{1,80}$/.test(slug)) return null;
   const r = await q.query<Row>(`${SELECT} WHERE slug = $1 AND ${liveOn('$2')}`, [slug, dayOf(now)]);
   return r.rows[0] ? toPromo(r.rows[0]) : null;
+}
+
+// Where a record stands today. Only `live` is playable and enterable; `ended` keeps a public page (a shared
+// link must never land on a 404) but takes no entries; `draft` and `upcoming` are not public at all.
+export type PromoPhase = 'draft' | 'upcoming' | 'live' | 'ended';
+
+export function promoPhase(p: Promo, now: Date): PromoPhase {
+  if (p.status === 'draft') return 'draft';
+  if (p.status === 'ended') return 'ended';
+  const today = dayOf(now);
+  if (p.startsOn && today < p.startsOn) return 'upcoming';
+  if (p.endsOn && today > p.endsOn) return 'ended';
+  return 'live';
+}
+
+// The public read for a promo page: the record when it is live or ended, null when it should not be public.
+export async function getPublicPromo(
+  q: Queryable,
+  slug: string,
+  now: Date,
+): Promise<{ promo: Promo; phase: 'live' | 'ended' } | null> {
+  if (!/^[a-z0-9-]{1,80}$/.test(slug)) return null;
+  const r = await q.query<Row>(`${SELECT} WHERE slug = $1`, [slug]);
+  if (!r.rows[0]) return null;
+  const promo = toPromo(r.rows[0]);
+  const phase = promoPhase(promo, now);
+  return phase === 'live' || phase === 'ended' ? { promo, phase } : null;
 }
 
 export async function listPromosAdmin(q: Queryable): Promise<Promo[]> {
@@ -100,14 +144,21 @@ export type PromoFields = {
   prize: string;
   startsOn: string | null;
   endsOn: string | null;
+  shareTitle?: string | null;
+  shareDescription?: string | null;
+  shareImage?: string | null;
   config: Record<string, unknown>;
 };
 
 export async function createPromo(q: Queryable, f: PromoFields): Promise<Promo> {
   const r = await q.query<Row>(
-    `INSERT INTO promotions (slug, type, title, short_description, body, rules, prize, starts_on, ends_on, config)
-     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10::jsonb) RETURNING *`,
-    [f.slug, f.type, f.title, f.shortDescription, f.body, f.rules, f.prize, f.startsOn, f.endsOn, JSON.stringify(f.config)],
+    `INSERT INTO promotions (slug, type, title, short_description, body, rules, prize, starts_on, ends_on,
+       share_title, share_description, share_image, config)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13::jsonb) RETURNING *`,
+    [
+      f.slug, f.type, f.title, f.shortDescription, f.body, f.rules, f.prize, f.startsOn, f.endsOn,
+      f.shareTitle ?? null, f.shareDescription ?? null, f.shareImage ?? null, JSON.stringify(f.config),
+    ],
   );
   // RETURNING * loses the ::text date casts; re-read through SELECT for a consistent shape.
   return (await getPromoById(q, r.rows[0].id))!;
@@ -116,8 +167,12 @@ export async function createPromo(q: Queryable, f: PromoFields): Promise<Promo> 
 export async function updatePromo(q: Queryable, id: string, f: PromoFields): Promise<boolean> {
   const r = await q.query(
     `UPDATE promotions SET slug = $2, type = $3, title = $4, short_description = $5, body = $6, rules = $7,
-       prize = $8, starts_on = $9, ends_on = $10, config = $11::jsonb, updated_at = now() WHERE id = $1`,
-    [id, f.slug, f.type, f.title, f.shortDescription, f.body, f.rules, f.prize, f.startsOn, f.endsOn, JSON.stringify(f.config)],
+       prize = $8, starts_on = $9, ends_on = $10, share_title = $11, share_description = $12, share_image = $13,
+       config = $14::jsonb, updated_at = now() WHERE id = $1`,
+    [
+      id, f.slug, f.type, f.title, f.shortDescription, f.body, f.rules, f.prize, f.startsOn, f.endsOn,
+      f.shareTitle ?? null, f.shareDescription ?? null, f.shareImage ?? null, JSON.stringify(f.config),
+    ],
   );
   return (r.rowCount ?? 0) > 0;
 }

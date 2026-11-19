@@ -1,20 +1,27 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/Breadcrumb';
 import StreakPanel from '@/components/promos/StreakPanel';
 import { promosEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
-import { getLivePromo, type Promo } from '@/lib/promos/repo';
+import { getPublicPromo, PROMO_HUB_SHARE_IMAGE, type Promo } from '@/lib/promos/repo';
 import { metadata as seo } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
 type Props = { params: Promise<{ slug: string }>; searchParams: Promise<{ r?: string }> };
 
+// Meta comes from the record: the share fields when the owner set them, the promo's own title and short
+// description otherwise, and the hub's share card when the record names no image of its own.
 export async function generateMetadata({ params }: Props) {
   if (!promosEnabled()) return {};
   try {
-    const promo = await getLivePromo(getDb(), (await params).slug, new Date());
-    return promo ? seo(promo.title, promo.shortDescription, `/promos/${promo.slug}/`) : {};
+    const found = await getPublicPromo(getDb(), (await params).slug, new Date());
+    if (!found) return {};
+    const { promo } = found;
+    return seo(promo.shareTitle ?? promo.title, promo.shareDescription ?? promo.shortDescription, `/promos/${promo.slug}/`, {
+      image: { url: promo.shareImage ?? PROMO_HUB_SHARE_IMAGE, alt: promo.title },
+    });
   } catch {
     return {};
   }
@@ -43,14 +50,16 @@ function dates(p: Promo): string | null {
 // panel here (and its registry entry in lib/promos/types.ts) — the shell does not change.
 export default async function PromoPage({ params, searchParams }: Props) {
   if (!promosEnabled()) notFound();
-  // Fail safe: an unreadable record is a 404, never an error page.
-  let promo: Promo | null = null;
+  // Fail safe: an unreadable record is a 404, never an error page. An ended promotion keeps its page (a
+  // shared link must never land on a 404) with an ended state instead of the entry panel.
+  let found: { promo: Promo; phase: 'live' | 'ended' } | null = null;
   try {
-    promo = await getLivePromo(getDb(), (await params).slug, new Date());
+    found = await getPublicPromo(getDb(), (await params).slug, new Date());
   } catch {
-    promo = null;
+    found = null;
   }
-  if (!promo) notFound();
+  if (!found) notFound();
+  const { promo, phase } = found;
   const { r } = await searchParams;
   const when = dates(promo);
   return (
@@ -65,13 +74,22 @@ export default async function PromoPage({ params, searchParams }: Props) {
         </p>
       )}
       {when && <p className="muted">{when}</p>}
+      {phase === 'ended' && (
+        <div className="grown-ups" role="status">
+          <h2>This promotion has ended</h2>
+          <p>
+            Thanks to everyone who played along. The page stays here so links to it keep working — the results
+            and rules are below. Watch the <Link href="/promos/">promotions page</Link> for the next one.
+          </p>
+        </div>
+      )}
       {promo.body && (
         <section aria-labelledby="how-heading">
           <h2 id="how-heading">How it works</h2>
           <Paragraphs text={promo.body} />
         </section>
       )}
-      {promo.type === 'streak_draw' && <StreakPanel promo={promo} r={r} />}
+      {phase === 'live' && promo.type === 'streak_draw' && <StreakPanel promo={promo} r={r} />}
       {promo.rules && (
         <section aria-labelledby="rules-heading">
           <h2 id="rules-heading">The official rules</h2>

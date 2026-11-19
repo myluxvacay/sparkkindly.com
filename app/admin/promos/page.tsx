@@ -48,6 +48,18 @@ function Fields({ p, prefix }: { p?: Promo; prefix: string }) {
         <input id={id('prize')} name="prize" maxLength={300} defaultValue={p?.prize} />
       </p>
       <p>
+        <label htmlFor={id('share-title')}>Share title (optional — how the link is titled when shared; blank = the title)</label>
+        <input id={id('share-title')} name="share_title" maxLength={120} defaultValue={p?.shareTitle ?? ''} />
+      </p>
+      <p>
+        <label htmlFor={id('share-desc')}>Share description (optional — blank = the short description)</label>
+        <input id={id('share-desc')} name="share_description" maxLength={300} defaultValue={p?.shareDescription ?? ''} />
+      </p>
+      <p>
+        <label htmlFor={id('share-image')}>Share image path (optional — a 1200×630 image on this site, e.g. /images/promos/share-streak.jpg; blank = the promotions card)</label>
+        <input id={id('share-image')} name="share_image" maxLength={300} defaultValue={p?.shareImage ?? ''} />
+      </p>
+      <p>
         <label htmlFor={id('starts')}>Starts on (YYYY-MM-DD, blank = no start bound)</label>
         <input id={id('starts')} name="starts_on" maxLength={10} defaultValue={p?.startsOn ?? ''} />
       </p>

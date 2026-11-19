@@ -31,6 +31,14 @@ function text(f: URLSearchParams, name: string, max: number, min = 0, fail: Fail
   return v;
 }
 
+// An optional field: blank means unset (null), so the page falls back to the promo's own title/description.
+function optText(f: URLSearchParams, name: string, max: number, fail: Fail): string | null {
+  const v = field(f, name);
+  if (v === '') return null;
+  if (v.length > max) throw fail(400, 'bad_input');
+  return v;
+}
+
 function dateField(f: URLSearchParams, name: string, fail: Fail): string | null {
   const v = field(f, name);
   if (v === '') return null;
@@ -71,6 +79,9 @@ function fieldsFrom(form: URLSearchParams, fail: Fail, existingConfig: Record<st
           winnersPerDraw: intField(form, 'winners_per_draw', 5, 1, 50, fail),
         }
       : existingConfig;
+  // The share image is a path on this site (the art lives in public/), never an outside URL.
+  const shareImage = optText(form, 'share_image', 300, fail);
+  if (shareImage !== null && (!shareImage.startsWith('/') || /\s/.test(shareImage))) throw fail(400, 'bad_input');
   return {
     slug,
     type,
@@ -81,6 +92,9 @@ function fieldsFrom(form: URLSearchParams, fail: Fail, existingConfig: Record<st
     prize: text(form, 'prize', 300, 0, fail),
     startsOn,
     endsOn,
+    shareTitle: optText(form, 'share_title', 120, fail),
+    shareDescription: optText(form, 'share_description', 300, fail),
+    shareImage,
     config,
   };
 }

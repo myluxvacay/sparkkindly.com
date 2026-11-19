@@ -80,6 +80,55 @@ test('an adult holder sees their streak and can enter the draw with the attestat
   await expect(page.getByRole('button', { name: /Enter the draw/ })).toHaveCount(0);
 });
 
+test('the promo pages carry per-record share meta, and the share art is served at 1200x630', async ({ page, request }) => {
+  await page.goto('/promos/spark-streak/');
+  const meta = async (sel: string) => page.locator(sel).getAttribute('content');
+  // The seeded record's share fields drive the tags (migration 041), not the page's own title.
+  expect(await meta('meta[property="og:title"]')).toContain('5 × $25 gift cards');
+  expect(await meta('meta[property="og:description"]')).toContain('ten days in a row');
+  expect(await meta('meta[property="og:image"]')).toContain('/images/promos/share-streak.jpg');
+  expect(await meta('meta[property="og:image:width"]')).toBe('1200');
+  expect(await meta('meta[property="og:image:height"]')).toBe('630');
+  expect(await meta('meta[name="twitter:card"]')).toBe('summary_large_image');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', /\/promos\/spark-streak\/$/);
+
+  await page.goto('/promos/');
+  expect(await meta('meta[property="og:image"]')).toContain('/images/promos/share-hub.jpg');
+
+  for (const img of ['share-streak.jpg', 'share-hub.jpg']) {
+    const res = await request.get(`/images/promos/${img}`);
+    expect(res.status()).toBe(200);
+    expect(res.headers()['content-type']).toContain('image/jpeg');
+    const body = await res.body();
+    expect(body.length).toBeLessThan(300_000); // a share card stays light
+    // JPEG SOF0/SOF2 carries the frame size: 1200x630.
+    expect(body.indexOf(Buffer.from([0xff, 0xd8]))).toBe(0);
+  }
+});
+
+test('an ended promotion keeps its page with an ended state — shared links never 404', async ({ page }) => {
+  await sql(
+    `INSERT INTO promotions (slug, type, title, short_description, body, rules, prize, status)
+     VALUES ('ended-promo', 'streak_draw', 'The Finished One', 'It ran its course.', 'How it worked.', 'The rules.', 'A prize', 'ended')`,
+  );
+  const res = await page.goto('/promos/ended-promo/');
+  expect(res?.status()).toBe(200);
+  await expect(page.getByRole('heading', { level: 1, name: 'The Finished One' })).toBeVisible();
+  await expect(page.getByText('This promotion has ended')).toBeVisible();
+  await expect(page.getByRole('button', { name: /Enter the draw/ })).toHaveCount(0);
+  // And it is not listed among the live promotions.
+  await page.goto('/promos/');
+  await expect(page.getByRole('link', { name: 'The Finished One' })).toHaveCount(0);
+});
+
+test('the sitemap lists the promotions hub and the live promos', async ({ request }) => {
+  const res = await request.get('/sitemap.xml');
+  expect(res.status()).toBe(200);
+  const xml = await res.text();
+  expect(xml).toContain('/promos/</loc>');
+  expect(xml).toContain('/promos/spark-streak/</loc>');
+});
+
 test('a 16-year-old holder can see their streak but is told the draw is for grown-ups', async ({ page }) => {
   const email = fresh();
   await signUp(page, email, dobYearsAgo(16));
