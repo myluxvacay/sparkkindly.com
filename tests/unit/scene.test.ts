@@ -6,6 +6,8 @@ import {
   diffScenes,
   elementLabel,
   factValue,
+  splitLabel,
+  templateCollisions,
   type SceneSpec,
 } from '@/lib/games/scene';
 
@@ -68,6 +70,28 @@ describe('diffScenes', () => {
       elements: pond.elements.map((el) => ({ ...el, x: el.x + 2 })),
     };
     expect(diffScenes(pond, after)).toEqual([]);
+  });
+});
+
+describe('template backdrop catalogue', () => {
+  it('catalogues the backdrop objects that collide with fact vocabulary', () => {
+    // The farm backdrop's big barn is a red house to any player; the street backdrop is three.
+    expect(templateCollisions('farm', 'house')).toHaveLength(1);
+    expect(templateCollisions('farm', 'house')[0].colors).toContain('red');
+    expect(templateCollisions('street', 'house')[0].count).toBe(3);
+    // The space backdrop is full of small white stars and stands on a planet, with a moon disc.
+    expect(templateCollisions('space', 'star')[0].count).toBe('many');
+    expect(templateCollisions('space', 'planet')).toHaveLength(1);
+    expect(templateCollisions('space', 'moon')).toHaveLength(1);
+    // The garden backdrop draws pebbles in its soil rows, never flowers.
+    expect(templateCollisions('garden', 'flower')).toHaveLength(0);
+    expect(templateCollisions('pond', 'duck')).toHaveLength(0);
+  });
+  it('splits labels into colour + noun', () => {
+    expect(splitLabel('yellow house')).toEqual({ color: 'yellow', noun: 'house' });
+    expect(splitLabel('bunch of grapes')).toEqual({ noun: 'bunch of grapes' });
+    expect(splitLabel('green bunch of grapes')).toEqual({ color: 'green', noun: 'bunch of grapes' });
+    expect(splitLabel('penguin')).toEqual({ noun: 'penguin' });
   });
 });
 

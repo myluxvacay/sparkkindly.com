@@ -91,6 +91,104 @@ export type SceneSpec = {
 
 export const elementLabel = (el: SceneElement): string => (el.color ? `${el.color} ${el.name}` : el.name);
 
+// ---------------------------------------------------------------------------
+// Template backdrop objects — what each template draws BEFORE any element is placed.
+//
+// Facts are derived from element data, but the player answers from the whole rendered picture,
+// backdrop included (owner report, 18 Nov 2026: observation-030's correct answer was a small
+// yellow house element while the farm backdrop's big RED barn — also a house to any player —
+// dominated the scene). So every intrinsic backdrop object is catalogued here in the same
+// vocabulary facts and labels speak in (plain noun + the colours a player would name), and the
+// content schema (lib/schemas.ts) refuses a game whose answer the backdrop makes ambiguous:
+// a fact may not hinge on a category the backdrop also draws in another colour or form.
+// Keep this catalogue in step with the Backdrop switch in components/games/SceneView.tsx —
+// the rendered render review (docs/reviews) is the check that the two agree.
+// ---------------------------------------------------------------------------
+
+export type TemplateObject = {
+  /** The plain noun a player would use for it, e.g. 'house' for the farm barn. */
+  name: string;
+  /** The colours a player would name for it; empty when it has no one naming colour. */
+  colors: SceneColor[];
+  count: number | 'many';
+  note: string;
+};
+
+export const TEMPLATE_OBJECTS: Record<SceneTemplate, TemplateObject[]> = {
+  pond: [
+    { name: 'sun', colors: ['yellow'], count: 1, note: 'Sun in the sky' },
+    { name: 'pond', colors: ['blue'], count: 1, note: 'The pond water itself' },
+    { name: 'reeds', colors: ['green'], count: 3, note: 'Reed strokes at the water edge' },
+  ],
+  meadow: [
+    { name: 'sun', colors: ['yellow'], count: 1, note: 'Sun in the sky' },
+    { name: 'hill', colors: ['green'], count: 2, note: 'Rolling green hills' },
+  ],
+  farm: [
+    { name: 'house', colors: ['red'], count: 1, note: 'The big red barn — players read it as the farm’s house' },
+    { name: 'fence', colors: ['white'], count: 1, note: 'Cream fence rails across the field' },
+    { name: 'sun', colors: ['yellow'], count: 1, note: 'Sun in the sky' },
+  ],
+  station: [
+    { name: 'roof', colors: ['gray'], count: 1, note: 'Station canopy roof' },
+    { name: 'tracks', colors: ['gray'], count: 1, note: 'Rail tracks along the platform' },
+    // Fixtures are exempt in every template that carries them (station/kitchen/classroom/park
+    // clocks; market/station/street/garden/beach sign boards): they render only from
+    // scene.clockTime / scene.signText and are answered by the clock/sign facts themselves,
+    // so they are not collisions.
+  ],
+  market: [
+    { name: 'awning', colors: ['red', 'white'], count: 1, note: 'Striped market awning' },
+    { name: 'counter', colors: ['brown'], count: 1, note: 'Wooden market counter' },
+  ],
+  kitchen: [
+    { name: 'window', colors: [], count: 1, note: 'Kitchen window' },
+    { name: 'sun', colors: ['yellow'], count: 1, note: 'Sun visible through the window' },
+    { name: 'lamp', colors: ['yellow'], count: 1, note: 'Hanging lamp' },
+  ],
+  beach: [
+    { name: 'sun', colors: ['yellow'], count: 1, note: 'Sun in the sky' },
+    { name: 'sea', colors: ['blue'], count: 1, note: 'The sea' },
+    { name: 'sand', colors: [], count: 1, note: 'The sand' },
+  ],
+  classroom: [
+    { name: 'chalkboard', colors: ['green'], count: 1, note: 'Green chalkboard with chalk lines' },
+  ],
+  park: [
+    { name: 'sun', colors: ['yellow'], count: 1, note: 'Sun in the sky' },
+    { name: 'bench', colors: ['brown'], count: 1, note: 'Park bench' },
+    { name: 'path', colors: [], count: 1, note: 'Winding path' },
+  ],
+  space: [
+    { name: 'star', colors: ['white'], count: 'many', note: 'About fifteen small white star dots across the sky' },
+    { name: 'moon', colors: ['yellow'], count: 1, note: 'Pale moon-like disc, top right' },
+    { name: 'planet', colors: ['purple'], count: 1, note: 'The big planet surface the scene stands on' },
+  ],
+  garden: [
+    { name: 'sun', colors: ['yellow'], count: 1, note: 'Sun in the sky' },
+    { name: 'hedge', colors: ['green'], count: 1, note: 'Hedge row' },
+    { name: 'pebble', colors: ['gray', 'brown'], count: 'many', note: 'Pebbles scattered in the soil rows' },
+  ],
+  street: [
+    { name: 'house', colors: ['brown', 'blue', 'pink'], count: 3, note: 'Three buildings — players read them as houses' },
+    { name: 'road', colors: ['gray'], count: 1, note: 'The road with yellow dashes' },
+  ],
+};
+
+/** Split a display label ("yellow house", "bunch of grapes") into its colour word and noun. */
+export function splitLabel(label: string): { color?: SceneColor; noun: string } {
+  const words = label.trim().toLowerCase().split(/\s+/);
+  if (words.length > 1 && (SCENE_COLORS as readonly string[]).includes(words[0])) {
+    return { color: words[0] as SceneColor, noun: words.slice(1).join(' ') };
+  }
+  return { noun: words.join(' ') };
+}
+
+/** Backdrop objects of `template` whose noun is `noun` — the collisions a fact must not trip over. */
+export function templateCollisions(template: SceneTemplate, noun: string): TemplateObject[] {
+  return (TEMPLATE_OBJECTS[template] ?? []).filter((o) => o.name === noun);
+}
+
 /** A one-paragraph description of the scene, used as the accessible text for the picture. */
 export function describeScene(scene: SceneSpec): string {
   const parts: string[] = [`A ${scene.template} scene.`];

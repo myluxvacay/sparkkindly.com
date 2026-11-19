@@ -477,6 +477,12 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .seq-tile{position:relative;display:block;width:104px}
 .seq-art{width:104px;height:104px;background:#fffdf9;border:1px solid #e4d8e8;border-radius:10px}
 .seq-num{position:absolute;top:6px;left:6px;background:var(--plum);color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font-size:13px;font-weight:700}
+.seq-stage{display:grid;place-items:center;margin:0 0 14px}
+.seq-art-big{width:220px;height:220px;background:#fffdf9;border:1px solid #e4d8e8;border-radius:14px}
+.seq-progress{display:flex;gap:8px;justify-content:center;margin:0 0 18px}
+.seq-dot{width:12px;height:12px;border-radius:50%;background:#e4d8e8}
+.seq-dot-on{background:var(--plum)}
+.sequence-prompt{font-family:var(--serif);font-size:26px;line-height:1.4;color:var(--plum);margin-bottom:18px}
 .memory-prompt{font-family:var(--serif);font-size:26px;line-height:1.4;color:var(--plum);margin-bottom:18px}
 .memory-note{font-weight:600;color:var(--plum)}
 .games-index-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:26px}
