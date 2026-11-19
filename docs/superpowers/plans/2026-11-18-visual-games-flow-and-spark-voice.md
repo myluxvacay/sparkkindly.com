@@ -55,3 +55,17 @@ next-question flow — no separate picture-game silo. Push staging → prod auth
 - Next: scripts/approve-visual-games.ts (registry + flips; rejects deleted), release-mode
   content:validate, targeted e2e (tests/e2e/visual-games-flow.spec.ts), merge to staging, verify CI,
   then main, verify, spot-check prod.
+
+## Completion (19 Nov 2026, ~00:45 UTC)
+
+- Review: 356/360 approved by the independent reviewer; 4 ambiguous colour-fact games dropped;
+  plural typos fixed; schema + generator now refuse ambiguous colour questions.
+- Dating rebalanced per type after the first pass left counting/sequence/what-changed with no
+  launch-day games: 154/356 playable at launch, rest 2/day.
+- Staging: merge 2b502f9 — Deploy success (content publish imported 356 games after a packaging
+  fix: release tarball now ships content/games; first attempt's app release was healthy but the
+  import needed a workflow_dispatch re-run), Verify success.
+- Prod: merge 9f91336 (registry unioned with main's parallel lineage, zero hash collisions;
+  merge-resurrected silo files re-deleted) — Deploy success ("Healthy: prod 9f91336", imported
+  356 games), Verify success. Spot-checked live: /play/odd-fruit-car/ serves as a GAME item with
+  games in its discovery rail.
