@@ -56,6 +56,10 @@ test('a memory game shows the scene first, then hides it for the answer', async 
 });
 
 test('a sequence game shows its items one at a time, then asks', async ({ page }) => {
+  // Four full-page hops (load + one per item + the ask hop) against the serial CI server: the
+  // default 60s budget proved too tight under load (main Verify, 19 Nov 2026 — the same code
+  // passed on staging). Same remedy as item-page.spec.ts; assertions unchanged.
+  test.setTimeout(180_000);
   const g = firstOf('sequence');
   await page.goto(`/${g.brand}/${g.id}/#play-panel`);
   // Show phase: exactly one item on stage, no question, no options, no strip of everything.
