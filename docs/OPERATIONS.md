@@ -1135,3 +1135,10 @@ the owner's numbers (P.1) is a one-line edit.
   attestation, entry time) and `promo_draws` (month, pool size, seed, method, winner account ids, drawing
   admin's email, time). Both go with account deletion for entries; draws keep winner account ids as the
   prize record. Entrant emails are shown only on the admin draw page.
+- **Sharing and SEO.** Each promo page renders its meta (title, description, Open Graph, Twitter card,
+  canonical) from its record: the optional share title / share description / share image fields in the admin
+  form, falling back to the promo's title, its short description and the hub card
+  (`/images/promos/share-hub.jpg`; the streak's own card is `/images/promos/share-streak.jpg`, both branded
+  1200×630). An ended promotion keeps its page with an "ended" notice — shared links never 404 — while
+  drafts and not-yet-started promos stay private. The hub and every live promo are in `/sitemap.xml`, and
+  the footer links to `/promos/` while promotions are enabled.

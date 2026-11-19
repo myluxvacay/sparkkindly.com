@@ -3,14 +3,19 @@ import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/Breadcrumb';
 import { promosEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
-import { listLivePromos, type Promo } from '@/lib/promos/repo';
+import { listLivePromos, PROMO_HUB_SHARE_IMAGE, type Promo } from '@/lib/promos/repo';
 import { metadata as seo } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
 
 export function generateMetadata() {
   return promosEnabled()
-    ? seo('Promotions', 'SparkKindly promotions: friendly challenges with small prizes, run in the open. No purchase, ever.', '/promos/')
+    ? seo(
+        'Promotions',
+        'SparkKindly promotions: friendly challenges with small prizes, run in the open. No purchase, ever.',
+        '/promos/',
+        { image: { url: PROMO_HUB_SHARE_IMAGE, alt: 'SparkKindly promotions — friendly challenges, small prizes, with Spark the mascot.' } },
+      )
     : {};
 }
 
