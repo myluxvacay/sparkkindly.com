@@ -32,14 +32,16 @@ CREATE TABLE promo_entries (
   PRIMARY KEY (promotion_id, account_id)
 );
 
--- A recorded draw: the entrant pool it drew from, the seed that drove it and the winners it produced, so anyone
--- with the seed and the pool can recompute the same winners (lib/promos/draw.ts names the method). One draw per
+-- A recorded draw: the entrant pool it drew from (the account ids themselves, not just the count), the seed
+-- that drove it and the winners it produced, so anyone with the recorded pool and seed can recompute the same
+-- winners (lib/promos/draw.ts names the method) even if answers or records change later. One draw per
 -- promotion per month; a month that has been drawn is never redrawn.
 CREATE TABLE promo_draws (
   id           uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   promotion_id uuid NOT NULL REFERENCES promotions (id) ON DELETE CASCADE,
   month        text NOT NULL CHECK (month ~ '^\d{4}-\d{2}$'),
   pool_size    int  NOT NULL CHECK (pool_size >= 0),
+  pool_ids     jsonb NOT NULL DEFAULT '[]'::jsonb,
   seed         text NOT NULL,
   method       text NOT NULL,
   winners      jsonb NOT NULL DEFAULT '[]'::jsonb,
@@ -61,7 +63,7 @@ VALUES (
 
 Every day there is one Question of the Day on SparkKindly. Answer it correctly and your streak grows by one. Answer it correctly ten days in a row and you have completed the streak.
 
-Life happens, so every attempt includes one streak-freeze: miss a single day and the freeze covers it, once. Miss two days in a row and the streak starts again — no hard feelings, just start a new one.
+Life happens, so every attempt includes one streak-freeze: miss a single day and the freeze covers it, once. Miss a second day in the same attempt and the streak starts again — no hard feelings, just start a new one.
 
 Enter the draw once (it is free, and you only enter once) and every month you complete the streak, you are in that month''s drawing. Spark picks five winners at random from that month''s finishers, and each winner gets a $25 gift card.
 
@@ -71,7 +73,7 @@ You need a free SparkKindly account so we can keep your streak honestly — your
 1. It is free. Entering the 10-Day Spark Streak costs nothing, and you never have to buy anything.
 2. You need a free SparkKindly account. Your streak is counted from the answers saved to your account, so play while signed in.
 3. What counts: a correct answer to the Question of the Day — the daily question shown on the home page and at /quiz/ — on that day. Answers to other questions, and answers given on a different day, do not count toward a streak.
-4. A completed streak is 10 days in a row with a correct daily answer. Each attempt includes one streak-freeze, which forgives one missed day. A second missed day in a row ends the attempt.
+4. A completed streak is 10 days in a row with a correct daily answer. Each attempt includes one streak-freeze, which forgives one missed day. A second missed day in the same attempt ends it.
 5. The draw: every month, SparkKindly draws 5 winners at random from the people who entered and completed the streak that month. Each winner receives a $25 gift card (sent by email). The total prize each month is $125.
 6. The draw is for grown-ups: you must be 18 or older to enter it. Anyone of any age can play, build a streak and complete it — younger players just cannot enter the prize draw. A child profile can never enter.
 7. One entry per person and per account. Entering more than once, or with more than one account, can remove you from the draw.

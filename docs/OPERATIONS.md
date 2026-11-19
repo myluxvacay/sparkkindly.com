@@ -1119,11 +1119,13 @@ the owner's numbers (P.1) is a one-line edit.
   4) Edit it any time with the same form; edits are live when saved. 5) "End promotion" when it is over;
   entries and past draws stay recorded, so a finished month can still be drawn afterwards.
 - **The streak draw (type `streak_draw`).** Streaks are derived from saved answers — nothing to maintain.
-  Entries are the account holder's own opt-in on the promo page (18+ attested; the account's age group must
-  be adult; a child profile can never enter). Per month: open `/admin/promos/draw/`, pick the promotion and
-  the month, check the standings (who entered, who completed), then "Draw" — the draw records the pool size,
-  a random seed, the method and the winners, and a drawn month can never be redrawn. Winners are recomputable
-  from the recorded seed and pool with `drawWinners` in `lib/promos/draw.ts`.
+  A streak day is a site-day (06:00 UTC to 06:00 UTC, the content publish slot), and only days from the
+  promotion's start date count. Entries are the account holder's own opt-in on the promo page (18+ attested;
+  the account's age group must be adult; a child profile can never enter). Per month: open
+  `/admin/promos/draw/`, pick the promotion and the month, check the standings (who entered, who completed),
+  then "Draw" — a month can be drawn only after it has ended. The draw records the pool (the entrant account
+  ids), a random seed, the method and the winners, and a drawn month can never be redrawn. Winners are
+  recomputable from the recorded pool and seed with `drawWinners` in `lib/promos/draw.ts`.
 - **Fulfilment is manual.** The draw page lists the winners' account emails. Email each winner at that
   address, buy and send the $25 gift card by email yourself, and keep the 14-day reply window from the rules
   in mind. If a winner never replies, the rules let the prize go to another finisher from the same month's

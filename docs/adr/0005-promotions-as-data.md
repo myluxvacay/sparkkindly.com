@@ -21,12 +21,17 @@ admin section if it needs one; the record storage, index and page shell never ch
 ride in the record's `config` jsonb. Unknown types render the generic record with no mechanic and no entries.
 
 The first type is `streak_draw`. Its streaks are derived, never stored: computed from the answers already in
-`item_responses` against each site-day's designated Question of the Day (the quiz the site itself shows that
-day, restricted to audiences every account kind can see), so there is no parallel tracking store. Draw entry
-is a separate recorded opt-in (`promo_entries`): account-holder sessions only, the account's own age group
-must be `adult`, and the entrant attests they are 18+. Monthly winners are picked by a recorded draw
-(`promo_draws`): the pool is recomputed from saved answers at draw time, and the row keeps the pool size, a
-random seed and the method, so the result is recomputable by anyone with the seed and the pool.
+`item_responses` against the designated Question of the Day, so there is no parallel tracking store. A
+site-day is the site's own content day — 06:00 UTC to 06:00 UTC, the publish slot — and the designated
+question at any moment is the quiz the site itself is showing the answerer then (the latest published quiz
+within the answerer's own audiences: a child profile's daily question is never an `adults`-audience quiz,
+because they cannot see one; a holder's can, exactly as on their /quiz/ page). An answer counts toward the
+site-day it was given in when its item was the designated question at that moment. Streaks count only
+site-days from the promotion's own start date. Draw entry is a separate recorded opt-in (`promo_entries`):
+account-holder sessions only, the account's own age group must be `adult`, and the entrant attests they are
+18+. Monthly winners are picked by a recorded draw (`promo_draws`), run only once the month has ended: the
+pool is recomputed from saved answers at draw time, and the row keeps the pool itself (the entrant account
+ids), a random seed and the method, so the result stays recomputable from the record alone.
 
 Unlike sibling features, promotions have no opt-in env flag: whether anything is promoted is itself the
 data (a record is public only while live), and the surface needs accounts, which are already gated.

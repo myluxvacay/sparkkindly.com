@@ -18,6 +18,8 @@ const entryLimits = createAccountActionLimits();
 type EnterDeps = { db: Db; now: Date; limit?: (accountId: string) => boolean };
 
 export async function enterPromoRequest(request: Request, slug: string, d: EnterDeps): Promise<Response> {
+  // The slug is validated before it is ever reflected into a redirect (the repo applies the same check).
+  if (!/^[a-z0-9-]{1,80}$/.test(slug)) return seeOther('/promos/');
   const back = (code: string) => seeOther(`/promos/${slug}/?r=${code}#entry`);
   if (!sameOrigin(request)) return forbidden();
   const ctx = await getContext(d.db, readCookie(request, ACCOUNT_COOKIE), d.now);

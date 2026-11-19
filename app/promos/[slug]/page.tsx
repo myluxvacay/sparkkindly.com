@@ -12,8 +12,12 @@ type Props = { params: Promise<{ slug: string }>; searchParams: Promise<{ r?: st
 
 export async function generateMetadata({ params }: Props) {
   if (!promosEnabled()) return {};
-  const promo = await getLivePromo(getDb(), (await params).slug, new Date());
-  return promo ? seo(promo.title, promo.shortDescription, `/promos/${promo.slug}/`) : {};
+  try {
+    const promo = await getLivePromo(getDb(), (await params).slug, new Date());
+    return promo ? seo(promo.title, promo.shortDescription, `/promos/${promo.slug}/`) : {};
+  } catch {
+    return {};
+  }
 }
 
 // Plain record text is stored as paragraphs separated by blank lines; render it as paragraphs, nothing richer.
@@ -39,7 +43,13 @@ function dates(p: Promo): string | null {
 // panel here (and its registry entry in lib/promos/types.ts) — the shell does not change.
 export default async function PromoPage({ params, searchParams }: Props) {
   if (!promosEnabled()) notFound();
-  const promo = await getLivePromo(getDb(), (await params).slug, new Date());
+  // Fail safe: an unreadable record is a 404, never an error page.
+  let promo: Promo | null = null;
+  try {
+    promo = await getLivePromo(getDb(), (await params).slug, new Date());
+  } catch {
+    promo = null;
+  }
   if (!promo) notFound();
   const { r } = await searchParams;
   const when = dates(promo);

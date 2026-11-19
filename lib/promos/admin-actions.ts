@@ -7,7 +7,7 @@ import type { Queryable } from '@/lib/db';
 import type { ErrorCode } from '@/lib/admin/messages';
 import { RESERVED_WORLD_SLUGS } from '@/lib/public/scope';
 import { createPromo, getPromoById, setPromoStatus, updatePromo, type PromoFields } from './repo';
-import { runDraw } from './draw';
+import { monthEnded, runDraw } from './draw';
 import { isPromoType, type PromoStatus } from './types';
 
 type Ctx = { tx: Queryable; admin: { email: string }; form: URLSearchParams; now: Date };
@@ -113,11 +113,13 @@ export function promoHandlers(fail: Fail): Record<string, (c: Ctx) => Promise<Do
     },
 
     // The monthly draw. The pool is recomputed from saved answers inside this same transaction, and the
-    // draw row (pool size, seed, winners) is the record of it; a drawn month refuses a second draw.
+    // draw row (pool, seed, winners) is the record of it; a drawn month refuses a second draw, and a month
+    // that has not ended yet refuses a first one (drawing it would lock out the rest of the month).
     async 'promo.draw'({ tx, form, admin, now }) {
       const id = promoId(form, fail);
       const month = field(form, 'month');
-      if (!MONTH.test(month) || month > now.toISOString().slice(0, 7)) throw fail(400, 'bad_input');
+      if (!MONTH.test(month)) throw fail(400, 'bad_input');
+      if (!monthEnded(month, now)) throw fail(400, 'promo_month_open');
       const promo = await getPromoById(tx, id);
       if (!promo) throw fail(404, 'not_found');
       if (promo.type !== 'streak_draw') throw fail(400, 'bad_input');

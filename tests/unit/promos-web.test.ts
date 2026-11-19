@@ -7,7 +7,7 @@ import { consumeAccountLink, requestAccountLink } from '@/lib/accounts/sessions'
 import { createChildProfile } from '@/lib/accounts/children';
 import { getContext, switchToProfile } from '@/lib/accounts/context';
 import { enterPromoRequest } from '@/lib/promos/enter-web';
-import { getEntry, getLivePromo } from '@/lib/promos/repo';
+import { createPromo, getEntry, getLivePromo } from '@/lib/promos/repo';
 
 // The entry POST (lib/promos/enter-web.ts): the account comes from the session only, and the gates are the
 // session kind (a child profile can never enter), the account's own age group (a 17-year-old cannot attest
@@ -55,6 +55,34 @@ describe('enterPromoRequest', () => {
     expect(where(await enterPromoRequest(post('attest=yes'), 'spark-streak', deps()))).toEqual([
       303,
       '/account/sign-in/',
+    ]);
+  });
+
+  it('a malformed slug is never reflected into a redirect', async () => {
+    const a = await account('1990-05-05');
+    expect(where(await enterPromoRequest(post('attest=yes', { cookie: a.session }), 'BAD SLUG!', deps()))).toEqual([
+      303,
+      '/promos/',
+    ]);
+  });
+
+  it('entry against a draft promotion is closed', async () => {
+    await createPromo(db, {
+      slug: 'draft-promo',
+      type: 'streak_draw',
+      title: 'Draft promo',
+      shortDescription: 'Not live.',
+      body: '',
+      rules: '',
+      prize: '',
+      startsOn: null,
+      endsOn: null,
+      config: { targetDays: 10, freezeAllowance: 1, winnersPerDraw: 5 },
+    });
+    const a = await account('1990-05-05');
+    expect(where(await enterPromoRequest(post('attest=yes', { cookie: a.session }), 'draft-promo', deps()))).toEqual([
+      303,
+      '/promos/draft-promo/?r=closed#entry',
     ]);
   });
 

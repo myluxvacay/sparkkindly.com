@@ -4,8 +4,8 @@ import StatusNote from '@/components/admin/StatusNote';
 import { requireAdmin } from '@/lib/admin/next';
 import { promosEnabled } from '@/lib/config';
 import { getDb } from '@/lib/db';
-import { entrantStandings, listDraws } from '@/lib/promos/draw';
-import { getPromoById, listEntries, listPromosAdmin } from '@/lib/promos/repo';
+import { entrantStandings, listDraws, monthEnded } from '@/lib/promos/draw';
+import { listEntries, listPromosAdmin } from '@/lib/promos/repo';
 import { streakConfig } from '@/lib/promos/types';
 
 export const dynamic = 'force-dynamic';
@@ -26,8 +26,11 @@ export default async function AdminPromoDrawPage({ searchParams }: Props) {
   const { done, error, promo: slug, month: monthParam } = await searchParams;
   const db = getDb();
   const now = new Date();
-  const thisMonth = now.toISOString().slice(0, 7);
-  const month = monthParam && MONTH.test(monthParam) ? monthParam : thisMonth;
+  // Default to the last completed month: the current month cannot be drawn until it has ended.
+  const prev = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - 1, 1));
+  const lastMonth = prev.toISOString().slice(0, 7);
+  const month = monthParam && MONTH.test(monthParam) ? monthParam : lastMonth;
+  const monthOpen = !monthEnded(month, now);
 
   const streakPromos = (await listPromosAdmin(db)).filter((p) => p.type === 'streak_draw');
   const promo = streakPromos.find((p) => p.slug === slug) ?? streakPromos[0];
@@ -50,7 +53,6 @@ export default async function AdminPromoDrawPage({ searchParams }: Props) {
   const drawn = draws.find((d) => d.month === month);
   const emailOf = new Map(entries.map((e) => [e.accountId, e.email]));
   const cfg = streakConfig(promo.config);
-  const fullPromo = await getPromoById(db, promo.id);
 
   return (
     <>
@@ -107,6 +109,11 @@ export default async function AdminPromoDrawPage({ searchParams }: Props) {
             This month was drawn on {drawn.drawnAt.toISOString().slice(0, 10)} by {drawn.drawnBy} from a pool of{' '}
             {drawn.poolSize}. A drawn month is never redrawn.
           </p>
+        ) : monthOpen ? (
+          <p className="muted">
+            {month} has not ended yet, so it cannot be drawn — drawing now would lock out everyone who completes
+            later in the month. Come back once the month is over.
+          </p>
         ) : pool.length === 0 ? (
           <p className="muted">The pool is empty for {month}, so there is nobody to draw from yet.</p>
         ) : (
@@ -148,7 +155,7 @@ export default async function AdminPromoDrawPage({ searchParams }: Props) {
           </ul>
         )}
       </section>
-      {fullPromo && <p className="muted">Promotion status: {fullPromo.status}. Entries stay recorded even after a promotion ends, so a completed month can still be drawn.</p>}
+      <p className="muted">Promotion status: {promo.status}. Entries stay recorded even after a promotion ends, so a completed month can still be drawn.</p>
     </>
   );
 }

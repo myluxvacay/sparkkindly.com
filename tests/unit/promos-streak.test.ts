@@ -3,12 +3,14 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { newTestDb } from '../helpers/test-db';
 import { seedReference } from '@/db/seed';
 import { signUp } from '@/lib/accounts/signup';
+import { createChildProfile } from '@/lib/accounts/children';
 import { recordAnswer } from '@/lib/accounts/responses';
-import { computeStreak, designate, streakForOwner } from '@/lib/promos/streak';
+import { byDesignation, computeStreak, designatedAt, siteDayOf, streakForOwner } from '@/lib/promos/streak';
 import type { StreakConfig } from '@/lib/promos/types';
 
 // The streak engine (lib/promos/streak.ts): the pure walk first (increments, wrong days, freeze, completion),
-// then the database derivation — the designated Question of the Day per site-day and which saved answers count.
+// then the site-day/designation model (06:00 UTC content days, the question the site is showing at the moment
+// of the answer, per-viewer audiences), then the database derivation of which saved answers count.
 
 const CFG: StreakConfig = { targetDays: 10, freezeAllowance: 1, winnersPerDraw: 5 };
 
@@ -83,20 +85,31 @@ describe('computeStreak', () => {
   });
 });
 
-describe('designate', () => {
-  const quiz = (id: string, day: string) => ({ id, published_at: new Date(`${day}T00:00:00Z`) });
+describe('siteDayOf', () => {
+  it('a site-day runs from the 06:00 UTC content slot to the next one', () => {
+    expect(siteDayOf(new Date('2026-11-02T01:00:00Z'))).toBe('2026-11-01');
+    expect(siteDayOf(new Date('2026-11-02T05:59:00Z'))).toBe('2026-11-01');
+    expect(siteDayOf(new Date('2026-11-02T06:00:00Z'))).toBe('2026-11-02');
+    expect(siteDayOf(new Date('2026-11-02T23:30:00Z'))).toBe('2026-11-02');
+  });
+});
 
-  it('carries the latest quiz forward until a newer one publishes', () => {
-    const { days: ds, byDay } = designate([quiz('b', '2026-11-03'), quiz('a', '2026-11-02')], '2026-11-04');
-    expect(ds).toEqual(['2026-11-02', '2026-11-03', '2026-11-04']);
-    expect(byDay.get('2026-11-02')).toBe('a');
-    expect(byDay.get('2026-11-03')).toBe('b');
-    expect(byDay.get('2026-11-04')).toBe('b');
+describe('designatedAt', () => {
+  const quiz = (id: string, iso: string) => ({ id, published_at: new Date(iso) });
+
+  it('carries the latest quiz forward until a newer one publishes — no dead window before the slot', () => {
+    const qs = byDesignation([quiz('b', '2026-11-03T06:00:00Z'), quiz('a', '2026-11-02T06:00:00Z')]);
+    expect(designatedAt(qs, new Date('2026-11-02T05:00:00Z'))).toBeNull();
+    expect(designatedAt(qs, new Date('2026-11-02T07:00:00Z'))?.id).toBe('a');
+    // 01:00 UTC on Nov 3 is still Nov 2's site-day, and the site is still showing a: it is the designated one.
+    expect(designatedAt(qs, new Date('2026-11-03T01:00:00Z'))?.id).toBe('a');
+    expect(designatedAt(qs, new Date('2026-11-03T07:00:00Z'))?.id).toBe('b');
+    expect(designatedAt(qs, new Date('2026-11-09T07:00:00Z'))?.id).toBe('b');
   });
 
   it('breaks a same-instant tie the way the public reads do (published_at desc, id asc)', () => {
-    const { byDay } = designate([quiz('z', '2026-11-02'), quiz('a', '2026-11-02')], '2026-11-02');
-    expect(byDay.get('2026-11-02')).toBe('a');
+    const qs = byDesignation([quiz('z', '2026-11-02T06:00:00Z'), quiz('a', '2026-11-02T06:00:00Z')]);
+    expect(designatedAt(qs, new Date('2026-11-02T07:00:00Z'))?.id).toBe('a');
   });
 });
 
@@ -110,10 +123,14 @@ let worldId = 0;
 const quizIds: string[] = [];
 
 async function addQuiz(slug: string, day: string, audience = 'all'): Promise<string> {
+  return addQuizAt(slug, `${day}T00:00:00Z`, audience);
+}
+
+async function addQuizAt(slug: string, iso: string, audience = 'all'): Promise<string> {
   const r = await db.query<{ id: string }>(
     `INSERT INTO items (world_id, kind, slug, title, summary, body, audience, status, published_at, created_by, risk_tier, approved_by)
      VALUES ($1,'quiz',$2,'T','S','{}'::jsonb,$3,'published',$4,'test','computable','test') RETURNING id`,
-    [worldId, slug, audience, `${day}T00:00:00Z`],
+    [worldId, slug, audience, iso],
   );
   return r.rows[0].id;
 }
@@ -178,14 +195,70 @@ describe('streakForOwner', () => {
     expect(s.current).toBe(0); // day 11 still open, new attempt not started
   });
 
-  it('an adults-audience quiz is never designated, so the previous question carries forward', async () => {
+  it('designation follows the viewer: a holder’s daily question can be an adults-audience quiz', async () => {
     const me = await account();
     const owner = { accountId: me, profileId: null };
-    const adultQuiz = await addQuiz('q-adults', days(12)[11], 'adults');
+    // The adults quiz publishes after that day's all-audience quiz, so it is what /quiz/ shows a holder.
+    const adultQuiz = await addQuizAt('q-adults', `${days(12)[11]}T06:00:00Z`, 'adults');
+    await recordAnswer(db, owner, adultQuiz, true, new Date(`${days(12)[11]}T12:00:00Z`));
+    const s = await streakForOwner(db, owner, new Date(`${days(12)[11]}T18:00:00Z`), CFG);
+    expect(s.todayQuestionId).toBe(adultQuiz);
+    expect(s.todayDone).toBe(true);
+  });
+
+  it('…but a child profile never gets the adults quiz: the previous visible question carries forward for them', async () => {
+    const me = await account();
+    const child = await createChildProfile(
+      db,
+      me,
+      { displayName: 'Mia', ageBand: '6-9', guardianConfirmed: true, pin: '1234' },
+      T0,
+    );
+    if (child.status !== 'created') throw new Error('profile failed');
+    const owner = { accountId: me, profileId: child.profileId };
     await recordAnswer(db, owner, quizIds[11], true, new Date(`${days(12)[11]}T12:00:00Z`));
     const s = await streakForOwner(db, owner, new Date(`${days(12)[11]}T18:00:00Z`), CFG);
     expect(s.todayQuestionId).toBe(quizIds[11]);
-    expect(s.todayQuestionId).not.toBe(adultQuiz);
     expect(s.todayDone).toBe(true);
+  });
+
+  it('the 06:00 boundary: an answer after midnight UTC still belongs to the site-day whose question it was', async () => {
+    const a = await addQuizAt('b-a', '2026-11-14T06:00:00Z');
+    const b = await addQuizAt('b-b', '2026-11-15T06:00:00Z');
+    const now = new Date('2026-11-15T12:00:00Z');
+    // 01:00 UTC on Nov 15: the site is still showing Nov 14's question (b publishes at 06:00). Answering it
+    // correctly counts for Nov 14's site-day.
+    const early = await account();
+    await recordAnswer(db, { accountId: early, profileId: null }, a, true, new Date('2026-11-15T01:00:00Z'));
+    const sEarly = await streakForOwner(db, { accountId: early, profileId: null }, now, CFG);
+    expect(sEarly.current).toBe(1);
+    expect(sEarly.todayDone).toBe(false);
+    // Answering tomorrow's question before it is the site's question counts for nothing.
+    const eager = await account();
+    await recordAnswer(db, { accountId: eager, profileId: null }, b, true, new Date('2026-11-15T02:00:00Z'));
+    const sEager = await streakForOwner(db, { accountId: eager, profileId: null }, now, CFG);
+    expect(sEager.current).toBe(0);
+    expect(sEager.todayDone).toBe(false);
+    // After the slot, the new question is today's, and answering it counts today.
+    const onTime = await account();
+    await recordAnswer(db, { accountId: onTime, profileId: null }, b, true, new Date('2026-11-15T07:00:00Z'));
+    const sOnTime = await streakForOwner(db, { accountId: onTime, profileId: null }, now, CFG);
+    expect(sOnTime.current).toBe(1);
+    expect(sOnTime.todayDone).toBe(true);
+  });
+
+  it('a sinceDay bound (a promotion’s start) keeps earlier days out of the count', async () => {
+    const me = await account();
+    const owner = { accountId: me, profileId: null };
+    for (let i = 0; i < 10; i++) {
+      await recordAnswer(db, owner, quizIds[i], true, new Date(`${days(12)[i]}T12:00:00Z`));
+    }
+    const now = new Date(`${days(12)[10]}T09:00:00Z`);
+    const unbounded = await streakForOwner(db, owner, now, CFG);
+    expect(unbounded.completedOn).toEqual([days(12)[9]]);
+    // Starting the count on day 6 leaves only five answered days (6–10): no completion, run still live.
+    const bounded = await streakForOwner(db, owner, now, CFG, { sinceDay: days(12)[5] });
+    expect(bounded.completedOn).toEqual([]);
+    expect(bounded.current).toBe(5);
   });
 });

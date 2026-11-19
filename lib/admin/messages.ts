@@ -84,6 +84,7 @@ export const ERRORS = {
   key_gone: 'That key has already been shown or has expired. Rotate the key again if it was not saved.',
   promo_already_drawn: 'That month has already been drawn. A drawn month is never redrawn.',
   promo_empty_pool: 'Nobody both entered and completed the streak that month, so there is nobody to draw from.',
+  promo_month_open: 'That month has not ended yet, so it cannot be drawn. Draw it once the month is over.',
 } as const;
 
 export type DoneCode = keyof typeof DONE;

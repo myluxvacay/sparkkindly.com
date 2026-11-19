@@ -13,7 +13,7 @@ import {
   updatePromo,
   type PromoFields,
 } from '@/lib/promos/repo';
-import { drawWinners, entrantStandings, getDraw, listDraws, runDraw } from '@/lib/promos/draw';
+import { drawWinners, entrantStandings, getDraw, listDraws, monthEnded, runDraw } from '@/lib/promos/draw';
 
 // Promotion records, entries and the recorded draw (lib/promos/repo.ts, lib/promos/draw.ts) against a real
 // migrated database: a promotion is data, so its whole lifecycle — create, edit, go live, end — is exercised
@@ -72,7 +72,8 @@ describe('promotion records', () => {
     const now = new Date('2026-11-19T12:00:00Z');
     const p = await createPromo(db, fields());
     expect(await getLivePromo(db, 'test-promo', now)).toBeNull();
-    expect(await listLivePromos(db, now)).toEqual([]);
+    // The seeded Spark Streak is legitimately live at this date; the draft must simply not be among the live.
+    expect((await listLivePromos(db, now)).map((x) => x.id)).not.toContain(p.id);
     await setPromoStatus(db, p.id, 'live');
     expect((await getLivePromo(db, 'test-promo', now))?.id).toBe(p.id);
     expect((await listLivePromos(db, now)).map((x) => x.id)).toContain(p.id);
@@ -155,6 +156,9 @@ describe('entries and the draw', () => {
       expect(drawn.draw.seed).toMatch(/^[0-9a-f]{48}$/);
       expect(drawn.draw.method).toContain('mulberry32');
       expect(drawn.draw.drawnBy).toBe('owner@example.test');
+      // The pool itself is recorded with the draw, so the winners stay recomputable from the record alone.
+      expect(drawn.draw.poolIds).toEqual([finisher]);
+      expect(drawWinners(drawn.draw.poolIds, drawn.draw.seed, 5)).toEqual(drawn.draw.winners);
     }
     expect((await listDraws(db, promo.id)).map((d) => d.month)).toEqual(['2026-11']);
     expect((await getDraw(db, promo.id, '2026-11'))?.winners).toEqual([finisher]);
@@ -163,5 +167,12 @@ describe('entries and the draw', () => {
     expect(again).toEqual({ ok: false, code: 'already_drawn' });
     const empty = await db.transaction((tx) => runDraw(tx, promo, '2026-10', 'owner@example.test', now));
     expect(empty).toEqual({ ok: false, code: 'empty_pool' });
+  });
+
+  it('a month can be drawn only once it has ended', () => {
+    expect(monthEnded('2026-11', new Date('2026-11-30T23:59:00Z'))).toBe(false);
+    expect(monthEnded('2026-11', new Date('2026-12-01T00:00:00Z'))).toBe(true);
+    expect(monthEnded('2026-12', new Date('2026-11-30T12:00:00Z'))).toBe(false);
+    expect(monthEnded('2026-10', new Date('2026-11-01T00:00:00Z'))).toBe(true);
   });
 });

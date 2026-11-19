@@ -507,13 +507,14 @@ export const actionNames = Object.keys(handlers);
 
 const failure = (status: 400 | 404 | 409, code: ErrorCode): AdminActionResult => ({ ok: false, status, code, message: ERRORS[code] });
 
-function asResult(err: unknown): AdminActionResult {
+function asResult(err: unknown, actionName?: string): AdminActionResult {
   if (err instanceof ActionError) return failure(err.status, err.code);
   if (err instanceof NotFoundError) return failure(404, 'not_found');
   if (err instanceof IllegalTransitionError) return failure(409, 'wrong_status');
   if (err instanceof ApprovalRequiredError) return failure(409, 'needs_approval');
   const code = (err as { code?: string }).code;
-  if (code === '23505') return failure(409, 'exists');
+  // A promo draw that loses a concurrent-draw race hits the promo_draws unique constraint; name it properly.
+  if (code === '23505') return failure(409, actionName === 'promo.draw' ? 'promo_already_drawn' : 'exists');
   if (code === '23514') return failure(409, 'safety_rule');
   throw err;
 }
@@ -562,6 +563,6 @@ export async function runAction(
     await sendAfter(send, mail);
     return result;
   } catch (err) {
-    return asResult(err);
+    return asResult(err, name);
   }
 }

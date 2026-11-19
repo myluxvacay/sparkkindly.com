@@ -90,10 +90,11 @@ export default async function StreakPanel({ promo, r }: { promo: Promo; r?: stri
     );
   }
 
-  // The streak belongs to whoever is playing: the account holder, or the active child profile.
+  // The streak belongs to whoever is playing: the account holder, or the active child profile. It is bounded
+  // by the promotion's own start — days before this promotion existed never count toward it.
   const viewer = await currentViewer();
   const owner = viewer.owner;
-  const streak = owner ? await streakForOwner(db, owner, new Date(), cfg) : null;
+  const streak = owner ? await streakForOwner(db, owner, new Date(), cfg, { sinceDay: promo.startsOn }) : null;
   const isHolder = ctx.profile === null;
   const entry = isHolder ? await getEntry(db, promo.id, ctx.account.id) : null;
 

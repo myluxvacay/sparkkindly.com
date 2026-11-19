@@ -1,27 +1,38 @@
 // The streak engine for the `streak_draw` promo type. A streak is DERIVED, never stored: it is computed from the
-// answers already saved in item_responses (lib/accounts/responses.ts) against each day's designated Question of
-// the Day, so there is no second tracking store to disagree with the play history.
+// answers already saved in item_responses (lib/accounts/responses.ts) against the designated Question of the
+// Day, so there is no second tracking store to disagree with the play history.
 //
-// The designated question for a site-day is the quiz the site itself shows that day: the most recently published
-// quiz (the same pick latestQuiz makes for the home page and /quiz/, in the same order — published_at desc, id
-// asc), carried forward until a newer one publishes. Quiz publication is date-based (a quiz's published_at is
-// its scheduled day at 00:00 UTC), so site-days here are UTC dates. Only quizzes every account kind can see
-// (audiences kids/all, enabled world, en) can be designated: an `adults`-audience quiz is never the daily
-// question for streak purposes, because a child profile could not answer it.
+// Site-days are the site's own content days, not UTC calendar days: new content publishes at the 06:00 UTC slot
+// (SLOT_HOUR_UTC in lib/items/policy.ts), so a site-day runs 06:00 UTC to the next 06:00 UTC, keyed by the UTC
+// date of its start. The designated question at any moment is the quiz the site itself is showing then — the
+// most recently published quiz (the same pick latestQuiz makes for the home page and /quiz/, in the same
+// order: published_at desc, id asc), as visible to the ANSWERER: a child profile's audiences are kids/all (an
+// `adults`-audience quiz is never their daily question, because they cannot see it), while an account holder
+// sees every audience, exactly as their /quiz/ page does. An answer counts toward the site-day it was given in
+// when its item was the designated question at that moment.
 //
-// A day counts when the owner's FIRST saved answer to that day's designated question, given on that day, is
-// correct (item_responses holds first answers only, so a wrong first answer can never be repaired — the same
-// rule the rest of the site plays by). No Next.js imports. Verified by tests/unit/promos-streak.test.ts.
+// A day counts on a correct FIRST saved answer (item_responses holds first answers only, so a wrong first
+// answer can never be repaired — the same rule the rest of the site plays by). No Next.js imports.
+// Verified by tests/unit/promos-streak.test.ts.
 import type { Queryable } from '@/lib/db';
+import { CHILD_AUDIENCES } from '@/lib/accounts/context';
 import { SAME_OWNER, validOwner, type Owner } from '@/lib/accounts/interests';
+import type { Audience } from '@/lib/items/repo';
 import type { StreakConfig } from './types';
 
 export const DAY_MS = 86_400_000;
+
+// The hour (UTC) a site-day starts: the content publish slot, mirrored from SLOT_HOUR_UTC in
+// lib/items/policy.ts. If that slot ever moves, this must move with it.
+export const SITE_DAY_START_HOUR_UTC = 6;
 
 // YYYY-MM-DD (UTC) for a Date.
 export const dayOf = (d: Date): string => d.toISOString().slice(0, 10);
 const dayStart = (day: string) => Date.parse(`${day}T00:00:00Z`);
 const addDays = (day: string, n: number) => dayOf(new Date(dayStart(day) + n * DAY_MS));
+
+// The site-day (YYYY-MM-DD) a moment falls in: the window starting at 06:00 UTC, keyed by its start date.
+export const siteDayOf = (d: Date): string => dayOf(new Date(d.getTime() - SITE_DAY_START_HOUR_UTC * 3_600_000));
 
 export type StreakState = {
   // Length of the run still alive today (0 when no run is live).
@@ -32,7 +43,7 @@ export type StreakState = {
   freezeLeft: number;
   // True when today's designated question is already answered correctly.
   todayDone: boolean;
-  // Every date on which a run reached the target, ascending. A date in a month makes that month's draw pool.
+  // Every site-day on which a run reached the target, ascending. A date in a month makes that month's draw pool.
   completedOn: string[];
 };
 
@@ -84,62 +95,62 @@ export function computeStreak(
 
 type QuizRow = { id: string; published_at: Date };
 
-// The designated Question of the Day for each site-day from the first published quiz to today, as a map of
-// day -> item id, plus the ascending list of days. Mirrors latestQuiz's pick (published_at desc, id asc) at
-// each day's close, restricted to quizzes every account kind may see.
-export function designate(
-  quizzes: readonly QuizRow[],
-  today: string,
-): { days: string[]; byDay: Map<string, string> } {
-  const byDay = new Map<string, string>();
-  if (quizzes.length === 0) return { days: [], byDay };
-  const sorted = [...quizzes].sort(
-    (a, b) => b.published_at.getTime() - a.published_at.getTime() || (a.id < b.id ? -1 : 1),
-  );
-  const firstDay = dayOf(sorted[sorted.length - 1].published_at);
-  const days: string[] = [];
-  for (let d = firstDay; d <= today; d = addDays(d, 1)) {
-    const end = dayStart(d) + DAY_MS;
-    const q = sorted.find((x) => x.published_at.getTime() < end);
-    if (q) {
-      byDay.set(d, q.id);
-      days.push(d);
-    }
-  }
-  return { days, byDay };
+// Quizzes in designation order: the site's own pick order (published_at desc, id asc — the ORDER BY in
+// lib/public/reads.ts listPublic).
+export const byDesignation = (quizzes: readonly QuizRow[]): QuizRow[] =>
+  [...quizzes].sort((a, b) => b.published_at.getTime() - a.published_at.getTime() || (a.id < b.id ? -1 : 1));
+
+// The designated Question of the Day at a moment: the most recently published quiz at or before it, carried
+// forward until a newer one publishes. Null before the first quiz ever.
+export function designatedAt(sortedQuizzes: readonly QuizRow[], at: Date): QuizRow | null {
+  return sortedQuizzes.find((q) => q.published_at.getTime() <= at.getTime()) ?? null;
 }
 
-async function publishedQuizzes(db: Queryable, now: Date): Promise<QuizRow[]> {
+// The audiences whose quizzes can be designated for this owner — the same audiences the owner's own pages
+// read with (lib/accounts/context.ts): a child profile sees kids/all only; a holder sees every audience.
+const audiencesFor = (owner: Owner): readonly Audience[] =>
+  owner.profileId ? CHILD_AUDIENCES : ['kids', 'all', 'adults'];
+
+async function publishedQuizzes(db: Queryable, now: Date, audiences: readonly Audience[]): Promise<QuizRow[]> {
   const r = await db.query<QuizRow>(
     `SELECT i.id, i.published_at FROM items i JOIN worlds w ON w.id = i.world_id
      WHERE i.kind = 'quiz' AND i.status = 'published' AND i.published_at IS NOT NULL AND i.published_at <= $1
-       AND w.enabled AND i.locale = 'en' AND i.audience IN ('kids', 'all')`,
-    [now],
+       AND w.enabled AND i.locale = 'en' AND i.audience = ANY($2::text[])`,
+    [now, [...audiences]],
   );
   return r.rows;
 }
 
-// The owner's streak right now, plus today's designated question id (null before the first quiz ever).
+// The owner's streak right now, plus the question currently designated for them (null before the first quiz
+// ever). `sinceDay` bounds the count to site-days on or after it (a promotion's start: days before a promo
+// existed never count toward it).
 export async function streakForOwner(
   db: Queryable,
   owner: Owner,
   now: Date,
   cfg: StreakConfig,
+  opts: { sinceDay?: string | null } = {},
 ): Promise<StreakState & { todayQuestionId: string | null }> {
   if (!validOwner(owner)) return { ...ZERO, freezeLeft: cfg.freezeAllowance, todayQuestionId: null };
-  const today = dayOf(now);
-  const { days, byDay } = designate(await publishedQuizzes(db, now), today);
-  if (days.length === 0) return { ...ZERO, freezeLeft: cfg.freezeAllowance, todayQuestionId: null };
-  const r = await db.query<{ item_id: string; day: string }>(
-    `SELECT r.item_id, (r.answered_at AT TIME ZONE 'UTC')::date::text AS day
-     FROM item_responses r WHERE ${SAME_OWNER.replaceAll(/\b(account_id|profile_id)\b/g, 'r.$1')} AND r.correct`,
+  const quizzes = byDesignation(await publishedQuizzes(db, now, audiencesFor(owner)));
+  if (quizzes.length === 0) return { ...ZERO, freezeLeft: cfg.freezeAllowance, todayQuestionId: null };
+  const today = siteDayOf(now);
+  const firstDay = siteDayOf(quizzes[quizzes.length - 1].published_at);
+  const days: string[] = [];
+  for (let d = firstDay; d <= today; d = addDays(d, 1)) {
+    if (!opts.sinceDay || d >= opts.sinceDay) days.push(d);
+  }
+  if (days.length === 0) return { ...ZERO, freezeLeft: cfg.freezeAllowance, todayQuestionId: designatedAt(quizzes, now)?.id ?? null };
+  const r = await db.query<{ item_id: string; answered_at: Date }>(
+    `SELECT r.item_id, r.answered_at FROM item_responses r
+     WHERE ${SAME_OWNER.replaceAll(/\b(account_id|profile_id)\b/g, 'r.$1')} AND r.correct`,
     [owner.accountId, owner.profileId],
   );
   const answered = new Set<string>();
   for (const row of r.rows) {
-    if (byDay.get(row.day) === row.item_id) answered.add(row.day);
+    if (designatedAt(quizzes, row.answered_at)?.id === row.item_id) answered.add(siteDayOf(row.answered_at));
   }
-  return { ...computeStreak(answered, days, today, cfg), todayQuestionId: byDay.get(today) ?? null };
+  return { ...computeStreak(answered, days, today, cfg), todayQuestionId: designatedAt(quizzes, now)?.id ?? null };
 }
 
 // The months (YYYY-MM) in which this owner has completed at least one streak.

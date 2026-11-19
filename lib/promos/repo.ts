@@ -63,18 +63,19 @@ const toPromo = (r: Row): Promo => ({
 });
 
 // A promo is publicly visible while it is live and today falls inside its dates (an unset bound is open).
-// Dates are site-days (UTC), the same convention as content scheduling.
-const liveOn = (today: string) =>
-  `status = 'live' AND (starts_on IS NULL OR starts_on <= '${today}'::date) AND (ends_on IS NULL OR ends_on >= '${today}'::date)`;
+// Dates are calendar dates (UTC), the way the owner sets them in the admin form. `$n` is the parameter
+// holding today's date.
+const liveOn = (ph: string) =>
+  `status = 'live' AND (starts_on IS NULL OR starts_on <= ${ph}::date) AND (ends_on IS NULL OR ends_on >= ${ph}::date)`;
 
 export async function listLivePromos(q: Queryable, now: Date): Promise<Promo[]> {
-  const r = await q.query<Row>(`${SELECT} WHERE ${liveOn(dayOf(now))} ORDER BY starts_on NULLS FIRST, title`);
+  const r = await q.query<Row>(`${SELECT} WHERE ${liveOn('$1')} ORDER BY starts_on NULLS FIRST, title`, [dayOf(now)]);
   return r.rows.map(toPromo);
 }
 
 export async function getLivePromo(q: Queryable, slug: string, now: Date): Promise<Promo | null> {
   if (!/^[a-z0-9-]{1,80}$/.test(slug)) return null;
-  const r = await q.query<Row>(`${SELECT} WHERE slug = $1 AND ${liveOn(dayOf(now))}`, [slug]);
+  const r = await q.query<Row>(`${SELECT} WHERE slug = $1 AND ${liveOn('$2')}`, [slug, dayOf(now)]);
   return r.rows[0] ? toPromo(r.rows[0]) : null;
 }
 
@@ -145,15 +146,18 @@ export async function recordEntry(
   return (r.rowCount ?? 0) > 0;
 }
 
-export async function getEntry(q: Queryable, promotionId: string, accountId: string): Promise<Entry | null> {
+// One account's own entry, without the email: this is the read the public promo page makes, and an entrant's
+// email is never needed there (listEntries below is the only email read, and it is admin-only).
+export type EntryRef = { accountId: string; attestedAdult: boolean; enteredAt: Date };
+
+export async function getEntry(q: Queryable, promotionId: string, accountId: string): Promise<EntryRef | null> {
   if (!isUuid(promotionId) || !isUuid(accountId)) return null;
-  const r = await q.query<{ account_id: string; email: string; attested_adult: boolean; entered_at: Date }>(
-    `SELECT e.account_id, a.email, e.attested_adult, e.entered_at FROM promo_entries e
-     JOIN accounts a ON a.id = e.account_id WHERE e.promotion_id = $1 AND e.account_id = $2`,
+  const r = await q.query<{ account_id: string; attested_adult: boolean; entered_at: Date }>(
+    'SELECT account_id, attested_adult, entered_at FROM promo_entries WHERE promotion_id = $1 AND account_id = $2',
     [promotionId, accountId],
   );
   const row = r.rows[0];
-  return row ? { accountId: row.account_id, email: row.email, attestedAdult: row.attested_adult, enteredAt: row.entered_at } : null;
+  return row ? { accountId: row.account_id, attestedAdult: row.attested_adult, enteredAt: row.entered_at } : null;
 }
 
 // Every entrant, oldest first. Admin only: this is the one place entrant emails are read, and it is only ever

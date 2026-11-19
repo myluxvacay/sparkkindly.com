@@ -30,7 +30,13 @@ function dates(p: Promo): string {
 // promotion in /admin takes it off this page at once — no deployment is involved either way.
 export default async function PromosPage() {
   if (!promosEnabled()) notFound();
-  const promos = await listLivePromos(getDb(), new Date());
+  // Fail safe: if the records cannot be read, the page shows its empty state rather than an error page.
+  let promos: Promo[] = [];
+  try {
+    promos = await listLivePromos(getDb(), new Date());
+  } catch {
+    promos = [];
+  }
   return (
     <div className="container section">
       <Breadcrumb trail={[{ name: 'Home', href: '/' }, { name: 'Promotions' }]} />
