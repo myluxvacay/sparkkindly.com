@@ -23,6 +23,7 @@ export const EXPORTED_TABLES = [
   'comment_appeals',
   'contributor_profiles',
   'contributions',
+  'promo_entries',
 ] as const;
 
 // Personal-data tables deliberately left out, each with its reason.
@@ -198,6 +199,10 @@ type ExportContributor = {
   createdAt: string;
   updatedAt: string;
 };
+// One of the account's own promotion entries (promotions framework): the promotion's public slug and title,
+// whether the 18+ attestation was given, and when. Draw records (promo_draws) are not exported: a draw row
+// names a whole month's pool and winners, not one account — the account's own wins reach it by email.
+type ExportPromoEntry = { promotion: string; title: string; attestedAdult: boolean; enteredAt: string };
 // One of the account's contributions, any state, with the reasons and owner notes addressed to it.
 type ExportContribution = {
   kind: string;
@@ -255,6 +260,7 @@ export type AccountExport = {
   commentAppeals: ExportAppeal[];
   contributor: ExportContributor | null;
   contributions: ExportContribution[];
+  promoEntries: ExportPromoEntry[];
   childProfiles: ExportChild[];
 };
 
@@ -520,6 +526,16 @@ async function contributionsOf(tx: Queryable, accountId: string): Promise<Export
   }));
 }
 
+async function promoEntriesOf(tx: Queryable, accountId: string): Promise<ExportPromoEntry[]> {
+  const r = await tx.query<{ slug: string; title: string; att: boolean; e: Date }>(
+    `SELECT p.slug, p.title, e.attested_adult AS att, e.entered_at AS e
+     FROM promo_entries e JOIN promotions p ON p.id = e.promotion_id
+     WHERE e.account_id = $1 ORDER BY e.entered_at, p.slug`,
+    [accountId],
+  );
+  return r.rows.map((x) => ({ promotion: x.slug, title: x.title, attestedAdult: x.att, enteredAt: iso(x.e) as string }));
+}
+
 async function readExport(tx: Queryable, accountId: string, now: Date): Promise<AccountExport | null> {
   const a = await tx.query<AccountRow>(
     `SELECT email, to_char(date_of_birth, 'YYYY-MM-DD') AS dob, time_zone, consent_state, consent_at,
@@ -555,6 +571,7 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
     commentAppeals: await appealsOf(tx, accountId),
     contributor: await contributorOf(tx, accountId),
     contributions: await contributionsOf(tx, accountId),
+    promoEntries: await promoEntriesOf(tx, accountId),
     childProfiles: children.rows.map((c) => ({
       displayName: c.display_name,
       ageBand: c.age_band,
