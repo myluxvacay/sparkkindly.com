@@ -70,8 +70,8 @@ test('a spot-the-difference game shows both pictures', async ({ page }) => {
 
 test('the /games/ page is a doorway into the flow, not a separate section', async ({ page }) => {
   await page.goto('/games/');
-  await expect(page.getByRole('heading', { name: 'Spot the Difference' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Memory Pictures' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Spot the Difference', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Memory Pictures', exact: true })).toBeVisible();
   await expect(page.getByRole('button', { name: /Spark's voice/ })).toBeVisible();
   await page.getByRole('link', { name: /Play one now/ }).first().click();
   await expect(page.locator('.quiz-panel')).toBeVisible();
