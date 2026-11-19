@@ -166,6 +166,12 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 
 ---
 
+## Promotions framework + 10-Day Spark Streak (owner direction, 19 November 2026)
+
+- [~] P.1 Promotions as data: promo records (slug, title, description, rules, prize, dates, status draft/live/ended, type) in the database with an admin create/edit/activate/end flow and public /promos/ index + per-promo pages rendered from the record — no deployment to change a promo. First type `streak_draw`: streaks derived from item_responses against each day's designated Question of the Day, 10 consecutive site-days with one freeze, 18+ attested entry (account holders only), monthly draw of 5 × $25 gift cards among entered completers, seeded live as "The 10-Day Spark Streak". *Evidence pending.*
+
+---
+
 ## Standing owner actions (not tied to one project)
 
 - [ ] Monthly budget ceiling: confirm about $150/month or set another figure.
