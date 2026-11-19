@@ -15,6 +15,8 @@ import {
   describeScene,
   diffScenes,
   elementLabel,
+  splitLabel,
+  templateCollisions,
 
   type SceneColor,
   type SceneElement,
@@ -237,6 +239,18 @@ function buildScene(r: Rng, template: SceneTemplate, count: number, opts: { arts
 const withClock = (scene: SceneSpec, time: string): SceneSpec => ({ ...scene, clockTime: time });
 const withSign = (scene: SceneSpec, word: string): SceneSpec => ({ ...scene, signText: word });
 
+// Backdrop collisions (owner report, 18 Nov 2026): the template backdrop is part of the picture
+// the player answers from — the farm backdrop's red barn made a "yellow house" answer read as
+// wrong. Facts and decoys must stay off categories the backdrop draws (TEMPLATE_OBJECTS in
+// lib/games/scene.ts); the content schema rejects them too, these guards keep generation clean.
+const backdropShows = (scene: SceneSpec, text: string): boolean => {
+  const { color, noun } = splitLabel(text);
+  const hits = templateCollisions(scene.template, noun);
+  return hits.length > 0 && (!color || hits.some((h) => h.colors.length === 0 || h.colors.includes(color)));
+};
+const backdropDraws = (scene: SceneSpec, name: string): boolean =>
+  templateCollisions(scene.template, name.toLowerCase()).length > 0;
+
 function clockTimeFor(r: Rng, difficulty: string): string {
   const hour = 1 + Math.floor(r() * 12);
   const minute = difficulty === 'easy' ? pick(r, [0, 30]) : difficulty === 'medium' ? pick(r, [0, 15, 30, 45]) : pick(r, [5, 10, 20, 25, 35, 40, 50, 55]);
@@ -309,7 +323,7 @@ function factGame(r: Rng, kind: 'observation' | 'memory', difficulty: string, n:
     // The prompt names only the object ("what colour is the duck?"), so the asked-about art must
     // appear exactly once in the scene — with two ducks of different colours the question has no
     // unique answer (independent review rejection, 18 Nov 2026: 4 games dropped for this).
-    const colored = scene.elements.filter((e) => e.color && scene.elements.filter((x) => x.art === e.art).length === 1);
+    const colored = scene.elements.filter((e) => e.color && scene.elements.filter((x) => x.art === e.art).length === 1 && !backdropDraws(scene, e.name));
     if (!colored.length) return null;
     const el = pick(r, colored);
     fact = { type: 'color', elementId: el.id };
@@ -318,7 +332,8 @@ function factGame(r: Rng, kind: 'observation' | 'memory', difficulty: string, n:
     wrongs = colorDistractors(r, el.color!);
     explanation = `The ${el.name} in the picture is ${el.color} — look at it closely and you can see its colour.`;
   } else if (factKind === 'count') {
-    const arts = [...new Set(scene.elements.map((e) => e.art))];
+    const arts = [...new Set(scene.elements.map((e) => e.art))].filter((a) => !backdropDraws(scene, scene.elements.find((e) => e.art === a)!.name));
+    if (!arts.length) return null;
     const art = pick(r, arts);
     const entry = byArt(art);
     const count = scene.elements.filter((e) => e.art === art).length;
@@ -330,11 +345,19 @@ function factGame(r: Rng, kind: 'observation' | 'memory', difficulty: string, n:
     if (wrongs.length < 3) wrongs.push(String(count + 3));
     explanation = `Count the ${pluralize(entry.name)} one by one, pointing at each so none is counted twice: there are ${count}.`;
   } else if (factKind === 'present') {
-    const el = pick(r, scene.elements);
+    // The target's colour must not fight the backdrop: a yellow house element in front of the
+    // farm backdrop's red barn is exactly the ambiguity the owner reported.
+    const safe = scene.elements.filter((e) => {
+      if (!e.color) return true;
+      const hits = templateCollisions(scene.template, e.name.toLowerCase());
+      return !hits.length || hits.some((h) => h.colors.includes(e.color!));
+    });
+    if (!safe.length) return null;
+    const el = pick(r, safe);
     fact = { type: 'present', elementId: el.id };
     const inScene = new Set(scene.elements.map((e) => elementLabel(e).toLowerCase()));
     const absentPool = CATALOG.flatMap((e) => (e.colors ?? [undefined]).map((c) => (c ? `${c} ${e.name}` : e.name)))
-      .filter((label) => !inScene.has(label.toLowerCase()));
+      .filter((label) => !inScene.has(label.toLowerCase()) && !backdropShows(scene, label));
     wrongs = sample(r, absentPool, 3);
     correct = elementLabel(el);
     prompt = `${lead}which of these can you see in the ${place}?`;
@@ -343,7 +366,7 @@ function factGame(r: Rng, kind: 'observation' | 'memory', difficulty: string, n:
     // absent (memory only in practice): the correct label is something the scene does NOT contain.
     const inScene = new Set(scene.elements.map((e) => elementLabel(e).toLowerCase()));
     const absentPool = CATALOG.flatMap((e) => (e.colors ?? [undefined]).map((c) => (c ? `${c} ${e.name}` : e.name)))
-      .filter((label) => !inScene.has(label.toLowerCase()));
+      .filter((label) => !inScene.has(label.toLowerCase()) && !backdropDraws(scene, splitLabel(label).noun));
     if (!absentPool.length || scene.elements.length < 3) return null;
     const label = pick(r, absentPool);
     fact = { type: 'absent', label };
@@ -461,12 +484,14 @@ function diffGame(r: Rng, kind: 'spot-difference' | 'what-changed', difficulty: 
 }
 
 // --- Counting -----------------------------------------------------------------------
+// No star/planet counting in space scenes: the space backdrop is itself full of star dots and
+// stands on a planet, so those counts are not readable from the picture (owner report, 18 Nov 2026).
 const COUNT_SETUPS: { template: SceneTemplate; art: string; zone: Zone }[] = [
   { template: 'pond', art: 'duck', zone: 'water' }, { template: 'pond', art: 'fish', zone: 'water' },
   { template: 'pond', art: 'frog', zone: 'water' }, { template: 'meadow', art: 'flower', zone: 'ground' },
   { template: 'meadow', art: 'butterfly', zone: 'sky' }, { template: 'beach', art: 'shell', zone: 'ground' },
-  { template: 'beach', art: 'crab', zone: 'ground' }, { template: 'space', art: 'star', zone: 'sky' },
-  { template: 'space', art: 'planet', zone: 'sky' }, { template: 'farm', art: 'chicken', zone: 'ground' },
+  { template: 'beach', art: 'crab', zone: 'ground' }, { template: 'space', art: 'rocket', zone: 'sky' },
+  { template: 'farm', art: 'chicken', zone: 'ground' },
   { template: 'farm', art: 'sheep', zone: 'ground' }, { template: 'garden', art: 'flower', zone: 'ground' },
   { template: 'garden', art: 'bee', zone: 'sky' }, { template: 'park', art: 'bird', zone: 'sky' },
   { template: 'market', art: 'apple', zone: 'counter' }, { template: 'market', art: 'orange', zone: 'counter' },

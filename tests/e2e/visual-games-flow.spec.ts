@@ -7,6 +7,7 @@ import fs from 'node:fs';
 // seeded library end to end.
 type GameFile = {
   id: string; brand: string; gameType: string; scheduledDate: string; reviewStatus: string;
+  prompt?: string;
   correctOptionId?: string; numberAnswer?: { value: number };
   options?: { id: string; text: string }[];
 };
@@ -42,9 +43,48 @@ test('a memory game shows the scene first, then hides it for the answer', async 
   await page.goto(`/${g.brand}/${g.id}/#play-panel`);
   await expect(page.locator('svg.scene-view')).toBeVisible();
   await expect(page.getByRole('radio')).toHaveCount(0);
+  // The look phase must not leak the question (owner design review, 18 Nov 2026): the prompt used
+  // to head the scene, telling the player exactly what to count or watch for.
+  await expect(page.locator('.quiz-panel')).not.toContainText(g.prompt!);
+  await expect(page.locator('.article-summary')).not.toContainText(g.prompt!);
   await page.getByRole('link', { name: /looked carefully/ }).click();
   await expect(page.locator('svg.scene-view')).toHaveCount(0);
   await expect(page.getByText('The picture is hidden now')).toBeVisible();
+  await page.locator('label.option', { hasText: correctText(g) }).first().click();
+  await page.getByRole('button', { name: /Check answer/ }).click();
+  await expect(page.getByRole('status')).toContainText(/Correct/);
+});
+
+test('a sequence game shows its items one at a time, then asks', async ({ page }) => {
+  const g = firstOf('sequence');
+  await page.goto(`/${g.brand}/${g.id}/#play-panel`);
+  // Show phase: exactly one item on stage, no question, no options, no strip of everything.
+  await expect(page.locator('.seq-stage')).toBeVisible();
+  await expect(page.locator('.seq-tile')).toHaveCount(0);
+  await expect(page.getByRole('radio')).toHaveCount(0);
+  await expect(page.locator('.quiz-panel')).not.toContainText(g.prompt!);
+  // Advance through the show steps until the ask step offers itself.
+  for (let i = 0; i < 5; i++) {
+    const ask = page.getByRole('link', { name: /remembered the order/ });
+    if ((await ask.count()) > 0) { await ask.click(); break; }
+    await page.getByRole('link', { name: /Next/ }).click();
+    await expect(page.locator('.seq-stage')).toBeVisible();
+  }
+  await expect(page.locator('.seq-stage')).toHaveCount(0);
+  await page.locator('label.option', { hasText: correctText(g) }).first().click();
+  await page.getByRole('button', { name: /Check answer/ }).click();
+  await expect(page.getByRole('status')).toContainText(/Correct/);
+});
+
+test('a what-changed game shows the before picture alone, then the after picture with the question', async ({ page }) => {
+  const g = firstOf('what-changed');
+  await page.goto(`/${g.brand}/${g.id}/#play-panel`);
+  await expect(page.locator('svg.scene-view')).toHaveCount(1);
+  await expect(page.getByText('Before', { exact: true })).toBeVisible();
+  await expect(page.getByRole('radio')).toHaveCount(0);
+  await page.getByRole('link', { name: /show the after picture/ }).click();
+  await expect(page.locator('svg.scene-view')).toHaveCount(1);
+  await expect(page.getByText('After', { exact: true })).toBeVisible();
   await page.locator('label.option', { hasText: correctText(g) }).first().click();
   await page.getByRole('button', { name: /Check answer/ }).click();
   await expect(page.getByRole('status')).toContainText(/Correct/);

@@ -147,12 +147,18 @@ test('a wrong answer keeps the quiz on screen, and Next hops quiz to quiz withou
 
   // Hop twice with the keep-playing buttons: each time a different question, a fresh form, panel on
   // top. Since 18 Nov 2026 the pool mixes picture games in with quizzes (owner direction), so a hop
-  // can land on a choice question (radios), a counting game (number box), or a memory game (scene
-  // first, then the "ask me" step reveals the choices) — every landing must be playable, never stuck.
+  // can land on a choice question (radios), a counting game (number box), or a phased game —
+  // memory (scene first, then "ask me"), sequence recall (items one at a time, then the question),
+  // what-changed (before picture, then after) — every landing must be playable, never stuck.
   const answerWhatever = async (p: typeof page) => {
     const panelEl = p.locator('.quiz-panel');
-    if ((await panelEl.getByRole('link', { name: /looked carefully/ }).count()) > 0) {
-      await panelEl.getByRole('link', { name: /looked carefully/ }).click();
+    // Advance through a phased game's look/show steps exactly as a player would, until the
+    // answer fields appear.
+    for (let i = 0; i < 6; i++) {
+      if ((await panelEl.getByRole('radio').count()) > 0 || (await panelEl.locator('input[type="number"]').count()) > 0) break;
+      const advance = panelEl.getByRole('link', { name: /looked carefully|remembered the order|show the after picture|Next/ }).first();
+      if ((await advance.count()) === 0) break;
+      await advance.click();
     }
     if ((await panelEl.locator('input[type="number"]').count()) > 0) {
       await panelEl.locator('input[type="number"]').fill('1');
@@ -190,7 +196,7 @@ test('a wrong answer keeps the quiz on screen, and Next hops quiz to quiz withou
   await expect(
     plain.locator('.quiz-panel').getByRole('radio').first()
       .or(plain.locator('.quiz-panel input[type="number"]'))
-      .or(plain.locator('.quiz-panel').getByRole('link', { name: /looked carefully/ })),
+      .or(plain.locator('.quiz-panel').getByRole('link', { name: /looked carefully|remembered the order|show the after picture|Next/ })),
   ).toBeVisible();
   await noJs.close();
 });

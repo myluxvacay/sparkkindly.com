@@ -1,10 +1,11 @@
-// Automated content publish for the deploy receiver: imports new library items and then refreshes stored hero
-// images, in one bundled process (built by `npm run content:publish:build`, shipped inside the release and run by
+// Automated content publish for the deploy receiver: imports new library items, refreshes stored hero
+// images, then syncs stored visual-game rows, in one bundled process (built by `npm run content:publish:build`, shipped inside the release and run by
 // deploy-receive.sh after the release passes its health gate, when the release carries the PUBLISH_CONTENT marker).
-// It performs exactly the two steps the owner used to run by hand — scripts/import-starter-content.ts
-// (npm run content:import) followed by scripts/update-hero-images.ts (npm run content:update-heroes) — using the
+// It performs exactly the steps the owner used to run by hand — scripts/import-starter-content.ts
+// (npm run content:import), scripts/update-hero-images.ts (npm run content:update-heroes) and
+// scripts/update-game-items.ts (npm run content:update-games) — using the
 // same library functions, the same production guard and the same output lines, so the workflow log reads the same.
-// Both steps are idempotent: existing rows are left alone and hero rows already current are untouched.
+// All steps are idempotent: existing rows are left alone and rows already current are untouched.
 // Usage: node content-publish.mjs            (staging or a local database)
 //        node content-publish.mjs --allow-production   (production database; the receiver passes this for prod only)
 // The target database comes from DATABASE_URL in the environment (the receiver loads the target's env file).
@@ -16,6 +17,7 @@ import { readFolder } from '../lib/repository';
 import { seedReference } from '../db/seed';
 import { importLegacy } from '../lib/items/import-legacy';
 import { updateHeroImages } from '../lib/items/update-heroes';
+import { updateGameItems } from '../lib/items/update-games';
 import { assertSafeImportTarget } from '../lib/items/import-guard';
 
 try {
@@ -42,6 +44,9 @@ try {
 
   const heroes = await updateHeroImages(db, articles);
   console.log(`Hero images: ${heroes.updated} updated, ${heroes.unchanged} already current, ${heroes.missing} not in database.`);
+
+  const gameSync = await updateGameItems(db, games);
+  console.log(`Game items: ${gameSync.updated} updated, ${gameSync.unchanged} already current, ${gameSync.missing} not in database.`);
 } catch (err) {
   console.error((err as Error).message);
   process.exitCode = 2;

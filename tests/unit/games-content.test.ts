@@ -6,7 +6,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync, readdirSync } from 'node:fs';
 import { allGames } from '@/lib/content';
 import { gameSchema } from '@/lib/schemas';
-import { countInScene, type SceneSpec } from '@/lib/games/scene';
+import { countInScene, describeScene, type SceneSpec } from '@/lib/games/scene';
 
 const SIX = ['observation', 'memory', 'spot-difference', 'what-changed', 'counting', 'sequence'] as const;
 
@@ -64,6 +64,32 @@ describe('visual games collection', () => {
     clone.visual.sceneAlt = `${clone.visual.sceneAlt} Plus a ${other} ${target.name} nearby.`;
     expect(gameSchema.safeParse(clone).success).toBe(false);
     expect(gameSchema.safeParse(source).success).toBe(true);
+  });
+
+  it('rejects a present fact the backdrop contradicts (observation-030, owner report)', () => {
+    // The shipped fix passes; rebuilding the reported bug — the farm scene's small yellow house
+    // element as the answer, in front of the farm backdrop's big red barn — must fail the gate.
+    const source = allGames.find((g) => g.id === 'observation-030')!;
+    expect(gameSchema.safeParse(source).success).toBe(true);
+    const clone = JSON.parse(JSON.stringify(source)) as typeof source;
+    const scene = clone.visual.scene!;
+    const house = scene.elements.find((e) => e.art === 'house')!;
+    clone.visual.fact = { type: 'present', elementId: house.id };
+    clone.options!.find((o) => o.id === clone.correctOptionId)!.text = 'yellow house';
+    clone.explanation = 'The yellow house is right there in the picture. The other three choices are not in this scene at all.';
+    expect(gameSchema.safeParse(clone).success).toBe(false);
+  });
+
+  it('rejects counting a category the backdrop also draws (space stars/planets)', () => {
+    const source = allGames.find((g) => g.gameType === 'counting' && g.visual.scene?.template === 'space')!;
+    expect(gameSchema.safeParse(source).success).toBe(true);
+    const clone = JSON.parse(JSON.stringify(source)) as typeof source;
+    for (const el of clone.visual.scene!.elements) {
+      if (el.art === 'rocket') { el.art = 'star'; el.name = 'star'; }
+    }
+    clone.visual.countTarget = { art: 'star' };
+    clone.visual.sceneAlt = describeScene(clone.visual.scene!);
+    expect(gameSchema.safeParse(clone).success).toBe(false);
   });
 
   it('has unique ids and no two games with identical scene payloads', () => {

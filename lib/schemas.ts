@@ -27,6 +27,8 @@ import {
   elementLabel,
   factValue,
   sameText,
+  splitLabel,
+  templateCollisions,
   type SceneSpec,
 } from './games/scene';
 
@@ -133,6 +135,53 @@ export const gameSchema = z.object({
             bad('Colour question is ambiguous: the scene holds that object in more than one colour');
           }
         }
+        // Backdrop collisions (owner report, 18 Nov 2026): facts are proven from element data,
+        // but the player answers from the whole rendered picture, backdrop included — the farm
+        // backdrop draws a big red barn, so observation-030's small "yellow house" element answer
+        // read as wrong. A fact may not hinge on a category the backdrop also draws in another
+        // colour or form, and no decoy option may name something the backdrop itself shows.
+        if (scene && g.options && g.visual.fact) {
+          const fact = g.visual.fact;
+          const elLabels = new Set(scene.elements.map((e) => elementLabel(e).toLowerCase()));
+          const wrongs = g.options.filter((o) => o.id !== g.correctOptionId);
+          const backdropShows = (text: string): boolean => {
+            const { color, noun } = splitLabel(text);
+            const hits = templateCollisions(scene.template, noun);
+            return hits.length > 0 && (!color || hits.some((h) => h.colors.length === 0 || h.colors.includes(color)));
+          };
+          if (fact.type === 'present') {
+            const target = scene.elements.find((e) => e.id === fact.elementId);
+            if (target?.color) {
+              const hits = templateCollisions(scene.template, target.name.toLowerCase());
+              if (hits.length && !hits.some((h) => h.colors.includes(target.color!))) {
+                bad(`Present fact is ambiguous: the ${scene.template} backdrop also draws a ${hits[0].colors.join('/')} ${target.name} (${hits[0].note})`);
+              }
+            }
+            for (const o of wrongs) {
+              if (backdropShows(o.text)) bad(`Option "${o.text}" is visible in the ${scene.template} backdrop itself`);
+              if (elLabels.has(o.text.trim().toLowerCase())) bad(`Option "${o.text}" names another element in the scene`);
+            }
+          } else if (fact.type === 'absent') {
+            if (templateCollisions(scene.template, splitLabel(fact.label).noun).length) {
+              bad(`Absent fact is ambiguous: the ${scene.template} backdrop draws a ${splitLabel(fact.label).noun} itself`);
+            }
+            for (const o of wrongs) {
+              if (!elLabels.has(o.text.trim().toLowerCase()) && !backdropShows(o.text)) {
+                bad(`Option "${o.text}" is not in the picture either — an absent question needs exactly one absent option`);
+              }
+            }
+          } else if (fact.type === 'color') {
+            const target = scene.elements.find((e) => e.id === fact.elementId);
+            if (target && templateCollisions(scene.template, target.name.toLowerCase()).length) {
+              bad(`Colour fact is ambiguous: the ${scene.template} backdrop also draws a ${target.name}`);
+            }
+          } else if (fact.type === 'count') {
+            const named = scene.elements.find((e) => e.art === fact.art);
+            if (named && templateCollisions(scene.template, named.name.toLowerCase()).length) {
+              bad(`Count fact is ambiguous: the ${scene.template} backdrop also draws ${named.name}s`);
+            }
+          }
+        }
       }
       break;
     }
@@ -162,6 +211,14 @@ export const gameSchema = z.object({
         const n = countInScene(scene, g.visual.countTarget);
         if (n !== g.numberAnswer.value) bad(`Counted ${n} in the scene, but the stored answer is ${g.numberAnswer.value}`);
         if (n < 1) bad('A counting game must count at least one thing');
+        // The backdrop counts too (owner report, 18 Nov 2026): the space backdrop is full of
+        // small stars and stands on a planet, the street backdrop is three houses — a target the
+        // backdrop also draws can never be counted exactly from the picture.
+        const target = g.visual.countTarget;
+        const named = scene.elements.find((e) => e.art === target.art);
+        if (named && templateCollisions(scene.template, named.name.toLowerCase()).length) {
+          bad(`Counting target is ambiguous: the ${scene.template} backdrop also draws ${named.name}s`);
+        }
       }
       break;
     }

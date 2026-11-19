@@ -28262,14 +28262,15 @@
     {
       "kind": "game",
       "id": "counting-001",
-      "priorHash": "b7ba8365746170ddfd984ad120a9f553ace941e7af739fbdbe115a54e247c0e1",
-      "approvedHash": "1bc2e2a5824e6cbff1f5e87c56840fe666acf6342920c75ad7e128e5cf2cd9b5",
+      "priorHash": "1bc2e2a5824e6cbff1f5e87c56840fe666acf6342920c75ad7e128e5cf2cd9b5",
+      "approvedHash": "84e0f3d13d7b6cc05cb404e935f93ed85329216f0a71ad4691f41cd595db6ba9",
       "fields": {
         "reviewStatus": "approved",
-        "reviewer": "independent-review-agent",
+        "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
-        "scheduledDate": "2026-11-10"
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "scheduledDate": "2026-11-10",
+        "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
     },
     {
@@ -28548,14 +28549,15 @@
     {
       "kind": "game",
       "id": "counting-023",
-      "priorHash": "98c1f0a563897d83c9565ee70c25c4f2f9f7ad0cb2bc47f81f4b99a92cdfe16d",
-      "approvedHash": "e9536dd550d773fbe8118ce7ace0d97987585695582fec10a59def4cb6c6f1d0",
+      "priorHash": "e9536dd550d773fbe8118ce7ace0d97987585695582fec10a59def4cb6c6f1d0",
+      "approvedHash": "7d0b33b2d458ec20d283a204045aa3bf9d6593a9d11958897d47fbcc6cb0adb2",
       "fields": {
         "reviewStatus": "approved",
-        "reviewer": "independent-review-agent",
+        "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
-        "scheduledDate": "2026-11-19"
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "scheduledDate": "2026-11-19",
+        "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
     },
     {
@@ -28769,14 +28771,15 @@
     {
       "kind": "game",
       "id": "counting-040",
-      "priorHash": "b6a3a5bb33db76b375614d2d86689355b45711522d56ded28035f26292bb2a6d",
-      "approvedHash": "57956b4406ec9529482dc57484226c2b0a3e3606587667661cac565b82490ed6",
+      "priorHash": "57956b4406ec9529482dc57484226c2b0a3e3606587667661cac565b82490ed6",
+      "approvedHash": "1bb04e6486dfdecf111843b495fd423f99706d410f64f1c03cc337aea1fda0e1",
       "fields": {
         "reviewStatus": "approved",
-        "reviewer": "independent-review-agent",
+        "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
-        "scheduledDate": "2026-11-27"
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "scheduledDate": "2026-11-27",
+        "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
     },
     {
@@ -28847,14 +28850,15 @@
     {
       "kind": "game",
       "id": "counting-046",
-      "priorHash": "dd949d2d885a553e62bd030c224149350076d26e2f8080585a7378b4fe1e0411",
-      "approvedHash": "4b1784bd29dce210f397f93ee6b4556bb9d042708710a25c60a8496c45db3681",
+      "priorHash": "4b1784bd29dce210f397f93ee6b4556bb9d042708710a25c60a8496c45db3681",
+      "approvedHash": "6fcad754d45cc86a953503fb54f33379485f69e8ab9f8334ed69cd20a4e27a20",
       "fields": {
         "reviewStatus": "approved",
-        "reviewer": "independent-review-agent",
+        "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
-        "scheduledDate": "2026-11-30"
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "scheduledDate": "2026-11-30",
+        "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
     },
     {
@@ -29159,14 +29163,15 @@
     {
       "kind": "game",
       "id": "memory-004",
-      "priorHash": "4dca25799730becac78e72b91fda2b4c40543ed1c88ca32b90e9c13ac83601c3",
-      "approvedHash": "65514adce4e1ec9f4d3d07ea8885e476fdcb503f38b6abe9958893d20f9acf06",
+      "priorHash": "65514adce4e1ec9f4d3d07ea8885e476fdcb503f38b6abe9958893d20f9acf06",
+      "approvedHash": "3589e44383f1be59bad7bf3b6b135da978845dd7fa57b847bb5c3e0dd5d132f9",
       "fields": {
         "reviewStatus": "approved",
-        "reviewer": "independent-review-agent",
+        "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
-        "scheduledDate": "2026-12-07"
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "scheduledDate": "2026-12-07",
+        "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
     },
     {
@@ -30225,14 +30230,15 @@
     {
       "kind": "game",
       "id": "observation-030",
-      "priorHash": "9cbea1f4a7920210352948b2106143a0a2207d42e14a10d3eff02f2e2be7661a",
-      "approvedHash": "7a10161e3296ba8a40eb76e7c54581c4d470e92dd05737e9685fd3560cc8c7b2",
+      "priorHash": "7a10161e3296ba8a40eb76e7c54581c4d470e92dd05737e9685fd3560cc8c7b2",
+      "approvedHash": "5a1eae4e59e6a81d4dd67a3e53f3520d184ddf9957782d67c343f9348556efad",
       "fields": {
         "reviewStatus": "approved",
-        "reviewer": "independent-review-agent",
+        "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
-        "scheduledDate": "2026-11-18"
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "scheduledDate": "2026-11-18",
+        "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
     },
     {

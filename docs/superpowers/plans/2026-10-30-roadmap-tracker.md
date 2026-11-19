@@ -162,6 +162,7 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 ## Visual games in the flow + Spark's recorded voice (owner direction, 18 November 2026)
 
 - [x] V.1 356 visual games live as library content in the keep-playing flow (six scene types + flags/odd-one-out/pick-the-right-one), schema-proven answers, silo retired; owner's five recorded Spark lines wired to greeting/praise/completion/encouragement/goodbye — *independent review 356/360 approved (4 ambiguous colour questions dropped), verdicts in `docs/reviews/2026-11-18-visual-games-review.json`; staging 2b502f9 and prod 9f91336, Deploy + Verify green on both, content publish imported 356 games on both.*
+- [~] V.2 Owner-report fixes (18 Nov 2026): backdrop/fact ambiguity (observation-030 "yellow house" vs the farm backdrop's red barn) — TEMPLATE_OBJECTS catalogue + schema gate + garden pebbles + 6 games retargeted; memory look phase leaked its question (prompt heading + summary=prompt) — neutral look phase + neutral memory summaries; design review — sequence recall rebuilt as a stepped one-at-a-time reveal, what-changed made sequential (spot-the-difference keeps the pair). *In progress: independent rendered-scene review, then staging → prod under the owner's standing authorization.*
 
 ---
 

@@ -197,14 +197,15 @@ function Backdrop({ scene }: { scene: SceneSpec }) {
           <rect y="290" width="800" height="70" fill="#4e7d3a" />
           <rect y="360" width="800" height="160" fill={GRASS} />
           <rect y="440" width="800" height="80" fill="#8a5a33" />
-          <g fill="#d43a2f">
-            {[30, 120, 210, 660, 740].map((x) => (
-              <circle key={x} cx={x} cy={478} r={9} />
-            ))}
-          </g>
-          <g fill="#f28bb4">
-            {[75, 165, 705].map((x) => (
-              <circle key={x} cx={x} cy={492} r={8} />
+          {/* Pebbles in the soil rows — deliberately grey/brown ovals, never flower-coloured
+              circles: the backdrop must not draw anything a player could count as a flower
+              (owner report, 18 Nov 2026; see TEMPLATE_OBJECTS in lib/games/scene.ts). */}
+          <g>
+            {[
+              [30, 478, '#9aa3ad'], [120, 492, '#8a5a33'], [210, 478, '#9aa3ad'], [300, 496, '#b08954'],
+              [470, 480, '#8a5a33'], [660, 478, '#9aa3ad'], [740, 492, '#b08954'], [560, 496, '#9aa3ad'],
+            ].map(([x, y, fill], i) => (
+              <ellipse key={i} cx={x as number} cy={y as number} rx={11} ry={6} fill={fill as string} />
             ))}
           </g>
           {signText && <SignBoard x={400} y={120} text={signText} />}
