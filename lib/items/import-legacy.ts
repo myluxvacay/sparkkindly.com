@@ -15,6 +15,32 @@ function tierFor(world: string, kind: 'article' | 'quiz'): RiskTier {
   return 'reflective';
 }
 
+// How a visual game lands in the items table: the play body, the answer key and the listing
+// summary. Shared verbatim with the guarded sync in lib/items/update-games.ts — the legacy import
+// is insert-only, so a game fix in content/games reaches existing rows only through that sync;
+// keep the two in step (the same arrangement as imageFor / updateHeroImages for articles).
+export function gameBodyFor(g: Game) {
+  const choices = (list: NonNullable<Game['options']>) =>
+    list.map((o) => ({ id: o.id, text: o.text, ...(o.art ? { art: o.art, alt: o.alt ?? o.text } : {}) }));
+  return g.gameType === 'counting'
+    ? { mechanic: 'number', prompt: g.prompt, difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
+    : g.gameType === 'odd-one-out'
+      ? { mechanic: 'odd_one_out', prompt: g.prompt, items: choices(g.items ?? []), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
+      : { mechanic: 'multiple_choice', prompt: g.prompt, options: choices(g.options ?? []), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate };
+}
+
+export function gameAnswerFor(g: Game) {
+  return g.gameType === 'counting' ? g.numberAnswer : g.correctOptionId;
+}
+
+// A memory game's summary must never be its prompt (owner design review, 18 Nov 2026): the
+// summary is what item cards, search results and the item page's own summary line show BEFORE
+// the look phase, and the prompt is the question the player must not see until the ask phase.
+export const MEMORY_GAME_SUMMARY = 'A memory picture game: look carefully, remember what you see, then answer from memory.';
+export function gameSummaryFor(g: Game): string {
+  return g.gameType === 'memory' ? MEMORY_GAME_SUMMARY : g.prompt;
+}
+
 function imageFor(hero: Article['hero']) {
   const stock = /unsplash/i.test(hero.credit);
   return {
@@ -129,17 +155,11 @@ export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[],
     // The mechanic stays one of the closed play mechanics, so answer checking, recording and the
     // keep-playing pool treat a game exactly like a quiz. The answer key goes to item_answers as ever.
     for (const g of games) {
-      const choices = (list: NonNullable<Game['options']>) =>
-        list.map((o) => ({ id: o.id, text: o.text, ...(o.art ? { art: o.art, alt: o.alt ?? o.text } : {}) }));
-      const body =
-        g.gameType === 'counting'
-          ? { mechanic: 'number', prompt: g.prompt, difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
-          : g.gameType === 'odd-one-out'
-            ? { mechanic: 'odd_one_out', prompt: g.prompt, items: choices(g.items ?? []), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
-            : { mechanic: 'multiple_choice', prompt: g.prompt, options: choices(g.options ?? []), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate };
-      const answer = g.gameType === 'counting' ? g.numberAnswer : g.correctOptionId;
+      const body = gameBodyFor(g);
+      const answer = gameAnswerFor(g);
+      const summary = gameSummaryFor(g);
       const id = await insertItem(tx, {
-        world: g.brand, kind: 'game', slug: g.id, title: g.title, summary: g.prompt, body,
+        world: g.brand, kind: 'game', slug: g.id, title: g.title, summary, body,
         audience: audienceFor(g.brand), tier: g.brand === 'kids' ? 'kids' : 'computable', approved: g.reviewStatus === 'approved',
         reviewer: g.reviewer, reviewedAt: at(g.reviewedAt), publishAt: at(g.scheduledDate), sources: g.sources,
         report: { legacy: true, importedFrom: 'content/games', reviewNote: g.reviewNote, gameType: g.gameType },

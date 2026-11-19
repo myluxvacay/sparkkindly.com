@@ -127,6 +127,7 @@ export default async function PlayPanel({
             play={play}
             clues={clueCount(params, play.clues.length)}
             stage={params.get('stage') === 'answer' ? 'answer' : 'look'}
+            step={Number.parseInt(params.get('step') ?? '0', 10) || 0}
           />
         )}
         <Note note={note} />
