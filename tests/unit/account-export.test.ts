@@ -138,6 +138,7 @@ describe('export inventory', () => {
       'contributor_profiles',
       'item_responses',
       'profile_interests',
+      'promo_entries',
       'referrals',
     ]);
     for (const reason of Object.values(EXCLUDED_TABLES)) expect(reason.length).toBeGreaterThan(10);
@@ -520,5 +521,34 @@ describe('exportAccount: comment reports and appeals (plan 7B)', () => {
     const y = await exportAccount(db, other, NOW);
     expect(y!.commentReports.map((r) => r.note)).toEqual(['their note']);
     expect(y!.commentAppeals).toEqual([]);
+  });
+});
+
+describe('exportAccount: promotion entries', () => {
+  it("exports the account's own entries (promotion slug and title, attestation, time); never another's, never ids", async () => {
+    const me = await signedIn(`prm${n++}@example.test`, '1985-03-04');
+    const other = await signedIn(`prm${n++}@example.test`, '1985-03-04');
+    const p = await db.query<{ id: string }>(
+      `INSERT INTO promotions (slug, type, title, short_description, status)
+       VALUES ('export-promo', 'streak_draw', 'Export Promo', 'A promo.', 'live') RETURNING id`,
+    );
+    const promoId = p.rows[0].id;
+    await db.query('INSERT INTO promo_entries (promotion_id, account_id, attested_adult, entered_at) VALUES ($1, $2, true, $3)', [
+      promoId,
+      me,
+      T1.toISOString(),
+    ]);
+    await db.query('INSERT INTO promo_entries (promotion_id, account_id, attested_adult, entered_at) VALUES ($1, $2, true, $3)', [
+      promoId,
+      other,
+      T1.toISOString(),
+    ]);
+    const x = await exportAccount(db, me, NOW);
+    expect(x!.promoEntries).toEqual([
+      { promotion: 'export-promo', title: 'Export Promo', attestedAdult: true, enteredAt: T1.toISOString() },
+    ]);
+    const text = JSON.stringify(x);
+    expect(text).not.toContain(promoId);
+    expect(text).not.toContain(other);
   });
 });
