@@ -1,0 +1,38 @@
+{
+  "id": "kids-quiz-butterfly-wings-704",
+  "scheduledDate": "2027-05-12",
+  "brand": "kids",
+  "prompt": "How many wings does a butterfly have?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Two"
+    },
+    {
+      "id": "b",
+      "text": "Four"
+    },
+    {
+      "id": "c",
+      "text": "Six"
+    },
+    {
+      "id": "d",
+      "text": "Eight"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A butterfly has four wings: two big front wings and two smaller back wings. The wings are covered in tiny, tiny scales that give them their bright colours and patterns.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Butterfly | Britannica",
+      "url": "https://www.britannica.com/animal/butterfly-insect",
+      "accessedAt": "2026-11-17"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-17",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
