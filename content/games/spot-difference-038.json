@@ -1,0 +1,164 @@
+{
+  "id": "spot-difference-038",
+  "scheduledDate": "2027-02-02",
+  "brand": "grow",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: classroom",
+  "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
+  "difficulty": "medium",
+  "explanation": "Compare the two pictures bit by bit: The banana moved, the white rabbit changed colour from gray to white and the green gift box changed colour from yellow to green. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The gray elephant changed colour from gray to purple, the white rabbit changed colour from gray to white and the green gift box changed colour from yellow to green."
+    },
+    {
+      "id": "b",
+      "text": "The banana moved, a blue ball appeared and the green gift box changed colour from yellow to green."
+    },
+    {
+      "id": "c",
+      "text": "The banana moved, the white rabbit changed colour from gray to white and the green gift box changed colour from yellow to green."
+    },
+    {
+      "id": "d",
+      "text": "The banana moved, the white rabbit changed colour from gray to white and the gray elephant vanished."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "elephant-2492",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 203,
+          "y": 425
+        },
+        {
+          "id": "banana-2493",
+          "art": "banana",
+          "name": "banana",
+          "x": 712,
+          "y": 470
+        },
+        {
+          "id": "chicken-2494",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 477,
+          "y": 505
+        },
+        {
+          "id": "horse-2495",
+          "art": "horse",
+          "name": "horse",
+          "color": "gray",
+          "x": 278,
+          "y": 500
+        },
+        {
+          "id": "rabbit-2496",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "gray",
+          "x": 638,
+          "y": 425
+        },
+        {
+          "id": "snowman-2497",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 417,
+          "y": 465,
+          "flip": true
+        },
+        {
+          "id": "gift-2498",
+          "art": "gift",
+          "name": "gift box",
+          "color": "yellow",
+          "x": 115,
+          "y": 470
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: gray elephant, banana, brown chicken, gray horse, gray rabbit, snowman, yellow gift box.",
+    "sceneAfter": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "elephant-2492",
+          "art": "elephant",
+          "name": "elephant",
+          "color": "gray",
+          "x": 203,
+          "y": 425
+        },
+        {
+          "id": "banana-2493",
+          "art": "banana",
+          "name": "banana",
+          "x": 542,
+          "y": 470
+        },
+        {
+          "id": "chicken-2494",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 477,
+          "y": 505
+        },
+        {
+          "id": "horse-2495",
+          "art": "horse",
+          "name": "horse",
+          "color": "gray",
+          "x": 278,
+          "y": 500
+        },
+        {
+          "id": "rabbit-2496",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "white",
+          "x": 638,
+          "y": 425
+        },
+        {
+          "id": "snowman-2497",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 417,
+          "y": 465,
+          "flip": true
+        },
+        {
+          "id": "gift-2498",
+          "art": "gift",
+          "name": "gift box",
+          "color": "green",
+          "x": 115,
+          "y": 470
+        }
+      ]
+    },
+    "sceneAfterAlt": "A classroom scene. In the scene: gray elephant, banana, brown chicken, gray horse, white rabbit, snowman, green gift box.",
+    "expectedChanges": [
+      "banana-2493:moved",
+      "rabbit-2496:color:gray->white",
+      "gift-2498:color:yellow->green"
+    ]
+  }
+}

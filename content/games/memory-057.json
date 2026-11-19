@@ -1,0 +1,129 @@
+{
+  "id": "memory-057",
+  "scheduledDate": "2026-11-10",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: street sign",
+  "prompt": "From memory: what does the sign in the street say?",
+  "difficulty": "hard",
+  "explanation": "The sign in the picture reads \"Library\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Museum"
+    },
+    {
+      "id": "b",
+      "text": "Library"
+    },
+    {
+      "id": "c",
+      "text": "Cafe"
+    },
+    {
+      "id": "d",
+      "text": "Fruit"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "flower-2223",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 683,
+          "y": 505
+        },
+        {
+          "id": "cloud-2224",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "white",
+          "x": 558,
+          "y": 95,
+          "flip": true
+        },
+        {
+          "id": "bird-2225",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 336,
+          "y": 505
+        },
+        {
+          "id": "gift-2226",
+          "art": "gift",
+          "name": "gift box",
+          "color": "blue",
+          "x": 308,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "butterfly-2227",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "orange",
+          "x": 244,
+          "y": 120
+        },
+        {
+          "id": "snowman-2228",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 132,
+          "y": 490
+        },
+        {
+          "id": "rabbit-2229",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "brown",
+          "x": 665,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "flower-2230",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 424,
+          "y": 460,
+          "flip": true
+        },
+        {
+          "id": "ladybug-2231",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 121,
+          "y": 385
+        },
+        {
+          "id": "penguin-2232",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 519,
+          "y": 490
+        }
+      ],
+      "signText": "Library"
+    },
+    "sceneAlt": "A street scene. A sign reads \"Library\". In the scene: red flower, white cloud, yellow bird, blue gift box, orange butterfly, snowman, brown rabbit, red flower, red ladybug, penguin.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

@@ -145,19 +145,32 @@ test('a wrong answer keeps the quiz on screen, and Next hops quiz to quiz withou
   await expect(panel.locator('.quiz-review-option.is-correct')).toContainText('True');
   await expect(panel.locator('.quiz-explain')).toContainText('An explanation that is long enough.');
 
-  // Hop twice with the keep-playing buttons: each time a different quiz, a fresh form, panel on top.
+  // Hop twice with the keep-playing buttons: each time a different question, a fresh form, panel on
+  // top. Since 18 Nov 2026 the pool mixes picture games in with quizzes (owner direction), so a hop
+  // can land on a choice question (radios), a counting game (number box), or a memory game (scene
+  // first, then the "ask me" step reveals the choices) — every landing must be playable, never stuck.
+  const answerWhatever = async (p: typeof page) => {
+    const panelEl = p.locator('.quiz-panel');
+    if ((await panelEl.getByRole('link', { name: /looked carefully/ }).count()) > 0) {
+      await panelEl.getByRole('link', { name: /looked carefully/ }).click();
+    }
+    if ((await panelEl.locator('input[type="number"]').count()) > 0) {
+      await panelEl.locator('input[type="number"]').fill('1');
+    } else {
+      await panelEl.getByRole('radio').first().check();
+    }
+    await panelEl.getByRole('button', { name: /Check answer/ }).click();
+    await expect(panelEl.getByRole('status')).toContainText(/Correct|Not quite/);
+  };
   let here = page.url();
   for (let hop = 0; hop < 2; hop++) {
     await page.getByRole('link', { name: /Play another at this level/ }).click();
     await page.waitForURL((url) => url.toString() !== here && url.hash === '#play-panel', { timeout: 10_000 });
     here = page.url();
-    await expect(page.getByRole('radio').first()).toBeVisible();
     await expect
       .poll(() => page.evaluate(() => Math.round(document.querySelector('.quiz-panel')!.getBoundingClientRect().top)))
       .toBeLessThan(160);
-    await page.getByRole('radio').first().check();
-    await page.getByRole('button', { name: /Check answer/ }).click();
-    await expect(page.locator('.quiz-panel').getByRole('status')).toContainText(/Correct|Not quite/);
+    await answerWhatever(page);
   }
 
   // The no-JavaScript path: the form reloads the same item page, the kept context is server-rendered,
@@ -172,7 +185,13 @@ test('a wrong answer keeps the quiz on screen, and Next hops quiz to quiz withou
   await expect(plain.locator('.quiz-explain')).toContainText('An explanation that is long enough.');
   await plain.getByRole('link', { name: /Play another at this level/ }).click();
   await plain.waitForURL((url) => !url.pathname.endsWith('/play/fx-focus-quiz/') && url.hash === '#play-panel', { timeout: 10_000 });
-  await expect(plain.getByRole('radio').first()).toBeVisible();
+  // Whatever the pool dealt — quiz or picture game — the landing is a playable panel, not a dead end.
+  await expect(plain.locator('.quiz-panel')).toBeVisible();
+  await expect(
+    plain.locator('.quiz-panel').getByRole('radio').first()
+      .or(plain.locator('.quiz-panel input[type="number"]'))
+      .or(plain.locator('.quiz-panel').getByRole('link', { name: /looked carefully/ })),
+  ).toBeVisible();
   await noJs.close();
 });
 

@@ -1,0 +1,153 @@
+{
+  "id": "observation-039",
+  "scheduledDate": "2027-01-08",
+  "brand": "discover",
+  "gameType": "observation",
+  "title": "Look closely: pond count",
+  "prompt": "How many ducks are in the pond?",
+  "difficulty": "hard",
+  "explanation": "Count the ducks one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "3"
+    },
+    {
+      "id": "b",
+      "text": "2"
+    },
+    {
+      "id": "c",
+      "text": "1"
+    },
+    {
+      "id": "d",
+      "text": "4"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "duck-758",
+          "art": "duck",
+          "name": "duck",
+          "color": "white",
+          "x": 124,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "turtle-759",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 595,
+          "y": 500
+        },
+        {
+          "id": "frog-760",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 174,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "fish-761",
+          "art": "fish",
+          "name": "fish",
+          "color": "purple",
+          "x": 263,
+          "y": 465
+        },
+        {
+          "id": "bird-762",
+          "art": "bird",
+          "name": "bird",
+          "color": "yellow",
+          "x": 178,
+          "y": 150
+        },
+        {
+          "id": "sheep-763",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "white",
+          "x": 681,
+          "y": 348,
+          "flip": true
+        },
+        {
+          "id": "bee-764",
+          "art": "bee",
+          "name": "bee",
+          "x": 606,
+          "y": 160
+        },
+        {
+          "id": "duck-765",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 649,
+          "y": 440,
+          "flip": true
+        },
+        {
+          "id": "turtle-766",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 327,
+          "y": 495
+        },
+        {
+          "id": "cow-767",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 113,
+          "y": 348
+        },
+        {
+          "id": "frog-768",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 396,
+          "y": 435
+        },
+        {
+          "id": "moon-769",
+          "art": "moon",
+          "name": "moon",
+          "x": 405,
+          "y": 110
+        },
+        {
+          "id": "frog-770",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 527,
+          "y": 470
+        }
+      ]
+    },
+    "sceneAlt": "A pond scene. In the scene: white duck, green turtle, green frog, purple fish, yellow bird, white sheep, bee, brown duck, green turtle, white cow, green frog, moon, green frog.",
+    "fact": {
+      "type": "count",
+      "art": "duck"
+    }
+  }
+}

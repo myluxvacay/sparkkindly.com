@@ -1,0 +1,110 @@
+{
+  "id": "memory-008",
+  "scheduledDate": "2026-12-09",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: street color",
+  "prompt": "From memory: what colour is the bird in the street?",
+  "difficulty": "medium",
+  "explanation": "The bird in the picture is red — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "purple"
+    },
+    {
+      "id": "b",
+      "text": "red"
+    },
+    {
+      "id": "c",
+      "text": "yellow"
+    },
+    {
+      "id": "d",
+      "text": "pink"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "banana-1154",
+          "art": "banana",
+          "name": "banana",
+          "x": 138,
+          "y": 490
+        },
+        {
+          "id": "fox-1155",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 430,
+          "y": 460
+        },
+        {
+          "id": "bird-1156",
+          "art": "bird",
+          "name": "bird",
+          "color": "red",
+          "x": 697,
+          "y": 505
+        },
+        {
+          "id": "bee-1157",
+          "art": "bee",
+          "name": "bee",
+          "x": 235,
+          "y": 120
+        },
+        {
+          "id": "snail-1158",
+          "art": "snail",
+          "name": "snail",
+          "color": "brown",
+          "x": 116,
+          "y": 385
+        },
+        {
+          "id": "grapes-1159",
+          "art": "grapes",
+          "name": "bunch of grapes",
+          "color": "purple",
+          "x": 663,
+          "y": 385,
+          "flip": true
+        },
+        {
+          "id": "ball-1160",
+          "art": "ball",
+          "name": "ball",
+          "color": "red",
+          "x": 307,
+          "y": 385
+        },
+        {
+          "id": "apple-1161",
+          "art": "apple",
+          "name": "apple",
+          "color": "yellow",
+          "x": 332,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: banana, orange fox, red bird, bee, brown snail, purple bunch of grapes, red ball, yellow apple.",
+    "fact": {
+      "type": "color",
+      "elementId": "bird-1156"
+    }
+  }
+}

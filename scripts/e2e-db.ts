@@ -7,7 +7,7 @@ import { fromPglite } from '../tests/helpers/test-db';
 import { migrate } from '../db/migrate.mjs';
 import { seedReference } from '../db/seed';
 import { importLegacy } from '../lib/items/import-legacy';
-import { articleSchema, quizSchema } from '../lib/schemas';
+import { articleSchema, gameSchema, quizSchema } from '../lib/schemas';
 import { readFolder } from '../lib/repository';
 
 const PORT = 54329;
@@ -17,7 +17,8 @@ await migrate(db, 'db/migrations');
 await seedReference(db);
 const articles = readFolder('articles').map((a) => articleSchema.parse(a));
 const quizzes = readFolder('quizzes').map((q) => quizSchema.parse(q));
-const result = await importLegacy(db, articles, quizzes);
+const games = readFolder('games').map((g) => gameSchema.parse(g));
+const result = await importLegacy(db, articles, quizzes, games);
 
 const server = new PGLiteSocketServer({ db: pg, port: PORT, host: '127.0.0.1', maxConnections: 10 });
 await server.start();

@@ -1,4 +1,4 @@
-// Original in-repo SVG artwork for the visual games (lib/games/visual-games.ts). Flags are public domain;
+// Original in-repo SVG artwork for the visual games (content/games; scenes use SceneArt.tsx). Flags are public domain;
 // their colours and layouts follow the real designs, simplified for small sizes (star counts and fine arms
 // are not exact). Everything else is a simple original illustration drawn for SparkKindly.
 // No external images, no hotlinks, no stock.

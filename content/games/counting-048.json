@@ -1,0 +1,121 @@
+{
+  "id": "counting-048",
+  "scheduledDate": "2026-12-01",
+  "brand": "grow",
+  "gameType": "counting",
+  "title": "Counting: pink flowers at the garden",
+  "prompt": "How many pink flowers can you count in the garden?",
+  "difficulty": "hard",
+  "explanation": "Count the pink flowers one by one: there are exactly 9. Only the pink ones count — the other colours are decoys.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 9,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "flower-3427",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 479,
+          "y": 505
+        },
+        {
+          "id": "flower-3428",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 123,
+          "y": 505
+        },
+        {
+          "id": "flower-3429",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 255,
+          "y": 405
+        },
+        {
+          "id": "flower-3430",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 534,
+          "y": 405
+        },
+        {
+          "id": "flower-3431",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 686,
+          "y": 425
+        },
+        {
+          "id": "flower-3432",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 654,
+          "y": 510
+        },
+        {
+          "id": "flower-3433",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 306,
+          "y": 510
+        },
+        {
+          "id": "flower-3434",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 382,
+          "y": 430
+        },
+        {
+          "id": "flower-3435",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 115,
+          "y": 425
+        },
+        {
+          "id": "kite-3436",
+          "art": "kite",
+          "name": "kite",
+          "color": "blue",
+          "x": 233,
+          "y": 135
+        },
+        {
+          "id": "balloon-3437",
+          "art": "balloon",
+          "name": "balloon",
+          "color": "purple",
+          "x": 525,
+          "y": 110,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: pink flower, pink flower, pink flower, pink flower, pink flower, pink flower, pink flower, pink flower, pink flower, blue kite, purple balloon.",
+    "countTarget": {
+      "art": "flower",
+      "color": "pink"
+    }
+  }
+}

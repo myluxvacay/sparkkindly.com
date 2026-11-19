@@ -1,0 +1,89 @@
+{
+  "id": "memory-001",
+  "scheduledDate": "2026-12-06",
+  "brand": "together",
+  "gameType": "memory",
+  "title": "Memory: park clock",
+  "prompt": "From memory: what time does the clock in the park show?",
+  "difficulty": "easy",
+  "explanation": "The clock's short hand points past 9 and its long hand shows 30 minutes, so the clock reads 9:30.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "9:15"
+    },
+    {
+      "id": "b",
+      "text": "8:30"
+    },
+    {
+      "id": "c",
+      "text": "9:30"
+    },
+    {
+      "id": "d",
+      "text": "10:30"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "park",
+      "elements": [
+        {
+          "id": "kite-1021",
+          "art": "kite",
+          "name": "kite",
+          "color": "purple",
+          "x": 656,
+          "y": 165,
+          "flip": true
+        },
+        {
+          "id": "frog-1022",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 646,
+          "y": 440
+        },
+        {
+          "id": "cat-1023",
+          "art": "cat",
+          "name": "cat",
+          "color": "black",
+          "x": 116,
+          "y": 480
+        },
+        {
+          "id": "carrot-1024",
+          "art": "carrot",
+          "name": "carrot",
+          "x": 247,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "frog-1025",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 559,
+          "y": 480,
+          "flip": true
+        }
+      ],
+      "clockTime": "9:30"
+    },
+    "sceneAlt": "A park scene. A clock shows 9:30. In the scene: purple kite, green frog, black cat, carrot, green frog.",
+    "fact": {
+      "type": "clock"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "memory-049",
+  "scheduledDate": "2026-11-17",
+  "brand": "kids",
+  "gameType": "memory",
+  "title": "Memory: pond count",
+  "prompt": "From memory: how many turtles are in the pond?",
+  "difficulty": "easy",
+  "explanation": "Count the turtles one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "2"
+    },
+    {
+      "id": "b",
+      "text": "3"
+    },
+    {
+      "id": "c",
+      "text": "4"
+    },
+    {
+      "id": "d",
+      "text": "1"
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "cloud-2159",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "gray",
+          "x": 400,
+          "y": 110
+        },
+        {
+          "id": "fish-2160",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 587,
+          "y": 500
+        },
+        {
+          "id": "turtle-2161",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 333,
+          "y": 495
+        },
+        {
+          "id": "turtle-2162",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 259,
+          "y": 465
+        },
+        {
+          "id": "fish-2163",
+          "art": "fish",
+          "name": "fish",
+          "color": "orange",
+          "x": 387,
+          "y": 435,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A pond scene. In the scene: gray cloud, blue fish, green turtle, green turtle, orange fish.",
+    "fact": {
+      "type": "count",
+      "art": "turtle"
+    }
+  }
+}

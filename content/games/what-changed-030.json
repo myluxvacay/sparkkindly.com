@@ -1,0 +1,184 @@
+{
+  "id": "what-changed-030",
+  "scheduledDate": "2027-02-15",
+  "brand": "play",
+  "gameType": "what-changed",
+  "title": "What changed: meadow",
+  "prompt": "One thing changed between the before and after meadow pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the white rabbit vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the red crab vanished."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the white rabbit vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: a blue ball appeared."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the red crab changed colour from red to purple."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "rabbit-2821",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "brown",
+          "x": 427,
+          "y": 505
+        },
+        {
+          "id": "crab-2822",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 716,
+          "y": 500
+        },
+        {
+          "id": "banana-2823",
+          "art": "banana",
+          "name": "banana",
+          "x": 377,
+          "y": 460
+        },
+        {
+          "id": "rocket-2824",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 163,
+          "y": 140
+        },
+        {
+          "id": "rabbit-2825",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "white",
+          "x": 111,
+          "y": 470
+        },
+        {
+          "id": "kite-2826",
+          "art": "kite",
+          "name": "kite",
+          "color": "green",
+          "x": 426,
+          "y": 100
+        },
+        {
+          "id": "snowman-2827",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 235,
+          "y": 495
+        },
+        {
+          "id": "horse-2828",
+          "art": "horse",
+          "name": "horse",
+          "color": "black",
+          "x": 631,
+          "y": 465
+        },
+        {
+          "id": "kite-2829",
+          "art": "kite",
+          "name": "kite",
+          "color": "blue",
+          "x": 646,
+          "y": 150
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: brown rabbit, red crab, banana, red rocket, white rabbit, green kite, snowman, black horse, blue kite.",
+    "sceneAfter": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "rabbit-2821",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "brown",
+          "x": 427,
+          "y": 505
+        },
+        {
+          "id": "crab-2822",
+          "art": "crab",
+          "name": "crab",
+          "color": "red",
+          "x": 716,
+          "y": 500
+        },
+        {
+          "id": "banana-2823",
+          "art": "banana",
+          "name": "banana",
+          "x": 377,
+          "y": 460
+        },
+        {
+          "id": "rocket-2824",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 163,
+          "y": 140
+        },
+        {
+          "id": "kite-2826",
+          "art": "kite",
+          "name": "kite",
+          "color": "green",
+          "x": 426,
+          "y": 100
+        },
+        {
+          "id": "snowman-2827",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 235,
+          "y": 495
+        },
+        {
+          "id": "horse-2828",
+          "art": "horse",
+          "name": "horse",
+          "color": "black",
+          "x": 631,
+          "y": 465
+        },
+        {
+          "id": "kite-2829",
+          "art": "kite",
+          "name": "kite",
+          "color": "blue",
+          "x": 646,
+          "y": 150
+        }
+      ]
+    },
+    "sceneAfterAlt": "A meadow scene. In the scene: brown rabbit, red crab, banana, red rocket, green kite, snowman, black horse, blue kite.",
+    "expectedChanges": [
+      "rabbit-2825:removed"
+    ]
+  }
+}

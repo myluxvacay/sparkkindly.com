@@ -17,7 +17,7 @@ describe('SparkAssistant', () => {
     expect(src).toContain('preload="none"');
     expect(src).not.toContain('autoPlay');
     expect(src).toContain('<audio ref={audioRef} controls');
-    expect(src).toContain('Listen to Spark’s greeting');
+    expect(src).toContain('Listen to Spark say hello');
   });
 
   it('tours only to real existing routes and remembers dismissal in localStorage', () => {
@@ -28,7 +28,11 @@ describe('SparkAssistant', () => {
 
   it('uses the canonical cape Spark asset and carries the greeting as readable text (captions)', () => {
     expect(src).toContain('/brand/spark.webp');
-    expect(src).toContain('/brand/spark-greeting.mp3');
+    // The greeting clip is the owner's recorded hello (18 Nov 2026), named in the shared voice map;
+    // its words appear beside the player, and Spark says the recorded goodbye on dismissal.
+    expect(src).toContain('src={SPARK_VOICE.greeting}');
+    expect(src).toContain('Hi friends, it’s Spark! Are you ready?');
+    expect(src).toContain("playSparkVoice('goodbye')");
     expect(src).toContain('A warm and curious welcome to SparkKindly');
   });
 

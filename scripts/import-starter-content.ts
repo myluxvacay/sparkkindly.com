@@ -3,7 +3,7 @@
 //        npm run content:import -- --allow-production   (cut-over only, after a verified backup)
 // Idempotent: existing rows are left alone.
 import { getDb } from '../lib/db';
-import { articleSchema, quizSchema } from '../lib/schemas';
+import { articleSchema, gameSchema, quizSchema } from '../lib/schemas';
 import { readFolder } from '../lib/repository';
 import { seedReference } from '../db/seed';
 import { importLegacy } from '../lib/items/import-legacy';
@@ -24,9 +24,10 @@ try {
 
   const articles = readFolder('articles').map((a) => articleSchema.parse(a));
   const quizzes = readFolder('quizzes').map((q) => quizSchema.parse(q));
+  const games = readFolder('games').map((g) => gameSchema.parse(g));
   await seedReference(db);
-  const result = await importLegacy(db, articles, quizzes);
-  console.log(`Imported ${result.items} items (${result.answers} answers) from ${articles.length} articles and ${quizzes.length} quizzes.`);
+  const result = await importLegacy(db, articles, quizzes, games);
+  console.log(`Imported ${result.items} items (${result.answers} answers) from ${articles.length} articles, ${quizzes.length} quizzes and ${games.length} games.`);
 } catch (err) {
   console.error((err as Error).message);
   process.exitCode = 2;

@@ -105,7 +105,7 @@ describe('client components', () => {
       'components/SocialLinks.tsx',
       'components/SparkAssistant.tsx', // the homepage Spark guide: tap-to-play greeting, dismissal remembered on device
       'components/admin/VideoUpload.tsx',
-      'components/games/VisualGames.tsx', // the picture-games island: in-place round and score state on /games
+      'components/games/SparkSoundToggle.tsx', // the Spark voice on/off toggle on /games (persisted as sk-games-sound)
       'components/item/PlayEnhancer.tsx', // the play island: in-place answer checking on the play page itself
       'components/item/ShareClient.tsx',
       'components/item/VideoPlayer.tsx', // owner-attached YouTube video: loads the player only after a press

@@ -1,0 +1,132 @@
+{
+  "id": "counting-033",
+  "scheduledDate": "2026-11-24",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: flowers at the meadow",
+  "prompt": "How many flowers can you count in the meadow?",
+  "difficulty": "hard",
+  "explanation": "Count the flowers one by one: there are exactly 9.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 9,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "flower-3292",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 427,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "flower-3293",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 624,
+          "y": 465
+        },
+        {
+          "id": "flower-3294",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 555,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "flower-3295",
+          "art": "flower",
+          "name": "flower",
+          "color": "pink",
+          "x": 109,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "flower-3296",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 188,
+          "y": 430
+        },
+        {
+          "id": "flower-3297",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 717,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "flower-3298",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 369,
+          "y": 460,
+          "flip": true
+        },
+        {
+          "id": "flower-3299",
+          "art": "flower",
+          "name": "flower",
+          "color": "red",
+          "x": 244,
+          "y": 495
+        },
+        {
+          "id": "flower-3300",
+          "art": "flower",
+          "name": "flower",
+          "color": "white",
+          "x": 507,
+          "y": 495
+        },
+        {
+          "id": "butterfly-3301",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "blue",
+          "x": 172,
+          "y": 140
+        },
+        {
+          "id": "bee-3302",
+          "art": "bee",
+          "name": "bee",
+          "x": 422,
+          "y": 100,
+          "flip": true
+        },
+        {
+          "id": "star-3303",
+          "art": "star",
+          "name": "star",
+          "color": "white",
+          "x": 644,
+          "y": 150
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: red flower, white flower, pink flower, pink flower, red flower, purple flower, white flower, red flower, white flower, blue butterfly, bee, white star.",
+    "countTarget": {
+      "art": "flower"
+    }
+  }
+}

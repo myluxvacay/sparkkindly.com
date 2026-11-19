@@ -18,6 +18,7 @@ import {
   seenIds,
   type SeenStorage,
 } from '@/lib/play/seen-quizzes';
+import { playSparkVoice } from '@/lib/games/spark-voice';
 import type { Difficulty } from '@/lib/public/body';
 
 // The play island (teen UI pass, 15 Nov 2026): progressive enhancement over the plain GET form, which
@@ -324,6 +325,17 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
         panel.replaceWith(imported);
         history.pushState(null, '', `${url.pathname}${url.search}#result`);
         initPanel(imported);
+        // Spark's recorded voice (owner lines, 18 Nov 2026): the verdict arrived as the direct
+        // result of the player's own answer submission — the one moment a clip may play in this
+        // flow. Praise for a correct answer, the completion line when this answer finished the
+        // whole shelf (the island just marked it .kp-done), encouragement for a miss. The shared
+        // sound toggle governs it; a page load or a no-JS submit never plays anything.
+        const verdict = imported.querySelector('.quiz-result h2')?.textContent ?? '';
+        if (verdict.startsWith('Correct')) {
+          playSparkVoice(imported.querySelector('.kp-done') ? 'completion' : 'praise');
+        } else if (verdict) {
+          playSparkVoice('encouragement');
+        }
         imported.querySelector<HTMLElement>('#result')?.focus();
       } catch {
         // Any failure returns the reader to the plain form path, which always works.

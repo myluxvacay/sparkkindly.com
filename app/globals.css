@@ -460,3 +460,26 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
    header had no slack left — at 320px a signed-in page overflowed sideways. The ≤400px row gives
    the difference back: smaller badge and wordmark, tighter gaps and controls. One row, as designed. */
 @media(max-width:400px){.header-inner{gap:6px}.brand-name{font-size:19px}.wordmark .brand-badge{width:36px;height:36px}.header-signin{font-size:12px}.menu-toggle{padding:7px;font-size:10px}.theme-toggle{width:32px;height:32px}}
+
+/* Visual game scenes in the play flow (18 Nov 2026): parametric SVG scenes, before/after pairs,
+   sequence strips and picture options inside the regular quiz panel. */
+.scene-view{width:100%;height:auto;display:block;border-radius:10px;border:1px solid #e4d8e8}
+.scene-single{margin:0 0 18px}
+.scene-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 18px}
+.scene-pair figure{margin:0}
+.scene-pair figcaption{font-weight:600;font-size:14px;margin-top:7px;color:var(--plum)}
+@media(max-width:580px){.scene-pair{grid-template-columns:1fr}}
+.options-art .option{flex-direction:column;align-items:flex-start;gap:8px;padding-top:34px}
+.options-art .option input{position:absolute;top:13px;left:13px}
+.options-art .option .option-letter{position:absolute;top:11px;left:38px}
+.options-art .option svg{width:118px;height:auto;max-width:100%}
+.seq-strip{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.seq-tile{position:relative;display:block;width:104px}
+.seq-art{width:104px;height:104px;background:#fffdf9;border:1px solid #e4d8e8;border-radius:10px}
+.seq-num{position:absolute;top:6px;left:6px;background:var(--plum);color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font-size:13px;font-weight:700}
+.memory-prompt{font-family:var(--serif);font-size:26px;line-height:1.4;color:var(--plum);margin-bottom:18px}
+.memory-note{font-weight:600;color:var(--plum)}
+.games-index-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:26px}
+.game-type-card{border:1px solid #e4d8e8;background:#fffdf9;border-radius:7px;padding:20px}
+.game-type-card h3{font-size:22px;margin-bottom:8px}
+.game-type-card p{font-size:13px;margin-bottom:12px}

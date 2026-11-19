@@ -1,0 +1,183 @@
+{
+  "id": "what-changed-048",
+  "scheduledDate": "2027-02-24",
+  "brand": "grow",
+  "gameType": "what-changed",
+  "title": "What changed: garden",
+  "prompt": "One thing changed between the before and after garden pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the moon vanished. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the purple hat changed colour from purple to green."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the purple hat vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: the moon vanished."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: a green frog appeared."
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "pumpkin-2947",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 258,
+          "y": 405
+        },
+        {
+          "id": "moon-2948",
+          "art": "moon",
+          "name": "moon",
+          "x": 527,
+          "y": 110
+        },
+        {
+          "id": "cow-2949",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 478,
+          "y": 505
+        },
+        {
+          "id": "ladybug-2950",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 684,
+          "y": 425
+        },
+        {
+          "id": "snowman-2951",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 539,
+          "y": 405
+        },
+        {
+          "id": "hat-2952",
+          "art": "hat",
+          "name": "hat",
+          "color": "purple",
+          "x": 656,
+          "y": 510
+        },
+        {
+          "id": "crab-2953",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 127,
+          "y": 505
+        },
+        {
+          "id": "bee-2954",
+          "art": "bee",
+          "name": "bee",
+          "x": 226,
+          "y": 135
+        },
+        {
+          "id": "flower-2955",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 383,
+          "y": 430
+        }
+      ]
+    },
+    "sceneAlt": "A garden scene. In the scene: orange pumpkin, moon, white cow, red ladybug, snowman, purple hat, orange crab, bee, purple flower.",
+    "sceneAfter": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "pumpkin-2947",
+          "art": "pumpkin",
+          "name": "pumpkin",
+          "color": "orange",
+          "x": 258,
+          "y": 405
+        },
+        {
+          "id": "cow-2949",
+          "art": "cow",
+          "name": "cow",
+          "color": "white",
+          "x": 478,
+          "y": 505
+        },
+        {
+          "id": "ladybug-2950",
+          "art": "ladybug",
+          "name": "ladybug",
+          "color": "red",
+          "x": 684,
+          "y": 425
+        },
+        {
+          "id": "snowman-2951",
+          "art": "snowman",
+          "name": "snowman",
+          "x": 539,
+          "y": 405
+        },
+        {
+          "id": "hat-2952",
+          "art": "hat",
+          "name": "hat",
+          "color": "purple",
+          "x": 656,
+          "y": 510
+        },
+        {
+          "id": "crab-2953",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 127,
+          "y": 505
+        },
+        {
+          "id": "bee-2954",
+          "art": "bee",
+          "name": "bee",
+          "x": 226,
+          "y": 135
+        },
+        {
+          "id": "flower-2955",
+          "art": "flower",
+          "name": "flower",
+          "color": "purple",
+          "x": 383,
+          "y": 430
+        }
+      ]
+    },
+    "sceneAfterAlt": "A garden scene. In the scene: orange pumpkin, white cow, red ladybug, snowman, purple hat, orange crab, bee, purple flower.",
+    "expectedChanges": [
+      "moon-2948:removed"
+    ]
+  }
+}

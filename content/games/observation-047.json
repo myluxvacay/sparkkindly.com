@@ -1,0 +1,121 @@
+{
+  "id": "observation-047",
+  "scheduledDate": "2026-11-13",
+  "brand": "grow",
+  "gameType": "observation",
+  "title": "Look closely: garden sign",
+  "prompt": "What does the sign in the garden say?",
+  "difficulty": "medium",
+  "explanation": "The sign in the picture reads \"Post\" — it is written in big letters on the board.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Books"
+    },
+    {
+      "id": "b",
+      "text": "Post"
+    },
+    {
+      "id": "c",
+      "text": "Fruit"
+    },
+    {
+      "id": "d",
+      "text": "Harbour"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "garden",
+      "elements": [
+        {
+          "id": "train-833",
+          "art": "train",
+          "name": "train",
+          "color": "green",
+          "x": 397,
+          "y": 430
+        },
+        {
+          "id": "horse-834",
+          "art": "horse",
+          "name": "horse",
+          "color": "white",
+          "x": 679,
+          "y": 425
+        },
+        {
+          "id": "umbrella-835",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "purple",
+          "x": 259,
+          "y": 405
+        },
+        {
+          "id": "crab-836",
+          "art": "crab",
+          "name": "crab",
+          "color": "orange",
+          "x": 122,
+          "y": 505
+        },
+        {
+          "id": "chicken-837",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 112,
+          "y": 425
+        },
+        {
+          "id": "gift-838",
+          "art": "gift",
+          "name": "gift box",
+          "color": "pink",
+          "x": 646,
+          "y": 510,
+          "flip": true
+        },
+        {
+          "id": "snail-839",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 484,
+          "y": 505
+        },
+        {
+          "id": "cloud-840",
+          "art": "cloud",
+          "name": "cloud",
+          "color": "gray",
+          "x": 525,
+          "y": 110,
+          "flip": true
+        },
+        {
+          "id": "kite-841",
+          "art": "kite",
+          "name": "kite",
+          "color": "blue",
+          "x": 229,
+          "y": 135
+        }
+      ],
+      "signText": "Post"
+    },
+    "sceneAlt": "A garden scene. A sign reads \"Post\". In the scene: green train, white horse, purple umbrella, orange crab, brown chicken, pink gift box, purple snail, gray cloud, blue kite.",
+    "fact": {
+      "type": "sign"
+    }
+  }
+}

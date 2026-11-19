@@ -1,0 +1,124 @@
+{
+  "id": "counting-014",
+  "scheduledDate": "2026-11-14",
+  "brand": "play",
+  "gameType": "counting",
+  "title": "Counting: chickens at the farm",
+  "prompt": "How many chickens can you count in the farm?",
+  "difficulty": "medium",
+  "explanation": "Count the chickens one by one: there are exactly 8.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "numberAnswer": {
+    "value": 8,
+    "tolerance": 0
+  },
+  "visual": {
+    "gameType": "counting",
+    "scene": {
+      "template": "farm",
+      "elements": [
+        {
+          "id": "chicken-3113",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 689,
+          "y": 500,
+          "flip": true
+        },
+        {
+          "id": "chicken-3114",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 724,
+          "y": 450
+        },
+        {
+          "id": "chicken-3115",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 297,
+          "y": 470
+        },
+        {
+          "id": "chicken-3116",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 559,
+          "y": 465,
+          "flip": true
+        },
+        {
+          "id": "chicken-3117",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 626,
+          "y": 425
+        },
+        {
+          "id": "chicken-3118",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 435,
+          "y": 500
+        },
+        {
+          "id": "chicken-3119",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "white",
+          "x": 241,
+          "y": 430
+        },
+        {
+          "id": "chicken-3120",
+          "art": "chicken",
+          "name": "chicken",
+          "color": "brown",
+          "x": 363,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "butterfly-3121",
+          "art": "butterfly",
+          "name": "butterfly",
+          "color": "blue",
+          "x": 697,
+          "y": 170,
+          "flip": true
+        },
+        {
+          "id": "rocket-3122",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 337,
+          "y": 130,
+          "flip": true
+        },
+        {
+          "id": "kite-3123",
+          "art": "kite",
+          "name": "kite",
+          "color": "red",
+          "x": 566,
+          "y": 100
+        }
+      ]
+    },
+    "sceneAlt": "A farm scene. In the scene: white chicken, white chicken, brown chicken, brown chicken, brown chicken, brown chicken, white chicken, brown chicken, blue butterfly, blue rocket, red kite.",
+    "countTarget": {
+      "art": "chicken"
+    }
+  }
+}

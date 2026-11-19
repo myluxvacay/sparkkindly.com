@@ -1,0 +1,198 @@
+{
+  "id": "what-changed-003",
+  "scheduledDate": "2026-11-09",
+  "brand": "together",
+  "gameType": "what-changed",
+  "title": "What changed: street",
+  "prompt": "One thing changed between the before and after street pictures. What changed?",
+  "difficulty": "hard",
+  "explanation": "Compare the two pictures bit by bit: Only one thing changed: the pink cupcake changed colour from white to pink. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Only one thing changed: the pink cupcake changed colour from white to pink."
+    },
+    {
+      "id": "b",
+      "text": "Only one thing changed: the green turtle vanished."
+    },
+    {
+      "id": "c",
+      "text": "Only one thing changed: a red kite appeared."
+    },
+    {
+      "id": "d",
+      "text": "Only one thing changed: the green turtle changed colour from green to purple."
+    }
+  ],
+  "correctOptionId": "a",
+  "visual": {
+    "gameType": "what-changed",
+    "scene": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "frog-2635",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 692,
+          "y": 505
+        },
+        {
+          "id": "apple-2636",
+          "art": "apple",
+          "name": "apple",
+          "color": "yellow",
+          "x": 118,
+          "y": 385
+        },
+        {
+          "id": "bee-2637",
+          "art": "bee",
+          "name": "bee",
+          "x": 556,
+          "y": 95
+        },
+        {
+          "id": "gift-2638",
+          "art": "gift",
+          "name": "gift box",
+          "color": "purple",
+          "x": 134,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "umbrella-2639",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "yellow",
+          "x": 297,
+          "y": 385
+        },
+        {
+          "id": "planet-2640",
+          "art": "planet",
+          "name": "planet",
+          "color": "pink",
+          "x": 236,
+          "y": 120
+        },
+        {
+          "id": "cupcake-2641",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "white",
+          "x": 325,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "penguin-2642",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 432,
+          "y": 460
+        },
+        {
+          "id": "turtle-2643",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 517,
+          "y": 490,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAlt": "A street scene. In the scene: green frog, yellow apple, bee, purple gift box, yellow umbrella, pink planet, white cupcake, penguin, green turtle.",
+    "sceneAfter": {
+      "template": "street",
+      "elements": [
+        {
+          "id": "frog-2635",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 692,
+          "y": 505
+        },
+        {
+          "id": "apple-2636",
+          "art": "apple",
+          "name": "apple",
+          "color": "yellow",
+          "x": 118,
+          "y": 385
+        },
+        {
+          "id": "bee-2637",
+          "art": "bee",
+          "name": "bee",
+          "x": 556,
+          "y": 95
+        },
+        {
+          "id": "gift-2638",
+          "art": "gift",
+          "name": "gift box",
+          "color": "purple",
+          "x": 134,
+          "y": 490,
+          "flip": true
+        },
+        {
+          "id": "umbrella-2639",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "yellow",
+          "x": 297,
+          "y": 385
+        },
+        {
+          "id": "planet-2640",
+          "art": "planet",
+          "name": "planet",
+          "color": "pink",
+          "x": 236,
+          "y": 120
+        },
+        {
+          "id": "cupcake-2641",
+          "art": "cupcake",
+          "name": "cupcake",
+          "color": "pink",
+          "x": 325,
+          "y": 505,
+          "flip": true
+        },
+        {
+          "id": "penguin-2642",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 432,
+          "y": 460
+        },
+        {
+          "id": "turtle-2643",
+          "art": "turtle",
+          "name": "turtle",
+          "color": "green",
+          "x": 517,
+          "y": 490,
+          "flip": true
+        }
+      ]
+    },
+    "sceneAfterAlt": "A street scene. In the scene: green frog, yellow apple, bee, purple gift box, yellow umbrella, pink planet, pink cupcake, penguin, green turtle.",
+    "expectedChanges": [
+      "cupcake-2641:color:white->pink"
+    ]
+  }
+}

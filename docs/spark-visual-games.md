@@ -1,5 +1,26 @@
 # Spark assistant + visual games — follow-ups (17 Nov 2026)
 
+> **Update, 18 Nov 2026 (owner direction: "do both and push to staging and prod").** The picture games
+> left the silo: all rounds — the seven below plus a generated collection of 360 — are library content
+> in `content/games/*.json`, imported as `kind: 'game'` items and dealt inside the regular
+> keep-playing question flow like any quiz. Six new scene types (observation, memory, spot the
+> difference, what changed, counting, sequence recall) render parametric SVG scenes
+> (`components/games/SceneArt.tsx` / `SceneView.tsx`) from data in the game file, and the content
+> schema (`gameSchema` in `lib/schemas.ts`) re-derives every answer from that data — counts, scene
+> diffs, facts and sequence positions — so a wrong key cannot validate. `lib/games/visual-games.ts`
+> and `components/games/VisualGames.tsx` are deleted; `/games/` is now an index into the flow.
+> Follow-ups 1, 2 and 5 below are therefore DONE (games record through the standard play path and
+> play without JavaScript, memory games via a two-step look-then-answer form). The hero rule from
+> follow-up 1 is enforced by the schema for every game. Spark's voice is now the owner's own
+> recordings (Marie voice): greeting `spark-hi-friends.mp3`, praise `spark-great-listening.mp3`,
+> completion `spark-you-did-it.mp3` (owner take replacing the synthesized one), encouragement
+> `spark-try-again.mp3`, goodbye `spark-goodbye.mp3` — mapped in `lib/games/spark-voice.ts`, played
+> only on tap or as the direct result of the player's own answer submission, behind the same
+> `sk-games-sound` toggle. The synthesized `spark-greeting.mp3` / `spark-you-got-this.mp3` are
+> retired. The in-flow games no longer show the victory/encouraging GIF reactions (the recorded
+> voice carries the reaction in the shared play panel); the GIF slots described below applied to
+> the retired silo player. Plan: `docs/superpowers/plans/2026-11-18-visual-games-flow-and-spark-voice.md`.
+
 Built on `feat/spark-and-visual-games` (off `staging`): Spark homepage widget (#20) and picture games at
 `/games/` (#21), with Spark hosting the games.
 

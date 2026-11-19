@@ -1,0 +1,112 @@
+{
+  "id": "memory-024",
+  "scheduledDate": "2026-12-17",
+  "brand": "grow",
+  "gameType": "memory",
+  "title": "Memory: classroom count",
+  "prompt": "From memory: how many horses are in the classroom?",
+  "difficulty": "hard",
+  "explanation": "Count the horses one by one, pointing at each so none is counted twice: there are 2.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "1"
+    },
+    {
+      "id": "b",
+      "text": "3"
+    },
+    {
+      "id": "c",
+      "text": "2"
+    },
+    {
+      "id": "d",
+      "text": "4"
+    }
+  ],
+  "correctOptionId": "c",
+  "visual": {
+    "gameType": "memory",
+    "scene": {
+      "template": "classroom",
+      "elements": [
+        {
+          "id": "penguin-1558",
+          "art": "penguin",
+          "name": "penguin",
+          "x": 118,
+          "y": 470,
+          "flip": true
+        },
+        {
+          "id": "horse-1559",
+          "art": "horse",
+          "name": "horse",
+          "color": "gray",
+          "x": 272,
+          "y": 500
+        },
+        {
+          "id": "rabbit-1560",
+          "art": "rabbit",
+          "name": "rabbit",
+          "color": "white",
+          "x": 425,
+          "y": 465
+        },
+        {
+          "id": "horse-1561",
+          "art": "horse",
+          "name": "horse",
+          "color": "white",
+          "x": 574,
+          "y": 500
+        },
+        {
+          "id": "orange-1562",
+          "art": "orange",
+          "name": "orange",
+          "color": "orange",
+          "x": 204,
+          "y": 425,
+          "flip": true
+        },
+        {
+          "id": "snail-1563",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 632,
+          "y": 425
+        },
+        {
+          "id": "owl-1564",
+          "art": "owl",
+          "name": "owl",
+          "color": "brown",
+          "x": 716,
+          "y": 470
+        },
+        {
+          "id": "shell-1565",
+          "art": "shell",
+          "name": "shell",
+          "color": "orange",
+          "x": 483,
+          "y": 505
+        }
+      ]
+    },
+    "sceneAlt": "A classroom scene. In the scene: penguin, gray horse, white rabbit, white horse, orange orange, purple snail, brown owl, orange shell.",
+    "fact": {
+      "type": "count",
+      "art": "horse"
+    }
+  }
+}

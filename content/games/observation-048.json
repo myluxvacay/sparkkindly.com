@@ -1,0 +1,142 @@
+{
+  "id": "observation-048",
+  "scheduledDate": "2026-11-15",
+  "brand": "play",
+  "gameType": "observation",
+  "title": "Look closely: meadow color",
+  "prompt": "What colour is the mushroom in the meadow?",
+  "difficulty": "hard",
+  "explanation": "The mushroom in the picture is purple — look at it closely and you can see its colour.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "pink"
+    },
+    {
+      "id": "b",
+      "text": "purple"
+    },
+    {
+      "id": "c",
+      "text": "brown"
+    },
+    {
+      "id": "d",
+      "text": "red"
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "observation",
+    "scene": {
+      "template": "meadow",
+      "elements": [
+        {
+          "id": "kite-842",
+          "art": "kite",
+          "name": "kite",
+          "color": "blue",
+          "x": 416,
+          "y": 100
+        },
+        {
+          "id": "moon-843",
+          "art": "moon",
+          "name": "moon",
+          "x": 173,
+          "y": 140
+        },
+        {
+          "id": "ball-844",
+          "art": "ball",
+          "name": "ball",
+          "color": "green",
+          "x": 723,
+          "y": 500
+        },
+        {
+          "id": "snail-845",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 247,
+          "y": 495
+        },
+        {
+          "id": "rocket-846",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "red",
+          "x": 644,
+          "y": 150
+        },
+        {
+          "id": "duck-847",
+          "art": "duck",
+          "name": "duck",
+          "color": "brown",
+          "x": 374,
+          "y": 460
+        },
+        {
+          "id": "snail-848",
+          "art": "snail",
+          "name": "snail",
+          "color": "purple",
+          "x": 626,
+          "y": 465
+        },
+        {
+          "id": "banana-849",
+          "art": "banana",
+          "name": "banana",
+          "x": 436,
+          "y": 505
+        },
+        {
+          "id": "umbrella-850",
+          "art": "umbrella",
+          "name": "umbrella",
+          "color": "yellow",
+          "x": 558,
+          "y": 425
+        },
+        {
+          "id": "sheep-851",
+          "art": "sheep",
+          "name": "sheep",
+          "color": "gray",
+          "x": 186,
+          "y": 430,
+          "flip": true
+        },
+        {
+          "id": "fox-852",
+          "art": "fox",
+          "name": "fox",
+          "color": "orange",
+          "x": 104,
+          "y": 470
+        },
+        {
+          "id": "mushroom-853",
+          "art": "mushroom",
+          "name": "mushroom",
+          "color": "purple",
+          "x": 494,
+          "y": 495
+        }
+      ]
+    },
+    "sceneAlt": "A meadow scene. In the scene: blue kite, moon, green ball, purple snail, red rocket, brown duck, purple snail, banana, yellow umbrella, gray sheep, orange fox, purple mushroom.",
+    "fact": {
+      "type": "color",
+      "elementId": "mushroom-853"
+    }
+  }
+}

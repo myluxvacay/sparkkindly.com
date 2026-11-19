@@ -6,7 +6,7 @@ import type { PublicItem } from '@/lib/items/repo';
 import { playResult, type PlayResult as CheckedResult } from '@/lib/play/answer';
 import { buildModel, poolQuizzes, rotateCandidates, DIFFICULTY_ORDER } from '@/lib/play/keep-playing';
 import { readPlay, type PlayView } from '@/lib/public/body';
-import { listQuizzes } from '@/lib/public/reads';
+import { listPublic, listQuizzes } from '@/lib/public/reads';
 import { currentViewer } from '@/lib/accounts/scope-next';
 import { recordableRequest, recordPlay, type AnswerNote } from '@/lib/accounts/record-play';
 import { listAnsweredIds } from '@/lib/accounts/responses';
@@ -47,20 +47,29 @@ export default async function PlayPanel({
     play.mechanic === 'put_in_order'
       ? `Please give each item a different position from 1 to ${play.items.length}, then check again.`
       : undefined;
-  const another = item.kind === 'quiz' ? '/quiz/archive/' : `/${item.world}/`;
+  const another = item.kind === 'quiz' ? '/quiz/archive/' : item.kind === 'game' ? '/games/' : `/${item.world}/`;
   const track = trackSeen && item.audience !== 'kids';
+  const playable = item.kind === 'quiz' || item.kind === 'game';
 
   // "Keep playing" (owner request, 17 Nov 2026): after a quiz answer, offer an easier / same-level /
   // harder next quiz from the same scope-filtered pool the archive lists, so the player stays in the
   // flow. Candidates are rotated (seeded by this quiz) per level; the island re-picks against the
   // merged seen-set (this device's memory ∪ the signed-in player's saved answers) at tap time. Built
   // only for a checked quiz answer — never for the bare question.
+  // Visual games joined the same flow on 18 Nov 2026 (owner direction): the pool is quizzes AND
+  // games from the same scope-filtered reads, so a keep-playing hop can land on a picture game and a
+  // picture game hands back to a quiz — one stream, no separate picture-game section.
   let keepPlaying: ReactNode = null;
-  if (result?.status === 'ok' && item.kind === 'quiz' && play.difficulty) {
+  if (result?.status === 'ok' && playable && play.difficulty) {
     const db = getDb();
     const items: PublicItem[] = [];
     for (let page = 0; page < 6; page++) {
       const rows = await listQuizzes(db, viewer.scope, { limit: 50, offset: page * 50 });
+      items.push(...rows);
+      if (rows.length < 50) break;
+    }
+    for (let page = 0; page < 4; page++) {
+      const rows = await listPublic(db, viewer.scope, { kind: 'game', limit: 50, offset: page * 50 });
       items.push(...rows);
       if (rows.length < 50) break;
     }
@@ -98,8 +107,8 @@ export default async function PlayPanel({
       <div
         className="quiz-panel"
         id="play-panel"
-        data-kp-current={track && item.kind === 'quiz' ? item.id : undefined}
-        data-kp-level={track && item.kind === 'quiz' ? play.difficulty : undefined}
+        data-kp-current={track && playable ? item.id : undefined}
+        data-kp-level={track && playable ? play.difficulty : undefined}
       >
         <DifficultyMeter level={play.difficulty} />
         {result && result.status !== 'not_found' && (
@@ -112,7 +121,14 @@ export default async function PlayPanel({
             keepPlaying={keepPlaying ?? undefined}
           />
         )}
-        {(!result || result.status === 'invalid') && <PlayForm action={action} play={play} clues={clueCount(params, play.clues.length)} />}
+        {(!result || result.status === 'invalid') && (
+          <PlayForm
+            action={action}
+            play={play}
+            clues={clueCount(params, play.clues.length)}
+            stage={params.get('stage') === 'answer' ? 'answer' : 'look'}
+          />
+        )}
         <Note note={note} />
         {result?.status === 'ok' && <SharePrompt itemId={item.id} />}
       </div>

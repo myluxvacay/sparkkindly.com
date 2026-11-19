@@ -1,5 +1,5 @@
 import type { Db, Queryable } from '@/lib/db';
-import type { Article, Quiz } from '@/lib/schemas';
+import type { Article, Game, Quiz } from '@/lib/schemas';
 
 type Audience = 'kids' | 'all';
 type RiskTier = 'kids' | 'sourced' | 'computable' | 'reflective';
@@ -37,7 +37,7 @@ function quizTitle(id: string): string {
 }
 
 async function insertItem(tx: Queryable, row: {
-  world: string; kind: 'article' | 'quiz'; slug: string; title: string; summary: string;
+  world: string; kind: 'article' | 'quiz' | 'game'; slug: string; title: string; summary: string;
   body: unknown; audience: Audience; tier: RiskTier; approved: boolean; reviewer: string | null;
   reviewedAt: string | null; publishAt: string | null; sources: unknown; report: unknown; image: unknown; tags: string[];
 }): Promise<string | null> {
@@ -68,7 +68,7 @@ async function insertItem(tx: Queryable, row: {
 // Imports the mock-up's articles and quizzes. Idempotent: an item that already exists (same world and slug) is left
 // untouched, and the counts returned are what this run added. Quiz bodies never include the correct answer; it goes
 // to item_answers with the explanation.
-export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[]): Promise<{ items: number; answers: number }> {
+export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[], games: Game[] = []): Promise<{ items: number; answers: number }> {
   return db.transaction(async (tx) => {
     let items = 0;
     let answers = 0;
@@ -121,6 +121,34 @@ export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[])
         items++;
         await tx.query('INSERT INTO item_answers (item_id, answer, explanation) VALUES ($1, $2::jsonb, $3)', [
           id, JSON.stringify(q.correctOptionId), q.explanation,
+        ]);
+        answers++;
+      }
+    }
+    // Visual games (18 Nov 2026): kind 'game' items whose bodies carry the scene payload in `visual`.
+    // The mechanic stays one of the closed play mechanics, so answer checking, recording and the
+    // keep-playing pool treat a game exactly like a quiz. The answer key goes to item_answers as ever.
+    for (const g of games) {
+      const choices = (list: NonNullable<Game['options']>) =>
+        list.map((o) => ({ id: o.id, text: o.text, ...(o.art ? { art: o.art, alt: o.alt ?? o.text } : {}) }));
+      const body =
+        g.gameType === 'counting'
+          ? { mechanic: 'number', prompt: g.prompt, difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
+          : g.gameType === 'odd-one-out'
+            ? { mechanic: 'odd_one_out', prompt: g.prompt, items: choices(g.items ?? []), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
+            : { mechanic: 'multiple_choice', prompt: g.prompt, options: choices(g.options ?? []), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate };
+      const answer = g.gameType === 'counting' ? g.numberAnswer : g.correctOptionId;
+      const id = await insertItem(tx, {
+        world: g.brand, kind: 'game', slug: g.id, title: g.title, summary: g.prompt, body,
+        audience: audienceFor(g.brand), tier: g.brand === 'kids' ? 'kids' : 'computable', approved: g.reviewStatus === 'approved',
+        reviewer: g.reviewer, reviewedAt: at(g.reviewedAt), publishAt: at(g.scheduledDate), sources: g.sources,
+        report: { legacy: true, importedFrom: 'content/games', reviewNote: g.reviewNote, gameType: g.gameType },
+        image: { origin: 'template' }, tags: [],
+      });
+      if (id) {
+        items++;
+        await tx.query('INSERT INTO item_answers (item_id, answer, explanation) VALUES ($1, $2::jsonb, $3)', [
+          id, JSON.stringify(answer), g.explanation,
         ]);
         answers++;
       }

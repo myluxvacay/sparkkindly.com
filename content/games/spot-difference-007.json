@@ -1,0 +1,133 @@
+{
+  "id": "spot-difference-007",
+  "scheduledDate": "2026-11-11",
+  "brand": "kids",
+  "gameType": "spot-difference",
+  "title": "Spot the difference: pond",
+  "prompt": "Three things changed between the two pond pictures. Which list names all three changes?",
+  "difficulty": "easy",
+  "explanation": "Compare the two pictures bit by bit: The frog changed colour from green to plain, the blue rocket changed colour from white to blue and the red boat changed colour from white to red. Nothing else is different.",
+  "sources": [],
+  "reviewStatus": "approved",
+  "reviewer": "independent-review-agent",
+  "reviewedAt": "2026-11-18",
+  "reviewNote": "Independent review passed: answer re-derived from scene data, difficulty and safety checked. Published under the owner's 18 Nov 2026 direction.",
+  "options": [
+    {
+      "id": "a",
+      "text": "The frog changed colour from green to plain, the blue rocket changed colour from white to blue and the blue fish vanished."
+    },
+    {
+      "id": "b",
+      "text": "The frog changed colour from green to plain, the blue rocket changed colour from white to blue and the red boat changed colour from white to red."
+    },
+    {
+      "id": "c",
+      "text": "The frog changed colour from green to plain, a red kite appeared and the red boat changed colour from white to red."
+    },
+    {
+      "id": "d",
+      "text": "The blue fish changed colour from blue to purple, the blue rocket changed colour from white to blue and the red boat changed colour from white to red."
+    }
+  ],
+  "correctOptionId": "b",
+  "visual": {
+    "gameType": "spot-difference",
+    "scene": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "frog-2280",
+          "art": "frog",
+          "name": "frog",
+          "color": "green",
+          "x": 645,
+          "y": 440
+        },
+        {
+          "id": "rocket-2281",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "white",
+          "x": 608,
+          "y": 160
+        },
+        {
+          "id": "fish-2282",
+          "art": "fish",
+          "name": "fish",
+          "color": "orange",
+          "x": 175,
+          "y": 500
+        },
+        {
+          "id": "fish-2283",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 264,
+          "y": 465
+        },
+        {
+          "id": "boat-2284",
+          "art": "boat",
+          "name": "boat",
+          "color": "white",
+          "x": 124,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAlt": "A pond scene. In the scene: green frog, white rocket, orange fish, blue fish, white boat.",
+    "sceneAfter": {
+      "template": "pond",
+      "elements": [
+        {
+          "id": "frog-2280",
+          "art": "frog",
+          "name": "frog",
+          "x": 645,
+          "y": 440
+        },
+        {
+          "id": "rocket-2281",
+          "art": "rocket",
+          "name": "rocket",
+          "color": "blue",
+          "x": 608,
+          "y": 160
+        },
+        {
+          "id": "fish-2282",
+          "art": "fish",
+          "name": "fish",
+          "color": "orange",
+          "x": 175,
+          "y": 500
+        },
+        {
+          "id": "fish-2283",
+          "art": "fish",
+          "name": "fish",
+          "color": "blue",
+          "x": 264,
+          "y": 465
+        },
+        {
+          "id": "boat-2284",
+          "art": "boat",
+          "name": "boat",
+          "color": "red",
+          "x": 124,
+          "y": 440
+        }
+      ]
+    },
+    "sceneAfterAlt": "A pond scene. In the scene: frog, blue rocket, orange fish, blue fish, red boat.",
+    "expectedChanges": [
+      "frog-2280:color:green->plain",
+      "rocket-2281:color:white->blue",
+      "boat-2284:color:white->red"
+    ]
+  }
+}
