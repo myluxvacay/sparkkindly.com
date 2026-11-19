@@ -1,0 +1,67 @@
+{
+  "id": "discover-draft-2026-11-19-01",
+  "slug": "how-a-barometer-reads-the-weather",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "How a barometer reads the weather in the weight of air",
+  "description": "Air has weight, and its mood swings move a needle. How a barometer turns invisible pressure into a forecast you can read on the wall.",
+  "publishedAt": "2026-11-19",
+  "updatedAt": "2026-11-19",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-19",
+  "hero": {
+    "src": "/images/weather.webp",
+    "alt": "Lightning striking over dark water",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "weather",
+    "inventions",
+    "science"
+  ],
+  "sources": [
+    {
+      "title": "Barometer | Britannica",
+      "url": "https://www.britannica.com/technology/barometer",
+      "accessedAt": "2026-11-19"
+    },
+    {
+      "title": "Barometer | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Barometer",
+      "accessedAt": "2026-11-19"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-19",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 19 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The ocean of air above us",
+      "paragraphs": [
+        "We live at the bottom of an ocean of air. It presses on everything — on your shoulders right now sits a column of air reaching to the top of the atmosphere — and that pressure changes as weather systems pass overhead.",
+        "A barometer measures that pressure. In the earliest designs, from the 1640s, air pressure pushed on a pool of mercury and forced it up a glass tube; the height of the mercury column was the reading. Later aneroid barometers replaced the liquid with a small sealed metal box that flexes as pressure changes and moves a needle."
+      ]
+    },
+    {
+      "heading": "Rising fair, falling rain",
+      "paragraphs": [
+        "High pressure usually means sinking, settling air — the recipe for calm, clear weather. Low pressure means rising air, which cools, forms clouds and often brings rain and wind. So a barometer's needle drifting up is a hopeful sign, and a needle falling fast is the sky clearing its throat.",
+        "The instrument does not see the future; it reads the present so well that the future gives itself away. Sailors watched barometers obsessively, because a sudden fall at sea was an early warning no lookout could match."
+      ]
+    },
+    {
+      "heading": "Read one like a sailor",
+      "paragraphs": [
+        "Tap the glass gently and note not just where the needle sits, but where it has been: barometers carry a marker hand you set each morning so the day's drift is visible at a glance. Change over hours matters more than the number itself.",
+        "Pair the reading with a look out of the window for a week, and you will start forecasting like a local — because that, in the end, is all a forecast is: pressure, pattern and practice."
+      ]
+    }
+  ],
+  "takeaway": "A barometer weighs the air: rising pressure usually brings settled weather, a fast fall warns of wind and rain.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

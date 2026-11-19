@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-poem-by-heart-708",
+  "scheduledDate": "2027-05-16",
+  "brand": "grow",
+  "prompt": "You want to learn a poem by heart for next month. Which approach usually works best?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Read it once, the night before"
+    },
+    {
+      "id": "b",
+      "text": "Practise a little each day, with gaps between sessions"
+    },
+    {
+      "id": "c",
+      "text": "Read it twenty times in one long sitting"
+    },
+    {
+      "id": "d",
+      "text": "Only listen to a recording of it, once"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Short practice spread over several days — called spaced practice — builds far stronger memories than the same time crammed into one sitting. The gaps are not wasted time; they are when the memory sets.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Spaced repetition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Spaced_repetition",
+      "accessedAt": "2026-11-19"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-19",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

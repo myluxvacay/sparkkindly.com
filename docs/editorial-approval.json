@@ -28268,7 +28268,7 @@
         "reviewStatus": "approved",
         "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner\u2019s 18 Nov 2026 report \u2014 answers re-derived and the rendered pictures inspected.",
         "scheduledDate": "2026-11-10",
         "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
@@ -28555,7 +28555,7 @@
         "reviewStatus": "approved",
         "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner\u2019s 18 Nov 2026 report \u2014 answers re-derived and the rendered pictures inspected.",
         "scheduledDate": "2026-11-19",
         "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
@@ -28777,7 +28777,7 @@
         "reviewStatus": "approved",
         "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner\u2019s 18 Nov 2026 report \u2014 answers re-derived and the rendered pictures inspected.",
         "scheduledDate": "2026-11-27",
         "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
@@ -28856,7 +28856,7 @@
         "reviewStatus": "approved",
         "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner\u2019s 18 Nov 2026 report \u2014 answers re-derived and the rendered pictures inspected.",
         "scheduledDate": "2026-11-30",
         "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
@@ -29169,7 +29169,7 @@
         "reviewStatus": "approved",
         "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner\u2019s 18 Nov 2026 report \u2014 answers re-derived and the rendered pictures inspected.",
         "scheduledDate": "2026-12-07",
         "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
@@ -30236,7 +30236,7 @@
         "reviewStatus": "approved",
         "reviewer": "independent-review-agent (rendered-scene pass)",
         "reviewedAt": "2026-11-18",
-        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner’s 18 Nov 2026 report — answers re-derived and the rendered pictures inspected.",
+        "reviewNote": "Independent rendered-scene review passed (18 Nov 2026): backdrop/fact ambiguity fixed under the owner\u2019s 18 Nov 2026 report \u2014 answers re-derived and the rendered pictures inspected.",
         "scheduledDate": "2026-11-18",
         "visualFix": "backdrop-fact ambiguity (owner report, 18 Nov 2026)"
       }
@@ -33284,6 +33284,158 @@
         "reviewer": "SparkKindly reviewer agent",
         "reviewedAt": "2026-11-18",
         "factualClaimsReviewedAt": "2026-11-18",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "together-draft-2026-11-19-02",
+      "priorHash": "c3dde0793faff0bd654faecc9c2a25027802ecd32f85f8ff705f687585079e8b",
+      "approvedHash": "fed9c9c77a2847e8ab8e284e7baad6ef9f0a47eb6d575739ebcc0ef62b154beb",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "grow-draft-2026-11-19-03",
+      "priorHash": "0b656ac5555c430d9f0f1b49db6c427f04d8ed9e0db1b238aa24078bda40d73e",
+      "approvedHash": "50a8e80f73da17196c272f4772e796117d7b232185966ecc6c97f90ba7e1669e",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "grow-quiz-poem-by-heart-708",
+      "priorHash": "780b23f11578e7c81e7a97a85797b2d8a8466282e2352f2e97ffbc9ca66ec280",
+      "approvedHash": "cae9001cd3e93eed8e6e4d82651d37c2c9e51922d2665b2a7c83ab348ce2eba3",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "discover-draft-2026-11-19-01",
+      "priorHash": "76443b51e7dbc4f31969626ec4ff057df6a2e9f88938704d67a96e7ea12cd729",
+      "approvedHash": "d9e3309bcd6ca286faf5707550e513b8c49c2eccfe53d4b1d4c211ec5058f2f9",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "save-draft-2026-11-19-02",
+      "priorHash": "bf963f6ec11e69c214e2bb8eae79c6306fe6d0fad1c40da7c8cdca8ff4eed9e6",
+      "approvedHash": "696825fe360cb0611acd74d9cc5a5600ebacc844a539bc13adb3d6686262ba24",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "together-draft-2026-11-19-03",
+      "priorHash": "2e5ba2273cc01526c3496806d4a42552a57f01f9a0fce25458d28b2e4677409c",
+      "approvedHash": "2f3edf76d5858f1eb6252c27a268c823e289440e68cfd77f37c143e384b0d369",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "save-draft-2026-11-19-01",
+      "priorHash": "b73818b827c412b5bcf246985a3b022e9bc44603a87a2a29c2d37af92b77009d",
+      "approvedHash": "c5f03c7dcb60acb8bff6b982849ed34d8075affbdba4671facdb6d071366c7c1",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "together-draft-2026-11-19-01",
+      "priorHash": "eaeb981ed4b226adf0984d88ee0eb611128d37af3cf36730cc9e007144d2bffe",
+      "approvedHash": "1148720ba9257fa5b60e8598f62f9cf2250c17063b9149e75ac864a376e1385c",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "grow-draft-2026-11-19-02",
+      "priorHash": "a9e3f7ed663e9e9789841f6eb7f2537efe9a292dd30a61733f463ab487268710",
+      "approvedHash": "83fba70ccfee058fbfb8fb346bf317eabac820fc440c96739adf591dd349e75b",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "grow-draft-2026-11-19-01",
+      "priorHash": "25d04ca815551402570f71033b8a54268ae44a47658792bde1ac8d70198229ee",
+      "approvedHash": "c0fee1f76ac3ec3ac3555e12bee374bce21302b5d3d8cdc9f299592ffbfab78a",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "save-draft-2026-11-19-03",
+      "priorHash": "35577d1a1d6c439fef78badd647d7fe706f26ddb66f1671c614dc0aaf86033b3",
+      "approvedHash": "a20ad9ddddc2178dba61ff6cb96673a6b5b3391e3f06392b2e3ba35741036004",
+      "fields": {
+        "publishedAt": "2026-11-19",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-19",
+        "factualClaimsReviewedAt": "2026-11-19",
         "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
       }
     }
