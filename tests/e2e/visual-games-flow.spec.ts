@@ -10,6 +10,7 @@ type GameFile = {
   prompt?: string;
   correctOptionId?: string; numberAnswer?: { value: number };
   options?: { id: string; text: string }[];
+  visual?: { sequence?: { label: string }[] };
 };
 const today = new Date().toISOString().slice(0, 10);
 const library: GameFile[] = fs
@@ -56,24 +57,28 @@ test('a memory game shows the scene first, then hides it for the answer', async 
 });
 
 test('a sequence game shows its items one at a time, then asks', async ({ page }) => {
-  // Four full-page hops (load + one per item + the ask hop) against the serial CI server: the
-  // default 60s budget proved too tight under load (main Verify, 19 Nov 2026 — the same code
-  // passed on staging). Same remedy as item-page.spec.ts; assertions unchanged.
+  // Several full-page hops against the serial CI server; the larger budget follows
+  // item-page.spec.ts. (A count()-polled advance loop raced the client-side navigation here —
+  // the old stage stays visible while the next step loads, so the poll read the stale page and
+  // then waited forever for a Next link the last step never has. The stage's aria-label counts
+  // the steps, so each hop below synchronises on the step actually changing.)
   test.setTimeout(180_000);
   const g = firstOf('sequence');
+  const steps = g.visual!.sequence!.length;
   await page.goto(`/${g.brand}/${g.id}/#play-panel`);
   // Show phase: exactly one item on stage, no question, no options, no strip of everything.
-  await expect(page.locator('.seq-stage')).toBeVisible();
+  await expect(page.locator('.seq-stage')).toHaveAttribute('aria-label', new RegExp(`thing 1 of ${steps}`));
   await expect(page.locator('.seq-tile')).toHaveCount(0);
   await expect(page.getByRole('radio')).toHaveCount(0);
   await expect(page.locator('.quiz-panel')).not.toContainText(g.prompt!);
-  // Advance through the show steps until the ask step offers itself.
-  for (let i = 0; i < 5; i++) {
-    const ask = page.getByRole('link', { name: /remembered the order/ });
-    if ((await ask.count()) > 0) { await ask.click(); break; }
+  // Advance one item at a time; each hop must land on the next single-item stage.
+  for (let step = 2; step <= steps; step++) {
     await page.getByRole('link', { name: /Next/ }).click();
-    await expect(page.locator('.seq-stage')).toBeVisible();
+    await expect(page.locator('.seq-stage')).toHaveAttribute('aria-label', new RegExp(`thing ${step} of ${steps}`));
   }
+  // The last item offers no Next — only the ask link. After it, the items are gone.
+  await expect(page.getByRole('link', { name: /Next/ })).toHaveCount(0);
+  await page.getByRole('link', { name: /remembered the order/ }).click();
   await expect(page.locator('.seq-stage')).toHaveCount(0);
   await page.locator('label.option', { hasText: correctText(g) }).first().click();
   await page.getByRole('button', { name: /Check answer/ }).click();
