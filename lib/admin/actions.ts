@@ -19,7 +19,8 @@ import { resetReporter, resolveEscalation } from '@/lib/comments/owner-actions';
 import { setTrust } from '@/lib/comments/trust';
 import { withRetry } from '@/lib/comments/moderation';
 import { isReasonCode } from '@/lib/comments/rejection-email';
-import { commentsEnabled, contributorsEnabled, socialEnabled, sponsorshipEnabled } from '@/lib/config';
+import { commentsEnabled, contributorsEnabled, promosEnabled, socialEnabled, sponsorshipEnabled } from '@/lib/config';
+import { promoHandlers } from '@/lib/promos/admin-actions';
 import { approveLink, isContributed, lockContribution, markApproved, ownerDecision } from '@/lib/contributors/owner';
 import { sendEmail, type EmailMessage } from '@/lib/email';
 import { attachSponsorship, createSponsor, endSponsorship } from '@/lib/sponsorship/admin';
@@ -500,6 +501,7 @@ const handlers: Record<string, Handler> = {
 
 Object.assign(handlers, socialHandlers((status, code) => new ActionError(status, code)));
 Object.assign(handlers, videoHandlers((status, code) => new ActionError(status, code)));
+Object.assign(handlers, promoHandlers((status, code) => new ActionError(status, code)));
 
 export const actionNames = Object.keys(handlers);
 
@@ -534,7 +536,8 @@ const available = (name: string) =>
   (!name.startsWith('contribution.') || contributorsEnabled()) &&
   (!name.startsWith('sponsor') || sponsorshipEnabled()) &&
   (!name.startsWith('social.') || socialEnabled()) &&
-  (!name.startsWith('video.') || socialEnabled());
+  (!name.startsWith('video.') || socialEnabled()) &&
+  (!name.startsWith('promo.') || promosEnabled());
 
 export async function runAction(
   db: Db,

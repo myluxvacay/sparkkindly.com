@@ -48,6 +48,10 @@ export const DONE = {
   social_kept: 'Kept as posted: it will not be retried.',
   video_approved: 'Video approved: it is scheduled for the platform time.',
   video_cancelled: 'Video job cancelled. Its files are deleted after 30 days.',
+  promo_created: 'Promotion created as a draft. Set it live when it is ready.',
+  promo_saved: 'Promotion saved.',
+  promo_status: 'Promotion status changed.',
+  promo_drawn: 'Draw recorded. The winners are listed on the promotion’s draw page.',
   video_retried: 'Video post scheduled for one more attempt now.',
 } as const;
 
@@ -78,6 +82,8 @@ export const ERRORS = {
   video_missing: 'The uploaded file is no longer on the server (files waiting more than 7 days are deleted). Upload it again.',
   video_file_changed: 'The file on the server no longer matches the checksum you approved. Upload it again and check it.',
   key_gone: 'That key has already been shown or has expired. Rotate the key again if it was not saved.',
+  promo_already_drawn: 'That month has already been drawn. A drawn month is never redrawn.',
+  promo_empty_pool: 'Nobody both entered and completed the streak that month, so there is nobody to draw from.',
 } as const;
 
 export type DoneCode = keyof typeof DONE;
