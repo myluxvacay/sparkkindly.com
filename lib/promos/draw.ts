@@ -10,7 +10,7 @@ import { createHash, randomBytes } from 'node:crypto';
 import type { Queryable } from '@/lib/db';
 import { isUuid } from '@/lib/accounts/pin';
 import { listEntries, type Promo } from './repo';
-import { streakForOwner } from './streak';
+import { siteDayOf, streakForOwner } from './streak';
 import { streakConfig } from './types';
 
 export const DRAW_METHOD =
@@ -40,8 +40,13 @@ export function drawWinners(pool: readonly string[], seed: string, count: number
 }
 
 // A month (YYYY-MM) can be drawn only once it has fully ended — drawing the current month would lock out
-// everyone who completes later in it. String comparison is safe on zero-padded YYYY-MM values.
-export const monthEnded = (month: string, now: Date): boolean => month < now.toISOString().slice(0, 7);
+// everyone who completes later in it. "Ended" is site-day aware: the month's last site-day runs to 06:00 UTC
+// on the 1st of the next month, so the month is drawable only once today's site-day is past its last day.
+export const monthEnded = (month: string, now: Date): boolean => {
+  const [y, m] = month.split('-').map(Number);
+  const lastDay = new Date(Date.UTC(y, m, 0)).toISOString().slice(0, 10);
+  return siteDayOf(now) > lastDay;
+};
 
 export type EntrantStanding = { accountId: string; email: string; enteredAt: Date; completedInMonth: boolean };
 

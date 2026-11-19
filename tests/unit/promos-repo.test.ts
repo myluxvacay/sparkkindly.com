@@ -169,10 +169,13 @@ describe('entries and the draw', () => {
     expect(empty).toEqual({ ok: false, code: 'empty_pool' });
   });
 
-  it('a month can be drawn only once it has ended', () => {
+  it('a month can be drawn only once it has ended — site-day aware, so not before 06:00 UTC on the 1st', () => {
     expect(monthEnded('2026-11', new Date('2026-11-30T23:59:00Z'))).toBe(false);
-    expect(monthEnded('2026-11', new Date('2026-12-01T00:00:00Z'))).toBe(true);
+    // Midnight on the 1st is still Nov 30's site-day (it runs to 06:00 UTC): not drawable yet.
+    expect(monthEnded('2026-11', new Date('2026-12-01T00:00:00Z'))).toBe(false);
+    expect(monthEnded('2026-11', new Date('2026-12-01T05:59:00Z'))).toBe(false);
+    expect(monthEnded('2026-11', new Date('2026-12-01T06:00:00Z'))).toBe(true);
     expect(monthEnded('2026-12', new Date('2026-11-30T12:00:00Z'))).toBe(false);
-    expect(monthEnded('2026-10', new Date('2026-11-01T00:00:00Z'))).toBe(true);
+    expect(monthEnded('2026-10', new Date('2026-11-01T06:00:00Z'))).toBe(true);
   });
 });
