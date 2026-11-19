@@ -80,7 +80,7 @@ jobs:
           cp deploy/content-publish.sh release/content-publish.sh
           chmod +x release/content-publish.sh
           mkdir -p release/content
-          cp -r content/articles content/quizzes release/content/
+          cp -r content/articles content/quizzes content/games release/content/
           if [ '${{ steps.content.outputs.changed }}' = 'true' ]; then
             touch release/PUBLISH_CONTENT
           fi
