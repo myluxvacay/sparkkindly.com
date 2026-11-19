@@ -17,6 +17,11 @@ export const commentsEnabled = (): boolean => accountsEnabled() && ['true', '1']
 // Contributors (Project 8) need accounts AND their own switch; with either unset no contribute page, contributor page,
 // byline, agent route or admin page exists.
 export const contributorsEnabled = (): boolean => accountsEnabled() && ['true', '1'].includes(process.env.CONTRIBUTORS_ENABLED ?? '');
+// Promotions (owner direction, 19 November 2026) need accounts (entry is an account act). Unlike the other
+// features there is no opt-in env switch: whether anything is promoted is itself data — a promo shows only while
+// its record is live in /admin — so the surface ships with accounts. PROMOS_ENABLED=false is an emergency
+// kill switch only; while off, /promos/ and /admin/promos/ do not exist.
+export const promosEnabled = (): boolean => accountsEnabled() && (process.env.PROMOS_ENABLED ?? '') !== 'false';
 // Public leaderboard (Project 4.11, ADR 0004) needs accounts AND its own switch; with either unset the /leaderboard/
 // route and the settings section do not exist.
 export const leaderboardEnabled = (): boolean => accountsEnabled() && ['true', '1'].includes(process.env.LEADERBOARD_ENABLED ?? '');

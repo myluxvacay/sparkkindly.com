@@ -1105,3 +1105,33 @@ the owner's numbers (P.1) is a one-line edit.
 - Kids items (world or audience `kids`) show no social-network links; a child context (a child profile, or a scope
   without adults) shows only the device share and copy buttons. Circle pages have no share section; the circle's own
   "Play it together" prompt is unchanged.
+
+## Promotions (19 November 2026)
+
+- **What it is.** A promotion is a database record, not a release (ADR 0005). Public pages: `/promos/` lists
+  the records that are live today; `/promos/<slug>/` renders one from its record (description, prize, dates,
+  how-it-works, official rules, plus a panel for its mechanic type). The surface needs member accounts on;
+  `PROMOS_ENABLED=false` in the environment is an emergency kill switch only — there is no opt-in flag,
+  because a record is public only while its status is `live`.
+- **Running a promotion (no deployment, all in `/admin/promos/`).** 1) Fill in "New promotion" and create it
+  (it starts as a draft, invisible to the public). 2) Check the wording with the edit form. 3) "Set live" —
+  it appears on `/promos/` at once (mind its start/end dates: a live record outside its dates stays hidden).
+  4) Edit it any time with the same form; edits are live when saved. 5) "End promotion" when it is over;
+  entries and past draws stay recorded, so a finished month can still be drawn afterwards.
+- **The streak draw (type `streak_draw`).** Streaks are derived from saved answers — nothing to maintain.
+  A streak day is a site-day (06:00 UTC to 06:00 UTC, the content publish slot), and only days from the
+  promotion's start date count. Entries are the account holder's own opt-in on the promo page (18+ attested;
+  the account's age group must be adult; a child profile can never enter). Per month: open
+  `/admin/promos/draw/`, pick the promotion and the month, check the standings (who entered, who completed),
+  then "Draw" — a month can be drawn only after it has ended. The draw records the pool (the entrant account
+  ids), a random seed, the method and the winners, and a drawn month can never be redrawn. Winners are
+  recomputable from the recorded pool and seed with `drawWinners` in `lib/promos/draw.ts`.
+- **Fulfilment is manual.** The draw page lists the winners' account emails. Email each winner at that
+  address, buy and send the $25 gift card by email yourself, and keep the 14-day reply window from the rules
+  in mind. If a winner never replies, the rules let the prize go to another finisher from the same month's
+  pool: pick one from the standings list on the draw page and keep a note of who was substituted and why
+  (a month itself is drawn only once, so there is no second draw record).
+- **Personal data held** (for the data inventory): `promo_entries` (promotion id, account id, 18+
+  attestation, entry time) and `promo_draws` (month, pool size, seed, method, winner account ids, drawing
+  admin's email, time). Both go with account deletion for entries; draws keep winner account ids as the
+  prize record. Entrant emails are shown only on the admin draw page.
