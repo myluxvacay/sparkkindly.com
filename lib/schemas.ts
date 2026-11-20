@@ -15,6 +15,7 @@ export const quizSchema = z.object({id:z.string().regex(/^[a-z0-9-]+$/),schedule
  // Reading strand (20 Nov 2026): a passage set question carries its passage with it so the text stays
  // on screen while the reader answers; setId groups the questions authored against one passage.
  passage:z.string().min(40).optional(),passageTitle:z.string().min(1).optional(),setId:z.string().regex(/^[a-z0-9-]+$/).optional(),
+ hero:media.optional(),
  prompt:z.string().min(10),options:z.array(z.object({id:z.string().min(1),text:z.string().min(1)})).length(4),correctOptionId:z.string(),explanation:z.string().min(20),difficulty:z.enum(['easy','medium','hard']),sources:z.array(sourceSchema),...review}).superRefine((q,c)=>{
  if(new Set(q.options.map(o=>o.id)).size!==4 || new Set(q.options.map(o=>o.text.trim().toLowerCase())).size!==4) c.addIssue({code:'custom',message:'Four distinct option IDs and texts required'});
  if(!q.options.some(o=>o.id===q.correctOptionId)) c.addIssue({code:'custom',message:'Correct option must exist'});

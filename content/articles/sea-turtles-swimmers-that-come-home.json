@@ -14,12 +14,12 @@
   "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production.",
   "ageGuidance": "Ages 8–11 (grades 3–5). Read together or independently; the glossary at the end explains harder words.",
   "hero": {
-    "src": "/images/oceans.webp",
-    "alt": "A sea turtle swimming underwater",
-    "width": 1200,
-    "height": 800,
-    "credit": "Development reference photograph · Unsplash",
-    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+    "src": "/images/reading-article-sea-turtles.webp",
+    "alt": "A sea turtle swimming underwater among coral and fish, with hatchlings on the beach above",
+    "width": 540,
+    "height": 540,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
   },
   "tags": [
     "reading",

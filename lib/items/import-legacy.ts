@@ -133,6 +133,7 @@ export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[],
         mechanic: 'multiple_choice',
         prompt: q.prompt,
         ...(q.passage ? { passage: q.passage, passageTitle: q.passageTitle, setId: q.setId } : {}),
+        ...(q.hero ? { passageImage: { src: q.hero.src, alt: q.hero.alt } } : {}),
         options: q.options.map((o) => ({ id: o.id, text: o.text })),
         difficulty: q.difficulty,
         scheduledDate: q.scheduledDate,
@@ -142,7 +143,7 @@ export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[],
         audience: audienceFor(q.brand), tier: tierFor(q.brand, 'quiz'), approved: q.reviewStatus === 'approved',
         reviewer: q.reviewer, reviewedAt: at(q.reviewedAt), publishAt: at(q.scheduledDate), sources: q.sources,
         report: { legacy: true, importedFrom: 'content/quizzes', reviewNote: q.reviewNote },
-        image: { origin: 'template' }, tags: [],
+        image: q.hero ? imageFor(q.hero) : { origin: 'template' }, tags: [],
       });
       if (id) {
         items++;

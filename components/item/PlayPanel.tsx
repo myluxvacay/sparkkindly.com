@@ -151,6 +151,7 @@ function reviewFor(play: PlayView, result: Extract<CheckedResult, { status: 'ok'
         prompt: play.prompt,
         passage: play.passage,
         passageTitle: play.passageTitle,
+        passageImage: play.passageImage,
         options: mark(play.options, result.choice, result.answerChoice),
       };
     case 'odd_one_out':

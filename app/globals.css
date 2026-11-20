@@ -489,6 +489,9 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .passage-title{font-size:22px;margin-bottom:10px}
 .passage p{font-size:16px;line-height:1.8;margin-bottom:12px}
 .passage .passage-note{font-size:13px;font-weight:600;color:var(--plum);margin-bottom:0}
+.passage-img{width:100%;height:auto;border-radius:5px;margin-bottom:14px}
+.passage-spot{margin:0 0 22px}
+.passage-spot .passage-img{margin-bottom:0}
 .games-index-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:26px}
 .game-type-card{border:1px solid #e4d8e8;background:#fffdf9;border-radius:7px;padding:20px}
 .game-type-card h3{font-size:22px;margin-bottom:8px}
