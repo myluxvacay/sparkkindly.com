@@ -73,6 +73,7 @@ const playBody = z.object({
   passage: opt(text),
   passageTitle: opt(text),
   setId: opt(text),
+  passageImage: opt(z.object({ src: opt(text), alt: z.string().catch('') })),
   prompt: z.string().catch(''),
   options: z.array(choice).catch([]),
   items: z.array(choice).catch([]),

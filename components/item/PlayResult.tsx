@@ -11,6 +11,7 @@ export type PlayReview = {
   prompt: string;
   passage?: string;
   passageTitle?: string;
+  passageImage?: { src?: string; alt: string };
   options?: { id: string; text: string; yours: boolean; correct: boolean }[];
   yourAnswer?: string;
 };
@@ -50,6 +51,7 @@ export default function PlayResult({ result, again, another, invalidHint, review
           <div className="quiz-review">
             {review.passage && (
               <section className="passage" aria-label={review.passageTitle ?? 'Reading passage'}>
+                {review.passageImage?.src && <img className="passage-img" src={review.passageImage.src} alt={review.passageImage.alt} loading="lazy" />}
                 {review.passageTitle && <h3 className="passage-title">{review.passageTitle}</h3>}
                 {review.passage.split(/\n\s*\n/).map((para, i) => (
                   <p key={i}>{para}</p>

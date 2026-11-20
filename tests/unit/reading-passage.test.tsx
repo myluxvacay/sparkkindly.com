@@ -17,6 +17,7 @@ const play = readPlay({
   mechanic: 'multiple_choice',
   passage: PASSAGE,
   passageTitle: "The Fox's Winter Den",
+  passageImage: { src: '/images/reading-fox-winter-den.webp', alt: 'A red fox curled up asleep in a den under tree roots' },
   setId: 'reading-set-fox-winter-den',
   prompt: 'Where did Ruby make her den?',
   options: [
@@ -36,6 +37,9 @@ describe('reading passage in the play view', () => {
   it('the answer form shows the passage before the question options', () => {
     const html = renderToStaticMarkup(createElement(PlayForm, { action: '/kids/reading-fox-winter-den-q1/', play, clues: 0 }));
     expect(html).toContain('class="passage"');
+    // The set's illustration sits at the top of the passage panel.
+    expect(html).toContain('src="/images/reading-fox-winter-den.webp"');
+    expect(html.indexOf('reading-fox-winter-den.webp')).toBeLessThan(html.indexOf('Ruby the fox dug her den'));
     expect(html).toContain('Ruby the fox dug her den');
     expect(html.indexOf('Ruby the fox dug her den')).toBeLessThan(html.indexOf('Under the roots of an old oak tree'));
     expect(html).toContain('it stays here while you think');
@@ -47,7 +51,7 @@ describe('reading passage in the play view', () => {
       explanation: 'The passage says Ruby found a hole under the roots of an old oak tree.', choice: 'a', answerChoice: 'a',
     };
     const review: PlayReview = {
-      prompt: play.prompt, passage: play.passage, passageTitle: play.passageTitle,
+      prompt: play.prompt, passage: play.passage, passageTitle: play.passageTitle, passageImage: play.passageImage,
       options: [
         { id: 'a', text: 'Under the roots of an old oak tree', yours: true, correct: true },
         { id: 'b', text: 'Inside a hollow log', yours: false, correct: false },

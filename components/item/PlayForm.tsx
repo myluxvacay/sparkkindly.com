@@ -206,8 +206,14 @@ export default function PlayForm({ action, play, clues, stage = 'look', step = 0
   const sceneAfter = toSceneSpec(play.visual?.sceneAfter);
   return (
     <form className="quiz-form" method="get" action={`${action}#result`}>
+      {play.passageImage?.src && !play.passage && (
+        <figure className="passage passage-spot">
+          <img className="passage-img" src={play.passageImage.src} alt={play.passageImage.alt} loading="lazy" />
+        </figure>
+      )}
       {play.passage && (
         <section className="passage" aria-label={play.passageTitle ?? 'Reading passage'}>
+          {play.passageImage?.src && <img className="passage-img" src={play.passageImage.src} alt={play.passageImage.alt} loading="lazy" />}
           {play.passageTitle && <h3 className="passage-title">{play.passageTitle}</h3>}
           {play.passage.split(/\n\s*\n/).map((para, i) => (
             <p key={i}>{para}</p>
