@@ -1,0 +1,38 @@
+{
+  "id": "reading-clue-enormous-701",
+  "scheduledDate": "2028-10-30",
+  "brand": "kids",
+  "prompt": "Read the sentence: \"The elephant was enormous — it was taller than the school bus and heavier than three cars!\" What does the word 'enormous' most likely mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Very, very small"
+    },
+    {
+      "id": "b",
+      "text": "Very, very big"
+    },
+    {
+      "id": "c",
+      "text": "Loud and noisy"
+    },
+    {
+      "id": "d",
+      "text": "Soft and gentle"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The clues in the sentence point to the meaning: 'enormous' means very, very big. Reading the words around a new word helps you work out what it means.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "enormous | Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/enormous",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

@@ -147,7 +147,12 @@ function reviewFor(play: PlayView, result: Extract<CheckedResult, { status: 'ok'
     list.map((o) => ({ id: o.id, text: o.text, yours: chosen === o.id, correct: answer === o.id }));
   switch (play.mechanic) {
     case 'multiple_choice':
-      return { prompt: play.prompt, options: mark(play.options, result.choice, result.answerChoice) };
+      return {
+        prompt: play.prompt,
+        passage: play.passage,
+        passageTitle: play.passageTitle,
+        options: mark(play.options, result.choice, result.answerChoice),
+      };
     case 'odd_one_out':
       return { prompt: play.prompt, options: mark(play.items, result.choice, result.answerChoice) };
     case 'true_false': {

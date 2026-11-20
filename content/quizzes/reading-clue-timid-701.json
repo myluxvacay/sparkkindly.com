@@ -1,0 +1,38 @@
+{
+  "id": "reading-clue-timid-701",
+  "scheduledDate": "2028-11-03",
+  "brand": "kids",
+  "prompt": "Read the sentence: \"The timid puppy hid behind the chair and peeked out shyly, too nervous to meet the visitors.\" What does the word 'timid' most likely mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Brave and bold"
+    },
+    {
+      "id": "b",
+      "text": "Shy and nervous"
+    },
+    {
+      "id": "c",
+      "text": "Silly and playful"
+    },
+    {
+      "id": "d",
+      "text": "Fast and strong"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The clues in the sentence point to the meaning: 'timid' means shy and nervous. Reading the words around a new word helps you work out what it means.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "timid | Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/timid",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

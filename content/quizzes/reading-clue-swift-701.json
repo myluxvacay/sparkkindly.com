@@ -1,0 +1,38 @@
+{
+  "id": "reading-clue-swift-701",
+  "scheduledDate": "2028-11-04",
+  "brand": "kids",
+  "prompt": "Read the sentence: \"The swift river rushed past the rocks so fast that the leaves were swept away in seconds.\" What does the word 'swift' most likely mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Very slow"
+    },
+    {
+      "id": "b",
+      "text": "Very deep"
+    },
+    {
+      "id": "c",
+      "text": "Very fast"
+    },
+    {
+      "id": "d",
+      "text": "Very cold"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The clues in the sentence point to the meaning: 'swift' means very fast. Reading the words around a new word helps you work out what it means.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "swift | Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/swift",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

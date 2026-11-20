@@ -132,6 +132,7 @@ export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[],
       const body = {
         mechanic: 'multiple_choice',
         prompt: q.prompt,
+        ...(q.passage ? { passage: q.passage, passageTitle: q.passageTitle, setId: q.setId } : {}),
         options: q.options.map((o) => ({ id: o.id, text: o.text })),
         difficulty: q.difficulty,
         scheduledDate: q.scheduledDate,

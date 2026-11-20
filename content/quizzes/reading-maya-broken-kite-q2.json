@@ -1,0 +1,41 @@
+{
+  "id": "reading-maya-broken-kite-q2",
+  "scheduledDate": "2027-05-09",
+  "brand": "kids",
+  "passage": "Maya loved the spring kite festival more than any other day of the year. This year she had built her own kite, with red and yellow paper and a tail of blue ribbons. But on the morning of the festival, disaster struck — the kite's wooden stick snapped in two! Maya wanted to cry. Instead, she took a deep breath and looked around the garden shed. She found a straight twig, some strong string, and sticky tape. Twenty minutes later, the kite was mended. It was not perfect, but when Maya ran across the meadow, her kite climbed into the sky and soared above all the others.",
+  "passageTitle": "Maya and the Broken Kite",
+  "setId": "reading-set-maya-broken-kite",
+  "prompt": "What does this story show about Maya?",
+  "options": [
+    {
+      "id": "a",
+      "text": "She gives up when things go wrong"
+    },
+    {
+      "id": "b",
+      "text": "She stays calm and solves problems"
+    },
+    {
+      "id": "c",
+      "text": "She does not really like kites"
+    },
+    {
+      "id": "d",
+      "text": "She always asks adults for help"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Instead of crying, Maya took a deep breath, found a twig, string and tape, and mended the kite herself — she stays calm and solves problems.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Kite | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kite",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

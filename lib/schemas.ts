@@ -11,7 +11,11 @@ export const articleSchema = z.object({id:z.string().min(1),slug:z.string().rege
  if(a.contentType==='video' && (!a.poster || !a.transcript || !a.productionStatus)) c.addIssue({code:'custom',message:'Video requires production status, poster and descriptive transcript'});
  if(a.productionStatus==='available' && (!a.videoSrc || !a.captionsSrc || !a.durationSeconds)) c.addIssue({code:'custom',message:'Available video requires media, captions and duration'});
 });
-export const quizSchema = z.object({id:z.string().regex(/^[a-z0-9-]+$/),scheduledDate:dateSchema,brand:brandSchema,prompt:z.string().min(10),options:z.array(z.object({id:z.string().min(1),text:z.string().min(1)})).length(4),correctOptionId:z.string(),explanation:z.string().min(20),difficulty:z.enum(['easy','medium','hard']),sources:z.array(sourceSchema),...review}).superRefine((q,c)=>{
+export const quizSchema = z.object({id:z.string().regex(/^[a-z0-9-]+$/),scheduledDate:dateSchema,brand:brandSchema,
+ // Reading strand (20 Nov 2026): a passage set question carries its passage with it so the text stays
+ // on screen while the reader answers; setId groups the questions authored against one passage.
+ passage:z.string().min(40).optional(),passageTitle:z.string().min(1).optional(),setId:z.string().regex(/^[a-z0-9-]+$/).optional(),
+ prompt:z.string().min(10),options:z.array(z.object({id:z.string().min(1),text:z.string().min(1)})).length(4),correctOptionId:z.string(),explanation:z.string().min(20),difficulty:z.enum(['easy','medium','hard']),sources:z.array(sourceSchema),...review}).superRefine((q,c)=>{
  if(new Set(q.options.map(o=>o.id)).size!==4 || new Set(q.options.map(o=>o.text.trim().toLowerCase())).size!==4) c.addIssue({code:'custom',message:'Four distinct option IDs and texts required'});
  if(!q.options.some(o=>o.id===q.correctOptionId)) c.addIssue({code:'custom',message:'Correct option must exist'});
  if(q.reviewStatus==='approved' && (!q.reviewer || !q.reviewedAt)) c.addIssue({code:'custom',message:'Human approval requires actual review identity and date'});

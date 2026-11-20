@@ -1,0 +1,38 @@
+{
+  "id": "reading-clue-sturdy-701",
+  "scheduledDate": "2028-11-07",
+  "brand": "kids",
+  "prompt": "Read the sentence: \"This table is sturdy. It is made of thick oak, and it does not wobble even when we lean on it.\" What does the word 'sturdy' most likely mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Weak and wobbly"
+    },
+    {
+      "id": "b",
+      "text": "Strong and well-made"
+    },
+    {
+      "id": "c",
+      "text": "Old and broken"
+    },
+    {
+      "id": "d",
+      "text": "Light as a feather"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The clues in the sentence point to the meaning: 'sturdy' means strong and well-made. Reading the words around a new word helps you work out what it means.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "sturdy | Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/sturdy",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

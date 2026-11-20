@@ -1,0 +1,41 @@
+{
+  "id": "reading-toms-tomato-plant-q2",
+  "scheduledDate": "2027-05-30",
+  "brand": "kids",
+  "passage": "In March, Tom planted one tiny tomato seed in a pot on his windowsill. For days, nothing happened, and Tom began to think the seed was broken. Then, one morning, a small green sprout pushed through the soil. Tom watered it a little every day and turned the pot so the plant would grow straight toward the sunlight. By June, the plant was taller than Tom's knee, with yellow flowers. By July, small green tomatoes hung from its branches, and by August they had turned red and ripe. Tom picked the very first one, washed it, and took a big, juicy bite. 'I grew that,' he said proudly.",
+  "passageTitle": "Tom's Tomato Plant",
+  "setId": "reading-set-toms-tomato-plant",
+  "prompt": "How did Tom feel when he ate the first tomato?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Disappointed"
+    },
+    {
+      "id": "b",
+      "text": "Proud"
+    },
+    {
+      "id": "c",
+      "text": "Surprised it tasted bad"
+    },
+    {
+      "id": "d",
+      "text": "Worried there would be no more"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Tom said 'I grew that' proudly after taking a bite of the first ripe tomato he had grown from a tiny seed.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Tomato | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tomato",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

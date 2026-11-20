@@ -1,0 +1,41 @@
+{
+  "id": "reading-night-lights-went-out-q1",
+  "scheduledDate": "2027-05-21",
+  "brand": "kids",
+  "passage": "One summer evening, just as Leo was brushing his teeth, every light in the house flickered and went out. The street outside went dark too. 'A power cut,' said Dad, lighting a candle. Leo felt a little nervous — until Mum opened the back door. 'Come and look,' she whispered. Because the street lamps were off, the night sky was filled with more stars than Leo had ever seen. A pale river of light stretched across the sky. 'That's the Milky Way,' said Dad. 'It's always there. The city lights usually hide it.' Leo gazed up until bedtime, and he was almost sorry when the lights came back on.",
+  "passageTitle": "The Night the Lights Went Out",
+  "setId": "reading-set-night-lights-went-out",
+  "prompt": "Why could Leo see so many stars that night?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Because it was a winter night"
+    },
+    {
+      "id": "b",
+      "text": "Because the street lamps were off in the power cut"
+    },
+    {
+      "id": "c",
+      "text": "Because he used a telescope"
+    },
+    {
+      "id": "d",
+      "text": "Because there were no clouds at all that year"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The passage says that because the street lamps were off, the night sky was filled with more stars than Leo had ever seen.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Milky Way | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Milky_Way",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

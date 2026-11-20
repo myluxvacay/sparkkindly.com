@@ -1,0 +1,41 @@
+{
+  "id": "reading-toms-tomato-plant-q3",
+  "scheduledDate": "2027-05-31",
+  "brand": "kids",
+  "passage": "In March, Tom planted one tiny tomato seed in a pot on his windowsill. For days, nothing happened, and Tom began to think the seed was broken. Then, one morning, a small green sprout pushed through the soil. Tom watered it a little every day and turned the pot so the plant would grow straight toward the sunlight. By June, the plant was taller than Tom's knee, with yellow flowers. By July, small green tomatoes hung from its branches, and by August they had turned red and ripe. Tom picked the very first one, washed it, and took a big, juicy bite. 'I grew that,' he said proudly.",
+  "passageTitle": "Tom's Tomato Plant",
+  "setId": "reading-set-toms-tomato-plant",
+  "prompt": "In the passage, a 'sprout' pushed through the soil. What is a sprout?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A small stone in the ground"
+    },
+    {
+      "id": "b",
+      "text": "A young plant just beginning to grow"
+    },
+    {
+      "id": "c",
+      "text": "A kind of garden worm"
+    },
+    {
+      "id": "d",
+      "text": "A drop of water"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The passage says a small green sprout pushed through the soil after the seed was planted — a sprout is a young plant just starting to grow.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Tomato | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tomato",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

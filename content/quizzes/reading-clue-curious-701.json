@@ -1,0 +1,38 @@
+{
+  "id": "reading-clue-curious-701",
+  "scheduledDate": "2028-11-05",
+  "brand": "kids",
+  "prompt": "Read the sentence: \"Ben is curious about everything — he is always asking how things work and why the sky changes colour.\" What does the word 'curious' most likely mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Wanting to learn and know more"
+    },
+    {
+      "id": "b",
+      "text": "Feeling sleepy"
+    },
+    {
+      "id": "c",
+      "text": "Feeling cross"
+    },
+    {
+      "id": "d",
+      "text": "Being very quiet"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The clues in the sentence point to the meaning: 'curious' means wanting to learn and know more. Reading the words around a new word helps you work out what it means.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "curious | Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/curious",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

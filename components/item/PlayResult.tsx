@@ -9,6 +9,8 @@ import type { PlayResult as Result } from '@/lib/play/answer';
 // for the rest.
 export type PlayReview = {
   prompt: string;
+  passage?: string;
+  passageTitle?: string;
   options?: { id: string; text: string; yours: boolean; correct: boolean }[];
   yourAnswer?: string;
 };
@@ -46,6 +48,14 @@ export default function PlayResult({ result, again, another, invalidHint, review
         <h2>{result.correct ? 'Correct. Nicely reasoned!' : 'Not quite. A little discovery to take with you.'}</h2>
         {review && (
           <div className="quiz-review">
+            {review.passage && (
+              <section className="passage" aria-label={review.passageTitle ?? 'Reading passage'}>
+                {review.passageTitle && <h3 className="passage-title">{review.passageTitle}</h3>}
+                {review.passage.split(/\n\s*\n/).map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </section>
+            )}
             {review.prompt && <p className="quiz-review-prompt">{review.prompt}</p>}
             {review.options ? (
               <ul className="quiz-review-options">

@@ -1,0 +1,38 @@
+{
+  "id": "reading-clue-fragile-701",
+  "scheduledDate": "2028-11-01",
+  "brand": "kids",
+  "prompt": "Read the sentence: \"Be careful with that glass ornament — it is fragile and could break into pieces if it falls.\" What does the word 'fragile' most likely mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hard to lift"
+    },
+    {
+      "id": "b",
+      "text": "Easy to break"
+    },
+    {
+      "id": "c",
+      "text": "Shiny and smooth"
+    },
+    {
+      "id": "d",
+      "text": "Loud when dropped"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The clues in the sentence point to the meaning: 'fragile' means easy to break. Reading the words around a new word helps you work out what it means.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "fragile | Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/fragile",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

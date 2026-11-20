@@ -206,6 +206,15 @@ export default function PlayForm({ action, play, clues, stage = 'look', step = 0
   const sceneAfter = toSceneSpec(play.visual?.sceneAfter);
   return (
     <form className="quiz-form" method="get" action={`${action}#result`}>
+      {play.passage && (
+        <section className="passage" aria-label={play.passageTitle ?? 'Reading passage'}>
+          {play.passageTitle && <h3 className="passage-title">{play.passageTitle}</h3>}
+          {play.passage.split(/\n\s*\n/).map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+          <p className="passage-note">Read the passage, then answer — it stays here while you think. 📖</p>
+        </section>
+      )}
       <fieldset>
         <legend>{play.prompt}</legend>
         {gameType === 'memory' || gameType === 'sequence' ? (

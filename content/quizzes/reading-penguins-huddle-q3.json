@@ -1,0 +1,41 @@
+{
+  "id": "reading-penguins-huddle-q3",
+  "scheduledDate": "2028-10-29",
+  "brand": "kids",
+  "passage": "In Antarctica, winter is colder than anywhere else on Earth, and the wind can blow as fast as a racing car. Emperor penguins cannot fly away to a warmer place, so they use a clever trick: they huddle. Hundreds of penguins press together in a big, tight group, like people crowding into a warm room. The penguins on the cold outside edge slowly shuffle around to the middle, and the penguins in the warm middle move out to take their turn at the edge. In this way, every penguin gets a turn being warm, and the whole group stays alive through the long, dark winter.",
+  "passageTitle": "Penguins Huddle Together",
+  "setId": "reading-set-penguins-huddle",
+  "prompt": "In the passage, to 'huddle' means to press together. Why does the passage compare the huddle to 'people crowding into a warm room'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "To show the penguins live in houses"
+    },
+    {
+      "id": "b",
+      "text": "To help readers picture how closely the penguins stand together"
+    },
+    {
+      "id": "c",
+      "text": "To explain why penguins like people"
+    },
+    {
+      "id": "d",
+      "text": "To show the room is in Antarctica"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The comparison helps readers picture the huddle: hundreds of penguins pressed closely together, like people crowding into one warm room.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Emperor penguin | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Emperor_penguin",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

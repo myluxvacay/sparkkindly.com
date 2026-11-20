@@ -1,0 +1,41 @@
+{
+  "id": "reading-sundial-tells-time-q2",
+  "scheduledDate": "2027-05-27",
+  "brand": "kids",
+  "passage": "Long before clocks and watches, people told the time using the Sun. A sundial is a flat stone or metal plate with numbers marked around its edge. In the middle stands a small triangle called a gnomon. As the Sun moves across the sky, the gnomon casts a shadow on the plate. In the morning, the shadow points one way; by the afternoon, it has slowly swung around to point at a later number. By looking at where the shadow falls, people could tell the time. Of course, a sundial only works when the Sun is shining — on a cloudy day, it tells you nothing at all!",
+  "passageTitle": "How a Sundial Tells Time",
+  "setId": "reading-set-sundial-tells-time",
+  "prompt": "Why does the shadow move across the sundial during the day?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Because the plate slowly turns"
+    },
+    {
+      "id": "b",
+      "text": "Because the Sun moves across the sky"
+    },
+    {
+      "id": "c",
+      "text": "Because the wind pushes it"
+    },
+    {
+      "id": "d",
+      "text": "Because the numbers change colour"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The passage says that as the Sun moves across the sky, the gnomon's shadow swings around the plate from morning to afternoon.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sundial | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sundial",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}
