@@ -34092,6 +34092,20 @@
         "publishedAt": "2026-11-20",
         "factualClaimsReviewedAt": "2026-11-20"
       }
+    },
+    {
+      "kind": "article",
+      "id": "reading-article-lighthouse-cat-ch1",
+      "priorHash": "5e9a98a5dd08bf37a2f8b60ee5762a8447d359e42ffef049d2135fc48b68d182",
+      "approvedHash": "ff57ab1d103ce1c2c87e8bb7b4a7b6c334dbac262e119d8ddbba33fef9dd0a16",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Lighthouse Cat serial Chapter 1 (20 November 2026), the first item on the owner-approved Gemini illustration route: schema, duplicate scan, Kids safety fields, reading-strand format (glossary, stop-and-think, think-and-talk) checked. Staged for owner review; not promoted to production.",
+        "publishedAt": "2026-11-20",
+        "factualClaimsReviewedAt": "2026-11-20"
+      }
     }
   ]
 }
