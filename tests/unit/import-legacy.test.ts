@@ -87,7 +87,11 @@ describe('importLegacy', () => {
 
   it('records image origin and licence for every article, and a template origin for quizzes', async () => {
     expect(await count("SELECT count(*) n FROM items WHERE kind = 'article' AND image->>'origin' IS NOT NULL AND image->>'licence' IS NOT NULL")).toBe(articles.length);
-    expect(await count("SELECT count(*) n FROM items WHERE kind = 'quiz' AND image->>'origin' = 'template'")).toBe(quizzes.length);
+    // Quizzes without a hero keep the template image; a quiz with a hero (reading strand, 20 Nov
+    // 2026) records that hero's origin and licence instead — the two groups cover every quiz.
+    const withHero = quizzes.filter((q) => q.hero).length;
+    expect(await count("SELECT count(*) n FROM items WHERE kind = 'quiz' AND image->>'origin' = 'template'")).toBe(quizzes.length - withHero);
+    expect(await count("SELECT count(*) n FROM items WHERE kind = 'quiz' AND image->>'origin' IS NOT NULL AND image->>'origin' <> 'template' AND image->>'licence' IS NOT NULL")).toBe(withHero);
   });
 
   it('keeps Kids article safety fields and the legacy content type in the body', async () => {
