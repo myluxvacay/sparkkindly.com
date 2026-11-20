@@ -1,0 +1,56 @@
+{
+  "id": "grow-draft-2026-11-20-01",
+  "slug": "a-walk-and-talk-for-hard-decisions",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "A walk-and-talk for hard decisions",
+  "description": "Some decisions will not move while you sit still. Why walking side by side loosens stuck thinking — and how to run a walking conversation that ends with an answer.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "hero": {
+    "src": "/images/focus.webp",
+    "alt": "A sunlit path winding through a forest",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "decisions",
+    "walking",
+    "thinking"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 20 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Why walking works on stuck minds",
+      "paragraphs": [
+        "A decision you have circled for days at a desk often moves within ten minutes of walking. Part of it is the body: steady rhythm and changing scenery give the anxious, looping part of the mind something to do, and the problem-solving part gets room to work underneath.",
+        "Part of it is geometry. Walking side by side, looking ahead rather than at each other, makes hard things easier to say — it is why so many honest conversations happen in cars and on walks, and so few across a desk."
+      ]
+    },
+    {
+      "heading": "Run the walk like a meeting",
+      "paragraphs": [
+        "State the decision out loud in one sentence before you set off: 'By the end of this walk I want to know whether…' A vague walk produces vague relief; a named question produces an answer, or at least a sharper question.",
+        "Walk for at least twenty minutes before judging any idea — the first ten are usually the old arguments warming up. When a thought feels true, say it out loud; hearing your own voice commit to a sentence is information no amount of silent circling provides."
+      ]
+    },
+    {
+      "heading": "Land the plane",
+      "paragraphs": [
+        "On the final stretch, agree the smallest next step and its date — not the whole future, just the first move. Decisions feel heavy when they pretend to be final; most are really just next steps wearing a crown.",
+        "Write the step down when you get home, before the kettle boils. A decision that survives being written down was a real one."
+      ]
+    }
+  ],
+  "takeaway": "Name the decision in one sentence, walk twenty minutes before judging ideas, and finish with one small dated next step.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

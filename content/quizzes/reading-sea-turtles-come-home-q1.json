@@ -1,0 +1,41 @@
+{
+  "id": "reading-sea-turtles-come-home-q1",
+  "scheduledDate": "2027-05-11",
+  "brand": "kids",
+  "passage": "A sea turtle spends most of her life swimming in the wide, warm ocean. She may travel thousands of kilometres, visiting coral reefs and hunting for food. But when she is grown up and ready to lay her eggs, something amazing happens. She swims all the way back to the very same beach where she was born — even though she has not been there for many years! Scientists think turtles can sense the Earth's invisible magnetic field, like a built-in compass, and use it to find their way home across the whole ocean.",
+  "passageTitle": "Sea Turtles Find Their Way Back",
+  "setId": "reading-set-sea-turtles-come-home",
+  "prompt": "Where does a grown-up sea turtle go to lay her eggs?",
+  "options": [
+    {
+      "id": "a",
+      "text": "To a coral reef far away"
+    },
+    {
+      "id": "b",
+      "text": "To the beach where she was born"
+    },
+    {
+      "id": "c",
+      "text": "To the coldest part of the ocean"
+    },
+    {
+      "id": "d",
+      "text": "To a river near the forest"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The passage says she swims back to the very same beach where she was born to lay her eggs.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sea turtle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sea_turtle",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

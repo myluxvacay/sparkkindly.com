@@ -1,0 +1,41 @@
+{
+  "id": "reading-penguins-huddle-q2",
+  "scheduledDate": "2028-10-28",
+  "brand": "kids",
+  "passage": "In Antarctica, winter is colder than anywhere else on Earth, and the wind can blow as fast as a racing car. Emperor penguins cannot fly away to a warmer place, so they use a clever trick: they huddle. Hundreds of penguins press together in a big, tight group, like people crowding into a warm room. The penguins on the cold outside edge slowly shuffle around to the middle, and the penguins in the warm middle move out to take their turn at the edge. In this way, every penguin gets a turn being warm, and the whole group stays alive through the long, dark winter.",
+  "passageTitle": "Penguins Huddle Together",
+  "setId": "reading-set-penguins-huddle",
+  "prompt": "Why do the penguins take turns at the edge of the huddle?",
+  "options": [
+    {
+      "id": "a",
+      "text": "So every penguin gets a turn in the warm middle"
+    },
+    {
+      "id": "b",
+      "text": "Because the edge penguins get tired of standing"
+    },
+    {
+      "id": "c",
+      "text": "To watch for danger in turns"
+    },
+    {
+      "id": "d",
+      "text": "Because the middle is too crowded to breathe"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The passage says the penguins on the cold edge shuffle to the middle and the warm ones move out, so every penguin gets a turn being warm.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Emperor penguin | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Emperor_penguin",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

@@ -70,6 +70,9 @@ export type ArticleView = z.infer<typeof articleBody>;
 
 const playBody = z.object({
   mechanic: opt(text),
+  passage: opt(text),
+  passageTitle: opt(text),
+  setId: opt(text),
   prompt: z.string().catch(''),
   options: z.array(choice).catch([]),
   items: z.array(choice).catch([]),

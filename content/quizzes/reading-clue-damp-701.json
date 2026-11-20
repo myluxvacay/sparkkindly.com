@@ -1,0 +1,38 @@
+{
+  "id": "reading-clue-damp-701",
+  "scheduledDate": "2028-11-06",
+  "brand": "kids",
+  "prompt": "Read the sentence: \"After the rain, the grass was damp, and our shoes got a little wet as we walked across it.\" What does the word 'damp' most likely mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Completely dry"
+    },
+    {
+      "id": "b",
+      "text": "Frozen hard"
+    },
+    {
+      "id": "c",
+      "text": "A little bit wet"
+    },
+    {
+      "id": "d",
+      "text": "Covered in dust"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The clues in the sentence point to the meaning: 'damp' means a little bit wet. Reading the words around a new word helps you work out what it means.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "damp | Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/damp",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

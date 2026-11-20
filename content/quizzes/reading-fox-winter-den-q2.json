@@ -1,0 +1,41 @@
+{
+  "id": "reading-fox-winter-den-q2",
+  "scheduledDate": "2027-04-25",
+  "brand": "kids",
+  "passage": "Winter was coming to the forest. Every morning, frost sparkled on the grass, and the wind felt sharper. Ruby the fox knew she needed a warm place to sleep. She found a hole under the roots of an old oak tree and began to dig. She dug until the hole was deep and round, like a small room under the ground. Then she carried in dry leaves and soft moss to make a bed. That night, snow covered the forest. But inside her den, Ruby was snug and warm, dreaming of spring.",
+  "passageTitle": "The Fox's Winter Den",
+  "setId": "reading-set-fox-winter-den",
+  "prompt": "Why did Ruby carry dry leaves and soft moss into the den?",
+  "options": [
+    {
+      "id": "a",
+      "text": "To hide the entrance from other animals"
+    },
+    {
+      "id": "b",
+      "text": "To make a soft, warm bed for winter"
+    },
+    {
+      "id": "c",
+      "text": "To store food for the spring"
+    },
+    {
+      "id": "d",
+      "text": "To mark the path back home"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The passage says she carried in leaves and moss to make a bed, and that night she was snug and warm inside while snow covered the forest.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Red fox | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Red_fox",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

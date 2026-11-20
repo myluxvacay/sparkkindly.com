@@ -1,0 +1,41 @@
+{
+  "id": "reading-moon-changes-shape-q2",
+  "scheduledDate": "2028-10-22",
+  "brand": "kids",
+  "passage": "Some nights the Moon looks like a big round coin. Other nights it is a thin, curved sliver, like a smile in the sky. The Moon does not really change its shape — it is always a round ball. What changes is how much of its sunlit side we can see from Earth. The Sun lights up one half of the Moon. As the Moon travels around the Earth, we see different amounts of that bright half. When we see all of it, we call it a full moon. When we see only a thin slice, it is called a crescent moon.",
+  "passageTitle": "Why the Moon Changes Shape",
+  "setId": "reading-set-moon-changes-shape",
+  "prompt": "Why does the Moon seem to change shape?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Because the Moon grows and shrinks"
+    },
+    {
+      "id": "b",
+      "text": "Because we see different amounts of its sunlit half as it travels around Earth"
+    },
+    {
+      "id": "c",
+      "text": "Because clouds cover parts of it"
+    },
+    {
+      "id": "d",
+      "text": "Because the Sun moves closer and further away"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The passage explains the Moon is always a round ball; we just see different amounts of its sunlit side as it travels around the Earth.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Lunar phase | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lunar_phase",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

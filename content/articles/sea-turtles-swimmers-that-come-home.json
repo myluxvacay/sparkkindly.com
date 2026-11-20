@@ -1,0 +1,86 @@
+{
+  "id": "reading-article-sea-turtles",
+  "slug": "sea-turtles-swimmers-that-come-home",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Sea Turtles: Swimmers That Come Home",
+  "description": "Sea turtles swim across whole oceans — then return to the very beach where they were born. A short reading with a glossary and questions to think about.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). Read together or independently; the glossary at the end explains harder words.",
+  "hero": {
+    "src": "/images/oceans.webp",
+    "alt": "A sea turtle swimming underwater",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "reading",
+    "animals",
+    "ocean",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Sea turtle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sea_turtle",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's grades 3–5 reading strand; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review.",
+  "body": [
+    {
+      "heading": "A life in the ocean",
+      "paragraphs": [
+        "A sea turtle is built for swimming. Instead of legs, it has flippers — long, flat arms shaped like paddles — and its smooth shell slips easily through the water. Some sea turtles swim across entire oceans, travelling thousands of kilometres between the places where they feed. A turtle might spend twenty or thirty years at sea before it is fully grown.",
+        "And then, one season, the turtle does something astonishing: it turns for home."
+      ]
+    },
+    {
+      "heading": "Stop and think",
+      "paragraphs": [
+        "Before you read on, think: the turtle has been away for many years, and the ocean has no roads or signs. How do you think it finds its way back? Hold your idea — then read on."
+      ]
+    },
+    {
+      "heading": "The beach where it began",
+      "paragraphs": [
+        "The turtle swims back to the very same beach where it hatched from its egg all those years ago. Scientists believe turtles can sense the Earth's magnetic field — an invisible force that works like a compass — and that each beach has its own magnetic 'address' that the turtle remembers. On a dark night, the mother turtle hauls herself onto the sand, digs a nest with her back flippers, and lays her eggs. Weeks later, tiny hatchlings burst out and race to the sea, beginning the whole journey again."
+      ]
+    },
+    {
+      "heading": "Words to know",
+      "paragraphs": [
+        "Flipper — a flat, wide limb shaped like a paddle, used for swimming.",
+        "Hatch — to break out of an egg.",
+        "Shore — the land along the edge of the sea.",
+        "Journey — a long trip from one place to another."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. The passage says each beach has a magnetic 'address.' What do you think that means — how is a beach like an address?",
+        "2. A hatchling's race to the sea is dangerous. Why do you think the mother turtle lays so many eggs at once?"
+      ]
+    }
+  ],
+  "takeaway": "Sea turtles spend decades swimming the oceans, then use the Earth's magnetic field like a compass to return to the beach where they were born.",
+  "fiction": false,
+  "materials": [
+    "Just you and this story — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell the story or three facts from it to someone at home in your own words."
+}

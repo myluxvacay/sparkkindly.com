@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-volleyball-players-709",
+  "scheduledDate": "2027-05-19",
+  "brand": "play",
+  "prompt": "In volleyball, how many players from one team are on the court at the same time?",
+  "options": [
+    {
+      "id": "a",
+      "text": "4 players"
+    },
+    {
+      "id": "b",
+      "text": "5 players"
+    },
+    {
+      "id": "c",
+      "text": "6 players"
+    },
+    {
+      "id": "d",
+      "text": "7 players"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A volleyball team has six players on the court at once — three in the front row and three in the back row. Players rotate positions each time their team wins back the serve.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Volleyball | Britannica",
+      "url": "https://www.britannica.com/sports/volleyball",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

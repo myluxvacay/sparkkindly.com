@@ -1,0 +1,87 @@
+{
+  "id": "reading-article-moon-faces",
+  "slug": "the-moons-changing-faces",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "The Moon's Changing Faces",
+  "description": "Why does the Moon look like a coin one night and a smile the next? A short reading about the Moon's phases, with a glossary and questions to think about.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). Read together or independently; the glossary at the end explains harder words.",
+  "hero": {
+    "src": "/images/moonphases.webp",
+    "alt": "The Moon in four phases — crescent, half, gibbous and full — over a night landscape",
+    "width": 1600,
+    "height": 1067,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "moon",
+    "space",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Lunar phase | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lunar_phase",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's grades 3–5 reading strand; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review.",
+  "body": [
+    {
+      "heading": "A different Moon every night",
+      "paragraphs": [
+        "Look at the Moon tonight, and then look again next week. It will not look the same! Some nights it is a round, shining coin. Other nights it is a thin curve, like a smile tipped on its side. The Moon seems to change its shape — but really, it never changes at all.",
+        "The Moon is a big round ball of rock, and it does not make its own light. The light we see is sunlight bouncing off it. The Sun always lights up one half of the Moon, the half facing it."
+      ]
+    },
+    {
+      "heading": "Stop and think",
+      "paragraphs": [
+        "Before you read on, think about this: if the Sun always lights up half of the Moon, why don't we always see the same half from Earth? Say your idea out loud or in your head — then read on and check."
+      ]
+    },
+    {
+      "heading": "The part we can see",
+      "paragraphs": [
+        "The Moon travels all the way around the Earth, and the trip takes about a month. As it moves, we see its sunlit half from different angles. Sometimes we face the bright half straight on, and the Moon looks full and round. Sometimes we see only a thin slice of the bright half, and that thin slice is called a crescent. The changing shapes are called the phases of the Moon.",
+        "So the Moon is not really changing. We are just seeing it from a different place each night — like walking around a lamp-lit statue in a garden and watching the light fall on different parts of it."
+      ]
+    },
+    {
+      "heading": "Words to know",
+      "paragraphs": [
+        "Phase — one of the shapes the Moon seems to have as we see different parts of its sunlit side.",
+        "Crescent — the thin, curved slice shape of the Moon, like a smile or a banana.",
+        "Orbit — the path one thing travels around another, like the Moon's path around the Earth.",
+        "Reflect — to bounce light off a surface, the way the Moon bounces sunlight toward us."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. If you could stand on the Moon and look at the Earth, do you think the Earth would have phases too? Why?",
+        "2. Draw the Moon as you saw it last time you looked. Which phase do you think it was — and what do you think it will look like in one week?"
+      ]
+    }
+  ],
+  "takeaway": "The Moon never changes shape — we see different amounts of its sunlit half as it orbits the Earth, and those views are called its phases.",
+  "fiction": false,
+  "materials": [
+    "Just you and this story — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell the story or three facts from it to someone at home in your own words."
+}

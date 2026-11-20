@@ -1,0 +1,41 @@
+{
+  "id": "reading-lost-library-book-q1",
+  "scheduledDate": "2028-10-24",
+  "brand": "kids",
+  "passage": "Priya loved the library book about deep-sea fish, but now it was due back — and she could not find it anywhere. She looked under her bed. She looked behind the sofa cushions. She even looked in the fridge, just in case. The book was due today, and Priya did not want to pay a fine or, worse, keep other children waiting to read it. Then she remembered: last weekend she had taken the book to Grandma's house to show her the glowing fish pictures. Priya phoned Grandma, who laughed and said, 'It's right here on my table, keeping me company.' Dad drove Priya over, and the book was back at the library before closing time.",
+  "passageTitle": "The Lost Library Book",
+  "setId": "reading-set-lost-library-book",
+  "prompt": "Where was the library book all along?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Under Priya's bed"
+    },
+    {
+      "id": "b",
+      "text": "At Grandma's house"
+    },
+    {
+      "id": "c",
+      "text": "Behind the sofa cushions"
+    },
+    {
+      "id": "d",
+      "text": "In the fridge"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Priya remembered she had taken the book to Grandma's house, and Grandma said it was right there on her table.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Public library | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Public_library",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

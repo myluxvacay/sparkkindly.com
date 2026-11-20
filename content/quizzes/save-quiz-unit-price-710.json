@@ -1,0 +1,38 @@
+{
+  "id": "save-quiz-unit-price-710",
+  "scheduledDate": "2027-05-23",
+  "brand": "save",
+  "prompt": "Rice costs $2.00 for a 1 kg bag, or $4.50 for a 2.5 kg bag. Which bag is cheaper per kilogram?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The 1 kg bag"
+    },
+    {
+      "id": "b",
+      "text": "The 2.5 kg bag"
+    },
+    {
+      "id": "c",
+      "text": "They cost exactly the same per kilogram"
+    },
+    {
+      "id": "d",
+      "text": "It is impossible to tell"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The 1 kg bag costs $2.00 per kilogram. The 2.5 kg bag costs $4.50 ÷ 2.5 = $1.80 per kilogram — so the bigger bag is cheaper per kilogram this time. Checking the unit price is the only way to be sure, because bigger is not always better value.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Unit price | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Unit_price",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

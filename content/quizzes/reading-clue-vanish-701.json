@@ -1,0 +1,38 @@
+{
+  "id": "reading-clue-vanish-701",
+  "scheduledDate": "2028-11-08",
+  "brand": "kids",
+  "prompt": "Read the sentence: \"The magician waved her wand, and the coin seemed to vanish — one moment it was in her hand, and the next it was gone.\" What does the word 'vanish' most likely mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Appear slowly"
+    },
+    {
+      "id": "b",
+      "text": "Disappear suddenly"
+    },
+    {
+      "id": "c",
+      "text": "Change colour"
+    },
+    {
+      "id": "d",
+      "text": "Make a sound"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The clues in the sentence point to the meaning: 'vanish' means disappear suddenly. Reading the words around a new word helps you work out what it means.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "vanish | Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/vanish",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "reading-bees-tell-the-way-q1",
+  "scheduledDate": "2027-04-27",
+  "brand": "kids",
+  "passage": "When a honey bee finds a patch of flowers full of sweet nectar, she does not keep the secret to herself. She flies back to the hive and tells the other bees where the flowers are — by dancing! On the wall of the hive, she wiggles her body and walks in a shape like a figure eight. This is called the waggle dance. The way she wiggles shows the other bees which direction to fly, and how long the dance lasts tells them how far away the flowers are. Soon, dozens of bees fly straight to the flowers she found.",
+  "passageTitle": "How Bees Tell the Way",
+  "setId": "reading-set-bees-tell-the-way",
+  "prompt": "What does a bee do when she returns to the hive after finding flowers?",
+  "options": [
+    {
+      "id": "a",
+      "text": "She makes honey at once"
+    },
+    {
+      "id": "b",
+      "text": "She does a waggle dance"
+    },
+    {
+      "id": "c",
+      "text": "She falls asleep"
+    },
+    {
+      "id": "d",
+      "text": "She builds a new hive"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The passage says the bee flies back to the hive and dances — a waggle dance — to tell the other bees where the flowers are.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Waggle dance | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Waggle_dance",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

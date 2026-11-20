@@ -1,0 +1,66 @@
+{
+  "id": "together-draft-2026-11-20-02",
+  "slug": "a-compliment-circle",
+  "brand": "together",
+  "contentType": "activity",
+  "title": "A compliment circle: take turns saying the true thing",
+  "description": "Sit in a circle, and one by one tell each person something specific you have noticed and never said. Ten minutes that change how a group feels about itself.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "hero": {
+    "src": "/images/kindness.webp",
+    "alt": "Friends stacking their hands together",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "kindness",
+    "groups",
+    "family"
+  ],
+  "sources": [],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 20 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Set it up so it stays safe",
+      "paragraphs": [
+        "Gather three to eight people — family at the table, friends, a team — and explain the one rule before anyone speaks: compliments must be specific and true. Not 'you're great', but 'you always notice when someone has gone quiet, and you check on them.' Specific is believable; general is just noise.",
+        "The person receiving may only say thank you. No deflecting ('oh, it was nothing'), no returning the compliment instantly. Receiving gracefully is half the exercise, and for many people the harder half."
+      ]
+    },
+    {
+      "heading": "Run the circle",
+      "paragraphs": [
+        "Go around the circle: everyone speaks to the person on their left, or draw names from a bowl so the order feels fair. The host goes first and sets the depth — a brave, honest first compliment gives everyone else permission.",
+        "Keep it to one compliment each per round, and let a comfortable silence do its work. If someone tears up, that is the activity working, not an emergency."
+      ]
+    },
+    {
+      "heading": "Close it well",
+      "paragraphs": [
+        "End after one or two full rounds, while it is still warm. If the group wants a keepsake, each person writes the compliment they received on a card to keep — words said once in a circle have a way of being reread on hard days.",
+        "Works beautifully at birthdays, leaving dos, and the last night of a holiday. Use it sparingly: a compliment circle every week would inflate the currency."
+      ]
+    }
+  ],
+  "takeaway": "Specific and true, one at a time, received with a plain thank-you — a circle of compliments takes ten minutes and lasts much longer.",
+  "fiction": false,
+  "materials": [
+    "A group of 3–8 people seated in a circle",
+    "Optional: a bowl and name slips for the order",
+    "Optional: blank cards and pens for keepsakes"
+  ],
+  "supervision": "The host is responsible for the safety rule: compliments only, nothing teasing disguised as praise, and anyone may pass and just listen.",
+  "safetyNotes": [
+    "Never force a reluctant participant to speak or receive in front of the group — offer them the listener role or a written card instead.",
+    "Keep compliments about character, effort and kindness, not appearance, especially with children and teenagers in the circle."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

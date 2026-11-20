@@ -1,0 +1,38 @@
+{
+  "id": "reading-clue-ancient-701",
+  "scheduledDate": "2028-10-31",
+  "brand": "kids",
+  "prompt": "Read the sentence: \"The castle is ancient. People built it more than a thousand years ago, long before cars or phones existed.\" What does the word 'ancient' most likely mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Brand new"
+    },
+    {
+      "id": "b",
+      "text": "Very, very old"
+    },
+    {
+      "id": "c",
+      "text": "Made of stone"
+    },
+    {
+      "id": "d",
+      "text": "Far away"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The clues in the sentence point to the meaning: 'ancient' means very, very old. Reading the words around a new word helps you work out what it means.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "ancient | Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/ancient",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

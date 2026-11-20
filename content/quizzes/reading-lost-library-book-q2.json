@@ -1,0 +1,41 @@
+{
+  "id": "reading-lost-library-book-q2",
+  "scheduledDate": "2028-10-25",
+  "brand": "kids",
+  "passage": "Priya loved the library book about deep-sea fish, but now it was due back — and she could not find it anywhere. She looked under her bed. She looked behind the sofa cushions. She even looked in the fridge, just in case. The book was due today, and Priya did not want to pay a fine or, worse, keep other children waiting to read it. Then she remembered: last weekend she had taken the book to Grandma's house to show her the glowing fish pictures. Priya phoned Grandma, who laughed and said, 'It's right here on my table, keeping me company.' Dad drove Priya over, and the book was back at the library before closing time.",
+  "passageTitle": "The Lost Library Book",
+  "setId": "reading-set-lost-library-book",
+  "prompt": "Why did Priya keep searching so hard for the book?",
+  "options": [
+    {
+      "id": "a",
+      "text": "She wanted to read it again herself"
+    },
+    {
+      "id": "b",
+      "text": "It was due back and she didn't want a fine or to keep others waiting"
+    },
+    {
+      "id": "c",
+      "text": "Her teacher had asked for it"
+    },
+    {
+      "id": "d",
+      "text": "She needed it for a school project that day"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The passage says the book was due today and Priya did not want to pay a fine or keep other children waiting to read it.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Public library | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Public_library",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}

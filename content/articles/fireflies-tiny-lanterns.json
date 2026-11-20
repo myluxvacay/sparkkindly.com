@@ -1,0 +1,87 @@
+{
+  "id": "reading-article-fireflies",
+  "slug": "fireflies-tiny-lanterns",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Fireflies: Tiny Lanterns of the Night",
+  "description": "How do fireflies glow, and why do they flash? A short reading about nature's living lanterns, with a glossary and questions to think about.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). Read together or independently; the glossary at the end explains harder words.",
+  "hero": {
+    "src": "/images/fireflies.webp",
+    "alt": "Fireflies glowing over a meadow at dusk",
+    "width": 1600,
+    "height": 1067,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "animals",
+    "nature",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Firefly | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Firefly",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's grades 3–5 reading strand; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review.",
+  "body": [
+    {
+      "heading": "Lights that fly",
+      "paragraphs": [
+        "On a warm summer evening, just as the sky turns purple, tiny lights begin to blink over the grass. On, off. On, off. They are fireflies — small beetles that can make their own light! A firefly's body has a special part near its tail that mixes chemicals together to make a glow. It is a cold light, not hot like a lamp or a candle, so the firefly never burns itself.",
+        "Each kind of firefly flashes in its own pattern, like a secret code made of light."
+      ]
+    },
+    {
+      "heading": "Stop and think",
+      "paragraphs": [
+        "Before you read on, think: why would a tiny beetle want to flash a light that other animals can see? Think of one reason — then read on and see if you were right."
+      ]
+    },
+    {
+      "heading": "Talking with light",
+      "paragraphs": [
+        "Fireflies flash to talk to each other. A male firefly flies above the grass, blinking his pattern. A female firefly waits below, and if she likes his pattern, she blinks back. That is how they find each other in the dark. But the flashes can also be a warning sign to birds and bats: 'I taste terrible — don't eat me!'",
+        "Sadly, fireflies are becoming harder to find in some places, because bright street lights confuse their signals and their grassy homes are being built over. Leaving a patch of long grass in a garden, and turning off outdoor lights, helps these tiny lanterns keep shining."
+      ]
+    },
+    {
+      "heading": "Words to know",
+      "paragraphs": [
+        "Glow — a soft, steady light, like the light a firefly makes.",
+        "Dusk — the time just after sunset, when the sky is still a little light but turning dark.",
+        "Signal — a sign or message sent to someone, like a flash that means 'I am here.'",
+        "Pattern — a design or order that repeats, like the firefly's blinking code."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. The firefly's flashes are both a message and a warning. What two different things do the flashes say?",
+        "2. If you wanted to help fireflies near your home, what could you do — and why would it help?"
+      ]
+    }
+  ],
+  "takeaway": "Fireflies make their own cold light and flash in patterns to talk to each other — and we can help them by keeping dark, grassy places for them to live.",
+  "fiction": false,
+  "materials": [
+    "Just you and this story — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell the story or three facts from it to someone at home in your own words."
+}

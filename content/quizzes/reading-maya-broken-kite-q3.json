@@ -1,0 +1,41 @@
+{
+  "id": "reading-maya-broken-kite-q3",
+  "scheduledDate": "2027-05-10",
+  "brand": "kids",
+  "passage": "Maya loved the spring kite festival more than any other day of the year. This year she had built her own kite, with red and yellow paper and a tail of blue ribbons. But on the morning of the festival, disaster struck — the kite's wooden stick snapped in two! Maya wanted to cry. Instead, she took a deep breath and looked around the garden shed. She found a straight twig, some strong string, and sticky tape. Twenty minutes later, the kite was mended. It was not perfect, but when Maya ran across the meadow, her kite climbed into the sky and soared above all the others.",
+  "passageTitle": "Maya and the Broken Kite",
+  "setId": "reading-set-maya-broken-kite",
+  "prompt": "The passage says Maya's kite 'soared' above the others. What does 'soared' mean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Fell slowly to the ground"
+    },
+    {
+      "id": "b",
+      "text": "Flew high up into the air"
+    },
+    {
+      "id": "c",
+      "text": "Spun round and round"
+    },
+    {
+      "id": "d",
+      "text": "Got stuck in a tree"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Soared means flew high. The passage says the kite climbed into the sky and soared above all the others.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Kite | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kite",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Staging proof pack for the grades 3-5 reading strand (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy against the passage text, Kids safety fields. Staged for owner review; not promoted to production."
+}
