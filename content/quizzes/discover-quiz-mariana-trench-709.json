@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-mariana-trench-709",
+  "scheduledDate": "2027-05-20",
+  "brand": "discover",
+  "prompt": "What is the Mariana Trench, the deepest known place in Earth's oceans?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A deep crack in the Pacific Ocean floor"
+    },
+    {
+      "id": "b",
+      "text": "A tall mountain under the Atlantic Ocean"
+    },
+    {
+      "id": "c",
+      "text": "A river that flows under the sea"
+    },
+    {
+      "id": "d",
+      "text": "A frozen lake in Antarctica"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The Mariana Trench in the western Pacific is the deepest oceanic trench on Earth, reaching about 10,900 metres down — deep enough that Mount Everest would fit inside it with room to spare.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Mariana Trench | Britannica",
+      "url": "https://www.britannica.com/place/Mariana-Trench",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "kids-quiz-bear-hibernation-710",
+  "scheduledDate": "2027-05-24",
+  "brand": "kids",
+  "prompt": "Which animal takes a very long, deep sleep through most of the cold winter? This sleep is called hibernation.",
+  "options": [
+    {
+      "id": "a",
+      "text": "A bear"
+    },
+    {
+      "id": "b",
+      "text": "A duck"
+    },
+    {
+      "id": "c",
+      "text": "A frog on a lily pad in summer"
+    },
+    {
+      "id": "d",
+      "text": "A butterfly"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A bear hibernates. In autumn it eats lots of food, then it sleeps in a cosy den through the winter, living on the fat stored in its body. It wakes up in spring.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Hibernation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hibernation",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

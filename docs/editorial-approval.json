@@ -33438,6 +33438,124 @@
         "factualClaimsReviewedAt": "2026-11-19",
         "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
       }
+    },
+    {
+      "kind": "article",
+      "id": "together-draft-2026-11-20-01",
+      "priorHash": "4c6a8e0894ecbddf70ba74ae8988ce7fa5cd8f20a250972394fcd3fdf7e91b0c",
+      "approvedHash": "c57d01109ca88a4ae6964b4e59a36a63c14468340297f53123eb188331d281fc",
+      "fields": {
+        "publishedAt": "2026-11-20",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval.",
+        "factualClaimsReviewedAt": "2026-11-20"
+      }
+    },
+    {
+      "kind": "article",
+      "id": "together-draft-2026-11-20-02",
+      "priorHash": "1569412408a9623a21b184d7cf1f7d11dc1bd318230bd08093cf849e4ef47be1",
+      "approvedHash": "20f1fed745f820359193d58b92d37e177d77257103fc163d7d5c128dc3465ef6",
+      "fields": {
+        "publishedAt": "2026-11-20",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval.",
+        "factualClaimsReviewedAt": "2026-11-20"
+      }
+    },
+    {
+      "kind": "article",
+      "id": "together-draft-2026-11-20-03",
+      "priorHash": "eb66938852d1c769f4b64137fc4f3c1b9b65f344d1510b245c6229c03dc42380",
+      "approvedHash": "2a7919fd73e2f071c681cf285edda502f0b201dec316f9d05263ed7ef7afdfd5",
+      "fields": {
+        "publishedAt": "2026-11-20",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval.",
+        "factualClaimsReviewedAt": "2026-11-20"
+      }
+    },
+    {
+      "kind": "article",
+      "id": "grow-draft-2026-11-20-01",
+      "priorHash": "711f9faa24515b831e82aaed924e1dd1408a9e4b752a66dd90a233da745a383d",
+      "approvedHash": "ae4a8ff28726247d45c1e9d39b44f1c23893cfafdc3d79b58fdbff97362e548b",
+      "fields": {
+        "publishedAt": "2026-11-20",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval.",
+        "factualClaimsReviewedAt": "2026-11-20"
+      }
+    },
+    {
+      "kind": "article",
+      "id": "grow-draft-2026-11-20-02",
+      "priorHash": "62ebc1ec56ad40595329f16c1352dc93fb57e72756e42f6adea4a570bfae2b6f",
+      "approvedHash": "7f611c7505c13b75d9fa71b7cf8c65a3ce17f61fb8149bf04b990b9cf35a4a42",
+      "fields": {
+        "publishedAt": "2026-11-20",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval.",
+        "factualClaimsReviewedAt": "2026-11-20"
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "play-quiz-volleyball-players-709",
+      "priorHash": "0234b9c09c87187a63d5814ee19e7ad2be56ff11744ade89b8cff8cf32dc3cc9",
+      "approvedHash": "3370757a7a2b76be3adef1c3842f2bb80b66bcdaef1e33399451332b1d7140d3",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "discover-quiz-mariana-trench-709",
+      "priorHash": "b32d974b30080398edb3f03545c5aa4b8bf5b569f24f0fbbaa30bb364c5743f5",
+      "approvedHash": "4a816d4d62d46e6714ba9845efb65508011be5609bbbeaa4350d2877fc1c87a9",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "save-quiz-unit-price-710",
+      "priorHash": "effe14922af93c87aa9af8031263e10602b1c61e39b5e340d04cfef89a0b7d89",
+      "approvedHash": "09c5fed232b4053e9cef4f20a3f2c6e4c62e6854c4d0d7423a4a48aa82e57bcb",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "kids-quiz-bear-hibernation-710",
+      "priorHash": "6f4c0678e9a676b649f0d597f9aec250875babd696917502706e28c195da8c9f",
+      "approvedHash": "160ad5fc24777d5998f32fd327ed4c51edeefc0e0836a7780a5b6311a799b5aa",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-20",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
     }
   ]
 }
