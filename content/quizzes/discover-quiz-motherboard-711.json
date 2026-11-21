@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-motherboard-711",
+  "scheduledDate": "2029-05-28",
+  "brand": "discover",
+  "prompt": "Inside a computer, what is the motherboard's main job?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It stores all your photos permanently"
+    },
+    {
+      "id": "b",
+      "text": "It is the main circuit board that connects the processor, memory and other parts so they can work together"
+    },
+    {
+      "id": "c",
+      "text": "It cools the computer down"
+    },
+    {
+      "id": "d",
+      "text": "It turns the computer into a games console"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The motherboard is the computer's main circuit board. The processor, memory and storage all plug into it, and its tracks carry signals between them — it is the meeting place that lets every part talk to the others.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Motherboard | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Motherboard",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

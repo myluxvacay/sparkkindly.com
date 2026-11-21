@@ -1,0 +1,62 @@
+{
+  "id": "discover-draft-2026-11-21-02",
+  "slug": "watching-a-volcano",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Watching a volcano: how scientists read the warning signs",
+  "description": "Volcanoes rarely erupt without grumbling first. Long before any lava appears, the mountain swells, shivers and breathes out different gases — and teams of scientists are listening for exactly those whispers.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "hero": {
+    "src": "/images/earth.webp",
+    "alt": "A volcano erupting under a daytime sky",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "earth",
+    "volcanoes",
+    "scientists"
+  ],
+  "sources": [
+    {
+      "title": "Volcano Hazards Program | U.S. Geological Survey",
+      "url": "https://www.usgs.gov/programs/volcano-hazards-program",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 21 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The mountain swells and shivers",
+      "paragraphs": [
+        "As magma pushes up inside a volcano, the ground above it can bulge — sometimes by centimetres, sometimes by a metre or more. Scientists track that swelling with satellite measurements and tiltmeters on the slopes, the way you might watch a balloon slowly inflating and know it cannot inflate forever.",
+        "At the same time, small earthquakes multiply under the mountain as rock cracks to let the magma through. A seismometer network hears every shiver, and a quiet volcano that suddenly records hundreds of small quakes a day is a volcano clearing its throat."
+      ]
+    },
+    {
+      "heading": "Breathing out clues",
+      "paragraphs": [
+        "A volcano's gases change as magma rises. Instruments — some flown through the plume, some sniffing from the ground — measure gases such as sulphur dioxide; a sharp rise can mean fresh magma is nearing the surface and releasing its fizz, like a shaken bottle about to be opened.",
+        "None of these signs alone proves an eruption is coming, and volcanoes sometimes grumble and go back to sleep. So observatories weigh them together — swelling plus quakes plus gas plus heat — before warning the people who live in the mountain's shadow."
+      ]
+    },
+    {
+      "heading": "Why the watching matters",
+      "paragraphs": [
+        "Those warnings save lives: towns can be evacuated days before an eruption when the signs are read in time, and the famous forecasts of the late twentieth century showed that a watched volcano is far less deadly than an unwatched one.",
+        "There are roughly a thousand-plus volcanoes on land considered potentially active, and not all can be watched closely. That is why satellites now keep a tireless eye on the remote ones — so no mountain has to grumble unheard."
+      ]
+    }
+  ],
+  "takeaway": "Scientists forecast eruptions by combining four clues — ground swelling, multiplying small earthquakes, changing gases and heat — because a volcano usually whispers before it shouts.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

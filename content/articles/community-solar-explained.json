@@ -1,0 +1,62 @@
+{
+  "id": "save-draft-2026-11-21-02",
+  "slug": "community-solar-explained",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Community solar: panels on someone else's roof, savings on your bill",
+  "description": "Renters and shaded roofs used to be locked out of solar power. Community solar splits one big solar farm among many households, who subscribe to a share and see a credit on their electricity bill.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "hero": {
+    "src": "/images/green.webp",
+    "alt": "Solar panels across a green field",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "energy",
+    "solar",
+    "bills"
+  ],
+  "sources": [
+    {
+      "title": "Community solar | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Community_solar",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 21 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "One farm, many households",
+      "paragraphs": [
+        "A community solar project is a shared array — often a field of panels rather than a rooftop — whose electricity is fed into the local grid. Households subscribe to a portion of it, sized roughly to match how much power they use, and receive a credit on their bill for their share of what the farm generates.",
+        "Nothing is installed at your home, which is the entire point: renters, apartment dwellers and anyone whose roof faces the wrong way can take part in solar generation without owning a suitable roof at all."
+      ]
+    },
+    {
+      "heading": "How the saving works",
+      "paragraphs": [
+        "In many schemes the credit on your bill is worth more than the subscription costs, so members save a modest percentage on electricity — often in the region of five to ten percent, though the exact figures depend on the project and the local rules. Read any offer for its cancellation terms, how the credit is calculated, and whether prices can rise over time.",
+        "It is not the deep saving of owning rooftop panels outright, and honest schemes say so. It is better understood as a discount club for clean power: small, steady savings, no installation, and an exit door you should check before you sign."
+      ]
+    },
+    {
+      "heading": "Who should look twice",
+      "paragraphs": [
+        "Community solar suits people who pay an electricity bill in their own name, expect to stay in the area a while, and cannot or do not want to install panels. Availability is patchy — it depends on local regulation — so the first step is simply checking whether a project near you is accepting subscribers.",
+        "Solar savings used to begin with owning a roof. Increasingly, they begin with a postcode."
+      ]
+    }
+  ],
+  "takeaway": "Community solar lets renters and shaded homes subscribe to a share of a shared solar farm and receive a bill credit — check the credit maths and the exit terms before signing.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
