@@ -1,4 +1,4 @@
-import { cache } from 'react';
+import { cache, type ReactNode } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -6,7 +6,9 @@ import ArticleBody from '@/components/item/ArticleBody';
 import Breadcrumb from '@/components/Breadcrumb';
 import ItemCard from '@/components/item/ItemCard';
 import MoneyDisclaimer, { showsMoneyDisclaimer } from '@/components/item/MoneyDisclaimer';
+import KeepReading from '@/components/item/KeepReading';
 import PlayPanel from '@/components/item/PlayPanel';
+import ReadNextEnhancer from '@/components/item/ReadNextEnhancer';
 import Picture from '@/components/Picture';
 import ReportLink from '@/components/item/ReportLink';
 import ShareButtons from '@/components/item/ShareButtons';
@@ -15,11 +17,13 @@ import TopicLinks from '@/components/item/TopicLinks';
 import VideoBlock from '@/components/item/VideoBlock';
 import { site } from '@/lib/config';
 import { getDb } from '@/lib/db';
+import type { PublicItem } from '@/lib/items/repo';
 import { readArticle, readImage } from '@/lib/public/body';
 import { formatDay } from '@/lib/public/dates';
 import { articleLd, breadcrumbLd } from '@/lib/public/jsonld';
 import type { SearchParams } from '@/lib/public/play-params';
 import { getPublicItem, listPublic, topicsNamed } from '@/lib/public/reads';
+import { buildReadNextModel } from '@/lib/read/read-next';
 import { isChildScope } from '@/lib/public/share';
 import { accountSessionToken, currentScope } from '@/lib/accounts/scope-next';
 import CommentSection from '@/components/comments/CommentSection';
@@ -80,6 +84,54 @@ export default async function ItemPage({ params, searchParams }: Props) {
   const topics = await topicsNamed(db, item.topics);
   const related = (await listPublic(db, await currentScope(), { world: item.world, limit: 4, offset: 0 })).filter((i) => i.id !== item.id).slice(0, 3);
 
+  // "Keep reading" (owner request, 20 Nov 2026): the reading counterpart of the keep-playing flow.
+  // At the end of an article the reader is offered the next similar article — same series, track,
+  // topics and reading band (lib/read/read-next) — instead of being dropped at the page foot. The
+  // pool is the same scope-filtered read the archive uses, in this article's world; a world holding
+  // nothing else falls back to the whole visible library so the panel never dead-ends. The device
+  // read list follows the quiz flow's child-safety carve-out: it is never used for Kids-audience
+  // articles (trackRead off), where the panel follows the server's candidates alone.
+  let keepReading: ReactNode = null;
+  if (item.kind === 'article') {
+    const scope = await currentScope();
+    const pool: PublicItem[] = [];
+    for (let page = 0; page < 6; page++) {
+      const rows = await listPublic(db, scope, { world: item.world, kind: 'article', limit: 50, offset: page * 50 });
+      pool.push(...rows);
+      if (rows.length < 50) break;
+    }
+    const candidates = pool.some((i) => i.id !== item.id)
+      ? pool
+      : await listPublic(db, scope, { kind: 'article', limit: 50, offset: 0 });
+    const collection =
+      item.topics.includes('poster-series') || item.topics.includes('reading')
+        ? { href: '/topics/reading/', label: 'Browse the whole reading collection' }
+        : topics.length > 0
+          ? { href: `/topics/${topics[0].slug}/`, label: `More in ${topics[0].name}` }
+          : { href: `/${item.world}/`, label: `More in ${w?.name ?? item.world}` };
+    const model = buildReadNextModel(
+      { id: item.id, topics: item.topics },
+      candidates.map((i) => ({
+        id: i.id,
+        world: i.world,
+        slug: i.slug,
+        title: i.title,
+        summary: i.summary,
+        image: readImage(i.image),
+        topics: i.topics,
+        publishedAt: i.publishedAt.toISOString(),
+      })),
+      { trackRead: item.audience !== 'kids', collection },
+    );
+    if (model.primary) {
+      keepReading = (
+        <ReadNextEnhancer>
+          <KeepReading model={model} />
+        </ReadNextEnhancer>
+      );
+    }
+  }
+
   const isArticle = item.kind === 'article';
   // An owner-attached YouTube video: never on Kids content, whatever the database holds.
   const videoId = isArticle && item.audience !== 'kids' && item.world !== 'kids' ? await getVideoId(db, item.id) : null;
@@ -134,6 +186,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
         </div>
       )}
       {isArticle ? <ArticleBody article={article} /> : <div className="container section quiz-page quiz-item"><PlayPanel item={item} searchParams={await searchParams} /></div>}
+      {keepReading && <div className="container">{keepReading}</div>}
       {sponsor && (
         <div className="container">
           <SponsorCard line={sponsor} />
@@ -148,7 +201,9 @@ export default async function ItemPage({ params, searchParams }: Props) {
         <ReportLink world={item.world} slug={item.slug} />
       </div>
       {comments && <CommentSection data={comments} code={typeof commentCode === 'string' ? commentCode : undefined} />}
-      {related.length > 0 && (
+      {/* Articles with a keep-reading panel end there instead: the panel is the article's discovery
+          flow (next similar article + its collection), so the generic shelf below would only repeat it. */}
+      {related.length > 0 && !keepReading && (
         <section className="container section">
           <p className="eyebrow">FOLLOW YOUR CURIOSITY</p>
           <h2>One more little discovery.</h2>

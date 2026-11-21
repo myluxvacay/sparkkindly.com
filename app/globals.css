@@ -435,6 +435,42 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .quiz-item .quiz-panel{margin-top:12px}
 .kp-flick{touch-action:none}
 
+/* Keep reading (20 Nov 2026): the next-article choices at the end of an article — the keep-playing
+   block's reading counterpart, on the article page's light surface instead of the plum quiz panel.
+   The same gold/dark button pairing (#3a2444 on #f7c948, 8.8:1); panel text is dark ink on the pale
+   gold ground, and the small print (#5f5468) stays above 6.5:1 on it. */
+.keep-reading{margin:28px 0;padding:20px;background:#fff8ec;border:1px solid #ecd9a8;border-radius:12px}
+.kr-head{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+.kr-spark-btn{background:none;border:0;padding:0;cursor:pointer;line-height:0;border-radius:8px}
+.kr-title{margin:0;font-size:16px;color:#302438}
+.kr-card{display:flex;gap:16px;align-items:center;background:#fffdf9;border:1px solid #ecd9a8;border-radius:10px;padding:12px 16px;text-decoration:none;color:#302438;margin-bottom:12px}
+.kr-card:hover{border-color:#f7c948;background:#fff6dd}
+.kr-card-img{width:104px;height:78px;object-fit:cover;border-radius:6px;flex:none}
+.kr-card-body{display:flex;flex-direction:column;gap:2px}
+.kr-card-title{font-weight:700;font-size:18px}
+.kr-card-sub{font-size:13px;color:#5f5468}
+.kr-card-done{cursor:default}
+.kr-btn{display:flex;flex-direction:column;gap:2px;justify-content:center;background:#f7c948;border:1px solid #f7c948;border-radius:8px;color:#3a2444;text-decoration:none;min-height:64px;padding:12px 16px}
+.kr-btn:hover{background:#ffe087;border-color:#ffe087}
+.kr-btn-sub{font-size:13px;color:#3a2444}
+.kr-btn-off{background:#f1e7cf;border-color:#f1e7cf;color:#5f5468;cursor:default}
+.kr-btn-off:hover{background:#f1e7cf;border-color:#f1e7cf}
+.kr-btn-off .kr-btn-sub{color:#5f5468}
+.kr-btn-done{background:#fffdf9;border-color:#ecd9a8;color:#302438;cursor:default}
+.kr-btn-done:hover{background:#fffdf9;border-color:#ecd9a8}
+.kr-btn-done .kr-btn-sub{color:#5f5468}
+.kr-btn-next{box-shadow:0 0 0 3px #f7c948,0 8px 20px rgba(58,36,68,.18)}
+.kr-done{background:#fffdf9;border:1px solid #ecd9a8;border-radius:8px;padding:18px 20px;color:#302438}
+.kr-done p{margin:0 0 8px;font-size:14px}
+.kr-done p:last-child{margin-bottom:0}
+.kr-done strong{font-size:18px}
+.kr-hint{margin:12px 0 0;font-size:13px;color:#5f5468}
+.kr-collection{margin:14px 0 0;font-size:15px}
+.kr-fresh{margin:14px 0 0;font-size:13px;color:#5f5468}
+.kr-fresh .text-button{min-height:44px;padding:6px 4px}
+.kr-flick{touch-action:none}
+@media(max-width:580px){.kr-card{flex-direction:column;align-items:flex-start}.kr-card-img{width:100%;height:auto}}
+
 /* Kept quiz context + explanation panel in the result (user feedback, 17 Nov 2026): after an answer
    the question and the player's own choice stay on screen inside the result card, and the answer and
    its explanation sit in their own panel, so the verdict reads as part of the quiz rather than a
