@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-switzerland-q1",
+  "scheduledDate": "2030-08-22",
+  "brand": "kids",
+  "setId": "country-set-meet-switzerland",
+  "prompt": "What is the capital of Switzerland?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bern"
+    },
+    {
+      "id": "b",
+      "text": "Bratislava"
+    },
+    {
+      "id": "c",
+      "text": "Ankara"
+    },
+    {
+      "id": "d",
+      "text": "Dodoma"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Bern is the capital of Switzerland. Bern is called the federal city — Switzerland has no official capital in its rules, but Bern is where the government and parliament sit.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Switzerland | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Switzerland",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Switzerland — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Switzerland",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-switzerland.webp",
+    "alt": "Spark and Mango visiting the Matterhorn pyramid above Zermatt and alpine meadows",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

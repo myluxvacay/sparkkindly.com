@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-croatia-q1",
+  "scheduledDate": "2029-12-19",
+  "brand": "kids",
+  "setId": "country-set-meet-croatia",
+  "prompt": "In which part of the world is Croatia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Southern Europe"
+    },
+    {
+      "id": "b",
+      "text": "Western Europe"
+    },
+    {
+      "id": "c",
+      "text": "Caribbean"
+    },
+    {
+      "id": "d",
+      "text": "Eastern Asia"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Croatia is in Southern Europe, part of Europe.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Croatia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Croatia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Croatia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Croatia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-croatia.webp",
+    "alt": "Spark and Mango visiting Dubrovnik's old town walls and terracotta roofs beside the Adriatic Sea",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

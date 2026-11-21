@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-turkiye-q2",
+  "scheduledDate": "2030-09-12",
+  "brand": "kids",
+  "setId": "country-set-meet-turkiye",
+  "prompt": "Which of these is a famous place to visit in Türkiye?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Champagne Reef"
+    },
+    {
+      "id": "b",
+      "text": "Sidi Bou Said"
+    },
+    {
+      "id": "c",
+      "text": "the Underwater Sculpture Park"
+    },
+    {
+      "id": "d",
+      "text": "Istanbul — Hagia Sophia and the Blue Mosque"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Istanbul — Hagia Sophia and the Blue Mosque is one of the two places we'd love to visit in Türkiye. Istanbul straddles two continents.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Türkiye | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/T%C3%BCrkiye",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Türkiye — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Turkey",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-turkiye.webp",
+    "alt": "Spark and Mango visiting the domes and minarets of the Blue Mosque and Hagia Sophia in Istanbul",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-namibia-q1",
+  "scheduledDate": "2030-05-20",
+  "brand": "kids",
+  "setId": "country-set-meet-namibia",
+  "prompt": "In which part of the world is Namibia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Western Africa"
+    },
+    {
+      "id": "b",
+      "text": "Middle Africa"
+    },
+    {
+      "id": "c",
+      "text": "Western Asia"
+    },
+    {
+      "id": "d",
+      "text": "Southern Africa"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Namibia is in Southern Africa, part of Africa.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Namibia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Namibia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Namibia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Namibia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-namibia.webp",
+    "alt": "Spark and Mango visiting giant red-orange dunes at Sossusvlei with a white clay pan and dead camelthorn trees",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

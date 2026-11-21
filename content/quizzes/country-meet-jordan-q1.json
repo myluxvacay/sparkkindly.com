@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-jordan-q1",
+  "scheduledDate": "2030-03-13",
+  "brand": "kids",
+  "setId": "country-set-meet-jordan",
+  "prompt": "What is the money of Jordan called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Mozambican metical"
+    },
+    {
+      "id": "b",
+      "text": "Lebanese pound"
+    },
+    {
+      "id": "c",
+      "text": "Turkish lira"
+    },
+    {
+      "id": "d",
+      "text": "Jordanian dinar"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The money of Jordan is the Jordanian dinar (JOD).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Jordan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Jordan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Jordan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jordan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-jordan.webp",
+    "alt": "Spark and Mango visiting the Treasury at Petra glowing rose-red at the end of the Siq canyon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

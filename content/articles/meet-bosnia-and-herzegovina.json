@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-bosnia-and-herzegovina",
+  "slug": "meet-bosnia-and-herzegovina",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Bosnia and Herzegovina",
+  "description": "Travel to Bosnia and Herzegovina with Spark and Mango: a country in Southern Europe whose capital is Sarajevo, where people speak Bosnian and pay with the Bosnia and Herzegovina convertible mark — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-bosnia-and-herzegovina.webp",
+    "alt": "Spark and Mango visiting the arched Stari Most bridge over the emerald Neretva River in Mostar",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Bosnia and Herzegovina | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Bosnia-and-Herzegovina",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Bosnia and Herzegovina — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Bosnia and Herzegovina?",
+      "paragraphs": [
+        "Bosnia and Herzegovina is a country in Southern Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Bosnia and Herzegovina is Sarajevo."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Bosnia and Herzegovina speak Bosnian, Croatian and Serbian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Bosnia and Herzegovina is the Bosnia and Herzegovina convertible mark."
+      ]
+    },
+    {
+      "heading": "How big is Bosnia and Herzegovina?",
+      "paragraphs": [
+        "Bosnia and Herzegovina covers about 51,000 square kilometres of land and inland water. That makes it about half the size of Iceland."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Mostar's Old Bridge arcs over the emerald Neretva River — divers leap from it in summer, and the old town's bazaars and mosques crowd its banks.",
+        "Sarajevo's old bazaar mixes Ottoman lanes, coffee houses and churches, mosques and synagogues within a few streets — a crossroads of cultures in green hills."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Bosnia and Herzegovina on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Bosnia and Herzegovina in one breath: a country in Southern Europe, capital Sarajevo, where people speak Bosnian and pay with the Bosnia and Herzegovina convertible mark.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Bosnia and Herzegovina)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Independent reading for confident readers; the Think and talk questions about Bosnia and Herzegovina make a good family discussion afterwards.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Bosnia and Herzegovina — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Bosnia and Herzegovina on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

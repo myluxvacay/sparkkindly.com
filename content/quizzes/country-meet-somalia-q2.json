@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-somalia-q2",
+  "scheduledDate": "2030-08-05",
+  "brand": "kids",
+  "setId": "country-set-meet-somalia",
+  "prompt": "Roughly how big is Somalia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 638,000 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 287,100 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 76,560 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 1,658,800 square kilometres"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Somalia covers about 638,000 square kilometres of land and inland water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Somalia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Somalia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Somalia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Somalia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-somalia.webp",
+    "alt": "Spark and Mango visiting ancient red and white rock paintings of cattle in a stone shelter at Laas Geel",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

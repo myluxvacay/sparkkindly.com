@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-samoa-q1",
+  "scheduledDate": "2030-07-11",
+  "brand": "kids",
+  "setId": "country-set-meet-samoa",
+  "prompt": "What is the money of Samoa called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bahamian dollar"
+    },
+    {
+      "id": "b",
+      "text": "Guinean franc"
+    },
+    {
+      "id": "c",
+      "text": "Samoan tala"
+    },
+    {
+      "id": "d",
+      "text": "Indian rupee"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The money of Samoa is the Samoan tala (WST).",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Samoa | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Samoa",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Samoa — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Samoa",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-samoa.webp",
+    "alt": "Spark and Mango visiting the green swimming hole of To Sua Ocean Trench with its ladder",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

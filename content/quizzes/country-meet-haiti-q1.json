@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-haiti-q1",
+  "scheduledDate": "2030-02-15",
+  "brand": "kids",
+  "setId": "country-set-meet-haiti",
+  "prompt": "Which of these is a main language people speak in Haiti?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Comorian"
+    },
+    {
+      "id": "b",
+      "text": "German"
+    },
+    {
+      "id": "c",
+      "text": "Icelandic"
+    },
+    {
+      "id": "d",
+      "text": "Haitian Creole"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "People in Haiti speak Haitian Creole and French.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Haiti | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Haiti",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Haiti — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Haiti",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-haiti.webp",
+    "alt": "Spark and Mango visiting the great stone Citadelle Laferrière on its mountain ridge",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-cabo-verde-q2",
+  "scheduledDate": "2029-11-28",
+  "brand": "kids",
+  "setId": "country-set-meet-cabo-verde",
+  "prompt": "Which of these is a famous place to visit in Cabo Verde?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Santa Maria beach on Sal island"
+    },
+    {
+      "id": "b",
+      "text": "the Terracotta Army, Xi'an"
+    },
+    {
+      "id": "c",
+      "text": "Marrakech and the Jemaa el-Fnaa"
+    },
+    {
+      "id": "d",
+      "text": "Lake Sevan"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Santa Maria beach on Sal island is one of the two places we'd love to visit in Cabo Verde. Sal island's Santa Maria beach has soft white sand, turquoise water and colourful fishing boats — perfect for swimming, kite-surfing and watching turtles in season.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Cabo Verde | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Cabo-Verde",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Cabo Verde — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cabo_Verde",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-cabo-verde.webp",
+    "alt": "Spark and Mango visiting colourful fishing boats on the white sand and turquoise water of Santa Maria beach on Sal island",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

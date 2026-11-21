@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-ukraine",
+  "slug": "meet-ukraine",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Ukraine",
+  "description": "Travel to Ukraine with Spark and Mango: a country in Eastern Europe whose capital is Kyiv, where people speak Ukrainian and pay with the Ukrainian hryvnia — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-ukraine.webp",
+    "alt": "Spark and Mango visiting the golden domes of Saint Sophia Cathedral in Kyiv",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Ukraine | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Ukraine",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Ukraine — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ukraine",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Ukraine?",
+      "paragraphs": [
+        "Ukraine is a country in Eastern Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Ukraine is Kyiv."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Ukraine is Ukrainian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Ukraine is the Ukrainian hryvnia."
+      ]
+    },
+    {
+      "heading": "How big is Ukraine?",
+      "paragraphs": [
+        "Ukraine covers about 604,000 square kilometres of land and inland water. That makes it about twice the size of Italy."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Kyiv's Saint Sophia Cathedral has golden domes and 1,000-year-old mosaics; nearby, the giant Motherland Monument and the cave monastery of Pechersk Lavra crown the Dnipro hills.",
+        "Lviv is a city of coffee houses, cobbled squares and churches in the far west — its UNESCO old town feels like a walk through old Europe."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Ukraine on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Ukraine in one breath: a country in Eastern Europe, capital Kyiv, where people speak Ukrainian and pay with the Ukrainian hryvnia.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Ukraine)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Ukraine on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Ukraine — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Ukraine on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

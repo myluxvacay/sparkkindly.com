@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-peru-q1",
+  "scheduledDate": "2030-06-19",
+  "brand": "kids",
+  "setId": "country-set-meet-peru",
+  "prompt": "What is the capital of Peru?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bogotá"
+    },
+    {
+      "id": "b",
+      "text": "Tbilisi"
+    },
+    {
+      "id": "c",
+      "text": "Bangui"
+    },
+    {
+      "id": "d",
+      "text": "Lima"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Lima is the capital of Peru. It is the city where the country's government works.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Peru | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Peru",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Peru — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Peru",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-peru.webp",
+    "alt": "Spark and Mango visiting the stone terraces and peaks of Machu Picchu in the clouds",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

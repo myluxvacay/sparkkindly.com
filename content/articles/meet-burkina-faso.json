@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-burkina-faso",
+  "slug": "meet-burkina-faso",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Burkina Faso",
+  "description": "Travel to Burkina Faso with Spark and Mango: a country in Western Africa whose capital is Ouagadougou, where people speak French and pay with the West African CFA franc — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-burkina-faso.webp",
+    "alt": "Spark and Mango visiting the boldly painted mud-brick houses of Tiébélé with black, white and red patterns",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Burkina Faso | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Burkina-Faso",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Burkina Faso — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Burkina_Faso",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Burkina Faso?",
+      "paragraphs": [
+        "Burkina Faso is a country in Western Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Burkina Faso is Ouagadougou."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Burkina Faso speak French and Fula."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Burkina Faso is the West African CFA franc. The CFA franc is shared with neighbouring countries, so the same money works across the region."
+      ]
+    },
+    {
+      "heading": "How big is Burkina Faso?",
+      "paragraphs": [
+        "Burkina Faso covers about 273,000 square kilometres of land and inland water. That makes it about half the size of Kenya."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "In Tiébélé, women paint the mud-brick houses with bold patterns in black, white and red. Walking its lanes feels like strolling through an outdoor art gallery.",
+        "The Sindou Peaks are a ridge of skinny rock towers carved by wind and rain. Families can hike between the stone spires on guided paths near Banfora."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Burkina Faso on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Burkina Faso in one breath: a country in Western Africa, capital Ouagadougou, where people speak French and pay with the West African CFA franc.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Burkina Faso)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Burkina Faso.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the high-up places in this article, trails and viewpoints in Burkina Faso need sturdy shoes and a grown-up along."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Burkina Faso on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

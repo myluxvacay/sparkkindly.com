@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-barbados",
+  "slug": "meet-barbados",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Barbados",
+  "description": "Travel to Barbados with Spark and Mango: a country in the Caribbean whose capital is Bridgetown, where people speak English and pay with the Barbadian dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-barbados.webp",
+    "alt": "Spark and Mango visiting stalactites and an underground stream inside Harrison's Cave",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Barbados | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Barbados",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Barbados — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Barbados",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Barbados?",
+      "paragraphs": [
+        "Barbados is a country in the Caribbean, which is part of North America. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Barbados is Bridgetown."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Barbados is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Barbados is the Barbadian dollar."
+      ]
+    },
+    {
+      "heading": "How big is Barbados?",
+      "paragraphs": [
+        "Barbados covers about 430 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Ride an underground tram through Harrison's Cave, a crystal cavern of stalactites, waterfalls and pools in the island's limestone heart.",
+        "Barbados' calm platinum west coast is made for swimming with turtles, while historic Bridgetown and its Garrison tell the island's story."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Barbados on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Barbados in one breath: a country in the Caribbean, capital Bridgetown, where people speak English and pay with the Barbadian dollar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Barbados)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Barbados.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Barbados always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Barbados on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

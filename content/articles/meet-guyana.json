@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-guyana",
+  "slug": "meet-guyana",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Guyana",
+  "description": "Travel to Guyana with Spark and Mango: a country in South America whose capital is Georgetown, where people speak English and pay with the Guyanese dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-guyana.webp",
+    "alt": "Spark and Mango visiting Kaieteur Falls plunging into a rainforest gorge",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "south-america",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Guyana | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Guyana",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Guyana — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Guyana",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Guyana?",
+      "paragraphs": [
+        "Guyana is a country in South America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Guyana is Georgetown."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Guyana is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Guyana is the Guyanese dollar."
+      ]
+    },
+    {
+      "heading": "How big is Guyana?",
+      "paragraphs": [
+        "Guyana covers about 215,000 square kilometres of land and inland water. That makes it about half the size of Paraguay."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Kaieteur is one of the world's most powerful single-drop waterfalls — the Potaro River plunges 226 metres in pristine rainforest, home to tiny golden frogs.",
+        "Guyana's Rupununi is a land of giant anteaters, arapaima lakes and Amerindian villages, beside the Iwokrama rainforest reserve."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Guyana on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Guyana in one breath: a country in South America, capital Georgetown, where people speak English and pay with the Guyanese dollar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Guyana)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Guyana on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Guyana — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Guyana on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

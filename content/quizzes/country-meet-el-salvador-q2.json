@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-el-salvador-q2",
+  "scheduledDate": "2030-01-09",
+  "brand": "kids",
+  "setId": "country-set-meet-el-salvador",
+  "prompt": "Which of these is a famous place to visit in El Salvador?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Buenos Aires — La Boca and Recoleta"
+    },
+    {
+      "id": "b",
+      "text": "El Tunco and the surf coast"
+    },
+    {
+      "id": "c",
+      "text": "Sossusvlei's giant red dunes"
+    },
+    {
+      "id": "d",
+      "text": "Amsterdam's canals"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "El Tunco and the surf coast is one of the two places we'd love to visit in El Salvador. El Salvador's Pacific 'Surf City' coast centres on El Tunco, a laid-back beach town named for its pig-shaped rock, with waves for every level.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "El Salvador | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/El-Salvador",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "El Salvador — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/El_Salvador",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-el-salvador.webp",
+    "alt": "Spark and Mango visiting a colourful mural-covered street in a Ruta de las Flores mountain town",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-georgia-q1",
+  "scheduledDate": "2030-01-28",
+  "brand": "kids",
+  "setId": "country-set-meet-georgia",
+  "prompt": "In which part of the world is Georgia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Polynesia"
+    },
+    {
+      "id": "b",
+      "text": "Micronesia"
+    },
+    {
+      "id": "c",
+      "text": "Western Asia"
+    },
+    {
+      "id": "d",
+      "text": "Northern Africa"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Georgia is in Western Asia, part of Asia.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Georgia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Georgia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Georgia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Georgia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-georgia.webp",
+    "alt": "Spark and Mango visiting colourful balconied houses in Tbilisi's old town beneath Narikala Fortress",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-bahrain-q2",
+  "scheduledDate": "2029-10-21",
+  "brand": "kids",
+  "setId": "country-set-meet-bahrain",
+  "prompt": "Roughly how big is Bahrain?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 1,989 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 344 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 92 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 765 square kilometres"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Bahrain covers about 765 square kilometres of land and inland water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Bahrain | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Bahrain",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Bahrain — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bahrain",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-bahrain.webp",
+    "alt": "Spark and Mango visiting the stone walls of Bahrain Fort beside the sea at sunset",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-cameroon-q2",
+  "scheduledDate": "2029-11-24",
+  "brand": "kids",
+  "setId": "country-set-meet-cameroon",
+  "prompt": "Which of these is a famous place to visit in Cameroon?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Orheiul Vechi (Old Orhei)"
+    },
+    {
+      "id": "b",
+      "text": "Barbuda's pink-sand beaches and frigate bird sanctuary"
+    },
+    {
+      "id": "c",
+      "text": "Mount Cameroon"
+    },
+    {
+      "id": "d",
+      "text": "Belgrade Fortress and Kalemegdan"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Mount Cameroon is one of the two places we'd love to visit in Cameroon. Mount Cameroon is one of Africa's largest volcanoes, rising straight from the coast near Buea.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Cameroon | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Cameroon",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Cameroon — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cameroon",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-cameroon.webp",
+    "alt": "Spark and Mango visiting the great green cone of Mount Cameroon rising above the coast",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

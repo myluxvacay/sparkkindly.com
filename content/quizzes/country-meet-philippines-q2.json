@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-philippines-q2",
+  "scheduledDate": "2030-06-22",
+  "brand": "kids",
+  "setId": "country-set-meet-philippines",
+  "prompt": "Which of these is a famous place to visit in Philippines?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Stockholm — Gamla Stan and the Vasa Museum"
+    },
+    {
+      "id": "b",
+      "text": "Mount Mulanje"
+    },
+    {
+      "id": "c",
+      "text": "the Sani Pass"
+    },
+    {
+      "id": "d",
+      "text": "the Chocolate Hills of Bohol"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "the Chocolate Hills of Bohol is one of the two places we'd love to visit in Philippines. Bohol has over 1,200 round hills that turn chocolate-brown in the dry season — and the island's forests shelter tarsiers, tiny primates with enormous eyes.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Philippines | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Philippines",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Philippines — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Philippines",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-philippines.webp",
+    "alt": "Spark and Mango visiting limestone islands and turquoise lagoons at El Nido, Palawan",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

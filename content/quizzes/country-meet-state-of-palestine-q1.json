@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-state-of-palestine-q1",
+  "scheduledDate": "2030-10-21",
+  "brand": "kids",
+  "setId": "country-set-meet-state-of-palestine",
+  "prompt": "Which of these is a main language people speak in State of Palestine?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Kinyarwanda"
+    },
+    {
+      "id": "b",
+      "text": "Kurdish"
+    },
+    {
+      "id": "c",
+      "text": "Arabic"
+    },
+    {
+      "id": "d",
+      "text": "Divehi"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "People in State of Palestine speak Arabic.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "State of Palestine | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/State-of-Palestine",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "State of Palestine — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Palestine",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-state-of-palestine.webp",
+    "alt": "Spark and Mango visiting Manger Square and the Church of the Nativity in Bethlehem",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

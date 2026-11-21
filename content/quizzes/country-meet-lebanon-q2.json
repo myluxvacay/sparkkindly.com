@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-lebanon-q2",
+  "scheduledDate": "2030-04-03",
+  "brand": "kids",
+  "setId": "country-set-meet-lebanon",
+  "prompt": "Which of these is a famous place to visit in Lebanon?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Mount Mulanje"
+    },
+    {
+      "id": "b",
+      "text": "Byblos"
+    },
+    {
+      "id": "c",
+      "text": "Banff and Lake Louise, Alberta"
+    },
+    {
+      "id": "d",
+      "text": "Rila Monastery"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Byblos is one of the two places we'd love to visit in Lebanon. Byblos is one of the oldest cities in the world, lived in for around 7,000 years — a pretty harbour town of Crusader castles, souks and seafood restaurants.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Lebanon | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Lebanon",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Lebanon — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lebanon",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-lebanon.webp",
+    "alt": "Spark and Mango visiting the towering columns of the Temple of Jupiter at Baalbek",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

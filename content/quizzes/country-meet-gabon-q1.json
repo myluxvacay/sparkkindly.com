@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-gabon-q1",
+  "scheduledDate": "2030-01-24",
+  "brand": "kids",
+  "setId": "country-set-meet-gabon",
+  "prompt": "What is the money of Gabon called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hungarian forint"
+    },
+    {
+      "id": "b",
+      "text": "Panamanian balboa"
+    },
+    {
+      "id": "c",
+      "text": "Central African CFA franc"
+    },
+    {
+      "id": "d",
+      "text": "Kuwaiti dinar"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The money of Gabon is the Central African CFA franc (XAF).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Gabon | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Gabon",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Gabon — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gabon",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-gabon.webp",
+    "alt": "Spark and Mango visiting elephants walking on a wild beach where rainforest meets the ocean in Loango National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

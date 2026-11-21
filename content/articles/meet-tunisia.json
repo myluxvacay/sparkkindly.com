@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-tunisia",
+  "slug": "meet-tunisia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Tunisia",
+  "description": "Travel to Tunisia with Spark and Mango: a country in Northern Africa whose capital is Tunis, where people speak Arabic and pay with the Tunisian dinar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-tunisia.webp",
+    "alt": "Spark and Mango visiting the great oval Roman amphitheatre of El Jem",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Tunisia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Tunisia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Tunisia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tunisia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Tunisia?",
+      "paragraphs": [
+        "Tunisia is a country in Northern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Tunisia is Tunis."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Tunisia is Arabic."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Tunisia is the Tunisian dinar."
+      ]
+    },
+    {
+      "heading": "How big is Tunisia?",
+      "paragraphs": [
+        "Tunisia covers about 164,000 square kilometres of land and inland water. That makes it about half the size of Côte d’Ivoire."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "El Jem's Roman amphitheatre is one of the biggest and best preserved in the world — you can explore its arena and underground passages where gladiators once waited.",
+        "This clifftop village above the Gulf of Tunis is painted white and blue — every door, window and lane — with cafés looking out over the sea."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Tunisia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Tunisia in one breath: a country in Northern Africa, capital Tunis, where people speak Arabic and pay with the Tunisian dinar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Tunisia)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Independent reading for confident readers; the Think and talk questions about Tunisia make a good family discussion afterwards.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Tunisia — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Tunisia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

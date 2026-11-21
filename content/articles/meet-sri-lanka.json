@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-sri-lanka",
+  "slug": "meet-sri-lanka",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Sri Lanka",
+  "description": "Travel to Sri Lanka with Spark and Mango: a country in Southern Asia whose capital is Sri Jayawardenepura Kotte, where people speak Sinhala and pay with the Sri Lankan rupee — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-sri-lanka.webp",
+    "alt": "Spark and Mango visiting the great rock fortress of Sigiriya rising from green forest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Sri Lanka | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Sri-Lanka",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Sri Lanka — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sri_Lanka",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Sri Lanka?",
+      "paragraphs": [
+        "Sri Lanka is a country in Southern Asia, which is part of Asia. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Sri Lanka is Sri Jayawardenepura Kotte. Sri Jayawardenepura Kotte is the legislative capital, where parliament meets. Colombo, the big seaport city nearby, is where the president and the courts work."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Sri Lanka speak Sinhala and Tamil."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Sri Lanka is the Sri Lankan rupee."
+      ]
+    },
+    {
+      "heading": "How big is Sri Lanka?",
+      "paragraphs": [
+        "Sri Lanka covers about 66,000 square kilometres of land and inland water. That makes it about half the size of Tajikistan."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Sigiriya is a royal palace built on top of a giant rock column. Climb past ancient paintings and between two huge lion's paws to the summit gardens.",
+        "The train ride through Sri Lanka's tea country — past waterfalls, tea pickers and the famous Nine Arch Bridge — is called one of the most beautiful rail journeys in the world."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Sri Lanka on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Sri Lanka in one breath: a country in Southern Asia, capital Sri Jayawardenepura Kotte, where people speak Sinhala and pay with the Sri Lankan rupee.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Sri Lanka)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Independent reading for confident readers; the Think and talk questions about Sri Lanka make a good family discussion afterwards.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the high-up places in this article, trails and viewpoints in Sri Lanka need sturdy shoes and a grown-up along."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Sri Lanka on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

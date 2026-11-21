@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-maldives-q2",
+  "scheduledDate": "2030-04-25",
+  "brand": "kids",
+  "setId": "country-set-meet-maldives",
+  "prompt": "Roughly how big is Maldives?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 36 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 300 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 135 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 780 square kilometres"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Maldives covers about 300 square kilometres of land and inland water.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Maldives | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Maldives",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Maldives — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Maldives",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-maldives.webp",
+    "alt": "Spark and Mango visiting a coral reef with sea turtles in the clear turquoise water of the Maldives",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

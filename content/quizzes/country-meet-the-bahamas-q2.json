@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-the-bahamas-q2",
+  "scheduledDate": "2029-10-19",
+  "brand": "kids",
+  "setId": "country-set-meet-the-bahamas",
+  "prompt": "Which of these is a famous place to visit in The Bahamas?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Nassau and Paradise Island"
+    },
+    {
+      "id": "b",
+      "text": "Kissama National Park"
+    },
+    {
+      "id": "c",
+      "text": "Muscat and the Mutrah Souq"
+    },
+    {
+      "id": "d",
+      "text": "the Sheikh Zayed Grand Mosque, Abu Dhabi"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Nassau and Paradise Island is one of the two places we'd love to visit in The Bahamas. Nassau mixes pastel colonial streets, the Queen's Staircase and straw markets with Paradise Island's famous Atlantis resort and aquariums across the bridge.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "The Bahamas | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/The-Bahamas",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "The Bahamas — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Bahamas",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-the-bahamas.webp",
+    "alt": "Spark and Mango visiting pastel buildings and harbour in Nassau with Paradise Island behind",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

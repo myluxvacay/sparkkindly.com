@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-togo",
+  "slug": "meet-togo",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Togo",
+  "description": "Travel to Togo with Spark and Mango: a country in Western Africa whose capital is Lomé, where people speak French and pay with the West African CFA franc — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-togo.webp",
+    "alt": "Spark and Mango visiting green hills and a waterfall near Kpalimé beneath Mount Agou",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Togo | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Togo",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Togo — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Togo",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Togo?",
+      "paragraphs": [
+        "Togo is a country in Western Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Togo is Lomé."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Togo speak French and Ewe. Ewe is the home language of many families in the south; French is the official language used across the whole country."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Togo is the West African CFA franc. The CFA franc is shared with neighbouring countries, so the same money works across the region."
+      ]
+    },
+    {
+      "heading": "How big is Togo?",
+      "paragraphs": [
+        "Togo covers about 57,000 square kilometres of land and inland water. That makes it about half the size of Benin."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Around Kpalimé, Togo's greenest corner, families find waterfalls, coffee and cocoa farms, and the climb up Mount Agou, the country's highest peak.",
+        "Cross Lake Togo by pirogue to Togoville, a historic lakeside town of shrines and colourful houses where the country's name began."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Togo on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Togo in one breath: a country in Western Africa, capital Lomé, where people speak French and pay with the West African CFA franc.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Togo)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Togo.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the high-up places in this article, trails and viewpoints in Togo need sturdy shoes and a grown-up along."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Togo on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

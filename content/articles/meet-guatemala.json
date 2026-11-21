@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-guatemala",
+  "slug": "meet-guatemala",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Guatemala",
+  "description": "Travel to Guatemala with Spark and Mango: a country in Central America whose capital is Guatemala City, where people speak Spanish and pay with the Guatemalan quetzal — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-guatemala.webp",
+    "alt": "Spark and Mango visiting Maya pyramid towers rising above the jungle at Tikal",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Guatemala | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Guatemala",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Guatemala — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Guatemala",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Guatemala?",
+      "paragraphs": [
+        "Guatemala is a country in Central America, which is part of North America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Guatemala is Guatemala City."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Guatemala is Spanish."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Guatemala is the Guatemalan quetzal."
+      ]
+    },
+    {
+      "heading": "How big is Guatemala?",
+      "paragraphs": [
+        "Guatemala covers about 109,000 square kilometres of land and inland water. That makes it about twice the size of Costa Rica."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Tikal's Maya pyramids spear out of the jungle canopy, with howler monkeys and toucans for company — one of the great ancient cities of the Americas.",
+        "Lake Atitlán fills a volcanic crater ringed by villages, and nearby Antigua is a cobbled colonial gem beneath three volcanoes."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Guatemala on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Guatemala in one breath: a country in Central America, capital Guatemala City, where people speak Spanish and pay with the Guatemalan quetzal.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Guatemala)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Guatemala.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Guatemala — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Guatemala on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

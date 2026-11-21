@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-china-q2",
+  "scheduledDate": "2029-12-06",
+  "brand": "kids",
+  "setId": "country-set-meet-china",
+  "prompt": "Which of these is TRUE about China?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Great Wall of China runs along China's southern border with Vietnam."
+    },
+    {
+      "id": "b",
+      "text": "The Great Wall of China is a single wall that was built in just one year."
+    },
+    {
+      "id": "c",
+      "text": "China is the smallest country in Asia."
+    },
+    {
+      "id": "d",
+      "text": "The Great Wall of China consists of many walls and fortifications built over centuries."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The Great Wall of China consists of many walls and fortifications built over centuries.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "China | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/China",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "China — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/China",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-china.webp",
+    "alt": "Spark and Mango visiting the Great Wall winding over green mountain ridges",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

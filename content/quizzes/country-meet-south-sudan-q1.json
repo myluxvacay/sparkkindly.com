@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-south-sudan-q1",
+  "scheduledDate": "2030-08-08",
+  "brand": "kids",
+  "setId": "country-set-meet-south-sudan",
+  "prompt": "In which part of the world is South Sudan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Micronesia"
+    },
+    {
+      "id": "b",
+      "text": "Western Africa"
+    },
+    {
+      "id": "c",
+      "text": "Middle Africa"
+    },
+    {
+      "id": "d",
+      "text": "Northern America"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "South Sudan is in Middle Africa, part of Africa.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "South Sudan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/South-Sudan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "South Sudan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/South_Sudan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-south-sudan.webp",
+    "alt": "Spark and Mango visiting vast herds of white-eared kob antelope crossing golden grassland in Boma National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

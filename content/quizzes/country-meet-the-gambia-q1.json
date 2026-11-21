@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-the-gambia-q1",
+  "scheduledDate": "2030-01-26",
+  "brand": "kids",
+  "setId": "country-set-meet-the-gambia",
+  "prompt": "What is the capital of The Gambia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Banjul"
+    },
+    {
+      "id": "b",
+      "text": "Sana'a"
+    },
+    {
+      "id": "c",
+      "text": "Santo Domingo"
+    },
+    {
+      "id": "d",
+      "text": "Ottawa"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Banjul is the capital of The Gambia. It is the city where the country's government works.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "The Gambia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/The-Gambia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "The Gambia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Gambia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-the-gambia.webp",
+    "alt": "Spark and Mango visiting a boat on the wide River Gambia passing mangrove shores",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-chad-q2",
+  "scheduledDate": "2029-12-02",
+  "brand": "kids",
+  "setId": "country-set-meet-chad",
+  "prompt": "Roughly how big is Chad?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 154,080 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 577,800 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 3,338,400 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 1,284,000 square kilometres"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Chad covers about 1,284,000 square kilometres of land and inland water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Chad | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Chad",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Chad — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chad",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-chad.webp",
+    "alt": "Spark and Mango visiting elephants and giraffes on the golden plains of Zakouma National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

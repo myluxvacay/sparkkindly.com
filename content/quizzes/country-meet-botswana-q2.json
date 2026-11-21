@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-botswana-q2",
+  "scheduledDate": "2029-11-10",
+  "brand": "kids",
+  "setId": "country-set-meet-botswana",
+  "prompt": "Which of these is a famous place to visit in Botswana?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Chobe National Park"
+    },
+    {
+      "id": "b",
+      "text": "the Underwater Sculpture Park"
+    },
+    {
+      "id": "c",
+      "text": "Kuala Lumpur and the Petronas Towers"
+    },
+    {
+      "id": "d",
+      "text": "the mud volcanoes of Gobustan"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Chobe National Park is one of the two places we'd love to visit in Botswana. Chobe is famous for its enormous elephant herds.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Botswana | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Botswana",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Botswana — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Botswana",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-botswana.webp",
+    "alt": "Spark and Mango visiting a mokoro canoe gliding through the reed channels of the Okavango Delta with elephants on an island shore",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

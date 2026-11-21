@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-marshall-islands-q1",
+  "scheduledDate": "2030-04-30",
+  "brand": "kids",
+  "setId": "country-set-meet-marshall-islands",
+  "prompt": "What is the money of Marshall Islands called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "US dollar"
+    },
+    {
+      "id": "b",
+      "text": "Romanian leu"
+    },
+    {
+      "id": "c",
+      "text": "Iranian rial"
+    },
+    {
+      "id": "d",
+      "text": "Mauritian rupee"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Marshall Islands is the US dollar (USD).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Marshall Islands | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Marshall-Islands",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Marshall Islands — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Marshall_Islands",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-marshall-islands.webp",
+    "alt": "Spark and Mango visiting a coral-covered sunken warship in Bikini Atoll lagoon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

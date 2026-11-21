@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-central-african-republic-q1",
+  "scheduledDate": "2029-11-29",
+  "brand": "kids",
+  "setId": "country-set-meet-central-african-republic",
+  "prompt": "What is the money of Central African Republic called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Central African CFA franc"
+    },
+    {
+      "id": "b",
+      "text": "Malagasy ariary"
+    },
+    {
+      "id": "c",
+      "text": "Zambian kwacha"
+    },
+    {
+      "id": "d",
+      "text": "Comorian franc"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Central African Republic is the Central African CFA franc (XAF).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Central African Republic | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Central-African-Republic",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Central African Republic — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Central_African_Republic",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-central-african-republic.webp",
+    "alt": "Spark and Mango visiting forest elephants gathering at a muddy clearing in the Dzanga-Sangha rainforest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

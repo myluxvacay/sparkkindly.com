@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-republic-of-the-congo-q1",
+  "scheduledDate": "2029-12-11",
+  "brand": "kids",
+  "setId": "country-set-meet-republic-of-the-congo",
+  "prompt": "In which part of the world is Republic of the Congo?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Southern Europe"
+    },
+    {
+      "id": "b",
+      "text": "Northern Europe"
+    },
+    {
+      "id": "c",
+      "text": "Middle Africa"
+    },
+    {
+      "id": "d",
+      "text": "Eastern Asia"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Republic of the Congo is in Middle Africa, part of Africa.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Republic of the Congo | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Republic-of-the-Congo",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Republic of the Congo — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Republic_of_the_Congo",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-republic-of-the-congo.webp",
+    "alt": "Spark and Mango visiting a western lowland gorilla family in the green clearings of Odzala-Kokoua rainforest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

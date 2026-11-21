@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-liechtenstein-q1",
+  "scheduledDate": "2030-04-10",
+  "brand": "kids",
+  "setId": "country-set-meet-liechtenstein",
+  "prompt": "In which part of the world is Liechtenstein?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Northern America"
+    },
+    {
+      "id": "b",
+      "text": "Western Asia"
+    },
+    {
+      "id": "c",
+      "text": "Middle Africa"
+    },
+    {
+      "id": "d",
+      "text": "Western Europe"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Liechtenstein is in Western Europe, part of Europe.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Liechtenstein | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Liechtenstein",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Liechtenstein — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Liechtenstein",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-liechtenstein.webp",
+    "alt": "Spark and Mango visiting Vaduz Castle on its hill above the small capital",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

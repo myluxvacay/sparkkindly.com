@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-bulgaria-q1",
+  "scheduledDate": "2029-11-15",
+  "brand": "kids",
+  "setId": "country-set-meet-bulgaria",
+  "prompt": "What is the capital of Bulgaria?",
+  "options": [
+    {
+      "id": "a",
+      "text": "St. George's"
+    },
+    {
+      "id": "b",
+      "text": "Luanda"
+    },
+    {
+      "id": "c",
+      "text": "São Tomé"
+    },
+    {
+      "id": "d",
+      "text": "Sofia"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Sofia is the capital of Bulgaria. It is the city where the country's government works.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Bulgaria | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Bulgaria",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Bulgaria — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bulgaria",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-bulgaria.webp",
+    "alt": "Spark and Mango visiting the striped arches and frescoes of Rila Monastery in green mountains",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

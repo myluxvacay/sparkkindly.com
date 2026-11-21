@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-sierra-leone-q1",
+  "scheduledDate": "2030-07-25",
+  "brand": "kids",
+  "setId": "country-set-meet-sierra-leone",
+  "prompt": "Which of these is a main language people speak in Sierra Leone?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hungarian"
+    },
+    {
+      "id": "b",
+      "text": "Mongolian"
+    },
+    {
+      "id": "c",
+      "text": "Luxembourgish"
+    },
+    {
+      "id": "d",
+      "text": "English"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "People in Sierra Leone speak English and Krio.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sierra Leone | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Sierra-Leone",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Sierra Leone — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sierra_Leone",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-sierra-leone.webp",
+    "alt": "Spark and Mango visiting green rainforest at Tacugama Chimpanzee Sanctuary above Freetown",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

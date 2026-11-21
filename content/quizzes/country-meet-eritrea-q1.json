@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-eritrea-q1",
+  "scheduledDate": "2030-01-12",
+  "brand": "kids",
+  "setId": "country-set-meet-eritrea",
+  "prompt": "In which part of the world is Eritrea?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Eastern Africa"
+    },
+    {
+      "id": "b",
+      "text": "Micronesia"
+    },
+    {
+      "id": "c",
+      "text": "Central Asia"
+    },
+    {
+      "id": "d",
+      "text": "Melanesia"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Eritrea is in Eastern Africa, part of Africa.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Eritrea | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Eritrea",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Eritrea — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Eritrea",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-eritrea.webp",
+    "alt": "Spark and Mango visiting pastel art deco buildings and palm-lined streets in Asmara",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

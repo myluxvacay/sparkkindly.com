@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-belize",
+  "slug": "meet-belize",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Belize",
+  "description": "Travel to Belize with Spark and Mango: a country in Central America whose capital is Belmopan, where people speak English and pay with the Belize dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-belize.webp",
+    "alt": "Spark and Mango visiting the deep blue circle of the Great Blue Hole in the Belize reef",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Belize | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Belize",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Belize — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Belize",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Belize?",
+      "paragraphs": [
+        "Belize is a country in Central America, which is part of North America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Belize is Belmopan."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Belize speak English and Spanish."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Belize is the Belize dollar."
+      ]
+    },
+    {
+      "heading": "How big is Belize?",
+      "paragraphs": [
+        "Belize covers about 23,000 square kilometres of land and inland water. That makes it about half the size of Dominican Republic."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Belize's reef is the largest in the northern hemisphere. Families snorkel at Hol Chan and Shark Ray Alley, and gaze into the perfect circle of the Great Blue Hole.",
+        "Inland, the Maya pyramid of Xunantunich rises above the jungle — reached by a hand-cranked ferry — near cave tubing rivers and butterfly farms."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Belize on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Belize in one breath: a country in Central America, capital Belmopan, where people speak English and pay with the Belize dollar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Belize)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Independent reading for confident readers; the Think and talk questions about Belize make a good family discussion afterwards.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Belize always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Belize on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

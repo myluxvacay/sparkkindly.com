@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-algeria",
+  "slug": "meet-algeria",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Algeria",
+  "description": "Travel to Algeria with Spark and Mango: a country in Northern Africa whose capital is Algiers, where people speak Arabic and pay with the Algerian dinar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-algeria.webp",
+    "alt": "Spark and Mango visiting the whitewashed Casbah old town of Algiers tumbling down a hill to the blue Mediterranean Sea",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Algeria | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Algeria",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Algeria — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Algeria",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Algeria?",
+      "paragraphs": [
+        "Algeria is a country in Northern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Algeria is Algiers."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Algeria is Arabic."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Algeria is the Algerian dinar."
+      ]
+    },
+    {
+      "heading": "How big is Algeria?",
+      "paragraphs": [
+        "Algeria covers about 2,382,000 square kilometres of land and inland water. It is the largest country in Africa. That makes it about three times the size of Mozambique."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Casbah is the old hillside heart of Algiers, a maze of whitewashed lanes and palaces above the Mediterranean Sea that families can explore with a guide.",
+        "Algeria holds a huge share of the Sahara. Around the oasis town of Timimoun, red sand dunes roll to the horizon and palm groves hide old mud-brick villages."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Algeria on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Algeria in one breath: a country in Northern Africa, capital Algiers, where people speak Arabic and pay with the Algerian dinar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Algeria)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Algeria on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Algeria — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Algeria on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

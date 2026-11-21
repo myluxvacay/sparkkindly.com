@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-ethiopia",
+  "slug": "meet-ethiopia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Ethiopia",
+  "description": "Travel to Ethiopia with Spark and Mango: a country in Eastern Africa whose capital is Addis Ababa, where people speak Amharic and pay with the Ethiopian birr — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-ethiopia.webp",
+    "alt": "Spark and Mango visiting a church carved down into red rock at Lalibela, reached by a stone trench",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Ethiopia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Ethiopia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Ethiopia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ethiopia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Ethiopia?",
+      "paragraphs": [
+        "Ethiopia is a country in Eastern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Ethiopia is Addis Ababa."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Ethiopia is Amharic."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Ethiopia is the Ethiopian birr."
+      ]
+    },
+    {
+      "heading": "How big is Ethiopia?",
+      "paragraphs": [
+        "Ethiopia covers about 1,104,000 square kilometres of land and inland water. That makes it about half the size of Democratic Republic of the Congo."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "About 800 years ago, workers carved entire churches down into solid rock at Lalibela — you walk down trenches to reach doors and windows cut into the stone.",
+        "The Simien Mountains are a rooftop of jagged peaks and deep cliffs where gelada monkeys graze in troops and lammergeier vultures soar overhead."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Ethiopia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Ethiopia in one breath: a country in Eastern Africa, capital Addis Ababa, where people speak Amharic and pay with the Ethiopian birr.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Ethiopia)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Ethiopia on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Ethiopia — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Ethiopia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

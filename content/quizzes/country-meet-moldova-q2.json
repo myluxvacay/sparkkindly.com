@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-moldova-q2",
+  "scheduledDate": "2030-05-11",
+  "brand": "kids",
+  "setId": "country-set-meet-moldova",
+  "prompt": "Which of these is a famous place to visit in Moldova?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Orheiul Vechi (Old Orhei)"
+    },
+    {
+      "id": "b",
+      "text": "Rodney Bay and Pigeon Island"
+    },
+    {
+      "id": "c",
+      "text": "Wadi Rum desert"
+    },
+    {
+      "id": "d",
+      "text": "Milford Sound, Fiordland"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Orheiul Vechi (Old Orhei) is one of the two places we'd love to visit in Moldova. Old Orhei is a natural amphitheatre of cliffs where a cave monastery was dug into the rock above the Răut River 2,000 years of history in one valley.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Moldova | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Moldova",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Moldova — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Moldova",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-moldova.webp",
+    "alt": "Spark and Mango visiting the cave monastery in the cliffs of Orheiul Vechi above the river",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-saint-vincent-and-the-grenadines-q1",
+  "scheduledDate": "2030-07-09",
+  "brand": "kids",
+  "setId": "country-set-meet-saint-vincent-and-the-grenadines",
+  "prompt": "Which of these is a main language people speak in Saint Vincent and the Grenadines?",
+  "options": [
+    {
+      "id": "a",
+      "text": "English"
+    },
+    {
+      "id": "b",
+      "text": "Kinyarwanda"
+    },
+    {
+      "id": "c",
+      "text": "Krio"
+    },
+    {
+      "id": "d",
+      "text": "Fon"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "People in Saint Vincent and the Grenadines speak English.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Saint Vincent and the Grenadines | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Saint-Vincent-and-the-Grenadines",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Saint Vincent and the Grenadines — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-saint-vincent-and-the-grenadines.webp",
+    "alt": "Spark and Mango visiting turquoise lagoon and tiny islands in the Tobago Cays",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

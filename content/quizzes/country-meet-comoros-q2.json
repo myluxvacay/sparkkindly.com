@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-comoros-q2",
+  "scheduledDate": "2029-12-10",
+  "brand": "kids",
+  "setId": "country-set-meet-comoros",
+  "prompt": "Which of these is a famous place to visit in Comoros?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bangkok's Grand Palace and Wat Pho"
+    },
+    {
+      "id": "b",
+      "text": "Kyiv — Saint Sophia Cathedral and the old town"
+    },
+    {
+      "id": "c",
+      "text": "the old town of Moroni"
+    },
+    {
+      "id": "d",
+      "text": "the islands of Phang Nga Bay"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "the old town of Moroni is one of the two places we'd love to visit in Comoros. Moroni, the capital, has a maze-like old town of coral-stone houses, mosques and a harbour full of wooden boats, all under the shoulder of a volcano.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Comoros | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Comoros",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Comoros — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Comoros",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-comoros.webp",
+    "alt": "Spark and Mango visiting the coral-stone old town and harbour of Moroni beneath green volcanic hills",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-south-sudan-q2",
+  "scheduledDate": "2030-08-09",
+  "brand": "kids",
+  "setId": "country-set-meet-south-sudan",
+  "prompt": "Which of these is a famous place to visit in South Sudan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Kinabalu Park, Borneo"
+    },
+    {
+      "id": "b",
+      "text": "the Sepik River"
+    },
+    {
+      "id": "c",
+      "text": "the old town of the City of San Marino"
+    },
+    {
+      "id": "d",
+      "text": "Nimule National Park"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Nimule National Park is one of the two places we'd love to visit in South Sudan. Where the White Nile rushes through rapids at the Ugandan border, Nimule's riverine forest shelters elephants and hippos along the great river.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "South Sudan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/South-Sudan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "South Sudan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/South_Sudan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-south-sudan.webp",
+    "alt": "Spark and Mango visiting vast herds of white-eared kob antelope crossing golden grassland in Boma National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

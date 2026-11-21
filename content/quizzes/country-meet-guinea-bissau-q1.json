@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-guinea-bissau-q1",
+  "scheduledDate": "2030-02-11",
+  "brand": "kids",
+  "setId": "country-set-meet-guinea-bissau",
+  "prompt": "What is the capital of Guinea-Bissau?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bissau"
+    },
+    {
+      "id": "b",
+      "text": "Abu Dhabi"
+    },
+    {
+      "id": "c",
+      "text": "Washington D.C."
+    },
+    {
+      "id": "d",
+      "text": "Tbilisi"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Bissau is the capital of Guinea-Bissau. It is the city where the country's government works.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Guinea-Bissau | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Guinea-Bissau",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Guinea-Bissau — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Guinea-Bissau",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-guinea-bissau.webp",
+    "alt": "Spark and Mango visiting a hippo wading in the sea shallows off Orango Island with palm trees behind",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

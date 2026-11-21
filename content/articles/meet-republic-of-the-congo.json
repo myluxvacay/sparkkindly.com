@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-republic-of-the-congo",
+  "slug": "meet-republic-of-the-congo",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Republic of the Congo",
+  "description": "Travel to Republic of the Congo with Spark and Mango: a country in Middle Africa whose capital is Brazzaville, where people speak French and pay with the Central African CFA franc — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-republic-of-the-congo.webp",
+    "alt": "Spark and Mango visiting a western lowland gorilla family in the green clearings of Odzala-Kokoua rainforest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Republic of the Congo | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Republic-of-the-Congo",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Republic of the Congo — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Republic_of_the_Congo",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Republic of the Congo?",
+      "paragraphs": [
+        "Republic of the Congo is a country in Middle Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Republic of the Congo is Brazzaville."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Republic of the Congo speak French and Lingala."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Republic of the Congo is the Central African CFA franc. The CFA franc is shared with neighbouring countries, so the same money works across the region."
+      ]
+    },
+    {
+      "heading": "How big is Republic of the Congo?",
+      "paragraphs": [
+        "Republic of the Congo covers about 342,000 square kilometres of land and inland water. That makes it about three times the size of Benin."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Odzala-Kokoua is an ancient rainforest where western lowland gorillas, forest elephants and colourful birds live among giant trees and swampy clearings.",
+        "Brazzaville sits on the mighty Congo River, facing Kinshasa across the water — the two closest capital cities in the world. River boats and markets make it lively to explore."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Republic of the Congo on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Republic of the Congo in one breath: a country in Middle Africa, capital Brazzaville, where people speak French and pay with the Central African CFA franc.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Republic of the Congo)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Republic of the Congo.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Republic of the Congo always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Republic of the Congo on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

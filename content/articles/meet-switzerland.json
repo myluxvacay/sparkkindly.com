@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-switzerland",
+  "slug": "meet-switzerland",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Switzerland",
+  "description": "Travel to Switzerland with Spark and Mango: a country in Western Europe whose capital is Bern, where people speak German and pay with the Swiss franc — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-switzerland.webp",
+    "alt": "Spark and Mango visiting the Matterhorn pyramid above Zermatt and alpine meadows",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Switzerland | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Switzerland",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Switzerland — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Switzerland",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Switzerland?",
+      "paragraphs": [
+        "Switzerland is a country in Western Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Switzerland is Bern. Bern is called the federal city — Switzerland has no official capital in its rules, but Bern is where the government and parliament sit."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Switzerland speak German, French and Italian. German, French and Italian are joined by Romansh, spoken in some mountain valleys — four national languages in all."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Switzerland is the Swiss franc."
+      ]
+    },
+    {
+      "heading": "How big is Switzerland?",
+      "paragraphs": [
+        "Switzerland covers about 41,000 square kilometres of land and inland water. That makes it about half the size of Austria."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Matterhorn's perfect pyramid towers over car-free Zermatt. Ride the Gornergrat railway for glacier views and spot the peak mirrored in mountain lakes.",
+        "Lucerne's covered wooden Chapel Bridge has crossed the Reuss since the 1300s — beyond it, lake steamers and the Pilatus and Rigi mountain railways await."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Switzerland on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Switzerland in one breath: a country in Western Europe, capital Bern, where people speak German and pay with the Swiss franc.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Switzerland)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Independent reading for confident readers; the Think and talk questions about Switzerland make a good family discussion afterwards.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Switzerland — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Switzerland on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-burkina-faso-q1",
+  "scheduledDate": "2029-11-17",
+  "brand": "kids",
+  "setId": "country-set-meet-burkina-faso",
+  "prompt": "In which part of the world is Burkina Faso?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Central America"
+    },
+    {
+      "id": "b",
+      "text": "Southern Asia"
+    },
+    {
+      "id": "c",
+      "text": "Northern America"
+    },
+    {
+      "id": "d",
+      "text": "Western Africa"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Burkina Faso is in Western Africa, part of Africa.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Burkina Faso | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Burkina-Faso",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Burkina Faso — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Burkina_Faso",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-burkina-faso.webp",
+    "alt": "Spark and Mango visiting the boldly painted mud-brick houses of Tiébélé with black, white and red patterns",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

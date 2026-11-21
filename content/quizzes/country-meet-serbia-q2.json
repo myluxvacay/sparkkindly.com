@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-serbia-q2",
+  "scheduledDate": "2030-07-22",
+  "brand": "kids",
+  "setId": "country-set-meet-serbia",
+  "prompt": "Which of these is a famous place to visit in Serbia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Atacama Desert and San Pedro"
+    },
+    {
+      "id": "b",
+      "text": "Lake Bled"
+    },
+    {
+      "id": "c",
+      "text": "Belgrade Fortress and Kalemegdan"
+    },
+    {
+      "id": "d",
+      "text": "the Bazaruto Archipelago"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Belgrade Fortress and Kalemegdan is one of the two places we'd love to visit in Serbia. Belgrade's fortress stands where the Sava meets the Danube, in a park of museums, a zoo and river views at the meeting of two great rivers.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Serbia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Serbia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Serbia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Serbia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-serbia.webp",
+    "alt": "Spark and Mango visiting Belgrade Fortress above the meeting of the Sava and Danube rivers",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

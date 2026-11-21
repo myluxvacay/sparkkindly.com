@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-nicaragua-q2",
+  "scheduledDate": "2030-05-31",
+  "brand": "kids",
+  "setId": "country-set-meet-nicaragua",
+  "prompt": "Roughly how big is Nicaragua?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 15,600 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 58,500 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 130,000 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 338,000 square kilometres"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Nicaragua covers about 130,000 square kilometres of land and inland water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Nicaragua | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Nicaragua",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Nicaragua — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nicaragua",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-nicaragua.webp",
+    "alt": "Spark and Mango visiting colourful colonial streets in Granada with a cathedral bell tower",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

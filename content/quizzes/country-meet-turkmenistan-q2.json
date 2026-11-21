@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-turkmenistan-q2",
+  "scheduledDate": "2030-09-14",
+  "brand": "kids",
+  "setId": "country-set-meet-turkmenistan",
+  "prompt": "Which of these is a famous place to visit in Turkmenistan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "ancient Merv"
+    },
+    {
+      "id": "b",
+      "text": "Rotorua's geothermal parks"
+    },
+    {
+      "id": "c",
+      "text": "Matka Canyon"
+    },
+    {
+      "id": "d",
+      "text": "Tacugama Chimpanzee Sanctuary"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "ancient Merv is one of the two places we'd love to visit in Turkmenistan. Merv was one of the great Silk Road oasis cities, a crossroads of traders and scholars, whose mud-brick walls and mausoleums still stand in the desert.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Turkmenistan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Turkmenistan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Turkmenistan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Turkmenistan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-turkmenistan.webp",
+    "alt": "Spark and Mango visiting the glowing Darvaza gas crater in the desert at night",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

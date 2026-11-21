@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-ireland",
+  "slug": "meet-ireland",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Ireland",
+  "description": "Travel to Ireland with Spark and Mango: a country in Northern Europe whose capital is Dublin, where people speak English and pay with the euro — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-ireland.webp",
+    "alt": "Spark and Mango visiting the Cliffs of Moher rising from the Atlantic Ocean",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Ireland | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Ireland",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Ireland — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ireland",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Ireland?",
+      "paragraphs": [
+        "Ireland is a country in Northern Europe, which is part of Europe. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Ireland is Dublin."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Ireland speak English and Irish. English is the language of everyday life. Irish — called Gaeilge — is the first official language, spoken every day in the Gaeltacht areas and learned by schoolchildren all over Ireland."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Ireland is the euro. The euro is shared by many countries in Europe, so the same coins and notes work across borders."
+      ]
+    },
+    {
+      "heading": "How big is Ireland?",
+      "paragraphs": [
+        "Ireland covers about 70,000 square kilometres of land and inland water. That makes it about half the size of Greece."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Cliffs of Moher rise 214 metres straight from the Atlantic, with seabirds wheeling below and views to the Aran Islands on clear days.",
+        "In Dublin, see the Book of Kells' illuminated pages in Trinity's Old Library, then explore Viking history and the deer of Phoenix Park."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Ireland on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Ireland in one breath: a country in Northern Europe, capital Dublin, where people speak English and pay with the euro.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Ireland)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Ireland on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Ireland — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Ireland on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

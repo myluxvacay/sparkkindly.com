@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-finland-q2",
+  "scheduledDate": "2030-01-21",
+  "brand": "kids",
+  "setId": "country-set-meet-finland",
+  "prompt": "Which of these is a famous place to visit in Finland?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Leptis Magna"
+    },
+    {
+      "id": "b",
+      "text": "the Ezulwini Valley"
+    },
+    {
+      "id": "c",
+      "text": "Helsinki and the Suomenlinna sea fortress"
+    },
+    {
+      "id": "d",
+      "text": "the Grand Canyon, Arizona"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Helsinki and the Suomenlinna sea fortress is one of the two places we'd love to visit in Finland. Helsinki's harbour leads to Suomenlinna, a giant sea fortress spread over islands — ferries, tunnels, cannons and picnic lawns, all a short boat ride away.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Finland | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Finland",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Finland — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Finland",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-finland.webp",
+    "alt": "Spark and Mango visiting Santa Claus Village in snowy Lapland with reindeer",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}
