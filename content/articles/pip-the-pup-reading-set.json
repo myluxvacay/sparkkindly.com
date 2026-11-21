@@ -1,0 +1,66 @@
+{
+  "id": "poster-pip-the-pup-reading-set",
+  "slug": "pip-the-pup-reading-set",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Pip the Pup: A First Reader",
+  "description": "Pip is a very small pup with a very big day. A five-sentence first reader for the newest readers of all, with gentle questions.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 4–6 (pre-K–kindergarten). Five short sentences; point at each word while reading together.",
+  "hero": {
+    "src": "/images/poster-pip-the-pup-reading-set.webp",
+    "alt": "Pip the small pup with his red ball, sitting happily in the mud",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "phonics",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Reading comprehension | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Reading_comprehension",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Pip the Pup",
+      "paragraphs": [
+        "Pip is a small pup. Pip has a red ball.",
+        "Pip runs and runs. Pip digs in the mud.",
+        "Now Pip is a muddy pup! Pip needs a bath."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why does Pip need a bath? Tell the story back in your own words.",
+        "2. What do you think Pip will dream about tonight?"
+      ]
+    }
+  ],
+  "takeaway": "Even the shortest story has a beginning, a middle and a muddy end — and new readers can find every answer in its five sentences.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

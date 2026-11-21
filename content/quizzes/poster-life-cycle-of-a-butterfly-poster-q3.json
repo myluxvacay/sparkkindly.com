@@ -1,0 +1,52 @@
+{
+  "id": "poster-life-cycle-of-a-butterfly-poster-q3",
+  "scheduledDate": "2029-04-23",
+  "brand": "kids",
+  "setId": "poster-set-life-cycle-of-a-butterfly-poster",
+  "prompt": "What really happens inside the chrysalis?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The caterpillar sleeps the whole time"
+    },
+    {
+      "id": "b",
+      "text": "Its body comes apart and rebuilds into a butterfly"
+    },
+    {
+      "id": "c",
+      "text": "It eats leaves in secret"
+    },
+    {
+      "id": "d",
+      "text": "It waits for winter"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Inside the chrysalis the body is dismantled and rebuilt — wings, legs, tongue and all.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Metamorphosis | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Metamorphosis",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Chrysalis | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pupa",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-life-cycle-of-a-butterfly-poster.webp",
+    "alt": "Mango watching a butterfly emerge — the last act of metamorphosis",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

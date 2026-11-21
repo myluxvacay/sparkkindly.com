@@ -1,0 +1,47 @@
+{
+  "id": "poster-numbers-to-twenty-poster-q3",
+  "scheduledDate": "2029-02-26",
+  "brand": "kids",
+  "setId": "poster-set-numbers-to-twenty-poster",
+  "prompt": "How many fingers do you have on two hands?",
+  "options": [
+    {
+      "id": "a",
+      "text": "5"
+    },
+    {
+      "id": "b",
+      "text": "8"
+    },
+    {
+      "id": "c",
+      "text": "10"
+    },
+    {
+      "id": "d",
+      "text": "12"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Five fingers on each hand makes ten altogether.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Counting | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Counting",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-numbers-to-twenty-poster.webp",
+    "alt": "Mango crossing twenty stepping stones — counting takes us all the way to twenty",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

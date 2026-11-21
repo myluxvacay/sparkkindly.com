@@ -1,0 +1,47 @@
+{
+  "id": "poster-am-is-are-poster-q1",
+  "scheduledDate": "2028-11-13",
+  "brand": "kids",
+  "setId": "poster-set-am-is-are-poster",
+  "prompt": "I ___ six years old.",
+  "options": [
+    {
+      "id": "a",
+      "text": "is"
+    },
+    {
+      "id": "b",
+      "text": "are"
+    },
+    {
+      "id": "c",
+      "text": "am"
+    },
+    {
+      "id": "d",
+      "text": "be"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "With 'I', the verb 'to be' is always am: 'I am six years old.'",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Copula (linguistics) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Copula_(linguistics)",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-am-is-are-poster.webp",
+    "alt": "Spark and Mango beside three garden signposts — am, is and are point to who we are talking about",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

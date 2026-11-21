@@ -1,0 +1,87 @@
+{
+  "id": "poster-count-the-syllables-poster",
+  "slug": "count-the-syllables-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Count the Syllables: Clap the Beats in Words",
+  "description": "Every word is made of beats called syllables. Clap along: rab-bit (2), but-ter-fly (3) — a first syllable chart with words to clap, stomp and count.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). Made to be clapped out loud — a grown-up clapping partner helps.",
+  "hero": {
+    "src": "/images/poster-count-the-syllables-poster.webp",
+    "alt": "Spark clapping the beats in words while a rabbit, a butterfly and a turtle listen",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "phonics",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Syllable | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Syllable",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Words have beats",
+      "paragraphs": [
+        "Say the word 'rabbit' slowly: rab-bit. Did you hear two beats? Those beats are called syllables. Every word has at least one, and clapping them is the easiest way to count them.",
+        "Put your hand under your chin and say a word — your chin drops once for every syllable. Try it with your own name!"
+      ]
+    },
+    {
+      "heading": "Two-beat words",
+      "paragraphs": [
+        "rabbit — rab-bit (2). turtle — tur-tle (2). pencil — pen-cil (2). garden — gar-den (2).",
+        "Clap once for each beat: clap-clap!"
+      ]
+    },
+    {
+      "heading": "Three-beat words",
+      "paragraphs": [
+        "butterfly — but-ter-fly (3). banana — ba-na-na (3). elephant — el-e-phant (3). umbrella — um-brel-la (3).",
+        "Tomato — to-ma-to (3). Kangaroo — kan-ga-roo (3). Dinosaur — di-no-saur (3).",
+        "Clap-clap-clap for every one of these!"
+      ]
+    },
+    {
+      "heading": "One-beat words",
+      "paragraphs": [
+        "cat (1). sun (1). fish (1). cake (1).",
+        "Short words often have just one beat. One clap!"
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Clap the syllables in everyone's name at dinner tonight. Whose name has the most beats?",
+        "2. Find a four-beat word. (Hint: think about a long, stripy, orange vegetable friend… no — think 'hippopotamus' — that's five!)"
+      ]
+    }
+  ],
+  "takeaway": "A syllable is a beat in a word — clap or feel your chin drop to count them: rabbit has 2, butterfly has 3, cat has 1.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Clap-and-count walk: name things you pass and clap their syllables — tree (1), flower (2), butterfly (3)."
+}

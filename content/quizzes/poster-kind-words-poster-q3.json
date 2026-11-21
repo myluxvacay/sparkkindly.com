@@ -1,0 +1,47 @@
+{
+  "id": "poster-kind-words-poster-q3",
+  "scheduledDate": "2029-04-11",
+  "brand": "kids",
+  "setId": "poster-set-kind-words-poster",
+  "prompt": "Why does the chart say 'specific kindness lands deepest'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Long words are better"
+    },
+    {
+      "id": "b",
+      "text": "'I like how you shared your markers' tells the person exactly what was kind"
+    },
+    {
+      "id": "c",
+      "text": "Vague praise is rude"
+    },
+    {
+      "id": "d",
+      "text": "Specific words are louder"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Naming the exact kind act shows you truly noticed — and tells them what to do again.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Kindness | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kindness",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-kind-words-poster.webp",
+    "alt": "Spark building a tower of golden blocks — kind words build people up",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

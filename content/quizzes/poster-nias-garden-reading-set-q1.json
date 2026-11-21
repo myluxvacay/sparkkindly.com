@@ -1,0 +1,49 @@
+{
+  "id": "poster-nias-garden-reading-set-q1",
+  "scheduledDate": "2029-01-15",
+  "brand": "kids",
+  "passage": "Nia had one tiny tomato seed. She dug a small hole in the garden and tucked the seed inside. Every morning, Nia watered the soil with her blue watering can. For six days, nothing happened. On the seventh day, Nia saw a tiny green sprout pushing up. 'You did it!' she whispered. By the end of summer, the plant was tall and strong, and it held three red tomatoes. Nia picked the biggest one and shared it with her little brother.",
+  "passageTitle": "Nia's Garden",
+  "setId": "poster-set-nias-garden-reading-set",
+  "prompt": "What kind of seed did Nia plant?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A bean seed"
+    },
+    {
+      "id": "b",
+      "text": "A tomato seed"
+    },
+    {
+      "id": "c",
+      "text": "A sunflower seed"
+    },
+    {
+      "id": "d",
+      "text": "An apple seed"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The passage begins: 'Nia had one tiny tomato seed.'",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Reading comprehension | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Reading_comprehension",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-nias-garden-reading-set.webp",
+    "alt": "Nia watering her tomato plant, which now holds three red tomatoes",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

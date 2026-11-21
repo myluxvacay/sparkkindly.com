@@ -1,0 +1,47 @@
+{
+  "id": "poster-trusted-adults-poster-q3",
+  "scheduledDate": "2029-04-15",
+  "brand": "kids",
+  "setId": "poster-set-trusted-adults-poster",
+  "prompt": "You told one trusted adult and they were too busy to listen. What next?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Give up — you tried"
+    },
+    {
+      "id": "b",
+      "text": "Tell the next person on your team, and keep telling until someone helps"
+    },
+    {
+      "id": "c",
+      "text": "Handle it completely alone"
+    },
+    {
+      "id": "d",
+      "text": "Wait a year and retry"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Keep telling until someone listens and helps. That is not tattling — it is how the team works.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Child safety | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Child_safety",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-trusted-adults-poster.webp",
+    "alt": "Spark and Mango with a circle of trusted helpers — every child deserves a safety team",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

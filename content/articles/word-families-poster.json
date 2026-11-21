@@ -1,0 +1,88 @@
+{
+  "id": "poster-word-families-poster",
+  "slug": "word-families-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Word Families: -at, -ig, -op and More",
+  "description": "Words that share an ending are a family: cat, bat, hat. Learn one ending and you can suddenly read a whole family of words.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). Best with a finger under each word, reading down the families.",
+  "hero": {
+    "src": "/images/poster-word-families-poster.webp",
+    "alt": "Spark and Mango at a picnic with a cat, a pig and a frog — word families share the same ending",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "phonics",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Phonics | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Phonics",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "The family trick",
+      "paragraphs": [
+        "Here is a secret that makes reading much easier: words come in families. Every word in a family ends with the same chunk of sound. If you can read 'cat', you are one letter away from reading bat, hat, mat, rat and sat.",
+        "Learn the ending once — then just swap the first letter and read the whole family!"
+      ]
+    },
+    {
+      "heading": "The -at family",
+      "paragraphs": [
+        "cat, bat, hat, mat, rat, sat, pat.",
+        "The cat sat on the mat in a hat. (Five family words in one silly sentence!)"
+      ]
+    },
+    {
+      "heading": "The -ig and -op families",
+      "paragraphs": [
+        "-ig: pig, big, dig, wig, fig.",
+        "-op: top, hop, mop, pop, stop.",
+        "The big pig can dig. The frog likes to hop on top."
+      ]
+    },
+    {
+      "heading": "The -un and -et families",
+      "paragraphs": [
+        "-un: sun, fun, run, bun.",
+        "-et: pet, wet, net, jet.",
+        "My pet got wet in the net — what a day!"
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Pick a family and race: how many of its words can you read in twenty seconds?",
+        "2. Invent a nonsense family member — 'zat' in the -at family. It is not a real word, but you can still read it. That is the family trick working!"
+      ]
+    }
+  ],
+  "takeaway": "Words that share an ending are a family — learn the ending (-at, -ig, -op) and swapping the first letter unlocks word after word.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Family shout game: one person calls an ending ('-op!'), everyone else shouts family words as fast as they can."
+}

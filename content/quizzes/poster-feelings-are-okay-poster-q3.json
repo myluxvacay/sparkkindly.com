@@ -1,0 +1,47 @@
+{
+  "id": "poster-feelings-are-okay-poster-q3",
+  "scheduledDate": "2029-04-03",
+  "brand": "kids",
+  "setId": "poster-set-feelings-are-okay-poster",
+  "prompt": "Is it okay to feel angry?",
+  "options": [
+    {
+      "id": "a",
+      "text": "No, never"
+    },
+    {
+      "id": "b",
+      "text": "Yes — but it is not okay to hurt people or things with it"
+    },
+    {
+      "id": "c",
+      "text": "Only on weekends"
+    },
+    {
+      "id": "d",
+      "text": "Only if you are big"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Every feeling is okay to feel. What matters is what we do with it.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Emotion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Emotion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-feelings-are-okay-poster.webp",
+    "alt": "Mango sitting calmly while sun, rain and a rainbow share his garden — feelings are weather, and weather passes",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

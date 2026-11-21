@@ -1,0 +1,82 @@
+{
+  "id": "poster-pronouns-poster",
+  "slug": "pronouns-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Pronouns: The Stand-In Words",
+  "description": "I, you, he, she, it, we, they — pronouns stand in for names so our sentences do not repeat the same name again and again.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). Short example sentences made for reading aloud.",
+  "hero": {
+    "src": "/images/poster-pronouns-poster.webp",
+    "alt": "Spark with seven paper dolls in a row — pronouns are the stand-in words for people and things",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "grammar",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Pronoun | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pronoun",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Why stand-ins?",
+      "paragraphs": [
+        "Imagine if we could never use stand-in words: 'Maya picked up Maya's book and Maya gave the book to Ben, and Ben thanked Maya.' Exhausting! Pronouns step in so sentences can breathe: 'Maya picked up her book and gave it to Ben, and he thanked her.'",
+        "Here are the seven hardest-working stand-ins in English."
+      ]
+    },
+    {
+      "heading": "Talking about myself and you",
+      "paragraphs": [
+        "I — I am seven. Use I when you talk about yourself.",
+        "You — You are my friend. Use you when you talk to someone.",
+        "We — We play together. Use we when you mean yourself and others."
+      ]
+    },
+    {
+      "heading": "Talking about others",
+      "paragraphs": [
+        "He — He is my brother. Use he for a boy or a man.",
+        "She — She is my teacher. Use she for a girl or a woman.",
+        "It — It is a puppy. Use it for an animal or a thing.",
+        "They — They are my cousins. Use they for two or more people, animals or things."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Tell a three-sentence story about your best friend without using their name — only he or she. Can your listener guess who it is?",
+        "2. Point to things and people around you and label each one: I, you, he, she, it or they."
+      ]
+    }
+  ],
+  "takeaway": "Pronouns — I, you, he, she, it, we, they — stand in for names so sentences stay smooth.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

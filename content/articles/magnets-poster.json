@@ -1,0 +1,88 @@
+{
+  "id": "poster-magnets-poster",
+  "slug": "magnets-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Magnets: Stick or Not?",
+  "description": "Magnets pull some things and ignore others completely. Which materials stick, which never will, and the invisible force field doing the pulling.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). The try-it hunt needs a grown-up and a fridge magnet — and no screens or cards anywhere near it.",
+  "hero": {
+    "src": "/images/poster-magnets-poster.webp",
+    "alt": "Spark's magnet pulling paper clips through the air while wood and a leaf ignore it completely",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Magnet | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Magnet",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "The invisible pull",
+      "paragraphs": [
+        "A magnet has a superpower you cannot see: it pulls certain metals toward itself, right through air, paper, even your hand. Scientists call the pulling area around it a magnetic field. You cannot see the field — but you can watch it work.",
+        "The strange part? Magnets are picky. Some things leap to a magnet. Others sit there as if nothing happened. Knowing which is which is the whole game."
+      ]
+    },
+    {
+      "heading": "It sticks!",
+      "paragraphs": [
+        "Things made of iron and steel stick to magnets: paper clips, nails, screws, keys, most coins' cousins the steel washers, fridge doors, scissors, and the metal strip on a toolbox.",
+        "If a magnet could talk to a paper clip across the table, the paper clip would come sliding over to say hello. That sliding is the field at work."
+      ]
+    },
+    {
+      "heading": "It never sticks",
+      "paragraphs": [
+        "Wood, plastic, paper, rubber, glass, cloth, leaves, stones and your fingers: a magnet ignores them all, forever, no matter how strong it is.",
+        "And here is the trick that fools everyone: not all metals stick either. Aluminum cans and most gold, silver and copper say no thank you. Magnets mainly love iron and steel."
+      ]
+    },
+    {
+      "heading": "Two magnets: push and pull",
+      "paragraphs": [
+        "Every magnet has two ends called poles. Bring two magnets together one way and they pull (attract). Flip one around and they push apart (repel) — you can feel an invisible cushion between them, like two hands pressing.",
+        "That push is how some fast trains float above their tracks — magnets repelling magnets, lifting tons of train on an invisible cushion."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Predict before you test: will a magnet stick to a bathtub? A bicycle? A banana? A bookshelf screw? Write your guesses, then check with a grown-up.",
+        "2. Why do you think 'stick or not?' is a better science question than just 'does it stick?' — what does the NOT teach us?"
+      ]
+    }
+  ],
+  "takeaway": "Magnets pull iron and steel through an invisible field, ignore wood, plastic and even some metals like aluminum — and two magnets can push as well as pull.",
+  "fiction": false,
+  "materials": [
+    "Just this page to read — or, to try it: one ordinary fridge magnet and a grown-up to hunt with"
+  ],
+  "supervision": "A grown-up joins the optional magnet hunt, especially around small objects.",
+  "safetyNotes": [
+    "Small magnets and small metal objects are choking hazards for children under 3 — keep them away from toddlers and never put magnets in mouths.",
+    "Strong or toy magnets with small parts: if two magnets are ever swallowed they are a medical emergency — tell a grown-up immediately and see a doctor.",
+    "Keep magnets away from phones, bank cards and computers, which they can damage; and never use anything electrical for this experiment."
+  ],
+  "screenFreeExtension": "Magnet hunt at home with a grown-up: predict 'stick or not' for ten objects, test each with a fridge magnet, and score your predictions."
+}

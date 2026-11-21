@@ -1,0 +1,47 @@
+{
+  "id": "poster-my-body-poster-q1",
+  "scheduledDate": "2029-02-28",
+  "brand": "kids",
+  "setId": "poster-set-my-body-poster",
+  "prompt": "What is the joint in the middle of your arm called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "wrist"
+    },
+    {
+      "id": "b",
+      "text": "elbow"
+    },
+    {
+      "id": "c",
+      "text": "ankle"
+    },
+    {
+      "id": "d",
+      "text": "chin"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The elbow is the bendy joint halfway down your arm.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Human body | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Human_body",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-my-body-poster.webp",
+    "alt": "Spark pointing from its head to its toes — body words name every part of us",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

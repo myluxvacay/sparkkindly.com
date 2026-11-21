@@ -1,0 +1,52 @@
+{
+  "id": "poster-how-bread-is-made-poster-q4",
+  "scheduledDate": "2029-05-26",
+  "brand": "kids",
+  "setId": "poster-set-how-bread-is-made-poster",
+  "prompt": "Put the journey in order: first step to last.",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bake, rise, harvest grain, knead"
+    },
+    {
+      "id": "b",
+      "text": "Harvest grain, mill flour, add yeast, knead, rise, bake"
+    },
+    {
+      "id": "c",
+      "text": "Mill flour, harvest grain, bake, rise"
+    },
+    {
+      "id": "d",
+      "text": "Add yeast, harvest grain, bake, knead"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Grain → flour → yeast mixed in → kneading → rising → baking. Six steps in that order.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Bread | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bread",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Baker's yeast | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Baker%27s_yeast",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-how-bread-is-made-poster.webp",
+    "alt": "Spark the baker holding a golden loaf — six steps from wheat field to table",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

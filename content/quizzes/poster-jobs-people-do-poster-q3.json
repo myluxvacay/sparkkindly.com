@@ -1,0 +1,47 @@
+{
+  "id": "poster-jobs-people-do-poster-q3",
+  "scheduledDate": "2029-03-06",
+  "brand": "kids",
+  "setId": "poster-set-jobs-people-do-poster",
+  "prompt": "What does a librarian do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Fixes cars"
+    },
+    {
+      "id": "b",
+      "text": "Helps you find books and guards a world of stories"
+    },
+    {
+      "id": "c",
+      "text": "Grows vegetables"
+    },
+    {
+      "id": "d",
+      "text": "Flies airplanes"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Librarians care for the library's collection and help readers find the right book.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Occupation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Occupation",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-jobs-people-do-poster.webp",
+    "alt": "Spark meeting the helpers of a village — a baker, a firefighter, a nurse and a farmer",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

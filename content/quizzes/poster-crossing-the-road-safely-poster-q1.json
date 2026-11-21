@@ -1,0 +1,47 @@
+{
+  "id": "poster-crossing-the-road-safely-poster-q1",
+  "scheduledDate": "2029-03-28",
+  "brand": "kids",
+  "setId": "poster-set-crossing-the-road-safely-poster",
+  "prompt": "What is the FIRST step of the crossing routine?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Look"
+    },
+    {
+      "id": "b",
+      "text": "Run"
+    },
+    {
+      "id": "c",
+      "text": "Stop at the curb"
+    },
+    {
+      "id": "d",
+      "text": "Wave"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Stop comes first — stop at the curb, before the road begins, while you decide.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Pedestrian crossing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pedestrian_crossing",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-crossing-the-road-safely-poster.webp",
+    "alt": "Spark stopped at a crossing, looking carefully before stepping out — stop, look, listen",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

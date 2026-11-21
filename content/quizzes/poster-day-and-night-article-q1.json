@@ -1,0 +1,52 @@
+{
+  "id": "poster-day-and-night-article-q1",
+  "scheduledDate": "2029-05-07",
+  "brand": "kids",
+  "setId": "poster-set-day-and-night-article",
+  "prompt": "What really makes day and night?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The sun travelling around Earth"
+    },
+    {
+      "id": "b",
+      "text": "Earth spinning like a top"
+    },
+    {
+      "id": "c",
+      "text": "The moon covering the sun"
+    },
+    {
+      "id": "d",
+      "text": "Clouds hiding the sun"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Earth spins once every 24 hours; our side takes turns facing the sun and facing away.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Earth's rotation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Earth%27s_rotation",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Daytime | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Daytime",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-day-and-night-article.webp",
+    "alt": "Spark and Mango on a hill that is half in daylight and half in night — Earth's spin gives us both",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

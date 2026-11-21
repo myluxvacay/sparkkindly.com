@@ -1,0 +1,47 @@
+{
+  "id": "poster-count-the-syllables-poster-q3",
+  "scheduledDate": "2028-12-21",
+  "brand": "kids",
+  "setId": "poster-set-count-the-syllables-poster",
+  "prompt": "Which word has THREE syllables?",
+  "options": [
+    {
+      "id": "a",
+      "text": "turtle"
+    },
+    {
+      "id": "b",
+      "text": "banana"
+    },
+    {
+      "id": "c",
+      "text": "fish"
+    },
+    {
+      "id": "d",
+      "text": "cake"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Ba-na-na has three beats. Turtle has two; fish and cake have one each.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Syllable | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Syllable",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-count-the-syllables-poster.webp",
+    "alt": "Spark clapping the beats in words while a rabbit, a butterfly and a turtle listen",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

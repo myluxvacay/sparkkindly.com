@@ -1,0 +1,47 @@
+{
+  "id": "poster-question-words-poster-q3",
+  "scheduledDate": "2028-12-13",
+  "brand": "kids",
+  "setId": "poster-set-question-words-poster",
+  "prompt": "___ do birds fly south in winter? (You want the reason.)",
+  "options": [
+    {
+      "id": "a",
+      "text": "When"
+    },
+    {
+      "id": "b",
+      "text": "Why"
+    },
+    {
+      "id": "c",
+      "text": "Where"
+    },
+    {
+      "id": "d",
+      "text": "Who"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Questions asking for a reason start with why.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Interrogative word | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Interrogative_word",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-question-words-poster.webp",
+    "alt": "Spark the detective with a magnifying glass and five glowing question marks — question words open every investigation",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "poster-crossing-the-road-safely-poster",
+  "slug": "crossing-the-road-safely-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Crossing the Road Safely: Stop, Look, Listen",
+  "description": "Stop at the curb, look left-right-left, listen, walk don't run — the road-crossing routine every child should be able to say in their sleep.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2), with a grown-up. This page teaches the routine; real crossings are always practiced with an adult.",
+  "hero": {
+    "src": "/images/poster-crossing-the-road-safely-poster.webp",
+    "alt": "Spark stopped at a crossing, looking carefully before stepping out — stop, look, listen",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "kindness",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Pedestrian crossing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pedestrian_crossing",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A routine that protects you",
+      "paragraphs": [
+        "Roads are for cars, and cars are big, fast and cannot stop instantly. But children cross roads safely every day — by using a routine so simple you can say it in your sleep: Stop. Look. Listen. Think. Walk.",
+        "Learn the words here. Practice the real thing only with a grown-up holding your hand or close beside you."
+      ]
+    },
+    {
+      "heading": "Stop and look",
+      "paragraphs": [
+        "STOP — Stop at the curb, before the road begins. Never step off the curb while you are still deciding.",
+        "LOOK — Look left, look right, then look left again. (In countries where cars drive on the left, it is right, left, right — ask your grown-up which way your country starts.) Look for cars, bicycles, buses — and remember that quiet electric cars are easy to miss."
+      ]
+    },
+    {
+      "heading": "Listen and think",
+      "paragraphs": [
+        "LISTEN — Ears catch what eyes miss: engines, sirens, bicycle bells. No headphones, no phone, no game while crossing — your ears are safety tools.",
+        "THINK — Is anything coming? Is that parked car hiding a moving one? Can drivers see ME? If you are not sure, wait. Waiting is always allowed."
+      ]
+    },
+    {
+      "heading": "Walk — don't run",
+      "paragraphs": [
+        "WALK straight across, still looking as you go. Running makes you trip and makes you harder to predict. Use a marked crossing or a crossing guard when there is one — they exist to be used.",
+        "And one more: never chase a ball, a dog or anything else into a road. Things can be replaced. You cannot be. Let it go and tell a grown-up."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Say the routine out loud three times: Stop, Look, Listen, Think, Walk. Can you say it backwards? (You do not need to — but it is fun.)",
+        "2. Why does the chart say parked cars can be dangerous even though they are not moving?"
+      ]
+    }
+  ],
+  "takeaway": "Stop at the curb, look left-right-left, listen with unplugged ears, think, then walk — never run, never chase anything into a road.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page for learning the words — real practice needs a grown-up and a quiet street"
+  ],
+  "supervision": "An adult must practice real crossings with the child, holding hands with younger children. This page teaches the routine only.",
+  "safetyNotes": [
+    "Never practice crossing alone — an adult is always present for real-road practice.",
+    "No phones, headphones or games while crossing: ears and eyes are the safety tools.",
+    "Never chase a ball, pet or any object into a road; tell a grown-up instead."
+  ],
+  "screenFreeExtension": "Practice the routine on a walk with your grown-up: say each step out loud at every curb, even the tiny quiet ones."
+}

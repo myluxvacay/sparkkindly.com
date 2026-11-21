@@ -1,0 +1,92 @@
+{
+  "id": "poster-how-bread-is-made-poster",
+  "slug": "how-bread-is-made-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "How Bread Is Made: From Grain to Loaf",
+  "description": "Wheat, flour, yeast, kneading, rising, baking — the six-step journey of a loaf of bread, including the tiny living helpers that blow it full of bubbles.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). The science of yeast is the star — and the optional bake needs a grown-up in charge of the oven.",
+  "hero": {
+    "src": "/images/poster-how-bread-is-made-poster.webp",
+    "alt": "Spark the baker holding a golden loaf — six steps from wheat field to table",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Bread | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bread",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Baker's yeast | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Baker%27s_yeast",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A loaf is a journey",
+      "paragraphs": [
+        "Bread feels simple — it has fed people for thousands of years — but a single loaf passes through fields, mills, bowls and fire before it reaches your plate. And its most important ingredient is alive. Here is the whole journey in six steps."
+      ]
+    },
+    {
+      "heading": "Steps 1 and 2: grain and flour",
+      "paragraphs": [
+        "Step 1 — Grain. Bread starts as wheat growing in a field. When the grain ripens golden, it is harvested and the hard outer husks are removed, leaving the wheat berries — the seeds.",
+        "Step 2 — Flour. At a mill, the wheat berries are ground between heavy stones or rollers into soft white or brown flour. Wholemeal flour keeps the ground-up outer bran too, which is why it is browner and heartier."
+      ]
+    },
+    {
+      "heading": "Steps 3 and 4: meet the yeast, knead the dough",
+      "paragraphs": [
+        "Step 3 — Yeast. The baker mixes flour with water, a pinch of salt — and yeast: a living fungus, tinier than dust, sold dried and sleeping. Woken in warm water, yeast begins eating sugars in the flour and breathing out bubbles of gas. Those bubbles are the whole secret of bread.",
+        "Step 4 — Kneading. The baker pushes, folds and stretches the dough for many minutes. Kneading builds stretchy strands (called gluten) that work like a net — a net that can trap the yeast's bubbles instead of letting them escape."
+      ]
+    },
+    {
+      "heading": "Steps 5 and 6: rise and bake",
+      "paragraphs": [
+        "Step 5 — Rising. Covered and left somewhere warm, the dough puffs up as thousands of bubbles inflate the gluten net — often doubling in size in an hour or two. Bakers call this proving, because it proves the yeast is alive and working.",
+        "Step 6 — Baking. In a hot oven, the dough sets around its bubbles, the inside cooks soft and airy, and the crust turns golden and crisp. Slice it open and you can see the bubbles' fossils: the holes in your bread are where the gas used to be."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Flatbreads like tortillas and chapatis skip the yeast. How would their texture be different from a risen loaf — and why?",
+        "2. The yeast in bread is alive. What three things does it need from the baker to do its job? (Warmth, water, and food — the flour's sugars.)"
+      ]
+    }
+  ],
+  "takeaway": "Bread is a six-step journey — grain, flour, yeast, kneading, rising, baking — powered by living yeast whose gas bubbles, trapped in a gluten net, make the loaf light.",
+  "fiction": false,
+  "materials": [
+    "Just this page to read — baking at home needs a full recipe, ingredients and a grown-up"
+  ],
+  "supervision": "Any home baking follow-up is grown-up led: adults handle the oven, hot trays and sharp knives, always.",
+  "safetyNotes": [
+    "Ovens and fresh-baked trays are burn hazards — children observe baking from a safe distance with an adult in charge.",
+    "Check for wheat/gluten and other allergies before any tasting activity.",
+    "Wash hands before handling dough or ingredients."
+  ],
+  "screenFreeExtension": "Bread detective work at home or in a shop: compare a slice of risen bread with a flatbread — count and compare the holes, and explain where they came from."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-count-the-syllables-poster-q4",
+  "scheduledDate": "2028-12-22",
+  "brand": "kids",
+  "setId": "poster-set-count-the-syllables-poster",
+  "prompt": "How many syllables are in 'elephant'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "2"
+    },
+    {
+      "id": "b",
+      "text": "4"
+    },
+    {
+      "id": "c",
+      "text": "3"
+    },
+    {
+      "id": "d",
+      "text": "5"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "El-e-phant — three syllables.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Syllable | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Syllable",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-count-the-syllables-poster.webp",
+    "alt": "Spark clapping the beats in words while a rabbit, a butterfly and a turtle listen",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

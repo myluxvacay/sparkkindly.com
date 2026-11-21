@@ -1,0 +1,47 @@
+{
+  "id": "poster-pronouns-poster-q3",
+  "scheduledDate": "2028-12-05",
+  "brand": "kids",
+  "setId": "poster-set-pronouns-poster",
+  "prompt": "The ball rolled away. ___ is under the car.",
+  "options": [
+    {
+      "id": "a",
+      "text": "She"
+    },
+    {
+      "id": "b",
+      "text": "He"
+    },
+    {
+      "id": "c",
+      "text": "We"
+    },
+    {
+      "id": "d",
+      "text": "It"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "A ball is a thing, so the pronoun is it.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Pronoun | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pronoun",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-pronouns-poster.webp",
+    "alt": "Spark with seven paper dolls in a row — pronouns are the stand-in words for people and things",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

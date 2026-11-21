@@ -1,0 +1,47 @@
+{
+  "id": "poster-words-every-child-should-know-poster-q4",
+  "scheduledDate": "2029-03-15",
+  "brand": "kids",
+  "setId": "poster-set-words-every-child-should-know-poster",
+  "prompt": "True or false: you can say 'No' and 'Stop' even to a grown-up, if something feels wrong.",
+  "options": [
+    {
+      "id": "a",
+      "text": "True — your voice is allowed with everyone"
+    },
+    {
+      "id": "b",
+      "text": "False — children must always obey grown-ups"
+    },
+    {
+      "id": "c",
+      "text": "Only to strangers"
+    },
+    {
+      "id": "d",
+      "text": "Only at school"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "True. Safety words are for everyone, and using them is never something you will be in trouble for.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Child safety | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Child_safety",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-words-every-child-should-know-poster.webp",
+    "alt": "Spark standing calmly with a raised paw beside Mango — your voice is a powerful safety tool",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

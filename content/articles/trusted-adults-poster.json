@@ -1,0 +1,90 @@
+{
+  "id": "poster-trusted-adults-poster",
+  "slug": "trusted-adults-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Trusted Adults: Your Safety Team",
+  "description": "A trusted adult is someone who listens, believes you and helps — at home, at school and in your neighborhood. How to choose your team and what to do if the first adult doesn't listen.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5), and for grown-ups to read with younger children. Practical safety planning, calmly told.",
+  "hero": {
+    "src": "/images/poster-trusted-adults-poster.webp",
+    "alt": "Spark and Mango with a circle of trusted helpers — every child deserves a safety team",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "kindness",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Child safety | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Child_safety",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Nobody should carry worries alone",
+      "paragraphs": [
+        "A trusted adult is a grown-up you can tell anything to — especially the hard, embarrassing or scary things. They have three jobs: listen, believe you, and help. If an adult does all three, they belong on your safety team.",
+        "This page helps you build that team on purpose, before you ever need it."
+      ]
+    },
+    {
+      "heading": "What a trusted adult looks like",
+      "paragraphs": [
+        "They listen without interrupting or laughing at serious things.",
+        "They believe you — even when the problem involves someone they know.",
+        "They never ask you to keep secrets from your parents or caregivers — surprises (like a birthday gift) are fine and have an end date; secrets that must never be told are not.",
+        "They respect your body and your 'no', and they do not make you hug, sit close or be photographed if you don't want to."
+      ]
+    },
+    {
+      "heading": "Build your team of five",
+      "paragraphs": [
+        "Pick about five, spread across your life so one is always reachable: one at home (a parent, grandparent or caregiver), one at school (a teacher, counselor or nurse), one in your neighborhood (a trusted neighbor, coach or family friend), one or two more who know your family well.",
+        "Write the names down together with your grown-up. Knowing the names in advance is the whole point — a team chosen calmly is a team you can find quickly."
+      ]
+    },
+    {
+      "heading": "If the first adult doesn't listen",
+      "paragraphs": [
+        "Sometimes an adult is busy, distracted, or does not understand. That is not the end of the road — it is a sign to tell the NEXT person on your team. Keep telling until someone listens and helps. That is not tattling, and it is never rude.",
+        "And if the problem is urgent or someone is being hurt, you can always call your local emergency number (911 in the United States) — operators are trained to help children, and calling when you truly need help is always right."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Name your five right now, out loud, with your grown-up. Where is each person usually found?",
+        "2. What is the difference between a surprise and a secret a child should not keep? Give one example of each."
+      ]
+    }
+  ],
+  "takeaway": "A trusted adult listens, believes you and helps — build a team of about five across home, school and neighborhood, and keep telling until someone acts.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — plus a pen if you write your team list together"
+  ],
+  "supervision": "Read together with a parent or caregiver; choosing the child's trusted adults is a joint family decision.",
+  "safetyNotes": [
+    "This page is safety education only — no activities, no contacting anyone.",
+    "Grown-ups: help the child choose the team, write it down, and repeat that the child will never be in trouble for telling.",
+    "If a child discloses harm while reading, believe them, stay calm, and contact local child-protection services or police (911 in an emergency in the US)."
+  ],
+  "screenFreeExtension": "Write or draw your safety team together on paper — five names, one for each finger of a traced hand — and keep it somewhere the family can find it."
+}

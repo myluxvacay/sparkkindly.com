@@ -1,0 +1,47 @@
+{
+  "id": "poster-silent-letters-poster-q1",
+  "scheduledDate": "2029-01-23",
+  "brand": "kids",
+  "setId": "poster-set-silent-letters-poster",
+  "prompt": "In the word 'knight', which letter is silent?",
+  "options": [
+    {
+      "id": "a",
+      "text": "n"
+    },
+    {
+      "id": "b",
+      "text": "k"
+    },
+    {
+      "id": "c",
+      "text": "g"
+    },
+    {
+      "id": "d",
+      "text": "t"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The k in knight is silent — we say 'night' with a k standing quietly in front.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Silent letter | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Silent_letter",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-silent-letters-poster.webp",
+    "alt": "Spark tiptoeing past a knight, a lamb and a gnome — some letters are silent",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

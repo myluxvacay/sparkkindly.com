@@ -1,0 +1,47 @@
+{
+  "id": "poster-polite-phrases-poster-q2",
+  "scheduledDate": "2029-03-09",
+  "brand": "kids",
+  "setId": "poster-set-polite-phrases-poster",
+  "prompt": "You need to walk past someone standing in a doorway. What do you say?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Move!"
+    },
+    {
+      "id": "b",
+      "text": "Coming through!"
+    },
+    {
+      "id": "c",
+      "text": "Excuse me"
+    },
+    {
+      "id": "d",
+      "text": "Watch out!"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "'Excuse me' asks for space politely.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Etiquette | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Etiquette",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-polite-phrases-poster.webp",
+    "alt": "Spark holding a door open for Mango — polite words and actions open doors between people",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

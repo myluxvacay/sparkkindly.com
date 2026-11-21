@@ -1,0 +1,88 @@
+{
+  "id": "poster-weather-words-poster",
+  "slug": "weather-words-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Weather Words: Sunny, Stormy and Everything Between",
+  "description": "Sunny, cloudy, breezy, foggy, stormy, snowy — the words we use to describe what the sky is doing, and the clues that tell us what is coming.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). Best read by a window — check the sky against the chart.",
+  "hero": {
+    "src": "/images/poster-weather-words-poster.webp",
+    "alt": "Spark and Mango under a rainbow where sun meets rain — weather words describe the sky",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "vocabulary",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Weather | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Weather",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Words for the sky",
+      "paragraphs": [
+        "Every day, the sky does something — and we have words for all of it. Weather words help us decide what to wear, what to play, and when to come inside.",
+        "Look out of the window while you read. Which words fit your sky today?"
+      ]
+    },
+    {
+      "heading": "Sunny, cloudy, rainy",
+      "paragraphs": [
+        "Sunny — The sun is out and the sky is mostly clear. A sunglasses day.",
+        "Cloudy — Clouds cover much of the sky, like a gray blanket.",
+        "Rainy — Water falls from the clouds in drops. A boots-and-umbrella day."
+      ]
+    },
+    {
+      "heading": "Breezy, stormy, foggy",
+      "paragraphs": [
+        "Breezy — A light wind moves the leaves and your hair.",
+        "Stormy — Strong wind, heavy rain, and maybe thunder and lightning. An inside day.",
+        "Foggy — Tiny water drops float in the air and make everything look soft and near things hard to see."
+      ]
+    },
+    {
+      "heading": "Snowy and icy",
+      "paragraphs": [
+        "Snowy — Soft white flakes fall and cover the ground.",
+        "Icy — Water has frozen hard and slippery on paths and puddles. Walk like a penguin!"
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Dress a character for three kinds of weather from this chart. What changes each time?",
+        "2. Dark clouds gathering often mean rain is coming. What other weather clues can you spot in nature?"
+      ]
+    }
+  ],
+  "takeaway": "Weather words — sunny, cloudy, rainy, breezy, stormy, foggy, snowy, icy — describe what the sky is doing and help us get ready for it.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Be a weather reporter: stand at the window, pick the two best weather words for right now, and give your family a forecast."
+}

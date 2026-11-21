@@ -1,0 +1,52 @@
+{
+  "id": "poster-why-leaves-change-color-article-q2",
+  "scheduledDate": "2029-05-20",
+  "brand": "kids",
+  "setId": "poster-set-why-leaves-change-color-article",
+  "prompt": "Where do fall's yellows and oranges come from?",
+  "options": [
+    {
+      "id": "a",
+      "text": "They are painted on by cold air"
+    },
+    {
+      "id": "b",
+      "text": "They were in the leaf all along, hidden under the green"
+    },
+    {
+      "id": "c",
+      "text": "They arrive from the roots in fall"
+    },
+    {
+      "id": "d",
+      "text": "Frost creates them overnight"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Carotenoid pigments sit in the leaf all summer, masked by chlorophyll until it fades.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Autumn leaf color | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Autumn_leaf_color",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Chlorophyll | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyll",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-why-leaves-change-color-article.webp",
+    "alt": "Mango under a maple tree turning from green to red and gold",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

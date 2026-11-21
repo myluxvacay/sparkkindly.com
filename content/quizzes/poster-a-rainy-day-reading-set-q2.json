@@ -1,0 +1,49 @@
+{
+  "id": "poster-a-rainy-day-reading-set-q2",
+  "scheduledDate": "2029-01-01",
+  "brand": "kids",
+  "passage": "I look out of the window. It is raining. Gray clouds fill the sky. I put on my yellow raincoat. I hold my blue umbrella up high. Splish, splash! I jump in the puddles. The rain feels cool on my nose. I love to play in the rain.",
+  "passageTitle": "A Rainy Day",
+  "setId": "poster-set-a-rainy-day-reading-set",
+  "prompt": "What color is the raincoat?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Blue"
+    },
+    {
+      "id": "b",
+      "text": "Yellow"
+    },
+    {
+      "id": "c",
+      "text": "Green"
+    },
+    {
+      "id": "d",
+      "text": "Red"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The story says: 'I put on my yellow raincoat.'",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Reading comprehension | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Reading_comprehension",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-a-rainy-day-reading-set.webp",
+    "alt": "A child in a yellow raincoat with a blue umbrella, splashing in a puddle",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

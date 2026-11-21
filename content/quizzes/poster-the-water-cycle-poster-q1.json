@@ -1,0 +1,47 @@
+{
+  "id": "poster-the-water-cycle-poster-q1",
+  "scheduledDate": "2029-04-25",
+  "brand": "kids",
+  "setId": "poster-set-the-water-cycle-poster",
+  "prompt": "What is evaporation?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Water freezing into ice"
+    },
+    {
+      "id": "b",
+      "text": "Sun-heated water turning into invisible vapor that rises"
+    },
+    {
+      "id": "c",
+      "text": "Rain falling from clouds"
+    },
+    {
+      "id": "d",
+      "text": "Water gathering in rivers"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Evaporation is liquid water becoming vapor and rising into the air.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Water cycle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-the-water-cycle-poster.webp",
+    "alt": "Spark on a hill between a lake, a river and clouds — water travels in an endless circle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

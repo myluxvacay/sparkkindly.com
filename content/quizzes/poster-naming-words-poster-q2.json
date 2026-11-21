@@ -1,0 +1,47 @@
+{
+  "id": "poster-naming-words-poster-q2",
+  "scheduledDate": "2028-12-16",
+  "brand": "kids",
+  "setId": "poster-set-naming-words-poster",
+  "prompt": "Which word names a PERSON?",
+  "options": [
+    {
+      "id": "a",
+      "text": "farmer"
+    },
+    {
+      "id": "b",
+      "text": "field"
+    },
+    {
+      "id": "c",
+      "text": "tractor"
+    },
+    {
+      "id": "d",
+      "text": "wheat"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "A farmer is a person. The others name a place and things.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Noun | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Noun",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-naming-words-poster.webp",
+    "alt": "Spark and Mango with a teacher, a schoolhouse, a ball and a tree — people, places and things all have naming words",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-word-families-poster-q4",
+  "scheduledDate": "2029-01-07",
+  "brand": "kids",
+  "setId": "poster-set-word-families-poster",
+  "prompt": "How many -un family words are in this sentence? 'We run in the sun for fun.'",
+  "options": [
+    {
+      "id": "a",
+      "text": "1"
+    },
+    {
+      "id": "b",
+      "text": "2"
+    },
+    {
+      "id": "c",
+      "text": "3"
+    },
+    {
+      "id": "d",
+      "text": "0"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Run, sun and fun — three -un family words.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Phonics | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Phonics",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-word-families-poster.webp",
+    "alt": "Spark and Mango at a picnic with a cat, a pig and a frog — word families share the same ending",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

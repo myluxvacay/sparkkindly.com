@@ -1,0 +1,77 @@
+{
+  "id": "poster-where-do-they-live-poster",
+  "slug": "where-do-they-live-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Where Do They Live? Animal Homes",
+  "description": "A dog lives in a kennel, a bee in a hive, a rabbit in a burrow — twelve animals and the special names of their homes.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). A matching-game chart: cover the home names and guess.",
+  "hero": {
+    "src": "/images/poster-where-do-they-live-poster.webp",
+    "alt": "Mango on a fence spotting a nest, a hive and a burrow — every animal has a home with its own name",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "vocabulary",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Animal shelter | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Animal_shelter",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Every animal has an address",
+      "paragraphs": [
+        "People live in houses, but animals have homes with special names of their own. Some are built by people, like a horse's stable. Some are built by the animals themselves, like a bird's nest or a rabbit's burrow.",
+        "Here are twelve animals and their homes. Learn them in pairs, the way the animals live in them!"
+      ]
+    },
+    {
+      "heading": "Farm homes",
+      "paragraphs": [
+        "The dog lives in a kennel. The horse lives in a stable. The cow lives in a shed. The pig lives in a pen. The sheep lives in a barn. The hen lives in a coop."
+      ]
+    },
+    {
+      "heading": "Wild homes",
+      "paragraphs": [
+        "The lion lives in a den. The bird lives in a nest. The bee lives in a hive. The frog lives in a pond. The rabbit lives in a burrow. The ant lives in an anthill."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Cover the home words and quiz each other: 'Where does a bee live?' How many can you get right?",
+        "2. A burrow, a den and a nest are all homes animals build themselves. Which one would be coziest to sleep in — and which would you visit for honey?"
+      ]
+    }
+  ],
+  "takeaway": "Animal homes have special names: kennel, stable, pen, coop, den, nest, hive, burrow and anthill.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Build a tiny animal home from cushions, boxes or sticks outside — then decide which animal it suits and why."
+}

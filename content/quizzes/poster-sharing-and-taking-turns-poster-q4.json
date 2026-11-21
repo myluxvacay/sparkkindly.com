@@ -1,0 +1,47 @@
+{
+  "id": "poster-sharing-and-taking-turns-poster-q4",
+  "scheduledDate": "2029-04-08",
+  "brand": "kids",
+  "setId": "poster-set-sharing-and-taking-turns-poster",
+  "prompt": "What is the best way to get a turn with a toy someone is using?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Grab it quickly"
+    },
+    {
+      "id": "b",
+      "text": "Hide it for later"
+    },
+    {
+      "id": "c",
+      "text": "Ask: 'When you are finished, may I have a turn?'"
+    },
+    {
+      "id": "d",
+      "text": "Tell them the toy is broken"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Asking with words works better than grabbing — grabbing starts fights and loses turns.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Sharing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sharing",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-sharing-and-taking-turns-poster.webp",
+    "alt": "Spark and Mango taking turns on a swing, with a sand timer to keep turns fair",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

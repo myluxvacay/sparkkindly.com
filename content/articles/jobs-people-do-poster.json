@@ -1,0 +1,90 @@
+{
+  "id": "poster-jobs-people-do-poster",
+  "slug": "jobs-people-do-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Jobs People Do: Helpers All Around Us",
+  "description": "Teachers, bakers, firefighters, nurses, farmers, builders — the jobs that keep a community running, and what each helper actually does all day.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A community tour — good preparation for 'what do you want to be?' conversations.",
+  "hero": {
+    "src": "/images/poster-jobs-people-do-poster.webp",
+    "alt": "Spark meeting the helpers of a village — a baker, a firefighter, a nurse and a farmer",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "vocabulary",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Occupation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Occupation",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A community is a team",
+      "paragraphs": [
+        "No one does everything. A community works because different people do different jobs — growing food, teaching children, fixing pipes, healing hurts — and trade the results with each other.",
+        "Here are ten of the helpers around you. Notice how many of them you have already met this week!"
+      ]
+    },
+    {
+      "heading": "People who help us learn and heal",
+      "paragraphs": [
+        "A teacher helps children learn new things and ask better questions.",
+        "A doctor finds out why your body hurts and how to fix it. A nurse cares for patients every day and helps the doctor.",
+        "A librarian guards a building full of stories and helps you find the exact book you need."
+      ]
+    },
+    {
+      "heading": "People who feed and build",
+      "paragraphs": [
+        "A farmer grows food — vegetables, fruit, grain — and cares for animals.",
+        "A baker turns flour, water and yeast into bread, rolls and cakes, starting work before the sun is up.",
+        "A builder constructs houses, schools and bridges from plans, wood, stone and steel.",
+        "A plumber fixes pipes so clean water comes in and dirty water goes away. An electrician makes sure lights and machines get power safely."
+      ]
+    },
+    {
+      "heading": "People who protect",
+      "paragraphs": [
+        "A firefighter races to fires, rescues people and teaches everyone how to stay safe.",
+        "A police officer helps keep people safe, directs traffic and helps when there is an emergency.",
+        "Every one of these jobs exists because someone, long ago, said: 'People need this. I will learn to do it well.'"
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Count how many of these helpers your family has relied on this month. Did the number surprise you?",
+        "2. Invent a job that does not exist yet but should. What problem would it solve, and what would its day look like?"
+      ]
+    }
+  ],
+  "takeaway": "Jobs are how a community shares work — teachers, nurses, farmers, bakers, builders, firefighters and more, each doing a part nobody could do alone.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

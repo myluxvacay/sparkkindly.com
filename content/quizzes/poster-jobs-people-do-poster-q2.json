@@ -1,0 +1,47 @@
+{
+  "id": "poster-jobs-people-do-poster-q2",
+  "scheduledDate": "2029-03-05",
+  "brand": "kids",
+  "setId": "poster-set-jobs-people-do-poster",
+  "prompt": "Which helper starts work before sunrise to make bread?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A builder"
+    },
+    {
+      "id": "b",
+      "text": "A nurse"
+    },
+    {
+      "id": "c",
+      "text": "A baker"
+    },
+    {
+      "id": "d",
+      "text": "A police officer"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Bakers begin very early so bread is ready when shops open.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Occupation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Occupation",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-jobs-people-do-poster.webp",
+    "alt": "Spark meeting the helpers of a village — a baker, a firefighter, a nurse and a farmer",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-how-a-seed-grows-poster-q3",
+  "scheduledDate": "2029-04-19",
+  "brand": "kids",
+  "setId": "poster-set-how-a-seed-grows-poster",
+  "prompt": "What is photosynthesis?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A seed splitting open"
+    },
+    {
+      "id": "b",
+      "text": "Leaves making food from sunlight, air and water"
+    },
+    {
+      "id": "c",
+      "text": "Roots drinking"
+    },
+    {
+      "id": "d",
+      "text": "A flower opening"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Photosynthesis is how green leaves cook the plant's food using sunlight.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Germination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Germination",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-how-a-seed-grows-poster.webp",
+    "alt": "Spark and Mango watching a seed split open — a root reaching down and a shoot reaching up",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

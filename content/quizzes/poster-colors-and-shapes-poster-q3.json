@@ -1,0 +1,47 @@
+{
+  "id": "poster-colors-and-shapes-poster-q3",
+  "scheduledDate": "2029-02-22",
+  "brand": "kids",
+  "setId": "poster-set-colors-and-shapes-poster",
+  "prompt": "Which shape is round all the way around?",
+  "options": [
+    {
+      "id": "a",
+      "text": "square"
+    },
+    {
+      "id": "b",
+      "text": "triangle"
+    },
+    {
+      "id": "c",
+      "text": "circle"
+    },
+    {
+      "id": "d",
+      "text": "rectangle"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A circle is perfectly round, like a ball or the sun.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Shape | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Shape",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-colors-and-shapes-poster.webp",
+    "alt": "Spark painting with colors and shapes — a red circle, a blue square, a gold triangle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

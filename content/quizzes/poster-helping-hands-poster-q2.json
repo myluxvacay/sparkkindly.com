@@ -1,0 +1,47 @@
+{
+  "id": "poster-helping-hands-poster-q2",
+  "scheduledDate": "2029-03-17",
+  "brand": "kids",
+  "setId": "poster-set-helping-hands-poster",
+  "prompt": "Which of these is called 'the bravest helping of all'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Watering a plant"
+    },
+    {
+      "id": "b",
+      "text": "Setting the table"
+    },
+    {
+      "id": "c",
+      "text": "Inviting someone sitting alone to join"
+    },
+    {
+      "id": "d",
+      "text": "Holding a door"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Inviting someone who is alone to join takes courage — that is why the chart calls it the bravest helping.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Prosocial behavior | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Prosocial_behavior",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-helping-hands-poster.webp",
+    "alt": "Spark and Mango carrying a watering can and a flower to the garden — helping hands work together",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

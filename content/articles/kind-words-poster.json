@@ -1,0 +1,81 @@
+{
+  "id": "poster-kind-words-poster",
+  "slug": "kind-words-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Kind Words: Words That Build, Words That Break",
+  "description": "Words can build people up or knock them down — and once said, they cannot be unsaid. A chart about choosing words that build.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). Best read together; the toothpaste idea in section 3 starts great conversations.",
+  "hero": {
+    "src": "/images/poster-kind-words-poster.webp",
+    "alt": "Spark building a tower of golden blocks — kind words build people up",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "kindness",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Kindness | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kindness",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Words are tools",
+      "paragraphs": [
+        "Words do things. 'You can sit with us' builds a person up. 'Nobody wants you here' knocks a person down. Same mouth, same day — completely different buildings.",
+        "You cannot control every word that comes out when you are upset. But you can learn the difference, practice the builders, and repair quickly when a breaker slips out."
+      ]
+    },
+    {
+      "heading": "Builder words",
+      "paragraphs": [
+        "'You worked really hard on that.' (Noticing effort builds.)",
+        "'Do you want help, or do you want to try alone first?' (Asking builds — it respects the person.)",
+        "'I like how you…' Finish this sentence about someone today. Specific kindness lands deepest.",
+        "'Thank you for…' Gratitude said out loud is the strongest builder of all."
+      ]
+    },
+    {
+      "heading": "Breaker words — and the toothpaste rule",
+      "paragraphs": [
+        "Teasing about how someone looks, learns or talks. Leaving-out words: 'You can't play.' Words said to get a laugh from others at someone's expense.",
+        "Here is why breakers matter: words are like toothpaste. Once they squeeze out, you cannot squeeze them back in. You can apologize — and you should — but choosing before speaking is better than repairing after."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Say one builder sentence about each person in your family tonight. Watch what happens to their faces.",
+        "2. Think of a breaker word or phrase you have heard at school. What builder words could replace it?"
+      ]
+    }
+  ],
+  "takeaway": "Words build or break, and like toothpaste they cannot go back in — so practice builders ('I noticed your effort', 'thank you for…') and repair fast when a breaker slips out.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Builder challenge: say three specific kind things to three different people today — name what they did, not just 'good job'."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-my-body-poster-q3",
+  "scheduledDate": "2029-03-02",
+  "brand": "kids",
+  "setId": "poster-set-my-body-poster",
+  "prompt": "Which finger helps you grip and hold things?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The smallest finger"
+    },
+    {
+      "id": "b",
+      "text": "The thumb"
+    },
+    {
+      "id": "c",
+      "text": "The middle finger"
+    },
+    {
+      "id": "d",
+      "text": "The ring finger"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The thumb is the special gripping finger — it makes thumbs-ups possible too.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Human body | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Human_body",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-my-body-poster.webp",
+    "alt": "Spark pointing from its head to its toes — body words name every part of us",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-beginning-sounds-poster-q2",
+  "scheduledDate": "2029-01-09",
+  "brand": "kids",
+  "setId": "poster-set-beginning-sounds-poster",
+  "prompt": "Which word starts with the same sound as 'ball'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "cat"
+    },
+    {
+      "id": "b",
+      "text": "bird"
+    },
+    {
+      "id": "c",
+      "text": "dog"
+    },
+    {
+      "id": "d",
+      "text": "fish"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Ball and bird both start with bbb.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Phonemic awareness | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Phonemic_awareness",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-beginning-sounds-poster.webp",
+    "alt": "Mango with a sun, an apple and a ball — every word starts with its own first sound",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

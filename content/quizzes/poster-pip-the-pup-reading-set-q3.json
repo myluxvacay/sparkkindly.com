@@ -1,0 +1,49 @@
+{
+  "id": "poster-pip-the-pup-reading-set-q3",
+  "scheduledDate": "2029-01-14",
+  "brand": "kids",
+  "passage": "Pip is a small pup. Pip has a red ball. Pip runs and runs. Pip digs in the mud. Now Pip is a muddy pup! Pip needs a bath.",
+  "passageTitle": "Pip the Pup",
+  "setId": "poster-set-pip-the-pup-reading-set",
+  "prompt": "What does Pip need at the end of the story?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A nap"
+    },
+    {
+      "id": "b",
+      "text": "A bath"
+    },
+    {
+      "id": "c",
+      "text": "A bone"
+    },
+    {
+      "id": "d",
+      "text": "A hat"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Pip is a muddy pup, so the story ends: 'Pip needs a bath.'",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Reading comprehension | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Reading_comprehension",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-pip-the-pup-reading-set.webp",
+    "alt": "Pip the small pup with his red ball, sitting happily in the mud",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "poster-beginning-sounds-poster",
+  "slug": "beginning-sounds-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Beginning Sounds: The First Sound You Hear",
+  "description": "Sun starts with sss. Mango starts with mmm. A first chart for hearing the sound at the start of a word — the very first reading skill.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 3–6 (pre-K–kindergarten). Stretch the first sound of every word like a rubber band: sss-un!",
+  "hero": {
+    "src": "/images/poster-beginning-sounds-poster.webp",
+    "alt": "Mango with a sun, an apple and a ball — every word starts with its own first sound",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "phonics",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Phonemic awareness | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Phonemic_awareness",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Listen to the start",
+      "paragraphs": [
+        "Every word starts with a sound. Say 'sun' very slowly: sss-un. The first sound is sss. Say 'Mango': mmm-ango. Mango starts with mmm!",
+        "Grown-ups call this the beginning sound. Hearing it is the very first step to reading — before letters, before books, just ears."
+      ]
+    },
+    {
+      "heading": "Sounds to stretch",
+      "paragraphs": [
+        "sss — sun, sock, soup, seed.",
+        "mmm — Mango, moon, milk, map.",
+        "bbb — ball, bus, bird, book.",
+        "ttt — turtle, top, ten, tiger."
+      ]
+    },
+    {
+      "heading": "Sounds to pop and hum",
+      "paragraphs": [
+        "ppp — pig, pen, pie, puppy.",
+        "nnn — nose, nut, nest, nine.",
+        "rrr — rabbit, rain, red, run.",
+        "fff — fish, frog, five, flower."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. What sound does YOUR name start with? Stretch it out: 'Bbb-ben!' Now do everyone in your family.",
+        "2. I spy something that starts with mmm. (It might be Mango… or a muffin… or Mom!)"
+      ]
+    }
+  ],
+  "takeaway": "Every word begins with a sound — stretch the word slowly and the first sound pops out: sss-un, mmm-ango, bbb-all.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Beginning-sound I-spy on a walk: 'I spy something starting with rrr' — road, robin, rose…"
+}

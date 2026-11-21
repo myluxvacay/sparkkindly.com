@@ -1,0 +1,47 @@
+{
+  "id": "poster-words-every-child-should-know-poster-q1",
+  "scheduledDate": "2029-03-12",
+  "brand": "kids",
+  "setId": "poster-set-words-every-child-should-know-poster",
+  "prompt": "Someone you know asks you to keep a secret from your parents that makes you feel uncomfortable. What should you do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keep the secret — secrets must be kept"
+    },
+    {
+      "id": "b",
+      "text": "Tell a trusted adult — safe adults don't ask kids to keep secrets from parents"
+    },
+    {
+      "id": "c",
+      "text": "Tell only a friend"
+    },
+    {
+      "id": "d",
+      "text": "Forget about it"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Safe adults never ask children to keep secrets from their parents. Telling a trusted adult is always right.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Child safety | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Child_safety",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-words-every-child-should-know-poster.webp",
+    "alt": "Spark standing calmly with a raised paw beside Mango — your voice is a powerful safety tool",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

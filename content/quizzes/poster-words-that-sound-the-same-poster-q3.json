@@ -1,0 +1,47 @@
+{
+  "id": "poster-words-that-sound-the-same-poster-q3",
+  "scheduledDate": "2028-11-27",
+  "brand": "kids",
+  "setId": "poster-set-words-that-sound-the-same-poster",
+  "prompt": "Please put the plant over ___ by the window.",
+  "options": [
+    {
+      "id": "a",
+      "text": "their"
+    },
+    {
+      "id": "b",
+      "text": "they're"
+    },
+    {
+      "id": "c",
+      "text": "there"
+    },
+    {
+      "id": "d",
+      "text": "theyr"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "This is a place, so the word is there — it even hides the word 'here'.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Homophone | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Homophone",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-words-that-sound-the-same-poster.webp",
+    "alt": "Spark juggling three speech bubbles where a path splits three ways — some words sound the same but go different ways",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

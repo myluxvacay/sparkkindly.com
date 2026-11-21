@@ -1,0 +1,90 @@
+{
+  "id": "poster-helping-hands-poster",
+  "slug": "helping-hands-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Helping Hands: Small Jobs, Big Difference",
+  "description": "Carrying a bag, watering a plant, cheering up a friend — ten small ways children can genuinely help at home and at school, every single day.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). A do-it-today chart: pick one helping job before bedtime.",
+  "hero": {
+    "src": "/images/poster-helping-hands-poster.webp",
+    "alt": "Spark and Mango carrying a watering can and a flower to the garden — helping hands work together",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "kindness",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Prosocial behavior | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Prosocial_behavior",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Helping is a superpower you already have",
+      "paragraphs": [
+        "You do not need to be big to be helpful. Homes and classrooms run on hundreds of tiny jobs — and most of them are exactly child-sized. Helping is not about being perfect at a job; it is about noticing that a job needs doing.",
+        "Here are ten real ways to help, starting today."
+      ]
+    },
+    {
+      "heading": "Helping at home",
+      "paragraphs": [
+        "Carry something: a bag, a book, a basket of laundry. Your arms are strong enough for something.",
+        "Water a plant. Plants cannot ask, so noticing they are thirsty is a kind of listening.",
+        "Set the table, or clear your own plate after a meal. Future-you says thank you.",
+        "Tidy one small corner — a shoe pile, a toy box, your own backpack."
+      ]
+    },
+    {
+      "heading": "Helping at school",
+      "paragraphs": [
+        "Hold the door for the person behind you. It takes two seconds and changes their morning.",
+        "Help a classmate find a lost crayon, book or mitten. Two searchers are faster than one.",
+        "If someone drops their things, kneel down and help pick them up. Everyone has dropped everything before.",
+        "Thank the people who help your school — the cooks, the cleaners, the crossing guard — by name if you know it."
+      ]
+    },
+    {
+      "heading": "Helping with your heart",
+      "paragraphs": [
+        "Notice someone sitting alone and invite them to join. This is the bravest helping of all.",
+        "Draw a picture or write a note for someone who is sad, sick or far away."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Which helping job from this chart will you do TODAY? Tell someone your plan — plans told out loud happen more often.",
+        "2. Think of a helper in your life who is easy to forget (the bus driver? the mail carrier?). How could you thank them this week?"
+      ]
+    }
+  ],
+  "takeaway": "Helping is noticing plus doing: carry, water, tidy, hold the door, include someone — small jobs that genuinely hold a home and a school together.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Helping bingo at home: pick three helping jobs from the chart and finish all three before bedtime."
+}

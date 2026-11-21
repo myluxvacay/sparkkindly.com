@@ -1,0 +1,47 @@
+{
+  "id": "poster-jobs-people-do-poster-q4",
+  "scheduledDate": "2029-03-07",
+  "brand": "kids",
+  "setId": "poster-set-jobs-people-do-poster",
+  "prompt": "Why does a community need many different jobs?",
+  "options": [
+    {
+      "id": "a",
+      "text": "So everyone wears a uniform"
+    },
+    {
+      "id": "b",
+      "text": "Because no one can do everything — people share the work"
+    },
+    {
+      "id": "c",
+      "text": "So children have homework topics"
+    },
+    {
+      "id": "d",
+      "text": "Because jobs are hobbies"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A community works by sharing: each person does a part, and everyone benefits from all the parts.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Occupation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Occupation",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-jobs-people-do-poster.webp",
+    "alt": "Spark meeting the helpers of a village — a baker, a firefighter, a nurse and a farmer",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "poster-nias-garden-reading-set",
+  "slug": "nias-garden-reading-set",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Nia's Garden: A Reading Set",
+  "description": "Nia plants a tiny seed and waits, waters and watches. A short reading passage about patience and growing things, with detail-hunting questions.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades 1–2). The passage stays with the questions; looking back is what good readers do.",
+  "hero": {
+    "src": "/images/poster-nias-garden-reading-set.webp",
+    "alt": "Nia watering her tomato plant, which now holds three red tomatoes",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "phonics",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Reading comprehension | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Reading_comprehension",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Nia's Garden",
+      "paragraphs": [
+        "Nia had one tiny tomato seed. She dug a small hole in the garden and tucked the seed inside. Every morning, Nia watered the soil with her blue watering can.",
+        "For six days, nothing happened. On the seventh day, Nia saw a tiny green sprout pushing up. 'You did it!' she whispered.",
+        "By the end of summer, the plant was tall and strong, and it held three red tomatoes. Nia picked the biggest one and shared it with her little brother."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Nia waited six days with nothing to see. What is something you have had to wait patiently for?",
+        "2. Why do you think Nia shared the biggest tomato instead of keeping it?"
+      ]
+    }
+  ],
+  "takeaway": "Good readers track the details: one seed, six quiet days, a sprout on day seven, and three tomatoes by summer's end.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

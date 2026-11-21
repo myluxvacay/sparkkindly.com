@@ -1,0 +1,47 @@
+{
+  "id": "poster-verb-tenses-poster-q2",
+  "scheduledDate": "2028-11-18",
+  "brand": "kids",
+  "setId": "poster-set-verb-tenses-poster",
+  "prompt": "Which sentence is about tomorrow? ",
+  "options": [
+    {
+      "id": "a",
+      "text": "I gave the book to Ana."
+    },
+    {
+      "id": "b",
+      "text": "I give the book to Ana."
+    },
+    {
+      "id": "c",
+      "text": "I will give the book to Ana."
+    },
+    {
+      "id": "d",
+      "text": "I giving the book to Ana."
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The future uses 'will' plus the verb: 'I will give the book to Ana.'",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "English verbs | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/English_verbs",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-verb-tenses-poster.webp",
+    "alt": "Spark with an hourglass between sunrise, midday and sunset — verbs change with time",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

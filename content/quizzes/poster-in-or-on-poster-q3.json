@@ -1,0 +1,47 @@
+{
+  "id": "poster-in-or-on-poster-q3",
+  "scheduledDate": "2028-12-01",
+  "brand": "kids",
+  "setId": "poster-set-in-or-on-poster",
+  "prompt": "The pilot is ___ the airplane, checking the controls.",
+  "options": [
+    {
+      "id": "a",
+      "text": "in"
+    },
+    {
+      "id": "b",
+      "text": "on"
+    },
+    {
+      "id": "c",
+      "text": "under"
+    },
+    {
+      "id": "d",
+      "text": "next"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "An airplane is a stand-up vehicle, so the pilot is on the airplane.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Preposition and postposition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Preposition_and_postposition",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-in-or-on-poster.webp",
+    "alt": "Spark boarding a big bus while Mango rides in a small car — we get on big vehicles and in small ones",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

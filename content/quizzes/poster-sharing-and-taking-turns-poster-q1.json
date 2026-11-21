@@ -1,0 +1,47 @@
+{
+  "id": "poster-sharing-and-taking-turns-poster-q1",
+  "scheduledDate": "2029-04-05",
+  "brand": "kids",
+  "setId": "poster-set-sharing-and-taking-turns-poster",
+  "prompt": "Your lovey that you sleep with every night belongs in which group?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Everyone's"
+    },
+    {
+      "id": "b",
+      "text": "Yours — special things may be kept"
+    },
+    {
+      "id": "c",
+      "text": "Turns"
+    },
+    {
+      "id": "d",
+      "text": "The teacher's"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A few special things are truly yours, and you may say so politely.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Sharing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sharing",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-sharing-and-taking-turns-poster.webp",
+    "alt": "Spark and Mango taking turns on a swing, with a sand timer to keep turns fair",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

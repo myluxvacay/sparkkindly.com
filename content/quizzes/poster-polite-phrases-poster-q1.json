@@ -1,0 +1,47 @@
+{
+  "id": "poster-polite-phrases-poster-q1",
+  "scheduledDate": "2029-03-08",
+  "brand": "kids",
+  "setId": "poster-set-polite-phrases-poster",
+  "prompt": "Someone thanks you for your help. The kind reply is…",
+  "options": [
+    {
+      "id": "a",
+      "text": "Whatever"
+    },
+    {
+      "id": "b",
+      "text": "You're welcome"
+    },
+    {
+      "id": "c",
+      "text": "Say please"
+    },
+    {
+      "id": "d",
+      "text": "Excuse me"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "'You're welcome' answers a thank-you and means you were glad to help.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Etiquette | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Etiquette",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-polite-phrases-poster.webp",
+    "alt": "Spark holding a door open for Mango — polite words and actions open doors between people",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

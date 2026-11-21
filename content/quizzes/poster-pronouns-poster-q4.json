@@ -1,0 +1,47 @@
+{
+  "id": "poster-pronouns-poster-q4",
+  "scheduledDate": "2028-12-06",
+  "brand": "kids",
+  "setId": "poster-set-pronouns-poster",
+  "prompt": "You and I are a team. ___ can do it together!",
+  "options": [
+    {
+      "id": "a",
+      "text": "They"
+    },
+    {
+      "id": "b",
+      "text": "We"
+    },
+    {
+      "id": "c",
+      "text": "It"
+    },
+    {
+      "id": "d",
+      "text": "He"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "'You and I' together is we.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Pronoun | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pronoun",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-pronouns-poster.webp",
+    "alt": "Spark with seven paper dolls in a row — pronouns are the stand-in words for people and things",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

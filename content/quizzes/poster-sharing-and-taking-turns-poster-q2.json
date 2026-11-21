@@ -1,0 +1,47 @@
+{
+  "id": "poster-sharing-and-taking-turns-poster-q2",
+  "scheduledDate": "2029-04-06",
+  "brand": "kids",
+  "setId": "poster-set-sharing-and-taking-turns-poster",
+  "prompt": "The classroom blocks belong to…",
+  "options": [
+    {
+      "id": "a",
+      "text": "The fastest child"
+    },
+    {
+      "id": "b",
+      "text": "Everyone — so everybody shares them"
+    },
+    {
+      "id": "c",
+      "text": "Nobody ever"
+    },
+    {
+      "id": "d",
+      "text": "Only guests"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Classroom things belong to everyone, which is exactly why we share them.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Sharing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sharing",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-sharing-and-taking-turns-poster.webp",
+    "alt": "Spark and Mango taking turns on a swing, with a sand timer to keep turns fair",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

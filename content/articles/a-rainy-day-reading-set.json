@@ -1,0 +1,66 @@
+{
+  "id": "poster-a-rainy-day-reading-set",
+  "slug": "a-rainy-day-reading-set",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "A Rainy Day: A First Reading Set",
+  "description": "Eight short sentences about rain, a yellow raincoat and jumping in puddles — a first-reader passage with questions about the details.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades 1–2). Short sentences for new readers; read it twice — once for fun, once to hunt for answers.",
+  "hero": {
+    "src": "/images/poster-a-rainy-day-reading-set.webp",
+    "alt": "A child in a yellow raincoat with a blue umbrella, splashing in a puddle",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "phonics",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Reading comprehension | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Reading_comprehension",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A Rainy Day",
+      "paragraphs": [
+        "I look out of the window. It is raining. Gray clouds fill the sky.",
+        "I put on my yellow raincoat. I hold my blue umbrella up high.",
+        "Splish, splash! I jump in the puddles. The rain feels cool on my nose. I love to play in the rain."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. What do YOU like to wear on a rainy day? What color is your umbrella — or the one you wish you had?",
+        "2. What sounds does rain make? Can you make three rain sounds with your hands and voice?"
+      ]
+    }
+  ],
+  "takeaway": "Every answer hides in the story's sentences — the weather, the colors, and where the child jumps.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

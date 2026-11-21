@@ -1,0 +1,52 @@
+{
+  "id": "poster-why-bees-matter-article-q2",
+  "scheduledDate": "2029-05-04",
+  "brand": "kids",
+  "setId": "poster-set-why-bees-matter-article",
+  "prompt": "About how much of our food depends on bees and other pollinators?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Almost none"
+    },
+    {
+      "id": "b",
+      "text": "One bite in a hundred"
+    },
+    {
+      "id": "c",
+      "text": "About one bite in three"
+    },
+    {
+      "id": "d",
+      "text": "All of it"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The article says about one out of every three bites exists because of pollinators like bees.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Pollination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pollination",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Honey bee | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Honey_bee",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-why-bees-matter-article.webp",
+    "alt": "A honeybee gathering pollen on lavender, with an apple tree in blossom behind",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

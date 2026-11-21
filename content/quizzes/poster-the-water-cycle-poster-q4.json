@@ -1,0 +1,47 @@
+{
+  "id": "poster-the-water-cycle-poster-q4",
+  "scheduledDate": "2029-04-28",
+  "brand": "kids",
+  "setId": "poster-set-the-water-cycle-poster",
+  "prompt": "Why is the water cycle called a cycle?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It happens only in spring"
+    },
+    {
+      "id": "b",
+      "text": "Water travels in an endless circle with no start or finish"
+    },
+    {
+      "id": "c",
+      "text": "It needs a bicycle"
+    },
+    {
+      "id": "d",
+      "text": "It takes exactly one year"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Collected water evaporates again — the journey loops forever.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Water cycle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-the-water-cycle-poster.webp",
+    "alt": "Spark on a hill between a lake, a river and clouds — water travels in an endless circle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

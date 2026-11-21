@@ -1,0 +1,86 @@
+{
+  "id": "poster-question-words-poster",
+  "slug": "question-words-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Question Words: Who, What, Where, When, Why",
+  "description": "The five W words (plus How) that open almost every question — what each one asks for, and how detectives, scientists and curious kids use them.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). Works as a writing helper: keep it nearby during journal time.",
+  "hero": {
+    "src": "/images/poster-question-words-poster.webp",
+    "alt": "Spark the detective with a magnifying glass and five glowing question marks — question words open every investigation",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "grammar",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Interrogative word | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Interrogative_word",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Every question starts somewhere",
+      "paragraphs": [
+        "Questions are how we learn anything — and almost every question in English begins with one of six small words. Each one asks for a different kind of answer. Knowing which one you need is the first skill of every detective, scientist and reporter.",
+        "Here is the toolkit."
+      ]
+    },
+    {
+      "heading": "Who and what",
+      "paragraphs": [
+        "Who — asks about a person. Who left this muddy footprint?",
+        "What — asks about a thing, an action or an idea. What is inside the box?"
+      ]
+    },
+    {
+      "heading": "Where and when",
+      "paragraphs": [
+        "Where — asks about a place. Where does the river begin?",
+        "When — asks about a time. When does the library open?"
+      ]
+    },
+    {
+      "heading": "Why and how",
+      "paragraphs": [
+        "Why — asks for a reason. Why is the sky blue? (Why is the most powerful question word of all — it is the one scientists live on.)",
+        "How — asks about the way something happens, or how much or how many. How does a bee find its way home?"
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Pick a mystery — a squeaky door, a missing sock — and write one question with each of the six words. Which question would you investigate first?",
+        "2. Interview a family member using only W questions. You may not ask anything that can be answered with plain yes or no!"
+      ]
+    }
+  ],
+  "takeaway": "Who asks for a person, what for a thing, where for a place, when for a time, why for a reason, and how for a method — six keys that open every question.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

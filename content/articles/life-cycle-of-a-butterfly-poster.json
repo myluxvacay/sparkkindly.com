@@ -1,0 +1,89 @@
+{
+  "id": "poster-life-cycle-of-a-butterfly-poster",
+  "slug": "life-cycle-of-a-butterfly-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Life Cycle of a Butterfly: Four Acts",
+  "description": "Egg, caterpillar, chrysalis, butterfly — the four acts of metamorphosis, and what actually happens inside the chrysalis (it is not sleeping).",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). A story-shaped science chart — read it as four acts of a play.",
+  "hero": {
+    "src": "/images/poster-life-cycle-of-a-butterfly-poster.webp",
+    "alt": "Mango watching a butterfly emerge — the last act of metamorphosis",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Metamorphosis | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Metamorphosis",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Chrysalis | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pupa",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "One animal, four bodies",
+      "paragraphs": [
+        "A butterfly does not grow the way you do, getting a bit bigger each year. It changes its whole body, four separate times — a complete transformation called metamorphosis. It is as if a fish turned into a bird halfway through its life. Here are the four acts."
+      ]
+    },
+    {
+      "heading": "Act 1 and 2: egg and caterpillar",
+      "paragraphs": [
+        "Act 1 — Egg. A mother butterfly lays tiny eggs on a leaf — usually the exact leaf her babies will love to eat. In a few days, out chew the tiniest caterpillars.",
+        "Act 2 — Caterpillar. The caterpillar's only job is eating. It munches and grows, and munches and grows, shedding its too-tight skin four or five times, like outgrowing four coats in a month."
+      ]
+    },
+    {
+      "heading": "Act 3: the chrysalis",
+      "paragraphs": [
+        "Act 3 — Chrysalis. When it is fully grown, the caterpillar hangs upside down and builds a quiet case around itself called a chrysalis. It looks like it is sleeping. It is not.",
+        "Inside, its body comes apart and rebuilds into a completely different animal — wings, long legs, curly tongue and all. This is the most astonishing construction job in nature, done without hands, in about two weeks."
+      ]
+    },
+    {
+      "heading": "Act 4: butterfly",
+      "paragraphs": [
+        "Act 4 — Butterfly. The case splits, and out climbs a butterfly with wet, crumpled wings. It pumps them full, lets them dry in the sun, and flies away to sip flower nectar and lay eggs of its own — starting the whole four-act play again."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. The caterpillar sheds its skin when it outgrows it. What do YOU outgrow — and what do you do with the things you outgrow?",
+        "2. If you could ask the chrysalis one question, what would it be?"
+      ]
+    }
+  ],
+  "takeaway": "A butterfly lives four lives — egg, caterpillar, chrysalis, butterfly — and the quiet chrysalis is where its body is taken apart and rebuilt.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Caterpillar watch: on a walk, look under leaves for caterpillars or nibbled leaves — observe with eyes only, and leave every creature where it lives."
+}

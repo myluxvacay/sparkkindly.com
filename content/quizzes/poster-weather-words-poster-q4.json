@@ -1,0 +1,47 @@
+{
+  "id": "poster-weather-words-poster-q4",
+  "scheduledDate": "2029-02-19",
+  "brand": "kids",
+  "setId": "poster-set-weather-words-poster",
+  "prompt": "On an icy day, paths are…",
+  "options": [
+    {
+      "id": "a",
+      "text": "soft and warm"
+    },
+    {
+      "id": "b",
+      "text": "frozen and slippery"
+    },
+    {
+      "id": "c",
+      "text": "covered in leaves"
+    },
+    {
+      "id": "d",
+      "text": "muddy"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Icy means water has frozen hard — paths become slippery, so walk carefully, like a penguin.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Weather | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Weather",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-weather-words-poster.webp",
+    "alt": "Spark and Mango under a rainbow where sun meets rain — weather words describe the sky",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

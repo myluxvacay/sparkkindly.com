@@ -1,0 +1,99 @@
+{
+  "id": "poster-why-leaves-change-color-article",
+  "slug": "why-leaves-change-color-article",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Why Do Leaves Change Color in Fall?",
+  "description": "The reds and golds of fall were hiding inside the leaf all summer. A reading article about chlorophyll, shortening days, and trees getting ready for winter.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). Read together or independently; the glossary carries the science words.",
+  "hero": {
+    "src": "/images/poster-why-leaves-change-color-article.webp",
+    "alt": "Mango under a maple tree turning from green to red and gold",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Autumn leaf color | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Autumn_leaf_color",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Chlorophyll | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyll",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A costume change with a secret",
+      "paragraphs": [
+        "Every fall, green trees put on a show: red maples, golden birches, orange oaks. It looks as if the leaves are painted new colors for the season. The truth is stranger and better — most of those colors were inside the leaf all along, hidden under green.",
+        "To understand the reveal, you first need to meet the green itself."
+      ]
+    },
+    {
+      "heading": "Stop and think",
+      "paragraphs": [
+        "Leaves are a tree's kitchens — they cook food from sunlight. Before reading on, think: what might happen to a leaf's cooking if the days got shorter and colder, and sunlight grew scarce? Predict, then check your prediction."
+      ]
+    },
+    {
+      "heading": "The green fades first",
+      "paragraphs": [
+        "The green in a leaf is a chemical called chlorophyll — the part that catches sunlight for cooking food. All summer, the tree replaces chlorophyll as fast as it wears out, so leaves stay deep green. But as fall days shorten, the tree begins shutting down its kitchens for the winter. It stops replacing the chlorophyll.",
+        "The old chlorophyll fades — and as the green drains away, the yellows and oranges that were always in the leaf (from pigments called carotenoids, the same family that colors carrots) finally show through. They were never added. They were unmasked."
+      ]
+    },
+    {
+      "heading": "Where red comes from",
+      "paragraphs": [
+        "Reds and purples are a different story: many trees make those pigments fresh in the fall, in leaves that hold leftover sugars. Bright sunny days plus cold (but not freezing) nights produce the most brilliant reds — which is why some autumns are spectacular and others are a little dull, depending on the weather.",
+        "Soon after, the leaf's connection to the tree seals off completely, and the leaf lets go. It is not waste, exactly: fallen leaves rot into the soil and return their minerals to the tree's roots. Even in letting go, the leaf gives back."
+      ]
+    },
+    {
+      "heading": "Words to know",
+      "paragraphs": [
+        "Chlorophyll — the green chemical in leaves that catches sunlight for making food.",
+        "Pigment — any chemical that gives something its color.",
+        "Carotenoids — yellow and orange pigments hiding in leaves (and carrots) all year.",
+        "Deciduous — trees that drop all their leaves each fall, unlike evergreens."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Pennsylvania's fall colors are famous — people travel just to see them. Which tree near your home puts on the best show, and what colors does it choose?",
+        "2. Evergreen trees keep their needles all winter. What might be the advantage of keeping leaves — and the advantage of dropping them? Every strategy has a price; what does each tree pay?"
+      ]
+    }
+  ],
+  "takeaway": "Fall colors are mostly an unmasking: as trees stop replacing green chlorophyll, hidden yellows and oranges show through — while reds are made fresh from leftover sugars on bright, cold days.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Leaf collection walk: gather five fallen leaves of different colors, sort them from greenest to reddest, and press one in a heavy book to keep."
+}

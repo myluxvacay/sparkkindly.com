@@ -1,0 +1,52 @@
+{
+  "id": "poster-why-leaves-change-color-article-q1",
+  "scheduledDate": "2029-05-19",
+  "brand": "kids",
+  "setId": "poster-set-why-leaves-change-color-article",
+  "prompt": "What is chlorophyll?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A red fall pigment"
+    },
+    {
+      "id": "b",
+      "text": "The green chemical in leaves that catches sunlight"
+    },
+    {
+      "id": "c",
+      "text": "A kind of tree root"
+    },
+    {
+      "id": "d",
+      "text": "The part of the leaf that seals off"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Chlorophyll is the green food-making chemical; leaves are green because of it.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Autumn leaf color | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Autumn_leaf_color",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Chlorophyll | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyll",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-why-leaves-change-color-article.webp",
+    "alt": "Mango under a maple tree turning from green to red and gold",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

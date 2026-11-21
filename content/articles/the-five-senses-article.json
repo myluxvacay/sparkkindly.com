@@ -1,0 +1,86 @@
+{
+  "id": "poster-the-five-senses-article",
+  "slug": "the-five-senses-article",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "The Five Senses: Your Body's Five Detectives",
+  "description": "Sight, hearing, smell, taste and touch — how your five senses gather news about the world and deliver it to your brain, with a detective for each sense.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 4–7 (pre-K–grade 2). A read-aloud tour — pause at each sense and test it on the spot.",
+  "hero": {
+    "src": "/images/poster-the-five-senses-article.webp",
+    "alt": "Spark the detective with symbols of the five senses — eye, ear, flower, strawberry and feather",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Sense | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sense",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Five detectives on duty",
+      "paragraphs": [
+        "Your brain sits in the dark inside your head. It cannot see the garden, hear the birds or feel the grass — not by itself. So it employs five detectives to go out and gather the news: your five senses.",
+        "Each detective has one special job, and each one reports back to headquarters — your brain — all day long."
+      ]
+    },
+    {
+      "heading": "Sight and hearing",
+      "paragraphs": [
+        "Detective Sight works through your eyes. Eyes catch light bouncing off everything around you, and your brain builds the picture: colors, shapes, movement, faces. Most of what you know about the world arrives through this detective.",
+        "Detective Hearing works through your ears. Sounds are invisible shaking in the air — ears catch the shaking, and your brain turns it into voices, music, thunder and the tiny tap of rain."
+      ]
+    },
+    {
+      "heading": "Smell and taste",
+      "paragraphs": [
+        "Detective Smell works through your nose, catching scent particles floating in the air: bread baking, rain coming, a rose, a warning whiff of something burning.",
+        "Detective Taste works through your tongue, and it has five flavors to report: sweet, salty, sour, bitter and savory. Smell and taste are partners — hold your nose while eating and notice how much flavor disappears!"
+      ]
+    },
+    {
+      "heading": "Touch — the everywhere detective",
+      "paragraphs": [
+        "Detective Touch works through your skin — and skin is everywhere, making touch the only detective on duty over your whole body. Touch reports soft and rough, hot and cold, smooth and scratchy, gentle and ouch.",
+        "Together, the five detectives keep you informed, delighted and safe. A hot stove, a sour berry, a friend's voice calling your name — every one of those arrived by detective delivery."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Close your eyes for ten seconds and listen. How many sounds can your hearing detective count? Now open your eyes — what did sight add?",
+        "2. Which sense would you choose to make twice as strong for a day — and what would you do with it?"
+      ]
+    }
+  ],
+  "takeaway": "Sight, hearing, smell, taste and touch are five detectives gathering news for your brain — and together they build your whole experience of the world.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Sense walk: take a short walk and deliberately collect one discovery for each sense — something seen, heard, smelled, touched, and (only if a grown-up says it is safe) tasted."
+}
