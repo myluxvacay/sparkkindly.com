@@ -1,0 +1,47 @@
+{
+  "id": "poster-syllables-challenge-poster-q4",
+  "scheduledDate": "2029-01-22",
+  "brand": "kids",
+  "setId": "poster-set-syllables-challenge-poster",
+  "prompt": "How many syllables are in 'watermelon'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "3"
+    },
+    {
+      "id": "b",
+      "text": "4"
+    },
+    {
+      "id": "c",
+      "text": "5"
+    },
+    {
+      "id": "d",
+      "text": "2"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Wa-ter-mel-on — four syllables.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Syllable | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Syllable",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-syllables-challenge-poster.webp",
+    "alt": "Spark conducting a hippo, an alligator and a caterpillar — long words have many beats",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

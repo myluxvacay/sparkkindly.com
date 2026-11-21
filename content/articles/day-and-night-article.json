@@ -1,0 +1,93 @@
+{
+  "id": "poster-day-and-night-article",
+  "slug": "day-and-night-article",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Day and Night: The Spinning Earth",
+  "description": "Why does the sun seem to move across the sky? A gentle first science article about Earth's spin, sunrise and sunset, and where the sun goes at night (nowhere).",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 4–7 (pre-K–grade 2). A read-aloud science story; a flashlight and a ball make a perfect partner demonstration.",
+  "hero": {
+    "src": "/images/poster-day-and-night-article.webp",
+    "alt": "Spark and Mango on a hill that is half in daylight and half in night — Earth's spin gives us both",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Earth's rotation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Earth%27s_rotation",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Daytime | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Daytime",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where does the sun go at night?",
+      "paragraphs": [
+        "Every morning, the sun climbs into the sky. Every evening, it sinks away, and the dark comes. It looks as if the sun is travelling around us. But here is the wonderful secret: the sun is not moving across our sky at all. WE are moving.",
+        "The Earth — our whole planet, with all its oceans and cities and gardens — is spinning, slowly and steadily, like a top that never stops."
+      ]
+    },
+    {
+      "heading": "Stop and think",
+      "paragraphs": [
+        "Imagine you are sitting on a merry-go-round, turning slowly, and your friend stands still holding a lamp. Would the lamp seem to move around you — even though your friend never walks? Hold that idea, and read on."
+      ]
+    },
+    {
+      "heading": "The great spin",
+      "paragraphs": [
+        "Earth takes one whole day and night — twenty-four hours — to spin around once. When your part of Earth turns to face the sun, sunlight falls on you: that is daytime, and the moment it begins is sunrise.",
+        "As Earth keeps turning, your part slowly turns away from the sun. The sun seems to sink — that is sunset — and then your side faces the dark of space: night, with the moon and stars. The sun has not gone anywhere. It is shining on the other side of the world, giving other children their morning.",
+        "While you sleep tonight, children across the ocean are eating breakfast in sunshine made by the very same sun."
+      ]
+    },
+    {
+      "heading": "Words to know",
+      "paragraphs": [
+        "Spin — to turn around and around in one place, like a top.",
+        "Sunrise — the moment your part of Earth turns into the sunlight.",
+        "Sunset — the moment your part of Earth turns away from the sunlight.",
+        "Planet — a huge world of rock or gas that travels around a star. Earth is our planet; the sun is our star."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. If Earth stopped spinning for one whole day, what would happen to the side facing the sun — and to the side facing away?",
+        "2. When it is night for you, name one thing children on the sunny side of Earth might be doing right now."
+      ]
+    }
+  ],
+  "takeaway": "Day and night come from Earth's spin: as our side turns toward the sun we get sunrise and day; as it turns away we get sunset and night.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Flashlight Earth: in a dark room, shine a flashlight (the sun) at a ball (Earth) and turn the ball slowly. Watch one spot move from light to dark — that is a day passing."
+}

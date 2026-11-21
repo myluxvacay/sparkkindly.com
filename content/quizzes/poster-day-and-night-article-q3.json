@@ -1,0 +1,52 @@
+{
+  "id": "poster-day-and-night-article-q3",
+  "scheduledDate": "2029-05-09",
+  "brand": "kids",
+  "setId": "poster-set-day-and-night-article",
+  "prompt": "How long does Earth take to spin around once?",
+  "options": [
+    {
+      "id": "a",
+      "text": "One hour"
+    },
+    {
+      "id": "b",
+      "text": "One week"
+    },
+    {
+      "id": "c",
+      "text": "Twenty-four hours — a day and a night"
+    },
+    {
+      "id": "d",
+      "text": "One year"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "One full spin takes 24 hours, which is exactly one day plus one night.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Earth's rotation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Earth%27s_rotation",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Daytime | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Daytime",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-day-and-night-article.webp",
+    "alt": "Spark and Mango on a hill that is half in daylight and half in night — Earth's spin gives us both",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

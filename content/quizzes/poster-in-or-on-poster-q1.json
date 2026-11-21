@@ -1,0 +1,47 @@
+{
+  "id": "poster-in-or-on-poster-q1",
+  "scheduledDate": "2028-11-29",
+  "brand": "kids",
+  "setId": "poster-set-in-or-on-poster",
+  "prompt": "We got ___ the bus outside school.",
+  "options": [
+    {
+      "id": "a",
+      "text": "in"
+    },
+    {
+      "id": "b",
+      "text": "on"
+    },
+    {
+      "id": "c",
+      "text": "under"
+    },
+    {
+      "id": "d",
+      "text": "behind"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "You can stand up and walk in a bus, so we say on the bus.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Preposition and postposition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Preposition_and_postposition",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-in-or-on-poster.webp",
+    "alt": "Spark boarding a big bus while Mango rides in a small car — we get on big vehicles and in small ones",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

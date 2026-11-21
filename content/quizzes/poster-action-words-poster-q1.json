@@ -1,0 +1,47 @@
+{
+  "id": "poster-action-words-poster-q1",
+  "scheduledDate": "2029-02-04",
+  "brand": "kids",
+  "setId": "poster-set-action-words-poster",
+  "prompt": "Which of these is an ACTION word?",
+  "options": [
+    {
+      "id": "a",
+      "text": "happy"
+    },
+    {
+      "id": "b",
+      "text": "jump"
+    },
+    {
+      "id": "c",
+      "text": "blue"
+    },
+    {
+      "id": "d",
+      "text": "table"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Jump is something you can DO, so it is an action word.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Verb | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Verb",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-action-words-poster.webp",
+    "alt": "Spark leaping over a puddle — action words are things we do",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

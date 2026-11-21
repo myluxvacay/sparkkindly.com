@@ -1,0 +1,92 @@
+{
+  "id": "poster-why-bees-matter-article",
+  "slug": "why-bees-matter-article",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Why Do Bees Matter?",
+  "description": "One out of every three bites you eat exists because a bee visited a flower. A reading article about pollination, honeybee teamwork and how to help bees.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). Read together or independently; the glossary explains the science words.",
+  "hero": {
+    "src": "/images/poster-why-bees-matter-article.webp",
+    "alt": "A honeybee gathering pollen on lavender, with an apple tree in blossom behind",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Pollination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pollination",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Honey bee | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Honey_bee",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A very small worker with a very big job",
+      "paragraphs": [
+        "Look at a bee and you might just see a small, stripy insect. Farmers see something else: one of the hardest-working partners they have. Bees are responsible, directly or indirectly, for about one out of every three bites of food you eat. Without them, supermarket shelves would look shockingly empty.",
+        "How does an insect the size of your thumb carry that much importance? It all starts with a flower's problem."
+      ]
+    },
+    {
+      "heading": "Stop and think",
+      "paragraphs": [
+        "Before you read on: a flower cannot walk. It stays rooted in one spot its whole life. But to make seeds — and fruit — most flowers need pollen from another flower. How do you think the pollen travels? Make a guess, then read on."
+      ]
+    },
+    {
+      "heading": "Pollen's taxi service",
+      "paragraphs": [
+        "Pollen is a flower's yellow dust, and it must reach another flower of the same kind for seeds and fruit to form. Wind carries some pollen, but bees are the master couriers. A bee visits a flower to drink its sweet nectar, and pollen sticks to her fuzzy body. At the next flower, some pollen rubs off. Flower fed, bee fed, seeds started.",
+        "This is called pollination, and bees do it billions of times a day — apples, berries, almonds, cucumbers, pumpkins and hundreds more foods all depend on it. A single honeybee colony can visit millions of flowers in a season, and one bee will visit fifty to a hundred flowers on a single trip."
+      ]
+    },
+    {
+      "heading": "Words to know",
+      "paragraphs": [
+        "Pollen — the yellow dust a flower makes, which must reach another flower for seeds to form.",
+        "Pollination — the carrying of pollen from flower to flower, often by bees.",
+        "Nectar — the sweet liquid flowers offer, which bees drink and turn into honey.",
+        "Colony — the whole bee family living together in one hive, led by a single queen."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Bees are in trouble in many places because of lost wildflowers, some farm sprays and disease. Which of the helping ideas in this article could your family actually do — plant a flower pot, leave a wild corner, buy local honey?",
+        "2. A bee stings only to defend itself or its hive, and a honeybee dies after stinging — so it is truly a last resort. How does knowing that change how you act near bees? (Calm and slow wins: never swat, just step away.)"
+      ]
+    }
+  ],
+  "takeaway": "Bees carry pollen from flower to flower, making seeds and fruit possible — about one in three bites of our food starts with a bee's visit.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Bee watch from a safe distance: sit near flowers for ten minutes and count how many bees visit. Which flowers are busiest?"
+}

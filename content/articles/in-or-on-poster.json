@@ -1,0 +1,84 @@
+{
+  "id": "poster-in-or-on-poster",
+  "slug": "in-or-on-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "In or On? Words for Travelling",
+  "description": "We get ON a bus but IN a car — a worksheet-style chart that explains the rule behind one of English's most puzzling little choices.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–9 (grades 1–3). The rule box in the middle is the part to remember; the rest is practice.",
+  "hero": {
+    "src": "/images/poster-in-or-on-poster.webp",
+    "alt": "Spark boarding a big bus while Mango rides in a small car — we get on big vehicles and in small ones",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "grammar",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Preposition and postposition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Preposition_and_postposition",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A tiny puzzle",
+      "paragraphs": [
+        "English speakers say 'on the bus' but 'in the car'. Why? Both are vehicles! There is a real rule hiding underneath, and once you see it, you will get it right nearly every time.",
+        "Read the rule, then test yourself on the sentences."
+      ]
+    },
+    {
+      "heading": "The rule: can you stand up inside?",
+      "paragraphs": [
+        "If the vehicle is big enough to stand up and walk around in, we say ON: on the bus, on the train, on the airplane, on the ship, on the ferry.",
+        "If the vehicle is small and you sit down inside it, we say IN: in the car, in the taxi, in the van, in the truck cab.",
+        "And if you sit on top and straddle it, we also say ON: on the bicycle, on the motorcycle, on the horse."
+      ]
+    },
+    {
+      "heading": "Practice sentences",
+      "paragraphs": [
+        "We got on the train at the station.",
+        "Dad is sitting in the car.",
+        "She is riding on her bicycle.",
+        "The passengers are on the airplane.",
+        "We traveled in a taxi to the beach.",
+        "He is traveling on a ship."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. A canoe: do you get in it or on it? (Trick question — most people say IN a canoe, because you sit down inside it.)",
+        "2. Invent a vehicle of the future. Would you ride in it or on it? Use the stand-up test to decide."
+      ]
+    }
+  ],
+  "takeaway": "Stand-up vehicles take 'on' (bus, train, plane, ship); sit-inside vehicles take 'in' (car, taxi, van); sit-on-top rides take 'on' too (bicycle, motorcycle).",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

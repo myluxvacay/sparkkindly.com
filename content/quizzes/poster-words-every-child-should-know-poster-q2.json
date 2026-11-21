@@ -1,0 +1,47 @@
+{
+  "id": "poster-words-every-child-should-know-poster-q2",
+  "scheduledDate": "2029-03-13",
+  "brand": "kids",
+  "setId": "poster-set-words-every-child-should-know-poster",
+  "prompt": "Which sentence asks for help?",
+  "options": [
+    {
+      "id": "a",
+      "text": "That's not okay"
+    },
+    {
+      "id": "b",
+      "text": "I need help"
+    },
+    {
+      "id": "c",
+      "text": "Stay away from me"
+    },
+    {
+      "id": "d",
+      "text": "No, thank you"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "'I need help' is the sentence that brings trusted adults to you.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Child safety | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Child_safety",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-words-every-child-should-know-poster.webp",
+    "alt": "Spark standing calmly with a raised paw beside Mango — your voice is a powerful safety tool",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

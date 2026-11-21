@@ -1,0 +1,83 @@
+{
+  "id": "poster-colors-and-shapes-poster",
+  "slug": "colors-and-shapes-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Colors and Shapes: What Do You See?",
+  "description": "Red, blue, gold and green; circle, square, triangle and star — the first describing words for what things look like.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 3–6 (pre-K–kindergarten). Point at every color and shape in the room as you read.",
+  "hero": {
+    "src": "/images/poster-colors-and-shapes-poster.webp",
+    "alt": "Spark painting with colors and shapes — a red circle, a blue square, a gold triangle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "vocabulary",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Shape | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Shape",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Two ways to describe",
+      "paragraphs": [
+        "When we describe what something looks like, we use two kinds of words: color words (what color is it?) and shape words (what shape is it?). Together they can describe almost anything you can see.",
+        "Let's practice with the world around us."
+      ]
+    },
+    {
+      "heading": "Colors",
+      "paragraphs": [
+        "Red like a strawberry. Blue like the sky. Yellow like the sun. Green like the grass.",
+        "Orange like a pumpkin. Purple like a plum. Pink like a flower. Brown like a tree trunk.",
+        "Black like the night. White like snow. Gold like treasure. Silver like the moon."
+      ]
+    },
+    {
+      "heading": "Shapes",
+      "paragraphs": [
+        "A circle is round all the way around — like a ball or the sun.",
+        "A square has four sides, all the same — like a window.",
+        "A triangle has three sides — like a roof or a slice of pie.",
+        "A rectangle is a longer square — like a door or a book.",
+        "A star has points that twinkle — like the stars in the night sky."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Describe something in the room using one color word and one shape word: 'a round, red clock!' Can others guess it?",
+        "2. Go on a shape hunt: find a circle, a square and a triangle without leaving the room."
+      ]
+    }
+  ],
+  "takeaway": "Color words and shape words work as a team to describe anything you can see — a round red ball, a square blue window.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Shape hunt indoors or out: find one circle, one square, one triangle and one star, and name each one's color."
+}

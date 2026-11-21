@@ -1,0 +1,86 @@
+{
+  "id": "poster-plurals-poster",
+  "slug": "plurals-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Plurals: Add -s or -es?",
+  "description": "One cat, two cats; one box, two boxes — how English makes 'more than one', including the words that change their whole shape.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–9 (grades 1–3). The -es rule and the shape-changers are the heart of this chart.",
+  "hero": {
+    "src": "/images/poster-plurals-poster.webp",
+    "alt": "Mango between one apple and a basket of apples — plurals mean more than one",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "grammar",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Plural | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Plural",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "More than one",
+      "paragraphs": [
+        "When there is more than one of something, English usually just adds an -s to the word: one cat, two cats; one book, three books; one apple, a basket of apples. Easy!",
+        "But some words end in sounds that bump into a plain -s. For those, English adds -es instead — and a few famous words change shape completely."
+      ]
+    },
+    {
+      "heading": "Just add -s",
+      "paragraphs": [
+        "cat → cats. dog → dogs. book → books. apple → apples. chair → chairs. flower → flowers.",
+        "Most words you meet every day work exactly like this."
+      ]
+    },
+    {
+      "heading": "Add -es after hissy endings",
+      "paragraphs": [
+        "Words ending in s, x, ch, sh or z get -es, because 'boxs' would be impossible to say: bus → buses, box → boxes, watch → watches, dish → dishes.",
+        "Try saying 'boxs' out loud. Your tongue will tell you why -es exists!"
+      ]
+    },
+    {
+      "heading": "The shape-changers",
+      "paragraphs": [
+        "A few words refuse both rules and change completely: child → children, person → people, mouse → mice, foot → feet, tooth → teeth, goose → geese.",
+        "There is no rule to learn here — these are old, old words. You simply get to know them, like friends."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Look around the room and name three plurals: 'I see four chairs.' Which rule did each one use?",
+        "2. Which shape-changer surprises you most — mice, feet or children?"
+      ]
+    }
+  ],
+  "takeaway": "Most plurals just add -s; words ending in s, x, ch, sh or z add -es; and a few old words (child/children, mouse/mice) change shape entirely.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

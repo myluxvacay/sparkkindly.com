@@ -1,0 +1,47 @@
+{
+  "id": "poster-crossing-the-road-safely-poster-q3",
+  "scheduledDate": "2029-03-30",
+  "brand": "kids",
+  "setId": "poster-set-crossing-the-road-safely-poster",
+  "prompt": "Your ball rolls into the road. What does the chart say?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Run after it quickly"
+    },
+    {
+      "id": "b",
+      "text": "Look once and dash"
+    },
+    {
+      "id": "c",
+      "text": "Let it go and tell a grown-up"
+    },
+    {
+      "id": "d",
+      "text": "Send a younger child"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Things can be replaced; you cannot be. Never chase anything into a road.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Pedestrian crossing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pedestrian_crossing",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-crossing-the-road-safely-poster.webp",
+    "alt": "Spark stopped at a crossing, looking carefully before stepping out — stop, look, listen",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

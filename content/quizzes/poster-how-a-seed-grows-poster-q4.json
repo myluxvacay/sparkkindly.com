@@ -1,0 +1,47 @@
+{
+  "id": "poster-how-a-seed-grows-poster-q4",
+  "scheduledDate": "2029-04-20",
+  "brand": "kids",
+  "setId": "poster-set-how-a-seed-grows-poster",
+  "prompt": "Why does the shoot grow UP toward the light?",
+  "options": [
+    {
+      "id": "a",
+      "text": "To escape the roots"
+    },
+    {
+      "id": "b",
+      "text": "So its leaves can catch sunlight and make food"
+    },
+    {
+      "id": "c",
+      "text": "Because soil is cold"
+    },
+    {
+      "id": "d",
+      "text": "To find the rain"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Leaves need sunlight to make food, so the shoot grows toward the light.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Germination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Germination",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-how-a-seed-grows-poster.webp",
+    "alt": "Spark and Mango watching a seed split open — a root reaching down and a shoot reaching up",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

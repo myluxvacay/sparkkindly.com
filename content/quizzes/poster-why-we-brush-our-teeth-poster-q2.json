@@ -1,0 +1,52 @@
+{
+  "id": "poster-why-we-brush-our-teeth-poster-q2",
+  "scheduledDate": "2029-04-30",
+  "brand": "kids",
+  "setId": "poster-set-why-we-brush-our-teeth-poster",
+  "prompt": "What do plaque bacteria make after eating sugar?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bubbles"
+    },
+    {
+      "id": "b",
+      "text": "Acid that can melt holes in teeth"
+    },
+    {
+      "id": "c",
+      "text": "Toothpaste"
+    },
+    {
+      "id": "d",
+      "text": "Calcium"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The bacteria turn sugar into acid, and acid is what damages teeth and causes cavities.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Tooth brushing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tooth_brushing",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Dental plaque | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dental_plaque",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-why-we-brush-our-teeth-poster.webp",
+    "alt": "Spark guarding a smiling tooth with a giant toothbrush — brushing sweeps away plaque",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-including-others-poster-q4",
+  "scheduledDate": "2029-03-27",
+  "brand": "kids",
+  "setId": "poster-set-including-others-poster",
+  "prompt": "Why does the chart say to pick the new person early when choosing teams?",
+  "options": [
+    {
+      "id": "a",
+      "text": "So the game ends sooner"
+    },
+    {
+      "id": "b",
+      "text": "So they are not an afterthought at the end"
+    },
+    {
+      "id": "c",
+      "text": "Because rules require it"
+    },
+    {
+      "id": "d",
+      "text": "To finish picking faster"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Being picked last feels like being leftover. Picking the new person early says: you belong here.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Social inclusion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Social_exclusion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-including-others-poster.webp",
+    "alt": "Spark waving Mango over to an open space at the picnic — including is making room on purpose",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

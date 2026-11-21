@@ -1,0 +1,86 @@
+{
+  "id": "poster-naming-words-poster",
+  "slug": "naming-words-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Naming Words: People, Places and Things",
+  "description": "A noun is a naming word — the very first grammar idea. People, places and things all have names, and every sentence needs them.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 3–6 (pre-K–kindergarten). Built for reading aloud and pointing games.",
+  "hero": {
+    "src": "/images/poster-naming-words-poster.webp",
+    "alt": "Spark and Mango with a teacher, a schoolhouse, a ball and a tree — people, places and things all have naming words",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "grammar",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Noun | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Noun",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Everything has a name",
+      "paragraphs": [
+        "Look around you. Everything you can point at has a name: cat, ball, teacher, tree. Words that name things are called nouns — but you can just call them naming words.",
+        "Naming words come in three families. Let's meet them!"
+      ]
+    },
+    {
+      "heading": "People",
+      "paragraphs": [
+        "teacher, baby, farmer, sister, doctor, friend.",
+        "If you can hug them or wave to them, their name is a naming word for a person."
+      ]
+    },
+    {
+      "heading": "Places",
+      "paragraphs": [
+        "school, garden, beach, kitchen, park, library.",
+        "If you can go there, its name is a naming word for a place."
+      ]
+    },
+    {
+      "heading": "Things",
+      "paragraphs": [
+        "ball, book, apple, chair, rainbow, shoe.",
+        "If you can hold it, see it or point to it, its name is a naming word for a thing."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Play 'I spy a naming word': 'I spy a thing that is red.' Take turns guessing.",
+        "2. How many naming words can your family shout out in thirty seconds? Sort them into people, places and things."
+      ]
+    }
+  ],
+  "takeaway": "Naming words (nouns) name people, places and things — and you can point at almost all of them.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Go on a naming-word walk: name ten people, places and things you pass, and say which family each one belongs to."
+}

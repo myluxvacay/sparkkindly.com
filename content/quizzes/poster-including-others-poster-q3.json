@@ -1,0 +1,47 @@
+{
+  "id": "poster-including-others-poster-q3",
+  "scheduledDate": "2029-03-26",
+  "brand": "kids",
+  "setId": "poster-set-including-others-poster",
+  "prompt": "Someone says, 'No thanks, I like drawing alone.' What should an includer do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Insist until they join"
+    },
+    {
+      "id": "b",
+      "text": "Feel offended"
+    },
+    {
+      "id": "c",
+      "text": "Smile and say the offer stays open"
+    },
+    {
+      "id": "d",
+      "text": "Never ask them again"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Including is offering the door, not pulling people through it. Respect the no, keep the offer open.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Social inclusion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Social_exclusion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-including-others-poster.webp",
+    "alt": "Spark waving Mango over to an open space at the picnic — including is making room on purpose",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

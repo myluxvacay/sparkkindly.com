@@ -1,0 +1,84 @@
+{
+  "id": "poster-words-that-sound-the-same-poster",
+  "slug": "words-that-sound-the-same-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Words That Sound the Same",
+  "description": "There, their and they're; see and sea; right and write — homophones are words that sound alike but mean different things and are spelled differently.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A reference chart for writing time; the trio in the first section is the one to master.",
+  "hero": {
+    "src": "/images/poster-words-that-sound-the-same-poster.webp",
+    "alt": "Spark juggling three speech bubbles where a path splits three ways — some words sound the same but go different ways",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "grammar",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Homophone | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Homophone",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Same sound, different word",
+      "paragraphs": [
+        "English is full of tricksters: words that sound exactly alike but are spelled differently and mean completely different things. They are called homophones. Your ears cannot tell them apart — only the meaning of the sentence can.",
+        "The most famous tricksters of all are there, their and they're. Master those three and the rest feel easy."
+      ]
+    },
+    {
+      "heading": "The famous trio: there, their, they're",
+      "paragraphs": [
+        "There — a place. The park is over there. (Tip: there hides the word here — both are places.)",
+        "Their — belonging to them. Their dog is friendly. (Tip: their hides the word heir — someone who inherits, who owns.)",
+        "They're — a short way of writing they are. They're coming to lunch. (Tip: if you can swap in 'they are' and the sentence still works, they're is your word.)"
+      ]
+    },
+    {
+      "heading": "More sound-alike pairs",
+      "paragraphs": [
+        "See / sea — I can see the boat. The sea is calm today.",
+        "Here / hear — Come here, please. I can hear the birds.",
+        "Where / wear — Where is my hat? I wear it outside.",
+        "Buy / bye — We buy bread on Fridays. Wave and say bye.",
+        "Sun / son — The sun is warm. Her son is seven.",
+        "Right / write — Your answer is right. Please write your name."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Write one sentence using 'their' and one using 'they're'. Read them to a partner — can they tell which is which from the sound alone?",
+        "2. Which pair do you mix up most often? Make up a silly memory trick for it, like the ones in the trio section."
+      ]
+    }
+  ],
+  "takeaway": "Homophones sound the same but differ in spelling and meaning — and for there/their/they're, the swap test ('they are') and the hidden words (here, heir) settle every argument.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

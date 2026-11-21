@@ -1,0 +1,91 @@
+{
+  "id": "poster-verb-tenses-poster",
+  "slug": "verb-tenses-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Verb Tenses: Today, Yesterday and Tomorrow",
+  "description": "Drink and drank, go and went, give and gave — ten everyday verbs in the present, the past and the future, including the tricky ones that change completely.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 7–11 (grades 2–5). The past-tense column rewards a second read; tricky verbs are marked in the text.",
+  "hero": {
+    "src": "/images/poster-verb-tenses-poster.webp",
+    "alt": "Spark with an hourglass between sunrise, midday and sunset — verbs change with time",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "grammar",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "English verbs | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/English_verbs",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Verbs tell the time",
+      "paragraphs": [
+        "A verb does more than name an action — it also tells us when the action happens. 'I drink my water' is today. 'I drank my water' already happened. 'I will drink my water' is still to come.",
+        "Many verbs make their past by adding -ed, like jump and jumped. But some of the most common verbs in English are rebels: they change their whole shape in the past. Those are the ones worth learning by heart."
+      ]
+    },
+    {
+      "heading": "The rebels: eat, drink, do, go",
+      "paragraphs": [
+        "Eat — I eat an apple today. I ate an apple yesterday. I will eat an apple tomorrow.",
+        "Drink — I drink milk today. I drank milk yesterday. I will drink milk tomorrow.",
+        "Do — I do my work today. I did my work yesterday. I will do my work tomorrow.",
+        "Go — I go to school today. I went to school yesterday. I will go to school tomorrow."
+      ]
+    },
+    {
+      "heading": "More rebels: come, get, make, see, take, give",
+      "paragraphs": [
+        "Come — I come home today. I came home yesterday. I will come home tomorrow.",
+        "Get — I get a sticker today. I got a sticker yesterday. I will get a sticker tomorrow.",
+        "Make — I make a card today. I made a card yesterday. I will make a card tomorrow.",
+        "See — I see a robin today. I saw a robin yesterday. I will see a robin tomorrow.",
+        "Take — I take a photo today. I took a photo yesterday. I will take a photo tomorrow.",
+        "Give — I give a flower today. I gave a flower yesterday. I will give a flower tomorrow."
+      ]
+    },
+    {
+      "heading": "The easy future",
+      "paragraphs": [
+        "Here is the good news: the future is the same for every verb. Just put will in front and keep the verb as it is — I will go, she will see, they will give. No shape changes, ever."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Tell your day in three sentences: one about yesterday (past), one about right now (present), one about tomorrow (future).",
+        "2. Which rebel verb do you think is the strangest — go/went or see/saw? Why?"
+      ]
+    }
+  ],
+  "takeaway": "The past tense of common verbs often changes shape completely — drank, ate, went, saw, gave — while the future is always just 'will' plus the verb.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

@@ -1,0 +1,86 @@
+{
+  "id": "poster-my-body-poster",
+  "slug": "my-body-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "My Body: From Head to Toe",
+  "description": "Head, shoulders, knees and toes — and the parts you cannot see on a chart song: elbows, wrists, ankles, chin and cheeks. A body-words tour.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). Touch each part as you read its name — your body is the chart.",
+  "hero": {
+    "src": "/images/poster-my-body-poster.webp",
+    "alt": "Spark pointing from its head to its toes — body words name every part of us",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "vocabulary",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Human body | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Human_body",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Your body, word by word",
+      "paragraphs": [
+        "You carry this chart around with you everywhere — it IS you. Body words help you tell a doctor where it hurts, follow a dance move, and understand how you work.",
+        "Touch each part as you read about it."
+      ]
+    },
+    {
+      "heading": "Head and face",
+      "paragraphs": [
+        "Your head holds your brain, your thinking machine. On your face: eyes for seeing, ears for hearing, a nose for smelling, a mouth for tasting, talking and smiling.",
+        "Your chin is the bottom of your face, and your cheeks are the soft parts on either side of your smile."
+      ]
+    },
+    {
+      "heading": "Arms and hands",
+      "paragraphs": [
+        "Shoulders connect your arms to your body. Your elbow is the bendy joint in the middle of your arm. Your wrist connects your hand to your arm.",
+        "Each hand has five fingers — and one special finger called the thumb, which helps you grip, hold and give a thumbs-up."
+      ]
+    },
+    {
+      "heading": "Legs and feet",
+      "paragraphs": [
+        "Your hips connect your legs to your body. Your knee is the bendy joint in the middle of your leg. Your ankle connects your foot to your leg.",
+        "Feet carry you everywhere. Your heel is at the back, your toes are at the front — ten toes in all, wiggling in your shoes."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Play body-words Simon Says with the tricky ones: 'Touch your elbow! Touch your wrist! Touch your chin!'",
+        "2. Which body part do you think works the hardest every day — your heart, your legs or your brain? Defend your answer!"
+      ]
+    }
+  ],
+  "takeaway": "Body words — chin, cheeks, elbow, wrist, knee, ankle, heel — let you describe exactly where things are and how you move.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Head, shoulders, knees and toes — sing it faster and faster, then try it with elbows and ankles added."
+}

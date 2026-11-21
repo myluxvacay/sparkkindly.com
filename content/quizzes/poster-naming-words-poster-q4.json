@@ -1,0 +1,47 @@
+{
+  "id": "poster-naming-words-poster-q4",
+  "scheduledDate": "2028-12-18",
+  "brand": "kids",
+  "setId": "poster-set-naming-words-poster",
+  "prompt": "In 'The dog sleeps,' which word is the naming word?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The"
+    },
+    {
+      "id": "b",
+      "text": "sleeps"
+    },
+    {
+      "id": "c",
+      "text": "dog"
+    },
+    {
+      "id": "d",
+      "text": "none of them"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "'Dog' names the animal. 'Sleeps' is an action word, not a naming word.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Noun | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Noun",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-naming-words-poster.webp",
+    "alt": "Spark and Mango with a teacher, a schoolhouse, a ball and a tree — people, places and things all have naming words",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

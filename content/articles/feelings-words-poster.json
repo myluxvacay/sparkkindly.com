@@ -1,0 +1,90 @@
+{
+  "id": "poster-feelings-words-poster",
+  "slug": "feelings-words-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Feelings Words: Beyond Happy and Sad",
+  "description": "Proud, frustrated, nervous, grateful, left out, brave — a bigger feelings vocabulary for older kids, because naming a feeling is the first step to handling it.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). For readers ready to name feelings precisely — a journaling helper.",
+  "hero": {
+    "src": "/images/poster-feelings-words-poster.webp",
+    "alt": "Spark with bubbles of many colors — feelings come in more colors than happy and sad",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "vocabulary",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Emotion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Emotion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Happy and sad are just the beginning",
+      "paragraphs": [
+        "Ask most people how they feel and you will hear 'fine', 'good', 'happy' or 'sad'. But real feelings are much more specific — and specific words are powerful. 'I feel frustrated' tells people exactly what is wrong. 'I feel bad' does not.",
+        "Here is a bigger toolkit. Every word below is a feeling you have probably already had."
+      ]
+    },
+    {
+      "heading": "Proud, grateful, excited, calm",
+      "paragraphs": [
+        "Proud — I practiced for weeks and it worked. My chest feels full.",
+        "Grateful — Someone did something kind for me, and I notice it and appreciate it.",
+        "Excited — Something good is coming and my body feels buzzy and awake.",
+        "Calm — My breathing is slow, my shoulders are down, nothing needs fixing right now."
+      ]
+    },
+    {
+      "heading": "Frustrated, nervous, disappointed, left out",
+      "paragraphs": [
+        "Frustrated — I keep trying and it keeps not working. (Frustration often means you need a break or a new strategy — not that you are bad at it.)",
+        "Nervous — Something important is coming and my stomach feels fluttery. Almost everyone feels this before performances and first days.",
+        "Disappointed — I hoped for one thing and got another. The hope was real, so the let-down is real too.",
+        "Left out — Others are together and I am not included. Naming it honestly is the first step to changing it."
+      ]
+    },
+    {
+      "heading": "Brave and embarrassed",
+      "paragraphs": [
+        "Brave — I am scared AND I am doing it anyway. Brave is not the absence of fear; it is fear with its boots on.",
+        "Embarrassed — Everyone saw my mistake and my face feels hot. It fades faster than it feels like it will — and everyone has been there."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Which word from this chart fits your day best right now? Say it in a full sentence: 'I feel ___ because…'.",
+        "2. Which feeling word do you think adults need to hear more often — and why?"
+      ]
+    }
+  ],
+  "takeaway": "Precise feelings words — proud, frustrated, nervous, grateful, left out, brave — turn 'I feel bad' into information other people can actually help with.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

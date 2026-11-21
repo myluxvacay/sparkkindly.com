@@ -1,0 +1,47 @@
+{
+  "id": "poster-prepositions-poster-q3",
+  "scheduledDate": "2028-11-23",
+  "brand": "kids",
+  "setId": "poster-set-prepositions-poster",
+  "prompt": "The apple is ___ the two books — one book on each side of it.",
+  "options": [
+    {
+      "id": "a",
+      "text": "between"
+    },
+    {
+      "id": "b",
+      "text": "under"
+    },
+    {
+      "id": "c",
+      "text": "in"
+    },
+    {
+      "id": "d",
+      "text": "above"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Something with one thing on each side of it is between them.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Preposition and postposition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Preposition_and_postposition",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-prepositions-poster.webp",
+    "alt": "Mango the cat hiding under a bench with a ball on top — prepositions tell us where things are",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

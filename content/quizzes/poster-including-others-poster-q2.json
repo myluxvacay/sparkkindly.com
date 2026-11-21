@@ -1,0 +1,47 @@
+{
+  "id": "poster-including-others-poster-q2",
+  "scheduledDate": "2029-03-25",
+  "brand": "kids",
+  "setId": "poster-set-including-others-poster",
+  "prompt": "What makes an invitation a REAL one, in this chart?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Shouting it across the playground"
+    },
+    {
+      "id": "b",
+      "text": "Walking over to the person to ask them"
+    },
+    {
+      "id": "c",
+      "text": "Sending someone else"
+    },
+    {
+      "id": "d",
+      "text": "Only inviting your best friends"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A real invitation has a person going to get them — you walk over and ask.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Social inclusion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Social_exclusion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-including-others-poster.webp",
+    "alt": "Spark waving Mango over to an open space at the picnic — including is making room on purpose",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

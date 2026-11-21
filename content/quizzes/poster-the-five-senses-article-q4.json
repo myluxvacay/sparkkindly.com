@@ -1,0 +1,47 @@
+{
+  "id": "poster-the-five-senses-article-q4",
+  "scheduledDate": "2029-05-14",
+  "brand": "kids",
+  "setId": "poster-set-the-five-senses-article",
+  "prompt": "Why does food taste dull when you hold your nose?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Your tongue stops working"
+    },
+    {
+      "id": "b",
+      "text": "Smell and taste are partners — smell carries much of the flavor"
+    },
+    {
+      "id": "c",
+      "text": "Noses do the chewing"
+    },
+    {
+      "id": "d",
+      "text": "Cold air helps taste"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Taste and smell work as a team; blocking smell removes much of what we call flavor.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sense | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sense",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-the-five-senses-article.webp",
+    "alt": "Spark the detective with symbols of the five senses — eye, ear, flower, strawberry and feather",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

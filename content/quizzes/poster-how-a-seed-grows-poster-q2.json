@@ -1,0 +1,47 @@
+{
+  "id": "poster-how-a-seed-grows-poster-q2",
+  "scheduledDate": "2029-04-18",
+  "brand": "kids",
+  "setId": "poster-set-how-a-seed-grows-poster",
+  "prompt": "Which part of the plant grows FIRST?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The flower"
+    },
+    {
+      "id": "b",
+      "text": "The leaves"
+    },
+    {
+      "id": "c",
+      "text": "The root"
+    },
+    {
+      "id": "d",
+      "text": "The stem"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The root grows first, so the plant can drink and anchor itself before anything else.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Germination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Germination",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-how-a-seed-grows-poster.webp",
+    "alt": "Spark and Mango watching a seed split open — a root reaching down and a shoot reaching up",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

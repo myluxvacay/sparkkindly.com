@@ -1,0 +1,84 @@
+{
+  "id": "poster-syllables-challenge-poster",
+  "slug": "syllables-challenge-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Count the Syllables: Challenge Words",
+  "description": "Ready for bigger beats? Hippopotamus (5), refrigerator (5), congratulations (5) — a challenge chart for readers who have mastered clapping syllables.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A challenge chart — the chin-drop trick still works on the longest words.",
+  "hero": {
+    "src": "/images/poster-syllables-challenge-poster.webp",
+    "alt": "Spark conducting a hippo, an alligator and a caterpillar — long words have many beats",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "phonics",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Syllable | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Syllable",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Bigger words, more beats",
+      "paragraphs": [
+        "You already know the trick: a syllable is a beat, and your chin drops once per beat. Now it is time for the heavyweight words — the ones with four, five, even six beats hiding inside.",
+        "Say each word slowly, chin on hand, and count the drops."
+      ]
+    },
+    {
+      "heading": "Four-beat words",
+      "paragraphs": [
+        "alligator — al-li-ga-tor (4). caterpillar — cat-er-pil-lar (4). watermelon — wa-ter-mel-on (4). helicopter — hel-i-cop-ter (4)."
+      ]
+    },
+    {
+      "heading": "Five-beat words",
+      "paragraphs": [
+        "hippopotamus — hip-po-pot-a-mus (5). refrigerator — re-frig-er-a-tor (5). congratulations — con-grat-u-la-tions (5). university — u-ni-ver-si-ty (5)."
+      ]
+    },
+    {
+      "heading": "The champion",
+      "paragraphs": [
+        "Can anything beat five? Try 'extraterrestrial' — ex-tra-ter-res-tri-al. Count the chin drops carefully… that is SIX beats, the champion of this chart.",
+        "Long words stop being scary when you read them beat by beat. That is the real secret of this chart: big words are just small beats holding hands."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find the longest word in a book you are reading and count its syllables. Can it beat the champion?",
+        "2. Why do you think breaking a long word into beats makes it easier to read AND easier to spell?"
+      ]
+    }
+  ],
+  "takeaway": "Even champion words surrender to the beat trick: hippopotamus has 5 syllables, and 'extraterrestrial' tops the chart with 6.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

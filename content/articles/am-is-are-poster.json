@@ -1,0 +1,86 @@
+{
+  "id": "poster-am-is-are-poster",
+  "slug": "am-is-are-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Am, Is or Are? The Verb 'To Be'",
+  "description": "I am, he is, we are — a friendly first chart for the verb 'to be', with example sentences a young reader can say out loud.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). Short sentences made to be read aloud together.",
+  "hero": {
+    "src": "/images/poster-am-is-are-poster.webp",
+    "alt": "Spark and Mango beside three garden signposts — am, is and are point to who we are talking about",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "grammar",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Copula (linguistics) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Copula_(linguistics)",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "One verb, three costumes",
+      "paragraphs": [
+        "The verb 'to be' changes its costume depending on who we are talking about. When you talk about yourself, it wears am. When you talk about one other person or thing, it wears is. When you talk about more than one, or about you and we, it wears are.",
+        "Say each sentence out loud. Your ear will start to know which costume sounds right."
+      ]
+    },
+    {
+      "heading": "I am",
+      "paragraphs": [
+        "I am a reader. I am happy today. I am ready to learn.",
+        "Am belongs to I — only I, every time."
+      ]
+    },
+    {
+      "heading": "He is, she is, it is",
+      "paragraphs": [
+        "He is my brother. She is a good friend. It is a sunny day.",
+        "One person or one thing? Choose is."
+      ]
+    },
+    {
+      "heading": "You are, we are, they are",
+      "paragraphs": [
+        "You are kind. We are a team. They are birds in the garden.",
+        "Talking to someone, talking about a group, or talking about more than one thing? Choose are."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Finish these sentences about your family: 'I am…', 'Mom or Dad is…', 'We are…'.",
+        "2. Point at things around the room and say 'It is…' sentences. How many can you make in one minute?"
+      ]
+    }
+  ],
+  "takeaway": "I am; he, she and it is; you, we and they are — the verb 'to be' changes with who you are talking about.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

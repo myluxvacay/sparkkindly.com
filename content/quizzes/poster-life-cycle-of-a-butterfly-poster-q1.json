@@ -1,0 +1,52 @@
+{
+  "id": "poster-life-cycle-of-a-butterfly-poster-q1",
+  "scheduledDate": "2029-04-21",
+  "brand": "kids",
+  "setId": "poster-set-life-cycle-of-a-butterfly-poster",
+  "prompt": "What is the change from caterpillar to butterfly called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hibernation"
+    },
+    {
+      "id": "b",
+      "text": "Metamorphosis"
+    },
+    {
+      "id": "c",
+      "text": "Photosynthesis"
+    },
+    {
+      "id": "d",
+      "text": "Migration"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Metamorphosis is the complete body change through four stages.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Metamorphosis | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Metamorphosis",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Chrysalis | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pupa",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-life-cycle-of-a-butterfly-poster.webp",
+    "alt": "Mango watching a butterfly emerge — the last act of metamorphosis",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

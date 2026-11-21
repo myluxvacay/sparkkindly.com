@@ -1,0 +1,86 @@
+{
+  "id": "poster-why-we-brush-our-teeth-poster",
+  "slug": "why-we-brush-our-teeth-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Why Do We Brush Our Teeth?",
+  "description": "Tiny germs, sticky plaque, sugar feasts and fluoride armor — what really happens in your mouth, and why two minutes twice a day defeats it.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 3–7 (pre-K–grade 2). Written for the toothbrush-resisters: knowledge is the best persuasion.",
+  "hero": {
+    "src": "/images/poster-why-we-brush-our-teeth-poster.webp",
+    "alt": "Spark guarding a smiling tooth with a giant toothbrush — brushing sweeps away plaque",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Tooth brushing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tooth_brushing",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Dental plaque | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dental_plaque",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Your mouth is a busy city",
+      "paragraphs": [
+        "Right now, your mouth is home to millions of tiny living things called bacteria. Most are harmless neighbors. But some love to build sticky cities on your teeth — and that is where our story starts.",
+        "You cannot see them, but you can feel their city in the morning: that fuzzy feeling on your teeth. It has a name."
+      ]
+    },
+    {
+      "heading": "Plaque: the sticky city",
+      "paragraphs": [
+        "The fuzzy film is called plaque — bacteria and their sticky glue, building up on every tooth. The bacteria in plaque eat the same sugar you eat, from food and drinks left on your teeth.",
+        "And here is the problem: after their sugar feast, the bacteria make acid. Acid melts tiny holes in teeth. A hole that grows is a cavity — and cavities hurt."
+      ]
+    },
+    {
+      "heading": "Brushing: the daily sweep",
+      "paragraphs": [
+        "A toothbrush is a broom for the city. Brushing sweeps the plaque away before its acid can do much damage — two minutes, morning and night, top, bottom, front, back and the chewing tops.",
+        "Toothpaste with fluoride is the armor delivery: fluoride makes the outside of your teeth harder, so acid has a tougher wall to melt. Grown-ups: a pea-sized blob is plenty for kids, and spitting (not swallowing) is the rule."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Run your tongue over your teeth right now. Fuzzy or smooth? That fuzz is plaque — your tongue is a plaque detector!",
+        "2. Why do you think dentists say brush at NIGHT especially carefully? (Hint: what are the bacteria doing while you sleep?)"
+      ]
+    }
+  ],
+  "takeaway": "Plaque bacteria feast on sugar and make acid that melts holes in teeth; two minutes of brushing, twice a day, sweeps them away while fluoride hardens the walls.",
+  "fiction": false,
+  "materials": [
+    "Just this page to read — brushing itself needs a soft toothbrush, fluoride toothpaste and a grown-up's help"
+  ],
+  "supervision": "Grown-ups should help or check brushing until at least age 7–8; children cannot reach every tooth surface alone yet.",
+  "safetyNotes": [
+    "Use only a pea-sized amount of fluoride toothpaste for young children; spit, don't swallow.",
+    "Never share toothbrushes. Replace brushes every 3–4 months or after illness.",
+    "This page is general information, not dental advice — a dentist who knows the child's teeth comes first."
+  ],
+  "screenFreeExtension": "Two-minute brushing challenge: brush together for a full two minutes (a song or a sand timer helps) and check every surface in the mirror."
+}

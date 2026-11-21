@@ -1,0 +1,47 @@
+{
+  "id": "poster-verb-tenses-poster-q3",
+  "scheduledDate": "2028-11-19",
+  "brand": "kids",
+  "setId": "poster-set-verb-tenses-poster",
+  "prompt": "He ___ his breakfast quickly this morning.",
+  "options": [
+    {
+      "id": "a",
+      "text": "eat"
+    },
+    {
+      "id": "b",
+      "text": "ate"
+    },
+    {
+      "id": "c",
+      "text": "eats tomorrow"
+    },
+    {
+      "id": "d",
+      "text": "will eat yesterday"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "'This morning' already happened, and the past tense of eat is ate.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "English verbs | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/English_verbs",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-verb-tenses-poster.webp",
+    "alt": "Spark with an hourglass between sunrise, midday and sunset — verbs change with time",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-helping-verbs-poster-q2",
+  "scheduledDate": "2028-11-10",
+  "brand": "kids",
+  "setId": "poster-set-helping-verbs-poster",
+  "prompt": "Which sentence uses the right helping verb? 'They ___ finished their puzzle.'",
+  "options": [
+    {
+      "id": "a",
+      "text": "has"
+    },
+    {
+      "id": "b",
+      "text": "have"
+    },
+    {
+      "id": "c",
+      "text": "is"
+    },
+    {
+      "id": "d",
+      "text": "does"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "'They' travels with have: 'They have finished their puzzle.' Has belongs with he, she and it.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Auxiliary verb | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Auxiliary_verb",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-helping-verbs-poster.webp",
+    "alt": "Spark holding a wrench and toolbox, ready to help a friendly robot — helping verbs lend a hand to action words",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

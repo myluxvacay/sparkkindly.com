@@ -1,0 +1,49 @@
+{
+  "id": "poster-my-dino-cup-reading-set-q3",
+  "scheduledDate": "2028-12-29",
+  "brand": "kids",
+  "passage": "I have a special cup. It is green, and it is shaped like a dinosaur. I call it Dino Cup. In the morning, Mom pours warm milk into Dino Cup before school. In the evening, when I come home, Mom pours apple juice into Dino Cup. At night, with dinner, Mom pours warm tomato soup into Dino Cup. I use Dino Cup three times every day. It is my favorite cup in the whole kitchen.",
+  "passageTitle": "My Dino Cup",
+  "setId": "poster-set-my-dino-cup-reading-set",
+  "prompt": "What does Mom pour into Dino Cup in the morning?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Apple juice"
+    },
+    {
+      "id": "b",
+      "text": "Warm milk"
+    },
+    {
+      "id": "c",
+      "text": "Tomato soup"
+    },
+    {
+      "id": "d",
+      "text": "Water"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "In the morning, Mom pours warm milk into Dino Cup before school.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Reading comprehension | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Reading_comprehension",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-my-dino-cup-reading-set.webp",
+    "alt": "A green dinosaur-shaped cup on a kitchen table, the star of the story",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-rhyming-pairs-poster-q2",
+  "scheduledDate": "2028-12-24",
+  "brand": "kids",
+  "setId": "poster-set-rhyming-pairs-poster",
+  "prompt": "Which word rhymes with 'hen'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "pen"
+    },
+    {
+      "id": "b",
+      "text": "hen house"
+    },
+    {
+      "id": "c",
+      "text": "ten pins"
+    },
+    {
+      "id": "d",
+      "text": "net"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Hen and pen rhyme — both end in the -en sound.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Rhyme | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rhyme",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-rhyming-pairs-poster.webp",
+    "alt": "Mango the kitten sitting in a box — a kit in a box is the start of a rhyming game",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

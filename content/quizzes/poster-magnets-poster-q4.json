@@ -1,0 +1,47 @@
+{
+  "id": "poster-magnets-poster-q4",
+  "scheduledDate": "2029-05-18",
+  "brand": "kids",
+  "setId": "poster-set-magnets-poster",
+  "prompt": "What can two magnets do besides pull together?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Melt"
+    },
+    {
+      "id": "b",
+      "text": "Push apart (repel)"
+    },
+    {
+      "id": "c",
+      "text": "Disappear"
+    },
+    {
+      "id": "d",
+      "text": "Change color"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Flip one magnet and the poles repel — an invisible cushion pushes them apart.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Magnet | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Magnet",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-magnets-poster.webp",
+    "alt": "Spark's magnet pulling paper clips through the air while wood and a leaf ignore it completely",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

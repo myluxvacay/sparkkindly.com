@@ -1,0 +1,47 @@
+{
+  "id": "poster-kind-words-poster-q1",
+  "scheduledDate": "2029-04-09",
+  "brand": "kids",
+  "setId": "poster-set-kind-words-poster",
+  "prompt": "Which sentence is a BUILDER?",
+  "options": [
+    {
+      "id": "a",
+      "text": "'You can't play with us.'"
+    },
+    {
+      "id": "b",
+      "text": "'You worked really hard on that.'"
+    },
+    {
+      "id": "c",
+      "text": "'Nice try — not.'"
+    },
+    {
+      "id": "d",
+      "text": "'Whatever, loser.'"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Noticing someone's effort builds them up — it is specific and kind.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Kindness | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kindness",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-kind-words-poster.webp",
+    "alt": "Spark building a tower of golden blocks — kind words build people up",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

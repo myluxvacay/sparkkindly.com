@@ -1,0 +1,47 @@
+{
+  "id": "poster-syllables-challenge-poster-q3",
+  "scheduledDate": "2029-01-21",
+  "brand": "kids",
+  "setId": "poster-set-syllables-challenge-poster",
+  "prompt": "Which word has SIX syllables?",
+  "options": [
+    {
+      "id": "a",
+      "text": "university"
+    },
+    {
+      "id": "b",
+      "text": "refrigerator"
+    },
+    {
+      "id": "c",
+      "text": "extraterrestrial"
+    },
+    {
+      "id": "d",
+      "text": "congratulations"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Ex-tra-ter-res-tri-al — six beats. The others have five each.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Syllable | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Syllable",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-syllables-challenge-poster.webp",
+    "alt": "Spark conducting a hippo, an alligator and a caterpillar — long words have many beats",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

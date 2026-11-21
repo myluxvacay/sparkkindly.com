@@ -1,0 +1,47 @@
+{
+  "id": "poster-helping-hands-poster-q1",
+  "scheduledDate": "2029-03-16",
+  "brand": "kids",
+  "setId": "poster-set-helping-hands-poster",
+  "prompt": "What does helping start with, according to this chart?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Being the biggest"
+    },
+    {
+      "id": "b",
+      "text": "Noticing that a job needs doing"
+    },
+    {
+      "id": "c",
+      "text": "Waiting to be asked three times"
+    },
+    {
+      "id": "d",
+      "text": "Having special tools"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Helping begins with noticing — seeing the thirsty plant, the dropped books, the person alone.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Prosocial behavior | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Prosocial_behavior",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-helping-hands-poster.webp",
+    "alt": "Spark and Mango carrying a watering can and a flower to the garden — helping hands work together",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

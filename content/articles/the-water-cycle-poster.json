@@ -1,0 +1,78 @@
+{
+  "id": "poster-the-water-cycle-poster",
+  "slug": "the-water-cycle-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "The Water Cycle: The Rain That Never Ends",
+  "description": "Evaporation, condensation, precipitation, collection — the endless journey of water from puddle to cloud to rain to river, in four steps.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). The four step-words are the vocabulary of every weather unit in school.",
+  "hero": {
+    "src": "/images/poster-the-water-cycle-poster.webp",
+    "alt": "Spark on a hill between a lake, a river and clouds — water travels in an endless circle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Water cycle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "The water you drink is ancient",
+      "paragraphs": [
+        "Here is a thought to bend your mind: the water in your glass today has been rain, river, ocean and cloud before — possibly in dinosaur times. Earth does not get new water delivered. It recycles the same water forever, in a giant circle called the water cycle. It has four steps."
+      ]
+    },
+    {
+      "heading": "Step 1 and 2: up it goes",
+      "paragraphs": [
+        "Step 1 — Evaporation. The sun heats water in oceans, lakes, puddles — even wet laundry — and turns its surface into invisible vapor that rises into the air. (Plants join in too, breathing vapor out of their leaves.)",
+        "Step 2 — Condensation. High up, the air is cold. The vapor cools and gathers into tiny droplets — and droplets gathered by the billion are a cloud. Your bathroom mirror fogging up is condensation doing the same trick at home."
+      ]
+    },
+    {
+      "heading": "Step 3 and 4: down it comes, and gathers",
+      "paragraphs": [
+        "Step 3 — Precipitation. When droplets grow too heavy to float, gravity wins: water falls as rain, snow, sleet or hail.",
+        "Step 4 — Collection. Fallen water gathers — in puddles, streams, rivers, lakes, oceans, and deep underground stores. And there it waits until the sun lifts it again. The circle has no start and no finish."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Follow one drop: imagine a raindrop landing on your street. Where has it been in the last year? Where will it be next year?",
+        "2. Why do you think the water cycle matters to farmers, sailors and skiers in completely different ways?"
+      ]
+    }
+  ],
+  "takeaway": "Water endlessly circles through evaporation, condensation, precipitation and collection — the rain on your window is older than the dinosaurs.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Cloud watch: lie on the grass for five minutes and track one cloud. Is it growing (condensing) or thinning (evaporating)?"
+}

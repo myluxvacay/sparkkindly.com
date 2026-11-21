@@ -1,0 +1,79 @@
+{
+  "id": "poster-numbers-to-twenty-poster",
+  "slug": "numbers-to-twenty-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Numbers 1 to 20: Counting with Mango",
+  "description": "One, two, three… all the way to twenty — number words with things to count, from Mango's whiskers to twenty garden stones.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 3–6 (pre-K–kindergarten). Count out loud and point — fingers are welcome and encouraged.",
+  "hero": {
+    "src": "/images/poster-numbers-to-twenty-poster.webp",
+    "alt": "Mango crossing twenty stepping stones — counting takes us all the way to twenty",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "vocabulary",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Counting | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Counting",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Counting is naming numbers in order",
+      "paragraphs": [
+        "Numbers have a special order, like steps on a staircase. Once you know the order, you can count anything: stones, stairs, strawberries, stars.",
+        "Count along with Mango. Point to your fingers, your toes — whatever helps!"
+      ]
+    },
+    {
+      "heading": "One to ten",
+      "paragraphs": [
+        "1 one, 2 two, 3 three, 4 four, 5 five, 6 six, 7 seven, 8 eight, 9 nine, 10 ten.",
+        "You have exactly ten fingers. Coincidence? Counting probably started with fingers, long, long ago!"
+      ]
+    },
+    {
+      "heading": "Eleven to twenty",
+      "paragraphs": [
+        "11 eleven, 12 twelve, 13 thirteen, 14 fourteen, 15 fifteen, 16 sixteen, 17 seventeen, 18 eighteen, 19 nineteen, 20 twenty.",
+        "See the pattern? After twelve, most numbers end in '-teen' — thirteen, fourteen, fifteen. They are the teenagers of numbers!"
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Count the stairs in your home. How many are there — more than ten? More than twenty?",
+        "2. Count backwards from ten, like a rocket launch: 10, 9, 8… blast off!"
+      ]
+    }
+  ],
+  "takeaway": "Numbers march in order from 1 to 20 — and after twelve, the '-teen' pattern (thirteen, fourteen, fifteen) helps you remember the way.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Count collections at home: how many spoons, socks or books can you count before you reach twenty?"
+}

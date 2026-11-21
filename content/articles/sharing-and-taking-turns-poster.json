@@ -1,0 +1,80 @@
+{
+  "id": "poster-sharing-and-taking-turns-poster",
+  "slug": "sharing-and-taking-turns-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Sharing and Taking Turns: Yours, Mine, Ours",
+  "description": "Some things are yours, some are everyone's, and turns make the everyone's-things fair. A first guide to sharing without tears (most of the time).",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 3–6 (pre-K–kindergarten). Read together before a playdate for best results.",
+  "hero": {
+    "src": "/images/poster-sharing-and-taking-turns-poster.webp",
+    "alt": "Spark and Mango taking turns on a swing, with a sand timer to keep turns fair",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "kindness",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Sharing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sharing",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Three kinds of things",
+      "paragraphs": [
+        "Grown-ups say 'share!' a lot, but sharing has rules that make it fair. Everything around you belongs in one of three groups.",
+        "Knowing the groups stops most sharing fights before they start."
+      ]
+    },
+    {
+      "heading": "Yours, everyone's, turns",
+      "paragraphs": [
+        "YOURS — A few special things are only yours: your lovey, your birthday gift, the picture you just drew. You may say, 'This is special to me. Please don't take it.' That is allowed.",
+        "EVERYONE'S — Some things belong to everyone: the park swing, the classroom blocks, the library books. Nobody owns them, so everybody shares them.",
+        "TURNS — For everyone's-things that only one person can use at a time, we take turns. A turn has a start and an end — a timer, a song, or counting to twenty can mark the end fairly."
+      ]
+    },
+    {
+      "heading": "How to ask, how to wait",
+      "paragraphs": [
+        "Ask with words: 'When you are finished, may I have a turn?' Asking works better than grabbing — grabbing starts fights and loses turns.",
+        "Waiting is the hard part. While you wait, watch, plan your turn, or find a for-now toy. Waiting well is a skill, and it grows like a muscle."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Sort five of your toys into the three groups: yours, everyone's, turns. Is there one you would move to a different group?",
+        "2. What could mark the end of a turn at your house — a timer, a song, or counting? Pick one together."
+      ]
+    }
+  ],
+  "takeaway": "Sharing is fair when we know the groups — special things are yours, shared things are everyone's, and a clear end (timer, song, count) makes turns work.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Turns practice: set a timer for a favorite toy's turn, and let the timer — not an argument — say when turns change."
+}

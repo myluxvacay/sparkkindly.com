@@ -1,0 +1,47 @@
+{
+  "id": "poster-verb-tenses-poster-q1",
+  "scheduledDate": "2028-11-17",
+  "brand": "kids",
+  "setId": "poster-set-verb-tenses-poster",
+  "prompt": "Yesterday, we ___ a heron by the river.",
+  "options": [
+    {
+      "id": "a",
+      "text": "see"
+    },
+    {
+      "id": "b",
+      "text": "sees"
+    },
+    {
+      "id": "c",
+      "text": "saw"
+    },
+    {
+      "id": "d",
+      "text": "will see"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The past tense of see is saw: 'Yesterday, we saw a heron by the river.'",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "English verbs | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/English_verbs",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-verb-tenses-poster.webp",
+    "alt": "Spark with an hourglass between sunrise, midday and sunset — verbs change with time",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

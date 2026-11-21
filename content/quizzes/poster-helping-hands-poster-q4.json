@@ -1,0 +1,47 @@
+{
+  "id": "poster-helping-hands-poster-q4",
+  "scheduledDate": "2029-03-19",
+  "brand": "kids",
+  "setId": "poster-set-helping-hands-poster",
+  "prompt": "Why does the chart say 'plans told out loud happen more often'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Because shouting is magic"
+    },
+    {
+      "id": "b",
+      "text": "Because telling someone your helping plan makes you more likely to do it"
+    },
+    {
+      "id": "c",
+      "text": "Because helpers must be loud"
+    },
+    {
+      "id": "d",
+      "text": "Because quiet plans are forbidden"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Saying a plan to another person turns a nice idea into a promise you remember.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Prosocial behavior | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Prosocial_behavior",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-helping-hands-poster.webp",
+    "alt": "Spark and Mango carrying a watering can and a flower to the garden — helping hands work together",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "poster-my-dino-cup-reading-set",
+  "slug": "my-dino-cup-reading-set",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "My Dino Cup: A First Reading Set",
+  "description": "A short, gentle first-reader passage about a much-loved dinosaur cup, with questions that check the reader found the details in the story.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades 1–2). A first independent read; the passage stays with the questions so readers can look back.",
+  "hero": {
+    "src": "/images/poster-my-dino-cup-reading-set.webp",
+    "alt": "A green dinosaur-shaped cup on a kitchen table, the star of the story",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "phonics",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Reading comprehension | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Reading_comprehension",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "My Dino Cup",
+      "paragraphs": [
+        "I have a special cup. It is green, and it is shaped like a dinosaur. I call it Dino Cup.",
+        "In the morning, Mom pours warm milk into Dino Cup before school. In the evening, when I come home, Mom pours apple juice into Dino Cup. At night, with dinner, Mom pours warm tomato soup into Dino Cup.",
+        "I use Dino Cup three times every day. It is my favorite cup in the whole kitchen."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Do you have a favorite cup, plate or spoon at home? What makes it special?",
+        "2. If Dino Cup could talk, what do you think it would say at breakfast?"
+      ]
+    }
+  ],
+  "takeaway": "Careful readers can find every answer right inside the story — the color, the shape, and what the cup holds morning, evening and night.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

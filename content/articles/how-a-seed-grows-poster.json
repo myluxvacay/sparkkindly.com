@@ -1,0 +1,87 @@
+{
+  "id": "poster-how-a-seed-grows-poster",
+  "slug": "how-a-seed-grows-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "How Does a Seed Grow?",
+  "description": "A seed wakes up, drinks, roots down and reaches up — the five steps from a dry little seed to a green seedling, explained panel by panel.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–8 (kindergarten–grade 2). The optional try-it needs a grown-up, a jar and a bean seed.",
+  "hero": {
+    "src": "/images/poster-how-a-seed-grows-poster.webp",
+    "alt": "Spark and Mango watching a seed split open — a root reaching down and a shoot reaching up",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Germination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Germination",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A seed is a sleeping plant",
+      "paragraphs": [
+        "Inside every seed is a tiny baby plant, packed with a lunch of food to get it started. A seed can sleep for weeks, months, even years — until three things arrive together: water, warmth and air. Then it wakes up. Here is exactly how."
+      ]
+    },
+    {
+      "heading": "Step 1 and 2: the drink, the split",
+      "paragraphs": [
+        "Step 1 — The seed drinks. Water soaks through the seed's coat and the seed swells up, bigger and bigger, like a sponge filling with water.",
+        "Step 2 — The coat splits. The swollen seed pops its coat open. Something is about to come out — and it is not the leaves."
+      ]
+    },
+    {
+      "heading": "Step 3 and 4: down first, then up",
+      "paragraphs": [
+        "Step 3 — The root comes first. A small white root pushes DOWN into the soil. Roots always grow first, because the plant needs to drink before it can do anything else. The root also anchors the plant, like a tent peg.",
+        "Step 4 — The shoot reaches up. A pale stem pushes UP toward the light, carrying the folded first leaves. When it breaks through the soil into the sun, the leaves open and turn green."
+      ]
+    },
+    {
+      "heading": "Step 5: the plant feeds itself",
+      "paragraphs": [
+        "Step 5 — Leaves catch sunlight and make food for the plant — a trick called photosynthesis. The seed's packed lunch is finished, and from now on the plant cooks its own meals with sunlight, air and water.",
+        "From seed to seedling in about a week for a bean. Every giant oak tree you have ever seen started exactly this way."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why do you think the root grows before the leaves? What would happen to a plant that grew leaves first?",
+        "2. A seed needs water, warmth and air. What do YOU need to grow? Compare the two lists."
+      ]
+    }
+  ],
+  "takeaway": "A seed wakes with water, warmth and air: it drinks, splits, sends a root down, a shoot up, and then its leaves start making food from sunlight.",
+  "fiction": false,
+  "materials": [
+    "Just this page to read — or, to try it: a clear jar, paper towels, water and a dried bean, with a grown-up"
+  ],
+  "supervision": "A grown-up helps with the optional jar experiment and chooses a sunny, safe spot for it.",
+  "safetyNotes": [
+    "Use dried beans meant for planting or cooking; wash hands after handling soil or compost.",
+    "Never eat seeds or beans from an experiment — some treated seeds are not food.",
+    "Keep jars on a stable surface where they cannot fall and break."
+  ],
+  "screenFreeExtension": "Plant a bean in a jar with damp paper towel against the glass (grown-up helps) and draw its root and shoot every day for a week."
+}

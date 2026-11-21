@@ -1,0 +1,47 @@
+{
+  "id": "poster-word-families-poster-q2",
+  "scheduledDate": "2029-01-05",
+  "brand": "kids",
+  "setId": "poster-set-word-families-poster",
+  "prompt": "If you can read 'pig', which word can you read by changing the first letter?",
+  "options": [
+    {
+      "id": "a",
+      "text": "peg"
+    },
+    {
+      "id": "b",
+      "text": "big"
+    },
+    {
+      "id": "c",
+      "text": "pug"
+    },
+    {
+      "id": "d",
+      "text": "piglet"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Big is in the -ig family with pig, dig and wig — just swap the first letter.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Phonics | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Phonics",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-word-families-poster.webp",
+    "alt": "Spark and Mango at a picnic with a cat, a pig and a frog — word families share the same ending",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

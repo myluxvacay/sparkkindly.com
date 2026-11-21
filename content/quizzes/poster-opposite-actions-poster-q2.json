@@ -1,0 +1,47 @@
+{
+  "id": "poster-opposite-actions-poster-q2",
+  "scheduledDate": "2029-01-28",
+  "brand": "kids",
+  "setId": "poster-set-opposite-actions-poster",
+  "prompt": "What is the opposite of 'fill'?",
+  "options": [
+    {
+      "id": "a",
+      "text": "pour"
+    },
+    {
+      "id": "b",
+      "text": "empty"
+    },
+    {
+      "id": "c",
+      "text": "spill"
+    },
+    {
+      "id": "d",
+      "text": "drink"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "To fill a cup is to put things in; to empty it is the opposite.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Antonym | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Antonym",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-opposite-actions-poster.webp",
+    "alt": "Mango pushing a crate — push and pull are opposite actions",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-my-body-poster-q4",
+  "scheduledDate": "2029-03-03",
+  "brand": "kids",
+  "setId": "poster-set-my-body-poster",
+  "prompt": "Where is your chin?",
+  "options": [
+    {
+      "id": "a",
+      "text": "On your foot"
+    },
+    {
+      "id": "b",
+      "text": "At the top of your head"
+    },
+    {
+      "id": "c",
+      "text": "At the bottom of your face"
+    },
+    {
+      "id": "d",
+      "text": "Behind your ear"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Your chin is the bottom part of your face, below your mouth.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Human body | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Human_body",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-my-body-poster.webp",
+    "alt": "Spark pointing from its head to its toes — body words name every part of us",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

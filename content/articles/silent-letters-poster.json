@@ -1,0 +1,87 @@
+{
+  "id": "poster-silent-letters-poster",
+  "slug": "silent-letters-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Silent Letters: The Quiet Ones",
+  "description": "The k in knight, the b in thumb, the w in write — English is full of letters that stand in the word but say nothing. Meet the quiet ones.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A spelling-survival chart: these words must be learned by eye, not by ear.",
+  "hero": {
+    "src": "/images/poster-silent-letters-poster.webp",
+    "alt": "Spark tiptoeing past a knight, a lamb and a gnome — some letters are silent",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "phonics",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Silent letter | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Silent_letter",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Letters that keep quiet",
+      "paragraphs": [
+        "Most letters do their job out loud. But some letters stand in a word and say nothing at all. The k in knight does not make a sound. Neither does the b in thumb or the w in write.",
+        "Hundreds of years ago, people DID pronounce those letters — a knight was a 'kuh-nicht'! The spelling stayed, the sound left, and now we just have to learn the quiet ones by sight."
+      ]
+    },
+    {
+      "heading": "Silent k and g: knight's family",
+      "paragraphs": [
+        "knight, knife, knee, knock, know — the k is silent; say only the n.",
+        "gnome, gnat, gnaw — the g is silent; say only the n."
+      ]
+    },
+    {
+      "heading": "Silent b and w",
+      "paragraphs": [
+        "thumb, lamb, climb, comb — the b is silent at the end.",
+        "write, wrong, wrist, wrap — the w is silent at the start.",
+        "answer, sword — here the w hides in the middle!"
+      ]
+    },
+    {
+      "heading": "Silent h and t",
+      "paragraphs": [
+        "hour, honest, heir — the h is silent; say 'our', 'onest', 'air'.",
+        "listen, often (for many speakers), castle, whistle — the t keeps quiet too."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why do you think English kept the silent letters instead of fixing the spelling? (Hint: books were printed with the old spellings, and printing froze them in place.)",
+        "2. Invent a sentence using three silent-letter words — then read it to someone and see if they can spell the tricky words."
+      ]
+    }
+  ],
+  "takeaway": "Silent letters — the k in knight, b in thumb, w in write, h in hour — are leftovers from old pronunciations; learn them by eye and they lose their power to trip you.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "After reading, close the screen and retell three things you learned to someone at home in your own words."
+}

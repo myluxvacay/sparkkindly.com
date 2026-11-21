@@ -1,0 +1,47 @@
+{
+  "id": "poster-feelings-words-poster-q4",
+  "scheduledDate": "2029-02-15",
+  "brand": "kids",
+  "setId": "poster-set-feelings-words-poster",
+  "prompt": "Why are precise feelings words useful?",
+  "options": [
+    {
+      "id": "a",
+      "text": "They make feelings disappear"
+    },
+    {
+      "id": "b",
+      "text": "They tell people exactly what is wrong, so they can help"
+    },
+    {
+      "id": "c",
+      "text": "They are longer words"
+    },
+    {
+      "id": "d",
+      "text": "They stop arguments instantly"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "'I feel frustrated' gives people information they can act on; 'I feel bad' does not.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Emotion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Emotion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-feelings-words-poster.webp",
+    "alt": "Spark with bubbles of many colors — feelings come in more colors than happy and sad",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

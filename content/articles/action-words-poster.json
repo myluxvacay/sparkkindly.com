@@ -1,0 +1,86 @@
+{
+  "id": "poster-action-words-poster",
+  "slug": "action-words-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Action Words: I Run, I Jump, I Read",
+  "description": "Sixteen everyday action words — run, jump, eat, read, draw, listen, help — each in a tiny 'I can' sentence for the youngest word learners.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 3–6 (pre-K–kindergarten). Read one, do one: act out each action as you meet it.",
+  "hero": {
+    "src": "/images/poster-action-words-poster.webp",
+    "alt": "Spark leaping over a puddle — action words are things we do",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "vocabulary",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Verb | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Verb",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Words for things we do",
+      "paragraphs": [
+        "Some words are for doing: run, jump, eat, sleep. Grown-ups call them verbs, but you can call them action words. If you can DO it, it is an action word!",
+        "Read each sentence and do the action. Ready?"
+      ]
+    },
+    {
+      "heading": "Move your body",
+      "paragraphs": [
+        "I run. I jump. I walk. I sit.",
+        "I dance. I play. I sleep. (That last one — just pretend!)"
+      ]
+    },
+    {
+      "heading": "Everyday actions",
+      "paragraphs": [
+        "I eat. I drink. I read. I write.",
+        "I draw. I listen. I laugh. I cry."
+      ]
+    },
+    {
+      "heading": "The kindest action",
+      "paragraphs": [
+        "I help.",
+        "Of all the action words on this page, 'help' is Spark's favorite. Helping is an action anyone can do, any day — feeding a pet, carrying a bag, holding a door."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Which action words did you do today already? Tell your day using three of them.",
+        "2. Act out an action word silently. Can your family guess it?"
+      ]
+    }
+  ],
+  "takeaway": "Action words (verbs) name things we do — run, read, draw, listen — and the kindest one of all is help.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Action-word Simon Says: 'Simon says jump! Simon says listen!' Only move when Simon says."
+}

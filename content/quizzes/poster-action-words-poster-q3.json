@@ -1,0 +1,47 @@
+{
+  "id": "poster-action-words-poster-q3",
+  "scheduledDate": "2029-02-06",
+  "brand": "kids",
+  "setId": "poster-set-action-words-poster",
+  "prompt": "Which action word means using your ears carefully?",
+  "options": [
+    {
+      "id": "a",
+      "text": "draw"
+    },
+    {
+      "id": "b",
+      "text": "listen"
+    },
+    {
+      "id": "c",
+      "text": "eat"
+    },
+    {
+      "id": "d",
+      "text": "run"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Listening is the action of paying attention with your ears.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Verb | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Verb",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-action-words-poster.webp",
+    "alt": "Spark leaping over a puddle — action words are things we do",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

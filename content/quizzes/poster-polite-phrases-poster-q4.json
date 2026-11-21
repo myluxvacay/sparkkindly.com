@@ -1,0 +1,47 @@
+{
+  "id": "poster-polite-phrases-poster-q4",
+  "scheduledDate": "2029-03-11",
+  "brand": "kids",
+  "setId": "poster-set-polite-phrases-poster",
+  "prompt": "Can you say NO politely?",
+  "options": [
+    {
+      "id": "a",
+      "text": "No — polite people always say yes"
+    },
+    {
+      "id": "b",
+      "text": "Yes — 'No, thank you' is polite"
+    },
+    {
+      "id": "c",
+      "text": "Only adults can"
+    },
+    {
+      "id": "d",
+      "text": "Only if you whisper"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Polite does not mean always yes. 'No, thank you' is a kind, complete answer.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Etiquette | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Etiquette",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-polite-phrases-poster.webp",
+    "alt": "Spark holding a door open for Mango — polite words and actions open doors between people",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

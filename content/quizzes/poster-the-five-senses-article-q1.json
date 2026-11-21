@@ -1,0 +1,47 @@
+{
+  "id": "poster-the-five-senses-article-q1",
+  "scheduledDate": "2029-05-11",
+  "brand": "kids",
+  "setId": "poster-set-the-five-senses-article",
+  "prompt": "How many senses does this article describe?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Three"
+    },
+    {
+      "id": "b",
+      "text": "Four"
+    },
+    {
+      "id": "c",
+      "text": "Five"
+    },
+    {
+      "id": "d",
+      "text": "Seven"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Sight, hearing, smell, taste and touch — five senses.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Sense | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sense",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-the-five-senses-article.webp",
+    "alt": "Spark the detective with symbols of the five senses — eye, ear, flower, strawberry and feather",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

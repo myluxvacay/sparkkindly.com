@@ -1,0 +1,47 @@
+{
+  "id": "poster-colors-and-shapes-poster-q4",
+  "scheduledDate": "2029-02-23",
+  "brand": "kids",
+  "setId": "poster-set-colors-and-shapes-poster",
+  "prompt": "'The moon looks silver tonight.' Which word is the COLOR word?",
+  "options": [
+    {
+      "id": "a",
+      "text": "moon"
+    },
+    {
+      "id": "b",
+      "text": "silver"
+    },
+    {
+      "id": "c",
+      "text": "tonight"
+    },
+    {
+      "id": "d",
+      "text": "looks"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Silver names the color. Moon is a naming word; looks is an action.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Shape | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Shape",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-colors-and-shapes-poster.webp",
+    "alt": "Spark painting with colors and shapes — a red circle, a blue square, a gold triangle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

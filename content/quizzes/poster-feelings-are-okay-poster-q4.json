@@ -1,0 +1,47 @@
+{
+  "id": "poster-feelings-are-okay-poster-q4",
+  "scheduledDate": "2029-04-04",
+  "brand": "kids",
+  "setId": "poster-set-feelings-are-okay-poster",
+  "prompt": "How does the chart say to breathe?",
+  "options": [
+    {
+      "id": "a",
+      "text": "As fast as you can"
+    },
+    {
+      "id": "b",
+      "text": "Smell the flower, blow the candle — three times"
+    },
+    {
+      "id": "c",
+      "text": "Hold your breath"
+    },
+    {
+      "id": "d",
+      "text": "Only through your ears"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Smell the flower (breathe in), blow the candle (breathe out), three times.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Emotion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Emotion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-feelings-are-okay-poster.webp",
+    "alt": "Mango sitting calmly while sun, rain and a rainbow share his garden — feelings are weather, and weather passes",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

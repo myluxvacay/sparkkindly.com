@@ -1,0 +1,52 @@
+{
+  "id": "poster-why-bees-matter-article-q3",
+  "scheduledDate": "2029-05-05",
+  "brand": "kids",
+  "setId": "poster-set-why-bees-matter-article",
+  "prompt": "Why does pollen stick to a bee so well?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Bees are sticky with honey"
+    },
+    {
+      "id": "b",
+      "text": "The bee's fuzzy body catches the pollen grains"
+    },
+    {
+      "id": "c",
+      "text": "Bees carry tiny baskets only for pollen and nothing sticks elsewhere"
+    },
+    {
+      "id": "d",
+      "text": "Pollen is magnetic"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A bee's fuzzy body picks up pollen as she drinks nectar, and rubs it off at the next flower.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Pollination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pollination",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Honey bee | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Honey_bee",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-why-bees-matter-article.webp",
+    "alt": "A honeybee gathering pollen on lavender, with an apple tree in blossom behind",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

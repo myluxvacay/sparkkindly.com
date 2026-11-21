@@ -1,0 +1,47 @@
+{
+  "id": "poster-where-do-they-live-poster-q4",
+  "scheduledDate": "2029-02-03",
+  "brand": "kids",
+  "setId": "poster-set-where-do-they-live-poster",
+  "prompt": "Which animal lives in a den?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A cow"
+    },
+    {
+      "id": "b",
+      "text": "A lion"
+    },
+    {
+      "id": "c",
+      "text": "A frog"
+    },
+    {
+      "id": "d",
+      "text": "A sheep"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "In this chart, the lion lives in a den — a sheltered wild home.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Animal shelter | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Animal_shelter",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-where-do-they-live-poster.webp",
+    "alt": "Mango on a fence spotting a nest, a hive and a burrow — every animal has a home with its own name",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

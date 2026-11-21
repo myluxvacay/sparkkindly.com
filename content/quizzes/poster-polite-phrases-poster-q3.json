@@ -1,0 +1,47 @@
+{
+  "id": "poster-polite-phrases-poster-q3",
+  "scheduledDate": "2029-03-10",
+  "brand": "kids",
+  "setId": "poster-set-polite-phrases-poster",
+  "prompt": "Which sentence asks permission politely?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Give me that"
+    },
+    {
+      "id": "b",
+      "text": "I am taking this"
+    },
+    {
+      "id": "c",
+      "text": "May I have this, please?"
+    },
+    {
+      "id": "d",
+      "text": "Mine now"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "'May I have this, please?' asks before taking — and accepts the answer.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Etiquette | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Etiquette",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-polite-phrases-poster.webp",
+    "alt": "Spark holding a door open for Mango — polite words and actions open doors between people",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

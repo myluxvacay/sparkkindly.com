@@ -1,0 +1,47 @@
+{
+  "id": "poster-opposites-describing-words-poster-q4",
+  "scheduledDate": "2029-02-11",
+  "brand": "kids",
+  "setId": "poster-set-opposites-describing-words-poster",
+  "prompt": "'Describing words' is a friendly name for…",
+  "options": [
+    {
+      "id": "a",
+      "text": "verbs"
+    },
+    {
+      "id": "b",
+      "text": "nouns"
+    },
+    {
+      "id": "c",
+      "text": "adjectives"
+    },
+    {
+      "id": "d",
+      "text": "pronouns"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Words that describe how something looks or feels are called adjectives.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Adjective | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Adjective",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-opposites-describing-words-poster.webp",
+    "alt": "A tall giraffe beside a small rabbit — describing words tell us how things are",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

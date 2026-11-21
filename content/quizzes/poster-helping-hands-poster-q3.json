@@ -1,0 +1,47 @@
+{
+  "id": "poster-helping-hands-poster-q3",
+  "scheduledDate": "2029-03-18",
+  "brand": "kids",
+  "setId": "poster-set-helping-hands-poster",
+  "prompt": "A classmate drops all their pencils. What does the chart suggest?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Step over them carefully"
+    },
+    {
+      "id": "b",
+      "text": "Kneel down and help pick them up"
+    },
+    {
+      "id": "c",
+      "text": "Tell the teacher and walk away"
+    },
+    {
+      "id": "d",
+      "text": "Wait for the bell"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Kneel and help pick them up — everyone has dropped everything before.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Prosocial behavior | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Prosocial_behavior",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-helping-hands-poster.webp",
+    "alt": "Spark and Mango carrying a watering can and a flower to the garden — helping hands work together",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

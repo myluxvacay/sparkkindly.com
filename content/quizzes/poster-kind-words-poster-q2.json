@@ -1,0 +1,47 @@
+{
+  "id": "poster-kind-words-poster-q2",
+  "scheduledDate": "2029-04-10",
+  "brand": "kids",
+  "setId": "poster-set-kind-words-poster",
+  "prompt": "What is the toothpaste rule?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Brush twice a day"
+    },
+    {
+      "id": "b",
+      "text": "Words, like toothpaste, cannot be squeezed back in once they are out"
+    },
+    {
+      "id": "c",
+      "text": "Toothpaste fixes arguments"
+    },
+    {
+      "id": "d",
+      "text": "Always speak sweetly like toothpaste tastes"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Once words are out, they cannot be taken back — which is why choosing before speaking matters.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Kindness | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kindness",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-kind-words-poster.webp",
+    "alt": "Spark building a tower of golden blocks — kind words build people up",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

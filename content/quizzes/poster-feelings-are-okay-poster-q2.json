@@ -1,0 +1,47 @@
+{
+  "id": "poster-feelings-are-okay-poster-q2",
+  "scheduledDate": "2029-04-02",
+  "brand": "kids",
+  "setId": "poster-set-feelings-are-okay-poster",
+  "prompt": "What is the first thing to do when a big feeling visits?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hide it"
+    },
+    {
+      "id": "b",
+      "text": "Name it: 'I feel angry'"
+    },
+    {
+      "id": "c",
+      "text": "Shout"
+    },
+    {
+      "id": "d",
+      "text": "Run away"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Naming a feeling makes it smaller — like turning on a light.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Emotion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Emotion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-feelings-are-okay-poster.webp",
+    "alt": "Mango sitting calmly while sun, rain and a rainbow share his garden — feelings are weather, and weather passes",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

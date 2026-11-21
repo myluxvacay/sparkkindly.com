@@ -1,0 +1,47 @@
+{
+  "id": "poster-jobs-people-do-poster-q1",
+  "scheduledDate": "2029-03-04",
+  "brand": "kids",
+  "setId": "poster-set-jobs-people-do-poster",
+  "prompt": "Who fixes pipes so clean water comes into your home?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A baker"
+    },
+    {
+      "id": "b",
+      "text": "A plumber"
+    },
+    {
+      "id": "c",
+      "text": "A librarian"
+    },
+    {
+      "id": "d",
+      "text": "A farmer"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Plumbers install and repair the pipes that carry water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Occupation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Occupation",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-jobs-people-do-poster.webp",
+    "alt": "Spark meeting the helpers of a village — a baker, a firefighter, a nurse and a farmer",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

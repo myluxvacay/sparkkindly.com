@@ -1,0 +1,47 @@
+{
+  "id": "poster-magnets-poster-q2",
+  "scheduledDate": "2029-05-16",
+  "brand": "kids",
+  "setId": "poster-set-magnets-poster",
+  "prompt": "What is the invisible pulling area around a magnet called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A magnetic blanket"
+    },
+    {
+      "id": "b",
+      "text": "A magnetic field"
+    },
+    {
+      "id": "c",
+      "text": "A force rope"
+    },
+    {
+      "id": "d",
+      "text": "A magnet shadow"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The magnetic field is the invisible area where the magnet's pull can be felt.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Magnet | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Magnet",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-magnets-poster.webp",
+    "alt": "Spark's magnet pulling paper clips through the air while wood and a leaf ignore it completely",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

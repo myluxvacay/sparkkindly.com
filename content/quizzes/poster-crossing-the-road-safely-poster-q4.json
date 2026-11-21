@@ -1,0 +1,47 @@
+{
+  "id": "poster-crossing-the-road-safely-poster-q4",
+  "scheduledDate": "2029-03-31",
+  "brand": "kids",
+  "setId": "poster-set-crossing-the-road-safely-poster",
+  "prompt": "Why no headphones while crossing?",
+  "options": [
+    {
+      "id": "a",
+      "text": "They are too heavy"
+    },
+    {
+      "id": "b",
+      "text": "Your ears are safety tools — they catch engines and bells your eyes miss"
+    },
+    {
+      "id": "c",
+      "text": "It is against fashion rules"
+    },
+    {
+      "id": "d",
+      "text": "Headphones break near roads"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Listening is a step of the routine. Ears catch what eyes miss, especially quiet vehicles and bicycle bells.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Pedestrian crossing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pedestrian_crossing",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-crossing-the-road-safely-poster.webp",
+    "alt": "Spark stopped at a crossing, looking carefully before stepping out — stop, look, listen",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

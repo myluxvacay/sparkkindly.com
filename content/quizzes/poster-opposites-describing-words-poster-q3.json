@@ -1,0 +1,47 @@
+{
+  "id": "poster-opposites-describing-words-poster-q3",
+  "scheduledDate": "2029-02-10",
+  "brand": "kids",
+  "setId": "poster-set-opposites-describing-words-poster",
+  "prompt": "Which describing word fits a butterfly best?",
+  "options": [
+    {
+      "id": "a",
+      "text": "heavy"
+    },
+    {
+      "id": "b",
+      "text": "light"
+    },
+    {
+      "id": "c",
+      "text": "wide"
+    },
+    {
+      "id": "d",
+      "text": "round"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A butterfly is light — it weighs almost nothing, unlike the heavy hippo.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Adjective | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Adjective",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-opposites-describing-words-poster.webp",
+    "alt": "A tall giraffe beside a small rabbit — describing words tell us how things are",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

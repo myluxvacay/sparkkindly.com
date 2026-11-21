@@ -1,0 +1,47 @@
+{
+  "id": "poster-prepositions-poster-q1",
+  "scheduledDate": "2028-11-21",
+  "brand": "kids",
+  "setId": "poster-set-prepositions-poster",
+  "prompt": "The cat sleeps ___ the rug. (The rug is underneath the cat.)",
+  "options": [
+    {
+      "id": "a",
+      "text": "under"
+    },
+    {
+      "id": "b",
+      "text": "on"
+    },
+    {
+      "id": "c",
+      "text": "behind"
+    },
+    {
+      "id": "d",
+      "text": "between"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The cat is on top of the rug, so we say the cat sleeps on the rug.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Preposition and postposition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Preposition_and_postposition",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-prepositions-poster.webp",
+    "alt": "Mango the cat hiding under a bench with a ball on top — prepositions tell us where things are",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

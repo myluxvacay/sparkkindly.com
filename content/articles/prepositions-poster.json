@@ -1,0 +1,89 @@
+{
+  "id": "poster-prepositions-poster",
+  "slug": "prepositions-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Prepositions: Where Is It?",
+  "description": "In, on, under, behind, next to, between — position words that tell us where things are, shown with Mango the cat and everyday objects.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 3–6 (pre-K–kindergarten). Made for reading aloud and acting out with a toy or a pet.",
+  "hero": {
+    "src": "/images/poster-prepositions-poster.webp",
+    "alt": "Mango the cat hiding under a bench with a ball on top — prepositions tell us where things are",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "grammar",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Preposition and postposition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Preposition_and_postposition",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Words that point to places",
+      "paragraphs": [
+        "A preposition is a word that tells us where something is. Mango is very good at showing us. Watch where he goes!",
+        "Read each line out loud, then try it yourself with a toy: put it in, on and under a box."
+      ]
+    },
+    {
+      "heading": "In, on, under",
+      "paragraphs": [
+        "The ball is in the basket.",
+        "The ball is on the table.",
+        "Mango is under the bench."
+      ]
+    },
+    {
+      "heading": "Behind, in front of, next to",
+      "paragraphs": [
+        "Mango is behind the tree.",
+        "Mango is in front of the door.",
+        "The cup is next to the plate."
+      ]
+    },
+    {
+      "heading": "Above, below, between",
+      "paragraphs": [
+        "The bird is above the roof.",
+        "The fish is below the water.",
+        "The frog sits between two stones."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Hide a toy and give clues with position words: 'It is under something soft. It is next to the chair.' Can your partner find it?",
+        "2. Where is Mango right now in the picture at the top? Use two prepositions in your answer."
+      ]
+    }
+  ],
+  "takeaway": "Prepositions like in, on, under, behind and between tell us exactly where something is.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Play 'Where is it?' around the room: one person hides a toy, the other hunts using only position-word clues."
+}

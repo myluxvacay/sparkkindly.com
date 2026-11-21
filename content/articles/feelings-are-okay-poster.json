@@ -1,0 +1,82 @@
+{
+  "id": "poster-feelings-are-okay-poster",
+  "slug": "feelings-are-okay-poster",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Feelings Are Okay: Every Feeling Can Visit",
+  "description": "Happy, sad, angry, scared, silly — feelings are visitors, not bosses. A first feelings chart about naming what you feel and letting it pass through.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "ageGuidance": "Ages 3–7 (pre-K–grade 2). Read together; pause and make each feeling's face as you go.",
+  "hero": {
+    "src": "/images/poster-feelings-are-okay-poster.webp",
+    "alt": "Mango sitting calmly while sun, rain and a rainbow share his garden — feelings are weather, and weather passes",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "kindness",
+    "pre-k"
+  ],
+  "sources": [
+    {
+      "title": "Emotion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Emotion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Poster Series pilot; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Feelings are like weather",
+      "paragraphs": [
+        "Feelings visit us all day long, the way weather visits the sky. Sometimes it is sunny-happy. Sometimes it rains sad. Sometimes a storm of angry blows through.",
+        "Here is the secret: feelings are visitors, not bosses. They can visit. They cannot tell you what to do. And every single one of them passes — even the stormy ones."
+      ]
+    },
+    {
+      "heading": "Meet the visitors",
+      "paragraphs": [
+        "Happy — My heart feels light. I want to smile and share it.",
+        "Sad — My heart feels heavy. I might want a hug, a cry, or a quiet minute. Crying is allowed; it is how sadness leaves.",
+        "Angry — My body feels hot and tight. My hands want to squeeze. Angry is okay to FEEL. It is not okay to hurt people or things with it.",
+        "Scared — My tummy feels fluttery. I want a grown-up close. Scared means my body is trying to protect me."
+      ]
+    },
+    {
+      "heading": "What to do when a big feeling visits",
+      "paragraphs": [
+        "Name it: 'I feel angry.' Naming a feeling makes it smaller, like turning on a light.",
+        "Breathe: smell the flower (breathe in), blow the candle (breathe out). Three times.",
+        "Tell a grown-up: feelings are always allowed to be told. A good grown-up will listen."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. What feeling is visiting you right now? Point to it on this page.",
+        "2. Make the face for each feeling in a mirror. Which face is the funniest? Which is the hardest to make?"
+      ]
+    }
+  ],
+  "takeaway": "All feelings are okay to feel — happy, sad, angry, scared. Name it, breathe, tell a grown-up: feelings are visitors, not bosses.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — no materials needed"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the think-and-talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Feeling faces game: one person makes a feeling face, the other guesses it and says what might have caused it."
+}

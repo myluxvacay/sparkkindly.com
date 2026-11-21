@@ -1,0 +1,47 @@
+{
+  "id": "poster-saying-sorry-well-poster-q4",
+  "scheduledDate": "2029-03-23",
+  "brand": "kids",
+  "setId": "poster-set-saying-sorry-well-poster",
+  "prompt": "Which is Part 3 — the fix?",
+  "options": [
+    {
+      "id": "a",
+      "text": "'That was wrong of me.'"
+    },
+    {
+      "id": "b",
+      "text": "'I will help you rebuild it, and I will walk in the classroom.'"
+    },
+    {
+      "id": "c",
+      "text": "'Will you forgive me?'"
+    },
+    {
+      "id": "d",
+      "text": "'I knocked it down.'"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Part 3 offers a repair or a real plan to do better.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Apology (act) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Apology_(act)",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Poster Series pilot (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording checked against the inspiration posters. Staged on feat/poster-pilot for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-saying-sorry-well-poster.webp",
+    "alt": "Spark offering a flower with both hands — a real apology is a gift you give honestly",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}
