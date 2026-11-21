@@ -3,26 +3,26 @@
   "scheduledDate": "2030-06-07",
   "brand": "kids",
   "setId": "country-set-meet-oman",
-  "prompt": "Which of these languages is spoken in Oman?",
+  "prompt": "Which of these is a main language people speak in Oman?",
   "options": [
     {
       "id": "a",
-      "text": "Tamil"
+      "text": "Portuguese"
     },
     {
       "id": "b",
-      "text": "Serbian"
+      "text": "Montenegrin"
     },
     {
       "id": "c",
-      "text": "Arabic"
+      "text": "Bosnian"
     },
     {
       "id": "d",
-      "text": "Latvian"
+      "text": "Arabic"
     }
   ],
-  "correctOptionId": "c",
+  "correctOptionId": "d",
   "explanation": "People in Oman speak Arabic.",
   "difficulty": "medium",
   "sources": [

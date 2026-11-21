@@ -3,26 +3,26 @@
   "scheduledDate": "2029-12-21",
   "brand": "kids",
   "setId": "country-set-meet-cuba",
-  "prompt": "Which of these languages is spoken in Cuba?",
+  "prompt": "Which of these is a main language people speak in Cuba?",
   "options": [
     {
       "id": "a",
-      "text": "isiXhosa"
+      "text": "Spanish"
     },
     {
       "id": "b",
-      "text": "Bislama"
+      "text": "Indonesian"
     },
     {
       "id": "c",
-      "text": "Albanian"
+      "text": "Greek"
     },
     {
       "id": "d",
-      "text": "Spanish"
+      "text": "isiZulu"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "a",
   "explanation": "People in Cuba speak Spanish.",
   "difficulty": "medium",
   "sources": [

@@ -3,27 +3,27 @@
   "scheduledDate": "2030-04-20",
   "brand": "kids",
   "setId": "country-set-meet-malawi",
-  "prompt": "Which of these languages is spoken in Malawi?",
+  "prompt": "Which of these is a main language people speak in Malawi?",
   "options": [
     {
       "id": "a",
-      "text": "Thai"
+      "text": "Nyanja"
     },
     {
       "id": "b",
-      "text": "Fula"
+      "text": "Dzongkha"
     },
     {
       "id": "c",
-      "text": "English"
+      "text": "Pashto"
     },
     {
       "id": "d",
-      "text": "Belarusian"
+      "text": "Romanian"
     }
   ],
-  "correctOptionId": "c",
-  "explanation": "People in Malawi speak English and Nyanja.",
+  "correctOptionId": "a",
+  "explanation": "People in Malawi speak Nyanja and English.",
   "difficulty": "medium",
   "sources": [
     {

@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Lake Issyk-Kul"
+      "text": "Geghard Monastery and the Garni Gorge"
     },
     {
       "id": "b",
-      "text": "the Panama Canal — Miraflores Locks"
+      "text": "Nassau and Paradise Island"
     },
     {
       "id": "c",
-      "text": "Asmara, the art deco capital"
+      "text": "Lake Issyk-Kul"
     },
     {
       "id": "d",
-      "text": "the Algarve's sea caves and beaches"
+      "text": "Santo Domingo's Colonial Zone"
     }
   ],
-  "correctOptionId": "a",
-  "explanation": "Lake Issyk-Kul is one of the two places we'd love to visit in Kyrgyzstan.",
+  "correctOptionId": "c",
+  "explanation": "Lake Issyk-Kul is one of the two places we'd love to visit in Kyrgyzstan. Issyk-Kul is one of the world's largest mountain lakes, ringed by snowy peaks.",
   "difficulty": "medium",
   "sources": [
     {

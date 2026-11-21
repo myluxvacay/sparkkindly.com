@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Gauja National Park and Sigulda"
+      "text": "the Tobago Cays"
     },
     {
       "id": "b",
-      "text": "the temples of Angkor Thom and Ta Prohm"
-    },
-    {
-      "id": "c",
       "text": "the Kokoda Track and Port Moresby's nature park"
     },
     {
+      "id": "c",
+      "text": "Abuko Nature Reserve"
+    },
+    {
       "id": "d",
-      "text": "Torres del Paine, Patagonia"
+      "text": "Agadez old town"
     }
   ],
-  "correctOptionId": "c",
-  "explanation": "the Kokoda Track and Port Moresby's nature park is one of the two places we'd love to visit in Papua New Guinea.",
+  "correctOptionId": "b",
+  "explanation": "the Kokoda Track and Port Moresby's nature park is one of the two places we'd love to visit in Papua New Guinea. The Kokoda Track crosses the Owen Stanley mountains on a famous wartime trail; in the capital, Port Moresby Nature Park shows the country's birds of paradise up close.",
   "difficulty": "hard",
   "sources": [
     {

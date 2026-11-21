@@ -3,26 +3,26 @@
   "scheduledDate": "2029-12-05",
   "brand": "kids",
   "setId": "country-set-meet-china",
-  "prompt": "Which of these languages is spoken in China?",
+  "prompt": "Which of these is a main language people speak in China?",
   "options": [
     {
       "id": "a",
-      "text": "Dzongkha"
+      "text": "Chinese"
     },
     {
       "id": "b",
-      "text": "French"
+      "text": "Slovenian"
     },
     {
       "id": "c",
-      "text": "Turkish"
+      "text": "Slovak"
     },
     {
       "id": "d",
-      "text": "Chinese"
+      "text": "Afar"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "a",
   "explanation": "People in China speak Chinese.",
   "difficulty": "medium",
   "sources": [

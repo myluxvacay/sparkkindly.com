@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Malabo and Pico Basile"
+      "text": "Český Krumlov"
     },
     {
       "id": "b",
-      "text": "the Oceanographic Museum"
+      "text": "the Avenue of the Baobabs"
     },
     {
       "id": "c",
-      "text": "Dublin — Trinity College and the Book of Kells"
+      "text": "Tiger's Nest Monastery (Paro Taktsang)"
     },
     {
       "id": "d",
-      "text": "Tiger's Nest Monastery (Paro Taktsang)"
+      "text": "Negril's Seven Mile Beach"
     }
   ],
-  "correctOptionId": "d",
-  "explanation": "Tiger's Nest Monastery (Paro Taktsang) is one of the two places we'd love to visit in Bhutan.",
+  "correctOptionId": "c",
+  "explanation": "Tiger's Nest Monastery (Paro Taktsang) is one of the two places we'd love to visit in Bhutan. Tiger's Nest clings to a cliff 900 metres above the Paro valley.",
   "difficulty": "hard",
   "sources": [
     {

@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Lahemaa National Park"
-    },
-    {
-      "id": "b",
-      "text": "Qal'at al-Bahrain (Bahrain Fort)"
-    },
-    {
-      "id": "c",
       "text": "Muscat and the Mutrah Souq"
     },
     {
+      "id": "b",
+      "text": "the Pitons and Soufrière"
+    },
+    {
+      "id": "c",
+      "text": "the Punakha Dzong"
+    },
+    {
       "id": "d",
-      "text": "Samarkand's Registan"
+      "text": "Etosha National Park"
     }
   ],
-  "correctOptionId": "c",
-  "explanation": "Muscat and the Mutrah Souq is one of the two places we'd love to visit in Oman.",
+  "correctOptionId": "a",
+  "explanation": "Muscat and the Mutrah Souq is one of the two places we'd love to visit in Oman. Muscat spreads white and low between rocky mountains and the sea.",
   "difficulty": "medium",
   "sources": [
     {

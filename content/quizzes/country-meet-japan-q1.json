@@ -3,26 +3,26 @@
   "scheduledDate": "2030-03-11",
   "brand": "kids",
   "setId": "country-set-meet-japan",
-  "prompt": "Which of these languages is spoken in Japan?",
+  "prompt": "Which of these is a main language people speak in Japan?",
   "options": [
     {
       "id": "a",
-      "text": "Chinese"
+      "text": "Malagasy"
     },
     {
       "id": "b",
-      "text": "Japanese"
+      "text": "Tswana"
     },
     {
       "id": "c",
-      "text": "Bulgarian"
+      "text": "Serbian"
     },
     {
       "id": "d",
-      "text": "Lingala"
+      "text": "Japanese"
     }
   ],
-  "correctOptionId": "b",
+  "correctOptionId": "d",
   "explanation": "People in Japan speak Japanese.",
   "difficulty": "easy",
   "sources": [

@@ -3,7 +3,7 @@
   "scheduledDate": "2030-08-10",
   "brand": "kids",
   "setId": "country-set-meet-spain",
-  "prompt": "Which of these languages is spoken in Spain?",
+  "prompt": "Which of these is a main language people speak in Spain?",
   "options": [
     {
       "id": "a",
@@ -11,15 +11,15 @@
     },
     {
       "id": "b",
-      "text": "Serbian"
+      "text": "Korean"
     },
     {
       "id": "c",
-      "text": "Swati"
+      "text": "Aymara"
     },
     {
       "id": "d",
-      "text": "Khmer"
+      "text": "Pijin"
     }
   ],
   "correctOptionId": "a",

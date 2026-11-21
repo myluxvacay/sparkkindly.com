@@ -3,26 +3,26 @@
   "scheduledDate": "2029-12-13",
   "brand": "kids",
   "setId": "country-set-meet-democratic-republic-of-the-congo",
-  "prompt": "Which of these languages is spoken in Democratic Republic of the Congo?",
+  "prompt": "Which of these is a main language people speak in Democratic Republic of the Congo?",
   "options": [
     {
       "id": "a",
-      "text": "isiZulu"
+      "text": "French"
     },
     {
       "id": "b",
-      "text": "Mauritian Creole"
+      "text": "Spanish"
     },
     {
       "id": "c",
-      "text": "Guarani"
+      "text": "Icelandic"
     },
     {
       "id": "d",
-      "text": "French"
+      "text": "Bangla"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "a",
   "explanation": "People in Democratic Republic of the Congo speak French, Lingala and Kongo.",
   "difficulty": "easy",
   "sources": [

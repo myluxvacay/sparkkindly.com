@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "The Amazon rainforest stretches across northern Brazil and several neighboring countries."
+      "text": "The Eiffel Tower is made entirely of wood."
     },
     {
       "id": "b",
-      "text": "Lemurs are primates native to Madagascar."
+      "text": "The Eiffel Tower was built for the very first Olympic Games."
     },
     {
       "id": "c",
-      "text": "Indonesia shares a land border with Timor-Leste."
+      "text": "The Eiffel Tower was constructed for the 1889 World’s Fair in Paris."
     },
     {
       "id": "d",
-      "text": "The Eiffel Tower was constructed for the 1889 World’s Fair in Paris."
+      "text": "The Eiffel Tower is the tallest building in the world today."
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "c",
   "explanation": "The Eiffel Tower was constructed for the 1889 World’s Fair in Paris.",
   "difficulty": "hard",
   "sources": [

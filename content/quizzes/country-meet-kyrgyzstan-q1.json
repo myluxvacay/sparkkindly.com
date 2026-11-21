@@ -3,26 +3,26 @@
   "scheduledDate": "2030-03-27",
   "brand": "kids",
   "setId": "country-set-meet-kyrgyzstan",
-  "prompt": "Which of these languages is spoken in Kyrgyzstan?",
+  "prompt": "Which of these is a main language people speak in Kyrgyzstan?",
   "options": [
     {
       "id": "a",
-      "text": "Portuguese"
+      "text": "Catalan"
     },
     {
       "id": "b",
-      "text": "Tswana"
+      "text": "Māori"
     },
     {
       "id": "c",
-      "text": "isiZulu"
+      "text": "Kyrgyz"
     },
     {
       "id": "d",
-      "text": "Kyrgyz"
+      "text": "Aymara"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "c",
   "explanation": "People in Kyrgyzstan speak Kyrgyz and Russian.",
   "difficulty": "medium",
   "sources": [

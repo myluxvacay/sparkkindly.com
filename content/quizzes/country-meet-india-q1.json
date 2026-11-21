@@ -3,26 +3,26 @@
   "scheduledDate": "2030-02-23",
   "brand": "kids",
   "setId": "country-set-meet-india",
-  "prompt": "Which of these languages is spoken in India?",
+  "prompt": "Which of these is a main language people speak in India?",
   "options": [
     {
       "id": "a",
-      "text": "Hindi"
+      "text": "Estonian"
     },
     {
       "id": "b",
-      "text": "Czech"
+      "text": "Greek"
     },
     {
       "id": "c",
-      "text": "Thai"
+      "text": "Hindi"
     },
     {
       "id": "d",
-      "text": "isiXhosa"
+      "text": "Nyanja"
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "c",
   "explanation": "People in India speak Hindi and English.",
   "difficulty": "medium",
   "sources": [

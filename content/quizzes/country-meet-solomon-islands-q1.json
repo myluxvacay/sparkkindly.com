@@ -3,27 +3,27 @@
   "scheduledDate": "2030-08-02",
   "brand": "kids",
   "setId": "country-set-meet-solomon-islands",
-  "prompt": "Which of these languages is spoken in Solomon Islands?",
+  "prompt": "Which of these is a main language people speak in Solomon Islands?",
   "options": [
     {
       "id": "a",
-      "text": "Sinhala"
+      "text": "Somali"
     },
     {
       "id": "b",
-      "text": "Kinyarwanda"
+      "text": "Tok Pisin"
     },
     {
       "id": "c",
-      "text": "English"
+      "text": "Pijin"
     },
     {
       "id": "d",
-      "text": "Somali"
+      "text": "Pashto"
     }
   ],
   "correctOptionId": "c",
-  "explanation": "People in Solomon Islands speak English.",
+  "explanation": "People in Solomon Islands speak Pijin and English.",
   "difficulty": "medium",
   "sources": [
     {

@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Matka Canyon"
-    },
-    {
-      "id": "b",
-      "text": "Machu Picchu"
-    },
-    {
-      "id": "c",
       "text": "the Tobago Cays"
     },
     {
+      "id": "b",
+      "text": "Andorra la Vella and the Caldea spa"
+    },
+    {
+      "id": "c",
+      "text": "Baku's Old City (Icherisheher)"
+    },
+    {
       "id": "d",
-      "text": "Le Morne and the southwest beaches"
+      "text": "the Maya ruins of Copán"
     }
   ],
-  "correctOptionId": "c",
-  "explanation": "the Tobago Cays is one of the two places we'd love to visit in Saint Vincent and the Grenadines.",
+  "correctOptionId": "a",
+  "explanation": "the Tobago Cays is one of the two places we'd love to visit in Saint Vincent and the Grenadines. The Tobago Cays are a protected marine park of tiny islands where families swim with turtles and rays in a lagoon of impossible blues.",
   "difficulty": "medium",
   "sources": [
     {

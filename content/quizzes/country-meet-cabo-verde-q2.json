@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Sidi Bou Said"
-    },
-    {
-      "id": "b",
       "text": "Santa Maria beach on Sal island"
     },
     {
+      "id": "b",
+      "text": "the Terracotta Army, Xi'an"
+    },
+    {
       "id": "c",
-      "text": "Tikal National Park"
+      "text": "Marrakech and the Jemaa el-Fnaa"
     },
     {
       "id": "d",
-      "text": "the Garden of the Sleeping Giant and Sabeto mud pools"
+      "text": "Lake Sevan"
     }
   ],
-  "correctOptionId": "b",
-  "explanation": "Santa Maria beach on Sal island is one of the two places we'd love to visit in Cabo Verde.",
+  "correctOptionId": "a",
+  "explanation": "Santa Maria beach on Sal island is one of the two places we'd love to visit in Cabo Verde. Sal island's Santa Maria beach has soft white sand, turquoise water and colourful fishing boats — perfect for swimming, kite-surfing and watching turtles in season.",
   "difficulty": "easy",
   "sources": [
     {

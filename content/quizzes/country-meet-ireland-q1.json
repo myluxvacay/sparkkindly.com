@@ -3,27 +3,27 @@
   "scheduledDate": "2030-03-03",
   "brand": "kids",
   "setId": "country-set-meet-ireland",
-  "prompt": "Which of these languages is spoken in Ireland?",
+  "prompt": "Which of these is a main language people speak in Ireland?",
   "options": [
     {
       "id": "a",
-      "text": "Irish"
+      "text": "Danish"
     },
     {
       "id": "b",
-      "text": "Tok Pisin"
+      "text": "English"
     },
     {
       "id": "c",
-      "text": "Japanese"
+      "text": "Belarusian"
     },
     {
       "id": "d",
-      "text": "Samoan"
+      "text": "Vietnamese"
     }
   ],
-  "correctOptionId": "a",
-  "explanation": "People in Ireland speak Irish and English.",
+  "correctOptionId": "b",
+  "explanation": "People in Ireland speak English and Irish.",
   "difficulty": "easy",
   "sources": [
     {

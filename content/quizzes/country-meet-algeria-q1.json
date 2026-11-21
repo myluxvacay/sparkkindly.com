@@ -3,15 +3,15 @@
   "scheduledDate": "2029-10-02",
   "brand": "kids",
   "setId": "country-set-meet-algeria",
-  "prompt": "Which of these languages is spoken in Algeria?",
+  "prompt": "Which of these is a main language people speak in Algeria?",
   "options": [
     {
       "id": "a",
-      "text": "Greek"
+      "text": "Uzbek"
     },
     {
       "id": "b",
-      "text": "Tajik"
+      "text": "Lao"
     },
     {
       "id": "c",
@@ -19,7 +19,7 @@
     },
     {
       "id": "d",
-      "text": "Slovak"
+      "text": "Slovenian"
     }
   ],
   "correctOptionId": "c",

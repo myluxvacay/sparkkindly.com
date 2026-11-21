@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Baku's Old City (Icherisheher)"
+      "text": "the Citadelle Laferrière"
     },
     {
       "id": "b",
-      "text": "Valletta"
+      "text": "the Mamanuca Islands"
     },
     {
       "id": "c",
-      "text": "the Basilica of Our Lady of Peace, Yamoussoukro"
+      "text": "Valletta"
     },
     {
       "id": "d",
-      "text": "the old town of Ghadames"
+      "text": "Saint Petersburg — the Hermitage and canals"
     }
   ],
-  "correctOptionId": "b",
-  "explanation": "Valletta is one of the two places we'd love to visit in Malta.",
+  "correctOptionId": "c",
+  "explanation": "Valletta is one of the two places we'd love to visit in Malta. Valletta is a golden-stone fortress capital built by knights, with St John's Co-Cathedral glittering inside, harbour cannons and grand harbour boat tours.",
   "difficulty": "easy",
   "sources": [
     {

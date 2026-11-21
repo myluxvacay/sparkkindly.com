@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Buenos Aires — La Boca and Recoleta"
-    },
-    {
-      "id": "b",
       "text": "Lake Malawi"
     },
     {
+      "id": "b",
+      "text": "Lahemaa National Park"
+    },
+    {
       "id": "c",
-      "text": "Kruger National Park"
+      "text": "Ometepe Island"
     },
     {
       "id": "d",
-      "text": "Brimstone Hill Fortress"
+      "text": "the amphitheatre of El Jem"
     }
   ],
-  "correctOptionId": "b",
-  "explanation": "Lake Malawi is one of the two places we'd love to visit in Malawi.",
+  "correctOptionId": "a",
+  "explanation": "Lake Malawi is one of the two places we'd love to visit in Malawi. Lake Malawi is so big it feels like an inland sea, with golden beaches, fishing villages and more kinds of colourful cichlid fish than any other lake on Earth.",
   "difficulty": "medium",
   "sources": [
     {

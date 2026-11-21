@@ -3,26 +3,26 @@
   "scheduledDate": "2030-10-21",
   "brand": "kids",
   "setId": "country-set-meet-state-of-palestine",
-  "prompt": "Which of these languages is spoken in State of Palestine?",
+  "prompt": "Which of these is a main language people speak in State of Palestine?",
   "options": [
     {
       "id": "a",
-      "text": "Icelandic"
+      "text": "Kinyarwanda"
     },
     {
       "id": "b",
-      "text": "Hungarian"
+      "text": "Kurdish"
     },
     {
       "id": "c",
-      "text": "Greek"
+      "text": "Arabic"
     },
     {
       "id": "d",
-      "text": "Arabic"
+      "text": "Divehi"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "c",
   "explanation": "People in State of Palestine speak Arabic.",
   "difficulty": "easy",
   "sources": [

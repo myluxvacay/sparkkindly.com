@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "About 81,450 square kilometres"
-    },
-    {
-      "id": "b",
       "text": "About 470,600 square kilometres"
     },
     {
+      "id": "b",
+      "text": "About 21,720 square kilometres"
+    },
+    {
       "id": "c",
-      "text": "About 181,000 square kilometres"
+      "text": "About 81,450 square kilometres"
     },
     {
       "id": "d",
-      "text": "About 21,720 square kilometres"
+      "text": "About 181,000 square kilometres"
     }
   ],
-  "correctOptionId": "c",
+  "correctOptionId": "d",
   "explanation": "Uruguay covers about 181,000 square kilometres of land and inland water.",
   "difficulty": "medium",
   "sources": [

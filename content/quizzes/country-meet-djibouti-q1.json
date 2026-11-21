@@ -3,27 +3,27 @@
   "scheduledDate": "2029-12-29",
   "brand": "kids",
   "setId": "country-set-meet-djibouti",
-  "prompt": "Which of these languages is spoken in Djibouti?",
+  "prompt": "Which of these is a main language people speak in Djibouti?",
   "options": [
     {
       "id": "a",
-      "text": "French"
+      "text": "Fula"
     },
     {
       "id": "b",
-      "text": "Macedonian"
+      "text": "Dari"
     },
     {
       "id": "c",
-      "text": "Dutch"
+      "text": "Quechua"
     },
     {
       "id": "d",
-      "text": "Guarani"
+      "text": "Somali"
     }
   ],
-  "correctOptionId": "a",
-  "explanation": "People in Djibouti speak French and Arabic.",
+  "correctOptionId": "d",
+  "explanation": "People in Djibouti speak Somali, Afar, Arabic and French.",
   "difficulty": "medium",
   "sources": [
     {

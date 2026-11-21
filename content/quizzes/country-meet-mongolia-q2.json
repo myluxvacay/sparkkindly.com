@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Funafuti Conservation Area"
+      "text": "Almaty and the Big Almaty Lake"
     },
     {
       "id": "b",
-      "text": "Salar de Uyuni, the salt flats"
-    },
-    {
-      "id": "c",
       "text": "the Gobi Desert and the Flaming Cliffs"
     },
     {
+      "id": "c",
+      "text": "the Museum of Islamic Art and Doha's Corniche"
+    },
+    {
       "id": "d",
-      "text": "Ganvie, the lake village"
+      "text": "Roatán and the Bay Islands"
     }
   ],
-  "correctOptionId": "c",
-  "explanation": "the Gobi Desert and the Flaming Cliffs is one of the two places we'd love to visit in Mongolia.",
+  "correctOptionId": "b",
+  "explanation": "the Gobi Desert and the Flaming Cliffs is one of the two places we'd love to visit in Mongolia. At the Flaming Cliffs, dinosaur eggs and fossils were found in glowing red rock.",
   "difficulty": "easy",
   "sources": [
     {

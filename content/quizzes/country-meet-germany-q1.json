@@ -3,19 +3,19 @@
   "scheduledDate": "2030-01-30",
   "brand": "kids",
   "setId": "country-set-meet-germany",
-  "prompt": "Which of these languages is spoken in Germany?",
+  "prompt": "Which of these is a main language people speak in Germany?",
   "options": [
     {
       "id": "a",
-      "text": "Thai"
+      "text": "Afar"
     },
     {
       "id": "b",
-      "text": "Romanian"
+      "text": "Korean"
     },
     {
       "id": "c",
-      "text": "Armenian"
+      "text": "Kinyarwanda"
     },
     {
       "id": "d",

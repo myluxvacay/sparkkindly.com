@@ -3,27 +3,27 @@
   "scheduledDate": "2029-11-27",
   "brand": "kids",
   "setId": "country-set-meet-cabo-verde",
-  "prompt": "Which of these languages is spoken in Cabo Verde?",
+  "prompt": "Which of these is a main language people speak in Cabo Verde?",
   "options": [
     {
       "id": "a",
-      "text": "Mandarin"
+      "text": "Cape Verdean Creole"
     },
     {
       "id": "b",
-      "text": "Finnish"
+      "text": "Greek"
     },
     {
       "id": "c",
-      "text": "Portuguese"
+      "text": "Maltese"
     },
     {
       "id": "d",
-      "text": "French"
+      "text": "Swedish"
     }
   ],
-  "correctOptionId": "c",
-  "explanation": "People in Cabo Verde speak Portuguese.",
+  "correctOptionId": "a",
+  "explanation": "People in Cabo Verde speak Cape Verdean Creole and Portuguese.",
   "difficulty": "easy",
   "sources": [
     {

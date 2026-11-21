@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "Iceland sits on the Mid-Atlantic Ridge, where tectonic plates spread apart."
+      "text": "Iceland has no volcanoes at all."
     },
     {
       "id": "b",
-      "text": "The Arabian Peninsula contains the Rub’ al Khali, one of the largest sand deserts."
+      "text": "Iceland sits where two tectonic plates crash together, slowly shrinking the island."
     },
     {
       "id": "c",
-      "text": "The Great Wall of China consists of many walls and fortifications built over centuries."
+      "text": "Iceland is a hot desert country near the equator."
     },
     {
       "id": "d",
-      "text": "The Gaza Strip lies along the Mediterranean Sea."
+      "text": "Iceland sits on the Mid-Atlantic Ridge, where tectonic plates spread apart."
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "d",
   "explanation": "Iceland sits on the Mid-Atlantic Ridge, where tectonic plates spread apart.",
   "difficulty": "hard",
   "sources": [

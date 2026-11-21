@@ -3,26 +3,26 @@
   "scheduledDate": "2029-11-11",
   "brand": "kids",
   "setId": "country-set-meet-brazil",
-  "prompt": "Which of these languages is spoken in Brazil?",
+  "prompt": "Which of these is a main language people speak in Brazil?",
   "options": [
     {
       "id": "a",
-      "text": "Tigrinya"
-    },
-    {
-      "id": "b",
       "text": "Portuguese"
     },
     {
+      "id": "b",
+      "text": "Nyanja"
+    },
+    {
       "id": "c",
-      "text": "English"
+      "text": "Tajik"
     },
     {
       "id": "d",
-      "text": "Mongolian"
+      "text": "Burmese"
     }
   ],
-  "correctOptionId": "b",
+  "correctOptionId": "a",
   "explanation": "People in Brazil speak Portuguese.",
   "difficulty": "medium",
   "sources": [

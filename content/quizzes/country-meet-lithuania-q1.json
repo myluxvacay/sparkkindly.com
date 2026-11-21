@@ -3,26 +3,26 @@
   "scheduledDate": "2030-04-12",
   "brand": "kids",
   "setId": "country-set-meet-lithuania",
-  "prompt": "Which of these languages is spoken in Lithuania?",
+  "prompt": "Which of these is a main language people speak in Lithuania?",
   "options": [
     {
       "id": "a",
-      "text": "Lithuanian"
+      "text": "Bulgarian"
     },
     {
       "id": "b",
-      "text": "Romanian"
+      "text": "Samoan"
     },
     {
       "id": "c",
-      "text": "Mandarin"
+      "text": "Lithuanian"
     },
     {
       "id": "d",
-      "text": "French"
+      "text": "Korean"
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "c",
   "explanation": "People in Lithuania speak Lithuanian.",
   "difficulty": "medium",
   "sources": [

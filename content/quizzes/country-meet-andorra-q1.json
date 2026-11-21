@@ -3,26 +3,26 @@
   "scheduledDate": "2030-10-13",
   "brand": "kids",
   "setId": "country-set-meet-andorra",
-  "prompt": "Which of these languages is spoken in Andorra?",
+  "prompt": "Which of these is a main language people speak in Andorra?",
   "options": [
     {
       "id": "a",
-      "text": "Kongo"
+      "text": "Amharic"
     },
     {
       "id": "b",
-      "text": "Swedish"
+      "text": "Russian"
     },
     {
       "id": "c",
-      "text": "Aymara"
+      "text": "Catalan"
     },
     {
       "id": "d",
-      "text": "Catalan"
+      "text": "Gilbertese"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "c",
   "explanation": "People in Andorra speak Catalan.",
   "difficulty": "medium",
   "sources": [

@@ -3,27 +3,27 @@
   "scheduledDate": "2030-04-04",
   "brand": "kids",
   "setId": "country-set-meet-lesotho",
-  "prompt": "Which of these languages is spoken in Lesotho?",
+  "prompt": "Which of these is a main language people speak in Lesotho?",
   "options": [
     {
       "id": "a",
-      "text": "English"
+      "text": "Southern Sotho"
     },
     {
       "id": "b",
-      "text": "French"
+      "text": "Kyrgyz"
     },
     {
       "id": "c",
-      "text": "Nauruan"
+      "text": "French"
     },
     {
       "id": "d",
-      "text": "Armenian"
+      "text": "Spanish"
     }
   ],
   "correctOptionId": "a",
-  "explanation": "People in Lesotho speak English and Southern Sotho.",
+  "explanation": "People in Lesotho speak Southern Sotho and English.",
   "difficulty": "easy",
   "sources": [
     {

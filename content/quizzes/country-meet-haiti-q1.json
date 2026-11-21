@@ -3,27 +3,27 @@
   "scheduledDate": "2030-02-15",
   "brand": "kids",
   "setId": "country-set-meet-haiti",
-  "prompt": "Which of these languages is spoken in Haiti?",
+  "prompt": "Which of these is a main language people speak in Haiti?",
   "options": [
     {
       "id": "a",
-      "text": "Tswana"
+      "text": "Comorian"
     },
     {
       "id": "b",
-      "text": "Burmese"
+      "text": "German"
     },
     {
       "id": "c",
-      "text": "Montenegrin"
+      "text": "Icelandic"
     },
     {
       "id": "d",
-      "text": "French"
+      "text": "Haitian Creole"
     }
   ],
   "correctOptionId": "d",
-  "explanation": "People in Haiti speak French and Haitian Creole.",
+  "explanation": "People in Haiti speak Haitian Creole and French.",
   "difficulty": "medium",
   "sources": [
     {

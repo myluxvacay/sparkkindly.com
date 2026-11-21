@@ -3,26 +3,26 @@
   "scheduledDate": "2030-08-26",
   "brand": "kids",
   "setId": "country-set-meet-tajikistan",
-  "prompt": "Which of these languages is spoken in Tajikistan?",
+  "prompt": "Which of these is a main language people speak in Tajikistan?",
   "options": [
     {
       "id": "a",
-      "text": "Tajik"
+      "text": "Guarani"
     },
     {
       "id": "b",
-      "text": "Italian"
+      "text": "isiZulu"
     },
     {
       "id": "c",
-      "text": "Czech"
+      "text": "Afrikaans"
     },
     {
       "id": "d",
-      "text": "Seychellois Creole"
+      "text": "Tajik"
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "d",
   "explanation": "People in Tajikistan speak Tajik and Russian.",
   "difficulty": "medium",
   "sources": [

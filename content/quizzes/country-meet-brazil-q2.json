@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "The Amazon rainforest stretches across northern Brazil and several neighboring countries."
+      "text": "The Sahara Desert covers most of Brazil."
     },
     {
       "id": "b",
-      "text": "Mount Kilimanjaro is the highest mountain in Africa."
+      "text": "Brazil is the smallest country in South America."
     },
     {
       "id": "c",
-      "text": "Malaysia shares a land border with Brunei Darussalam."
+      "text": "The Amazon River flows through Brazil and empties into the Pacific Ocean."
     },
     {
       "id": "d",
-      "text": "The Great Wall of China consists of many walls and fortifications built over centuries."
+      "text": "The Amazon rainforest stretches across northern Brazil and several neighboring countries."
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "d",
   "explanation": "The Amazon rainforest stretches across northern Brazil and several neighboring countries.",
   "difficulty": "hard",
   "sources": [

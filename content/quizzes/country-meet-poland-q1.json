@@ -3,19 +3,19 @@
   "scheduledDate": "2030-06-23",
   "brand": "kids",
   "setId": "country-set-meet-poland",
-  "prompt": "Which of these languages is spoken in Poland?",
+  "prompt": "Which of these is a main language people speak in Poland?",
   "options": [
     {
       "id": "a",
-      "text": "Bosnian"
+      "text": "Pashto"
     },
     {
       "id": "b",
-      "text": "Dari"
+      "text": "Nauruan"
     },
     {
       "id": "c",
-      "text": "Turkmen"
+      "text": "Amharic"
     },
     {
       "id": "d",

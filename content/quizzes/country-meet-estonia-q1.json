@@ -3,26 +3,26 @@
   "scheduledDate": "2030-01-14",
   "brand": "kids",
   "setId": "country-set-meet-estonia",
-  "prompt": "Which of these languages is spoken in Estonia?",
+  "prompt": "Which of these is a main language people speak in Estonia?",
   "options": [
     {
       "id": "a",
-      "text": "Catalan"
+      "text": "Luxembourgish"
     },
     {
       "id": "b",
-      "text": "Estonian"
+      "text": "isiXhosa"
     },
     {
       "id": "c",
-      "text": "Aymara"
+      "text": "Italian"
     },
     {
       "id": "d",
-      "text": "English"
+      "text": "Estonian"
     }
   ],
-  "correctOptionId": "b",
+  "correctOptionId": "d",
   "explanation": "People in Estonia speak Estonian.",
   "difficulty": "medium",
   "sources": [

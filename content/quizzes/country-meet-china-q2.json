@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "The pyramids at Giza were built in ancient Egypt as royal tombs."
+      "text": "The Great Wall of China runs along China's southern border with Vietnam."
     },
     {
       "id": "b",
-      "text": "The Great Wall of China consists of many walls and fortifications built over centuries."
+      "text": "The Great Wall of China is a single wall that was built in just one year."
     },
     {
       "id": "c",
-      "text": "The Atacama Desert in northern Chile is one of the driest nonpolar deserts on Earth."
+      "text": "China is the smallest country in Asia."
     },
     {
       "id": "d",
-      "text": "Indonesia shares a land border with Timor-Leste."
+      "text": "The Great Wall of China consists of many walls and fortifications built over centuries."
     }
   ],
-  "correctOptionId": "b",
+  "correctOptionId": "d",
   "explanation": "The Great Wall of China consists of many walls and fortifications built over centuries.",
   "difficulty": "hard",
   "sources": [

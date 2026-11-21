@@ -3,26 +3,26 @@
   "scheduledDate": "2030-05-30",
   "brand": "kids",
   "setId": "country-set-meet-nicaragua",
-  "prompt": "Which of these languages is spoken in Nicaragua?",
+  "prompt": "Which of these is a main language people speak in Nicaragua?",
   "options": [
     {
       "id": "a",
-      "text": "Spanish"
+      "text": "Mauritian Creole"
     },
     {
       "id": "b",
-      "text": "Fijian"
+      "text": "Spanish"
     },
     {
       "id": "c",
-      "text": "Dzongkha"
+      "text": "Gilbertese"
     },
     {
       "id": "d",
-      "text": "isiZulu"
+      "text": "Maltese"
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "b",
   "explanation": "People in Nicaragua speak Spanish.",
   "difficulty": "easy",
   "sources": [

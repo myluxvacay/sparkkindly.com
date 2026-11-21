@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "About 1,071,900 square kilometres"
-    },
-    {
-      "id": "b",
-      "text": "About 2,382,000 square kilometres"
-    },
-    {
-      "id": "c",
       "text": "About 285,840 square kilometres"
     },
     {
-      "id": "d",
+      "id": "b",
+      "text": "About 1,071,900 square kilometres"
+    },
+    {
+      "id": "c",
       "text": "About 6,193,200 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 2,382,000 square kilometres"
     }
   ],
-  "correctOptionId": "b",
+  "correctOptionId": "d",
   "explanation": "Algeria covers about 2,382,000 square kilometres of land and inland water.",
   "difficulty": "easy",
   "sources": [

@@ -3,27 +3,27 @@
   "scheduledDate": "2030-07-25",
   "brand": "kids",
   "setId": "country-set-meet-sierra-leone",
-  "prompt": "Which of these languages is spoken in Sierra Leone?",
+  "prompt": "Which of these is a main language people speak in Sierra Leone?",
   "options": [
     {
       "id": "a",
-      "text": "English"
+      "text": "Hungarian"
     },
     {
       "id": "b",
-      "text": "Urdu"
+      "text": "Mongolian"
     },
     {
       "id": "c",
-      "text": "Hebrew"
+      "text": "Luxembourgish"
     },
     {
       "id": "d",
-      "text": "Hungarian"
+      "text": "English"
     }
   ],
-  "correctOptionId": "a",
-  "explanation": "People in Sierra Leone speak English.",
+  "correctOptionId": "d",
+  "explanation": "People in Sierra Leone speak English and Krio.",
   "difficulty": "medium",
   "sources": [
     {

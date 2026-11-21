@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "The Great Migration brings huge herds of wildebeest through the Maasai Mara ecosystem."
+      "text": "The Great Migration is a journey made by penguins across Kenya."
     },
     {
       "id": "b",
-      "text": "Venice is built on islands linked by bridges and canals."
+      "text": "The wildebeest herds of the Great Migration swim across the ocean to reach Kenya."
     },
     {
       "id": "c",
-      "text": "The pyramids at Giza were built in ancient Egypt as royal tombs."
+      "text": "The Great Migration brings huge herds of wildebeest through the Maasai Mara ecosystem."
     },
     {
       "id": "d",
-      "text": "Mount Kilimanjaro is the highest mountain in Africa."
+      "text": "The Great Migration takes place in the Sahara Desert in northern Kenya."
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "c",
   "explanation": "The Great Migration brings huge herds of wildebeest through the Maasai Mara ecosystem.",
   "difficulty": "hard",
   "sources": [

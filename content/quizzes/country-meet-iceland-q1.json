@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "Melanesia"
-    },
-    {
-      "id": "b",
-      "text": "Central Asia"
-    },
-    {
-      "id": "c",
       "text": "Northern Europe"
     },
     {
-      "id": "d",
+      "id": "b",
       "text": "Southeast Asia"
+    },
+    {
+      "id": "c",
+      "text": "Melanesia"
+    },
+    {
+      "id": "d",
+      "text": "Central Asia"
     }
   ],
-  "correctOptionId": "c",
+  "correctOptionId": "a",
   "explanation": "Iceland is in Northern Europe, part of Europe.",
   "difficulty": "medium",
   "sources": [

@@ -3,26 +3,26 @@
   "scheduledDate": "2030-01-22",
   "brand": "kids",
   "setId": "country-set-meet-france",
-  "prompt": "Which of these languages is spoken in France?",
+  "prompt": "Which of these is a main language people speak in France?",
   "options": [
     {
       "id": "a",
-      "text": "French"
+      "text": "Tswana"
     },
     {
       "id": "b",
-      "text": "Azerbaijani"
+      "text": "Kurdish"
     },
     {
       "id": "c",
-      "text": "Mauritian Creole"
+      "text": "French"
     },
     {
       "id": "d",
-      "text": "Latin"
+      "text": "Irish"
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "c",
   "explanation": "People in France speak French.",
   "difficulty": "medium",
   "sources": [

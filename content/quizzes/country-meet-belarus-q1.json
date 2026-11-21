@@ -3,26 +3,26 @@
   "scheduledDate": "2029-10-26",
   "brand": "kids",
   "setId": "country-set-meet-belarus",
-  "prompt": "Which of these languages is spoken in Belarus?",
+  "prompt": "Which of these is a main language people speak in Belarus?",
   "options": [
     {
       "id": "a",
-      "text": "Irish"
+      "text": "Bosnian"
     },
     {
       "id": "b",
-      "text": "Belarusian"
+      "text": "Ewe"
     },
     {
       "id": "c",
-      "text": "Tamil"
+      "text": "Serbian"
     },
     {
       "id": "d",
-      "text": "Tajik"
+      "text": "Belarusian"
     }
   ],
-  "correctOptionId": "b",
+  "correctOptionId": "d",
   "explanation": "People in Belarus speak Belarusian and Russian.",
   "difficulty": "easy",
   "sources": [

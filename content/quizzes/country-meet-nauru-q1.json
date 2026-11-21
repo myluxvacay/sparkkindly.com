@@ -3,26 +3,26 @@
   "scheduledDate": "2030-05-22",
   "brand": "kids",
   "setId": "country-set-meet-nauru",
-  "prompt": "Which of these languages is spoken in Nauru?",
+  "prompt": "Which of these is a main language people speak in Nauru?",
   "options": [
     {
       "id": "a",
-      "text": "Belarusian"
+      "text": "Cape Verdean Creole"
     },
     {
       "id": "b",
-      "text": "Nauruan"
+      "text": "Fula"
     },
     {
       "id": "c",
-      "text": "isiXhosa"
+      "text": "Haitian Creole"
     },
     {
       "id": "d",
-      "text": "Aymara"
+      "text": "Nauruan"
     }
   ],
-  "correctOptionId": "b",
+  "correctOptionId": "d",
   "explanation": "People in Nauru speak Nauruan and English.",
   "difficulty": "medium",
   "sources": [

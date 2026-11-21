@@ -3,26 +3,26 @@
   "scheduledDate": "2029-10-18",
   "brand": "kids",
   "setId": "country-set-meet-the-bahamas",
-  "prompt": "Which of these languages is spoken in The Bahamas?",
+  "prompt": "Which of these is a main language people speak in The Bahamas?",
   "options": [
     {
       "id": "a",
-      "text": "Persian"
+      "text": "English"
     },
     {
       "id": "b",
-      "text": "Danish"
+      "text": "Fula"
     },
     {
       "id": "c",
-      "text": "Latin"
+      "text": "Bulgarian"
     },
     {
       "id": "d",
-      "text": "English"
+      "text": "Comorian"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "a",
   "explanation": "People in The Bahamas speak English.",
   "difficulty": "medium",
   "sources": [

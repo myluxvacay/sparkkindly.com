@@ -3,19 +3,19 @@
   "scheduledDate": "2030-07-01",
   "brand": "kids",
   "setId": "country-set-meet-russia",
-  "prompt": "Which of these languages is spoken in Russia?",
+  "prompt": "Which of these is a main language people speak in Russia?",
   "options": [
     {
       "id": "a",
-      "text": "Slovenian"
+      "text": "Greek"
     },
     {
       "id": "b",
-      "text": "Malay"
+      "text": "Kazakh"
     },
     {
       "id": "c",
-      "text": "Dzongkha"
+      "text": "Comorian"
     },
     {
       "id": "d",

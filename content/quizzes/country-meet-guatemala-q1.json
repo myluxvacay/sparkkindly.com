@@ -3,7 +3,7 @@
   "scheduledDate": "2030-02-07",
   "brand": "kids",
   "setId": "country-set-meet-guatemala",
-  "prompt": "Which of these languages is spoken in Guatemala?",
+  "prompt": "Which of these is a main language people speak in Guatemala?",
   "options": [
     {
       "id": "a",
@@ -11,15 +11,15 @@
     },
     {
       "id": "b",
-      "text": "Finnish"
+      "text": "Shona"
     },
     {
       "id": "c",
-      "text": "Italian"
+      "text": "Lingala"
     },
     {
       "id": "d",
-      "text": "Tamil"
+      "text": "Fon"
     }
   ],
   "correctOptionId": "a",

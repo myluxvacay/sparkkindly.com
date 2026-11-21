@@ -3,7 +3,7 @@
   "scheduledDate": "2030-07-17",
   "brand": "kids",
   "setId": "country-set-meet-saudi-arabia",
-  "prompt": "Which of these languages is spoken in Saudi Arabia?",
+  "prompt": "Which of these is a main language people speak in Saudi Arabia?",
   "options": [
     {
       "id": "a",
@@ -11,15 +11,15 @@
     },
     {
       "id": "b",
-      "text": "Khmer"
+      "text": "Macedonian"
     },
     {
       "id": "c",
-      "text": "Vietnamese"
+      "text": "Nepali"
     },
     {
       "id": "d",
-      "text": "Sango"
+      "text": "Samoan"
     }
   ],
   "correctOptionId": "a",

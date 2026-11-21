@@ -3,7 +3,7 @@
   "scheduledDate": "2030-08-06",
   "brand": "kids",
   "setId": "country-set-meet-south-africa",
-  "prompt": "What is the capital of South Africa?",
+  "prompt": "South Africa has three capital cities. Which of these is one of them?",
   "options": [
     {
       "id": "a",
@@ -23,7 +23,7 @@
     }
   ],
   "correctOptionId": "a",
-  "explanation": "Pretoria is the capital of South Africa.",
+  "explanation": "Pretoria is one of South Africa's three capitals — it is where the president and government work. The others are Cape Town and Bloemfontein.",
   "difficulty": "medium",
   "sources": [
     {

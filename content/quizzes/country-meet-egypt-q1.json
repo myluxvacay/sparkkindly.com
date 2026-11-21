@@ -3,26 +3,26 @@
   "scheduledDate": "2030-01-06",
   "brand": "kids",
   "setId": "country-set-meet-egypt",
-  "prompt": "Which of these languages is spoken in Egypt?",
+  "prompt": "Which of these is a main language people speak in Egypt?",
   "options": [
     {
       "id": "a",
-      "text": "Slovak"
+      "text": "French"
     },
     {
       "id": "b",
-      "text": "Italian"
-    },
-    {
-      "id": "c",
       "text": "Arabic"
     },
     {
+      "id": "c",
+      "text": "Thai"
+    },
+    {
       "id": "d",
-      "text": "Tswana"
+      "text": "Italian"
     }
   ],
-  "correctOptionId": "c",
+  "correctOptionId": "b",
   "explanation": "People in Egypt speak Arabic.",
   "difficulty": "medium",
   "sources": [

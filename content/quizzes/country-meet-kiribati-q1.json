@@ -3,26 +3,26 @@
   "scheduledDate": "2030-03-19",
   "brand": "kids",
   "setId": "country-set-meet-kiribati",
-  "prompt": "Which of these languages is spoken in Kiribati?",
+  "prompt": "Which of these is a main language people speak in Kiribati?",
   "options": [
     {
       "id": "a",
-      "text": "Southern Sotho"
-    },
-    {
-      "id": "b",
-      "text": "Tswana"
-    },
-    {
-      "id": "c",
       "text": "Gilbertese"
     },
     {
+      "id": "b",
+      "text": "Rundi"
+    },
+    {
+      "id": "c",
+      "text": "Quechua"
+    },
+    {
       "id": "d",
-      "text": "Tongan"
+      "text": "Malay"
     }
   ],
-  "correctOptionId": "c",
+  "correctOptionId": "a",
   "explanation": "People in Kiribati speak Gilbertese and English.",
   "difficulty": "easy",
   "sources": [

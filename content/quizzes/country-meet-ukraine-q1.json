@@ -3,26 +3,26 @@
   "scheduledDate": "2030-09-19",
   "brand": "kids",
   "setId": "country-set-meet-ukraine",
-  "prompt": "Which of these languages is spoken in Ukraine?",
+  "prompt": "Which of these is a main language people speak in Ukraine?",
   "options": [
     {
       "id": "a",
-      "text": "Ukrainian"
+      "text": "Haitian Creole"
     },
     {
       "id": "b",
-      "text": "Slovenian"
+      "text": "Palauan"
     },
     {
       "id": "c",
-      "text": "Swati"
+      "text": "Lingala"
     },
     {
       "id": "d",
-      "text": "Fula"
+      "text": "Ukrainian"
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "d",
   "explanation": "People in Ukraine speak Ukrainian.",
   "difficulty": "easy",
   "sources": [

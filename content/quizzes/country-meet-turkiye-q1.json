@@ -3,26 +3,26 @@
   "scheduledDate": "2030-09-11",
   "brand": "kids",
   "setId": "country-set-meet-turkiye",
-  "prompt": "Which of these languages is spoken in Türkiye?",
+  "prompt": "Which of these is a main language people speak in Türkiye?",
   "options": [
     {
       "id": "a",
-      "text": "Haitian Creole"
+      "text": "Kinyarwanda"
     },
     {
       "id": "b",
-      "text": "Lingala"
+      "text": "Urdu"
     },
     {
       "id": "c",
-      "text": "Sango"
+      "text": "Turkish"
     },
     {
       "id": "d",
-      "text": "Turkish"
+      "text": "Thai"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "c",
   "explanation": "People in Türkiye speak Turkish.",
   "difficulty": "easy",
   "sources": [

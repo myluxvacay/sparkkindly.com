@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "About 42,840 square kilometres"
-    },
-    {
-      "id": "b",
       "text": "About 928,200 square kilometres"
     },
     {
+      "id": "b",
+      "text": "About 357,000 square kilometres"
+    },
+    {
       "id": "c",
-      "text": "About 160,650 square kilometres"
+      "text": "About 42,840 square kilometres"
     },
     {
       "id": "d",
-      "text": "About 357,000 square kilometres"
+      "text": "About 160,650 square kilometres"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "b",
   "explanation": "Germany covers about 357,000 square kilometres of land and inland water.",
   "difficulty": "hard",
   "sources": [

@@ -3,27 +3,27 @@
   "scheduledDate": "2030-08-18",
   "brand": "kids",
   "setId": "country-set-meet-eswatini",
-  "prompt": "Which of these languages is spoken in Eswatini?",
+  "prompt": "Which of these is a main language people speak in Eswatini?",
   "options": [
     {
       "id": "a",
-      "text": "Spanish"
+      "text": "siSwati"
     },
     {
       "id": "b",
-      "text": "English"
+      "text": "Spanish"
     },
     {
       "id": "c",
-      "text": "Lingala"
+      "text": "Turkmen"
     },
     {
       "id": "d",
-      "text": "Turkish"
+      "text": "Afrikaans"
     }
   ],
-  "correctOptionId": "b",
-  "explanation": "People in Eswatini speak English and Swati.",
+  "correctOptionId": "a",
+  "explanation": "People in Eswatini speak siSwati and English.",
   "difficulty": "medium",
   "sources": [
     {

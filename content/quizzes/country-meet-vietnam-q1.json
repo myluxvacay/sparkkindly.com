@@ -3,26 +3,26 @@
   "scheduledDate": "2030-10-05",
   "brand": "kids",
   "setId": "country-set-meet-vietnam",
-  "prompt": "Which of these languages is spoken in Vietnam?",
+  "prompt": "Which of these is a main language people speak in Vietnam?",
   "options": [
     {
       "id": "a",
-      "text": "Slovak"
+      "text": "Vietnamese"
     },
     {
       "id": "b",
-      "text": "Lao"
+      "text": "Mandarin"
     },
     {
       "id": "c",
-      "text": "Serbian"
+      "text": "Romanian"
     },
     {
       "id": "d",
-      "text": "Vietnamese"
+      "text": "Sinhala"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "a",
   "explanation": "People in Vietnam speak Vietnamese.",
   "difficulty": "easy",
   "sources": [

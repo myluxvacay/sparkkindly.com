@@ -3,26 +3,26 @@
   "scheduledDate": "2029-10-10",
   "brand": "kids",
   "setId": "country-set-meet-armenia",
-  "prompt": "Which of these languages is spoken in Armenia?",
+  "prompt": "Which of these is a main language people speak in Armenia?",
   "options": [
     {
       "id": "a",
-      "text": "Lao"
+      "text": "Hungarian"
     },
     {
       "id": "b",
-      "text": "Quechua"
+      "text": "Armenian"
     },
     {
       "id": "c",
-      "text": "Nauruan"
+      "text": "Polish"
     },
     {
       "id": "d",
-      "text": "Armenian"
+      "text": "Lingala"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "b",
   "explanation": "People in Armenia speak Armenian and Russian.",
   "difficulty": "medium",
   "sources": [

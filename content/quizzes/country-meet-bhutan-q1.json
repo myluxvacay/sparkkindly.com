@@ -3,26 +3,26 @@
   "scheduledDate": "2029-11-03",
   "brand": "kids",
   "setId": "country-set-meet-bhutan",
-  "prompt": "Which of these languages is spoken in Bhutan?",
+  "prompt": "Which of these is a main language people speak in Bhutan?",
   "options": [
     {
       "id": "a",
-      "text": "Dzongkha"
+      "text": "Dari"
     },
     {
       "id": "b",
-      "text": "Turkmen"
+      "text": "Latin"
     },
     {
       "id": "c",
-      "text": "Arabic"
+      "text": "Montenegrin"
     },
     {
       "id": "d",
-      "text": "Macedonian"
+      "text": "Dzongkha"
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "d",
   "explanation": "People in Bhutan speak Dzongkha.",
   "difficulty": "medium",
   "sources": [

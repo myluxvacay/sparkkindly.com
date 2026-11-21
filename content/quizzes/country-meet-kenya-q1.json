@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "Eastern Asia"
-    },
-    {
-      "id": "b",
       "text": "Micronesia"
     },
     {
-      "id": "c",
+      "id": "b",
       "text": "Eastern Africa"
     },
     {
-      "id": "d",
+      "id": "c",
       "text": "Melanesia"
+    },
+    {
+      "id": "d",
+      "text": "Eastern Asia"
     }
   ],
-  "correctOptionId": "c",
+  "correctOptionId": "b",
   "explanation": "Kenya is in Eastern Africa, part of Africa.",
   "difficulty": "medium",
   "sources": [

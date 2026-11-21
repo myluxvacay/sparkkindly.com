@@ -3,27 +3,27 @@
   "scheduledDate": "2029-11-19",
   "brand": "kids",
   "setId": "country-set-meet-burundi",
-  "prompt": "Which of these languages is spoken in Burundi?",
+  "prompt": "Which of these is a main language people speak in Burundi?",
   "options": [
     {
       "id": "a",
-      "text": "Marshallese"
+      "text": "Kongo"
     },
     {
       "id": "b",
-      "text": "French"
+      "text": "Rundi"
     },
     {
       "id": "c",
-      "text": "Swati"
+      "text": "Latvian"
     },
     {
       "id": "d",
-      "text": "Indonesian"
+      "text": "Chuukese"
     }
   ],
   "correctOptionId": "b",
-  "explanation": "People in Burundi speak French and Rundi.",
+  "explanation": "People in Burundi speak Rundi and French.",
   "difficulty": "medium",
   "sources": [
     {

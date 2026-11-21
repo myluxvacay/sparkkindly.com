@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Wadi Rum desert"
+      "text": "Edinburgh Castle and the Royal Mile"
     },
     {
       "id": "b",
-      "text": "Lake Sevan"
+      "text": "Namche Bazaar, the gateway to Everest"
     },
     {
       "id": "c",
-      "text": "the Kuang Si Falls"
+      "text": "Lake Sevan"
     },
     {
       "id": "d",
-      "text": "the Maasai Mara"
+      "text": "the Bazaruto Archipelago"
     }
   ],
-  "correctOptionId": "b",
-  "explanation": "Lake Sevan is one of the two places we'd love to visit in Armenia.",
+  "correctOptionId": "c",
+  "explanation": "Lake Sevan is one of the two places we'd love to visit in Armenia. Lake Sevan is one of the largest high-mountain lakes in the world.",
   "difficulty": "medium",
   "sources": [
     {

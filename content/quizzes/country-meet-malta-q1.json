@@ -3,26 +3,26 @@
   "scheduledDate": "2030-04-28",
   "brand": "kids",
   "setId": "country-set-meet-malta",
-  "prompt": "Which of these languages is spoken in Malta?",
+  "prompt": "Which of these is a main language people speak in Malta?",
   "options": [
     {
       "id": "a",
-      "text": "Maltese"
+      "text": "Guarani"
     },
     {
       "id": "b",
-      "text": "Sinhala"
+      "text": "Aymara"
     },
     {
       "id": "c",
-      "text": "Afrikaans"
+      "text": "Maltese"
     },
     {
       "id": "d",
-      "text": "Arabic"
+      "text": "Slovak"
     }
   ],
-  "correctOptionId": "a",
+  "correctOptionId": "c",
   "explanation": "People in Malta speak Maltese and English.",
   "difficulty": "easy",
   "sources": [

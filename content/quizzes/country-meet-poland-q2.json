@@ -7,7 +7,7 @@
   "options": [
     {
       "id": "a",
-      "text": "About 813,800 square kilometres"
+      "text": "About 313,000 square kilometres"
     },
     {
       "id": "b",
@@ -15,14 +15,14 @@
     },
     {
       "id": "c",
-      "text": "About 313,000 square kilometres"
+      "text": "About 813,800 square kilometres"
     },
     {
       "id": "d",
       "text": "About 37,560 square kilometres"
     }
   ],
-  "correctOptionId": "c",
+  "correctOptionId": "a",
   "explanation": "Poland covers about 313,000 square kilometres of land and inland water.",
   "difficulty": "medium",
   "sources": [

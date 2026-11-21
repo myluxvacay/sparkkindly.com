@@ -7,22 +7,22 @@
   "options": [
     {
       "id": "a",
-      "text": "The Great Migration brings huge herds of wildebeest through the Maasai Mara ecosystem."
+      "text": "Yellowstone National Park is famous for its giant sand dunes and wild camels."
     },
     {
       "id": "b",
-      "text": "Yellowstone National Park contains geysers heated by geothermal energy."
+      "text": "Old Faithful is a famous waterfall in Yellowstone National Park."
     },
     {
       "id": "c",
-      "text": "Mount Kilimanjaro is the highest mountain in Africa."
+      "text": "Yellowstone National Park contains geysers heated by geothermal energy."
     },
     {
       "id": "d",
-      "text": "The ancient Maya built large cities with temples in parts of present-day Mexico."
+      "text": "Yellowstone's geysers erupt because of ocean tides."
     }
   ],
-  "correctOptionId": "b",
+  "correctOptionId": "c",
   "explanation": "Yellowstone National Park contains geysers heated by geothermal energy.",
   "difficulty": "medium",
   "sources": [

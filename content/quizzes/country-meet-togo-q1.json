@@ -3,27 +3,27 @@
   "scheduledDate": "2030-09-03",
   "brand": "kids",
   "setId": "country-set-meet-togo",
-  "prompt": "Which of these languages is spoken in Togo?",
+  "prompt": "Which of these is a main language people speak in Togo?",
   "options": [
     {
       "id": "a",
-      "text": "French"
+      "text": "Tswana"
     },
     {
       "id": "b",
-      "text": "Swedish"
+      "text": "English"
     },
     {
       "id": "c",
-      "text": "Dzongkha"
+      "text": "Kinyarwanda"
     },
     {
       "id": "d",
-      "text": "Thai"
+      "text": "French"
     }
   ],
-  "correctOptionId": "a",
-  "explanation": "People in Togo speak French.",
+  "correctOptionId": "d",
+  "explanation": "People in Togo speak French and Ewe.",
   "difficulty": "medium",
   "sources": [
     {

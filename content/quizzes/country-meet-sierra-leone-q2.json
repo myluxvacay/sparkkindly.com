@@ -7,23 +7,23 @@
   "options": [
     {
       "id": "a",
-      "text": "Tacugama Chimpanzee Sanctuary"
+      "text": "the Day Forest"
     },
     {
       "id": "b",
-      "text": "the Ennedi Plateau"
+      "text": "the Pitons and Soufrière"
     },
     {
       "id": "c",
-      "text": "Hlane Royal National Park"
+      "text": "Tacugama Chimpanzee Sanctuary"
     },
     {
       "id": "d",
-      "text": "Neuschwanstein Castle, Bavaria"
+      "text": "Pico do Fogo volcano"
     }
   ],
-  "correctOptionId": "a",
-  "explanation": "Tacugama Chimpanzee Sanctuary is one of the two places we'd love to visit in Sierra Leone.",
+  "correctOptionId": "c",
+  "explanation": "Tacugama Chimpanzee Sanctuary is one of the two places we'd love to visit in Sierra Leone. In the forest above Freetown, Tacugama rescues orphaned chimpanzees.",
   "difficulty": "hard",
   "sources": [
     {

@@ -3,26 +3,26 @@
   "scheduledDate": "2030-05-06",
   "brand": "kids",
   "setId": "country-set-meet-mexico",
-  "prompt": "Which of these languages is spoken in Mexico?",
+  "prompt": "Which of these is a main language people speak in Mexico?",
   "options": [
     {
       "id": "a",
-      "text": "Thai"
+      "text": "Tuvaluan"
     },
     {
       "id": "b",
-      "text": "Portuguese"
+      "text": "Sinhala"
     },
     {
       "id": "c",
-      "text": "Lingala"
+      "text": "Spanish"
     },
     {
       "id": "d",
-      "text": "Spanish"
+      "text": "Vietnamese"
     }
   ],
-  "correctOptionId": "d",
+  "correctOptionId": "c",
   "explanation": "People in Mexico speak Spanish.",
   "difficulty": "medium",
   "sources": [

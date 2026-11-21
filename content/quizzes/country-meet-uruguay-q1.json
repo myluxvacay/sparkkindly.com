@@ -3,15 +3,15 @@
   "scheduledDate": "2030-09-27",
   "brand": "kids",
   "setId": "country-set-meet-uruguay",
-  "prompt": "Which of these languages is spoken in Uruguay?",
+  "prompt": "Which of these is a main language people speak in Uruguay?",
   "options": [
     {
       "id": "a",
-      "text": "Hindi"
+      "text": "Slovak"
     },
     {
       "id": "b",
-      "text": "Russian"
+      "text": "Pijin"
     },
     {
       "id": "c",
@@ -19,7 +19,7 @@
     },
     {
       "id": "d",
-      "text": "Swahili"
+      "text": "isiZulu"
     }
   ],
   "correctOptionId": "c",

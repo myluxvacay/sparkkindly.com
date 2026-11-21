@@ -3,26 +3,26 @@
   "scheduledDate": "2030-06-15",
   "brand": "kids",
   "setId": "country-set-meet-papua-new-guinea",
-  "prompt": "Which of these languages is spoken in Papua New Guinea?",
+  "prompt": "Which of these is a main language people speak in Papua New Guinea?",
   "options": [
     {
       "id": "a",
-      "text": "Norwegian"
-    },
-    {
-      "id": "b",
-      "text": "Croatian"
-    },
-    {
-      "id": "c",
       "text": "Tok Pisin"
     },
     {
+      "id": "b",
+      "text": "North Ndebele"
+    },
+    {
+      "id": "c",
+      "text": "Dutch"
+    },
+    {
       "id": "d",
-      "text": "Polish"
+      "text": "Pohnpeian"
     }
   ],
-  "correctOptionId": "c",
+  "correctOptionId": "a",
   "explanation": "People in Papua New Guinea speak Tok Pisin and English.",
   "difficulty": "medium",
   "sources": [

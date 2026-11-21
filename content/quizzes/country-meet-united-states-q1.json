@@ -11,18 +11,18 @@
     },
     {
       "id": "b",
-      "text": "Australia and New Zealand"
+      "text": "Northern Africa"
     },
     {
       "id": "c",
-      "text": "Northern America"
+      "text": "Australia and New Zealand"
     },
     {
       "id": "d",
-      "text": "Northern Africa"
+      "text": "Northern America"
     }
   ],
-  "correctOptionId": "c",
+  "correctOptionId": "d",
   "explanation": "United States is in Northern America, part of North America.",
   "difficulty": "medium",
   "sources": [
