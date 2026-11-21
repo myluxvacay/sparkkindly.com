@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-belgium-q1",
+  "scheduledDate": "2029-10-28",
+  "brand": "kids",
+  "setId": "country-set-meet-belgium",
+  "prompt": "What is the money of Belgium called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "euro"
+    },
+    {
+      "id": "b",
+      "text": "Chinese yuan"
+    },
+    {
+      "id": "c",
+      "text": "Armenian dram"
+    },
+    {
+      "id": "d",
+      "text": "Jamaican dollar"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Belgium is the euro.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Belgium | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Belgium",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Belgium — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Belgium",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-belgium.webp",
+    "alt": "Spark and Mango visiting a canal with stone bridges and the Belfry tower in Bruges",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

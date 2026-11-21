@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-equatorial-guinea-q1",
+  "scheduledDate": "2030-01-10",
+  "brand": "kids",
+  "setId": "country-set-meet-equatorial-guinea",
+  "prompt": "What is the capital of Equatorial Guinea?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Funafuti"
+    },
+    {
+      "id": "b",
+      "text": "Amsterdam"
+    },
+    {
+      "id": "c",
+      "text": "Malabo"
+    },
+    {
+      "id": "d",
+      "text": "Luanda"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Malabo is the capital of Equatorial Guinea.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Equatorial Guinea | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Equatorial-Guinea",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Equatorial Guinea — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Equatorial_Guinea",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-equatorial-guinea.webp",
+    "alt": "Spark and Mango visiting a waterfall in the thick green rainforest of Monte Alén National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-zimbabwe-q2",
+  "scheduledDate": "2030-10-12",
+  "brand": "kids",
+  "setId": "country-set-meet-zimbabwe",
+  "prompt": "Which of these is a famous place to visit in Zimbabwe?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Tree of Life"
+    },
+    {
+      "id": "b",
+      "text": "Great Zimbabwe"
+    },
+    {
+      "id": "c",
+      "text": "the old city of Sana'a"
+    },
+    {
+      "id": "d",
+      "text": "Lake Assal"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Great Zimbabwe is one of the two places we'd love to visit in Zimbabwe.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Zimbabwe | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Zimbabwe",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Zimbabwe — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zimbabwe",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-zimbabwe.webp",
+    "alt": "Spark and Mango visiting the main curtain of Victoria Falls seen through rainforest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

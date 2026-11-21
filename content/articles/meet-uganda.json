@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-uganda",
+  "slug": "meet-uganda",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Uganda",
+  "description": "Travel to Uganda with Spark and Mango: a country in Eastern Africa whose capital is Kampala, where people speak English and pay with the Ugandan shilling — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-uganda.webp",
+    "alt": "Spark and Mango visiting a mountain gorilla in the misty green forest of Bwindi",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Uganda | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Uganda",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Uganda — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Uganda",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Uganda?",
+      "paragraphs": [
+        "Uganda is a country in Eastern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Uganda is Kampala."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Uganda speak English and Swahili."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Uganda is the Ugandan shilling."
+      ]
+    },
+    {
+      "heading": "How big is Uganda?",
+      "paragraphs": [
+        "Uganda covers about 242,000 square kilometres of land and inland water. That makes it about half the size of Cameroon."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Bwindi's ancient, misty forest is home to nearly half the world's mountain gorillas. Guided treks lead families to spend an unforgettable hour with a gorilla family.",
+        "At Jinja, the River Nile begins its long journey from Lake Victoria. Families take boat rides to the spring point and watch fishermen and fish eagles."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Uganda on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Uganda in one breath: a country in Eastern Africa, capital Kampala, where people speak English and pay with the Ugandan shilling.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Uganda on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

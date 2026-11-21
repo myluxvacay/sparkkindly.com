@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-liberia-q2",
+  "scheduledDate": "2030-04-07",
+  "brand": "kids",
+  "setId": "country-set-meet-liberia",
+  "prompt": "Roughly how big is Liberia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 288,600 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 49,950 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 111,000 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 13,320 square kilometres"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Liberia covers about 111,000 square kilometres of land and inland water.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Liberia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Liberia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Liberia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Liberia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-liberia.webp",
+    "alt": "Spark and Mango visiting giant rainforest trees and a river in Sapo National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

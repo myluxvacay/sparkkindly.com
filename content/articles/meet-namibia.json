@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-namibia",
+  "slug": "meet-namibia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Namibia",
+  "description": "Travel to Namibia with Spark and Mango: a country in Southern Africa whose capital is Windhoek, where people speak English and pay with the Namibian dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-namibia.webp",
+    "alt": "Spark and Mango visiting giant red-orange dunes at Sossusvlei with a white clay pan and dead camelthorn trees",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Namibia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Namibia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Namibia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Namibia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Namibia?",
+      "paragraphs": [
+        "Namibia is a country in Southern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Namibia is Windhoek."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Namibia speak English and Afrikaans."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Namibia is the Namibian dollar."
+      ]
+    },
+    {
+      "heading": "How big is Namibia?",
+      "paragraphs": [
+        "Namibia covers about 826,000 square kilometres of land and inland water. That makes it about three times the size of Burkina Faso."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Some of the tallest sand dunes on Earth glow red-orange at Sossusvlei. Climbing Dune 45 at sunrise and seeing the white clay pan of Deadvlei is unforgettable.",
+        "Etosha circles a salt pan so big it can be seen from space. At its waterholes, rhinos, lions, elephants and springbok gather, especially in the dry season."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Namibia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Namibia in one breath: a country in Southern Africa, capital Windhoek, where people speak English and pay with the Namibian dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Namibia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

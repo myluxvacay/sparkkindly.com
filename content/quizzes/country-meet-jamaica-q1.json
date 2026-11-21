@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-jamaica-q1",
+  "scheduledDate": "2030-03-09",
+  "brand": "kids",
+  "setId": "country-set-meet-jamaica",
+  "prompt": "In which part of the world is Jamaica?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Eastern Asia"
+    },
+    {
+      "id": "b",
+      "text": "Western Africa"
+    },
+    {
+      "id": "c",
+      "text": "South America"
+    },
+    {
+      "id": "d",
+      "text": "Caribbean"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Jamaica is in Caribbean, part of North America.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Jamaica | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Jamaica",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Jamaica — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jamaica",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-jamaica.webp",
+    "alt": "Spark and Mango visiting terraced waterfalls at Dunn's River Falls surrounded by jungle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

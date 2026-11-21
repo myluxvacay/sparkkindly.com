@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-spain-q1",
+  "scheduledDate": "2030-08-10",
+  "brand": "kids",
+  "setId": "country-set-meet-spain",
+  "prompt": "Which of these languages is spoken in Spain?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Spanish"
+    },
+    {
+      "id": "b",
+      "text": "Serbian"
+    },
+    {
+      "id": "c",
+      "text": "Swati"
+    },
+    {
+      "id": "d",
+      "text": "Khmer"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "People in Spain speak Spanish.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Spain | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Spain",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Spain — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Spain",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-spain.webp",
+    "alt": "Spark and Mango visiting the Sagrada Família's towers in Barcelona",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

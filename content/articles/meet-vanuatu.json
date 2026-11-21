@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-vanuatu",
+  "slug": "meet-vanuatu",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Vanuatu",
+  "description": "Travel to Vanuatu with Spark and Mango: a country in Melanesia whose capital is Port Vila, where people speak Bislama and pay with the Vanuatu vatu — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-vanuatu.webp",
+    "alt": "Spark and Mango visiting Mount Yasur erupting with glowing lava at dusk",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "oceania",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Vanuatu | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Vanuatu",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Vanuatu — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Vanuatu",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Vanuatu?",
+      "paragraphs": [
+        "Vanuatu is a country in Melanesia, which is part of Oceania. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Vanuatu is Port Vila."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Vanuatu speak Bislama, English and French."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Vanuatu is the Vanuatu vatu."
+      ]
+    },
+    {
+      "heading": "How big is Vanuatu?",
+      "paragraphs": [
+        "Vanuatu covers about 12,000 square kilometres of land and inland water. That makes it about half the size of Solomon Islands."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Mount Yasur is one of the world's most accessible active volcanoes — families can stand at its rim at dusk and watch it hurl glowing lava into the sky.",
+        "Santo's blue holes are freshwater springs of impossible sapphire blue, with rope swings and jungle shade — plus Champagne Beach's white sand nearby."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Vanuatu on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Vanuatu in one breath: a country in Melanesia, capital Port Vila, where people speak Bislama and pay with the Vanuatu vatu.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Vanuatu on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

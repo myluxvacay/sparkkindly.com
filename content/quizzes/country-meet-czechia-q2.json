@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-czechia-q2",
+  "scheduledDate": "2029-12-26",
+  "brand": "kids",
+  "setId": "country-set-meet-czechia",
+  "prompt": "Roughly how big is Czechia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 205,400 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 9,480 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 35,550 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 79,000 square kilometres"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Czechia covers about 79,000 square kilometres of land and inland water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Czechia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Czechia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Czechia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Czechia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-czechia.webp",
+    "alt": "Spark and Mango visiting Charles Bridge and Prague Castle across the Vltava River at dawn",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-mongolia",
+  "slug": "meet-mongolia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Mongolia",
+  "description": "Travel to Mongolia with Spark and Mango: a country in Eastern Asia whose capital is Ulaanbaatar, where people speak Mongolian and pay with the Mongolian tugrik — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-mongolia.webp",
+    "alt": "Spark and Mango visiting red cliffs and golden dunes in the Gobi Desert with camels",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Mongolia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Mongolia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Mongolia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mongolia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Mongolia?",
+      "paragraphs": [
+        "Mongolia is a country in Eastern Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Mongolia is Ulaanbaatar."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Mongolia is Mongolian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Mongolia is the Mongolian tugrik."
+      ]
+    },
+    {
+      "heading": "How big is Mongolia?",
+      "paragraphs": [
+        "Mongolia covers about 1,564,000 square kilometres of land and inland water. That makes it about twice the size of Türkiye."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "At the Flaming Cliffs, dinosaur eggs and fossils were found in glowing red rock. Nearby, families ride camels among the singing sand dunes of Khongoryn Els.",
+        "Each July, Naadam celebrates Mongolia's 'three games' — wrestling, horse racing and archery — and families can stay in a round ger tent on the endless green steppe."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Mongolia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Mongolia in one breath: a country in Eastern Asia, capital Ulaanbaatar, where people speak Mongolian and pay with the Mongolian tugrik.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Mongolia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

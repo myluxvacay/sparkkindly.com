@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-trinidad-and-tobago-q1",
+  "scheduledDate": "2030-09-07",
+  "brand": "kids",
+  "setId": "country-set-meet-trinidad-and-tobago",
+  "prompt": "What is the capital of Trinidad and Tobago?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Zagreb"
+    },
+    {
+      "id": "b",
+      "text": "Libreville"
+    },
+    {
+      "id": "c",
+      "text": "Port of Spain"
+    },
+    {
+      "id": "d",
+      "text": "Guatemala City"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Port of Spain is the capital of Trinidad and Tobago.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Trinidad and Tobago | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Trinidad-and-Tobago",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Trinidad and Tobago — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Trinidad_and_Tobago",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-trinidad-and-tobago.webp",
+    "alt": "Spark and Mango visiting hummingbirds at feeders on a veranda above rainforest in Trinidad",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

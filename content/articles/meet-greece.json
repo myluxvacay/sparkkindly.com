@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-greece",
+  "slug": "meet-greece",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Greece",
+  "description": "Travel to Greece with Spark and Mango: a country in Southern Europe whose capital is Athens, where people speak Greek and pay with the euro — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-greece.webp",
+    "alt": "Spark and Mango visiting the Parthenon on the Acropolis above Athens",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Greece | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Greece",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Greece — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Greece",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Greece?",
+      "paragraphs": [
+        "Greece is a country in Southern Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Greece is Athens."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Greece is Greek."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Greece is the euro. The euro is shared by many countries in Europe, so the same coins and notes work across borders."
+      ]
+    },
+    {
+      "heading": "How big is Greece?",
+      "paragraphs": [
+        "Greece covers about 132,000 square kilometres of land and inland water. That makes it about twice the size of Latvia."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "The Parthenon is an ancient temple on the Acropolis in Athens. The Parthenon was built for Athena, the goddess of wisdom, nearly 2,500 years ago — you can still see it glowing above Athens today."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Parthenon crowns the Acropolis, a marble temple built 2,500 years ago for the goddess Athena — the symbol of ancient Greece above a buzzing modern city.",
+        "Santorini's white villages cling to the rim of a drowned volcano, with blue domes, donkey paths and sunsets over the Aegean Sea."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Greece on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Greece in one breath: a country in Southern Europe, capital Athens, where people speak Greek and pay with the euro.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Greece on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

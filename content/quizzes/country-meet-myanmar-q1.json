@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-myanmar-q1",
+  "scheduledDate": "2030-10-17",
+  "brand": "kids",
+  "setId": "country-set-meet-myanmar",
+  "prompt": "What is the capital of Myanmar?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Sofia"
+    },
+    {
+      "id": "b",
+      "text": "Pretoria"
+    },
+    {
+      "id": "c",
+      "text": "Naypyidaw"
+    },
+    {
+      "id": "d",
+      "text": "Yerevan"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Naypyidaw is the capital of Myanmar.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Myanmar | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Myanmar",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Myanmar — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Myanmar",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-myanmar.webp",
+    "alt": "Spark and Mango visiting hundreds of temple spires across the plain of Bagan at sunrise",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

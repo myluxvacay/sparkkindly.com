@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-namibia-q2",
+  "scheduledDate": "2030-05-21",
+  "brand": "kids",
+  "setId": "country-set-meet-namibia",
+  "prompt": "Which of these is a famous place to visit in Namibia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Kyiv — Saint Sophia Cathedral and the old town"
+    },
+    {
+      "id": "b",
+      "text": "the Cliffs of Moher"
+    },
+    {
+      "id": "c",
+      "text": "Santorini's caldera villages"
+    },
+    {
+      "id": "d",
+      "text": "Etosha National Park"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Etosha National Park is one of the two places we'd love to visit in Namibia.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Namibia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Namibia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Namibia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Namibia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-namibia.webp",
+    "alt": "Spark and Mango visiting giant red-orange dunes at Sossusvlei with a white clay pan and dead camelthorn trees",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

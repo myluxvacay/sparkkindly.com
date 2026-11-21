@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-albania-q2",
+  "scheduledDate": "2029-10-01",
+  "brand": "kids",
+  "setId": "country-set-meet-albania",
+  "prompt": "Which of these is a famous place to visit in Albania?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Harrison's Cave"
+    },
+    {
+      "id": "b",
+      "text": "Trakai Island Castle"
+    },
+    {
+      "id": "c",
+      "text": "Komodo National Park"
+    },
+    {
+      "id": "d",
+      "text": "the Albanian Riviera — Ksamil and Himara"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "the Albanian Riviera — Ksamil and Himara is one of the two places we'd love to visit in Albania.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Albania | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Albania",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Albania — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Albania",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-albania.webp",
+    "alt": "Spark and Mango visiting white houses with many windows climbing a hill to Berat castle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

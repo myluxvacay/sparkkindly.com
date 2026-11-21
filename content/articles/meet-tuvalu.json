@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-tuvalu",
+  "slug": "meet-tuvalu",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Tuvalu",
+  "description": "Travel to Tuvalu with Spark and Mango: a country in Polynesia whose capital is Funafuti, where people speak English and pay with the Australian dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-tuvalu.webp",
+    "alt": "Spark and Mango visiting a small palm islet in the Funafuti lagoon with a sea turtle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "oceania",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Tuvalu | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Tuvalu",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Tuvalu — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tuvalu",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Tuvalu?",
+      "paragraphs": [
+        "Tuvalu is a country in Polynesia, which is part of Oceania. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Tuvalu is Funafuti."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Tuvalu is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Tuvalu is the Australian dollar."
+      ]
+    },
+    {
+      "heading": "How big is Tuvalu?",
+      "paragraphs": [
+        "Tuvalu covers about 26 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Funafuti's protected lagoon islets are a nursery for turtles, rays and tropical fish — families visit by boat to snorkel and picnic on uninhabited motu.",
+        "On Funafuti's main islet, the airstrip doubles as the village green — in the evenings it fills with volleyball, football and families enjoying the breeze."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Tuvalu on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Tuvalu in one breath: a country in Polynesia, capital Funafuti, where people speak English and pay with the Australian dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Tuvalu on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

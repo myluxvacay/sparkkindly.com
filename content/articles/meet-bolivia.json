@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-bolivia",
+  "slug": "meet-bolivia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Bolivia",
+  "description": "Travel to Bolivia with Spark and Mango: a country in South America whose capital is Sucre, where people speak Spanish and pay with the Bolivian boliviano — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-bolivia.webp",
+    "alt": "Spark and Mango visiting the white salt flats of Uyuni reflecting the sky like a mirror",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "south-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Bolivia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Bolivia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Bolivia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bolivia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Bolivia?",
+      "paragraphs": [
+        "Bolivia is a country in South America, which is part of South America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Bolivia is Sucre. Sucre is the constitutional capital — the city named in the country's rules — while the president and government work in La Paz, one of the highest capital cities in the world."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Bolivia speak Spanish, Aymara and Quechua."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Bolivia is the Bolivian boliviano."
+      ]
+    },
+    {
+      "heading": "How big is Bolivia?",
+      "paragraphs": [
+        "Bolivia covers about 1,099,000 square kilometres of land and inland water. That makes it about three times the size of Paraguay."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Uyuni is the world's largest salt flat — a white infinity that turns into a perfect mirror after rain, with cactus islands and pink flamingos.",
+        "Titicaca is the world's highest navigable lake. From Copacabana, boats sail to the Island of the Sun, sacred in Inca legend."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Bolivia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Bolivia in one breath: a country in South America, capital Sucre, where people speak Spanish and pay with the Bolivian boliviano.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Bolivia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

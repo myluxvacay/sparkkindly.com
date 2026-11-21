@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-brunei-q1",
+  "scheduledDate": "2029-11-13",
+  "brand": "kids",
+  "setId": "country-set-meet-brunei",
+  "prompt": "What is the money of Brunei called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Brunei dollar"
+    },
+    {
+      "id": "b",
+      "text": "Ugandan shilling"
+    },
+    {
+      "id": "c",
+      "text": "Icelandic króna"
+    },
+    {
+      "id": "d",
+      "text": "Zambian kwacha"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Brunei is the Brunei dollar.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Brunei | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Brunei",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Brunei — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Brunei",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-brunei.webp",
+    "alt": "Spark and Mango visiting a longboat on a jungle river in Ulu Temburong National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

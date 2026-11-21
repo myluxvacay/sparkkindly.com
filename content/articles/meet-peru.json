@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-peru",
+  "slug": "meet-peru",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Peru",
+  "description": "Travel to Peru with Spark and Mango: a country in South America whose capital is Lima, where people speak Spanish and pay with the Peruvian sol — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-peru.webp",
+    "alt": "Spark and Mango visiting the stone terraces and peaks of Machu Picchu in the clouds",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "south-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Peru | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Peru",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Peru — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Peru",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Peru?",
+      "paragraphs": [
+        "Peru is a country in South America, which is part of South America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Peru is Lima."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Peru is Spanish."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Peru is the Peruvian sol."
+      ]
+    },
+    {
+      "heading": "How big is Peru?",
+      "paragraphs": [
+        "Peru covers about 1,285,000 square kilometres of land and inland water. That makes it about half the size of Argentina."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "Machu Picchu is an Inca-era site high in Peru’s Andes Mountains. Nobody knows exactly why the Inca built it — a royal estate, a sacred place, or both. Its stones fit together so tightly that a knife blade cannot slip between them."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Machu Picchu is the Incas' mountain citadel — stone temples and terraces in the clouds above the Urubamba River, reached by train or the Inca Trail.",
+        "Cusco was the Inca capital — its streets pair Inca stone walls with Spanish churches, and the Sacred Valley holds markets, salt terraces and fortresses."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Peru on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Peru in one breath: a country in South America, capital Lima, where people speak Spanish and pay with the Peruvian sol.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Peru on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

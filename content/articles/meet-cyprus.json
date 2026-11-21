@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-cyprus",
+  "slug": "meet-cyprus",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Cyprus",
+  "description": "Travel to Cyprus with Spark and Mango: a country in Southern Europe whose capital is Nicosia, where people speak Greek and pay with the euro — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-cyprus.webp",
+    "alt": "Spark and Mango visiting the star-shaped Venetian walls and old town of Nicosia",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Cyprus | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Cyprus",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Cyprus — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cyprus",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Cyprus?",
+      "paragraphs": [
+        "Cyprus is a country in Southern Europe, which is part of Europe. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Cyprus is Nicosia."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Cyprus speak Greek, Turkish and Armenian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Cyprus is the euro. The euro is shared by many countries in Europe, so the same coins and notes work across borders."
+      ]
+    },
+    {
+      "heading": "How big is Cyprus?",
+      "paragraphs": [
+        "Cyprus covers about 9,000 square kilometres of land and inland water. That makes it about three times the size of Luxembourg."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Nicosia's star-shaped Venetian walls ring an old town of churches, mosques and cafés — the last divided capital in Europe, full of history to explore.",
+        "In the pine-scented Troodos Mountains, tiny Byzantine churches hide dazzling medieval paintings, and villages make lace, honey and halloumi cheese."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Cyprus on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Cyprus in one breath: a country in Southern Europe, capital Nicosia, where people speak Greek and pay with the euro.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Cyprus on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

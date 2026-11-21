@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-singapore",
+  "slug": "meet-singapore",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Singapore",
+  "description": "Travel to Singapore with Spark and Mango: a country in Southeast Asia whose capital is Singapore, where people speak English and pay with the Singapore dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-singapore.webp",
+    "alt": "Spark and Mango visiting the Supertree towers at Gardens by the Bay lit at dusk",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Singapore | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Singapore",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Singapore — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Singapore",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Singapore?",
+      "paragraphs": [
+        "Singapore is a country in Southeast Asia, which is part of Asia. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Singapore is Singapore. Singapore is a country, a city and an island all at once — one of the world's great port cities."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Singapore speak English, Malay, Mandarin and Tamil. Singapore has four official languages: English, Malay, Mandarin and Tamil."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Singapore is the Singapore dollar."
+      ]
+    },
+    {
+      "heading": "How big is Singapore?",
+      "paragraphs": [
+        "Singapore covers about 710 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Gardens by the Bay's Supertrees are giant solar-powered garden towers that light up in a music show at night, beside domes holding a cloud forest and waterfall.",
+        "Sentosa is Singapore's island of fun — beaches, a huge aquarium, cable cars and the Universal Studios theme park, all a short ride from the city."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Singapore on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Singapore in one breath: a country in Southeast Asia, capital Singapore, where people speak English and pay with the Singapore dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Singapore on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

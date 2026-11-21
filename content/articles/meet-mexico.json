@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-mexico",
+  "slug": "meet-mexico",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Mexico",
+  "description": "Travel to Mexico with Spark and Mango: a country in Central America whose capital is Mexico City, where people speak Spanish and pay with the Mexican peso — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-mexico.webp",
+    "alt": "Spark and Mango visiting the great pyramid of El Castillo at Chichen Itza",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Mexico | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Mexico",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Mexico — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mexico",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Mexico?",
+      "paragraphs": [
+        "Mexico is a country in Central America, which is part of North America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Mexico is Mexico City."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Mexico is Spanish."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Mexico is the Mexican peso."
+      ]
+    },
+    {
+      "heading": "How big is Mexico?",
+      "paragraphs": [
+        "Mexico covers about 1,964,000 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "The ancient Maya built large cities with temples in parts of present-day Mexico. Some Maya cities, like Palenque and Calakmul, still hide in the jungle, wrapped in trees and birdsong."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Chichen Itza's great pyramid of Kukulkan was a Maya calendar in stone — at the equinoxes, shadows form a serpent down its steps.",
+        "The capital layers Aztec ruins, a giant cathedral and Diego Rivera murals — then families float Xochimilco's canals on bright trajinera boats with mariachi music."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Mexico on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Mexico in one breath: a country in Central America, capital Mexico City, where people speak Spanish and pay with the Mexican peso.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Mexico on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

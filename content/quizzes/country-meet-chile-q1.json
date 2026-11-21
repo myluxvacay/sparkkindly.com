@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-chile-q1",
+  "scheduledDate": "2029-12-03",
+  "brand": "kids",
+  "setId": "country-set-meet-chile",
+  "prompt": "In which part of the world is Chile?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Micronesia"
+    },
+    {
+      "id": "b",
+      "text": "Eastern Europe"
+    },
+    {
+      "id": "c",
+      "text": "South America"
+    },
+    {
+      "id": "d",
+      "text": "Northern America"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Chile is in South America, part of South America.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Chile | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Chile",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Chile — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chile",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-chile.webp",
+    "alt": "Spark and Mango visiting the granite towers of Torres del Paine above a turquoise lake",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

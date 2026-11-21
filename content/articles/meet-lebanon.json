@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-lebanon",
+  "slug": "meet-lebanon",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Lebanon",
+  "description": "Travel to Lebanon with Spark and Mango: a country in Western Asia whose capital is Beirut, where people speak Arabic and pay with the Lebanese pound — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-lebanon.webp",
+    "alt": "Spark and Mango visiting the towering columns of the Temple of Jupiter at Baalbek",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Lebanon | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Lebanon",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Lebanon — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lebanon",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Lebanon?",
+      "paragraphs": [
+        "Lebanon is a country in Western Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Lebanon is Beirut."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Lebanon speak Arabic and French."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Lebanon is the Lebanese pound."
+      ]
+    },
+    {
+      "heading": "How big is Lebanon?",
+      "paragraphs": [
+        "Lebanon covers about 10,000 square kilometres of land and inland water. That makes it about half the size of Israel."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Baalbek holds some of the largest Roman temples ever built — the Temple of Jupiter's columns tower over the Bekaa Valley, with single stones weighing 800 tons.",
+        "Byblos is one of the oldest cities in the world, lived in for around 7,000 years — a pretty harbour town of Crusader castles, souks and seafood restaurants."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Lebanon on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Lebanon in one breath: a country in Western Asia, capital Beirut, where people speak Arabic and pay with the Lebanese pound.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Lebanon on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

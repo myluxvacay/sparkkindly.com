@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-australia-q1",
+  "scheduledDate": "2029-10-12",
+  "brand": "kids",
+  "setId": "country-set-meet-australia",
+  "prompt": "What is the money of Australia called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Australian dollar"
+    },
+    {
+      "id": "b",
+      "text": "Central African CFA franc"
+    },
+    {
+      "id": "c",
+      "text": "Azerbaijani manat"
+    },
+    {
+      "id": "d",
+      "text": "Singapore dollar"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Australia is the Australian dollar.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Australia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Australia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Australia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Australia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-australia.webp",
+    "alt": "Spark and Mango visiting a coral reef with a sea turtle in the Great Barrier Reef",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

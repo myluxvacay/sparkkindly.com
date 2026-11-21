@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-hungary-q1",
+  "scheduledDate": "2030-02-19",
+  "brand": "kids",
+  "setId": "country-set-meet-hungary",
+  "prompt": "What is the capital of Hungary?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Budapest"
+    },
+    {
+      "id": "b",
+      "text": "Port-au-Prince"
+    },
+    {
+      "id": "c",
+      "text": "Port Vila"
+    },
+    {
+      "id": "d",
+      "text": "Minsk"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Budapest is the capital of Hungary.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Hungary | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Hungary",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Hungary — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hungary",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-hungary.webp",
+    "alt": "Spark and Mango visiting the Hungarian Parliament along the Danube in Budapest at dusk",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

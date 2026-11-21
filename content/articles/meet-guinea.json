@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-guinea",
+  "slug": "meet-guinea",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Guinea",
+  "description": "Travel to Guinea with Spark and Mango: a country in Western Africa whose capital is Conakry, where people speak French and pay with the Guinean franc — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-guinea.webp",
+    "alt": "Spark and Mango visiting green highland plateaus and a waterfall in the Fouta Djallon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Guinea | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Guinea",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Guinea — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Guinea",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Guinea?",
+      "paragraphs": [
+        "Guinea is a country in Western Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Guinea is Conakry."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Guinea speak French and Fula."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Guinea is the Guinean franc."
+      ]
+    },
+    {
+      "heading": "How big is Guinea?",
+      "paragraphs": [
+        "Guinea covers about 246,000 square kilometres of land and inland water. That makes it about half the size of Cameroon."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Fouta Djallon is a highland of green plateaus, waterfalls and villages — the source of great West African rivers like the Niger and the Senegal.",
+        "Just off Conakry, the Îles de Los are palm-covered islands with quiet beaches where families swim, picnic and ride boats between villages."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Guinea on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Guinea in one breath: a country in Western Africa, capital Conakry, where people speak French and pay with the Guinean franc.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Guinea on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-suriname",
+  "slug": "meet-suriname",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Suriname",
+  "description": "Travel to Suriname with Spark and Mango: a country in South America whose capital is Paramaribo, where people speak Dutch and pay with the Surinamese dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-suriname.webp",
+    "alt": "Spark and Mango visiting white wooden colonial buildings in Paramaribo",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "south-america",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Suriname | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Suriname",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Suriname — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Suriname",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Suriname?",
+      "paragraphs": [
+        "Suriname is a country in South America, which is part of South America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Suriname is Paramaribo."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Suriname is Dutch."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Suriname is the Surinamese dollar."
+      ]
+    },
+    {
+      "heading": "How big is Suriname?",
+      "paragraphs": [
+        "Suriname covers about 164,000 square kilometres of land and inland water. It is the smallest country in South America."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Paramaribo's wooden Dutch colonial houses are UNESCO-listed — a city where a synagogue and mosque stand side by side in friendship.",
+        "This vast protected rainforest of rapids, granite domes like the Voltzberg and Raleighvallen's waterfalls shelters jaguars and eight monkey species."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Suriname on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Suriname in one breath: a country in South America, capital Paramaribo, where people speak Dutch and pay with the Surinamese dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Suriname on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

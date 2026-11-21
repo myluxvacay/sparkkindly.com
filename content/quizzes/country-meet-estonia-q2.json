@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-estonia-q2",
+  "scheduledDate": "2030-01-15",
+  "brand": "kids",
+  "setId": "country-set-meet-estonia",
+  "prompt": "Which of these is a famous place to visit in Estonia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Three Towers of San Marino"
+    },
+    {
+      "id": "b",
+      "text": "Tallinn's medieval Old Town"
+    },
+    {
+      "id": "c",
+      "text": "Mir Castle and Nesvizh"
+    },
+    {
+      "id": "d",
+      "text": "Orango Island in the Bijagós"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Tallinn's medieval Old Town is one of the two places we'd love to visit in Estonia.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Estonia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Estonia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Estonia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Estonia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-estonia.webp",
+    "alt": "Spark and Mango visiting Tallinn's medieval towers and red roofs from above",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

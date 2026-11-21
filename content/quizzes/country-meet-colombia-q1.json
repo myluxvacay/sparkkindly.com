@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-colombia-q1",
+  "scheduledDate": "2029-12-07",
+  "brand": "kids",
+  "setId": "country-set-meet-colombia",
+  "prompt": "What is the money of Colombia called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Panamanian balboa"
+    },
+    {
+      "id": "b",
+      "text": "Chilean peso"
+    },
+    {
+      "id": "c",
+      "text": "Colombian peso"
+    },
+    {
+      "id": "d",
+      "text": "Indian rupee"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The money of Colombia is the Colombian peso.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Colombia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Colombia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Colombia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Colombia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-colombia.webp",
+    "alt": "Spark and Mango visiting flower-draped balconies inside Cartagena's walled old town",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

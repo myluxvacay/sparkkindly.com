@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-saint-lucia-q1",
+  "scheduledDate": "2030-07-07",
+  "brand": "kids",
+  "setId": "country-set-meet-saint-lucia",
+  "prompt": "In which part of the world is Saint Lucia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "South America"
+    },
+    {
+      "id": "b",
+      "text": "Middle Africa"
+    },
+    {
+      "id": "c",
+      "text": "Southeast Asia"
+    },
+    {
+      "id": "d",
+      "text": "Caribbean"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Saint Lucia is in Caribbean, part of North America.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Saint Lucia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Saint-Lucia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Saint Lucia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Saint_Lucia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-saint-lucia.webp",
+    "alt": "Spark and Mango visiting the twin Pitons rising from the sea at Soufrière",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

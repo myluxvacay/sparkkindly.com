@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-argentina-q1",
+  "scheduledDate": "2029-10-08",
+  "brand": "kids",
+  "setId": "country-set-meet-argentina",
+  "prompt": "In which part of the world is Argentina?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Western Africa"
+    },
+    {
+      "id": "b",
+      "text": "South America"
+    },
+    {
+      "id": "c",
+      "text": "Southern Europe"
+    },
+    {
+      "id": "d",
+      "text": "Western Asia"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Argentina is in South America, part of South America.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Argentina | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Argentina",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Argentina — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Argentina",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-argentina.webp",
+    "alt": "Spark and Mango visiting the vast waterfalls of Iguazu surrounded by rainforest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

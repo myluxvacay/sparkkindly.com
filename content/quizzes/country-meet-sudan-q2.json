@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-sudan-q2",
+  "scheduledDate": "2030-08-15",
+  "brand": "kids",
+  "setId": "country-set-meet-sudan",
+  "prompt": "Which of these is a famous place to visit in Sudan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Jesuit missions of La Santísima Trinidad"
+    },
+    {
+      "id": "b",
+      "text": "the pyramids of Meroë"
+    },
+    {
+      "id": "c",
+      "text": "Mont Saint-Michel"
+    },
+    {
+      "id": "d",
+      "text": "the old town of Nicosia and its Venetian walls"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "the pyramids of Meroë is one of the two places we'd love to visit in Sudan.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Sudan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Sudan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Sudan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sudan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-sudan.webp",
+    "alt": "Spark and Mango visiting steep slender pyramids of Meroë rising from desert sand",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

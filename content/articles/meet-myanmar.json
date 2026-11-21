@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-myanmar",
+  "slug": "meet-myanmar",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Myanmar",
+  "description": "Travel to Myanmar with Spark and Mango: a country in Southeast Asia whose capital is Naypyidaw, where people speak Burmese and pay with the Myanmar kyat — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-myanmar.webp",
+    "alt": "Spark and Mango visiting hundreds of temple spires across the plain of Bagan at sunrise",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Myanmar | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Myanmar",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Myanmar — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Myanmar",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Myanmar?",
+      "paragraphs": [
+        "Myanmar is a country in Southeast Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Myanmar is Naypyidaw. Naypyidaw is a brand-new capital built in the middle of the country in the 2000s. Yangon, the old capital, is still the biggest city."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Myanmar is Burmese."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Myanmar is the Myanmar kyat."
+      ]
+    },
+    {
+      "heading": "How big is Myanmar?",
+      "paragraphs": [
+        "Myanmar covers about 677,000 square kilometres of land and inland water. That makes it about twice the size of Philippines."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Over 2,000 ancient temples and pagodas spread across Bagan's plain beside the Irrawaddy River — at sunrise, balloons drift over a sea of spires.",
+        "On Inle Lake, Intha fishermen row with one leg wrapped around the oar, floating gardens grow tomatoes on the water, and villages stand on stilts."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Myanmar on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Myanmar in one breath: a country in Southeast Asia, capital Naypyidaw, where people speak Burmese and pay with the Myanmar kyat.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Myanmar on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

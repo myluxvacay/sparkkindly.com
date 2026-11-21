@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-guyana-q2",
+  "scheduledDate": "2030-02-14",
+  "brand": "kids",
+  "setId": "country-set-meet-guyana",
+  "prompt": "Which of these is a famous place to visit in Guyana?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Rupununi savannas and Iwokrama"
+    },
+    {
+      "id": "b",
+      "text": "Spiš Castle and Bratislava's old town"
+    },
+    {
+      "id": "c",
+      "text": "Xunantunich and the Cayo District"
+    },
+    {
+      "id": "d",
+      "text": "the Erbil Citadel"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "the Rupununi savannas and Iwokrama is one of the two places we'd love to visit in Guyana.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Guyana | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Guyana",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Guyana — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Guyana",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-guyana.webp",
+    "alt": "Spark and Mango visiting Kaieteur Falls plunging into a rainforest gorge",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

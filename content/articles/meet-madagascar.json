@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-madagascar",
+  "slug": "meet-madagascar",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Madagascar",
+  "description": "Travel to Madagascar with Spark and Mango: a country in Eastern Africa whose capital is Antananarivo, where people speak French and pay with the Malagasy ariary — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-madagascar.webp",
+    "alt": "Spark and Mango visiting giant baobab trees lining a red dirt road at sunset on the Avenue of the Baobabs",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Madagascar | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Madagascar",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Madagascar — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Madagascar",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Madagascar?",
+      "paragraphs": [
+        "Madagascar is a country in Eastern Africa, which is part of Africa. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Madagascar is Antananarivo."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Madagascar speak French and Malagasy."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Madagascar is the Malagasy ariary."
+      ]
+    },
+    {
+      "heading": "How big is Madagascar?",
+      "paragraphs": [
+        "Madagascar covers about 587,000 square kilometres of land and inland water. That makes it about half the size of South Africa."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "Lemurs are primates native to Madagascar. About nine in every ten of Madagascar's plants and animals live nowhere else on Earth — the island is a world of its own."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Giant baobab trees, some 800 years old, line a dirt road near Morondava like a parade of friendly giants — at sunset they glow orange against the sky.",
+        "In this misty rainforest you can hear the indri — the largest lemur — singing its eerie, beautiful song through the trees before you ever see it."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Madagascar on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Madagascar in one breath: a country in Eastern Africa, capital Antananarivo, where people speak French and pay with the Malagasy ariary.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Madagascar on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

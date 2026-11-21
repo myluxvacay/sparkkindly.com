@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-norway",
+  "slug": "meet-norway",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Norway",
+  "description": "Travel to Norway with Spark and Mango: a country in Northern Europe whose capital is Oslo, where people speak Norwegian and pay with the Norwegian krone — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-norway.webp",
+    "alt": "Spark and Mango visiting waterfalls pouring down the cliffs of the Geirangerfjord",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Norway | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Norway",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Norway — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Norway",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Norway?",
+      "paragraphs": [
+        "Norway is a country in Northern Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Norway is Oslo."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Norway is Norwegian. Norwegian is written in two official forms, Bokmål and Nynorsk — schoolchildren learn both!"
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Norway is the Norwegian krone."
+      ]
+    },
+    {
+      "heading": "How big is Norway?",
+      "paragraphs": [
+        "Norway covers about 324,000 square kilometres of land and inland water. That makes it about half the size of France."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "Norway’s coastal fjords were carved by glaciers over long periods. The fjords are so deep and steep that villages at their heads are reached by boat or by tunnels through the mountains."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Geirangerfjord is Norway's postcard fjord — waterfalls like the Seven Sisters pour down cliffs to a tiny village at the head of deep blue water.",
+        "Tromsø is the capital of the Arctic — ride its cable car, meet huskies and, in winter, watch the aurora dance over the snow."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Norway on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Norway in one breath: a country in Northern Europe, capital Oslo, where people speak Norwegian and pay with the Norwegian krone.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Norway on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

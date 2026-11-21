@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-dominican-republic-q1",
+  "scheduledDate": "2030-01-02",
+  "brand": "kids",
+  "setId": "country-set-meet-dominican-republic",
+  "prompt": "What is the capital of Dominican Republic?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Brasília"
+    },
+    {
+      "id": "b",
+      "text": "Vatican City"
+    },
+    {
+      "id": "c",
+      "text": "Santo Domingo"
+    },
+    {
+      "id": "d",
+      "text": "Bangkok"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Santo Domingo is the capital of Dominican Republic.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Dominican Republic | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Dominican-Republic",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Dominican Republic — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dominican_Republic",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-dominican-republic.webp",
+    "alt": "Spark and Mango visiting palm trees and turquoise water on a Punta Cana beach",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

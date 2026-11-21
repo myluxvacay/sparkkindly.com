@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-laos",
+  "slug": "meet-laos",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Laos",
+  "description": "Travel to Laos with Spark and Mango: a country in Southeast Asia whose capital is Vientiane, where people speak Lao and pay with the Lao kip — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-laos.webp",
+    "alt": "Spark and Mango visiting golden temple roofs in Luang Prabang beside the Mekong River",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Laos | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Laos",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Laos — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Laos",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Laos?",
+      "paragraphs": [
+        "Laos is a country in Southeast Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Laos is Vientiane."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Laos is Lao."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Laos is the Lao kip."
+      ]
+    },
+    {
+      "heading": "How big is Laos?",
+      "paragraphs": [
+        "Laos covers about 237,000 square kilometres of land and inland water. That makes it about half the size of Turkmenistan."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Luang Prabang is a gentle town of golden temples between the Mekong and Nam Khan rivers, where monks collect alms at dawn and night markets glow with lanterns.",
+        "Kuang Si's water tumbles over limestone into turquoise pools where families can swim — and a rescue centre nearby cares for sun bears."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Laos on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Laos in one breath: a country in Southeast Asia, capital Vientiane, where people speak Lao and pay with the Lao kip.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Laos on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

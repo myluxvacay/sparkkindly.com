@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-saint-kitts-and-nevis",
+  "slug": "meet-saint-kitts-and-nevis",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Saint Kitts and Nevis",
+  "description": "Travel to Saint Kitts and Nevis with Spark and Mango: a country in Caribbean whose capital is Basseterre, where people speak English and pay with the East Caribbean dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-saint-kitts-and-nevis.webp",
+    "alt": "Spark and Mango visiting the stone walls of Brimstone Hill Fortress above the sea",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Saint Kitts and Nevis | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Saint-Kitts-and-Nevis",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Saint Kitts and Nevis — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Saint_Kitts_and_Nevis",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Saint Kitts and Nevis?",
+      "paragraphs": [
+        "Saint Kitts and Nevis is a country in Caribbean, which is part of North America. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Saint Kitts and Nevis is Basseterre."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Saint Kitts and Nevis is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Saint Kitts and Nevis is the East Caribbean dollar."
+      ]
+    },
+    {
+      "heading": "How big is Saint Kitts and Nevis?",
+      "paragraphs": [
+        "Saint Kitts and Nevis covers about 261 square kilometres of land and inland water. It is the smallest country in North America. That makes it about half the size of Saint Lucia."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Brimstone Hill is a massive hilltop fortress called the 'Gibraltar of the West Indies', with cannon views over the Caribbean and across to other islands.",
+        "A narrow-gauge railway loops the island past sugar cane fields and gorges — the last railway in the West Indies, with calypso singers aboard."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Saint Kitts and Nevis on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Saint Kitts and Nevis in one breath: a country in Caribbean, capital Basseterre, where people speak English and pay with the East Caribbean dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Saint Kitts and Nevis on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

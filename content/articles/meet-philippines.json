@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-philippines",
+  "slug": "meet-philippines",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Philippines",
+  "description": "Travel to Philippines with Spark and Mango: a country in Southeast Asia whose capital is Manila, where people speak Filipino and pay with the Philippine peso — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-philippines.webp",
+    "alt": "Spark and Mango visiting limestone islands and turquoise lagoons at El Nido, Palawan",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Philippines | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Philippines",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Philippines — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Philippines",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Philippines?",
+      "paragraphs": [
+        "Philippines is a country in Southeast Asia, which is part of Asia. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Philippines is Manila. Manila is the capital, a busy port city on the island of Luzon. Together with its neighbours it forms Metro Manila, home to more than ten million people."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Philippines speak Filipino and English. Filipino, based on Tagalog, is the national language, and English is used in schools, courts and business."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Philippines is the Philippine peso."
+      ]
+    },
+    {
+      "heading": "How big is Philippines?",
+      "paragraphs": [
+        "Philippines covers about 342,000 square kilometres of land and inland water. That makes it about half the size of Myanmar."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Palawan's El Nido is a wonderland of limestone islands, hidden lagoons and coral reefs — families island-hop by outrigger boat through turquoise water.",
+        "Bohol has over 1,200 round hills that turn chocolate-brown in the dry season — and the island's forests shelter tarsiers, tiny primates with enormous eyes."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Philippines on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Philippines in one breath: a country in Southeast Asia, capital Manila, where people speak Filipino and pay with the Philippine peso.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Philippines on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

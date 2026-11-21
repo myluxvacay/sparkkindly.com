@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-afghanistan",
+  "slug": "meet-afghanistan",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Afghanistan",
+  "description": "Travel to Afghanistan with Spark and Mango: a country in Southern Asia whose capital is Kabul, where people speak Pashto and pay with the Afghan afghani — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-afghanistan.webp",
+    "alt": "Spark and Mango visiting deep blue lakes of Band-e Amir between pale cliffs in the Hindu Kush mountains",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Afghanistan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Afghanistan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Afghanistan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Afghanistan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Afghanistan?",
+      "paragraphs": [
+        "Afghanistan is a country in Southern Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Afghanistan is Kabul."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Afghanistan speak Pashto, Dari, Uzbek and Turkmen. Pashto and Dari are the official languages; Dari is understood almost everywhere."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Afghanistan is the Afghan afghani."
+      ]
+    },
+    {
+      "heading": "How big is Afghanistan?",
+      "paragraphs": [
+        "Afghanistan covers about 652,000 square kilometres of land and inland water. That makes it about twice the size of Malaysia."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Band-e Amir is a chain of deep-blue lakes held back by natural travertine dams in the Hindu Kush mountains — Afghanistan's first national park and a place of striking beauty.",
+        "Herat is one of the great historic cities of the Silk Road, with a huge citadel, a famous blue-tiled Friday Mosque and centuries of poetry and art."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Afghanistan on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Afghanistan in one breath: a country in Southern Asia, capital Kabul, where people speak Pashto and pay with the Afghan afghani.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Afghanistan on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

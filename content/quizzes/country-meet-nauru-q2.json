@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-nauru-q2",
+  "scheduledDate": "2030-05-23",
+  "brand": "kids",
+  "setId": "country-set-meet-nauru",
+  "prompt": "Which of these is a famous place to visit in Nauru?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Serengeti National Park"
+    },
+    {
+      "id": "b",
+      "text": "the Bazaruto Archipelago"
+    },
+    {
+      "id": "c",
+      "text": "Buada Lagoon"
+    },
+    {
+      "id": "d",
+      "text": "Vaduz Castle and the capital's old town"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Buada Lagoon is one of the two places we'd love to visit in Nauru.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Nauru | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Nauru",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Nauru — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nauru",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-nauru.webp",
+    "alt": "Spark and Mango visiting the palm-ringed freshwater Buada Lagoon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

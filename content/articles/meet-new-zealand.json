@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-new-zealand",
+  "slug": "meet-new-zealand",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet New Zealand",
+  "description": "Travel to New Zealand with Spark and Mango: a country in Australia and New Zealand whose capital is Wellington, where people speak English and pay with the New Zealand dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-new-zealand.webp",
+    "alt": "Spark and Mango visiting steep green cliffs and waterfalls at Milford Sound",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "oceania",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "New Zealand | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/New-Zealand",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "New Zealand — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/New_Zealand",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is New Zealand?",
+      "paragraphs": [
+        "New Zealand is a country in Australia and New Zealand, which is part of Oceania. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of New Zealand is Wellington. Wellington, at the southern tip of the North Island, is the capital — famous for wind, cable cars and the Beehive parliament building."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in New Zealand speak English and Māori."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of New Zealand is the New Zealand dollar."
+      ]
+    },
+    {
+      "heading": "How big is New Zealand?",
+      "paragraphs": [
+        "New Zealand covers about 270,000 square kilometres of land and inland water. That makes it about half the size of Papua New Guinea."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "The kiwi is a flightless bird native to New Zealand. Kiwis cannot fly, but they have an excellent sense of smell — unusual for a bird — and they are the country's beloved national symbol."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Milford Sound's cliffs rise a kilometre from black water, with waterfalls that pour after rain and dolphins riding the bow waves of cruise boats.",
+        "Rotorua bubbles and steams — geysers erupt at Te Puia beside Māori cultural performances, and mud pools plop in rainbow mineral terraces."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find New Zealand on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "New Zealand in one breath: a country in Australia and New Zealand, capital Wellington, where people speak English and pay with the New Zealand dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find New Zealand on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

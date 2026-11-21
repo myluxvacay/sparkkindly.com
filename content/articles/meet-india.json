@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-india",
+  "slug": "meet-india",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet India",
+  "description": "Travel to India with Spark and Mango: a country in Southern Asia whose capital is New Delhi, where people speak Hindi and pay with the Indian rupee — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-india.webp",
+    "alt": "Spark and Mango visiting the white marble Taj Mahal and its reflecting pool at sunrise",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "India | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/India",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "India — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/India",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is India?",
+      "paragraphs": [
+        "India is a country in Southern Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of India is New Delhi."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in India speak Hindi and English. And that is just the start — India has hundreds of languages in all, more than almost any other country."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of India is the Indian rupee."
+      ]
+    },
+    {
+      "heading": "How big is India?",
+      "paragraphs": [
+        "India covers about 3,288,000 square kilometres of land and inland water. That makes it about twice the size of Iran."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "The Taj Mahal in Agra was built as a marble mausoleum during the Mughal Empire. It is built from white marble that seems to change colour with the light, and it is one of the most famous buildings on Earth."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Taj Mahal is a white marble mausoleum built by an emperor for his wife, inlaid with flowers of semi-precious stone. It glows pink at sunrise and silver by moonlight.",
+        "Jaipur's old city is painted terracotta-pink, with the honeycomb Hawa Mahal palace, the hilltop Amber Fort and bazaars full of gems, puppets and sweets."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find India on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "India in one breath: a country in Southern Asia, capital New Delhi, where people speak Hindi and pay with the Indian rupee.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find India on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-haiti",
+  "slug": "meet-haiti",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Haiti",
+  "description": "Travel to Haiti with Spark and Mango: a country in Caribbean whose capital is Port-au-Prince, where people speak French and pay with the Haitian gourde — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-haiti.webp",
+    "alt": "Spark and Mango visiting the great stone Citadelle Laferrière on its mountain ridge",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Haiti | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Haiti",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Haiti — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Haiti",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Haiti?",
+      "paragraphs": [
+        "Haiti is a country in Caribbean, which is part of North America. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Haiti is Port-au-Prince."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Haiti speak French and Haitian Creole."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Haiti is the Haitian gourde."
+      ]
+    },
+    {
+      "heading": "How big is Haiti?",
+      "paragraphs": [
+        "Haiti covers about 28,000 square kilometres of land and inland water. That makes it about twice the size of The Bahamas."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Citadelle is the largest fortress in the Americas — a mountaintop stronghold built after independence, with walls 40 metres high and views to the sea.",
+        "Near Cap-Haïtien, Labadie is a sheltered cove of clear water and white sand beneath green hills — Haiti's best-known beach day."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Haiti on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Haiti in one breath: a country in Caribbean, capital Port-au-Prince, where people speak French and pay with the Haitian gourde.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Haiti on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

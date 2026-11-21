@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-malta",
+  "slug": "meet-malta",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Malta",
+  "description": "Travel to Malta with Spark and Mango: a country in Southern Europe whose capital is Valletta, where people speak Maltese and pay with the euro — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-malta.webp",
+    "alt": "Spark and Mango visiting Valletta's golden stone skyline across the Grand Harbour",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Malta | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Malta",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Malta — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Malta",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Malta?",
+      "paragraphs": [
+        "Malta is a country in Southern Europe, which is part of Europe. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Malta is Valletta."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Malta speak Maltese and English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Malta is the euro. The euro is shared by many countries in Europe, so the same coins and notes work across borders."
+      ]
+    },
+    {
+      "heading": "How big is Malta?",
+      "paragraphs": [
+        "Malta covers about 316 square kilometres of land and inland water. That makes it about twice the size of Liechtenstein."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Valletta is a golden-stone fortress capital built by knights, with St John's Co-Cathedral glittering inside, harbour cannons and grand harbour boat tours.",
+        "Between Malta and Gozo, Comino's Blue Lagoon is a pool of impossible turquoise over white sand — the country's favourite swimming spot."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Malta on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Malta in one breath: a country in Southern Europe, capital Valletta, where people speak Maltese and pay with the euro.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Malta on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

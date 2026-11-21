@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-cambodia",
+  "slug": "meet-cambodia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Cambodia",
+  "description": "Travel to Cambodia with Spark and Mango: a country in Southeast Asia whose capital is Phnom Penh, where people speak Khmer and pay with the Cambodian riel — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-cambodia.webp",
+    "alt": "Spark and Mango visiting the five towers of Angkor Wat reflected in its moat at sunrise",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Cambodia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Cambodia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Cambodia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cambodia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Cambodia?",
+      "paragraphs": [
+        "Cambodia is a country in Southeast Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Cambodia is Phnom Penh."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Cambodia is Khmer."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Cambodia is the Cambodian riel."
+      ]
+    },
+    {
+      "heading": "How big is Cambodia?",
+      "paragraphs": [
+        "Cambodia covers about 181,000 square kilometres of land and inland water. That makes it about half the size of Japan."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Angkor Wat is the largest religious monument in the world — a stone temple-city of towers and moats built 900 years ago, best seen glowing at sunrise.",
+        "Near Angkor Wat, giant stone faces smile from the Bayon temple, and at Ta Prohm, enormous tree roots pour over the ruins like melted wax."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Cambodia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Cambodia in one breath: a country in Southeast Asia, capital Phnom Penh, where people speak Khmer and pay with the Cambodian riel.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Cambodia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

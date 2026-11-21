@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-marshall-islands",
+  "slug": "meet-marshall-islands",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Marshall Islands",
+  "description": "Travel to Marshall Islands with Spark and Mango: a country in Micronesia whose capital is Majuro, where people speak English and pay with the US dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-marshall-islands.webp",
+    "alt": "Spark and Mango visiting a coral-covered sunken warship in Bikini Atoll lagoon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "oceania",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Marshall Islands | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Marshall-Islands",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Marshall Islands — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Marshall_Islands",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Marshall Islands?",
+      "paragraphs": [
+        "Marshall Islands is a country in Micronesia, which is part of Oceania. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Marshall Islands is Majuro."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Marshall Islands speak English and Marshallese."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Marshall Islands is the US dollar. Yes — the very same dollars used in the United States!"
+      ]
+    },
+    {
+      "heading": "How big is Marshall Islands?",
+      "paragraphs": [
+        "Marshall Islands covers about 181 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Bikini Atoll's lagoon holds a fleet of sunken WWII warships — now a UNESCO-listed diving museum where sharks patrol ghost ships on the sea floor.",
+        "Majuro Atoll's road ends at Laura, where the island's best beach meets a wide lagoon — families picnic under palms and swim in warm shallows."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Marshall Islands on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Marshall Islands in one breath: a country in Micronesia, capital Majuro, where people speak English and pay with the US dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Marshall Islands on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

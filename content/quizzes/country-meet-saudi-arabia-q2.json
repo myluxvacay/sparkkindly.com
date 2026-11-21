@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-saudi-arabia-q2",
+  "scheduledDate": "2030-07-18",
+  "brand": "kids",
+  "setId": "country-set-meet-saudi-arabia",
+  "prompt": "Roughly how big is Saudi Arabia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 5,590,000 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 967,500 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 258,000 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 2,150,000 square kilometres"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Saudi Arabia covers about 2,150,000 square kilometres of land and inland water.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Saudi Arabia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Saudi-Arabia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Saudi Arabia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Saudi_Arabia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-saudi-arabia.webp",
+    "alt": "Spark and Mango visiting a carved Nabataean tomb in the desert cliffs of Hegra at AlUla",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-france-q2",
+  "scheduledDate": "2030-01-23",
+  "brand": "kids",
+  "setId": "country-set-meet-france",
+  "prompt": "Which of these is TRUE about France?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Amazon rainforest stretches across northern Brazil and several neighboring countries."
+    },
+    {
+      "id": "b",
+      "text": "Lemurs are primates native to Madagascar."
+    },
+    {
+      "id": "c",
+      "text": "Indonesia shares a land border with Timor-Leste."
+    },
+    {
+      "id": "d",
+      "text": "The Eiffel Tower was constructed for the 1889 World’s Fair in Paris."
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The Eiffel Tower was constructed for the 1889 World’s Fair in Paris.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "France | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/France",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "France — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/France",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-france.webp",
+    "alt": "Spark and Mango visiting the Eiffel Tower beside the River Seine in Paris",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

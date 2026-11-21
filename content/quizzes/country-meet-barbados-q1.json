@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-barbados-q1",
+  "scheduledDate": "2029-10-24",
+  "brand": "kids",
+  "setId": "country-set-meet-barbados",
+  "prompt": "In which part of the world is Barbados?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Melanesia"
+    },
+    {
+      "id": "b",
+      "text": "Western Asia"
+    },
+    {
+      "id": "c",
+      "text": "Caribbean"
+    },
+    {
+      "id": "d",
+      "text": "Southeast Asia"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Barbados is in Caribbean, part of North America.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Barbados | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Barbados",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Barbados — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Barbados",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-barbados.webp",
+    "alt": "Spark and Mango visiting stalactites and an underground stream inside Harrison's Cave",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

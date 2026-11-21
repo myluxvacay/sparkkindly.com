@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-liechtenstein-q2",
+  "scheduledDate": "2030-04-11",
+  "brand": "kids",
+  "setId": "country-set-meet-liechtenstein",
+  "prompt": "Which of these is a famous place to visit in Liechtenstein?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Malbun ski village"
+    },
+    {
+      "id": "b",
+      "text": "Los Roques Archipelago"
+    },
+    {
+      "id": "c",
+      "text": "Saint Petersburg — the Hermitage and canals"
+    },
+    {
+      "id": "d",
+      "text": "Mount Mulanje"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "the Malbun ski village is one of the two places we'd love to visit in Liechtenstein.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Liechtenstein | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Liechtenstein",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Liechtenstein — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Liechtenstein",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-liechtenstein.webp",
+    "alt": "Spark and Mango visiting Vaduz Castle on its hill above the small capital",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

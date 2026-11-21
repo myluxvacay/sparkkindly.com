@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-chad-q1",
+  "scheduledDate": "2029-12-01",
+  "brand": "kids",
+  "setId": "country-set-meet-chad",
+  "prompt": "What is the capital of Chad?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ngerulmud"
+    },
+    {
+      "id": "b",
+      "text": "N'Djamena"
+    },
+    {
+      "id": "c",
+      "text": "Georgetown"
+    },
+    {
+      "id": "d",
+      "text": "Amman"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "N'Djamena is the capital of Chad.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Chad | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Chad",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Chad — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chad",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-chad.webp",
+    "alt": "Spark and Mango visiting elephants and giraffes on the golden plains of Zakouma National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

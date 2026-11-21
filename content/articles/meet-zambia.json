@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-zambia",
+  "slug": "meet-zambia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Zambia",
+  "description": "Travel to Zambia with Spark and Mango: a country in Eastern Africa whose capital is Lusaka, where people speak English and pay with the Zambian kwacha — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-zambia.webp",
+    "alt": "Spark and Mango visiting the mile-wide curtain of Victoria Falls with rainbows in the spray",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Zambia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Zambia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Zambia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zambia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Zambia?",
+      "paragraphs": [
+        "Zambia is a country in Eastern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Zambia is Lusaka."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Zambia is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Zambia is the Zambian kwacha."
+      ]
+    },
+    {
+      "heading": "How big is Zambia?",
+      "paragraphs": [
+        "Zambia covers about 753,000 square kilometres of land and inland water. That makes it about three times the size of Guinea."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Zambezi River plunges over a mile-wide cliff at Victoria Falls — 'the Smoke that Thunders' — sending up rainbows and clouds of spray you can see for miles.",
+        "South Luangwa is famous for walking safaris and leopards — expert guides lead families on foot among giraffes, elephants and hippos along the Luangwa River."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Zambia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Zambia in one breath: a country in Eastern Africa, capital Lusaka, where people speak English and pay with the Zambian kwacha.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Zambia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-romania",
+  "slug": "meet-romania",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Romania",
+  "description": "Travel to Romania with Spark and Mango: a country in Eastern Europe whose capital is Bucharest, where people speak Romanian and pay with the Romanian leu — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-romania.webp",
+    "alt": "Spark and Mango visiting Bran Castle on its rocky hill in Transylvania",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Romania | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Romania",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Romania — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Romania",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Romania?",
+      "paragraphs": [
+        "Romania is a country in Eastern Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Romania is Bucharest."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Romania is Romanian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Romania is the Romanian leu."
+      ]
+    },
+    {
+      "heading": "How big is Romania?",
+      "paragraphs": [
+        "Romania covers about 238,000 square kilometres of land and inland water. That makes it about three times the size of Czechia."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Bran Castle, perched on a rock in the Carpathians, is forever linked with the Dracula legend — Transylvania's towns like Brașov and Sighișoara are medieval gems.",
+        "Where the Danube meets the Black Sea, its delta is a watery wilderness of pelicans, wild horses and fishing villages reached only by boat."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Romania on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Romania in one breath: a country in Eastern Europe, capital Bucharest, where people speak Romanian and pay with the Romanian leu.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Romania on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

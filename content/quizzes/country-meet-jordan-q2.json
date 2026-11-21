@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-jordan-q2",
+  "scheduledDate": "2030-03-14",
+  "brand": "kids",
+  "setId": "country-set-meet-jordan",
+  "prompt": "Roughly how big is Jordan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 10,680 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 40,050 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 231,400 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 89,000 square kilometres"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Jordan covers about 89,000 square kilometres of land and inland water.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Jordan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Jordan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Jordan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jordan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-jordan.webp",
+    "alt": "Spark and Mango visiting the Treasury at Petra glowing rose-red at the end of the Siq canyon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

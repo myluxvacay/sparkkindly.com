@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-costa-rica-q1",
+  "scheduledDate": "2029-12-15",
+  "brand": "kids",
+  "setId": "country-set-meet-costa-rica",
+  "prompt": "What is the money of Costa Rica called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Costa Rican colón"
+    },
+    {
+      "id": "b",
+      "text": "Rwandan franc"
+    },
+    {
+      "id": "c",
+      "text": "Guyanese dollar"
+    },
+    {
+      "id": "d",
+      "text": "Omani rial"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Costa Rica is the Costa Rican colón.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Costa Rica | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Costa-Rica",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Costa Rica — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Costa_Rica",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-costa-rica.webp",
+    "alt": "Spark and Mango visiting the cone of Arenal Volcano above rainforest and hot springs",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

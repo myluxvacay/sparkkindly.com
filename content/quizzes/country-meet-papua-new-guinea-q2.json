@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-papua-new-guinea-q2",
+  "scheduledDate": "2030-06-16",
+  "brand": "kids",
+  "setId": "country-set-meet-papua-new-guinea",
+  "prompt": "Which of these is a famous place to visit in Papua New Guinea?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Gauja National Park and Sigulda"
+    },
+    {
+      "id": "b",
+      "text": "the temples of Angkor Thom and Ta Prohm"
+    },
+    {
+      "id": "c",
+      "text": "the Kokoda Track and Port Moresby's nature park"
+    },
+    {
+      "id": "d",
+      "text": "Torres del Paine, Patagonia"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "the Kokoda Track and Port Moresby's nature park is one of the two places we'd love to visit in Papua New Guinea.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Papua New Guinea | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Papua-New-Guinea",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Papua New Guinea — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Papua_New_Guinea",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-papua-new-guinea.webp",
+    "alt": "Spark and Mango visiting a bird of paradise displaying in green rainforest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

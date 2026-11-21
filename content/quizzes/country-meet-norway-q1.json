@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-norway-q1",
+  "scheduledDate": "2030-06-05",
+  "brand": "kids",
+  "setId": "country-set-meet-norway",
+  "prompt": "In which part of the world is Norway?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Southeast Asia"
+    },
+    {
+      "id": "b",
+      "text": "Central Asia"
+    },
+    {
+      "id": "c",
+      "text": "Northern Africa"
+    },
+    {
+      "id": "d",
+      "text": "Northern Europe"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Norway is in Northern Europe, part of Europe.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Norway | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Norway",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Norway — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Norway",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-norway.webp",
+    "alt": "Spark and Mango visiting waterfalls pouring down the cliffs of the Geirangerfjord",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

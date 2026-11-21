@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-mozambique",
+  "slug": "meet-mozambique",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Mozambique",
+  "description": "Travel to Mozambique with Spark and Mango: a country in Eastern Africa whose capital is Maputo, where people speak Portuguese and pay with the Mozambican metical — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-mozambique.webp",
+    "alt": "Spark and Mango visiting sandy islands and turquoise sea in the Bazaruto Archipelago",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Mozambique | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Mozambique",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Mozambique — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mozambique",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Mozambique?",
+      "paragraphs": [
+        "Mozambique is a country in Eastern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Mozambique is Maputo."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Mozambique is Portuguese."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Mozambique is the Mozambican metical."
+      ]
+    },
+    {
+      "heading": "How big is Mozambique?",
+      "paragraphs": [
+        "Mozambique covers about 802,000 square kilometres of land and inland water. That makes it about three times the size of Gabon."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "These sandy islands off Vilanculos have dunes, coral reefs and dugongs grazing in seagrass meadows — families snorkel with turtles and manta rays in glass-clear water.",
+        "Gorongosa, at the foot of its own mountain, is one of Africa's great wildlife comebacks — lions, elephants and hippos thrive again on its floodplains."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Mozambique on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Mozambique in one breath: a country in Eastern Africa, capital Maputo, where people speak Portuguese and pay with the Mozambican metical.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Mozambique on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

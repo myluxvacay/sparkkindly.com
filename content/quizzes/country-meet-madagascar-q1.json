@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-madagascar-q1",
+  "scheduledDate": "2030-04-18",
+  "brand": "kids",
+  "setId": "country-set-meet-madagascar",
+  "prompt": "In which part of the world is Madagascar?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Western Africa"
+    },
+    {
+      "id": "b",
+      "text": "Eastern Europe"
+    },
+    {
+      "id": "c",
+      "text": "Eastern Africa"
+    },
+    {
+      "id": "d",
+      "text": "Central Asia"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Madagascar is in Eastern Africa, part of Africa.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Madagascar | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Madagascar",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Madagascar — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Madagascar",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-madagascar.webp",
+    "alt": "Spark and Mango visiting giant baobab trees lining a red dirt road at sunset on the Avenue of the Baobabs",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

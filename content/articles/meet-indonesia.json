@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-indonesia",
+  "slug": "meet-indonesia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Indonesia",
+  "description": "Travel to Indonesia with Spark and Mango: a country in Southeast Asia whose capital is Jakarta, where people speak Indonesian and pay with the Indonesian rupiah — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-indonesia.webp",
+    "alt": "Spark and Mango visiting emerald rice terraces and a temple gate on Bali",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Indonesia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Indonesia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Indonesia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Indonesia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Indonesia?",
+      "paragraphs": [
+        "Indonesia is a country in Southeast Asia, which is part of Asia. It is an island country, surrounded by sea. It is made of thousands of islands — more than 17,000 of them — strung along the equator. It shares a land border with Timor-Leste."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Indonesia is Jakarta. Jakarta is a huge, busy city on the island of Java. A brand-new capital city called Nusantara is being built on the island of Borneo for the future."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Indonesia is Indonesian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Indonesia is the Indonesian rupiah."
+      ]
+    },
+    {
+      "heading": "How big is Indonesia?",
+      "paragraphs": [
+        "Indonesia covers about 1,905,000 square kilometres of land and inland water. That makes it about three times the size of Afghanistan."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "Komodo dragons are large monitor lizards native to several Indonesian islands. Komodo dragons have a venomous bite and an amazing sense of smell — they can detect a meal kilometres away."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Bali is called the Island of the Gods — families visit sea temples like Tanah Lot, emerald rice terraces at Tegallalang and the art town of Ubud.",
+        "In Komodo National Park, rangers lead families to see real-life dragons — Komodo dragons, the world's largest lizards — plus pink-sand beaches and manta rays."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Indonesia on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Indonesia in one breath: a country in Southeast Asia, capital Jakarta, where people speak Indonesian and pay with the Indonesian rupiah.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Indonesia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

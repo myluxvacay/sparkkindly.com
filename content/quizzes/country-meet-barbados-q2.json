@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-barbados-q2",
+  "scheduledDate": "2029-10-25",
+  "brand": "kids",
+  "setId": "country-set-meet-barbados",
+  "prompt": "Which of these is a famous place to visit in Barbados?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Yellowstone National Park"
+    },
+    {
+      "id": "b",
+      "text": "Banc d'Arguin National Park"
+    },
+    {
+      "id": "c",
+      "text": "the west coast beaches and Bridgetown"
+    },
+    {
+      "id": "d",
+      "text": "the Grand Canyon, Arizona"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "the west coast beaches and Bridgetown is one of the two places we'd love to visit in Barbados.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Barbados | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Barbados",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Barbados — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Barbados",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-barbados.webp",
+    "alt": "Spark and Mango visiting stalactites and an underground stream inside Harrison's Cave",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

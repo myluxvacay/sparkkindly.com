@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-pakistan",
+  "slug": "meet-pakistan",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Pakistan",
+  "description": "Travel to Pakistan with Spark and Mango: a country in Southern Asia whose capital is Islamabad, where people speak English and pay with the Pakistani rupee — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-pakistan.webp",
+    "alt": "Spark and Mango visiting the Hunza Valley with terraced fields beneath the snowy peak of Rakaposhi",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Pakistan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Pakistan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Pakistan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pakistan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Pakistan?",
+      "paragraphs": [
+        "Pakistan is a country in Southern Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Pakistan is Islamabad."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Pakistan speak English and Urdu."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Pakistan is the Pakistani rupee."
+      ]
+    },
+    {
+      "heading": "How big is Pakistan?",
+      "paragraphs": [
+        "Pakistan covers about 882,000 square kilometres of land and inland water. That makes it about twice the size of Iraq."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Hunza Valley is a mountain paradise of apricot orchards and ancient forts beneath Rakaposhi, a 7,788-metre giant — travellers call it the real Shangri-La.",
+        "Lahore's Mughal treasures face each other across gardens — the red Badshahi Mosque, one of the world's largest, and the palaces of Lahore Fort."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Pakistan on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Pakistan in one breath: a country in Southern Asia, capital Islamabad, where people speak English and pay with the Pakistani rupee.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Pakistan on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-uganda-q2",
+  "scheduledDate": "2030-09-18",
+  "brand": "kids",
+  "setId": "country-set-meet-uganda",
+  "prompt": "Which of these is a famous place to visit in Uganda?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Source of the Nile at Jinja"
+    },
+    {
+      "id": "b",
+      "text": "the Great Barrier Reef, Queensland"
+    },
+    {
+      "id": "c",
+      "text": "the Cocora Valley"
+    },
+    {
+      "id": "d",
+      "text": "the Sheikh Zayed Grand Mosque, Abu Dhabi"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "the Source of the Nile at Jinja is one of the two places we'd love to visit in Uganda.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Uganda | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Uganda",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Uganda — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Uganda",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-uganda.webp",
+    "alt": "Spark and Mango visiting a mountain gorilla in the misty green forest of Bwindi",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

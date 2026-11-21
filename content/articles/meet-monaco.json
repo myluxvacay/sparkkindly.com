@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-monaco",
+  "slug": "meet-monaco",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Monaco",
+  "description": "Travel to Monaco with Spark and Mango: a country in Western Europe whose capital is Monaco, where people speak French and pay with the euro — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-monaco.webp",
+    "alt": "Spark and Mango visiting the Prince's Palace and harbour of Monaco with yachts",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Monaco | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Monaco",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Monaco — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Monaco",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Monaco?",
+      "paragraphs": [
+        "Monaco is a country in Western Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Monaco is Monaco. Monaco is a country and a city in one — a tiny city-state on the French Riviera, smaller than New York's Central Park."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Monaco is French."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Monaco is the euro. The euro is shared by many countries in Europe, so the same coins and notes work across borders."
+      ]
+    },
+    {
+      "heading": "How big is Monaco?",
+      "paragraphs": [
+        "Monaco covers about 2 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Monaco packs glamour into two square kilometres: the Prince's Palace with its changing of the guard, the casino square and supercars along the harbour.",
+        "Cliffside above the sea, Monaco's Oceanographic Museum has aquariums of sharks and turtles and was directed for years by explorer Jacques Cousteau."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Monaco on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Monaco in one breath: a country in Western Europe, capital Monaco, where people speak French and pay with the euro.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Monaco on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

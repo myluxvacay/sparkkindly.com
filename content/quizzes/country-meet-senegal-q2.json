@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-senegal-q2",
+  "scheduledDate": "2030-07-20",
+  "brand": "kids",
+  "setId": "country-set-meet-senegal",
+  "prompt": "Which of these is a famous place to visit in Senegal?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Funafuti Conservation Area"
+    },
+    {
+      "id": "b",
+      "text": "Lake Retba, the pink lake"
+    },
+    {
+      "id": "c",
+      "text": "Tacugama Chimpanzee Sanctuary"
+    },
+    {
+      "id": "d",
+      "text": "Sigiriya, the Lion Rock"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Lake Retba, the pink lake is one of the two places we'd love to visit in Senegal.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Senegal | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Senegal",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Senegal — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Senegal",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-senegal.webp",
+    "alt": "Spark and Mango visiting pastel colonial streets and bougainvillea on Gorée Island",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

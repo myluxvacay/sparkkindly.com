@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-latvia",
+  "slug": "meet-latvia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Latvia",
+  "description": "Travel to Latvia with Spark and Mango: a country in Northern Europe whose capital is Riga, where people speak Latvian and pay with the euro — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-latvia.webp",
+    "alt": "Spark and Mango visiting art nouveau facades on Alberta Street in Riga",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Latvia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Latvia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Latvia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Latvia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Latvia?",
+      "paragraphs": [
+        "Latvia is a country in Northern Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Latvia is Riga."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Latvia is Latvian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Latvia is the euro. The euro is shared by many countries in Europe, so the same coins and notes work across borders."
+      ]
+    },
+    {
+      "heading": "How big is Latvia?",
+      "paragraphs": [
+        "Latvia covers about 65,000 square kilometres of land and inland water. That makes it about half the size of Greece."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Riga has more art nouveau buildings than almost any city — whole streets of carved faces and swirls — plus a medieval old town and a huge market in old airship hangars.",
+        "The Gauja valley is Latvia's adventure corner — castles at Sigulda and Turaida, a cable car over the river and forest trails in autumn colour."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Latvia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Latvia in one breath: a country in Northern Europe, capital Riga, where people speak Latvian and pay with the euro.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Latvia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

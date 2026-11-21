@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-yemen",
+  "slug": "meet-yemen",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Yemen",
+  "description": "Travel to Yemen with Spark and Mango: a country in Western Asia whose capital is Sana'a, where people speak Arabic and pay with the Yemeni rial — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-yemen.webp",
+    "alt": "Spark and Mango visiting tall decorated tower houses in the old city of Sana'a",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Yemen | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Yemen",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Yemen — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yemen",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Yemen?",
+      "paragraphs": [
+        "Yemen is a country in Western Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Yemen is Sana'a."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Yemen is Arabic."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Yemen is the Yemeni rial."
+      ]
+    },
+    {
+      "heading": "How big is Yemen?",
+      "paragraphs": [
+        "Yemen covers about 528,000 square kilometres of land and inland water. That makes it about three times the size of Cambodia."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Sana'a's old city is famous for its tower houses — tall buildings of mud brick decorated with white gypsum patterns, looking like gingerbread houses, lived in for centuries.",
+        "Socotra is called the 'Galápagos of the Indian Ocean' — its dragon blood trees look like giant umbrellas, and a third of its plants grow nowhere else on Earth."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Yemen on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Yemen in one breath: a country in Western Asia, capital Sana'a, where people speak Arabic and pay with the Yemeni rial.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Yemen on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

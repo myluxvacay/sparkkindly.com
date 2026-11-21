@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-zambia-q1",
+  "scheduledDate": "2030-10-09",
+  "brand": "kids",
+  "setId": "country-set-meet-zambia",
+  "prompt": "What is the capital of Zambia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Apia"
+    },
+    {
+      "id": "b",
+      "text": "Lusaka"
+    },
+    {
+      "id": "c",
+      "text": "Madrid"
+    },
+    {
+      "id": "d",
+      "text": "Monrovia"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Lusaka is the capital of Zambia.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Zambia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Zambia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Zambia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zambia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-zambia.webp",
+    "alt": "Spark and Mango visiting the mile-wide curtain of Victoria Falls with rainbows in the spray",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

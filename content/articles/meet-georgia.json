@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-georgia",
+  "slug": "meet-georgia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Georgia",
+  "description": "Travel to Georgia with Spark and Mango: a country in Western Asia whose capital is Tbilisi, where people speak Georgian and pay with the Georgian lari — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-georgia.webp",
+    "alt": "Spark and Mango visiting colourful balconied houses in Tbilisi's old town beneath Narikala Fortress",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Georgia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Georgia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Georgia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Georgia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Georgia?",
+      "paragraphs": [
+        "Georgia is a country in Western Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Georgia is Tbilisi."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Georgia is Georgian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Georgia is the Georgian lari."
+      ]
+    },
+    {
+      "heading": "How big is Georgia?",
+      "paragraphs": [
+        "Georgia covers about 70,000 square kilometres of land and inland water. That makes it about half the size of Tajikistan."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Tbilisi's old town is a jumble of colourful balconies, sulphur bathhouses and narrow lanes beneath the ancient Narikala Fortress and the Mtkvari River cliffs.",
+        "At Stepantsminda, the Gergeti Trinity Church stands on a green hill before the snowy cone of Mount Kazbek — one of the most photographed views in the Caucasus."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Georgia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Georgia in one breath: a country in Western Asia, capital Tbilisi, where people speak Georgian and pay with the Georgian lari.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Georgia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

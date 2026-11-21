@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-gabon",
+  "slug": "meet-gabon",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Gabon",
+  "description": "Travel to Gabon with Spark and Mango: a country in Middle Africa whose capital is Libreville, where people speak French and pay with the Central African CFA franc — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-gabon.webp",
+    "alt": "Spark and Mango visiting elephants walking on a wild beach where rainforest meets the ocean in Loango National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Gabon | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Gabon",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Gabon — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gabon",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Gabon?",
+      "paragraphs": [
+        "Gabon is a country in Middle Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Gabon is Libreville."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Gabon is French."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Gabon is the Central African CFA franc. The CFA franc is shared with neighbouring countries, so the same money works across the region."
+      ]
+    },
+    {
+      "heading": "How big is Gabon?",
+      "paragraphs": [
+        "Gabon covers about 268,000 square kilometres of land and inland water. That makes it about half the size of Kenya."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Loango is called 'Africa's Last Eden' — elephants and buffalo stroll on wild beaches, and hippos sometimes wade into the surf where forest meets the Atlantic.",
+        "In Lopé, rainforest rolls into savanna hills. It's one of the best places in Africa to track mandrills — the world's largest monkeys, with rainbow-coloured faces."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Gabon on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Gabon in one breath: a country in Middle Africa, capital Libreville, where people speak French and pay with the Central African CFA franc.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Gabon on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

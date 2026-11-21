@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-ethiopia-q2",
+  "scheduledDate": "2030-01-17",
+  "brand": "kids",
+  "setId": "country-set-meet-ethiopia",
+  "prompt": "Which of these is a famous place to visit in Ethiopia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Blue Lagoon, Comino"
+    },
+    {
+      "id": "b",
+      "text": "Sidi Bou Said"
+    },
+    {
+      "id": "c",
+      "text": "Amsterdam's canals"
+    },
+    {
+      "id": "d",
+      "text": "the Simien Mountains"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "the Simien Mountains is one of the two places we'd love to visit in Ethiopia.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Ethiopia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Ethiopia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Ethiopia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ethiopia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-ethiopia.webp",
+    "alt": "Spark and Mango visiting a church carved down into red rock at Lalibela, reached by a stone trench",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

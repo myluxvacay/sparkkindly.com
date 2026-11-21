@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-peru-q2",
+  "scheduledDate": "2030-06-20",
+  "brand": "kids",
+  "setId": "country-set-meet-peru",
+  "prompt": "Which of these is a famous place to visit in Peru?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Lido Beach, Mogadishu"
+    },
+    {
+      "id": "b",
+      "text": "Machu Picchu"
+    },
+    {
+      "id": "c",
+      "text": "Chichen Itza, Yucatán"
+    },
+    {
+      "id": "d",
+      "text": "the Sheikh Zayed Grand Mosque, Abu Dhabi"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Machu Picchu is one of the two places we'd love to visit in Peru.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Peru | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Peru",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Peru — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Peru",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-peru.webp",
+    "alt": "Spark and Mango visiting the stone terraces and peaks of Machu Picchu in the clouds",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

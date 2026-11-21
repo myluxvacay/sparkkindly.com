@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-chile",
+  "slug": "meet-chile",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Chile",
+  "description": "Travel to Chile with Spark and Mango: a country in South America whose capital is Santiago, where people speak Spanish and pay with the Chilean peso — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-chile.webp",
+    "alt": "Spark and Mango visiting the granite towers of Torres del Paine above a turquoise lake",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "south-america",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Chile | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Chile",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Chile — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chile",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Chile?",
+      "paragraphs": [
+        "Chile is a country in South America, which is part of South America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Chile is Santiago."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Chile is Spanish."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Chile is the Chilean peso."
+      ]
+    },
+    {
+      "heading": "How big is Chile?",
+      "paragraphs": [
+        "Chile covers about 756,000 square kilometres of land and inland water. That makes it about half the size of Peru."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "The Atacama Desert in northern Chile is one of the driest nonpolar deserts on Earth. Some weather stations in the Atacama have never recorded rain at all. Its skies are so clear that the world's biggest telescopes watch the stars from its hills."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Torres del Paine's granite towers rise over turquoise lakes and guanaco herds — Patagonia's crown jewel of hiking and wild weather.",
+        "The Atacama is the driest non-polar desert on Earth — salt flats with flamingos, geysers at dawn and the clearest stargazing skies anywhere."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Chile on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Chile in one breath: a country in South America, capital Santiago, where people speak Spanish and pay with the Chilean peso.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Chile on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

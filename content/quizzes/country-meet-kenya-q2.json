@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-kenya-q2",
+  "scheduledDate": "2030-03-18",
+  "brand": "kids",
+  "setId": "country-set-meet-kenya",
+  "prompt": "Which of these is TRUE about Kenya?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Great Migration brings huge herds of wildebeest through the Maasai Mara ecosystem."
+    },
+    {
+      "id": "b",
+      "text": "Venice is built on islands linked by bridges and canals."
+    },
+    {
+      "id": "c",
+      "text": "The pyramids at Giza were built in ancient Egypt as royal tombs."
+    },
+    {
+      "id": "d",
+      "text": "Mount Kilimanjaro is the highest mountain in Africa."
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The Great Migration brings huge herds of wildebeest through the Maasai Mara ecosystem.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Kenya | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Kenya",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Kenya — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kenya",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-kenya.webp",
+    "alt": "Spark and Mango visiting wildebeest and zebras crossing golden grassland in the Maasai Mara with acacia trees",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

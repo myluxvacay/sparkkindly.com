@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-indonesia-q1",
+  "scheduledDate": "2030-02-25",
+  "brand": "kids",
+  "setId": "country-set-meet-indonesia",
+  "prompt": "What is the money of Indonesia called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Indonesian rupiah"
+    },
+    {
+      "id": "b",
+      "text": "Dominican peso"
+    },
+    {
+      "id": "c",
+      "text": "Israeli new shekel"
+    },
+    {
+      "id": "d",
+      "text": "Solomon Islands dollar"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Indonesia is the Indonesian rupiah.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Indonesia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Indonesia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Indonesia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Indonesia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-indonesia.webp",
+    "alt": "Spark and Mango visiting emerald rice terraces and a temple gate on Bali",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

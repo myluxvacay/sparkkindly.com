@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-the-bahamas-q1",
+  "scheduledDate": "2029-10-18",
+  "brand": "kids",
+  "setId": "country-set-meet-the-bahamas",
+  "prompt": "Which of these languages is spoken in The Bahamas?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Persian"
+    },
+    {
+      "id": "b",
+      "text": "Danish"
+    },
+    {
+      "id": "c",
+      "text": "Latin"
+    },
+    {
+      "id": "d",
+      "text": "English"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "People in The Bahamas speak English.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "The Bahamas | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/The-Bahamas",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "The Bahamas — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Bahamas",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-the-bahamas.webp",
+    "alt": "Spark and Mango visiting pastel buildings and harbour in Nassau with Paradise Island behind",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

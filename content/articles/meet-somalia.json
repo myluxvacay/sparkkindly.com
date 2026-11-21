@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-somalia",
+  "slug": "meet-somalia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Somalia",
+  "description": "Travel to Somalia with Spark and Mango: a country in Eastern Africa whose capital is Mogadishu, where people speak Somali and pay with the Somali shilling — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-somalia.webp",
+    "alt": "Spark and Mango visiting ancient red and white rock paintings of cattle in a stone shelter at Laas Geel",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Somalia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Somalia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Somalia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Somalia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Somalia?",
+      "paragraphs": [
+        "Somalia is a country in Eastern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Somalia is Mogadishu."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Somalia speak Somali and Arabic."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Somalia is the Somali shilling."
+      ]
+    },
+    {
+      "heading": "How big is Somalia?",
+      "paragraphs": [
+        "Somalia covers about 638,000 square kilometres of land and inland water. That makes it about half the size of Chad."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "At Laas Geel, rock shelters hold some of Africa's finest ancient paintings — cattle and people painted in red and white thousands of years ago, remarkably bright today.",
+        "Mogadishu's Lido Beach is the capital's beloved seaside, where families swim, play football on the sand and eat fresh fish as boats come in."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Somalia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Somalia in one breath: a country in Eastern Africa, capital Mogadishu, where people speak Somali and pay with the Somali shilling.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Somalia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

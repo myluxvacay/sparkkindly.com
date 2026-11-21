@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-moldova",
+  "slug": "meet-moldova",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Moldova",
+  "description": "Travel to Moldova with Spark and Mango: a country in Eastern Europe whose capital is Chișinău, where people speak Romanian and pay with the Moldovan leu — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-moldova.webp",
+    "alt": "Spark and Mango visiting the cave monastery in the cliffs of Orheiul Vechi above the river",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Moldova | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Moldova",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Moldova — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Moldova",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Moldova?",
+      "paragraphs": [
+        "Moldova is a country in Eastern Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Moldova is Chișinău."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Moldova is Romanian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Moldova is the Moldovan leu."
+      ]
+    },
+    {
+      "heading": "How big is Moldova?",
+      "paragraphs": [
+        "Moldova covers about 34,000 square kilometres of land and inland water. That makes it about half the size of Ireland."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Old Orhei is a natural amphitheatre of cliffs where a cave monastery was dug into the rock above the Răut River 2,000 years of history in one valley.",
+        "Moldova's wine cellars are underground cities — Cricova's tunnels run for 120 kilometres, and Mileștii Mici holds the world's largest wine collection."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Moldova on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Moldova in one breath: a country in Eastern Europe, capital Chișinău, where people speak Romanian and pay with the Moldovan leu.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Moldova on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

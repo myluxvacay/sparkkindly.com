@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-vietnam",
+  "slug": "meet-vietnam",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Vietnam",
+  "description": "Travel to Vietnam with Spark and Mango: a country in Southeast Asia whose capital is Hanoi, where people speak Vietnamese and pay with the Vietnamese dong — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-vietnam.webp",
+    "alt": "Spark and Mango visiting limestone islands rising from the emerald water of Ha Long Bay",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Vietnam | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Vietnam",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Vietnam — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Vietnam",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Vietnam?",
+      "paragraphs": [
+        "Vietnam is a country in Southeast Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Vietnam is Hanoi."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Vietnam is Vietnamese."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Vietnam is the Vietnamese dong."
+      ]
+    },
+    {
+      "heading": "How big is Vietnam?",
+      "paragraphs": [
+        "Vietnam covers about 331,000 square kilometres of land and inland water. That makes it about half the size of Afghanistan."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "In Ha Long Bay — 'where the dragon descends' — nearly 2,000 limestone islands rise from green water. Families cruise overnight and kayak into caves and lagoons.",
+        "Hoi An is a riverside town of yellow merchant houses where hundreds of silk lanterns glow at night and boats carry floating candles down the river."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Vietnam on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Vietnam in one breath: a country in Southeast Asia, capital Hanoi, where people speak Vietnamese and pay with the Vietnamese dong.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Vietnam on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-bhutan-q2",
+  "scheduledDate": "2029-11-04",
+  "brand": "kids",
+  "setId": "country-set-meet-bhutan",
+  "prompt": "Which of these is a famous place to visit in Bhutan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Malabo and Pico Basile"
+    },
+    {
+      "id": "b",
+      "text": "the Oceanographic Museum"
+    },
+    {
+      "id": "c",
+      "text": "Dublin — Trinity College and the Book of Kells"
+    },
+    {
+      "id": "d",
+      "text": "Tiger's Nest Monastery (Paro Taktsang)"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Tiger's Nest Monastery (Paro Taktsang) is one of the two places we'd love to visit in Bhutan.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Bhutan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Bhutan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Bhutan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bhutan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-bhutan.webp",
+    "alt": "Spark and Mango visiting Tiger's Nest Monastery clinging to a cliff above the Paro valley",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

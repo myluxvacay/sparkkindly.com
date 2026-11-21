@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-federated-states-of-micronesia-q2",
+  "scheduledDate": "2030-05-09",
+  "brand": "kids",
+  "setId": "country-set-meet-federated-states-of-micronesia",
+  "prompt": "Which of these is a famous place to visit in Federated States of Micronesia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Algarve's sea caves and beaches"
+    },
+    {
+      "id": "b",
+      "text": "Angkor Wat"
+    },
+    {
+      "id": "c",
+      "text": "Chuuk Lagoon's ghost fleet"
+    },
+    {
+      "id": "d",
+      "text": "Massawa, the old port on the Red Sea"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Chuuk Lagoon's ghost fleet is one of the two places we'd love to visit in Federated States of Micronesia.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Federated States of Micronesia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Federated-States-of-Micronesia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Federated States of Micronesia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Federated_States_of_Micronesia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-federated-states-of-micronesia.webp",
+    "alt": "Spark and Mango visiting ancient stone ruins on islets in the lagoon at Nan Madol",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

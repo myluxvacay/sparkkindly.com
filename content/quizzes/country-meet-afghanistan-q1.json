@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-afghanistan-q1",
+  "scheduledDate": "2029-09-28",
+  "brand": "kids",
+  "setId": "country-set-meet-afghanistan",
+  "prompt": "What is the capital of Afghanistan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Dakar"
+    },
+    {
+      "id": "b",
+      "text": "Kyiv"
+    },
+    {
+      "id": "c",
+      "text": "Kabul"
+    },
+    {
+      "id": "d",
+      "text": "Cairo"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Kabul is the capital of Afghanistan.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Afghanistan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Afghanistan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Afghanistan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Afghanistan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-afghanistan.webp",
+    "alt": "Spark and Mango visiting deep blue lakes of Band-e Amir between pale cliffs in the Hindu Kush mountains",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

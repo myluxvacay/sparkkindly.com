@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-egypt-q2",
+  "scheduledDate": "2030-01-07",
+  "brand": "kids",
+  "setId": "country-set-meet-egypt",
+  "prompt": "Roughly how big is Egypt?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 1,002,000 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 2,605,200 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 120,240 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 450,900 square kilometres"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Egypt covers about 1,002,000 square kilometres of land and inland water.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Egypt | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Egypt",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Egypt — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Egypt",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-egypt.webp",
+    "alt": "Spark and Mango visiting the three Pyramids of Giza and the Great Sphinx at the edge of the desert near Cairo",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

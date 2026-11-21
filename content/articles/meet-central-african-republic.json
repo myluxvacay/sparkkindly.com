@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-central-african-republic",
+  "slug": "meet-central-african-republic",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Central African Republic",
+  "description": "Travel to Central African Republic with Spark and Mango: a country in Middle Africa whose capital is Bangui, where people speak French and pay with the Central African CFA franc — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-central-african-republic.webp",
+    "alt": "Spark and Mango visiting forest elephants gathering at a muddy clearing in the Dzanga-Sangha rainforest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Central African Republic | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Central-African-Republic",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Central African Republic — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Central_African_Republic",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Central African Republic?",
+      "paragraphs": [
+        "Central African Republic is a country in Middle Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Central African Republic is Bangui."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Central African Republic speak French and Sango."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Central African Republic is the Central African CFA franc. The CFA franc is shared with neighbouring countries, so the same money works across the region."
+      ]
+    },
+    {
+      "heading": "How big is Central African Republic?",
+      "paragraphs": [
+        "Central African Republic covers about 623,000 square kilometres of land and inland water. That makes it about half the size of Angola."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "In the Dzanga-Sangha rainforest, forest elephants gather at a famous muddy clearing called Dzanga Bai, and trackers can help families spot lowland gorillas.",
+        "Near the capital Bangui, the Boali Falls crash over wide rock steps on the Mbali River, surrounded by green hills and picnic spots."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Central African Republic on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Central African Republic in one breath: a country in Middle Africa, capital Bangui, where people speak French and pay with the Central African CFA franc.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Central African Republic on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

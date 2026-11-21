@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-iraq",
+  "slug": "meet-iraq",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Iraq",
+  "description": "Travel to Iraq with Spark and Mango: a country in Western Asia whose capital is Baghdad, where people speak Arabic and pay with the Iraqi dinar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-iraq.webp",
+    "alt": "Spark and Mango visiting the ancient citadel hill of Erbil above the city",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Iraq | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Iraq",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Iraq — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Iraq",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Iraq?",
+      "paragraphs": [
+        "Iraq is a country in Western Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Iraq is Baghdad."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Iraq speak Arabic and Kurdish."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Iraq is the Iraqi dinar."
+      ]
+    },
+    {
+      "heading": "How big is Iraq?",
+      "paragraphs": [
+        "Iraq covers about 438,000 square kilometres of land and inland water. That makes it about half the size of Pakistan."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Erbil's citadel is one of the oldest continuously lived-in places on Earth — people have called this hilltop home for around 6,000 years.",
+        "Near Hillah stand the remains of Babylon, one of the ancient world's greatest cities — a reconstructed Ishtar Gate gleams blue where kings once processed."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Iraq on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Iraq in one breath: a country in Western Asia, capital Baghdad, where people speak Arabic and pay with the Iraqi dinar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Iraq on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

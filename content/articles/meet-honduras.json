@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-honduras",
+  "slug": "meet-honduras",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Honduras",
+  "description": "Travel to Honduras with Spark and Mango: a country in Central America whose capital is Tegucigalpa, where people speak Spanish and pay with the Honduran lempira — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-honduras.webp",
+    "alt": "Spark and Mango visiting a coral reef and beach at West Bay, Roatán",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Honduras | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Honduras",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Honduras — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Honduras",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Honduras?",
+      "paragraphs": [
+        "Honduras is a country in Central America, which is part of North America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Honduras is Tegucigalpa."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Honduras is Spanish."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Honduras is the Honduran lempira."
+      ]
+    },
+    {
+      "heading": "How big is Honduras?",
+      "paragraphs": [
+        "Honduras covers about 112,000 square kilometres of land and inland water. That makes it about twice the size of Costa Rica."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Roatán sits on the world's second-largest barrier reef — families snorkel and dive with turtles in West Bay's glass-clear water.",
+        "Copán is famed for its carved stone stelae and a hieroglyphic stairway of over 2,000 glyphs — the longest Maya text known — with scarlet macaws flying free."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Honduras on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Honduras in one breath: a country in Central America, capital Tegucigalpa, where people speak Spanish and pay with the Honduran lempira.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Honduras on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

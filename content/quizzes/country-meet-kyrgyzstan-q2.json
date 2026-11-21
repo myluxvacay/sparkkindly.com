@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-kyrgyzstan-q2",
+  "scheduledDate": "2030-03-28",
+  "brand": "kids",
+  "setId": "country-set-meet-kyrgyzstan",
+  "prompt": "Which of these is a famous place to visit in Kyrgyzstan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Lake Issyk-Kul"
+    },
+    {
+      "id": "b",
+      "text": "the Panama Canal — Miraflores Locks"
+    },
+    {
+      "id": "c",
+      "text": "Asmara, the art deco capital"
+    },
+    {
+      "id": "d",
+      "text": "the Algarve's sea caves and beaches"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Lake Issyk-Kul is one of the two places we'd love to visit in Kyrgyzstan.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Kyrgyzstan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Kyrgyzstan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Kyrgyzstan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kyrgyzstan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-kyrgyzstan.webp",
+    "alt": "Spark and Mango visiting the blue waters of Lake Issyk-Kul ringed by snowy mountains",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

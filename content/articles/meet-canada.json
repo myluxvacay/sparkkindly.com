@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-canada",
+  "slug": "meet-canada",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Canada",
+  "description": "Travel to Canada with Spark and Mango: a country in Northern America whose capital is Ottawa, where people speak English and pay with the Canadian dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-canada.webp",
+    "alt": "Spark and Mango visiting turquoise Lake Louise beneath snowy Rocky Mountain peaks",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Canada | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Canada",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Canada — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Canada",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Canada?",
+      "paragraphs": [
+        "Canada is a country in Northern America, which is part of North America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Canada is Ottawa. Ottawa is the capital, chosen by Queen Victoria in 1857. Toronto is the biggest city, but Ottawa is where parliament meets on Parliament Hill."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Canada speak English and French. English and French are both official languages of Canada — road signs and cereal boxes use both."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Canada is the Canadian dollar."
+      ]
+    },
+    {
+      "heading": "How big is Canada?",
+      "paragraphs": [
+        "Canada covers about 9,985,000 square kilometres of land and inland water. It is the largest country in North America."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "Canada has more natural lakes than any other country. Nobody knows exactly how many lakes Canada has — the count runs into the hundreds of thousands."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "In the Rockies, Lake Louise glows turquoise beneath glaciers. Families canoe its waters, ride the Banff gondola and watch for elk and bears.",
+        "Niagara's Horseshoe Falls pour 2,800 tonnes of water a second over the cliff. Boat rides sail into the mist and tunnels run behind the falls."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Canada on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Canada in one breath: a country in Northern America, capital Ottawa, where people speak English and pay with the Canadian dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Canada on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

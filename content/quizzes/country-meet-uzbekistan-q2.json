@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-uzbekistan-q2",
+  "scheduledDate": "2030-09-30",
+  "brand": "kids",
+  "setId": "country-set-meet-uzbekistan",
+  "prompt": "Which of these is a famous place to visit in Uzbekistan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Wahiba Sands"
+    },
+    {
+      "id": "b",
+      "text": "Bukhara's old city"
+    },
+    {
+      "id": "c",
+      "text": "Babylon's ruins"
+    },
+    {
+      "id": "d",
+      "text": "the Central Suriname Nature Reserve"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Bukhara's old city is one of the two places we'd love to visit in Uzbekistan.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Uzbekistan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Uzbekistan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Uzbekistan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Uzbekistan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-uzbekistan.webp",
+    "alt": "Spark and Mango visiting the blue-tiled madrasas of the Registan in Samarkand",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

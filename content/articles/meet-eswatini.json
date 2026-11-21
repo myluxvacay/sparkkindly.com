@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-eswatini",
+  "slug": "meet-eswatini",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Eswatini",
+  "description": "Travel to Eswatini with Spark and Mango: a country in Southern Africa whose capital is Lobamba, where people speak English and pay with the Swazi lilangeni — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-eswatini.webp",
+    "alt": "Spark and Mango visiting elephants and giraffes among thorn trees in Hlane Royal National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Eswatini | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Eswatini",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Eswatini — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Eswatini",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Eswatini?",
+      "paragraphs": [
+        "Eswatini is a country in Southern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Eswatini is Lobamba. Mbabane is the capital where the government works. Lobamba is the royal and legislative capital, home to the King's palace and parliament."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Eswatini speak English and Swati."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Eswatini is the Swazi lilangeni."
+      ]
+    },
+    {
+      "heading": "How big is Eswatini?",
+      "paragraphs": [
+        "Eswatini covers about 17,000 square kilometres of land and inland water. That makes it about half the size of Guinea-Bissau."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Hlane is Eswatini's largest protected area, where lions, elephants, rhinos and giraffes roam thorny bushveld dotted with ancient leadwood trees.",
+        "The 'Valley of Heaven' between the two capitals is the country's visitor heartland — craft markets, cultural villages and green hills beneath the Execution Rock peak."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Eswatini on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Eswatini in one breath: a country in Southern Africa, capital Lobamba, where people speak English and pay with the Swazi lilangeni.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Eswatini on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

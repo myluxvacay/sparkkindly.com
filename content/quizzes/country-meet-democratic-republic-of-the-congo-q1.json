@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-democratic-republic-of-the-congo-q1",
+  "scheduledDate": "2029-12-13",
+  "brand": "kids",
+  "setId": "country-set-meet-democratic-republic-of-the-congo",
+  "prompt": "Which of these languages is spoken in Democratic Republic of the Congo?",
+  "options": [
+    {
+      "id": "a",
+      "text": "isiZulu"
+    },
+    {
+      "id": "b",
+      "text": "Mauritian Creole"
+    },
+    {
+      "id": "c",
+      "text": "Guarani"
+    },
+    {
+      "id": "d",
+      "text": "French"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "People in Democratic Republic of the Congo speak French, Lingala and Kongo.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Democratic Republic of the Congo | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Democratic-Republic-of-the-Congo",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Democratic Republic of the Congo — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-democratic-republic-of-the-congo.webp",
+    "alt": "Spark and Mango visiting misty green volcano slopes in Virunga National Park with a mountain gorilla",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

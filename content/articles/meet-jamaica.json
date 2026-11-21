@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-jamaica",
+  "slug": "meet-jamaica",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Jamaica",
+  "description": "Travel to Jamaica with Spark and Mango: a country in Caribbean whose capital is Kingston, where people speak English and pay with the Jamaican dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-jamaica.webp",
+    "alt": "Spark and Mango visiting terraced waterfalls at Dunn's River Falls surrounded by jungle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Jamaica | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Jamaica",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Jamaica — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jamaica",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Jamaica?",
+      "paragraphs": [
+        "Jamaica is a country in Caribbean, which is part of North America. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Jamaica is Kingston."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Jamaica is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Jamaica is the Jamaican dollar."
+      ]
+    },
+    {
+      "heading": "How big is Jamaica?",
+      "paragraphs": [
+        "Jamaica covers about 11,000 square kilometres of land and inland water. That makes it about half the size of Belize."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "At Dunn's River, families hold hands in a chain and climb a staircase of waterfalls from the beach into the jungle.",
+        "Negril's Seven Mile Beach is soft sand and calm sea by day, with cliff divers and legendary sunsets at its west end."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Jamaica on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Jamaica in one breath: a country in Caribbean, capital Kingston, where people speak English and pay with the Jamaican dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Jamaica on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-vatican-city-q2",
+  "scheduledDate": "2030-10-20",
+  "brand": "kids",
+  "setId": "country-set-meet-vatican-city",
+  "prompt": "Which of these is a famous place to visit in Vatican City?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Stockholm — Gamla Stan and the Vasa Museum"
+    },
+    {
+      "id": "b",
+      "text": "Kuala Lumpur and the Petronas Towers"
+    },
+    {
+      "id": "c",
+      "text": "Xunantunich and the Cayo District"
+    },
+    {
+      "id": "d",
+      "text": "the Vatican Museums and the Sistine Chapel"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "the Vatican Museums and the Sistine Chapel is one of the two places we'd love to visit in Vatican City.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Vatican City | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Vatican-City",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Vatican City — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Vatican_City",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-vatican-city.webp",
+    "alt": "Spark and Mango visiting St Peter's Basilica and its great square in Vatican City",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "id": "country-meet-australia",
+  "slug": "meet-australia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Australia",
+  "description": "Travel to Australia with Spark and Mango: a country in Australia and New Zealand whose capital is Canberra, where people speak English and pay with the Australian dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-australia.webp",
+    "alt": "Spark and Mango visiting a coral reef with a sea turtle in the Great Barrier Reef",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "oceania",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Australia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Australia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Australia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Australia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Australia?",
+      "paragraphs": [
+        "Australia is a country in Australia and New Zealand, which is part of Oceania. Australia is so big that it is both a country and a continent — the smallest continent in the world."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Australia is Canberra. Canberra was built on purpose as the capital, so that Sydney and Melbourne would not have to argue about which of them should win!"
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Australia is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Australia is the Australian dollar."
+      ]
+    },
+    {
+      "heading": "How big is Australia?",
+      "paragraphs": [
+        "Australia covers about 7,692,000 square kilometres of land and inland water. It is the largest country in Oceania."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "The Great Barrier Reef is the world’s largest coral reef system. It is the largest living structure on the planet — so big that it is made of billions of tiny coral animals working together."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Great Barrier Reef is the largest living structure on Earth — families snorkel from reef pontoons with turtles, clownfish and coral gardens in warm water.",
+        "Uluru rises from the desert at the heart of Australia — sacred to the Anangu people, it changes colour from ochre to glowing red at sunset."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Australia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Australia in one breath: a country in Australia and New Zealand, capital Canberra, where people speak English and pay with the Australian dollar.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Australia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

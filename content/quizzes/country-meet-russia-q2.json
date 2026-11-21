@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-russia-q2",
+  "scheduledDate": "2030-07-02",
+  "brand": "kids",
+  "setId": "country-set-meet-russia",
+  "prompt": "Which of these is a famous place to visit in Russia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Moscow — Red Square and St Basil's Cathedral"
+    },
+    {
+      "id": "b",
+      "text": "Mount Cameroon"
+    },
+    {
+      "id": "c",
+      "text": "the Avenue of the Baobabs"
+    },
+    {
+      "id": "d",
+      "text": "Lake Balaton"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Moscow — Red Square and St Basil's Cathedral is one of the two places we'd love to visit in Russia.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Russia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Russia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Russia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Russia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-russia.webp",
+    "alt": "Spark and Mango visiting St Basil's Cathedral's colourful domes on Red Square in Moscow",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

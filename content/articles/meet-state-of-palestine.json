@@ -1,0 +1,100 @@
+{
+  "id": "country-meet-state-of-palestine",
+  "slug": "meet-state-of-palestine",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet State of Palestine",
+  "description": "Travel to State of Palestine with Spark and Mango: a country in Western Asia with its own story — its languages, its land and two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-state-of-palestine.webp",
+    "alt": "Spark and Mango visiting Manger Square and the Church of the Nativity in Bethlehem",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "State of Palestine | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/State-of-Palestine",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "State of Palestine — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Palestine",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is State of Palestine?",
+      "paragraphs": [
+        "State of Palestine is a country in Western Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "Two parts, one country",
+      "paragraphs": [
+        "The State of Palestine is made of two areas. The West Bank lies west of the Jordan River, and the Gaza Strip lies along the Mediterranean Sea. Palestinian government offices are based in the city of Ramallah, in the West Bank."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in State of Palestine is Arabic."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of State of Palestine is the Israeli new shekel."
+      ]
+    },
+    {
+      "heading": "How big is State of Palestine?",
+      "paragraphs": [
+        "State of Palestine covers about 6,020 square kilometres of land and inland water. That makes it about half the size of Qatar."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Bethlehem is famous around the world as the birthplace of Jesus. Its Church of the Nativity is one of the oldest churches anywhere, and Manger Square buzzes with markets and cafés.",
+        "Jericho is one of the oldest cities on Earth and the lowest — below sea level! A cable car climbs to the Mount of Temptation above its palm groves and orchards."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find State of Palestine on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "State of Palestine in one breath: a country in Western Asia, where people speak Arabic and pay with the Israeli new shekel.",
+  "fiction": false,
+  "materials": [
+    "Just you and this page — a globe, atlas or world map nearby makes it even better"
+  ],
+  "supervision": "A grown-up nearby is recommended for younger readers; the Think and talk questions work well read aloud together.",
+  "safetyNotes": [
+    "Reading only — no physical activity or materials are involved."
+  ],
+  "screenFreeExtension": "Screen-free mission: find State of Palestine on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

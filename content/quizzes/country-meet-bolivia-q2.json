@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-bolivia-q2",
+  "scheduledDate": "2029-11-06",
+  "brand": "kids",
+  "setId": "country-set-meet-bolivia",
+  "prompt": "Which of these is a famous place to visit in Bolivia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Cristo Rei statue and Dili's coast"
+    },
+    {
+      "id": "b",
+      "text": "Colonia del Sacramento"
+    },
+    {
+      "id": "c",
+      "text": "Saint Petersburg — the Hermitage and canals"
+    },
+    {
+      "id": "d",
+      "text": "Lake Titicaca and Copacabana"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Lake Titicaca and Copacabana is one of the two places we'd love to visit in Bolivia.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Bolivia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Bolivia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Bolivia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bolivia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-bolivia.webp",
+    "alt": "Spark and Mango visiting the white salt flats of Uyuni reflecting the sky like a mirror",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}
