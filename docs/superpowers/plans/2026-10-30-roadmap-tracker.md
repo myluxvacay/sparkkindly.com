@@ -172,6 +172,12 @@ Detailed plan: `docs/superpowers/plans/2026-10-30-project-0-foundations.md`.
 
 ---
 
+## Keep reading: read-next flow for articles (owner direction, 20 November 2026)
+
+- [~] R.1 End-of-article "Keep reading" panel — the reading counterpart of keep-playing: a next-similar article card (series → track → shared topics → band) plus easier / same / harder choices across the reading bands (pre-k, grades-k-2, grades-3-5), an on-device read list (localStorage `sk-read-articles`) under the quiz flow's child-safety carve-out (never read or written for Kids-audience articles), Spark presenting with tap-to-play greeting and the flick/double-tap gestures. The pilot's structural tags become real topics (migration 043 + seed) and an insert-only topic-link sync (`lib/items/update-topics.ts`, run by the content publish and `npm run content:update-topics`) backfills links the insert-only import dropped. *Evidence: pending staging verification.*
+
+---
+
 ## Standing owner actions (not tied to one project)
 
 - [ ] Monthly budget ceiling: confirm about $150/month or set another figure.

@@ -35,7 +35,7 @@ export const topicChildren: Record<string, Record<string, string>> = {
   },
   wellbeing: { mindfulness: 'Mindfulness', sleep: 'Sleep', stress: 'Stress' },
   creativity: { art: 'Art', music: 'Music', writing: 'Writing' },
-  language: { words: 'Words', etymology: 'Where words come from' },
+  language: { words: 'Words', etymology: 'Where words come from', grammar: 'Grammar', phonics: 'Phonics', vocabulary: 'Vocabulary' },
   history: { 'ancient-history': 'Ancient history', inventions: 'Inventions' },
   technology: { computing: 'Computing', 'internet-safety': 'Internet safety' },
   kindness: { gratitude: 'Gratitude', 'helping-others': 'Helping others' },
@@ -43,5 +43,14 @@ export const topicChildren: Record<string, Record<string, string>> = {
   green: { climate: 'Climate', recycling: 'Recycling', 'reducing-waste': 'Reducing waste', 'energy-saving': 'Saving energy' },
 };
 
-// Top-level topics with no parent.
-export const topicRoots: Record<string, string> = { curiosity: 'Curiosity' };
+// Top-level topics with no parent. The reading-series structure (migration 043 mirrors it for existing
+// databases): the collection, the series and its explainer track, and the three reading bands.
+export const topicRoots: Record<string, string> = {
+  curiosity: 'Curiosity',
+  reading: 'Reading',
+  'poster-series': 'Poster series',
+  explainers: 'Explainers',
+  'pre-k': 'Pre-K',
+  'grades-k-2': 'Grades K-2',
+  'grades-3-5': 'Grades 3-5',
+};

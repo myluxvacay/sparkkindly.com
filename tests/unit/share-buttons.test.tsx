@@ -107,6 +107,7 @@ describe('client components', () => {
       'components/admin/VideoUpload.tsx',
       'components/games/SparkSoundToggle.tsx', // the Spark voice on/off toggle on /games (persisted as sk-games-sound)
       'components/item/PlayEnhancer.tsx', // the play island: in-place answer checking on the play page itself
+      'components/item/ReadNextEnhancer.tsx', // the reading island: read-aware re-picking + gestures on the keep-reading panel (20 Nov 2026)
       'components/item/ShareClient.tsx',
       'components/item/VideoPlayer.tsx', // owner-attached YouTube video: loads the player only after a press
       'components/me/InterestsEnhancer.tsx', // the interests island: the live 30-cap counter on the picker (17 Nov 2026)

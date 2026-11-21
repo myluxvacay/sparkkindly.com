@@ -1,5 +1,5 @@
 // Automated content publish for the deploy receiver: imports new library items, refreshes stored hero
-// images, then syncs stored visual-game rows, in one bundled process (built by `npm run content:publish:build`, shipped inside the release and run by
+// images, syncs stored article topic links, then syncs stored visual-game rows, in one bundled process (built by `npm run content:publish:build`, shipped inside the release and run by
 // deploy-receive.sh after the release passes its health gate, when the release carries the PUBLISH_CONTENT marker).
 // It performs exactly the steps the owner used to run by hand — scripts/import-starter-content.ts
 // (npm run content:import), scripts/update-hero-images.ts (npm run content:update-heroes) and
@@ -17,6 +17,7 @@ import { readFolder } from '../lib/repository';
 import { seedReference } from '../db/seed';
 import { importLegacy } from '../lib/items/import-legacy';
 import { updateHeroImages } from '../lib/items/update-heroes';
+import { updateItemTopics } from '../lib/items/update-topics';
 import { updateGameItems } from '../lib/items/update-games';
 import { assertSafeImportTarget } from '../lib/items/import-guard';
 
@@ -44,6 +45,9 @@ try {
 
   const heroes = await updateHeroImages(db, articles);
   console.log(`Hero images: ${heroes.updated} updated, ${heroes.unchanged} already current, ${heroes.missing} not in database.`);
+
+  const topicLinks = await updateItemTopics(db, articles);
+  console.log(`Topic links: ${topicLinks.added} added, ${topicLinks.unchanged} already current, ${topicLinks.missing} not in database.`);
 
   const gameSync = await updateGameItems(db, games);
   console.log(`Game items: ${gameSync.updated} updated, ${gameSync.unchanged} already current, ${gameSync.missing} not in database.`);
