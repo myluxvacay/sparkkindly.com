@@ -6,7 +6,7 @@
   "title": "Seed Jar: Watch a Root Wake Up",
   "description": "A bean, a jar and damp paper: the oldest science model in the world. Watch a seed split, root and shoot over one week, and draw every day of the story.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-seed-jar-model-steps.webp",
+        "alt": "The seed jar in four pictures, left to right: hands watering the paper lining inside the jar, two dry beans resting against the glass, one bean with a white root tip by the sunny window, and the bean fully sprouted with roots and green leaves — with Spark and Mango watching",
+        "width": 1938,
+        "height": 476,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-seed-jar-model-steps-1.webp",
+          "alt": "Step 1 of 4: hands watering the paper towel lining inside the glass jar",
+          "width": 477,
+          "height": 476,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-seed-jar-model-steps-2.webp",
+          "alt": "Step 2 of 4: two dry beans resting between the damp paper and the glass",
+          "width": 477,
+          "height": 476,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-seed-jar-model-steps-3.webp",
+          "alt": "Step 3 of 4: one bean with its coat split and a white root tip pointing down by the sunny window",
+          "width": 477,
+          "height": 476,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-seed-jar-model-steps-4.webp",
+          "alt": "Step 4 of 4: the sprouted bean with white roots below and a green shoot with leaves above",
+          "width": 477,
+          "height": 476,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Line the jar. Roll the paper towel into a tube that fits snugly inside the jar, or scrunch paper loosely into it. Pour in water until the paper is damp all the way up — wet, not swimming.",
         "Step 2 — Plant against the glass. Push the beans between the paper and the glass, halfway up, so you can see them clearly. Two or three beans, spaced around the jar — seeds are individuals, and one may be a slowcoach.",

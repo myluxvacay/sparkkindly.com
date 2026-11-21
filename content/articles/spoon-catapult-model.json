@@ -6,7 +6,7 @@
   "title": "Spoon Catapult: Launch Like an Engineer",
   "description": "A spoon, a bottle cap and a rubber band become a working catapult. Build it, label its parts, and test how far a soft pom-pom can fly.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-spoon-catapult-model-steps.webp",
+        "alt": "The spoon catapult in four pictures, left to right: Spark resting the spoon across the bottle cap, Spark stretching the rubber band, Spark pressing the loaded spoon down, and the pom-pom flying toward the target — with Mango watching",
+        "width": 1638,
+        "height": 617,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-spoon-catapult-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark resting the spoon across the bottle cap like a seesaw",
+          "width": 402,
+          "height": 617,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-spoon-catapult-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark stretching the rubber band that holds the spoon handle down",
+          "width": 402,
+          "height": 617,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-spoon-catapult-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark pressing the pom-pom-loaded spoon bowl down against the band",
+          "width": 402,
+          "height": 617,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-spoon-catapult-model-steps-4.webp",
+          "alt": "Step 4 of 4: the pom-pom flying through the air toward the paper target",
+          "width": 402,
+          "height": 617,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Rest the spoon across the bottle cap like a tiny seesaw, bowl end up. Tape the cap to the table so the base cannot wander.",
         "Step 2 — Loop the rubber band over the spoon's handle end and anchor it to the table or a heavy book, so the handle is held down and the bowl end points up.",
