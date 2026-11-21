@@ -1142,3 +1142,39 @@ the owner's numbers (P.1) is a one-line edit.
   1200×630). An ended promotion keeps its page with an "ended" notice — shared links never 404 — while
   drafts and not-yet-started promos stay private. The hub and every live promo are in `/sitemap.xml`, and
   the footer links to `/promos/` while promotions are enabled.
+
+## Content Push API (20 November 2026)
+
+- **What it is.** An authenticated API (`docs/content-push-api.md`, ADR 0006) through which external
+  agents submit finished content packages — article, companion quizzes, hero image, optional video —
+  without codebase access. Submissions land in the `items` store as drafts/in-review, pass the daily
+  pipeline's quality gates server-side, and are published by state change, never by deployment. The git
+  pipeline and `content:validate` are untouched by API items.
+- **Keys.** Agent keys are the existing `/admin/agents/` keys (SHA-256 at rest, disable to revoke).
+  Roles: `content` submits and manages its own items' media, `reviewer` approves/rejects, `promoter`
+  publishes. **Promoter keys for production are issued only by the owner** — that key is the production
+  gate. Staging keys are staging-only and are created against the staging database, never copied from
+  production.
+- **Workflow states.** draft (a gate failed; the failures are named in the item's quality report) →
+  in_review → approved (slot/date assigned: articles take the next world slot, quiz dates are
+  server-assigned and globally unique) → published. Rejection requires a reason. An approved item goes
+  live at its slot via the publish-due job even if nobody calls publish; publish just makes it immediate.
+  **Exception:** an item with a video is approved with NO slot, so publish-due can never take it — it
+  publishes only through the publish endpoint, after its video flips public. Media (hero, video) can
+  change only while an item is draft/in_review; approval freezes what the reviewer saw.
+- **Media.** Hero images and fetched/uploaded videos live in the shared push-media directory
+  (`PUSH_MEDIA_DIR`, default `/opt/sparkkindly/shared/media/push`) — outside releases, backed up with
+  the other shared media. Heroes are served at `/api/push-media/<file>`; only the exact variant names
+  the server writes are served.
+- **Videos.** A pushed video uploads to YouTube **private** at submission and flips to **public** only
+  inside the publish step; both transitions are in the audit log (`content_push.video_*`). The Google
+  app is in Testing mode, so the YouTube consent expires roughly every 7 days: when it lapses, videos
+  sit in the `auth_expired` state ("YouTube authorization expired — owner re-approval needed") and
+  publishes needing the flip are refused. Fix: re-approve the consent the usual way, then re-process
+  the video (`POST /api/agent/content/:id/video` with `{}`) and publish again. A video in `failed` with
+  the "may have reached YouTube" error must be checked on the channel by hand — it is never re-uploaded
+  automatically. A video stuck in `uploading` needs no hand repair: a claim older than 30 minutes is
+  treated as a crashed processor and the next process/publish call takes it over. The site has ONE connected YouTube channel; a package's `brand` is recorded intent, and
+  API videos are NOT mirrored to Facebook/Instagram in v1.
+- **Audit.** Submissions, image/video events, reviews and publishes are in `audit_log` under
+  `content_push.*` with the acting agent's name — that is the record of which key did what.
