@@ -1,8 +1,10 @@
 // Automated content publish for the deploy receiver: imports new library items, refreshes stored hero
-// images, syncs stored article topic links, then syncs stored visual-game rows, in one bundled process (built by `npm run content:publish:build`, shipped inside the release and run by
+// images, refreshes stored article section images, syncs stored article topic links, then syncs stored
+// visual-game rows, in one bundled process (built by `npm run content:publish:build`, shipped inside the release and run by
 // deploy-receive.sh after the release passes its health gate, when the release carries the PUBLISH_CONTENT marker).
 // It performs exactly the steps the owner used to run by hand — scripts/import-starter-content.ts
-// (npm run content:import), scripts/update-hero-images.ts (npm run content:update-heroes) and
+// (npm run content:import), scripts/update-hero-images.ts (npm run content:update-heroes),
+// scripts/update-section-images.ts (npm run content:update-section-images) and
 // scripts/update-game-items.ts (npm run content:update-games) — using the
 // same library functions, the same production guard and the same output lines, so the workflow log reads the same.
 // All steps are idempotent: existing rows are left alone and rows already current are untouched.
@@ -17,6 +19,7 @@ import { readFolder } from '../lib/repository';
 import { seedReference } from '../db/seed';
 import { importLegacy } from '../lib/items/import-legacy';
 import { updateHeroImages } from '../lib/items/update-heroes';
+import { updateSectionImages } from '../lib/items/update-section-images';
 import { updateItemTopics } from '../lib/items/update-topics';
 import { updateGameItems } from '../lib/items/update-games';
 import { assertSafeImportTarget } from '../lib/items/import-guard';
@@ -45,6 +48,9 @@ try {
 
   const heroes = await updateHeroImages(db, articles);
   console.log(`Hero images: ${heroes.updated} updated, ${heroes.unchanged} already current, ${heroes.missing} not in database.`);
+
+  const sectionImages = await updateSectionImages(db, articles);
+  console.log(`Section images: ${sectionImages.updated} updated, ${sectionImages.unchanged} already current, ${sectionImages.missing} not in database, ${sectionImages.skipped} skipped.`);
 
   const topicLinks = await updateItemTopics(db, articles);
   console.log(`Topic links: ${topicLinks.added} added, ${topicLinks.unchanged} already current, ${topicLinks.missing} not in database.`);
