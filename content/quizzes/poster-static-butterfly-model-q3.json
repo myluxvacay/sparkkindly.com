@@ -1,0 +1,47 @@
+{
+  "id": "poster-static-butterfly-model-q3",
+  "scheduledDate": "2029-06-30",
+  "brand": "kids",
+  "setId": "poster-set-static-butterfly-model",
+  "prompt": "Why are the wings made of TISSUE paper?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It is the prettiest"
+    },
+    {
+      "id": "b",
+      "text": "It is so light that the small static pull can lift it"
+    },
+    {
+      "id": "c",
+      "text": "It is waterproof"
+    },
+    {
+      "id": "d",
+      "text": "It is the cheapest"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Static's pull is gentle — only something very light, like tissue, can answer it.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Static electricity | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Static_electricity",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-static-butterfly-model.webp",
+    "alt": "Mango watching a tissue butterfly's wings lift toward a charged balloon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

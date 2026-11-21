@@ -1,0 +1,97 @@
+{
+  "id": "poster-parachute-drop-model",
+  "slug": "parachute-drop-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Parachute Drop: Fall Slowly, Land Softly",
+  "description": "A napkin canopy, four strings and a brave paper-clip passenger. Build a parachute, label its parts, and find out why a big canopy falls so gently.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up supervises all drops and chooses the drop spot — dropping is done from a chair or step they approve.",
+  "hero": {
+    "src": "/images/poster-parachute-drop-model.webp",
+    "alt": "Spark watching a napkin parachute float down with its paper-clip passenger",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Parachute | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Parachute",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Falling, but politely",
+      "paragraphs": [
+        "Drop a paper clip and it plummets. Drop the same clip under a parachute and it floats down like a dandelion seed. Nothing about gravity changed — the parachute simply gives the falling air something big to push against. Build one and watch falling slow down."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The canopy — the napkin or square of light fabric or plastic that catches the air. The lines — four strings, all the same length, that share the passenger's weight evenly. The passenger — a paper clip, washer or tiny toy that the parachute must protect. The vent — the small hole at the canopy's top that lets a little air escape so the parachute doesn't wobble and spill."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A paper napkin or a square cut from a thin plastic bag, four pieces of string the same length, tape, a paper clip or small washer as the passenger, safety scissors, and a ruler for measuring the strings evenly."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Make the canopy. Lay the napkin flat. Tape one string to each corner, pressing the tape down firmly — corners are where parachutes fail.",
+        "Step 2 — Gather the lines. Hold the four free ends together, check they are exactly the same length (uneven lines make tippy parachutes), and tie or tape them to the passenger.",
+        "Step 3 — Pack it loosely. Hold the passenger in one hand and let the canopy drape over it — no careful folding needed; parachutes like to be scruffy.",
+        "Step 4 — Drop! A grown-up approves the spot — the top of the stairs or a chair they hold steady. Hold the parachute high by the canopy's middle, let the passenger dangle, and release. Time the fall with a slow count. Then drop the passenger alone and count again."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Falling things are pulled by gravity but pushed back by the air they shove aside — that push is air resistance, or drag. A wide canopy shoves aside a LOT of air, so the push-back nearly matches gravity's pull, and the fall slows to a gentle drift. It is why real parachutes are enormous: a person needs a canopy the size of a room to catch enough air. The little vent hole matters too — it lets trapped air leak out steadily so the canopy floats straight instead of rocking and spilling its air."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why must all four strings be exactly the same length?",
+        "2. Predict: a canopy twice as big — does the passenger fall faster, slower, or the same? How could you test fairly?"
+      ]
+    }
+  ],
+  "takeaway": "A parachute falls slowly because its wide canopy catches so much air that air resistance nearly balances gravity's pull.",
+  "fiction": false,
+  "materials": [
+    "Paper napkin or square of thin plastic bag (canopy)",
+    "Four equal lengths of string (lines)",
+    "Tape",
+    "Paper clip or washer (passenger)",
+    "Safety scissors and ruler"
+  ],
+  "supervision": "A grown-up supervises every drop and chooses the drop spot; children never climb to drop from height themselves.",
+  "safetyNotes": [
+    "Drops happen from a spot a grown-up approves and controls — the top of stairs with a grown-up present, or a chair a grown-up holds. Never drop from windows, balconies a child can climb to, or furniture a child stands on alone.",
+    "Keep the drop zone clear: nobody stands underneath a falling passenger, even a paper clip.",
+    "Plastic-bag canopies: use only with a grown-up present, and store bags away afterwards — plastic bags are never toys for younger children and never go near faces."
+  ],
+  "screenFreeExtension": "Canopy trials: make a second parachute with a bigger napkin and race the two, counting the fall out loud — record which canopy wins three drops in a row."
+}

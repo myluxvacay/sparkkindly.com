@@ -1,0 +1,47 @@
+{
+  "id": "poster-static-butterfly-model-q2",
+  "scheduledDate": "2029-06-29",
+  "brand": "kids",
+  "setId": "poster-set-static-butterfly-model",
+  "prompt": "How do you put static charge ON the balloon?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Wash it"
+    },
+    {
+      "id": "b",
+      "text": "Freeze it"
+    },
+    {
+      "id": "c",
+      "text": "Rub it on hair or a woolly jumper"
+    },
+    {
+      "id": "d",
+      "text": "Sing to it"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Rubbing transfers tiny electric charges onto the balloon's surface.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Static electricity | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Static_electricity",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-static-butterfly-model.webp",
+    "alt": "Mango watching a tissue butterfly's wings lift toward a charged balloon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

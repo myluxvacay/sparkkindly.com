@@ -1,0 +1,47 @@
+{
+  "id": "poster-tornado-in-a-bottle-model-q4",
+  "scheduledDate": "2029-08-02",
+  "brand": "kids",
+  "setId": "poster-set-tornado-in-a-bottle-model",
+  "prompt": "What real storm has the same vortex shape?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A rainbow"
+    },
+    {
+      "id": "b",
+      "text": "A tornado"
+    },
+    {
+      "id": "c",
+      "text": "A snowflake"
+    },
+    {
+      "id": "d",
+      "text": "A heatwave"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A tornado is a giant vortex of spinning air — your bottle shows its shape in water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Vortex | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Vortex",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-tornado-in-a-bottle-model.webp",
+    "alt": "Spark holding a bottle tornado with a swirling vortex inside",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

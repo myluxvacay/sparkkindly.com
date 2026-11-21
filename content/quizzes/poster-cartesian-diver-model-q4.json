@@ -1,0 +1,47 @@
+{
+  "id": "poster-cartesian-diver-model-q4",
+  "scheduledDate": "2029-07-21",
+  "brand": "kids",
+  "setId": "poster-set-cartesian-diver-model",
+  "prompt": "Why must the diver be tuned to ONLY-JUST float at the start?",
+  "options": [
+    {
+      "id": "a",
+      "text": "For luck"
+    },
+    {
+      "id": "b",
+      "text": "So a small change in the bubble is enough to tip it between floating and sinking"
+    },
+    {
+      "id": "c",
+      "text": "To save clay"
+    },
+    {
+      "id": "d",
+      "text": "So it looks neat"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Balanced at the edge, a tiny squeeze makes the difference between floating and sinking — that's the control.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Cartesian diver | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cartesian_diver",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-cartesian-diver-model.webp",
+    "alt": "Spark squeezing a bottle to make the little diver sink",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

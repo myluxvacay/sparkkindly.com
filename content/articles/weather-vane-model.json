@@ -1,0 +1,104 @@
+{
+  "id": "poster-weather-vane-model",
+  "slug": "weather-vane-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Weather Vane and Cup Spinner: Which Way, How Fast?",
+  "description": "One model answers two weather questions: a vane that points where the wind comes FROM, and spinning cups that race faster as the wind strengthens. Build a pocket weather station.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up handles pins and hot glue and supervises the outdoor station.",
+  "hero": {
+    "src": "/images/poster-weather-vane-model.webp",
+    "alt": "Spark and Mango with a weather vane arrow and spinning cup anemometer on a garden post",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Anemometer | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Anemometer",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Weather vane | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Weather_vane",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Two questions, one station",
+      "paragraphs": [
+        "Every weather report answers two wind questions: which way is it blowing, and how hard? Professional stations use a vane for the first and an anemometer for the second. This model builds BOTH on one post — and once it stands in your garden, you are running a weather station."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The vane arrow — a card arrow with a big tail fin; the tail catches the wind and swings the arrow to point INTO the wind, showing where it comes FROM. The cups — four paper cups fixed sideways on crossed arms; wind fills them unevenly and spins the cross. The axle — a pin or skewer both instruments turn on, freely. The compass base — N, E, S, W marked on the stand, so 'the arrow points west' means something."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "Two straws or thin sticks, four small paper cups, card for the arrow and tail, a long pin or wooden skewer, a bead, a pencil with an eraser or a garden post, tape and glue (grown-up's), and a compass or phone to find north once, at set-up."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Build the cups cross. Tape two straws into an X. Fix a cup at each of the four ends, all facing the SAME way around the circle — every cup's open side pointing clockwise. This sameness is the whole secret.",
+        "Step 2 — Build the vane. Cut a card arrow: a triangle point at one end, a big rectangle tail at the other, fixed along a straw. The tail must be much bigger than the point — it is the sail the wind steers by.",
+        "Step 3 — Mount both on the axle. A grown-up pushes the pin or skewer through the cups cross, a bead, and the vane straw, into the post's eraser top — everything must spin and swing FREELY. Rubbing is the enemy; add bead spacers until both turn at a breath.",
+        "Step 4 — Set up and read. A grown-up fixes the post outdoors and marks N/E/S/W on the base using a real compass once. Now read your station: the vane's arrow points to where the wind comes FROM (a west wind blows from the west). Count cup spins in 30 seconds: more spins, stronger wind. Log both, morning and evening, like a meteorologist."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "The vane works because wind pushes hardest on the biggest surface: the tail. The wind shoves the tail downwind until the arrow settles pointing straight into the wind — minimum push, perfect balance. The cups spin because wind fills the open cup on one side (a strong push) while the cup on the other side presents its rounded back (a weak push). Uneven push, again — the same trick as the pinwheel — makes rotation. Meteorologists calibrate cup spins against real wind speed; your count is a honest estimate in 'spins per 30 seconds', a unit of your own station."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. A 'west wind' blows FROM the west. If your vane points west and you face the same way as the arrow, is the wind in your face or on your back?",
+        "2. Why do you think weather watchers log wind at the same times every day instead of whenever they feel like it?"
+      ]
+    }
+  ],
+  "takeaway": "A vane's big tail makes its arrow point into the wind (showing where wind comes from), and cups spin faster as wind strengthens — direction and speed from one garden post.",
+  "fiction": false,
+  "materials": [
+    "Two straws or thin sticks",
+    "Four small paper cups",
+    "Card for arrow and tail fin",
+    "Long pin or wooden skewer, plus beads (spacers)",
+    "Pencil with eraser or a garden post",
+    "Tape and glue (grown-up's)",
+    "Compass for one-time set-up"
+  ],
+  "supervision": "A grown-up handles the pin/skewer and glue, fixes the station outdoors, and supervises set-up.",
+  "safetyNotes": [
+    "Pins and skewers are sharp: grown-ups do all pushing and mounting, points are capped with a bead or cork when carried, and the station is mounted where nobody can walk into it at eye height.",
+    "The station lives in a garden or yard away from play paths and roads — never set up near traffic to 'find better wind'.",
+    "In stormy weather the station is observed from indoors or the doorway — nobody goes out to read instruments in thunder, lightning or flying-debris wind."
+  ],
+  "screenFreeExtension": "Weather log week: read and record vane direction and cup spins at breakfast and tea-time for seven days in a notebook, then hunt for a pattern — does your wind have a favourite direction?"
+}

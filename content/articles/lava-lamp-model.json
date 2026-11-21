@@ -1,0 +1,97 @@
+{
+  "id": "poster-lava-lamp-model",
+  "slug": "lava-lamp-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Lava Lamp: Blobs That Dance",
+  "description": "Oil, water and one fizzy tablet make blobs that rise, bloom and sink in slow motion. Build a table-top lava lamp and learn why the blobs can't decide where to live.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up adds the fizzy tablet pieces and supervises — tablets are not sweets and are handled by grown-ups.",
+  "hero": {
+    "src": "/images/poster-lava-lamp-model.webp",
+    "alt": "Spark and Mango watching coloured blobs rise and fall in a bottle lava lamp",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Lava lamp | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lava_lamp",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A lamp with no lightbulb",
+      "paragraphs": [
+        "A real lava lamp needs heat and patience. Yours needs neither — just oil, water and fizz. Within seconds of dropping in a tablet piece, coloured blobs begin a slow, endless dance: up, bloom, down, again. It is the most relaxing science model in this whole collection."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The oil — the clear golden ocean that fills most of the bottle; it never mixes with water. The water — coloured, sitting in a layer at the bottom, denser than the oil. The fizz — pieces of an effervescent tablet, which make bubbles of gas when they meet water. The bottle — tall and clear, so the whole dance is visible. A torch underneath is the stage light."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A clear plastic bottle or tall glass, cooking oil, water, food colouring, effervescent tablets (the vitamin or antacid kind — a grown-up keeps and handles them), and a torch or phone light for the stage lighting."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Pour the water layer. Fill the bottle about a quarter full with water and stir in food colouring until it is deep and jewel-bright.",
+        "Step 2 — Add the oil, slowly, down the side. It will slide over the water and settle on top — oil and water never mix, and oil is lighter, so the layers sort themselves.",
+        "Step 3 — A grown-up breaks a tablet into quarters and drops ONE piece in. Watch the bottom: fizz! Bubbles form in the water, grab blobs of coloured water, and carry them up through the oil like tiny elevators.",
+        "Step 4 — Watch the top. When a blob reaches the surface, its bubbles pop and escape — and the blob, suddenly heavier again, sinks slowly back down to reload. Add another piece whenever the dancing slows."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Two rules run this show. First: oil and water never mix, and water is denser, so water stays below. Second: the tablet's fizz makes gas bubbles, and a blob of water wearing a coat of bubbles becomes LIGHTER overall than the oil around it — so it floats up. At the top the bubbles pop, the coat is gone, the blob is dense water again, and down it sinks. Rise, pop, sink, repeat — a density elevator that runs until the fizz runs out."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why does the blob rise only while it is wearing bubbles?",
+        "2. What do you think happens if you drop the tablet into a bottle of ONLY oil? Predict, then ask your grown-up if you may test it."
+      ]
+    }
+  ],
+  "takeaway": "Fizz bubbles coat blobs of coloured water and make them lighter than the oil, so they rise; when the bubbles pop at the top, the blobs are dense again and sink.",
+  "fiction": false,
+  "materials": [
+    "Clear plastic bottle or tall glass",
+    "Cooking oil",
+    "Water and food colouring",
+    "Effervescent tablets (grown-up handles them)",
+    "Torch or phone light"
+  ],
+  "supervision": "A grown-up handles the tablets, adds every piece, and supervises the lamp from start to finish.",
+  "safetyNotes": [
+    "Effervescent tablets are NOT sweets — they may be medicine. A grown-up keeps them in their packet, breaks and drops every piece, and they are never tasted or handled by children.",
+    "The lava lamp is a model, never a drink: it contains oil and tablet water. Label the bottle LAVA LAMP and keep it away from cups and younger children.",
+    "Shine the torch from under or beside the bottle, never into anyone's eyes, and wipe oil drips at once — oil on floors is a slipping hazard."
+  ],
+  "screenFreeExtension": "Blob meditation minute: set the lamp where the family can see it, start a fresh fizz, and everyone watches in silence for one whole minute — then each person describes the best blob they saw."
+}

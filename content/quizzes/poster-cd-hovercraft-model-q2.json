@@ -1,0 +1,47 @@
+{
+  "id": "poster-cd-hovercraft-model-q2",
+  "scheduledDate": "2029-07-11",
+  "brand": "kids",
+  "setId": "poster-set-cd-hovercraft-model",
+  "prompt": "Why does the hovercraft glide so far with a tiny push?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The table is sloped"
+    },
+    {
+      "id": "b",
+      "text": "Friction nearly disappears when the surfaces barely touch"
+    },
+    {
+      "id": "c",
+      "text": "The balloon pulls it"
+    },
+    {
+      "id": "d",
+      "text": "CDs are magic"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "With the CD floating on air, almost no friction rubs against the glide to slow it.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Hovercraft | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hovercraft",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-cd-hovercraft-model.webp",
+    "alt": "Spark and Mango watching a balloon-powered CD hovercraft glide across a table",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

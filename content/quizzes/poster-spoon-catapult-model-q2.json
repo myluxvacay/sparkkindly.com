@@ -1,0 +1,47 @@
+{
+  "id": "poster-spoon-catapult-model-q2",
+  "scheduledDate": "2029-06-01",
+  "brand": "kids",
+  "setId": "poster-set-spoon-catapult-model",
+  "prompt": "Where is the energy stored before you let go?",
+  "options": [
+    {
+      "id": "a",
+      "text": "In the pom-pom"
+    },
+    {
+      "id": "b",
+      "text": "In the table"
+    },
+    {
+      "id": "c",
+      "text": "In the stretched rubber band"
+    },
+    {
+      "id": "d",
+      "text": "In the bottle cap"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Stretching the rubber band stores potential energy, ready to snap back.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Catapult | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Catapult",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-spoon-catapult-model.webp",
+    "alt": "Spark launching a soft pom-pom from a spoon catapult",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-seed-jar-model-q2",
+  "scheduledDate": "2029-09-05",
+  "brand": "kids",
+  "setId": "poster-set-seed-jar-model",
+  "prompt": "Which part grows FIRST, and which way?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The shoot, up"
+    },
+    {
+      "id": "b",
+      "text": "The leaves, sideways"
+    },
+    {
+      "id": "c",
+      "text": "The root, down"
+    },
+    {
+      "id": "d",
+      "text": "The flower, up"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The root comes first and grows down — the plant must find water before anything else.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Germination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Germination",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-seed-jar-model.webp",
+    "alt": "Mango watching a bean seed sprout roots and a shoot inside a glass jar",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-volcano-model-q1",
+  "scheduledDate": "2029-08-11",
+  "brand": "kids",
+  "setId": "poster-set-volcano-model",
+  "prompt": "What is the VENT of a volcano?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The bowl at the top"
+    },
+    {
+      "id": "b",
+      "text": "The pipe that magma travels up through"
+    },
+    {
+      "id": "c",
+      "text": "The underground store of molten rock"
+    },
+    {
+      "id": "d",
+      "text": "The lava on the ground"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The vent is the channel from the magma chamber to the surface — the volcano's pipe.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Volcano | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Volcano",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-volcano-model.webp",
+    "alt": "Spark and Mango with a cutaway volcano model erupting foam from its crater",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

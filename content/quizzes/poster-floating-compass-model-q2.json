@@ -1,0 +1,47 @@
+{
+  "id": "poster-floating-compass-model-q2",
+  "scheduledDate": "2029-08-28",
+  "brand": "kids",
+  "setId": "poster-set-floating-compass-model",
+  "prompt": "Why must the strokes with the magnet all go the SAME direction?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It is faster"
+    },
+    {
+      "id": "b",
+      "text": "One-way stroking lines up the needle's tiny magnetic domains into order"
+    },
+    {
+      "id": "c",
+      "text": "It polishes the needle"
+    },
+    {
+      "id": "d",
+      "text": "It makes the needle lighter"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Consistent stroking persuades the microscopic domains to point one way — that is what magnetises the steel.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Compass | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Compass",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-floating-compass-model.webp",
+    "alt": "Spark watching a floating cork compass needle point north in a bowl of water",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

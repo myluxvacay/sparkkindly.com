@@ -1,0 +1,99 @@
+{
+  "id": "poster-simple-machines-model",
+  "slug": "simple-machines-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Simple Machines: One Cardboard Board, Four Superpowers",
+  "description": "Build a cardboard model that holds four simple machines at once — a lever, a pulley, a wheel and axle, and an inclined plane — and learn the job each one does.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up helps with cutting and hot glue; the lifting tests are kid-powered.",
+  "hero": {
+    "src": "/images/poster-simple-machines-model.webp",
+    "alt": "Spark and Mango with a cardboard board showing a lever, a pulley, a wheel and axle, and a ramp",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Simple machine | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Simple_machine",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Four machines hiding in one board",
+      "paragraphs": [
+        "Some tools are so simple they hide in plain sight. A ramp, a seesaw, a flagpole rope — each one is a simple machine: a device that changes a push or a pull so a job gets easier. Build this one cardboard board and you will own four of them at once, ready to test."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The lever — a stiff ruler or strip of wood that rests across a block. The block it rests on is the fulcrum. The thing you lift is the load, and the push you give the other end is the effort.",
+        "The pulley — a spool or cotton reel that spins on a pin, with string running over it and a small load tied to one end. The inclined plane — a smooth cardboard ramp leaning on a stack of books. The wheel and axle — a toy wheel fixed to a pencil, so the wheel and the pencil turn together as one piece."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A big piece of stiff cardboard for the base board, a ruler or flat stick, a small block or eraser for a fulcrum, a cotton reel or spool, string, a pencil, a toy wheel or bottle cap, cardboard strips for a ramp, a stack of books, tape, safety scissors, and small loads to lift — toy bricks, coins or a toy car."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Build the lever. Rest the ruler across the block so it tips like a seesaw. Put a toy brick on the low end.",
+        "Step 2 — Test the effort. Press the high end down with one finger. The brick rises. Slide the block closer to the brick and press again — it feels even easier. Moving the fulcrum trades a long push for a lighter one.",
+        "Step 3 — Rig the pulley. Push a pin or pencil through the spool and fix it above the board's edge. Run string over the spool, tie your load to one end, and pull down on the other. The load rises — the pulley changed the direction of your pull.",
+        "Step 4 — Roll the ramp and the wheel. Push a toy car up the ramp instead of lifting it straight up: slower, but easier. Then spin the wheel-and-axle and feel how the big wheel turns the thin pencil with barely any effort."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "No simple machine creates energy — each one trades. A lever trades a long, easy push for a short, strong lift. A ramp trades a longer path for a gentler climb. A wheel and axle trades a big turn for a powerful twist. Engineers call this mechanical advantage, and it is the reason a child can lift a brick that fingers alone could not."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Which of the four machines helps you every single day without you noticing? Hunt for one at home and report back.",
+        "2. If you had to lift a very heavy piano up one step, which machine would you pick first — and what would you trade away?"
+      ]
+    }
+  ],
+  "takeaway": "Levers, pulleys, ramps and wheel-and-axles are simple machines: each one trades distance for force, so a small effort can move a big load.",
+  "fiction": false,
+  "materials": [
+    "Stiff cardboard base board",
+    "Ruler or flat stick (lever arm) and a small block (fulcrum)",
+    "Cotton reel or spool, pin or pencil, and string (pulley)",
+    "Cardboard strips and a stack of books (ramp)",
+    "Toy wheel or bottle cap fixed to a pencil (wheel and axle)",
+    "Tape, safety scissors, and small loads such as toy bricks or coins"
+  ],
+  "supervision": "A grown-up helps with cutting cardboard and any pin or hot-glue steps, and stays for the lifting tests.",
+  "safetyNotes": [
+    "Use safety scissors; a grown-up does any craft-knife or hot-glue work — never the child.",
+    "Keep loads light: toy bricks and coins only. A simple machine multiplies force, so never put fingers under a load being lifted.",
+    "Pins and pencils are sharp — carry them point-down, store them point-first into a cork or eraser when finished, and keep them away from younger children."
+  ],
+  "screenFreeExtension": "Machine hunt: walk through your home with a notebook and find one real example of each of the four machines (scissors count twice!). Draw each one and label its parts."
+}

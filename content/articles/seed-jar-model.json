@@ -1,0 +1,97 @@
+{
+  "id": "poster-seed-jar-model",
+  "slug": "seed-jar-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Seed Jar: Watch a Root Wake Up",
+  "description": "A bean, a jar and damp paper: the oldest science model in the world. Watch a seed split, root and shoot over one week, and draw every day of the story.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up sets up the jar with the child and supervises hand-washing and the daily check-ins.",
+  "hero": {
+    "src": "/images/poster-seed-jar-model.webp",
+    "alt": "Mango watching a bean seed sprout roots and a shoot inside a glass jar",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Germination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Germination",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A week-long story in a jar",
+      "paragraphs": [
+        "Plants start their lives underground where nobody can see. This model fixes that: a bean pressed against glass, where every secret stage of waking up happens in full view. It takes a week, it costs almost nothing, and it has been a child's first science model for hundreds of years — because it works every single time."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The seed — a dried bean: a baby plant packed in a coat, carrying its own lunch. The coat — the seed's skin, which must drink water and split before anything can grow. The root — the first part out, always growing DOWN to find water. The shoot — the stem that follows, growing UP to find light. The jar and damp paper — the seed's see-through soil, holding it still and keeping it moist."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A clear glass jar or plastic cup, paper towels or blotting paper, water, and two or three large dried beans (butter beans or kidney beans work beautifully). A notebook and pencil for the daily drawings."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Line the jar. Roll the paper towel into a tube that fits snugly inside the jar, or scrunch paper loosely into it. Pour in water until the paper is damp all the way up — wet, not swimming.",
+        "Step 2 — Plant against the glass. Push the beans between the paper and the glass, halfway up, so you can see them clearly. Two or three beans, spaced around the jar — seeds are individuals, and one may be a slowcoach.",
+        "Step 3 — The daily watch. Put the jar somewhere bright but not in baking sun. Every day, check the paper is still damp (add a spoon of water if it dries), and DRAW your bean. Day 1–2: it swells. Day 2–3: the coat splits and a white root tip peeks out — always pointing down.",
+        "Step 4 — The great turn. By day 4–5 the shoot appears and bends UP toward the light, even though it started under the paper. Leaves unfold by the week's end. Your drawings, laid in a row, are a film of a plant being born."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "A seed wakes — germinates — when water, warmth and air arrive together. First it drinks and swells; then the root bursts out, and the root always grows down, sensing gravity, because a plant must find water before anything else. The shoot does the opposite trick, growing up toward light so its leaves can start making food from sunshine. Until the leaves open, the baby plant eats the lunch packed inside the seed — which is why the seed halves shrink as the plant grows."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. The root grew down and the shoot grew up, inside a dark jar with no instructions. How does each part know which way to go?",
+        "2. What do you think would happen to a bean kept in a dry jar? What is the very first thing a seed needs?"
+      ]
+    }
+  ],
+  "takeaway": "With water, warmth and air, a seed drinks, splits, sends a root down toward water and a shoot up toward light — and a glass jar lets you watch every step.",
+  "fiction": false,
+  "materials": [
+    "Clear glass jar or plastic cup",
+    "Paper towels or blotting paper",
+    "Water",
+    "Two or three large dried beans",
+    "Notebook and pencil"
+  ],
+  "supervision": "A grown-up sets up the jar with the child and supervises hand-washing and daily watering.",
+  "safetyNotes": [
+    "Beans for growing are not beans for eating: dried beans from the packet are never tasted raw (some are harmful uncooked), and experiment beans never go into cooking pots.",
+    "Wash hands with soap after handling seeds, damp paper and any mouldy beans; if a bean goes mouldy, a grown-up bins it and the jar gets a hot wash.",
+    "Glass jars stay on a stable surface away from the table's edge; a plastic cup is the better choice for the youngest builders."
+  ],
+  "screenFreeExtension": "Bean diary strip: draw your bean every morning for a week on a long strip of paper, then fold it into a concertina book — the whole birth of a plant, in your pocket."
+}

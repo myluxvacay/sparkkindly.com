@@ -1,0 +1,97 @@
+{
+  "id": "poster-paper-bridge-model",
+  "slug": "paper-bridge-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Paper Bridge: How Strong Is One Sheet?",
+  "description": "One sheet of paper, two books, and a pile of coins. Test a flat bridge, then fold the same paper and test again — the difference will surprise you.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up counts coins and supervises the testing; little engineers do the building.",
+  "hero": {
+    "src": "/images/poster-paper-bridge-model.webp",
+    "alt": "Mango watching a folded paper bridge hold a stack of coins between two books",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Bridge | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bridge",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A bridge made of almost nothing",
+      "paragraphs": [
+        "Paper is floppy. Everyone knows that. But bridge engineers know a secret: shape can make a weak material strong. This model tests the same single sheet of paper two ways — flat, then folded — and counts exactly how much stronger shape makes it."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The span — the gap between the two books, the 'river' your bridge must cross. The deck — the paper itself, the road the load sits on. The supports — the two books, like the banks of a river. The load — coins added one at a time until the bridge gives up. The fold — the zigzag ridges you will add, called corrugation."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "Two books the same height, two sheets of paper from the same pad, a ruler, and a pile of coins (or washers) to use as test weights. A notebook to record your results like a real engineer."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Set the span. Place the books with a gap about as wide as your hand. Lay one flat sheet across them.",
+        "Step 2 — Test the flat bridge. Add coins one at a time, gently, in the middle. Count how many it holds before it sags into the gap. Write the number down.",
+        "Step 3 — Fold the second sheet. Fold it back and forth like a fan, making zigzag ridges from end to end. Lay it across the same gap, ridges running across the span.",
+        "Step 4 — Test the folded bridge. Add coins the same way, in the middle. Count again — most builders are amazed. Same paper, same span, far more strength."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "A flat sheet bends easily because it is thin in the direction of the load. Folding zigzags makes the paper deep and ridged — and deep shapes resist bending far better than thin ones. The ridges spread the load out and hold each other up. It is exactly why cardboard boxes are made with a wavy layer inside, and why real steel bridge decks and roof panels are folded into ridges too."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why did the SAME paper hold more coins after folding? What changed — the paper, or its shape?",
+        "2. Where can you find zigzag-folded material hiding in your house right now? (Hint: check a cardboard box's edge.)"
+      ]
+    }
+  ],
+  "takeaway": "Folding paper into zigzag ridges makes the same sheet many times stronger — shape, not just material, decides how much a bridge can hold.",
+  "fiction": false,
+  "materials": [
+    "Two books of equal height (supports)",
+    "Two sheets of paper from the same pad",
+    "Ruler (to set the same span every test)",
+    "Coins or washers (counted test loads)",
+    "Notebook and pencil (engineering log)"
+  ],
+  "supervision": "A grown-up supervises testing and helps keep the span and coin placement the same for a fair test.",
+  "safetyNotes": [
+    "Coins and washers are small parts — keep them away from children under 3, and wash hands after handling money.",
+    "Paper edges can give paper cuts — fold slowly and smooth ridges with the flat of your hand, not a fingertip run along the edge.",
+    "Build on a table so collapsing bridges drop coins onto the table, not the floor where bare feet walk."
+  ],
+  "screenFreeExtension": "Bridge championship: challenge a family member — each of you folds one sheet any way you like, then test both bridges with coins and crown the strongest design in your engineering log."
+}

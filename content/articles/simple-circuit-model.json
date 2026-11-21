@@ -1,0 +1,98 @@
+{
+  "id": "poster-simple-circuit-model",
+  "slug": "simple-circuit-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Simple Circuit: Light a Bulb with a Battery",
+  "description": "A battery, two wires, a small bulb and a paper-clip switch on a cardboard base. Build a real working circuit, label every part, and learn what makes the loop complete.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up builds alongside and supervises throughout — batteries and wires are a team project, always.",
+  "hero": {
+    "src": "/images/poster-simple-circuit-model.webp",
+    "alt": "Spark and Mango with a cardboard circuit model: battery, wires, glowing bulb and a paper-clip switch",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Electric circuit | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Electric_circuit",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A loop that lights up",
+      "paragraphs": [
+        "Every torch, toy and tablet runs on the same idea you are about to build: electricity travelling in a complete loop. Break the loop anywhere and everything stops. Complete it, and a bulb glows. This model puts the whole loop on one cardboard base where you can see — and touch — every part."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The battery — the power source. It has two ends, called terminals: one marked + and one marked −. The wires — the roads the electricity travels on, metal inside, plastic outside. The bulb — the load: the part that uses the electricity and turns it into light. The switch — a paper clip that opens and closes a gap in the loop. Open gap, no loop, no light. The base — cardboard that holds everything still so connections stay tight."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "One AA or C battery (a grown-up provides it — from a drawer, never from inside a device you still use), a small torch bulb in a holder or an LED with long legs (a grown-up chooses), two short insulated wires with stripped ends (a grown-up prepares them), a large paper clip, two brass paper fasteners, tape, and a cardboard base."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Fix the parts to the base. Tape the battery at one end of the cardboard. Set the bulb holder in the middle. Push the two brass fasteners through the card near the other end, a finger-width apart — these are your switch posts.",
+        "Step 2 — Wire the loop. Connect one wire from the battery's + end to the bulb holder. Connect a second wire from the bulb holder to one switch post. Connect the paper clip loosely on the other switch post so it can swing.",
+        "Step 3 — Close the last gap. Run a final wire from the free switch post back to the battery's − end. Now swing the paper clip so it touches BOTH posts. The bulb lights! The loop is complete — electricity can travel all the way around.",
+        "Step 4 — Be a scientist about it. Open the switch: dark. Loosen one wire: dark. Reverse the battery with an LED: dark — LEDs are one-way streets. Every failure tells you the same law: no complete loop, no flow."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Electricity in a circuit is a flow of tiny particles called electrons through the metal wires. The battery is a pump: its two ends push and pull the flow around the loop. The bulb's filament (or the LED) resists the flow, and that resistance turns electrical energy into light and a little heat. A switch is simply a bridge you can lift — lift it, and the road is broken. One battery like this is gentle and low-powered, which is exactly why it is the safe way to learn. Wall sockets are a completely different, dangerous world — circuits in this project NEVER plug in, ever."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why does the bulb go out the instant ANY single wire comes loose — even one far from the bulb?",
+        "2. A torch, a doorbell and a toy car all hide a circuit. Pick one and describe where its battery, switch and load are hiding."
+      ]
+    }
+  ],
+  "takeaway": "A circuit is a complete loop: battery, wires, bulb and switch. Close the loop and electricity flows and the bulb lights; break it anywhere and everything stops.",
+  "fiction": false,
+  "materials": [
+    "Cardboard base",
+    "One AA or C battery (grown-up supplies it)",
+    "Small torch bulb in a holder, or an LED (grown-up chooses)",
+    "Two short insulated wires with stripped ends (grown-up prepares)",
+    "Large paper clip and two brass paper fasteners (switch)",
+    "Tape"
+  ],
+  "supervision": "A grown-up builds alongside, prepares all wires, supplies the battery, and supervises the whole build and every test.",
+  "safetyNotes": [
+    "BATTERIES ONLY — this circuit never plugs into a wall socket, a charger or any mains electricity, in any way, ever. Wall power is dangerous; battery power for this model is not.",
+    "Use only the single AA or C battery listed. Never connect a wire directly from one battery end to the other and leave it (a short circuit) — it heats the battery and wire; if anything feels warm, disconnect and tell your grown-up.",
+    "Batteries are not food and not toys for younger children: never put batteries in mouths, and if a battery leaks, leaks are a grown-up's job to clean up — do not touch the white crust."
+  ],
+  "screenFreeExtension": "Circuit detective walk: with a grown-up, tour your home and list five things that hide a circuit (torch, doorbell, toy, remote…). For each, name its battery, switch and load out loud."
+}

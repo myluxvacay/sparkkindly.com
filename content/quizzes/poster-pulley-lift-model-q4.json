@@ -1,0 +1,47 @@
+{
+  "id": "poster-pulley-lift-model-q4",
+  "scheduledDate": "2029-06-07",
+  "brand": "kids",
+  "setId": "poster-set-pulley-lift-model",
+  "prompt": "In this model, what is the EFFORT?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The paper cup"
+    },
+    {
+      "id": "b",
+      "text": "The spool spinning"
+    },
+    {
+      "id": "c",
+      "text": "Your hand pulling down on the string"
+    },
+    {
+      "id": "d",
+      "text": "The toy bricks"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The effort is the force you apply — your downward pull on the free end of the string.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Pulley | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pulley",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-pulley-lift-model.webp",
+    "alt": "Spark and Mango lifting a toy brick in a paper cup with a spool pulley",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

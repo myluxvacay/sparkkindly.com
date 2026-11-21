@@ -1,0 +1,47 @@
+{
+  "id": "poster-floating-compass-model-q3",
+  "scheduledDate": "2029-08-29",
+  "brand": "kids",
+  "setId": "poster-set-floating-compass-model",
+  "prompt": "Why does the needle float on water instead of resting on the table?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Needles are shy"
+    },
+    {
+      "id": "b",
+      "text": "Water gives almost no friction, so the Earth's gentle pull can turn it"
+    },
+    {
+      "id": "c",
+      "text": "It looks prettier"
+    },
+    {
+      "id": "d",
+      "text": "The table is magnetic"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "On a table, friction wins. Floating frees the needle so even a weak force can swing it.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Compass | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Compass",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-floating-compass-model.webp",
+    "alt": "Spark watching a floating cork compass needle point north in a bowl of water",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

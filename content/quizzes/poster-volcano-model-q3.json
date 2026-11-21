@@ -1,0 +1,47 @@
+{
+  "id": "poster-volcano-model-q3",
+  "scheduledDate": "2029-08-13",
+  "brand": "kids",
+  "setId": "poster-set-volcano-model",
+  "prompt": "In the model, what creates the erupting push?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A hidden pump"
+    },
+    {
+      "id": "b",
+      "text": "Carbon dioxide gas made when vinegar reacts with bicarbonate of soda"
+    },
+    {
+      "id": "c",
+      "text": "The tray shaking"
+    },
+    {
+      "id": "d",
+      "text": "Food colouring expanding"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Acid plus base makes CO2 gas — thousands of bubbles that push the foam up the vent and out.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Volcano | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Volcano",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-volcano-model.webp",
+    "alt": "Spark and Mango with a cutaway volcano model erupting foam from its crater",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

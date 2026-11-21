@@ -1,0 +1,97 @@
+{
+  "id": "poster-balloon-rocket-model",
+  "slug": "balloon-rocket-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Balloon Rocket: Zoom on a String",
+  "description": "A balloon, a straw and a long string make a rocket that zooms across the room. Build it, label the parts, and discover the push that moves real rockets too.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up inflates the balloon, anchors the string, and runs every launch.",
+  "hero": {
+    "src": "/images/poster-balloon-rocket-model.webp",
+    "alt": "Spark and Mango watching a balloon rocket zoom along a string",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Newton's laws of motion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A rocket that runs on breath",
+      "paragraphs": [
+        "Real rockets do not push against the ground or the air — they push against their own exhaust, and the exhaust pushes back. Your balloon rocket proves it on a string across the room: air rushes out one way, the rocket zooms the other."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The engine — the balloon itself: a stretchy tank of squeezed air. The nozzle — the balloon's neck, where the air escapes. The guide — a drinking straw taped to the balloon, threaded on the string. The track — a long string stretched tight and level between two chairs, which keeps the rocket's flight straight."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "One long balloon if you have it (a round one works too), a drinking straw, a long piece of string or smooth wool (3–5 metres), tape, and two chairs. Plus a grown-up: the balloon is theirs to inflate, and the string is theirs to anchor."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Lay the track. Thread the string through the straw FIRST — this order matters — then tie or tape the string tightly between two chairs so it is level and taut.",
+        "Step 2 — Mount the rocket. Your grown-up inflates the balloon and pinches the neck shut (no tying — this rocket must breathe out). Tape the straw to the balloon's side, one piece of tape near each end of the straw.",
+        "Step 3 — To the launch pad. Slide the balloon to one end of the string, neck pointing back toward the start. Everyone stands to the side. Count down together…",
+        "Step 4 — Launch! Let go of the neck. Air whooshes out backwards, and the balloon rockets forwards along the string. Try a bigger breath and a smaller one — measure how far each flies with footsteps."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "This is Newton's third law, the rocket law: every action has an equal and opposite reaction. The balloon pushes air out backwards (the action), so the air pushes the balloon forwards (the reaction). The push lasts only while air is escaping — when the balloon is empty, the push stops, and friction on the string slows the rocket to a halt. Real rockets work exactly this way, carrying their own push with them into space where there is nothing else to push on."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why does the rocket stop when the balloon runs out of air — what runs out, the push or the track?",
+        "2. A longer balloon holds more air. Predict: does it fly further, faster, or both? Test it and see."
+      ]
+    }
+  ],
+  "takeaway": "A balloon rocket flies by Newton's third law: air pushed out backwards pushes the balloon forwards — the same law that moves real rockets.",
+  "fiction": false,
+  "materials": [
+    "One balloon (long if possible) — inflated by a grown-up",
+    "Drinking straw",
+    "Long string or smooth wool, 3–5 metres",
+    "Tape",
+    "Two chairs (string anchors)"
+  ],
+  "supervision": "A grown-up inflates the balloon, anchors the string, and supervises every launch.",
+  "safetyNotes": [
+    "BALLOON RULES: grown-ups inflate balloons — never children. If a balloon pops, collect every piece immediately: burst pieces are a serious choking hazard for babies, toddlers and pets.",
+    "Anchor the string at chair height, never across a doorway or walkway where someone could walk into it, and never at neck height across a path.",
+    "Launches happen on the countdown with everyone standing to the side — nobody stands at the far end in the rocket's path."
+  ],
+  "screenFreeExtension": "Rocket measurement league: mark the floor with tape where each flight ends, try three balloon sizes, and keep a wall chart of distances — whose breath-engine flies furthest?"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "poster-spoon-catapult-model",
+  "slug": "spoon-catapult-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Spoon Catapult: Launch Like an Engineer",
+  "description": "A spoon, a bottle cap and a rubber band become a working catapult. Build it, label its parts, and test how far a soft pom-pom can fly.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up builds alongside and supervises every launch — this is a together project.",
+  "hero": {
+    "src": "/images/poster-spoon-catapult-model.webp",
+    "alt": "Spark launching a soft pom-pom from a spoon catapult",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Catapult | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Catapult",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A spoon with a secret job",
+      "paragraphs": [
+        "Long ago, engineers built giant catapults to throw heavy stones over castle walls. Yours fits on a table and throws something much friendlier: a pom-pom. But the science is exactly the same — store up energy, then let it go all at once."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The arm — the spoon. Its bowl is the bucket that holds your pom-pom. The base — a bottle cap or small block the spoon rests across; this is the fulcrum, the tipping point. The band — a rubber band that holds the spoon down and stretches to store energy. The load — your soft pom-pom, the only thing allowed to fly."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A plastic spoon, a bottle cap or small wooden block, a rubber band, tape, a soft pom-pom or cotton ball, and a paper target to aim at. That is all — no tools at all."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Rest the spoon across the bottle cap like a tiny seesaw, bowl end up. Tape the cap to the table so the base cannot wander.",
+        "Step 2 — Loop the rubber band over the spoon's handle end and anchor it to the table or a heavy book, so the handle is held down and the bowl end points up.",
+        "Step 3 — Load the pom-pom into the bowl. Press the bowl end down gently — feel the band stretch. That stretch is stored energy, waiting.",
+        "Step 4 — Let go! The band snaps the arm back, the arm whips up, and the pom-pom flies. Try pressing down a little and then a lot. More stretch, more stored energy, longer flight."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "A stretched rubber band holds potential energy — energy stored by being stretched or squashed. When you let go, that stored energy turns into movement energy in a flash. The arm swings, the bucket stops suddenly, and the pom-pom keeps going — flying things always try to keep moving in the direction they started."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. What happened when you pressed the spoon down further before letting go? Why?",
+        "2. Real catapult engineers aimed carefully. What could you change to make your pom-pom land closer to the target every time?"
+      ]
+    }
+  ],
+  "takeaway": "A catapult stores energy in a stretched band and releases it in one snap — the arm swings, stops, and the soft load keeps flying.",
+  "fiction": false,
+  "materials": [
+    "Plastic spoon",
+    "Bottle cap or small wooden block (fulcrum base)",
+    "Rubber band",
+    "Tape",
+    "Soft pom-pom or cotton ball (the only flying object)",
+    "Paper target"
+  ],
+  "supervision": "A grown-up builds alongside the child and supervises every launch from start to finish.",
+  "safetyNotes": [
+    "Only soft pom-poms or cotton balls may be launched — never stones, coins, food or anything hard, even as a joke.",
+    "Always launch in one agreed direction, toward the target, and check the flight path is clear of people and pets before every single launch.",
+    "Rubber bands can snap — a grown-up checks the band for cracks, and nobody pulls a band toward their own or anyone else's face."
+  ],
+  "screenFreeExtension": "Target tournament: draw three paper targets at different distances, score 1, 3 and 5 points, and play first-to-20 with a family member — best of three launches each turn."
+}

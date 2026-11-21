@@ -1,0 +1,47 @@
+{
+  "id": "poster-lung-model-q1",
+  "scheduledDate": "2029-09-08",
+  "brand": "kids",
+  "setId": "poster-set-lung-model",
+  "prompt": "Which part of the model is the DIAPHRAGM?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The straw"
+    },
+    {
+      "id": "b",
+      "text": "The stretchy sheet across the bottle's bottom"
+    },
+    {
+      "id": "c",
+      "text": "The small balloons"
+    },
+    {
+      "id": "d",
+      "text": "The bottle itself"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The balloon sheet at the bottom plays the diaphragm — the muscle sheet under your lungs.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Lung | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lung",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-lung-model.webp",
+    "alt": "Spark making the balloons inside a bottle lung model inflate by pulling the bottom balloon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

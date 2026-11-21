@@ -1,0 +1,52 @@
+{
+  "id": "poster-weather-vane-model-q1",
+  "scheduledDate": "2029-08-23",
+  "brand": "kids",
+  "setId": "poster-set-weather-vane-model",
+  "prompt": "A weather vane's arrow points…",
+  "options": [
+    {
+      "id": "a",
+      "text": "Where the wind is going TO"
+    },
+    {
+      "id": "b",
+      "text": "Where the wind is coming FROM"
+    },
+    {
+      "id": "c",
+      "text": "Always north"
+    },
+    {
+      "id": "d",
+      "text": "Wherever it was left"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The wind pushes the big tail downwind, so the arrow settles pointing into the wind — its source.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Anemometer | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Anemometer",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Weather vane | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Weather_vane",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-weather-vane-model.webp",
+    "alt": "Spark and Mango with a weather vane arrow and spinning cup anemometer on a garden post",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

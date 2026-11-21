@@ -1,0 +1,47 @@
+{
+  "id": "poster-balloon-rocket-model-q4",
+  "scheduledDate": "2029-07-05",
+  "brand": "kids",
+  "setId": "poster-set-balloon-rocket-model",
+  "prompt": "Whose law explains the balloon rocket?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Newton's third law: every action has an equal and opposite reaction"
+    },
+    {
+      "id": "b",
+      "text": "The law of the jungle"
+    },
+    {
+      "id": "c",
+      "text": "Murphy's law"
+    },
+    {
+      "id": "d",
+      "text": "The rules of football"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Newton's third law is the rocket law — real rockets fly by exactly the same rule.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Newton's laws of motion | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-balloon-rocket-model.webp",
+    "alt": "Spark and Mango watching a balloon rocket zoom along a string",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

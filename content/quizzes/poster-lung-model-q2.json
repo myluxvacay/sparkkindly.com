@@ -1,0 +1,47 @@
+{
+  "id": "poster-lung-model-q2",
+  "scheduledDate": "2029-09-09",
+  "brand": "kids",
+  "setId": "poster-set-lung-model",
+  "prompt": "Why do the lung balloons fill when you pull the sheet DOWN?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The sheet blows into them"
+    },
+    {
+      "id": "b",
+      "text": "Pulling down makes more space, the pressure inside drops, and outside air pushes in through the straw"
+    },
+    {
+      "id": "c",
+      "text": "The balloons are magnets"
+    },
+    {
+      "id": "d",
+      "text": "Gravity fills them"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Bigger space, lower pressure — higher-pressure air outside rushes in and inflates the lungs.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Lung | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lung",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-lung-model.webp",
+    "alt": "Spark making the balloons inside a bottle lung model inflate by pulling the bottom balloon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

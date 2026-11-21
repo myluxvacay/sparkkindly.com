@@ -1,0 +1,47 @@
+{
+  "id": "poster-water-cycle-bag-model-q3",
+  "scheduledDate": "2029-08-09",
+  "brand": "kids",
+  "setId": "poster-set-water-cycle-bag-model",
+  "prompt": "What is the SUN's job in the water cycle?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It colours the water"
+    },
+    {
+      "id": "b",
+      "text": "It warms the water and powers evaporation — it is the cycle's engine"
+    },
+    {
+      "id": "c",
+      "text": "It holds the bag up"
+    },
+    {
+      "id": "d",
+      "text": "It makes the rain cold"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "No sun, no evaporation: sunshine is the energy that drives the whole cycle, in the bag and on Earth.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Water cycle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-water-cycle-bag-model.webp",
+    "alt": "Mango watching droplets form and rain inside a water-cycle bag on a sunny window",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-pinwheel-model-q4",
+  "scheduledDate": "2029-07-17",
+  "brand": "kids",
+  "setId": "poster-set-pinwheel-model",
+  "prompt": "How is a giant wind turbine like your pinwheel?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It is also made of paper"
+    },
+    {
+      "id": "b",
+      "text": "Angled blades catch the wind and spin a hub — the turbine's spin makes electricity"
+    },
+    {
+      "id": "c",
+      "text": "It also needs a bead"
+    },
+    {
+      "id": "d",
+      "text": "It only works on birthdays"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Same machine, bigger job: blades, hub and wind — plus a generator to turn spin into power.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Wind turbine | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wind_turbine",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-pinwheel-model.webp",
+    "alt": "Mango watching a paper pinwheel spin in the breeze",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}
