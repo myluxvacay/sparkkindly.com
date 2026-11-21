@@ -46,6 +46,14 @@ async function token(deps: VideoDeps): Promise<string> {
 
 const privacy = (env: EnvLike) => (env.YOUTUBE_PRIVACY === 'public' || env.YOUTUBE_PRIVACY === 'unlisted' ? env.YOUTUBE_PRIVACY : 'private');
 
+export type YoutubePrivacy = 'private' | 'unlisted' | 'public';
+
+// What a Content Push upload states explicitly instead of taking from the environment: the privacy it
+// lands with (always private at submission; the publish step flips it) and the made-for-kids declaration
+// the submitting agent made. Tags ride in the snippet, where YouTube keeps them, rather than as hashtags
+// appended to the description (the 5B brief style, withTags, stays the social pipeline's own choice).
+type SessionOptions = { privacyStatus?: YoutubePrivacy; madeForKids?: boolean; tags?: string[] };
+
 function sessionUrl(v: string | null): string {
   try {
     const u = new URL(v ?? '');
@@ -56,7 +64,7 @@ function sessionUrl(v: string | null): string {
   throw new SocialPostError('permanent', 'YouTube returned an unusable upload session');
 }
 
-async function startSession(deps: VideoDeps, t: string, d: VideoPayload): Promise<string> {
+async function startSession(deps: VideoDeps, t: string, d: VideoPayload, opts: SessionOptions = {}): Promise<string> {
   const res = await send(deps, {
     service: SERVICE,
     url: `${UPLOAD}/videos?uploadType=resumable&part=snippet,status`,
@@ -68,8 +76,13 @@ async function startSession(deps: VideoDeps, t: string, d: VideoPayload): Promis
       'x-upload-content-type': 'video/mp4',
     },
     body: JSON.stringify({
-      snippet: { title: d.title ?? d.caption, description: withTags(d.description ?? '', d.hashtags), categoryId: CATEGORY_EDUCATION },
-      status: { privacyStatus: privacy(deps.env), selfDeclaredMadeForKids: false },
+      snippet: {
+        title: d.title ?? d.caption,
+        description: opts.tags ? (d.description ?? '') : withTags(d.description ?? '', d.hashtags),
+        categoryId: CATEGORY_EDUCATION,
+        ...(opts.tags?.length ? { tags: opts.tags } : {}),
+      },
+      status: { privacyStatus: opts.privacyStatus ?? privacy(deps.env), selfDeclaredMadeForKids: opts.madeForKids ?? false },
     }),
   });
   return sessionUrl(res.headers.get('location'));
@@ -151,3 +164,61 @@ export const youtube: VideoAdapter = {
     return clean({ views: num(s.viewCount), likes: num(s.likeCount), comments: num(s.commentCount) });
   },
 };
+
+// --- Content Push API (20 November 2026) ---------------------------------------------------------------
+// The push pipeline uploads a package's video with the same resumable machinery, but the privacy and the
+// made-for-kids declaration come from the package, not the environment: a pushed video lands PRIVATE at
+// submission whatever YOUTUBE_PRIVACY says (the owner's rule: nothing public before the publish step),
+// and goes public only through setVideoPrivacy at publish. Errors keep the adapter's kinds, so a refused
+// refresh token surfaces as 'credentials' and the caller can name the real fix (owner re-approval).
+
+export type PushUpload = {
+  filePath: string;
+  size: number;
+  title: string;
+  description: string;
+  tags: string[];
+  privacyStatus: YoutubePrivacy;
+  madeForKids: boolean;
+};
+
+export async function uploadPushVideo(deps: VideoDeps, v: PushUpload): Promise<string> {
+  const t = await token(deps);
+  const payload: VideoPayload = {
+    filePath: v.filePath,
+    size: v.size,
+    caption: v.title,
+    title: v.title,
+    description: v.description,
+    hashtags: [],
+    captionsPath: null,
+  };
+  return upload(deps, t, await startSession(deps, t, payload, { privacyStatus: v.privacyStatus, madeForKids: v.madeForKids, tags: v.tags }), payload);
+}
+
+// Flips one video's privacy, preserving everything else YouTube holds for it: videos.update replaces the
+// whole resource, so the current snippet and status are read first and sent back with only the privacy
+// changed (the made-for-kids declaration the upload made is preserved, never silently reset).
+export async function setVideoPrivacy(deps: VideoDeps, videoId: string, privacyStatus: YoutubePrivacy): Promise<void> {
+  if (!/^[A-Za-z0-9_-]{11}$/.test(videoId)) throw new SocialPostError('permanent', 'not a YouTube video id');
+  const t = await token(deps);
+  const read = await send(deps, {
+    service: SERVICE,
+    url: `https://www.googleapis.com/youtube/v3/videos?part=snippet,status&id=${videoId}`,
+    method: 'GET',
+    headers: { authorization: `Bearer ${t}` },
+  });
+  const item = (await json<{ items?: { snippet?: Record<string, unknown>; status?: Record<string, unknown> }[] }>(read, SERVICE)).items?.[0];
+  if (!item?.snippet || !item?.status) throw new SocialPostError('permanent', 'YouTube has no such video');
+  await send(deps, {
+    service: SERVICE,
+    url: 'https://www.googleapis.com/youtube/v3/videos?part=snippet,status',
+    method: 'PUT',
+    headers: { authorization: `Bearer ${t}`, 'content-type': 'application/json; charset=UTF-8' },
+    body: JSON.stringify({
+      id: videoId,
+      snippet: { ...item.snippet, categoryId: typeof item.snippet.categoryId === 'string' ? item.snippet.categoryId : CATEGORY_EDUCATION },
+      status: { ...item.status, privacyStatus },
+    }),
+  });
+}
