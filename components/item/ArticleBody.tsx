@@ -30,13 +30,30 @@ export default function ArticleBody({ article }: { article: ArticleView }) {
           <h2>{s.heading}</h2>
           {s.image?.src && (
             <Picture
-              className="section-image"
+              className={s.imagePanels && s.imagePanels.length > 1 ? 'section-image section-image-strip' : 'section-image'}
               src={s.image.src}
               width={s.image.width ?? 1200}
               height={s.image.height ?? 675}
               alt={s.image.alt}
               sizes="(max-width: 580px) 100vw, 680px"
             />
+          )}
+          {s.image?.src && s.imagePanels && s.imagePanels.length > 1 && (
+            <div className="section-panels">
+              {s.imagePanels.map((p) =>
+                p.src ? (
+                  <Picture
+                    key={p.src}
+                    className="section-panel"
+                    src={p.src}
+                    width={p.width ?? 400}
+                    height={p.height ?? 400}
+                    alt={p.alt}
+                    sizes="(max-width: 580px) 50vw, 340px"
+                  />
+                ) : null,
+              )}
+            </div>
           )}
           {s.paragraphs.map((p, j) => (
             <p key={j}>{p}</p>

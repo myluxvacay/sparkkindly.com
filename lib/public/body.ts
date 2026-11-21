@@ -50,12 +50,13 @@ export function toSceneSpec(view: SceneView | undefined): SceneSpec | null {
 }
 
 // A section may carry one wide illustration (the step strip on "How it works" sections,
-// 21 Nov 2026): the same defensive shape as the hero image view below.
+// 21 Nov 2026) plus, optionally, that strip's panel set (imagePanels — the mobile 2x2
+// arrangement of the same illustration): the same defensive shape as the hero image view below.
 const sectionImage = z.object({ src: opt(text), alt: z.string().catch(''), width: opt(z.number()), height: opt(z.number()), credit: opt(text), rights: opt(text) });
 export type SectionImageView = z.infer<typeof sectionImage>;
 
 const articleBody = z.object({
-  sections: z.array(z.object({ heading: text, paragraphs: list, image: opt(sectionImage) })).catch([]),
+  sections: z.array(z.object({ heading: text, paragraphs: list, image: opt(sectionImage), imagePanels: opt(z.array(sectionImage)) })).catch([]),
   takeaway: z.string().catch(''),
   fiction: opt(z.boolean()),
   byline: opt(text),

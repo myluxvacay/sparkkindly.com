@@ -32,6 +32,21 @@ describe('public body readers', () => {
     expect(good.sections[2].image).toBeUndefined();
   });
 
+  it('keep a section imagePanels set (the strip mobile arrangement) and drop a malformed one', () => {
+    const panel = (n: number) => ({ src: `/images/x-steps-${n}.webp`, alt: `Step ${n}`, width: 385, height: 377, credit: 'c', rights: 'r' });
+    const good = readArticle({
+      sections: [
+        { heading: 'Steps', paragraphs: ['p'], imagePanels: [panel(1), panel(2)] },
+        { heading: 'Bad', paragraphs: ['p'], imagePanels: 'nope' },
+        { heading: 'Plain', paragraphs: ['p'] },
+      ],
+      takeaway: 'T',
+    });
+    expect(good.sections[0].imagePanels).toEqual([panel(1), panel(2)]);
+    expect(good.sections[1].imagePanels).toBeUndefined();
+    expect(good.sections[2].imagePanels).toBeUndefined();
+  });
+
   it('read play options, items and clues', () => {
     const p = readPlay({ mechanic: 'clue_reveal', prompt: 'P', clues: ['a', 'b'], options: [{ id: 'a', text: 'A' }] });
     expect(p.clues).toEqual(['a', 'b']);
