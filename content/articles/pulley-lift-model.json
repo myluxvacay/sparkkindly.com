@@ -6,7 +6,7 @@
   "title": "Pulley Lift: Make Lifting Easy",
   "description": "String, a spool and a paper cup become a working elevator for toy loads. Build a pulley lift, label its parts, and feel how the pull changes.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-pulley-lift-model-steps.webp",
+        "alt": "The pulley lift in four pictures, left to right: the spool on its pencil resting across two tall books, Spark threading the string and tying on the loaded cup, Spark pulling the free end of the string down, and Spark straining to lift the same loaded cup with both hands — with Mango watching",
+        "width": 1786,
+        "height": 439,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-pulley-lift-model-steps-1.webp",
+          "alt": "Step 1 of 4: the spool threaded on a pencil resting across the tops of two tall books",
+          "width": 439,
+          "height": 439,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-pulley-lift-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark tying the string to the paper cup loaded with toy bricks",
+          "width": 439,
+          "height": 439,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-pulley-lift-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark pulling the free end of the string down so the cup rises",
+          "width": 439,
+          "height": 439,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-pulley-lift-model-steps-4.webp",
+          "alt": "Step 4 of 4: Spark straining to lift the loaded cup with both hands, no pulley to help",
+          "width": 439,
+          "height": 439,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Build the frame. Stand two tall books like towers (or tape a cardboard arch) and rest the pencil across the tops. Slide the spool onto the pencil so it spins freely.",
         "Step 2 — Thread the string over the spool's groove. Tie one end to the paper cup — punch two small holes and tie through them so the cup hangs level.",

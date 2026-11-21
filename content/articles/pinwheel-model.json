@@ -6,7 +6,7 @@
   "title": "Pinwheel Power: Catch the Wind",
   "description": "Paper, a pin and a pencil become a spinning wind wheel. Build a pinwheel, label its parts, and learn how moving air becomes turning power — the wind turbine's baby cousin.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-pinwheel-model-steps.webp",
+        "alt": "The pinwheel build in four pictures, left to right: hands cutting the square along its diagonals, hands folding the corner points into the centre, hands pinning the hub with a bead onto the pencil, and the finished pinwheel spinning in the breeze — with Spark and Mango watching",
+        "width": 1582,
+        "height": 605,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-pinwheel-model-steps-1.webp",
+          "alt": "Step 1 of 4: hands cutting the paper square along a diagonal line with scissors",
+          "width": 388,
+          "height": 605,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-pinwheel-model-steps-2.webp",
+          "alt": "Step 2 of 4: hands folding the cut corner points of the square into the centre",
+          "width": 388,
+          "height": 605,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-pinwheel-model-steps-3.webp",
+          "alt": "Step 3 of 4: hands pinning the folded hub with a bead onto the pencil while Spark holds it",
+          "width": 388,
+          "height": 605,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-pinwheel-model-steps-4.webp",
+          "alt": "Step 4 of 4: the finished pinwheel spinning on its pencil in the breeze while Mango watches",
+          "width": 388,
+          "height": 605,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Mark the square. A grown-up draws two diagonal lines corner to corner. Cut along each line from the corner toward the centre — stopping a thumb's width from the middle. The centre must stay whole.",
         "Step 2 — Fold the blades. Bend every OTHER corner into the centre, so four points meet in the middle. The folds make the angled blades — flat paper would just flap, but angled blades catch the wind and turn it into spin.",

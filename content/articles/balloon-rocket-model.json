@@ -6,7 +6,7 @@
   "title": "Balloon Rocket: Zoom on a String",
   "description": "A balloon, a straw and a long string make a rocket that zooms across the room. Build it, label the parts, and discover the push that moves real rockets too.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-balloon-rocket-model-steps.webp",
+        "alt": "The balloon rocket in four pictures, left to right: Spark threading the string through the straw, grown-up hands holding the blown-up balloon while Spark tapes the straw on, the balloon waiting at the start of the string, and the balloon rocketing along the string — with Mango watching",
+        "width": 1986,
+        "height": 490,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-balloon-rocket-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark threading the string through the drinking straw first",
+          "width": 489,
+          "height": 490,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-balloon-rocket-model-steps-2.webp",
+          "alt": "Step 2 of 4: grown-up hands holding the inflated balloon while Spark tapes the straw to its side",
+          "width": 489,
+          "height": 490,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-balloon-rocket-model-steps-3.webp",
+          "alt": "Step 3 of 4: the balloon slid to the start of the string, ready to launch, with Spark and Mango cheering",
+          "width": 489,
+          "height": 490,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-balloon-rocket-model-steps-4.webp",
+          "alt": "Step 4 of 4: the balloon rocketing along the string as air whooshes out behind it",
+          "width": 489,
+          "height": 490,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Lay the track. Thread the string through the straw FIRST — this order matters — then tie or tape the string tightly between two chairs so it is level and taut.",
         "Step 2 — Mount the rocket. Your grown-up inflates the balloon and pinches the neck shut (no tying — this rocket must breathe out). Tape the straw to the balloon's side, one piece of tape near each end of the straw.",

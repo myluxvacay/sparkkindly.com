@@ -6,7 +6,7 @@
   "title": "String Telephone: Whispers That Travel",
   "description": "Two cups and a long string carry a whisper further than shouting can. Build the classic string telephone and feel sound travelling through a solid.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-string-telephone-model-steps.webp",
+        "alt": "The string telephone in four pictures, left to right: hands threading the string through the cups and tying the knots, Spark and Mango walked apart so the string is tight, Spark listening with the cup over one ear, and the string gone slack so the phone stops working",
+        "width": 1910,
+        "height": 471,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-string-telephone-model-steps-1.webp",
+          "alt": "Step 1 of 4: hands threading the string through the base of a cup and tying a big knot",
+          "width": 470,
+          "height": 471,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-string-telephone-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark and Mango walked far apart so the string between their cups is tight and straight",
+          "width": 470,
+          "height": 471,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-string-telephone-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark listening with the cup over one ear while Mango speaks into the other cup",
+          "width": 470,
+          "height": 471,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-string-telephone-model-steps-4.webp",
+          "alt": "Step 4 of 4: the string hanging slack between Spark and Mango — the phone has gone dead",
+          "width": 470,
+          "height": 471,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — A grown-up pokes one small hole in the centre of each cup's base. Thread the string through and tie a big knot (or tie to a paper clip) inside each cup so it cannot pull out.",
         "Step 2 — Walk apart until the string is pulled TIGHT and straight, not touching anything — no trees, fences or fingers along its length. A string that sags or touches things is a broken phone.",

@@ -6,7 +6,7 @@
   "title": "Paper Bridge: How Strong Is One Sheet?",
   "description": "One sheet of paper, two books, and a pile of coins. Test a flat bridge, then fold the same paper and test again — the difference will surprise you.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-paper-bridge-model-steps.webp",
+        "alt": "The paper bridge tests in four pictures, left to right: a flat sheet laid across the gap between two books, Spark stacking coins on the flat bridge, Spark holding the fan-folded second sheet, and the folded bridge holding tall stacks of coins — with Mango watching",
+        "width": 1962,
+        "height": 482,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-paper-bridge-model-steps-1.webp",
+          "alt": "Step 1 of 4: a flat sheet of paper laid across the gap between two books",
+          "width": 483,
+          "height": 482,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-paper-bridge-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark stacking coins in the middle of the flat bridge",
+          "width": 483,
+          "height": 482,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-paper-bridge-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark holding the second sheet folded into zigzag ridges",
+          "width": 483,
+          "height": 482,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-paper-bridge-model-steps-4.webp",
+          "alt": "Step 4 of 4: the folded bridge holding three tall stacks of coins across the same gap",
+          "width": 483,
+          "height": 482,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Set the span. Place the books with a gap about as wide as your hand. Lay one flat sheet across them.",
         "Step 2 — Test the flat bridge. Add coins one at a time, gently, in the middle. Count how many it holds before it sags into the gap. Write the number down.",

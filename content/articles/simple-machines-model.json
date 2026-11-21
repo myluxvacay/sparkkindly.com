@@ -6,7 +6,7 @@
   "title": "Simple Machines: One Cardboard Board, Four Superpowers",
   "description": "Build a cardboard model that holds four simple machines at once — a lever, a pulley, a wheel and axle, and an inclined plane — and learn the job each one does.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -58,6 +58,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-simple-machines-model-steps.webp",
+        "alt": "The simple machines board in four pictures, left to right: the lever built with a brick on its low end, a finger pressing the lever so the brick rises, Spark pulling the pulley string to lift the bucket, and the toy car on the ramp beside the spinning wheel and axle — with Mango watching",
+        "width": 2014,
+        "height": 496,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-simple-machines-model-steps-1.webp",
+          "alt": "Step 1 of 4: the ruler lever resting across the block with a toy brick on its low end",
+          "width": 496,
+          "height": 496,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-simple-machines-model-steps-2.webp",
+          "alt": "Step 2 of 4: a finger pressing the high end of the lever while the brick rises",
+          "width": 496,
+          "height": 496,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-simple-machines-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark pulling the pulley string to lift the little bucket",
+          "width": 496,
+          "height": 496,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-simple-machines-model-steps-4.webp",
+          "alt": "Step 4 of 4: the toy car rolling up the ramp beside the big spinning wheel and axle",
+          "width": 496,
+          "height": 496,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Build the lever. Rest the ruler across the block so it tips like a seesaw. Put a toy brick on the low end.",
         "Step 2 — Test the effort. Press the high end down with one finger. The brick rises. Slide the block closer to the brick and press again — it feels even easier. Moving the fulcrum trades a long push for a lighter one.",

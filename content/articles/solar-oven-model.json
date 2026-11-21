@@ -6,7 +6,7 @@
   "title": "Pizza-Box Solar Oven: Cook with Sunshine",
   "description": "A pizza box, foil and sunshine become a real oven that melts cheese and warms cookies. Build it, label how it traps heat, and taste the science.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-solar-oven-model-steps.webp",
+        "alt": "The pizza-box solar oven in four pictures, left to right: hands opening the foil-covered flap in the box lid, Spark stretching clear plastic across the window, the oven sitting in full sun with nachos inside, and Spark checking the thermometer beside the melted nachos — with Mango watching",
+        "width": 1866,
+        "height": 460,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-solar-oven-model-steps-1.webp",
+          "alt": "Step 1 of 4: hands lifting the foil-covered flap cut into the pizza-box lid",
+          "width": 459,
+          "height": 460,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-solar-oven-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark stretching clear plastic across the window the flap left",
+          "width": 459,
+          "height": 460,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-solar-oven-model-steps-3.webp",
+          "alt": "Step 3 of 4: the solar oven in full sun with a tray of nachos inside and its flap propped open",
+          "width": 459,
+          "height": 460,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-solar-oven-model-steps-4.webp",
+          "alt": "Step 4 of 4: Spark holding a thermometer beside the oven of melted-cheese nachos",
+          "width": 459,
+          "height": 460,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — A grown-up cuts a three-sided flap in the pizza-box lid, folding it up and back. Cover the flap's underside with foil, shiny side out, smoothed flat — this is the reflector.",
         "Step 2 — Seal the window. Tape clear plastic across the opening the flap left, airtight all round. Line the box's floor with black paper — the absorber — and stuff newspaper around the inside edges for insulation.",
