@@ -1,0 +1,47 @@
+{
+  "id": "poster-water-filter-model-q1",
+  "scheduledDate": "2029-08-03",
+  "brand": "kids",
+  "setId": "poster-set-water-filter-model",
+  "prompt": "What does each layer of the filter do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Adds flavour"
+    },
+    {
+      "id": "b",
+      "text": "Traps smaller and smaller bits of dirt in the gaps between its grains"
+    },
+    {
+      "id": "c",
+      "text": "Colours the water"
+    },
+    {
+      "id": "d",
+      "text": "Makes the water cold"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Filtering is sieving at many sizes — gravel catches big bits, fine sand and cotton catch the small cloudiness.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Water purification | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_purification",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-water-filter-model.webp",
+    "alt": "Spark and Mango filtering muddy water through layers of gravel, sand and cotton",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

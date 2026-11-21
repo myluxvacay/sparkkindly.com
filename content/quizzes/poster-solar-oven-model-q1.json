@@ -1,0 +1,47 @@
+{
+  "id": "poster-solar-oven-model-q1",
+  "scheduledDate": "2029-08-15",
+  "brand": "kids",
+  "setId": "poster-set-solar-oven-model",
+  "prompt": "What does the foil flap (the reflector) do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Keeps rain off"
+    },
+    {
+      "id": "b",
+      "text": "Bounces extra sunlight into the box"
+    },
+    {
+      "id": "c",
+      "text": "Cools the food"
+    },
+    {
+      "id": "d",
+      "text": "Holds the lid shut"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The reflector aims extra rays through the window — more sunlight in means more heat.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Solar cooker | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solar_cooker",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-solar-oven-model.webp",
+    "alt": "Spark and Mango cooking a treat in a pizza-box solar oven",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

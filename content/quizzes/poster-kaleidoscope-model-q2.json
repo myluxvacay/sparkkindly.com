@@ -1,0 +1,47 @@
+{
+  "id": "poster-kaleidoscope-model-q2",
+  "scheduledDate": "2029-09-17",
+  "brand": "kids",
+  "setId": "poster-set-kaleidoscope-model",
+  "prompt": "Why are the patterns ALWAYS symmetrical?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The beads are tidy"
+    },
+    {
+      "id": "b",
+      "text": "Every 'petal' is the same beads reflected — mirrors cannot reflect untidily"
+    },
+    {
+      "id": "c",
+      "text": "The tube is round"
+    },
+    {
+      "id": "d",
+      "text": "Luck"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Symmetry is guaranteed by the mirrors: each section is a reflection of the same original beads.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Kaleidoscope | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kaleidoscope",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-kaleidoscope-model.webp",
+    "alt": "Mango looking into a kaleidoscope with symmetrical patterns bursting out",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

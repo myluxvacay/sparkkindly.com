@@ -1,0 +1,47 @@
+{
+  "id": "poster-egg-drop-model-q4",
+  "scheduledDate": "2029-06-19",
+  "brand": "kids",
+  "setId": "poster-set-egg-drop-model",
+  "prompt": "Your egg cracked on a high drop. What is the engineer's next step?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Give up on eggs"
+    },
+    {
+      "id": "b",
+      "text": "Blame the egg"
+    },
+    {
+      "id": "c",
+      "text": "Inspect where it shifted, improve the design, and test again"
+    },
+    {
+      "id": "d",
+      "text": "Drop it from even higher"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Engineers treat failures as data: inspect, redesign, retest — that loop is the whole method.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Egg drop competition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Egg_drop_competition",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-egg-drop-model.webp",
+    "alt": "Spark with a padded egg landing pod with straw legs, ready for a drop test",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

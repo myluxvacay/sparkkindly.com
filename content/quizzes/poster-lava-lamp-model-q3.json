@@ -1,0 +1,47 @@
+{
+  "id": "poster-lava-lamp-model-q3",
+  "scheduledDate": "2029-07-28",
+  "brand": "kids",
+  "setId": "poster-set-lava-lamp-model",
+  "prompt": "Why does a blob sink again at the top?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It gets cold"
+    },
+    {
+      "id": "b",
+      "text": "Its bubbles pop and escape, so it is dense water again"
+    },
+    {
+      "id": "c",
+      "text": "It runs out of colour"
+    },
+    {
+      "id": "d",
+      "text": "Gravity turns back on"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "No bubbles, no lift — the blob is denser than oil again and sinks back to reload.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Lava lamp | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lava_lamp",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-lava-lamp-model.webp",
+    "alt": "Spark and Mango watching coloured blobs rise and fall in a bottle lava lamp",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

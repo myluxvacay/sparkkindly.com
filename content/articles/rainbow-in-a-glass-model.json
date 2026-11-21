@@ -1,0 +1,99 @@
+{
+  "id": "poster-rainbow-in-a-glass-model",
+  "slug": "rainbow-in-a-glass-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Rainbow in a Glass: Stacking Liquids",
+  "description": "Honey, dish soap, water, oil and coloured layers stack into a rainbow that refuses to mix. Build the tower, label the layers, and learn the word that decides who floats.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up pours alongside and handles the rubbing alcohol layer if you add one — that layer is grown-up-only.",
+  "hero": {
+    "src": "/images/poster-rainbow-in-a-glass-model.webp",
+    "alt": "Spark and Mango with a glass of stacked rainbow liquid layers",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Density | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Density",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A rainbow that pours",
+      "paragraphs": [
+        "Pour water into juice and they swirl into one. But some liquids refuse to mix — poured carefully, they stack like floors in a tower, each staying in its own layer. Build this rainbow column and you can hold five liquids in one glass, sorted by an invisible rule."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The tower — a tall, clear glass or jar, so every layer shows. The heavyweights — honey (or golden syrup) and dish soap, the densest liquids, which sink to the bottom floors. The middle — coloured water. The lightweight — cooking oil, which floats above water no matter how you pour it. The tool — a spoon, held against the glass's side, so each new layer lands gently and doesn't punch through the floor below."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A tall clear glass or jar, honey or golden syrup, dish soap, water, cooking oil, food colouring, a spoon, and small cups for mixing colours. Optional top layer (grown-up pours it): a little rubbing alcohol tinted with colouring."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Pour the foundation. Add a layer of honey about two fingers deep. It is thick and slow — give it time to level out.",
+        "Step 2 — Add dish soap, poured slowly onto the honey. Then the coloured water: this is the delicate one — trickle it down the back of a spoon held just above the soap, so it spreads like a blanket instead of drilling a hole.",
+        "Step 3 — Add the oil the same gentle way. Watch what it does at the water line: oil and water will not mix, so the oil climbs to its own floor above the water and stays there.",
+        "Step 4 — Read your tower. Bottom to top: honey, soap, water, oil — heaviest first, lightest last. Drop in testers: a grape, a cork, a coin, a pasta twist. Each sinks until it reaches a liquid denser than itself — and stops, floating mid-glass like magic."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "The rule is density: how much stuff is packed into the same space. A cup of honey weighs more than a cup of oil — honey is denser. In any stack, denser liquids sink below lighter ones, always, which is why the tower sorts itself and never needs your help to stay layered. The testers float at their own level for the same reason: a cork is less dense than everything, so it bobs on top; a grape is denser than oil and water but lighter than honey, so it hovers at its own floor. Icebergs, hot-air balloons and salad dressing all obey this one rule."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Shake a bottle of oil-and-water salad dressing and it mixes — then separates again. Why does it always un-mix in the same order?",
+        "2. Predict before you drop: where will a plastic bead stop in the tower? A metal screw? Say why, then test."
+      ]
+    }
+  ],
+  "takeaway": "Liquids stack by density — the densest sinks to the bottom and the lightest floats on top — and dropped objects hover at the layer that matches their own density.",
+  "fiction": false,
+  "materials": [
+    "Tall clear glass or jar",
+    "Honey or golden syrup",
+    "Dish soap",
+    "Water and cooking oil",
+    "Food colouring",
+    "Spoon and small mixing cups",
+    "Testers: grape, cork, coin, pasta twist"
+  ],
+  "supervision": "A grown-up pours alongside throughout and alone handles any rubbing-alcohol layer; the tower is built at a table over a tray.",
+  "safetyNotes": [
+    "This rainbow is a model, NOT a drink: it contains dish soap and oil — nobody tastes any layer, and the glass is labelled and kept away from drinking glasses.",
+    "Rubbing alcohol, if used, is poured by a grown-up only, kept in its original labelled bottle away from flames, and never left in the tower glass unattended.",
+    "Work over a tray — oil spills are slippery, honey is sticky, and glass plus spills is a bad mix; a broken glass is a grown-up's clean-up, swept, never picked by hand."
+  ],
+  "screenFreeExtension": "Density detective: at the kitchen sink with a grown-up, test five mystery objects in a bowl of water — float or sink — then predict each one's floor in the rainbow tower before you drop it in."
+}

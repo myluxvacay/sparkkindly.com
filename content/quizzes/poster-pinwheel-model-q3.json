@@ -1,0 +1,47 @@
+{
+  "id": "poster-pinwheel-model-q3",
+  "scheduledDate": "2029-07-16",
+  "brand": "kids",
+  "setId": "poster-set-pinwheel-model",
+  "prompt": "Your pinwheel stops spinning when you turn sideways to the wind. Why?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It got tired"
+    },
+    {
+      "id": "b",
+      "text": "The blades only catch wind that hits them face-on"
+    },
+    {
+      "id": "c",
+      "text": "The pin fell out"
+    },
+    {
+      "id": "d",
+      "text": "Wind stops at corners"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Angled blades need the wind's push from the front — sideways wind slides past them.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Wind turbine | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wind_turbine",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-pinwheel-model.webp",
+    "alt": "Mango watching a paper pinwheel spin in the breeze",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

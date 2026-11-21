@@ -1,0 +1,47 @@
+{
+  "id": "poster-seed-jar-model-q1",
+  "scheduledDate": "2029-09-04",
+  "brand": "kids",
+  "setId": "poster-set-seed-jar-model",
+  "prompt": "What three things wake a seed up?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Soil, shade and silence"
+    },
+    {
+      "id": "b",
+      "text": "Water, warmth and air"
+    },
+    {
+      "id": "c",
+      "text": "Sun, sand and salt"
+    },
+    {
+      "id": "d",
+      "text": "Rain, frost and dark"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Germination starts when water, warmth and air arrive together.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Germination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Germination",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-seed-jar-model.webp",
+    "alt": "Mango watching a bean seed sprout roots and a shoot inside a glass jar",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

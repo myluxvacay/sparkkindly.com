@@ -1,0 +1,47 @@
+{
+  "id": "poster-spoon-catapult-model-q1",
+  "scheduledDate": "2029-05-31",
+  "brand": "kids",
+  "setId": "poster-set-spoon-catapult-model",
+  "prompt": "What is the spoon in this catapult?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The bucket only"
+    },
+    {
+      "id": "b",
+      "text": "The arm"
+    },
+    {
+      "id": "c",
+      "text": "The target"
+    },
+    {
+      "id": "d",
+      "text": "The band"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The spoon is the catapult's arm — its bowl works as the bucket that holds the load.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Catapult | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Catapult",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-spoon-catapult-model.webp",
+    "alt": "Spark launching a soft pom-pom from a spoon catapult",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

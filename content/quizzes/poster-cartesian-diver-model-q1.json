@@ -1,0 +1,47 @@
+{
+  "id": "poster-cartesian-diver-model-q1",
+  "scheduledDate": "2029-07-18",
+  "brand": "kids",
+  "setId": "poster-set-cartesian-diver-model",
+  "prompt": "What happens to the diver's air bubble when you squeeze the bottle?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It grows bigger"
+    },
+    {
+      "id": "b",
+      "text": "It gets squashed smaller by the extra pressure"
+    },
+    {
+      "id": "c",
+      "text": "It escapes"
+    },
+    {
+      "id": "d",
+      "text": "It freezes"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Squeezing raises the pressure everywhere in the water, and the pressure compresses the bubble.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Cartesian diver | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cartesian_diver",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-cartesian-diver-model.webp",
+    "alt": "Spark squeezing a bottle to make the little diver sink",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "poster-egg-drop-model",
+  "slug": "egg-drop-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Egg Drop: Design a Landing Pod",
+  "description": "Engineers protect astronauts, phones and eggs the same way: cushion the landing and spread the stop. Build a pod, drop an egg, and see if your design keeps it whole.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up chooses the drop spot and supervises all drops — raw eggs and rooftops are grown-up territory.",
+  "hero": {
+    "src": "/images/poster-egg-drop-model.webp",
+    "alt": "Spark with a padded egg landing pod with straw legs, ready for a drop test",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Egg drop competition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Egg_drop_competition",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "The world's most breakable astronaut",
+      "paragraphs": [
+        "When a spacecraft lands, engineers cannot make the landing soft — so they make the STOP slow. Airbags, crumple zones and foam all do one job: stretch the stopping time so the force spreads out gently. Your egg is a tiny astronaut, and its pod is its only spacecraft. Design well."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The capsule — a small box or container that holds the egg snugly. The cushioning — cotton, foam, tissue or bubble wrap packed around the egg so it cannot rattle. The shell — the pod's outer layer, which takes the first hit. The legs or crumple zone — straws or folded card sticking out, designed to bend and squash so the capsule doesn't have to."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "One raw egg (plus spares — engineers always have spares), a small box or plastic container, cotton balls, foam, tissue or bubble wrap, drinking straws or folded card, tape, a plastic bag to line the pod (trust us), and a tray or washable drop zone."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Pack the capsule. Line the container with cushioning, nestle the egg in the middle so it touches nothing hard, and pack more cushioning on top. Shake gently: the egg must not move.",
+        "Step 2 — Add the sacrifice layer. Tape straws or folded card around the outside as legs or a crumple skirt. These parts are DESIGNED to bend and crush — their damage is the egg's protection.",
+        "Step 3 — Test low first. Drop from knee height onto the tray. Open and inspect. Any crack? Add cushioning where the egg shifted.",
+        "Step 4 — The real drop. A grown-up drops the pod from the agreed height — a porch step or balcony they choose and control. Open the pod like a flight recorder team: did the crumple zone crush? Did the egg survive? Record everything, even the omelettes — failed drops are data."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "A falling egg gains speed, and speed means energy. Landing means that energy has to go somewhere in a stop. A hard floor stops the egg in a split second — all the force at once, and the shell loses. Cushioning stretches the stop over more time and lets soft materials absorb the energy by squashing. Same egg, same fall, gentler stop. It is why cars crumple, helmets are foam, and parcels come wrapped in bubbles."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why do the straws and card on the OUTSIDE matter, when the egg is on the inside?",
+        "2. Your pod survived a low drop but cracked from higher up. What two design changes would you try next, and why?"
+      ]
+    }
+  ],
+  "takeaway": "Protection is about time: cushioning and crumple zones stretch the stop and absorb the fall's energy, so the force never lands on the egg all at once.",
+  "fiction": false,
+  "materials": [
+    "Raw eggs (plus spares)",
+    "Small box or plastic container (capsule)",
+    "Cotton balls, foam, tissue or bubble wrap (cushioning)",
+    "Drinking straws or folded card (crumple zone / legs)",
+    "Tape",
+    "Plastic bag liner and a tray for the drop zone"
+  ],
+  "supervision": "A grown-up chooses and controls the drop height and spot, and supervises every drop.",
+  "safetyNotes": [
+    "Drops happen only where a grown-up approves — never from windows or roofs a child can access, and nobody stands below a drop zone, ever.",
+    "Raw egg can carry germs: wash hands with soap after handling eggs or cleaning up, and wipe surfaces; broken eggs go straight in the bin, never tasted.",
+    "Do the drop over a tray or washable outdoor spot — shells are sharp and yolk is slippery underfoot."
+  ],
+  "screenFreeExtension": "Pod redesign round: sketch your version-2 pod on paper first like a real engineer — label what you changed and predict the result before you drop."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-pinwheel-model-q1",
+  "scheduledDate": "2029-07-14",
+  "brand": "kids",
+  "setId": "poster-set-pinwheel-model",
+  "prompt": "Why are the pinwheel's blades angled?",
+  "options": [
+    {
+      "id": "a",
+      "text": "To look pretty"
+    },
+    {
+      "id": "b",
+      "text": "So the wind's push lands unevenly and twists the wheel into a spin"
+    },
+    {
+      "id": "c",
+      "text": "To make it lighter"
+    },
+    {
+      "id": "d",
+      "text": "So it fits the pin"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Angled blades catch the push unevenly — that uneven push is what turns the wheel.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Wind turbine | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wind_turbine",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-pinwheel-model.webp",
+    "alt": "Mango watching a paper pinwheel spin in the breeze",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-cartesian-diver-model-q2",
+  "scheduledDate": "2029-07-19",
+  "brand": "kids",
+  "setId": "poster-set-cartesian-diver-model",
+  "prompt": "Why does the diver SINK when its bubble shrinks?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The cap gets sad"
+    },
+    {
+      "id": "b",
+      "text": "Water creeps in and the diver becomes heavier than the water it pushes aside"
+    },
+    {
+      "id": "c",
+      "text": "The bottle pulls it down"
+    },
+    {
+      "id": "d",
+      "text": "Clay dissolves"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "With a smaller bubble the diver displaces less water and weighs more by comparison — down it goes.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Cartesian diver | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cartesian_diver",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-cartesian-diver-model.webp",
+    "alt": "Spark squeezing a bottle to make the little diver sink",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

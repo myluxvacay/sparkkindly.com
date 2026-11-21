@@ -1,0 +1,47 @@
+{
+  "id": "poster-rainbow-in-a-glass-model-q2",
+  "scheduledDate": "2029-07-23",
+  "brand": "kids",
+  "setId": "poster-set-rainbow-in-a-glass-model",
+  "prompt": "Why does oil always end up ABOVE water?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Oil is scared of water"
+    },
+    {
+      "id": "b",
+      "text": "Oil is less dense than water and the two will not mix"
+    },
+    {
+      "id": "c",
+      "text": "Oil is thicker"
+    },
+    {
+      "id": "d",
+      "text": "You poured it last"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Oil floats on water because it is less dense — and since they don't mix, the layer stays separate.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Density | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Density",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-rainbow-in-a-glass-model.webp",
+    "alt": "Spark and Mango with a glass of stacked rainbow liquid layers",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

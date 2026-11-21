@@ -1,0 +1,47 @@
+{
+  "id": "poster-floating-compass-model-q4",
+  "scheduledDate": "2029-08-30",
+  "brand": "kids",
+  "setId": "poster-set-floating-compass-model",
+  "prompt": "You rotate the BOWL and the needle still points north. Why doesn't it turn with the bowl?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The cork is stuck"
+    },
+    {
+      "id": "b",
+      "text": "The float is free in the water — the Earth's field, not the bowl, holds the needle's direction"
+    },
+    {
+      "id": "c",
+      "text": "The needle is broken"
+    },
+    {
+      "id": "d",
+      "text": "North moved too"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The needle answers to the planet, not the bowl — that's exactly what made it trustworthy at sea.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Compass | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Compass",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-floating-compass-model.webp",
+    "alt": "Spark watching a floating cork compass needle point north in a bowl of water",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-water-cycle-bag-model-q4",
+  "scheduledDate": "2029-08-10",
+  "brand": "kids",
+  "setId": "poster-set-water-cycle-bag-model",
+  "prompt": "Why doesn't the water in the bag ever run out?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The bag makes new water"
+    },
+    {
+      "id": "b",
+      "text": "The same water goes round and round — evaporate, condense, rain, repeat"
+    },
+    {
+      "id": "c",
+      "text": "Windows refill it"
+    },
+    {
+      "id": "d",
+      "text": "It does run out quickly"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "It is a cycle: the water is recycled endlessly — Earth's water works exactly the same way.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Water cycle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-water-cycle-bag-model.webp",
+    "alt": "Mango watching droplets form and rain inside a water-cycle bag on a sunny window",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-paper-bridge-model-q1",
+  "scheduledDate": "2029-06-08",
+  "brand": "kids",
+  "setId": "poster-set-paper-bridge-model",
+  "prompt": "What is the SPAN of a bridge?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The coins on top"
+    },
+    {
+      "id": "b",
+      "text": "The gap the bridge must cross"
+    },
+    {
+      "id": "c",
+      "text": "The books at the ends"
+    },
+    {
+      "id": "d",
+      "text": "The fold in the paper"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The span is the gap between the supports — the 'river' the deck has to cross.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Bridge | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bridge",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-paper-bridge-model.webp",
+    "alt": "Mango watching a folded paper bridge hold a stack of coins between two books",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "poster-solar-system-mobile-model",
+  "slug": "solar-system-mobile-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Solar System Mobile: Eight Planets on Strings",
+  "description": "Paint eight planets, hang them in order from a hoop, and learn the line-up of our solar system — plus the honest truth about sizes and distances that no mobile can show.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up helps with hanging and any hot glue; painting and ordering are the builders' joy.",
+  "hero": {
+    "src": "/images/poster-solar-system-mobile-model.webp",
+    "alt": "Spark and Mango under a mobile of the eight planets hanging in order",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Solar System | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solar_System",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Our whole neighbourhood, hanging from a hoop",
+      "paragraphs": [
+        "Everything you have ever known sits in one solar system: one star, eight planets, and a lot of empty space. A mobile cannot show it truly to scale — no model can, and this article will tell you why — but it can teach your hands the order of the planets and how different they are."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The Sun — a golden ball at the centre or top: the star whose gravity holds the whole system together. The rocky four — Mercury, Venus, Earth, Mars: small, hard worlds near the Sun. The giants — Jupiter and Saturn: enormous gas worlds, with Saturn's famous rings. The ice giants — Uranus and Neptune: cold, blue, far away. The strings and hoop — the mobile's skeleton, standing in for the orbits the planets travel."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "Eight balls in different sizes (foam, papier-mâché or scrunched paper and tape), paints and brushes, string, a hoop, ring or two crossed sticks for the top, a tiny torch or label for the Sun, and a grown-up for hanging. Optional: a marble for Mercury and a beach ball for Jupiter, to feel the size problem."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Make the planets. Paint each ball: Mercury grey and cratered, Venus creamy yellow, Earth blue with green-brown lands, Mars rusty red, Jupiter banded with a red spot, Saturn pale gold WITH A RING (a card disc), Uranus pale cyan, Neptune deep blue.",
+        "Step 2 — Learn the line-up. Order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. A memory sentence helps: 'My Very Energetic Mother Just Served Us Noodles.'",
+        "Step 3 — Hang them in order. Tie strings of different lengths so the planets hang at varied heights, in the right order around (or along) the hoop, with the Sun at the centre-top. A grown-up hangs the mobile where it can turn slowly in the air.",
+        "Step 4 — The honesty check. Read the science bit below, then look at your mobile again: beautiful, correct in ORDER — and gloriously wrong in scale. Knowing what a model gets wrong is real science."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Here is the scale problem. If the Sun were a beach ball, Earth would be a peppercorn 26 metres away, and Jupiter a small apple. No classroom mobile can fit that — so every model chooses: correct order and roughly comparative sizes, with distances squeezed. The facts to keep: the four inner planets are small and rocky; the four outer are giants of gas and ice; Saturn's rings are ice and rock chunks; and the true ruler of the system is the Sun's gravity, which holds every planet in its orbit — the strings on your mobile are standing in for that invisible grip. A year is one full orbit: Mercury whips round in 88 days; Neptune takes 165 Earth years."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why can no hanging mobile show the solar system truly to scale? What would the room need to look like?",
+        "2. Which planet would you visit first if you could — and what would your spacecraft need to survive there?"
+      ]
+    }
+  ],
+  "takeaway": "Eight planets circle one star: four small rocky worlds, then four giants. A mobile teaches the order and the variety — but real sizes and distances are so extreme that every model must squeeze them.",
+  "fiction": false,
+  "materials": [
+    "Eight balls in varied sizes (foam or papier-mâché)",
+    "Paints and brushes",
+    "Card disc for Saturn's ring",
+    "String",
+    "Hoop or two crossed sticks",
+    "Grown-up for hanging"
+  ],
+  "supervision": "A grown-up helps with hanging the mobile and any hot glue, and supervises painting at a covered table.",
+  "safetyNotes": [
+    "Hanging is a grown-up's job: the mobile hangs from a secure fixing, never above a bed or cot, and strings are kept short and tidy — long loops of string are a strangling hazard for babies and toddlers and never belong in their reach.",
+    "Paints: use washable, child-safe paints, cover the table, and wash hands and brushes after; papier-mâché paste is flour-and-water only if a grown-up makes it.",
+    "Small balls (Mercury marbles) are choking hazards for under-3s — the mobile hangs out of reach and loose small planets are stored in a closed box."
+  ],
+  "screenFreeExtension": "Planet walk: with a grown-up, pace out the peppercorn solar system in a park — Sun beach ball, then walk 26 paces to Earth the peppercorn — and feel how empty space really is."
+}

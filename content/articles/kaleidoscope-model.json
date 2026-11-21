@@ -1,0 +1,97 @@
+{
+  "id": "poster-kaleidoscope-model",
+  "slug": "kaleidoscope-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Kaleidoscope: Mirrors That Make Patterns",
+  "description": "Three mirror strips inside a tube turn a handful of beads into endless symmetrical snowflakes of colour. Build one and discover why the patterns are always perfect.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up assembles the mirror strips and supervises — mirror card only, never glass.",
+  "hero": {
+    "src": "/images/poster-kaleidoscope-model.webp",
+    "alt": "Mango looking into a kaleidoscope with symmetrical patterns bursting out",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Kaleidoscope | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kaleidoscope",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A pattern machine",
+      "paragraphs": [
+        "Point a kaleidoscope at the light, turn it slowly, and perfect symmetrical patterns bloom and melt and bloom again — never the same twice, never messy once. There is no drawing skill inside the tube and no computer. There are only mirrors, doing mathematics with light."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The mirror tunnel — three strips of mirror card taped into a triangle tube, shiny sides facing IN. This is the pattern engine. The object cup — a clear pot at the far end holding colourful beads, sequins and translucent bits that can tumble. The eye hole — a card disc with a small hole at the near end, so you look along the tunnel. The tube — the cardboard body that keeps the tunnel dark and straight."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "Three strips of mirror card the same size (a grown-up cuts and tapes them), a cardboard tube, a small clear plastic pot or two clear discs, colourful translucent beads and sequins, tape, and card for the eye disc."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — A grown-up builds the tunnel: three mirror strips taped edge to edge into a long triangle, shiny sides in. Slide it into the cardboard tube — snug and straight.",
+        "Step 2 — Fit the eye disc. Tape a card disc with a small centre hole over one end of the tube. Look through it now: you can see the tunnel's triangle of mirrors waiting.",
+        "Step 3 — Load the object cup. Put a pinch of beads and sequins in the clear pot (not too many — they need room to tumble) and tape it over the far end so light shines through it.",
+        "Step 4 — Turn and watch. Point the far end toward the light — never the sun — and turn the tube slowly. The beads tumble, and the mirrors multiply them into a perfect six-petalled flower of colour that changes with every turn."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "One mirror makes one reflection. But mirrors facing each other reflect each other's reflections — copies of copies, bouncing on and on. Three mirrors in a triangle bounce the beads' image around the triangle again and again, tiling it into a pattern with perfect symmetry: every petal matches because every petal IS the same beads, reflected. The pattern can never be messy — mirrors cannot reflect untidily — and it can never repeat exactly, because the beads never fall the same way twice."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why are the patterns always symmetrical, even though the beads fall messily?",
+        "2. How many petals does your pattern have? What do you think decides that number — the beads, or the mirrors?"
+      ]
+    }
+  ],
+  "takeaway": "Three mirrors in a triangle reflect each other's reflections, tiling a few tumbling beads into endless perfectly symmetrical patterns.",
+  "fiction": false,
+  "materials": [
+    "Three strips of mirror card (grown-up cuts and tapes)",
+    "Cardboard tube",
+    "Small clear pot or two clear discs",
+    "Colourful translucent beads and sequins",
+    "Tape and card (eye disc)"
+  ],
+  "supervision": "A grown-up builds the mirror tunnel and supervises the whole project.",
+  "safetyNotes": [
+    "Mirror CARD or acrylic only — never glass or real mirror shards in a child's kaleidoscope; cut edges of mirror card are taped over by a grown-up before the tunnel is handled.",
+    "Never point a kaleidoscope at the sun or look at the sun through it — it gathers light toward your eye. Bright windows and lamps are the light sources.",
+    "Beads and sequins are small parts — counted out and back into a closed pot, away from children under 3 and off the floor."
+  ],
+  "screenFreeExtension": "Pattern copying game: one person turns the kaleidoscope to a favourite pattern and describes it — colours, petals, shapes — while the other draws what they hear. Then compare drawing to pattern."
+}

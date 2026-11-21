@@ -1,0 +1,47 @@
+{
+  "id": "poster-pinwheel-model-q2",
+  "scheduledDate": "2029-07-15",
+  "brand": "kids",
+  "setId": "poster-set-pinwheel-model",
+  "prompt": "What does the little bead do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Makes it shiny"
+    },
+    {
+      "id": "b",
+      "text": "Holds the wheel away from the mast so it spins without rubbing"
+    },
+    {
+      "id": "c",
+      "text": "Feeds the wind"
+    },
+    {
+      "id": "d",
+      "text": "Nothing at all"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The bead is a spacer — rubbing against the mast would brake the wheel.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Wind turbine | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wind_turbine",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-pinwheel-model.webp",
+    "alt": "Mango watching a paper pinwheel spin in the breeze",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

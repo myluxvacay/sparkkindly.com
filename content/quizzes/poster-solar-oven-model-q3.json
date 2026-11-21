@@ -1,0 +1,47 @@
+{
+  "id": "poster-solar-oven-model-q3",
+  "scheduledDate": "2029-08-17",
+  "brand": "kids",
+  "setId": "poster-set-solar-oven-model",
+  "prompt": "What is the clear window's trick?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It magnifies the sun"
+    },
+    {
+      "id": "b",
+      "text": "It lets sunlight in but traps the warm air — the greenhouse effect"
+    },
+    {
+      "id": "c",
+      "text": "It filters the light"
+    },
+    {
+      "id": "d",
+      "text": "It cooks the food itself"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Sunlight passes in easily; the heat it creates cannot escape back — so warmth piles up inside.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Solar cooker | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solar_cooker",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-solar-oven-model.webp",
+    "alt": "Spark and Mango cooking a treat in a pizza-box solar oven",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

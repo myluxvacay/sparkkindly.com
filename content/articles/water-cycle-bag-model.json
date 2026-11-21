@@ -1,0 +1,98 @@
+{
+  "id": "poster-water-cycle-bag-model",
+  "slug": "water-cycle-bag-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Water Cycle in a Bag: Rain on Your Window",
+  "description": "A zip bag, warm water and a sunny window become the whole water cycle in miniature — evaporation, condensation and rain, happening on the glass all day.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up pours the warm water, tapes the bag to the window, and supervises.",
+  "hero": {
+    "src": "/images/poster-water-cycle-bag-model.webp",
+    "alt": "Mango watching droplets form and rain inside a water-cycle bag on a sunny window",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Water cycle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "The whole sky in one bag",
+      "paragraphs": [
+        "The water in the oceans, the clouds in the sky and the rain on your window are all one endless round trip — the water cycle. This model shrinks the entire journey into a plastic bag on a sunny window, where you can watch every stage happen before lunch."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The ocean — a little warm water in the bottom of the bag, coloured blue. The sun — real sunshine through the window (or a warm radiator nearby), the engine of the whole cycle. The sky — the top half of the bag, where vapour gathers. The rain — droplets that form on the bag's inside and run down, back to the ocean."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A zip-seal plastic bag, warm water, blue food colouring, a permanent marker (grown-up uses it), strong tape, and a sunny window. A notebook for weather-scientist observations."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Draw the scenery. A grown-up draws a sun in one top corner of the bag and a cloud in the other, with wavy lines at the bottom for the sea. The drawing stays on the OUTSIDE.",
+        "Step 2 — Add the ocean. Pour warm water into the bag until it is about a quarter full, stir in a drop of blue, and seal the zip tightly — every bit of air and water must stay inside for the cycle to work.",
+        "Step 3 — Tape the bag to a sunny window, sea at the bottom. Make sure the tape is strong — this ocean hangs around for days.",
+        "Step 4 — Watch and wait. Within an hour, mist and droplets appear on the inside top of the bag — that is condensation. The droplets grow, join, and trickle down the inside like rain, back into the blue sea. Your window is now running the same cycle as the whole Earth."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Warmth from the sun gives water molecules the energy to escape into the air as invisible vapour — evaporation. The vapour rises, meets the cooler plastic of the bag (your 'sky'), and turns back into liquid droplets — condensation, the same thing that fogs a bathroom mirror. When droplets grow heavy enough, they run down as precipitation — rain. On Earth, the sun does the warming, clouds are the condensation, and the oceans are the sea in the bag. The water in your bag never leaves and never runs out — and neither does Earth's: the water you drank today is millions of years old, recycled by this cycle forever."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Where in the bag is each stage — evaporation, condensation, rain? Point to each one and tell its story.",
+        "2. What happens to the cycle on a cloudy day when the sun hides? Check your bag and see if you were right."
+      ]
+    }
+  ],
+  "takeaway": "Sun warms the water so it evaporates, vapour condenses into droplets on the cooler bag, and the droplets fall back as rain — the Earth's whole water cycle in one window bag.",
+  "fiction": false,
+  "materials": [
+    "Zip-seal plastic bag",
+    "Warm water",
+    "Blue food colouring",
+    "Permanent marker (grown-up draws)",
+    "Strong tape",
+    "Sunny window"
+  ],
+  "supervision": "A grown-up pours the warm water, draws on the bag, seals and tapes it to the window, and checks it daily.",
+  "safetyNotes": [
+    "Warm water only, poured by a grown-up — never boiling; test the bag's seal over a sink before it goes on the window.",
+    "Plastic bags are never toys for younger children and never go near faces or heads — this bag stays taped to the window, and is binned (not played with) when the project ends.",
+    "Tape the bag where it cannot drip onto plugs, sockets or devices — water and electricity never share a windowsill."
+  ],
+  "screenFreeExtension": "Cycle diary: check the bag at breakfast, lunch and bedtime for three days and draw what you see each time — misty, dripping or calm — then match each drawing to the weather outside."
+}

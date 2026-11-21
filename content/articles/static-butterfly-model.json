@@ -1,0 +1,98 @@
+{
+  "id": "poster-static-butterfly-model",
+  "slug": "static-butterfly-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Static Butterfly: Wings That Move Like Magic",
+  "description": "A tissue-paper butterfly whose wings rise and flutter when a charged balloon comes near — no touching, no strings. Build it and meet static electricity.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up inflates and ties the balloon and supervises — balloon safety rules are part of this build.",
+  "hero": {
+    "src": "/images/poster-static-butterfly-model.webp",
+    "alt": "Mango watching a tissue butterfly's wings lift toward a charged balloon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Static electricity | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Static_electricity",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A butterfly that answers a balloon",
+      "paragraphs": [
+        "This little butterfly cannot fly — its wings are tissue paper. But bring a rubbed balloon close and the wings lift and flutter as if it were alive. No strings, no magnets, no touching. The puppeteer is invisible: static electricity."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The wings — two shapes cut from a single layer of tissue paper, light enough for a whisper of force to lift. The body — a strip of card the wings are glued along, like a real butterfly's body. The garden — a piece of cardboard the butterfly rests on. The charger — a balloon, rubbed on hair or a woolly jumper to load it with static."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "Tissue paper, a small strip of card, a piece of cardboard for the garden, safety scissors, a glue stick, crayons for decorating, and one balloon — which a grown-up inflates, ties and keeps in charge of."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Cut the wings. Fold the tissue in half and cut a wing shape so you get two matching wings joined at the fold. Tissue tears easily — slow scissors win.",
+        "Step 2 — Build the butterfly. Glue just the fold line to the card body — the wings themselves stay free and floppy. Draw a face and spots if you like, and glue the body to the middle of the cardboard garden.",
+        "Step 3 — Charge the balloon. Your grown-up rubs the balloon briskly on clean, dry hair or a wool jumper, about ten rubs. The balloon is now carrying an invisible electric charge.",
+        "Step 4 — Bring the balloon slowly down toward the butterfly — close, but not touching. The wings rise to meet it and flutter! Move the balloon away and they settle. Closer, and they lift again. You are conducting with static."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Rubbing moves tiny electric charges onto the balloon — this build-up is called static electricity. The charged balloon attracts light, uncharged things: the tissue wings are pulled toward it, just as charged balloons pull hair and tiny paper bits. It is the same force that makes a crackle when you pull off a jumper — and, in a giant sky-sized version, lightning."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why do the wings fall back down when the balloon moves away?",
+        "2. The trick works best on a dry day. Why do you think rainy, damp air makes static tricks weaker?"
+      ]
+    }
+  ],
+  "takeaway": "Rubbing gives a balloon a static electric charge, and that charge attracts light things — strong enough to lift a tissue butterfly's wings without touching them.",
+  "fiction": false,
+  "materials": [
+    "Tissue paper (wings)",
+    "Small strip of card (body)",
+    "Cardboard (garden base)",
+    "Safety scissors and a glue stick",
+    "Crayons",
+    "One balloon — inflated and tied by a grown-up"
+  ],
+  "supervision": "A grown-up inflates, ties and holds charge of the balloon, and supervises the whole activity.",
+  "safetyNotes": [
+    "BALLOON RULES: grown-ups inflate balloons — never children. Keep balloons away from faces while inflating, and if one pops, pick up every piece at once: burst balloon pieces are a serious choking hazard for babies, toddlers and pets.",
+    "Children with a latex allergy should do this build with a rubbed plastic ruler instead — ask your grown-up first.",
+    "Static is gentle, but never rub a balloon near anyone's eyes or ears, and stop if the popping sounds worry a younger child — watch from a happy distance instead."
+  ],
+  "screenFreeExtension": "Static parade: test what else the charged balloon can lift — tiny paper stars, a thread, a trickle of water from a tap (grown-up at the sink). Rank them from easiest to hardest to lift."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-water-cycle-bag-model-q1",
+  "scheduledDate": "2029-08-07",
+  "brand": "kids",
+  "setId": "poster-set-water-cycle-bag-model",
+  "prompt": "What is EVAPORATION?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Water freezing"
+    },
+    {
+      "id": "b",
+      "text": "Water turning into invisible vapour and escaping into the air"
+    },
+    {
+      "id": "c",
+      "text": "Rain falling"
+    },
+    {
+      "id": "d",
+      "text": "Water turning blue"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The sun's warmth gives water the energy to become vapour — that is evaporation.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Water cycle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_cycle",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-water-cycle-bag-model.webp",
+    "alt": "Mango watching droplets form and rain inside a water-cycle bag on a sunny window",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

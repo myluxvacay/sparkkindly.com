@@ -1,0 +1,52 @@
+{
+  "id": "poster-weather-vane-model-q4",
+  "scheduledDate": "2029-08-26",
+  "brand": "kids",
+  "setId": "poster-set-weather-vane-model",
+  "prompt": "Why does the vane need a BIG tail and a small point?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Big tails are traditional"
+    },
+    {
+      "id": "b",
+      "text": "The wind pushes hardest on the biggest surface, so the tail is shoved downwind until the arrow points into the wind"
+    },
+    {
+      "id": "c",
+      "text": "To balance the cups"
+    },
+    {
+      "id": "d",
+      "text": "So birds can sit on it"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Maximum push on the tail, minimum on the point — the arrow rests only when it points straight into the wind.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Anemometer | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Anemometer",
+      "accessedAt": "2026-11-20"
+    },
+    {
+      "title": "Weather vane | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Weather_vane",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-weather-vane-model.webp",
+    "alt": "Spark and Mango with a weather vane arrow and spinning cup anemometer on a garden post",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

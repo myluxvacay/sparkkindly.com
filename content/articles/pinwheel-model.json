@@ -1,0 +1,97 @@
+{
+  "id": "poster-pinwheel-model",
+  "slug": "pinwheel-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Pinwheel Power: Catch the Wind",
+  "description": "Paper, a pin and a pencil become a spinning wind wheel. Build a pinwheel, label its parts, and learn how moving air becomes turning power — the wind turbine's baby cousin.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up handles the pin and supervises — pins are the grown-up's part of this build.",
+  "hero": {
+    "src": "/images/poster-pinwheel-model.webp",
+    "alt": "Mango watching a paper pinwheel spin in the breeze",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Wind turbine | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wind_turbine",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A wheel that eats wind",
+      "paragraphs": [
+        "Wind is invisible, but a pinwheel makes it visible — every gust shows up as a spin. Your pinwheel is a tiny wind turbine: the same machine that, grown to the size of a building, lights up whole towns. Build one and hold the wind in your hand."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The blades — four folded paper triangles that catch the wind; each one is angled like a tiny sail. The hub — the centre where the blades meet and the pin passes through. The axle — the pin itself, the rod the wheel turns on. The mast — the pencil or stick you hold, which must stay still while the wheel spins free."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A square of stiff paper or thin card, safety scissors, a ruler and pencil for marking, a dressmaker's pin with a bead head (a grown-up keeps charge of it), a small bead, and a pencil with an eraser end or a wooden stick for the mast."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Mark the square. A grown-up draws two diagonal lines corner to corner. Cut along each line from the corner toward the centre — stopping a thumb's width from the middle. The centre must stay whole.",
+        "Step 2 — Fold the blades. Bend every OTHER corner into the centre, so four points meet in the middle. The folds make the angled blades — flat paper would just flap, but angled blades catch the wind and turn it into spin.",
+        "Step 3 — Pin the hub. A grown-up pushes the pin through all four folded points and the centre, then through a small bead, then into the pencil's eraser. The bead is a spacer — it holds the wheel away from the mast so it can spin without rubbing.",
+        "Step 4 — Catch the wind. Hold the mast still, face the wheel into the breeze (or walk slowly forward), and watch it spin. Turn sideways to the wind: the spin dies. A pinwheel only eats wind that hits its blades face-on."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Wind is moving air, and moving air pushes. The blades are angled, so the push lands unevenly — stronger on one side of each blade — and that uneven push is what twists the wheel around. Bigger gusts push harder and spin it faster; the spinning speed is a wind-speed meter you can see. Wind turbines work identically: angled blades, a hub, and wind doing the pushing — only their spin turns a generator to make electricity instead of just looking cheerful."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why do the blades have to be ANGLED? What would happen if they were folded perfectly flat?",
+        "2. Your pinwheel spins faster and slower as you watch. What is it telling you about the wind?"
+      ]
+    }
+  ],
+  "takeaway": "A pinwheel's angled blades catch the wind's push unevenly, turning moving air into spin — the same idea that powers giant wind turbines.",
+  "fiction": false,
+  "materials": [
+    "Square of stiff paper or thin card",
+    "Safety scissors, ruler and pencil",
+    "Dressmaker's pin with a bead head (grown-up keeps it)",
+    "Small bead (spacer)",
+    "Pencil with eraser end or a stick (mast)"
+  ],
+  "supervision": "A grown-up handles the pin at every step and supervises the build and the wind testing.",
+  "safetyNotes": [
+    "PINS ARE SHARP: the pin belongs to the grown-up — they do all pinning, carry it point-down, and park it in a pincushion or eraser the moment it is not being used. Never leave a pin in a finished pinwheel unattended where small hands can pull it out.",
+    "This build is not for children under 3 (pin and bead are small, sharp hazards); younger siblings watch the spinning from a grown-up's arms.",
+    "Outdoor testing: hold the mast, never run with the pinwheel — a fall onto a pin is exactly what the rules are for."
+  ],
+  "screenFreeExtension": "Wind hunt: carry your pinwheel around your garden or street with a grown-up and find the windiest spot — spinning speed is your meter. Mark the champion spot with a ribbon."
+}

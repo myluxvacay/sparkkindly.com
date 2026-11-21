@@ -1,0 +1,47 @@
+{
+  "id": "poster-tornado-in-a-bottle-model-q2",
+  "scheduledDate": "2029-07-31",
+  "brand": "kids",
+  "setId": "poster-set-tornado-in-a-bottle-model",
+  "prompt": "Why does spinning help the water drain?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It scares the water"
+    },
+    {
+      "id": "b",
+      "text": "It opens a hollow core so air can rise while water spirals down around it"
+    },
+    {
+      "id": "c",
+      "text": "It makes the bottle bigger"
+    },
+    {
+      "id": "d",
+      "text": "It heats the water"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The swirl throws water to the walls, leaving a central air channel — air up, water down, no more fighting.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Vortex | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Vortex",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-tornado-in-a-bottle-model.webp",
+    "alt": "Spark holding a bottle tornado with a swirling vortex inside",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

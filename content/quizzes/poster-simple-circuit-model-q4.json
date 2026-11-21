@@ -1,0 +1,47 @@
+{
+  "id": "poster-simple-circuit-model-q4",
+  "scheduledDate": "2029-06-27",
+  "brand": "kids",
+  "setId": "poster-set-simple-circuit-model",
+  "prompt": "What is the battery's job in the circuit?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It is the load"
+    },
+    {
+      "id": "b",
+      "text": "It is the switch"
+    },
+    {
+      "id": "c",
+      "text": "It pumps electricity around the loop"
+    },
+    {
+      "id": "d",
+      "text": "It insulates the wires"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The battery is the pump and power source — its + and − ends push and pull the flow around.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Electric circuit | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Electric_circuit",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-simple-circuit-model.webp",
+    "alt": "Spark and Mango with a cardboard circuit model: battery, wires, glowing bulb and a paper-clip switch",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

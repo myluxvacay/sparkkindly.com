@@ -1,0 +1,47 @@
+{
+  "id": "poster-magnet-maze-model-q3",
+  "scheduledDate": "2029-06-22",
+  "brand": "kids",
+  "setId": "poster-set-magnet-maze-model",
+  "prompt": "What happens if you drive the magnet too fast?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The car melts"
+    },
+    {
+      "id": "b",
+      "text": "The car loses the pull and gets left behind"
+    },
+    {
+      "id": "c",
+      "text": "The plate tears every time"
+    },
+    {
+      "id": "d",
+      "text": "The magnet stops working forever"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Move too fast and the clip slips out of the field's grip — smooth and slow keeps the tow.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Magnet | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Magnet",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-magnet-maze-model.webp",
+    "alt": "Spark and Mango steering a paper-clip car through a paper plate maze with a hidden magnet",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

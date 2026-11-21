@@ -1,0 +1,47 @@
+{
+  "id": "poster-periscope-model-q3",
+  "scheduledDate": "2029-09-14",
+  "brand": "kids",
+  "setId": "poster-set-periscope-model",
+  "prompt": "Why must the two mirrors be PARALLEL?",
+  "options": [
+    {
+      "id": "a",
+      "text": "To save tape"
+    },
+    {
+      "id": "b",
+      "text": "So the second bounce restores the light's direction and the view arrives the right way up"
+    },
+    {
+      "id": "c",
+      "text": "So the tube is balanced"
+    },
+    {
+      "id": "d",
+      "text": "Mirrors like company"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Identical leans undo each other's turn — the scene reaches your eye upright and correct.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Periscope | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Periscope",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-periscope-model.webp",
+    "alt": "Spark using a cardboard periscope to see Mango sitting on top of a wall",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "poster-human-sundial-model",
+  "slug": "human-sundial-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Human Sundial: You Are the Clock",
+  "description": "No parts to buy and nothing to cut: your own body is the sundial. Stand in the sun, mark where your shadow falls, and tell the time with your shadow all day.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up supervises outdoors and runs the timing; sun safety is part of the lesson.",
+  "hero": {
+    "src": "/images/poster-human-sundial-model.webp",
+    "alt": "Spark standing in a chalk sundial circle with a long shadow pointing to an hour marker",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Sundial | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sundial",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "The oldest clock is you",
+      "paragraphs": [
+        "Thousands of years before watches, people told time by shadows — because the sun appears to travel across the sky, and shadows swing around like the hand of a giant clock. Most sundials are made of stone or metal. Yours is made of something much better: you."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The gnomon — that is YOU: the standing-straight part whose shadow does the telling (on stone sundials it is a triangular fin; on you, it is your whole body). The dial — a circle marked on the ground with the hours. The hand — your shadow, which points to the hour. The engine — the sun, whose steady march across the sky moves the hand for free."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A sunny, flat patch of ground (pavement or patio), chalk, a watch or clock to check against, a compass or a grown-up who knows which way is north, and a sunny day with a few hours to spare. That is the entire kit."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Find your spot in the morning. A grown-up helps choose a flat sunny place and marks a standing spot with an X — you must stand on exactly this spot every time.",
+        "Step 2 — Take the first reading. Stand tall on the X, feet together, arms at your sides. Your grown-up draws the outline of your shadow's head (or your whole shadow) in chalk and writes the clock time beside it.",
+        "Step 3 — Return every hour. Stand on the same X in the same pose and mark the new shadow position and time. Watch the pattern: morning shadows are LONG and point one way; noon shadows shrink short; afternoon shadows stretch out the other way.",
+        "Step 4 — Use your clock. By late afternoon your ground is a working sundial: stand on the X and your shadow points to roughly the right hour mark. You have built a clock out of sunlight and standing still."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "The sun does not really travel — the Earth turns, and that turning makes the sun appear to arc across the sky from east to west. As its position changes, shadows swing the opposite way and change length: when the sun is low (morning and evening), shadows stretch long; when it is high (midday), shadows shrink to almost nothing. A sundial simply reads that swing. Your body's shadow moves about the width of your hand every quarter of an hour — slow, steady, and powered by the turning Earth itself."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why must you stand on exactly the same X every time for the clock to work?",
+        "2. Your sundial says one time and the kitchen clock says another, a little different. Who is 'right' — and why might they disagree?"
+      ]
+    }
+  ],
+  "takeaway": "As the Earth turns, the sun appears to cross the sky and your shadow swings and stretches like a clock hand — stand in the same spot, and the shadow tells the time.",
+  "fiction": false,
+  "materials": [
+    "Sunny flat ground (pavement or patio)",
+    "Chalk",
+    "A watch or clock (to check against)",
+    "A grown-up who knows which way is north, or a compass"
+  ],
+  "supervision": "A grown-up supervises outdoors throughout, runs the clock checks, and leads sun safety.",
+  "safetyNotes": [
+    "Sun safety is real science too: hats and sunscreen for the hourly trips outside, and NEVER look directly at the sun — you read the shadow, not the sun.",
+    "Choose a spot away from roads, driveways and reversing cars — a garden or patio, never a street, however quiet it seems.",
+    "Hot pavement in summer can burn bare feet — sundial scientists wear shoes, and take water breaks in the shade between readings."
+  ],
+  "screenFreeExtension": "Shadow portraits: at your favourite hour, have a grown-up chalk your whole shadow outline, then decorate the giant shadow-person with chalk clothes and a hat before it fades."
+}
