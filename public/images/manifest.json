@@ -1,814 +1,822 @@
 [
- {
-  "file": "hero.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-10-17",
-  "publicUseAuthorizedAt": "2026-10-19"
- },
- {
-  "file": "play.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-10-17",
-  "publicUseAuthorizedAt": "2026-10-19"
- },
- {
-  "file": "shadows.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-10-17",
-  "publicUseAuthorizedAt": "2026-10-19"
- },
- {
-  "file": "ocean.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-10-17",
-  "publicUseAuthorizedAt": "2026-10-19"
- },
- {
-  "file": "together.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-10-17",
-  "publicUseAuthorizedAt": "2026-10-19"
- },
- {
-  "file": "grow.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-10-17",
-  "publicUseAuthorizedAt": "2026-10-19"
- },
- {
-  "file": "kids.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-10-17",
-  "publicUseAuthorizedAt": "2026-10-19"
- },
- {
-  "file": "science.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1572884267966-02340ebc90ac?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Yassine Khalfalli",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "space.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Benjamin Voros",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "earth.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1475776408506-9a5371e7a068?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Yosh Ginsu",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "body.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Hush Naidoo Jade Photography",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "animals.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Ray Hennessy",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "plants.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Markus Spiske",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "oceans.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Wexor Tmg",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "weather.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1600377927594-ceae8f8981a6?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Raychel Sanner",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "maths.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1548690596-f1722c190938?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Crissy Jarvis",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "money.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Andre Taissin",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "family.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Jessica Rockowitz",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "mind.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1522075782449-e45a34f1ddfb?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Sage Friedman",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "focus.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1445711005973-54fe2a103826?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Patrick Fore",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "art.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1471666875520-c75081f42081?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Tim Arterbury",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "words.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Janko Ferlič",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "history.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1603566541830-972ff1b4b2cd?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Constantinos Kollias",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "tech.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Chris Ried",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "kindness.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Hannah Busing",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "games.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "Randy Fath",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "green.webp",
-  "sourceUrl": "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80&fm=webp",
-  "photographer": "American Public Power Association",
-  "license": "https://unsplash.com/license",
-  "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
-  "downloadedAt": "2026-11-15",
-  "publicUseAuthorizedAt": "2026-11-15"
- },
- {
-  "file": "kite.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-16",
-  "publicUseAuthorizedAt": "2026-11-16"
- },
- {
-  "file": "moonrise.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-16",
-  "publicUseAuthorizedAt": "2026-11-16"
- },
- {
-  "file": "moonphases.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-16",
-  "publicUseAuthorizedAt": "2026-11-16"
- },
- {
-  "file": "obstacle.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-16",
-  "publicUseAuthorizedAt": "2026-11-16"
- },
- {
-  "file": "telescope.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-16",
-  "publicUseAuthorizedAt": "2026-11-16"
- },
- {
-  "file": "fireflies.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-16",
-  "publicUseAuthorizedAt": "2026-11-16"
- },
- {
-  "file": "sundial.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-16",
-  "publicUseAuthorizedAt": "2026-11-16"
- },
- {
-  "file": "reading-fox-winter-den.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-bees-tell-the-way.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-maya-broken-kite.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-sea-turtles-come-home.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-night-lights-went-out.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-sundial-tells-time.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-toms-tomato-plant.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-moon-changes-shape.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-lost-library-book.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-penguins-huddle.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-article-moon-faces.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-article-fireflies.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-article-kite-race.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-article-sea-turtles.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "reading-clue-detective.webp",
-  "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-helping-verbs-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-am-is-are-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-verb-tenses-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-prepositions-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-words-that-sound-the-same-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-in-or-on-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-pronouns-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-plurals-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-question-words-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-naming-words-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-count-the-syllables-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-rhyming-pairs-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-my-dino-cup-reading-set.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-a-rainy-day-reading-set.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-word-families-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-beginning-sounds-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-pip-the-pup-reading-set.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-nias-garden-reading-set.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-syllables-challenge-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-silent-letters-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-opposite-actions-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-where-do-they-live-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-action-words-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-opposites-describing-words-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-feelings-words-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-weather-words-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-colors-and-shapes-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-numbers-to-twenty-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-my-body-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-jobs-people-do-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-polite-phrases-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-words-every-child-should-know-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-helping-hands-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-saying-sorry-well-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-including-others-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-crossing-the-road-safely-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-feelings-are-okay-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-sharing-and-taking-turns-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-kind-words-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-trusted-adults-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-how-a-seed-grows-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-life-cycle-of-a-butterfly-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-the-water-cycle-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-why-we-brush-our-teeth-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-why-bees-matter-article.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-day-and-night-article.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-the-five-senses-article.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-magnets-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-why-leaves-change-color-article.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- },
- {
-  "file": "poster-how-bread-is-made-poster.webp",
-  "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
-  "license": "Owner-generated work; no third-party licence applies",
-  "status": "Owner-authorized public publication",
-  "downloadedAt": "2026-11-20",
-  "publicUseAuthorizedAt": "2026-11-20"
- }
+  {
+    "file": "hero.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-10-17",
+    "publicUseAuthorizedAt": "2026-10-19"
+  },
+  {
+    "file": "play.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-10-17",
+    "publicUseAuthorizedAt": "2026-10-19"
+  },
+  {
+    "file": "shadows.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-10-17",
+    "publicUseAuthorizedAt": "2026-10-19"
+  },
+  {
+    "file": "ocean.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-10-17",
+    "publicUseAuthorizedAt": "2026-10-19"
+  },
+  {
+    "file": "together.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-10-17",
+    "publicUseAuthorizedAt": "2026-10-19"
+  },
+  {
+    "file": "grow.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-10-17",
+    "publicUseAuthorizedAt": "2026-10-19"
+  },
+  {
+    "file": "kids.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-10-17",
+    "publicUseAuthorizedAt": "2026-10-19"
+  },
+  {
+    "file": "science.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1572884267966-02340ebc90ac?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Yassine Khalfalli",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "space.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Benjamin Voros",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "earth.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1475776408506-9a5371e7a068?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Yosh Ginsu",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "body.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Hush Naidoo Jade Photography",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "animals.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Ray Hennessy",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "plants.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Markus Spiske",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "oceans.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Wexor Tmg",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "weather.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1600377927594-ceae8f8981a6?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Raychel Sanner",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "maths.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1548690596-f1722c190938?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Crissy Jarvis",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "money.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Andre Taissin",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "family.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Jessica Rockowitz",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "mind.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1522075782449-e45a34f1ddfb?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Sage Friedman",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "focus.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1445711005973-54fe2a103826?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Patrick Fore",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "art.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1471666875520-c75081f42081?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Tim Arterbury",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "words.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Janko Ferli\u010d",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "history.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1603566541830-972ff1b4b2cd?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Constantinos Kollias",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "tech.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Chris Ried",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "kindness.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Hannah Busing",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "games.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "Randy Fath",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "green.webp",
+    "sourceUrl": "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80&fm=webp",
+    "photographer": "American Public Power Association",
+    "license": "https://unsplash.com/license",
+    "status": "Owner-authorized public publication; detailed provenance and independent final rights review remain incomplete",
+    "downloadedAt": "2026-11-15",
+    "publicUseAuthorizedAt": "2026-11-15"
+  },
+  {
+    "file": "kite.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-16",
+    "publicUseAuthorizedAt": "2026-11-16"
+  },
+  {
+    "file": "moonrise.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-16",
+    "publicUseAuthorizedAt": "2026-11-16"
+  },
+  {
+    "file": "moonphases.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-16",
+    "publicUseAuthorizedAt": "2026-11-16"
+  },
+  {
+    "file": "obstacle.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-16",
+    "publicUseAuthorizedAt": "2026-11-16"
+  },
+  {
+    "file": "telescope.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-16",
+    "publicUseAuthorizedAt": "2026-11-16"
+  },
+  {
+    "file": "fireflies.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-16",
+    "publicUseAuthorizedAt": "2026-11-16"
+  },
+  {
+    "file": "sundial.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-16)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-16",
+    "publicUseAuthorizedAt": "2026-11-16"
+  },
+  {
+    "file": "reading-fox-winter-den.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-bees-tell-the-way.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-maya-broken-kite.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-sea-turtles-come-home.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-night-lights-went-out.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-sundial-tells-time.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-toms-tomato-plant.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-moon-changes-shape.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-lost-library-book.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-penguins-huddle.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-article-moon-faces.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-article-fireflies.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-article-kite-race.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-article-sea-turtles.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-clue-detective.webp",
+    "sourceUrl": "AI-generated for SparkKindly (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-helping-verbs-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-am-is-are-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-verb-tenses-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-prepositions-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-words-that-sound-the-same-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-in-or-on-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-pronouns-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-plurals-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-question-words-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-naming-words-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-count-the-syllables-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-rhyming-pairs-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-my-dino-cup-reading-set.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-a-rainy-day-reading-set.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-word-families-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-beginning-sounds-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-pip-the-pup-reading-set.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-nias-garden-reading-set.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-syllables-challenge-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-silent-letters-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-opposite-actions-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-where-do-they-live-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-action-words-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-opposites-describing-words-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-feelings-words-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-weather-words-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-colors-and-shapes-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-numbers-to-twenty-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-my-body-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-jobs-people-do-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-polite-phrases-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-words-every-child-should-know-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-helping-hands-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-saying-sorry-well-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-including-others-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-crossing-the-road-safely-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-feelings-are-okay-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-sharing-and-taking-turns-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-kind-words-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-trusted-adults-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-how-a-seed-grows-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-life-cycle-of-a-butterfly-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-the-water-cycle-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-why-we-brush-our-teeth-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-why-bees-matter-article.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-day-and-night-article.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-the-five-senses-article.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-magnets-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-why-leaves-change-color-article.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "poster-how-bread-is-made-poster.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  },
+  {
+    "file": "reading-article-lighthouse-cat.webp",
+    "sourceUrl": "AI-generated for SparkKindly with Google Gemini (owner-commissioned, 2026-11-20)",
+    "license": "Owner-generated work; no third-party licence applies",
+    "status": "Owner-authorized public publication",
+    "downloadedAt": "2026-11-20",
+    "publicUseAuthorizedAt": "2026-11-20"
+  }
 ]
