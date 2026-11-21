@@ -6,7 +6,7 @@
   "title": "Water Filter: Clean It Like Nature Does",
   "description": "Sand, gravel, cotton and a cut bottle become a working water filter. Pour in muddy water, watch it drip out clearer, and learn how layers trap dirt.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-water-filter-model-steps.webp",
+        "alt": "The water filter in four pictures, left to right: a grown-up holding the bottle funnel over the jar, Spark layering sand into the funnel, Spark stirring the murky challenge water, and Spark pouring the muddy water through the filter as clearer drips land in the jar",
+        "width": 1842,
+        "height": 447,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-water-filter-model-steps-1.webp",
+          "alt": "Step 1 of 4: a grown-up holding the cut-bottle funnel over the jar while Spark watches",
+          "width": 453,
+          "height": 447,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-water-filter-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark pouring a layer of sand into the filter funnel",
+          "width": 453,
+          "height": 447,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-water-filter-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark stirring soil and leaf bits into a jug of murky water",
+          "width": 453,
+          "height": 447,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-water-filter-model-steps-4.webp",
+          "alt": "Step 4 of 4: Spark pouring muddy water through the filter as clearer drips land in the jar",
+          "width": 453,
+          "height": 447,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — A grown-up cuts the bottle and turns the top half upside down into the bottom half or over a jar. Push cotton wool into the neck — this is the last gate every drop must pass.",
         "Step 2 — Build the layers upward from the neck: fine sand above the cotton, then coarse sand, then gravel on top. Each layer about two fingers deep. Rinse the layers by pouring clean water through once and throwing that water away.",

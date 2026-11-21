@@ -6,7 +6,7 @@
   "title": "Marble Run: Gravity's Roller Coaster",
   "description": "Cardboard tubes and ramps become a marble roller coaster. Build a run, label its parts, and discover why marbles speed up, slow down, and sometimes fly off the track.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-marble-run-model-steps.webp",
+        "alt": "The marble run in four pictures, left to right: Spark planning the zigzag route against a tower of books, Spark taping the first tube ramp high on the tower, a second ramp and turn added below, and the marble rolling down into the finish bowl — with Spark and Mango watching",
+        "width": 3358,
+        "height": 1248,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-marble-run-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark planning the zigzag run of tubes against the tower of books",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-marble-run-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark taping the first cardboard tube at a gentle slant high on the tower",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-marble-run-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark adding a second ramp and a curved turn below the first ramp",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-marble-run-model-steps-4.webp",
+          "alt": "Step 4 of 4: the marble rolling down the zigzag run into the finish bowl",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Plan the drop. Choose your wall or tower of books. A good run zigzags: down one ramp, turn, down the next, so the marble travels far without falling too fast.",
         "Step 2 — Build the first ramp. Tape a tube or folded cardboard channel at a gentle slant — steep enough to roll, gentle enough to control. Rest its low end above the first turn.",

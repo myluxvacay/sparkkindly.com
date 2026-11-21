@@ -6,7 +6,7 @@
   "title": "Magnet Maze: Steer Without Touching",
   "description": "A paper plate maze, a paper clip car, and a magnet hidden underneath. Guide the car through the maze with an invisible force — no touching allowed.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-magnet-maze-model-steps.webp",
+        "alt": "The magnet maze in four pictures, left to right: Spark drawing the winding maze on a paper plate, a close-up of the paper clip taped under the paper car, the plate resting on a box with the car at the start and a hand hidden underneath, and the car steering through the maze — with Mango watching",
+        "width": 3358,
+        "height": 1248,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-magnet-maze-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark drawing a wide winding maze on a round paper plate",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-magnet-maze-model-steps-2.webp",
+          "alt": "Step 2 of 4: a close-up of Spark taping a paper clip underneath the small paper car",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-magnet-maze-model-steps-3.webp",
+          "alt": "Step 3 of 4: the plate on an open box, the car at the maze start and a hand hidden underneath",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-magnet-maze-model-steps-4.webp",
+          "alt": "Step 4 of 4: the paper car steering through the maze turns, pulled by the hidden magnet",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Draw the maze. Start with wide, gentle paths — hairpin bends come later, once you are a champion driver. Mark a START and a FINISH.",
         "Step 2 — Build the car. Tape the paper clip flat under your paper car, or fold the car so the clip hides inside. Test: does a magnet grab it through the plate? It must slide, not stick fast — if it sticks, use a thicker plate.",

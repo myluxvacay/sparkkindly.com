@@ -6,7 +6,7 @@
   "title": "Floating Compass: A Needle That Finds North",
   "description": "A magnetised needle, a leaf of cork, and a bowl of water: the compass sailors used for a thousand years. Build one and watch the needle hunt for north on its own.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-floating-compass-model-steps.webp",
+        "alt": "The floating compass in four pictures, left to right: hands stroking the needle with a magnet on the table, Spark setting the flagged needle float onto the bowl of water, the cork float settled and pointing in the bowl, and Spark checking the float against a real compass — with Mango watching",
+        "width": 1914,
+        "height": 470,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-floating-compass-model-steps-1.webp",
+          "alt": "Step 1 of 4: hands stroking the needle with a magnet on the table while Spark holds it steady",
+          "width": 471,
+          "height": 470,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-floating-compass-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark setting the cork float with its needle and tiny flag onto the bowl of water",
+          "width": 471,
+          "height": 470,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-floating-compass-model-steps-3.webp",
+          "alt": "Step 3 of 4: the cork float settled in the bowl with Spark and Mango watching",
+          "width": 471,
+          "height": 470,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-floating-compass-model-steps-4.webp",
+          "alt": "Step 4 of 4: Spark pointing from the floating needle to the real compass beside the bowl",
+          "width": 471,
+          "height": 470,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Magnetise the needle. A grown-up strokes the needle with the magnet — always in the SAME direction, lifting the magnet away at the end of each stroke, about thirty strokes. Stroking one way lines up the needle's tiny magnetic parts into order: the needle is now a magnet itself.",
         "Step 2 — Mount the float. The grown-up lays the needle across the cork slice. A dot of paint or a tiny paper flag marks the needle's north-seeking end (the end that was stroked toward — test it against the real compass in a moment).",

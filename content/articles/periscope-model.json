@@ -6,7 +6,7 @@
   "title": "Periscope: See Around Corners",
   "description": "Two mirrors in a cardboard tube let you see over walls and around corners. Build a periscope, label its light path, and learn why the mirrors must lean at exactly 45 degrees.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-periscope-model-steps.webp",
+        "alt": "The periscope build in four pictures, left to right: hands cutting the windows in the cardboard tube, a hand setting the top mirror, a hand setting the bottom mirror, and Spark peeking through the periscope to see Mango over the wall",
+        "width": 1542,
+        "height": 603,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-periscope-model-steps-1.webp",
+          "alt": "Step 1 of 4: hands cutting a window in the long cardboard tube with scissors",
+          "width": 378,
+          "height": 603,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-periscope-model-steps-2.webp",
+          "alt": "Step 2 of 4: a hand setting the first small mirror inside the top of the tube",
+          "width": 378,
+          "height": 603,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-periscope-model-steps-3.webp",
+          "alt": "Step 3 of 4: a hand setting the second mirror inside the bottom of the tube",
+          "width": 378,
+          "height": 603,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-periscope-model-steps-4.webp",
+          "alt": "Step 4 of 4: Spark peeking through the periscope, seeing Mango over the wall along the zigzag light path",
+          "width": 378,
+          "height": 603,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Cut the windows. A grown-up cuts a window near the top of the tube facing forward, and one near the bottom facing the opposite way (toward where your eye will be).",
         "Step 2 — Set the top mirror. Fix the first mirror inside the top of the tube, facing the top window, tilted at exactly 45 degrees — half of a right angle. Tape it firmly; a slipped mirror is a broken periscope.",

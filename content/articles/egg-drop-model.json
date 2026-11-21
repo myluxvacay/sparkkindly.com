@@ -6,7 +6,7 @@
   "title": "Egg Drop: Design a Landing Pod",
   "description": "Engineers protect astronauts, phones and eggs the same way: cushion the landing and spread the stop. Build a pod, drop an egg, and see if your design keeps it whole.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-egg-drop-model-steps.webp",
+        "alt": "The egg drop pod in four pictures, left to right: Spark nestling the egg into cotton cushioning inside the container, Spark taping straw crumple legs around the outside, the pod dropping from knee height onto a tray, and grown-up hands dropping the pod from a porch step — with Mango watching",
+        "width": 3358,
+        "height": 1248,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-egg-drop-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark nestling the egg into soft cotton cushioning inside the container",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-egg-drop-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark taping drinking straws around the outside of the pod as crumple legs",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-egg-drop-model-steps-3.webp",
+          "alt": "Step 3 of 4: the pod dropping from knee height onto a tray while Spark watches",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-egg-drop-model-steps-4.webp",
+          "alt": "Step 4 of 4: grown-up hands dropping the pod from a porch step while Spark and Mango watch",
+          "width": 832,
+          "height": 1248,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Pack the capsule. Line the container with cushioning, nestle the egg in the middle so it touches nothing hard, and pack more cushioning on top. Shake gently: the egg must not move.",
         "Step 2 — Add the sacrifice layer. Tape straws or folded card around the outside as legs or a crumple skirt. These parts are DESIGNED to bend and crush — their damage is the egg's protection.",

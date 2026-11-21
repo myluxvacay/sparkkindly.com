@@ -6,7 +6,7 @@
   "title": "Weather Vane and Cup Spinner: Which Way, How Fast?",
   "description": "One model answers two weather questions: a vane that points where the wind comes FROM, and spinning cups that race faster as the wind strengthens. Build a pocket weather station.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -62,6 +62,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-weather-vane-model-steps.webp",
+        "alt": "The weather station build in four pictures, left to right: Spark taping paper cups onto the crossed straws at the table, Spark cutting the card arrow, grown-up hands mounting the cups and arrow onto the post, and the finished weather station spinning outside while Spark logs the reading — with Mango watching",
+        "width": 1806,
+        "height": 444,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-weather-vane-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark taping paper cups onto the crossed pair of straws at the table",
+          "width": 444,
+          "height": 444,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-weather-vane-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark cutting the card arrow with scissors while Mango holds the card",
+          "width": 444,
+          "height": 444,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-weather-vane-model-steps-3.webp",
+          "alt": "Step 3 of 4: grown-up hands mounting the cup cross and the arrow onto the garden post",
+          "width": 444,
+          "height": 444,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-weather-vane-model-steps-4.webp",
+          "alt": "Step 4 of 4: the finished weather station spinning outdoors while Spark writes the reading in a notebook",
+          "width": 444,
+          "height": 444,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Build the cups cross. Tape two straws into an X. Fix a cup at each of the four ends, all facing the SAME way around the circle — every cup's open side pointing clockwise. This sameness is the whole secret.",
         "Step 2 — Build the vane. Cut a card arrow: a triangle point at one end, a big rectangle tail at the other, fixed along a straw. The tail must be much bigger than the point — it is the sail the wind steers by.",

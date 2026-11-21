@@ -19,6 +19,7 @@ import { site } from '@/lib/config';
 import { getDb } from '@/lib/db';
 import type { PublicItem } from '@/lib/items/repo';
 import { readArticle, readImage } from '@/lib/public/body';
+import { stepShareCard } from '@/lib/public/step-share-card';
 import { formatDay } from '@/lib/public/dates';
 import { articleLd, breadcrumbLd } from '@/lib/public/jsonld';
 import type { SearchParams } from '@/lib/public/play-params';
@@ -50,7 +51,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = await loadItem(world, slug);
   if (!item) return {};
   const path = `/${item.world}/${item.slug}/`;
-  const image = { url: `/api/template-image/${item.world}/${item.slug}/`, width: 1200, height: 630, alt: item.title };
+  // Step-strip articles share their panel-composed card (the curiosity teaser, 21 Nov 2026);
+  // everything else keeps the template share image.
+  const image = (item.kind === 'article' ? stepShareCard(item.body, item.title) : null) ?? {
+    url: `/api/template-image/${item.world}/${item.slug}/`,
+    width: 1200,
+    height: 630,
+    alt: item.title,
+  };
   const base = seo(item.title, item.summary, path);
   // SEO audit L2: article:published_time and article:modified_time.
   const openGraph = {

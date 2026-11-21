@@ -6,7 +6,7 @@
   "title": "Tornado in a Bottle: Spin a Vortex",
   "description": "Two bottles, a swirl of water, and a funnel cloud appears on command. Build a tornado in a bottle and learn why spinning water drains in a whirlpool spiral.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-tornado-in-a-bottle-model-steps.webp",
+        "alt": "The bottle tornado in four pictures, left to right: Spark tipping glitter into the water bottle, hands taping the two bottles neck to neck, the joined bottles flipped with water glugging down, and a glittering vortex swirling as Spark holds the bottle — with Mango watching",
+        "width": 1954,
+        "height": 481,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-tornado-in-a-bottle-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark tipping glitter into the bottle of water at the sink",
+          "width": 481,
+          "height": 481,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-tornado-in-a-bottle-model-steps-2.webp",
+          "alt": "Step 2 of 4: hands wrapping tape around the two bottle necks joined mouth to mouth",
+          "width": 481,
+          "height": 481,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-tornado-in-a-bottle-model-steps-3.webp",
+          "alt": "Step 3 of 4: the joined bottles flipped over, water glugging down into the lower bottle",
+          "width": 481,
+          "height": 481,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-tornado-in-a-bottle-model-steps-4.webp",
+          "alt": "Step 4 of 4: a glittering vortex swirling while Spark holds the bottle and Mango watches",
+          "width": 481,
+          "height": 481,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Fill one bottle about two-thirds full of water. Add the drop of soap and the glitter. Swirl it once and watch the glitter drift — no funnel yet.",
         "Step 2 — A grown-up joins the bottles neck to neck with layers of tape wrapped tightly round and round. Squeeze-test over the sink: no leaks allowed on this mission.",

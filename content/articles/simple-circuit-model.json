@@ -6,7 +6,7 @@
   "title": "Simple Circuit: Light a Bulb with a Battery",
   "description": "A battery, two wires, a small bulb and a paper-clip switch on a cardboard base. Build a real working circuit, label every part, and learn what makes the loop complete.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-simple-circuit-model-steps.webp",
+        "alt": "The simple circuit in four pictures, left to right: Spark taping the battery, bulb and switch posts onto the cardboard base, Spark holding the wires ready to connect, the bulb glowing with the loop complete, and the bulb dark again as Spark the scientist points at the open switch — with Mango watching",
+        "width": 1922,
+        "height": 473,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-simple-circuit-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark fixing the battery, bulb holder and two brass fasteners onto the cardboard base",
+          "width": 473,
+          "height": 473,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-simple-circuit-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark holding the red and black wires ready to connect the loop",
+          "width": 473,
+          "height": 473,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-simple-circuit-model-steps-3.webp",
+          "alt": "Step 3 of 4: the bulb glowing brightly with the loop complete and Spark celebrating",
+          "width": 473,
+          "height": 473,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-simple-circuit-model-steps-4.webp",
+          "alt": "Step 4 of 4: the bulb dark with the switch open while Spark points like a scientist",
+          "width": 473,
+          "height": 473,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Fix the parts to the base. Tape the battery at one end of the cardboard. Set the bulb holder in the middle. Push the two brass fasteners through the card near the other end, a finger-width apart — these are your switch posts.",
         "Step 2 — Wire the loop. Connect one wire from the battery's + end to the bulb holder. Connect a second wire from the bulb holder to one switch post. Connect the paper clip loosely on the other switch post so it can swing.",
