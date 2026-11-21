@@ -27,6 +27,7 @@
     "content:update-heroes": "tsx scripts/update-hero-images.ts",
     "content:update-topics": "tsx scripts/backfill-item-topics.ts",
     "content:update-games": "tsx scripts/update-game-items.ts",
+    "content:update-section-images": "tsx scripts/update-section-images.ts",
     "content:publish:build": "esbuild scripts/content-publish.ts --bundle --platform=node --format=esm --target=node24 --external:pg --outfile=release/content-publish.mjs"
   },
   "keywords": [],
