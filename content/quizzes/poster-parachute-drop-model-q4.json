@@ -1,0 +1,47 @@
+{
+  "id": "poster-parachute-drop-model-q4",
+  "scheduledDate": "2029-07-09",
+  "brand": "kids",
+  "setId": "poster-set-parachute-drop-model",
+  "prompt": "Why are real parachutes for people SO big?",
+  "options": [
+    {
+      "id": "a",
+      "text": "For advertising"
+    },
+    {
+      "id": "b",
+      "text": "A person is heavy, so the canopy must catch a huge amount of air to slow them"
+    },
+    {
+      "id": "c",
+      "text": "Pilots like big things"
+    },
+    {
+      "id": "d",
+      "text": "They are made from leftover tent fabric"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "More weight needs more drag — a person's canopy must be room-sized to push back enough air.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Parachute | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Parachute",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-parachute-drop-model.webp",
+    "alt": "Spark watching a napkin parachute float down with its paper-clip passenger",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-marble-run-model-q2",
+  "scheduledDate": "2029-06-13",
+  "brand": "kids",
+  "setId": "poster-set-marble-run-model",
+  "prompt": "At the START gate, what does the marble have most of?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Speed"
+    },
+    {
+      "id": "b",
+      "text": "Stored (potential) energy from being high up"
+    },
+    {
+      "id": "c",
+      "text": "Friction"
+    },
+    {
+      "id": "d",
+      "text": "Noise"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Height gives the marble potential energy, which turns into movement as it rolls down.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Gravity | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gravity",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-marble-run-model.webp",
+    "alt": "Spark and Mango watching a marble zigzag down a cardboard tube run",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

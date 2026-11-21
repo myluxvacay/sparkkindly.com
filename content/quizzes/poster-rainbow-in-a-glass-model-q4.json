@@ -1,0 +1,47 @@
+{
+  "id": "poster-rainbow-in-a-glass-model-q4",
+  "scheduledDate": "2029-07-25",
+  "brand": "kids",
+  "setId": "poster-set-rainbow-in-a-glass-model",
+  "prompt": "A grape stops halfway down the tower and hovers. Why there?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It got stuck on the glass"
+    },
+    {
+      "id": "b",
+      "text": "It sank through liquids less dense than itself and floats on the first liquid denser than it"
+    },
+    {
+      "id": "c",
+      "text": "It is filled with air"
+    },
+    {
+      "id": "d",
+      "text": "It is too tired to sink"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Every object sinks until it meets a liquid denser than itself — that layer becomes its floor.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Density | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Density",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-rainbow-in-a-glass-model.webp",
+    "alt": "Spark and Mango with a glass of stacked rainbow liquid layers",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

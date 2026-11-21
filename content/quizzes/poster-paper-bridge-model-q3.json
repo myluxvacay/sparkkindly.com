@@ -1,0 +1,47 @@
+{
+  "id": "poster-paper-bridge-model-q3",
+  "scheduledDate": "2029-06-10",
+  "brand": "kids",
+  "setId": "poster-set-paper-bridge-model",
+  "prompt": "Why do ridges make paper stronger?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The ridges make the paper heavier"
+    },
+    {
+      "id": "b",
+      "text": "Deep, ridged shapes resist bending and spread the load"
+    },
+    {
+      "id": "c",
+      "text": "The coins get scared"
+    },
+    {
+      "id": "d",
+      "text": "Folding adds glue"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A deep ridged shape resists bending much better than a thin flat sheet, and the ridges share the load.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Bridge | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bridge",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-paper-bridge-model.webp",
+    "alt": "Mango watching a folded paper bridge hold a stack of coins between two books",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

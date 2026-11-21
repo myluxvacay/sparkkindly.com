@@ -1,0 +1,47 @@
+{
+  "id": "poster-marble-run-model-q1",
+  "scheduledDate": "2029-06-12",
+  "brand": "kids",
+  "setId": "poster-set-marble-run-model",
+  "prompt": "What powers a marble run?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Batteries"
+    },
+    {
+      "id": "b",
+      "text": "A motor"
+    },
+    {
+      "id": "c",
+      "text": "Gravity"
+    },
+    {
+      "id": "d",
+      "text": "Magnets"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Gravity is the only engine — it pulls the marble down every ramp.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Gravity | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gravity",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-marble-run-model.webp",
+    "alt": "Spark and Mango watching a marble zigzag down a cardboard tube run",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

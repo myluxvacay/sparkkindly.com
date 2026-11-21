@@ -1,0 +1,47 @@
+{
+  "id": "poster-string-telephone-model-q4",
+  "scheduledDate": "2029-09-23",
+  "brand": "kids",
+  "setId": "poster-set-string-telephone-model",
+  "prompt": "Why does the string phone beat shouting across the garden?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Cups are magic"
+    },
+    {
+      "id": "b",
+      "text": "Sound scatters in open air, but the string keeps every vibration in line to the listener"
+    },
+    {
+      "id": "c",
+      "text": "Shouting is banned"
+    },
+    {
+      "id": "d",
+      "text": "The string is electric"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A solid, taut string is a guided road for sound; open air lets a voice spread and fade.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Tin can telephone | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tin_can_telephone",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-string-telephone-model.webp",
+    "alt": "Spark and Mango talking through two cups joined by a long taut string",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

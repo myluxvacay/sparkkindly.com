@@ -1,0 +1,47 @@
+{
+  "id": "poster-pulley-lift-model-q2",
+  "scheduledDate": "2029-06-05",
+  "brand": "kids",
+  "setId": "poster-set-pulley-lift-model",
+  "prompt": "With ONE fixed pulley, what actually changes?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The load gets lighter"
+    },
+    {
+      "id": "b",
+      "text": "The direction of your pull — you pull down to lift up"
+    },
+    {
+      "id": "c",
+      "text": "Gravity gets weaker"
+    },
+    {
+      "id": "d",
+      "text": "The rope gets longer"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A single fixed pulley changes direction, not weight — pulling down lets your body weight help.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Pulley | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pulley",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-pulley-lift-model.webp",
+    "alt": "Spark and Mango lifting a toy brick in a paper cup with a spool pulley",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

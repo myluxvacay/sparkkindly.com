@@ -1,0 +1,96 @@
+{
+  "id": "poster-periscope-model",
+  "slug": "periscope-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Periscope: See Around Corners",
+  "description": "Two mirrors in a cardboard tube let you see over walls and around corners. Build a periscope, label its light path, and learn why the mirrors must lean at exactly 45 degrees.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up cuts the tube slots and handles the mirrors; unbreakable mirror card is the right material.",
+  "hero": {
+    "src": "/images/poster-periscope-model.webp",
+    "alt": "Spark using a cardboard periscope to see Mango sitting on top of a wall",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Periscope | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Periscope",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Eyes on a zigzag",
+      "paragraphs": [
+        "Submarines peek above the waves with it, soldiers peeked out of trenches with it, and you can peek over the garden wall with it: the periscope. It contains no lenses and no electronics — just two mirrors, stealing light and bending its path around corners."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The tube — a long cardboard tube or box that holds everything in line and keeps stray light out. The top mirror — set at the top, angled at 45 degrees, catching light from the scene. The bottom mirror — angled at 45 degrees the same way, catching the light from the top mirror and sending it into your eye. The windows — two openings, one at the top facing forward, one at the bottom facing you. The light path — the invisible zigzag: in at the top, down the tube, out at the bottom."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A long cardboard tube or two juice cartons joined (a grown-up cuts), two small mirrors or squares of mirror card (unbreakable — never glass), a protractor or a 45-degree guide drawn on card, tape, and a ruler."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Cut the windows. A grown-up cuts a window near the top of the tube facing forward, and one near the bottom facing the opposite way (toward where your eye will be).",
+        "Step 2 — Set the top mirror. Fix the first mirror inside the top of the tube, facing the top window, tilted at exactly 45 degrees — half of a right angle. Tape it firmly; a slipped mirror is a broken periscope.",
+        "Step 3 — Set the bottom mirror. Fix the second mirror inside the bottom, facing the bottom window, tilted at 45 degrees in the same direction, so the two mirrors are parallel — twins leaning the same way. Parallel is the secret.",
+        "Step 4 — Peek! Hold the tube upright, eye at the bottom window, top window above the wall (or above a grown-up's book barrier). The scene appears — light has travelled in, bounced down, and bounced out into your eye. Adjust the mirrors a hair at a time until the view is clear and whole."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Light travels in straight lines — it cannot turn corners by itself. But a mirror changes its direction by reflection, and reflection follows a strict rule: the angle in equals the angle out. A mirror at 45 degrees turns a horizontal light ray exactly 90 degrees, sending it straight down the tube; the second 45-degree mirror turns it 90 degrees again, back to horizontal and into your eye. Because both mirrors lean identically, the view arrives the right way up and the right way round. Submarine periscopes add lenses to magnify, but the two-mirror zigzag is the heart of every one."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why must the two mirrors be parallel? What would you see if the bottom mirror leaned the OTHER way?",
+        "2. Light can't bend around corners — so how is a periscope different from just holding a mirror up high?"
+      ]
+    }
+  ],
+  "takeaway": "Two parallel mirrors at 45 degrees bounce light in a zigzag — in at the top, down the tube, out into your eye — so you can see over and around things without being seen.",
+  "fiction": false,
+  "materials": [
+    "Long cardboard tube or two joined cartons (cut by a grown-up)",
+    "Two small unbreakable mirrors or mirror card",
+    "Protractor or 45-degree card guide",
+    "Tape and ruler"
+  ],
+  "supervision": "A grown-up cuts all slots and windows and handles the mirrors; the child aligns, tapes and tests.",
+  "safetyNotes": [
+    "Mirrors are mirror CARD or unbreakable acrylic only — never glass mirrors in a child's build; if a real mirror is the only option, a grown-up mounts it fully taped into the tube before the build begins.",
+    "All tube cutting is a grown-up's job (craft knives and stubborn card); children never cut slots above their own hand height or toward their body.",
+    "Periscopes are for peeking over garden walls, not roads: never use one to look across a road, into windows, or at the sun — a mirror can bounce sunlight into eyes, yours or someone else's."
+  ],
+  "screenFreeExtension": "Periscope spyglass course: set up a barrier of cushions, hide three soft toys behind it at different heights, and find them all using only the periscope — no standing up allowed."
+}

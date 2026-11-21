@@ -1,0 +1,47 @@
+{
+  "id": "poster-solar-system-mobile-model-q3",
+  "scheduledDate": "2029-09-02",
+  "brand": "kids",
+  "setId": "poster-set-solar-system-mobile-model",
+  "prompt": "Why can't a mobile be truly to scale?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Not enough paint"
+    },
+    {
+      "id": "b",
+      "text": "True scale needs a beach-ball Sun and a peppercorn Earth 26 metres away — no room fits the real proportions"
+    },
+    {
+      "id": "c",
+      "text": "Planets keep changing size"
+    },
+    {
+      "id": "d",
+      "text": "String is too weak"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Real sizes and distances are so extreme that every model must squeeze them — good scientists say so out loud.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Solar System | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solar_System",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-solar-system-mobile-model.webp",
+    "alt": "Spark and Mango under a mobile of the eight planets hanging in order",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-solar-oven-model-q2",
+  "scheduledDate": "2029-08-16",
+  "brand": "kids",
+  "setId": "poster-set-solar-oven-model",
+  "prompt": "Why is the lining BLACK?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It hides dirt"
+    },
+    {
+      "id": "b",
+      "text": "Dark surfaces absorb more sunlight and turn it into heat"
+    },
+    {
+      "id": "c",
+      "text": "Black paper is cheaper"
+    },
+    {
+      "id": "d",
+      "text": "It scares insects"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Dark colours soak up light energy instead of reflecting it away — that absorbed light becomes heat.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Solar cooker | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solar_cooker",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-solar-oven-model.webp",
+    "alt": "Spark and Mango cooking a treat in a pizza-box solar oven",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

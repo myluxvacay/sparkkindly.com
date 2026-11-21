@@ -1,0 +1,47 @@
+{
+  "id": "poster-simple-machines-model-q1",
+  "scheduledDate": "2029-05-27",
+  "brand": "kids",
+  "setId": "poster-set-simple-machines-model",
+  "prompt": "In a lever, what is the FULCRUM?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The thing being lifted"
+    },
+    {
+      "id": "b",
+      "text": "The block the lever rests and tips on"
+    },
+    {
+      "id": "c",
+      "text": "The push you give"
+    },
+    {
+      "id": "d",
+      "text": "The string over the top"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The fulcrum is the fixed point the lever arm tips on — slide it and the lifting gets easier or harder.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Simple machine | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Simple_machine",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-simple-machines-model.webp",
+    "alt": "Spark and Mango with a cardboard board showing a lever, a pulley, a wheel and axle, and a ramp",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "poster-lung-model",
+  "slug": "lung-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Lung Model: Breathe In, Breathe Out",
+  "description": "A bottle, two balloons and a straw build a working pair of lungs. Pull the bottom balloon and watch the lungs fill — the hidden muscle doing the work will surprise you.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up cuts the bottle, inflates nothing (balloons stay uninflated until fitted), and supervises the build.",
+  "hero": {
+    "src": "/images/poster-lung-model.webp",
+    "alt": "Spark making the balloons inside a bottle lung model inflate by pulling the bottom balloon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Lung | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lung",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Lungs that can't breathe by themselves",
+      "paragraphs": [
+        "Here is a fact that shocks everyone: your lungs cannot breathe on their own. They have no muscles to pull air in. Something else does the breathing FOR them — and this bottle model reveals the hidden worker, because the model has exactly the same secret."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The chest — the rigid plastic bottle, like your ribcage: a stiff box that protects what's inside. The windpipe — the straw, the single tube air travels through. The lungs — two small balloons on the straw's end, which fill and empty but cannot pull. The diaphragm — the stretchy balloon sheet sealed across the bottle's bottom: a dome of muscle (in you) that flattens and rises to do all the work."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A clear plastic bottle (a grown-up cuts the bottom off), two small balloons, a straw or a Y-shaped pair of straws, tape or a rubber band, modelling clay for sealing, and scissors for the grown-up only."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — A grown-up cuts the bottom off the bottle and smooths the edge with tape. Push the straw through the bottle's neck from inside, seal around it with clay so no air can sneak past.",
+        "Step 2 — Fit the lungs. Stretch one small balloon over the straw's end inside the bottle (or two balloons on a Y of straws) and tape them airtight. These balloons are the lungs — test that they are floppy and empty.",
+        "Step 3 — Fit the diaphragm. Cut the neck off the second balloon and stretch its sheet across the bottle's cut bottom, sealed all round with tape or a band. Add a small tape tab in the middle to pull.",
+        "Step 4 — Breathe. Pull the tab DOWN: the inside space grows, air pressure inside drops, and air rushes in through the straw — the lung balloons inflate! Push the sheet UP: air is squeezed out and the lungs empty. You are breathing, from the outside."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Breathing is pressure engineering. Your diaphragm — a dome of muscle under your lungs — flattens when you breathe in, making your chest space bigger. Bigger space means lower pressure inside, so air from outside (at higher pressure) pushes in through your windpipe and fills the lungs. Relax the diaphragm and it domes back up, shrinking the space and squeezing air out. The lungs themselves are passive passengers — stretchy bags. Your bottle copies this exactly: pull its balloon diaphragm and the 'lungs' fill, though nothing ever touched them."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. If the lungs can't pull air in themselves, what is actually doing the work when you take a deep breath?",
+        "2. Hiccups are the diaphragm twitching. What do you think a hiccup would look like on the bottle model?"
+      ]
+    }
+  ],
+  "takeaway": "Lungs are passive bags — the diaphragm does the breathing: flatten it and air rushes in; let it dome up and air is pushed out. The bottle model breathes by the same pressure trick.",
+  "fiction": false,
+  "materials": [
+    "Clear plastic bottle (bottom cut off by a grown-up)",
+    "Two small balloons (lungs + diaphragm sheet)",
+    "Straw or Y-shaped straw pair (windpipe)",
+    "Modelling clay (seal)",
+    "Tape or rubber band"
+  ],
+  "supervision": "A grown-up cuts the bottle, smooths edges, and supervises the build; balloon rules apply throughout.",
+  "safetyNotes": [
+    "BALLOON RULES: balloons in this build are parts, not toys — a grown-up handles them, they are never inflated by mouth for this model, and all pieces are binned at the end: balloon scraps are a choking hazard for babies, toddlers and pets.",
+    "The cut bottle edge is sharp until taped — a grown-up cuts, checks and tapes the rim before the bottle changes hands.",
+    "Children with a latex allergy should skip the balloon parts — a grown-up can substitute a plastic-bag sheet for the diaphragm and watch the build instead."
+  ],
+  "screenFreeExtension": "Breath counting calm: lie down, rest a soft toy on your tummy, and breathe slowly enough to rock it gently up and down ten times — feel your own diaphragm doing the model's job."
+}

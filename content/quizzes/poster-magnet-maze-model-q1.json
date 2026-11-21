@@ -1,0 +1,47 @@
+{
+  "id": "poster-magnet-maze-model-q1",
+  "scheduledDate": "2029-06-20",
+  "brand": "kids",
+  "setId": "poster-set-magnet-maze-model",
+  "prompt": "What pulls the car through the plate?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Wind"
+    },
+    {
+      "id": "b",
+      "text": "A magnetic field reaching through the paper"
+    },
+    {
+      "id": "c",
+      "text": "Static electricity"
+    },
+    {
+      "id": "d",
+      "text": "Gravity"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The magnet's field passes through paper and card, pulling the steel clip — and the car — along.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Magnet | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Magnet",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-magnet-maze-model.webp",
+    "alt": "Spark and Mango steering a paper-clip car through a paper plate maze with a hidden magnet",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

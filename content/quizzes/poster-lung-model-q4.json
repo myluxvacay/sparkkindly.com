@@ -1,0 +1,47 @@
+{
+  "id": "poster-lung-model-q4",
+  "scheduledDate": "2029-09-11",
+  "brand": "kids",
+  "setId": "poster-set-lung-model",
+  "prompt": "What happens in the model when you PUSH the sheet up?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The lungs inflate more"
+    },
+    {
+      "id": "b",
+      "text": "The space shrinks and air is squeezed out — the lungs empty"
+    },
+    {
+      "id": "c",
+      "text": "The straw closes"
+    },
+    {
+      "id": "d",
+      "text": "Nothing ever"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Pushing up domes the diaphragm, shrinking the chest space and squeezing air out — breathing out.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Lung | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lung",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-lung-model.webp",
+    "alt": "Spark making the balloons inside a bottle lung model inflate by pulling the bottom balloon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-string-telephone-model-q1",
+  "scheduledDate": "2029-09-20",
+  "brand": "kids",
+  "setId": "poster-set-string-telephone-model",
+  "prompt": "What actually travels along the string?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Air"
+    },
+    {
+      "id": "b",
+      "text": "Vibrations — tiny squeezes and stretches passed from the cup"
+    },
+    {
+      "id": "c",
+      "text": "The words written down"
+    },
+    {
+      "id": "d",
+      "text": "Electricity"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The cup's vibrating base passes its vibrations onto the string, and they race to the far cup.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Tin can telephone | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tin_can_telephone",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-string-telephone-model.webp",
+    "alt": "Spark and Mango talking through two cups joined by a long taut string",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

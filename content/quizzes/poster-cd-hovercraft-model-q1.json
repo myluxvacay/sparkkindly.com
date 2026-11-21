@@ -1,0 +1,47 @@
+{
+  "id": "poster-cd-hovercraft-model-q1",
+  "scheduledDate": "2029-07-10",
+  "brand": "kids",
+  "setId": "poster-set-cd-hovercraft-model",
+  "prompt": "What does the escaping air form under the CD?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A puddle"
+    },
+    {
+      "id": "b",
+      "text": "A cushion that lifts the CD off the table"
+    },
+    {
+      "id": "c",
+      "text": "A vacuum"
+    },
+    {
+      "id": "d",
+      "text": "A magnet"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Air spreading under the CD lifts it a hair's width — that cushion is the hovercraft's secret.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Hovercraft | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hovercraft",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-cd-hovercraft-model.webp",
+    "alt": "Spark and Mango watching a balloon-powered CD hovercraft glide across a table",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

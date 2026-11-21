@@ -1,0 +1,47 @@
+{
+  "id": "poster-egg-drop-model-q1",
+  "scheduledDate": "2029-06-16",
+  "brand": "kids",
+  "setId": "poster-set-egg-drop-model",
+  "prompt": "What is the cushioning's real job?",
+  "options": [
+    {
+      "id": "a",
+      "text": "To make the pod prettier"
+    },
+    {
+      "id": "b",
+      "text": "To stretch the stop over more time and absorb energy"
+    },
+    {
+      "id": "c",
+      "text": "To make the egg heavier"
+    },
+    {
+      "id": "d",
+      "text": "To keep the egg cold"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Cushioning squashes slowly, spreading the stop out so the force on the shell stays small.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Egg drop competition | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Egg_drop_competition",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-egg-drop-model.webp",
+    "alt": "Spark with a padded egg landing pod with straw legs, ready for a drop test",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

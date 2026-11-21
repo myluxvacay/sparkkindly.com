@@ -1,0 +1,99 @@
+{
+  "id": "poster-magnet-maze-model",
+  "slug": "magnet-maze-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Magnet Maze: Steer Without Touching",
+  "description": "A paper plate maze, a paper clip car, and a magnet hidden underneath. Guide the car through the maze with an invisible force — no touching allowed.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up helps draw the maze and supervises magnet play — small magnets are grown-up-checked first.",
+  "hero": {
+    "src": "/images/poster-magnet-maze-model.webp",
+    "alt": "Spark and Mango steering a paper-clip car through a paper plate maze with a hidden magnet",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Magnet | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Magnet",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Driving with invisible hands",
+      "paragraphs": [
+        "Here is a magic trick that is really physics: a little car crosses a paper plate, turning left and right through a maze — and nobody ever touches it. The driver is a magnet under the plate, pulling through the paper as if the plate were not there."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The track — a maze drawn on a paper plate or card, with a start and a finish. The car — a small paper shape with a steel paper clip fixed to it; the clip is what the magnet can grab. The driver magnet — a fridge magnet held flat under the plate. The force — magnetism, which passes through paper and card as if they were air."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A paper plate or piece of card, a pen for the maze, a small paper car shape, a steel paper clip, tape, and a fridge magnet. A cereal box makes a good stand to hold the plate up so hands fit underneath."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Draw the maze. Start with wide, gentle paths — hairpin bends come later, once you are a champion driver. Mark a START and a FINISH.",
+        "Step 2 — Build the car. Tape the paper clip flat under your paper car, or fold the car so the clip hides inside. Test: does a magnet grab it through the plate? It must slide, not stick fast — if it sticks, use a thicker plate.",
+        "Step 3 — Set the stage. Rest the plate on an open box or between two books so a hand fits underneath, holding the magnet flat against the plate's underside, right below the car.",
+        "Step 4 — Drive! Move the magnet slowly and the car follows, pulled through the plate. Steer through every turn to the finish. Too fast and the car loses its invisible tow rope — smooth and slow wins the maze."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "A magnet's pull lives in an invisible area around it called a magnetic field. The field can reach through materials a magnet ignores — paper, card, plastic, wood, even your hand. Steel contains iron, and iron is one of the few materials magnets pull strongly. So the magnet pulls the clip, the clip pulls the car, and the plate in between might as well be made of air."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why does the car stop following if you move the magnet too quickly?",
+        "2. What other materials could the magnet pull through? Test a book, a wooden ruler and a baking tray — which ones block the magic?"
+      ]
+    }
+  ],
+  "takeaway": "A magnetic field reaches through paper and card to pull steel — so a hidden magnet can steer a paper-clip car through a maze without ever touching it.",
+  "fiction": false,
+  "materials": [
+    "Paper plate or card (the track)",
+    "Pen (to draw the maze)",
+    "Small paper car shape",
+    "Steel paper clip",
+    "Tape",
+    "Fridge magnet",
+    "Open box or two books (stand)"
+  ],
+  "supervision": "A grown-up checks the magnet before play and supervises — magnet safety rules below are part of the project.",
+  "safetyNotes": [
+    "Magnets are never toys for the mouth: if a small magnet is swallowed it is a medical emergency — tell a grown-up at once. Keep magnets away from children under 3 entirely.",
+    "Use one ordinary fridge magnet only; strong craft magnets stay in grown-up hands, and two magnets must never be given to a child to click together near fingers (pinching) or mouths.",
+    "Keep magnets away from phones, bank cards and tablets, which they can damage — the maze stays on its box, away from devices."
+  ],
+  "screenFreeExtension": "Maze swap: draw a second, trickier maze on the back of the plate, swap with a family member, and time each other's runs with a counting chant."
+}

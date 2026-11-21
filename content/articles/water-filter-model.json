@@ -1,0 +1,98 @@
+{
+  "id": "poster-water-filter-model",
+  "slug": "water-filter-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Water Filter: Clean It Like Nature Does",
+  "description": "Sand, gravel, cotton and a cut bottle become a working water filter. Pour in muddy water, watch it drip out clearer, and learn how layers trap dirt.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up cuts the bottle and supervises; filtered water from this model is NEVER for drinking.",
+  "hero": {
+    "src": "/images/poster-water-filter-model.webp",
+    "alt": "Spark and Mango filtering muddy water through layers of gravel, sand and cotton",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Water purification | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_purification",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Nature's cleaning trick, in a bottle",
+      "paragraphs": [
+        "Rain that fell months ago may be the water in your tap today — cleaned on its journey through soil, sand and rock. This model rebuilds that journey in a cut bottle: pour muddy water in the top, and watch it drip out the bottom clearer with every layer it passes."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The funnel — the top half of a cut bottle, turned upside down. The layers — gravel at the top to catch big bits, coarse sand, then fine sand to catch smaller bits, and cotton wool at the neck as the final polish. The catchment — a jar under the funnel collecting the drips. The muddy water — your test water: water stirred with soil, leaves and a little glitter-free grit."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A large plastic bottle (a grown-up cuts it in half), gravel or small pebbles (rinsed), coarse sand and fine sand (rinsed), cotton wool or coffee-filter paper, a jar, and muddy water you make yourself with soil and leaves."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — A grown-up cuts the bottle and turns the top half upside down into the bottom half or over a jar. Push cotton wool into the neck — this is the last gate every drop must pass.",
+        "Step 2 — Build the layers upward from the neck: fine sand above the cotton, then coarse sand, then gravel on top. Each layer about two fingers deep. Rinse the layers by pouring clean water through once and throwing that water away.",
+        "Step 3 — Make the challenge water: stir soil, leaf bits and sand into a jug of water until it is properly murky. Photograph it or hold it against white paper — you will want the 'before' picture.",
+        "Step 4 — Pour slowly. Add the muddy water a little at a time and WAIT. Flooding the filter just stirs the dirt through. Watch the drips land in the jar: clearer by far — though not clean enough to drink, and a scientist can say exactly why."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Filtering is sieving at many sizes. Gravel stops leaves and big grit; each finer layer traps smaller particles in the tiny gaps between its grains; the cotton catches the finest cloudiness. The water that drips out looks clear — but 'looks clear' is not 'safe': germs are thousands of times smaller than the gaps in sand, and they sail straight through. Real water treatment copies this model's layers and then adds germ-killing steps (like careful chemistry and light) before water is drinkable. Nature's version — rain soaking through soil and rock — is why spring water can be so clear, and it still gets tested before anyone drinks it."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why does the order of the layers matter — what would go wrong with fine sand on top and gravel at the bottom?",
+        "2. Your filtered water looks clear. A scientist still would not drink it. What is hiding in it that your eyes cannot see?"
+      ]
+    }
+  ],
+  "takeaway": "Layers of gravel, sand and cotton sieve dirt out of water bit by bit — but clear-looking water is not safe water, because germs are far smaller than the gaps in sand.",
+  "fiction": false,
+  "materials": [
+    "Large plastic bottle (cut by a grown-up)",
+    "Gravel or small pebbles, rinsed",
+    "Coarse sand and fine sand, rinsed",
+    "Cotton wool or coffee-filter paper",
+    "Jar (catchment)",
+    "Self-made muddy water: soil, leaves, water"
+  ],
+  "supervision": "A grown-up cuts the bottle and supervises the whole build and pour.",
+  "safetyNotes": [
+    "NEVER DRINK THE FILTERED WATER — it can still carry germs. This rule has no exceptions, even if the water looks crystal clear; the filtered water goes on the garden afterwards.",
+    "Bottle cutting is a grown-up's job — cut edges can be sharp; a grown-up checks and tapes any sharp rim before small hands build the layers.",
+    "Wash hands with soap after handling soil and muddy water, and keep the model outdoors or over a tray — muddy drips and floors are slip hazards."
+  ],
+  "screenFreeExtension": "Layer detective: rebuild the filter with the layers in the WRONG order, pour the same muddy water, and compare the two jars side by side — write up what the order changed."
+}

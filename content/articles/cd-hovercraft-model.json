@@ -1,0 +1,97 @@
+{
+  "id": "poster-cd-hovercraft-model",
+  "slug": "cd-hovercraft-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "CD Hovercraft: Float on Air",
+  "description": "An old CD, a bottle cap and a balloon become a hovercraft that glides across the table on a cushion of air. Build it, label it, and feel friction almost disappear.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up inflates the balloon and helps with glue; launches are table-top only.",
+  "hero": {
+    "src": "/images/poster-cd-hovercraft-model.webp",
+    "alt": "Spark and Mango watching a balloon-powered CD hovercraft glide across a table",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Hovercraft | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hovercraft",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "The craft that floats on nothing",
+      "paragraphs": [
+        "A real hovercraft never touches the water it crosses — it rides on a cushion of air it makes itself, which is why it can travel over water, mud and ice alike. Your tabletop version uses a balloon as its engine, and the effect is startling: a CD that normally scrapes becomes a glider that spins and slides like a puck on ice."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The deck — the CD: flat, stiff and smooth underneath, with a ready-made hole in the middle. The valve — a sports bottle cap (the pull-up kind) glued over the CD's hole; it lets air down through the hole and can be closed to trap the balloon's air. The engine — the balloon: a store of squeezed air. The cushion — the thin layer of escaping air under the CD, the invisible part that does all the work."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "An old CD or DVD nobody needs, a sports-cap bottle top (the pull-up spout kind), strong glue or a glue gun (grown-up's job), one balloon (grown-up inflates), and the smoothest table or floor you can find."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Fit the valve. A grown-up glues the sports cap over the CD's centre hole, spout up, making sure the glue seals all the way around — escaping air must go DOWN through the hole, not out of the sides.",
+        "Step 2 — Charge the engine. Close the spout. Your grown-up blows up the balloon and twists its neck to seal it, then stretches the neck over the closed spout. The air is trapped and waiting.",
+        "Step 3 — Set it down. Place the hovercraft on the table and pull the spout open. Air rushes down through the hole and spreads under the CD, lifting it a hair's width off the table.",
+        "Step 4 — Glide! Give the craft the gentlest push. It slides and spins almost without slowing. Now try it with the spout closed and no air: same CD, same push — it scrapes to a stop in centimetres. The cushion was doing everything."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Friction is the rubbing force between two surfaces that touch — it is what stops every sliding thing. The hovercraft's escaping air holds the CD just above the table, so the surfaces barely touch and friction nearly vanishes. With almost nothing slowing it, even a tiny push sends it gliding far. Real hovercraft use engine-driven fans to keep their cushion pumped up, and flexible skirts to hold the air in — yours just uses a balloon, until the balloon runs out."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why does the hovercraft stop gliding when the balloon empties, even though the CD hasn't changed?",
+        "2. The same craft barely moves on carpet. Why — what happens to the air cushion there?"
+      ]
+    }
+  ],
+  "takeaway": "A hovercraft floats on a cushion of escaping air, so its surfaces barely touch and friction nearly disappears — a tiny push becomes a long glide.",
+  "fiction": false,
+  "materials": [
+    "Old CD or DVD (deck)",
+    "Sports-cap bottle top, pull-up kind (valve)",
+    "Strong glue or glue gun (grown-up only)",
+    "One balloon — inflated by a grown-up",
+    "Smooth table or floor"
+  ],
+  "supervision": "A grown-up does all gluing and inflates the balloon; the whole family tests on a table the grown-up approves.",
+  "safetyNotes": [
+    "BALLOON RULES: grown-ups inflate balloons — never children. If a balloon pops, collect every piece at once: burst pieces are a serious choking hazard for babies, toddlers and pets.",
+    "Hot glue guns burn — gluing is a grown-up's job from start to finish, and the gun rests on a safe surface, never handed to a child.",
+    "Glide tests happen on a table or a clear patch of floor — never near stairs, roads or anywhere the craft (or a chasing child) could rush into danger."
+  ],
+  "screenFreeExtension": "Glide-distance league: chalk or tape a start line on the floor, launch from it three times, and record your longest glide — then try to beat it with a bigger balloon breath."
+}

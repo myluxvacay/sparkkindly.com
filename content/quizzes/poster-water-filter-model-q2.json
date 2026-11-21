@@ -1,0 +1,47 @@
+{
+  "id": "poster-water-filter-model-q2",
+  "scheduledDate": "2029-08-04",
+  "brand": "kids",
+  "setId": "poster-set-water-filter-model",
+  "prompt": "Why must you NEVER drink the filtered water?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It tastes of sand"
+    },
+    {
+      "id": "b",
+      "text": "Germs are far smaller than the gaps in sand and pass straight through"
+    },
+    {
+      "id": "c",
+      "text": "It is too cold"
+    },
+    {
+      "id": "d",
+      "text": "The bottle is plastic"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Clear-looking is not safe: bacteria and viruses are thousands of times smaller than the spaces between sand grains.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Water purification | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Water_purification",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-water-filter-model.webp",
+    "alt": "Spark and Mango filtering muddy water through layers of gravel, sand and cotton",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

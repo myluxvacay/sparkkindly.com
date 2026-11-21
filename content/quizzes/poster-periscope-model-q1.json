@@ -1,0 +1,47 @@
+{
+  "id": "poster-periscope-model-q1",
+  "scheduledDate": "2029-09-12",
+  "brand": "kids",
+  "setId": "poster-set-periscope-model",
+  "prompt": "At what angle do the periscope's mirrors lean?",
+  "options": [
+    {
+      "id": "a",
+      "text": "10 degrees"
+    },
+    {
+      "id": "b",
+      "text": "45 degrees"
+    },
+    {
+      "id": "c",
+      "text": "90 degrees"
+    },
+    {
+      "id": "d",
+      "text": "Any angle works"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "45 degrees turns a horizontal light ray exactly 90 degrees — down the tube, then out again.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Periscope | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Periscope",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-periscope-model.webp",
+    "alt": "Spark using a cardboard periscope to see Mango sitting on top of a wall",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

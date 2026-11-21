@@ -1,0 +1,47 @@
+{
+  "id": "poster-simple-machines-model-q3",
+  "scheduledDate": "2029-05-29",
+  "brand": "kids",
+  "setId": "poster-set-simple-machines-model",
+  "prompt": "Why is pushing a car up a ramp easier than lifting it straight up?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The ramp makes the car lighter"
+    },
+    {
+      "id": "b",
+      "text": "You trade a longer path for a gentler push"
+    },
+    {
+      "id": "c",
+      "text": "The wheels disappear"
+    },
+    {
+      "id": "d",
+      "text": "Gravity turns off on ramps"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "An inclined plane spreads the lift over a longer distance, so each push needs less force.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Simple machine | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Simple_machine",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-simple-machines-model.webp",
+    "alt": "Spark and Mango with a cardboard board showing a lever, a pulley, a wheel and axle, and a ramp",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "poster-solar-oven-model",
+  "slug": "solar-oven-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Pizza-Box Solar Oven: Cook with Sunshine",
+  "description": "A pizza box, foil and sunshine become a real oven that melts cheese and warms cookies. Build it, label how it traps heat, and taste the science.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up supervises throughout — the oven gets genuinely hot, and all food steps follow kitchen rules.",
+  "hero": {
+    "src": "/images/poster-solar-oven-model.webp",
+    "alt": "Spark and Mango cooking a treat in a pizza-box solar oven",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Solar cooker | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solar_cooker",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "An oven with no plug",
+      "paragraphs": [
+        "Sunlight carries energy — you feel it as warmth on your skin. A solar oven's whole job is to catch as much of that energy as possible and refuse to let it escape. Build one from a pizza box and you can melt cheese on nachos or soften a marshmallow with nothing but a sunny day."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The reflector — a foil-covered flap that bounces extra sunlight into the box, like aiming a mirror. The glazing — a clear plastic window that lets sunlight IN but traps warm air inside, the greenhouse trick. The absorber — black paper lining the box: dark surfaces soak up sunlight and turn it into heat. The insulation — newspaper or foam around the sides that slows heat escaping. The cooking tray — the dark plate where the food sits in the hottest spot."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A clean pizza box, aluminium foil, clear plastic wrap or a clear plastic sheet, black construction paper, newspaper, tape and glue, a wooden skewer or stick to prop the flap, a thermometer if you have one, and a simple food to warm — nachos with cheese, or a marshmallow on a cracker."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — A grown-up cuts a three-sided flap in the pizza-box lid, folding it up and back. Cover the flap's underside with foil, shiny side out, smoothed flat — this is the reflector.",
+        "Step 2 — Seal the window. Tape clear plastic across the opening the flap left, airtight all round. Line the box's floor with black paper — the absorber — and stuff newspaper around the inside edges for insulation.",
+        "Step 3 — Set up in full sun. Put the food on its dark tray in the middle of the box, close the lid, and prop the reflector flap with the skewer so it bounces sunlight down through the window onto the food. Angle is everything: adjust until the bright patch lands on the tray.",
+        "Step 4 — Wait and measure. Solar cooking is slow cooking: cheese melts in 20–40 minutes on a strong sunny day. If you have a thermometer, log the inside temperature every ten minutes — a good pizza-box oven climbs past 60°C. Graph it like a scientist."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "Three tricks stack up the heat. The reflector adds EXTRA sunlight, bouncing in rays that would have missed the box. The black absorber turns light into heat efficiently — dark surfaces absorb far more light energy than pale ones. And the plastic window runs the greenhouse effect: sunlight passes through easily, but the warm air it creates cannot escape back, so heat piles up inside. Real solar cookers use the same three tricks to cook whole meals for families in sunny places with no fuel at all."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why is the inside lined with BLACK paper instead of white?",
+        "2. Your oven cooks slowly at noon and barely works at 5 p.m. What changed — and what does that tell you about the sun's angle and energy?"
+      ]
+    }
+  ],
+  "takeaway": "A solar oven stacks three tricks — a foil reflector adds sunlight, a black lining turns light into heat, and a clear window traps the warmth like a greenhouse.",
+  "fiction": false,
+  "materials": [
+    "Clean pizza box",
+    "Aluminium foil (reflector)",
+    "Clear plastic wrap or sheet (glazing)",
+    "Black construction paper (absorber)",
+    "Newspaper (insulation)",
+    "Tape, glue, wooden skewer (flap prop)",
+    "Simple food to warm; thermometer optional"
+  ],
+  "supervision": "A grown-up supervises the whole build and cook, does any cutting, and runs all food handling.",
+  "safetyNotes": [
+    "The oven gets genuinely hot inside: food and trays are lifted out by a grown-up with oven gloves, and nobody reaches into a working oven bare-handed.",
+    "Kitchen rules for food: clean hands, clean box (line the cooking area with foil or a clean tray — food never sits on cardboard that held takeaway grease), and warmed food is eaten promptly, not saved for later.",
+    "Never look directly at the sun or at its reflection in the foil — angle the reflector by watching the light patch on the box, not by staring at the glare."
+  ],
+  "screenFreeExtension": "Solar chef's log: cook the same marshmallow on three different days — sunny noon, cloudy noon, sunny evening — and record times in a chart to find sunshine's strongest hour."
+}

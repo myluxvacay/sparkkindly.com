@@ -1,0 +1,47 @@
+{
+  "id": "poster-cd-hovercraft-model-q3",
+  "scheduledDate": "2029-07-12",
+  "brand": "kids",
+  "setId": "poster-set-cd-hovercraft-model",
+  "prompt": "What is the sports cap's job?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Decoration"
+    },
+    {
+      "id": "b",
+      "text": "A valve — it traps the balloon's air, then releases it down through the hole"
+    },
+    {
+      "id": "c",
+      "text": "It steers the craft"
+    },
+    {
+      "id": "d",
+      "text": "It makes the balloon bigger"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Closed, the cap stores the air; open, it lets the air flow down to build the cushion.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Hovercraft | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hovercraft",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-cd-hovercraft-model.webp",
+    "alt": "Spark and Mango watching a balloon-powered CD hovercraft glide across a table",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "poster-pulley-lift-model",
+  "slug": "pulley-lift-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Pulley Lift: Make Lifting Easy",
+  "description": "String, a spool and a paper cup become a working elevator for toy loads. Build a pulley lift, label its parts, and feel how the pull changes.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up helps with the frame and any pin work; lifting tests use light toy loads only.",
+  "hero": {
+    "src": "/images/poster-pulley-lift-model.webp",
+    "alt": "Spark and Mango lifting a toy brick in a paper cup with a spool pulley",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Pulley | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pulley",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "An elevator for toys",
+      "paragraphs": [
+        "Cranes, flagpoles and window-cleaners' platforms all share one humble hero: the pulley. It is just a wheel with a groove for a rope — but rig one over a frame and you can lift a load by pulling down, using your own body weight to help. Build this paper-cup elevator and feel the trick for yourself."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The wheel — a cotton reel or spool that spins freely; its groove keeps the string in line. The axle — the pencil or dowel the wheel turns on, held by the frame. The rope — string long enough to reach the floor. The load — a paper cup carrying toy bricks. And the effort — your hand, pulling down on the free end."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A cotton reel or spool, a pencil or wooden dowel, string, a paper cup, two tall books or a cardboard frame, tape, a hole punch or a grown-up's help for the cup holes, and light loads — toy bricks, crayons or coins."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Build the frame. Stand two tall books like towers (or tape a cardboard arch) and rest the pencil across the tops. Slide the spool onto the pencil so it spins freely.",
+        "Step 2 — Thread the string over the spool's groove. Tie one end to the paper cup — punch two small holes and tie through them so the cup hangs level.",
+        "Step 3 — Load the cup with two or three toy bricks. Now pull the free end of the string DOWN, slowly. The cup rises, smooth and straight.",
+        "Step 4 — Compare. Lift the same loaded cup straight up with your hand, no pulley. Same weight — but notice how the pulley let you pull down and lean your weight into it, instead of curling the load up with your fingers."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "A single fixed pulley does not make the load lighter — it changes the direction of the force. Pulling down is easier than lifting up because you can add your body's weight to the pull, and your arms are stronger pulling down. Add a second pulley that moves with the load, and the rope shares the weight between two sections — that is when lifting truly gets lighter, and real cranes use whole teams of pulleys this way."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Where have you seen a pulley working in real life — a flagpole, a crane, a blind cord? What was it lifting?",
+        "2. Your model uses one fixed pulley. What do you predict would change if the pulley were tied to the CUP instead of the frame?"
+      ]
+    }
+  ],
+  "takeaway": "A fixed pulley changes the direction of a pull — down instead of up — so your body weight helps you lift; extra pulleys share the load and make it lighter still.",
+  "fiction": false,
+  "materials": [
+    "Cotton reel or spool (the pulley wheel)",
+    "Pencil or wooden dowel (axle)",
+    "String (the rope)",
+    "Paper cup (the load carrier)",
+    "Two tall books or a cardboard frame",
+    "Tape, and light loads: toy bricks, crayons or coins"
+  ],
+  "supervision": "A grown-up helps build the frame and punch holes, and checks the frame is steady before lifting begins.",
+  "safetyNotes": [
+    "Light loads only — toy bricks and crayons. Never hang anything heavy, and never hang the pulley from a person or pet.",
+    "String can tangle and wrap — keep it away from necks, and put it away tidily when you finish; never leave string trailing on the floor.",
+    "Build on a table over a clear floor, so a falling cup lands on nothing and nobody."
+  ],
+  "screenFreeExtension": "Elevator deliveries: set up a 'ground floor' and a 'top floor' (a chair or shelf a grown-up approves), and deliver soft toys up and down, counting how many trips your pulley makes in ten minutes."
+}

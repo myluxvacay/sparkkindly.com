@@ -1,0 +1,47 @@
+{
+  "id": "poster-solar-oven-model-q4",
+  "scheduledDate": "2029-08-18",
+  "brand": "kids",
+  "setId": "poster-set-solar-oven-model",
+  "prompt": "Why does the oven work best at noon?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The box is hungrier then"
+    },
+    {
+      "id": "b",
+      "text": "The sun is highest and its rays are most direct and energetic"
+    },
+    {
+      "id": "c",
+      "text": "Air is thinner at noon"
+    },
+    {
+      "id": "d",
+      "text": "Cheese melts only at noon"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "High sun means straighter, stronger rays through the window — low evening sun arrives at a weak slant.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Solar cooker | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solar_cooker",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-solar-oven-model.webp",
+    "alt": "Spark and Mango cooking a treat in a pizza-box solar oven",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

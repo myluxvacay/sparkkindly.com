@@ -1,0 +1,99 @@
+{
+  "id": "poster-marble-run-model",
+  "slug": "marble-run-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Marble Run: Gravity's Roller Coaster",
+  "description": "Cardboard tubes and ramps become a marble roller coaster. Build a run, label its parts, and discover why marbles speed up, slow down, and sometimes fly off the track.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 6–8 (grades K–2). A grown-up helps with cutting and tall towers; marbles are for builders aged 5 and up only.",
+  "hero": {
+    "src": "/images/poster-marble-run-model.webp",
+    "alt": "Spark and Mango watching a marble zigzag down a cardboard tube run",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Gravity | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gravity",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A roller coaster for one marble",
+      "paragraphs": [
+        "Every roller coaster on Earth runs on one engine: gravity. No batteries, no motor — just height and the pull of the Earth. Your marble run is a pocket roller coaster: you give the marble height, and gravity does the rest."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The start gate — the highest point, where the marble waits full of promise. The ramps — slanted tubes and channels that guide the fall. The turns — cups or curved tubes that catch the marble and send it a new way. The supports — books and boxes holding everything up. The finish bowl — a cup or box that catches the marble at the bottom."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "Cardboard tubes (kitchen-roll and wrapping-paper tubes), cardboard strips, a cereal box, tape, safety scissors, books and boxes for supports, a bowl or cup for the finish, and one marble — plus a grown-up for cutting and tower safety."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Plan the drop. Choose your wall or tower of books. A good run zigzags: down one ramp, turn, down the next, so the marble travels far without falling too fast.",
+        "Step 2 — Build the first ramp. Tape a tube or folded cardboard channel at a gentle slant — steep enough to roll, gentle enough to control. Rest its low end above the first turn.",
+        "Step 3 — Add turns and more ramps. Each ramp must start a little lower than the one above ended — a marble can never roll higher than where it started without a push. Test after every piece you add.",
+        "Step 4 — The grand run. Drop the marble at the start gate and watch: it speeds up on the steeps, slows on the shallows, and rattles around the turns into the finish bowl. If it flies off, engineers call that data — soften that ramp and test again."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "At the top, the marble holds potential energy — stored energy from being high up. As it rolls down, that energy turns into movement. Steeper ramps trade height for speed faster; gentle ramps trade slowly. Friction — the rubbing between marble and track — steals a little energy the whole way, which is why the marble can never climb higher than its start."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why can the marble never roll UP to a point higher than the start gate?",
+        "2. Where on your run is the marble moving fastest? How can you tell — and how could you slow it down there?"
+      ]
+    }
+  ],
+  "takeaway": "A marble run trades height for speed: gravity turns stored energy at the top into movement all the way down, and friction makes sure the marble never climbs higher than it started.",
+  "fiction": false,
+  "materials": [
+    "Cardboard tubes and strips",
+    "Cereal box or stiff card for channels",
+    "Tape",
+    "Safety scissors",
+    "Books and boxes (supports)",
+    "Bowl or cup (finish)",
+    "One marble"
+  ],
+  "supervision": "A grown-up helps with cutting and checks tall towers are stable before the first run.",
+  "safetyNotes": [
+    "Marbles are a choking hazard — this build is for children 5 and up, and marbles must be counted out and counted back into a closed box, away from toddlers and pets.",
+    "Tape runs to a wall only with a grown-up's permission, on a surface they approve — paint and wallpaper can peel.",
+    "Keep towers below shoulder height and never lean over a run from above; rebuild wobbly supports instead of holding them during a run."
+  ],
+  "screenFreeExtension": "Two-marble race day: build a second short ramp next to the finish bowl, race marbles of different sizes, and keep a chalk tally of which size wins most often."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-marble-run-model-q3",
+  "scheduledDate": "2029-06-14",
+  "brand": "kids",
+  "setId": "poster-set-marble-run-model",
+  "prompt": "Why can't the marble climb higher than the start gate?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Marbles are lazy"
+    },
+    {
+      "id": "b",
+      "text": "Friction steals a little energy all the way, and it only started with its height energy"
+    },
+    {
+      "id": "c",
+      "text": "The tubes block it"
+    },
+    {
+      "id": "d",
+      "text": "It gets dizzy"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The marble only has the energy its height gave it, and friction spends some — so it can never finish higher than it began.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Gravity | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gravity",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-marble-run-model.webp",
+    "alt": "Spark and Mango watching a marble zigzag down a cardboard tube run",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-cartesian-diver-model-q3",
+  "scheduledDate": "2029-07-20",
+  "brand": "kids",
+  "setId": "poster-set-cartesian-diver-model",
+  "prompt": "How is a submarine like the diver?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Both are made of pen caps"
+    },
+    {
+      "id": "b",
+      "text": "Both change their weight with water or air in tanks to sink or rise"
+    },
+    {
+      "id": "c",
+      "text": "Both are squeezed by hand"
+    },
+    {
+      "id": "d",
+      "text": "Both live in bottles"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Submarines flood ballast tanks to dive and fill them with air to surface — the diver's trick at giant scale.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Cartesian diver | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cartesian_diver",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-cartesian-diver-model.webp",
+    "alt": "Spark squeezing a bottle to make the little diver sink",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

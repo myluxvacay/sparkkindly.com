@@ -1,0 +1,96 @@
+{
+  "id": "poster-cartesian-diver-model",
+  "slug": "cartesian-diver-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Cartesian Diver: Sink and Rise on Command",
+  "description": "A pen cap, a blob of clay and a bottle of water make a diver that sinks when you squeeze and rises when you let go. Build it and unlock the secret of floating and sinking.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up helps tune the diver and supervises — glass-free zone: plastic bottles only.",
+  "hero": {
+    "src": "/images/poster-cartesian-diver-model.webp",
+    "alt": "Spark squeezing a bottle to make the little diver sink",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Cartesian diver | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cartesian_diver",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "The diver that obeys your hand",
+      "paragraphs": [
+        "Inside this bottle lives a tiny diver that does exactly what your hand commands: squeeze — it sinks. Let go — it floats back up. No strings, no magnets, no batteries. It looks like telepathy. It is actually one of the neatest tricks in all of physics, and submarines use the same idea to dive."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The diver — a pen cap (or small dropper) carrying a hidden bubble of air trapped inside it. The ballast — a blob of modelling clay on the cap that weighs it down to exactly almost-sinking. The tank — a clear plastic bottle filled right to the brim with water. The control — your squeezing hand, which changes the pressure everywhere in the bottle at once."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A clear plastic drinks bottle with its cap, a pen cap with no holes (or a plastic pipette), modelling clay, and water. A jug and a towel — tuning a diver is splashy work."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Build the diver. Press a pea of clay onto the pen cap's closed end as ballast. The cap's open end must face DOWN when it floats, trapping its bubble of air inside.",
+        "Step 2 — Tune it — the fiddly, brilliant part. Float the diver in a jug of water. It should float with just its tip at the surface. Too floaty? Add a speck of clay. Sinking already? Take a speck off. When it only-just floats, it is ready.",
+        "Step 3 — Bottle it. Fill the bottle to the very brim (a full bottle works best), lower the diver in, and screw the cap on tight.",
+        "Step 4 — Command it. Squeeze the bottle's sides: the diver sinks, smoothly, as if pulled. Hold the squeeze halfway and you can make it hover mid-water. Release: up it floats. You are now operating a submarine with one hand."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "The secret is the air bubble trapped in the diver. Squeezing raises the water pressure everywhere in the bottle — pressure travels through water instantly. The extra pressure squashes the bubble smaller, water creeps into the cap, and the diver becomes heavier than the water it pushes aside — so it sinks. Release, the bubble swells back, the diver lightens, and up it floats. Submarines do the same trick at giant scale: they flood tanks with water to dive and blow them full of air to rise."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why does the bubble inside the diver shrink when you squeeze — what is pressing on it, and through what?",
+        "2. Fish do this trick too, with an organ called a swim bladder. How is a fish like your diver?"
+      ]
+    }
+  ],
+  "takeaway": "Squeezing raises the water pressure, which squashes the diver's air bubble and makes it heavier so it sinks; releasing lets the bubble swell and float it back up.",
+  "fiction": false,
+  "materials": [
+    "Clear plastic drinks bottle with cap",
+    "Pen cap with no holes, or a plastic pipette (the diver)",
+    "Modelling clay (ballast)",
+    "Water, a jug and a towel"
+  ],
+  "supervision": "A grown-up helps with the tuning and supervises; all water play happens over a tray or outdoors.",
+  "safetyNotes": [
+    "Plastic bottles only — never glass for a squeezing toy; a squeezed glass bottle that cracks is a cutting hazard.",
+    "Water play stays over a tray, sink or garden: spilled water on floors is a slipping hazard, and bottles stay away from plugs and devices.",
+    "Modelling clay is not food — wash hands after the build, and keep clay-tuned divers out of drinks bottles anyone might sip from. Label the bottle TOY."
+  ],
+  "screenFreeExtension": "Hover challenge: practise until you can hold the diver perfectly still in the middle of the bottle for a slow count of five — then teach the trick to someone else without telling them the secret first."
+}

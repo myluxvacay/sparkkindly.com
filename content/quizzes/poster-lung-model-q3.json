@@ -1,0 +1,47 @@
+{
+  "id": "poster-lung-model-q3",
+  "scheduledDate": "2029-09-10",
+  "brand": "kids",
+  "setId": "poster-set-lung-model",
+  "prompt": "True or false: your lungs pull air in by themselves.",
+  "options": [
+    {
+      "id": "a",
+      "text": "True"
+    },
+    {
+      "id": "b",
+      "text": "False — the diaphragm and chest muscles do the work; the lungs are passive"
+    },
+    {
+      "id": "c",
+      "text": "Only when you sleep"
+    },
+    {
+      "id": "d",
+      "text": "Only in winter"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Lungs have no muscles for breathing in — the diaphragm's movement does it all, exactly like the model.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Lung | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lung",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-lung-model.webp",
+    "alt": "Spark making the balloons inside a bottle lung model inflate by pulling the bottom balloon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

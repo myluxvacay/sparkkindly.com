@@ -1,0 +1,47 @@
+{
+  "id": "poster-string-telephone-model-q3",
+  "scheduledDate": "2029-09-22",
+  "brand": "kids",
+  "setId": "poster-set-string-telephone-model",
+  "prompt": "What happens if someone pinches the string mid-call?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The voice gets louder"
+    },
+    {
+      "id": "b",
+      "text": "The call goes silent — the pinch stops the vibrations"
+    },
+    {
+      "id": "c",
+      "text": "Nothing"
+    },
+    {
+      "id": "d",
+      "text": "The string breaks"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Pinching blocks the vibrations' road — proof the sound was travelling through the string itself.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Tin can telephone | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tin_can_telephone",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-string-telephone-model.webp",
+    "alt": "Spark and Mango talking through two cups joined by a long taut string",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "poster-parachute-drop-model-q1",
+  "scheduledDate": "2029-07-06",
+  "brand": "kids",
+  "setId": "poster-set-parachute-drop-model",
+  "prompt": "What does the canopy do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Makes the passenger heavier"
+    },
+    {
+      "id": "b",
+      "text": "Catches the air to slow the fall"
+    },
+    {
+      "id": "c",
+      "text": "Steers left and right"
+    },
+    {
+      "id": "d",
+      "text": "Makes the strings longer"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The wide canopy shoves aside lots of air, and the air pushes back — that is drag slowing the fall.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Parachute | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Parachute",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-parachute-drop-model.webp",
+    "alt": "Spark watching a napkin parachute float down with its paper-clip passenger",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

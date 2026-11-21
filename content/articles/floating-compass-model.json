@@ -1,0 +1,97 @@
+{
+  "id": "poster-floating-compass-model",
+  "slug": "floating-compass-model",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Floating Compass: A Needle That Finds North",
+  "description": "A magnetised needle, a leaf of cork, and a bowl of water: the compass sailors used for a thousand years. Build one and watch the needle hunt for north on its own.",
+  "publishedAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–11 (grades 3–5). A grown-up handles the needle and magnetising, and supervises throughout.",
+  "hero": {
+    "src": "/images/poster-floating-compass-model.webp",
+    "alt": "Spark watching a floating cork compass needle point north in a bowl of water",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "poster-series",
+    "explainers",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Compass | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Compass",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-20",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Science-Model Collection; reviewed by the SparkKindly reviewer agent on 20 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "A needle with a homing instinct",
+      "paragraphs": [
+        "Long before phones and satellites, sailors crossed whole oceans guided by this: a magnetised needle floating on water, free to swing — and it always, always settles pointing north. Build the sailor's compass and you are holding one of the most important inventions in human history, in a soup bowl."
+      ]
+    },
+    {
+      "heading": "Meet the parts",
+      "paragraphs": [
+        "The needle — an ordinary sewing needle that you will turn into a magnet by stroking it with a strong magnet. The float — a thin slice of cork (or a leaf or a bottle-cap) that carries the needle on the water. The bowl — water deep enough for the float to turn without touching the sides. The invisible guide — the Earth's own magnetic field, the giant, planet-sized magnet doing the pointing."
+      ]
+    },
+    {
+      "heading": "You will need",
+      "paragraphs": [
+        "A sewing needle (a grown-up keeps and handles it), a strong fridge magnet, a slice of cork or a large leaf, a wide bowl of water, and a real compass or a grown-up who knows where north is, to check your work."
+      ]
+    },
+    {
+      "heading": "How it works — step by step",
+      "paragraphs": [
+        "Step 1 — Magnetise the needle. A grown-up strokes the needle with the magnet — always in the SAME direction, lifting the magnet away at the end of each stroke, about thirty strokes. Stroking one way lines up the needle's tiny magnetic parts into order: the needle is now a magnet itself.",
+        "Step 2 — Mount the float. The grown-up lays the needle across the cork slice. A dot of paint or a tiny paper flag marks the needle's north-seeking end (the end that was stroked toward — test it against the real compass in a moment).",
+        "Step 3 — Float it. Lower the cork gently onto the middle of the bowl's water, away from the edges. Wait. The float turns — slowly, eerily — and settles. The needle has found its line.",
+        "Step 4 — Check and disturb it. Compare with the real compass: your needle points the same way. Now rotate the BOWL. The float stays put in the water while the bowl turns around it — the needle still points north. Blow it off course and watch it hunt its way back."
+      ]
+    },
+    {
+      "heading": "The science bit",
+      "paragraphs": [
+        "The Earth itself is a magnet — its core acts like a giant bar magnet, and its magnetic field reaches every corner of the planet. A free-turning magnetised needle is pulled by that field into line with it: one end toward the magnetic north. Floating on water is the genius part: water gives the needle almost no friction, so even the Earth's gentle pull is strong enough to turn it. Stroking magnetised the needle by persuading its microscopic magnetic domains — tiny regions inside the steel — to line up in one direction instead of pointing every which way."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Why does the needle need to FLOAT? What would happen if you just laid it on the table?",
+        "2. Your needle points to magnetic north, which is not exactly the same place as the North Pole on a map. Why might sailors still have trusted it for a thousand years?"
+      ]
+    }
+  ],
+  "takeaway": "Stroke a needle into a magnet, float it so it can turn freely, and the Earth's own magnetic field swings it into line, pointing north — the compass that guided sailors for centuries.",
+  "fiction": false,
+  "materials": [
+    "Sewing needle (grown-up handles it)",
+    "Strong fridge magnet",
+    "Thin slice of cork, or a large leaf (float)",
+    "Wide bowl of water",
+    "Real compass for checking"
+  ],
+  "supervision": "A grown-up magnetises and handles the needle at every step and supervises the whole build.",
+  "safetyNotes": [
+    "NEEDLES ARE SHARP AND SMALL: this is a grown-up-handled part from start to finish — the needle is counted out, used at the table, and counted back into its storage; never carried around the house or left in the float unattended.",
+    "Strong magnets follow magnet rules: away from mouths and children under 3, away from phones and bank cards.",
+    "Water and bowls stay on the table over a tray; a spilled bowl near devices or plugs gets the project paused and dried first."
+  ],
+  "screenFreeExtension": "Compass treasure: a grown-up hides a 'treasure' in the garden and gives directions by compass points only — ten paces north, six paces east — and the needle you made leads the hunt."
+}

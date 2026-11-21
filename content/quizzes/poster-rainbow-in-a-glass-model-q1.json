@@ -1,0 +1,47 @@
+{
+  "id": "poster-rainbow-in-a-glass-model-q1",
+  "scheduledDate": "2029-07-22",
+  "brand": "kids",
+  "setId": "poster-set-rainbow-in-a-glass-model",
+  "prompt": "What decides which layer a liquid sits in?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Its colour"
+    },
+    {
+      "id": "b",
+      "text": "Its density — how much stuff is packed into the same space"
+    },
+    {
+      "id": "c",
+      "text": "Its smell"
+    },
+    {
+      "id": "d",
+      "text": "The order you bought them"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Density sorts the tower: denser liquids sink, lighter ones float on top.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Density | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Density",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-rainbow-in-a-glass-model.webp",
+    "alt": "Spark and Mango with a glass of stacked rainbow liquid layers",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

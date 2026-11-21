@@ -1,0 +1,47 @@
+{
+  "id": "poster-marble-run-model-q4",
+  "scheduledDate": "2029-06-15",
+  "brand": "kids",
+  "setId": "poster-set-marble-run-model",
+  "prompt": "Your marble keeps flying off one ramp. What is the engineer's fix?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Use a heavier marble"
+    },
+    {
+      "id": "b",
+      "text": "Make that ramp gentler (less steep)"
+    },
+    {
+      "id": "c",
+      "text": "Shout at it"
+    },
+    {
+      "id": "d",
+      "text": "Remove the finish bowl"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A gentler slope trades height for speed more slowly, keeping the marble under control.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Gravity | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gravity",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-marble-run-model.webp",
+    "alt": "Spark and Mango watching a marble zigzag down a cardboard tube run",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

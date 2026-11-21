@@ -1,0 +1,47 @@
+{
+  "id": "poster-simple-circuit-model-q1",
+  "scheduledDate": "2029-06-24",
+  "brand": "kids",
+  "setId": "poster-set-simple-circuit-model",
+  "prompt": "What must a circuit be for the bulb to light?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A complete, unbroken loop"
+    },
+    {
+      "id": "b",
+      "text": "A straight line"
+    },
+    {
+      "id": "c",
+      "text": "Painted red"
+    },
+    {
+      "id": "d",
+      "text": "Plugged into a wall"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Electricity needs a complete loop — break it anywhere and the flow stops.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Electric circuit | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Electric_circuit",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-simple-circuit-model.webp",
+    "alt": "Spark and Mango with a cardboard circuit model: battery, wires, glowing bulb and a paper-clip switch",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

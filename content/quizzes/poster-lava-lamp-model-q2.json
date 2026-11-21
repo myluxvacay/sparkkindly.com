@@ -1,0 +1,47 @@
+{
+  "id": "poster-lava-lamp-model-q2",
+  "scheduledDate": "2029-07-27",
+  "brand": "kids",
+  "setId": "poster-set-lava-lamp-model",
+  "prompt": "What carries the blobs UP through the oil?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Tiny motors"
+    },
+    {
+      "id": "b",
+      "text": "Bubbles of gas from the fizzing tablet coat the blobs and make them lighter"
+    },
+    {
+      "id": "c",
+      "text": "Magnets"
+    },
+    {
+      "id": "d",
+      "text": "The torch light pushes them"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A blob wearing bubbles is lighter overall than the oil around it — so it floats up like an elevator.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Lava lamp | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lava_lamp",
+      "accessedAt": "2026-11-20"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-20",
+  "reviewNote": "Science-Model Collection (20 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/science-models for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/poster-lava-lamp-model.webp",
+    "alt": "Spark and Mango watching coloured blobs rise and fall in a bottle lava lamp",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}
