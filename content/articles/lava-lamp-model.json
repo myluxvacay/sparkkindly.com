@@ -6,7 +6,7 @@
   "title": "Lava Lamp: Blobs That Dance",
   "description": "Oil, water and one fizzy tablet make blobs that rise, bloom and sink in slow motion. Build a table-top lava lamp and learn why the blobs can't decide where to live.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-lava-lamp-model-steps.webp",
+        "alt": "The lava lamp in four pictures, left to right: Spark pouring the coloured water into the bottle, golden oil being poured in to settle on top, a grown-up hand dropping in a piece of fizzy tablet, and the finished lamp glowing with blobs rising and sinking — with Spark and Mango watching",
+        "width": 1998,
+        "height": 491,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-lava-lamp-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark pouring jewel-coloured water into the tall bottle",
+          "width": 492,
+          "height": 491,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-lava-lamp-model-steps-2.webp",
+          "alt": "Step 2 of 4: golden oil being poured slowly into the bottle to settle on top of the water",
+          "width": 492,
+          "height": 491,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-lava-lamp-model-steps-3.webp",
+          "alt": "Step 3 of 4: a grown-up hand dropping a piece of fizzy tablet into the bottle",
+          "width": 492,
+          "height": 491,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-lava-lamp-model-steps-4.webp",
+          "alt": "Step 4 of 4: the finished lava lamp glowing on its light with coloured blobs rising and sinking",
+          "width": 492,
+          "height": 491,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Pour the water layer. Fill the bottle about a quarter full with water and stir in food colouring until it is deep and jewel-bright.",
         "Step 2 — Add the oil, slowly, down the side. It will slide over the water and settle on top — oil and water never mix, and oil is lighter, so the layers sort themselves.",

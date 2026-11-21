@@ -6,7 +6,7 @@
   "title": "Static Butterfly: Wings That Move Like Magic",
   "description": "A tissue-paper butterfly whose wings rise and flutter when a charged balloon comes near — no touching, no strings. Build it and meet static electricity.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-static-butterfly-model-steps.webp",
+        "alt": "The static butterfly in four pictures, left to right: Spark cutting the tissue wing shape, Spark gluing the wings in the cardboard garden, a grown-up rubbing a balloon on a woolly jumper, and the charged balloon hovering over the butterfly as its wings lift",
+        "width": 2014,
+        "height": 496,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-static-butterfly-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark cutting a wing shape from folded tissue paper",
+          "width": 496,
+          "height": 496,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-static-butterfly-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark gluing the tissue wings onto the card body in the cardboard garden",
+          "width": 496,
+          "height": 496,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-static-butterfly-model-steps-3.webp",
+          "alt": "Step 3 of 4: a grown-up rubbing a balloon briskly on a woolly jumper to charge it",
+          "width": 496,
+          "height": 496,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-static-butterfly-model-steps-4.webp",
+          "alt": "Step 4 of 4: the charged balloon hovering above the butterfly as its tissue wings lift toward it",
+          "width": 496,
+          "height": 496,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Cut the wings. Fold the tissue in half and cut a wing shape so you get two matching wings joined at the fold. Tissue tears easily — slow scissors win.",
         "Step 2 — Build the butterfly. Glue just the fold line to the card body — the wings themselves stay free and floppy. Draw a face and spots if you like, and glue the body to the middle of the cardboard garden.",

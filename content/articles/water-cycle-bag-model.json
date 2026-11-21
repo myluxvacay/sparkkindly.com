@@ -6,7 +6,7 @@
   "title": "Water Cycle in a Bag: Rain on Your Window",
   "description": "A zip bag, warm water and a sunny window become the whole water cycle in miniature — evaporation, condensation and rain, happening on the glass all day.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-water-cycle-bag-model-steps.webp",
+        "alt": "The water cycle bag in four pictures, left to right: hands holding up the bag with its sun, cloud and sea drawings, blue water being poured into the bag, the bag taped to a sunny window, and droplets forming inside the bag as Spark points",
+        "width": 1742,
+        "height": 426,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-water-cycle-bag-model-steps-1.webp",
+          "alt": "Step 1 of 4: hands holding up the zip bag with a sun, a cloud and wavy sea lines drawn on it",
+          "width": 428,
+          "height": 426,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-water-cycle-bag-model-steps-2.webp",
+          "alt": "Step 2 of 4: blue water being poured into the bag before it is sealed",
+          "width": 428,
+          "height": 426,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-water-cycle-bag-model-steps-3.webp",
+          "alt": "Step 3 of 4: the sealed bag taped flat to a sunny window with its sea at the bottom",
+          "width": 428,
+          "height": 426,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-water-cycle-bag-model-steps-4.webp",
+          "alt": "Step 4 of 4: droplets inside the bag on the window while Spark points and Mango watches",
+          "width": 428,
+          "height": 426,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Draw the scenery. A grown-up draws a sun in one top corner of the bag and a cloud in the other, with wavy lines at the bottom for the sea. The drawing stays on the OUTSIDE.",
         "Step 2 — Add the ocean. Pour warm water into the bag until it is about a quarter full, stir in a drop of blue, and seal the zip tightly — every bit of air and water must stay inside for the cycle to work.",

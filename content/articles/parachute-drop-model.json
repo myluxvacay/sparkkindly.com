@@ -6,7 +6,7 @@
   "title": "Parachute Drop: Fall Slowly, Land Softly",
   "description": "A napkin canopy, four strings and a brave paper-clip passenger. Build a parachute, label its parts, and find out why a big canopy falls so gently.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-parachute-drop-model-steps.webp",
+        "alt": "The parachute build in four pictures, left to right: Spark taping strings to the napkin canopy at a table, Spark gathering the four strings onto the paper-clip passenger, Spark holding the packed parachute up ready, and the parachute floating gently down — with Mango watching",
+        "width": 1674,
+        "height": 619,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-parachute-drop-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark taping a string to the corner of the flat napkin canopy",
+          "width": 411,
+          "height": 619,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-parachute-drop-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark holding the four gathered strings tied to the paper-clip passenger",
+          "width": 411,
+          "height": 619,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-parachute-drop-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark holding the packed parachute up, canopy draped over the passenger",
+          "width": 411,
+          "height": 619,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-parachute-drop-model-steps-4.webp",
+          "alt": "Step 4 of 4: the parachute floating down with its paper-clip passenger while Spark and Mango point up",
+          "width": 411,
+          "height": 619,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Make the canopy. Lay the napkin flat. Tape one string to each corner, pressing the tape down firmly — corners are where parachutes fail.",
         "Step 2 — Gather the lines. Hold the four free ends together, check they are exactly the same length (uneven lines make tippy parachutes), and tie or tape them to the passenger.",
