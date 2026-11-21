@@ -6,7 +6,7 @@
   "title": "Kaleidoscope: Mirrors That Make Patterns",
   "description": "Three mirror strips inside a tube turn a handful of beads into endless symmetrical snowflakes of colour. Build one and discover why the patterns are always perfect.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-kaleidoscope-model-steps.webp",
+        "alt": "The kaleidoscope build in four pictures, left to right: hands sliding the mirror tunnel into the cardboard tube, Spark holding up the eye disc, Spark adding colourful beads to the object cup, and Spark looking through the kaleidoscope as a pattern blooms out — with Mango watching",
+        "width": 1978,
+        "height": 487,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-kaleidoscope-model-steps-1.webp",
+          "alt": "Step 1 of 4: hands sliding the shiny mirror tunnel into the cardboard tube",
+          "width": 487,
+          "height": 487,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-kaleidoscope-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark holding up the card eye disc with its small centre hole",
+          "width": 487,
+          "height": 487,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-kaleidoscope-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark pouring colourful beads and sequins toward the object cup",
+          "width": 487,
+          "height": 487,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-kaleidoscope-model-steps-4.webp",
+          "alt": "Step 4 of 4: Spark looking through the kaleidoscope as a symmetrical pattern blooms out",
+          "width": 487,
+          "height": 487,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — A grown-up builds the tunnel: three mirror strips taped edge to edge into a long triangle, shiny sides in. Slide it into the cardboard tube — snug and straight.",
         "Step 2 — Fit the eye disc. Tape a card disc with a small centre hole over one end of the tube. Look through it now: you can see the tunnel's triangle of mirrors waiting.",

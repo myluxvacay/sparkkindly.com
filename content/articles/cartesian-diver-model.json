@@ -6,7 +6,7 @@
   "title": "Cartesian Diver: Sink and Rise on Command",
   "description": "A pen cap, a blob of clay and a bottle of water make a diver that sinks when you squeeze and rises when you let go. Build it and unlock the secret of floating and sinking.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-cartesian-diver-model-steps.webp",
+        "alt": "The cartesian diver in four pictures, left to right: Spark holding the pen-cap diver with its clay ballast, the diver floating in a jug with just its tip at the surface, the diver sealed inside the full bottle, and hands squeezing the bottle to make the diver sink",
+        "width": 1934,
+        "height": 472,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-cartesian-diver-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark holding the pen-cap diver with its blob of clay ballast over a jug of water",
+          "width": 476,
+          "height": 472,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-cartesian-diver-model-steps-2.webp",
+          "alt": "Step 2 of 4: the little diver floating in a jug of water with just its tip at the surface",
+          "width": 476,
+          "height": 472,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-cartesian-diver-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark screwing the cap onto the full bottle with the diver inside",
+          "width": 476,
+          "height": 472,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-cartesian-diver-model-steps-4.webp",
+          "alt": "Step 4 of 4: two hands squeezing the bottle while the diver sinks inside",
+          "width": 476,
+          "height": 472,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Build the diver. Press a pea of clay onto the pen cap's closed end as ballast. The cap's open end must face DOWN when it floats, trapping its bubble of air inside.",
         "Step 2 — Tune it — the fiddly, brilliant part. Float the diver in a jug of water. It should float with just its tip at the surface. Too floaty? Add a speck of clay. Sinking already? Take a speck off. When it only-just floats, it is ready.",

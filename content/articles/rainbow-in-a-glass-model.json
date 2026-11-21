@@ -6,7 +6,7 @@
   "title": "Rainbow in a Glass: Stacking Liquids",
   "description": "Honey, dish soap, water, oil and coloured layers stack into a rainbow that refuses to mix. Build the tower, label the layers, and learn the word that decides who floats.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-rainbow-in-a-glass-model-steps.webp",
+        "alt": "The rainbow tower in four pictures, left to right: Spark pouring the honey layer into the glass, Spark trickling coloured liquid down the back of a spoon, Spark adding the oil layer, and Spark dropping a coin into the finished rainbow tower — with Mango watching",
+        "width": 1622,
+        "height": 583,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-rainbow-in-a-glass-model-steps-1.webp",
+          "alt": "Step 1 of 4: Spark pouring golden honey into the tall glass",
+          "width": 398,
+          "height": 583,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-rainbow-in-a-glass-model-steps-2.webp",
+          "alt": "Step 2 of 4: Spark trickling coloured liquid down the back of a spoon into the glass",
+          "width": 398,
+          "height": 583,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-rainbow-in-a-glass-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark adding the golden oil layer from a small jug",
+          "width": 398,
+          "height": 583,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-rainbow-in-a-glass-model-steps-4.webp",
+          "alt": "Step 4 of 4: Spark dropping a coin into the finished tower of rainbow layers",
+          "width": 398,
+          "height": 583,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — Pour the foundation. Add a layer of honey about two fingers deep. It is thick and slow — give it time to level out.",
         "Step 2 — Add dish soap, poured slowly onto the honey. Then the coloured water: this is the delicate one — trickle it down the back of a spoon held just above the soap, so it spreads like a blanket instead of drilling a hole.",

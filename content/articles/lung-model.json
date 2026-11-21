@@ -6,7 +6,7 @@
   "title": "Lung Model: Breathe In, Breathe Out",
   "description": "A bottle, two balloons and a straw build a working pair of lungs. Pull the bottom balloon and watch the lungs fill — the hidden muscle doing the work will surprise you.",
   "publishedAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -57,6 +57,48 @@
     },
     {
       "heading": "How it works — step by step",
+      "image": {
+        "src": "/images/poster-lung-model-steps.webp",
+        "alt": "The lung model in four pictures, left to right: a grown-up hand pushing the straw through the bottle neck, the balloon lungs fitted on the straw inside the bottle, Spark stretching the balloon sheet across the bottle bottom, and the finished model with its lung balloon inflated — with Mango watching",
+        "width": 1982,
+        "height": 488,
+        "credit": "AI-generated image · SparkKindly",
+        "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+      },
+      "imagePanels": [
+        {
+          "src": "/images/poster-lung-model-steps-1.webp",
+          "alt": "Step 1 of 4: a grown-up hand pushing the straw through the neck of the cut bottle",
+          "width": 488,
+          "height": 488,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-lung-model-steps-2.webp",
+          "alt": "Step 2 of 4: two small balloon lungs fitted on the straw inside the bottle",
+          "width": 488,
+          "height": 488,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-lung-model-steps-3.webp",
+          "alt": "Step 3 of 4: Spark stretching the balloon sheet across the cut bottom of the bottle",
+          "width": 488,
+          "height": 488,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        },
+        {
+          "src": "/images/poster-lung-model-steps-4.webp",
+          "alt": "Step 4 of 4: the finished lung model with the balloon inside inflated",
+          "width": 488,
+          "height": 488,
+          "credit": "AI-generated image · SparkKindly",
+          "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+        }
+      ],
       "paragraphs": [
         "Step 1 — A grown-up cuts the bottom off the bottle and smooths the edge with tape. Push the straw through the bottle's neck from inside, seal around it with clay so no air can sneak past.",
         "Step 2 — Fit the lungs. Stretch one small balloon over the straw's end inside the bottle (or two balloons on a Y of straws) and tape them airtight. These balloons are the lungs — test that they are floppy and empty.",
