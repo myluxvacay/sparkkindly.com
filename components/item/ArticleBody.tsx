@@ -1,3 +1,4 @@
+import Picture from '@/components/Picture';
 import type { ArticleView } from '@/lib/public/body';
 
 // The article text. Every value is rendered as text by React, so markup in a stored title or paragraph shows literally.
@@ -27,6 +28,16 @@ export default function ArticleBody({ article }: { article: ArticleView }) {
       {article.sections.map((s, i) => (
         <section key={`${i}-${s.heading}`}>
           <h2>{s.heading}</h2>
+          {s.image?.src && (
+            <Picture
+              className="section-image"
+              src={s.image.src}
+              width={s.image.width ?? 1200}
+              height={s.image.height ?? 675}
+              alt={s.image.alt}
+              sizes="(max-width: 580px) 100vw, 680px"
+            />
+          )}
           {s.paragraphs.map((p, j) => (
             <p key={j}>{p}</p>
           ))}

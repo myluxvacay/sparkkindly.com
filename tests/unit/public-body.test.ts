@@ -18,6 +18,20 @@ describe('public body readers', () => {
     expect(a.supervision).toBe('Adult');
   });
 
+  it('keep a section image (the step strip) and drop a malformed one', () => {
+    const good = readArticle({
+      sections: [
+        { heading: 'Steps', paragraphs: ['p'], image: { src: '/images/x-steps.webp', alt: 'strip', width: 1572, height: 405, credit: 'c', rights: 'r' } },
+        { heading: 'Bad', paragraphs: ['p'], image: { src: 7, alt: 'x' } },
+        { heading: 'Plain', paragraphs: ['p'] },
+      ],
+      takeaway: 'T',
+    });
+    expect(good.sections[0].image).toEqual({ src: '/images/x-steps.webp', alt: 'strip', width: 1572, height: 405, credit: 'c', rights: 'r' });
+    expect(good.sections[1].image?.src).toBeUndefined();
+    expect(good.sections[2].image).toBeUndefined();
+  });
+
   it('read play options, items and clues', () => {
     const p = readPlay({ mechanic: 'clue_reveal', prompt: 'P', clues: ['a', 'b'], options: [{ id: 'a', text: 'A' }] });
     expect(p.clues).toEqual(['a', 'b']);
