@@ -1,0 +1,62 @@
+{
+  "id": "discover-draft-2026-11-22-01",
+  "slug": "plankton-the-drifters-that-feed-the-ocean",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Plankton: the tiny drifters that feed the ocean",
+  "description": "The open ocean looks empty. It is anything but: every bucket of surface seawater carries drifting plants and animals too small to see clearly — and nearly everything bigger in the sea depends on them.",
+  "publishedAt": "2026-11-22",
+  "updatedAt": "2026-11-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "A wave rolling across the open ocean",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "ocean",
+    "plankton",
+    "food-webs"
+  ],
+  "sources": [
+    {
+      "title": "Plankton | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Plankton",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-22",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 22 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Drifters, not swimmers",
+      "paragraphs": [
+        "Plankton is not one creature but a way of life: organisms that drift with the currents rather than swimming against them. The word covers microscopic plant-like phytoplankton, tiny animal zooplankton, and even jellyfish and the floating eggs and larvae of fish, crabs and sea stars.",
+        "The plant-like drifters do the quiet heavy lifting. Phytoplankton photosynthesise in the sunlit surface layer just as land plants do, turning sunlight, water and carbon dioxide into food and oxygen — a share of the oxygen in every breath you take began in these drifting green specks."
+      ]
+    },
+    {
+      "heading": "The first course of almost everything",
+      "paragraphs": [
+        "Zooplankton graze on phytoplankton, and are eaten in turn by small fish, krill feed whales, and the great ocean food web is under way. Remove the drifters and there is nothing for the small fish, nothing for the big fish, and nothing for the largest animal that has ever lived — the blue whale eats almost nothing but krill, which eat plankton.",
+        "Plankton also write climate history. When phytoplankton die, some sink, carrying their captured carbon down to the deep sea floor, where it can stay locked away for centuries. The empty-looking surface of the open ocean is one of Earth's hardest-working landscapes."
+      ]
+    },
+    {
+      "heading": "Seeing the invisible",
+      "paragraphs": [
+        "You cannot pick out single plankton with the naked eye, but you can see their crowds: a green or milky bloom colouring a whole bay, or summer seas that sparkle at night when disturbed drifters flash with bioluminescent light.",
+        "Next time you look at open water, picture it correctly — not as emptiness with fish in it, but as a thin, sunlit soup of drifters with everything else visiting to feed."
+      ]
+    }
+  ],
+  "takeaway": "Plankton are organisms that drift rather than swim; the plant-like kinds make food and oxygen in the sunlit surface, and almost every ocean food web starts with them.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

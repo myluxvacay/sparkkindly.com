@@ -1,0 +1,65 @@
+{
+  "id": "grow-draft-2026-11-22-03",
+  "slug": "the-mistakes-notebook",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "The mistakes notebook: one page per error",
+  "description": "Not a diary of shame — a field guide to your own patterns. Each mistake gets one page: what happened, what it cost, and the one-line cue that will catch it next time. Reviewed monthly, it quietly stops history repeating.",
+  "publishedAt": "2026-11-22",
+  "updatedAt": "2026-11-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "A child writing in a notebook",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "learning",
+    "habits",
+    "reflection"
+  ],
+  "sources": [
+    {
+      "title": "Error | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Error",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-22",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 22 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The one-page rule",
+      "paragraphs": [
+        "Keep a cheap notebook for mistakes only. When something goes wrong that you could repeat — a missed deadline, a mis-sent message, a burnt dinner, a lost argument you should have won kindly — give it one page and three headings: What happened (facts only, no adjectives about yourself). What it cost (time, money, trust, sleep). The cue (one short sentence your future self can act on: 'Check the attachment before the apology.').",
+        "One page is the whole discipline. A mistake that needs three pages of analysis is usually being punished, not studied — and punishment teaches avoidance, not skill. Facts, cost, cue, close the book."
+      ]
+    },
+    {
+      "heading": "The monthly harvest",
+      "paragraphs": [
+        "Once a month, read the notebook cover to cover with a pen in hand. You are hunting for repeats: the same cue appearing three times is not three mistakes, it is one system asking to be redesigned. Move that cue somewhere it cannot be skipped — a checklist, a phone reminder, a note on the door.",
+        "Expect the notebook to thin out over time in the best way: whole categories of error retire as their cues become habits. The mistakes that remain will be new ones, which is what progress actually looks like from the inside."
+      ]
+    }
+  ],
+  "takeaway": "Give each repeatable mistake one page — facts, cost, and a one-line cue — then harvest the repeats monthly and turn the commonest cue into a system.",
+  "fiction": false,
+  "materials": [
+    "A cheap notebook kept only for mistakes",
+    "A pen that lives with the notebook",
+    "Ten quiet minutes after a mistake, and thirty minutes once a month for the review"
+  ],
+  "supervision": "No supervision is required; this is a private reflective activity for adults and older children.",
+  "safetyNotes": [
+    "Keep the notebook private and store it somewhere others will not read it — honesty on the page depends on it staying yours alone.",
+    "Write facts, not verdicts about your character; if reviewing mistakes leaves you distressed rather than clearer, close the book and return another day."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

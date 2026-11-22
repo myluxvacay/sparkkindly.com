@@ -1,0 +1,55 @@
+{
+  "id": "grow-draft-2026-11-22-01",
+  "slug": "what-a-stethoscope-hears",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "What a stethoscope hears: lub-dub, and listening in",
+  "description": "Press the cold disc to a chest and the body stops being silent: a heartbeat with two sounds, breath like wind through branches. What doctors are actually listening for — and what you can hear yourself.",
+  "publishedAt": "2026-11-22",
+  "updatedAt": "2026-11-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "hero": {
+    "src": "/images/body.webp",
+    "alt": "A stethoscope close-up",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "body",
+    "health",
+    "listening"
+  ],
+  "sources": [
+    {
+      "title": "Stethoscope | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Stethoscope",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-22",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 22 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Two sounds, one heartbeat",
+      "paragraphs": [
+        "A stethoscope carries the body's sounds from skin to ear along a tube, amplifying the quiet ones. The heartbeat it delivers is famously two-toned — lub-dub — and those two sounds are valves closing: first the valves between the heart's upper and lower chambers snap shut, then the valves at the exits of the lower chambers follow.",
+        "That simple pair of sounds is a report. A steady rhythm, evenly spaced, tells one story; extra sounds, whooshes between the beats, or an irregular pattern tell another, which is why a routine listen remains part of examinations two centuries after the instrument was invented — first as a rolled paper tube, by a doctor too polite to press his ear to a stranger's chest."
+      ]
+    },
+    {
+      "heading": "Breath, and the skill of listening",
+      "paragraphs": [
+        "Moved to the back, the stethoscope hears breathing: air rustling through the branching airways like wind in leaves. Clear, even rustling is the healthy baseline; crackles, wheezes or silent patches each point a clinician somewhere different.",
+        "The deeper lesson travels beyond medicine. A stethoscope works because someone decided the body's quiet signals were worth an instrument and a practised ear. Your own version needs no equipment: notice your breathing when you climb stairs, your pulse after bad news, the difference between tired and unwell. Listening in — to a body, to a friend, to yourself — is a skill, and like all skills it sharpens with use."
+      ]
+    }
+  ],
+  "takeaway": "A stethoscope amplifies the body's quiet sounds: the lub-dub of heart valves closing and the rustle of breath — a reminder that listening closely is a learnable skill.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
