@@ -1,0 +1,38 @@
+{
+  "id": "kids-quiz-fox-tail-blanket-711",
+  "scheduledDate": "2029-06-01",
+  "brand": "kids",
+  "prompt": "On a cold winter night, a red fox curls up and wraps its big bushy tail around its nose and feet. Why does it do that?",
+  "options": [
+    {
+      "id": "a",
+      "text": "To hide from the moon"
+    },
+    {
+      "id": "b",
+      "text": "To keep warm, like wrapping up in a blanket"
+    },
+    {
+      "id": "c",
+      "text": "To make its tail grow longer"
+    },
+    {
+      "id": "d",
+      "text": "To practise balancing"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A red fox's thick, bushy tail works like a blanket. Curling up and wrapping it around its nose and feet keeps the fox warm while it sleeps in the snow.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Red fox | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Red_fox",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

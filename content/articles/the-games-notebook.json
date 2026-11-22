@@ -1,0 +1,62 @@
+{
+  "id": "play-draft-2026-11-22-03",
+  "slug": "the-games-notebook",
+  "brand": "play",
+  "contentType": "article",
+  "title": "The games notebook: scores, rematches and house rules",
+  "description": "A plain notebook by the games shelf quietly becomes the family record book: who won, by how much, which house rule you all agreed, and who is owed a rematch. Why writing it down makes games better.",
+  "publishedAt": "2026-11-22",
+  "updatedAt": "2026-11-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "A child writing in a notebook",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "games",
+    "family",
+    "records"
+  ],
+  "sources": [
+    {
+      "title": "House rule | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/House_rule",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-22",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 22 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "More than a score sheet",
+      "paragraphs": [
+        "A score forgotten by Friday settles nothing. A score written in the games notebook is history: the night the youngest player finally beat everyone at cards, the chess game that lasted three evenings, the tournament that ended 4–4 and still awaits its decider. Rivalries stay friendly when the record is shared and nobody has to rely on a suspiciously selective memory.",
+        "Give each game its own page spread: date, players, scores, and one line about the moment of the match. A line is enough — future readers will supply the rest of the story themselves."
+      ]
+    },
+    {
+      "heading": "Where house rules go to be settled",
+      "paragraphs": [
+        "Every household bends a rule somewhere: the card you may not play on a birthday, the board-game shortcut everyone uses, the rematch clause after a thrashing. Arguments about those rules repeat because the agreement was spoken once and remembered four different ways.",
+        "Write the house rule in the notebook, in the words everyone agreed, and date it. A house rule is a local variation a group adopts for its own games — writing it down does not make it official, it makes it settled. Next time the dispute starts, the notebook referees, and play resumes in seconds."
+      ]
+    },
+    {
+      "heading": "Start yours tonight",
+      "paragraphs": [
+        "Begin with the next game you play, however ordinary. Note the winner of the ongoing season, crown a notebook champion each month, and let the loser of any final write the match report — one honest line, signed.",
+        "In a year the notebook will be the most re-read book in the house: proof that the point of keeping score was never the score. It was remembering that you played."
+      ]
+    }
+  ],
+  "takeaway": "A notebook that records scores, moments and agreed house rules turns arguments into history — and every game into a rematch waiting to happen.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

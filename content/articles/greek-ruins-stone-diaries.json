@@ -1,0 +1,62 @@
+{
+  "id": "discover-draft-2026-11-21-03",
+  "slug": "greek-ruins-stone-diaries",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Greek ruins: what broken columns can still tell us",
+  "description": "A fallen column looks like an ending, but to an archaeologist it is a sentence mid-way through. How the ruins of ancient Greece — temples, theatres and marketplaces — still report on the people who built them.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "hero": {
+    "src": "/images/history.webp",
+    "alt": "An ancient stone pillar in grass",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "history",
+    "greece",
+    "archaeology"
+  ],
+  "sources": [
+    {
+      "title": "Parthenon | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Parthenon",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 21 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Buildings that outlived their makers",
+      "paragraphs": [
+        "The Parthenon in Athens has stood for roughly two and a half thousand years — through earthquakes, wars, and a long second life as first a church and then a mosque. Greek builders cut marble so precisely, and joined blocks with metal clamps instead of mortar, that their temples could survive ages that erased almost everything built in wood.",
+        "Even the damage is information. Scorch marks, repairs in a different stone, and columns re-erected in the wrong order all record what later centuries did to the building — a ruin is a diary written by everyone who ever touched it."
+      ]
+    },
+    {
+      "heading": "Reading a ruin like a detective",
+      "paragraphs": [
+        "Archaeologists read the ground in layers: the deepest layer is the oldest, so a coin or a shard of pottery in a layer dates everything buried with it. Fallen column drums lying in a neat row suggest an earthquake toppled them in one push; drums scattered and broken suggest stone was robbed away for later buildings.",
+        "Shape tells stories too. A theatre's curved rows reveal a city that gathered thousands to watch plays; a marketplace lined with the bases of small shops reveals what people bought, argued about and ate, two millennia before anyone thought to write a shopping list down."
+      ]
+    },
+    {
+      "heading": "Why we leave them ruined",
+      "paragraphs": [
+        "It can be tempting to rebuild a temple to its shining first day, but modern practice is careful: restore only what is certain, make new stone visibly new, and leave the rest as evidence. A ruin honestly kept teaches more than a guess beautifully built.",
+        "So the broken columns are not the failure of the story. They are the story — proof that something built with care can keep speaking long after its builders are gone."
+      ]
+    }
+  ],
+  "takeaway": "Ruins are evidence, not just leftovers: layers date them, fallen columns record earthquakes and robbers, and careful restorers leave the gaps honest.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "play-draft-2026-11-22-02",
+  "slug": "doodle-relay-finish-each-others-drawings",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Doodle relay: finish each other's drawings",
+  "description": "One person draws for sixty seconds, then passes the page. The next person must build on whatever is already there — no rubbing out, no starting again. A drawing game where the surprise is the whole point.",
+  "publishedAt": "2026-11-22",
+  "updatedAt": "2026-11-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "hero": {
+    "src": "/images/art.webp",
+    "alt": "Paintbrushes, a sketchbook and watercolour paints",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "drawing",
+    "games",
+    "imagination"
+  ],
+  "sources": [
+    {
+      "title": "Doodle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Doodle",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-22",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 22 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "How the relay runs",
+      "paragraphs": [
+        "Give everyone the same starting squiggle — one wavy line, one circle, one zigzag — drawn at the top of their page. Set a timer for sixty seconds and draw whatever the squiggle suggests: the wave becomes a sea, the circle becomes a sun, the zigzag becomes mountains.",
+        "When the timer sounds, every page moves one seat to the left. You now own someone else's half-finished picture, and the rule is generous but firm: you may add anything, but you may not erase or cross out what is already there. A boat drawn by player one can gain sails, a storm, or a very surprised fish — but it stays a boat."
+      ]
+    },
+    {
+      "heading": "Rounds that keep it fresh",
+      "paragraphs": [
+        "Play three or four passes, then hold an exhibition: each artist explains what they thought the picture was becoming, and the next artist explains what they turned it into. The gap between the two stories is where the laughter lives.",
+        "For a harder round, ban talking and ban lifting the pen during your sixty seconds. For a gentler round with younger players, swap timers for songs — draw until the song ends, then pass the page."
+      ]
+    }
+  ],
+  "takeaway": "Pass the page every minute and build on what you find — no erasing allowed — and every drawing becomes a story nobody planned.",
+  "fiction": false,
+  "materials": [
+    "A sketchbook or pad of plain paper",
+    "Pens, pencils or paints for each player",
+    "A timer or a phone stopwatch",
+    "The same simple starting squiggle on each page"
+  ],
+  "supervision": "No special supervision is needed for older children and adults; an adult should join in or stay nearby when younger children are playing with paints.",
+  "safetyNotes": [
+    "Use washable, non-toxic paints and pens when children are playing, and cover the table before anyone opens a paint pot.",
+    "Keep drinks away from the drawing area so a knocked cup cannot flood everyone's pages."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

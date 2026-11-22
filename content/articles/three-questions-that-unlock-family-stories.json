@@ -1,0 +1,55 @@
+{
+  "id": "together-draft-2026-11-22-01",
+  "slug": "three-questions-that-unlock-family-stories",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Three questions that unlock family stories",
+  "description": "'Tell me about the old days' earns a shrug. Specific questions earn stories: the house you grew up in, the journey you took, the meal you still miss. How to ask so the memories actually come.",
+  "publishedAt": "2026-11-22",
+  "updatedAt": "2026-11-22",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family holding hands while walking",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "stories",
+    "oral-history"
+  ],
+  "sources": [
+    {
+      "title": "Oral history | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Oral_history",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-22",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 22 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Why broad questions fail",
+      "paragraphs": [
+        "Oral history — recording people's spoken memories — works because memory is stored in scenes, not summaries. Ask for a life story and the mind finds nothing to grip; ask about one kitchen, one journey, one winter, and the details arrive carrying the story with them.",
+        "So trade the broad question for three narrow ones. First: 'What did the home you grew up in look like — walk me through the front door.' Rooms unlock routines, routines unlock people. Second: 'What journey do you still think about?' Journeys have beginnings and endings, which makes them natural stories. Third: 'What meal do you miss, and who cooked it?' Food questions reliably produce the warmest, funniest, most detailed answers of all."
+      ]
+    },
+    {
+      "heading": "Ask, then be quiet",
+      "paragraphs": [
+        "The second skill is silence. After your question, let pauses happen — the best sentence of the story usually arrives after a gap that felt too long to the listener. Follow the detail, not your list: if the kitchen story mentions a neighbour, ask about the neighbour.",
+        "Write down or record what you gather, with permission, and say names and dates aloud as you go so the record keeps them. Families lose their stories one unasked question at a time; three good questions on one ordinary walk can save a century of them."
+      ]
+    }
+  ],
+  "takeaway": "Specific questions unlock specific memories: describe the home, retell the journey, name the missed meal — then listen longer than feels natural.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

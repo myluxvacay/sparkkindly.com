@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-stalemate-no-legal-move-712",
+  "scheduledDate": "2029-09-28",
+  "brand": "play",
+  "prompt": "In chess, it is your turn. Your king is NOT in check, but every legal move you could make would put your king in check, and you have no other pieces to move. What is the result?",
+  "options": [
+    {
+      "id": "a",
+      "text": "You win, because your king was never captured"
+    },
+    {
+      "id": "b",
+      "text": "You lose, because having no move forfeits the game"
+    },
+    {
+      "id": "c",
+      "text": "The game is a draw — this is stalemate"
+    },
+    {
+      "id": "d",
+      "text": "You may pass your turn and let your opponent move again"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "This is stalemate. A player who is not in check but has no legal move has stalemated the game, and the result is a draw — even if the other player has far more pieces left.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Stalemate | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Stalemate",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

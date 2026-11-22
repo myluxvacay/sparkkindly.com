@@ -1,0 +1,38 @@
+{
+  "id": "save-quiz-community-solar-share-711",
+  "scheduledDate": "2029-05-31",
+  "brand": "save",
+  "prompt": "In a community solar scheme, where do the solar panels you subscribe to usually stand?",
+  "options": [
+    {
+      "id": "a",
+      "text": "On your own roof, installed free of charge"
+    },
+    {
+      "id": "b",
+      "text": "On a shared solar farm or large array away from your home, whose power goes into the grid"
+    },
+    {
+      "id": "c",
+      "text": "On the roof of the electricity company’s office"
+    },
+    {
+      "id": "d",
+      "text": "There are no real panels; it is only a billing discount"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Community solar members subscribe to a share of a shared array — typically a solar farm — rather than panels on their own roof. The electricity enters the grid and the member receives a credit on their bill, which is why renters can join.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Community solar | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Community_solar",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

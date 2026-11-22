@@ -1,0 +1,62 @@
+{
+  "id": "together-draft-2026-11-21-01",
+  "slug": "recreate-the-old-photo",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Recreate the old photo: same people, same spot, years later",
+  "description": "Find a family photograph from ten, twenty, forty years ago — then gather the same people, in the same place, in the same poses. The new picture takes ten minutes to make and tends to become the most treasured one you own.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family holding hands while walking",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "photographs",
+    "memories"
+  ],
+  "sources": [
+    {
+      "title": "Pictures | Library of Congress",
+      "url": "https://www.loc.gov/pictures/",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 21 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Choose the right old photo",
+      "paragraphs": [
+        "The best candidates are ordinary, not formal: a kitchen-table birthday, a front-step lineup, cousins squeezed onto one sofa. Ordinary photos hold the details everyone has forgotten — the wallpaper, the haircut, the dog — and those details are what make the recreation glow.",
+        "Pick one where most of the people can still gather, and where the place still exists. A photo whose people have scattered across the world can wait for the rare reunion; a photo of your own street can be remade this weekend."
+      ]
+    },
+    {
+      "heading": "Remake it faithfully, then loosely",
+      "paragraphs": [
+        "Match what you can: the same doorway, the same order of people, the same expressions if you can hold them. Then accept the beautiful failures — the toddler is now taller than grandma, the sofa is gone, someone insists on holding a cat that was not consulted last time either.",
+        "Take the faithful version first, then let everyone relax into a second, laughing version. Families usually frame the laughing one."
+      ]
+    },
+    {
+      "heading": "Print both, side by side",
+      "paragraphs": [
+        "The magic only completes itself when the two pictures sit together: print them the same size, old on the left, new on the right, and give copies to everyone in the frame. Grandparents, in particular, tend to keep theirs somewhere it will be seen every day.",
+        "Repeat it every five or ten years and you have built something no camera roll can give you — a slow-motion portrait of a family, taken one decade at a time."
+      ]
+    }
+  ],
+  "takeaway": "Pick an ordinary old photo, restage it with the same people in the same spot, and print old and new side by side — then do it again in ten years.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

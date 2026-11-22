@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-shooting-star-meteor-712",
+  "scheduledDate": "2029-09-29",
+  "brand": "discover",
+  "prompt": "You see a 'shooting star' streak across the night sky for a second and vanish. What have you actually seen?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A star falling out of the sky towards Earth"
+    },
+    {
+      "id": "b",
+      "text": "A tiny piece of rock or dust burning up in Earth's atmosphere"
+    },
+    {
+      "id": "c",
+      "text": "A satellite switching its lights off"
+    },
+    {
+      "id": "d",
+      "text": "Lightning reflecting off a high cloud"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A shooting star is a meteor: usually a grain of rock or dust, often no bigger than a pea, hitting Earth's atmosphere at enormous speed and burning up in a bright streak. No star is involved at all.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Meteoroid | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Meteoroid",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

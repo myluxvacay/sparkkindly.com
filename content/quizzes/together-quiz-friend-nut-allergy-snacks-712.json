@@ -1,0 +1,38 @@
+{
+  "id": "together-quiz-friend-nut-allergy-snacks-712",
+  "scheduledDate": "2029-09-30",
+  "brand": "together",
+  "prompt": "You have brought snacks to share with a group, and you remember that one friend has a serious nut allergy. What is the most caring thing to do?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Serve the nut snacks anyway — your friend can just not eat them"
+    },
+    {
+      "id": "b",
+      "text": "Keep the nut snacks sealed and separate, tell your friend clearly which foods contain nuts, and make sure there are safe snacks they can eat"
+    },
+    {
+      "id": "c",
+      "text": "Say nothing, so your friend does not feel singled out"
+    },
+    {
+      "id": "d",
+      "text": "Ask your friend to sit away from the group while everyone eats"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "For someone with a serious food allergy, even traces of the food can cause a severe reaction. Keeping allergen foods separate, labelling them honestly and providing safe alternatives protects your friend and keeps them included.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Food allergy | NHS",
+      "url": "https://www.nhs.uk/conditions/food-allergy/",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

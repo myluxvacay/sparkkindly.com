@@ -1,0 +1,62 @@
+{
+  "id": "save-draft-2026-11-21-01",
+  "slug": "why-a-piggy-bank-is-a-pig",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Why is a piggy bank a pig? (It was the clay, not the animal)",
+  "description": "The pig in piggy bank is an accident of language. Centuries ago, the cheap clay used for household pots was called 'pygg' — and the little money pots made from it slowly turned into the animal we know.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money",
+    "history",
+    "saving"
+  ],
+  "sources": [
+    {
+      "title": "Piggy bank | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Piggy_bank",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 21 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "It started with a word for clay",
+      "paragraphs": [
+        "In medieval England, metal was expensive, so ordinary households kept dishes and pots made from a cheap orange clay called pygg. Loose coins went into a pygg pot or jar on the shelf — the household's savings, quite literally kept in clay.",
+        "By the eighteenth and nineteenth centuries, the clay's name and the farm animal's name sounded identical, and potters — who never miss a joke — began making the money pots pig-shaped. The pun outlived the clay: the pots became ceramic, then plastic, then apps, and the pig stayed."
+      ]
+    },
+    {
+      "heading": "The pot you had to break",
+      "paragraphs": [
+        "The oldest piggy banks had no hole in the bottom. To spend your savings you had to smash the pot — a design that made saving the default and spending an event. Every coin dropped in was a small decision, and the pot's growing weight was the only balance enquiry available.",
+        "There is a lesson in that friction. Modern saving works best the same way: money that is slightly inconvenient to reach gets spent less than money one tap away. The pig understood behavioural economics centuries early."
+      ]
+    },
+    {
+      "heading": "Keep the pig, keep the point",
+      "paragraphs": [
+        "A piggy bank still earns its shelf space today — for children learning that coins become something bigger, and for adults who find a visible, physical savings habit sticks when an invisible account balance does not.",
+        "Choose a goal, name the pig if you must, and let it fill. Some technologies survive because the idea inside them was never really about the technology."
+      ]
+    }
+  ],
+  "takeaway": "Piggy banks are pigs because of a clay called 'pygg' and a potter's pun — and their break-to-open friction is still a saving lesson worth keeping.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,65 @@
+{
+  "id": "play-draft-2026-11-21-02",
+  "slug": "count-on-an-abacus",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Count on an abacus: beads that hold a number",
+  "description": "Long before calculators, shopkeepers across Asia counted with beads on rods — and the abacus is still faster than fingers. Learn how one rod holds ones, the next tens, and how a number lives in the beads.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "hero": {
+    "src": "/images/maths.webp",
+    "alt": "Colourful wooden abacus beads",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "maths",
+    "counting",
+    "hands-on"
+  ],
+  "sources": [
+    {
+      "title": "Abacus | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Abacus",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 21 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Meet the rods",
+      "paragraphs": [
+        "A school abacus has rows or rods of beads, and each rod stands for a place in a number: ones, tens, hundreds. On a Japanese-style soroban each rod has one bead above the bar and four below it; on a classroom counting frame, ten beads slide on each wire. Either way, the rule is the same — a bead only counts when it is pushed to its counting position.",
+        "Start with everything cleared: no beads touching the bar. That empty, quiet frame is zero, and every number you will ever make is just beads moved with intent."
+      ]
+    },
+    {
+      "heading": "Build numbers, then add",
+      "paragraphs": [
+        "Slide beads to show 7 on the ones rod. Now add 5 more: there are not enough ones beads left, so trade — clear the ones and push one bead on the tens rod, then show the remaining 2. You have just done carrying with your hands, the move written maths hides inside a tiny 1.",
+        "Race a partner: one of you calls a number up to 99, the other builds it. Then swap. Finish with shopkeeper sums — build the price, build the payment, slide back the change."
+      ]
+    }
+  ],
+  "takeaway": "Each rod is a place — ones, tens, hundreds — and 'carrying' stops being a rule in a book and becomes a trade your hands can feel.",
+  "fiction": false,
+  "materials": [
+    "A school counting-frame abacus or soroban-style abacus",
+    "A partner for the number race (optional)",
+    "Paper and pencil to write the numbers you build"
+  ],
+  "supervision": "No special supervision is needed; an adult or older child can act as the number-caller for younger players.",
+  "safetyNotes": [
+    "Check a second-hand abacus for loose beads or splintered rods before play, and keep loose beads away from toddlers, who may put them in their mouths.",
+    "Play on a table so a dropped abacus cannot land on feet."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
