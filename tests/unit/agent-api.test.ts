@@ -234,7 +234,8 @@ describe('getBrief', () => {
       const j = r.json as { today: string; world: { slug: string; approvalMode: string; bufferDays: number }; supported: { kinds: string[]; mechanics: string[] }; topics: { slug: string; recentCount: number }[]; recentTitles: string[]; scheduledDaysAhead: number };
       expect(j.world).toMatchObject({ slug: 'play', approvalMode: 'auto', bufferDays: 3 });
       expect(j.supported.kinds).toEqual(['article', 'game', 'quiz', 'video_script']);
-      expect(j.supported.mechanics).toHaveLength(7);
+      expect(j.supported.mechanics).toHaveLength(8); // the seven launch mechanics + match_pairs (games wave 1, 21 Nov 2026)
+      expect(j.supported.mechanics).toContain('match_pairs');
       expect(j.topics.find((t) => t.slug === 'physics')?.recentCount).toBe(5); // play's five, not grow's one
       expect(j.topics.length).toBeGreaterThan(40);
       expect(j.recentTitles).toHaveLength(30);
