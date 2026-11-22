@@ -45914,6 +45914,258 @@
     "reviewedAt": "2026-11-21",
     "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production."
    }
+  },
+  {
+   "kind": "game",
+   "id": "build-a-word-001",
+   "priorHash": "950b64943a5dfe17ad16eba80cff937aa718e6066e513bafa29abebe56a5e257",
+   "approvedHash": "8d82aa2e57e875728b3c89e82c689db9cd759d8f63f71a34a856bf4ca6189999",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: tiles spell CAT matching the hero picture; wordAnswer verified absent from the public play body. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "build-a-word-002",
+   "priorHash": "8d2c762629531bc1955296b11589f47523271bde34e224b8c187f44321685bd5",
+   "approvedHash": "77331ffc0a38167d1152e8468295943ccb8bedf55b464437c089ee3f93c13e04",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: tiles spell BUS matching the hero picture; wordAnswer verified absent from the public play body. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "build-a-word-003",
+   "priorHash": "35fab5eb03b21f226c4357e95e1e9228d1c769d69b9e54f48bb9c9dd36c4ab26",
+   "approvedHash": "47a4b4a566a14a183bbdbb4c3fa225d1af8f3eea1e1c2003a8d3815cdbb71266",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: tiles spell DUCK matching the hero picture; wordAnswer verified absent from the public play body. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "build-a-word-004",
+   "priorHash": "cfafa9e04e8b9bc503051a1096d7961c9662a6f8cd62a05aaa06e6e210835b95",
+   "approvedHash": "3acbe2c71b6ff8dd8cae17f0c384510cac79ff35c6c4579e273adee5d769a78b",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: tiles spell APPLE plus the declared decoy S, matching the hero picture; wordAnswer verified absent from the public play body. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "drag-match-habitat-001",
+   "priorHash": "3ea8dd5e9ccfa81fe9b782152c140ea092d6e8955ed607acaff92ac3a0d0b33f",
+   "approvedHash": "e8087839ec213a31b7bf5c4533213ab445223825a8f780b3c0dfec2054512897",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: pairings hand-verified (bird-tree, bee-flowers, rabbit-carrots, crab-shore); schema proves permutation only for non-dots matches (review finding H2). Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "drag-match-hedgehog-001",
+   "priorHash": "4227ca36eff191bcaa0dff330568e2b701ce0a4b90adda15d70cecc96dd89f29",
+   "approvedHash": "9726b7c79affc6fd916a63baf0f1b8f944be6806eafe673431be6ccf4652c79c",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: dot-count pairing re-derived and schema-proved (targets 3,1,4,5,2). Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "drag-match-hedgehog-002",
+   "priorHash": "bf4ac4599a78b27502ead912f2b627cec0b9e37fa9cc2493d2e0c30c5219f5f1",
+   "approvedHash": "2f029835bc5a973f3ea8fd0cfaa81fe67d9576c205973cd9d9b24946c78fd40b",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: dot-count pairing re-derived and schema-proved (targets 6,4,8,5,7). Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "drag-match-opposites-001",
+   "priorHash": "b407c2211977997ff100597c543499af8e092e50ce3fb786bb59b220de64110d",
+   "approvedHash": "f207284eb0fa40aba5c4502041bf0bb810122b36448229df09805169aa8b3246",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: opposite pairs hand-verified (hot-cold, up-down, big-little, open-closed). Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "drag-match-sounds-001",
+   "priorHash": "49689cb09206857c277f3a06a2b09cdfbbf103e95d3a1427ef59a64eca8b777f",
+   "approvedHash": "24e0850e4dd2bfefe4322a4cfe17424480c6b8c79ae5d0b3c4a80553f7480978",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: beginning sounds hand-verified (B-Bear, C-Cat, D-Dog, F-Frog). Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "emotion-detectives-001",
+   "priorHash": "1101da69b83c38d9c95143b4f71b14068f279fdebd9d74cd7eba602b54512759",
+   "approvedHash": "19d3fdac318d9dcd2b0df0dc663ac388dfc5acbe2b70798f52b3f7e04de8e592",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed with note: feeling Sad unambiguously cued and explanation clue-based; scene draws books rather than the block tower (alt text accurate to the drawing). Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "emotion-detectives-002",
+   "priorHash": "4f3d4f9b43a5e41891108c27840acc749151dcf68bf8f133cb738a7753423a42",
+   "approvedHash": "f1c914d2d1f270611d05747cadca9b27380428822c4441f3fc45c0c36e67203c",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed with note: feeling Proud unambiguously cued and explanation clue-based; park scene is a loose illustration that does not depict the puzzle. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "emotion-detectives-003",
+   "priorHash": "03636415e20c7b9be3e8a60b8a2e9ada45c6d4d2d839127d5815b57d4b3c9dc0",
+   "approvedHash": "dd6b8af38f79d736010b5ff0ac22d911b752399204b0e6a7f53a4fe7a97576e1",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: feeling Thankful clearly cued (shared umbrella), explanation clue-based, scene depicts the scenario. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "emotion-detectives-004",
+   "priorHash": "38780e48c7a49418931ede2505c4b89876757b49c15a9991eb035d46374d5636",
+   "approvedHash": "bf5e977f75d9c10149e0b1577c5e95d4ebb5ee52a3a0a37924b420bb7d650a59",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: feeling Scared clearly cued (creaking gate, shadow, trembling, hiding), explanation clue-based. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "fact-or-fiction-001",
+   "priorHash": "8b022e980eb6fd0c583264881d52ab244baf94068a3938404c11005db2e6ed57",
+   "approvedHash": "1cb9f9e6ee213ce176f40a4e128d7e9e8e2c3d0fbf8cda2257c015f68fa82b57",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: statement verified true against cited Honey bee (Wikipedia) source; sceneAlt complete. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "fact-or-fiction-002",
+   "priorHash": "8a208ad553a35f9afe8f58dff7c6748271ed9154903dfdbb7e1c5b5d954d2a06",
+   "approvedHash": "1ff78a9d68e037ab4e9bd0ca0b215e97f7afcc08fa9dcffb49dff36bb319e751",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: Moon-of-cheese statement clearly imaginary, consistent with cited Moon (Wikipedia) source; sceneAlt complete. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "fact-or-fiction-003",
+   "priorHash": "69304e8c41b387324576e3292eed807a520c472f9167a73d82d9d5e0e5fac156",
+   "approvedHash": "5793476313a03426eb85c63fc4e0c303aeb5c3b14418204361e23bb33fdaf7ab",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: Canada second-largest-country statement verified true against cited Canada (Wikipedia) source. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "fact-or-fiction-004",
+   "priorHash": "7c6e9f079af2b80902518f0fcb7c8abe0cd9f5395c5404a2930c1e1fc54738d8",
+   "approvedHash": "091bdc98e5194bdf7fd36b5a902b8013383b086232834763a305e409195fa332",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: penguin hats/scarves statement clearly imaginary; explanation accurate; Penguin (Wikipedia) cited. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "pattern-001",
+   "priorHash": "2f46a33b2b6deadfc093b66f124efd55d41fa02803d3f4199fd2a0930b352422",
+   "approvedHash": "8f45c17af754af1b8c07218ad6340abe2763c72e11e828c0f748f232bf5dc758",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: ABAB rocket/planet pattern, missing piece (pos 5, red rocket) re-derived from sequence data. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "pattern-002",
+   "priorHash": "ca255abba6a829cf0a4c31a78cb55a865ef4e3900467b6598449aef8ec393c5b",
+   "approvedHash": "cac3646110fb301ac71cddd76c264c9f9e7b39b2cb01bf26f5ba5b9a95ff1a59",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed with note: AAB star/star/moon pattern, missing piece (pos 5, second star) correct, but only one full cycle precedes the gap so the proof assumes the repetition continues. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "pattern-003",
+   "priorHash": "fe8ecd88784e15719a93589fc755106615bee788593fa622594cd5891d0c80ae",
+   "approvedHash": "f1560d6a51d15066a62a3d9cd24bb374e195d396159e7628a6e36f842f37cb25",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: red/yellow/blue colour cycle, missing piece (pos 5, yellow ball) re-derived from sequence data. Staging sample under the owner's 21 Nov 2026 direction."
+   }
+  },
+  {
+   "kind": "game",
+   "id": "pattern-004",
+   "priorHash": "c791651d4f03e8dfa9653b5c83a526afbeb09a6fe48902fbf0694156e3e230b8",
+   "approvedHash": "e279fb3317b481f9d71edecbc8e59700cfa93602fd276bd3c12373006a258ba8",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "games-wave1-independent-review",
+    "reviewedAt": "2026-11-21",
+    "reviewNote": "Independent review passed: ABAB butterfly/bee pattern, missing piece (pos 4, yellow bee) re-derived from sequence data. Staging sample under the owner's 21 Nov 2026 direction."
+   }
   }
  ]
 }

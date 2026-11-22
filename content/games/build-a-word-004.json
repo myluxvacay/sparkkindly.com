@@ -1,0 +1,30 @@
+{
+  "brand": "kids",
+  "difficulty": "medium",
+  "explanation": "A-P-P-L-E spells APPLE — the crunchy red fruit. Watch out: the S tile was a spare that the word does not need!",
+  "gameType": "build-a-word",
+  "id": "build-a-word-004",
+  "prompt": "Look at the picture. Tap the letter tiles to spell what you see — one tile is a spare!",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Build-a-Word: apple",
+  "visual": {
+    "decoyLetter": "s",
+    "gameType": "build-a-word",
+    "heroAlt": "A shiny red apple with a green leaf",
+    "heroArt": "apple",
+    "tiles": [
+      "p",
+      "l",
+      "a",
+      "e",
+      "p",
+      "s"
+    ]
+  },
+  "wordAnswer": "apple",
+  "reviewNote": "Independent review passed: tiles spell APPLE plus the declared decoy S, matching the hero picture; wordAnswer verified absent from the public play body. Staging sample under the owner's 21 Nov 2026 direction."
+}

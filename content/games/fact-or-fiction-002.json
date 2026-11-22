@@ -1,0 +1,67 @@
+{
+  "brand": "discover",
+  "correctOptionId": "make-believe",
+  "difficulty": "easy",
+  "explanation": "Make-believe! The Moon is really made of rock, like a giant grey stone in the sky — no cheese, and no picnics.",
+  "gameType": "fact-or-fiction",
+  "id": "fact-or-fiction-002",
+  "options": [
+    {
+      "id": "fact",
+      "text": "Fact"
+    },
+    {
+      "id": "make-believe",
+      "text": "Make-Believe"
+    }
+  ],
+  "prompt": "Fact or Make-Believe? Read the statement, look at the picture, and decide.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [
+    {
+      "accessedAt": "2026-11-21",
+      "title": "Moon — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Moon"
+    }
+  ],
+  "title": "Fact or Make-Believe?: the Moon",
+  "visual": {
+    "gameType": "fact-or-fiction",
+    "scene": {
+      "elements": [
+        {
+          "art": "rocket",
+          "color": "white",
+          "id": "rocket-1",
+          "name": "rocket",
+          "x": 280,
+          "y": 320
+        },
+        {
+          "art": "star",
+          "color": "yellow",
+          "id": "star-1",
+          "name": "star",
+          "x": 520,
+          "y": 180
+        },
+        {
+          "art": "moon",
+          "color": "yellow",
+          "id": "moon-1",
+          "name": "moon",
+          "x": 640,
+          "y": 300
+        }
+      ],
+      "template": "space"
+    },
+    "sceneAlt": "A space scene. In the scene: white rocket, yellow star, yellow moon.",
+    "statement": "The Moon is made of cheese, and mice hold picnics on it.",
+    "statementIsFact": false
+  },
+  "reviewNote": "Independent review passed: Moon-of-cheese statement clearly imaginary, consistent with cited Moon (Wikipedia) source; sceneAlt complete. Staging sample under the owner's 21 Nov 2026 direction."
+}

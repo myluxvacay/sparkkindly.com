@@ -21,16 +21,35 @@ function tierFor(world: string, kind: 'article' | 'quiz'): RiskTier {
 // keep the two in step (the same arrangement as imageFor / updateHeroImages for articles).
 export function gameBodyFor(g: Game) {
   const choices = (list: NonNullable<Game['options']>) =>
-    list.map((o) => ({ id: o.id, text: o.text, ...(o.art ? { art: o.art, alt: o.alt ?? o.text } : {}) }));
+    list.map((o) => ({ id: o.id, text: o.text, ...(o.art ? { art: o.art, alt: o.alt ?? o.text } : {}), ...(o.color ? { color: o.color } : {}) }));
+  // Wave 1 (21 Nov 2026): drag-match plays as match_pairs (the board rides in `visual`, the form
+  // answers one piece per target), fact-or-fiction as true_false with its own labels rendered from
+  // visual.gameType, and build-a-word as short_text (the word itself is NOT copied into the body —
+  // it lives only in the answer key via gameAnswerFor). Pattern and emotion-detectives are plain
+  // multiple_choice; their payloads ride in `visual` like every other picture game.
   return g.gameType === 'counting'
     ? { mechanic: 'number', prompt: g.prompt, difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
     : g.gameType === 'odd-one-out'
       ? { mechanic: 'odd_one_out', prompt: g.prompt, items: choices(g.items ?? []), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
-      : { mechanic: 'multiple_choice', prompt: g.prompt, options: choices(g.options ?? []), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate };
+      : g.gameType === 'drag-match'
+        ? { mechanic: 'match_pairs', prompt: g.prompt, items: (g.visual.match?.pieces ?? []).map((p) => ({ id: p.id, text: p.text })), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
+        : g.gameType === 'fact-or-fiction'
+          ? { mechanic: 'true_false', prompt: g.prompt, difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
+          : g.gameType === 'build-a-word'
+            ? { mechanic: 'short_text', prompt: g.prompt, difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate }
+            : { mechanic: 'multiple_choice', prompt: g.prompt, options: choices(g.options ?? []), difficulty: g.difficulty, visual: g.visual, scheduledDate: g.scheduledDate };
 }
 
 export function gameAnswerFor(g: Game) {
-  return g.gameType === 'counting' ? g.numberAnswer : g.correctOptionId;
+  return g.gameType === 'counting'
+    ? g.numberAnswer
+    : g.gameType === 'drag-match'
+      ? g.matchAnswer
+      : g.gameType === 'fact-or-fiction'
+        ? g.correctOptionId === 'fact'
+        : g.gameType === 'build-a-word'
+          ? { accepted: [g.wordAnswer] }
+          : g.correctOptionId;
 }
 
 // A memory game's summary must never be its prompt (owner design review, 18 Nov 2026): the

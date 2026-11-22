@@ -1,0 +1,79 @@
+{
+  "brand": "discover",
+  "difficulty": "easy",
+  "explanation": "Birds nest in the leafy tree, bees visit the flower patch, rabbits munch in the carrot patch, and crabs scuttle along the seashell shore.",
+  "gameType": "drag-match",
+  "id": "drag-match-habitat-001",
+  "matchAnswer": [
+    "bird",
+    "bee",
+    "rabbit",
+    "crab"
+  ],
+  "prompt": "Every animal is looking for its home. Drag each animal to the place it belongs!",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Habitat Heroes: every animal home",
+  "visual": {
+    "gameType": "drag-match",
+    "match": {
+      "pieces": [
+        {
+          "alt": "A red crab with big claws",
+          "art": "crab",
+          "id": "crab",
+          "text": "Crab"
+        },
+        {
+          "alt": "A small round bird",
+          "art": "bird",
+          "id": "bird",
+          "text": "Bird"
+        },
+        {
+          "alt": "A grey rabbit with long ears",
+          "art": "rabbit",
+          "id": "rabbit",
+          "text": "Rabbit"
+        },
+        {
+          "alt": "A striped bee with wings",
+          "art": "bee",
+          "id": "bee",
+          "text": "Bee"
+        }
+      ],
+      "targets": [
+        {
+          "alt": "A tall tree with a round leafy top",
+          "art": "tree",
+          "id": "tree",
+          "text": "Leafy tree"
+        },
+        {
+          "alt": "A patch of colourful flowers",
+          "art": "flower",
+          "id": "flowers",
+          "text": "Flower patch"
+        },
+        {
+          "alt": "Orange carrots growing in a patch",
+          "art": "carrot",
+          "id": "carrots",
+          "text": "Carrot patch"
+        },
+        {
+          "alt": "A spiral seashell on the shore",
+          "art": "shell",
+          "id": "shore",
+          "text": "Seashell shore"
+        }
+      ],
+      "variant": "match"
+    }
+  },
+  "reviewNote": "Independent review passed: pairings hand-verified (bird-tree, bee-flowers, rabbit-carrots, crab-shore); schema proves permutation only for non-dots matches (review finding H2). Staging sample under the owner's 21 Nov 2026 direction."
+}

@@ -81,8 +81,8 @@ describe('the other mechanics', () => {
   it('rejects an unknown mechanic', () => {
     expect(ok(quiz({ mechanic: 'crossword' }, 'a'))).toBe(false);
   });
-  it('lists the seven launch mechanics', () => {
-    expect([...mechanics]).toEqual(['multiple_choice', 'true_false', 'short_text', 'number', 'odd_one_out', 'put_in_order', 'clue_reveal']);
+  it('lists the launch mechanics plus match_pairs (games wave 1, 21 Nov 2026)', () => {
+    expect([...mechanics]).toEqual(['multiple_choice', 'true_false', 'short_text', 'number', 'odd_one_out', 'put_in_order', 'clue_reveal', 'match_pairs']);
   });
 });
 

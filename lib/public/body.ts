@@ -6,7 +6,7 @@ import { SCENE_ART_KEYS, SCENE_COLORS, SCENE_TEMPLATES, type SceneSpec } from '@
 const opt = <T extends z.ZodType>(t: T) => t.optional().catch(undefined);
 const text = z.string();
 const list = z.array(z.string());
-const choice = z.object({ id: z.string(), text: z.string(), art: opt(text), alt: opt(text) });
+const choice = z.object({ id: z.string(), text: z.string(), art: opt(text), alt: opt(text), color: opt(z.enum(SCENE_COLORS)) });
 
 // Visual game payload (18 Nov 2026): the scene data a picture game renders from. Read as defensively
 // as everything else here; toSceneSpec below turns it into the renderer's typed spec or drops it.
@@ -27,6 +27,8 @@ const sceneView = z.object({
   elements: z.array(sceneElementView).catch([]),
 });
 export type SceneView = z.infer<typeof sceneView>;
+const matchPieceView = z.object({ id: text, text: text, art: opt(text), alt: opt(text), value: opt(z.number()) });
+const matchTargetView = z.object({ id: text, text: text, art: opt(text), alt: opt(text), dots: opt(z.number()) });
 const visual = z.object({
   gameType: opt(text),
   scene: opt(sceneView),
@@ -38,6 +40,16 @@ const visual = z.object({
   decoyLabel: opt(text),
   heroArt: opt(text),
   heroAlt: opt(text),
+  // Wave 1 (21 Nov 2026): the five new types' payloads, read as defensively as everything above.
+  // ANSWER-KEY FIELDS ARE DELIBERATELY ABSENT: statementIsFact (fact-or-fiction), feeling
+  // (emotion-detectives) and decoyLetter (build-a-word) would hand the player the answer in the
+  // page payload — the stored body carries them, this reader strips them (review finding H1,
+  // 21 Nov 2026). No component reads them; the verdict comes from the server-side answer key.
+  match: opt(z.object({ variant: opt(text), pieces: z.array(matchPieceView).catch([]), targets: z.array(matchTargetView).catch([]) })),
+  statement: opt(text),
+  scenario: opt(text),
+  missingPosition: opt(z.number()),
+  tiles: opt(z.array(text)),
 });
 export type VisualView = z.infer<typeof visual>;
 

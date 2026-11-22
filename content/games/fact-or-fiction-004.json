@@ -1,0 +1,39 @@
+{
+  "brand": "kids",
+  "correctOptionId": "make-believe",
+  "difficulty": "easy",
+  "explanation": "Make-believe! Penguins stay warm with thick feathers and a cosy layer of fat — they never wear hats or scarves.",
+  "gameType": "fact-or-fiction",
+  "id": "fact-or-fiction-004",
+  "options": [
+    {
+      "id": "fact",
+      "text": "Fact"
+    },
+    {
+      "id": "make-believe",
+      "text": "Make-Believe"
+    }
+  ],
+  "prompt": "Fact or Make-Believe? Read the statement, look at the picture, and decide.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [
+    {
+      "accessedAt": "2026-11-21",
+      "title": "Penguin — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Penguin"
+    }
+  ],
+  "title": "Fact or Make-Believe?: penguin clothes",
+  "visual": {
+    "gameType": "fact-or-fiction",
+    "heroAlt": "A penguin with a black and white body and an orange beak",
+    "heroArt": "penguin",
+    "statement": "Penguins wear woolly hats and scarves to keep warm.",
+    "statementIsFact": false
+  },
+  "reviewNote": "Independent review passed: penguin hats/scarves statement clearly imaginary; explanation accurate; Penguin (Wikipedia) cited. Staging sample under the owner's 21 Nov 2026 direction."
+}
