@@ -1,0 +1,61 @@
+{
+  "brand": "kids",
+  "correctOptionId": "a",
+  "difficulty": "easy",
+  "explanation": "Spark feels proud. The clues are that he finished something tricky all by himself, and sat up tall with a smile.",
+  "gameType": "emotion-detectives",
+  "id": "emotion-detectives-002",
+  "options": [
+    {
+      "id": "a",
+      "text": "Proud"
+    },
+    {
+      "id": "b",
+      "text": "Scared"
+    },
+    {
+      "id": "c",
+      "text": "Bored"
+    },
+    {
+      "id": "d",
+      "text": "Angry"
+    }
+  ],
+  "prompt": "How does Spark feel?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Emotion Detectives: the tricky puzzle",
+  "visual": {
+    "feeling": "Proud",
+    "gameType": "emotion-detectives",
+    "scenario": "Spark worked on a very tricky puzzle for a long time. He tried and tried, and at last — click! — the final piece fit. Spark sat up tall and smiled.",
+    "scene": {
+      "elements": [
+        {
+          "art": "rabbit",
+          "color": "white",
+          "id": "rabbit-1",
+          "name": "rabbit",
+          "x": 300,
+          "y": 470
+        },
+        {
+          "art": "dog",
+          "color": "brown",
+          "id": "dog-1",
+          "name": "dog",
+          "x": 560,
+          "y": 480
+        }
+      ],
+      "template": "park"
+    },
+    "sceneAlt": "A park scene. In the scene: white rabbit, brown dog."
+  },
+  "reviewNote": "Independent review passed with note: feeling Proud unambiguously cued and explanation clue-based; park scene is a loose illustration that does not depict the puzzle. Staging sample under the owner's 21 Nov 2026 direction."
+}

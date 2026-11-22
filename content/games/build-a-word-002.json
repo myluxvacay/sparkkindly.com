@@ -1,0 +1,26 @@
+{
+  "brand": "kids",
+  "difficulty": "easy",
+  "explanation": "B-U-S spells BUS — the yellow vehicle that carries children to school.",
+  "gameType": "build-a-word",
+  "id": "build-a-word-002",
+  "prompt": "Look at the picture. Tap the letter tiles to spell what you see!",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Build-a-Word: bus",
+  "visual": {
+    "gameType": "build-a-word",
+    "heroAlt": "A yellow school bus with big windows",
+    "heroArt": "bus",
+    "tiles": [
+      "s",
+      "b",
+      "u"
+    ]
+  },
+  "wordAnswer": "bus",
+  "reviewNote": "Independent review passed: tiles spell BUS matching the hero picture; wordAnswer verified absent from the public play body. Staging sample under the owner's 21 Nov 2026 direction."
+}

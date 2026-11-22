@@ -1,0 +1,77 @@
+{
+  "brand": "play",
+  "correctOptionId": "c",
+  "difficulty": "easy",
+  "explanation": "The pattern takes turns: rocket, planet, rocket, planet — so the missing piece is another rocket.",
+  "gameType": "pattern",
+  "id": "pattern-001",
+  "options": [
+    {
+      "alt": "A yellow star",
+      "art": "star",
+      "color": "yellow",
+      "id": "a",
+      "text": "yellow star"
+    },
+    {
+      "alt": "A purple planet with a ring",
+      "art": "planet",
+      "color": "purple",
+      "id": "b",
+      "text": "purple planet"
+    },
+    {
+      "alt": "A red rocket",
+      "art": "rocket",
+      "color": "red",
+      "id": "c",
+      "text": "red rocket"
+    },
+    {
+      "alt": "A yellow moon",
+      "art": "moon",
+      "color": "yellow",
+      "id": "d",
+      "text": "yellow moon"
+    }
+  ],
+  "prompt": "Look at the pattern. Which piece is missing?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Pattern Planet: rockets and planets",
+  "visual": {
+    "gameType": "pattern",
+    "missingPosition": 5,
+    "sequence": [
+      {
+        "art": "rocket",
+        "color": "red",
+        "label": "red rocket"
+      },
+      {
+        "art": "planet",
+        "color": "purple",
+        "label": "purple planet"
+      },
+      {
+        "art": "rocket",
+        "color": "red",
+        "label": "red rocket"
+      },
+      {
+        "art": "planet",
+        "color": "purple",
+        "label": "purple planet"
+      },
+      {
+        "art": "rocket",
+        "color": "red",
+        "label": "red rocket"
+      }
+    ]
+  },
+  "reviewNote": "Independent review passed: ABAB rocket/planet pattern, missing piece (pos 5, red rocket) re-derived from sequence data. Staging sample under the owner's 21 Nov 2026 direction."
+}

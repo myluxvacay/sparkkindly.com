@@ -9,6 +9,9 @@ export const mechanics = [
   'odd_one_out',
   'put_in_order',
   'clue_reveal',
+  // Wave 1 (21 Nov 2026): drag-match games. The response is one piece id per target, in target
+  // order — the same closed shape as put_in_order, keyed by the target list in the visual block.
+  'match_pairs',
 ] as const;
 export type Mechanic = (typeof mechanics)[number];
 
@@ -123,6 +126,16 @@ function checkPlay(v: PlayCandidate, ctx: z.RefinementCtx) {
       if (!clues || clues.length < 3 || clues.length > 6) return bad('clue_reveal needs three to six clues', ['body', 'clues']);
       if (!isAccepted(a)) bad('answer must be { accepted: [one or more strings] }');
       return;
+    case 'match_pairs': {
+      // Pieces ride in `items` (the submission shape, and library games mirror them there at
+      // import — gameBodyFor); the targets live in the visual block, which this validator does
+      // not carry — the content schema (lib/schemas.ts) proves the pairing for library games,
+      // so here the answer just has to be a permutation of the pieces.
+      if (!items || items.length < 3 || items.length > 6 || !distinct(items)) return bad('match_pairs needs three to six distinct pieces', ['body', 'items']);
+      const ids = items.map((o) => o.id).sort().join('|');
+      if (!Array.isArray(a) || a.length !== items.length || a.map(String).sort().join('|') !== ids) bad('answer must be every piece id exactly once, in target order');
+      return;
+    }
   }
 }
 

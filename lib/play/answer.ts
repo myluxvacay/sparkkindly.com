@@ -24,11 +24,16 @@ export type PlayResult =
 
 // Mechanics whose response is a closed choice (an id, true/false, a number, an order of ids). Only these keep the
 // response for re-scoring (plan 4C); free text a player typed (short_text, clue_reveal) is never stored.
-const CLOSED: readonly Mechanic[] = ['multiple_choice', 'odd_one_out', 'true_false', 'number', 'put_in_order'];
+const CLOSED: readonly Mechanic[] = ['multiple_choice', 'odd_one_out', 'true_false', 'number', 'put_in_order', 'match_pairs'];
 
 const isMechanic = (x: unknown): x is Mechanic => (mechanics as readonly unknown[]).includes(x);
 
-type Body = { mechanic: Mechanic; options?: { id: string }[]; items?: { id: string }[] };
+type Body = {
+  mechanic: Mechanic;
+  options?: { id: string }[];
+  items?: { id: string }[];
+  visual?: { match?: { pieces?: { id: string }[]; targets?: { id: string }[] } };
+};
 const ids = (list: unknown) => (Array.isArray(list) ? list.map((c: { id?: unknown }) => c?.id) : []);
 
 // The response to keep for re-scoring (4C review M1): only a closed form the item itself offers, never text a player
@@ -37,6 +42,10 @@ function closedChoice(body: Body, given: unknown): unknown {
   if (!CLOSED.includes(body.mechanic)) return null;
   if (body.mechanic === 'multiple_choice') return ids(body.options).includes(given) ? given : null;
   if (body.mechanic === 'odd_one_out') return [...ids(body.items), ...ids(body.options)].includes(given) ? given : null;
+  if (body.mechanic === 'match_pairs') {
+    const pieces = ids(body.visual?.match?.pieces);
+    return Array.isArray(given) && given.every((id) => pieces.includes(id)) ? given : null;
+  }
   return given;
 }
 
@@ -51,6 +60,7 @@ function closedAnswer(body: Body, stored: unknown): unknown {
     case 'true_false':
       return typeof stored === 'boolean' ? stored : null;
     case 'put_in_order':
+    case 'match_pairs':
       return Array.isArray(stored) ? stored : null;
     case 'number':
       return typeof stored === 'object' && stored !== null && typeof (stored as { value?: unknown }).value === 'number'
@@ -70,7 +80,15 @@ export async function playResult(db: Queryable, scope: Scope, world: string, slu
   const body = item.body as (Omit<Body, 'mechanic'> & { mechanic?: unknown }) | null;
   if (!body || !isMechanic(body.mechanic)) return { status: 'not_found' };
 
-  const given = parseGiven(body.mechanic, params, body.items?.map((i) => i.id));
+  const given =
+    body.mechanic === 'match_pairs'
+      ? parseGiven(
+          body.mechanic,
+          params,
+          (body as Body).visual?.match?.targets?.map((t) => t.id),
+          (body as Body).visual?.match?.pieces?.map((p) => p.id),
+        )
+      : parseGiven(body.mechanic, params, body.items?.map((i) => i.id));
   if (given === null) return { status: 'invalid' };
 
   // ponytail: the key is read outside the transaction that records the answer, so a changeAnswerKey committed between

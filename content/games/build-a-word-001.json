@@ -1,0 +1,26 @@
+{
+  "brand": "kids",
+  "difficulty": "easy",
+  "explanation": "C-A-T spells CAT — the animal in the picture, with soft fur and whiskers.",
+  "gameType": "build-a-word",
+  "id": "build-a-word-001",
+  "prompt": "Look at the picture. Tap the letter tiles to spell what you see!",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Build-a-Word: cat",
+  "visual": {
+    "gameType": "build-a-word",
+    "heroAlt": "An orange cat with pointy ears and whiskers",
+    "heroArt": "cat",
+    "tiles": [
+      "t",
+      "c",
+      "a"
+    ]
+  },
+  "wordAnswer": "cat",
+  "reviewNote": "Independent review passed: tiles spell CAT matching the hero picture; wordAnswer verified absent from the public play body. Staging sample under the owner's 21 Nov 2026 direction."
+}

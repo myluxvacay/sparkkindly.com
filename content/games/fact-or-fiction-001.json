@@ -1,0 +1,75 @@
+{
+  "brand": "discover",
+  "correctOptionId": "fact",
+  "difficulty": "easy",
+  "explanation": "Fact! Bees really do collect nectar from flowers and turn it into honey back at the hive.",
+  "gameType": "fact-or-fiction",
+  "id": "fact-or-fiction-001",
+  "options": [
+    {
+      "id": "fact",
+      "text": "Fact"
+    },
+    {
+      "id": "make-believe",
+      "text": "Make-Believe"
+    }
+  ],
+  "prompt": "Fact or Make-Believe? Read the statement, look at the picture, and decide.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [
+    {
+      "accessedAt": "2026-11-21",
+      "title": "Honey bee — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Honey_bee"
+    }
+  ],
+  "title": "Fact or Make-Believe?: bees and honey",
+  "visual": {
+    "gameType": "fact-or-fiction",
+    "scene": {
+      "elements": [
+        {
+          "art": "bee",
+          "color": "yellow",
+          "id": "bee-1",
+          "name": "bee",
+          "x": 300,
+          "y": 300
+        },
+        {
+          "art": "flower",
+          "color": "pink",
+          "id": "flower-1",
+          "name": "flower",
+          "x": 200,
+          "y": 460
+        },
+        {
+          "art": "flower",
+          "color": "red",
+          "id": "flower-2",
+          "name": "flower",
+          "x": 560,
+          "y": 470
+        },
+        {
+          "art": "butterfly",
+          "color": "purple",
+          "id": "butterfly-1",
+          "name": "butterfly",
+          "x": 640,
+          "y": 260
+        }
+      ],
+      "template": "garden"
+    },
+    "sceneAlt": "A garden scene. In the scene: yellow bee, pink flower, red flower, purple butterfly.",
+    "statement": "Bees make honey from nectar they collect from flowers.",
+    "statementIsFact": true
+  },
+  "reviewNote": "Independent review passed: statement verified true against cited Honey bee (Wikipedia) source; sceneAlt complete. Staging sample under the owner's 21 Nov 2026 direction."
+}

@@ -1,0 +1,27 @@
+{
+  "brand": "kids",
+  "difficulty": "medium",
+  "explanation": "D-U-C-K spells DUCK — the bird that quacks and loves to swim.",
+  "gameType": "build-a-word",
+  "id": "build-a-word-003",
+  "prompt": "Look at the picture. Tap the letter tiles to spell what you see!",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Build-a-Word: duck",
+  "visual": {
+    "gameType": "build-a-word",
+    "heroAlt": "A yellow duck with an orange beak",
+    "heroArt": "duck",
+    "tiles": [
+      "k",
+      "d",
+      "c",
+      "u"
+    ]
+  },
+  "wordAnswer": "duck",
+  "reviewNote": "Independent review passed: tiles spell DUCK matching the hero picture; wordAnswer verified absent from the public play body. Staging sample under the owner's 21 Nov 2026 direction."
+}

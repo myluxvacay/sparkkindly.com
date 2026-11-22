@@ -1,0 +1,69 @@
+{
+  "brand": "kids",
+  "correctOptionId": "a",
+  "difficulty": "medium",
+  "explanation": "Mango feels thankful. The clue is that Faye helped him — she shared her umbrella so he stayed dry.",
+  "gameType": "emotion-detectives",
+  "id": "emotion-detectives-003",
+  "options": [
+    {
+      "id": "a",
+      "text": "Thankful"
+    },
+    {
+      "id": "b",
+      "text": "Angry"
+    },
+    {
+      "id": "c",
+      "text": "Scared"
+    },
+    {
+      "id": "d",
+      "text": "Silly"
+    }
+  ],
+  "prompt": "How does Mango feel?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Emotion Detectives: the shared umbrella",
+  "visual": {
+    "feeling": "Thankful",
+    "gameType": "emotion-detectives",
+    "scenario": "Rain began to pour on the way home. Faye the rabbit held her big umbrella over both of them, all the way to the door, so Mango stayed dry.",
+    "scene": {
+      "elements": [
+        {
+          "art": "rabbit",
+          "color": "white",
+          "id": "rabbit-1",
+          "name": "rabbit",
+          "x": 350,
+          "y": 480
+        },
+        {
+          "art": "umbrella",
+          "color": "red",
+          "id": "umbrella-1",
+          "name": "umbrella",
+          "x": 420,
+          "y": 300
+        },
+        {
+          "art": "cat",
+          "color": "orange",
+          "id": "cat-1",
+          "name": "cat",
+          "x": 520,
+          "y": 480
+        }
+      ],
+      "template": "street"
+    },
+    "sceneAlt": "A street scene. In the scene: white rabbit, red umbrella, orange cat."
+  },
+  "reviewNote": "Independent review passed: feeling Thankful clearly cued (shared umbrella), explanation clue-based, scene depicts the scenario. Staging sample under the owner's 21 Nov 2026 direction."
+}

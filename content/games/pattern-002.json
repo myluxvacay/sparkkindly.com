@@ -1,0 +1,77 @@
+{
+  "brand": "play",
+  "correctOptionId": "a",
+  "difficulty": "medium",
+  "explanation": "The pattern repeats star, star, moon — star, star, moon. After the first star of the new group, the missing piece is the second star.",
+  "gameType": "pattern",
+  "id": "pattern-002",
+  "options": [
+    {
+      "alt": "A yellow star",
+      "art": "star",
+      "color": "yellow",
+      "id": "a",
+      "text": "yellow star"
+    },
+    {
+      "alt": "A white moon",
+      "art": "moon",
+      "color": "white",
+      "id": "b",
+      "text": "white moon"
+    },
+    {
+      "alt": "A blue rocket",
+      "art": "rocket",
+      "color": "blue",
+      "id": "c",
+      "text": "blue rocket"
+    },
+    {
+      "alt": "An orange planet with a ring",
+      "art": "planet",
+      "color": "orange",
+      "id": "d",
+      "text": "orange planet"
+    }
+  ],
+  "prompt": "Look at the pattern. Which piece is missing?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Pattern Planet: two stars and a moon",
+  "visual": {
+    "gameType": "pattern",
+    "missingPosition": 5,
+    "sequence": [
+      {
+        "art": "star",
+        "color": "yellow",
+        "label": "yellow star"
+      },
+      {
+        "art": "star",
+        "color": "yellow",
+        "label": "yellow star"
+      },
+      {
+        "art": "moon",
+        "color": "white",
+        "label": "white moon"
+      },
+      {
+        "art": "star",
+        "color": "yellow",
+        "label": "yellow star"
+      },
+      {
+        "art": "star",
+        "color": "yellow",
+        "label": "yellow star"
+      }
+    ]
+  },
+  "reviewNote": "Independent review passed with note: AAB star/star/moon pattern, missing piece (pos 5, second star) correct, but only one full cycle precedes the gap so the proof assumes the repetition continues. Staging sample under the owner's 21 Nov 2026 direction."
+}

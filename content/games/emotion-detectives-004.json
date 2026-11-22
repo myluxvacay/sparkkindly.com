@@ -1,0 +1,77 @@
+{
+  "brand": "kids",
+  "correctOptionId": "c",
+  "difficulty": "medium",
+  "explanation": "Biscuit feels scared. The clues are the creaking gate, the big shadow, and the trembling — he even hid behind the pots!",
+  "gameType": "emotion-detectives",
+  "id": "emotion-detectives-004",
+  "options": [
+    {
+      "id": "a",
+      "text": "Brave"
+    },
+    {
+      "id": "b",
+      "text": "Sleepy"
+    },
+    {
+      "id": "c",
+      "text": "Scared"
+    },
+    {
+      "id": "d",
+      "text": "Hungry"
+    }
+  ],
+  "prompt": "How does Biscuit feel?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Emotion Detectives: the creaking gate",
+  "visual": {
+    "feeling": "Scared",
+    "gameType": "emotion-detectives",
+    "scenario": "The garden gate creaked in the dark. A big shadow moved slowly across the fence, and Biscuit the dog hid behind the flower pots, trembling.",
+    "scene": {
+      "elements": [
+        {
+          "art": "dog",
+          "color": "brown",
+          "id": "dog-1",
+          "name": "dog",
+          "x": 400,
+          "y": 480
+        },
+        {
+          "art": "flower",
+          "color": "pink",
+          "id": "flower-1",
+          "name": "flower",
+          "x": 250,
+          "y": 470
+        },
+        {
+          "art": "flower",
+          "color": "purple",
+          "id": "flower-2",
+          "name": "flower",
+          "x": 580,
+          "y": 470
+        },
+        {
+          "art": "moon",
+          "color": "yellow",
+          "id": "moon-1",
+          "name": "moon",
+          "x": 680,
+          "y": 200
+        }
+      ],
+      "template": "garden"
+    },
+    "sceneAlt": "A garden scene. In the scene: brown dog, pink flower, purple flower, yellow moon."
+  },
+  "reviewNote": "Independent review passed: feeling Scared clearly cued (creaking gate, shadow, trembling, hiding), explanation clue-based. Staging sample under the owner's 21 Nov 2026 direction."
+}
