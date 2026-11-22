@@ -28,6 +28,11 @@ const TYPE_CARDS: { type: string; name: string; blurb: string }[] = [
   { type: 'odd-one-out', name: 'Odd One Out', blurb: 'Four pictures — one does not belong.' },
   { type: 'pick-the-right-one', name: 'Pick the Right One', blurb: 'Read the clue, pick the matching picture.' },
   { type: 'flags-and-places', name: 'Flags & Places', blurb: 'Flags and famous places — which country?' },
+  { type: 'drag-match', name: 'Drag & Drop Match', blurb: 'Drag each piece to its match — cones onto dot circles, animals to their homes, letters to their sounds.' },
+  { type: 'fact-or-fiction', name: 'Fact or Make-Believe?', blurb: 'Read the statement, look at the picture, and decide: is it a fact, or make-believe?' },
+  { type: 'pattern', name: 'Pattern Planet', blurb: 'A pattern with one piece missing. Which piece completes it?' },
+  { type: 'emotion-detectives', name: 'Emotion Detectives', blurb: 'Read the little story, spot the clues, and name how the character feels.' },
+  { type: 'build-a-word', name: 'Build-a-Word', blurb: 'See the picture, tap the letter tiles, and spell the word.' },
 ];
 
 export default async function GamesPage() {

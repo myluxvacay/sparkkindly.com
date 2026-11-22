@@ -1,0 +1,77 @@
+{
+  "brand": "kids",
+  "correctOptionId": "d",
+  "difficulty": "easy",
+  "explanation": "The pattern takes turns: butterfly, bee, butterfly, bee, butterfly. The missing piece is the bee.",
+  "gameType": "pattern",
+  "id": "pattern-004",
+  "options": [
+    {
+      "alt": "A purple butterfly",
+      "art": "butterfly",
+      "color": "purple",
+      "id": "a",
+      "text": "purple butterfly"
+    },
+    {
+      "alt": "A pink flower",
+      "art": "flower",
+      "color": "pink",
+      "id": "b",
+      "text": "pink flower"
+    },
+    {
+      "alt": "A green snail",
+      "art": "snail",
+      "color": "green",
+      "id": "c",
+      "text": "green snail"
+    },
+    {
+      "alt": "A yellow bee",
+      "art": "bee",
+      "color": "yellow",
+      "id": "d",
+      "text": "yellow bee"
+    }
+  ],
+  "prompt": "Look at the pattern. Which piece is missing?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Pattern Planet: butterfly and bee",
+  "visual": {
+    "gameType": "pattern",
+    "missingPosition": 4,
+    "sequence": [
+      {
+        "art": "butterfly",
+        "color": "purple",
+        "label": "purple butterfly"
+      },
+      {
+        "art": "bee",
+        "color": "yellow",
+        "label": "yellow bee"
+      },
+      {
+        "art": "butterfly",
+        "color": "purple",
+        "label": "purple butterfly"
+      },
+      {
+        "art": "bee",
+        "color": "yellow",
+        "label": "yellow bee"
+      },
+      {
+        "art": "butterfly",
+        "color": "purple",
+        "label": "purple butterfly"
+      }
+    ]
+  },
+  "reviewNote": "Independent review passed: ABAB butterfly/bee pattern, missing piece (pos 4, yellow bee) re-derived from sequence data. Staging sample under the owner's 21 Nov 2026 direction."
+}

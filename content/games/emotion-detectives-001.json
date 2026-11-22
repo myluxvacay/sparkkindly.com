@@ -1,0 +1,69 @@
+{
+  "brand": "kids",
+  "correctOptionId": "b",
+  "difficulty": "easy",
+  "explanation": "Mango feels sad. The clue is the crash — his tower fell down after all his hard work.",
+  "gameType": "emotion-detectives",
+  "id": "emotion-detectives-001",
+  "options": [
+    {
+      "id": "a",
+      "text": "Happy"
+    },
+    {
+      "id": "b",
+      "text": "Sad"
+    },
+    {
+      "id": "c",
+      "text": "Proud"
+    },
+    {
+      "id": "d",
+      "text": "Sleepy"
+    }
+  ],
+  "prompt": "How does Mango feel?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Emotion Detectives: the fallen tower",
+  "visual": {
+    "feeling": "Sad",
+    "gameType": "emotion-detectives",
+    "scenario": "Mango the cat spent all morning building a tall tower of blocks. Just as he put the last block on top — crash! The whole tower tumbled down.",
+    "scene": {
+      "elements": [
+        {
+          "art": "cat",
+          "color": "orange",
+          "id": "cat-1",
+          "name": "cat",
+          "x": 400,
+          "y": 480
+        },
+        {
+          "art": "book",
+          "color": "purple",
+          "id": "book-1",
+          "name": "book",
+          "x": 250,
+          "y": 490
+        },
+        {
+          "art": "book",
+          "color": "blue",
+          "id": "book-2",
+          "name": "book",
+          "x": 560,
+          "y": 490
+        }
+      ],
+      "template": "classroom"
+    },
+    "sceneAlt": "A classroom scene. In the scene: orange cat, purple book, blue book."
+  },
+  "reviewNote": "Independent review passed with note: feeling Sad unambiguously cued and explanation clue-based; scene draws books rather than the block tower (alt text accurate to the drawing). Staging sample under the owner's 21 Nov 2026 direction."
+}

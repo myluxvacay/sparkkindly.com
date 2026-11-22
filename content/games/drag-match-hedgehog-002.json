@@ -1,0 +1,82 @@
+{
+  "brand": "kids",
+  "difficulty": "medium",
+  "explanation": "Count carefully: the circles hold 6, 4, 8, 5 and 7 dots, and every cone landed on the circle with its own number of dots.",
+  "gameType": "drag-match",
+  "id": "drag-match-hedgehog-002",
+  "matchAnswer": [
+    "cone-6",
+    "cone-4",
+    "cone-8",
+    "cone-5",
+    "cone-7"
+  ],
+  "prompt": "More dots this time! Put each number cone on the hedgehog circle with the same number of dots.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Drag & Drop Match: bigger hedgehog numbers",
+  "visual": {
+    "gameType": "drag-match",
+    "match": {
+      "pieces": [
+        {
+          "id": "cone-8",
+          "text": "8",
+          "value": 8
+        },
+        {
+          "id": "cone-5",
+          "text": "5",
+          "value": 5
+        },
+        {
+          "id": "cone-7",
+          "text": "7",
+          "value": 7
+        },
+        {
+          "id": "cone-4",
+          "text": "4",
+          "value": 4
+        },
+        {
+          "id": "cone-6",
+          "text": "6",
+          "value": 6
+        }
+      ],
+      "targets": [
+        {
+          "dots": 6,
+          "id": "circle-6",
+          "text": "circle with 6 dots"
+        },
+        {
+          "dots": 4,
+          "id": "circle-4",
+          "text": "circle with 4 dots"
+        },
+        {
+          "dots": 8,
+          "id": "circle-8",
+          "text": "circle with 8 dots"
+        },
+        {
+          "dots": 5,
+          "id": "circle-5",
+          "text": "circle with 5 dots"
+        },
+        {
+          "dots": 7,
+          "id": "circle-7",
+          "text": "circle with 7 dots"
+        }
+      ],
+      "variant": "dots"
+    }
+  },
+  "reviewNote": "Independent review passed: dot-count pairing re-derived and schema-proved (targets 6,4,8,5,7). Staging sample under the owner's 21 Nov 2026 direction."
+}

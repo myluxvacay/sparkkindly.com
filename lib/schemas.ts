@@ -61,6 +61,20 @@ const sceneFactSchema = z.discriminatedUnion('type', [
   z.object({ type: z.literal('present'), elementId: z.string().min(1) }),
   z.object({ type: z.literal('absent'), label: z.string().min(1) }),
 ]);
+const matchPieceSchema = z.object({
+  id: z.string().min(1),
+  text: z.string().min(1),
+  art: z.enum(SCENE_ART_KEYS).optional(),
+  alt: z.string().optional(),
+  value: z.number().int().min(0).max(99).optional(),
+});
+const matchTargetSchema = z.object({
+  id: z.string().min(1),
+  text: z.string().min(1),
+  art: z.enum(SCENE_ART_KEYS).optional(),
+  alt: z.string().optional(),
+  dots: z.number().int().min(1).max(10).optional(),
+});
 const visualBlockSchema = z.object({
   gameType: z.enum(GAME_TYPES),
   scene: sceneSpecSchema.optional(),
@@ -75,8 +89,21 @@ const visualBlockSchema = z.object({
   fact: sceneFactSchema.optional(),
   countTarget: z.object({ art: z.enum(SCENE_ART_KEYS), color: z.enum(SCENE_COLORS).optional() }).optional(),
   expectedChanges: z.array(z.string()).optional(),
+  // Wave 1 (21 Nov 2026) — see the VisualBlock type in lib/games/scene.ts.
+  match: z.object({
+    variant: z.enum(['dots', 'match']).optional(),
+    pieces: z.array(matchPieceSchema).min(3).max(6),
+    targets: z.array(matchTargetSchema).min(3).max(6),
+  }).optional(),
+  statement: z.string().min(10).optional(),
+  statementIsFact: z.boolean().optional(),
+  scenario: z.string().min(20).optional(),
+  feeling: z.string().min(1).optional(),
+  missingPosition: z.number().int().min(1).max(5).optional(),
+  tiles: z.array(z.string().length(1)).min(3).max(9).optional(),
+  decoyLetter: z.string().length(1).optional(),
 });
-const gameChoice = z.object({ id: z.string().min(1), text: z.string().min(1), art: z.string().min(1).optional(), alt: z.string().optional() });
+const gameChoice = z.object({ id: z.string().min(1), text: z.string().min(1), art: z.string().min(1).optional(), alt: z.string().optional(), color: z.enum(SCENE_COLORS).optional() });
 
 // Visual games (owner direction, 18 Nov 2026): picture rounds as first-class library content, in the
 // same pipeline as quizzes. The superRefine PROVES each answer against the scene data — counts are
@@ -94,6 +121,11 @@ export const gameSchema = z.object({
   items: z.array(gameChoice).optional(),
   correctOptionId: z.string().optional(),
   numberAnswer: z.object({ value: z.number().int().min(0), tolerance: z.literal(0) }).optional(),
+  /** Drag-match (wave 1): the correct piece id for each target, in target order. */
+  matchAnswer: z.array(z.string().min(1)).optional(),
+  /** Build-a-word (wave 1): the word the tiles spell. Kept out of the play body on import —
+   *  it becomes the short_text answer key, never page data. */
+  wordAnswer: z.string().min(2).optional(),
   difficulty: z.enum(['easy', 'medium', 'hard']),
   explanation: z.string().min(20),
   sources: z.array(sourceSchema),
@@ -258,11 +290,108 @@ export const gameSchema = z.object({
       checkChoices(g.options, 'options');
       break;
     }
+    // ---- Wave 1 (21 Nov 2026): the same prove-the-answer discipline, one case per new type. ----
+    case 'drag-match': {
+      const m = g.visual.match;
+      if (!m) { bad('A drag-match game needs visual.match'); break; }
+      if (m.pieces.length !== m.targets.length) bad('Drag-match needs one piece per target');
+      for (const [list, what] of [[m.pieces, 'pieces'], [m.targets, 'targets']] as const) {
+        if (new Set(list.map((o) => o.id)).size !== list.length) bad(`Drag-match ${what} need distinct ids`);
+        if (new Set(list.map((o) => o.text.trim().toLowerCase())).size !== list.length) bad(`Drag-match ${what} need distinct texts`);
+        if (list.some((o) => Boolean(o.art) !== Boolean(o.alt))) bad(`Drag-match ${what} carry art and alt as a pair`);
+      }
+      if (!g.matchAnswer) bad('A drag-match game needs matchAnswer (piece ids in target order)');
+      else {
+        const pieceIds = m.pieces.map((p) => p.id);
+        if (g.matchAnswer.length !== pieceIds.length || [...g.matchAnswer].sort().join() !== [...pieceIds].sort().join())
+          bad('matchAnswer must be a permutation of the piece ids');
+        // The hedgehog proof: when the targets are dot counts and the pieces are numbers, the
+        // declared pairing must put each number on the circle with exactly that many dots —
+        // recounted here, so a mismatched cone cannot validate.
+        if (m.targets.some((t) => t.dots !== undefined)) {
+          if (m.targets.some((t) => t.dots === undefined) || m.pieces.some((p) => p.value === undefined))
+            bad('A dot-count drag-match needs dots on every target and a value on every piece');
+          else {
+            if (new Set(m.targets.map((t) => t.dots)).size !== m.targets.length) bad('Dot counts must be distinct');
+            if (new Set(m.pieces.map((p) => p.value)).size !== m.pieces.length) bad('Piece values must be distinct');
+            m.targets.forEach((t, i) => {
+              const piece = m.pieces.find((p) => p.id === g.matchAnswer![i]);
+              if (piece && piece.value !== t.dots) bad(`Target "${t.text}" has ${t.dots} dots but is paired with the number ${piece.value}`);
+            });
+          }
+        }
+      }
+      break;
+    }
+    case 'fact-or-fiction': {
+      if (!g.visual.statement) bad('A fact-or-fiction game needs visual.statement');
+      if (g.visual.statementIsFact === undefined) bad('A fact-or-fiction game needs visual.statementIsFact');
+      if (!g.visual.scene && !g.visual.heroArt) bad('A fact-or-fiction game needs a picture (scene or heroArt)');
+      if (g.visual.scene && g.options?.some((o) => o.art)) bad('Scene game options are text-only (an option must never repeat the scene)');
+      if (g.correctOptionId !== 'fact' && g.correctOptionId !== 'make-believe')
+        bad('A fact-or-fiction game answers "fact" or "make-believe"');
+      else if ((g.correctOptionId === 'fact') !== g.visual.statementIsFact)
+        bad('correctOptionId disagrees with statementIsFact');
+      // The statement makes a factual claim about the world (or pretends to), so — unlike the
+      // scene-derived games — it must carry a checkable source (generator rule, 20 Nov 2026).
+      if (!g.sources.length) bad('A fact-or-fiction game needs at least one source');
+      break;
+    }
+    case 'pattern': {
+      const seq = g.visual.sequence;
+      if (!seq || seq.length < 3 || seq.length > 5) bad('A pattern game needs 3 to 5 sequence entries');
+      checkChoices(g.options, 'options');
+      if (g.options?.some((o) => !o.art)) bad('Pattern options all carry artwork (the player matches the picture)');
+      if (seq && g.options && g.visual.missingPosition) {
+        const pos = g.visual.missingPosition;
+        if (pos < 1 || pos > seq.length) bad('missingPosition is outside the sequence');
+        else {
+          const missing = seq[pos - 1];
+          const correct = g.options.find((o) => o.id === g.correctOptionId);
+          if (!correct || correct.art !== missing.art || !sameText(correct.text, missing.label) || (missing.color !== undefined && correct.color !== missing.color))
+            bad(`The correct option must be the missing piece ("${missing.label}")`);
+          // A piece's identity is picture + colour: a colour pattern (red/yellow/blue balls)
+          // legitimately offers the same picture in other colours, so only a full match —
+          // same picture AND same colour — is a second correct answer in disguise.
+          if (g.options.some((o) => o.id !== g.correctOptionId && o.art === missing.art && (o.color ?? undefined) === (missing.color ?? undefined)))
+            bad('Another option repeats the missing piece');
+        }
+      } else if (!g.visual.missingPosition) bad('A pattern game needs missingPosition');
+      break;
+    }
+    case 'emotion-detectives': {
+      checkChoices(g.options, 'options');
+      if (g.visual.scene && g.options?.some((o) => o.art)) bad('Scene game options are text-only (an option must never repeat the scene)');
+      if (!g.visual.scenario) bad('An emotion-detectives game needs visual.scenario');
+      if (!g.visual.feeling) bad('An emotion-detectives game needs visual.feeling');
+      else if (g.options) {
+        const text = correctText(g.options);
+        if (!text || !sameText(text, g.visual.feeling)) bad(`Correct option must be the feeling "${g.visual.feeling}"`);
+      }
+      break;
+    }
+    case 'build-a-word': {
+      if (!g.wordAnswer) bad('A build-a-word game needs wordAnswer');
+      if (!g.visual.heroArt) bad('A build-a-word game needs a hero picture (the word’s object)');
+      if (!g.visual.tiles) bad('A build-a-word game needs visual.tiles');
+      if (g.wordAnswer && g.visual.tiles) {
+        const word = g.wordAnswer.toLowerCase();
+        if (!/^[a-z]+$/.test(word)) bad('wordAnswer must be one lowercase a–z word');
+        const tiles = g.visual.tiles.map((t) => t.toLowerCase());
+        if (tiles.some((t) => !/^[a-z]$/.test(t))) bad('Tiles are single a–z letters');
+        const want = [...word.split(''), ...(g.visual.decoyLetter ? [g.visual.decoyLetter.toLowerCase()] : [])].sort().join();
+        if ([...tiles].sort().join() !== want)
+          bad('Tiles must be exactly the word’s letters, plus the declared decoy letter when one is set');
+      }
+      break;
+    }
   }
   // The pinned hero rule (owner report, 17 Nov 2026): no option may repeat the hero picture.
   if (g.visual.heroArt) {
     const all = [...(g.options ?? []), ...(g.items ?? [])];
     if (all.some((o) => o.art === g.visual.heroArt)) bad('An option repeats the hero image');
+    const matchArt = [...(g.visual.match?.pieces ?? []), ...(g.visual.match?.targets ?? [])];
+    if (matchArt.some((o) => o.art === g.visual.heroArt)) bad('A match piece or target repeats the hero image');
   }
   // Scene alts are generated from the same data (describeScene in the generator); a stored alt that
   // names something absent would mislead a screen-reader player, so element labels must appear in it.

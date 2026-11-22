@@ -46,7 +46,9 @@ export default async function PlayPanel({
   const invalidHint =
     play.mechanic === 'put_in_order'
       ? `Please give each item a different position from 1 to ${play.items.length}, then check again.`
-      : undefined;
+      : play.mechanic === 'match_pairs'
+        ? 'Please match every piece to a target — each target takes exactly one piece — then check again.'
+        : undefined;
   const another = item.kind === 'quiz' ? '/quiz/archive/' : item.kind === 'game' ? '/games/' : `/${item.world}/`;
   const track = trackSeen && item.audience !== 'kids';
   const playable = item.kind === 'quiz' || item.kind === 'game';
@@ -158,17 +160,26 @@ function reviewFor(play: PlayView, result: Extract<CheckedResult, { status: 'ok'
       return { prompt: play.prompt, options: mark(play.items, result.choice, result.answerChoice) };
     case 'true_false': {
       const asId = (v: unknown) => (v === true ? 'true' : v === false ? 'false' : null);
-      return {
-        prompt: play.prompt,
-        options: mark(
-          [
-            { id: 'true', text: 'True' },
-            { id: 'false', text: 'False' },
-          ],
-          asId(result.choice),
-          asId(result.answerChoice),
-        ),
-      };
+      // Fact-or-fiction (wave 1) reviews in its own labels, matching the form the player used.
+      const labels =
+        play.visual?.gameType === 'fact-or-fiction'
+          ? [
+              { id: 'true', text: 'Fact' },
+              { id: 'false', text: 'Make-Believe' },
+            ]
+          : [
+              { id: 'true', text: 'True' },
+              { id: 'false', text: 'False' },
+            ];
+      return { prompt: play.prompt, options: mark(labels, asId(result.choice), asId(result.answerChoice)) };
+    }
+    case 'match_pairs': {
+      const m = play.visual?.match;
+      const pieceText = new Map((m?.pieces ?? []).map((p) => [p.id, p.text]));
+      const pairs = Array.isArray(result.choice)
+        ? result.choice.map((pid, i) => `${pieceText.get(String(pid)) ?? String(pid)} → ${m?.targets?.[i]?.text ?? '?'}`)
+        : [];
+      return { prompt: play.prompt, yourAnswer: pairs.length ? pairs.join('; ') : undefined };
     }
     case 'number':
       return { prompt: play.prompt, yourAnswer: typeof result.choice === 'number' ? String(result.choice) : undefined };

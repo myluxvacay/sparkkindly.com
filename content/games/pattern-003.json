@@ -1,0 +1,77 @@
+{
+  "brand": "discover",
+  "correctOptionId": "b",
+  "difficulty": "medium",
+  "explanation": "The colours repeat red, yellow, blue — red, yellow, blue. The missing colour is yellow.",
+  "gameType": "pattern",
+  "id": "pattern-003",
+  "options": [
+    {
+      "alt": "A red ball",
+      "art": "ball",
+      "color": "red",
+      "id": "a",
+      "text": "red ball"
+    },
+    {
+      "alt": "A yellow ball",
+      "art": "ball",
+      "color": "yellow",
+      "id": "b",
+      "text": "yellow ball"
+    },
+    {
+      "alt": "A blue ball",
+      "art": "ball",
+      "color": "blue",
+      "id": "c",
+      "text": "blue ball"
+    },
+    {
+      "alt": "A green ball",
+      "art": "ball",
+      "color": "green",
+      "id": "d",
+      "text": "green ball"
+    }
+  ],
+  "prompt": "Look at the pattern of colours. Which piece is missing?",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Pattern Planet: colour balls",
+  "visual": {
+    "gameType": "pattern",
+    "missingPosition": 5,
+    "sequence": [
+      {
+        "art": "ball",
+        "color": "red",
+        "label": "red ball"
+      },
+      {
+        "art": "ball",
+        "color": "yellow",
+        "label": "yellow ball"
+      },
+      {
+        "art": "ball",
+        "color": "blue",
+        "label": "blue ball"
+      },
+      {
+        "art": "ball",
+        "color": "red",
+        "label": "red ball"
+      },
+      {
+        "art": "ball",
+        "color": "yellow",
+        "label": "yellow ball"
+      }
+    ]
+  },
+  "reviewNote": "Independent review passed: red/yellow/blue colour cycle, missing piece (pos 5, yellow ball) re-derived from sequence data. Staging sample under the owner's 21 Nov 2026 direction."
+}
