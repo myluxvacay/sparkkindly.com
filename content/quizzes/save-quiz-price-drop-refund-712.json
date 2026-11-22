@@ -1,0 +1,38 @@
+{
+  "id": "save-quiz-price-drop-refund-712",
+  "scheduledDate": "2029-10-02",
+  "brand": "save",
+  "prompt": "You bought a coat for $84. One week later the same shop reduces it to $63, and its policy refunds the difference to recent buyers. How much should you get back?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$12"
+    },
+    {
+      "id": "b",
+      "text": "$21"
+    },
+    {
+      "id": "c",
+      "text": "$63"
+    },
+    {
+      "id": "d",
+      "text": "$147"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The refund is the difference between the two prices: $84 − $63 = $21. Price-adjustment policies refund the drop, not the whole new price.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Price matching | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Price_matching",
+      "accessedAt": "2026-11-22"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-22",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

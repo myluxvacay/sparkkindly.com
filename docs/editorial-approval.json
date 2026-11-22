@@ -39432,6 +39432,84 @@
         "factualClaimsReviewedAt": "2026-11-22",
         "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
       }
+    },
+    {
+      "kind": "quiz",
+      "id": "play-quiz-stalemate-no-legal-move-712",
+      "priorHash": "fcc0c67586c086bce45b762eeebf3a18a6715467ea389fb20d71fe1419c650d2",
+      "approvedHash": "79312cefb5b1ca0fb7dc64b4e4f4adcdda98707f4e4dad31aeb40dfa5550cbc2",
+      "fields": {
+        "scheduledDate": "2029-09-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-22",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "discover-quiz-shooting-star-meteor-712",
+      "priorHash": "55292c75f1ab94f1d95a291d9151bbf864065fbcd945d270a65067bbdcbd7d1e",
+      "approvedHash": "3360c2eb20e2288b7993339ee85e398a59fb05ac2842076e97c3a3ad9b5dff56",
+      "fields": {
+        "scheduledDate": "2029-09-29",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-22",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "together-quiz-friend-nut-allergy-snacks-712",
+      "priorHash": "484597b2ad028aa1cd8dd3ae111f5a06b4c233a427098f0a8701e33ef6ed8088",
+      "approvedHash": "b189ef19f572fddcde2e7b6cad8065320e20f6908197a024e67a8c3feb4fe2fa",
+      "fields": {
+        "scheduledDate": "2029-09-30",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-22",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "grow-quiz-touch-typing-plan-712",
+      "priorHash": "8d50bef34e386c4798420553309556abc432a6e82daa4763ca77aa7d6ba052d3",
+      "approvedHash": "032a16c6c7f59f819c8416373ec8c7310788624f875ef3d25fdfdaa475eaae94",
+      "fields": {
+        "scheduledDate": "2029-10-01",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-22",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "save-quiz-price-drop-refund-712",
+      "priorHash": "ab1483c6a879a1c524cc616d0c22cf31548487abc39dedb9d740ea5509358473",
+      "approvedHash": "a5032e138608973c3bc6ec5d5f5177fbf7aeab606cb1f2c62f047cc39ec4265f",
+      "fields": {
+        "scheduledDate": "2029-10-02",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-22",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "kids-quiz-sea-turtle-shell-712",
+      "priorHash": "a9ab8041a9c7552828ee66e9ca4d0ebd1209763400ac3389ae16e94a95bf6312",
+      "approvedHash": "511dda4987323b3f2b1d1d4e7f3975b06e5085b9e81602f45327888740fbfde8",
+      "fields": {
+        "scheduledDate": "2029-10-03",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-22",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
     }
   ]
 }
