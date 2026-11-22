@@ -62,8 +62,8 @@ function MatchFields({ play }: { play: PlayView }) {
         <p>Match each piece to its target:</p>
         {m.targets.map((t) => (
           <label className="match-select-row" key={t.id}>
-            <span>{t.dots ? `Circle with ${t.dots} dots` : t.text}</span>
-            <select name={`match-${t.id}`} required defaultValue="" aria-label={`Piece for ${t.dots ? `the circle with ${t.dots} dots` : t.text}`}>
+            <span>{t.dots ? `Circle with ${t.dots} dot${t.dots === 1 ? "" : "s"}` : t.text}</span>
+            <select name={`match-${t.id}`} required defaultValue="" aria-label={`Piece for ${t.dots ? `the circle with ${t.dots} dot${t.dots === 1 ? "" : "s"}` : t.text}`}>
               <option value="" disabled>
                 Choose a piece…
               </option>
