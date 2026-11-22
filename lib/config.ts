@@ -6,7 +6,15 @@ export const site = {
   contactEmail: (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(process.env.CONTACT_EMAIL ?? '') ? process.env.CONTACT_EMAIL : null) as string | null,
   // Optional postal address for the Contact page, one line, set only in the server env (this repo is public).
   postalAddress: ((v) => (v && v.length <= 200 ? v : null))((process.env.CONTACT_ADDRESS ?? '').replace(/\s+/g, ' ').trim()) as string | null,
-  socials: { youtube: null, instagram: null, facebook: null, tiktok: null } as Record<string, string | null>,
+  // The brand's own public profiles (footer links, JSON-LD sameAs, and the /watch/ hub). The Facebook
+  // value is the Page's profile id (61592978620272, per the connector's page list) — the Page has no
+  // vanity username yet.
+  socials: {
+    youtube: 'https://www.youtube.com/channel/UCM4Xc3JxrDSXNXw0uoPu4UQ',
+    instagram: 'https://www.instagram.com/sparkkindly/',
+    facebook: 'https://www.facebook.com/profile.php?id=61592978620272',
+    tiktok: 'https://www.tiktok.com/@sparkkindly',
+  } as Record<string, string | null>,
 };
 // Member accounts are off until the owner turns them on: with this unset every /account route and page is a 404.
 export const accountsEnabled = (): boolean => ['true', '1'].includes(process.env.ACCOUNTS_ENABLED ?? '');
