@@ -219,7 +219,7 @@ export default function MatchBoard({
                 style={{ left: `${slots[i][0]}%`, top: `${slots[i][1]}%` }}
                 {...dropProps(t.id)}
                 onClick={() => tapTarget(t.id)}
-                aria-label={`Circle with ${t.dots} dots${piece ? ` — cone ${piece.text} is on it (tap to lift it off)` : ' — empty'}`}
+                aria-label={`Circle with ${t.dots} dot${t.dots === 1 ? "" : "s"}${piece ? ` — cone ${piece.text} is on it (tap to lift it off)` : ' — empty'}`}
               >
                 <DotCircle dots={t.dots ?? 0} />
                 {piece && (
