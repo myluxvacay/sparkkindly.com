@@ -104,6 +104,7 @@ describe('client components', () => {
       'components/Header.tsx',
       'components/SocialLinks.tsx',
       'components/SparkAssistant.tsx', // the homepage Spark guide: tap-to-play greeting, dismissal remembered on device
+      'components/WatchCatalogue.tsx', // the /watch/ catalogue island: filter chips + lite-embed play-in-place (22 Nov 2026)
       'components/admin/VideoUpload.tsx',
       'components/games/SparkSoundToggle.tsx', // the Spark voice on/off toggle on /games (persisted as sk-games-sound)
       'components/item/PlayEnhancer.tsx', // the play island: in-place answer checking on the play page itself
