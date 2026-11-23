@@ -20,11 +20,18 @@ export default function ItemCard({ item, world, headingLevel = 3, variant = 'row
   // A card for a playable item (quiz/game) is a play-intent entry — the archive shelf above all — so
   // its link carries the play panel's fragment and the visitor lands on the question, not the article
   // header (owner phone report, 17 Nov 2026). Article cards keep the plain URL: reading starts at the top.
-  const href = item.kind === 'article' ? `/${item.world}/${item.slug}/` : `/${item.world}/${item.slug}/#play-panel`;
+  // A printable (22 Nov 2026) is badged as one and links to its sheet page in /printables/, wherever
+  // the card appears — search results included — because the sheet view is the printable experience.
+  const printable = item.topics.includes('printables');
+  const href = printable
+    ? `/printables/${item.slug}/`
+    : item.kind === 'article'
+      ? `/${item.world}/${item.slug}/`
+      : `/${item.world}/${item.slug}/#play-panel`;
   const meta = (
     <div className="card-meta">
       <span className={`brand-label ${world?.color ?? 'gold'}`}>{world?.name ?? item.world}</span>
-      <span>{KIND_LABEL[item.kind] ?? 'Read'}</span>
+      <span>{printable ? 'Printable' : (KIND_LABEL[item.kind] ?? 'Read')}</span>
     </div>
   );
   const heading = (
