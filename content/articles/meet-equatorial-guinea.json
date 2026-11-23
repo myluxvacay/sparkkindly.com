@@ -6,7 +6,7 @@
   "title": "Meet Equatorial Guinea",
   "description": "Travel to Equatorial Guinea with Spark and Mango: a country in Middle Africa whose capital is Malabo, where people speak Spanish and pay with the Central African CFA franc — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
   "hero": {
-    "src": "/images/country-meet-equatorial-guinea.webp",
-    "alt": "Spark and Mango visiting a waterfall in the thick green rainforest of Monte Alén National Park",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-equatorial-guinea-map.webp",
+    "alt": "A SparkKindly map card of Equatorial Guinea: the country's outline with pins on Malabo, the capital, and Monte Alén National Park, and a badge showing Equatorial Guinea's money, the Central African CFA franc.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

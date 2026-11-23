@@ -6,7 +6,7 @@
   "title": "Meet Japan",
   "description": "Travel to Japan with Spark and Mango: a country in Eastern Asia whose capital is Tokyo, where people speak Japanese and pay with the Japanese yen — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
   "hero": {
-    "src": "/images/country-meet-japan.webp",
-    "alt": "Spark and Mango visiting the towering bamboo grove path at Arashiyama in Kyoto",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-japan-map.webp",
+    "alt": "A SparkKindly map card of Japan: the islands' outline with pins on Tokyo, the capital, Kyoto and Mount Fuji, and a badge showing Japan's money, the Japanese yen.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

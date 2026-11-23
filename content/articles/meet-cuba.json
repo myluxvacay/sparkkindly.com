@@ -6,7 +6,7 @@
   "title": "Meet Cuba",
   "description": "Travel to Cuba with Spark and Mango: a country in the Caribbean whose capital is Havana, where people speak Spanish and pay with the Cuban peso — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
   "hero": {
-    "src": "/images/country-meet-cuba.webp",
-    "alt": "Spark and Mango visiting colourful classic cars along the Malecón in Old Havana",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-cuba-map.webp",
+    "alt": "A SparkKindly map card of Cuba: the country's outline with pins on Havana, the capital, Old Havana and Viñales Valley, and a badge showing Cuba's money, the Cuban peso.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

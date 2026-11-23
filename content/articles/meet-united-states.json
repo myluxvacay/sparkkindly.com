@@ -6,7 +6,7 @@
   "title": "Meet United States",
   "description": "Travel to United States with Spark and Mango: a country in Northern America whose capital is Washington D.C., where people speak English and pay with the US dollar — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
   "hero": {
-    "src": "/images/country-meet-united-states.webp",
-    "alt": "Spark and Mango visiting the vast layered depths of the Grand Canyon at sunset",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-united-states-map.webp",
+    "alt": "A SparkKindly map card of the United States: the country's outline with pins on Washington D.C., the capital, the Grand Canyon and Yellowstone, with Alaska and Hawaii drawn smaller in inset panels and Puerto Rico drawn bigger, and a badge showing the United States' money, the US dollar.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

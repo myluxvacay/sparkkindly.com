@@ -6,7 +6,7 @@
   "title": "Meet Qatar",
   "description": "Travel to Qatar with Spark and Mango: a country in Western Asia whose capital is Doha, where people speak Arabic and pay with the Qatari riyal — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
   "hero": {
-    "src": "/images/country-meet-qatar.webp",
-    "alt": "Spark and Mango visiting the Museum of Islamic Art on the water with Doha's skyline behind",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-qatar-map.webp",
+    "alt": "A SparkKindly map card of Qatar: the country's outline with pins on Doha, the capital, Museum of Islamic Art and Inland Sea (Khor Al Adaid), and a badge showing Qatar's money, the Qatari riyal.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

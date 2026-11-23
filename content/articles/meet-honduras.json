@@ -6,7 +6,7 @@
   "title": "Meet Honduras",
   "description": "Travel to Honduras with Spark and Mango: a country in Central America whose capital is Tegucigalpa, where people speak Spanish and pay with the Honduran lempira — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
   "hero": {
-    "src": "/images/country-meet-honduras.webp",
-    "alt": "Spark and Mango visiting a coral reef and beach at West Bay, Roatán",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-honduras-map.webp",
+    "alt": "A SparkKindly map card of Honduras: the country's outline with pins on Tegucigalpa, the capital, Roatán and the Bay Islands and Maya ruins of Copán, and a badge showing Honduras' money, the Honduran lempira.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

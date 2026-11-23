@@ -6,7 +6,7 @@
   "title": "Meet The Bahamas",
   "description": "Travel to The Bahamas with Spark and Mango: a country in the Caribbean whose capital is Nassau, where people speak English and pay with the Bahamian dollar — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
   "hero": {
-    "src": "/images/country-meet-the-bahamas.webp",
-    "alt": "Spark and Mango visiting pastel buildings and harbour in Nassau with Paradise Island behind",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-the-bahamas-map.webp",
+    "alt": "A SparkKindly map card of The Bahamas: the country's outline with pins on Nassau, the capital, Nassau and Paradise Island and Exuma Cays and the swimming pigs, and a badge showing The Bahamas' money, the Bahamian dollar.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

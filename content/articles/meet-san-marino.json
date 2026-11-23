@@ -6,7 +6,7 @@
   "title": "Meet San Marino",
   "description": "Travel to San Marino with Spark and Mango: a country in Southern Europe whose capital is City of San Marino, where people speak Italian and pay with the euro — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
   "hero": {
-    "src": "/images/country-meet-san-marino.webp",
-    "alt": "Spark and Mango visiting the Guaita tower on Mount Titano above the clouds",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-san-marino-map.webp",
+    "alt": "A SparkKindly map card of San Marino: the country's outline with pins on City of San Marino, the capital, Three Towers of San Marino and San Marino Old Town, and a badge showing San Marino's money, the euro.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

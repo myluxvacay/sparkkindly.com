@@ -6,7 +6,7 @@
   "title": "Meet Namibia",
   "description": "Travel to Namibia with Spark and Mango: a country in Southern Africa whose capital is Windhoek, where people speak English and pay with the Namibian dollar — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
   "hero": {
-    "src": "/images/country-meet-namibia.webp",
-    "alt": "Spark and Mango visiting giant red-orange dunes at Sossusvlei with a white clay pan and dead camelthorn trees",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-namibia-map.webp",
+    "alt": "A SparkKindly map card of Namibia: the country's outline with pins on Windhoek, the capital, Etosha National Park and Sossusvlei, and a badge showing Namibia's money, the Namibian dollar.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

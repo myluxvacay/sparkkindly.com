@@ -6,7 +6,7 @@
   "title": "Meet Brazil",
   "description": "Travel to Brazil with Spark and Mango: a country in South America whose capital is Brasília, where people speak Portuguese and pay with the Brazilian real — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
   "hero": {
-    "src": "/images/country-meet-brazil.webp",
-    "alt": "Spark and Mango visiting Christ the Redeemer above Rio de Janeiro's bays and beaches",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-brazil-map.webp",
+    "alt": "A SparkKindly map card of Brazil: the country's outline with pins on Brasília, the capital, Rio de Janeiro and Manaus, and a badge showing Brazil's money, the Brazilian real.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",
