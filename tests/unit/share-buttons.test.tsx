@@ -90,7 +90,7 @@ describe('ShareButtons', () => {
 });
 
 describe('client components', () => {
-  it('ShareClient is the only new client component', () => {
+  it('the client components are exactly the inventoried islands', () => {
     const files = (dir: string): string[] =>
       readdirSync(dir, { recursive: true })
         .map(String)
@@ -106,7 +106,9 @@ describe('client components', () => {
       'components/SparkAssistant.tsx', // the homepage Spark guide: tap-to-play greeting, dismissal remembered on device
       'components/WatchCatalogue.tsx', // the /watch/ catalogue island: filter chips + lite-embed play-in-place (22 Nov 2026)
       'components/admin/VideoUpload.tsx',
+      'components/games/MatchBoard.tsx', // the drag-match board island: drag + tap placement over the server-rendered selects (games wave 1, 21 Nov 2026)
       'components/games/SparkSoundToggle.tsx', // the Spark voice on/off toggle on /games (persisted as sk-games-sound)
+      'components/games/WordTiles.tsx', // the build-a-word letter tiles over the plain answer input (games wave 1, 21 Nov 2026)
       'components/item/PlayEnhancer.tsx', // the play island: in-place answer checking on the play page itself
       'components/item/ReadNextEnhancer.tsx', // the reading island: read-aware re-picking + gestures on the keep-reading panel (20 Nov 2026)
       'components/item/ShareClient.tsx',

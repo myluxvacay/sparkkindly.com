@@ -1,0 +1,71 @@
+{
+  "brand": "kids",
+  "difficulty": "easy",
+  "explanation": "Bear begins with B, Cat begins with C, Dog begins with D, and Frog begins with F. Listen for the very first sound!",
+  "gameType": "drag-match",
+  "id": "drag-match-sounds-001",
+  "matchAnswer": [
+    "letter-b",
+    "letter-c",
+    "letter-d",
+    "letter-f"
+  ],
+  "prompt": "Each animal's name starts with a sound. Drag each letter to the animal whose name begins with that sound!",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Sound Safari: beginning sounds",
+  "visual": {
+    "gameType": "drag-match",
+    "match": {
+      "pieces": [
+        {
+          "id": "letter-f",
+          "text": "F"
+        },
+        {
+          "id": "letter-b",
+          "text": "B"
+        },
+        {
+          "id": "letter-d",
+          "text": "D"
+        },
+        {
+          "id": "letter-c",
+          "text": "C"
+        }
+      ],
+      "targets": [
+        {
+          "alt": "A friendly brown bear",
+          "art": "bear",
+          "id": "bear",
+          "text": "Bear"
+        },
+        {
+          "alt": "An orange cat sitting down",
+          "art": "cat",
+          "id": "cat",
+          "text": "Cat"
+        },
+        {
+          "alt": "A happy brown dog",
+          "art": "dog",
+          "id": "dog",
+          "text": "Dog"
+        },
+        {
+          "alt": "A green frog",
+          "art": "frog",
+          "id": "frog",
+          "text": "Frog"
+        }
+      ],
+      "variant": "match"
+    }
+  },
+  "reviewNote": "Independent review passed: beginning sounds hand-verified (B-Bear, C-Cat, D-Dog, F-Frog). Staging sample under the owner's 21 Nov 2026 direction."
+}

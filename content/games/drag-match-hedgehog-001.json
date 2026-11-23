@@ -1,0 +1,82 @@
+{
+  "brand": "kids",
+  "difficulty": "easy",
+  "explanation": "Count the dots in each circle: the cones belong on 3, 1, 4, 5 and 2 — every cone found the circle with the same number of dots.",
+  "gameType": "drag-match",
+  "id": "drag-match-hedgehog-001",
+  "matchAnswer": [
+    "cone-3",
+    "cone-1",
+    "cone-4",
+    "cone-5",
+    "cone-2"
+  ],
+  "prompt": "The hedgehog's back has circles of dots. Put each number cone on the circle with the same number of dots!",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Drag & Drop Match: the hedgehog's cones",
+  "visual": {
+    "gameType": "drag-match",
+    "match": {
+      "pieces": [
+        {
+          "id": "cone-4",
+          "text": "4",
+          "value": 4
+        },
+        {
+          "id": "cone-2",
+          "text": "2",
+          "value": 2
+        },
+        {
+          "id": "cone-5",
+          "text": "5",
+          "value": 5
+        },
+        {
+          "id": "cone-1",
+          "text": "1",
+          "value": 1
+        },
+        {
+          "id": "cone-3",
+          "text": "3",
+          "value": 3
+        }
+      ],
+      "targets": [
+        {
+          "dots": 3,
+          "id": "circle-3",
+          "text": "circle with 3 dots"
+        },
+        {
+          "dots": 1,
+          "id": "circle-1",
+          "text": "circle with 1 dot"
+        },
+        {
+          "dots": 4,
+          "id": "circle-4",
+          "text": "circle with 4 dots"
+        },
+        {
+          "dots": 5,
+          "id": "circle-5",
+          "text": "circle with 5 dots"
+        },
+        {
+          "dots": 2,
+          "id": "circle-2",
+          "text": "circle with 2 dots"
+        }
+      ],
+      "variant": "dots"
+    }
+  },
+  "reviewNote": "Independent review passed: dot-count pairing re-derived and schema-proved (targets 3,1,4,5,2). Staging sample under the owner's 21 Nov 2026 direction."
+}

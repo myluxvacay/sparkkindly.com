@@ -333,10 +333,22 @@ export const GAME_TYPES = [
   'odd-one-out',
   'pick-the-right-one',
   'flags-and-places',
+  // Wave 1 (owner direction, 21 Nov 2026): five new types, sampled on staging first.
+  'drag-match',
+  'fact-or-fiction',
+  'pattern',
+  'emotion-detectives',
+  'build-a-word',
 ] as const;
 export type GameType = (typeof GAME_TYPES)[number];
 
 export type SequenceEntry = { art: string; label: string; color?: SceneColor };
+
+/** One draggable piece in a drag-match game. `value` is set on number pieces (the hedgehog cones). */
+export type MatchPiece = { id: string; text: string; art?: string; alt?: string; value?: number };
+/** One drop target in a drag-match game. `dots` is set on dot-count targets (the hedgehog circles). */
+export type MatchTarget = { id: string; text: string; art?: string; alt?: string; dots?: number };
+export type MatchSpec = { variant?: 'dots' | 'match'; pieces: MatchPiece[]; targets: MatchTarget[] };
 
 export type VisualBlock = {
   gameType: GameType;
@@ -355,4 +367,20 @@ export type VisualBlock = {
   countTarget?: { art: string; color?: SceneColor };
   /** Canonical change keys from diffScenes, stored so the proof compares like with like. */
   expectedChanges?: string[];
+  /** Drag-match (wave 1): the pieces, the targets, and how the board is drawn. The game's
+   *  `matchAnswer` (piece ids in target order) is proven against this data by the schema. */
+  match?: MatchSpec;
+  /** Fact-or-fiction (wave 1): the statement the player judges, and whether it is a fact. */
+  statement?: string;
+  statementIsFact?: boolean;
+  /** Emotion detectives (wave 1): the little story the player reads the feeling from, and the
+   *  feeling the correct option must name. */
+  scenario?: string;
+  feeling?: string;
+  /** Pattern (wave 1): the 1-based position in `sequence` the strip hides and the options offer. */
+  missingPosition?: number;
+  /** Build-a-word (wave 1): the letter tiles on the table — exactly the word's letters, plus the
+   *  one declared decoy letter when `decoyLetter` is set. Proven against `wordAnswer`. */
+  tiles?: string[];
+  decoyLetter?: string;
 };

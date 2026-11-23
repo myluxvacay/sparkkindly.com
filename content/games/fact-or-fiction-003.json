@@ -1,0 +1,39 @@
+{
+  "brand": "discover",
+  "correctOptionId": "fact",
+  "difficulty": "medium",
+  "explanation": "Fact! Only Russia is bigger than Canada — Canada is the second-largest country on Earth.",
+  "gameType": "fact-or-fiction",
+  "id": "fact-or-fiction-003",
+  "options": [
+    {
+      "id": "fact",
+      "text": "Fact"
+    },
+    {
+      "id": "make-believe",
+      "text": "Make-Believe"
+    }
+  ],
+  "prompt": "Fact or Make-Believe? Read the statement, look at the picture, and decide.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [
+    {
+      "accessedAt": "2026-11-21",
+      "title": "Canada — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Canada"
+    }
+  ],
+  "title": "Fact or Make-Believe?: Canada",
+  "visual": {
+    "gameType": "fact-or-fiction",
+    "heroAlt": "The flag of Canada: red and white with a red maple leaf",
+    "heroArt": "flag-ca",
+    "statement": "Canada is the second-largest country in the whole world.",
+    "statementIsFact": true
+  },
+  "reviewNote": "Independent review passed: Canada second-largest-country statement verified true against cited Canada (Wikipedia) source. Staging sample under the owner's 21 Nov 2026 direction."
+}

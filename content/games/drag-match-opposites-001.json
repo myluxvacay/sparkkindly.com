@@ -1,0 +1,63 @@
+{
+  "brand": "play",
+  "difficulty": "medium",
+  "explanation": "Hot is the opposite of cold, up is the opposite of down, big is the opposite of little, and open is the opposite of closed.",
+  "gameType": "drag-match",
+  "id": "drag-match-opposites-001",
+  "matchAnswer": [
+    "hot",
+    "up",
+    "big",
+    "open"
+  ],
+  "prompt": "Opposites attract! Drag each word onto the word that means the opposite.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-21",
+  "reviewer": "games-wave1-independent-review",
+  "scheduledDate": "2026-11-18",
+  "sources": [],
+  "title": "Drag & Drop Match: opposites attract",
+  "visual": {
+    "gameType": "drag-match",
+    "match": {
+      "pieces": [
+        {
+          "id": "up",
+          "text": "up"
+        },
+        {
+          "id": "big",
+          "text": "big"
+        },
+        {
+          "id": "hot",
+          "text": "hot"
+        },
+        {
+          "id": "open",
+          "text": "open"
+        }
+      ],
+      "targets": [
+        {
+          "id": "cold",
+          "text": "cold"
+        },
+        {
+          "id": "down",
+          "text": "down"
+        },
+        {
+          "id": "little",
+          "text": "little"
+        },
+        {
+          "id": "closed",
+          "text": "closed"
+        }
+      ],
+      "variant": "match"
+    }
+  },
+  "reviewNote": "Independent review passed: opposite pairs hand-verified (hot-cold, up-down, big-little, open-closed). Staging sample under the owner's 21 Nov 2026 direction."
+}

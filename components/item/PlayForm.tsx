@@ -1,12 +1,35 @@
 import Link from 'next/link';
 import { toSceneSpec, type PlayView } from '@/lib/public/body';
+import type { SceneColor } from '@/lib/games/scene';
 import GameArt from '@/components/games/GameArt';
 import SceneView from '@/components/games/SceneView';
 import SceneArt from '@/components/games/SceneArt';
+import MatchBoard from '@/components/games/MatchBoard';
+import WordTiles from '@/components/games/WordTiles';
 
 type Props = { action: string; play: PlayView; clues: number; stage?: 'look' | 'answer'; step?: number };
 
-type Choice = { id: string; text: string; art?: string; alt?: string };
+type Choice = { id: string; text: string; art?: string; alt?: string; color?: SceneColor };
+
+// Pattern options are SceneArt chips (wave 1): the player is matching the strip's pictures, so
+// the options must be drawn by the same hand as the strip — GameArt's separate picture set
+// would make the right answer look different from its place in the pattern.
+const PatternChoices = ({ list }: { list: Choice[] }) => (
+  <div className="options options-art pattern-options">
+    {list.map((o, i) => (
+      <label className="option" key={o.id}>
+        <input type="radio" name="r" value={o.id} required={i === 0} />
+        <span className="option-letter" aria-hidden="true">{o.id.toUpperCase().slice(0, 2)}</span>
+        {o.art && (
+          <svg viewBox="0 0 120 120" className="pattern-art" role="img" aria-label={o.alt ?? o.text}>
+            <SceneArt art={o.art} color={o.color} />
+          </svg>
+        )}
+        <span>{o.text}</span>
+      </label>
+    ))}
+  </div>
+);
 
 const Choices = ({ name, list }: { name: string; list: Choice[] }) => {
   const withArt = list.some((o) => o.art);
@@ -23,6 +46,66 @@ const Choices = ({ name, list }: { name: string; list: Choice[] }) => {
     </div>
   );
 };
+
+// Drag-match fields (wave 1): the interactive board plus, under it, one plain <select> per
+// target. The selects are the real controls — with no JavaScript they ARE the game (choose the
+// piece for each target from the menus); MatchBoard enhances them away and keeps them synced.
+function MatchFields({ play }: { play: PlayView }) {
+  const m = play.visual?.match;
+  if (!m || m.pieces.length === 0 || m.targets.length === 0) {
+    return <p>This activity can’t be played on this page yet.</p>;
+  }
+  return (
+    <div className="match-area">
+      <MatchBoard pieces={m.pieces} targets={m.targets} variant={m.variant} />
+      <div className="match-selects">
+        <p>Match each piece to its target:</p>
+        {m.targets.map((t) => (
+          <label className="match-select-row" key={t.id}>
+            <span>{t.dots ? `Circle with ${t.dots} dot${t.dots === 1 ? "" : "s"}` : t.text}</span>
+            <select name={`match-${t.id}`} required defaultValue="" aria-label={`Piece for ${t.dots ? `the circle with ${t.dots} dot${t.dots === 1 ? "" : "s"}` : t.text}`}>
+              <option value="" disabled>
+                Choose a piece…
+              </option>
+              {m.pieces.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.text}
+                </option>
+              ))}
+            </select>
+          </label>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// The pattern strip (wave 1): the whole pattern stays on screen — this is prediction, not
+// recall — with the missing piece shown as an empty chip. The aria label names every visible
+// piece and the gap, so a screen-reader player gets the same pattern the picture shows.
+function PatternStrip({ play }: { play: PlayView }) {
+  const v = play.visual;
+  if (!v || v.gameType !== 'pattern' || v.sequence.length === 0) return null;
+  const missing = v.missingPosition ?? -1;
+  const spoken = v.sequence.map((e, i) => (i + 1 === missing ? 'a missing piece' : e.label)).join(', ');
+  return (
+    <div className="pattern-strip" role="img" aria-label={`Pattern: ${spoken}.`}>
+      {v.sequence.map((e, i) =>
+        i + 1 === missing ? (
+          <span key={i} className="pattern-chip pattern-gap" aria-hidden="true">
+            ?
+          </span>
+        ) : (
+          <span key={i} className="pattern-chip">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <SceneArt art={e.art} color={e.color} />
+            </svg>
+          </span>
+        ),
+      )}
+    </div>
+  );
+}
 
 // The picture half of a visual game (18 Nov 2026): hero artwork, one scene, or a before/after
 // scene pair (spot-the-difference only — what-changed renders its scenes one phase at a time in
@@ -41,6 +124,17 @@ function Visual({ play }: { play: PlayView }) {
           <figcaption className="visually-hidden">{v.heroAlt ?? ''}</figcaption>
         </figure>
       )}
+      {v.scenario && (
+        <section className="passage scenario-card" aria-label="The story so far">
+          <p>{v.scenario}</p>
+        </section>
+      )}
+      {v.statement && (
+        <blockquote className="statement-card">
+          <p>“{v.statement}”</p>
+        </blockquote>
+      )}
+      <PatternStrip play={play} />
       {scene && sceneAfter ? (
         <div className="scene-pair">
           <figure>
@@ -84,11 +178,18 @@ function Order({ items }: { items: { id: string; text: string }[] }) {
 function Fields({ play, clues }: { play: PlayView; clues: number }) {
   switch (play.mechanic) {
     case 'multiple_choice':
-      return <Choices name="r" list={play.options} />;
+      return play.visual?.gameType === 'pattern' ? <PatternChoices list={play.options} /> : <Choices name="r" list={play.options} />;
     case 'odd_one_out':
       return <Choices name="r" list={play.items} />;
+    case 'match_pairs':
+      return <MatchFields play={play} />;
     case 'true_false':
-      return <Choices name="r" list={[{ id: 'true', text: 'True' }, { id: 'false', text: 'False' }]} />;
+      // Fact-or-fiction (wave 1) speaks its own labels; the submitted values stay true/false.
+      return play.visual?.gameType === 'fact-or-fiction' ? (
+        <Choices name="r" list={[{ id: 'true', text: 'Fact' }, { id: 'false', text: 'Make-Believe' }]} />
+      ) : (
+        <Choices name="r" list={[{ id: 'true', text: 'True' }, { id: 'false', text: 'False' }]} />
+      );
     case 'put_in_order':
       return <Order items={play.items} />;
     case 'number':
@@ -99,6 +200,10 @@ function Fields({ play, clues }: { play: PlayView; clues: number }) {
       );
     case 'short_text':
     case 'clue_reveal':
+      // Build-a-word (wave 1) is short_text with letter tiles over the same input.
+      if (play.visual?.gameType === 'build-a-word') {
+        return <WordTiles letters={play.visual.tiles ?? []} />;
+      }
       return (
         <>
           {play.mechanic === 'clue_reveal' && (

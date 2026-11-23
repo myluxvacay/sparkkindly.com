@@ -29,9 +29,27 @@ function parseOrder(params: URLSearchParams, itemIds?: string[]): string[] | nul
   return slots as string[];
 }
 
+function parseMatch(params: URLSearchParams, targetIds?: string[], pieceIds?: string[]): string[] | null {
+  if (!targetIds || targetIds.length === 0 || !pieceIds || pieceIds.length === 0) return null;
+  const known = new Set(targetIds.map((id) => `match-${id}`));
+  for (const key of params.keys()) if (key.startsWith('match-') && !known.has(key)) return null; // unknown target
+  const pieces = new Set(pieceIds);
+  const used = new Set<string>();
+  const slots: string[] = [];
+  for (const id of targetIds) {
+    const raw = params.get(`match-${id}`);
+    if (raw === null || !pieces.has(raw) || used.has(raw)) return null; // missing, unknown or reused piece
+    used.add(raw);
+    slots.push(raw);
+  }
+  return slots;
+}
+
 // Reads the player's response from a form post. null means missing or malformed; never throws.
-export function parseGiven(mechanic: Mechanic, params: URLSearchParams, itemIds?: string[]): unknown | null {
+// For match_pairs, `itemIds` carries the target ids (in board order) and `pieceIds` the piece ids.
+export function parseGiven(mechanic: Mechanic, params: URLSearchParams, itemIds?: string[], pieceIds?: string[]): unknown | null {
   if (mechanic === 'put_in_order') return parseOrder(params, itemIds);
+  if (mechanic === 'match_pairs') return parseMatch(params, itemIds, pieceIds);
   const r = params.get('r');
   if (r === null || r.length > MAX_INPUT || r.trim() === '') return null;
   switch (mechanic) {
@@ -66,6 +84,7 @@ export function checkAnswer(mechanic: Mechanic, stored: unknown, given: unknown)
       return typeof given === 'number' && Number.isFinite(given) && Math.abs(given - stored.value) <= stored.tolerance;
     }
     case 'put_in_order':
+    case 'match_pairs':
       return Array.isArray(stored) && Array.isArray(given) && stored.length === given.length && stored.every((id, i) => id === given[i]);
   }
 }
@@ -76,11 +95,26 @@ const choices = (x: unknown): Choice[] => (Array.isArray(x) ? (x as Choice[]).fi
 // Human text for the correct answer. Call only after a result has been given.
 export function describeAnswer(body: unknown, stored: unknown): string {
   const b = isRecord(body) ? body : {};
-  const all = [...choices(b.options), ...choices(b.items)];
+  const visual = isRecord(b.visual) ? b.visual : {};
+  const match = isRecord(visual.match) ? visual.match : null;
+  const all = [...choices(b.options), ...choices(b.items), ...choices(match?.pieces)];
   const text = (id: unknown) => all.find((c) => c.id === id)?.text ?? String(id);
-  if (typeof stored === 'boolean') return stored ? 'True' : 'False';
+  if (typeof stored === 'boolean') {
+    // Fact-or-fiction games speak their own labels (wave 1): the stored boolean is the same,
+    // the words the player sees are Fact / Make-Believe.
+    if (visual.gameType === 'fact-or-fiction') return stored ? 'Fact' : 'Make-Believe';
+    return stored ? 'True' : 'False';
+  }
   if (typeof stored === 'string') return text(stored);
-  if (Array.isArray(stored)) return stored.map(text).join(', ');
+  if (Array.isArray(stored)) {
+    // A match_pairs key reads as pairs ("B → bear") when the body carries the board; the target
+    // order is the board's, the stored ids are the pieces placed on them.
+    const targets = match && Array.isArray(match.targets) ? (match.targets as Choice[]) : [];
+    if (targets.length === stored.length && targets.every((t) => isRecord(t))) {
+      return stored.map((pieceId, i) => `${text(pieceId)} → ${targets[i].text}`).join('; ');
+    }
+    return stored.map(text).join(', ');
+  }
   const list = accepted(stored);
   if (list && list.length > 0) return list[0];
   if (isRecord(stored) && typeof stored.value === 'number') return String(stored.value);

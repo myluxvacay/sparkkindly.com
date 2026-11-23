@@ -571,3 +571,55 @@ html[data-theme="dark"] .social-card{background:#2a1a36;border-color:var(--line)
 html[data-theme="dark"] .social-card p:not(.eyebrow){color:#cfc4cf}
 html[data-theme="dark"] .watch-card{background:#2a1a36}
 html[data-theme="dark"] .watch-chip{background:#2a1a36}
+/* Games wave 1 (21 Nov 2026): drag-match boards, pattern strips, fact statements, emotion
+   scenarios and build-a-word tiles inside the regular play panel. Like the scene cards above,
+   these surfaces are light in both themes, so their text colour is pinned dark (#241529 on
+   #fffdf9 is >12:1) instead of inheriting the theme ink. */
+.statement-card{background:#fffdf9;border:1px solid #e4d8e8;border-left:3px solid var(--plum);border-radius:5px;padding:18px 22px;margin:0 0 22px;color:#241529}
+.statement-card p{font-family:var(--serif);font-size:22px;line-height:1.5;margin:0}
+.scenario-card p{margin:0}
+.pattern-strip{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 18px}
+.pattern-chip{display:grid;place-items:center;width:104px;height:104px;background:#fffdf9;border:1px solid #e4d8e8;border-radius:10px}
+.pattern-chip svg{width:92px;height:92px}
+.pattern-gap{font-family:var(--serif);font-size:44px;font-weight:700;color:var(--plum);border-style:dashed}
+.pattern-options .option svg.pattern-art{width:104px;height:104px}
+.match-area{margin:0 0 6px}
+.match-selects{display:grid;gap:10px;margin:14px 0}
+.match-select-row{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fffdf9;border:1px solid #e4d8e8;border-radius:10px;padding:10px 14px;color:#241529;font-weight:600}
+.match-select-row select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid #c9b8d4;background:#fff;color:#241529}
+.match-area.is-enhanced .match-selects{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.match-board{margin:0 0 14px}
+.match-tray{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.match-piece{display:grid;justify-items:center;gap:4px;background:#fffdf9;border:2px solid #e4d8e8;border-radius:12px;padding:8px 10px;cursor:pointer;color:#241529;font-weight:700;min-width:76px}
+.match-piece:hover,.match-piece:focus-visible{border-color:#5a2d82}
+.match-piece.is-selected{border-color:#b97b0f;background:#fdf3d8}
+.match-piece.is-placed{opacity:.45}
+.match-piece .match-art{width:64px;height:64px}
+.match-piece-word{font-size:26px;padding:10px 6px}
+.match-targets{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.match-target{display:grid;justify-items:center;gap:6px;background:#fffdf9;border:2px dashed #c9b8d4;border-radius:12px;padding:12px;cursor:pointer;color:#241529;font-weight:600}
+.match-target:hover,.match-target:focus-visible{border-color:#5a2d82}
+.match-target.is-filled{border-style:solid;border-color:#2e7d32;background:#eef7ee}
+.match-target .match-art{width:76px;height:76px}
+.match-target-slot{font-weight:800;color:var(--plum)}
+.match-hint{font-size:14px;color:var(--plum);font-weight:600;margin:4px 0 0}
+.hedgehog-board{position:relative;max-width:560px;margin:0 auto}
+.hedgehog-art{width:100%;height:auto;display:block}
+.dot-target{position:absolute;width:17%;aspect-ratio:1;background:none;border:none;padding:0;cursor:pointer;border-radius:50%}
+.dot-target:focus-visible{outline:3px solid #5a2d82;outline-offset:2px}
+.dot-target .dot-circle{width:100%;height:100%;display:block}
+.dot-target-cone{position:absolute;inset:auto 0 -14px 0;display:grid;justify-items:center;pointer-events:none}
+.dot-target-cone .cone-small{width:44%}
+.cone{width:64px;height:64px}
+.match-board-dots .match-tray{justify-content:center}
+.match-board-dots .match-piece{background:none;border-color:transparent;min-width:0;padding:2px}
+.match-board-dots .match-piece.is-selected{background:#fdf3d8;border-color:#b97b0f}
+.match-board-dots .match-hint{text-align:center}
+.word-tiles{margin:0 0 6px}
+.word-answer input{font:inherit;font-size:20px;letter-spacing:2px;text-transform:uppercase;padding:8px 10px;border-radius:8px;border:1px solid #c9b8d4;background:#fff;color:#241529;max-width:100%}
+.tile-row{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 6px}
+.tile{display:grid;place-items:center;width:52px;height:58px;background:#fffdf9;border:2px solid #e4d8e8;border-bottom-width:4px;border-radius:10px;font-size:24px;font-weight:800;color:#241529;cursor:pointer}
+.tile:hover,.tile:focus-visible{border-color:#5a2d82}
+.tile:disabled{opacity:.35;cursor:default}
+.tile-actions{margin:6px 0}
+.word-tiles-hint{font-size:14px;color:var(--plum);font-weight:600}
