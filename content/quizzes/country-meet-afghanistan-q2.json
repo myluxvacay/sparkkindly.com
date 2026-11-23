@@ -1,6 +1,6 @@
 {
   "id": "country-meet-afghanistan-q2",
-  "scheduledDate": "2029-09-29",
+  "scheduledDate": "2030-10-24",
   "brand": "kids",
   "setId": "country-set-meet-afghanistan",
   "prompt": "Which of these is a famous place to visit in Afghanistan?",
@@ -23,7 +23,7 @@
     }
   ],
   "correctOptionId": "a",
-  "explanation": "Band-e Amir lakes is one of the two places we'd love to visit in Afghanistan. Band-e Amir is a chain of deep-blue lakes held back by natural travertine dams in the Hindu Kush mountains — Afghanistan's first national park and a place of striking beauty.",
+  "explanation": "Band-e Amir lakes is one of the two places we'd love to visit in Afghanistan. Band-e Amir is a chain of deep-blue lakes held back by natural travertine dams in the Hindu Kush mountains \u2014 Afghanistan's first national park and a place of striking beauty.",
   "difficulty": "easy",
   "sources": [
     {
@@ -32,7 +32,7 @@
       "accessedAt": "2026-11-21"
     },
     {
-      "title": "Afghanistan — Wikipedia",
+      "title": "Afghanistan \u2014 Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Afghanistan",
       "accessedAt": "2026-11-21"
     }
@@ -40,13 +40,13 @@
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
   "reviewedAt": "2026-11-21",
-  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "hero": {
     "src": "/images/country-meet-afghanistan.webp",
     "alt": "Spark and Mango visiting deep blue lakes of Band-e Amir between pale cliffs in the Hindu Kush mountains",
     "width": 832,
     "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
+    "credit": "AI-generated image \u00b7 SparkKindly",
     "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
   }
 }

@@ -40,7 +40,7 @@
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
   "reviewedAt": "2026-11-21",
-  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "hero": {
     "src": "/images/country-meet-mongolia.webp",
     "alt": "Spark and Mango visiting red cliffs and golden dunes in the Gobi Desert with camels",

@@ -11,7 +11,7 @@
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
   "reviewedAt": "2026-11-21",
-  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
   "hero": {
     "src": "/images/country-meet-uruguay.webp",
@@ -40,7 +40,7 @@
     }
   ],
   "factualClaimsReviewedAt": "2026-11-21",
-  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Approved by the SparkKindly site owner for publication on 22 November 2026.",
   "body": [
     {
       "heading": "Where in the world is Uruguay?",

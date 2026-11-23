@@ -1,6 +1,6 @@
 {
   "id": "country-meet-algeria-q1",
-  "scheduledDate": "2029-10-02",
+  "scheduledDate": "2030-10-27",
   "brand": "kids",
   "setId": "country-set-meet-algeria",
   "prompt": "Which of these is a main language people speak in Algeria?",
@@ -32,7 +32,7 @@
       "accessedAt": "2026-11-21"
     },
     {
-      "title": "Algeria — Wikipedia",
+      "title": "Algeria \u2014 Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Algeria",
       "accessedAt": "2026-11-21"
     }
@@ -40,13 +40,13 @@
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
   "reviewedAt": "2026-11-21",
-  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "hero": {
     "src": "/images/country-meet-algeria.webp",
     "alt": "Spark and Mango visiting the whitewashed Casbah old town of Algiers tumbling down a hill to the blue Mediterranean Sea",
     "width": 832,
     "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
+    "credit": "AI-generated image \u00b7 SparkKindly",
     "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
   }
 }

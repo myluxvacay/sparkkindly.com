@@ -11,7 +11,7 @@
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
   "reviewedAt": "2026-11-21",
-  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
   "hero": {
     "src": "/images/country-meet-trinidad-and-tobago.webp",
@@ -40,7 +40,7 @@
     }
   ],
   "factualClaimsReviewedAt": "2026-11-21",
-  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Approved by the SparkKindly site owner for publication on 22 November 2026.",
   "body": [
     {
       "heading": "Where in the world is Trinidad and Tobago?",

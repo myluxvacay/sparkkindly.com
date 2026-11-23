@@ -1,6 +1,6 @@
 {
   "id": "country-meet-albania-q2",
-  "scheduledDate": "2029-10-01",
+  "scheduledDate": "2030-10-26",
   "brand": "kids",
   "setId": "country-set-meet-albania",
   "prompt": "Which of these is a famous place to visit in Albania?",
@@ -19,11 +19,11 @@
     },
     {
       "id": "d",
-      "text": "the Albanian Riviera — Ksamil and Himara"
+      "text": "the Albanian Riviera \u2014 Ksamil and Himara"
     }
   ],
   "correctOptionId": "d",
-  "explanation": "the Albanian Riviera — Ksamil and Himara is one of the two places we'd love to visit in Albania. Albania's Ionian coast has turquoise bays and island-dotted beaches at Ksamil and Himara, beneath the dramatic Llogara mountain pass.",
+  "explanation": "the Albanian Riviera \u2014 Ksamil and Himara is one of the two places we'd love to visit in Albania. Albania's Ionian coast has turquoise bays and island-dotted beaches at Ksamil and Himara, beneath the dramatic Llogara mountain pass.",
   "difficulty": "easy",
   "sources": [
     {
@@ -32,7 +32,7 @@
       "accessedAt": "2026-11-21"
     },
     {
-      "title": "Albania — Wikipedia",
+      "title": "Albania \u2014 Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Albania",
       "accessedAt": "2026-11-21"
     }
@@ -40,13 +40,13 @@
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
   "reviewedAt": "2026-11-21",
-  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Promoted to production on 22 November 2026 on the site owner's order.",
   "hero": {
     "src": "/images/country-meet-albania.webp",
     "alt": "Spark and Mango visiting white houses with many windows climbing a hill to Berat castle",
     "width": 832,
     "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
+    "credit": "AI-generated image \u00b7 SparkKindly",
     "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
   }
 }
