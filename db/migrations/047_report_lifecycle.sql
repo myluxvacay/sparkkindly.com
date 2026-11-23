@@ -18,8 +18,11 @@ ALTER TABLE problem_reports
     CHECK (reason IN ('wrong', 'unsafe', 'broken', 'other', 'typo', 'picture'));
 UPDATE problem_reports SET status = 'pending' WHERE status = 'open';
 UPDATE problem_reports SET status = 'fixed' WHERE status = 'closed';
+-- The status list only GAINS values (the migrate gate's widen-only rule): 'open'/'closed' stay
+-- DB-legal as legacy values — every existing row is remapped above, the default becomes 'pending'
+-- and the application writes only the new vocabulary; a later contract migration may retire them.
 ALTER TABLE problem_reports
   DROP CONSTRAINT problem_reports_status_check,
   ADD CONSTRAINT problem_reports_status_check
-    CHECK (status IN ('pending', 'fixed', 'not-a-mistake', 'duplicate'));
+    CHECK (status IN ('open', 'closed', 'pending', 'fixed', 'not-a-mistake', 'duplicate'));
 ALTER TABLE problem_reports ALTER COLUMN status SET DEFAULT 'pending';
