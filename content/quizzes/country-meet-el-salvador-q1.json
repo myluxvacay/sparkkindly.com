@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-el-salvador-q1",
+  "scheduledDate": "2030-01-08",
+  "brand": "kids",
+  "setId": "country-set-meet-el-salvador",
+  "prompt": "What is the money of El Salvador called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ghanaian cedi"
+    },
+    {
+      "id": "b",
+      "text": "US dollar"
+    },
+    {
+      "id": "c",
+      "text": "Egyptian pound"
+    },
+    {
+      "id": "d",
+      "text": "Cuban peso"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The money of El Salvador is the US dollar (USD).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "El Salvador | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/El-Salvador",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "El Salvador — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/El_Salvador",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-el-salvador.webp",
+    "alt": "Spark and Mango visiting a colourful mural-covered street in a Ruta de las Flores mountain town",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

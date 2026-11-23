@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-armenia",
+  "slug": "meet-armenia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Armenia",
+  "description": "Travel to Armenia with Spark and Mango: a country in Western Asia whose capital is Yerevan, where people speak Armenian and pay with the Armenian dram — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-armenia.webp",
+    "alt": "Spark and Mango visiting Sevanavank monastery's stone churches on a peninsula above Lake Sevan",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Armenia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Armenia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Armenia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Armenia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Armenia?",
+      "paragraphs": [
+        "Armenia is a country in Western Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Armenia is Yerevan."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Armenia speak Armenian and Russian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Armenia is the Armenian dram."
+      ]
+    },
+    {
+      "heading": "How big is Armenia?",
+      "paragraphs": [
+        "Armenia covers about 30,000 square kilometres of land and inland water. That makes it about three times the size of Lebanon."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Lake Sevan is one of the largest high-mountain lakes in the world. On a peninsula stands Sevanavank monastery, with views over water that changes from blue to silver.",
+        "Geghard's chapels are carved straight into the cliff rock, while nearby Garni has a Greek-style temple above a gorge of giant basalt columns called the Symphony of Stones."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Armenia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Armenia in one breath: a country in Western Asia, capital Yerevan, where people speak Armenian and pay with the Armenian dram.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Armenia)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Armenia.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Armenia — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Armenia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-san-marino-q2",
+  "scheduledDate": "2030-07-14",
+  "brand": "kids",
+  "setId": "country-set-meet-san-marino",
+  "prompt": "Which of these is a famous place to visit in San Marino?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Three Towers of San Marino"
+    },
+    {
+      "id": "b",
+      "text": "Great Zimbabwe"
+    },
+    {
+      "id": "c",
+      "text": "the Mamanuca Islands"
+    },
+    {
+      "id": "d",
+      "text": "the hill country train to Ella"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "the Three Towers of San Marino is one of the two places we'd love to visit in San Marino. San Marino, the world's oldest republic, crowns Mount Titano with three medieval towers linked by walls — the Guaita fortress has views to the Adriatic.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "San Marino | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/San-Marino",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "San Marino — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/San_Marino",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-san-marino.webp",
+    "alt": "Spark and Mango visiting the Guaita tower on Mount Titano above the clouds",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

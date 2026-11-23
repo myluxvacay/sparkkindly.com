@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-sao-tome-and-principe-q2",
+  "scheduledDate": "2030-07-16",
+  "brand": "kids",
+  "setId": "country-set-meet-sao-tome-and-principe",
+  "prompt": "Which of these is a famous place to visit in São Tomé and Príncipe?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Laas Geel cave paintings"
+    },
+    {
+      "id": "b",
+      "text": "Casco Viejo, Panama City"
+    },
+    {
+      "id": "c",
+      "text": "Český Krumlov"
+    },
+    {
+      "id": "d",
+      "text": "Ilhéu das Rolas, on the Equator"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Ilhéu das Rolas, on the Equator is one of the two places we'd love to visit in São Tomé and Príncipe. This tiny island sits exactly on the Equator line — you can stand with one foot in each hemisphere, then swim at its quiet beaches.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "São Tomé and Príncipe | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/S%C3%A3o-Tom%C3%A9-and-Pr%C3%ADncipe",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "São Tomé and Príncipe — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-sao-tome-and-principe.webp",
+    "alt": "Spark and Mango visiting the needle-like volcanic peak of Pico Cão Grande rising from green rainforest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

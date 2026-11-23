@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-liberia",
+  "slug": "meet-liberia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Liberia",
+  "description": "Travel to Liberia with Spark and Mango: a country in Western Africa whose capital is Monrovia, where people speak English and pay with the Liberian dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-liberia.webp",
+    "alt": "Spark and Mango visiting giant rainforest trees and a river in Sapo National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Liberia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Liberia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Liberia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Liberia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Liberia?",
+      "paragraphs": [
+        "Liberia is a country in Western Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Liberia is Monrovia."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Liberia is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Liberia is the Liberian dollar."
+      ]
+    },
+    {
+      "heading": "How big is Liberia?",
+      "paragraphs": [
+        "Liberia covers about 111,000 square kilometres of land and inland water. That makes it about half the size of Ghana."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Sapo protects one of West Africa's last great rainforests, home to forest elephants, pygmy hippos and chimpanzees beneath enormous trees.",
+        "Robertsport is a laid-back surf town where rolling Atlantic waves meet golden sand — Liberia's favourite beach escape, dotted with old seaside houses."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Liberia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Liberia in one breath: a country in Western Africa, capital Monrovia, where people speak English and pay with the Liberian dollar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Liberia)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Liberia.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Liberia always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Liberia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

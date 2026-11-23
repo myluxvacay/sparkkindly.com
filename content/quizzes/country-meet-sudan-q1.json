@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-sudan-q1",
+  "scheduledDate": "2030-08-14",
+  "brand": "kids",
+  "setId": "country-set-meet-sudan",
+  "prompt": "What is the capital of Sudan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Khartoum"
+    },
+    {
+      "id": "b",
+      "text": "Tegucigalpa"
+    },
+    {
+      "id": "c",
+      "text": "Warsaw"
+    },
+    {
+      "id": "d",
+      "text": "Georgetown"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Khartoum is the capital of Sudan. It is the city where the country's government works.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Sudan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Sudan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Sudan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sudan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-sudan.webp",
+    "alt": "Spark and Mango visiting steep slender pyramids of Meroë rising from desert sand",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

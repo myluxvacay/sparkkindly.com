@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-malawi",
+  "slug": "meet-malawi",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Malawi",
+  "description": "Travel to Malawi with Spark and Mango: a country in Eastern Africa whose capital is Lilongwe, where people speak Nyanja and pay with the Malawian kwacha — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-malawi.webp",
+    "alt": "Spark and Mango visiting fishing boats and golden beaches on the vast blue shore of Lake Malawi",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Malawi | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Malawi",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Malawi — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Malawi",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Malawi?",
+      "paragraphs": [
+        "Malawi is a country in Eastern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Malawi is Lilongwe."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Malawi speak Nyanja and English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Malawi is the Malawian kwacha."
+      ]
+    },
+    {
+      "heading": "How big is Malawi?",
+      "paragraphs": [
+        "Malawi covers about 118,000 square kilometres of land and inland water. That makes it about half the size of Ghana."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Lake Malawi is so big it feels like an inland sea, with golden beaches, fishing villages and more kinds of colourful cichlid fish than any other lake on Earth.",
+        "Mount Mulanje rises in steep granite walls above tea fields. Hiking trails lead to waterfalls, rock pools and huts with huge views."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Malawi on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Malawi in one breath: a country in Eastern Africa, capital Lilongwe, where people speak Nyanja and pay with the Malawian kwacha.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Malawi)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Malawi.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Malawi always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Malawi on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

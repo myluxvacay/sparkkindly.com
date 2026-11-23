@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-united-arab-emirates-q1",
+  "scheduledDate": "2030-09-21",
+  "brand": "kids",
+  "setId": "country-set-meet-united-arab-emirates",
+  "prompt": "What is the money of United Arab Emirates called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Algerian dinar"
+    },
+    {
+      "id": "b",
+      "text": "Philippine peso"
+    },
+    {
+      "id": "c",
+      "text": "UAE dirham"
+    },
+    {
+      "id": "d",
+      "text": "Jamaican dollar"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "The money of United Arab Emirates is the UAE dirham (AED).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "United Arab Emirates | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/United-Arab-Emirates",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "United Arab Emirates — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/United_Arab_Emirates",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-united-arab-emirates.webp",
+    "alt": "Spark and Mango visiting the Burj Khalifa towering over Dubai's fountains",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

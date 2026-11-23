@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-equatorial-guinea-q2",
+  "scheduledDate": "2030-01-11",
+  "brand": "kids",
+  "setId": "country-set-meet-equatorial-guinea",
+  "prompt": "Which of these is a famous place to visit in Equatorial Guinea?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Monte Alén National Park"
+    },
+    {
+      "id": "b",
+      "text": "Massawa, the old port on the Red Sea"
+    },
+    {
+      "id": "c",
+      "text": "the Inland Sea (Khor Al Adaid)"
+    },
+    {
+      "id": "d",
+      "text": "the Avenue of the Baobabs"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Monte Alén National Park is one of the two places we'd love to visit in Equatorial Guinea. Monte Alén protects thick rainforest in the mainland region of Río Muni — waterfalls, rivers and wildlife including gorillas, elephants and mandrills.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Equatorial Guinea | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Equatorial-Guinea",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Equatorial Guinea — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Equatorial_Guinea",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-equatorial-guinea.webp",
+    "alt": "Spark and Mango visiting a waterfall in the thick green rainforest of Monte Alén National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

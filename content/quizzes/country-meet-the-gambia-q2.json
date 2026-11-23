@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-the-gambia-q2",
+  "scheduledDate": "2030-01-27",
+  "brand": "kids",
+  "setId": "country-set-meet-the-gambia",
+  "prompt": "Which of these is a famous place to visit in The Gambia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Robertsport's beaches"
+    },
+    {
+      "id": "b",
+      "text": "Lake Issyk-Kul"
+    },
+    {
+      "id": "c",
+      "text": "the River Gambia and Kunta Kinteh Island"
+    },
+    {
+      "id": "d",
+      "text": "Dublin — Trinity College and the Book of Kells"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "the River Gambia and Kunta Kinteh Island is one of the two places we'd love to visit in The Gambia. Boat trips up the River Gambia pass mangroves full of birds to Kunta Kinteh Island, a small island fort with a powerful history families can learn about together.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "The Gambia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/The-Gambia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "The Gambia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Gambia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-the-gambia.webp",
+    "alt": "Spark and Mango visiting a boat on the wide River Gambia passing mangrove shores",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

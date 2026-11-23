@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-north-korea-q1",
+  "scheduledDate": "2030-03-21",
+  "brand": "kids",
+  "setId": "country-set-meet-north-korea",
+  "prompt": "What is the money of North Korea called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "North Korean won"
+    },
+    {
+      "id": "b",
+      "text": "Moroccan dirham"
+    },
+    {
+      "id": "c",
+      "text": "Vanuatu vatu"
+    },
+    {
+      "id": "d",
+      "text": "South Sudanese pound"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of North Korea is the North Korean won (KPW).",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "North Korea | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/North-Korea",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "North Korea — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/North_Korea",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-north-korea.webp",
+    "alt": "Spark and Mango visiting the Arch of Triumph monument in Pyongyang",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-cote-divoire-q1",
+  "scheduledDate": "2029-12-17",
+  "brand": "kids",
+  "setId": "country-set-meet-cote-divoire",
+  "prompt": "What is the capital of Côte d’Ivoire?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Thimphu"
+    },
+    {
+      "id": "b",
+      "text": "Suva"
+    },
+    {
+      "id": "c",
+      "text": "Yamoussoukro"
+    },
+    {
+      "id": "d",
+      "text": "Athens"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Yamoussoukro is the capital of Côte d’Ivoire. Yamoussoukro is the political capital, famous for its enormous basilica.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Côte d’Ivoire | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/C%C3%B4te-d%E2%80%99Ivoire",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Côte d’Ivoire — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/C%C3%B4te_d%E2%80%99Ivoire",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-cote-divoire.webp",
+    "alt": "Spark and Mango visiting the soaring dome of the great basilica at Yamoussoukro beside its lake",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

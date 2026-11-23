@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-burundi-q2",
+  "scheduledDate": "2029-11-20",
+  "brand": "kids",
+  "setId": "country-set-meet-burundi",
+  "prompt": "Roughly how big is Burundi?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 72,800 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 3,360 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 12,600 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 28,000 square kilometres"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Burundi covers about 28,000 square kilometres of land and inland water.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Burundi | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Burundi",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Burundi — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Burundi",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-burundi.webp",
+    "alt": "Spark and Mango visiting fishing boats on the shore of vast Lake Tanganyika at golden hour",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

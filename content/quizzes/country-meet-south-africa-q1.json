@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-south-africa-q1",
+  "scheduledDate": "2030-08-06",
+  "brand": "kids",
+  "setId": "country-set-meet-south-africa",
+  "prompt": "South Africa has three capital cities. Which of these is one of them?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Pretoria"
+    },
+    {
+      "id": "b",
+      "text": "Jakarta"
+    },
+    {
+      "id": "c",
+      "text": "Addis Ababa"
+    },
+    {
+      "id": "d",
+      "text": "Mexico City"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Pretoria is one of South Africa's three capitals — it is where the president and government work. The others are Cape Town and Bloemfontein.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "South Africa | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/South-Africa",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "South Africa — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/South_Africa",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-south-africa.webp",
+    "alt": "Spark and Mango visiting flat-topped Table Mountain above Cape Town and the sea",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

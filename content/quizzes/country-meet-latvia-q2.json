@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-latvia-q2",
+  "scheduledDate": "2030-04-01",
+  "brand": "kids",
+  "setId": "country-set-meet-latvia",
+  "prompt": "Roughly how big is Latvia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 7,800 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 65,000 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 169,000 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 29,250 square kilometres"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Latvia covers about 65,000 square kilometres of land and inland water.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Latvia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Latvia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Latvia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Latvia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-latvia.webp",
+    "alt": "Spark and Mango visiting art nouveau facades on Alberta Street in Riga",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

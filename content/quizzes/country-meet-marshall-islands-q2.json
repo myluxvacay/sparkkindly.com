@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-marshall-islands-q2",
+  "scheduledDate": "2030-05-01",
+  "brand": "kids",
+  "setId": "country-set-meet-marshall-islands",
+  "prompt": "Roughly how big is Marshall Islands?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 22 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 181 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 471 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 81 square kilometres"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Marshall Islands covers about 181 square kilometres of land and inland water.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Marshall Islands | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Marshall-Islands",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Marshall Islands — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Marshall_Islands",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-marshall-islands.webp",
+    "alt": "Spark and Mango visiting a coral-covered sunken warship in Bikini Atoll lagoon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

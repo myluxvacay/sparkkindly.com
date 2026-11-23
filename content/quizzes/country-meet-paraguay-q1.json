@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-paraguay-q1",
+  "scheduledDate": "2030-06-17",
+  "brand": "kids",
+  "setId": "country-set-meet-paraguay",
+  "prompt": "What is the money of Paraguay called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Paraguayan guarani"
+    },
+    {
+      "id": "b",
+      "text": "Canadian dollar"
+    },
+    {
+      "id": "c",
+      "text": "São Tomé and Príncipe dobra"
+    },
+    {
+      "id": "d",
+      "text": "Bosnia and Herzegovina convertible mark"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Paraguay is the Paraguayan guarani (PYG).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Paraguay | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Paraguay",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Paraguay — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Paraguay",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-paraguay.webp",
+    "alt": "Spark and Mango visiting the red stone church tower of the Trinidad Jesuit mission",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

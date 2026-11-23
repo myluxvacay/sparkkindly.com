@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-kazakhstan-q1",
+  "scheduledDate": "2030-03-15",
+  "brand": "kids",
+  "setId": "country-set-meet-kazakhstan",
+  "prompt": "What is the capital of Kazakhstan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Lomé"
+    },
+    {
+      "id": "b",
+      "text": "Astana"
+    },
+    {
+      "id": "c",
+      "text": "Copenhagen"
+    },
+    {
+      "id": "d",
+      "text": "Dhaka"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Astana is the capital of Kazakhstan. Astana is a futuristic capital of towers and golden glass that rose from the steppe — it was renamed Nur-Sultan for a few years before becoming Astana again.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Kazakhstan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Kazakhstan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Kazakhstan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kazakhstan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-kazakhstan.webp",
+    "alt": "Spark and Mango visiting red rock towers in the Charyn Canyon",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

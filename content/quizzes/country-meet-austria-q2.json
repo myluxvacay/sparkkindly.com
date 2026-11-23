@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-austria-q2",
+  "scheduledDate": "2029-10-15",
+  "brand": "kids",
+  "setId": "country-set-meet-austria",
+  "prompt": "Roughly how big is Austria?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 84,000 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 37,800 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 218,400 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 10,080 square kilometres"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Austria covers about 84,000 square kilometres of land and inland water.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Austria | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Austria",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Austria — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Austria",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-austria.webp",
+    "alt": "Spark and Mango visiting Schönbrunn Palace and its gardens in Vienna",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-azerbaijan-q2",
+  "scheduledDate": "2029-10-17",
+  "brand": "kids",
+  "setId": "country-set-meet-azerbaijan",
+  "prompt": "Which of these is a famous place to visit in Azerbaijan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the mud volcanoes of Gobustan"
+    },
+    {
+      "id": "b",
+      "text": "Lido Beach, Mogadishu"
+    },
+    {
+      "id": "c",
+      "text": "Cricova and Mileștii Mici wine cellars"
+    },
+    {
+      "id": "d",
+      "text": "the Grand Mosque and Souq Al-Mubarakiya"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "the mud volcanoes of Gobustan is one of the two places we'd love to visit in Azerbaijan. Azerbaijan has hundreds of mud volcanoes — grey cones that bubble and plop cold mud.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Azerbaijan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Azerbaijan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Azerbaijan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Azerbaijan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-azerbaijan.webp",
+    "alt": "Spark and Mango visiting the stone Maiden Tower in Baku's old city with the Flame Towers behind",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

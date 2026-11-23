@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-slovenia-q1",
+  "scheduledDate": "2030-07-31",
+  "brand": "kids",
+  "setId": "country-set-meet-slovenia",
+  "prompt": "In which part of the world is Slovenia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Southern Europe"
+    },
+    {
+      "id": "b",
+      "text": "Eastern Asia"
+    },
+    {
+      "id": "c",
+      "text": "Southern Asia"
+    },
+    {
+      "id": "d",
+      "text": "Australia and New Zealand"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Slovenia is in Southern Europe, part of Europe.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Slovenia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Slovenia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Slovenia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Slovenia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-slovenia.webp",
+    "alt": "Spark and Mango visiting the island church on Lake Bled with its cliff castle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

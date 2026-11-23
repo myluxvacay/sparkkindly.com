@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-solomon-islands",
+  "slug": "meet-solomon-islands",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Solomon Islands",
+  "description": "Travel to Solomon Islands with Spark and Mango: a country in Melanesia whose capital is Honiara, where people speak Pijin and pay with the Solomon Islands dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-solomon-islands.webp",
+    "alt": "Spark and Mango visiting a coral-covered shipwreck in clear shallows at Bonegi Beach",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "oceania",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Solomon Islands | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Solomon-Islands",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Solomon Islands — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solomon_Islands",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Solomon Islands?",
+      "paragraphs": [
+        "Solomon Islands is a country in Melanesia, which is part of Oceania. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Solomon Islands is Honiara."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Solomon Islands speak Pijin and English. Pijin is the language most people use to chat with each other across the islands; English is the official language of government and school."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Solomon Islands is the Solomon Islands dollar."
+      ]
+    },
+    {
+      "heading": "How big is Solomon Islands?",
+      "paragraphs": [
+        "Solomon Islands covers about 29,000 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Guadalcanal's battlefields, memorials and the sunken ships at Bonegi Beach tell the story of 1942 — history you can walk and snorkel.",
+        "Marovo is the world's largest saltwater lagoon, a maze of reef islands famous for master woodcarvers, diving and village stays."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Solomon Islands on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Solomon Islands in one breath: a country in Melanesia, capital Honiara, where people speak Pijin and pay with the Solomon Islands dollar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Solomon Islands)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Solomon Islands.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Solomon Islands always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Solomon Islands on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

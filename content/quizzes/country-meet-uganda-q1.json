@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-uganda-q1",
+  "scheduledDate": "2030-09-17",
+  "brand": "kids",
+  "setId": "country-set-meet-uganda",
+  "prompt": "In which part of the world is Uganda?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Eastern Asia"
+    },
+    {
+      "id": "b",
+      "text": "Southern Asia"
+    },
+    {
+      "id": "c",
+      "text": "Central Asia"
+    },
+    {
+      "id": "d",
+      "text": "Eastern Africa"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Uganda is in Eastern Africa, part of Africa.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Uganda | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Uganda",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Uganda — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Uganda",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-uganda.webp",
+    "alt": "Spark and Mango visiting a mountain gorilla in the misty green forest of Bwindi",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

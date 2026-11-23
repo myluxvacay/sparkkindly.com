@@ -1,0 +1,108 @@
+{
+  "id": "country-meet-united-states",
+  "slug": "meet-united-states",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet United States",
+  "description": "Travel to United States with Spark and Mango: a country in Northern America whose capital is Washington D.C., where people speak English and pay with the US dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-united-states.webp",
+    "alt": "Spark and Mango visiting the vast layered depths of the Grand Canyon at sunset",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "United States | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/United-States",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "United States — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/United_States",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is United States?",
+      "paragraphs": [
+        "United States is a country in Northern America, which is part of North America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of United States is Washington D.C.. Washington, D.C. is the capital — the 'D.C.' stands for District of Columbia, a special district that belongs to no single state."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in United States is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of United States is the US dollar."
+      ]
+    },
+    {
+      "heading": "How big is United States?",
+      "paragraphs": [
+        "United States covers about 9,629,000 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "Yellowstone National Park contains geysers heated by geothermal energy. Old Faithful is Yellowstone's most famous geyser, erupting on a schedule rangers can predict. Under the park sleeps a giant volcano — a supervolcano."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Grand Canyon is a mile deep and 18 miles wide — families ride the rim train, walk the Trail of Time and watch the rocks change colour at sunset.",
+        "Yellowstone, the world's first national park, has geysers like Old Faithful, rainbow hot springs and valleys of bison, elk and bears."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find United States on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "United States in one breath: a country in Northern America, capital Washington D.C., where people speak English and pay with the US dollar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find United States)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about United States.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the high-up places in this article, trails and viewpoints in United States need sturdy shoes and a grown-up along."
+  ],
+  "screenFreeExtension": "Screen-free mission: find United States on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

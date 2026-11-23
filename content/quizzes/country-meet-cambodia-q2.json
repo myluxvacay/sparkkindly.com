@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-cambodia-q2",
+  "scheduledDate": "2029-11-22",
+  "brand": "kids",
+  "setId": "country-set-meet-cambodia",
+  "prompt": "Which of these is a famous place to visit in Cambodia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Amsterdam's canals"
+    },
+    {
+      "id": "b",
+      "text": "the temples of Angkor Thom and Ta Prohm"
+    },
+    {
+      "id": "c",
+      "text": "the Sahara dunes near Timimoun"
+    },
+    {
+      "id": "d",
+      "text": "the Wahiba Sands"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "the temples of Angkor Thom and Ta Prohm is one of the two places we'd love to visit in Cambodia. Near Angkor Wat, giant stone faces smile from the Bayon temple, and at Ta Prohm, enormous tree roots pour over the ruins like melted wax.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Cambodia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Cambodia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Cambodia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cambodia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-cambodia.webp",
+    "alt": "Spark and Mango visiting the five towers of Angkor Wat reflected in its moat at sunrise",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

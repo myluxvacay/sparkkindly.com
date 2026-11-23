@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-moldova-q1",
+  "scheduledDate": "2030-05-10",
+  "brand": "kids",
+  "setId": "country-set-meet-moldova",
+  "prompt": "What is the capital of Moldova?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Andorra la Vella"
+    },
+    {
+      "id": "b",
+      "text": "New Delhi"
+    },
+    {
+      "id": "c",
+      "text": "Chișinău"
+    },
+    {
+      "id": "d",
+      "text": "Pretoria"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Chișinău is the capital of Moldova. It is the city where the country's government works.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Moldova | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Moldova",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Moldova — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Moldova",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-moldova.webp",
+    "alt": "Spark and Mango visiting the cave monastery in the cliffs of Orheiul Vechi above the river",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

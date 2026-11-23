@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-suriname-q1",
+  "scheduledDate": "2030-08-16",
+  "brand": "kids",
+  "setId": "country-set-meet-suriname",
+  "prompt": "In which part of the world is Suriname?",
+  "options": [
+    {
+      "id": "a",
+      "text": "South America"
+    },
+    {
+      "id": "b",
+      "text": "Western Europe"
+    },
+    {
+      "id": "c",
+      "text": "Eastern Africa"
+    },
+    {
+      "id": "d",
+      "text": "Middle Africa"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Suriname is in South America.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Suriname | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Suriname",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Suriname — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Suriname",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-suriname.webp",
+    "alt": "Spark and Mango visiting white wooden colonial buildings in Paramaribo",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

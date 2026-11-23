@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-israel-q1",
+  "scheduledDate": "2030-03-05",
+  "brand": "kids",
+  "setId": "country-set-meet-israel",
+  "prompt": "What is the money of Israel called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Israeli new shekel"
+    },
+    {
+      "id": "b",
+      "text": "Barbadian dollar"
+    },
+    {
+      "id": "c",
+      "text": "Malagasy ariary"
+    },
+    {
+      "id": "d",
+      "text": "Panamanian balboa"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Israel is the Israeli new shekel (ILS).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Israel | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Israel",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Israel — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Israel",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-israel.webp",
+    "alt": "Spark and Mango visiting the golden Dome of the Rock and old stone walls of Jerusalem",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

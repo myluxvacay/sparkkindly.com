@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-romania-q1",
+  "scheduledDate": "2030-06-29",
+  "brand": "kids",
+  "setId": "country-set-meet-romania",
+  "prompt": "In which part of the world is Romania?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Eastern Europe"
+    },
+    {
+      "id": "b",
+      "text": "Southern Europe"
+    },
+    {
+      "id": "c",
+      "text": "South America"
+    },
+    {
+      "id": "d",
+      "text": "Middle Africa"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Romania is in Eastern Europe, part of Europe.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Romania | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Romania",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Romania — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Romania",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-romania.webp",
+    "alt": "Spark and Mango visiting Bran Castle on its rocky hill in Transylvania",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

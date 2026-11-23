@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-brazil-q1",
+  "scheduledDate": "2029-11-11",
+  "brand": "kids",
+  "setId": "country-set-meet-brazil",
+  "prompt": "Which of these is a main language people speak in Brazil?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Portuguese"
+    },
+    {
+      "id": "b",
+      "text": "Nyanja"
+    },
+    {
+      "id": "c",
+      "text": "Tajik"
+    },
+    {
+      "id": "d",
+      "text": "Burmese"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "People in Brazil speak Portuguese.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Brazil | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Brazil",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Brazil — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Brazil",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-brazil.webp",
+    "alt": "Spark and Mango visiting Christ the Redeemer above Rio de Janeiro's bays and beaches",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

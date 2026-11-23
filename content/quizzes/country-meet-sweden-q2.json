@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-sweden-q2",
+  "scheduledDate": "2030-08-21",
+  "brand": "kids",
+  "setId": "country-set-meet-sweden",
+  "prompt": "Which of these is a famous place to visit in Sweden?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Pico do Fogo volcano"
+    },
+    {
+      "id": "b",
+      "text": "Abisko and the Aurora Sky Station"
+    },
+    {
+      "id": "c",
+      "text": "Luxor and the Valley of the Kings"
+    },
+    {
+      "id": "d",
+      "text": "Victoria Falls town and the falls"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Abisko and the Aurora Sky Station is one of the two places we'd love to visit in Sweden. Abisko National Park in Swedish Lapland sits in a rain shadow that clears the sky — one of the best places on Earth to watch the northern lights.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sweden | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Sweden",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Sweden — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sweden",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-sweden.webp",
+    "alt": "Spark and Mango visiting the colourful old town waterfront of Stockholm",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

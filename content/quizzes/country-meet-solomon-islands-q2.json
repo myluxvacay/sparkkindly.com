@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-solomon-islands-q2",
+  "scheduledDate": "2030-08-03",
+  "brand": "kids",
+  "setId": "country-set-meet-solomon-islands",
+  "prompt": "Which of these is a famous place to visit in Solomon Islands?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Ganvie, the lake village"
+    },
+    {
+      "id": "b",
+      "text": "Guadalcanal's WWII sites and Bonegi wrecks"
+    },
+    {
+      "id": "c",
+      "text": "Mont Saint-Michel"
+    },
+    {
+      "id": "d",
+      "text": "Petra"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Guadalcanal's WWII sites and Bonegi wrecks is one of the two places we'd love to visit in Solomon Islands. Guadalcanal's battlefields, memorials and the sunken ships at Bonegi Beach tell the story of 1942 — history you can walk and snorkel.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Solomon Islands | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Solomon-Islands",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Solomon Islands — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solomon_Islands",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-solomon-islands.webp",
+    "alt": "Spark and Mango visiting a coral-covered shipwreck in clear shallows at Bonegi Beach",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-tajikistan-q2",
+  "scheduledDate": "2030-08-27",
+  "brand": "kids",
+  "setId": "country-set-meet-tajikistan",
+  "prompt": "Which of these is a famous place to visit in Tajikistan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Kuwait Towers"
+    },
+    {
+      "id": "b",
+      "text": "the Pamir Highway and the Wakhan Valley"
+    },
+    {
+      "id": "c",
+      "text": "Vienna — Schönbrunn Palace and the Ringstrasse"
+    },
+    {
+      "id": "d",
+      "text": "the Rock Islands and Jellyfish Lake"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "the Pamir Highway and the Wakhan Valley is one of the two places we'd love to visit in Tajikistan. The Pamir Highway is one of the world's highest roads, winding through the 'Roof of the World' past yaks, hot springs and views of Hindu Kush giants.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Tajikistan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Tajikistan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Tajikistan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tajikistan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-tajikistan.webp",
+    "alt": "Spark and Mango visiting a winding mountain road in the Pamir Mountains with snowy peaks",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

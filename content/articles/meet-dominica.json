@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-dominica",
+  "slug": "meet-dominica",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Dominica",
+  "description": "Travel to Dominica with Spark and Mango: a country in the Caribbean whose capital is Roseau, where people speak English and pay with the East Caribbean dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-dominica.webp",
+    "alt": "Spark and Mango visiting the steaming Boiling Lake in Dominica's rainforest mountains",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Dominica | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Dominica",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Dominica — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dominica",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Dominica?",
+      "paragraphs": [
+        "Dominica is a country in the Caribbean, which is part of North America. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Dominica is Roseau."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Dominica is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Dominica is the East Caribbean dollar."
+      ]
+    },
+    {
+      "heading": "How big is Dominica?",
+      "paragraphs": [
+        "Dominica covers about 751 square kilometres of land and inland water. That makes it about twice the size of Saint Vincent and the Grenadines."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Dominica, the Nature Island, hides a flooded fumarole lake that actually boils, plus the twin Trafalgar Falls in its UNESCO-listed rainforest park.",
+        "At Champagne Reef, volcanic bubbles fizz up through the snorkelling water like a glass of soda — warm, bubbly and full of seahorses."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Dominica on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Dominica in one breath: a country in the Caribbean, capital Roseau, where people speak English and pay with the East Caribbean dollar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Dominica)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Dominica on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Dominica always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Dominica on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

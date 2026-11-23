@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-italy-q1",
+  "scheduledDate": "2030-03-07",
+  "brand": "kids",
+  "setId": "country-set-meet-italy",
+  "prompt": "What is the capital of Italy?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Tunis"
+    },
+    {
+      "id": "b",
+      "text": "Port Vila"
+    },
+    {
+      "id": "c",
+      "text": "Rome"
+    },
+    {
+      "id": "d",
+      "text": "Kabul"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Rome is the capital of Italy. It is the city where the country's government works.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Italy | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Italy",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Italy — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Italy",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-italy.webp",
+    "alt": "Spark and Mango visiting the Colosseum in Rome at golden hour",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

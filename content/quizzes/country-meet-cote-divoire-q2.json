@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-cote-divoire-q2",
+  "scheduledDate": "2029-12-18",
+  "brand": "kids",
+  "setId": "country-set-meet-cote-divoire",
+  "prompt": "Which of these is a famous place to visit in Côte d’Ivoire?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Waza National Park"
+    },
+    {
+      "id": "b",
+      "text": "South Luangwa National Park"
+    },
+    {
+      "id": "c",
+      "text": "the Basilica of Our Lady of Peace, Yamoussoukro"
+    },
+    {
+      "id": "d",
+      "text": "Rovaniemi and Santa Claus Village, Lapland"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "the Basilica of Our Lady of Peace, Yamoussoukro is one of the two places we'd love to visit in Côte d’Ivoire. Yamoussoukro's basilica is one of the largest churches in the world, with a soaring dome and glowing stained glass — and sacred crocodiles live in the lake beside the presidential palace nearby.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Côte d’Ivoire | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/C%C3%B4te-d%E2%80%99Ivoire",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Côte d’Ivoire — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/C%C3%B4te_d%E2%80%99Ivoire",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-cote-divoire.webp",
+    "alt": "Spark and Mango visiting the soaring dome of the great basilica at Yamoussoukro beside its lake",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-malaysia-q2",
+  "scheduledDate": "2030-04-23",
+  "brand": "kids",
+  "setId": "country-set-meet-malaysia",
+  "prompt": "Which of these is a famous place to visit in Malaysia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Mamanuca Islands"
+    },
+    {
+      "id": "b",
+      "text": "Kinabalu Park, Borneo"
+    },
+    {
+      "id": "c",
+      "text": "the Rock Islands and Jellyfish Lake"
+    },
+    {
+      "id": "d",
+      "text": "Grand-Bassam old town"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Kinabalu Park, Borneo is one of the two places we'd love to visit in Malaysia. In Malaysian Borneo, Kinabalu Park surrounds Southeast Asia's mighty Mount Kinabalu, with rainforest trails, giant pitcher plants and rafflesia, the world's largest flower.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Malaysia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Malaysia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Malaysia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Malaysia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-malaysia.webp",
+    "alt": "Spark and Mango visiting the twin Petronas Towers rising over Kuala Lumpur",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

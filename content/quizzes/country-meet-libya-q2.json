@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-libya-q2",
+  "scheduledDate": "2030-04-09",
+  "brand": "kids",
+  "setId": "country-set-meet-libya",
+  "prompt": "Which of these is a famous place to visit in Libya?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Gorongosa National Park"
+    },
+    {
+      "id": "b",
+      "text": "Leptis Magna"
+    },
+    {
+      "id": "c",
+      "text": "Anibare Bay"
+    },
+    {
+      "id": "d",
+      "text": "Vilnius Old Town and the Hill of Crosses"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Leptis Magna is one of the two places we'd love to visit in Libya. Leptis Magna is one of the best-preserved Roman cities anywhere — marble streets, a huge theatre and triumphal arches standing by the Mediterranean Sea.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Libya | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Libya",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Libya — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Libya",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-libya.webp",
+    "alt": "Spark and Mango visiting Roman marble columns and arches of Leptis Magna beside the Mediterranean",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

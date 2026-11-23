@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-tunisia-q2",
+  "scheduledDate": "2030-09-10",
+  "brand": "kids",
+  "setId": "country-set-meet-tunisia",
+  "prompt": "Roughly how big is Tunisia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 19,680 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 73,800 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 164,000 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 426,400 square kilometres"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Tunisia covers about 164,000 square kilometres of land and inland water.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Tunisia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Tunisia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Tunisia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tunisia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-tunisia.webp",
+    "alt": "Spark and Mango visiting the great oval Roman amphitheatre of El Jem",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

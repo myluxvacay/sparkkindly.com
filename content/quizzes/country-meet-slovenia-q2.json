@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-slovenia-q2",
+  "scheduledDate": "2030-08-01",
+  "brand": "kids",
+  "setId": "country-set-meet-slovenia",
+  "prompt": "Which of these is a famous place to visit in Slovenia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Kaieteur Falls"
+    },
+    {
+      "id": "b",
+      "text": "Lahemaa National Park"
+    },
+    {
+      "id": "c",
+      "text": "Postojna Cave and Predjama Castle"
+    },
+    {
+      "id": "d",
+      "text": "Asmara, the art deco capital"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Postojna Cave and Predjama Castle is one of the two places we'd love to visit in Slovenia. Ride an underground train into Postojna Cave's halls of stalactites, then see Predjama Castle built into a cliff cave mouth nearby.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Slovenia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Slovenia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Slovenia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Slovenia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-slovenia.webp",
+    "alt": "Spark and Mango visiting the island church on Lake Bled with its cliff castle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

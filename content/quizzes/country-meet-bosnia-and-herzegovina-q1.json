@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-bosnia-and-herzegovina-q1",
+  "scheduledDate": "2029-11-07",
+  "brand": "kids",
+  "setId": "country-set-meet-bosnia-and-herzegovina",
+  "prompt": "What is the capital of Bosnia and Herzegovina?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Kuwait City"
+    },
+    {
+      "id": "b",
+      "text": "Kyiv"
+    },
+    {
+      "id": "c",
+      "text": "Mbabane"
+    },
+    {
+      "id": "d",
+      "text": "Sarajevo"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Sarajevo is the capital of Bosnia and Herzegovina. It is the city where the country's government works.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Bosnia and Herzegovina | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Bosnia-and-Herzegovina",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Bosnia and Herzegovina — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-bosnia-and-herzegovina.webp",
+    "alt": "Spark and Mango visiting the arched Stari Most bridge over the emerald Neretva River in Mostar",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

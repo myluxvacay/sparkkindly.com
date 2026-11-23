@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-samoa",
+  "slug": "meet-samoa",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Samoa",
+  "description": "Travel to Samoa with Spark and Mango: a country in Polynesia whose capital is Apia, where people speak Samoan and pay with the Samoan tala — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-samoa.webp",
+    "alt": "Spark and Mango visiting the green swimming hole of To Sua Ocean Trench with its ladder",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "oceania",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Samoa | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Samoa",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Samoa — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Samoa",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Samoa?",
+      "paragraphs": [
+        "Samoa is a country in Polynesia, which is part of Oceania. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Samoa is Apia."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Samoa speak Samoan and English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Samoa is the Samoan tala."
+      ]
+    },
+    {
+      "heading": "How big is Samoa?",
+      "paragraphs": [
+        "Samoa covers about 3,000 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "To Sua is a giant natural swimming hole in a lava tube — climb down a long ladder to swim in jewel-green water connected to the sea.",
+        "Lalomanu's white beach is Samoa's favourite, and on Savai'i the Alofaaga blowholes shoot sea water high into the air through lava tubes."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Samoa on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Samoa in one breath: a country in Polynesia, capital Apia, where people speak Samoan and pay with the Samoan tala.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Samoa)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Samoa on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Samoa always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Samoa on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

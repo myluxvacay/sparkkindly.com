@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-mali-q1",
+  "scheduledDate": "2030-04-26",
+  "brand": "kids",
+  "setId": "country-set-meet-mali",
+  "prompt": "In which part of the world is Mali?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Southern Europe"
+    },
+    {
+      "id": "b",
+      "text": "Southern Africa"
+    },
+    {
+      "id": "c",
+      "text": "Western Africa"
+    },
+    {
+      "id": "d",
+      "text": "Northern Africa"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Mali is in Western Africa, part of Africa.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Mali | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Mali",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Mali — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mali",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-mali.webp",
+    "alt": "Spark and Mango visiting the great mud-brick mosque of Djenné with wooden beams, like a giant sandcastle",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

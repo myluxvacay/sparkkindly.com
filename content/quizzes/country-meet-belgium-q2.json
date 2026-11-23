@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-belgium-q2",
+  "scheduledDate": "2029-10-29",
+  "brand": "kids",
+  "setId": "country-set-meet-belgium",
+  "prompt": "Which of these is a famous place to visit in Belgium?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Berlin — the Brandenburg Gate and Museum Island"
+    },
+    {
+      "id": "b",
+      "text": "Kibira National Park"
+    },
+    {
+      "id": "c",
+      "text": "Brussels — Grand Place and the Atomium"
+    },
+    {
+      "id": "d",
+      "text": "Machu Picchu"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Brussels — Grand Place and the Atomium is one of the two places we'd love to visit in Belgium. Brussels' Grand Place is one of Europe's grandest squares, and the Atomium — a giant iron atom built for a world's fair — has lifts inside its spheres.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Belgium | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Belgium",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Belgium — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Belgium",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-belgium.webp",
+    "alt": "Spark and Mango visiting a canal with stone bridges and the Belfry tower in Bruges",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

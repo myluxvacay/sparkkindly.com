@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-united-kingdom",
+  "slug": "meet-united-kingdom",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet United Kingdom",
+  "description": "Travel to United Kingdom with Spark and Mango: a country in Northern Europe whose capital is London, where people speak English and pay with the British pound — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-united-kingdom.webp",
+    "alt": "Spark and Mango visiting the Tower Bridge and the Thames in London",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "United Kingdom | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/United-Kingdom",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "United Kingdom — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/United_Kingdom",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is United Kingdom?",
+      "paragraphs": [
+        "United Kingdom is a country in Northern Europe, which is part of Europe. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of United Kingdom is London."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in United Kingdom is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of United Kingdom is the British pound."
+      ]
+    },
+    {
+      "heading": "How big is United Kingdom?",
+      "paragraphs": [
+        "United Kingdom covers about 243,000 square kilometres of land and inland water. That makes it about half the size of Spain."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "London packs in wonders: the Tower of London's Crown Jewels, Big Ben and the Thames, plus free museums of dinosaurs, rockets and mummies.",
+        "Edinburgh Castle crowns a volcanic rock above the Royal Mile's narrow closes — and the city hosts the world's biggest arts festival each August."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find United Kingdom on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "United Kingdom in one breath: a country in Northern Europe, capital London, where people speak English and pay with the British pound.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find United Kingdom)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about United Kingdom.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to United Kingdom — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find United Kingdom on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

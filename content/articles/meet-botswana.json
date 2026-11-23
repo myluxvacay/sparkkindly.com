@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-botswana",
+  "slug": "meet-botswana",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Botswana",
+  "description": "Travel to Botswana with Spark and Mango: a country in Southern Africa whose capital is Gaborone, where people speak Tswana and pay with the Botswana pula — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-botswana.webp",
+    "alt": "Spark and Mango visiting a mokoro canoe gliding through the reed channels of the Okavango Delta with elephants on an island shore",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "africa",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Botswana | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Botswana",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Botswana — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Botswana",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Botswana?",
+      "paragraphs": [
+        "Botswana is a country in Southern Africa, which is part of Africa."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Botswana is Gaborone."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Botswana speak Tswana and English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Botswana is the Botswana pula."
+      ]
+    },
+    {
+      "heading": "How big is Botswana?",
+      "paragraphs": [
+        "Botswana covers about 582,000 square kilometres of land and inland water. That makes it about half the size of South Africa."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Every year floodwater spreads across the Kalahari to make the Okavango Delta, a watery maze of islands where elephants, hippos and lions wander. Visitors glide silently in mokoro canoes.",
+        "Chobe is famous for its enormous elephant herds. On a boat ride along the Chobe River you might count hundreds of elephants coming down to drink and splash at sunset."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Botswana on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Botswana in one breath: a country in Southern Africa, capital Gaborone, where people speak Tswana and pay with the Botswana pula.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Botswana)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Botswana on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Botswana always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Botswana on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

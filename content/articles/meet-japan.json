@@ -1,0 +1,108 @@
+{
+  "id": "country-meet-japan",
+  "slug": "meet-japan",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Japan",
+  "description": "Travel to Japan with Spark and Mango: a country in Eastern Asia whose capital is Tokyo, where people speak Japanese and pay with the Japanese yen — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-japan.webp",
+    "alt": "Spark and Mango visiting the towering bamboo grove path at Arashiyama in Kyoto",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Japan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Japan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Japan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Japan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Japan?",
+      "paragraphs": [
+        "Japan is a country in Eastern Asia, which is part of Asia. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Japan is Tokyo."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Japan is Japanese."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Japan is the Japanese yen."
+      ]
+    },
+    {
+      "heading": "How big is Japan?",
+      "paragraphs": [
+        "Japan covers about 378,000 square kilometres of land and inland water. That makes it about half the size of Türkiye."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "Japan has a high-speed railway system called the Shinkansen, known for its bullet trains. The fastest bullet trains whisk families between cities at up to 320 kilometres per hour."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Kyoto holds over a thousand temples — walk the vermilion gates of Fushimi Inari, the golden pavilion of Kinkaku-ji and the whispering Arashiyama bamboo grove.",
+        "Mount Fuji is Japan's beloved sacred mountain. Families view its perfect cone from Lake Kawaguchi, ride the Hakone ropeway, or climb it in summer season."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Japan on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Japan in one breath: a country in Eastern Asia, capital Tokyo, where people speak Japanese and pay with the Japanese yen.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Japan)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Japan on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the high-up places in this article, trails and viewpoints in Japan need sturdy shoes and a grown-up along."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Japan on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

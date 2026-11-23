@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-ecuador-q1",
+  "scheduledDate": "2030-01-04",
+  "brand": "kids",
+  "setId": "country-set-meet-ecuador",
+  "prompt": "In which part of the world is Ecuador?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Melanesia"
+    },
+    {
+      "id": "b",
+      "text": "South America"
+    },
+    {
+      "id": "c",
+      "text": "Western Asia"
+    },
+    {
+      "id": "d",
+      "text": "Polynesia"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Ecuador is in South America.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Ecuador | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Ecuador",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Ecuador — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ecuador",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-ecuador.webp",
+    "alt": "Spark and Mango visiting a giant tortoise and blue-footed boobies in the Galápagos Islands",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

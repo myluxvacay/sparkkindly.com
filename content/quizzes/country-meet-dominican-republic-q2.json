@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-dominican-republic-q2",
+  "scheduledDate": "2030-01-03",
+  "brand": "kids",
+  "setId": "country-set-meet-dominican-republic",
+  "prompt": "Which of these is a famous place to visit in Dominican Republic?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Dublin — Trinity College and the Book of Kells"
+    },
+    {
+      "id": "b",
+      "text": "Valletta"
+    },
+    {
+      "id": "c",
+      "text": "Punta Cana's beaches"
+    },
+    {
+      "id": "d",
+      "text": "the Asa Wright Nature Centre, Trinidad"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Punta Cana's beaches is one of the two places we'd love to visit in Dominican Republic. Punta Cana's palm-fringed white beaches and calm turquoise water are the Caribbean's classic family resort coast.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Dominican Republic | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Dominican-Republic",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Dominican Republic — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dominican_Republic",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-dominican-republic.webp",
+    "alt": "Spark and Mango visiting palm trees and turquoise water on a Punta Cana beach",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

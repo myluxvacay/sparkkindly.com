@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-bosnia-and-herzegovina-q2",
+  "scheduledDate": "2029-11-08",
+  "brand": "kids",
+  "setId": "country-set-meet-bosnia-and-herzegovina",
+  "prompt": "Roughly how big is Bosnia and Herzegovina?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 22,950 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 132,600 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 6,120 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 51,000 square kilometres"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Bosnia and Herzegovina covers about 51,000 square kilometres of land and inland water.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Bosnia and Herzegovina | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Bosnia-and-Herzegovina",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Bosnia and Herzegovina — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-bosnia-and-herzegovina.webp",
+    "alt": "Spark and Mango visiting the arched Stari Most bridge over the emerald Neretva River in Mostar",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-trinidad-and-tobago",
+  "slug": "meet-trinidad-and-tobago",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Trinidad and Tobago",
+  "description": "Travel to Trinidad and Tobago with Spark and Mango: a country in the Caribbean whose capital is Port of Spain, where people speak English and pay with the Trinidad and Tobago dollar — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-trinidad-and-tobago.webp",
+    "alt": "Spark and Mango visiting hummingbirds at feeders on a veranda above rainforest in Trinidad",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Trinidad and Tobago | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Trinidad-and-Tobago",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Trinidad and Tobago — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Trinidad_and_Tobago",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Trinidad and Tobago?",
+      "paragraphs": [
+        "Trinidad and Tobago is a country in the Caribbean, which is part of North America. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Trinidad and Tobago is Port of Spain."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Trinidad and Tobago is English."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Trinidad and Tobago is the Trinidad and Tobago dollar."
+      ]
+    },
+    {
+      "heading": "How big is Trinidad and Tobago?",
+      "paragraphs": [
+        "Trinidad and Tobago covers about 5,000 square kilometres of land and inland water. That makes it about half the size of Jamaica."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "In Trinidad's Arima Valley, Asa Wright's veranda overlooks rainforest alive with hummingbirds, toucans and bellbirds — a birder's paradise.",
+        "Tobago is the relaxed sister island — glass-bottom boats tour Buccoo Reef and Nylon Pool, and Pigeon Point's jetty is the Caribbean postcard."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Trinidad and Tobago on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Trinidad and Tobago in one breath: a country in the Caribbean, capital Port of Spain, where people speak English and pay with the Trinidad and Tobago dollar.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Trinidad and Tobago)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Trinidad and Tobago on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Trinidad and Tobago always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Trinidad and Tobago on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

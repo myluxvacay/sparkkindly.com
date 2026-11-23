@@ -1,0 +1,108 @@
+{
+  "id": "country-meet-china",
+  "slug": "meet-china",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet China",
+  "description": "Travel to China with Spark and Mango: a country in Eastern Asia whose capital is Beijing, where people speak Chinese and pay with the Chinese yuan — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-china.webp",
+    "alt": "Spark and Mango visiting the Great Wall winding over green mountain ridges",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "China | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/China",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "China — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/China",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is China?",
+      "paragraphs": [
+        "China is a country in Eastern Asia, which is part of Asia."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of China is Beijing."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in China is Chinese."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of China is the Chinese yuan."
+      ]
+    },
+    {
+      "heading": "How big is China?",
+      "paragraphs": [
+        "China covers about 9,640,000 square kilometres of land and inland water. It is the largest country in Asia. That makes it about three times the size of India."
+      ]
+    },
+    {
+      "heading": "A fact to wow your friends",
+      "paragraphs": [
+        "The Great Wall of China consists of many walls and fortifications built over centuries. If you joined every wall together, they would stretch more than halfway around the Earth. Guards once watched from its towers for invaders crossing the mountains."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Great Wall winds over mountains for thousands of kilometres. Families love the restored sections near Beijing, where you can walk the wall and ride a cable car up.",
+        "Thousands of life-size clay soldiers — each with a different face — have guarded the first emperor's tomb for over 2,000 years. The pits at Xi'an are astonishing."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find China on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "China in one breath: a country in Eastern Asia, capital Beijing, where people speak Chinese and pay with the Chinese yuan.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find China)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Independent reading for confident readers; the Think and talk questions about China make a good family discussion afterwards.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to China — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find China on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

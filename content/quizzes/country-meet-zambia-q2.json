@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-zambia-q2",
+  "scheduledDate": "2030-10-10",
+  "brand": "kids",
+  "setId": "country-set-meet-zambia",
+  "prompt": "Roughly how big is Zambia?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 90,360 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 753,000 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 338,850 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 1,957,800 square kilometres"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Zambia covers about 753,000 square kilometres of land and inland water.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Zambia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Zambia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Zambia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zambia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-zambia.webp",
+    "alt": "Spark and Mango visiting the mile-wide curtain of Victoria Falls with rainbows in the spray",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-sri-lanka-q1",
+  "scheduledDate": "2030-08-12",
+  "brand": "kids",
+  "setId": "country-set-meet-sri-lanka",
+  "prompt": "What is the money of Sri Lanka called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Romanian leu"
+    },
+    {
+      "id": "b",
+      "text": "South Korean won"
+    },
+    {
+      "id": "c",
+      "text": "South African rand"
+    },
+    {
+      "id": "d",
+      "text": "Sri Lankan rupee"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The money of Sri Lanka is the Sri Lankan rupee (LKR).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Sri Lanka | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Sri-Lanka",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Sri Lanka — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sri_Lanka",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-sri-lanka.webp",
+    "alt": "Spark and Mango visiting the great rock fortress of Sigiriya rising from green forest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

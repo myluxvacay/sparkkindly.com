@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-cambodia-q1",
+  "scheduledDate": "2029-11-21",
+  "brand": "kids",
+  "setId": "country-set-meet-cambodia",
+  "prompt": "What is the money of Cambodia called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Iraqi dinar"
+    },
+    {
+      "id": "b",
+      "text": "Cambodian riel"
+    },
+    {
+      "id": "c",
+      "text": "Afghan afghani"
+    },
+    {
+      "id": "d",
+      "text": "Turkmenistani manat"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The money of Cambodia is the Cambodian riel (KHR).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Cambodia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Cambodia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Cambodia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cambodia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-cambodia.webp",
+    "alt": "Spark and Mango visiting the five towers of Angkor Wat reflected in its moat at sunrise",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

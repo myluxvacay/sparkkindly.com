@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-djibouti-q1",
+  "scheduledDate": "2029-12-29",
+  "brand": "kids",
+  "setId": "country-set-meet-djibouti",
+  "prompt": "Which of these is a main language people speak in Djibouti?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Fula"
+    },
+    {
+      "id": "b",
+      "text": "Dari"
+    },
+    {
+      "id": "c",
+      "text": "Quechua"
+    },
+    {
+      "id": "d",
+      "text": "Somali"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "People in Djibouti speak Somali, Afar, Arabic and French.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Djibouti | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Djibouti",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Djibouti — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Djibouti",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-djibouti.webp",
+    "alt": "Spark and Mango visiting the dazzling white salt shore of Lake Assal ringed by black lava fields",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

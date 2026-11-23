@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-mauritania-q1",
+  "scheduledDate": "2030-05-02",
+  "brand": "kids",
+  "setId": "country-set-meet-mauritania",
+  "prompt": "What is the capital of Mauritania?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Nouakchott"
+    },
+    {
+      "id": "b",
+      "text": "Doha"
+    },
+    {
+      "id": "c",
+      "text": "Riga"
+    },
+    {
+      "id": "d",
+      "text": "South Tarawa"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Nouakchott is the capital of Mauritania. It is the city where the country's government works.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Mauritania | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Mauritania",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Mauritania — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mauritania",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-mauritania.webp",
+    "alt": "Spark and Mango visiting the stone old town of Chinguetti at the edge of golden Sahara dunes",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

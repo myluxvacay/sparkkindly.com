@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-portugal-q2",
+  "scheduledDate": "2030-06-26",
+  "brand": "kids",
+  "setId": "country-set-meet-portugal",
+  "prompt": "Which of these is a famous place to visit in Portugal?",
+  "options": [
+    {
+      "id": "a",
+      "text": "the Day Forest"
+    },
+    {
+      "id": "b",
+      "text": "the Algarve's sea caves and beaches"
+    },
+    {
+      "id": "c",
+      "text": "the Bay of Kotor"
+    },
+    {
+      "id": "d",
+      "text": "the Ennedi Plateau"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "the Algarve's sea caves and beaches is one of the two places we'd love to visit in Portugal. The Algarve's golden cliffs hide caves like Benagil, where a skylight opens above a secret beach — boat and kayak trips explore them all.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Portugal | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Portugal",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Portugal — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Portugal",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-portugal.webp",
+    "alt": "Spark and Mango visiting a yellow tram climbing through Lisbon's Alfama district",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

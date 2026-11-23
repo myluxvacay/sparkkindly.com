@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-czechia",
+  "slug": "meet-czechia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Czechia",
+  "description": "Travel to Czechia with Spark and Mango: a country in Eastern Europe whose capital is Prague, where people speak Czech and pay with the Czech koruna — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-czechia.webp",
+    "alt": "Spark and Mango visiting Charles Bridge and Prague Castle across the Vltava River at dawn",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Czechia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Czechia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Czechia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Czechia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Czechia?",
+      "paragraphs": [
+        "Czechia is a country in Eastern Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Czechia is Prague."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Czechia speak Czech and Slovak."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Czechia is the Czech koruna."
+      ]
+    },
+    {
+      "heading": "How big is Czechia?",
+      "paragraphs": [
+        "Czechia covers about 79,000 square kilometres of land and inland water. That makes it about three times the size of North Macedonia."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Prague's Charles Bridge, lined with statues, leads to an Old Town where a 600-year-old astronomical clock puts on a show every hour.",
+        "Český Krumlov is a miniature fairytale town looped by a river, with a giant castle, a bear moat and lanes made for wandering."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Czechia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Czechia in one breath: a country in Eastern Europe, capital Prague, where people speak Czech and pay with the Czech koruna.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Czechia)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Czechia on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Czechia — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Czechia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

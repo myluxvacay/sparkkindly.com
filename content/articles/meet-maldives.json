@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-maldives",
+  "slug": "meet-maldives",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Maldives",
+  "description": "Travel to Maldives with Spark and Mango: a country in Southern Asia whose capital is Malé, where people speak Divehi and pay with the Maldivian rufiyaa — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
+  "hero": {
+    "src": "/images/country-meet-maldives.webp",
+    "alt": "Spark and Mango visiting a coral reef with sea turtles in the clear turquoise water of the Maldives",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "asia",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Maldives | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Maldives",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Maldives — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Maldives",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Maldives?",
+      "paragraphs": [
+        "Maldives is a country in Southern Asia, which is part of Asia. It is an island country, surrounded by sea."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Maldives is Malé."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Maldives is Divehi."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Maldives is the Maldivian rufiyaa."
+      ]
+    },
+    {
+      "heading": "How big is Maldives?",
+      "paragraphs": [
+        "Maldives covers about 300 square kilometres of land and inland water. It is the smallest country in Asia."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "The Maldives is a necklace of coral atolls. Families snorkel straight off the beach with turtles, rays and rainbow fish in water as clear as glass.",
+        "Malé is one of the world's smallest, liveliest capitals — fish markets, the golden-domed Islamic Centre and local cafés packed onto one small island."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Maldives on a map or globe. Which continent is it nearest to — and what sea or ocean surrounds it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Maldives in one breath: a country in Southern Asia, capital Malé, where people speak Divehi and pay with the Maldivian rufiyaa.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Maldives)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Independent reading for confident readers; the Think and talk questions about Maldives make a good family discussion afterwards.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Maldives always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Maldives on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

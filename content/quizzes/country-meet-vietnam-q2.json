@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-vietnam-q2",
+  "scheduledDate": "2030-10-06",
+  "brand": "kids",
+  "setId": "country-set-meet-vietnam",
+  "prompt": "Which of these is a famous place to visit in Vietnam?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Lopé National Park"
+    },
+    {
+      "id": "b",
+      "text": "Hallstatt and the Salzkammergut lakes"
+    },
+    {
+      "id": "c",
+      "text": "the Algarve's sea caves and beaches"
+    },
+    {
+      "id": "d",
+      "text": "Ha Long Bay"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Ha Long Bay is one of the two places we'd love to visit in Vietnam. In Ha Long Bay — 'where the dragon descends' — nearly 2,000 limestone islands rise from green water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Vietnam | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Vietnam",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Vietnam — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Vietnam",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-vietnam.webp",
+    "alt": "Spark and Mango visiting limestone islands rising from the emerald water of Ha Long Bay",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

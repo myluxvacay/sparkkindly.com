@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-laos-q1",
+  "scheduledDate": "2030-03-29",
+  "brand": "kids",
+  "setId": "country-set-meet-laos",
+  "prompt": "What is the money of Laos called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Armenian dram"
+    },
+    {
+      "id": "b",
+      "text": "East Caribbean dollar"
+    },
+    {
+      "id": "c",
+      "text": "Namibian dollar"
+    },
+    {
+      "id": "d",
+      "text": "Lao kip"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The money of Laos is the Lao kip (LAK).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Laos | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Laos",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Laos — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Laos",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-laos.webp",
+    "alt": "Spark and Mango visiting golden temple roofs in Luang Prabang beside the Mekong River",
+    "width": 1024,
+    "height": 1024,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

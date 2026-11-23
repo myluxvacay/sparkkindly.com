@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-pakistan-q2",
+  "scheduledDate": "2030-06-10",
+  "brand": "kids",
+  "setId": "country-set-meet-pakistan",
+  "prompt": "Which of these is a famous place to visit in Pakistan?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Lake Titicaca and Copacabana"
+    },
+    {
+      "id": "b",
+      "text": "Lahore Fort and the Badshahi Mosque"
+    },
+    {
+      "id": "c",
+      "text": "Victoria Falls town and the falls"
+    },
+    {
+      "id": "d",
+      "text": "Trakai Island Castle"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Lahore Fort and the Badshahi Mosque is one of the two places we'd love to visit in Pakistan. Lahore's Mughal treasures face each other across gardens — the red Badshahi Mosque, one of the world's largest, and the palaces of Lahore Fort.",
+  "difficulty": "hard",
+  "sources": [
+    {
+      "title": "Pakistan | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Pakistan",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Pakistan — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pakistan",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-pakistan.webp",
+    "alt": "Spark and Mango visiting the Hunza Valley with terraced fields beneath the snowy peak of Rakaposhi",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

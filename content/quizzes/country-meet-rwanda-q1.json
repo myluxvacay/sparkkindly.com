@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-rwanda-q1",
+  "scheduledDate": "2030-07-03",
+  "brand": "kids",
+  "setId": "country-set-meet-rwanda",
+  "prompt": "What is the money of Rwanda called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Rwandan franc"
+    },
+    {
+      "id": "b",
+      "text": "Polish złoty"
+    },
+    {
+      "id": "c",
+      "text": "Barbadian dollar"
+    },
+    {
+      "id": "d",
+      "text": "Argentine peso"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Rwanda is the Rwandan franc (RWF).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Rwanda | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Rwanda",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Rwanda — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rwanda",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-rwanda.webp",
+    "alt": "Spark and Mango visiting misty green volcano peaks in Volcanoes National Park",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-samoa-q2",
+  "scheduledDate": "2030-07-12",
+  "brand": "kids",
+  "setId": "country-set-meet-samoa",
+  "prompt": "Roughly how big is Samoa?",
+  "options": [
+    {
+      "id": "a",
+      "text": "About 3,000 square kilometres"
+    },
+    {
+      "id": "b",
+      "text": "About 1,350 square kilometres"
+    },
+    {
+      "id": "c",
+      "text": "About 7,800 square kilometres"
+    },
+    {
+      "id": "d",
+      "text": "About 360 square kilometres"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Samoa covers about 3,000 square kilometres of land and inland water.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Samoa | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Samoa",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Samoa — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Samoa",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-samoa.webp",
+    "alt": "Spark and Mango visiting the green swimming hole of To Sua Ocean Trench with its ladder",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

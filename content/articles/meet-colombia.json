@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-colombia",
+  "slug": "meet-colombia",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Colombia",
+  "description": "Travel to Colombia with Spark and Mango: a country in South America whose capital is Bogotá, where people speak Spanish and pay with the Colombian peso — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-colombia.webp",
+    "alt": "Spark and Mango visiting flower-draped balconies inside Cartagena's walled old town",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "south-america",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Colombia | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Colombia",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Colombia — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Colombia",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Colombia?",
+      "paragraphs": [
+        "Colombia is a country in South America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Colombia is Bogotá."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Colombia is Spanish."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Colombia is the Colombian peso."
+      ]
+    },
+    {
+      "heading": "How big is Colombia?",
+      "paragraphs": [
+        "Colombia covers about 1,142,000 square kilometres of land and inland water. That makes it about three times the size of Paraguay."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Cartagena's old town is a Caribbean jewel of flower-draped balconies inside mighty sea walls, with the great fortress of San Felipe above.",
+        "In coffee country, the Cocora Valley's wax palms — the world's tallest — poke through cloud forest mist like a Dr Seuss drawing."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Colombia on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Colombia in one breath: a country in South America, capital Bogotá, where people speak Spanish and pay with the Colombian peso.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Colombia)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Colombia.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Colombia — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Colombia on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

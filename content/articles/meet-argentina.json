@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-argentina",
+  "slug": "meet-argentina",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Argentina",
+  "description": "Travel to Argentina with Spark and Mango: a country in South America whose capital is Buenos Aires, where people speak Spanish and pay with the Argentine peso — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-argentina.webp",
+    "alt": "Spark and Mango visiting the vast waterfalls of Iguazu surrounded by rainforest",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "south-america",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Argentina | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Argentina",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Argentina — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Argentina",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Argentina?",
+      "paragraphs": [
+        "Argentina is a country in South America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Argentina is Buenos Aires."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "People in Argentina speak Spanish and Guarani. Guaraní is spoken in the north-east, around Corrientes — a link with neighbouring Paraguay, where people speak it everywhere."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Argentina is the Argentine peso."
+      ]
+    },
+    {
+      "heading": "How big is Argentina?",
+      "paragraphs": [
+        "Argentina covers about 2,780,000 square kilometres of land and inland water. That makes it about three times the size of Venezuela."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Iguazu's 275 waterfalls thunder through rainforest on the Brazil border — walkways lead over the water to the roaring Devil's Throat.",
+        "Buenos Aires dances with tango: rainbow houses in La Boca, grand avenues, the Recoleta Cemetery's marble city and café culture everywhere."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Argentina on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Argentina in one breath: a country in South America, capital Buenos Aires, where people speak Spanish and pay with the Argentine peso.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Argentina)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Argentina on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "The two visit ideas are daydreams for a future family trip to Argentina — real trips always need grown-up planning."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Argentina on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

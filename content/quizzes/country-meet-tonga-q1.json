@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-tonga-q1",
+  "scheduledDate": "2030-09-05",
+  "brand": "kids",
+  "setId": "country-set-meet-tonga",
+  "prompt": "What is the money of Tonga called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Swiss franc"
+    },
+    {
+      "id": "b",
+      "text": "Tunisian dinar"
+    },
+    {
+      "id": "c",
+      "text": "Bangladeshi taka"
+    },
+    {
+      "id": "d",
+      "text": "Tongan pa'anga"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "The money of Tonga is the Tongan pa'anga (TOP).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Tonga | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Tonga",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Tonga — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tonga",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-tonga.webp",
+    "alt": "Spark and Mango visiting a humpback whale and calf in the blue water of Vava'u",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

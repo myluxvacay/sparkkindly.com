@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-iran-q1",
+  "scheduledDate": "2030-02-27",
+  "brand": "kids",
+  "setId": "country-set-meet-iran",
+  "prompt": "What is the capital of Iran?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Mogadishu"
+    },
+    {
+      "id": "b",
+      "text": "Accra"
+    },
+    {
+      "id": "c",
+      "text": "Naypyidaw"
+    },
+    {
+      "id": "d",
+      "text": "Tehran"
+    }
+  ],
+  "correctOptionId": "d",
+  "explanation": "Tehran is the capital of Iran. It is the city where the country's government works.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Iran | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Iran",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Iran — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Iran",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-iran.webp",
+    "alt": "Spark and Mango visiting the great carved staircases and columns of Persepolis",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

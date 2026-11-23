@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-hungary",
+  "slug": "meet-hungary",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Hungary",
+  "description": "Travel to Hungary with Spark and Mango: a country in Eastern Europe whose capital is Budapest, where people speak Hungarian and pay with the Hungarian forint — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
+  "hero": {
+    "src": "/images/country-meet-hungary.webp",
+    "alt": "Spark and Mango visiting the Hungarian Parliament along the Danube in Budapest at dusk",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "europe",
+    "grades-3-5"
+  ],
+  "sources": [
+    {
+      "title": "Hungary | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Hungary",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Hungary — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hungary",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Hungary?",
+      "paragraphs": [
+        "Hungary is a country in Eastern Europe, which is part of Europe."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Hungary is Budapest."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Hungary is Hungarian."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Hungary is the Hungarian forint."
+      ]
+    },
+    {
+      "heading": "How big is Hungary?",
+      "paragraphs": [
+        "Hungary covers about 93,000 square kilometres of land and inland water. That makes it about three times the size of Belgium."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Budapest's Parliament is a riverside palace of spires; cross the Chain Bridge to Buda Castle, then soak in the city's famous thermal baths.",
+        "Balaton is Central Europe's largest lake — Hungary's summer sea of sailing boats, beaches, the Tihany lavender abbey and shallow family shores."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Hungary on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Hungary in one breath: a country in Eastern Europe, capital Budapest, where people speak Hungarian and pay with the Hungarian forint.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Hungary)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Confident readers can read alone; a grown-up can join in for the Think and talk questions about Hungary.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Hungary always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Hungary on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

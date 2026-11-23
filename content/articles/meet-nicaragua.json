@@ -1,0 +1,102 @@
+{
+  "id": "country-meet-nicaragua",
+  "slug": "meet-nicaragua",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Meet Nicaragua",
+  "description": "Travel to Nicaragua with Spark and Mango: a country in Central America whose capital is Managua, where people speak Spanish and pay with the Nicaraguan córdoba — plus two places we'd love to visit.",
+  "publishedAt": "2026-11-21",
+  "updatedAt": "2026-11-21",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
+  "hero": {
+    "src": "/images/country-meet-nicaragua.webp",
+    "alt": "Spark and Mango visiting colourful colonial streets in Granada with a cathedral bell tower",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "reading",
+    "countries",
+    "north-america",
+    "grades-k-2"
+  ],
+  "sources": [
+    {
+      "title": "Nicaragua | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Nicaragua",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Nicaragua — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nicaragua",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-21",
+  "aiDisclosure": "Written with AI assistance for SparkKindly's Country Facts batch; reviewed by the SparkKindly reviewer agent on 21 November 2026. Staged for owner review; not promoted to production.",
+  "body": [
+    {
+      "heading": "Where in the world is Nicaragua?",
+      "paragraphs": [
+        "Nicaragua is a country in Central America, which is part of North America."
+      ]
+    },
+    {
+      "heading": "The capital city",
+      "paragraphs": [
+        "The capital of Nicaragua is Managua."
+      ]
+    },
+    {
+      "heading": "Words you might hear",
+      "paragraphs": [
+        "The language you will hear most in Nicaragua is Spanish."
+      ]
+    },
+    {
+      "heading": "Money in your pocket",
+      "paragraphs": [
+        "The money of Nicaragua is the Nicaraguan córdoba."
+      ]
+    },
+    {
+      "heading": "How big is Nicaragua?",
+      "paragraphs": [
+        "Nicaragua covers about 130,000 square kilometres of land and inland water."
+      ]
+    },
+    {
+      "heading": "Two places we'd love to visit",
+      "paragraphs": [
+        "Granada is a colourful colonial city on the great lake, where boats tour 365 tiny islands formed by a volcano's eruption.",
+        "Ometepe is an island of two volcanoes rising from Lake Nicaragua — families hike to waterfalls, kayak and spot monkeys in its forests."
+      ]
+    },
+    {
+      "heading": "Think and talk",
+      "paragraphs": [
+        "1. Find Nicaragua on a map or globe. Which continent is it on — and can you name a country that sits next to it?",
+        "2. Spark and Mango can visit only ONE of the two places in this article. Which should they choose — and what would you pack for the trip?"
+      ]
+    }
+  ],
+  "takeaway": "Nicaragua in one breath: a country in Central America, capital Managua, where people speak Spanish and pay with the Nicaraguan córdoba.",
+  "fiction": false,
+  "materials": [
+    "A globe, atlas or world map (to find Nicaragua)",
+    "Paper and crayons or pencils for the screen-free mission"
+  ],
+  "supervision": "Read this one together: a grown-up can help with tricky place names and hunt for Nicaragua on the map as you read.",
+  "safetyNotes": [
+    "Reading only — no physical activity is involved.",
+    "If your family ever visits the watery places in this article, water fun in Nicaragua always needs a grown-up watching closely."
+  ],
+  "screenFreeExtension": "Screen-free mission: find Nicaragua on a map or globe, say its capital out loud, then draw the place you'd most love to visit there."
+}

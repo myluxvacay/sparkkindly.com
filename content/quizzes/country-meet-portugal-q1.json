@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-portugal-q1",
+  "scheduledDate": "2030-06-25",
+  "brand": "kids",
+  "setId": "country-set-meet-portugal",
+  "prompt": "What is the money of Portugal called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "euro"
+    },
+    {
+      "id": "b",
+      "text": "Swedish krona"
+    },
+    {
+      "id": "c",
+      "text": "Namibian dollar"
+    },
+    {
+      "id": "d",
+      "text": "Sierra Leonean leone"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The money of Portugal is the euro (EUR).",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Portugal | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Portugal",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Portugal — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Portugal",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-portugal.webp",
+    "alt": "Spark and Mango visiting a yellow tram climbing through Lisbon's Alfama district",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}

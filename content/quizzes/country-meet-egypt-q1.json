@@ -1,0 +1,52 @@
+{
+  "id": "country-meet-egypt-q1",
+  "scheduledDate": "2030-01-06",
+  "brand": "kids",
+  "setId": "country-set-meet-egypt",
+  "prompt": "Which of these is a main language people speak in Egypt?",
+  "options": [
+    {
+      "id": "a",
+      "text": "French"
+    },
+    {
+      "id": "b",
+      "text": "Arabic"
+    },
+    {
+      "id": "c",
+      "text": "Thai"
+    },
+    {
+      "id": "d",
+      "text": "Italian"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "People in Egypt speak Arabic.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Egypt | Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/place/Egypt",
+      "accessedAt": "2026-11-21"
+    },
+    {
+      "title": "Egypt — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Egypt",
+      "accessedAt": "2026-11-21"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-21",
+  "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
+  "hero": {
+    "src": "/images/country-meet-egypt.webp",
+    "alt": "Spark and Mango visiting the three Pyramids of Giza and the Great Sphinx at the edge of the desert near Cairo",
+    "width": 832,
+    "height": 1248,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  }
+}
