@@ -159,11 +159,11 @@ describe('problem reports', () => {
   const report = (id: string, reason = 'wrong', message = 'It is wrong.') =>
     db.query('INSERT INTO problem_reports (item_id, reason, message) VALUES ($1, $2, $3)', [id, reason, message]);
 
-  it('stores a valid report as open', async () => {
+  it('stores a valid report as pending', async () => {
     const id = await item();
     await report(id);
     const r = await db.query<{ status: string }>('SELECT status FROM problem_reports WHERE item_id = $1', [id]);
-    expect(r.rows).toEqual([{ status: 'open' }]);
+    expect(r.rows).toEqual([{ status: 'pending' }]);
   });
 
   it('rejects an unknown reason and a message over 1000 characters', async () => {
