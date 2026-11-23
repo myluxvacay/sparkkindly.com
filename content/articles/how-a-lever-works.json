@@ -1,0 +1,72 @@
+{
+  "id": "printable-how-a-lever-works",
+  "slug": "how-a-lever-works",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "How a Lever Works",
+  "description": "Free SparkKindly Kids how things work printable poster: How a Lever Works.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly Kids",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "reviewNote": "How Things Work poster, added 23 November 2026 at the owner's direction (\"Add these too please\") from artwork he delivered and QA'd himself (labels, facts and Mango's brass bell verified owner-side; no art changes). The sheet PDF is a faithful full-page rendering of the delivered poster — header and footer bands whole, nothing cropped. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED).",
+  "ageGuidance": "Ages 5–8. Young readers enjoy it read aloud with a grown-up; confident readers can explore the labels on their own.",
+  "hero": {
+    "src": "/images/printable-how-a-lever-works.webp",
+    "alt": "SparkKindly How Things Work poster: how a lever works, with the bar, the load and the fulcrum labelled.",
+    "width": 1024,
+    "height": 1324,
+    "credit": "SparkKindly Kids printable library",
+    "rights": "Artwork delivered by the site owner for publication on sparkkindly.com (23 November 2026); owner QA of the artwork completed owner-side; staging page QA pending."
+  },
+  "tags": [
+    "printables",
+    "printables-how-things-work",
+    "ages-5-8"
+  ],
+  "sources": [
+    {
+      "title": "Encyclopaedia Britannica — Lever",
+      "url": "https://www.britannica.com/technology/lever",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Poster artwork delivered by the site owner (23 November 2026) and published unchanged; the page text around it was written for SparkKindly. Staged for owner QA review, like the delivered library.",
+  "body": [
+    {
+      "heading": "About this poster",
+      "paragraphs": [
+        "Free SparkKindly Kids how things work printable poster: How a Lever Works.",
+        "This poster explains the simplest machine of all: a lever is a stiff bar that rests on a pivot (the fulcrum), and pushing down on the long end lifts a heavy load on the short end. Seesaws, bottle openers and wheelbarrows all work this way. Big labels and one idea per box — then spot levers hiding all over your home."
+      ]
+    },
+    {
+      "heading": "How to use this sheet",
+      "paragraphs": [
+        "Print it big if you can and read it together, pointing to each label as you name it. Then cover the words and see how much you can explain from the pictures alone — that explaining-back is where the learning sticks."
+      ]
+    },
+    {
+      "heading": "Talk about it",
+      "paragraphs": [
+        "What is the special name for the pivot point of a lever?",
+        "Why does the long end make lifting easier?",
+        "Where is the lever hiding in a seesaw — and in a wheelbarrow?"
+      ]
+    }
+  ],
+  "takeaway": "A lever trades distance for strength: push a long way down on one end, and something heavy lifts a little way on the other.",
+  "fiction": false,
+  "materials": [
+    "A printer and one sheet of paper (letter or A4) — or just a screen to view it on"
+  ],
+  "supervision": "Read together the first time: an adult reads the labels aloud and answers the questions the poster raises.",
+  "safetyNotes": [
+    "A reading poster — no tools, parts or experiments. If you try the real thing afterwards (a magnet hunt, a proper handwash), a grown-up leads.",
+    "Print at 100% size (not \"fit to page\") so the poster keeps its true proportions."
+  ],
+  "screenFreeExtension": "Explain it back: after reading, put the poster away and tell a grown-up how it works in your own words — then draw your own version."
+}

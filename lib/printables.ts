@@ -36,6 +36,7 @@ export const PRINTABLE_CATEGORIES: PrintableCategory[] = [
   { slug: 'science-labels', topic: 'printables-science-labels', name: 'Label-the-Parts', blurb: 'Diagrams to label from the word bank — name it to know it.', glyph: '🔬', instruction: 'Use the word bank to label every part of the diagram.' },
   { slug: 'kindness', topic: 'printables-kindness-feelings', name: 'Kindness & Feelings', blurb: 'Journal pages about feelings and the kind acts that help.', glyph: '💛', instruction: 'Take it slowly — on a feelings page, honest answers are the whole point.' },
   { slug: 'sequencing', topic: 'printables-story-sequencing', name: 'Story Sequencing Cards', blurb: 'Put the story cards in order — beginning, middle, end — and retell it.', glyph: '📖', instruction: 'Look at every card, number them in story order, and retell the story aloud.' },
+  { slug: 'how-things-work', topic: 'printables-how-things-work', name: 'How Things Work', blurb: 'Big friendly posters that explain how everyday things work.', glyph: '💡', instruction: 'Read it together, point to each part as you name it, then explain it back in your own words.' },
 ];
 
 export type AgeBand = { topic: string; label: string; short: string };
