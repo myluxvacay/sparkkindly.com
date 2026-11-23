@@ -1,0 +1,55 @@
+{
+  "id": "grow-draft-2026-11-23-01",
+  "slug": "why-a-sprout-leans-toward-the-light",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Why a sprout leans toward the light",
+  "description": "Put a seedling on a windowsill and within days it bends toward the glass. The plant is not deciding anything — it is growing unevenly, on purpose, steered by light itself.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/plants.webp",
+    "alt": "Young green sprouts growing in soil",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "light",
+    "growing"
+  ],
+  "sources": [
+    {
+      "title": "Phototropism | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Phototropism",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Growth that bends",
+      "paragraphs": [
+        "A shoot tip senses the direction of light. In response, a growth chemical called auxin gathers on the shaded side of the stem. Auxin makes stem cells lengthen faster, so the shaded side grows more than the lit side — and the shoot curves toward the light. This response is called phototropism.",
+        "The bend is not the plant leaning like a person; it is new growth laid down unevenly. Straighten the pot around and the tip will curve back the other way within days."
+      ]
+    },
+    {
+      "heading": "Why it is worth the effort",
+      "paragraphs": [
+        "Leaves are solar panels: a shoot that finds light can feed itself, while one stuck in shade starves slowly. Bending toward brightness is how a seedling escapes the shadow of the plants around it.",
+        "Gardeners use the same trick in reverse — turning windowsill pots a quarter-turn every few days so the plant grows straight instead of lopsided."
+      ]
+    }
+  ],
+  "takeaway": "A sprout bends toward light because a growth chemical gathers on its shaded side and makes that side grow faster — phototropism.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

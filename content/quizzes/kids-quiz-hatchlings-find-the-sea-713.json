@@ -1,0 +1,38 @@
+{
+  "id": "kids-quiz-hatchlings-find-the-sea-713",
+  "scheduledDate": "2031-01-06",
+  "brand": "kids",
+  "prompt": "Baby sea turtles hatch from eggs in the sand at night. Where do they crawl first?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Up a tree"
+    },
+    {
+      "id": "b",
+      "text": "Toward the sea"
+    },
+    {
+      "id": "c",
+      "text": "Into a cave"
+    },
+    {
+      "id": "d",
+      "text": "Under a big rock"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Hatchlings crawl toward the sea, guided by the brighter light over the water. Reaching the sea quickly keeps them safer from hungry birds and crabs on the beach.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Sea turtle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sea_turtle",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

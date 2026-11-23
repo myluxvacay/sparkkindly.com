@@ -1,0 +1,65 @@
+{
+  "id": "play-draft-2026-11-23-02",
+  "slug": "write-the-rules-of-a-game-you-invent",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Write the rules of a game you invent",
+  "description": "Every game you love began as rules somebody wrote down. Invent a simple game, write its rules in a notebook, and test whether a friend can play it from your words alone.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "A child writing in a notebook",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "games",
+    "writing",
+    "inventing"
+  ],
+  "sources": [
+    {
+      "title": "Game design | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Game_design",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Start with a tiny game",
+      "paragraphs": [
+        "Pick something small: a card game with ten cards, a race game on a drawn track, or a guessing game with three rules. Give it a name and write down the goal in one sentence — what does a player have to do to win?",
+        "Then write the setup (what each player starts with) and the turn order (what one player does on their turn). Three to five rules is plenty for a first version."
+      ]
+    },
+    {
+      "heading": "The real test: hand over the notebook",
+      "paragraphs": [
+        "Give your written rules to a friend or family member and watch them play without explaining anything. Every question they ask shows a rule that is missing or unclear — write that rule down on the spot.",
+        "Change one rule at a time between games and note what happened. Game designers call this playtesting, and your notebook becomes the record of how your game grew from a rough idea into one that works."
+      ]
+    }
+  ],
+  "takeaway": "Invent a small game, write its goal, setup and turns in a notebook, then let a friend play from the words alone — their questions are your missing rules.",
+  "fiction": false,
+  "materials": [
+    "A notebook or several sheets of paper",
+    "A pen or pencil",
+    "Simple props your game needs, such as cards, counters or dice"
+  ],
+  "supervision": "An adult or older sibling acts as the first playtester and helps the inventor word the rules clearly.",
+  "safetyNotes": [
+    "Keep small game pieces away from very young children, who may put them in their mouths.",
+    "Playtest kindly — questions about the rules are help, not criticism of the inventor."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

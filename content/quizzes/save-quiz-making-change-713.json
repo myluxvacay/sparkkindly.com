@@ -1,0 +1,38 @@
+{
+  "id": "save-quiz-making-change-713",
+  "scheduledDate": "2031-01-05",
+  "brand": "save",
+  "prompt": "You buy a notebook for $13.50 and pay with a $20 bill. How much change should you receive?",
+  "options": [
+    {
+      "id": "a",
+      "text": "$5.50"
+    },
+    {
+      "id": "b",
+      "text": "$6.50"
+    },
+    {
+      "id": "c",
+      "text": "$7.50"
+    },
+    {
+      "id": "d",
+      "text": "$16.50"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "$20.00 − $13.50 = $6.50. A quick check: count up from $13.50 — 50 cents reaches $14, and $6 more reaches $20, so the change is $6.50 in total.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Coin | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Coin",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

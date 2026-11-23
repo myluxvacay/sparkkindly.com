@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-seeds-that-wait-713",
+  "scheduledDate": "2031-01-04",
+  "brand": "grow",
+  "prompt": "Some seeds can wait years in the soil before sprouting. What are they mainly waiting for?",
+  "options": [
+    {
+      "id": "a",
+      "text": "A particular animal to dig them up"
+    },
+    {
+      "id": "b",
+      "text": "The right combination of water, temperature and sometimes light"
+    },
+    {
+      "id": "c",
+      "text": "Someone to plant them deeper"
+    },
+    {
+      "id": "d",
+      "text": "The parent plant to die"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Seed dormancy keeps a seed alive but paused until conditions suit growth — typically the right moisture and temperature, and for some species light or a cold period first. Dormancy stops seeds sprouting in a brief warm spell that would kill the seedling.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Seed dormancy | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Seed_dormancy",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

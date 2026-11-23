@@ -1,0 +1,65 @@
+{
+  "id": "together-draft-2026-11-23-03",
+  "slug": "the-circle-check-in-everyone-speaks-once",
+  "brand": "together",
+  "contentType": "activity",
+  "title": "The circle check-in: everyone speaks once",
+  "description": "Before a family discussion or a group decision, go around the circle: each person speaks once, briefly, with no interruptions, before anyone speaks twice. It changes what gets heard.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "A group of friends with their hands joined together",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "listening",
+    "meetings",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Talking circle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Talking_circle",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "How the circle runs",
+      "paragraphs": [
+        "Sit where everyone can see everyone else. Choose one question — 'What should we do about…?' or simply 'How is everyone, really?' Go around in order; each person gets up to a minute, and nobody may interrupt, correct or answer during someone else's turn.",
+        "Only when every voice has been heard once does open discussion begin. The person who suggested the question speaks last in the first round, so their view does not anchor everyone else's."
+      ]
+    },
+    {
+      "heading": "Why it works",
+      "paragraphs": [
+        "In open discussion, the fastest talkers set the agenda and quieter people edit themselves out. The circle guarantees the quietest person the same first minute as the loudest — and knowing your turn is coming makes listening easier, because you are not fighting for a gap.",
+        "Keep it short and use it often: a weekly family circle of ten minutes surfaces small problems while they are still small."
+      ]
+    }
+  ],
+  "takeaway": "Go once around the circle with no interruptions before open discussion — everyone gets a first minute, so everyone gets heard.",
+  "fiction": false,
+  "materials": [
+    "A circle of chairs or cushions",
+    "A timer or phone clock for one-minute turns",
+    "One question chosen in advance"
+  ],
+  "supervision": "One person facilitates: they keep time, protect each turn from interruption and speak last in the first round.",
+  "safetyNotes": [
+    "Anyone may pass on a question that feels too personal — passing is always allowed and never questioned.",
+    "What is shared in the circle stays in the circle unless the speaker says otherwise."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

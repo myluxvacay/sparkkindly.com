@@ -1,0 +1,55 @@
+{
+  "id": "discover-draft-2026-11-23-01",
+  "slug": "why-waves-break-as-they-reach-the-shore",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why waves break as they reach the shore",
+  "description": "Out at sea a wave is a smooth swell. Near the beach it rears up, curls and crashes. The change happens because the wave starts to feel the bottom.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/ocean.webp",
+    "alt": "A wave rolling across the open ocean",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "oceans",
+    "waves",
+    "coasts"
+  ],
+  "sources": [
+    {
+      "title": "Breaking wave | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Breaking_wave",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "A wave that touches the bottom",
+      "paragraphs": [
+        "In deep water a wave moves through water that barely travels with it — the energy passes along while the water mostly circles in place. When the water gets shallower than about half the wave's length, the bottom of the wave starts to drag against the seabed.",
+        "The drag slows the wave's base while its top keeps moving at the old speed. The wave grows steeper and taller as the water behind piles into the slowing front."
+      ]
+    },
+    {
+      "heading": "The curl and the crash",
+      "paragraphs": [
+        "Eventually the top of the wave is leaning so far forward, moving faster than the base beneath it, that it can no longer stand. It topples over — the breaking surfers ride and beachgoers hear as surf.",
+        "Gentle slopes make waves spill gradually in white foam; steep shores make them plunge in a single dramatic curl. The beach itself decides how its waves break."
+      ]
+    }
+  ],
+  "takeaway": "Waves break because shallow water drags at their base while the top races on, until the crest topples forward into surf.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

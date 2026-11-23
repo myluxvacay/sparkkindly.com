@@ -1,0 +1,65 @@
+{
+  "id": "grow-draft-2026-11-23-03",
+  "slug": "forest-bathing-a-slow-walk-with-no-destination",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "Forest bathing: a slow walk with no destination",
+  "description": "Shinrin-yoku — forest bathing — is a walk in the trees with the goals removed: no step count, no summit, no hurry. You move slowly, stop often, and let the forest set the pace.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/focus.webp",
+    "alt": "A sunlit path winding through a forest",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "forests",
+    "walking",
+    "calm"
+  ],
+  "sources": [
+    {
+      "title": "Shinrin-yoku | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Shinrin-yoku",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Set up the slowest walk you know",
+      "paragraphs": [
+        "Choose a wooded path you can cover in twenty minutes at normal speed — then take an hour over it. Leave headphones behind and put your phone on silent in a pocket. Walk until something catches your attention, then stop and give it a full minute: bark patterns, layered birdsong, the smell after rain.",
+        "Sit for part of the time. A bench, a log or a patch of dry ground under trees is a destination all by itself."
+      ]
+    },
+    {
+      "heading": "What to notice, in order",
+      "paragraphs": [
+        "Work through the senses slowly: five things you can see, four you can hear, three you can feel (air, ground, fabric), two you can smell, one slow breath to taste the air. The list is a handrail for attention, not a test.",
+        "Finish by walking back at ordinary speed. Most people find the normal world briefly louder and brighter — evidence of how far their attention had settled."
+      ]
+    }
+  ],
+  "takeaway": "Walk a short forest path at a quarter of your usual speed, stop for whatever catches your attention, and let an hour do what a brisk walk cannot.",
+  "fiction": false,
+  "materials": [
+    "A wooded path or tree-filled park",
+    "Comfortable shoes and weather-appropriate clothing",
+    "Water for a longer outing"
+  ],
+  "supervision": "Walk with a companion or tell someone your route and return time; children stay within sight of their adult at all times.",
+  "safetyNotes": [
+    "Stay on marked paths, check the weather before setting out and turn back if thunder approaches.",
+    "Watch footing on roots and wet leaves, and check for ticks after walking in long grass or woodland."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

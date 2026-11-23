@@ -1,0 +1,55 @@
+{
+  "id": "save-draft-2026-11-23-02",
+  "slug": "from-clay-pots-to-pink-pigs-the-piggy-banks-long-history",
+  "brand": "save",
+  "contentType": "article",
+  "title": "From clay pots to pink pigs: the piggy bank's long history",
+  "description": "The piggy bank is named after neither a farmer nor a fairy tale. Its story starts with an orange clay called pygg — and a misunderstanding that gave savings a snout.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "saving",
+    "history",
+    "money"
+  ],
+  "sources": [
+    {
+      "title": "Piggy bank | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Piggy_bank",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Pots made of pygg",
+      "paragraphs": [
+        "In medieval England, people kept coins in pots made from an inexpensive orange clay called pygg. A 'pygg pot' was simply a clay money jar — to reach the coins, you had to smash it, which made it a stern little savings device.",
+        "By the 18th century the clay's name had faded, and potters hearing 'pygg bank' began shaping the pots as pigs. The pun stuck, and the pig became the world's symbol of saving."
+      ]
+    },
+    {
+      "heading": "Why the design still works",
+      "paragraphs": [
+        "The classic piggy bank teaches the oldest savings lesson in the world: money you cannot easily reach is money you do not spend. Having to break the pot — or at least stop and think — adds friction exactly where impulse wants speed.",
+        "Modern versions with plugs trade a little of that friction for reusability. The lesson survives either way: separate the money, make it visible, and let it accumulate undisturbed."
+      ]
+    }
+  ],
+  "takeaway": "Piggy banks began as pots of 'pygg' clay that had to be smashed to open — potters turned the name into pigs, and the friction became the lesson.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

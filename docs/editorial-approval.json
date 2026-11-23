@@ -50466,6 +50466,316 @@
     "reviewedAt": "2026-11-23",
     "reviewNote": "How Things Work poster, added 23 November 2026 at the owner's direction (\"Add these too please\") from artwork he delivered and QA'd himself (labels, facts and Mango's brass bell verified owner-side; no art changes). The sheet PDF is a faithful full-page rendering of the delivered poster — header and footer bands whole, nothing cropped. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED)."
    }
+  },
+  {
+   "kind": "article",
+   "id": "together-draft-2026-11-23-01",
+   "priorHash": "f32614c4ab519401ea82d92df1d68a29fc8faae9569b617651ac06c8d95bb90c",
+   "approvedHash": "f46eda1e164d572fb256e7525e51050a698c06237d13375e8b10dc3e2ec003b4",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "save-draft-2026-11-23-03",
+   "priorHash": "493314ae3727d612e77687b976432d5e19b6e465805acd6bbc0ecd6bfa2401af",
+   "approvedHash": "4c19be97938fdbfe363c661f5c3d664b90134c6ee34a78bfaa094822e65bf1c7",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "grow-draft-2026-11-23-02",
+   "priorHash": "6bfd3c6748ea10554e3a86de14aaea303deed60a6ca1ca55c7a1bee55cfbf575",
+   "approvedHash": "ea295ff35f87d5cca973466e2d4631a899d97b4994609a46a6d8f6bd84878f39",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "quiz",
+   "id": "discover-quiz-moon-phases-order-713",
+   "priorHash": "090b2bb020c479de38869aed2b965baeb046885129f66d9a2bee181865feb5b2",
+   "approvedHash": "9c32f5b3990a6c6e1d5ed5cdd08d924b791b1cca2e3a0851358f88d027dcd43c",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "discover-draft-2026-11-23-03",
+   "priorHash": "be55f04833c59b629f6f47a76774918e8870e8c7155605540b6be4ba2ae273be",
+   "approvedHash": "baeb1a5ae21c567d644dd8dabed361fad62f4f272e9e4297ec7962b21b41d51a",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "kids-draft-2026-11-23-01",
+   "priorHash": "e1758df000d0f242948f7009292e452530538cd6e8017b1bc9a25a094a069b31",
+   "approvedHash": "3f119baf2e29676aba46612d74d63638a7f0d87e1e8335ebd0f77a317f931608",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "grow-draft-2026-11-23-03",
+   "priorHash": "535c3b21bbe409db8d172dce1f0e509b86a2c462c65ce0b5d0f68aaf72f9b896",
+   "approvedHash": "e342c9344c193a6078b4574af6cd1c6dc6cdae06c7f07447f6fb2f109e82240b",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "save-draft-2026-11-23-02",
+   "priorHash": "1ea08e7e49701df5bd2fe8a2e44b7e712e6203a63c4e4a9c3e6d4dd8b4d5370e",
+   "approvedHash": "28d4492ae08d320076dd380d26e2f84302f420943d42d579b67c39885fb24eff",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "quiz",
+   "id": "grow-quiz-seeds-that-wait-713",
+   "priorHash": "8e6345555400d71a3dfc3dddbb460a6aa08e8e372fcbf38a6def541414ea2be0",
+   "approvedHash": "368ae373bfad0db12897bec3967a78639fc7fa40fc63dd065f3d1f939e46127b",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "together-draft-2026-11-23-02",
+   "priorHash": "8282f01d7887516d6ae64c4ee97d942c6f6a758a9c0f9a2f4b661243fb7a5000",
+   "approvedHash": "bb1693be17403e7c002a44e2bc5d8facf57cd67f3e695b827fbd729a58ee01c3",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "quiz",
+   "id": "kids-quiz-hatchlings-find-the-sea-713",
+   "priorHash": "39fdee51661247d69892de5a4228356bb5d26d304e76123029c341a0a34ebf2a",
+   "approvedHash": "927638a01ace2b51e17f7f96e9fdc39d659cea2c21312f212b3adf5ea8415564",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "play-draft-2026-11-23-01",
+   "priorHash": "19a89b5988b412f8164f611829fb8802c0dc2fc3b8c50d4ced36994ad24528b0",
+   "approvedHash": "49537c2f83f2147f4f3b6cf320eed8ef1e44bd7183a45bf2e350c2ca19c5cabe",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "quiz",
+   "id": "play-quiz-fifty-move-rule-713",
+   "priorHash": "484e132cee177f18bfefc5243070b8b686113d86c5eda07f68c6a442cf605d17",
+   "approvedHash": "d2c43acbb3753115c0f72177b630d6d9026c141b75f3ff43f9cd4ce9551823b8",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "discover-draft-2026-11-23-02",
+   "priorHash": "5e9107abeef4616e5bb7c23fe7bdd3e0b1ebed26661fa2332da6285f0612d506",
+   "approvedHash": "b91895defec2682a314d477cfc90e584293e73792cb3de3056b62b3f28048de8",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "quiz",
+   "id": "save-quiz-making-change-713",
+   "priorHash": "71438db0392056fc83f179a35f4cd701e27fa01f59085687ffa931ffbaf3a357",
+   "approvedHash": "4140f4b86bba8b647ab7e73bff357db65e45e1d1ea0ba11052510813523cb469",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "kids-draft-2026-11-23-02",
+   "priorHash": "ca86844941411eedf74d3d7ccbe41e96e9ceb8c267ad5ce53e44818b00214cfd",
+   "approvedHash": "7d0180297460a8eab8944896d76fa4b69139d42aedee7d8b421a93e313e23b64",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "together-draft-2026-11-23-03",
+   "priorHash": "80a2dfe2f3239fd0dffa53ae92982ba984a17c0d2c1afe8358ad4bda21786250",
+   "approvedHash": "065befdfc9b01b2730105e5168d20b5e79895c42c446a8d88e943ef27226cd9b",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "quiz",
+   "id": "together-quiz-phubbing-at-the-table-713",
+   "priorHash": "27b1af1277a0a4760bbc3e41b368fdf91049332f50fa12e22384b711d7057813",
+   "approvedHash": "a720d8a32e170007964f2c5155f28ff3388fb2471d16c0b7cc81efa993142dd6",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "save-draft-2026-11-23-01",
+   "priorHash": "0c3eb69ec2542aaa6e1ce8e144027d7e7c5e30eb37e1539f9f857a7089afa03d",
+   "approvedHash": "73a4b534a91f4f7a7ceb71007a8a21d6c51efec3e31fa30e992cc836e188f025",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "play-draft-2026-11-23-03",
+   "priorHash": "f89112f01927379ff37b9117a22007ff9043459464394a06c21a692da6fbf1ba",
+   "approvedHash": "0771b17e0d07623b4995b7494f0034bb61de957aebd45c0ad8ae24e1d45d6eca",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "grow-draft-2026-11-23-01",
+   "priorHash": "a08133a3825a097c6369277c3ee994e26dedcea74adcd090a0632c8583fb8872",
+   "approvedHash": "d59032d0a192f2da41c588b352c2093f73baf1dad8e1a4abe6293ee466f6d0a7",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "discover-draft-2026-11-23-01",
+   "priorHash": "ffe118c89f1102a75a926fc4c06e00cbd7937f63ee03df31f6031f86bbcfd763",
+   "approvedHash": "03fce3f26269ee99e34f66c258f0d77f0ef718ef5d1bccc0331d652b521f0718",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "play-draft-2026-11-23-02",
+   "priorHash": "c886f4a2e86e95555cecbbf5c7de0a72af8b706e6388a2b0ecff6ba96d1d0b21",
+   "approvedHash": "16031f6525605ca4ca65ea5f76cda8c759e3c1bd4a8eb57f76c1c352cac303ad",
+   "fields": {
+    "publishedAt": "2026-11-23",
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "factualClaimsReviewedAt": "2026-11-23",
+    "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+   }
   }
  ]
 }

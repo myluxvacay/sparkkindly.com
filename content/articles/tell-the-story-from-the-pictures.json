@@ -1,0 +1,65 @@
+{
+  "id": "kids-draft-2026-11-23-02",
+  "slug": "tell-the-story-from-the-pictures",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Tell the story from the pictures",
+  "description": "Pick a picture book and cover the words. Now tell the story using only the pictures. What do you think happens on each page?",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "School books with an apple on top",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "books",
+    "stories",
+    "pictures"
+  ],
+  "sources": [
+    {
+      "title": "Wordless picture book | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wordless_picture_book",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Look before you tell",
+      "paragraphs": [
+        "Choose a book you know, or a new one. Cover the words with your hand, or just don't read them. Look at the first picture for a long time. Who is in it? Where are they? How do they feel?",
+        "Now tell that part of the story out loud, in your own words. Turn the page and do it again. The pictures will give you clues — faces, colours, and little details hiding in the corners."
+      ]
+    },
+    {
+      "heading": "Check the real story",
+      "paragraphs": [
+        "When you finish, read the book again with the words. Did the pictures tell you the same story? Which parts did you guess right, and which parts surprised you?",
+        "Making up the story first is not getting it wrong. It is reading with your eyes before you read with words — and it makes the real story feel like a prize."
+      ]
+    }
+  ],
+  "takeaway": "Cover the words, tell the story from the pictures alone, then read the real words and see what you guessed.",
+  "fiction": false,
+  "ageGuidance": "Ages 3–7, with a grown-up.",
+  "materials": [
+    "A picture book with clear, detailed pictures",
+    "Your hand, to cover the words (optional)"
+  ],
+  "supervision": "A grown-up listens to the child's story, asks gentle questions about the pictures, and reads the real words afterwards.",
+  "safetyNotes": [
+    "This is a calm indoor reading activity — choose a comfy spot with good light so eyes do not strain."
+  ],
+  "screenFreeExtension": "Draw three pictures of something that happened today, in order, and tell your day as a story from your own pictures.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-moon-phases-order-713",
+  "scheduledDate": "2031-01-02",
+  "brand": "discover",
+  "prompt": "The Moon's phases follow a fixed order. Which phase comes immediately after the first quarter moon?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Full moon"
+    },
+    {
+      "id": "b",
+      "text": "Waxing gibbous"
+    },
+    {
+      "id": "c",
+      "text": "New moon"
+    },
+    {
+      "id": "d",
+      "text": "Last quarter"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "After first quarter, the lit part keeps growing — waxing — into the bulging waxing gibbous phase, before reaching full moon. Gibbous means more than half lit but not yet full.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Lunar phase | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lunar_phase",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

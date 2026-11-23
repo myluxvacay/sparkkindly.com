@@ -1,0 +1,65 @@
+{
+  "id": "save-draft-2026-11-23-03",
+  "slug": "count-the-piggy-bank-guess-first-then-count",
+  "brand": "save",
+  "contentType": "activity",
+  "title": "Count the piggy bank: guess first, then count",
+  "description": "Before you open a piggy bank or savings jar, guess what is inside — in writing. Then count it properly, in sorted stacks. The gap between the guess and the truth is the lesson.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "saving",
+    "counting",
+    "money"
+  ],
+  "sources": [
+    {
+      "title": "Piggy bank | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Piggy_bank",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Guess, then open",
+      "paragraphs": [
+        "Pick up the bank, feel its weight, shake it gently, and write down your best guess of the total — and how confident you feel, from 'wild guess' to 'almost sure'. Most people are surprised in one direction or the other, because coins are deceptively heavy and notes weigh nothing.",
+        "Empty everything onto a table. Sort coins by denomination into stacks of ten, count the stacks, then add notes. Sorting first makes the count checkable: if the total looks wrong, you can recount one stack instead of starting again."
+      ]
+    },
+    {
+      "heading": "What to do with the truth",
+      "paragraphs": [
+        "Compare the counted total with the guess and note the difference. Then decide the money's job before it evaporates: a named goal, a bank deposit, or a split between saving and spending.",
+        "Write the new starting total and today's date on a slip inside the refilled bank. Next count, you will know exactly how much the habit added — and your guess will be sharper, too."
+      ]
+    }
+  ],
+  "takeaway": "Guess the piggy bank's total in writing, then sort, stack and count it — the surprise gap teaches more about your money than the total does.",
+  "fiction": false,
+  "materials": [
+    "A piggy bank or savings jar with contents",
+    "A flat table",
+    "Paper and pen for the guess and the tally"
+  ],
+  "supervision": "A parent or partner double-checks the count with younger savers and helps decide where the counted money goes next.",
+  "safetyNotes": [
+    "Wash hands after handling lots of coins, and keep small coins away from toddlers, who may swallow them.",
+    "Count at home in private, and put the money away promptly rather than leaving it out on display."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

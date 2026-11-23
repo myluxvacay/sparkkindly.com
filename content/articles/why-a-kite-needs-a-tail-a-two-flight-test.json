@@ -1,0 +1,65 @@
+{
+  "id": "play-draft-2026-11-23-03",
+  "slug": "why-a-kite-needs-a-tail-a-two-flight-test",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Why a kite needs a tail: a two-flight test",
+  "description": "A kite's tail is not decoration — it is ballast and drag that keep the kite pointing into the wind. Fly once without a tail, once with, and watch the difference.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/kite.webp",
+    "alt": "A red and yellow kite with long ribbon tails flying over a green meadow",
+    "width": 1200,
+    "height": 800,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "kites",
+    "wind",
+    "experiments"
+  ],
+  "sources": [
+    {
+      "title": "Kite | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kite",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Flight one: no tail",
+      "paragraphs": [
+        "On a breezy day in an open space, fly a simple diamond kite with no tail, or with its tail removed if it unclips. Watch what it does: most tailless diamond kites loop, dive and spin, because nothing holds the bottom of the kite down and steady.",
+        "Keep the flight short and note what you saw. A kite that will not stay up is not broken — it is missing its stabiliser."
+      ]
+    },
+    {
+      "heading": "Flight two: add the tail",
+      "paragraphs": [
+        "Clip or tie on a tail about five times the kite's height, with small bows or strips of light cloth tied along it for extra drag. Fly again in the same wind and compare: the tail's weight pulls the kite's bottom down while the drag resists spinning, so the kite points up into the wind and holds steady.",
+        "If it still dances, add another bow or two. Kite flyers tune tails the way musicians tune strings — a little at a time, testing between changes."
+      ]
+    }
+  ],
+  "takeaway": "A tail steadies a kite with weight and drag: fly tailless and watch it loop, then add a long tail and watch it settle.",
+  "fiction": false,
+  "materials": [
+    "A simple diamond kite with a removable or clip-on tail",
+    "Light cloth strips or ribbon for extra bows",
+    "A notebook to record both flights (optional)"
+  ],
+  "supervision": "An adult flies with the child, chooses the open space and handles tangled line.",
+  "safetyNotes": [
+    "Fly only in open spaces well away from roads, power lines, trees and airports, and never in thundery weather.",
+    "Never leave kite line across a path where cyclists or walkers could trip on it."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,55 @@
+{
+  "id": "together-draft-2026-11-23-01",
+  "slug": "a-family-photo-walk-everyone-frames-one-picture",
+  "brand": "together",
+  "contentType": "article",
+  "title": "A family photo walk: everyone frames one picture",
+  "description": "Take a walk together, but give it a gentle job: each person must choose exactly one thing worth photographing. The limit is the point — it makes everyone look.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family holding hands while walking",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "walking",
+    "photography"
+  ],
+  "sources": [
+    {
+      "title": "Walking | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Walking",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "One picture each, chosen slowly",
+      "paragraphs": [
+        "Walk a familiar route — your street, a park loop, the way to the shops. Each person may take just one photograph on the whole walk. Knowing you have only one makes you scan doorways, trees and shadows far more carefully than usual.",
+        "Children often choose what adults walk straight past: a crack shaped like a heart, a very serious cat, the best puddle. The rule protects those choices — nobody's one picture can be voted down."
+      ]
+    },
+    {
+      "heading": "Show and tell at home",
+      "paragraphs": [
+        "Back home, pass the photos around one at a time. The photographer explains what they saw and why it earned the walk's only frame, and everyone else says what they notice in it.",
+        "Keep the sets. A season of photo walks becomes a small family archive of the same streets changing — and of each person's eye growing sharper."
+      ]
+    }
+  ],
+  "takeaway": "Give everyone exactly one photograph per family walk, then share them at home — the limit teaches everyone to really look.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

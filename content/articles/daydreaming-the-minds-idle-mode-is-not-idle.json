@@ -1,0 +1,55 @@
+{
+  "id": "grow-draft-2026-11-23-02",
+  "slug": "daydreaming-the-minds-idle-mode-is-not-idle",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Daydreaming: the mind's idle mode is not idle",
+  "description": "Staring out of a window, mind wandering, looks like doing nothing. Brain research suggests those drifting minutes are when the mind files memories, rehearses futures and quietly joins up ideas.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/mind.webp",
+    "alt": "Resting on a bench at a mountain viewpoint",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "mind",
+    "attention",
+    "creativity"
+  ],
+  "sources": [
+    {
+      "title": "Daydream | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Daydream",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "What the wandering mind is doing",
+      "paragraphs": [
+        "When we stop focusing on a task, a set of brain regions known as the default mode network becomes more active. During daydreams we replay recent events, imagine upcoming conversations and test possible futures — mental housekeeping that focused work crowds out.",
+        "That is why answers so often arrive in the shower or on a walk: the problem was handed to the part of the mind that works without being watched."
+      ]
+    },
+    {
+      "heading": "Making room for drift",
+      "paragraphs": [
+        "Daydreaming is not the same as distraction by a feed: a scroll fills every gap, while a drift needs an empty one. Short, boring stretches — a bench, a view, a slow queue — are where the idle mode can start.",
+        "Try protecting a few unfilled minutes a day. Sit somewhere pleasant, let your thoughts wander, and keep a notebook nearby for whatever surfaces."
+      ]
+    }
+  ],
+  "takeaway": "Daydreaming switches on the brain's default mode network, which files memories and rehearses futures — idle minutes are working minutes.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

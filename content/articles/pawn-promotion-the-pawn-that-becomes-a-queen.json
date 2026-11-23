@@ -1,0 +1,55 @@
+{
+  "id": "play-draft-2026-11-23-01",
+  "slug": "pawn-promotion-the-pawn-that-becomes-a-queen",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Pawn promotion: the pawn that becomes a queen",
+  "description": "A pawn that crosses the whole board earns an extraordinary reward: it must become a queen, rook, bishop or knight. Why promotion exists, and why almost everyone chooses the queen.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/games.webp",
+    "alt": "Wooden chess pieces on a board",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chess",
+    "pawns",
+    "rules"
+  ],
+  "sources": [
+    {
+      "title": "Promotion (chess) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Promotion_(chess)",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The long walk pays off",
+      "paragraphs": [
+        "A pawn that reaches the far end of the board — the eighth rank for White, the first for Black — cannot stay a pawn. In the same move it must be replaced by a queen, rook, bishop or knight of its own colour. It can never become a king, and it cannot refuse the upgrade.",
+        "Promotion is why a single passed pawn can decide a game. A player who is a whole rook down can still win by shepherding one pawn to the end, because the new queen is worth more than the piece they lost."
+      ]
+    },
+    {
+      "heading": "Why the queen, almost always",
+      "paragraphs": [
+        "Queening is the default because the queen is the strongest piece, combining rook and bishop moves. Players occasionally choose a knight instead — underpromotion — when the knight's jump gives an immediate check the queen could not, or when queening would stalemate the opponent.",
+        "You may promote to a piece you still have on the board, so two queens at once is perfectly legal. In practice the spare queen is often shown with an upside-down rook."
+      ]
+    }
+  ],
+  "takeaway": "A pawn that reaches the far rank must promote — usually to a queen, which is why one small pawn can outweigh a lost rook.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

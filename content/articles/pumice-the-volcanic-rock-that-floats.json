@@ -1,0 +1,55 @@
+{
+  "id": "discover-draft-2026-11-23-02",
+  "slug": "pumice-the-volcanic-rock-that-floats",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Pumice: the volcanic rock that floats",
+  "description": "Drop most rocks in water and they sink. Pumice floats — sometimes in rafts covering whole stretches of ocean. Its secret is that it is mostly air.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/earth.webp",
+    "alt": "A volcano erupting under a daytime sky",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "volcanoes",
+    "rocks",
+    "oceans"
+  ],
+  "sources": [
+    {
+      "title": "Pumice | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pumice",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Froth that turned to stone",
+      "paragraphs": [
+        "Pumice begins as gas-filled lava fizzing like the head on a fizzy drink. When that frothy lava is thrown from a volcano and cools very quickly, the bubbles cannot escape. They are frozen into the rock as millions of tiny holes.",
+        "Because so much of its volume is trapped air, pumice is lighter than water. A piece can float for months, and big eruptions create drifting pumice rafts that carry small sea creatures to new shores."
+      ]
+    },
+    {
+      "heading": "Useful holes",
+      "paragraphs": [
+        "The same holes make pumice rough and gritty, so people have used it for centuries to scrub and polish — from smoothing skin to the pumice in some soaps and the stone-washing of jeans.",
+        "Gardeners mix pumice into soil to hold air and drainage around roots. One volcanic rock, three jobs — all thanks to bubbles that never got out."
+      ]
+    }
+  ],
+  "takeaway": "Pumice is lava froth cooled so fast its air bubbles stayed trapped, making a rock light enough to float and gritty enough to scrub.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "together-quiz-phubbing-at-the-table-713",
+  "scheduledDate": "2031-01-03",
+  "brand": "together",
+  "prompt": "At a shared meal, one person keeps checking their phone mid-conversation — a habit researchers call 'phubbing'. What does the research generally find it does to the people being phubbed?",
+  "options": [
+    {
+      "id": "a",
+      "text": "It makes them feel more connected"
+    },
+    {
+      "id": "b",
+      "text": "It tends to make them feel excluded and lowers conversation quality"
+    },
+    {
+      "id": "c",
+      "text": "It has no effect on anyone"
+    },
+    {
+      "id": "d",
+      "text": "It improves the phubber's memory of the meal"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Studies of phubbing — snubbing someone in favour of a phone — find that the person being phubbed typically feels excluded and rates the interaction and relationship worse. Putting the phone away is a small act with outsized effect.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Phubbing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Phubbing",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

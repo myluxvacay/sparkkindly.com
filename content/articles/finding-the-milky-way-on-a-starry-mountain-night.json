@@ -1,0 +1,55 @@
+{
+  "id": "discover-draft-2026-11-23-03",
+  "slug": "finding-the-milky-way-on-a-starry-mountain-night",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Finding the Milky Way on a starry mountain night",
+  "description": "On a clear, dark night far from town lights, a pale band crosses the sky. That band is our own galaxy seen edge-on — and mountains are one of the best places to find it.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/space.webp",
+    "alt": "A starry sky over snowy mountains",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "stars",
+    "galaxies",
+    "night sky"
+  ],
+  "sources": [
+    {
+      "title": "Milky Way | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Milky_Way",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "A band of a hundred billion suns",
+      "paragraphs": [
+        "The Milky Way is a spiral galaxy, and we live inside one of its arms. Looking along the flat disc of the galaxy, we see stars so numerous and distant that their light merges into a glowing band. Dark lanes in the band are not empty sky — they are clouds of dust blocking the light behind them.",
+        "The band is brightest toward the constellation Sagittarius, where we look toward the galaxy's crowded centre."
+      ]
+    },
+    {
+      "heading": "How to give yourself the best chance",
+      "paragraphs": [
+        "Choose a moonless night, get as far from streetlights as you can, and let your eyes adjust for at least twenty minutes without looking at a phone. High, dry places — mountain viewpoints above the haze — show the band at its sharpest.",
+        "What looks like a faint cloud is neither cloud nor mist: it does not move or change shape through the night, because it is the structure of the galaxy itself, turning with the sky."
+      ]
+    }
+  ],
+  "takeaway": "The pale band over dark mountains is our galaxy seen from inside: a hundred billion stars merged into one river of light.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

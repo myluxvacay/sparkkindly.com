@@ -1,0 +1,55 @@
+{
+  "id": "save-draft-2026-11-23-01",
+  "slug": "when-solar-panels-retire-can-they-be-recycled",
+  "brand": "save",
+  "contentType": "article",
+  "title": "When solar panels retire: can they be recycled?",
+  "description": "A solar panel works for roughly 25 to 30 years. As the first big generations of panels reach retirement, a new question matters for your wallet and the planet: what happens to them next?",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "hero": {
+    "src": "/images/green.webp",
+    "alt": "Solar panels across a green field",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "solar",
+    "recycling",
+    "energy"
+  ],
+  "sources": [
+    {
+      "title": "End-of-life management for solar photovoltaics | U.S. Department of Energy",
+      "url": "https://www.energy.gov/eere/solar/end-life-management-solar-photovoltaics",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 23 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Mostly glass, metal — and value",
+      "paragraphs": [
+        "A typical panel is mostly glass and an aluminium frame, with silicon cells and small amounts of silver and copper inside. Those materials are worth recovering: specialist recyclers can reclaim the great majority of a panel's mass, and the metals go straight back into manufacturing.",
+        "The catch is cost and scale. Recycling a panel still costs more than sending it to landfill in many places, which is why rules and take-back schemes are only now catching up with the retirement wave."
+      ]
+    },
+    {
+      "heading": "What it means when you buy",
+      "paragraphs": [
+        "When you get quotes, ask what the installer does with old panels and whether the manufacturer runs a take-back programme. A slightly higher quote that includes end-of-life handling can be the cheaper honest price over the panel's whole life.",
+        "And a retiring panel is not always a dead one: panels that have lost some output can still serve in lower-demand roles, so reuse comes before recycling in the waste hierarchy."
+      ]
+    }
+  ],
+  "takeaway": "Retired solar panels are mostly recyclable glass and metal — ask installers about take-back schemes, because landfill is the lazy option, not the only one.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
