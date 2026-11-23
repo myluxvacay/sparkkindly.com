@@ -4,8 +4,9 @@
 -- decision in /admin/requests/ moves it to 'approved' (shown on the public Fresh Requests shelf),
 -- 'declined' (never shown) or 'created' (shown as Made!, linking the published item).
 -- No personal data exists anywhere in this design: no name, no email, no account. The submitter/voter
--- columns hold only a one-way hash of the client network prefix (+ user agent for votes), kept so the
--- same household cannot vote twice or flood the queue; the hash cannot be reversed to an address.
+-- columns hold only a keyed HMAC of the client network prefix (IPv4 /24, IPv6 /64; + user agent for
+-- votes), kept so one neighbourhood network cannot vote twice or flood the queue; the keyed hash
+-- cannot be enumerated back to an address from the table alone.
 -- Additive only (new tables), so the previous release still runs against this schema.
 -- Rollback: DROP TABLE printable_request_votes; DROP TABLE printable_requests;
 --   DELETE FROM schema_migrations WHERE name = '046_printable_requests.sql'.
@@ -15,7 +16,7 @@ CREATE TABLE printable_requests (
   age_topic      text NOT NULL CHECK (char_length(age_topic) BETWEEN 1 AND 30),
   request_text   text NOT NULL CHECK (char_length(request_text) BETWEEN 1 AND 280),
   status         text NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'declined', 'created')),
-  created_url    text CHECK (created_url IS NULL OR (char_length(created_url) BETWEEN 1 AND 300 AND created_url LIKE '/%')),
+  created_url    text CHECK (created_url IS NULL OR (char_length(created_url) BETWEEN 1 AND 300 AND created_url LIKE '/%' AND created_url NOT LIKE '//%' AND created_url NOT LIKE '%\\%')),
   me_too_count   integer NOT NULL DEFAULT 0 CHECK (me_too_count >= 0),
   submitter_hash text NOT NULL CHECK (char_length(submitter_hash) = 64),
   created_at     timestamptz NOT NULL DEFAULT now(),

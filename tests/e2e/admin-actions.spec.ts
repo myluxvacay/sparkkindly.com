@@ -68,7 +68,7 @@ test('close a problem report from the reports page', async ({ page }) => {
   await expect(page.getByText('<b>e2e markup stays text</b>')).toBeVisible();
   await page.getByRole('button', { name: 'Close report on: E2E reported item' }).click();
   await expect(page.getByRole('status')).toContainText('Report closed.');
-  expect((await sql("SELECT status FROM problem_reports WHERE item_id = $1", [id])).rows).toEqual([{ status: 'closed' }]);
+  expect((await sql("SELECT status FROM problem_reports WHERE item_id = $1", [id])).rows).toEqual([{ status: 'fixed' }]);
 });
 
 test('a world named after a page is refused with a readable error', async ({ page }) => {

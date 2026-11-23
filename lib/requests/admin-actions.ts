@@ -23,10 +23,11 @@ function requestId(f: URLSearchParams, fail: Fail): string {
   return id;
 }
 
-// The created item's link: an on-site path only (never an external URL), short and markup-free.
+// The created item's link: an on-site path only — never an external URL, so protocol-relative
+// ('//host/…') and backslash ('/\host') forms are refused alongside markup and whitespace.
 function createdUrl(f: URLSearchParams, fail: Fail): string {
   const v = field(f, 'created_url');
-  if (!v.startsWith('/') || v.length > 300 || /[<>\s]/.test(v)) throw fail(400, 'bad_input');
+  if (!v.startsWith('/') || v.startsWith('//') || v.includes('\\') || v.length > 300 || /[<>\s]/.test(v)) throw fail(400, 'bad_input');
   return v;
 }
 

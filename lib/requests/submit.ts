@@ -5,7 +5,7 @@
 // `website` is a honeypot hidden from people; a bot that fills it is 'dropped': the caller answers
 // as if the request were stored and nothing is written.
 // Verified by tests/unit/requests-submit.test.ts and tests/unit/requests-repo.test.ts.
-import { createHash } from 'node:crypto';
+import { createHmac } from 'node:crypto';
 import type { Queryable } from '@/lib/db';
 import { clientPrefix } from '@/lib/admin/guard';
 import { createLimiter } from '@/lib/agents/rate-limit';
@@ -21,11 +21,14 @@ const MARKUP = /[<>]/;
 export type RequestInput = { category: unknown; age: unknown; text: unknown; website: unknown };
 export type RequestResult = { status: 'stored' } | { status: 'dropped' } | { status: 'invalid' };
 
-// The only identity a submission or vote ever leaves: a one-way hash of the client network prefix
-// (and, for votes, the browser family string), so one household counts once and floods are visible
-// without storing anything that identifies a person or a child.
+// The only identity a submission or vote ever leaves: a keyed HMAC of the client network prefix —
+// IPv4 truncated to /24, IPv6 to /64 (clientPrefix) — and, for votes, the browser family string.
+// The /24 truncation plus the server-secret key (the admin secret key, reused as pepper) mean the
+// stored value cannot be enumerated back to an address by anyone who merely reads the table: at
+// most it ever names a neighbourhood-sized network, never a person or a child.
 export function visitorHash(clientIp: string, salt = ''): string {
-  return createHash('sha256').update(`${clientPrefix(clientIp)}|${salt}`).digest('hex');
+  const key = process.env.ADMIN_SECRET_KEY ?? 'sparkkindly-requests-unpeppered';
+  return createHmac('sha256', key).update(`${clientPrefix(clientIp, 24)}|${salt}`).digest('hex');
 }
 
 export async function submitPrintableRequest(

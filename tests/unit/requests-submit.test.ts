@@ -39,9 +39,11 @@ describe('submitPrintableRequest', () => {
     expect(await count()).toBe(2);
   });
 
-  it('visitorHash is a stable one-way hash of the client prefix', () => {
+  it('visitorHash is a stable keyed hash of the /24 client prefix, never of a full address', () => {
     expect(visitorHash('203.0.113.7')).toMatch(/^[0-9a-f]{64}$/);
     expect(visitorHash('203.0.113.7')).toBe(visitorHash('203.0.113.7'));
+    // Same /24 neighbourhood: same hash — the stored value names a network, not a household.
+    expect(visitorHash('203.0.113.7')).toBe(visitorHash('203.0.113.200'));
     expect(visitorHash('203.0.113.7')).not.toBe(visitorHash('198.51.100.9'));
     expect(visitorHash('203.0.113.7', 'ua')).not.toBe(visitorHash('203.0.113.7'));
   });
