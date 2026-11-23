@@ -57,6 +57,7 @@ export const topicChildren: Record<string, Record<string, string>> = {
     'printables-kindness-feelings': 'Kindness & Feelings',
     'printables-science-labels': 'Label-the-Parts',
     'printables-story-sequencing': 'Story Sequencing Cards',
+    'printables-how-things-work': 'How Things Work',
     'ages-5-8': 'Ages 5–8',
     'ages-6-10': 'Ages 6–10',
   },

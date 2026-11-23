@@ -3,9 +3,10 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { AGE_BANDS, PRINTABLE_CATEGORIES, printableAgeBand, printableCategory } from '@/lib/printables';
 
-// Library integrity: the 300 delivered printables (scripts/ingest-printables.ts) plus the one
+// Library integrity: the 300 delivered printables (scripts/ingest-printables.ts), the one
 // in-house sheet added 23 Nov 2026 (paper-aeroplane-classic-dart, Fold & Make — the delivery had
-// no aeroplane) must agree with the taxonomy and with the assets on disk — an item whose PDF or
+// no aeroplane) and the six owner-delivered How Things Work posters (23 Nov 2026, their own
+// category) must agree with the taxonomy and with the assets on disk — an item whose PDF or
 // preview is missing, or whose tags drift from its category, would ship a broken sheet page to a
 // child's table.
 
@@ -17,16 +18,16 @@ const printableDocs = fs
   .filter((d) => typeof d.id === 'string' && d.id.startsWith('printable-'));
 
 describe('printables taxonomy', () => {
-  it('has fifteen categories with unique topics and the two delivered age bands', () => {
-    expect(PRINTABLE_CATEGORIES).toHaveLength(15);
-    expect(new Set(PRINTABLE_CATEGORIES.map((c) => c.topic)).size).toBe(15);
+  it('has sixteen categories with unique topics and the two delivered age bands', () => {
+    expect(PRINTABLE_CATEGORIES).toHaveLength(16);
+    expect(new Set(PRINTABLE_CATEGORIES.map((c) => c.topic)).size).toBe(16);
     expect(AGE_BANDS.map((a) => a.topic)).toEqual(['ages-5-8', 'ages-6-10']);
   });
 });
 
 describe('delivered printable library', () => {
-  it('has exactly 301 items, twenty per category plus the in-house aeroplane in Fold & Make', () => {
-    expect(printableDocs).toHaveLength(301);
+  it('has exactly 307 items: twenty per delivered category, the aeroplane in Fold & Make, six How Things Work posters', () => {
+    expect(printableDocs).toHaveLength(307);
     const perTopic = new Map<string, number>();
     for (const doc of printableDocs) {
       const topic = PRINTABLE_CATEGORIES.map((c) => c.topic).find((t) => doc.tags.includes(t));
@@ -34,7 +35,8 @@ describe('delivered printable library', () => {
       perTopic.set(topic!, (perTopic.get(topic!) ?? 0) + 1);
     }
     for (const category of PRINTABLE_CATEGORIES) {
-      expect(perTopic.get(category.topic), category.slug).toBe(category.topic === 'printables-fold-make' ? 21 : 20);
+      const expected = category.topic === 'printables-fold-make' ? 21 : category.topic === 'printables-how-things-work' ? 6 : 20;
+      expect(perTopic.get(category.topic), category.slug).toBe(expected);
     }
   });
 
@@ -66,7 +68,7 @@ describe('delivered printable library', () => {
   });
 
   it('slugs are unique and category/age helpers resolve from topics', () => {
-    expect(new Set(printableDocs.map((d) => d.slug)).size).toBe(301);
+    expect(new Set(printableDocs.map((d) => d.slug)).size).toBe(307);
     for (const doc of printableDocs.slice(0, 25)) {
       const item = { topics: doc.tags as string[] };
       expect(printableCategory(item)?.topic, doc.slug).toBe(doc.tags.find((t: string) => t.startsWith('printables-') && t !== 'printables'));

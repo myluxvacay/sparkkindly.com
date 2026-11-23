@@ -50394,6 +50394,78 @@
     "reviewedAt": "2026-11-23",
     "reviewNote": "Created in-house for SparkKindly on 23 November 2026 at the owner's direction (\"Add paper aeroplane\") to fill the Fold & Make gap in the delivered printable library — the delivered 300 sheets contained no aeroplane. Step diagrams drawn programmatically so each fold follows geometrically from the previous step. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED)."
    }
+  },
+  {
+   "kind": "article",
+   "id": "printable-how-the-eye-works",
+   "priorHash": "e02fc54f05b95aaf490988886c4b25daa11c693ceac4de62be919e9ad29b8f96",
+   "approvedHash": "b54793ed9ed578d9ff1bf0942e3f13f0c5c8a59cbae6a274c23dab895c911823",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "How Things Work poster, added 23 November 2026 at the owner's direction (\"Add these too please\") from artwork he delivered and QA'd himself (labels, facts and Mango's brass bell verified owner-side; no art changes). The sheet PDF is a faithful full-page rendering of the delivered poster — header and footer bands whole, nothing cropped. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED)."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "printable-how-soap-cleans-your-hands",
+   "priorHash": "c94f61eb3346fdaa4babfc1498dce04015b0b51f39402b23cb17730b3845dc93",
+   "approvedHash": "9191347333c0ae78df50be9c2eb9b5e4b45daccf353c773c7699a6a1d23958fb",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "How Things Work poster, added 23 November 2026 at the owner's direction (\"Add these too please\") from artwork he delivered and QA'd himself (labels, facts and Mango's brass bell verified owner-side; no art changes). The sheet PDF is a faithful full-page rendering of the delivered poster — header and footer bands whole, nothing cropped. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED)."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "printable-how-super-fast-trains-work",
+   "priorHash": "7a0c509284af64036c3b7aa27718c43f5a92a9652ca03087e404161d6418ed47",
+   "approvedHash": "03a5e2c8aef2417f61ef87d22c37f5463712b3f3fe4faa2d2c140ac6fdc2785b",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "How Things Work poster, added 23 November 2026 at the owner's direction (\"Add these too please\") from artwork he delivered and QA'd himself (labels, facts and Mango's brass bell verified owner-side; no art changes). The sheet PDF is a faithful full-page rendering of the delivered poster — header and footer bands whole, nothing cropped. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED)."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "printable-how-magnets-work",
+   "priorHash": "b96821c70382f71d4ae4e3abb3db31418628ab28e2b794cae555f02e5c3a4f59",
+   "approvedHash": "da72f65e19bde2c63b286773b64f52230110a6da45884023ee132b8d9651e7c4",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "How Things Work poster, added 23 November 2026 at the owner's direction (\"Add these too please\") from artwork he delivered and QA'd himself (labels, facts and Mango's brass bell verified owner-side; no art changes). The sheet PDF is a faithful full-page rendering of the delivered poster — header and footer bands whole, nothing cropped. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED)."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "printable-how-a-lever-works",
+   "priorHash": "de411403d77546fd1e8dcad21203885721d2a6b94724870101d65c7b6de99349",
+   "approvedHash": "189c404810d97cc716c112be1e302a1cdf27e9b0e76f06ec9c20cb32a0fea807",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "How Things Work poster, added 23 November 2026 at the owner's direction (\"Add these too please\") from artwork he delivered and QA'd himself (labels, facts and Mango's brass bell verified owner-side; no art changes). The sheet PDF is a faithful full-page rendering of the delivered poster — header and footer bands whole, nothing cropped. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED)."
+   }
+  },
+  {
+   "kind": "article",
+   "id": "printable-how-photosynthesis-works",
+   "priorHash": "6e98ece7593562ff624756e59ca1df9972ef3c4a98159f5bfc1db100fa4bfb63",
+   "approvedHash": "8a605a1662c9e173a2d168070d81f68eafc72518e785a707fef03e3ab090eaac",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "How Things Work poster, added 23 November 2026 at the owner's direction (\"Add these too please\") from artwork he delivered and QA'd himself (labels, facts and Mango's brass bell verified owner-side; no art changes). The sheet PDF is a faithful full-page rendering of the delivered poster — header and footer bands whole, nothing cropped. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED)."
+   }
   }
  ]
 }
