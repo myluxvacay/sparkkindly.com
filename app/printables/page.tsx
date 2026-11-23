@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import PrintablesHub, { type HubItem } from '@/components/printables/PrintablesHub';
 import { PrintableShare } from '@/components/printables/PrintableActions';
@@ -61,6 +62,14 @@ export default async function PrintablesPage() {
         and learn together away from the screen.
       </p>
       <PrintablesHub items={hubItems} />
+      <section className="section" aria-labelledby="request-heading">
+        <h2 id="request-heading">Can&apos;t find it? Request it</h2>
+        <p>
+          Tell us the sheet your family or classroom needs — a topic, an animal, a celebration — and we&apos;ll add it
+          to the list. <Link href="/printables/request/">Request a printable</Link> ·{' '}
+          <Link href="/printables/fresh-requests/">Fresh Requests shelf</Link>
+        </p>
+      </section>
       <PrintableShare
         url={hubUrl}
         title="SparkKindly Printables"

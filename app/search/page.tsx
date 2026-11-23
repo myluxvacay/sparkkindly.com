@@ -53,7 +53,19 @@ export default async function SearchPage({ searchParams }: Props) {
       )}
       {trimmed.length > MAX_Q && <p>We used the first {MAX_Q} characters of your search.</p>}
       {!q && <p>Type a word or two to look through titles and summaries.</p>}
-      {q && !items.length && <p>{page > 1 ? <>Nothing on this page. <Link href={href(1)}>Back to the first page</Link>.</> : 'Nothing matched. Try a simpler word.'}</p>}
+      {q && !items.length && (
+        <p>
+          {page > 1 ? (
+            <>Nothing on this page. <Link href={href(1)}>Back to the first page</Link>.</>
+          ) : (
+            <>
+              Nothing matched. Try a simpler word — or, if it&apos;s a printable you&apos;re after,{' '}
+              <Link href={`/printables/request/?text=${encodeURIComponent(q)}`}>request it</Link> and we&apos;ll add it
+              to the list.
+            </>
+          )}
+        </p>
+      )}
       <div className="card-list">
         {items.map((i) => <ItemCard item={i} world={worlds.get(i.world)} key={i.id} headingLevel={2} variant="text" />)}
       </div>
