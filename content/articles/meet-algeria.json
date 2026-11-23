@@ -6,7 +6,7 @@
   "title": "Meet Algeria",
   "description": "Travel to Algeria with Spark and Mango: a country in Northern Africa whose capital is Algiers, where people speak Arabic and pay with the Algerian dinar — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
   "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
   "hero": {
-    "src": "/images/country-meet-algeria.webp",
-    "alt": "Spark and Mango visiting the whitewashed Casbah old town of Algiers tumbling down a hill to the blue Mediterranean Sea",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-algeria-map.webp",
+    "alt": "A SparkKindly map card of Algeria: the country's outline with pins on Algiers, the capital, Casbah of Algiers and Sahara dunes near Timimoun, and a badge showing Algeria's money, the Algerian dinar.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

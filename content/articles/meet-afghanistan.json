@@ -6,7 +6,7 @@
   "title": "Meet Afghanistan",
   "description": "Travel to Afghanistan with Spark and Mango: a country in Southern Asia whose capital is Kabul, where people speak Pashto and pay with the Afghan afghani — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
   "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
   "hero": {
-    "src": "/images/country-meet-afghanistan.webp",
-    "alt": "Spark and Mango visiting deep blue lakes of Band-e Amir between pale cliffs in the Hindu Kush mountains",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-afghanistan-map.webp",
+    "alt": "A SparkKindly map card of Afghanistan: the country's outline with pins on Kabul, the capital, Band-e Amir lakes and Old City of Herat, and a badge showing Afghanistan's money, the Afghan afghani.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

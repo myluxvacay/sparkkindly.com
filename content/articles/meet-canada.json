@@ -6,7 +6,7 @@
   "title": "Meet Canada",
   "description": "Travel to Canada with Spark and Mango: a country in Northern America whose capital is Ottawa, where people speak English and pay with the Canadian dollar — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
   "ageGuidance": "Ages 5–7 (grades K–2). Short sentences and one idea at a time — read it aloud together and find the country on a map as you go.",
   "hero": {
-    "src": "/images/country-meet-canada.webp",
-    "alt": "Spark and Mango visiting turquoise Lake Louise beneath snowy Rocky Mountain peaks",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-canada-map.webp",
+    "alt": "A SparkKindly map card of Canada: the country's outline with pins on Ottawa, the capital, Banff and Lake Louise and Niagara Falls, and a badge showing Canada's money, the Canadian dollar.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

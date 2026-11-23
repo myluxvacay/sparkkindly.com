@@ -6,7 +6,7 @@
   "title": "Meet Maldives",
   "description": "Travel to Maldives with Spark and Mango: a country in Southern Asia whose capital is Malé, where people speak Divehi and pay with the Maldivian rufiyaa — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
   "ageGuidance": "Ages 9–11 (grades 3–5, stretching up). Denser facts and a harder quiz — for confident readers who love geography.",
   "hero": {
-    "src": "/images/country-meet-maldives.webp",
-    "alt": "Spark and Mango visiting a coral reef with sea turtles in the clear turquoise water of the Maldives",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-maldives-map.webp",
+    "alt": "A SparkKindly map card of Maldives: the country's outline with pins on Malé, the capital, and North Malé Atoll reefs, and a badge showing Maldives' money, the Maldivian rufiyaa.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

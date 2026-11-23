@@ -6,7 +6,7 @@
   "title": "Meet Poland",
   "description": "Travel to Poland with Spark and Mango: a country in Eastern Europe whose capital is Warsaw, where people speak Polish and pay with the Polish złoty — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
   "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
   "hero": {
-    "src": "/images/country-meet-poland.webp",
-    "alt": "Spark and Mango visiting Kraków's market square and St Mary's Basilica",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-poland-map.webp",
+    "alt": "A SparkKindly map card of Poland: the country's outline with pins on Warsaw, the capital, Kraków's Old Town and Wawel Castle and Wieliczka Salt Mine, and a badge showing Poland's money, the Polish złoty.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",

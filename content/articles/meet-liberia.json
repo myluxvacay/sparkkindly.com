@@ -6,7 +6,7 @@
   "title": "Meet Liberia",
   "description": "Travel to Liberia with Spark and Mango: a country in Western Africa whose capital is Monrovia, where people speak English and pay with the Liberian dollar — plus two places we'd love to visit.",
   "publishedAt": "2026-11-21",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",
@@ -14,12 +14,12 @@
   "reviewNote": "Country Facts batch (21 November 2026), reviewed by the SparkKindly reviewer agent: schema, duplicate scan, sources, answer accuracy, Kids safety fields, original wording throughout. Staged on feat/country-facts for owner review; not promoted to production.",
   "ageGuidance": "Ages 8–10 (grades 3–5). Confident readers can explore alone; the Think and talk questions make a good family discussion.",
   "hero": {
-    "src": "/images/country-meet-liberia.webp",
-    "alt": "Spark and Mango visiting giant rainforest trees and a river in Sapo National Park",
-    "width": 832,
-    "height": 1248,
-    "credit": "AI-generated image · SparkKindly",
-    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+    "src": "/images/country-meet-liberia-map.webp",
+    "alt": "A SparkKindly map card of Liberia: the country's outline with pins on Monrovia, the capital, Sapo National Park and Robertsport's beaches, and a badge showing Liberia's money, the Liberian dollar.",
+    "width": 1600,
+    "height": 1000,
+    "credit": "Map card drawn by SparkKindly from Natural Earth outline data (public domain)",
+    "rights": "Created for SparkKindly from public-domain Natural Earth data; owner-approved map-card rollout on 2026-11-23"
   },
   "tags": [
     "reading",
