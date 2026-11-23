@@ -114,6 +114,8 @@ describe('client components', () => {
       'components/item/ShareClient.tsx',
       'components/item/VideoPlayer.tsx', // owner-attached YouTube video: loads the player only after a press
       'components/me/InterestsEnhancer.tsx', // the interests island: the live 30-cap counter on the picker (17 Nov 2026)
+      'components/printables/PrintableActions.tsx', // the printables island: copy-link share button on printable pages + hub (print/share anchors work without JS) (22 Nov 2026)
+      'components/printables/PrintablesHub.tsx', // the /printables/ hub island: category + age-band filtering over the server-rendered shelf (22 Nov 2026)
     ]);
   });
 
