@@ -364,7 +364,6 @@ html[data-theme="dark"] .text-card{background:transparent;border-color:#4a3a56}
 .vg-option.picked{border-color:#b97b0f;background:#fdf3d8}
 .vg-option.correct{border-color:#2e7d32;background:#e6f4e6}
 .vg-result{background:#f3eafd;border-radius:12px;padding:12px}
-.games-feature{padding-top:0}
 
 /* Review fix (17 Nov 2026): the new cards are light in BOTH themes by design, so their text colour is pinned
    dark — inheriting the theme ink made labels near-white on near-white in dark mode (WCAG 1.4.3). */
