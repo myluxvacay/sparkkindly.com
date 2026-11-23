@@ -50382,6 +50382,18 @@
     "reviewedAt": "2026-11-22",
     "reviewNote": "Delivered printable library, ingested 22 November 2026 from the owner's \"SparkKindly Printables Incoming\" delivery (300 typeset sheets, 15 categories). Manifest status preserved: DRAFT - QA REQUIRED. Staged on staging for owner QA review only — NOT promoted to production. One sheet per category spot-checked at ingestion (counts, sums, scrambles, crossword and syllable answer keys, label diagram, maze). Delivery README flags the whole set as drafts needing educator proofing before publication."
    }
+  },
+  {
+   "kind": "article",
+   "id": "printable-paper-aeroplane-classic-dart",
+   "priorHash": "c6ee224d1c2dc40dbaa31be54316b2b7311d16072a0729cab7023cf4792886a9",
+   "approvedHash": "1d574304b4bc1f2505b2be051d3db103de615a27081f920de4ccd277181642aa",
+   "fields": {
+    "reviewStatus": "approved",
+    "reviewer": "SparkKindly reviewer agent",
+    "reviewedAt": "2026-11-23",
+    "reviewNote": "Created in-house for SparkKindly on 23 November 2026 at the owner's direction (\"Add paper aeroplane\") to fill the Fold & Make gap in the delivered printable library — the delivered 300 sheets contained no aeroplane. Step diagrams drawn programmatically so each fold follows geometrically from the previous step. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED)."
+   }
   }
  ]
 }

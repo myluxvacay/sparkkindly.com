@@ -3,9 +3,11 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { AGE_BANDS, PRINTABLE_CATEGORIES, printableAgeBand, printableCategory } from '@/lib/printables';
 
-// Delivered-library integrity: the 300 ingested printables (scripts/ingest-printables.ts) must
-// agree with the taxonomy and with the assets on disk — an item whose PDF or preview is missing,
-// or whose tags drift from its category, would ship a broken sheet page to a child's table.
+// Library integrity: the 300 delivered printables (scripts/ingest-printables.ts) plus the one
+// in-house sheet added 23 Nov 2026 (paper-aeroplane-classic-dart, Fold & Make — the delivery had
+// no aeroplane) must agree with the taxonomy and with the assets on disk — an item whose PDF or
+// preview is missing, or whose tags drift from its category, would ship a broken sheet page to a
+// child's table.
 
 const articlesDir = path.join(process.cwd(), 'content/articles');
 const printableDocs = fs
@@ -23,15 +25,17 @@ describe('printables taxonomy', () => {
 });
 
 describe('delivered printable library', () => {
-  it('has exactly 300 items, twenty per category', () => {
-    expect(printableDocs).toHaveLength(300);
+  it('has exactly 301 items, twenty per category plus the in-house aeroplane in Fold & Make', () => {
+    expect(printableDocs).toHaveLength(301);
     const perTopic = new Map<string, number>();
     for (const doc of printableDocs) {
       const topic = PRINTABLE_CATEGORIES.map((c) => c.topic).find((t) => doc.tags.includes(t));
       expect(topic, doc.slug).toBeTruthy();
       perTopic.set(topic!, (perTopic.get(topic!) ?? 0) + 1);
     }
-    for (const category of PRINTABLE_CATEGORIES) expect(perTopic.get(category.topic), category.slug).toBe(20);
+    for (const category of PRINTABLE_CATEGORIES) {
+      expect(perTopic.get(category.topic), category.slug).toBe(category.topic === 'printables-fold-make' ? 21 : 20);
+    }
   });
 
   it('every item is a kids activity tagged printables + one category + one delivered age band', () => {
@@ -62,7 +66,7 @@ describe('delivered printable library', () => {
   });
 
   it('slugs are unique and category/age helpers resolve from topics', () => {
-    expect(new Set(printableDocs.map((d) => d.slug)).size).toBe(300);
+    expect(new Set(printableDocs.map((d) => d.slug)).size).toBe(301);
     for (const doc of printableDocs.slice(0, 25)) {
       const item = { topics: doc.tags as string[] };
       expect(printableCategory(item)?.topic, doc.slug).toBe(doc.tags.find((t: string) => t.startsWith('printables-') && t !== 'printables'));
