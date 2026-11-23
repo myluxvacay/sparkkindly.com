@@ -41,10 +41,32 @@ export const topicChildren: Record<string, Record<string, string>> = {
   kindness: { gratitude: 'Gratitude', 'helping-others': 'Helping others' },
   'play-and-games': { 'word-games': 'Word games', 'brain-teasers': 'Brain teasers' },
   green: { climate: 'Climate', recycling: 'Recycling', 'reducing-waste': 'Reducing waste', 'energy-saving': 'Saving energy' },
+  printables: {
+    'printables-colouring': 'Coloring Pages',
+    'printables-writing-tracing': 'Writing & Tracing',
+    'printables-counting-maths': 'Counting',
+    'printables-maths': 'Math',
+    'printables-fold-make': 'Fold & Make',
+    'printables-mazes': 'Mazes',
+    'printables-dot-to-dot': 'Dot-to-Dot',
+    'printables-matching-sorting': 'Matching & Sorting',
+    'printables-word-play': 'Word Play',
+    'printables-reading-aids': 'Reading Aids',
+    'printables-crosswords': 'Crosswords',
+    'printables-cut-paste-crafts': 'Cut-and-Paste Crafts',
+    'printables-kindness-feelings': 'Kindness & Feelings',
+    'printables-science-labels': 'Label-the-Parts',
+    'printables-story-sequencing': 'Story Sequencing Cards',
+    'printables-how-things-work': 'How Things Work',
+    'ages-5-8': 'Ages 5–8',
+    'ages-6-10': 'Ages 6–10',
+  },
 };
 
 // Top-level topics with no parent. The reading-series structure (migration 043 mirrors it for existing
 // databases): the collection, the series and its explainer track, and the three reading bands.
+// Printables (22 Nov 2026): the collection root; its children in topicChildren below carry the fifteen
+// printable categories and the two delivered age bands, so the hub can filter on topics alone.
 export const topicRoots: Record<string, string> = {
   curiosity: 'Curiosity',
   reading: 'Reading',
@@ -53,4 +75,5 @@ export const topicRoots: Record<string, string> = {
   'pre-k': 'Pre-K',
   'grades-k-2': 'Grades K-2',
   'grades-3-5': 'Grades 3-5',
+  printables: 'Printables',
 };

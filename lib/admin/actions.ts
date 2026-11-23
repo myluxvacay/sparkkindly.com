@@ -21,6 +21,8 @@ import { withRetry } from '@/lib/comments/moderation';
 import { isReasonCode } from '@/lib/comments/rejection-email';
 import { commentsEnabled, contributorsEnabled, promosEnabled, socialEnabled, sponsorshipEnabled } from '@/lib/config';
 import { promoHandlers } from '@/lib/promos/admin-actions';
+import { requestHandlers } from '@/lib/requests/admin-actions';
+import { reportHandlers } from '@/lib/reports/admin-actions';
 import { approveLink, isContributed, lockContribution, markApproved, ownerDecision } from '@/lib/contributors/owner';
 import { sendEmail, type EmailMessage } from '@/lib/email';
 import { attachSponsorship, createSponsor, endSponsorship } from '@/lib/sponsorship/admin';
@@ -240,7 +242,7 @@ const handlers: Record<string, Handler> = {
 
   async 'report.close'({ tx, form }) {
     const id = intId(form);
-    await one(tx, "UPDATE problem_reports SET status = 'closed' WHERE id = $1 AND status = 'open'", [id]);
+    await one(tx, "UPDATE problem_reports SET status = 'fixed' WHERE id = $1 AND status = 'pending'", [id]);
     return { code: 'report_closed', target: `report:${id}` };
   },
 
@@ -502,6 +504,8 @@ const handlers: Record<string, Handler> = {
 Object.assign(handlers, socialHandlers((status, code) => new ActionError(status, code)));
 Object.assign(handlers, videoHandlers((status, code) => new ActionError(status, code)));
 Object.assign(handlers, promoHandlers((status, code) => new ActionError(status, code)));
+Object.assign(handlers, requestHandlers((status, code) => new ActionError(status, code)));
+Object.assign(handlers, reportHandlers((status, code) => new ActionError(status, code)));
 
 export const actionNames = Object.keys(handlers);
 

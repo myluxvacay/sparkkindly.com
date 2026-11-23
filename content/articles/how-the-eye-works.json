@@ -1,0 +1,72 @@
+{
+  "id": "printable-how-the-eye-works",
+  "slug": "how-the-eye-works",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "How the Eye Works",
+  "description": "Free SparkKindly Kids how things work printable poster: How the Eye Works.",
+  "publishedAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "author": "SparkKindly Kids",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-23",
+  "reviewNote": "How Things Work poster, added 23 November 2026 at the owner's direction (\"Add these too please\") from artwork he delivered and QA'd himself (labels, facts and Mango's brass bell verified owner-side; no art changes). The sheet PDF is a faithful full-page rendering of the delivered poster — header and footer bands whole, nothing cropped. Staged on staging for owner QA review only — NOT promoted to production. Status: NEW — pending owner QA, like the delivered set (DRAFT - QA REQUIRED).",
+  "ageGuidance": "Ages 5–8. Young readers enjoy it read aloud with a grown-up; confident readers can explore the labels on their own.",
+  "hero": {
+    "src": "/images/printable-how-the-eye-works.webp",
+    "alt": "SparkKindly How Things Work poster: how the eye works, with the parts of the eye labelled.",
+    "width": 1024,
+    "height": 1324,
+    "credit": "SparkKindly Kids printable library",
+    "rights": "Artwork delivered by the site owner for publication on sparkkindly.com (23 November 2026); owner QA of the artwork completed owner-side; staging page QA pending."
+  },
+  "tags": [
+    "printables",
+    "printables-how-things-work",
+    "ages-5-8"
+  ],
+  "sources": [
+    {
+      "title": "National Eye Institute — How the Eyes Work",
+      "url": "https://www.nei.nih.gov/learn-about-eye-health/healthy-vision/how-eyes-work",
+      "accessedAt": "2026-11-23"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-23",
+  "aiDisclosure": "Poster artwork delivered by the site owner (23 November 2026) and published unchanged; the page text around it was written for SparkKindly. Approved by the SparkKindly site owner for publication on 23 November 2026.",
+  "body": [
+    {
+      "heading": "About this poster",
+      "paragraphs": [
+        "Free SparkKindly Kids how things work printable poster: How the Eye Works.",
+        "This poster walks through the eye part by part: light comes in through the pupil, the lens focuses it, and the retina at the back catches the picture and sends it to the brain. Big labels, friendly art, and one idea per box — made to be read together and talked about."
+      ]
+    },
+    {
+      "heading": "How to use this sheet",
+      "paragraphs": [
+        "Print it big if you can and read it together, pointing to each label as you name it. Then cover the words and see how much you can explain from the pictures alone — that explaining-back is where the learning sticks."
+      ]
+    },
+    {
+      "heading": "Talk about it",
+      "paragraphs": [
+        "Which part of the eye lets light in?",
+        "Why do you think the picture lands upside down — and who turns it the right way up?",
+        "What do your eyelashes and eyelids protect your eyes from?"
+      ]
+    }
+  ],
+  "takeaway": "Your eyes are living cameras: they catch light, focus it, and send the picture to your brain faster than you can blink.",
+  "fiction": false,
+  "materials": [
+    "A printer and one sheet of paper (letter or A4) — or just a screen to view it on"
+  ],
+  "supervision": "Read together the first time: an adult reads the labels aloud and answers the questions the poster raises.",
+  "safetyNotes": [
+    "A reading poster — no tools, parts or experiments. If you try the real thing afterwards (a magnet hunt, a proper handwash), a grown-up leads.",
+    "Print at 100% size (not \"fit to page\") so the poster keeps its true proportions."
+  ],
+  "screenFreeExtension": "Explain it back: after reading, put the poster away and tell a grown-up how it works in your own words — then draw your own version."
+}

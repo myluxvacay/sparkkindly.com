@@ -52,7 +52,7 @@ export async function buildDigest(db: Queryable, now: Date): Promise<Digest> {
      FROM worlds w LEFT JOIN items i ON i.world_id = w.id WHERE w.enabled GROUP BY w.slug, w.sort ORDER BY w.sort, w.slug`,
     [at],
   );
-  const reports = await db.query<{ n: string }>("SELECT count(*) AS n FROM problem_reports WHERE status = 'open'");
+  const reports = await db.query<{ n: string }>("SELECT count(*) AS n FROM problem_reports WHERE status = 'pending'");
   const agents = await db.query<{ n: string }>("SELECT count(*) AS n FROM agents WHERE role = 'content' AND last_run_at > $1::timestamptz", [
     new Date(now.getTime() - 3 * DAY).toISOString(),
   ]);

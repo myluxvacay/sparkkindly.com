@@ -3,7 +3,21 @@ import { createLimiter } from '@/lib/agents/rate-limit';
 import { getPublicItem } from '@/lib/public/reads';
 import type { Scope } from '@/lib/public/scope';
 
-const REASONS = ['wrong', 'unsafe', 'broken', 'other'];
+// The issue types (owner direction, 23 November 2026, Report-a-Mistake): the five the owner named,
+// plus 'unsafe' retained from the original form — a safety channel on a children's site is not
+// removed as a side effect of a wording change. Values are stored; labels render on the form and
+// in the admin queue.
+export const REPORT_REASONS = [
+  ['wrong', 'Wrong answer or fact'],
+  ['typo', 'A typo or spelling mistake'],
+  ['picture', "The picture doesn't match"],
+  ['broken', "Something's broken"],
+  ['unsafe', 'Something is unsafe or unsuitable'],
+  ['other', 'Something else'],
+] as const;
+const REASONS: readonly string[] = REPORT_REASONS.map(([value]) => value);
+export const reportReasonLabel = (value: string): string =>
+  REPORT_REASONS.find(([v]) => v === value)?.[1] ?? value;
 const MAX_MESSAGE = 1000;
 
 export type ReportInput = { world: string; slug: string; reason: unknown; message: unknown; website: unknown };

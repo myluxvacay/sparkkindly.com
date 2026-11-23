@@ -94,19 +94,32 @@ export async function latestQuiz(db: Queryable, scope: Scope): Promise<PublicIte
 
 // Title and summary only (ruling): the WHERE uses the expression the items_search index was built on, so the index is
 // used; the ORDER BY weights the title above the summary. websearch_to_tsquery accepts any text without erroring.
-export async function searchPublic(db: Queryable, scope: Scope, q: string, page: Page): Promise<PublicItem[]> {
+export async function searchPublic(
+  db: Queryable,
+  scope: Scope,
+  q: string,
+  page: Page,
+  o: { topic?: string } = {},
+): Promise<PublicItem[]> {
   const text = q.trim().slice(0, MAX_QUERY_CHARS);
   if (!text) return [];
   const params = [...base(scope), text];
   const { limit, offset } = clampPage(page);
+  // An optional topic narrows the search to one collection (the search page's Printables filter,
+  // 22 Nov 2026) — the same EXISTS shape listPublic uses, so the predicate stays in one style.
+  let topicClause = '';
+  if (o.topic) {
+    topicClause = ` AND EXISTS (SELECT 1 FROM item_topics it JOIN topics t ON t.id = it.topic_id
+                           WHERE it.item_id = i.id AND t.slug = $${params.push(o.topic)})`;
+  }
   const r = await db.query<Row>(
     `${PUBLIC_SELECT}
-     WHERE ${VISIBLE} AND to_tsvector('english', i.title || ' ' || i.summary) @@ websearch_to_tsquery('english', $3)
+     WHERE ${VISIBLE} AND to_tsvector('english', i.title || ' ' || i.summary) @@ websearch_to_tsquery('english', $3)${topicClause}
      ORDER BY ts_rank(setweight(to_tsvector('english', i.title), 'A') || setweight(to_tsvector('english', i.summary), 'B'),
                       websearch_to_tsquery('english', $3)) DESC,
               i.published_at DESC, i.id
-     LIMIT $4 OFFSET $5`,
-    [...params, limit, offset],
+     LIMIT $${params.push(limit)} OFFSET $${params.push(offset)}`,
+    params,
   );
   return r.rows.map(toPublic);
 }

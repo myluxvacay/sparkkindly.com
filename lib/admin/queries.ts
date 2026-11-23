@@ -74,7 +74,7 @@ export async function listReports(db: Queryable): Promise<ReportRow[]> {
     `SELECT p.id::text, p.reason, p.message, p.created_at AS "createdAt", i.id AS "itemId", i.title, w.slug AS world, i.slug,
             i.status AS "itemStatus", i.quality_report AS "qualityReport"
      FROM problem_reports p JOIN items i ON i.id = p.item_id JOIN worlds w ON w.id = i.world_id
-     WHERE p.status = 'open' ORDER BY p.created_at LIMIT 200`,
+     WHERE p.status = 'pending' ORDER BY p.created_at LIMIT 200`,
   );
   return r.rows;
 }
