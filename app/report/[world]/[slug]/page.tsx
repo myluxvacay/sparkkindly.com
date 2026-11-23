@@ -3,16 +3,10 @@ import { notFound } from 'next/navigation';
 import { getDb } from '@/lib/db';
 import { currentScope } from '@/lib/accounts/scope-next';
 import { getPublicItem } from '@/lib/public/reads';
+import { REPORT_REASONS } from '@/lib/reports/submit';
 
 export const dynamic = 'force-dynamic';
-export const metadata = { title: 'Report a problem', robots: { index: false, follow: false } };
-
-const REASONS: [string, string][] = [
-  ['wrong', 'Something is wrong or out of date'],
-  ['unsafe', 'Something is unsafe or unsuitable'],
-  ['broken', 'Something is broken'],
-  ['other', 'Something else'],
-];
+export const metadata = { title: 'Report a mistake', robots: { index: false, follow: false } };
 
 type Props = { params: Promise<{ world: string; slug: string }>; searchParams: Promise<{ sent?: string; error?: string }> };
 
@@ -26,8 +20,8 @@ export default async function ReportPage({ params, searchParams }: Props) {
 
   return (
     <div className="container trust-page">
-      <p className="eyebrow">REPORT A PROBLEM</p>
-      <h1>Tell us what is wrong.</h1>
+      <p className="eyebrow">REPORT A MISTAKE</p>
+      <h1>Report a mistake</h1>
       <p className="intro-text">
         About: <Link href={itemPath}>{item.title}</Link>
       </p>
@@ -43,9 +37,9 @@ export default async function ReportPage({ params, searchParams }: Props) {
       )}
       <form method="post" action={action} className="prose quiz-form">
         <fieldset>
-          <legend>What kind of problem is it?</legend>
+          <legend>What kind of mistake is it?</legend>
           <div className="options">
-            {REASONS.map(([value, label]) => (
+            {REPORT_REASONS.map(([value, label]) => (
               <label key={value} className="option">
                 <input type="radio" name="reason" value={value} required />
                 {label}
@@ -54,7 +48,7 @@ export default async function ReportPage({ params, searchParams }: Props) {
           </div>
         </fieldset>
         <p>
-          <label htmlFor="message">Anything else we should know? (optional, up to 1000 characters)</label>
+          <label htmlFor="message">What did you spot? (optional, up to 1000 characters)</label>
           <br />
           <textarea id="message" name="message" rows={5} maxLength={1000} style={{ width: '100%', font: 'inherit' }} />
         </p>

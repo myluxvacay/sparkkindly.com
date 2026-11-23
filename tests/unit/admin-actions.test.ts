@@ -163,11 +163,11 @@ describe('item actions', () => {
 });
 
 describe('report actions', () => {
-  it('closes an open report; a bad id is not found', async () => {
+  it('closes a pending report as fixed; a bad id is not found', async () => {
     const item = await make({ status: 'published', publishAt: NOW, approvedBy: 'x' });
     const r = await db.query<{ id: string }>("INSERT INTO problem_reports (item_id, reason) VALUES ($1, 'wrong') RETURNING id", [item.id]);
     expect(await act('report.close', { id: r.rows[0].id })).toMatchObject({ ok: true });
-    expect((await db.query('SELECT status FROM problem_reports WHERE id = $1', [r.rows[0].id])).rows[0]).toEqual({ status: 'closed' });
+    expect((await db.query('SELECT status FROM problem_reports WHERE id = $1', [r.rows[0].id])).rows[0]).toEqual({ status: 'fixed' });
     expect(await act('report.close', { id: '999999' })).toMatchObject({ ok: false, status: 404 });
     expect(await act('report.close', { id: '1; DROP TABLE items' })).toMatchObject({ ok: false, status: 404 });
   });

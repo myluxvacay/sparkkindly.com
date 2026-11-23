@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 import ItemCard from '@/components/item/ItemCard';
+import ReportLink from '@/components/item/ReportLink';
 import PrintableSheet from '@/components/printables/PrintableSheet';
 import { PrintButton, PrintableShare } from '@/components/printables/PrintableActions';
 import { site } from '@/lib/config';
@@ -171,6 +172,17 @@ export default async function PrintablePage({ params }: Props) {
         text={`Free printable for kids: ${item.title} — from SparkKindly:`}
         mediaUrl={`${site.url}${printableCardPath(item.slug)}`}
       />
+
+      <ReportLink world={item.world} slug={item.slug} />
+
+      <section className="section" aria-labelledby="request-heading">
+        <h2 id="request-heading">Can&apos;t find the sheet you need?</h2>
+        <p>
+          <Link href={`/printables/request/${category ? `?category=${category.topic}` : ''}`}>Request it</Link> — tell us
+          what to create, and watch the <Link href="/printables/fresh-requests/">Fresh Requests shelf</Link>. The
+          most-requested sheets get made first.
+        </p>
+      </section>
     </div>
   );
 }

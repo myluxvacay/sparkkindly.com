@@ -37,7 +37,7 @@ describe('submitReport', () => {
     const r = await db.query<Record<string, unknown>>('SELECT * FROM problem_reports');
     expect(r.rows).toHaveLength(1);
     expect(Object.keys(r.rows[0]).sort()).toEqual(['created_at', 'id', 'item_id', 'message', 'reason', 'status']);
-    expect(r.rows[0]).toMatchObject({ reason: 'wrong', message: 'The answer looks off.', status: 'open' });
+    expect(r.rows[0]).toMatchObject({ reason: 'wrong', message: 'The answer looks off.', status: 'pending' });
   });
 
   it('is not_found, and writes nothing, for an unknown slug, a draft and a video_script', async () => {
