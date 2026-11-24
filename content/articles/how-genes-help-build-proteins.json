@@ -1,0 +1,72 @@
+{
+  "id": "printable-how-genes-help-build-proteins",
+  "slug": "how-genes-help-build-proteins",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "How Genes Help Build Proteins",
+  "description": "Free SparkKindly Kids how things work printable poster: How Genes Help Build Proteins.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly Kids",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "reviewNote": "How Things Work rich-illustration poster (HTW-044), added 24 November 2026 at the owner's direction (\"QA the 62 and import to staging\") from AI-generated artwork delivered in the owner's Drive folder. Reviewer QA completed 24 November 2026: science and labels checked, all text read for spelling and garbling, Spark canon (heart-shaped mascot, teal cape, gold medallion, purple shoes) and SparkKindly header/footer branding verified, poster confirmed on-topic for its title. The sheet PDF is a faithful full-page rendering of the delivered poster image (the delivered PDF had non-standard image-sized pages); the artwork itself is unchanged. Staged on staging for owner QA review only — NOT promoted to production.",
+  "ageGuidance": "Ages 6–10. Young readers enjoy it read aloud with a grown-up; confident readers can explore the labels on their own.",
+  "hero": {
+    "src": "/images/printable-how-genes-help-build-proteins.webp",
+    "alt": "SparkKindly How Things Work poster: how genes help build proteins — DNA copied into RNA, and ribosomes linking amino acids into a protein.",
+    "width": 1024,
+    "height": 1365,
+    "credit": "SparkKindly Kids printable library",
+    "rights": "Artwork delivered by the site owner for publication on sparkkindly.com (24 November 2026); reviewer QA of the artwork completed 24 November 2026; staging page QA pending."
+  },
+  "tags": [
+    "printables",
+    "printables-how-things-work",
+    "ages-6-10"
+  ],
+  "sources": [
+    {
+      "title": "Encyclopaedia Britannica — Gene",
+      "url": "https://www.britannica.com/science/gene",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Poster artwork delivered by the site owner (24 November 2026) and published unchanged after reviewer QA (science, text, character canon and branding checked); the page text around it was written for SparkKindly. Staged for owner QA review, like the delivered library.",
+  "body": [
+    {
+      "heading": "About this poster",
+      "paragraphs": [
+        "Free SparkKindly Kids how things work printable poster: How Genes Help Build Proteins.",
+        "This poster follows a gene at work, step by step: the gene's instructions are copied into an RNA message in the nucleus, the message travels to a ribosome, and the ribosome reads it to link amino acids into a chain that folds into a working protein."
+      ]
+    },
+    {
+      "heading": "How to use this sheet",
+      "paragraphs": [
+        "Print it big if you can and read it together, pointing to each label as you name it. Then cover the words and see how much you can explain from the pictures alone — that explaining-back is where the learning sticks."
+      ]
+    },
+    {
+      "heading": "Talk about it",
+      "paragraphs": [
+        "What carries the gene's message out of the nucleus?",
+        "Which tiny machine reads the message and builds the protein?",
+        "What are proteins built from?"
+      ]
+    }
+  ],
+  "takeaway": "A gene is copied into RNA, and a ribosome reads the copy to build a protein from amino acids.",
+  "fiction": false,
+  "materials": [
+    "A printer and one sheet of paper (letter or A4) — or just a screen to view it on"
+  ],
+  "supervision": "Read together the first time: an adult reads the labels aloud and answers the questions the poster raises.",
+  "safetyNotes": [
+    "A reading poster — no tools, parts or experiments. If you try a related activity afterwards, a grown-up leads.",
+    "Print at 100% size (not \"fit to page\") so the poster keeps its true proportions."
+  ],
+  "screenFreeExtension": "Explain it back: after reading, put the poster away and tell a grown-up how it works in your own words — then draw your own version."
+}
