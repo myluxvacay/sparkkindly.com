@@ -5,10 +5,11 @@ import { AGE_BANDS, PRINTABLE_CATEGORIES, printableAgeBand, printableCategory } 
 
 // Library integrity: the 300 delivered printables (scripts/ingest-printables.ts), the one
 // in-house sheet added 23 Nov 2026 (paper-aeroplane-classic-dart, Fold & Make — the delivery had
-// no aeroplane) and the six owner-delivered How Things Work posters (23 Nov 2026, their own
-// category) must agree with the taxonomy and with the assets on disk — an item whose PDF or
-// preview is missing, or whose tags drift from its category, would ship a broken sheet page to a
-// child's table.
+// no aeroplane), the six owner-delivered How Things Work posters (23 Nov 2026, their own
+// category) and the 39 QA-passed How Things Work rich-illustration posters (24 Nov 2026 —
+// 62 delivered, 41 passed reviewer QA, 2 owner hold-outs) must agree with the taxonomy and
+// with the assets on disk — an item whose PDF or preview is missing, or whose tags drift from
+// its category, would ship a broken sheet page to a child's table.
 
 const articlesDir = path.join(process.cwd(), 'content/articles');
 const printableDocs = fs
@@ -26,8 +27,8 @@ describe('printables taxonomy', () => {
 });
 
 describe('delivered printable library', () => {
-  it('has exactly 307 items: twenty per delivered category, the aeroplane in Fold & Make, six How Things Work posters', () => {
-    expect(printableDocs).toHaveLength(307);
+  it('has exactly 346 items: twenty per delivered category, the aeroplane in Fold & Make, forty-five How Things Work posters', () => {
+    expect(printableDocs).toHaveLength(346);
     const perTopic = new Map<string, number>();
     for (const doc of printableDocs) {
       const topic = PRINTABLE_CATEGORIES.map((c) => c.topic).find((t) => doc.tags.includes(t));
@@ -35,7 +36,7 @@ describe('delivered printable library', () => {
       perTopic.set(topic!, (perTopic.get(topic!) ?? 0) + 1);
     }
     for (const category of PRINTABLE_CATEGORIES) {
-      const expected = category.topic === 'printables-fold-make' ? 21 : category.topic === 'printables-how-things-work' ? 6 : 20;
+      const expected = category.topic === 'printables-fold-make' ? 21 : category.topic === 'printables-how-things-work' ? 45 : 20;
       expect(perTopic.get(category.topic), category.slug).toBe(expected);
     }
   });
@@ -68,7 +69,7 @@ describe('delivered printable library', () => {
   });
 
   it('slugs are unique and category/age helpers resolve from topics', () => {
-    expect(new Set(printableDocs.map((d) => d.slug)).size).toBe(307);
+    expect(new Set(printableDocs.map((d) => d.slug)).size).toBe(346);
     for (const doc of printableDocs.slice(0, 25)) {
       const item = { topics: doc.tags as string[] };
       expect(printableCategory(item)?.topic, doc.slug).toBe(doc.tags.find((t: string) => t.startsWith('printables-') && t !== 'printables'));
