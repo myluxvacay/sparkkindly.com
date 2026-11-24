@@ -1,0 +1,65 @@
+{
+  "id": "together-draft-2026-11-24-03",
+  "slug": "the-two-chair-swap-argue-the-other-side",
+  "brand": "together",
+  "contentType": "activity",
+  "title": "The two-chair swap: argue the other side",
+  "description": "Pick a friendly disagreement, set two chairs facing each other, and take turns arguing the OTHER person's position for two minutes. You cannot rebut — only represent.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "A group of friends with their hands joined together",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "listening",
+    "debate",
+    "empathy"
+  ],
+  "sources": [
+    {
+      "title": "Active listening | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Active_listening",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "How the swap runs",
+      "paragraphs": [
+        "Choose a low-stakes disagreement — where to holiday, whether the cat should be allowed in the bedroom. Person A states their own view in one minute. Then A sits in the other chair and argues B's view for two minutes, as fairly as they can, while B listens without correcting.",
+        "Then swap roles. The round ends with each person saying what surprised them about holding the other position — not who won."
+      ]
+    },
+    {
+      "heading": "Why representing beats rebutting",
+      "paragraphs": [
+        "Arguing a view you oppose forces you to find its strongest form, which is the fastest way to discover what the disagreement is actually about. Often it shrinks: the two positions turn out to share a value and differ only on method.",
+        "Groups that practise the swap argue better everywhere else, because listening-to-represent becomes a habit, not a technique. Keep it playful and time-boxed, and retire any topic that stops being friendly."
+      ]
+    }
+  ],
+  "takeaway": "Argue the other person's position for two minutes from their chair — representing a view fairly is the quickest way to understand it.",
+  "fiction": false,
+  "materials": [
+    "Two chairs",
+    "A timer",
+    "A low-stakes disagreement chosen in advance"
+  ],
+  "supervision": "One person keeps time and enforces the no-rebuttal rule; anyone may retire a topic that stops feeling friendly.",
+  "safetyNotes": [
+    "Choose light topics only — never use the swap for grievances, money disputes or anything involving a third person's feelings.",
+    "Either person may stop the exercise at any time, no reason needed."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,55 @@
+{
+  "id": "save-draft-2026-11-24-01",
+  "slug": "the-decoy-effect-the-middle-option-that-steers-you",
+  "brand": "save",
+  "contentType": "article",
+  "title": "The decoy effect: the middle option that steers you",
+  "description": "Two prices become three, and suddenly the expensive one looks sensible. Shops add a deliberately unattractive option not to sell it, but to move you — here is how to spot the trap.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "pricing",
+    "decisions",
+    "shopping"
+  ],
+  "sources": [
+    {
+      "title": "Decoy effect | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Decoy_effect",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The option nobody is meant to buy",
+      "paragraphs": [
+        "The classic demonstration is a subscription sold in three forms: online-only for one price, print-only for a much higher price, and print-plus-online for that same higher price. The print-only option is a decoy — dominated by the bundle at the same price — and its presence makes the bundle look like obvious value, dramatically increasing how many people choose it.",
+        "Remove the decoy and most people pick the cheap option. Nothing about the two real choices changed; only the company they kept."
+      ]
+    },
+    {
+      "heading": "How to shop past it",
+      "paragraphs": [
+        "When you see three tiers, cover the middle one — literally, with a thumb — and compare the remaining two on their own merits: what do you get, what does it cost, what would you pay for that difference elsewhere?",
+        "Then ask the decoy question: which option here exists only to make another look good? Naming the decoy out loud breaks most of its power, in shops, software pricing pages and coffee sizes alike."
+      ]
+    }
+  ],
+  "takeaway": "A decoy option exists to make a pricier choice look like value. Cover the middle tier and compare the other two on their own merits.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

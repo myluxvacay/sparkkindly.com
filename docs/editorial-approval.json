@@ -50776,6 +50776,284 @@
     "factualClaimsReviewedAt": "2026-11-23",
     "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
    }
+  },
+ {
+  "kind": "article",
+  "id": "discover-draft-2026-11-24-02",
+  "priorHash": "960a1e05803b5694c34fde0f1f8f0be5bd9007d27f5247551f3d2fdc123052b9",
+  "approvedHash": "5cf61dce6e43762b952a22c029835d2f402c9b150182507472e71287697fd531",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
   }
+ },
+ {
+  "kind": "quiz",
+  "id": "discover-quiz-corona-eclipse-714",
+  "priorHash": "d31d19d8dc2353def43cff2b06c7e4fc93a82ebc56703d302e702b252a398c1e",
+  "approvedHash": "132c4224c785d9344ec5c5d340cfcf4f1007619b0911cb5409e1ce0f43003eb7",
+  "fields": {
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "quiz",
+  "id": "grow-quiz-deliberate-practice-714",
+  "priorHash": "7d9414ad81778e5d27a0c2a0718aa6125f33a6c9c6bcff56b48a7cac63ccf427",
+  "approvedHash": "e7225cb1af0a4570f98d821068f04edebcd94a279f27bd2153e7024a913fb77c",
+  "fields": {
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "grow-draft-2026-11-24-01",
+  "priorHash": "299b8ddf21035d53af4a135441a99c1d83cdc1dd44d80fe86c1f402a9b5645e8",
+  "approvedHash": "9e4fb66a45125949588aac9d305d2aeee57e1aec57d29f8d007798a38d96ef92",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "play-draft-2026-11-24-02",
+  "priorHash": "bb1e4dbfe8922160efd80fe8430e2533da2fcb950c0cb6779f2894088daff873",
+  "approvedHash": "35a5abbdebbb317ede50e35c16baa8cadb20418230b5dfb4cff7ca9c97f11f28",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "quiz",
+  "id": "play-quiz-notation-knight-714",
+  "priorHash": "9ff83b1b2a8a08099b61cba65fa97481ed89f913c39c9ec1da612156205727c2",
+  "approvedHash": "78479dc580f9fbad04edd5146cab44840d7aa049ec18787a12832a293d42be84",
+  "fields": {
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "play-draft-2026-11-24-03",
+  "priorHash": "d1ffde9c48b731a740e736f10738d71b6fe33d300a1a588484d8ef3353700151",
+  "approvedHash": "dff7ab9b90fec25f90143eccce7b14869e799e2c1596903273fb79b71f090a9b",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "save-draft-2026-11-24-02",
+  "priorHash": "25b6569f8788ebe6684527dc9ba6ac5732682b7b8160d076af7c27c1a0c7325f",
+  "approvedHash": "16e5554123eacfc3ce112230d33e5d91f0bce485f56f89baae69e895d9826bfa",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "quiz",
+  "id": "save-quiz-delayed-gratification-714",
+  "priorHash": "0655dd5d1f29b30ba955c220424c1051765b24a67d81e2bf4438ab3851165451",
+  "approvedHash": "ce907dde244dbc381717c04dd8517e4da1999645a9398e60a8e2147c10ef1ece",
+  "fields": {
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "discover-draft-2026-11-24-03",
+  "priorHash": "8a6ccd9bcf83a6d8a59b46854d034248ebcb25feb901b8cf91995bf0096befe8",
+  "approvedHash": "4425b1fccb0597727951d87243116af1d4614c2b16d9f02428226920318263b7",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "kids-draft-2026-11-24-03",
+  "priorHash": "35c2b6b5acbab08df89d0ea17d062de7ccf61733a270d81a3fe329657329784d",
+  "approvedHash": "4f8bbe4e8da670a0c8b6b0407dcdea050d4b9e87fab3a9e123b6cb767940c7f1",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "save-draft-2026-11-24-01",
+  "priorHash": "ef13f434cabc14f3cd064c30076739e6c8cb02dd417a49352205aefc5b8b8fca",
+  "approvedHash": "5a065c230266b80fb3e4b630bd87fa6ef1e3747954ac83dfea05cc39a5b91402",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "kids-draft-2026-11-24-01",
+  "priorHash": "b6b7f6866d8786789b4fef2c0c7f99fe774736d1f5fa582a303e2632d88b24bf",
+  "approvedHash": "5223b0d586baaefbea9df406fddaa74abeb8ff1afd2d8c247da6a049e18ca695",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "hero": {
+    "src": "/images/moonrise.webp",
+    "alt": "A huge full moon low on the horizon over fields at dusk",
+    "width": 1600,
+    "height": 1067,
+    "credit": "AI-generated image \u00b7 SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+   },
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "together-draft-2026-11-24-03",
+  "priorHash": "462a262d60a76426f33c04951d8d5849356a5b8bf7216a39147e9212930bf1aa",
+  "approvedHash": "3d1791c72485de16e89309af4b30f1128b6a198d25234ae3eda73498ef5e1e08",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "together-draft-2026-11-24-01",
+  "priorHash": "d753ccb2545b6c014c90f7f56bc102c6a597845cb1811c7b32cb98d5ed8b80d3",
+  "approvedHash": "d499f4d9bb6749cdaf27f3d70b8ec289c83abe6d93cc46055a19d0fe013f58ed",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "grow-draft-2026-11-24-02",
+  "priorHash": "aff3631a58a1694070151883dc834d62e76abd8898a1bcf58c466871ba7a7620",
+  "approvedHash": "a85526f58eed9674de1c08bfd527fbdad742b85790bb297c730f6bd080ece283",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "quiz",
+  "id": "together-quiz-active-listening-check-714",
+  "priorHash": "7c8a61a35b39534db1199b9f23065643d60788bc55640903c36d51f5cf510dd8",
+  "approvedHash": "58394b928c019506c1ad7b74a068d4801cb92e08b171f47224fcebd2c5348201",
+  "fields": {
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "grow-draft-2026-11-24-03",
+  "priorHash": "26cd550bcfbf24d5d864a3f80a8a1a105c7f583707ce8b705532ddec5307c9f6",
+  "approvedHash": "d33eb8ce5878c4fcc4f5911ea6581055809cbdf377469585563ac1151b334479",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "discover-draft-2026-11-24-01",
+  "priorHash": "a20002d5748b85ae52d9018ea3a72f4200b0f13308aca4ccaec7ac636bdcb08c",
+  "approvedHash": "226fa6a0a271fe37506c9087e07853b7096212841b544a9241fbb67918263e04",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ },
+ {
+  "kind": "article",
+  "id": "play-draft-2026-11-24-01",
+  "priorHash": "9679c4c421ec913785a0482357d961e262f1eae989d29d162419c5b6e023baba",
+  "approvedHash": "813fd57966a1149b1a07c1648268c920d3848ffc968778235016e8c938148a0d",
+  "fields": {
+   "publishedAt": "2026-11-24",
+   "reviewStatus": "approved",
+   "reviewer": "SparkKindly reviewer agent",
+   "reviewedAt": "2026-11-24",
+   "factualClaimsReviewedAt": "2026-11-24",
+   "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+  }
+ }
  ]
 }

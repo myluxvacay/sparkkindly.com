@@ -1,0 +1,55 @@
+{
+  "id": "play-draft-2026-11-24-01",
+  "slug": "why-chess-players-write-down-every-move",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Why chess players write down every move",
+  "description": "In serious chess, players record each move in notation as they play. The score sheet settles disputes, proves draws — and becomes the game's memory.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/games.webp",
+    "alt": "Wooden chess pieces on a board",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chess",
+    "notation",
+    "tournaments"
+  ],
+  "sources": [
+    {
+      "title": "Algebraic notation (chess) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Algebraic_notation_(chess)",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "A receipt for the whole game",
+      "paragraphs": [
+        "Algebraic notation gives every square a coordinate and every piece a letter, so a move like Nf3 captures a knight's journey in three characters. Writing moves down is required in most classical tournaments, and the signed score sheets are the official record of the game.",
+        "That record has practical teeth. Claims of a draw by threefold repetition or the fifty-move rule can only be checked against the written moves, and if a dispute arises, the score sheet — not anyone's memory — decides."
+      ]
+    },
+    {
+      "heading": "The game's second life",
+      "paragraphs": [
+        "Recorded games can be replayed, studied and published, which is how famous matches from a century ago are still taught today. Your own score sheets are a training tool too: the moves you most want to take back are usually visible in the pattern of your past games.",
+        "Keeping score also slows the hand. Players who must write each move down tend to blunder less, because the small pause between moving and writing is one last chance to notice a hanging piece."
+      ]
+    }
+  ],
+  "takeaway": "Chess notation turns a game into a checkable record: it proves draw claims, settles disputes and lets every game be studied afterwards.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

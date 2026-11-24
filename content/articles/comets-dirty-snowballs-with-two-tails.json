@@ -1,0 +1,55 @@
+{
+  "id": "discover-draft-2026-11-24-02",
+  "slug": "comets-dirty-snowballs-with-two-tails",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Comets: dirty snowballs with two tails",
+  "description": "A comet is a lump of ice and dust left over from the birth of the solar system. When it swings near the Sun it grows not one tail but two — and they point in different directions.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/space.webp",
+    "alt": "A starry sky over snowy mountains",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "comets",
+    "solar system",
+    "ice"
+  ],
+  "sources": [
+    {
+      "title": "Comet | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Comet",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "A snowball that boils in sunlight",
+      "paragraphs": [
+        "Astronomer Fred Whipple called comets 'dirty snowballs': a nucleus of ice mixed with dark dust and rock, often only a few kilometres wide. Far from the Sun it is frozen and invisible; as it approaches, the ice turns straight to gas, jetting out and dragging dust with it to form a glowing head called the coma.",
+        "That outgassing is why comets brighten so unpredictably. A fresh crack in the crust can expose new ice and make a comet flare, while an old, crusted comet may disappoint."
+      ]
+    },
+    {
+      "heading": "Two tails, two forces",
+      "paragraphs": [
+        "The dust tail is broad, curved and yellowish — sunlight reflecting off grains pushed gently away from the Sun. The ion tail is narrow, straight and blue: gas charged by sunlight and swept directly outward by the solar wind, the stream of particles flowing from the Sun.",
+        "Because both tails are pushed away from the Sun, a comet leaving the inner solar system travels tail-first — the tails lead, the head follows."
+      ]
+    }
+  ],
+  "takeaway": "A comet is a dirty snowball of ice and dust that grows two tails near the Sun: a curved dust tail and a straight blue ion tail, both pointing away from the Sun.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

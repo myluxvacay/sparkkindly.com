@@ -1,0 +1,38 @@
+{
+  "id": "grow-quiz-deliberate-practice-714",
+  "scheduledDate": "2031-02-04",
+  "brand": "grow",
+  "prompt": "Two people practise the piano for an hour. What makes one session 'deliberate practice' rather than casual repetition?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Playing favourite pieces start to finish without stopping"
+    },
+    {
+      "id": "b",
+      "text": "Working on a specific weakness just beyond current ability, with feedback"
+    },
+    {
+      "id": "c",
+      "text": "Practising for longer than anyone else"
+    },
+    {
+      "id": "d",
+      "text": "Playing only in front of an audience"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Deliberate practice targets a defined weakness at the edge of current ability, with immediate feedback and correction — as opposed to repeating what is already comfortable, which maintains skill more than it grows it.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Deliberate practice | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Practice_(learning_method)",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

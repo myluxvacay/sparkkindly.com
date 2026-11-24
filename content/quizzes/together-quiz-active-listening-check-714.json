@@ -1,0 +1,38 @@
+{
+  "id": "together-quiz-active-listening-check-714",
+  "scheduledDate": "2031-02-03",
+  "brand": "together",
+  "prompt": "A friend finishes explaining a problem. Which reply shows active listening best?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Immediately offering three solutions"
+    },
+    {
+      "id": "b",
+      "text": "Summarising what they said and checking you understood it"
+    },
+    {
+      "id": "c",
+      "text": "Changing the subject to something cheerful"
+    },
+    {
+      "id": "d",
+      "text": "Waiting silently until they stop talking, then giving your verdict"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Active listening involves reflecting back what the speaker said — a short summary or paraphrase — and checking it matches what they meant. It confirms understanding before advice, and makes the speaker feel heard.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Active listening | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Active_listening",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

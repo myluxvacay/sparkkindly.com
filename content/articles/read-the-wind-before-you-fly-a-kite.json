@@ -1,0 +1,65 @@
+{
+  "id": "play-draft-2026-11-24-03",
+  "slug": "read-the-wind-before-you-fly-a-kite",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Read the wind before you fly a kite",
+  "description": "Good kite days are visible before you ever unroll the string. Flags, treetops, clouds and your own face all report the wind — learn to read them in order.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/kite.webp",
+    "alt": "A red and yellow kite with long ribbon tails flying over a green meadow",
+    "width": 1600,
+    "height": 1067,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "kites",
+    "wind",
+    "weather"
+  ],
+  "sources": [
+    {
+      "title": "Beaufort scale | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Beaufort_scale",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Read the signs, low to high",
+      "paragraphs": [
+        "Start with flags and washing: limp means too little wind for most kites; a flag flying steadily out means a flyable breeze. Look at treetops next — leaves rustling is gentle, whole branches swaying is strong. Finally watch the clouds: slow, stately movement matches the steady wind kites love.",
+        "Sailors organised these clues into the Beaufort scale, which describes wind by what it does to the world — smoke rising straight, twigs moving, trees in motion — long before instruments were common."
+      ]
+    },
+    {
+      "heading": "Match the kite to the report",
+      "paragraphs": [
+        "Light, steady wind suits simple diamond and sled kites; strong or gusty wind calls for sturdier kites, shorter sessions, or a walk instead. If the wind keeps dropping your kite and then snatching it, it is gusty — the hardest kind to fly in, whatever your skill.",
+        "Write your wind reading in a notebook next to how the flight went. A season of notes teaches you your local flying field better than any forecast."
+      ]
+    }
+  ],
+  "takeaway": "Flags, treetops and clouds report the wind in order: read them first, match the kite to what they say, and note how the flight went.",
+  "fiction": false,
+  "materials": [
+    "A kite and line",
+    "A notebook for wind notes (optional)",
+    "An open flying field"
+  ],
+  "supervision": "An adult reads the wind with the child, chooses the field and decides if gusts make it a no-fly day.",
+  "safetyNotes": [
+    "Fly only in open spaces well away from roads, power lines, trees and airports, and never when thunder is near.",
+    "If branches are snapping or bins are tipping, the wind is too strong — pack up and fly another day."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

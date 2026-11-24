@@ -1,0 +1,55 @@
+{
+  "id": "discover-draft-2026-11-24-03",
+  "slug": "shield-dome-and-cone-three-shapes-of-volcano",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Shield, dome and cone: three shapes of volcano",
+  "description": "A volcano's shape is a fingerprint of its lava. Runny lava builds wide, gentle shields; sticky lava piles into domes; and alternating ash and lava stack the classic steep cone.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/earth.webp",
+    "alt": "A volcano erupting under a daytime sky",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "volcanoes",
+    "lava",
+    "geology"
+  ],
+  "sources": [
+    {
+      "title": "Shield volcano | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Shield_volcano",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Runny lava builds shields",
+      "paragraphs": [
+        "Some lava is thin and fluid, flowing for many kilometres before it hardens — like the basalt eruptions of Hawaii. Layer upon layer of these long flows builds a shield volcano: enormously wide, with slopes so gentle you could walk up without noticing, named for its resemblance to a warrior's shield laid on the ground.",
+        "The same runny lava makes eruptions comparatively gentle: spectacular rivers of rock that usually move slowly enough for people to evacuate, though they destroy everything in their path."
+      ]
+    },
+    {
+      "heading": "Sticky lava builds domes and cones",
+      "paragraphs": [
+        "Thick, sticky lava barely flows at all. It oozes out and piles up over the vent as a steep lava dome, which can later collapse or explode. In between, stratovolcanoes alternate layers of ash and lava flows, building the tall, symmetrical cones of picture books — and the most explosive eruptions, because sticky lava traps gas like a cork in a bottle.",
+        "So the silhouette tells the story: gentle shield, runny lava; steep cone, trapped gas. Volcanologists read a volcano's shape the way you read a warning label."
+      ]
+    }
+  ],
+  "takeaway": "Volcano shapes record lava thickness: fluid lava spreads into wide shields, sticky lava piles into domes, and alternating ash and lava stack steep, explosive cones.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

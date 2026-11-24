@@ -1,0 +1,65 @@
+{
+  "id": "grow-draft-2026-11-24-03",
+  "slug": "walk-the-same-path-in-four-seasons",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "Walk the same path in four seasons",
+  "description": "Choose one short path and walk it once in each season, notebook in hand, noting what changed. A year of four slow walks teaches you a place the way residents know it and visitors never do.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/focus.webp",
+    "alt": "A sunlit path winding through a forest",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "seasons",
+    "walking",
+    "noticing"
+  ],
+  "sources": [
+    {
+      "title": "Phenology | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Phenology",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Set up the year's four walks",
+      "paragraphs": [
+        "Pick a path you can walk in twenty minutes — a park loop, a lane, a stretch of towpath. Mark four dates roughly three months apart. On each walk, take the same notebook and answer the same five prompts: first flower or leaf I see; loudest sound; a smell; something animals are doing; one thing that was not here last time.",
+        "Photograph the same tree or view from the same spot each time. Four frames, one year: the cheapest time-lapse you will ever make."
+      ]
+    },
+    {
+      "heading": "What the comparison teaches",
+      "paragraphs": [
+        "Scientists who record seasonal timings — first buds, first migrants, first frost — call the study phenology, and long records of exactly these notes now help track how the climate is shifting. Your four pages are the same instrument, at garden scale.",
+        "Most people are surprised less by spring than by how much happens in winter: buds swelling, birdsong starting in February, the path's quiet machinery already running."
+      ]
+    }
+  ],
+  "takeaway": "Walk one short path once per season with the same five prompts and the same photo spot — four slow walks that teach you a place deeply.",
+  "fiction": false,
+  "materials": [
+    "A short, familiar path",
+    "A notebook and pen",
+    "A phone or camera for one repeated photo (optional)"
+  ],
+  "supervision": "Walk with a companion or tell someone your route; children stay within sight of their adult.",
+  "safetyNotes": [
+    "Dress for the season and check the forecast; shorten or postpone the walk in ice, lightning or extreme heat.",
+    "Stay on the path and take care on wet leaves, mud and ice."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

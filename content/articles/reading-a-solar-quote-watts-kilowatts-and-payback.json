@@ -1,0 +1,55 @@
+{
+  "id": "save-draft-2026-11-24-02",
+  "slug": "reading-a-solar-quote-watts-kilowatts-and-payback",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Reading a solar quote: watts, kilowatts and payback",
+  "description": "Solar quotes hide simple arithmetic inside jargon. Three numbers — system size in kilowatts, expected yearly kilowatt-hours, and total price — tell you almost everything, including the payback year.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/green.webp",
+    "alt": "Solar panels across a green field",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "solar",
+    "energy bills",
+    "home"
+  ],
+  "sources": [
+    {
+      "title": "Photovoltaic system | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Photovoltaic_system",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Translate the jargon first",
+      "paragraphs": [
+        "A quote's 'kWp' is the system's peak output in strong sun — its size, not its daily production. What you actually buy is kilowatt-hours over a year, which the quote should estimate from your roof's direction, tilt and shading. Divide the total price by the kWp to get a price-per-watt figure you can compare across installers like-for-like.",
+        "Be wary of a quote with no yearly generation estimate, or one that assumes every day is cloudless. Honest installers shade their estimates down, not up."
+      ]
+    },
+    {
+      "heading": "Work out the payback honestly",
+      "paragraphs": [
+        "Payback is the total price divided by what the system saves you per year: the electricity you use yourself (worth your full tariff) plus any export payments for surplus. Count only generation you will genuinely use or be paid for, and include inverter replacement — typically once in the system's life — in the cost side.",
+        "A payback inside the panels' working life, calculated on cautious numbers, is a sound buy. One that needs perfect weather and rising prices to work is a hope, not a plan."
+      ]
+    }
+  ],
+  "takeaway": "Read a solar quote by three numbers — kilowatts peak, honest yearly kilowatt-hours and total price — and divide price by yearly savings for a payback you can trust.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

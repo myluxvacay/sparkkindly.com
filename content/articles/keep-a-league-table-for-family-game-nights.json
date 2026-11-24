@@ -1,0 +1,65 @@
+{
+  "id": "play-draft-2026-11-24-02",
+  "slug": "keep-a-league-table-for-family-game-nights",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Keep a league table for family game nights",
+  "description": "One notebook page can turn scattered game nights into a season. Record who played, who won and one memorable moment — and watch everyone start asking when the next fixture is.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "A child writing in a notebook",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "games",
+    "family",
+    "notebooks"
+  ],
+  "sources": [
+    {
+      "title": "Round-robin tournament | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Round-robin_tournament",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Set up the table",
+      "paragraphs": [
+        "Rule a notebook page into columns: date, game, players, winner, and 'moment of the night'. After each game night, fill in one row together while the result is fresh. Keep points simple — two for a win, one each for a draw — or skip points entirely and just count wins per game.",
+        "Rotate who chooses the game and who keeps the score. The record-keeper's job is a small honour, and children who tally the table are practising arithmetic with real stakes."
+      ]
+    },
+    {
+      "heading": "Run it like a season",
+      "paragraphs": [
+        "Give the league a season length — say, until the end of the school term — and a finals night where the table decides who picks the celebration snack. Mid-season, add each player's favourite game and least favourite; the table starts to show what your family actually loves to play.",
+        "The real prize is the memory bank. A year of rows becomes a diary of evenings together, written in winners and moments rather than paragraphs."
+      ]
+    }
+  ],
+  "takeaway": "A notebook league table — date, game, players, winner, one memorable moment — turns game nights into a season everyone wants to continue.",
+  "fiction": false,
+  "materials": [
+    "A notebook",
+    "A pen or pencil",
+    "The games your family already owns"
+  ],
+  "supervision": "An adult or older child keeps the table honestly and makes sure everyone agrees the result before it is written down.",
+  "safetyNotes": [
+    "Keep league rivalry friendly — the table records fun, and anyone can suggest a cooperative game night instead.",
+    "Keep small game pieces tidied away after play, away from very young children."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

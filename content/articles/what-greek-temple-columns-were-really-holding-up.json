@@ -1,0 +1,55 @@
+{
+  "id": "discover-draft-2026-11-24-01",
+  "slug": "what-greek-temple-columns-were-really-holding-up",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "What Greek temple columns were really holding up",
+  "description": "The rows of columns on a Greek temple look like decoration, but they are the building's skeleton: a stone post-and-lintel system carrying a heavy roof, one upright at a time.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/history.webp",
+    "alt": "An ancient stone pillar in grass",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "ancient Greece",
+    "architecture",
+    "temples"
+  ],
+  "sources": [
+    {
+      "title": "Ancient Greek temple | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Greek_temple",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Posts, beams and a stone roof",
+      "paragraphs": [
+        "A Greek temple is built like a giant stone table. The columns are the legs, standing in rows around a central room; across their tops runs a horizontal beam called the architrave, and above that sat the roof structure and the triangular pediment at each end.",
+        "Stone is strong when squeezed but snaps when stretched, so stone beams can only span short gaps. That is why the columns stand so close together — each gap is the longest a stone lintel can safely bridge."
+      ]
+    },
+    {
+      "heading": "Why they swell and lean",
+      "paragraphs": [
+        "Look closely and the columns are not perfectly straight: many bulge very slightly in the middle, a refinement called entasis, and corner columns are a touch thicker and lean inward. These tweaks correct optical illusions that would make a dead-straight temple look pinched and splayed.",
+        "The flutes — the vertical grooves — carry the eye upward and emphasise that each column is a load-bearing post, not a wall. The decoration is the structure, made visible."
+      ]
+    }
+  ],
+  "takeaway": "Greek temple columns are a stone skeleton: close-set posts carrying short stone beams, subtly swollen and leaning to look straight while they hold the roof up.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

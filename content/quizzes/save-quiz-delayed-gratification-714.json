@@ -1,0 +1,38 @@
+{
+  "id": "save-quiz-delayed-gratification-714",
+  "scheduledDate": "2031-02-05",
+  "brand": "save",
+  "prompt": "In the famous marshmallow experiments, young children could eat one treat now or wait and receive two. What did the waiting strategy of looking away or covering the treat demonstrate?",
+  "options": [
+    {
+      "id": "a",
+      "text": "That willpower is fixed at birth and cannot be helped"
+    },
+    {
+      "id": "b",
+      "text": "That managing attention — not just resisting harder — helps delay gratification"
+    },
+    {
+      "id": "c",
+      "text": "That the children who waited did not like marshmallows"
+    },
+    {
+      "id": "d",
+      "text": "That rewards should never be delayed"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Children who waited successfully tended to manage their attention — looking away, covering the treat, or inventing distractions — rather than staring at the reward and relying on raw resistance. The same trick powers waiting lists and out-of-sight savings.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Stanford marshmallow experiment | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Stanford_marshmallow_experiment",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

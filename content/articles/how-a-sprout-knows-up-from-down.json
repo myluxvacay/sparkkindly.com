@@ -1,0 +1,55 @@
+{
+  "id": "grow-draft-2026-11-24-01",
+  "slug": "how-a-sprout-knows-up-from-down",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "How a sprout knows up from down",
+  "description": "Bury a seed any way up and the sprout still gets it right: roots dive down, shoots climb up. The seed carries its own sense of gravity, built from tiny falling grains inside its cells.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/plants.webp",
+    "alt": "Young green sprouts growing in soil",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "gravity",
+    "seeds"
+  ],
+  "sources": [
+    {
+      "title": "Gravitropism | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gravitropism",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Tiny stones that settle",
+      "paragraphs": [
+        "Inside certain plant cells are dense grains called statoliths — heavier than the fluid around them, so they settle to whichever side of the cell faces down, like pebbles sinking in a jar of water. Their settling tells the plant which way is down. This response to gravity is called gravitropism.",
+        "Roots grow toward gravity (positive gravitropism) and shoots grow against it (negative gravitropism), steered by the same growth chemical, auxin, that bends shoots toward light — distributed unevenly according to the statoliths' report."
+      ]
+    },
+    {
+      "heading": "Why it cannot be fooled for long",
+      "paragraphs": [
+        "Lay a seedling on its side and within hours the shoot tip curves upward and the root tip downward, each re-aiming itself. Astronauts growing plants in orbit, where nothing settles, have watched roots wander without gravity's instructions — proof of how much the seed relies on falling grains.",
+        "For the seed, the system is life insurance: buried at any angle, in darkness, it can still send its first root to water and its first shoot to light."
+      ]
+    }
+  ],
+  "takeaway": "A sprout finds up and down using statoliths — dense grains that settle inside its cells — steering roots down toward water and shoots up toward light.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

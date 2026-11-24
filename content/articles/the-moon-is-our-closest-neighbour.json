@@ -1,0 +1,66 @@
+{
+  "id": "kids-draft-2026-11-24-01",
+  "slug": "the-moon-is-our-closest-neighbour",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "The Moon is our closest neighbour",
+  "description": "Look out of the window at night. The Moon you can see through a small telescope is the closest thing to Earth in the whole of space — close enough that astronauts have stood on it.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/moonrise.webp",
+    "alt": "A huge full moon low on the horizon over fields at dusk",
+    "width": 1600,
+    "height": 1067,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "moon",
+    "space",
+    "neighbours"
+  ],
+  "sources": [
+    {
+      "title": "Moon | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Moon",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Not as far as it looks",
+      "paragraphs": [
+        "The Moon looks tiny, like a coin in the sky. But it is really a big, round world made of rock. It is just very far away — so far that its light takes a whole second to reach your eyes.",
+        "Even so, it is our closest neighbour. People have flown there, landed, and walked on its dusty ground. No one has ever travelled to anywhere farther away."
+      ]
+    },
+    {
+      "heading": "Mountains you can see",
+      "paragraphs": [
+        "On a clear night, look at the Moon with a grown-up. The dark patches are flat, dusty plains. Long ago, people thought they looked like seas, and we still call them seas today — but there is no water in them at all.",
+        "Near the edge of the light part, you may spot bumpy shadows. Those are real mountains and craters, lit by the Sun from the side. The Moon has no weather, so its footprints and mountains stay just as they were left."
+      ]
+    }
+  ],
+  "takeaway": "The Moon is a big rock world and our closest neighbour in space — close enough that people have walked on it, and near enough to see its mountains from your window.",
+  "fiction": false,
+  "ageGuidance": "Ages 4–8, read with a grown-up.",
+  "materials": [
+    "Just yourself and a grown-up to read with",
+    "A window with a view of the Moon (optional)"
+  ],
+  "supervision": "A grown-up reads with the child and joins any night-time Moon watching from a safe spot at home.",
+  "safetyNotes": [
+    "Never look at the Sun through a telescope or binoculars — only ever look at the Moon.",
+    "Moon watching happens at home or in the garden with a grown-up, never out alone after dark."
+  ],
+  "screenFreeExtension": "Draw the Moon as you see it tonight, with its dark patches, and write the date under your picture.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,55 @@
+{
+  "id": "grow-draft-2026-11-24-02",
+  "slug": "the-zeigarnik-effect-why-unfinished-tasks-stick",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "The Zeigarnik effect: why unfinished tasks stick",
+  "description": "You forget the shopping you finished but keep remembering the email you half-wrote. Psychologist Bluma Zeigarnik found that unfinished tasks cling to memory far better than completed ones — and you can use the effect on purpose.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/mind.webp",
+    "alt": "Resting on a bench at a mountain viewpoint",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "memory",
+    "focus",
+    "psychology"
+  ],
+  "sources": [
+    {
+      "title": "Zeigarnik effect | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zeigarnik_effect",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Waiters, orders and open loops",
+      "paragraphs": [
+        "In 1920s Berlin, Zeigarnik noticed waiters who could recall long, unpaid orders in perfect detail — and forgot them the moment the bill was settled. Her experiments confirmed it: people remember interrupted tasks markedly better than completed ones, because the mind keeps an open task mentally 'on hold'.",
+        "The flip side is the 3 a.m. reminder loop: an unfinished task keeps resurfacing, which feels like stress but is really a filing system refusing to close a file."
+      ]
+    },
+    {
+      "heading": "Close the loop on paper",
+      "paragraphs": [
+        "You do not have to finish a task to quiet it — you have to give the loop a trusted next step. Writing down exactly what remains and what the next action is lets the mind file the task as handled-for-now; studies of planning show the mental rehearsal stops once a concrete plan exists.",
+        "And the effect cuts the other way for starting: beginning a dreaded task for just two minutes opens a loop your mind then wants to close, which is why starting small so often carries you further than motivation does."
+      ]
+    }
+  ],
+  "takeaway": "Unfinished tasks stick in memory — the Zeigarnik effect. Quiet them by writing the next step down, and exploit them by starting for just two minutes.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

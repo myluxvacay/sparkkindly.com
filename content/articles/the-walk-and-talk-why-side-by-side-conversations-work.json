@@ -1,0 +1,55 @@
+{
+  "id": "together-draft-2026-11-24-01",
+  "slug": "the-walk-and-talk-why-side-by-side-conversations-work",
+  "brand": "together",
+  "contentType": "article",
+  "title": "The walk-and-talk: why side-by-side conversations work",
+  "description": "Some conversations go better on the move. Walking side by side — eyes forward, no fixed stare — makes hard topics easier to start and silences easier to share.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family holding hands while walking",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "walking",
+    "conversation",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Walking | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Walking",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Easier without the stare",
+      "paragraphs": [
+        "Face-to-face talks carry an unspoken pressure: constant eye contact, and nowhere for a pause to go. Walking removes both. You look at the path together, silence becomes just a stretch of road, and a difficult sentence can be said to the horizon instead of into someone's eyes.",
+        "Therapists and mentors have long used walking sessions for exactly this reason, and parents discover it independently: teenagers who go quiet at the kitchen table often open up by the second street of a walk."
+      ]
+    },
+    {
+      "heading": "Rhythm does part of the work",
+      "paragraphs": [
+        "Walking sets a shared rhythm — matched steps, matched breathing — that settles nerves on both sides. The body is occupied just enough to stop fidgeting, and the changing scenery supplies gentle prompts: a garden, a dog, a memory attached to a corner.",
+        "Keep walks regular and route them somewhere pleasant. The talk does not need an agenda; it needs a recurring chance to happen."
+      ]
+    }
+  ],
+  "takeaway": "Walking side by side makes conversation easier: no fixed stare, silences that feel natural, and a shared rhythm that settles both talkers.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

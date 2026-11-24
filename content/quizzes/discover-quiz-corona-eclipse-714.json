@@ -1,0 +1,38 @@
+{
+  "id": "discover-quiz-corona-eclipse-714",
+  "scheduledDate": "2031-02-02",
+  "brand": "discover",
+  "prompt": "During a total solar eclipse, the Moon briefly covers the Sun's bright disc. What is the Sun's faint outer atmosphere that becomes visible around the dark Moon called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The chromosphere"
+    },
+    {
+      "id": "b",
+      "text": "The corona"
+    },
+    {
+      "id": "c",
+      "text": "The photosphere"
+    },
+    {
+      "id": "d",
+      "text": "The solar prominence"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The corona is the Sun's outer atmosphere, normally drowned out by the glare of the bright disc (the photosphere). During totality it appears as a pearly crown of streamers around the Moon. Eclipses must only ever be viewed with proper eye protection or indirect methods.",
+  "difficulty": "medium",
+  "sources": [
+    {
+      "title": "Solar eclipse | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solar_eclipse",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

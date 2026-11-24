@@ -1,0 +1,38 @@
+{
+  "id": "play-quiz-notation-knight-714",
+  "scheduledDate": "2031-02-01",
+  "brand": "play",
+  "prompt": "In algebraic chess notation, which piece does the letter 'N' stand for?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Knight"
+    },
+    {
+      "id": "b",
+      "text": "King"
+    },
+    {
+      "id": "c",
+      "text": "Queen"
+    },
+    {
+      "id": "d",
+      "text": "Bishop"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "The knight takes 'N' because 'K' already belongs to the king. So 'Nf3' means a knight moved to f3; pawns get no letter at all.",
+  "difficulty": "easy",
+  "sources": [
+    {
+      "title": "Algebraic notation (chess) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Algebraic_notation_(chess)",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

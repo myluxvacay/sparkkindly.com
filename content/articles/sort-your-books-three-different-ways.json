@@ -1,0 +1,66 @@
+{
+  "id": "kids-draft-2026-11-24-03",
+  "slug": "sort-your-books-three-different-ways",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Sort your books three different ways",
+  "description": "Your bookshelf is a puzzle. Take your books out and sort them three different ways — by colour, by size, and by how much you love them. Which way looks best?",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "School books with an apple on top",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "books",
+    "sorting",
+    "tidying"
+  ],
+  "sources": [
+    {
+      "title": "Sorting | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sorting",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 24 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Way one and way two",
+      "paragraphs": [
+        "First, sort by colour: all the red books together, all the blue, all the green. Stand them in a row and you have made a rainbow shelf.",
+        "Now mix them up and sort by size instead: tallest books at one end, tiniest at the other, like a staircase going down. Count how many books are in your biggest group each time."
+      ]
+    },
+    {
+      "heading": "Way three: your favourites",
+      "paragraphs": [
+        "Last, sort by love: your most-read, most-loved books at the front where you can grab them, and the forgotten ones behind. You might find a book you have not read for ages — that is the treasure of this game.",
+        "Choose your favourite sorting to keep, and put the books away that way with your grown-up. Your shelf, your system."
+      ]
+    }
+  ],
+  "takeaway": "Sort your books by colour, then by size, then by how much you love them — and keep your favourite system on the shelf.",
+  "fiction": false,
+  "ageGuidance": "Ages 3–8, with a grown-up nearby.",
+  "materials": [
+    "Your own books",
+    "A clear floor or bed to sort on"
+  ],
+  "supervision": "A grown-up helps with heavy armfuls of books and joins the choosing of the final system.",
+  "safetyNotes": [
+    "Carry only a few books at a time so none drop on toes.",
+    "Stack books flat and steady — no towers that can topple."
+  ],
+  "screenFreeExtension": "Draw your bookshelf with the books in their new order, and colour the spines to match.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
