@@ -1,0 +1,72 @@
+{
+  "id": "printable-how-cells-move-materials",
+  "slug": "how-cells-move-materials",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "How Cells Move Materials",
+  "description": "Free SparkKindly Kids how things work printable poster: How Cells Move Materials.",
+  "publishedAt": "2026-11-24",
+  "updatedAt": "2026-11-24",
+  "author": "SparkKindly Kids",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-24",
+  "reviewNote": "How Things Work rich-illustration poster (HTW-055), added 24 November 2026 at the owner's direction (\"QA the 62 and import to staging\") from AI-generated artwork delivered in the owner's Drive folder. Reviewer QA completed 24 November 2026: science and labels checked, all text read for spelling and garbling, Spark canon (heart-shaped mascot, teal cape, gold medallion, purple shoes) and SparkKindly header/footer branding verified, poster confirmed on-topic for its title. The delivered A4 PDF is served unchanged. Staged on staging for owner QA review only — NOT promoted to production.",
+  "ageGuidance": "Ages 6–10 and up — the ideas suit older children too (to about 13); younger readers enjoy it read aloud with a grown-up.",
+  "hero": {
+    "src": "/images/printable-how-cells-move-materials.webp",
+    "alt": "SparkKindly How Things Work poster: how cells move materials — diffusion, facilitated diffusion through channels and carriers, and active transport using energy.",
+    "width": 1024,
+    "height": 1447,
+    "credit": "SparkKindly Kids printable library",
+    "rights": "Artwork delivered by the site owner for publication on sparkkindly.com (24 November 2026); reviewer QA of the artwork completed 24 November 2026; staging page QA pending."
+  },
+  "tags": [
+    "printables",
+    "printables-how-things-work",
+    "ages-6-10"
+  ],
+  "sources": [
+    {
+      "title": "Encyclopaedia Britannica — Diffusion",
+      "url": "https://www.britannica.com/science/diffusion",
+      "accessedAt": "2026-11-24"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-24",
+  "aiDisclosure": "Poster artwork delivered by the site owner (24 November 2026) and published unchanged after reviewer QA (science, text, character canon and branding checked); the page text around it was written for SparkKindly. Staged for owner QA review, like the delivered library.",
+  "body": [
+    {
+      "heading": "About this poster",
+      "paragraphs": [
+        "Free SparkKindly Kids how things work printable poster: How Cells Move Materials.",
+        "This poster covers the cell membrane's three transport systems: diffusion, where materials drift from crowded to less crowded; facilitated diffusion through channels and carriers; and active transport, which spends energy to push materials against the flow."
+      ]
+    },
+    {
+      "heading": "How to use this sheet",
+      "paragraphs": [
+        "Print it big if you can and read it together, pointing to each label as you name it. Then cover the words and see how much you can explain from the pictures alone — that explaining-back is where the learning sticks."
+      ]
+    },
+    {
+      "heading": "Talk about it",
+      "paragraphs": [
+        "What is the difference between diffusion and active transport?",
+        "Which transport system needs energy — and why?",
+        "What do channel and carrier proteins do?"
+      ]
+    }
+  ],
+  "takeaway": "Cells move materials by diffusion, through helper channels and carriers, or by spending energy on active transport.",
+  "fiction": false,
+  "materials": [
+    "A printer and one sheet of paper (letter or A4) — or just a screen to view it on"
+  ],
+  "supervision": "Read together the first time: an adult reads the labels aloud and answers the questions the poster raises.",
+  "safetyNotes": [
+    "A reading poster — no tools, parts or experiments. If you try a related activity afterwards, a grown-up leads.",
+    "Print at 100% size (not \"fit to page\") so the poster keeps its true proportions."
+  ],
+  "screenFreeExtension": "Explain it back: after reading, put the poster away and tell a grown-up how it works in your own words — then draw your own version."
+}
