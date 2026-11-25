@@ -1,0 +1,41 @@
+{
+  "id": "save-quiz-buy-now-pay-later-715",
+  "scheduledDate": "2031-02-14",
+  "brand": "save",
+  "prompt": "A shop offers 'buy now, pay later': take the item home today and pay in instalments over the next few weeks. What is the most important thing to check before agreeing?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Whether the shop has the item in your favourite colour"
+    },
+    {
+      "id": "b",
+      "text": "What happens if a payment is late — fees and total cost"
+    },
+    {
+      "id": "c",
+      "text": "Whether your friends also use it"
+    },
+    {
+      "id": "d",
+      "text": "How quickly you can get the item home"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Buy now, pay later can be interest-free if every instalment is paid on time, but missed payments can bring late fees and affect your credit record — so the late-payment terms, not the item, are what need reading first.",
+  "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Buy now, pay later | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Buy_now,_pay_later",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

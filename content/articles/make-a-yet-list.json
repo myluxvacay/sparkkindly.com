@@ -1,0 +1,70 @@
+{
+  "id": "grow-draft-2026-11-25-make-a-yet-list",
+  "slug": "make-a-yet-list",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "Make a 'yet' list: things you cannot do — yet",
+  "description": "A one-page list that turns 'I can't do this' into 'I can't do this yet', with the smallest next step written beside each item. A paper habit borrowed from growth-mindset research.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "hero": {
+    "src": "/images/grow.webp",
+    "alt": "Green shoots growing in soft light",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "mindset",
+    "goals",
+    "habits"
+  ],
+  "sources": [
+    {
+      "title": "Mindset | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mindset",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-25",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 25 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Write the list honestly",
+      "paragraphs": [
+        "Take a blank page and write down things you currently cannot do that you wish you could: ride a unicycle, hold a conversation in another language, bake bread, do ten press-ups. Beside each one, add the word 'yet' — out loud as you write it. The word is small; the sentence it makes is a different claim about the future.",
+        "Then, for each item, write the smallest possible next step: not 'learn Spanish' but 'learn how to say good morning and count to ten'. A yet list fails when the steps are heroic; it works when they are almost embarrassingly small."
+      ]
+    },
+    {
+      "heading": "Review it monthly, cross things off loudly",
+      "paragraphs": [
+        "Keep the list somewhere you will see it — a wall, a notebook's first page — and review it once a month. Move one small step onto your calendar. When an item graduates from cannot to can, cross it off in a colour you cannot miss and write the date beside it.",
+        "The crossed-off items are the list's real engine: written proof, in your own handwriting, that 'cannot' has expired before. On the next hard day, that evidence is worth more than any pep talk."
+      ]
+    }
+  ],
+  "takeaway": "A yet list turns 'I can't' into 'I can't yet': write each wished-for skill, add its smallest next step, review monthly, and cross off graduates in bright ink.",
+  "fiction": false,
+  "materials": [
+    "A blank page or notebook",
+    "A pen, plus a bright pen for crossing off",
+    "A wall spot or notebook first page to keep it visible"
+  ],
+  "supervision": "A self-directed activity; younger children make their list together with a parent or teacher.",
+  "safetyNotes": [
+    "Keep the list encouraging — it is a private tool, never a scoreboard to compare with anyone else.",
+    "Choose steps that are safe and age-appropriate; ask an adult before steps involving tools, cooking or sport.",
+    "If a step keeps failing, make it smaller rather than abandoning the item."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

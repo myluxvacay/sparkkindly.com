@@ -1,0 +1,58 @@
+{
+  "id": "save-draft-2026-11-25-three-jars-a-simple-way-",
+  "slug": "three-jars-a-simple-way-to-split-any-money",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Three jars: a simple way to split any money that arrives",
+  "description": "Envelope budgeting in its simplest form: when money arrives, split it on the spot into Spend, Save and Share. Why deciding once, in advance, beats deciding every time.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "budgeting",
+    "saving",
+    "habits"
+  ],
+  "sources": [
+    {
+      "title": "Envelope system | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Envelope_system",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-25",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 25 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Decide once, not every time",
+      "paragraphs": [
+        "The three-jar method is the old envelope system shrunk to its bones. Money that arrives — wages, a gift, pocket money — is divided immediately into three containers: Spend for now, Save for later, Share for giving. The percentages are yours to choose; a common starting split is 70, 20 and 10.",
+        "The power is in the timing. Every spending decision made in a shop is a small battle between present-you and future-you. The jars settle the battle once, at the moment the money arrives, when nobody is hungry, rushed or being advertised at."
+      ]
+    },
+    {
+      "heading": "Physical jars, digital jars",
+      "paragraphs": [
+        "For children and beginners, real jars teach fastest: you can watch Save fill and feel Spend empty. For adults the same structure works as three bank accounts or three labelled pots in a banking app — what matters is that the split is visible and the transfer happens on arrival, not with whatever is left at the end of the month. Leftovers are a plan that rarely survives contact with a month.",
+        "Review the split twice a year. If Save is always raided, the split is wrong, not you: adjust the percentages until the system fits the life it is meant to serve."
+      ]
+    }
+  ],
+  "takeaway": "Split money on arrival into Spend, Save and Share — deciding once, calmly, instead of at every till — and review the percentages twice a year.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

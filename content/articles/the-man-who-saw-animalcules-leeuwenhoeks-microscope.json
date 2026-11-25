@@ -1,0 +1,59 @@
+{
+  "id": "discover-draft-2026-11-25-the-man-who-saw-animalcu",
+  "slug": "the-man-who-saw-animalcules-leeuwenhoeks-microscope",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "The man who saw animalcules: Leeuwenhoek's tiny microscope",
+  "description": "Antonie van Leeuwenhoek was a cloth merchant with no university education who built the best microscopes of the 1600s — single tiny lenses that revealed a world of living creatures nobody had imagined existed.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "hero": {
+    "alt": "A microscope in a bright laboratory",
+    "credit": "Development reference photograph · Unsplash",
+    "height": 800,
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json",
+    "src": "/images/science.webp",
+    "width": 1200
+  },
+  "tags": [
+    "microscopes",
+    "history",
+    "discovery"
+  ],
+  "sources": [
+    {
+      "title": "Antonie van Leeuwenhoek | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-25",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 25 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "A draper's side hobby",
+      "paragraphs": [
+        "Leeuwenhoek sold cloth in Delft in the Netherlands, and lenses were tools of his trade — drapers used magnifiers to inspect thread. Curious, he taught himself to grind a single tiny glass bead into a lens of extraordinary quality, mounted it between brass plates, and started looking at everything: lake water, pepper, the plaque from his own teeth.",
+        "His microscopes were not the tube-shaped instruments in school labs. Each was a single lens smaller than a fingernail paring, yet the best magnified around 270 times — better than the compound microscopes of professional scientists, whose stacked lenses blurred as much as they revealed. He made hundreds of them and kept his lens-making method secret for the rest of his life."
+      ]
+    },
+    {
+      "heading": "A world in a drop of water",
+      "paragraphs": [
+        "In 1676 he reported 'animalcules' — little animals — swarming in water: what we now call bacteria and other microbes. The Royal Society in London, initially sceptical that a cloth merchant had out-seen every university, sent observers to verify. The animalcules were real, and with them an entire kingdom of life entered human knowledge.",
+        "He went on to describe red blood cells, sperm cells and the banded structure of muscle, all with a bead of glass and patience. The lesson of Leeuwenhoek is not the instrument; it is that the biggest discoveries of his century were made by an amateur looking carefully at ordinary things."
+      ]
+    }
+  ],
+  "takeaway": "Cloth merchant Antonie van Leeuwenhoek ground single tiny lenses better than any university's microscopes and, in 1676, revealed microbes — 'animalcules' — living in a drop of water.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

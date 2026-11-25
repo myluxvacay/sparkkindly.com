@@ -1,0 +1,73 @@
+{
+  "id": "play-draft-2026-11-25-build-a-simple-kite-from",
+  "slug": "build-a-simple-kite-from-a-bag-and-two-sticks",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Build a simple kite from a bag and two sticks",
+  "description": "A plastic bag, two light sticks, string and tape: a diamond kite you can build on the kitchen table in half an hour and fly the same afternoon — plus why the tail is not decoration.",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "hero": {
+    "src": "/images/kite.webp",
+    "alt": "A red and yellow kite with long ribbon tails flying over a green meadow",
+    "width": 1600,
+    "height": 1067,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "kites",
+    "making",
+    "outdoors"
+  ],
+  "sources": [
+    {
+      "title": "Kite | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kite",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-25",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 25 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Build the diamond",
+      "paragraphs": [
+        "Cut a large plastic bag open into one flat sheet. Lay two light sticks — garden canes or wooden skewers taped together — in a cross on the sheet, the upright one longer than the sideways one, and tape the ends firmly. Cut the sheet into a diamond around the cross, fold the edges over the sticks, and tape them down so the frame cannot slip.",
+        "Tie your flying line to the point where the sticks cross, slightly above the middle. That attachment point, the bridle point, is where the kite balances against the wind — a centimetre up or down changes how it flies, and adjusting it is the whole craft of kite-making in miniature."
+      ]
+    },
+    {
+      "heading": "The tail is not decoration",
+      "paragraphs": [
+        "Cut a tail from strips of bag or ribbon, at least as long as the kite is tall, and tie small bows or knots along it. A new builder's kite that spins and dives is almost never broken — it is under-tailed. The tail adds drag behind the kite, which holds its nose into the wind the way feathers hold an arrow straight.",
+        "Fly in an open space away from trees, roads and power lines, on a steady breeze rather than a gusty day. If the kite loops, land it and lengthen the tail; if it will not climb, shorten it a little. You are now doing what kite builders have done for two thousand years: tuning by flying."
+      ]
+    }
+  ],
+  "takeaway": "A bag, two sticks and string make a working diamond kite — and its tail is real engineering: drag that holds the kite's nose into the wind, lengthened or shortened to tune the flight.",
+  "fiction": false,
+  "materials": [
+    "A large plastic bag",
+    "Two light sticks or garden canes",
+    "Sticky tape and scissors",
+    "String or light line for flying",
+    "Strips of bag or ribbon for the tail"
+  ],
+  "supervision": "An adult helps with cutting and taping, chooses the flying site, and supervises all flying.",
+  "safetyNotes": [
+    "Never fly near power lines, roads, airports or in thunderstorms — if a kite catches on a power line, leave it and tell an adult to call the power company.",
+    "Fly in open spaces away from trees and other people.",
+    "An adult does all scissor work for younger children."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "kids-draft-2026-11-25-every-book-is-a-door",
+  "slug": "every-book-is-a-door",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Every book is a door",
+  "description": "A book looks quiet and still. But open it, and you can visit a dragon's mountain, the bottom of the sea, or a kitchen in another country — all before lunch.",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
+  "publishedAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "School books with an apple on top",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "books",
+    "reading",
+    "stories"
+  ],
+  "sources": [
+    {
+      "title": "Children's literature | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Children%27s_literature",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-25",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 25 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Open the door",
+      "paragraphs": [
+        "A book is a door you can hold in your hands. On one side is your chair, your room and your snack. On the other side is a pirate ship, a snowy forest, or a tiny mouse with a very big problem.",
+        "All you need to walk through the door is the first page. Some doors open onto funny places. Some open onto scary places. You can always close the book if a place is too scary — the door will wait for you."
+      ]
+    },
+    {
+      "heading": "Every reader sees a different room",
+      "paragraphs": [
+        "Here is the magic part. When you read about a dragon, the dragon in your head is yours. Nobody else's dragon looks exactly like it — not your friend's, not your teacher's, not even the writer's.",
+        "That means every book is really lots of books: one for every person who reads it. Which door will you open today?"
+      ]
+    }
+  ],
+  "takeaway": "Every book is a door to another place, and the dragon you imagine is yours alone — no two readers ever see quite the same room.",
+  "fiction": false,
+  "ageGuidance": "Ages 3–8, read with a grown-up.",
+  "materials": [
+    "Any picture book or story book",
+    "A comfy spot to read together"
+  ],
+  "supervision": "A grown-up reads with the child and talks about the pictures and story.",
+  "safetyNotes": [
+    "Choose books that are right for the child's age.",
+    "Reading together happens somewhere safe and comfortable, with breaks whenever the child wants one."
+  ],
+  "screenFreeExtension": "Draw the door from today's story and what you think is behind it, then tell a grown-up about your picture.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

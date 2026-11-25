@@ -1,0 +1,58 @@
+{
+  "id": "grow-draft-2026-11-25-thinking-on-a-forest-pat",
+  "slug": "thinking-on-a-forest-path",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Thinking on a forest path: why walking loosens hard problems",
+  "description": "Stuck on a problem, the worst place to stay is often the desk. Walking — especially somewhere green and undemanding — changes how the mind works on a problem it cannot solve by force.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "hero": {
+    "src": "/images/focus.webp",
+    "alt": "A sunlit path winding through a forest",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "walking",
+    "thinking",
+    "focus"
+  ],
+  "sources": [
+    {
+      "title": "Walking | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Walking",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-25",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 25 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Attention that rests while you move",
+      "paragraphs": [
+        "A forest path asks just enough of your attention to keep you safe — footing, direction, weather — and no more. Psychologists call this soft fascination: the mind is gently occupied by rustling leaves and changing light, which lets deliberate, effortful thinking stand down for a while.",
+        "That standing-down is the point. A problem gripped too tightly gets only the approaches you have already tried. Loosen the grip and the mind starts offering combinations it had filed elsewhere — which is why the answer so often arrives in the middle of a walk, apparently from nowhere."
+      ]
+    },
+    {
+      "heading": "How to walk a problem",
+      "paragraphs": [
+        "State the problem in one sentence before you set off, then deliberately think about the path instead: the sounds in order, the colours, the smell of the place. You are not abandoning the problem; you are giving it a quieter room to work in. Carry a phone or notebook for the moment something surfaces — walk-insights evaporate fast once you are home.",
+        "Keep the route familiar and the pace easy. A hard hike is its own problem and will take the whole mind; a gentle, known path is the one that lends you most of it back."
+      ]
+    }
+  ],
+  "takeaway": "Walking a familiar, gentle path gives a hard problem soft fascination instead of force: attention rests, the mind recombines, and answers often surface mid-walk — so carry a notebook.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

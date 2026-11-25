@@ -1,0 +1,59 @@
+{
+  "id": "play-draft-2026-11-25-how-the-queen-became-the",
+  "slug": "how-the-queen-became-the-strongest-piece-in-chess",
+  "brand": "play",
+  "contentType": "article",
+  "title": "How the queen became the strongest piece in chess",
+  "description": "For most of chess history the queen was one of the weakest pieces on the board, shuffling one square at a time. Then, around 500 years ago, players gave her the powers of rook and bishop at once — and the game exploded.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "hero": {
+    "src": "/images/games.webp",
+    "alt": "Wooden chess pieces on a board",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chess",
+    "history",
+    "games"
+  ],
+  "sources": [
+    {
+      "title": "Queen (chess) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Queen_(chess)",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-25",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 25 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The queen who could barely move",
+      "paragraphs": [
+        "Chess began as a war game, and its 'queen' was originally a counsellor — a vizier in the Persian and Arabic versions — who could move exactly one square diagonally. Beside the rook, which swept whole ranks and files, the piece beside the king was a bodyguard, not a weapon.",
+        "Medieval European chess kept her weak for centuries. Games were slower, attacks took longer to build, and checkmate was a long siege rather than a sudden strike. The board's most famous piece spent a thousand years as one of its least powerful."
+      ]
+    },
+    {
+      "heading": "The mad queen revolution",
+      "paragraphs": [
+        "In the late 1400s, in Spain and Italy, players began trying a radical variant: the queen could move like a rook and a bishop combined — any distance, in any straight or diagonal line. Contemporaries called it 'mad queen chess', half scandalised, and it caught on like wildfire because it made the game dramatically faster and sharper.",
+        "The new queen changed everything downstream. Old openings were abandoned, checkmates could arrive in a handful of moves, and players had to defend from the very first turns. The chess the world plays today — the chess of the wooden pieces in front of you — is the mad queen's game."
+      ]
+    }
+  ],
+  "takeaway": "The chess queen spent a thousand years moving one square at a time; when players in the 1400s gave her the combined powers of rook and bishop, 'mad queen chess' became the modern game.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

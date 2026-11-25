@@ -1,0 +1,42 @@
+{
+  "id": "play-quiz-knight-jump-715",
+  "scheduledDate": "2031-02-07",
+  "brand": "play",
+  "prompt": "In chess, one piece can jump over other pieces instead of being blocked by them. Which piece is it?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The bishop"
+    },
+    {
+      "id": "b",
+      "text": "The knight"
+    },
+    {
+      "id": "c",
+      "text": "The rook"
+    },
+    {
+      "id": "d",
+      "text": "The queen"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "The knight moves in an L shape and is the only chess piece that can leap over pieces in its way — every other piece is blocked by anything standing in its path.",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "sources": [
+    {
+      "title": "Knight (chess) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Knight_(chess)",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

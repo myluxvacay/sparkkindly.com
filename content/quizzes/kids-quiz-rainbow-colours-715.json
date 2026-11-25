@@ -1,0 +1,42 @@
+{
+  "id": "kids-quiz-rainbow-colours-715",
+  "scheduledDate": "2031-02-12",
+  "brand": "kids",
+  "prompt": "How many colours are in a rainbow?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Five"
+    },
+    {
+      "id": "b",
+      "text": "Six"
+    },
+    {
+      "id": "c",
+      "text": "Seven"
+    },
+    {
+      "id": "d",
+      "text": "Ten"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A rainbow has seven colours: red, orange, yellow, green, blue, indigo and violet. You can remember them with the name Roy G. Biv.",
+  "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
+  "sources": [
+    {
+      "title": "Rainbow | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rainbow",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

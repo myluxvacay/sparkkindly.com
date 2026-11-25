@@ -1,0 +1,58 @@
+{
+  "id": "together-draft-2026-11-25-the-stories-hiding-in-ol",
+  "slug": "the-stories-hiding-in-old-photos",
+  "brand": "together",
+  "contentType": "article",
+  "title": "The stories hiding in old photos: an album afternoon",
+  "description": "A box of old family photos is an archive with no index — the names and stories live only in people's memories. One afternoon with an older relative and a pencil can rescue them before they fade.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family holding hands while walking",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "photos",
+    "stories"
+  ],
+  "sources": [
+    {
+      "title": "Photo album | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Photo_album",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-25",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 25 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Photos remember less than people do",
+      "paragraphs": [
+        "A photograph preserves faces and places but not names, jokes, or why everyone is laughing. Within a generation or two, most family photos become pictures of strangers: the people are recognisable as relatives and unknowable as people. The knowledge of who they were exists in exactly one place — the memory of the oldest person who knew them.",
+        "That makes an album afternoon a rescue mission disguised as a visit. Spread the photos out, choose the ones nobody can name, and let the oldest relative talk. Their identifications — 'that's your great-grandfather's brother, the one who kept bees' — are the captions the album never had."
+      ]
+    },
+    {
+      "heading": "Write it down, gently",
+      "paragraphs": [
+        "Write names and dates in pencil on the back of prints, or keep a numbered list beside the box: photo 12, front left, name, one remembered detail. One detail matters — 'kept bees' turns a stranger back into a person faster than a full biography.",
+        "Go slowly and let the stories wander; the detours are usually the treasure. And record the session if they are willing, because a voice saying 'that's your great-grandfather' is itself an heirloom now."
+      ]
+    }
+  ],
+  "takeaway": "Old photos keep faces but lose names and stories within a generation — an afternoon labelling them with an older relative, one remembered detail at a time, rescues the family's memory.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

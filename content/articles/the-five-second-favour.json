@@ -1,0 +1,58 @@
+{
+  "id": "together-draft-2026-11-25-the-five-second-favour",
+  "slug": "the-five-second-favour",
+  "brand": "together",
+  "contentType": "article",
+  "title": "The five-second favour: small help, offered early",
+  "description": "Most kindness costs almost nothing because it is offered early: the held door before the struggle, the offered seat before the wobble. Why timing, not size, is what makes small help feel large.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "hero": {
+    "src": "/images/kindness.webp",
+    "alt": "Friends stacking their hands together",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "kindness",
+    "neighbours",
+    "habits"
+  ],
+  "sources": [
+    {
+      "title": "Kindness | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kindness",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-25",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 25 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Help has a timing curve",
+      "paragraphs": [
+        "The same act is worth very different amounts depending on when it arrives. A hand offered while someone is still gathering their bags feels like attentiveness; the identical hand offered after they have dropped everything feels like rescue — welcome, but it confirms they were struggling. Early help protects dignity as well as arms.",
+        "This is why small favours punch above their weight. Five seconds of noticing — holding the lift, offering the seat, picking up the dropped glove and returning it — tells the other person they are seen, which is most of what kindness ever communicates."
+      ]
+    },
+    {
+      "heading": "Make noticing a habit, not a mood",
+      "paragraphs": [
+        "You cannot schedule generosity, but you can schedule attention. The practical trick is a trigger: every time you go through a door, look behind you; every time you sit on a bus, scan once for who is standing. Attach the look to something you already do and the favours start finding you.",
+        "None of this requires being an especially good person. It requires being a slightly earlier one — and earlier, most days, is entirely within reach."
+      ]
+    }
+  ],
+  "takeaway": "Small help offered early is worth more than the same help offered late: it protects dignity, signals that someone is noticed, and costs about five seconds.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

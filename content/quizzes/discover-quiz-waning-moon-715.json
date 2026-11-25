@@ -1,0 +1,41 @@
+{
+  "id": "discover-quiz-waning-moon-715",
+  "scheduledDate": "2031-02-08",
+  "brand": "discover",
+  "prompt": "Just after a full moon, the bright part of the Moon starts to shrink a little each night. What is this shrinking phase called?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Waxing"
+    },
+    {
+      "id": "b",
+      "text": "Waning"
+    },
+    {
+      "id": "c",
+      "text": "New"
+    },
+    {
+      "id": "d",
+      "text": "Blue"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Waning means shrinking: after full moon the lit part wanes until the new moon, while waxing means growing, from new moon up to full.",
+  "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
+  "sources": [
+    {
+      "title": "Lunar phase | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lunar_phase",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-25",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
