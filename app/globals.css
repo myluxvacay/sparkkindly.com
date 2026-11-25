@@ -717,6 +717,7 @@ a.watch-chip{display:inline-flex;align-items:center;text-decoration:none}
 @media(max-width:580px){.printable-cats,.printable-grid,.sheet-steps{grid-template-columns:1fr}.sheet-cards{grid-template-columns:repeat(2,1fr)}.printable-sheet{padding:22px 18px}.sheet-letter-grid td{width:40px;height:40px;font-size:22px}.trace-row{font-size:32px;gap:16px}.sheet-logo{width:72px;height:72px}.sheet-spark{height:84px}.sheet-header{gap:12px}}
 
 .band-chip{background:#f7c94866;border-radius:3px;padding:2px 8px;font-weight:600}
+.card-meta{flex-wrap:wrap} /* the band chip joins the card meta row; wrapping keeps narrow screens (200% zoom) free of horizontal overflow */
 .band-chip-label{margin-bottom:14px}
 .band-control{font-size:11px;color:#665b65;margin:0}
 .band-lead-bar{font-size:12px;color:var(--muted);margin-bottom:18px}

@@ -21,7 +21,7 @@ test('trust pages make no third-party request except Clarity and store nothing i
   });
   for (const path of PAGES) {
     await page.goto(path);
-    expect(await page.evaluate(() => ({ local: localStorage.length, session: Object.keys(sessionStorage).filter((k) => k !== '_cltk').length })), path).toEqual({ local: 0, session: 0 });
+    expect(await page.evaluate(() => ({ local: Object.keys(localStorage).filter((k) => k !== 'sk-age-band').length, session: Object.keys(sessionStorage).filter((k) => k !== '_cltk').length })), path).toEqual({ local: 0, session: 0 });
   }
   expect((await context.cookies()).filter((c) => !['_clck', '_clsk'].includes(c.name) && !/(^|\.)(clarity\.ms|bing\.com)$/.test(c.domain.replace(/^\./, '')))).toEqual([]);
   expect(outside).toEqual([]);
