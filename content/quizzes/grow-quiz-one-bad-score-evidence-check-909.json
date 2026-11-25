@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "One score is a tiny, noisy sample affected by topic and difficulty. A fair test pre-decides a trial period and compares a trend, not a single data point.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

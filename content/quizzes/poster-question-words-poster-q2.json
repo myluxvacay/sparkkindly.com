@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Questions about a person start with who.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Interrogative word | Wikipedia",

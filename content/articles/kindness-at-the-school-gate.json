@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "The school run gathers the same people daily; a little space, a learned name, and patience make it a kinder crowd.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

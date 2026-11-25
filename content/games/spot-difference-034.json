@@ -6,6 +6,10 @@
   "title": "Spot the difference: space scene",
   "prompt": "Three things changed between the two space scene pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The black sheep changed colour from white to black, the blue planet vanished and the bee vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

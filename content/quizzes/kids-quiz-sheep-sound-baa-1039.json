@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Yes, a sheep says baa. You remembered the sheep sound, well done!",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

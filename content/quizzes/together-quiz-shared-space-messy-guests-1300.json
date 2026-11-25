@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A short, shared tidy with a time limit turns a blame moment into teamwork and gets the room ready without a pre-visit argument.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

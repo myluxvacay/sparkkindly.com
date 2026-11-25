@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Outcomes cannot be done directly; actions can. A workable plan converts each outcome into dated steps and notes what must come first, such as choosing projects before building the site around them.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

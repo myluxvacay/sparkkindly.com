@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Encouragement without verification changes nothing. Accountability works when the commitment is specific and the other person can actually see whether it was kept.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

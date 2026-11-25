@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The steps shrink by 1 each time: -10, -9, -8, so the next step is -7, giving 73-7=66.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

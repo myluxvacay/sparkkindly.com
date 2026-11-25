@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "Port Vila is the capital of Vanuatu. It is the city where the country's government works.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Vanuatu | Encyclopaedia Britannica",

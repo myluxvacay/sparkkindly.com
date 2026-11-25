@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Incubation effects are modest and depend on having first engaged seriously with the problem. The walk helped after effortful work; it is not a substitute for that work or a guaranteed fix.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "The money of Brunei is the Brunei dollar (BND).",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Brunei | Encyclopaedia Britannica",

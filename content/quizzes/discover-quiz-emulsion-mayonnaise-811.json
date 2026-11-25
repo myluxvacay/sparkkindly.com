@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "Egg yolk contains lecithin, an emulsifier with a water-loving end and a fat-loving end. It coats small oil droplets and stops them coalescing, keeping the oil-in-water emulsion of mayonnaise stable.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Emulsion",

@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "People in Brazil speak Portuguese.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Brazil | Encyclopaedia Britannica",

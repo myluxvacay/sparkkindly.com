@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Specific, gentle honesty before the interview can save them from an avoidable setback, and leaving the choice with them respects their autonomy. False reassurance and mockery both fail them in different ways.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

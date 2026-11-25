@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Each cat catches one mouse every 3 minutes, so in 100 minutes one cat catches about 33 mice — three cats together catch about 100.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

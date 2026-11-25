@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "One day after Monday is Tuesday. Two days after Monday is Wednesday. Good thinking!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

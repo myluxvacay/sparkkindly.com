@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Distant benefits are weak motivators in the moment. An immediate reward after the routine helps the loop repeat until the behaviour itself becomes more familiar.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

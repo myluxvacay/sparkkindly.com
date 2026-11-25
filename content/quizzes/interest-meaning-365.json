@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Interest is a small payment the bank gives you for keeping your money with them, so your savings slowly grow on their own.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

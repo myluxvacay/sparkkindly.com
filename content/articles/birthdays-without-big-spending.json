@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "Birthdays without big spending",
   "description": "The birthdays people remember are built from attention and ritual, not from the size of the bill at the end.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-08-25",
   "updatedAt": "2026-08-25",
   "tags": [

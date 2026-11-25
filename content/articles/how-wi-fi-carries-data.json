@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Wi-Fi writes data onto radio waves — billions of tiny changes per second that other devices read back as bits.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

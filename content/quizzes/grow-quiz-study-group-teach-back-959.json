@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Preparing to teach a topic forces you to organise and truly understand it, and the group's questions reveal gaps — so the teacher often learns as much as the listeners.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Learning by teaching",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Call the width w, so the length is 2w. The perimeter is 2 x (w + 2w) = 6w, and 6w = 36 gives w = 6 cm. Check: the sides are 6 and 12, and 6 + 12 + 6 + 12 = 36.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

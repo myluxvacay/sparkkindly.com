@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "At sea-level air pressure, water boils at 100 degrees C (212 degrees F), when bubbles of steam form throughout the liquid.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Boiling point",

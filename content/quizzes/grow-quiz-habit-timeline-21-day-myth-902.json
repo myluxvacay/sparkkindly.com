@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The 21-day figure is a popular myth. Studies of real habits show a broad range of times to automaticity, so steady repetition beyond a month is expected.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Habit",

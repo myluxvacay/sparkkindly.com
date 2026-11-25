@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "There are 12 months in a year, from January all the way to December.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

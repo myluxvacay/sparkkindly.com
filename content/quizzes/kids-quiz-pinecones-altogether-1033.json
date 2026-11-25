@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Great adding! 9 + 8 = 17, so Leo has 17 pinecones altogether.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

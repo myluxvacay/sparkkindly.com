@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "The spoon is the catapult's arm — its bowl works as the bucket that holds the load.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Catapult | Wikipedia",

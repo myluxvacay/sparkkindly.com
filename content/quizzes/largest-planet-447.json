@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Jupiter is the largest planet; more than 1,300 Earths could fit inside it.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Jupiter - Wikipedia",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "That is right! A frog says croak near its pond. Well done remembering!",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

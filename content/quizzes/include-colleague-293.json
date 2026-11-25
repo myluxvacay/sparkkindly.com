@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Adding them and catching them up fixes the problem directly and shows the whole group that everyone belongs.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

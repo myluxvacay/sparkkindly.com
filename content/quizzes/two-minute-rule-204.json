@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Tiny tasks cost more time to track and remember than to simply do on the spot.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

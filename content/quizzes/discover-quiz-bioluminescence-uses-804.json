@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Deep-sea bioluminescence is used for luring prey, defence and communication, but it is far too weak and localised to power photosynthesis, and deep-sea food webs there are not based on animals lighting their own food production.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Bioluminescence",

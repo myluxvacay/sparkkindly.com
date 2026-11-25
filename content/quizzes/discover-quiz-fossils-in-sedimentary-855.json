@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Sedimentary rock forms from layers of sand, mud and silt that bury dead organisms gently. Igneous and metamorphic processes involve heat that would destroy the remains.",
   "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Sedimentary rock",

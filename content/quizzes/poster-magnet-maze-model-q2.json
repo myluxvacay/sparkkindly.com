@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Steel contains iron, one of the few materials a magnet pulls hard.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Magnet | Wikipedia",

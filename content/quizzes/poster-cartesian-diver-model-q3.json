@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Submarines flood ballast tanks to dive and fill them with air to surface — the diver's trick at giant scale.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Cartesian diver | Wikipedia",

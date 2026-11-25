@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "The money of Ethiopia is the Ethiopian birr (ETB).",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Ethiopia | Encyclopaedia Britannica",

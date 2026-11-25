@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The small bag costs $8 / 2 = $4 per kg. The large bag costs $17.50 / 5 = $3.50 per kg, so the 5 kg bag is better value.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

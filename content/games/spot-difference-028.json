@@ -6,6 +6,10 @@
   "title": "Spot the difference: beach",
   "prompt": "Three things changed between the two beach pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The green book changed colour from red to green, the gray cloud changed colour from white to gray and the green turtle vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Asking with words works better than grabbing — grabbing starts fights and loses turns.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sharing | Wikipedia",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Single tickets cost 20 x $2.50 = $50 in total. The pass costs $40, so you save $50 - $40 = $10.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

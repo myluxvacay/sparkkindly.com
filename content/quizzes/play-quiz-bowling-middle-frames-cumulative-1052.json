@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Frame 4's spare scores 10 + 10 (the strike is the next ball) = 20, taking the total to 62. Frame 5's strike scores 10 + 8 + 1 = 19, taking it to 81. Frame 6 is an open frame scoring 9, for a total of 90.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tenpin bowling",

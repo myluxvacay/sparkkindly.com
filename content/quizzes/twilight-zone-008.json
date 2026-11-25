@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "The twilight or dysphotic zone is approximately 200 to 1,000 metres deep. Light fades rapidly; there is not enough for photosynthesis.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "NOAA: How far does light travel in the ocean?",

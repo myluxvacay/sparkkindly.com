@@ -2,6 +2,9 @@
   "brand": "kids",
   "correctOptionId": "b",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Mango feels sad. The clue is the crash — his tower fell down after all his hard work.",
   "gameType": "emotion-detectives",
   "id": "emotion-detectives-001",

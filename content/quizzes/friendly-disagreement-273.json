@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Sharing your view while asking about theirs treats the disagreement as a conversation, not a contest.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

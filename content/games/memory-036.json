@@ -6,6 +6,10 @@
   "title": "Memory: classroom clock",
   "prompt": "From memory: what time does the clock in the classroom show?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The clock's short hand points past 1 and its long hand shows 50 minutes, so the clock reads 1:50.",
   "sources": [],
   "reviewStatus": "approved",

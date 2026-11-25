@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A leading question pushes people towards one answer, and friends are not the audience whose behaviour matters here. What new listeners actually do — stopping in the first minute — is less flattering but far more informative.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Sampling bias",

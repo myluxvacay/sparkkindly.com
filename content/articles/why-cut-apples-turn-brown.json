@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "A sliced apple browns because cutting lets oxygen reach an enzyme that builds brown pigments — the fruit's own way of sealing a wound.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

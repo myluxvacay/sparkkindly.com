@@ -15,6 +15,11 @@ import {
   type StoredItem,
 } from '@/lib/items/repo';
 import { lockWorldSlots, nextSlot } from '@/lib/items/policy';
+import { bandTopic, bandTopicsFor, CHILD_BANDS, LEGACY_BAND_TOPICS } from '@/lib/age-bands';
+
+// Every topic slug that makes serving derive a child band for an item (canonical + the two legacy
+// printables topics lib/age-bands.ts unifies). An item with none of these serves as 'family'.
+const BAND_TOPIC_SLUGS = new Set([...CHILD_BANDS.map(bandTopic), ...Object.keys(LEGACY_BAND_TOPICS)]);
 import { watchUrl } from '@/lib/items/video';
 import { SocialPostError } from '@/lib/social/adapters/meta';
 import { tokenStatus } from '@/lib/social/token-store';
@@ -394,11 +399,15 @@ export async function submitPackage(db: Db, agent: Agent, body: unknown, deps: P
   }
 
   // Topics: article tags that name a curated topic link as topics; the rest stay library tags, recorded
-  // in the quality report (the legacy import links them the same way — by topic match only).
+  // in the quality report (the legacy import links them the same way — by topic match only). The age-band
+  // topics come from each item's own ageBands (bandTopicsFor), NOT from tags: serving derives an item's
+  // bands from its linked ages-* topics (lib/items/repo.ts toPublic), so a pushed item without them
+  // would silently serve as 'family' to everyone.
   const articleTags = pkg.article?.tags ?? [];
   const knownTopics = articleTags.length
     ? (await db.query<{ slug: string }>('SELECT slug FROM topics WHERE slug = ANY($1)', [articleTags])).rows.map((r) => r.slug)
     : [];
+  const articleTopics = [...new Set([...knownTopics, ...bandTopicsFor(pkg.article?.ageBands)])];
   const packageFingerprint = contentFingerprint(pkg);
 
   let created: { plan: ItemPlan; stored: StoredItem; replayed: boolean }[] = [];
@@ -419,6 +428,10 @@ export async function submitPackage(db: Db, agent: Agent, body: unknown, deps: P
             libraryId: plan.libraryId,
             submittedBy: agent.name,
             submittedAt: now.toISOString(),
+            // The bands as submitted, kept beside the linked topics: the approval gate reads this to
+            // tell a deliberate 'family'-only item (which links no band topics, by design) from a
+            // bandless row that predates the ageBands requirement.
+            ageBands: (plan.article ?? plan.quiz)!.ageBands,
             ...(plan.kind === 'article' ? { tags: articleTags, unlinkedTags: articleTags.filter((t) => !knownTopics.includes(t)) } : {}),
           },
           riskTier: tier,
@@ -456,7 +469,7 @@ export async function submitPackage(db: Db, agent: Agent, body: unknown, deps: P
             sources: a.sources,
             qualityReport: report,
             image: a.hero ? imageFor(a.hero) : { origin: 'template' },
-            topics: knownTopics,
+            topics: articleTopics,
             answer: null,
             idempotencyKey: plan.fingerprint,
           });
@@ -493,7 +506,7 @@ export async function submitPackage(db: Db, agent: Agent, body: unknown, deps: P
             sources: q.sources,
             qualityReport: report,
             image: q.hero ? imageFor(q.hero) : { origin: 'template' },
-            topics: [],
+            topics: bandTopicsFor(q.ageBands),
             answer: { value: q.correctOptionId, explanation: q.explanation },
             idempotencyKey: plan.fingerprint,
           });
@@ -907,6 +920,24 @@ export async function reviewPushItem(db: Db, agent: Agent, id: string, body: unk
     }
     return { status: 200, json: { ...itemView(stored), world: await worldSlug(db, item.worldId) } };
   }
+
+  // Age-band gate (belt-and-braces): serving derives an item's bands from its linked ages-* topics,
+  // so an item with NO band topic linked publishes as 'family' for everyone. Submissions now always
+  // link their bands, and a deliberate family-only submission records ageBands: ['family'] in its
+  // push report (it links no topics by design) — anything else with no band topic, e.g. a draft row
+  // stored before ageBands was required on this API, is refused rather than approved bandless.
+  const topicRows = await db.query<{ slug: string }>(
+    'SELECT t.slug FROM item_topics it JOIN topics t ON t.id = it.topic_id WHERE it.item_id = $1',
+    [item.id],
+  );
+  const recordedBands = ((item.qualityReport ?? {}) as { push?: { ageBands?: unknown } }).push?.ageBands;
+  const declaredFamilyOnly =
+    Array.isArray(recordedBands) && recordedBands.length > 0 && recordedBands.every((b) => b === 'family');
+  if (!topicRows.rows.some((r) => BAND_TOPIC_SLUGS.has(r.slug)) && !declaredFamilyOnly)
+    return fail(422, 'missing_age_bands', {
+      message:
+        'This item has no age-band topics linked, so approving it would publish it as family for everyone. Re-submit it with ageBands (or link its band topics) before approval.',
+    });
 
   // An approval has to show its work for the item's tier, exactly as a contribution verdict does
   // (lib/agents/verdict.ts): a Sourced item needs the sources the reviewer actually opened, a

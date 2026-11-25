@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The tracker is doing its job: it shows the slot, not the habit, is the problem. Moving practice to a time that actually exists keeps the routine honest and sustainable.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

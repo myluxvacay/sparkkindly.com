@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "Counting back by tens takes away 10 each time. After 20 comes 10. Great counting back!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

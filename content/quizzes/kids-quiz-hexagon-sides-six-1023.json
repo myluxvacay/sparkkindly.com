@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Well done! A hexagon has 6 sides. Count them slowly: 1, 2, 3, 4, 5, 6.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

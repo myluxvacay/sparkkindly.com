@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The share saved is $45 / $180 = 0.25, which is 25% of the goal.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the blue train, second the purple umbrella, third the brown snail, fourth the red balloon, fifth the white chicken. So the second one was the purple umbrella.",
   "sources": [],
   "reviewStatus": "approved",

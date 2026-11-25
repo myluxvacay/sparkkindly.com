@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "Laundry that uses less power",
   "description": "Most laundry energy goes into heating water and drying, so cooler washes and air-drying do the heavy lifting.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-06-12",
   "updatedAt": "2026-06-12",
   "tags": [

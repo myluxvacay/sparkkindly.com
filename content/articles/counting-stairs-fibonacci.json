@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "Counting stairs: a puzzle that grows a famous sequence",
   "description": "How many ways can you climb ten stairs if each stride takes one or two steps? The answer is 89 — and the counting grows the Fibonacci sequence.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-07-19",
   "updatedAt": "2026-07-19",
   "author": "SparkKindly · AI-assisted",

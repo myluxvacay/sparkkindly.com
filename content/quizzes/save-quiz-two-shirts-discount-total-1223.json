@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The shirts cost 2 x $20 = $40 in total. The discount is $40 x 25 / 100 = $10, so you pay $40 - $10 = $30.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

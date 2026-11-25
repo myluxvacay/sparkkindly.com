@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "An airplane is a stand-up vehicle, so the pilot is on the airplane.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Preposition and postposition | Wikipedia",

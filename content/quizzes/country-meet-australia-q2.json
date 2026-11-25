@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Uluru and the Red Centre is one of the two places we'd love to visit in Australia. Uluru rises from the desert at the heart of Australia — sacred to the Anangu people, it changes colour from ochre to glowing red at sunset.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Australia | Encyclopaedia Britannica",

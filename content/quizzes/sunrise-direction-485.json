@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "The sun rises in the east and sets in the west, every single day.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

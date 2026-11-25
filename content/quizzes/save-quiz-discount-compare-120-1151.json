@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Store A: $120 x 0.75 = $90. Store B: $120 - $35 = $85. Store B is cheaper by $90 - $85 = $5. A percentage off and a fixed amount off must each be worked out in money before comparing.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

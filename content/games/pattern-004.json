@@ -2,6 +2,9 @@
   "brand": "kids",
   "correctOptionId": "d",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The pattern takes turns: butterfly, bee, butterfly, bee, butterfly. The missing piece is the bee.",
   "gameType": "pattern",
   "id": "pattern-004",

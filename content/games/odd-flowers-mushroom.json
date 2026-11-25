@@ -6,6 +6,10 @@
   "title": "Odd one out: the one that never blooms",
   "prompt": "Three of these bloom as flowers. Which one never does?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Roses, sunflowers and tulips are flowers. A mushroom is a fungus — it grows, but it never blooms.",
   "sources": [],
   "reviewStatus": "approved",

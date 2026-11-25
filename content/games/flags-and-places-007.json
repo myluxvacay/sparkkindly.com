@@ -6,6 +6,10 @@
   "title": "Flags & places: name this flag",
   "prompt": "This flag belongs to which country?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Germany’s flag is black, red and gold in horizontal stripes.",
   "sources": [],
   "reviewStatus": "approved",

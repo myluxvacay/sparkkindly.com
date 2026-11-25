@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Helping with the books and checking on the person turns an embarrassing moment into a supported one.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

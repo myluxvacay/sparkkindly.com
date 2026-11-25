@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A penguin's wings work like flippers, making it a fast, graceful swimmer, but it cannot fly at all.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Penguin",

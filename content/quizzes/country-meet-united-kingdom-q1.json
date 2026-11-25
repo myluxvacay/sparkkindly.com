@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "London is the capital of United Kingdom. It is the city where the country's government works.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "United Kingdom | Encyclopaedia Britannica",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "In the pack of 4, each box costs $7 / 4 = $1.75, which beats $2 each, $2.50 each, and the $2.50 each in the pack of 2.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

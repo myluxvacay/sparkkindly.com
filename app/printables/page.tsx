@@ -8,7 +8,8 @@ import { readImage } from '@/lib/public/body';
 import { listPublic } from '@/lib/public/reads';
 import { currentScope } from '@/lib/accounts/scope-next';
 import { metadata as seo } from '@/lib/seo';
-import { PRINTABLES_TOPIC, printableAgeBand, printableCategory } from '@/lib/printables';
+import { PRINTABLES_TOPIC, printableCategory } from '@/lib/printables';
+import { bandChipLabel } from '@/lib/age-bands';
 
 export const dynamic = 'force-dynamic';
 
@@ -37,7 +38,6 @@ export default async function PrintablesPage() {
   const hubItems: HubItem[] = items.map((item) => {
     const image = readImage(item.image);
     const category = printableCategory(item);
-    const age = printableAgeBand(item);
     return {
       slug: item.slug,
       title: item.title,
@@ -46,8 +46,8 @@ export default async function PrintablesPage() {
       imageAlt: image.alt,
       categoryTopic: category?.topic ?? null,
       categoryName: category?.name ?? null,
-      ageTopic: age?.topic ?? null,
-      ageLabel: age?.label ?? null,
+      ageBands: item.ageBands,
+      ageLabel: bandChipLabel(item.ageBands),
     };
   });
   const hubUrl = `${site.url}/printables/`;

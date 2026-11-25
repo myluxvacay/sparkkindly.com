@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The two known angles add to 50+60=110 degrees. The third angle is 180-110=70 degrees.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

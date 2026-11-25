@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "The money of Belgium is the euro (EUR).",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Belgium | Encyclopaedia Britannica",

@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Food-chain arrows point from the organism being eaten to the eater, showing the path energy takes through the ecosystem.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Food chain",

@@ -6,6 +6,10 @@
   "title": "Memory: kitchen clock",
   "prompt": "From memory: what time does the clock in the kitchen show?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The clock's short hand points past 7 and its long hand shows 55 minutes, so the clock reads 7:55.",
   "sources": [],
   "reviewStatus": "approved",

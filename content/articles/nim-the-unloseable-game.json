@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "Nim: The Tiny Game With a Perfect Strategy",
   "description": "Take 1, 2 or 3 stones from a pile - last move wins. This ancient game hides a pattern that makes one player unbeatable.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-10-19",
   "updatedAt": "2026-10-19",
   "author": "SparkKindly · AI-assisted",

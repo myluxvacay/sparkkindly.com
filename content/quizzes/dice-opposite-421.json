@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Opposite faces sum to 7, so the face opposite 2 is 7 - 2 = 5.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

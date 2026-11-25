@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "A tradition is a good moment a family decided to repeat — so start with one that already makes everyone happy, and give it a date.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Maximum push on the tail, minimum on the point — the arrow rests only when it points straight into the wind.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Anemometer | Wikipedia",

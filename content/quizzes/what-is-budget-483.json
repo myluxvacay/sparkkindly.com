@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A budget is a plan that decides in advance how your money will be spent and saved.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

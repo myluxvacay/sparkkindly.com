@@ -6,6 +6,9 @@
   "title": "What changed: classroom",
   "prompt": "One thing changed between the before and after classroom pictures. What changed?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the green hat changed colour from blue to green. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

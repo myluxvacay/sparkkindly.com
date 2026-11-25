@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The total cost is $1.50 x 40 = $60.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -1,11 +1,16 @@
 import { z } from 'zod';
 export const dateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v => !isNaN(Date.parse(v)) && new Date(v).toISOString().slice(0,10) === v, 'Invalid calendar date');
 export const brandSchema = z.enum(['play','discover','together','grow','save','kids']);
+// Age bands (24 Nov 2026): every approved item carries the band(s) it suits — see lib/age-bands.ts.
+// Optional at parse time so pre-band snapshots still load; the approval gate below requires it.
+export const ageBandSchema = z.enum(['3-5','6-8','9-12','family']);
+const ageBandsField = { ageBands: z.array(ageBandSchema).min(1).optional() };
 const sourceSchema = z.object({title:z.string().min(1),url:z.url().startsWith('https://'),accessedAt:dateSchema});
 const review = { reviewStatus:z.enum(['draft','source-check','safety-review','approved']), reviewer:z.string().nullable(), reviewedAt:dateSchema.nullable(), reviewNote:z.string().optional() };
 const media = z.object({src:z.string().startsWith('/images/'),alt:z.string(),width:z.number().positive(),height:z.number().positive(),credit:z.string().min(1),rights:z.string().min(1)});
-export const articleSchema = z.object({id:z.string().min(1),slug:z.string().regex(/^[a-z0-9-]+$/),brand:brandSchema,contentType:z.enum(['article','video','activity']),title:z.string().min(1),description:z.string().min(1),publishedAt:dateSchema.nullable(),updatedAt:dateSchema,author:z.string().min(1),...review,ageGuidance:z.string().optional(),hero:media,tags:z.array(z.string()),sources:z.array(sourceSchema),factualClaimsReviewedAt:dateSchema.nullable(),aiDisclosure:z.string().min(1),body:z.array(z.object({heading:z.string().min(1),paragraphs:z.array(z.string().min(1)).min(1),image:media.optional(),imagePanels:z.array(media).min(2).optional()})).min(2),takeaway:z.string().min(1),fiction:z.boolean().default(false),correctionNote:z.string().optional(),materials:z.array(z.string()).optional(),supervision:z.string().optional(),safetyNotes:z.array(z.string()).optional(),screenFreeExtension:z.string().optional(),productionStatus:z.enum(['in-production','available']).optional(),durationSeconds:z.number().positive().nullable().optional(),poster:media.optional(),videoSrc:z.string().nullable().optional(),captionsSrc:z.string().nullable().optional(),transcript:z.string().optional()}).superRefine((a,c)=>{
+export const articleSchema = z.object({id:z.string().min(1),slug:z.string().regex(/^[a-z0-9-]+$/),brand:brandSchema,contentType:z.enum(['article','video','activity']),title:z.string().min(1),description:z.string().min(1),publishedAt:dateSchema.nullable(),updatedAt:dateSchema,author:z.string().min(1),...review,ageGuidance:z.string().optional(),...ageBandsField,hero:media,tags:z.array(z.string()),sources:z.array(sourceSchema),factualClaimsReviewedAt:dateSchema.nullable(),aiDisclosure:z.string().min(1),body:z.array(z.object({heading:z.string().min(1),paragraphs:z.array(z.string().min(1)).min(1),image:media.optional(),imagePanels:z.array(media).min(2).optional()})).min(2),takeaway:z.string().min(1),fiction:z.boolean().default(false),correctionNote:z.string().optional(),materials:z.array(z.string()).optional(),supervision:z.string().optional(),safetyNotes:z.array(z.string()).optional(),screenFreeExtension:z.string().optional(),productionStatus:z.enum(['in-production','available']).optional(),durationSeconds:z.number().positive().nullable().optional(),poster:media.optional(),videoSrc:z.string().nullable().optional(),captionsSrc:z.string().nullable().optional(),transcript:z.string().optional()}).superRefine((a,c)=>{
  if(a.reviewStatus==='approved' && (!a.reviewer || !a.reviewedAt || !a.publishedAt || !a.factualClaimsReviewedAt)) c.addIssue({code:'custom',message:'Approval requires actual reviewer, review dates and publication date'});
+ if(a.reviewStatus==='approved' && !a.ageBands?.length) c.addIssue({code:'custom',message:'Approval requires ageBands (24 Nov 2026: every published item is age-band tagged)'});
  if(a.brand==='kids' && (!a.ageGuidance || !a.materials?.length || !a.supervision || !a.safetyNotes?.length || !a.screenFreeExtension)) c.addIssue({code:'custom',message:'Kids requires age guidance, materials, supervision, safety and screen-free extension'});
  if(a.contentType==='activity' && (!a.materials?.length || !a.supervision || !a.safetyNotes?.length)) c.addIssue({code:'custom',message:'Activity requires materials and safety'});
  if(a.contentType==='video' && (!a.poster || !a.transcript || !a.productionStatus)) c.addIssue({code:'custom',message:'Video requires production status, poster and descriptive transcript'});
@@ -16,10 +21,11 @@ export const quizSchema = z.object({id:z.string().regex(/^[a-z0-9-]+$/),schedule
  // on screen while the reader answers; setId groups the questions authored against one passage.
  passage:z.string().min(40).optional(),passageTitle:z.string().min(1).optional(),setId:z.string().regex(/^[a-z0-9-]+$/).optional(),
  hero:media.optional(),
- prompt:z.string().min(10),options:z.array(z.object({id:z.string().min(1),text:z.string().min(1)})).length(4),correctOptionId:z.string(),explanation:z.string().min(20),difficulty:z.enum(['easy','medium','hard']),sources:z.array(sourceSchema),...review}).superRefine((q,c)=>{
+ prompt:z.string().min(10),options:z.array(z.object({id:z.string().min(1),text:z.string().min(1)})).length(4),correctOptionId:z.string(),explanation:z.string().min(20),difficulty:z.enum(['easy','medium','hard']),...ageBandsField,sources:z.array(sourceSchema),...review}).superRefine((q,c)=>{
  if(new Set(q.options.map(o=>o.id)).size!==4 || new Set(q.options.map(o=>o.text.trim().toLowerCase())).size!==4) c.addIssue({code:'custom',message:'Four distinct option IDs and texts required'});
  if(!q.options.some(o=>o.id===q.correctOptionId)) c.addIssue({code:'custom',message:'Correct option must exist'});
  if(q.reviewStatus==='approved' && (!q.reviewer || !q.reviewedAt)) c.addIssue({code:'custom',message:'Human approval requires actual review identity and date'});
+ if(q.reviewStatus==='approved' && !q.ageBands?.length) c.addIssue({code:'custom',message:'Approval requires ageBands (24 Nov 2026: every published item is age-band tagged)'});
 });
 import {
   GAME_TYPES,
@@ -127,6 +133,7 @@ export const gameSchema = z.object({
    *  it becomes the short_text answer key, never page data. */
   wordAnswer: z.string().min(2).optional(),
   difficulty: z.enum(['easy', 'medium', 'hard']),
+  ...ageBandsField,
   explanation: z.string().min(20),
   sources: z.array(sourceSchema),
   visual: visualBlockSchema,
@@ -135,6 +142,7 @@ export const gameSchema = z.object({
   const bad = (message: string) => c.addIssue({ code: 'custom', message });
   if (g.visual.gameType !== g.gameType) bad('visual.gameType must match gameType');
   if (g.reviewStatus === 'approved' && (!g.reviewer || !g.reviewedAt)) bad('Approval requires actual reviewer and review date');
+  if (g.reviewStatus === 'approved' && !g.ageBands?.length) bad('Approval requires ageBands (24 Nov 2026: every published item is age-band tagged)');
 
   const checkChoices = (list: { id: string; text: string; art?: string }[] | undefined, what: string) => {
     if (!list || list.length !== 4) return bad(`${what} needs exactly four entries`);

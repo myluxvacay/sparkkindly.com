@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Ten protected minutes and a hot drink, at the same time each day, keep a couple connected through the busiest seasons.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Every object sinks until it meets a liquid denser than itself — that layer becomes its floor.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Density | Wikipedia",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A single fixed pulley only changes the direction of the force — you pull down and the load goes up. The force needed is about the same as the load's weight.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Pulley",

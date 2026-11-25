@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Light travels at about 300,000 kilometres per second, while sound in air manages only about 343 metres per second - which is why you see lightning before you hear the thunder.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Speed of light",

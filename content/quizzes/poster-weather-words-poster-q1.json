@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "That is fog — the weather word is foggy.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Weather | Wikipedia",

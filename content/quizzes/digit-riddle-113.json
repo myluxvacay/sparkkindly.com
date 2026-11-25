@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "24 is even and sits between 20 and 30, and its digits add up to 2+4=6; the other choices have digit sums of 4, 8 and 10.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

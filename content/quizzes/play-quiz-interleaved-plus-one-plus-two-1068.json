@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Split the sequence into alternate terms. The 1st, 3rd, 5th and 7th terms run 3, 4, 5, 6, rising by 1. The 2nd, 4th and 6th terms run 5, 7, 9, rising by 2, so the next term, which belongs to the second run, is 11.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

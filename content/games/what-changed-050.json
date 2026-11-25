@@ -6,6 +6,9 @@
   "title": "What changed: kitchen",
   "prompt": "One thing changed between the before and after kitchen pictures. What changed?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the green hat changed colour from yellow to green. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

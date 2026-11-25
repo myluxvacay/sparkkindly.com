@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "People in China speak Chinese.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "China | Encyclopaedia Britannica",

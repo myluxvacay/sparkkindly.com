@@ -6,6 +6,9 @@
   "title": "What changed: beach",
   "prompt": "One thing changed between the before and after beach pictures. What changed?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the bee vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

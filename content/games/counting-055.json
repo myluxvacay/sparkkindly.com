@@ -6,6 +6,10 @@
   "title": "Counting: birds at the park",
   "prompt": "How many birds can you count in the park?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the birds one by one: there are exactly 3.",
   "sources": [],
   "reviewStatus": "approved",

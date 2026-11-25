@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "An eagle has strong wings and can soar high in the sky. Penguins and ostriches are birds that cannot fly.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

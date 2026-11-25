@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "$60 / $10 per month = 6 months of saving to reach your goal.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

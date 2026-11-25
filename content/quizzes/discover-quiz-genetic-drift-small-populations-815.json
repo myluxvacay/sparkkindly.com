@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "In small populations, which individuals happen to reproduce can shift gene frequencies by chance alone. This random process is genetic drift, and it is strongest when the population is small.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Genetic drift",

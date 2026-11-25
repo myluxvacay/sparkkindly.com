@@ -125,6 +125,7 @@ describe('landing focus + flick zone (owner phone report, 17 Nov 2026)', () => {
     sources: [],
     image: null,
     topics: [],
+    ageBands: ['family'],
   });
 
   it('the play panel carries the anchor id every play-intent link targets', () => {

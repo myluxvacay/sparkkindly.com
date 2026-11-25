@@ -2,6 +2,10 @@
   "brand": "play",
   "correctOptionId": "a",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The pattern repeats star, star, moon — star, star, moon. After the first star of the new group, the missing piece is the second star.",
   "gameType": "pattern",
   "id": "pattern-002",

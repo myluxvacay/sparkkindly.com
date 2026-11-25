@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "You pay for 2 items: 2 x $9 = $18, and you receive 3 items. Effective price: $18 divided by 3 = $6 per item.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

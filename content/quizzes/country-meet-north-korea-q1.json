@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "The money of North Korea is the North Korean won (KPW).",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "North Korea | Encyclopaedia Britannica",

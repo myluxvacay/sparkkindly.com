@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The letters are the first letters of the months in order: January, February, March, April, May, June, July, August, September. The next month is October, which starts with O.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

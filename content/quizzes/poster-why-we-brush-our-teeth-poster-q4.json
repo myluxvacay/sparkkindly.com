@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Fluoride strengthens enamel — armor for teeth. It never replaces the brushing itself.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tooth brushing | Wikipedia",

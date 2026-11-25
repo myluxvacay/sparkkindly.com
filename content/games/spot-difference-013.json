@@ -6,6 +6,10 @@
   "title": "Spot the difference: classroom",
   "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The orange shell changed colour from white to orange, the snowman vanished and the gray dog vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

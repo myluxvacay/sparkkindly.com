@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "The systemic circuit to the whole body offers far more resistance than the short pulmonary circuit to the lungs, so the left ventricle needs a thicker, stronger wall to generate the higher pressure required.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Ventricle (heart)",

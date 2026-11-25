@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Adding a clearly labelled safe option means your colleague can join in like everyone else instead of sitting out quietly, and checking ingredients yourself avoids putting them on the spot in front of the whole office.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

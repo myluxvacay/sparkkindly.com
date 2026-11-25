@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A specific question about one part of the work gives the reader something concrete to answer, and the reasons they give point to changes you can actually make.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Pairing a chore with something you enjoy makes starting feel pleasant, so the habit sticks.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

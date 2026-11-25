@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Look at the gaps between terms: 1, 4, 9, 16, 25. These are the square numbers 1, 4, 9, 16, 25, so the next gap is 36, giving 57 + 36 = 93.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

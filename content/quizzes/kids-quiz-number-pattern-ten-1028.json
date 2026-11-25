@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Nice counting! The numbers go up by twos, so 10 comes after 8.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

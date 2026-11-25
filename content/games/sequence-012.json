@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the yellow ball, second the red crab, third the blue ball, fourth the purple ball, fifth the white boat. So the second one was the red crab.",
   "sources": [],
   "reviewStatus": "approved",

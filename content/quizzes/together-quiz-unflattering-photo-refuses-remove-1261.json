@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A private, clear request with a stated boundary gives them a fair chance to do the right thing without a public pile-on. Revenge posting escalates the harm, and laughing along leaves the boundary unstated.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

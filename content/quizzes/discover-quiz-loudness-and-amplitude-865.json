@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Loudness is linked to amplitude — the size of the vibration. Bigger pressure swings carry more energy and are heard as a louder sound at the same pitch.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Amplitude",

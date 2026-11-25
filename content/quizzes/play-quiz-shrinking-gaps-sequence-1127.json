@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The numbers shrink by gaps that grow: 100-3=97, 97-6=91 and 91-9=82. The gaps are 3, 6, 9, so the next gap is 12, giving 82-12=70.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

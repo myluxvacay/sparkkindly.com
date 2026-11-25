@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "People in Burundi speak Rundi and French.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Burundi | Encyclopaedia Britannica",

@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "Emperor penguins breed on the sea ice around Antarctica, enduring the coldest winter on Earth to raise their chicks.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Emperor penguin",

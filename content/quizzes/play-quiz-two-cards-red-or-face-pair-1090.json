@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "There are C(52,2) = 1326 equally likely pairs. Both red: C(26,2) = 325 pairs. Both face cards: C(12,2) = 66 pairs. Pairs that are both red and both face cards, C(6,2) = 15, have been counted twice, so subtract them once: 325 + 66 - 15 = 376 winning pairs. The probability is 376/1326, which simplifies to 188/663.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

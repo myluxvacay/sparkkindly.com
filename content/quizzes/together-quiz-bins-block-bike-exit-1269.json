@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A polite, specific request explains the real difficulty and invites a simple fix, which works better than notes or silent resentment.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

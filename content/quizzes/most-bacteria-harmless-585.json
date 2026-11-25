@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Only a small fraction of bacteria cause illness. The rest are harmless or useful, recycling nutrients, fermenting food and helping digestion.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Bacteria",

@@ -6,6 +6,10 @@
   "title": "Spot the difference: space scene",
   "prompt": "Three things changed between the two space scene pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The moon moved, the yellow bird moved and the orange tree vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Real loyalty does not require dishonesty that could put your friend at risk and drag you into it. Refusing to lie while offering help with an honest conversation protects both the friendship and your integrity.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

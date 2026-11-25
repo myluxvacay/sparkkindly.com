@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "People in Malta speak Maltese and English.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Malta | Encyclopaedia Britannica",

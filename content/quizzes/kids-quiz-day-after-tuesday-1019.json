@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Good work! After Tuesday comes Wednesday, in the middle of the week.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

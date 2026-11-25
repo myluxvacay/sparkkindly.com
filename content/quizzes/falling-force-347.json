@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Gravity is the force that attracts objects with mass toward each other; Earth's gravity is what keeps your feet on the ground.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Gravity - Wikipedia",

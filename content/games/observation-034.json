@@ -6,6 +6,9 @@
   "title": "Look closely: kitchen count",
   "prompt": "How many bears are in the kitchen?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Count the bears one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

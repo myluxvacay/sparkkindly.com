@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "3 x $4 = $12 spent, and $20 - $12 = $8, so your change is eight dollars.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

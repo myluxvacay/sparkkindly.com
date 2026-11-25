@@ -6,6 +6,9 @@
   "title": "Spot the difference: farm",
   "prompt": "Three things changed between the two farm pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The yellow star changed colour from white to yellow, the white sheep moved and the blue kite vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

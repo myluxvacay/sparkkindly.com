@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Birds combine several guides: the Sun and stars, coastlines and other landmarks, and a built-in sensitivity to Earth's magnetic field. Smell-homing belongs to salmon.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Bird migration",

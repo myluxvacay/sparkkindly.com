@@ -6,6 +6,9 @@
   "title": "Look closely: kitchen present",
   "prompt": "Which of these can you see in the kitchen?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The green apple is right there in the picture. The other three choices are not in this scene at all.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Year 1: $200 x 1.10 = $220. Year 2: $220 x 1.10 = $242. Year 3: $242 x 1.10 = $266.20. Simple interest would give only $260, because compound interest also earns interest on past interest.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

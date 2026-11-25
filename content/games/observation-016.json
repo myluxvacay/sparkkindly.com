@@ -6,6 +6,9 @@
   "title": "Look closely: park clock",
   "prompt": "What time does the clock in the park show?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The clock's short hand points towards 3 and its long hand shows 0 minutes, so the clock reads 3:00.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "Coal formed mainly from lush swamp plants of the Carboniferous period, buried before they could fully rot and transformed by heat and pressure.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Coal",

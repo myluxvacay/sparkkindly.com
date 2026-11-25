@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "121 = 11×11, 144 = 12×12 and 169 = 13×13, but no whole number multiplied by itself makes 190.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

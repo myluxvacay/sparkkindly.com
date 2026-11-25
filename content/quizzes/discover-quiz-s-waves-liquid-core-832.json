@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "S-waves shake material side to side. A liquid has no shear strength and cannot spring back from that sideways motion, so S-waves cannot propagate through the liquid outer core, creating an S-wave shadow zone.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "S wave",

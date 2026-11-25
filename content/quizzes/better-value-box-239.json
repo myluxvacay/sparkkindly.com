@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Two 500 g boxes would give you 1 kg for $8, so the 1 kg box at $7 gives the same amount of cereal for less money.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Narrow, identical practice builds a fragile sequence that breaks when conditions change. Varied practice forces the learner to recognise principles across situations, which transfers to new games.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

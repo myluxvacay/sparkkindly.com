@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "In 12 months you pay for 12 - 3 = 9 months. 9 x $9 = $81. Multiplying $9 by all 12 months ($108) forgets the free months.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

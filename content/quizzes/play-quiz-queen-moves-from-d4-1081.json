@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Along its row and column the queen reaches 7 + 7 = 14 squares. On the diagonals from d4 it reaches 4 + 3 + 3 + 3 = 13 squares. In total, 14 + 13 = 27 squares.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Queen (chess)",

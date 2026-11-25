@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "Glucagon, released by the pancreas when blood glucose is low, acts mainly on the liver, stimulating it to break glycogen down into glucose and release it — the opposite action to insulin.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Glucagon",

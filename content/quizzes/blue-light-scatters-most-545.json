@@ -1,1 +1,42 @@
-{"brand":"discover","correctOptionId":"a","difficulty":"medium","explanation":"Tiny air molecules scatter short blue wavelengths in all directions far more strongly than the longer reds and yellows — Rayleigh scattering — so blue light reaches your eyes from every part of the sky.","id":"blue-light-scatters-most-545","options":[{"id":"a","text":"Air molecules scatter blue light from sunlight much more strongly than other colours"},{"id":"b","text":"The sky reflects the blue of the oceans below"},{"id":"c","text":"Sunlight arriving at Earth is mostly blue to begin with"},{"id":"d","text":"Distant air is tinted blue by water vapour"}],"prompt":"Why does the clear daytime sky look blue?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-02-27","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Rayleigh scattering","url":"https://en.wikipedia.org/wiki/Rayleigh_scattering"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "a",
+  "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "explanation": "Tiny air molecules scatter short blue wavelengths in all directions far more strongly than the longer reds and yellows — Rayleigh scattering — so blue light reaches your eyes from every part of the sky.",
+  "id": "blue-light-scatters-most-545",
+  "options": [
+    {
+      "id": "a",
+      "text": "Air molecules scatter blue light from sunlight much more strongly than other colours"
+    },
+    {
+      "id": "b",
+      "text": "The sky reflects the blue of the oceans below"
+    },
+    {
+      "id": "c",
+      "text": "Sunlight arriving at Earth is mostly blue to begin with"
+    },
+    {
+      "id": "d",
+      "text": "Distant air is tinted blue by water vapour"
+    }
+  ],
+  "prompt": "Why does the clear daytime sky look blue?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-02-27",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Rayleigh scattering",
+      "url": "https://en.wikipedia.org/wiki/Rayleigh_scattering"
+    }
+  ]
+}

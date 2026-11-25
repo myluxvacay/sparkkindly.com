@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "'We' means more than one person, so it takes are: 'We are ready for lunch.'",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Copula (linguistics) | Wikipedia",

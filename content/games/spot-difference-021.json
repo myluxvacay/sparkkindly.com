@@ -6,6 +6,10 @@
   "title": "Spot the difference: market stall",
   "prompt": "Three things changed between the two market stall pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The green apple changed colour from red to green, the blue book changed colour from purple to blue and the penguin moved. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

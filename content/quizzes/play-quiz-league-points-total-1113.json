@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The wins give 2x3=6 points and the draws give 3x1=3 points. The loss adds nothing, so the total is 6+3=9 points.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

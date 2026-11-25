@@ -6,6 +6,9 @@
   "title": "Spot the difference: beach",
   "prompt": "Three things changed between the two beach pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The green balloon moved, the green bunch of grapes changed colour from purple to green and the red crab vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

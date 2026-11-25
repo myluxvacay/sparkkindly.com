@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "In a chemical reaction, atoms rearrange themselves: old bonds break, new bonds form, and entirely new substances appear.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

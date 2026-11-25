@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "The pancreas releases insulin, the hormone that helps control the level of sugar in the blood.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Pancreas",

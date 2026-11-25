@@ -2,6 +2,10 @@
   "brand": "kids",
   "correctOptionId": "c",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Biscuit feels scared. The clues are the creaking gate, the big shadow, and the trembling — he even hid behind the pots!",
   "gameType": "emotion-detectives",
   "id": "emotion-detectives-004",

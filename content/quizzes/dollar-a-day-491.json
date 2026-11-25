@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Saving $1 a day for 7 days gives 1 x 7 = $7.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

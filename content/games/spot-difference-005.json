@@ -6,6 +6,9 @@
   "title": "Spot the difference: farm",
   "prompt": "Three things changed between the two farm pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The white shell changed colour from pink to white, the orange tree changed colour from green to orange and the white star changed colour from yellow to white. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

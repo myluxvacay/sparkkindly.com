@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "3 + 3 = 6. Count them: 1, 2, 3 red and 1, 2, 3 blue - six crayons!",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

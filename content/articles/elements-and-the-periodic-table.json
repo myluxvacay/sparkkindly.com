@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "An element is a substance made from just one kind of atom, and the periodic table arranges all of them into a map full of patterns.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

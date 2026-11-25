@@ -6,6 +6,10 @@
   "title": "Memory: beach absent",
   "prompt": "From memory: which of these was NOT in the beach?",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The green bird never appeared in the picture. The other three choices were all there to be spotted.",
   "sources": [],
   "reviewStatus": "approved",

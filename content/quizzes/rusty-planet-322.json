@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Mars looks red because its surface is rich in iron oxide - the same compound as rust.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Mars - Wikipedia",

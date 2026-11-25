@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "A rollercoaster is an argument between two kinds of energy. Kinetic is motion happening; potential is motion waiting its turn.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

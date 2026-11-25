@@ -6,6 +6,10 @@
   "title": "Look closely: park color",
   "prompt": "What colour is the sheep in the park?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The sheep in the picture is white — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

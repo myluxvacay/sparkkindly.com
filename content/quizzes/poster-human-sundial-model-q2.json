@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Low sun means long shadows; high midday sun shrinks them to almost nothing.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sundial | Wikipedia",

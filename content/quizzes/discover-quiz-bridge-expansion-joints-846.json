@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Most building materials expand when heated and contract when cooled. Over a long bridge deck those small changes add up to centimetres, so gaps at the ends let the deck lengthen safely on hot days instead of buckling or cracking.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

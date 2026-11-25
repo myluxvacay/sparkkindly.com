@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "First kilogram: $4. Extra weight: 7 - 1 = 6 kg, at 6 x $2.50 = $15. Postage so far: $4 + $15 = $19. With insurance: $19 + $3 = $22. The $21.50 option charges all 7 kg at $2.50 plus the first-kilo fee again, and $19 forgets the insurance.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "The ducks have 2 plus 2 plus 2, which is 6 legs. The dogs have 4 plus 4, which is 8 legs. 6 add 8 is 14. Super counting!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

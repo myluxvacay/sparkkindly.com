@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Vague advice to 'cut back' gives Dev nothing to act on. A week of categorised tracking turns a mystery into a pattern — for example, daily small purchases adding up to a large monthly sum — and shows exactly where a change would matter.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "A few special things are truly yours, and you may say so politely.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sharing | Wikipedia",

@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "A treatment plant turns muddy river water into safe tap water through a chain of physical and chemical steps — no single magic filter.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "'Whatever is left' is usually close to nothing, because spending expands into available money. Automating the transfer first makes saving the default rather than a leftover.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

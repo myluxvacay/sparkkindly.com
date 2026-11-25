@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Prices differ between shops and change with offers, so a quick comparison can save money without giving anything up.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

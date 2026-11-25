@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "$5 multiplied by 8 weeks equals $40, so steady weekly saving adds up to forty dollars.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

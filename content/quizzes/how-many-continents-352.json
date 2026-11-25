@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "The seven commonly counted continents are Africa, Antarctica, Asia, Europe, North America, South America and Australia (Oceania).",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Continent - Wikipedia",

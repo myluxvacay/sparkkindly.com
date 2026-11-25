@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Fold Your Own Picture Book",
   "description": "For ages 6–9 with an adult: fold one big sheet of paper into a little book and fill it with your story.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-07-05",
   "updatedAt": "2026-07-05",
   "author": "SparkKindly · AI-assisted",

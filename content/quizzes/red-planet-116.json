@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Mars looks red because its surface dust contains iron oxide, the same compound as rust, which gives the planet its reddish colour.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Mars",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Sharing a possible sighting with the time, place and your uncertainty gives your neighbour something real to follow up without false hope, and offering to look with them turns a doubtful glimpse into genuine help.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

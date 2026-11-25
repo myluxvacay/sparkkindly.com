@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "People in Eswatini speak siSwati and English.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Eswatini | Encyclopaedia Britannica",

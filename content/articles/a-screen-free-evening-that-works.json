@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "An evening without screens goes better when something replaces them, not when they are simply banned.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

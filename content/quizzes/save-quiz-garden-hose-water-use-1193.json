@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The water used is 12 litres per minute x 15 minutes = 180 litres.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

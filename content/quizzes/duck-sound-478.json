@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "A duck says quack; dogs say woof, cats say meow and pigs say oink.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

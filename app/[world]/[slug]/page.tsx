@@ -37,6 +37,7 @@ import { recordSocialVisit } from '@/lib/social/visits';
 import VideoPlayer from '@/components/item/VideoPlayer';
 import { getVideoId } from '@/lib/items/video';
 import { getWorld } from '@/lib/public/worlds';
+import { bandChipLabel } from '@/lib/age-bands';
 import { JsonLd, metadata as seo } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -161,6 +162,7 @@ export default async function ItemPage({ params, searchParams }: Props) {
           {KIND_EYEBROW[item.kind] ?? 'ITEM'}
         </p>
         <h1>{item.title}</h1>
+        {bandChipLabel(item.ageBands) && <p className="pill band-chip-label">{bandChipLabel(item.ageBands)}</p>}
         {sponsor && <SponsorLine line={sponsor} />}
         <p className="article-summary">{item.summary}</p>
         <p className="byline">

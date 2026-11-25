@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Yes, book and look rhyme. They both end with the same ook sound.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

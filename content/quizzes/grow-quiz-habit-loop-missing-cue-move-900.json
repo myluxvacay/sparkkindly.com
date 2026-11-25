@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The routine and reward did not change; the cue did. Re-attaching reading to a new stable cue in the new home, such as after locking the front door, restores the trigger.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Habit",

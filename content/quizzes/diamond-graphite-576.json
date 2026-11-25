@@ -1,1 +1,41 @@
-{"brand":"discover","correctOptionId":"b","difficulty":"easy","explanation":"Both are pure carbon. In diamond the atoms lock into a rigid three-dimensional network, making it extremely hard; in graphite they form slippery layers, making it soft enough to write with.","id":"diamond-graphite-576","options":[{"id":"a","text":"Silicon"},{"id":"b","text":"Carbon"},{"id":"c","text":"Iron"},{"id":"d","text":"Calcium"}],"prompt":"Diamond and graphite feel completely different, yet both are made of one single element. Which one?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-03-30","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Allotropes of carbon","url":"https://en.wikipedia.org/wiki/Allotropes_of_carbon"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "b",
+  "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
+  "explanation": "Both are pure carbon. In diamond the atoms lock into a rigid three-dimensional network, making it extremely hard; in graphite they form slippery layers, making it soft enough to write with.",
+  "id": "diamond-graphite-576",
+  "options": [
+    {
+      "id": "a",
+      "text": "Silicon"
+    },
+    {
+      "id": "b",
+      "text": "Carbon"
+    },
+    {
+      "id": "c",
+      "text": "Iron"
+    },
+    {
+      "id": "d",
+      "text": "Calcium"
+    }
+  ],
+  "prompt": "Diamond and graphite feel completely different, yet both are made of one single element. Which one?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-03-30",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Allotropes of carbon",
+      "url": "https://en.wikipedia.org/wiki/Allotropes_of_carbon"
+    }
+  ]
+}

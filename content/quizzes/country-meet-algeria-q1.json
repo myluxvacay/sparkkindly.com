@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "People in Algeria speak Arabic.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Algeria | Encyclopaedia Britannica",

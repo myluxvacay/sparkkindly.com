@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Preparing the night before, when things are calm, removes the decision from the busiest moment of the day.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

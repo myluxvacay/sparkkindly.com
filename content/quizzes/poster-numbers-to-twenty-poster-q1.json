@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "After twelve comes thirteen — the first of the '-teen' numbers.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Counting | Wikipedia",

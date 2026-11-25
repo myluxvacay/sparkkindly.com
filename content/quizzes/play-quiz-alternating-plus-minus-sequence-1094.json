@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The steps alternate +2, -1: 4+2=6, 6-1=5, 5+2=7, 7-1=6 and 6+2=8. The next step is -1, giving 8-1=7.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

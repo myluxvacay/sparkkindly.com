@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Great counting! Counting by fives goes 5, 10, 15, then 20.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

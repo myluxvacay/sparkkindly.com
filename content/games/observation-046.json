@@ -6,6 +6,9 @@
   "title": "Look closely: kitchen clock",
   "prompt": "What time does the clock in the kitchen show?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The clock's short hand points towards 2 and its long hand shows 0 minutes, so the clock reads 2:00.",
   "sources": [],
   "reviewStatus": "approved",

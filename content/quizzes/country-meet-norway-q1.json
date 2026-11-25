@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "Norway is in Northern Europe, part of Europe.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Norway | Encyclopaedia Britannica",

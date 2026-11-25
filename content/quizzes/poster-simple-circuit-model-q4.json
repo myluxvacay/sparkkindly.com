@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "The battery is the pump and power source — its + and − ends push and pull the flow around.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Electric circuit | Wikipedia",

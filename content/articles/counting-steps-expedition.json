@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Counting Steps Expedition",
   "description": "For ages 6–9 with an adult: count how many of your steps it takes to cross the garden, the room, or the whole street.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-10-18",
   "updatedAt": "2026-10-18",
   "author": "SparkKindly · AI-assisted",

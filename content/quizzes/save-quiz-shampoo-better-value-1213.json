@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The small bottle costs $6 / 3 = $2 per 100 ml. The large bottle costs $9 / 6 = $1.50 per 100 ml, so the 600 ml bottle is better value.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

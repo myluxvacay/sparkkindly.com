@@ -27,6 +27,9 @@
   "correctOptionId": "a",
   "explanation": "Casts means throws or produces. The gnomon casts — throws — a shadow onto the plate, and the shadow's position tells the time.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sundial | Wikipedia",

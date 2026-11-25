@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A plateau often means practice has become comfortable repetition. Targeting specific weaknesses with new challenges, and getting feedback on them, pushes the exact skills that have stalled.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

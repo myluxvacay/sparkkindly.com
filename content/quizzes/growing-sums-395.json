@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Each number is the sum of the two before it: 2+3=5, 3+5=8, 5+8=13, so the next is 8+13 = 21.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

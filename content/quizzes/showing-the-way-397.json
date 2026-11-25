@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Walking with them takes a moment, makes sure they actually arrive, and helps a new person feel welcome.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

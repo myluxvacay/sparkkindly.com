@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Germination starts with imbibition: the seed soaks up water, swells and switches on the enzymes that digest its food store. It has no leaves yet, so sunlight is not the trigger.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Germination",

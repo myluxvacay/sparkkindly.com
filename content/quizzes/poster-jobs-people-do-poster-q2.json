@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Bakers begin very early so bread is ready when shops open.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Occupation | Wikipedia",

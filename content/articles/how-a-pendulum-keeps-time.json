@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "A pendulum's swing takes the same time whether the bob is heavy or light — only its length matters, and that made clocks accurate.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

@@ -6,6 +6,10 @@
   "title": "Sequence recall: what came third?",
   "prompt": "Spark showed some things in order. What came third?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The order was: first the gray sheep, second the brown horse, third the purple cupcake, fourth the green hat. So the third one was the purple cupcake.",
   "sources": [],
   "reviewStatus": "approved",

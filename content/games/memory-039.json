@@ -6,6 +6,10 @@
   "title": "Memory: space scene count",
   "prompt": "From memory: how many butterflies are in the space scene?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the butterflies one by one, pointing at each so none is counted twice: there are 3.",
   "sources": [],
   "reviewStatus": "approved",

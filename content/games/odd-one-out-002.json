@@ -6,6 +6,10 @@
   "title": "Odd one out: three flowers and a fruit",
   "prompt": "Three of these are flowers. Which one is not?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Roses, tulips and sunflowers are flowers. An apple is a fruit that grows on a tree.",
   "sources": [],
   "reviewStatus": "approved",

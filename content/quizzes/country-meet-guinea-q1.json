@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "The money of Guinea is the Guinean franc (GNF).",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Guinea | Encyclopaedia Britannica",

@@ -6,6 +6,10 @@
   "title": "What changed: farm",
   "prompt": "One thing changed between the before and after farm pictures. What changed?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the white star changed colour from yellow to white. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

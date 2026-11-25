@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Slowing down for a minute and guiding them through the button, then protecting their turn to speak, keeps your grandparent a real part of the family call instead of an audience for it.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

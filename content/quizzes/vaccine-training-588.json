@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "A vaccine presents a killed, weakened or partial germ so the immune system can build memory cells safely, ready for the real infection.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Vaccine",

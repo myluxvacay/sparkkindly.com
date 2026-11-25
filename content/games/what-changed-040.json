@@ -6,6 +6,10 @@
   "title": "What changed: meadow",
   "prompt": "One thing changed between the before and after meadow pictures. What changed?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the red apple changed colour from green to red. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

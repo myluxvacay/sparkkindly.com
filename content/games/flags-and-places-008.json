@@ -6,6 +6,10 @@
   "title": "Flags & places: name this flag",
   "prompt": "This flag belongs to which country?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Portugal’s flag is green and red with a yellow armillary sphere.",
   "sources": [],
   "reviewStatus": "approved",

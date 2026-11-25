@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "The chart calls 'help' the kindest action of all.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Verb | Wikipedia",

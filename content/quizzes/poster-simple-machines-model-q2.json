@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "A fixed pulley lets you pull DOWN while the load goes UP — it changes the pull's direction.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Simple machine | Wikipedia",

@@ -21,6 +21,7 @@ import { importLegacy } from '../lib/items/import-legacy';
 import { updateHeroImages } from '../lib/items/update-heroes';
 import { updateSectionImages } from '../lib/items/update-section-images';
 import { updateItemTopics } from '../lib/items/update-topics';
+import { updateAgeBandTopics } from '../lib/items/update-age-bands';
 import { updateGameItems } from '../lib/items/update-games';
 import { assertSafeImportTarget } from '../lib/items/import-guard';
 
@@ -54,6 +55,9 @@ try {
 
   const topicLinks = await updateItemTopics(db, articles);
   console.log(`Topic links: ${topicLinks.added} added, ${topicLinks.unchanged} already current, ${topicLinks.missing} not in database.`);
+
+  const bandLinks = await updateAgeBandTopics(db, articles, quizzes, games);
+  console.log(`Age-band links: ${bandLinks.added} added, ${bandLinks.unchanged} already current, ${bandLinks.missing} not in database.`);
 
   const gameSync = await updateGameItems(db, games);
   console.log(`Game items: ${gameSync.updated} updated, ${gameSync.unchanged} already current, ${gameSync.missing} not in database.`);

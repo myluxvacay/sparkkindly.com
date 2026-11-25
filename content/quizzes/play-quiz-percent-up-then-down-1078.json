@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Increasing $240 by 25% gives 240 x 1.25 = $300. Decreasing $300 by 20% gives 300 x 0.80 = $240. The two changes cancel out exactly, because 1.25 x 0.80 = 1.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

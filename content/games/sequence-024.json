@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came third?",
   "prompt": "Spark showed some things in order. What came third?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the red umbrella, second the yellow duck, third the brown owl, fourth the gray cloud, fifth the black bear. So the third one was the brown owl.",
   "sources": [],
   "reviewStatus": "approved",

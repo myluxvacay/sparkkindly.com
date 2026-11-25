@@ -6,6 +6,10 @@
   "title": "Sequence recall: what came third?",
   "prompt": "Spark showed some things in order. What came third?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The order was: first the snowman, second the white rabbit, third the blue ball, fourth the purple ball. So the third one was the blue ball.",
   "sources": [],
   "reviewStatus": "approved",

@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Sunrise is your side of the spinning Earth turning to face the sun.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Earth's rotation | Wikipedia",

@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "People in Lithuania speak Lithuanian.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Lithuania | Encyclopaedia Britannica",

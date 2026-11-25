@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "People in France speak French.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "France | Encyclopaedia Britannica",

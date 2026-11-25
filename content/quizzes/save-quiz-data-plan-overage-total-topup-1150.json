@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Extra data: 17 - 10 = 7 GB, at 7 x $4 = $28. Total: $30 (plan) + $28 (extra data) + $10 (device fee) = $68. The $58 option forgets the device fee, and $98 wrongly charges for all 17 GB on top of the plan (17 x $4 = $68, plus $30).",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

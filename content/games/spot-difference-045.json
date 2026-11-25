@@ -6,6 +6,10 @@
   "title": "Spot the difference: pond",
   "prompt": "Three things changed between the two pond pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The blue boat turned around, the turtle changed colour from green to plain and the green turtle vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

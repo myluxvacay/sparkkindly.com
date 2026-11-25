@@ -6,6 +6,9 @@
   "title": "What changed: garden",
   "prompt": "One thing changed between the before and after garden pictures. What changed?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the banana vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

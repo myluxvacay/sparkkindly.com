@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "My Week of Weather",
   "description": "For ages 6–9 with an adult: draw the weather every day for a week and become a weather watcher.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-08-13",
   "updatedAt": "2026-08-13",
   "author": "SparkKindly · AI-assisted",

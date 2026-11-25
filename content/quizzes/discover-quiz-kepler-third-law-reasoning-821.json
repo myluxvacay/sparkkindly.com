@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "From period² ∝ distance³, period ∝ distance^(3/2). For a distance ratio of 4, the period ratio is 4^(3/2) = 8, so the planet's year lasts 8 Earth years.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Kepler's laws of planetary motion",

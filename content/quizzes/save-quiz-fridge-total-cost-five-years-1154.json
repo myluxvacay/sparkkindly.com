@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Fridge B total: $700 + (5 x $30) = $700 + $150 = $850. Fridge A totals $600 + (5 x $60) = $900, so B is cheaper overall despite costing more to buy.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "A parachute trades speed for drag: its wide canopy catches so much air that a lethal fall becomes a gentle landing.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

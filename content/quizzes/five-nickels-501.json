@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Each nickel is 5 cents, and 5 x 5 = 25 cents in total.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

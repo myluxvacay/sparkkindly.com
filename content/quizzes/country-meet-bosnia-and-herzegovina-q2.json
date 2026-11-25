@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "Bosnia and Herzegovina covers about 51,000 square kilometres of land and inland water.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Bosnia and Herzegovina | Encyclopaedia Britannica",

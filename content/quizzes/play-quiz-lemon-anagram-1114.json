@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "MELON uses the same five letters as LEMON: L, E, M, O and N, just rearranged. Melons adds an S, and the other words use different letters.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

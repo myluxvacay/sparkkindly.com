@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Under Monopoly rules, a third consecutive double on the same turn means you go directly to Jail and do not take the third move.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Monopoly (game)",

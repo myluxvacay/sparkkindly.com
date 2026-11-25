@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "The money of Singapore is the Singapore dollar (SGD).",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Singapore | Encyclopaedia Britannica",

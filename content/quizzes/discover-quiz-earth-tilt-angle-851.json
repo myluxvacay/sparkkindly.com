@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Earth's axial tilt is about 23.4–23.5 degrees. That lean, combined with Earth's orbit, is what produces the changing seasons.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Axial tilt",

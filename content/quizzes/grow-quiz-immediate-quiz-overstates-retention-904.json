@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Performance straight after teaching overstates long-term learning, because the material has barely begun to be forgotten. A retrieval check delayed by days or weeks gives a far more honest picture of retention and tells the teacher which topics need spaced review before the final test.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

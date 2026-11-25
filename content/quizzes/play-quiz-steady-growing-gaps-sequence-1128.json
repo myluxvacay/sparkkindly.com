@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The gaps between terms grow steadily: +3, +4, +5, +6. The next gap is +7, so the next term is 25 + 7 = 32.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Four 250 g bags make 1 kg and cost 4 x $5 = $20. The 1 kg bag costs $18. Saving: $20 - $18 = $2.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

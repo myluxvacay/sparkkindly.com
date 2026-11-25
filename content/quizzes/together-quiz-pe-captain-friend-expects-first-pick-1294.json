@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Choosing a balanced side and explaining your reasoning to your friend respects both the game and the player who is usually overlooked. Always picking your friend first teaches everyone else that the teams are fixed before anyone plays.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

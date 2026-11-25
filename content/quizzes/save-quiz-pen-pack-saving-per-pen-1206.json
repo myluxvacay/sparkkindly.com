@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The saving per pen is 80 cents - 50 cents = 30 cents.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

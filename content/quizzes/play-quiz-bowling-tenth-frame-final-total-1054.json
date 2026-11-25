@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Frame 9's strike scores 10 plus the first two balls of frame 10: 10 + 10 + 7 = 27, taking the total to 147. Frame 10 itself scores just its own balls, 10 + 7 + 2 = 19, with no extra strike bonus. Final total: 147 + 19 = 166.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

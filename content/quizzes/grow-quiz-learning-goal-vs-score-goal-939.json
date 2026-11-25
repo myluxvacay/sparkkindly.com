@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A learning (mastery) goal treats early results as diagnostic information, which sustains practice after setbacks. A pure performance goal makes each low score feel like a verdict on ability.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

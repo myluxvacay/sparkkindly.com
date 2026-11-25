@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Check both conditions for each: treble 20 + treble 15 + single 5 = 60 + 45 + 5 = 110 but ends on a single; treble 19 + treble 17 + single 2 = 57 + 51 + 2 = 110 but also ends on a single; treble 20 + single 16 + double 16 = 60 + 16 + 32 = 108, so it ends on a double but is 2 short. Treble 20 + single 20 + double 15 = 60 + 20 + 30 = 110 and ends on a double, so it finishes the leg.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

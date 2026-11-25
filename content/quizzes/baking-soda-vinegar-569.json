@@ -1,1 +1,41 @@
-{"brand":"discover","correctOptionId":"a","difficulty":"easy","explanation":"Vinegar is an acid and baking soda is a base. When they react, they produce carbon dioxide, and it is the rush of that gas forming bubbles that makes the mixture foam and fizz.","id":"baking-soda-vinegar-569","options":[{"id":"a","text":"Carbon dioxide"},{"id":"b","text":"Oxygen"},{"id":"c","text":"Steam"},{"id":"d","text":"Nitrogen"}],"prompt":"When baking soda is stirred into vinegar, which gas causes the vigorous fizzing?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-03-23","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Sodium bicarbonate","url":"https://en.wikipedia.org/wiki/Sodium_bicarbonate"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "a",
+  "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
+  "explanation": "Vinegar is an acid and baking soda is a base. When they react, they produce carbon dioxide, and it is the rush of that gas forming bubbles that makes the mixture foam and fizz.",
+  "id": "baking-soda-vinegar-569",
+  "options": [
+    {
+      "id": "a",
+      "text": "Carbon dioxide"
+    },
+    {
+      "id": "b",
+      "text": "Oxygen"
+    },
+    {
+      "id": "c",
+      "text": "Steam"
+    },
+    {
+      "id": "d",
+      "text": "Nitrogen"
+    }
+  ],
+  "prompt": "When baking soda is stirred into vinegar, which gas causes the vigorous fizzing?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-03-23",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Sodium bicarbonate",
+      "url": "https://en.wikipedia.org/wiki/Sodium_bicarbonate"
+    }
+  ]
+}

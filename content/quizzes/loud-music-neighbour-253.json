@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Most people respond well to a friendly, direct request; stronger steps are still available if it does not work.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

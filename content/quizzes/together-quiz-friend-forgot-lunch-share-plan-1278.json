@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Splitting what you have and pooling what you can means neither of you goes hungry, and agreeing how it evens out later keeps it relaxed instead of turning a bad morning into a debt or an embarrassment.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

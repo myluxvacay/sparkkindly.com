@@ -1,6 +1,10 @@
 {
   "brand": "kids",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the dots in each circle: the cones belong on 3, 1, 4, 5 and 2 — every cone found the circle with the same number of dots.",
   "gameType": "drag-match",
   "id": "drag-match-hedgehog-001",

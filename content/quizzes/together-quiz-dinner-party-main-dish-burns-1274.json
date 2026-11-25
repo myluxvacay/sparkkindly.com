@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A practical rescue plus a calm welcome saves what your friend actually cared about, which was hosting people well. Cancelling abandons the evening, announcing the disaster makes it the story of the night, and taking over removes the host from their own party.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

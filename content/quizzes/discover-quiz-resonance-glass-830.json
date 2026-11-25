@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "At resonance, a driving vibration at an object's natural frequency transfers energy efficiently cycle after cycle, so the amplitude grows large. A glass vibrated strongly enough at its resonant frequency can flex beyond its limit and shatter.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Resonance",

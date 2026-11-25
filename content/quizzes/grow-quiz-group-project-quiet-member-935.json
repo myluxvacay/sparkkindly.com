@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A private, curious conversation finds out what is actually in the way, and a smaller step with a date is far more likely to get done than blame or silently taking over.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

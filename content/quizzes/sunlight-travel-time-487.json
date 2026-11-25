@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Light travels very fast, but the Sun is so far away that its light still takes about 8 minutes to reach Earth.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sunlight - Wikipedia",

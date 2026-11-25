@@ -6,6 +6,10 @@
   "title": "What changed: pond",
   "prompt": "One thing changed between the before and after pond pictures. What changed?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the blue boat moved. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

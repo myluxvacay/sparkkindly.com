@@ -6,6 +6,9 @@
   "title": "Look closely: farm count",
   "prompt": "How many butterflies are in the farm?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "Count the butterflies one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

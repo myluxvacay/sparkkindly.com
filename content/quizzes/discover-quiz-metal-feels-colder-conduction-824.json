@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "How cold something feels depends on how fast it draws heat from your skin, not just its temperature. At the same 10°C, metal's high thermal conductivity pulls heat away quickly, while wood is a poor conductor and lets your skin stay warmer.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

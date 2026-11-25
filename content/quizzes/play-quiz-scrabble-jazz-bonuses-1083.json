@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The plain letter total is 8 + 1 + 10 + 10 = 29. The Double Letter square doubles the J to 16, lifting the word total to 37. The Triple Word square then triples that: 37 x 3 = 111.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Scrabble letter distributions",

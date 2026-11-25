@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Bug and jug rhyme: 'A bug in a jug.'",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Rhyme | Wikipedia",

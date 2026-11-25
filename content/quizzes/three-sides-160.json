@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "A triangle has 3 sides and 3 corners. Squares and rectangles have 4 sides, and a circle has no straight sides at all!",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

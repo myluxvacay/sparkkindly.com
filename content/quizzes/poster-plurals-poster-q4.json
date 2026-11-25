@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Dish ends in sh, so it takes -es: dishes.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Plural | Wikipedia",

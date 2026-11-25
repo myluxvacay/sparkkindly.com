@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came fourth?",
   "prompt": "Spark showed some things in order. What came fourth?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the moon, second the gray sheep, third the blue umbrella, fourth the white flower, fifth the green hat. So the fourth one was the white flower.",
   "sources": [],
   "reviewStatus": "approved",

@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "Kakuro: the crossword that adds up",
   "description": "Kakuro replaces crossword letters with digits and clues with sums. No repeats inside a sum, every total exact — a calm, logical workout.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-07-12",
   "updatedAt": "2026-07-12",
   "author": "SparkKindly · AI-assisted",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Walking with them at a pace they can manage keeps the day shared instead of leaving them to finish alone and embarrassed, and checking in at the checkpoint keeps it safe without making a drama of it.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

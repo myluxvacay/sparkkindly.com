@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Every object you have ever touched is built from atoms — tiny particles with a dense centre and electrons in motion around it.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A simple invitation can turn a lonely first week into the start of a friendship; small welcomes make a big difference.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

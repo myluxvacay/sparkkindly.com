@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A calm conversation about the pattern gives your friend information and a chance to respond, whether the cause is overwhelm or thoughtlessness. Revenge cancelling, silent fading, and pretending it is fine all let the problem grow.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

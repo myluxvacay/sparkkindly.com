@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "A switch is a liftable bridge: closed, the loop is complete; open, the road is broken.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Electric circuit | Wikipedia",

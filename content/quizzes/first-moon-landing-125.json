@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "Neil Armstrong stepped onto the Moon on 20 July 1969 during Apollo 11; Buzz Aldrin followed him, while Michael Collins stayed in orbit.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Apollo 11",

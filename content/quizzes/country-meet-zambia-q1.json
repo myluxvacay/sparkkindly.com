@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Lusaka is the capital of Zambia. It is the city where the country's government works.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Zambia | Encyclopaedia Britannica",

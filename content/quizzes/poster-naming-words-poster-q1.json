@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "A library is a place you can go to, so 'library' is a naming word for a place.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Noun | Wikipedia",

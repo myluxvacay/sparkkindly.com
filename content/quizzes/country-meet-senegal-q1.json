@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "The money of Senegal is the West African CFA franc (XOF).",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Senegal | Encyclopaedia Britannica",

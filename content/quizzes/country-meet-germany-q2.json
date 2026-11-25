@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Germany covers about 357,000 square kilometres of land and inland water.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Germany | Encyclopaedia Britannica",

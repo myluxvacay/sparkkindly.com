@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Draw a Friend",
   "description": "For ages 6–9 with an adult: draw a friend or someone in your family doing something kind, and give them the picture.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-08-27",
   "updatedAt": "2026-08-27",
   "author": "SparkKindly · AI-assisted",

@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "The four outer planets are giants — Jupiter and Saturn of gas, Uranus and Neptune of ice and gas.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Solar System | Wikipedia",

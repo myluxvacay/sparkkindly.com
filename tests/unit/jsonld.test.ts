@@ -7,7 +7,7 @@ import type { PublicItem } from '@/lib/items/repo';
 const item = (title: string, over: Partial<PublicItem> = {}): PublicItem => ({
   id: 'i', world: 'discover', kind: 'article', slug: 'a-slug', title, summary: 'A summary that is long enough.', body: {},
   audience: 'all', evergreen: false, publishedAt: new Date('2026-10-01T00:00:00Z'), updatedAt: new Date('2026-10-03T09:00:00Z'),
-  sources: [], image: null, topics: [], ...over,
+  sources: [], image: null, topics: [], ageBands: ['family'], ...over,
 });
 const BASE = 'https://sparkkindly.com';
 const ORG = { '@type': 'Organization', name: 'SparkKindly', url: 'https://sparkkindly.com/', logo: 'https://sparkkindly.com/brand/icon-512.png' };

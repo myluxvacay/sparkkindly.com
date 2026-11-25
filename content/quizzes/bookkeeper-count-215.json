@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Count them: B-O-O-K-K-E-E-P-E-R makes 10 letters, with three pairs of double letters in a row.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

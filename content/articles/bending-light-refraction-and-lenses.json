@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Light bends when it changes speed between materials. That one effect explains bent straws, shallow-looking pools and your spectacles.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

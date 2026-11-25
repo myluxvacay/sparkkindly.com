@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Different mistakes need different fixes. Sorting them shows which marks were lost to slips and which to real gaps, so your practice time goes on the gaps that cost the most.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

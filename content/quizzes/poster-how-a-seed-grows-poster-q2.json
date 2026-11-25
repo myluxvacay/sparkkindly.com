@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "The root grows first, so the plant can drink and anchor itself before anything else.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Germination | Wikipedia",

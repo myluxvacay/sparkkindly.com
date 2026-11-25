@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Georgia is in Western Asia, part of Asia.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Georgia | Encyclopaedia Britannica",

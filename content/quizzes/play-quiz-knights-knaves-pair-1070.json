@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Suppose Alex were a knave. Then his statement is false, so Ben is a knight, but then Ben's claim that they are the same type would be false, which a knight cannot say. So Alex is a knight, his statement is true, and Ben is a knave — which fits, because Ben's 'same type' claim is indeed a lie.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

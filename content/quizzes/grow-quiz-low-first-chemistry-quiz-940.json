@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "One early quiz is information, not a verdict. Finding the exact topics, asking a specific question, and reviewing those topics in short sessions targets the real gaps while the term is young.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

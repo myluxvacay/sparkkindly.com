@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "The k in knight is silent — we say 'night' with a k standing quietly in front.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Silent letter | Wikipedia",

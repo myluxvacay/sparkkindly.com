@@ -6,6 +6,10 @@
   "title": "Spot the difference: beach",
   "prompt": "Three things changed between the two beach pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The yellow duck turned around, the frog changed colour from green to plain and the orange pumpkin turned around. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

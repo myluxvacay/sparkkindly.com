@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The interest is $500 x 2 / 100 = $10, so the total is $500 + $10 = $510.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

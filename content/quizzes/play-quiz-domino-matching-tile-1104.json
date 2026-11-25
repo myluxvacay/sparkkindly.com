@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Only the 6-2 tile has an end matching an open end: its 6 matches the open 6. The other tiles have no 6 and no 3 on either end.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

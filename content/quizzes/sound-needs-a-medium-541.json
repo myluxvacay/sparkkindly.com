@@ -1,1 +1,41 @@
-{"brand":"discover","correctOptionId":"d","difficulty":"easy","explanation":"Sound is a travelling vibration passed from particle to particle; with no air or other material in a vacuum, there is nothing to carry the squeeze and stretch, so sound cannot cross it.","id":"sound-needs-a-medium-541","options":[{"id":"a","text":"Space is too cold for sound to exist"},{"id":"b","text":"Starlight blocks sound waves"},{"id":"c","text":"Sound turns into light when it leaves the air"},{"id":"d","text":"Sound needs particles to vibrate and pass it on, and a vacuum has none"}],"prompt":"Why can sound not travel through the vacuum of space?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-02-23","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Sound","url":"https://en.wikipedia.org/wiki/Sound"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "d",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
+  "explanation": "Sound is a travelling vibration passed from particle to particle; with no air or other material in a vacuum, there is nothing to carry the squeeze and stretch, so sound cannot cross it.",
+  "id": "sound-needs-a-medium-541",
+  "options": [
+    {
+      "id": "a",
+      "text": "Space is too cold for sound to exist"
+    },
+    {
+      "id": "b",
+      "text": "Starlight blocks sound waves"
+    },
+    {
+      "id": "c",
+      "text": "Sound turns into light when it leaves the air"
+    },
+    {
+      "id": "d",
+      "text": "Sound needs particles to vibrate and pass it on, and a vacuum has none"
+    }
+  ],
+  "prompt": "Why can sound not travel through the vacuum of space?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-02-23",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Sound",
+      "url": "https://en.wikipedia.org/wiki/Sound"
+    }
+  ]
+}

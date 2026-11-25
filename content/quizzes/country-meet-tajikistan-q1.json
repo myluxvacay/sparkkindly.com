@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "People in Tajikistan speak Tajik and Russian.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tajikistan | Encyclopaedia Britannica",

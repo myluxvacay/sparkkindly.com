@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Actively inviting quieter voices makes the trip belong to the whole group and gently checks one person dominating without a clash.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

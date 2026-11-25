@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Stop comes first — stop at the curb, before the road begins, while you decide.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Pedestrian crossing | Wikipedia",

@@ -1,4 +1,5 @@
 import type { Db, Queryable } from '@/lib/db';
+import { bandsFromTopics, type AgeBand } from '@/lib/age-bands';
 import { cancelForItem } from '@/lib/social/cancel';
 
 export type Status = 'draft' | 'in_review' | 'scheduled' | 'published' | 'rejected' | 'archived';
@@ -111,6 +112,9 @@ export type PublicItem = {
   sources: unknown[];
   image: unknown;
   topics: string[];
+  // Age bands the item suits (24 Nov 2026, lib/age-bands.ts), derived from its band topics;
+  // ['family'] when it carries no child band — all-ages.
+  ageBands: AgeBand[];
 };
 
 const ITEM_COLUMNS = `id, world_id, kind, slug, locale, title, summary, body, audience, evergreen, status, publish_at,
@@ -313,7 +317,7 @@ export const PUBLIC_SELECT = `
                         WHERE it.item_id = i.id ORDER BY t.slug), '{}') AS topics
   FROM items i JOIN worlds w ON w.id = i.world_id`;
 
-export const toPublic = (r: Row): PublicItem => ({
+export const toPublic = (r: Row): PublicItem => ({ ageBands: bandsFromTopics(r.topics as string[]),
   id: r.id as string, world: r.world as string, kind: r.kind as Kind, slug: r.slug as string, title: r.title as string,
   summary: r.summary as string, body: r.body, audience: r.audience as Audience, evergreen: r.evergreen as boolean,
   publishedAt: r.published_at as Date, updatedAt: r.updated_at as Date, sources: r.sources as unknown[], image: r.image, topics: r.topics as string[],

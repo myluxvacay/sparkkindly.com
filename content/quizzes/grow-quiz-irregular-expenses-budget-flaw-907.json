@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The problem bills are not surprises — they arrive every year. Adding up predictable irregular costs, dividing by twelve, and putting that amount aside each month turns four crisis months into ordinary ones.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

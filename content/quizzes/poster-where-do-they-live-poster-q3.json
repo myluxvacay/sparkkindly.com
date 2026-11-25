@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Hens live in a coop, where they sleep and lay their eggs.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Animal shelter | Wikipedia",

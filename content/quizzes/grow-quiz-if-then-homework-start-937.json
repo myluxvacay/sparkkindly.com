@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "An implementation intention links a specific cue (time, place, just-finished snack) to a specific action, so the start is decided in advance instead of relying on in-the-moment willpower.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Implementation intention",

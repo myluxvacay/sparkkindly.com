@@ -20,6 +20,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "When someone tells you a problem, they usually want a witness before they want a solution.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

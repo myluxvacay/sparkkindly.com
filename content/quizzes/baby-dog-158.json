@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "A baby dog is called a puppy. Kittens are baby cats, calves are baby cows and chicks are baby chickens.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

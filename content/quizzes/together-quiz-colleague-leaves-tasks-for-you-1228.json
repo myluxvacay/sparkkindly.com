@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A private conversation about the pattern and its impact is fair and gives them a chance to fix it. Silent covering breeds gossip and resentment, while a public confrontation is more likely to make them defensive.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

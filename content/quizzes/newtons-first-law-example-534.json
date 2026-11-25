@@ -1,1 +1,42 @@
-{"brand":"discover","correctOptionId":"c","difficulty":"easy","explanation":"The puck keeps moving in a straight line at a steady speed because almost no force acts on it; it only slows when friction and air resistance finally act on it.","id":"newtons-first-law-example-534","options":[{"id":"a","text":"A ball falling faster and faster toward the ground"},{"id":"b","text":"A rocket pushing exhaust gas down so it can lift off"},{"id":"c","text":"A hockey puck sliding across smooth ice, keeping going until friction slows it"},{"id":"d","text":"A magnet pulling a paperclip across a table"}],"prompt":"Which everyday event best shows Newton's first law — that an object keeps its motion unless a force changes it?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-02-16","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Newton's laws of motion","url":"https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "c",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "explanation": "The puck keeps moving in a straight line at a steady speed because almost no force acts on it; it only slows when friction and air resistance finally act on it.",
+  "id": "newtons-first-law-example-534",
+  "options": [
+    {
+      "id": "a",
+      "text": "A ball falling faster and faster toward the ground"
+    },
+    {
+      "id": "b",
+      "text": "A rocket pushing exhaust gas down so it can lift off"
+    },
+    {
+      "id": "c",
+      "text": "A hockey puck sliding across smooth ice, keeping going until friction slows it"
+    },
+    {
+      "id": "d",
+      "text": "A magnet pulling a paperclip across a table"
+    }
+  ],
+  "prompt": "Which everyday event best shows Newton's first law — that an object keeps its motion unless a force changes it?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-02-16",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Newton's laws of motion",
+      "url": "https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion"
+    }
+  ]
+}

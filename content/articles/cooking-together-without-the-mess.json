@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Simple shared cooking works when the recipe is forgiving, the jobs are divided early, and tidying happens as you go.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

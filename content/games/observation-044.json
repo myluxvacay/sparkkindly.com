@@ -6,6 +6,10 @@
   "title": "Look closely: train station count",
   "prompt": "How many mushrooms are in the train station?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Count the mushrooms one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

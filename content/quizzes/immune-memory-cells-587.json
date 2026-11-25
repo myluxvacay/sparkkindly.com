@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "After the first infection, memory B and T cells keep the invader's description for years, so a second attack is beaten quickly, often before symptoms appear.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Immunological memory",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A hygrometer measures humidity, the amount of water vapour in the air, which museums control to stop artworks cracking or growing mould.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Hygrometer",

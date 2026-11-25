@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "People in Ireland speak English and Irish.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Ireland | Encyclopaedia Britannica",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Two sequences are interleaved. The terms in odd positions count up: 1, 2, 3, 4. The terms in even positions count down: 10, 9, 8, so the next even-position term is 7.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

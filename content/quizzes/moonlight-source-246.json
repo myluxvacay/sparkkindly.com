@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The Moon produces no light of its own; the brightness we see is sunlight bouncing off its surface.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Moon",

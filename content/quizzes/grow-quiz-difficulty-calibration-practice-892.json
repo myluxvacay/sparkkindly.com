@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "This is the desirable-difficulty balance: perfect success means the task is below her level, while total incomprehension gives nothing to build on. Slightly-too-hard, with feedback, is where learning happens.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

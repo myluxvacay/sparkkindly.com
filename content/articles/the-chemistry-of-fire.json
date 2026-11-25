@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Fire is a fast chemical reaction between a fuel and oxygen — and it only keeps going while fuel, oxygen and heat all remain present.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

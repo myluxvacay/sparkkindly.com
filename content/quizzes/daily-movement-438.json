@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Small, regular movement built into your day, like stairs and short walks, adds up to a real difference over time.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

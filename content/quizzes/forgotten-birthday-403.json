@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Speaking honestly and kindly gives your friend the chance to understand and make it right, instead of letting the hurt grow quietly.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

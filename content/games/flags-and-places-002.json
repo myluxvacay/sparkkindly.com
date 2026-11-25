@@ -6,6 +6,9 @@
   "title": "Flags & places: which flag is Brazil?",
   "prompt": "Which flag belongs to Brazil?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Brazil’s flag is green with a yellow diamond and a blue starry globe. The other flags belong to Japan, Italy, United States.",
   "sources": [],
   "reviewStatus": "approved",

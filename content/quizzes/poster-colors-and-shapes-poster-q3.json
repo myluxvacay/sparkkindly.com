@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "A circle is perfectly round, like a ball or the sun.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Shape | Wikipedia",

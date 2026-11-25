@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A butterfly has 4 wings, two on each side. They help it flutter from flower to flower!",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Series circuits share one path and one fate; parallel circuits give every branch the full voltage. That difference wires your whole home.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

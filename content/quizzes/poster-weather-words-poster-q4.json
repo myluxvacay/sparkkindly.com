@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Icy means water has frozen hard — paths become slippery, so walk carefully, like a penguin.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Weather | Wikipedia",

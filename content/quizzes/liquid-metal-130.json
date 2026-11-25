@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Mercury melts at about minus 39 degrees Celsius, so it stays liquid at room temperature, unlike iron, copper and aluminium, which are solid.",
   "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Mercury (element)",

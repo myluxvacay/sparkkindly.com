@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Total spending: $900 + $400 + $150 + $250 = $1,700. Left over: $2,000 - $1,700 = $300.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

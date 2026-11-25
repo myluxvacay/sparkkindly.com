@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Well done! An elephant is much bigger than a dog, a cat or a mouse.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "The ancient Egyptians built the Giza pyramids around 4,500 years ago as tombs for their pharaohs.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Egyptian pyramids",

@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "In this chart, give pairs with take: 'She gives the book. He takes the book.'",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Antonym | Wikipedia",

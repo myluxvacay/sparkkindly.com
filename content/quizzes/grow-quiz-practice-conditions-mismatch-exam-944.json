@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Performance transfers best when practice resembles the test: retrieving without notes, under time pressure. Matching those conditions in stages exposes pacing and recall problems while there is still time to fix them.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Context-dependent memory",

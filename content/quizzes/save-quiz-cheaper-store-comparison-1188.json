@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "At Store A you pay $80 - ($80 x 10 / 100) = $80 - $8 = $72. Store B charges $70, so Store B is cheaper by $72 - $70 = $2.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

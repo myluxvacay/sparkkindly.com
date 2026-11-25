@@ -2,6 +2,9 @@
   "brand": "kids",
   "correctOptionId": "make-believe",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Make-believe! Penguins stay warm with thick feathers and a cosy layer of fat — they never wear hats or scarves.",
   "gameType": "fact-or-fiction",
   "id": "fact-or-fiction-004",

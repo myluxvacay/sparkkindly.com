@@ -6,6 +6,10 @@
   "title": "Spot the difference: train station",
   "prompt": "Three things changed between the two train station pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The fox changed colour from orange to plain, the purple gift box changed colour from pink to purple and the purple snail vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Rumours can hurt even when they turn out to be false. Choosing not to spread one protects the person it is about.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

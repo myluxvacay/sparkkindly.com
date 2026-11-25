@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Raising it calmly afterwards is honest about the impact without turning the gathering itself into an argument.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

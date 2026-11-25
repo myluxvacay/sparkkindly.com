@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Scattered admin repeatedly breaks concentration and each restart costs focus. Batching confines those switches to set windows and preserves long stretches where deep work can actually build.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

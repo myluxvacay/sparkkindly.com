@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Earth's surface absorbs sunlight and re-emits the energy as infrared. Greenhouse gases absorb some of that outgoing infrared and re-radiate it in all directions, reducing how efficiently Earth cools to space.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Greenhouse effect",

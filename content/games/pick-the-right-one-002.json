@@ -6,6 +6,9 @@
   "title": "Pick the right one: find the tulip",
   "prompt": "Which flower is a tulip?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The tulip is the pink, cup-shaped flower. The mushroom beside it is not a flower at all.",
   "sources": [],
   "reviewStatus": "approved",

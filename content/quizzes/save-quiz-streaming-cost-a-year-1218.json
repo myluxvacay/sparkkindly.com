@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The yearly cost is $11 x 12 = $132.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

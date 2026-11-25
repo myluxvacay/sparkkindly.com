@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "There are 36 equally likely pairs. Six of them are ties, leaving 30. By symmetry exactly half of those 30 have the first roll greater, so 15 pairs win: 15/36 = 5/12.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the pink pig, second the white rocket, third the purple bunch of grapes, fourth the penguin, fifth the blue bird. So the second one was the white rocket.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A messy draft gives you something to improve. Editing a rough start is far easier than facing an empty page.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

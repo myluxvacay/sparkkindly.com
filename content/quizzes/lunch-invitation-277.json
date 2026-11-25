@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A direct, friendly invitation removes the hardest step for someone new: having to ask to belong.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

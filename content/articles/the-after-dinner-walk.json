@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "A short walk after dinner is one of the easiest family habits to start, because it asks for nothing but shoes and twenty minutes.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

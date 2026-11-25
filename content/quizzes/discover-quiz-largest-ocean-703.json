@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "The Pacific Ocean is by far the largest: it covers more of Earth's surface than all the land on the planet combined, stretching from Asia and Australia to the Americas. It holds more than half of the world's open ocean water.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Ocean | Britannica",

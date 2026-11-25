@@ -1,1 +1,41 @@
-{"brand":"discover","correctOptionId":"d","difficulty":"medium","explanation":"Each parallel branch connects directly across the supply, so every lamp receives the full mains voltage and can be switched on or off without affecting the others — which is why homes are wired this way.","id":"parallel-circuits-voltage-550","options":[{"id":"a","text":"A share of the voltage that shrinks with every extra branch"},{"id":"b","text":"Half the mains voltage, shared with the next branch"},{"id":"c","text":"No voltage until all the other branches are switched off"},{"id":"d","text":"The full mains voltage, whichever other branches are on or off"}],"prompt":"In a parallel circuit like a home's wiring, what voltage does each branch — for example, each lamp — receive?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-03-04","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Series and parallel circuits","url":"https://en.wikipedia.org/wiki/Series_and_parallel_circuits"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "d",
+  "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
+  "explanation": "Each parallel branch connects directly across the supply, so every lamp receives the full mains voltage and can be switched on or off without affecting the others — which is why homes are wired this way.",
+  "id": "parallel-circuits-voltage-550",
+  "options": [
+    {
+      "id": "a",
+      "text": "A share of the voltage that shrinks with every extra branch"
+    },
+    {
+      "id": "b",
+      "text": "Half the mains voltage, shared with the next branch"
+    },
+    {
+      "id": "c",
+      "text": "No voltage until all the other branches are switched off"
+    },
+    {
+      "id": "d",
+      "text": "The full mains voltage, whichever other branches are on or off"
+    }
+  ],
+  "prompt": "In a parallel circuit like a home's wiring, what voltage does each branch — for example, each lamp — receive?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-03-04",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Series and parallel circuits",
+      "url": "https://en.wikipedia.org/wiki/Series_and_parallel_circuits"
+    }
+  ]
+}

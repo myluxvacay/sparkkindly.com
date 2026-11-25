@@ -1,5 +1,6 @@
 import type { Db, Queryable } from '@/lib/db';
 import type { Article, Game, Quiz } from '@/lib/schemas';
+import { bandTopicsFor } from '@/lib/age-bands';
 
 type Audience = 'kids' | 'all';
 type RiskTier = 'kids' | 'sourced' | 'computable' | 'reflective';
@@ -143,7 +144,7 @@ export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[],
         audience: audienceFor(a.brand), tier: tierFor(a.brand, 'article'), approved: a.reviewStatus === 'approved',
         reviewer: a.reviewer, reviewedAt: at(a.reviewedAt), publishAt: at(a.publishedAt), sources: a.sources,
         report: { legacy: true, importedFrom: 'content/articles', reviewNote: a.reviewNote, factualClaimsReviewedAt: a.factualClaimsReviewedAt },
-        image: imageFor(a.hero), tags: a.tags,
+        image: imageFor(a.hero), tags: [...a.tags, ...bandTopicsFor(a.ageBands)],
       });
       if (id) items++;
     }
@@ -162,7 +163,7 @@ export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[],
         audience: audienceFor(q.brand), tier: tierFor(q.brand, 'quiz'), approved: q.reviewStatus === 'approved',
         reviewer: q.reviewer, reviewedAt: at(q.reviewedAt), publishAt: at(q.scheduledDate), sources: q.sources,
         report: { legacy: true, importedFrom: 'content/quizzes', reviewNote: q.reviewNote },
-        image: q.hero ? imageFor(q.hero) : { origin: 'template' }, tags: [],
+        image: q.hero ? imageFor(q.hero) : { origin: 'template' }, tags: bandTopicsFor(q.ageBands),
       });
       if (id) {
         items++;
@@ -184,7 +185,7 @@ export async function importLegacy(db: Db, articles: Article[], quizzes: Quiz[],
         audience: audienceFor(g.brand), tier: g.brand === 'kids' ? 'kids' : 'computable', approved: g.reviewStatus === 'approved',
         reviewer: g.reviewer, reviewedAt: at(g.reviewedAt), publishAt: at(g.scheduledDate), sources: g.sources,
         report: { legacy: true, importedFrom: 'content/games', reviewNote: g.reviewNote, gameType: g.gameType },
-        image: { origin: 'template' }, tags: [],
+        image: { origin: 'template' }, tags: bandTopicsFor(g.ageBands),
       });
       if (id) {
         items++;

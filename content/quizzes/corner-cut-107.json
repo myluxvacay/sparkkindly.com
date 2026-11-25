@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Cutting off one corner removes that corner, but the cut creates two new corners along the new edge, so 4 - 1 + 2 = 5 corners.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Finding the precise step that went wrong turns a vague feeling of failure into one fixable point, and the next similar question becomes a chance to practise that step.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

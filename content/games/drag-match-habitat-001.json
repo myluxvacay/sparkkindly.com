@@ -1,6 +1,10 @@
 {
   "brand": "discover",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Birds nest in the leafy tree, bees visit the flower patch, rabbits munch in the carrot patch, and crabs scuttle along the seashell shore.",
   "gameType": "drag-match",
   "id": "drag-match-habitat-001",

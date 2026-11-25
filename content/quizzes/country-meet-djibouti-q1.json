@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "People in Djibouti speak Somali, Afar, Arabic and French.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Djibouti | Encyclopaedia Britannica",

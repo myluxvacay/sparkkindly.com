@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "the Acropolis of Athens is one of the two places we'd love to visit in Greece. The Parthenon crowns the Acropolis, a marble temple built 2,500 years ago for the goddess Athena — the symbol of ancient Greece above a buzzing modern city.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Greece | Encyclopaedia Britannica",

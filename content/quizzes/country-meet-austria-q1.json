@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "Vienna is the capital of Austria. It is the city where the country's government works.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Austria | Encyclopaedia Britannica",

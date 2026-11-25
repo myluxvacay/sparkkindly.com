@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Sleep plays an important role in consolidating memories formed during the day, so a full night's sleep plus a short morning review usually serves recall better than exhausted extra hours.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Sleep and memory",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "After the rise: $50 x 1.10 = $55. The 10% cut applies to $55: $55 x 0.90 = $49.50. A rise and a fall of the same percentage do not cancel out, because the second percentage is taken from a different amount.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

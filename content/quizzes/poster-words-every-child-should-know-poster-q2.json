@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "'I need help' is the sentence that brings trusted adults to you.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Child safety | Wikipedia",

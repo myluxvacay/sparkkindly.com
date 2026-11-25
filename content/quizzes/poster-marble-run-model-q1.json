@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "Gravity is the only engine — it pulls the marble down every ramp.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Gravity | Wikipedia",

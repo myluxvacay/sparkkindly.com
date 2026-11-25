@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "In H2O, the small 2 after H means each water molecule contains two hydrogen atoms joined to one oxygen atom.",
   "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Water",

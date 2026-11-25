@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Grain → flour → yeast mixed in → kneading → rising → baking. Six steps in that order.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Bread | Wikipedia",

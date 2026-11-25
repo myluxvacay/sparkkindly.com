@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Sound is a vibration passed from particle to particle. In steel the particles are packed tightly and held in a stiff, elastic solid, so each vibration is handed on much faster than in air, where molecules are far apart — about 5,000 metres per second versus about 343.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

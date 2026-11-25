@@ -6,6 +6,9 @@
   "title": "What changed: meadow",
   "prompt": "One thing changed between the before and after meadow pictures. What changed?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the gray cloud changed colour from white to gray. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

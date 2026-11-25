@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "People in Togo speak French and Ewe.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Togo | Encyclopaedia Britannica",

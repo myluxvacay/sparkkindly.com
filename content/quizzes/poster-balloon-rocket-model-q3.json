@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "The push exists only while air is escaping — empty balloon, no push, and friction slows it down.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Newton's laws of motion | Wikipedia",

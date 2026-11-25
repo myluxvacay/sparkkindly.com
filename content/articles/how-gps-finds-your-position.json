@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "GPS times how long satellite signals take to reach you; from those travel times it works out exactly where you are.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

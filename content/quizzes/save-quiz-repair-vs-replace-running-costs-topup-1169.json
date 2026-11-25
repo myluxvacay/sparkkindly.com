@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Repair path: $200 + (3 x $80 = $240) = $440. New machine: $600 + (3 x $40 = $120) = $720. Difference: $720 - $440 = $280, so repairing costs less over the 3 years. The $400 option compares only the upfront prices ($600 - $200) and ignores the running costs.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

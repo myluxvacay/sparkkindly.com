@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came third?",
   "prompt": "Spark showed some things in order. What came third?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the purple ball, second the orange orange, third the yellow balloon, fourth the pink cupcake, fifth the brown duck. So the third one was the yellow balloon.",
   "sources": [],
   "reviewStatus": "approved",

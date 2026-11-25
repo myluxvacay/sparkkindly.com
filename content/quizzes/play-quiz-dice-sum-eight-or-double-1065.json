@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Five outcomes sum to 8: (2,6), (3,5), (4,4), (5,3), (6,2). Six outcomes are doubles. The outcome (4,4) is in both groups, so the count is 5 + 6 - 1 = 10 out of 36, which is 5/18.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

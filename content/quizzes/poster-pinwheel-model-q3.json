@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Angled blades need the wind's push from the front — sideways wind slides past them.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Wind turbine | Wikipedia",

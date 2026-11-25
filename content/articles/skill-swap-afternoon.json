@@ -5,6 +5,9 @@
   "contentType": "activity",
   "title": "A Skill-Swap Afternoon",
   "description": "Trade twenty minutes of something you can do for twenty minutes of something a friend can do. Both of you leave knowing more than you arrived with — and it costs nothing.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-16",
   "updatedAt": "2026-11-16",
   "author": "SparkKindly · AI-assisted",

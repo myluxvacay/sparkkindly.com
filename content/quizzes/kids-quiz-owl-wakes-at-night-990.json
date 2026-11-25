@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "An owl wakes up at night and flies quietly to look for food. Hoo, hoo!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

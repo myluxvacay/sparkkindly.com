@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The LED saves 100 - 20 = 80 watts per hour. Over 50 hours that is 80 x 50 = 4,000 watt-hours, which is 4 kWh.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

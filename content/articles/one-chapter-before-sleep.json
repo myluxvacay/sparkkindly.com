@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "A short shared chapter at the end of the day is a reading habit, a calming ritual, and time together in one.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

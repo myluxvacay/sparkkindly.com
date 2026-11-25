@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Bats echolocate: they emit rapid ultrasonic clicks and read the returning echoes to judge the insect's distance, direction and movement.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Animal echolocation",

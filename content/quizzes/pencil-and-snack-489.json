@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Adding the two prices gives 4 + 7 = $11 in total.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

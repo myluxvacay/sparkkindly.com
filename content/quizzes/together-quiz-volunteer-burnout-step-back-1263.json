@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Notice plus a proper handover honours the commitment you made while still protecting your health. Disappearing, silently burning out, or inventing an excuse leaves the group stranded and the trust damaged.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

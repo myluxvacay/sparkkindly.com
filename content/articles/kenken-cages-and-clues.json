@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "KenKen: Sudoku's arithmetic cousin",
   "description": "KenKen keeps Sudoku's tidy grid but adds little cages with sums and differences to solve. It was invented by a teacher who wanted maths practice to feel like play.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-07-10",
   "updatedAt": "2026-07-10",
   "author": "SparkKindly · AI-assisted",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "End of Year 1: $1,000 x 1.05 = $1,050. Start of Year 2: $1,050 + $1,000 = $2,050. End of Year 2: $2,050 x 1.05 = $2,152.50. The $2,100 option adds 5% of $2,000 once only, $2,050 forgets the second year's interest, and $2,205 wrongly gives the second $1,000 two full years of interest.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

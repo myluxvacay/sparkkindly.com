@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Earth completes one orbit in about 365 and a quarter days, which is why our year is 365 days with an extra leap day every four years.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Earth",

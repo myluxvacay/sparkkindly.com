@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A quarter is worth 25 cents, because four quarters make one dollar (100 cents).",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Quarter (United States coin) - Wikipedia",

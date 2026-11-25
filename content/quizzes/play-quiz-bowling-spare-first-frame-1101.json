@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The spare itself is worth 10 pins, and the bonus is the next ball's 4 pins. So frame 1 scores 10+4=14.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Ten-pin bowling",

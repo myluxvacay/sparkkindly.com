@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Noting the distraction clears it from your mind, and reading in smaller sections with quick understanding checks catches wandering early instead of at the end of another lost page.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "'I feel frustrated' gives people information they can act on; 'I feel bad' does not.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Emotion | Wikipedia",

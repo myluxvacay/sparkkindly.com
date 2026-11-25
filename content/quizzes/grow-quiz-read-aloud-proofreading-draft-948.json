@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Silent re-reading lets the brain supply the words it expects to see, which is how Sofia skipped her own errors three times. Reading aloud breaks that shortcut — every word has to be spoken, so gaps and awkward rhythms become obvious.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

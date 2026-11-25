@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Lake Kivu is one of the two places we'd love to visit in Rwanda. Lake Kivu is one of Africa's Great Lakes, with green hills, island-dotted water and relaxed lakeside towns like Kibuye and Gisenyi for boat trips and swimming.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Rwanda | Encyclopaedia Britannica",

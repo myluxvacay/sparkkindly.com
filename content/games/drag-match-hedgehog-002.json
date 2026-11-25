@@ -1,6 +1,9 @@
 {
   "brand": "kids",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Count carefully: the circles hold 6, 4, 8, 5 and 7 dots, and every cone landed on the circle with its own number of dots.",
   "gameType": "drag-match",
   "id": "drag-match-hedgehog-002",

@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "Fields pass through materials magnets ignore — paper, card, plastic, wood — as if they were air.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Magnet | Wikipedia",

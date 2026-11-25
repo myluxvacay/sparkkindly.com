@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Before the fee: $500 x 0.80 = €400. Fee: 5% of €400 = €20. You receive: €400 - €20 = €380. The €400 option forgets the fee; €375 wrongly works out the fee as 5% of 500 (€25) instead of 5% of the €400 being converted (€20); €420 adds a fee instead of subtracting it.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

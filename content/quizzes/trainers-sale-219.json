@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "10% of $80 is $8, and $80 - $8 = $72.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Useful feedback is specific, checkable and informed. The vague reaction is still a signal, but the detailed diagnosis gives testable changes to make first.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

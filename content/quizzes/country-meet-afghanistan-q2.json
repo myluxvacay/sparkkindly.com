@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Band-e Amir lakes is one of the two places we'd love to visit in Afghanistan. Band-e Amir is a chain of deep-blue lakes held back by natural travertine dams in the Hindu Kush mountains — Afghanistan's first national park and a place of striking beauty.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Afghanistan | Encyclopaedia Britannica",

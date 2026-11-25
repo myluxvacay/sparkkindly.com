@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "The root comes first and grows down — the plant must find water before anything else.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Germination | Wikipedia",

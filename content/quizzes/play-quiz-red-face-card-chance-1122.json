@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Only the two red suits count, and each has a jack, queen and king, so there are 2 x 3 = 6 red face cards out of 52. That gives 6/52, which simplifies to 3/26.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

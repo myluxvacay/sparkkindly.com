@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Interest each year is $200 x 5 / 100 = $10. Over 3 years that is $10 x 3 = $30.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

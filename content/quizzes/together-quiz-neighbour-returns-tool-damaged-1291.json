@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Raising it calmly and soon gives them a fair chance to explain and share the cost. Silence followed by a grudge, gossip, or an angry demand all damage a relationship you still have to live next to.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

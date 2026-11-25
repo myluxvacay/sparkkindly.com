@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the purple ball, second the green gift box, third the bee, fourth the black bear, fifth the orange cat. So the second one was the green gift box.",
   "sources": [],
   "reviewStatus": "approved",

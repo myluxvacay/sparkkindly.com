@@ -21,6 +21,9 @@
   "slug": "sale-prices-and-real-savings",
   "title": "Sale prices and real savings",
   "description": "A 50% discount is only a saving if you needed the thing at the full price.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-10",
   "updatedAt": "2026-11-10",
   "tags": [

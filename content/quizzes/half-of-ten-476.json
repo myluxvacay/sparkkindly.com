@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Half of $10 is $5, because two lots of $5 make $10.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A smaller goal you restart today rebuilds momentum; punishing catch-up targets usually lead to quitting altogether.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

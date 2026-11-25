@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Two friends means more than one person, so the pronoun is they.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Pronoun | Wikipedia",

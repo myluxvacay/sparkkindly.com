@@ -5,6 +5,9 @@
   "contentType": "activity",
   "title": "Cook one recipe together, start to finish",
   "description": "One recipe, two cooks, no phones at the table. Pick something neither of you has mastered, divide the jobs, and eat whatever the experiment produces.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-19",
   "updatedAt": "2026-11-19",
   "author": "SparkKindly · AI-assisted",

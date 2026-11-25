@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Copying puts you both at risk and teaches your friend nothing. Explaining and practising together is real help that respects the rules, whereas reporting them as a first step skips a direct conversation.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

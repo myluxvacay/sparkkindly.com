@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Each soccer team fields eleven players at a time, including the goalkeeper. Teams can name substitutes on the bench, but only eleven from each side are on the field during play.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Association football | Britannica",

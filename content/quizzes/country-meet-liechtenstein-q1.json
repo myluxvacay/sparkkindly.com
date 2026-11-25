@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "Liechtenstein is in Western Europe, part of Europe.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Liechtenstein | Encyclopaedia Britannica",

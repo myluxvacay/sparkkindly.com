@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Every simple machine trades: move a longer distance with less force, or a shorter distance with more.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Simple machine | Wikipedia",

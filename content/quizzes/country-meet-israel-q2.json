@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Masada is one of the two places we'd love to visit in Israel. Ride a cable car to Masada, a fortress-palace on a flat desert mountain above the Dead Sea, built by King Herod and famous for its last stand in history.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Israel | Encyclopaedia Britannica",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Since 8 x 12 = 96, dividing the other way gives 96 / 8 = 12.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

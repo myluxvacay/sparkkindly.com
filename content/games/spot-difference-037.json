@@ -6,6 +6,10 @@
   "title": "Spot the difference: park",
   "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The frog changed colour from green to plain, the elephant changed colour from gray to plain and the moon vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

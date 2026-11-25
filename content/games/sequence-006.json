@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the red balloon, second the green hat, third the pink flower, fourth the white horse, fifth the snowman. So the second one was the green hat.",
   "sources": [],
   "reviewStatus": "approved",

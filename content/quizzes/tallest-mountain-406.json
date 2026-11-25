@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Mount Everest rises about 8,849 metres above sea level, making it the highest point on Earth.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Mount Everest",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "From the corner most L-shaped moves fall off the board. Only two land on the board: b3 (one file across, two ranks up) and c2 (two files across, one rank up).",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

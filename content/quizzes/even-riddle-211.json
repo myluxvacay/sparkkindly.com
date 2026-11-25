@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Take the letter S away from SEVEN and you are left with EVEN - and seven is an odd number.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

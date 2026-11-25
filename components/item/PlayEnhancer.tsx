@@ -19,6 +19,8 @@ import {
   type SeenStorage,
 } from '@/lib/play/seen-quizzes';
 import { playSparkVoice } from '@/lib/games/spark-voice';
+import { bandMatches, type AgeBand } from '@/lib/age-bands';
+import { loadAgeBand } from '@/lib/age-band-client';
 import type { Difficulty } from '@/lib/public/body';
 
 // The play island (teen UI pass, 15 Nov 2026): progressive enhancement over the plain GET form, which
@@ -58,6 +60,7 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
       });
       kpMarkPresented(panel);
       initKeepPlaying(panel);
+      initDaily(panel);
     };
 
     // --- "Keep playing" (17 Nov 2026): the seen-questions memory + next-quiz picking + gestures.
@@ -321,7 +324,18 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
         const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
         const fresh = doc.querySelector('.quiz-panel');
         if (!fresh) throw new Error('no panel in response');
-        const imported = document.importNode(fresh, true);
+        const imported = document.importNode(fresh, true) as HTMLElement;
+        // The answer was submitted from a daily surface: the fetched item page carries no daily
+        // model, so carry this panel's model over — the result panel then marks the question
+        // seen under the daily rules in initDaily (initPanel below).
+        const dailyRaw = (panel as HTMLElement).dataset.dailyModel;
+        if (dailyRaw) {
+          imported.dataset.dailyModel = dailyRaw;
+          const dailyCurrent = (panel as HTMLElement).dataset.dailyCurrent;
+          if (dailyCurrent) imported.dataset.dailyCurrent = dailyCurrent;
+          imported.removeAttribute('data-kp-current');
+          imported.removeAttribute('data-kp-level');
+        }
         panel.replaceWith(imported);
         history.pushState(null, '', `${url.pathname}${url.search}#result`);
         initPanel(imported);
@@ -344,6 +358,114 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
         form.submit();
       }
     };
+
+    // --- Today's Spark advance (owner addendum, 24 Nov 2026). The daily surfaces embed a chain
+    // model on the panel (data-daily-model / data-daily-current, built server-side in
+    // lib/play/daily-quiz.ts). A panel showing a result marks the current question seen on this
+    // device — unless its audience is 'kids', where the device store is NEVER read or written
+    // (the Kids carve-out stands; signed-in history alone, in accountSeen, serves those). A
+    // fresh panel whose current question is already seen (account ∪ device, same carve-out)
+    // swaps in the next unanswered question, band-matching ones first.
+    type DailyEntry = { id: string; world: string; slug: string; title: string; bands: string[]; difficulty: string | null; audience: string };
+    type DailyModelShape = { chain: DailyEntry[]; accountSeen: string[] };
+    const dailyModelOf = (panel: Element): DailyModelShape | null => {
+      const raw = (panel as HTMLElement).dataset.dailyModel;
+      if (!raw) return null;
+      try {
+        const parsed = JSON.parse(raw) as DailyModelShape;
+        return Array.isArray(parsed.chain) && Array.isArray(parsed.accountSeen) ? parsed : null;
+      } catch {
+        return null;
+      }
+    };
+
+    function initDaily(panel: Element) {
+      const model = dailyModelOf(panel);
+      const currentId = (panel as HTMLElement).dataset.dailyCurrent;
+      if (!model || !currentId) return;
+      const current = model.chain.find((c) => c.id === currentId);
+      if (panel.querySelector('.quiz-result')) {
+        // Answered: remember it on this device so a reload / return visit advances. Kids-audience
+        // questions never touch the device store.
+        if (current?.audience !== 'kids') {
+          const level =
+            current?.difficulty && (DIFFICULTY_ORDER as readonly string[]).includes(current.difficulty)
+              ? (current.difficulty as Difficulty)
+              : 'medium';
+          const backend = kpStorage();
+          saveSeen(backend, markSeen(loadSeen(backend), currentId, level, Date.now()));
+        }
+        return;
+      }
+      void dailyAdvance(panel, model, currentId, current?.audience);
+    }
+
+    async function dailyAdvance(panel: Element, model: DailyModelShape, currentId: string, audience: string | undefined) {
+      const el = panel as HTMLElement;
+      if (el.dataset.dailyAdvancing) return;
+      const merged = new Set<string>(model.accountSeen);
+      if (audience !== 'kids') {
+        for (const id of seenIds(loadSeen(kpStorage()))) merged.add(id);
+      }
+      const stored = loadAgeBand();
+      if (!merged.has(currentId)) {
+        // Band-first on FIRST load (owner addendum, 24 Nov 2026): the served question has not been
+        // answered, but if it does not suit the visitor's stored band and an unseen band-matching
+        // question exists in the chain, lead with that one instead. Read-only: this path never
+        // writes storage — the band was already the visitor's stored choice, and the seen sets
+        // change only when a question is answered. Loop safety: the swap target bandMatches the
+        // stored band and is not in the merged seen set, so when initPanel re-runs initDaily on
+        // the swapped panel neither this trigger nor the answered trigger below can fire again.
+        if (!stored || stored === 'all') return; // no band picked (or unfiltered exploring)
+        const band = stored as AgeBand;
+        const current = model.chain.find((c) => c.id === currentId);
+        if (!current || bandMatches(current.bands as AgeBand[], band)) return;
+        const candidate = model.chain.find(
+          (c) => c.id !== currentId && !merged.has(c.id) && bandMatches(c.bands as AgeBand[], band),
+        );
+        if (!candidate) return;
+        await swapDaily(panel, model, candidate);
+        return;
+      }
+      let ordered = model.chain;
+      if (stored && stored !== 'all' && stored !== 'family') {
+        const band = stored as AgeBand;
+        const hits = (c: DailyEntry) => bandMatches(c.bands as AgeBand[], band);
+        ordered = [...model.chain.filter(hits), ...model.chain.filter((c) => !hits(c))];
+      }
+      const candidate = ordered.find((c) => c.id !== currentId && !merged.has(c.id));
+      if (!candidate) return;
+      await swapDaily(panel, model, candidate);
+    }
+
+    // The one swap path for the daily chain: fetch the candidate's item page, take its panel,
+    // carry the daily model over with the candidate as current, and re-initialise. Used by the
+    // answered advance and the band-first first-load lead alike.
+    async function swapDaily(panel: Element, model: DailyModelShape, candidate: DailyEntry) {
+      const el = panel as HTMLElement;
+      el.dataset.dailyAdvancing = '1';
+      try {
+        const res = await fetch(`/${candidate.world}/${candidate.slug}/`, { headers: { accept: 'text/html' } });
+        if (!res.ok) return;
+        const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+        const fresh = doc.querySelector('.quiz-panel');
+        if (!fresh) return;
+        const imported = document.importNode(fresh, true) as HTMLElement;
+        // The fetched item page knows nothing of the daily chain: copy the model onto the new
+        // panel, and strip the keep-playing presented markers — a daily question counts as seen
+        // only when answered (above), never merely for being shown.
+        imported.dataset.dailyModel = JSON.stringify(model);
+        imported.dataset.dailyCurrent = candidate.id;
+        imported.removeAttribute('data-kp-current');
+        imported.removeAttribute('data-kp-level');
+        panel.replaceWith(imported);
+        const titleEl = document.querySelector('[data-daily-title]');
+        if (titleEl) titleEl.textContent = candidate.title;
+        initPanel(imported);
+      } catch {
+        // Any failure leaves the server-rendered question in place, which always works.
+      }
+    }
 
     // Keep-playing gestures, on the result hotspot only (the verdict block + the keep-playing block):
     // flick up → harder, flick down → easier, double-tap → same level. Touches starting on anything

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The frog is the same green as the leaf, so it blends in and is hard to see. This hiding trick is called camouflage!",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

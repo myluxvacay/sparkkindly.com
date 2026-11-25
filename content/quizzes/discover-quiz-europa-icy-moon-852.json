@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Evidence from spacecraft indicates Europa has a salty liquid ocean under its ice shell, and liquid water is a key ingredient for life as we know it.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Europa (moon)",

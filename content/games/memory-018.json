@@ -6,6 +6,10 @@
   "title": "Memory: space scene color",
   "prompt": "From memory: what colour is the pig in the space scene?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The pig in the picture is pink — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Count by size: 64 squares of 1x1, 49 of 2x2, 36 of 3x3, 25 of 4x4, 16 of 5x5, 9 of 6x6, 4 of 7x7 and 1 of 8x8. Adding them: 64 + 49 + 36 + 25 + 16 + 9 + 4 + 1 = 204.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came first?",
   "prompt": "Spark showed some things in order. What came first?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The order was: first the red umbrella, second the black sheep, third the green car. So the first one was the red umbrella.",
   "sources": [],
   "reviewStatus": "approved",

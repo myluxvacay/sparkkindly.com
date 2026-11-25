@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Canberra is Australia's capital, even though Sydney and Melbourne are bigger cities.",
   "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Canberra - Wikipedia",

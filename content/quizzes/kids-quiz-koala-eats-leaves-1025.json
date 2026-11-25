@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Yes! Koalas eat eucalyptus leaves from the trees where they rest.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

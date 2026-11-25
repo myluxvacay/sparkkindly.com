@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "There are 36 equally likely pairs. Six of them make 7: (1,6), (2,5), (3,4), (4,3), (5,2) and (6,1). So the chance is 6 out of 36, which is 1 in 6.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

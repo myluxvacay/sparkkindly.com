@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "SILENT uses exactly the letters L, I, S, T, E and N from LISTEN; the others swap in letters like D, G or O that are not in LISTEN.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Each dime is 10 cents and a nickel is 5 cents, so 10 + 10 + 5 = 25 cents.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

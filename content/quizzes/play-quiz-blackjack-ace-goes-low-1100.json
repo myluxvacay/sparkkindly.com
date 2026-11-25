@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Counting the ace as 11 would give 11+6+9=26, which is over 21. So the ace counts as 1 instead, giving 1+6+9=16, and the hand is not bust.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Blackjack",

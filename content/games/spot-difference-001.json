@@ -6,6 +6,10 @@
   "title": "Spot the difference: meadow",
   "prompt": "Three things changed between the two meadow pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The white sheep vanished, the bee vanished and the gray sheep vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Magnet Fishing Game",
   "description": "For ages 6–9 with an adult: fish for paper clips with a magnet on a string and sort your catch into magnetic and not.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-11-01",
   "updatedAt": "2026-11-01",
   "author": "SparkKindly · AI-assisted",

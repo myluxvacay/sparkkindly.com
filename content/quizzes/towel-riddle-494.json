@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A towel dries you by soaking up water, so the more it dries, the wetter it gets.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

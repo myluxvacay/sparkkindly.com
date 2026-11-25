@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Smell the flower (breathe in), blow the candle (breathe out), three times.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Emotion | Wikipedia",

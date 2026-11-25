@@ -21,6 +21,9 @@
   "slug": "cost-per-use-thinking",
   "title": "Cost-per-use thinking",
   "description": "A $90 item used 90 times can be better value than a $20 item used twice.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-01",
   "updatedAt": "2026-11-01",
   "tags": [

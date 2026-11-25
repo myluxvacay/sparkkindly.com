@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Treating accessibility as a normal planning factor, with real alternatives, includes everyone without making one member the problem to be solved. Joining by video while everyone else is together is exclusion dressed as a compromise.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

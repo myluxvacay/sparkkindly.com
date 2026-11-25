@@ -6,6 +6,10 @@
   "title": "Spot the difference: classroom",
   "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The gray owl changed colour from brown to gray, the red book changed colour from green to red and the fox changed colour from orange to plain. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

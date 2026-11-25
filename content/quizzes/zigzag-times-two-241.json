@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The pattern alternates +2, then x2: 5+2=7, 7x2=14, 14+2=16, 16x2=32, 32+2=34, so next is 34x2=68.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

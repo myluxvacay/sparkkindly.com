@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "People in Türkiye speak Turkish.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Türkiye | Encyclopaedia Britannica",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Stopping the conversation protects the person who never consented to their story being shared. Listening first and warning later still spreads private information and creates a triangle of gossip.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

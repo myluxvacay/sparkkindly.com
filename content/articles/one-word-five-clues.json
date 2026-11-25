@@ -5,6 +5,9 @@
   "contentType": "activity",
   "title": "One word, five clues",
   "description": "Five carefully chosen clues. One everyday word. Take it one clue at a time.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-10-19",
   "updatedAt": "2026-10-19",
   "author": "SparkKindly · AI-assisted",

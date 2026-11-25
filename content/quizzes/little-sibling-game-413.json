@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A role that fits their ability, like scorekeeper or playing as your partner, lets them belong without spoiling the game for anyone.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The tongue detects only five basic tastes. Most of flavour comes from smell, including aromas reaching the nose from the back of the mouth as you chew.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Taste",

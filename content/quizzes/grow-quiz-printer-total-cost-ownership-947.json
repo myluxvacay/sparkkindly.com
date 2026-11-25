@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The shelf price is only part of what a printer costs. For a regular printer user, adding the cartridges a year of printing will actually use can easily reverse which model is cheaper overall.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Total cost of ownership",

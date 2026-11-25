@@ -6,6 +6,10 @@
   "title": "Spot the difference: park",
   "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The green frog turned around, the green car changed colour from yellow to green and the pine tree changed colour from green to plain. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

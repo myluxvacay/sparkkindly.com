@@ -6,6 +6,10 @@
   "title": "What changed: train station",
   "prompt": "One thing changed between the before and after train station pictures. What changed?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the turtle changed colour from green to plain. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

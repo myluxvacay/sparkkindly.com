@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Plastics are polymers: giant molecules built from thousands of small units linked into chains, like beads on a very long string.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

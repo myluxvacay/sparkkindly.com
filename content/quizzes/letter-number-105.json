@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Each letter matches its position in the alphabet: A is 1st, B is 2nd, C is 3rd, so D, the 4th letter, matches 4.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

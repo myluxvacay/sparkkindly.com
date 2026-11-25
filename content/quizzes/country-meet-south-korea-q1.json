@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "Seoul is the capital of South Korea. It is the city where the country's government works.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "South Korea | Encyclopaedia Britannica",

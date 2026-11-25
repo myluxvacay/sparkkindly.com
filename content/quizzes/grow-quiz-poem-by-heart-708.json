@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Short practice spread over several days — called spaced practice — builds far stronger memories than the same time crammed into one sitting. The gaps are not wasted time; they are when the memory sets.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Spaced repetition | Wikipedia",

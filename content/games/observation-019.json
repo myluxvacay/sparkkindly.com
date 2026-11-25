@@ -6,6 +6,9 @@
   "title": "Look closely: train station count",
   "prompt": "How many cows are in the train station?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Count the cows one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

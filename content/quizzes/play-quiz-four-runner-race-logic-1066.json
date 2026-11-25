@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Cara and Dan must sit in consecutive places. If they were 1st and 2nd, or 2nd and 3rd, then Ben ahead of Ana forces Ana into 4th place, which is ruled out. So Cara is 3rd and Dan 4th, leaving Ben 1st and Ana 2nd, which satisfies every clue.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

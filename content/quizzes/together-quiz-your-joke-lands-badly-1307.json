@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A private check-in lets the friend be honest without an audience, and offering to delete the post puts their feelings ahead of the laugh.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

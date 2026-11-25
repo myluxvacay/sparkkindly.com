@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "Acceleration depends on force divided by mass. Discarding an empty tank removes dead mass, so the thrust of the next stage accelerates a lighter vehicle and the remaining fuel goes much further.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Multistage rocket",

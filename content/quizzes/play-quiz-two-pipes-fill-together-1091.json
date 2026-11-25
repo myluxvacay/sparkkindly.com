@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "In one hour A fills 1/6 of the tank and B fills 1/4, so together they fill 1/6 + 1/4 = 5/12 per hour. The whole tank takes 12/5 hours, which is 2.4 hours, or 2 hours 24 minutes.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

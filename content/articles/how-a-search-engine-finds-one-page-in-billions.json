@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "How a search engine finds one page in billions",
   "description": "It does not search the web when you type — it searches an enormous index it built beforehand, the way you use the index at the back of a book.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-08-14",
   "updatedAt": "2026-08-14",
   "author": "SparkKindly · AI-assisted",

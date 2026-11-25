@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The pattern skips one letter each time - A, C, E, G - so the next letter is I.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

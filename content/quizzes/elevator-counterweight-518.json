@@ -1,1 +1,42 @@
-{"brand":"discover","correctOptionId":"d","difficulty":"easy","explanation":"The counterweight hangs on the other end of the cables and roughly balances the car plus half a load, so the motor works against only the imbalance instead of the car's full weight.","id":"elevator-counterweight-518","options":[{"id":"a","text":"To act as an emergency brake"},{"id":"b","text":"To store spare electricity for power cuts"},{"id":"c","text":"To measure how many passengers are inside"},{"id":"d","text":"To balance the car so the motor lifts only the difference in weight"}],"prompt":"What is the main job of a lift's (elevator's) counterweight?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-01-31","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Elevator","url":"https://en.wikipedia.org/wiki/Elevator"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "d",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "explanation": "The counterweight hangs on the other end of the cables and roughly balances the car plus half a load, so the motor works against only the imbalance instead of the car's full weight.",
+  "id": "elevator-counterweight-518",
+  "options": [
+    {
+      "id": "a",
+      "text": "To act as an emergency brake"
+    },
+    {
+      "id": "b",
+      "text": "To store spare electricity for power cuts"
+    },
+    {
+      "id": "c",
+      "text": "To measure how many passengers are inside"
+    },
+    {
+      "id": "d",
+      "text": "To balance the car so the motor lifts only the difference in weight"
+    }
+  ],
+  "prompt": "What is the main job of a lift's (elevator's) counterweight?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-01-31",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Elevator",
+      "url": "https://en.wikipedia.org/wiki/Elevator"
+    }
+  ]
+}

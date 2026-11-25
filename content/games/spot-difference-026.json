@@ -6,6 +6,9 @@
   "title": "Spot the difference: market stall",
   "prompt": "Three things changed between the two market stall pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The purple bunch of grapes changed colour from green to purple, the yellow apple changed colour from green to yellow and the yellow duck moved. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

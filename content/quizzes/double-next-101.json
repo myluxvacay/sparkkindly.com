@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Each number is double the one before it: 2x2=4, 4x2=8, 8x2=16, so the next number is 16x2=32.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -88,6 +88,12 @@ export async function findQuizBySlug(db: Queryable, scope: Scope, slug: string):
   return r.rows[0] ? toPublic(r.rows[0]) : null;
 }
 
+// The daily-question chain (24 Nov 2026): recent quizzes, newest first — the pool the
+// Today's Spark advance deals from once today's question has been answered by this visitor.
+export async function dailyQuizChain(db: Queryable, scope: Scope, limit = 40): Promise<PublicItem[]> {
+  return listQuizzes(db, scope, { limit: Math.min(MAX_LIMIT, Math.max(1, whole(limit, 40))), offset: 0 });
+}
+
 export async function latestQuiz(db: Queryable, scope: Scope): Promise<PublicItem | null> {
   return (await listQuizzes(db, scope, { limit: 1, offset: 0 }))[0] ?? null;
 }

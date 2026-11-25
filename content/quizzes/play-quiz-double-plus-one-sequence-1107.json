@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Check the rule: 5x2+1=11, 11x2+1=23 and 23x2+1=47, so the next term is 47x2+1=95.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

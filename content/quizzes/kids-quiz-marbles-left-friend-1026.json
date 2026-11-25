@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Great counting! 15 - 5 = 10, so you have 10 marbles left.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

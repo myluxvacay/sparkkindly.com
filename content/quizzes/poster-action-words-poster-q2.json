@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "You read a book: 'I read a book.'",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Verb | Wikipedia",

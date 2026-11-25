@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Tuvalu covers about 26 square kilometres of land and inland water.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tuvalu | Encyclopaedia Britannica",

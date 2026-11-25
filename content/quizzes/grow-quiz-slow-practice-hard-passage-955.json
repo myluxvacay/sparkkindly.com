@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Slow, accurate repetitions of just the difficult passage build the correct movement first; adding speed gradually then keeps the accuracy instead of rehearsing the same mistake faster.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

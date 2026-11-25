@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Deliberate practice targets a specific sub-skill just beyond current ability, with attention and feedback. Comfortably replaying mastered material maintains it but rarely extends it.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

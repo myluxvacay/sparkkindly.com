@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Rent pays for shelter, which is a basic need; the others are extras you can enjoy but can also live without.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

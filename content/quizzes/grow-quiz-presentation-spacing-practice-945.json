@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Short practice sessions spread over several days are remembered better than the same time crammed into one session, and speaking aloud practises the actual skill you will need.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Spaced repetition",

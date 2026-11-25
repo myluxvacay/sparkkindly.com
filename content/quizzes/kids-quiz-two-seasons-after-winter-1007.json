@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Count two steps from winter. One step is spring, and two steps is summer. Well done counting the seasons!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Vent communities run on chemosynthesis: bacteria build food from chemicals such as hydrogen sulfide, and animals graze on or host those bacteria.",
   "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Chemosynthesis",

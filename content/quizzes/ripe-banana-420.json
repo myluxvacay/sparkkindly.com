@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "Bananas start off green, and when they turn yellow they are soft, sweet and ready to eat.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

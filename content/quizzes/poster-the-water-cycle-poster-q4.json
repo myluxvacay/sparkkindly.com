@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Collected water evaporates again — the journey loops forever.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Water cycle | Wikipedia",

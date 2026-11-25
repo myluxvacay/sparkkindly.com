@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "Sentosa Island is one of the two places we'd love to visit in Singapore. Sentosa is Singapore's island of fun — beaches, a huge aquarium, cable cars and the Universal Studios theme park, all a short ride from the city.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Singapore | Encyclopaedia Britannica",

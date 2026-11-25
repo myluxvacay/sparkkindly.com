@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "An inclined plane spreads the work over a longer distance, so the force needed at any moment is smaller — the total work against gravity is the same.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Inclined plane",

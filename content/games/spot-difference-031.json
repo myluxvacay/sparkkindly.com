@@ -6,6 +6,10 @@
   "title": "Spot the difference: farm",
   "prompt": "Three things changed between the two farm pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The brown rabbit changed colour from gray to brown, the pig changed colour from pink to plain and the blue umbrella changed colour from green to blue. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

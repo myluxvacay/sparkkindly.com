@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Behaviour follows friction. Making the desired action the easiest one in the environment, and adding distance to the competing one, changes outcomes without relying on nightly willpower.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

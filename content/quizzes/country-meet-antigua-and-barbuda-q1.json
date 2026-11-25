@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Saint John's is the capital of Antigua and Barbuda. It is the city where the country's government works.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Antigua and Barbuda | Encyclopaedia Britannica",

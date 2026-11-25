@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Three $5 bills add up to 5 + 5 + 5 = $15.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

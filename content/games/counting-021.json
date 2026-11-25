@@ -6,6 +6,10 @@
   "title": "Counting: purple flowers at the meadow",
   "prompt": "How many purple flowers can you count in the meadow?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the purple flowers one by one: there are exactly 9. Only the purple ones count — the other colours are decoys.",
   "sources": [],
   "reviewStatus": "approved",

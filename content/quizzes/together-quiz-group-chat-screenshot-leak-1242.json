@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Private messages were shared for that audience, not a bigger one. Cropping a name or sharing with one person still spreads it, while checking first respects the friend who trusted the small chat.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

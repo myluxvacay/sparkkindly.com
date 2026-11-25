@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The 1 kg bag costs $2.00 per kilogram. The 2.5 kg bag costs $4.50 ÷ 2.5 = $1.80 per kilogram — so the bigger bag is cheaper per kilogram this time. Checking the unit price is the only way to be sure, because bigger is not always better value.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Unit price | Wikipedia",

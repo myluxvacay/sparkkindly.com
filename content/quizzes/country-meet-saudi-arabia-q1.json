@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "People in Saudi Arabia speak Arabic.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Saudi Arabia | Encyclopaedia Britannica",

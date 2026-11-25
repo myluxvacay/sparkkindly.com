@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Deposit: 25% of $720 = $180. Monthly payments: 12 x $50 = $600. Plan total: $180 + $600 + $20 fee = $800. Extra over buying outright: $800 - $720 = $80. The other options come from common slips: $60 forgets the $20 fee ($780 total, $780 - $720 = $60); $100 counts the $20 fee twice ($820 total, $820 - $720 = $100); $130 counts 13 monthly payments instead of 12 ($180 + $650 + $20 = $850, $850 - $720 = $130).",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

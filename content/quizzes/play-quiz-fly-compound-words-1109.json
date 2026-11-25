@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Adding FLY gives firefly, butterfly and dragonfly, all common compound words. The other endings do not complete all three words.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

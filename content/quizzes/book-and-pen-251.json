@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "If the pen costs x, the book costs x + $10, so x + x + 10 = 11, which gives x = $0.50. Check: $0.50 + $10.50 = $11.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

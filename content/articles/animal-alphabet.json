@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Animal Alphabet",
   "description": "For ages 6–9 with an adult: think of an animal for every letter of the alphabet, and draw the trickiest ones.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-06-18",
   "updatedAt": "2026-06-18",
   "author": "SparkKindly · AI-assisted",

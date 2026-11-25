@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "At 6-6 in the tiebreak, one more point only makes 7-6, which is not a 2-point lead. Winning two straight points makes it 8-6, a clear 2-point lead, so the tiebreak ends 8-6 and the set is recorded as 7-6.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tennis scoring system",

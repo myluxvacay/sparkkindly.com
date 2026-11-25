@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Bees live in a hive, where they store their honey.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Animal shelter | Wikipedia",

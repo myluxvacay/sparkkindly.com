@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Short, regular practice at a fixed time builds skill steadily and turns playing into an easy daily habit.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

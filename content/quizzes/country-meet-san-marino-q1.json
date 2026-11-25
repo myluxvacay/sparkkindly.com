@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "City of San Marino is the capital of San Marino. It is the city where the country's government works.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "San Marino | Encyclopaedia Britannica",

@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Byblos is one of the two places we'd love to visit in Lebanon. Byblos is one of the oldest cities in the world, lived in for around 7,000 years — a pretty harbour town of Crusader castles, souks and seafood restaurants.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Lebanon | Encyclopaedia Britannica",

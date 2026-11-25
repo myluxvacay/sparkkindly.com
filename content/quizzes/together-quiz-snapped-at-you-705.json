@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Empathy means holding two truths at once: your friend's behaviour had a reason, and it still landed on you. Naming both — care for their pain, honesty about yours — is what psychologists describe as an empathic, relationship-protecting response.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Empathy | Psychology Today",

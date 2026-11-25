@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Each term is the square of a prime number: 2 squared = 4, 3 squared = 9, 5 squared = 25, 7 squared = 49, 11 squared = 121. The next prime is 13, and 13 squared = 169.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

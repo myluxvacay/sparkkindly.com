@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Ben's gap is not knowledge but matching his answer to the question. Noticing the command word and practising the type of answer it demands — explanation means saying why, not just what — targets the marks he is actually losing.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

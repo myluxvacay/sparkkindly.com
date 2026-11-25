@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Naming the impact and agreeing a sharing rule fixes the practical problem and prevents a repeat better than revenge or silence.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

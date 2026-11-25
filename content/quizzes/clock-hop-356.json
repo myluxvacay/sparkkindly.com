@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Adding 45 minutes to 10:30 takes you past the hour: 30 minutes brings you to 11:00, and 15 more minutes makes 11:15.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

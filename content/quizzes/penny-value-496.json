@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A penny is worth exactly 1 cent, the smallest United States coin value in everyday use.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

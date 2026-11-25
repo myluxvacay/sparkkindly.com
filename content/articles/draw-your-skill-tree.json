@@ -5,6 +5,9 @@
   "contentType": "activity",
   "title": "Draw your skill tree: map what you can do, choose your next branch",
   "description": "Video games show a character's abilities as a branching tree. Draw your own — real skills you have, connected to the ones they unlock — and your next step stops being a guess.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-17",
   "updatedAt": "2026-11-17",
   "author": "SparkKindly · AI-assisted",

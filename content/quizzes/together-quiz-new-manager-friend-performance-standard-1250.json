@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Holding a friend to the same standard as everyone else, in private and with real support, is fair to the team without being a betrayal. Quietly covering for them breeds resentment, extra strictness punishes them for the friendship, and handing the problem away avoids a conversation a good manager and a good friend can actually have.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

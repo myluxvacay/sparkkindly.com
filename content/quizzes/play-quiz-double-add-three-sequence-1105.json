@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Following the alternation: 2x2=4, 4+3=7, 7x2=14, 14+3=17 and 17x2=34. The next step is +3, giving 34+3=37.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

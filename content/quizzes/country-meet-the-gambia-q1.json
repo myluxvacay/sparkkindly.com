@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Banjul is the capital of The Gambia. It is the city where the country's government works.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "The Gambia | Encyclopaedia Britannica",

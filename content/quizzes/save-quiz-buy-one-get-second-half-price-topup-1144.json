@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The half-price item is the cheaper jacket: $40 / 2 = $20. Total: $50 (first jacket) + $20 (second jacket at half price) + $10 (hat) = $80. Check by saving: the full-price subtotal is $50 + $40 + $10 = $100, and the only saving is half of $40, which is $20, so $100 - $20 = $80. The $90 option takes only $10 off, $70 forgets the hat, and $75 wrongly takes 25% off everything.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Specific, honest feedback with an offer of help is respectful and actually useful; vague praise or blame helps nobody learn.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

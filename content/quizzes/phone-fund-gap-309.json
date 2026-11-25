@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "$240 − $180 = $60, so sixty more dollars reaches the target.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

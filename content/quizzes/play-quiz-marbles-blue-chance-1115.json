@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "There are 5 marbles in total and 2 of them are blue, so the chance of picking a blue one is 2 out of 5.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

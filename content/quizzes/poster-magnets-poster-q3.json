@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "Aluminum cans ignore magnets — magnets mainly love iron and steel.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Magnet | Wikipedia",

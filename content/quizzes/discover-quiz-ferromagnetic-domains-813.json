@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Ferromagnetic materials such as iron have domains in which many atoms' magnetic moments are aligned. An external field rotates more domains into alignment, producing a strong combined attraction, unlike weakly magnetic aluminium.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Ferromagnetism",

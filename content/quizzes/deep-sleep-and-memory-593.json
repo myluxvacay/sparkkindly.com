@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "During sleep the brain replays and files experiences, strengthening useful memories. Sleeping after learning measurably improves recall compared with staying awake.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Sleep",

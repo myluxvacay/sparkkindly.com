@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "The article says about one out of every three bites exists because of pollinators like bees.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Pollination | Wikipedia",

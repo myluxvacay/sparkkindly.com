@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The price dropped from $20 to $15, and 20 - 15 = $5 saved.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

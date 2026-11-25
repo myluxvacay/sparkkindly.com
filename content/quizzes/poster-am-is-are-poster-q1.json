@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "With 'I', the verb 'to be' is always am: 'I am six years old.'",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Copula (linguistics) | Wikipedia",

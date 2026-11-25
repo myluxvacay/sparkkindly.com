@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Egg first, then the eating caterpillar, then the rebuilding chrysalis, then the butterfly.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Metamorphosis | Wikipedia",

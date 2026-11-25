@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "Prime Numbers: The Atoms of Arithmetic",
   "description": "Every whole number is built from primes multiplied together - here is how to hunt them with a 2,300-year-old sieve.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-05",
   "updatedAt": "2026-11-05",
   "author": "SparkKindly · AI-assisted",

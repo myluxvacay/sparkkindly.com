@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Brakes are energy converters: they turn a car's motion into heat through friction, and dump that heat to the air.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

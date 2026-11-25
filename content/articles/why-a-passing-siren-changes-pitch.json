@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "The siren never changes its note — the motion squeezes and stretches its own waves. That is the Doppler effect, and astronomers use it too.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

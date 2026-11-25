@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "One dollar is made of 100 cents, which is why prices are written like $1.00.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Cent (currency) - Wikipedia",

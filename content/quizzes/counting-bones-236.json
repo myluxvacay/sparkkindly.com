@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Adults have 206 bones. Babies are born with around 300, but many of them fuse together as they grow.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Human skeleton",

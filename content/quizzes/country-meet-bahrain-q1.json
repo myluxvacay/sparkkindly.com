@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "The money of Bahrain is the Bahraini dinar (BHD).",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Bahrain | Encyclopaedia Britannica",

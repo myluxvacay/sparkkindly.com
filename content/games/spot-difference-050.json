@@ -6,6 +6,9 @@
   "title": "Spot the difference: kitchen",
   "prompt": "Three things changed between the two kitchen pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The blue hat changed colour from red to blue, the white cat changed colour from black to white and the green bunch of grapes vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

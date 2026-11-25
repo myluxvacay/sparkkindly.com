@@ -6,6 +6,10 @@
   "title": "Look closely: kitchen clock",
   "prompt": "What time does the clock in the kitchen show?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The clock's short hand points past 12 and its long hand shows 45 minutes, so the clock reads 12:45.",
   "sources": [],
   "reviewStatus": "approved",

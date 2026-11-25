@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Kyoto's temples and bamboo grove is one of the two places we'd love to visit in Japan. Kyoto holds over a thousand temples — walk the vermilion gates of Fushimi Inari, the golden pavilion of Kinkaku-ji and the whispering Arashiyama bamboo grove.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Japan | Encyclopaedia Britannica",

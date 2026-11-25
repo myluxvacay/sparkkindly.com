@@ -16,6 +16,7 @@ import PlayResult, { type PlayReview } from './PlayResult';
 import PlayEnhancer from './PlayEnhancer';
 import KeepPlaying from './KeepPlaying';
 import SharePrompt from './SharePrompt';
+import type { DailyModel } from '@/lib/play/daily-quiz';
 import DifficultyMeter from './DifficultyMeter';
 
 // One playable item: the answer form until a response arrives, then the server's verdict. Shared by the item page and
@@ -26,9 +27,13 @@ export default async function PlayPanel({
   item,
   searchParams,
   trackSeen = true,
+  daily,
 }: {
   item: PublicItem;
   searchParams: SearchParams;
+  /** The Today's Spark chain model (lib/play/daily-quiz), on the daily surfaces only: the play
+   * island uses it to advance to the next unanswered question once this one is answered. */
+  daily?: DailyModel;
   /**
    * Whether the keep-playing seen list may be kept on the visitor's device for this surface. The
    * daily-question surfaces (/quiz/ and the home hero) pass false, and Kids-audience items are always
@@ -111,6 +116,8 @@ export default async function PlayPanel({
         id="play-panel"
         data-kp-current={track && playable ? item.id : undefined}
         data-kp-level={track && playable ? play.difficulty : undefined}
+        data-daily-model={daily ? JSON.stringify(daily) : undefined}
+        data-daily-current={daily ? item.id : undefined}
       >
         <DifficultyMeter level={play.difficulty} />
         {result && result.status !== 'not_found' && (

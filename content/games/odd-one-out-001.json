@@ -6,6 +6,10 @@
   "title": "Odd one out: three birds and a fungus",
   "prompt": "One of these does not belong. Can you spot it?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The owl, flamingo and duck are all birds. The mushroom is a fungus — it is the odd one out.",
   "sources": [],
   "reviewStatus": "approved",

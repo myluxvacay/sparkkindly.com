@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Blocked practice lets you repeat a method without recognising when to use it. Interleaving forces that recognition step, which is exactly what a mixed test demands.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A plateau often hides one bottleneck sub-skill. Isolating it, slowing it down so errors are visible, and rebuilding speed is deliberate practice aimed at the actual limit.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

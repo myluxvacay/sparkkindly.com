@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "There are 10 possible pairs. A pair sums to an even total only if both numbers are odd or both are even: the odd counters 1, 3, 5 give 3 pairs, and the even counters 2, 4 give 1 pair. That is 4 winning pairs out of 10, which is 2/5.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

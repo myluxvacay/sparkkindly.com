@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "A rainbow has seven colours: red, orange, yellow, green, blue, indigo and violet.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Rainbow - Wikipedia",

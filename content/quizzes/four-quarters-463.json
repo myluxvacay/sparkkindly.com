@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Each quarter is 25 cents, and 25 x 4 = 100 cents, which is $1.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

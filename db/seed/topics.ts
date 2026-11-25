@@ -14,11 +14,15 @@ export const topicParents: Record<string, string> = {
   history: 'History',
   technology: 'Technology',
   kindness: 'Kindness',
+  'age-bands': 'Age bands',
   'play-and-games': 'Play and games',
   green: 'Green',
 };
 
 export const topicChildren: Record<string, Record<string, string>> = {
+  // Age bands (24 Nov 2026): the canonical child bands every item is tagged with (lib/age-bands.ts).
+  // 'family' (all-ages) is deliberately NOT a topic — it is the absence of a child-band topic.
+  'age-bands': { 'ages-3-5': 'Ages 3–5', 'ages-6-8': 'Ages 6–8', 'ages-9-12': 'Ages 9–12' },
   science: { physics: 'Physics', chemistry: 'Chemistry', space: 'Space', 'earth-science': 'Earth science', 'human-body': 'The human body' },
   nature: { animals: 'Animals', plants: 'Plants', oceans: 'Oceans', weather: 'Weather' },
   'maths-and-logic': { 'number-puzzles': 'Number puzzles', patterns: 'Patterns', 'logic-puzzles': 'Logic puzzles', probability: 'Probability' },

@@ -6,6 +6,9 @@
   "title": "Look closely: pond count",
   "prompt": "How many ducks are in the pond?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "Count the ducks one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "24 divided by 4 is 6, so saving $4 a week reaches $24 in 6 weeks.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Savings after growth: $500 x 1.04 = $520. Basket after price rises: $500 x 1.06 = $530. Shortfall: $530 - $520 = $10. The $20 option is just the interest you earned, and $30 is just the price rise; the answer is the gap between the two grown amounts.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

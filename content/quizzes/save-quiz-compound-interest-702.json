@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "In the first year you earn 5% of $100, which is $5, so your balance becomes $105. In the second year you earn 5% of $105, which is $5.25, giving $110.25. That extra 25 cents is compound interest: interest earned on interest already added. Over many years, that snowball is what makes saving early so powerful.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "The Power of Compound Interest: Calculations and Examples — Investopedia",

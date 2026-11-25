@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "2,000 W = 2 kW. Energy used: 2 kW x 3 hours x 30 days = 180 kWh. Cost: 180 x $0.20 = $36.00.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

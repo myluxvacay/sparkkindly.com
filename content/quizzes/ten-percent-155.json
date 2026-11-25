@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "10% means one tenth, and $50 divided by 10 is $5, so you put five dollars aside.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

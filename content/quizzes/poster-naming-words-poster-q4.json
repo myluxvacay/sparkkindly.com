@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "'Dog' names the animal. 'Sleeps' is an action word, not a naming word.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Noun | Wikipedia",

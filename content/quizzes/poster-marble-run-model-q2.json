@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Height gives the marble potential energy, which turns into movement as it rolls down.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Gravity | Wikipedia",

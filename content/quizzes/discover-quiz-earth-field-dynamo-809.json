@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The geodynamo arises from convection and rotation of liquid iron alloy in the outer core. Moving conducting fluid sustains electric currents, and those currents generate Earth's magnetic field.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Dynamo theory",

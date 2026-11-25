@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Each term describes the digits of the one before, read in runs: 111221 is 'three 1s, two 2s, one 1', which is written 312211. The same reading turns 1 into 11, 11 into 21, and so on through the sequence.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Look-and-say sequence",

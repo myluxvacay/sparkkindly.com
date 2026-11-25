@@ -6,6 +6,9 @@
   "title": "Spot the difference: kitchen",
   "prompt": "Three things changed between the two kitchen pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The blue gift box moved, the orange changed colour from orange to plain and the green umbrella vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

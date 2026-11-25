@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Work backwards: before the 10% cut the price was 54 / 0.9 = 60 dollars. Before the 20% rise it was 60 / 1.2 = 50 dollars. Check forwards: 50 x 1.2 = 60, then 60 x 0.9 = 54.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

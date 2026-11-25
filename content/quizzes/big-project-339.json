@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Shrinking the task to one small, clear action makes starting possible, and starting builds momentum.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

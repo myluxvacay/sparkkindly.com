@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Charles Darwin published the book in 1859 after years of studying wildlife, including finches on the Galápagos Islands.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "On the Origin of Species",

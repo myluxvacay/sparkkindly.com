@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came first?",
   "prompt": "Spark showed some things in order. What came first?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The order was: first the gray owl, second the red car, third the black horse. So the first one was the gray owl.",
   "sources": [],
   "reviewStatus": "approved",

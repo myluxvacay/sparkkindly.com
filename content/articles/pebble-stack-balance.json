@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Pebble Stack Challenge",
   "description": "For ages 6–9 with an adult: balance smooth pebbles into the tallest tower you can build at the beach or in the garden.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-10-02",
   "updatedAt": "2026-10-02",
   "author": "SparkKindly · AI-assisted",

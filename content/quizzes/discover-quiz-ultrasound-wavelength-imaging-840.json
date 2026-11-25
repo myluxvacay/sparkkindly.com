@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "Wavelength limits the smallest detail a wave can distinguish. Megahertz ultrasound has wavelengths of fractions of a millimetre in tissue, allowing it to image small internal structures that audible sound could not resolve.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Medical ultrasound",

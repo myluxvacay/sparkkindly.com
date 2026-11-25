@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Linking a new habit to an existing routine gives it a reliable trigger, which works far better than waiting for motivation.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

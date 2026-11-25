@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The magnetosphere guides energetic charged particles along field lines that converge near the magnetic poles. There the particles collide with oxygen and nitrogen high in the atmosphere, which then emit the light of the aurora.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Aurora",

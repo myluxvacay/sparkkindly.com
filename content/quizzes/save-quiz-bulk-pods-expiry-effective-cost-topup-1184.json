@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Pods you actually use before the expiry date: 5 per week x 6 weeks = 30 pods. Effective cost per used pod: $30 / 30 = $1.00. The $0.60 option divides by all 50 pods in the box ($30 / 50) and ignores the 20 pods that expire unused.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

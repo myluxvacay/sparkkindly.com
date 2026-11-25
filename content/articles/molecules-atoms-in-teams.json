@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "When atoms join together they form molecules — from the oxygen you breathe to the long chains of atoms that make up your DNA.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

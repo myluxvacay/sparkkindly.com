@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Bending the list would quietly take from other families waiting for the same parcels. Sticking to the shared rules while actively helping your friend find the official extra support treats both their need and everyone else's fairly.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

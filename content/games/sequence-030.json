@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came fifth?",
   "prompt": "Spark showed some things in order. What came fifth?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the banana, second the blue kite, third the brown cow, fourth the green pine tree, fifth the blue fish. So the fifth one was the blue fish.",
   "sources": [],
   "reviewStatus": "approved",

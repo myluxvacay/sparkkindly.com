@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Work backwards: 20 minus 6 is 14, and half of 14 is 7. Check: 7 doubled is 14, plus 6 makes 20.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

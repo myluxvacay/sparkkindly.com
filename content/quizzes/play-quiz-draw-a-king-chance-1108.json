@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "There are 4 kings among 52 cards, so the chance is 4 out of 52. Dividing top and bottom by 4 simplifies this to 1 in 13.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Kabul is the capital of Afghanistan. It is the city where the country's government works.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Afghanistan | Encyclopaedia Britannica",

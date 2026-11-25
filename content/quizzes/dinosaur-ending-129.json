@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "An asteroid impact about 66 million years ago caused a mass extinction that wiped out the non-bird dinosaurs.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Dinosaur",

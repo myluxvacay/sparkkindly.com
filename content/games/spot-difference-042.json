@@ -6,6 +6,10 @@
   "title": "Spot the difference: street",
   "prompt": "Three things changed between the two street pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The white cow turned around, the yellow balloon turned around and the yellow car turned around. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

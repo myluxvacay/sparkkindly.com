@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Sorting the names eight, five, four, nine, one, seven, six, three, two, zero alphabetically puts 'zero' last, since z comes after e, f, n, o, s and t. So the last number is 0.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

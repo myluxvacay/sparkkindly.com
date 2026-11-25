@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "$7 x 6 weeks = $42. Small amounts saved steadily really do add up.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

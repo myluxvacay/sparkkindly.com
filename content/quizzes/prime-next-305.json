@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "12, 14 and 15 can all be divided by smaller numbers, but 13 can only be divided by 1 and itself, so it is prime.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The saving is 9 litres per minute x 2 minutes = 18 litres.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

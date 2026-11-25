@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Gallons needed: 120 divided by 40 = 3 gallons. Cost: 3 x $3.60 = $10.80.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

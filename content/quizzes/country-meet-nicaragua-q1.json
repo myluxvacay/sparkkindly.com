@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "People in Nicaragua speak Spanish.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Nicaragua | Encyclopaedia Britannica",

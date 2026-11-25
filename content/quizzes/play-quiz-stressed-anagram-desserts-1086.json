@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "STRESSED uses the letters S three times, E twice, and T, R and D once each. DESSERTS uses exactly the same letters: D once, E twice, S three times, R once and T once. DESSERT is one S short.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The gaps grow by one each time: +2, +3, +4, +5. The next gap is +6, so the next number is 15+6=21.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

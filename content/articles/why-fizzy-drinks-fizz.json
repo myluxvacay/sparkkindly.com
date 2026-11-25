@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "The fizz in a soft drink is carbon dioxide forced into the liquid under pressure, escaping the moment you open the bottle.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

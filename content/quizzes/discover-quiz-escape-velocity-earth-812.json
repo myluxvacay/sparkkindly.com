@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "At escape velocity a projectile's kinetic energy is enough for it to climb out of Earth's gravitational well indefinitely without extra thrust. Ignoring air resistance, the value does not depend on the projectile's own mass.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Escape velocity",

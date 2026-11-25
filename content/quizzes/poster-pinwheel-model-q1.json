@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Angled blades catch the push unevenly — that uneven push is what turns the wheel.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Wind turbine | Wikipedia",

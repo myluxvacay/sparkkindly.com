@@ -6,6 +6,10 @@
   "title": "Memory: street color",
   "prompt": "From memory: what colour is the snail in the street?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The snail in the picture is purple — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

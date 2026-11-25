@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "The gnomon is the shadow-caster; on a human sundial, your own body does the job.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sundial | Wikipedia",

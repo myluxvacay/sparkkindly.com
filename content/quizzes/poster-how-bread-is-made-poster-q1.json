@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Yeast is alive; it eats sugars in flour and breathes out gas bubbles that inflate the dough.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Bread | Wikipedia",

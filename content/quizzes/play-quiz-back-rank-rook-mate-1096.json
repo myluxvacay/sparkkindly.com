@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Rook to d8 checks the king along the whole back rank, covering f8 and h8 as escape squares. The king cannot capture the rook, its own pawns on f7, g7 and h7 block the way down, and Black has nothing that can block the rank or take the rook.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Checkmate",

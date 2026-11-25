@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "People in The Bahamas speak English.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "The Bahamas | Encyclopaedia Britannica",

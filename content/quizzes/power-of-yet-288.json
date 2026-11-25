@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "“I can't do this yet” treats ability as something that grows with practice, instead of a fixed verdict on you.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

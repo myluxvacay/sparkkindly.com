@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Compounded: $400 x 1.10 = $440 after year 1, then $440 x 1.10 = $484. Not compounded: $400 + $40 + $40 = $480. Difference: $484 - $480 = $4, the interest on the first year's $40.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

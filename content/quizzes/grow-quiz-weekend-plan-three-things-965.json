@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Putting each commitment into a real time slot, breaks included, shows whether the weekend actually fits — and lets you adjust calmly in advance instead of running out of time.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

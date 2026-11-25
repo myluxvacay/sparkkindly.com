@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came third?",
   "prompt": "Spark showed some things in order. What came third?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The order was: first the black horse, second the white star, third the orange fox. So the third one was the orange fox.",
   "sources": [],
   "reviewStatus": "approved",

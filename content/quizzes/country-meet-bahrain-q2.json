@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "Bahrain covers about 765 square kilometres of land and inland water.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Bahrain | Encyclopaedia Britannica",

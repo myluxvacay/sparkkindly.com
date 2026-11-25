@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "'Bi' means two - a bicycle has two wheels, one at the front and one at the back!",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

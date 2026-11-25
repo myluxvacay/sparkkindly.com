@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "People in Solomon Islands speak Pijin and English.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Solomon Islands | Encyclopaedia Britannica",

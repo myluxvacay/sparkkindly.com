@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "A caterpillar changes inside a chrysalis and comes out as a butterfly.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Metamorphosis - Wikipedia",

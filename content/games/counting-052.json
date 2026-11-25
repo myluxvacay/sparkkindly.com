@@ -6,6 +6,10 @@
   "title": "Counting: shells at the beach",
   "prompt": "How many shells can you count in the beach?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the shells one by one: there are exactly 4.",
   "sources": [],
   "reviewStatus": "approved",

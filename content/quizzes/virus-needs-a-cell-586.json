@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A virus is just instructions in a protein coat. It carries no machinery for building proteins or copying genes, so it hijacks a cell's machinery instead.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Virus",

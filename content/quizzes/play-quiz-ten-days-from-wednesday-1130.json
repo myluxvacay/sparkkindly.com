@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Seven days after Wednesday is Wednesday again. Three more days take you to Thursday, Friday and then Saturday, so 10 days later is a Saturday.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

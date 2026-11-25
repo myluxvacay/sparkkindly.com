@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The drops grow each time: 60-5=55, 55-10=45, 45-15=30, so the next drop is 20: 30-20 = 10.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

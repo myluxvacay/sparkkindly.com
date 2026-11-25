@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The Sun is our own star, about 150 million kilometres away - far closer than any other star. The Moon is not a star at all.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sun",

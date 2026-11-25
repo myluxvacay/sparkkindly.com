@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Each number is the sum of the two before it: 5 + 8 = 13. This is the Fibonacci sequence.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

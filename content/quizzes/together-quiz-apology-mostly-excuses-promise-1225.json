@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Naming what is missing from an apology, calmly and specifically, gives your friend a real chance to repair trust. Pretending it is fine, score-keeping past failures, and silent punishment all leave the broken promise unresolved.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

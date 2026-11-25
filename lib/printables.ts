@@ -7,6 +7,17 @@
 // ingested by scripts/ingest-printables.ts); each item's hero image is the rendered first page of its
 // PDF, and the Download PDF button serves the delivered PDF unchanged.
 import type { PublicItem } from './items/repo';
+import { bandsFromTopics, type AgeBand as CanonicalAgeBand } from './age-bands';
+
+// The canonical age-band list lives in lib/age-bands.ts only (24 Nov 2026); it is re-exported
+// here under a distinct name so the legacy delivered-library bands below are never confused
+// with it — there is one canonical list, and the hub filters on it via printableAgeBands.
+export { AGE_BANDS as CANONICAL_AGE_BANDS, BAND_LABEL } from './age-bands';
+export type { AgeBand as CanonicalAgeBand } from './age-bands';
+
+// An item's canonical age bands, unified from its topics (legacy ages-5-8 / ages-6-10 topics
+// included, via lib/age-bands). ['family'] when it carries no child band.
+export const printableAgeBands = (item: { topics: string[] }): CanonicalAgeBand[] => bandsFromTopics(item.topics);
 
 export const PRINTABLES_TOPIC = 'printables';
 
@@ -69,6 +80,9 @@ const MACHINERY = new Set([
   PRINTABLES_TOPIC,
   ...PRINTABLE_CATEGORIES.map((c) => c.topic),
   ...AGE_BANDS.map((a) => a.topic),
+  'ages-3-5',
+  'ages-6-8',
+  'ages-9-12',
 ]);
 export const printableSkillTopics = (item: Pick<PublicItem, 'topics'>): string[] =>
   item.topics.filter((t) => !MACHINERY.has(t));

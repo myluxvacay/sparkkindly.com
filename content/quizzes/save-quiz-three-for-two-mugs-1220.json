@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "With the offer you only pay for 2 mugs, so you pay 2 x $6 = $12 for all 3.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

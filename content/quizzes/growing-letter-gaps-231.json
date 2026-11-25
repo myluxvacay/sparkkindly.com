@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The gaps between the letters grow by one each time: +2, +3, +4, +5, so the next gap is +6. Six letters after P is V.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

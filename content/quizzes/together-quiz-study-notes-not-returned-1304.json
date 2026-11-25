@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A direct, calm reminder of the earlier sharing asks for fairness without threats and gives them a clear chance to return the favour.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

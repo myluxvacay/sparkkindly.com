@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Verbatim copying can happen without thinking. Generative notes — summarising and questioning in your own words — require processing the ideas, which is what application questions test.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

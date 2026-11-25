@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Encouragement after a mistake helps a teammate recover and play better; blame usually makes the next mistake more likely.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

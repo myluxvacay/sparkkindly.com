@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "In this chart, the lion lives in a den — a sheltered wild home.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Animal shelter | Wikipedia",

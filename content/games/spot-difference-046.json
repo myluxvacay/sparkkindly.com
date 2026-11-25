@@ -6,6 +6,10 @@
   "title": "Spot the difference: park",
   "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The pink shell changed colour from orange to pink, the orange changed colour from orange to plain and the gray sheep changed colour from white to gray. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

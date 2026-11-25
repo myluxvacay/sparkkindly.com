@@ -6,6 +6,10 @@
   "title": "Memory: market stall sign",
   "prompt": "From memory: what does the sign in the market stall say?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The sign in the picture reads \"Farm Shop\" — it is written in big letters on the board.",
   "sources": [],
   "reviewStatus": "approved",

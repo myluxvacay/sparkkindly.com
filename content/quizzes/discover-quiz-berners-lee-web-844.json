@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Tim Berners-Lee, working at CERN, invented the World Wide Web in 1989 and gave the technology away freely, which helped it spread worldwide.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "World Wide Web",

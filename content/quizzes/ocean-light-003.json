@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "NOAA states that significant sunlight is rarely present beyond 200 metres. Water conditions affect penetration, so this is an approximate guide, not a fixed boundary.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "NOAA: How far does light travel in the ocean?",

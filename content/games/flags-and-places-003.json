@@ -6,6 +6,9 @@
   "title": "Flags & places: which flag is Italy?",
   "prompt": "Which flag belongs to Italy?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Italy’s flag is green, white and red in vertical stripes. The other flags belong to France, Argentina, Mexico.",
   "sources": [],
   "reviewStatus": "approved",

@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "A light, gentle wind is a breeze — the day is breezy.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Weather | Wikipedia",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The reduction is $250 - $200 = $50. As a percentage of the original price: $50 divided by $250 = 0.20, which is 20%. Dividing by the new price would wrongly give 25%.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

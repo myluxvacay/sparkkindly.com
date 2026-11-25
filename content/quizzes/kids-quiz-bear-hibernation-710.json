@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "A bear hibernates. In autumn it eats lots of food, then it sleeps in a cosy den through the winter, living on the fat stored in its body. It wakes up in spring.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Hibernation | Wikipedia",

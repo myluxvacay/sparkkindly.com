@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Starting at deuce, Player A's point gives Advantage A. Player B's next point cancels that advantage, so the score returns to deuce.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tennis scoring",

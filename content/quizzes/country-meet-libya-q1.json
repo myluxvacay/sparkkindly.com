@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "Tripoli is the capital of Libya. It is the city where the country's government works.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Libya | Encyclopaedia Britannica",

@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the red car, second the gray elephant, third the gray cloud, fourth the blue house, fifth the purple umbrella. So the second one was the gray elephant.",
   "sources": [],
   "reviewStatus": "approved",

@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "Newton's third law is the rocket law — real rockets fly by exactly the same rule.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Newton's laws of motion | Wikipedia",

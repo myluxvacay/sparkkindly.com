@@ -6,6 +6,10 @@
   "title": "Memory: park color",
   "prompt": "From memory: what colour is the frog in the park?",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The frog in the picture is green — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

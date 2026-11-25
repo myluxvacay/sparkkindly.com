@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Pass electricity through water and it splits into hydrogen and oxygen — electrolysis uses electrical energy to force a reaction.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

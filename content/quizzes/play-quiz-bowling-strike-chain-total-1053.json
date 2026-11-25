@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Frame 1 scores 10 + 10 (next strike) + 7 = 27. Frame 2 scores 10 + 7 + 2 = 19. Frame 3 is an open frame scoring 9. Total: 27 + 19 + 9 = 55.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tenpin bowling",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "CO2 + water forms carbonic acid, which partly splits into hydrogen ions and bicarbonate. More hydrogen ions means a lower pH — the process called ocean acidification.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Ocean acidification",

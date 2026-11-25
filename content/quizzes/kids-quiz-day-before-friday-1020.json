@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Good work! Thursday comes just before Friday in the week.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

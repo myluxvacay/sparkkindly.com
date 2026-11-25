@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the red rocket, second the brown mushroom, third the black sheep, fourth the black cat, fifth the purple snail. So the second one was the brown mushroom.",
   "sources": [],
   "reviewStatus": "approved",

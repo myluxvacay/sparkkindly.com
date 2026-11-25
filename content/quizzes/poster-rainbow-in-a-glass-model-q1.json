@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Density sorts the tower: denser liquids sink, lighter ones float on top.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Density | Wikipedia",

@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Bronze, brass and steel are not elements but mixtures — metals blended on purpose because the mix outperforms any single metal in it.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

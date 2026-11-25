@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "People in Malawi speak Nyanja and English.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Malawi | Encyclopaedia Britannica",

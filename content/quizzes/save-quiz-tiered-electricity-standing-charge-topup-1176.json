@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "First 100 kWh: 100 x $0.20 = $20. Remaining use: 250 - 100 = 150 kWh, at 150 x $0.30 = $45. Standing charge: $10. Total: $20 + $45 + $10 = $75. The $85 option charges all 250 kWh at the higher rate plus the standing charge, and $65 forgets the standing charge.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

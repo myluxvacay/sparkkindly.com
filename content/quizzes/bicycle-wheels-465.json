@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "A bicycle has two wheels, which is why its name starts with 'bi', meaning two.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

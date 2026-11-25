@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "People in Haiti speak Haitian Creole and French.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Haiti | Encyclopaedia Britannica",

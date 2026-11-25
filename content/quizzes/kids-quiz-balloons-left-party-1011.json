@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Great counting! 18 - 9 = 9, so there are 9 balloons left.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

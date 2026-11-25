@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Salt melts ice by making it harder for water to freeze, and it transforms food by changing how your taste buds report flavour.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

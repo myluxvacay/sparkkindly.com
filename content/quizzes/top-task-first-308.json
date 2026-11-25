@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Picking one priority breaks the paralysis, and finishing what matters most makes the rest of the list feel lighter.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Good choice! A raincoat helps keep your clothes dry when it rains.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

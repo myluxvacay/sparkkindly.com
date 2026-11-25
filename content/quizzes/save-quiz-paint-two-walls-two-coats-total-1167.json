@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Area of one wall: 5 x 3 = 15 square metres. Two walls: 2 x 15 = 30 square metres. Two coats: 2 x 30 = 60 square metres to cover. Tins needed: 60 / 10 = 6 tins. Paint cost: 6 x $15 = $90. Total with the roller set: $90 + $10 = $100. The other options come from common slips: $55 forgets the second coat (30 square metres, 3 tins, 3 x $15 + $10 = $55); $90 forgets the roller set (paint only, 6 x $15 = $90); $190 counts 4 walls instead of 2 (120 square metres, 12 tins, 12 x $15 + $10 = $190).",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

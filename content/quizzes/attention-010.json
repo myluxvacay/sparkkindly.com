@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "“Have I understood that correctly?” invites the other person to confirm or correct your interpretation in their own words.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

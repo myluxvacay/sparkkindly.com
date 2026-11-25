@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Even + even and odd + odd both give even answers. Only even + odd gives an odd answer: 4 + 7 = 11.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",
