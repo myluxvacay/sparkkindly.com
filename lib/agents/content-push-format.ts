@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { brandSchema, dateSchema } from '@/lib/schemas';
+import { ageBandSchema, brandSchema, dateSchema } from '@/lib/schemas';
 
 // The Content Push API package format (docs/content-push-api.md). A package carries content in the LIBRARY
 // shapes (lib/schemas.ts articleSchema / quizSchema) — the same JSON an agent would otherwise commit to
@@ -42,6 +42,10 @@ export const pushArticleSchema = z
     contentType: z.enum(['article', 'activity']), // a 'video' library item is not pushable; use the video component
     title: z.string().min(1),
     description: z.string().min(1),
+    // Age bands are REQUIRED here (unlike the file schema, where they are optional at parse time):
+    // approval on this API is a row status, not a schema state, so a bandless push item would slip
+    // past the lib/schemas.ts approval gate and serve as 'family' to everyone.
+    ageBands: z.array(ageBandSchema).min(1, 'at least one age band is required'),
     updatedAt: dateSchema,
     author: z.string().min(1),
     ageGuidance: z.string().optional(),
@@ -73,6 +77,7 @@ export const pushQuizSchema = z
   .object({
     id: z.string().regex(/^[a-z0-9-]+$/),
     brand: brandSchema,
+    ageBands: z.array(ageBandSchema).min(1, 'at least one age band is required'),
     passage: z.string().min(40).optional(),
     passageTitle: z.string().min(1).optional(),
     setId: z.string().regex(/^[a-z0-9-]+$/).optional(),

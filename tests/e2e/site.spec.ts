@@ -26,9 +26,12 @@ test('mobile disclosure keyboard, Escape, focus and 320px reflow',async({page})=
 test('axe homepage, Kids, article and submitted quiz have no serious/critical violations',async({page})=>{
  for(const path of ['/','/kids/','/discover/a-day-in-shadows/','/quiz/']){await page.goto(path);if(path==='/quiz/'){await page.getByRole('radio').first().check();await page.getByRole('button',{name:/Check answer/}).click();await expect(page.getByRole('status')).toBeVisible();}const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();expect(result.violations.filter(v=>v.impact==='serious'||v.impact==='critical'),JSON.stringify(result.violations)).toEqual([]);}
 });
+// 'sk-age-band' is excepted from the local count below, like '_cltk' is from the session count: it is
+// the owner's sanctioned age-band value (lib/age-band-client), not an identifier, and the suite seeds
+// it (playwright.config.ts storageState) so the first-visit picker never interrupts the other specs.
 test('Kids navigation sends no third party requests except Clarity, stores no identifiers',async({page,context})=>{
  const thirdParty:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://localhost:4173/')&&!/^https:\/\/([\w-]+\.)*(clarity\.ms|bing\.com)\//.test(r.url()))thirdParty.push(r.url());});
- for(const path of ['/kids/','/kids/words-that-help/','/quiz/','/kids/shadow-explorers/']){await page.goto(path);expect(await page.evaluate(()=>({local:localStorage.length,session:Object.keys(sessionStorage).filter(k=>k!=='_cltk').length}))).toEqual({local:0,session:0});}
+ for(const path of ['/kids/','/kids/words-that-help/','/quiz/','/kids/shadow-explorers/']){await page.goto(path);expect(await page.evaluate(()=>({local:Object.keys(localStorage).filter(k=>k!=='sk-age-band').length,session:Object.keys(sessionStorage).filter(k=>k!=='_cltk').length}))).toEqual({local:0,session:0});}
  expect((await context.cookies()).filter(c=>!['_clck','_clsk'].includes(c.name)&&!/(^|\.)(clarity\.ms|bing\.com)$/.test(c.domain.replace(/^\./,'')))).toEqual([]);expect(thirdParty).toEqual([]);
 });
 test('without JavaScript, articles and dated answers remain readable',async({browser})=>{

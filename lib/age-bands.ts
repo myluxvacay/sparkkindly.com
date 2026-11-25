@@ -75,10 +75,17 @@ export function bandsForAgeRange(min: number, max: number): AgeBand[] {
 
 export function parseAgeRange(text: string): { min: number; max: number } | null {
   const m = text.match(/ages?\s*(\d{1,2})\s*[–—-]\s*(\d{1,2})/i) ?? text.match(/(\d{1,2})\s*[–—-]\s*(\d{1,2})\s*(?:years?|yrs?)/i);
-  if (!m) return null;
-  const min = Number(m[1]);
-  const max = Number(m[2]);
-  return min >= 0 && max >= min && max <= 18 ? { min, max } : null;
+  if (m) {
+    const min = Number(m[1]);
+    const max = Number(m[2]);
+    return min >= 0 && max >= min && max <= 18 ? { min, max } : null;
+  }
+  // Open-ended forms ("Ages 4+", "5 and up", "4+ years"): a floor with no stated ceiling runs to
+  // the top of the child bands (12), so bandsForAgeRange maps it onto every band it touches.
+  const open = text.match(/ages?\s*(\d{1,2})\s*\+/i) ?? text.match(/(\d{1,2})\s*(?:\+|and up)\s*(?:years?|yrs?)?/i);
+  if (!open) return null;
+  const min = Number(open[1]);
+  return min >= 0 && min <= 18 ? { min, max: 12 } : null;
 }
 
 // Does an item with these bands suit a visitor exploring as `band`? 'family' items suit

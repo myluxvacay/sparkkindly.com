@@ -88,6 +88,11 @@ slot — globally unique by construction, so two agents can never collide.
 with per-field issues and store nothing:
 
 - The full article/quiz schemas (a Kids *activity* must use `contentType: "activity"`).
+- **`ageBands` is required on every article and quiz** — a non-empty array of the canonical bands
+  (`"3-5"`, `"6-8"`, `"9-12"`, `"family"`). The server links the matching `ages-*` topics from it
+  (serving derives an item's bands from those topics), records it on the item's push report, and
+  refuses approval for any stored item that has no band topics linked and did not declare
+  `["family"]` — a bandless item would otherwise publish as family for everyone.
 - **Sources are required on articles and quizzes alike** — at least one, each an https URL off this
   site. (The file pipeline allows a quiz without sources; the API does not.)
 - **Kids items** (`brand: "kids"`) must carry all five substantive fields: `ageGuidance`, `materials`,

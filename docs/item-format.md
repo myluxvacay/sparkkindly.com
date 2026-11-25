@@ -28,6 +28,9 @@ and you can fix it and send it again. The authoritative definition is `lib/items
   abstractness. A memory game can suit ages 3–5 even when it is challenging; a question about mercury the
   metal never suits ages 3–5, however easy its wording is. Band an item for the youngest band that could
   genuinely meet its subject, words and ideas — not for how hard it is to answer.
+  Note: band topic links are added by an insert-only sync (`updateAgeBandTopics`). If an edit NARROWS
+  an item's bands, the old band topics stay linked until an owner-run re-banding pass — editors
+  narrowing bands must flag it for that pass.
 - **`world`** is only needed by the master agent. A world agent can only submit to its own world.
 
 ## Article

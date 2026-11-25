@@ -25,6 +25,8 @@ import {
   uploadHeroImage,
 } from '@/lib/agents/content-push';
 import { readMediaFile } from '@/lib/agents/content-push-media';
+import { createItem } from '@/lib/items/repo';
+import { bandsFromTopics } from '@/lib/age-bands';
 import { getPublicItem } from '@/lib/public/reads';
 import { anonymousScope } from '@/lib/public/scope';
 import { publishDue } from '@/lib/jobs/publish-due';
@@ -71,6 +73,7 @@ const kidsArticle = (over: Record<string, unknown> = {}) => {
     slug: `push-article-${i}`,
     brand: 'kids',
     contentType: 'article',
+    ageBands: ['3-5', '6-8'],
     title: `Why Bees Visit Flowers ${i}`,
     description: 'Bees fly from flower to flower and help plants make seeds.',
     updatedAt: '2026-11-20',
@@ -99,6 +102,7 @@ const kidsQuiz = (over: Record<string, unknown> = {}) => {
     // duplicate gate against the quizzes submitted by earlier tests.
     id: `push-quiz-${i}-bees`,
     brand: 'kids',
+    ageBands: ['3-5', '6-8'],
     prompt: 'Why do bees visit flowers?',
     options: [
       { id: 'a', text: 'To sip nectar' },
@@ -159,6 +163,46 @@ describe('submitPackage', () => {
     delete (noSafetyQuiz as Record<string, unknown>).safetyNotes;
     const r4 = await submitPackage(db, submitter, { quizzes: [noSafetyQuiz] }, deps());
     expect(r4.status).toBe(422);
+  });
+
+  it('refuses an article or quiz without ageBands: approval here is a row status, so the schema gate cannot catch a bandless push item later', async () => {
+    const noBandsArticle = kidsArticle();
+    delete (noBandsArticle as Record<string, unknown>).ageBands;
+    const r1 = await submitPackage(db, submitter, { article: noBandsArticle }, deps());
+    expect(r1.status).toBe(422);
+    expect((r1.json as Json).error).toBe('invalid_package');
+    expect(JSON.stringify((r1.json as Json).issues)).toContain('ageBands');
+
+    const noBandsQuiz = kidsQuiz();
+    delete (noBandsQuiz as Record<string, unknown>).ageBands;
+    const r2 = await submitPackage(db, submitter, { quizzes: [noBandsQuiz] }, deps());
+    expect(r2.status).toBe(422);
+    expect((r2.json as Json).error).toBe('invalid_package');
+
+    const empty = await submitPackage(db, submitter, { article: kidsArticle({ ageBands: [] }) }, deps());
+    expect(empty.status).toBe(422);
+  });
+
+  it('links the band topics from ageBands at creation, for articles and quizzes alike, so serving derives the real bands', async () => {
+    const pkg = { article: kidsArticle({ ageBands: ['6-8'] }), quizzes: [kidsQuiz({ ageBands: ['9-12', 'family'] })] };
+    const r = await submitPackage(db, submitter, pkg, deps());
+    expect(r.status).toBe(201);
+    const [article, quiz] = itemsOf(r);
+    const topicsOf = async (id: string) =>
+      (
+        await db.query<{ slug: string }>(
+          'SELECT t.slug FROM item_topics it JOIN topics t ON t.id = it.topic_id WHERE it.item_id = $1 ORDER BY t.slug',
+          [id],
+        )
+      ).rows.map((row) => row.slug);
+    // The article keeps its tag-matched topic ('reading') and gains exactly its band topic.
+    expect(await topicsOf(article.id)).toEqual(['ages-6-8', 'reading']);
+    expect(await topicsOf(quiz.id)).toEqual(['ages-9-12']);
+    // Serving derives bands from topics: 'family' in a quiz's ageBands links nothing extra.
+    expect(bandsFromTopics(await topicsOf(article.id))).toEqual(['6-8']);
+    expect(bandsFromTopics(await topicsOf(quiz.id))).toEqual(['9-12']);
+    expect((article.qualityReport as Json).push.ageBands).toEqual(['6-8']);
+    expect((quiz.qualityReport as Json).push.ageBands).toEqual(['9-12', 'family']);
   });
 
   it('caps sources at the pipeline maximum and refuses a package that repeats a slug', async () => {
@@ -250,6 +294,34 @@ describe('review and publish', () => {
     expect(audit.rows.map((r) => r.action)).toEqual(['content_push.submit', 'content_push.review_approve', 'content_push.publish']);
   });
 
+  it('refuses approval for a stored push item with no band topics linked (a pre-ageBands row), while a declared family-only item approves', async () => {
+    // A row stored before ageBands was required on this API: a push report with no ageBands and no
+    // band topics. Approving it would publish it as 'family' for everyone, so the gate refuses.
+    const world = (await db.query<{ id: number }>("SELECT id FROM worlds WHERE slug = 'kids'")).rows[0];
+    const legacy = await createItem(db, {
+      worldId: world.id,
+      kind: 'article',
+      slug: `push-legacy-bandless-${++n}`,
+      title: 'A Bandless Legacy Row',
+      summary: 'Stored before ageBands was required on the push API.',
+      body: { sections: [], takeaway: 'None.' },
+      audience: 'kids',
+      status: 'in_review',
+      createdBy: submitter.name,
+      agentId: submitter.id,
+      riskTier: 'kids',
+      sources: [source],
+      qualityReport: { push: { fingerprint: 'legacy-bandless', libraryId: 'legacy-bandless' }, riskTier: 'kids', gates: [] },
+      topics: [],
+      answer: null,
+    });
+    const refused = await reviewPushItem(db, reviewer, legacy.id, { decision: 'approve' }, deps());
+    expect(refused.status).toBe(422);
+    expect((refused.json as Json).error).toBe('missing_age_bands');
+    // The family-only control is the Sourced test below: its grow article declares ageBands
+    // ['family'] (no band topics by design) and approves with sourcesChecked.
+  });
+
   it('rejects with a recorded reason, and a rejected item cannot be published', async () => {
     const pkg = await submitPackage(db, submitter, { article: kidsArticle() }, deps());
     const id = itemsOf(pkg)[0].id as string;
@@ -277,6 +349,7 @@ describe('review and publish', () => {
       slug: `push-grow-${i}`,
       brand: 'grow',
       contentType: 'article',
+      ageBands: ['family'],
       title: `Saving Money on Groceries ${i}`,
       description: 'Simple ways a family can spend less on food each week.',
       updatedAt: '2026-11-20',

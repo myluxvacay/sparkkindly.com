@@ -32,6 +32,26 @@ export default function BandPicker() {
     dialogRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false);
+      // Focus trap: the dialog is aria-modal, so Tab must cycle among its own focusable
+      // elements rather than escaping into the page behind the backdrop.
+      if (e.key === 'Tab') {
+        const dialog = dialogRef.current;
+        if (!dialog) return;
+        const focusable = Array.from(
+          dialog.querySelectorAll<HTMLElement>('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),
+        ).filter((el) => !el.hasAttribute('disabled') && el.offsetParent !== null);
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        const active = document.activeElement;
+        if (e.shiftKey && (active === first || active === dialog || !dialog.contains(active))) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && (active === last || !dialog.contains(active))) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
     document.addEventListener('keydown', onKey);
     return () => {

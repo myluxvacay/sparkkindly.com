@@ -407,8 +407,26 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
       if (audience !== 'kids') {
         for (const id of seenIds(loadSeen(kpStorage()))) merged.add(id);
       }
-      if (!merged.has(currentId)) return; // this visitor has not answered today's question yet
       const stored = loadAgeBand();
+      if (!merged.has(currentId)) {
+        // Band-first on FIRST load (owner addendum, 24 Nov 2026): the served question has not been
+        // answered, but if it does not suit the visitor's stored band and an unseen band-matching
+        // question exists in the chain, lead with that one instead. Read-only: this path never
+        // writes storage — the band was already the visitor's stored choice, and the seen sets
+        // change only when a question is answered. Loop safety: the swap target bandMatches the
+        // stored band and is not in the merged seen set, so when initPanel re-runs initDaily on
+        // the swapped panel neither this trigger nor the answered trigger below can fire again.
+        if (!stored || stored === 'all') return; // no band picked (or unfiltered exploring)
+        const band = stored as AgeBand;
+        const current = model.chain.find((c) => c.id === currentId);
+        if (!current || bandMatches(current.bands as AgeBand[], band)) return;
+        const candidate = model.chain.find(
+          (c) => c.id !== currentId && !merged.has(c.id) && bandMatches(c.bands as AgeBand[], band),
+        );
+        if (!candidate) return;
+        await swapDaily(panel, model, candidate);
+        return;
+      }
       let ordered = model.chain;
       if (stored && stored !== 'all' && stored !== 'family') {
         const band = stored as AgeBand;
@@ -417,6 +435,14 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
       }
       const candidate = ordered.find((c) => c.id !== currentId && !merged.has(c.id));
       if (!candidate) return;
+      await swapDaily(panel, model, candidate);
+    }
+
+    // The one swap path for the daily chain: fetch the candidate's item page, take its panel,
+    // carry the daily model over with the candidate as current, and re-initialise. Used by the
+    // answered advance and the band-first first-load lead alike.
+    async function swapDaily(panel: Element, model: DailyModelShape, candidate: DailyEntry) {
+      const el = panel as HTMLElement;
       el.dataset.dailyAdvancing = '1';
       try {
         const res = await fetch(`/${candidate.world}/${candidate.slug}/`, { headers: { accept: 'text/html' } });

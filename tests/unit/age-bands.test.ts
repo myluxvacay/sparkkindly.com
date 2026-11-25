@@ -63,6 +63,15 @@ describe('parseAgeRange', () => {
     expect(parseAgeRange('Suitable for 3—5 years')).toEqual({ min: 3, max: 5 });
   });
 
+  it('parses open-ended forms as min..12', () => {
+    expect(parseAgeRange('Ages 4+')).toEqual({ min: 4, max: 12 });
+    expect(parseAgeRange('5 and up')).toEqual({ min: 5, max: 12 });
+    expect(parseAgeRange('4+ years')).toEqual({ min: 4, max: 12 });
+    expect(parseAgeRange('Suitable for ages 3+ with a grown-up')).toEqual({ min: 3, max: 12 });
+    const r = parseAgeRange('Ages 4+');
+    expect(r && bandsForAgeRange(r.min, r.max)).toEqual(['3-5', '6-8', '9-12']);
+  });
+
   it('returns null when there is no sane range', () => {
     expect(parseAgeRange('fun for everyone')).toBeNull();
     expect(parseAgeRange('Ages 9–6')).toBeNull();
