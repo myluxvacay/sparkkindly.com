@@ -20,7 +20,7 @@ import {
 } from '@/lib/play/seen-quizzes';
 import { playSparkVoice } from '@/lib/games/spark-voice';
 import { bandMatches, type AgeBand } from '@/lib/age-bands';
-import { loadAgeBand } from '@/lib/age-band-client';
+import { BAND_CHANGED_EVENT, loadAgeBand } from '@/lib/age-band-client';
 import type { Difficulty } from '@/lib/public/body';
 
 // The play island (teen UI pass, 15 Nov 2026): progressive enhancement over the plain GET form, which
@@ -444,6 +444,7 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
     async function swapDaily(panel: Element, model: DailyModelShape, candidate: DailyEntry) {
       const el = panel as HTMLElement;
       el.dataset.dailyAdvancing = '1';
+      let replaced = false;
       try {
         const res = await fetch(`/${candidate.world}/${candidate.slug}/`, { headers: { accept: 'text/html' } });
         if (!res.ok) return;
@@ -459,11 +460,16 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
         imported.removeAttribute('data-kp-current');
         imported.removeAttribute('data-kp-level');
         panel.replaceWith(imported);
+        replaced = true;
         const titleEl = document.querySelector('[data-daily-title]');
         if (titleEl) titleEl.textContent = candidate.title;
         initPanel(imported);
       } catch {
         // Any failure leaves the server-rendered question in place, which always works.
+      } finally {
+        // On failure the panel survives: clear the re-entry guard so a later band change
+        // (or any later initDaily) can retry the swap instead of being blocked forever.
+        if (!replaced) delete el.dataset.dailyAdvancing;
       }
     }
 
@@ -515,12 +521,23 @@ export default function PlayEnhancer({ children }: { children: React.ReactNode }
     root.addEventListener('submit', onSubmit);
     root.addEventListener('touchstart', onTouchStart, { passive: true });
     root.addEventListener('touchend', onTouchEnd, { passive: true });
+    // Band picked or changed AFTER this panel first rendered (the first-visit picker runs after
+    // page load, when no band was stored yet): re-run the daily check against the now-current
+    // panel so the band-first lead applies without waiting for a reload. initDaily is safe to
+    // re-run — the swap path guards re-entry, a question panel only advances, and a result
+    // panel's seen-mark is idempotent. Panels without a daily model ignore the call.
+    const onBandChanged = () => {
+      const current = root.querySelector('.quiz-panel');
+      if (current) initDaily(current);
+    };
+    window.addEventListener(BAND_CHANGED_EVENT, onBandChanged);
     return () => {
       root.removeEventListener('change', onChange);
       root.removeEventListener('click', onClick);
       root.removeEventListener('submit', onSubmit);
       root.removeEventListener('touchstart', onTouchStart);
       root.removeEventListener('touchend', onTouchEnd);
+      window.removeEventListener(BAND_CHANGED_EVENT, onBandChanged);
     };
   }, []);
 
