@@ -720,6 +720,19 @@ a.watch-chip{display:inline-flex;align-items:center;text-decoration:none}
 .card-meta{flex-wrap:wrap} /* the band chip joins the card meta row; wrapping keeps narrow screens (200% zoom) free of horizontal overflow */
 .band-chip-label{margin-bottom:14px}
 .band-control{font-size:11px;color:#665b65;margin:0}
+/* The top age-band strip (25 Nov 2026): a slim bar directly under the header carrying the same
+   BandControl as the footer, so the current band is visible without scrolling. It is a sibling
+   AFTER the header, so the header's own layout and the mobile nav dropdown are untouched. The
+   inner width mirrors .header-inner at every breakpoint. */
+.band-strip{background:var(--paper);border-bottom:1px solid #eee4d7}
+.band-strip-inner{width:min(1336px,calc(100% - 80px));margin:auto;display:flex;justify-content:flex-end;padding-block:5px}
+.band-control-top{font-size:12px;color:#665b65}
+.band-control-top button{padding-block:5px}
+@media(max-width:1100px){.band-strip-inner{width:calc(100% - 50px)}}
+@media(max-width:800px){.band-strip-inner{width:calc(100% - 32px)}}
+@media(max-width:400px){.band-strip-inner{width:calc(100% - 24px)}}
+html[data-theme="dark"] .band-strip{border-color:var(--line)}
+html[data-theme="dark"] .band-control-top{color:var(--muted)}
 .band-lead-bar{font-size:12px;color:var(--muted);margin-bottom:18px}
 .band-picker-backdrop{position:fixed;inset:0;background:rgba(30,19,38,.55);display:flex;align-items:center;justify-content:center;z-index:90;padding:20px}
 .band-picker{background:var(--paper);color:var(--ink);border-radius:7px;padding:32px;max-width:440px;width:100%;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.25)}
