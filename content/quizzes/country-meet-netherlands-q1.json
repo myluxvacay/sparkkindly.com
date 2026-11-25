@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "Amsterdam is the capital of Netherlands. Amsterdam is the capital and the biggest city.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Netherlands | Encyclopaedia Britannica",

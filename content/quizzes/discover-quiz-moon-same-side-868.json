@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The Moon is tidally locked: its rotation period equals its orbital period of about 27.3 days, so the same hemisphere always faces Earth.",
   "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Tidal locking",

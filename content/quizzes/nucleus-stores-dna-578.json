@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "The nucleus stores the cell's DNA and coordinates its activities; mitochondria release energy and ribosomes build proteins instead.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Cell nucleus",

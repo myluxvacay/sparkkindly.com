@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Diamond and graphite are both pure carbon. Only the arrangement of their atoms differs — and that changes everything about them.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

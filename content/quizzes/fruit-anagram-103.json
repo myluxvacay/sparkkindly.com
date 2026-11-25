@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "PLEAP uses the letters A, P, P, L and E, which rearrange exactly into APPLE; the other fruits need letters that are not there.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

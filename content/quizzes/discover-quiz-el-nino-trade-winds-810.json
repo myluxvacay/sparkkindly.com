@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Trade winds normally push warm surface water westward. When they weaken during El Niño, that warm water sloshes eastward, warming the central and eastern Pacific and suppressing the usual cold upwelling off South America.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "El Niño",

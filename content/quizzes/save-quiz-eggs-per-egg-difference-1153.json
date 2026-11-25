@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Pack of 12: $3.60 divided by 12 = 30 cents per egg. Pack of 18: $4.50 divided by 18 = 25 cents per egg. Difference: 30 - 25 = 5 cents per egg.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

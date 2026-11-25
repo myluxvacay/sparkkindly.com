@@ -6,6 +6,9 @@
   "title": "Look closely: train station clock",
   "prompt": "What time does the clock in the train station show?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The clock's short hand points past 11 and its long hand shows 40 minutes, so the clock reads 11:40.",
   "sources": [],
   "reviewStatus": "approved",

@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Mmm-ango — Mango starts with mmm.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Phonemic awareness | Wikipedia",

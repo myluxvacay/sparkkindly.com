@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Map of My Home",
   "description": "For ages 6–9 with an adult: draw a simple map of your home, with a star on your favourite place.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-07-24",
   "updatedAt": "2026-07-24",
   "author": "SparkKindly · AI-assisted",

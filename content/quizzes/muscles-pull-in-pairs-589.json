@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "Muscles can only contract and pull; they cannot push. The triceps straightens the elbow that the biceps bent, each pulling the bone its own way.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Muscle",

@@ -2,6 +2,9 @@
   "brand": "discover",
   "correctOptionId": "fact",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Fact! Bees really do collect nectar from flowers and turn it into honey back at the hive.",
   "gameType": "fact-or-fiction",
   "id": "fact-or-fiction-001",

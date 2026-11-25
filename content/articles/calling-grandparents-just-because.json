@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Short, frequent calls with no agenda — and children making their own — keep grandparents woven into ordinary family life.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

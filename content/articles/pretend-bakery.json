@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Pretend Bakery",
   "description": "For ages 6–9 with an adult: roll, pat, and bake pretend cakes for the most patient customers in the world.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-08-03",
   "updatedAt": "2026-08-03",
   "author": "SparkKindly · AI-assisted",

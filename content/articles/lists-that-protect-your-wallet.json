@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "Lists that protect your wallet at the shops",
   "description": "A written list is the simplest spending tool there is, because it makes the decisions at home where they are cheapest.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-08-24",
   "updatedAt": "2026-08-24",
   "tags": [

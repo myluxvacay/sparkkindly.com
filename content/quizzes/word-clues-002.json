@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Pencil has six letters, begins with PE, and can write on paper. Planet begins with PL; the other two words do not begin with P.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

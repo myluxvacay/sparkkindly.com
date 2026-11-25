@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "Eritrea is in Eastern Africa, part of Africa.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Eritrea | Encyclopaedia Britannica",

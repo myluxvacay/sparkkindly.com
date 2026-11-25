@@ -6,6 +6,10 @@
   "title": "Counting: oranges at the market stall",
   "prompt": "How many oranges can you count in the market stall?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the oranges one by one: there are exactly 5.",
   "sources": [],
   "reviewStatus": "approved",

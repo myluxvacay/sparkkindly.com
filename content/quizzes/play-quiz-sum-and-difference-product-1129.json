@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Adding the two facts: twice the larger number is 27 + 7 = 34, so the larger number is 17 and the smaller is 27 - 17 = 10. Their product is 17 x 10 = 170.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

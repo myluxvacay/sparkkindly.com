@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Vague tasks stall because there is no obvious first move. Defining the next concrete action — 'open the calendar and check two dates' — converts avoidance into a startable step.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

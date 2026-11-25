@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Pinecone Weather Watch",
   "description": "For ages 6–9 with an adult: hang up a pinecone and watch it open and close as the air changes.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-09-03",
   "updatedAt": "2026-09-03",
   "author": "SparkKindly · AI-assisted",

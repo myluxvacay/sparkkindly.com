@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Doubling 15 gives 30, and subtracting 6 from 30 gives 24.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

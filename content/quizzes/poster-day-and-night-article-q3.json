@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "One full spin takes 24 hours, which is exactly one day plus one night.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Earth's rotation | Wikipedia",

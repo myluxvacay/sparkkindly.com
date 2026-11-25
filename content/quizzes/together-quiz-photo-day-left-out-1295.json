@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Speaking up before the plan is final gives the group a chance to fix the oversight without blame and stops the friend feeling deliberately excluded.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

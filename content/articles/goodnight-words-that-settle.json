@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "A few predictable words at the end of the day give children a safe full stop — and they tend to stay in the family for years.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

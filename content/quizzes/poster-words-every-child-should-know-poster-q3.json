@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Without the family password, do not go. Stay where people are and check with a trusted adult.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Child safety | Wikipedia",

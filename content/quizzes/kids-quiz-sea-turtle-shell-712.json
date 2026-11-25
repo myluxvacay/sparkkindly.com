@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "A sea turtle's hard shell is like armour. It protects the turtle's soft body from animals that might try to hurt it.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sea turtle | Wikipedia",

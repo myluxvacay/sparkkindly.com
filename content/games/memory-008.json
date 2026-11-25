@@ -6,6 +6,10 @@
   "title": "Memory: street color",
   "prompt": "From memory: what colour is the bird in the street?",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The bird in the picture is red — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

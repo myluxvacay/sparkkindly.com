@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "Tehran is the capital of Iran. It is the city where the country's government works.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Iran | Encyclopaedia Britannica",

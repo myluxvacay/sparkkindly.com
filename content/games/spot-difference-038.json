@@ -6,6 +6,9 @@
   "title": "Spot the difference: classroom",
   "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The banana moved, the white rabbit changed colour from gray to white and the green gift box changed colour from yellow to green. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Saving in power: 60 - 10 = 50 W = 0.05 kW. Hours per year: 5 x 365 = 1,825. Energy saved: 0.05 x 1,825 = 91.25 kWh.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

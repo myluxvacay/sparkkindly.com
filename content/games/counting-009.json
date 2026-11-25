@@ -6,6 +6,10 @@
   "title": "Counting: red flowers at the meadow",
   "prompt": "How many red flowers can you count in the meadow?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the red flowers one by one: there are exactly 9. Only the red ones count — the other colours are decoys.",
   "sources": [],
   "reviewStatus": "approved",

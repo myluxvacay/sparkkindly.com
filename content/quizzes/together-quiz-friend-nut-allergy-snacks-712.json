@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "For someone with a serious food allergy, even traces of the food can cause a severe reaction. Keeping allergen foods separate, labelling them honestly and providing safe alternatives protects your friend and keeps them included.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Food allergy | NHS",

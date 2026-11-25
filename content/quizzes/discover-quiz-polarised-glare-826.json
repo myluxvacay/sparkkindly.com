@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Reflection from horizontal surfaces polarises light mainly in the horizontal plane. Polarising lenses have a vertical transmission axis, so they selectively block that reflected horizontal glare while letting other light through.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Polarizer",

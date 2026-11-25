@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Provider A: 12 x $45 = $540, with no setup fee. Provider B: $60 + (12 x $35 = $420) = $480. Difference: $540 - $480 = $60, so Provider B is cheaper. The $120 options come from comparing only the monthly fees (12 x $10) and forgetting B's $60 setup fee.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

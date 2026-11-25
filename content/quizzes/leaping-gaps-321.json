@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The gaps grow by 2 each time: +3, +5, +7, +9, so the next gap is +11, and 27 + 11 = 38.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

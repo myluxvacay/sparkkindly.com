@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Short, regular entries build the habit gently; marathon sessions usually collapse within a week.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

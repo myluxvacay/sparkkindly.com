@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Dutch artist Vincent van Gogh painted The Starry Night in 1889, based on the view from his window in Saint-Remy, France.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "The Starry Night",

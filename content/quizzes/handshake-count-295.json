@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Each of the 5 friends shakes 4 hands, giving 5 × 4 = 20, but that counts every handshake twice, so 20 ÷ 2 = 10.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

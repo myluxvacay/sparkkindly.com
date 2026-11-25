@@ -6,6 +6,9 @@
   "title": "Spot the difference: farm",
   "prompt": "Three things changed between the two farm pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The pink shell changed colour from orange to pink, the green bird vanished and the yellow apple vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

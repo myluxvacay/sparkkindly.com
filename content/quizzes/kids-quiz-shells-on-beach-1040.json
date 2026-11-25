@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Well done! 7 + 5 = 12. Count on from 7 and you reach 12 shells.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Helping Hands Missions",
   "description": "For ages 6–9 with an adult: get a secret helping mission each day and complete it like a kindness agent.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-08-24",
   "updatedAt": "2026-08-24",
   "author": "SparkKindly · AI-assisted",

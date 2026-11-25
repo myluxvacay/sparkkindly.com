@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "The months go June, then July. July is the month that comes right after June!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

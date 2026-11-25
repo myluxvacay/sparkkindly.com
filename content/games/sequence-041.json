@@ -6,6 +6,10 @@
   "title": "Sequence recall: what came fourth?",
   "prompt": "Spark showed some things in order. What came fourth?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The order was: first the red car, second the orange pumpkin, third the bee, fourth the green car. So the fourth one was the green car.",
   "sources": [],
   "reviewStatus": "approved",

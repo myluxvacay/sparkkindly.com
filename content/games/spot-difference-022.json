@@ -6,6 +6,10 @@
   "title": "Spot the difference: park",
   "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The white chicken changed colour from brown to white, the purple snail changed colour from brown to purple and the brown owl changed colour from gray to brown. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

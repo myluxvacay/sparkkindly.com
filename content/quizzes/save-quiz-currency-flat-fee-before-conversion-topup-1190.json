@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "After the fee: $800 - $20 = $780. Converted: $780 x 0.75 = €585. The €600 option forgets the fee ($800 x 0.75), and €580 wrongly subtracts the $20 after converting instead of before.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

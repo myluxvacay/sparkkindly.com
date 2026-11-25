@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A piano has keys that you press to make music, not keys that open locks.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

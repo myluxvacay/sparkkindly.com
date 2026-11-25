@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came third?",
   "prompt": "Spark showed some things in order. What came third?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The order was: first the green train, second the yellow gift box, third the snowman. So the third one was the snowman.",
   "sources": [],
   "reviewStatus": "approved",

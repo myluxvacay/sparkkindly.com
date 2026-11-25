@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Spaced repetition uses the effort of retrieving a partly-remembered item. Waiting until it is fully forgotten turns review into relearning, and massing it in one evening wastes that spacing benefit.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Spaced repetition",

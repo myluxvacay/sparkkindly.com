@@ -21,6 +21,9 @@
   "slug": "pause-before-you-buy",
   "title": "Pause before you buy",
   "description": "A 24-hour pause on non-essential buys can save more than any coupon.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-10-31",
   "updatedAt": "2026-10-31",
   "tags": [

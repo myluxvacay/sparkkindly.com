@@ -6,6 +6,9 @@
   "title": "Pick the right one: the flag of Japan",
   "prompt": "Which flag is Japan?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Japan’s flag is white with a single red disc in the centre, representing the sun — Japan is called the Land of the Rising Sun.",
   "sources": [],
   "reviewStatus": "approved",

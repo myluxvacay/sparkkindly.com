@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Good choice! A sun hat shades your eyes on a bright sunny day.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

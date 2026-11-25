@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Name That Sound",
   "description": "For ages 6–9 with an adult: close your eyes and guess the household sounds your adult makes — keys, paper, water, and more.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-10-16",
   "updatedAt": "2026-10-16",
   "author": "SparkKindly · AI-assisted",

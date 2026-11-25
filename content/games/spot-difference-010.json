@@ -6,6 +6,10 @@
   "title": "Spot the difference: classroom",
   "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The red crab changed colour from orange to red, the orange changed colour from orange to plain and the red ladybug vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

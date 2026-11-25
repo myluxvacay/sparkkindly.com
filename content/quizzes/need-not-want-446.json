@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Food is something your body must have, so it is a need; games, toys and movies are wants.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

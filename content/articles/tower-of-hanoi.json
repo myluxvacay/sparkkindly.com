@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "The Tower of Hanoi: sixty-four disks and the end of the world",
   "description": "Move a tower of disks one at a time, never placing a larger disk on a smaller one. Three disks are easy, four are fun — and sixty-four would outlast the Sun.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-07-23",
   "updatedAt": "2026-07-23",
   "author": "SparkKindly · AI-assisted",

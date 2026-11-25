@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Earth spins once every 24 hours; our side takes turns facing the sun and facing away.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Earth's rotation | Wikipedia",

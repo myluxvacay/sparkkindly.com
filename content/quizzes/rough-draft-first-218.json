@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A draft only needs to exist. Editing something imperfect is far easier than conjuring perfection from a blank page.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

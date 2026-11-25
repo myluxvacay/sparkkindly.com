@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "The cornea does most of the bending of light, but the lens fine-tunes it: small muscles make it rounder for near objects and flatter for distant ones.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Human eye",

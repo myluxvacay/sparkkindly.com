@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The minute hand at 40 minutes points at 240 degrees. The hour hand has moved past 4: it sits at 4 x 30 + 40 x 0.5 = 140 degrees. The difference is 240 - 140 = 100 degrees, which is the smaller angle.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Clock angle problem",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A gentle question with no pressure opens the door while leaving your friend in control of the conversation.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

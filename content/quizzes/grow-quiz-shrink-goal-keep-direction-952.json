@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Shrinking the target keeps the direction of the goal while making the next step achievable, so you keep building fitness and confidence instead of quitting or overdoing it.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

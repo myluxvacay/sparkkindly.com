@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Speaking up early with alternatives gives the family a real chance to include you, instead of a late surprise or silent withdrawal.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

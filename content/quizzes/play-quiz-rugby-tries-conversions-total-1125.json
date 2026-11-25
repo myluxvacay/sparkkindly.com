@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The three tries give 3x5=15 points. The two conversions add 2x2=4 points, for a total of 15+4=19 points.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Rugby union",

@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Valletta is one of the two places we'd love to visit in Malta. Valletta is a golden-stone fortress capital built by knights, with St John's Co-Cathedral glittering inside, harbour cannons and grand harbour boat tours.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Malta | Encyclopaedia Britannica",

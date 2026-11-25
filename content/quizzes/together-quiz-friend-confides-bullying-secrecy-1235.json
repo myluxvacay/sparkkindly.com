@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "You can stay loyal without promising secrecy about safety. Encouraging a trusted adult and offering to be there gives your friend support and a real chance of help, while confronting others or spreading the story can make things worse.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

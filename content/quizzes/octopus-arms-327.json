@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "An octopus has eight arms, which is why its name starts with 'octo', the Greek word for eight.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Octopus - Wikipedia",

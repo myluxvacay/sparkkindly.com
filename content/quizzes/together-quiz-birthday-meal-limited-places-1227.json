@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Honesty before they hear it second-hand respects their feelings and separates the cost limit from how much you value them. Lying, overspending resentfully, or breaking a promise to someone else creates bigger hurts.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

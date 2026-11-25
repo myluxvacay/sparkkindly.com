@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A geostationary satellite orbits over the equator in about 24 hours (one sidereal day), in the same direction Earth spins, at about 35,786 km altitude, so its position relative to the surface stays fixed.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Geostationary orbit",

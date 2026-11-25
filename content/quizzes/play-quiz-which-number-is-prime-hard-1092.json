@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The others all divide: 91 = 7 x 13, 87 = 3 x 29 and 57 = 3 x 19. But 97 has no divisors other than 1 and itself, so 97 is prime.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

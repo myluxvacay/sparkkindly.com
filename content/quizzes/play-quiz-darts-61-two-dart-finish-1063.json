@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Treble 15 scores 45, leaving 16, and double 8 scores exactly 16 while finishing on a double: 45 + 16 = 61. The other pairs also total 61, but each ends on a single, which cannot finish a leg.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Darts",

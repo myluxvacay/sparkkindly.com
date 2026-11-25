@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Each raindrop bends sunlight, splits it into colours and reflects it back — millions of drops together draw the bow at a fixed angle.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

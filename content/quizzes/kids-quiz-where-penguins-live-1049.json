@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "That is right! Penguins live in cold, icy places and love to swim.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

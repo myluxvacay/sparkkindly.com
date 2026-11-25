@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Surprises have an end date (a birthday gift). A secret that must never reach your parents is a red flag.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Child safety | Wikipedia",

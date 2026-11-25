@@ -6,6 +6,10 @@
   "title": "Odd one out: three fruits and a fungus",
   "prompt": "One of these does not belong. Can you spot it?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Apples, bananas and oranges are fruits. A mushroom is a fungus, not a fruit.",
   "sources": [],
   "reviewStatus": "approved",

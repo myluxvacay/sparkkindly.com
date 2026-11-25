@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "There are 8 equally likely outcomes. Exactly three of them have two heads: HHT, HTH and THH. So the probability is 3 out of 8, written 3/8.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

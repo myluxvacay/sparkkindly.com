@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Checking privately protects their dignity, and suggesting cheaper options as your own idea keeps them included without making them the reason. Announcing their finances or quietly excluding them both single them out.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

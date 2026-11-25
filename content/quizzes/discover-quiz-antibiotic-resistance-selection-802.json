@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "Resistance usually exists in a few bacteria by chance before treatment begins. The antibiotic does not create it; it selects for it, by killing susceptible bacteria and leaving the already-resistant survivors free to reproduce.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

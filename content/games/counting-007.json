@@ -6,6 +6,10 @@
   "title": "Counting: apples at the market stall",
   "prompt": "How many apples can you count in the market stall?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the apples one by one: there are exactly 5.",
   "sources": [],
   "reviewStatus": "approved",

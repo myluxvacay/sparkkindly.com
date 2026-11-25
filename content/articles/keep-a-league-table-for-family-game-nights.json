@@ -5,6 +5,9 @@
   "contentType": "activity",
   "title": "Keep a league table for family game nights",
   "description": "One notebook page can turn scattered game nights into a season. Record who played, who won and one memorable moment — and watch everyone start asking when the next fixture is.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-24",
   "updatedAt": "2026-11-24",
   "author": "SparkKindly · AI-assisted",

@@ -6,6 +6,9 @@
   "title": "What changed: space scene",
   "prompt": "One thing changed between the before and after space scene pictures. What changed?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the white star changed colour from yellow to white. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

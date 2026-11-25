@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the carrot, second the brown chicken, third the yellow ball, fourth the blue boat, fifth the purple planet. So the second one was the brown chicken.",
   "sources": [],
   "reviewStatus": "approved",

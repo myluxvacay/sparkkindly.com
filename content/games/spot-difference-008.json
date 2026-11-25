@@ -6,6 +6,9 @@
   "title": "Spot the difference: meadow",
   "prompt": "Three things changed between the two meadow pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The green bunch of grapes changed colour from purple to green, the brown mushroom moved and the purple hat moved. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

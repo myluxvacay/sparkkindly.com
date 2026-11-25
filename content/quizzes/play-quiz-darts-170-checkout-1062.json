@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Treble 20 scores 60, so 60 + 60 + 50 for the bullseye = 170 exactly, and the bullseye counts as a finishing double. The other finishes total 160, 167 and 164.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Darts",

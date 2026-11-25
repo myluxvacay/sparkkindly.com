@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the yellow flower, second the yellow balloon, third the red bird, fourth the gray cloud, fifth the brown rabbit. So the second one was the yellow balloon.",
   "sources": [],
   "reviewStatus": "approved",

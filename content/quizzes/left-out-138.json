@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Speaking up for someone who has been left out costs very little and can change their whole day; most groups are happy to include one more.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

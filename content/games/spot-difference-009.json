@@ -6,6 +6,10 @@
   "title": "Spot the difference: street",
   "prompt": "Three things changed between the two street pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The red ladybug moved, the bee moved and the red rocket vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

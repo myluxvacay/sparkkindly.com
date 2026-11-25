@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Camouflage works by blending: matching the colours and patterns of the background, or breaking up the body's outline so it cannot be picked out.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Camouflage",

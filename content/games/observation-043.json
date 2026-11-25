@@ -6,6 +6,9 @@
   "title": "Look closely: street color",
   "prompt": "What colour is the pig in the street?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The pig in the picture is pink — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

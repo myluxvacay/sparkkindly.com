@@ -21,6 +21,9 @@
   "slug": "needs-wants-and-wishes",
   "title": "Needs, wants, and wishes",
   "description": "A simple three-way sort that makes everyday spending decisions much clearer.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-10-21",
   "updatedAt": "2026-10-21",
   "tags": [

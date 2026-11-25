@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "A ball is a thing, so the pronoun is it.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Pronoun | Wikipedia",

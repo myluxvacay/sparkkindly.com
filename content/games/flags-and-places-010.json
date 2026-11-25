@@ -6,6 +6,10 @@
   "title": "Flags & places: name this flag",
   "prompt": "This flag belongs to which country?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Argentina’s flag is sky blue and white with a golden sun.",
   "sources": [],
   "reviewStatus": "approved",

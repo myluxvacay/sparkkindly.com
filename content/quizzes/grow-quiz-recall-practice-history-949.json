@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Trying to recall material from memory, then checking the gaps, strengthens retention far more than re-reading or copying, which can feel familiar without being well learned.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Testing effect",

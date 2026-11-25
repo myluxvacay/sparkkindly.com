@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Treble 20 is 60 and treble 17 is 51, leaving 10, which double 5 scores exactly while finishing on a double: 60 + 51 + 10 = 121. The other three also total 121, but each ends on a single, which is not a legal finish.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Darts",

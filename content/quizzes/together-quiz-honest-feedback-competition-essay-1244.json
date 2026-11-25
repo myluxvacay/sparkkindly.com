@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Specific honesty helps them improve before the deadline, while vague praise or harsh bluntness either leaves the problem in place or knocks their confidence. Naming strengths as well keeps the feedback usable.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

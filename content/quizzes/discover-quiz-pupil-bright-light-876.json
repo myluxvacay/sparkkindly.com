@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "In bright light the iris makes the pupil smaller, reducing the light entering the eye and protecting the retina — the pupillary light reflex.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Pupillary light reflex",

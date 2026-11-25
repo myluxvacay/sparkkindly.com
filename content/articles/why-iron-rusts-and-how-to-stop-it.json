@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Rust is iron slowly reacting with oxygen and water together — and every way of stopping it works by keeping one of the two away.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

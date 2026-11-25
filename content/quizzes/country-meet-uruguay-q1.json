@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "People in Uruguay speak Spanish.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Uruguay | Encyclopaedia Britannica",

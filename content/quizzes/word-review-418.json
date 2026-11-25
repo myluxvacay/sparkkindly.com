@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Spaced review, a little and often, helps your memory hold on to words far longer than one big cramming session.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Feedback should be weighted by specificity, expertise and repetition. A lone vague insult carries almost no usable information compared with a point several informed reviewers independently raised.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

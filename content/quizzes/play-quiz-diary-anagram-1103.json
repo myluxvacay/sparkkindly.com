@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "DAIRY uses the same five letters as DIARY: D, A, I, R and Y, just rearranged. Daisy swaps R for S, Daily swaps R for L, and Daring has extra letters.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

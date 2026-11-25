@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Light travels at about 300,000 kilometres per second, and the Sun is roughly 150 million kilometres away, so the trip takes about 8 minutes.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sun",

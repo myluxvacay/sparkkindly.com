@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Interest for one year is $200 x 3 / 100 = $6.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

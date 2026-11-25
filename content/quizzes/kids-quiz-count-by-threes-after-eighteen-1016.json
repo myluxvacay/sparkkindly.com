@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Counting by threes adds 3 each time. After 18 comes 21. Keep going: 6, 9, 12, 15, 18, 21!",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Studies of phubbing — snubbing someone in favour of a phone — find that the person being phubbed typically feels excluded and rates the interaction and relationship worse. Putting the phone away is a small act with outsized effect.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Phubbing | Wikipedia",

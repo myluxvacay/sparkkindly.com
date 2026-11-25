@@ -6,6 +6,10 @@
   "title": "Memory: park clock",
   "prompt": "From memory: what time does the clock in the park show?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The clock's short hand points past 9 and its long hand shows 30 minutes, so the clock reads 9:30.",
   "sources": [],
   "reviewStatus": "approved",

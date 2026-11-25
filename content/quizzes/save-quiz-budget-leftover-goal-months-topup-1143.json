@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Monthly spending: $700 + $400 + $200 + $100 = $1,400. Left over each month: $1,800 - $1,400 = $400. Still needed: $2,000 - $400 already saved = $1,600. Months needed: $1,600 / $400 = 4 months. The 5-month option forgets the $400 already saved ($2,000 / $400).",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

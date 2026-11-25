@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "1,500 W = 1.5 kW. Energy used: 1.5 kW x 0.5 hours = 0.75 kWh. Cost: 0.75 x $0.20 = $0.15.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

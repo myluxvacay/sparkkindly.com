@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Previewing the structure gives your reading a purpose: you know the main questions in advance, so key points stand out instead of arriving as an undifferentiated stream of text.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

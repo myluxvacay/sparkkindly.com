@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Year 1: $500 x 1.04 = $520. Year 2: $520 x 1.04 = $540.80. The extra $0.80 over simple interest ($540) is interest earned on the first year's interest.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

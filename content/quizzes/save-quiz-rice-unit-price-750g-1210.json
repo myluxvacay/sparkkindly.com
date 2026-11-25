@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "750 g is 0.75 kg. Price per kg = $3.00 divided by 0.75 = $4.00 per kg. Dividing by the weight in kilograms, not grams, gives the unit price.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

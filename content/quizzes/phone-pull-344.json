@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Distance works: a phone out of sight and silenced removes most temptations before willpower is even needed.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

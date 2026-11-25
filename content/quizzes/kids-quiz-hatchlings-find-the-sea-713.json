@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Hatchlings crawl toward the sea, guided by the brighter light over the water. Reaching the sea quickly keeps them safer from hungry birds and crabs on the beach.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sea turtle | Wikipedia",

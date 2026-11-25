@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "People in Papua New Guinea speak Tok Pisin and English.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Papua New Guinea | Encyclopaedia Britannica",

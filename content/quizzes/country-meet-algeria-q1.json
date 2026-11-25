@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "People in Algeria speak Arabic.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Algeria | Encyclopaedia Britannica",
@@ -32,7 +36,7 @@
       "accessedAt": "2026-11-21"
     },
     {
-      "title": "Algeria \u2014 Wikipedia",
+      "title": "Algeria — Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Algeria",
       "accessedAt": "2026-11-21"
     }
@@ -46,7 +50,7 @@
     "alt": "Spark and Mango visiting the whitewashed Casbah old town of Algiers tumbling down a hill to the blue Mediterranean Sea",
     "width": 832,
     "height": 1248,
-    "credit": "AI-generated image \u00b7 SparkKindly",
+    "credit": "AI-generated image · SparkKindly",
     "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
   }
 }

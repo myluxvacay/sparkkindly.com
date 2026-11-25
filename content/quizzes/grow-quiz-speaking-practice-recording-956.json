@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Speaking is its own skill, so it improves with speaking practice. Short daily recordings on familiar topics give you regular, low-pressure speaking reps and a way to hear your own progress.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

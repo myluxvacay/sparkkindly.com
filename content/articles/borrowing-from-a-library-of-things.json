@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "Borrowing from a library of things",
   "description": "Many towns now lend tools, toys and kitchen gadgets like books, and borrowing suits the things we rarely use.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-06-21",
   "updatedAt": "2026-06-21",
   "tags": [

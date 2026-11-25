@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "$50 is five lots of $10, and 5 x $6 = $30 saved.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

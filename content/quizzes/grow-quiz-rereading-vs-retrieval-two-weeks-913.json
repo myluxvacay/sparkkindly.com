@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Re-reading creates a feeling of familiarity that is often mistaken for knowledge. Retrieval practice — answering from memory and checking — exposes gaps and strengthens recall.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Testing effect",

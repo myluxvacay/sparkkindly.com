@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "People in Germany speak German.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Germany | Encyclopaedia Britannica",

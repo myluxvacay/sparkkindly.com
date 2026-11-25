@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Tall pairs with short: a tall giraffe, a short rabbit.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Adjective | Wikipedia",

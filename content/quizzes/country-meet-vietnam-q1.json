@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "People in Vietnam speak Vietnamese.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Vietnam | Encyclopaedia Britannica",

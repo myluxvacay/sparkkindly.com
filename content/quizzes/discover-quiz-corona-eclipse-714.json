@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "The corona is the Sun's outer atmosphere, normally drowned out by the glare of the bright disc (the photosphere). During totality it appears as a pearly crown of streamers around the Moon. Eclipses must only ever be viewed with proper eye protection or indirect methods.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Solar eclipse | Wikipedia",

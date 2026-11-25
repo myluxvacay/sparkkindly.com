@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The wasted water is 3 litres x 8 hours = 24 litres.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

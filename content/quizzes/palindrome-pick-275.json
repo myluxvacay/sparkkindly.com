@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Spelled backwards, level is still level. The others all change when they are reversed.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Two things change each time. The number of dots goes up by 1, and the colour swaps from red to blue and back. So next is 5 red dots!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

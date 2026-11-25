@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Most touchscreens sense your finger electrically: your body disturbs a faint field, and the screen spots where.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

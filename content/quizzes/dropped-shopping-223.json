@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A minute of help turns a flustering moment into a reminder that strangers can be kind.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

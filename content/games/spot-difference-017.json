@@ -6,6 +6,9 @@
   "title": "Spot the difference: market stall",
   "prompt": "Three things changed between the two market stall pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The black sheep changed colour from white to black, the green apple moved and the green bunch of grapes changed colour from purple to green. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

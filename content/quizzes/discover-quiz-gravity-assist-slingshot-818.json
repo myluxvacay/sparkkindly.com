@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "In the planet's own frame the probe leaves about as fast as it arrived, but Jupiter itself is moving around the Sun. Adding that motion means the probe can leave the encounter faster relative to the Sun, gaining a minute fraction of Jupiter's orbital energy.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Gravity assist",

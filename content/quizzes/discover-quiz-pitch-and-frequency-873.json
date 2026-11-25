@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Pitch is set by frequency — how many vibrations happen per second. A tighter string vibrates faster, raising the frequency and therefore the pitch.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Frequency",

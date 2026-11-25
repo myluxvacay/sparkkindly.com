@@ -6,6 +6,9 @@
   "title": "Flags & places: which flag is Mexico?",
   "prompt": "Which flag belongs to Mexico?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Mexico’s flag is green, white and red with an eagle emblem in the centre. The other flags belong to Germany, Italy, Australia.",
   "sources": [],
   "reviewStatus": "approved",

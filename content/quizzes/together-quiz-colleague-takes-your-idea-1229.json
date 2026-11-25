@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A calm private conversation gives your colleague a chance to correct the pattern without a public fight. Calling them out angrily, gossiping, or withdrawing your ideas all cost you more than they fix.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

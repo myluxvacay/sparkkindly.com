@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Deliberate practice targets a defined weakness at the edge of current ability, with immediate feedback and correction — as opposed to repeating what is already comfortable, which maintains skill more than it grows it.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Deliberate practice | Wikipedia",

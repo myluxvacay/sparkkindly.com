@@ -2,6 +2,9 @@
   "brand": "discover",
   "correctOptionId": "make-believe",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Make-believe! The Moon is really made of rock, like a giant grey stone in the sky — no cheese, and no picnics.",
   "gameType": "fact-or-fiction",
   "id": "fact-or-fiction-002",

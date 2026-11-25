@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Effective unit price uses what is actually used: $8 divided by 1.5 kg = about $5.33 per kg. That is more than the headline $4 per kg ($8 divided by 2 kg), so wasted bulk can cost more than a smaller pack.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

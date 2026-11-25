@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Five minutes is small enough to start, and starting usually dissolves the dread - most people keep going once they have begun.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

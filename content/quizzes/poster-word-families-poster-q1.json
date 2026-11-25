@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Hat ends in -at, like cat, bat and mat.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Phonics | Wikipedia",

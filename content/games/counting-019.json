@@ -6,6 +6,10 @@
   "title": "Counting: frogs at the pond",
   "prompt": "How many frogs can you count in the pond?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the frogs one by one: there are exactly 5.",
   "sources": [],
   "reviewStatus": "approved",

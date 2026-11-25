@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "30 divided by 3 is 10, so saving $3 a week reaches $30 in 10 weeks.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

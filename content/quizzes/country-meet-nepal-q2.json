@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Nepal covers about 147,000 square kilometres of land and inland water.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Nepal | Encyclopaedia Britannica",

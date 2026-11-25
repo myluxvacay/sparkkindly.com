@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Robot Moves",
   "description": "For ages 6–9 with an adult: give a robot very exact instructions and watch what happens.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-07-31",
   "updatedAt": "2026-07-31",
   "author": "SparkKindly · AI-assisted",

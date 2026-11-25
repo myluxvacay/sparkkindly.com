@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "15 - 9 = $6, so $6 of your earnings is left.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

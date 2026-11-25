@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "Charging separates charge onto the two plates. The stored energy resides in the electric field in the insulating gap between them, and it is released when the plates are allowed to discharge.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Capacitor",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "$6 x 7 weeks = $42. Regular small amounts grow into a tidy sum faster than most people expect.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

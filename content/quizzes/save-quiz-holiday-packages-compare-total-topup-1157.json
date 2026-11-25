@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Package A: flights 2 x $300 = $600, plus hotel 5 x $80 = $400, total $1,000. Package B: flights 2 x $250 = $500, plus hotel 5 x $110 = $550, total $1,050. Difference: $1,050 - $1,000 = $50, so Package A is cheaper. The $100 option compares only the flights and misses that B's hotel costs $150 more over the 5 nights.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

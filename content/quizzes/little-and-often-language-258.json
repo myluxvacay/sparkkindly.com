@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Frequent, active practice - especially speaking - builds usable skill far faster than rare marathon sessions.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

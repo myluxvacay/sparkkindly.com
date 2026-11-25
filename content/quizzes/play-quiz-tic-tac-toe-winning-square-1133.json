@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "X already holds the top-left and top-middle squares. Playing the top-right square completes the whole top row of three X's, which wins the game.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

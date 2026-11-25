@@ -6,6 +6,9 @@
   "title": "Look closely: street count",
   "prompt": "How many frogs are in the street?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Count the frogs one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

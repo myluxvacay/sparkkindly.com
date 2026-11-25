@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The letters are the first letters of the counting numbers: One, Two, Three, Four, Five, Six, Seven. The next number is Eight, which starts with E.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

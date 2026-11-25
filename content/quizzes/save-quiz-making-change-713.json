@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "$20.00 − $13.50 = $6.50. A quick check: count up from $13.50 — 50 cents reaches $14, and $6 more reaches $20, so the change is $6.50 in total.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Coin | Wikipedia",

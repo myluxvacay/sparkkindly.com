@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Warm sun melts ice, and the ice turns into water, drip by drip. Good noticing!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

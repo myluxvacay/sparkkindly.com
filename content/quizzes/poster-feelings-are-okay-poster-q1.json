@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Feelings are visitors like weather: they come, they stay a while, and they pass — even stormy ones.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Emotion | Wikipedia",

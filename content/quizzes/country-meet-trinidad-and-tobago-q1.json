@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Port of Spain is the capital of Trinidad and Tobago. It is the city where the country's government works.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Trinidad and Tobago | Encyclopaedia Britannica",

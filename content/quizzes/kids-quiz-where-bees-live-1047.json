@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "That is right! Bees live together in a hive and visit flowers every day.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

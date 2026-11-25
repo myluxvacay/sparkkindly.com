@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "People in Mexico speak Spanish.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Mexico | Encyclopaedia Britannica",

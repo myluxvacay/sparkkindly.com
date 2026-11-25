@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Escalator steps stay flat because each step rides on two sets of wheels following two different tracks.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

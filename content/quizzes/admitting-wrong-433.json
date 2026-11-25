@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Admitting a mistake openly builds trust. People respect honesty far more than someone who can never be wrong.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

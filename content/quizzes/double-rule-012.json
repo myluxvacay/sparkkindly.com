@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Doubling means multiplying by 2. The next term after 24 is 24×2 = 48. Adding 3 would be a different rule.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "Counting by fives adds 5 each time. After 20 comes 25. You can count on your fingers to check!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

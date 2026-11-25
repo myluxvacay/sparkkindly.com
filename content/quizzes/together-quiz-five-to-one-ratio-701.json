@@ -2,6 +2,9 @@
   "brand": "together",
   "correctOptionId": "b",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "explanation": "Relationship researcher John Gottman found that in stable, happy relationships, positive interactions outnumber negative ones by about five to one. It is not about never arguing — it is about keeping the balance of kindness well in the black.",
   "id": "together-quiz-five-to-one-ratio-701",
   "options": [

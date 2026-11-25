@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The total spend is $1.50 x 20 = $30.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

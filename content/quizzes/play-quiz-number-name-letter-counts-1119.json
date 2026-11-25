@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The number names so far are one to six. The next counting number is seven, and s-e-v-e-n has 5 letters.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

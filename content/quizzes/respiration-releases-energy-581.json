@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Respiration breaks down food, usually glucose with oxygen, and captures the released energy in ATP, the molecule cells spend to do work.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Cellular respiration",

@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Short visits, specific help, food that only needs reheating, and a present for the older child: welcoming a baby, gently.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

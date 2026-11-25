@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "$100 minus $60 is $40, so you get $40 back.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

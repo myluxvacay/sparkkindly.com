@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The pattern is cue-driven, not hunger-driven: same place, same time, same routine. Keeping the cue and swapping in a different routine is a more precise fix than nightly willpower or total avoidance.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

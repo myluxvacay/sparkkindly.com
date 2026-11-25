@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Librarians care for the library's collection and help readers find the right book.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Occupation | Wikipedia",

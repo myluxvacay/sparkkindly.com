@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "A pyroclastic flow is a ground-hugging current of hot gas and volcanic debris, often several hundred degrees and moving tens to hundreds of kilometres per hour, which destroys nearly everything in its path.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Pyroclastic flow",

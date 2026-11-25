@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "People in Estonia speak Estonian.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Estonia | Encyclopaedia Britannica",

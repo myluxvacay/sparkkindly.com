@@ -6,6 +6,10 @@
   "title": "Flags & places: which flag is Canada’s?",
   "prompt": "Reverse round: which flag belongs to Canada?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Canada’s flag has a single red maple leaf in the centre, between two red bands. It was first flown in 1965.",
   "sources": [],
   "reviewStatus": "approved",

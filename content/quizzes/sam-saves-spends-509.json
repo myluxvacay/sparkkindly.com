@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Sam saved 8 x 3 = $24, and $24 minus the $10 gift leaves $14.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

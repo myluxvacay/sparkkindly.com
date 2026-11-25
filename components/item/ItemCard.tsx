@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { PublicItem } from '@/lib/items/repo';
 import type { World } from '@/lib/public/worlds';
 import { readImage } from '@/lib/public/body';
+import { bandChipLabel } from '@/lib/age-bands';
 
 const KIND_LABEL: Record<string, string> = { article: 'Read', quiz: 'Quiz', game: 'Game' };
 
@@ -32,6 +33,7 @@ export default function ItemCard({ item, world, headingLevel = 3, variant = 'row
     <div className="card-meta">
       <span className={`brand-label ${world?.color ?? 'gold'}`}>{world?.name ?? item.world}</span>
       <span>{printable ? 'Printable' : (KIND_LABEL[item.kind] ?? 'Read')}</span>
+      {bandChipLabel(item.ageBands) && <span className="band-chip">{bandChipLabel(item.ageBands)}</span>}
     </div>
   );
   const heading = (
@@ -41,7 +43,7 @@ export default function ItemCard({ item, world, headingLevel = 3, variant = 'row
   );
   if (variant === 'text') {
     return (
-      <article className="content-card text-card">
+      <article className="content-card text-card" data-bands={item.ageBands.join(',')}>
         {meta}
         {heading}
         <p>{item.summary}</p>
@@ -51,7 +53,7 @@ export default function ItemCard({ item, world, headingLevel = 3, variant = 'row
   if (variant === 'strip') {
     const image = readImage(item.image);
     return (
-      <article className="content-card strip-card">
+      <article className="content-card strip-card" data-bands={item.ageBands.join(',')}>
         {image.src ? (
           <Link className="strip-thumb" href={href} tabIndex={-1} aria-hidden="true">
             <img src={image.src} alt="" width={208} height={156} loading="lazy" />
@@ -68,7 +70,7 @@ export default function ItemCard({ item, world, headingLevel = 3, variant = 'row
     );
   }
   return (
-    <article className="content-card">
+    <article className="content-card" data-bands={item.ageBands.join(',')}>
       <span className={`card-tile ${world?.color ?? 'gold'}`} aria-hidden="true">{world?.icon ?? '✦'}</span>
       <div className="card-body">
         {meta}

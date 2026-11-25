@@ -6,6 +6,10 @@
   "title": "Spot the difference: kitchen",
   "prompt": "Three things changed between the two kitchen pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The banana turned around, the black horse changed colour from white to black and the orange crab turned around. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

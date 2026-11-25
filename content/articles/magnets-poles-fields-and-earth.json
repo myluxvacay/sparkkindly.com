@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Like poles repel, unlike attract — and the same magnetism runs a planet-sized dynamo that shields Earth and lights the auroras.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

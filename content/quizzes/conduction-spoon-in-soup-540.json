@@ -1,1 +1,42 @@
-{"brand":"discover","correctOptionId":"b","difficulty":"easy","explanation":"The heat travels through the metal itself, particle to particle, from the hot end in the soup to the cool handle end — direct transfer through a material is conduction.","id":"conduction-spoon-in-soup-540","options":[{"id":"a","text":"Radiation"},{"id":"b","text":"Conduction"},{"id":"c","text":"Convection"},{"id":"d","text":"Evaporation"}],"prompt":"A metal spoon left standing in hot soup becomes hot at the handle end, far from the soup. Which kind of heat transfer is this?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-02-22","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Thermal conduction","url":"https://en.wikipedia.org/wiki/Thermal_conduction"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "b",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "explanation": "The heat travels through the metal itself, particle to particle, from the hot end in the soup to the cool handle end — direct transfer through a material is conduction.",
+  "id": "conduction-spoon-in-soup-540",
+  "options": [
+    {
+      "id": "a",
+      "text": "Radiation"
+    },
+    {
+      "id": "b",
+      "text": "Conduction"
+    },
+    {
+      "id": "c",
+      "text": "Convection"
+    },
+    {
+      "id": "d",
+      "text": "Evaporation"
+    }
+  ],
+  "prompt": "A metal spoon left standing in hot soup becomes hot at the handle end, far from the soup. Which kind of heat transfer is this?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-02-22",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Thermal conduction",
+      "url": "https://en.wikipedia.org/wiki/Thermal_conduction"
+    }
+  ]
+}

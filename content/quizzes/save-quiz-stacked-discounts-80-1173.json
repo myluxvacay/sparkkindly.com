@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "First discount: $80 x 0.80 = $64. Second discount applies to $64: $64 x 0.90 = $57.60. Stacked discounts are not the same as one 30% discount, which would give $56.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

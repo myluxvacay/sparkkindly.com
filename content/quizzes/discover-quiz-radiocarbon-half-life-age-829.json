@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Each half-life halves the carbon-14 that remains: 1 to 1/2 to 1/4 to 1/8 is three halvings. Three times 5,730 years is about 17,190 years since the wood died and stopped taking in new carbon-14.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

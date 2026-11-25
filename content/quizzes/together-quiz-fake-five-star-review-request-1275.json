@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A fake review misleads strangers who are trusting it with their money, but refusing does not have to mean refusing to help. Trying the service, sharing it or improving the advert supports your friend in ways that are actually true.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Modelling the correct name and offering gentle reminders normalises getting it right, which matters more than it may seem to the person named.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

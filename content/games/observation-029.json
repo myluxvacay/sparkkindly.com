@@ -6,6 +6,10 @@
   "title": "Look closely: kitchen count",
   "prompt": "How many balls are in the kitchen?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Count the balls one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

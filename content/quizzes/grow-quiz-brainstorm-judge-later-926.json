@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Separating generating ideas from judging them stops early criticism from shutting people down, so the group ends up with a longer, more varied list to choose from.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

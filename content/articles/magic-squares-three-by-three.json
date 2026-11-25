@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "Magic squares: the three-by-three that always makes fifteen",
   "description": "Arrange the numbers 1 to 9 so every row, column and diagonal adds to fifteen. This ancient puzzle has exactly one solution at its heart.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-07-04",
   "updatedAt": "2026-07-04",
   "author": "SparkKindly · AI-assisted",

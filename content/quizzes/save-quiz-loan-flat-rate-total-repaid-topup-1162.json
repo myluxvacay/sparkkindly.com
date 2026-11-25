@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Interest: $3,000 x 10% = $300 per year, and $300 x 2 years = $600. Total repaid: $3,000 + $600 = $3,600. The $3,300 option charges only one year of interest, and $3,600 is the total repaid, not the interest alone.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

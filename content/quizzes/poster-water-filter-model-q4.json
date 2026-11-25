@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Treatment plants filter first, then disinfect — killing the germs that filtering cannot catch.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Water purification | Wikipedia",

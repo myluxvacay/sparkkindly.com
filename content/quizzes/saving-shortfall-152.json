@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "$60 minus $45 equals $15, so you need fifteen more dollars to reach the price.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

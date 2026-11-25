@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Every month has at least 28 days. February is simply the only month that sometimes has exactly 28 and no more.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

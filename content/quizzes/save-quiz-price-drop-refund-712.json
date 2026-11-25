@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The refund is the difference between the two prices: $84 − $63 = $21. Price-adjustment policies refund the drop, not the whole new price.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Price matching | Wikipedia",

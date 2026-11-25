@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "In total internal reflection, light in a denser medium striking the boundary at more than the critical angle cannot refract out and is reflected completely back inside, which is how optical fibres guide light.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Total internal reflection",

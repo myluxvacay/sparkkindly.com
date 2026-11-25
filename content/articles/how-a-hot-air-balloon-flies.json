@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Heat the air inside a balloon and it expands and lightens until the whole craft weighs less than the air it displaces.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

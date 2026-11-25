@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "After 30% off: $200 x 0.70 = $140. Then the coupon: $140 - $10 = $130. The order matters: the coupon comes off the already-reduced price.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

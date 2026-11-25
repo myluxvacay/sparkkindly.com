@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Since 7 x 8 = 56, the missing number that completes the multiplication is 8.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

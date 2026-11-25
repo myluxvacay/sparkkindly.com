@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Each number is the sum of the two before it, so the next is 5 + 8 = 13.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

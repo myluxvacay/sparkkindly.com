@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "A cat has four legs - two at the front and two at the back - perfect for padding around quietly.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

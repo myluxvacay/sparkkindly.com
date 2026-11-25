@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Stirring sugar into tea is a physical change you can undo; burning the sugar is a chemical change that cannot be reversed.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

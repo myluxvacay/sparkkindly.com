@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Leaf Shape Matching",
   "description": "For ages 6–9 with an adult: collect fallen leaves and match them to the trees they came from.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-09-09",
   "updatedAt": "2026-09-09",
   "author": "SparkKindly · AI-assisted",

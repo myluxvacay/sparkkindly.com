@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Every month has at least 28 days, so all 12 months have 28 days - some just have more.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

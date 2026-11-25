@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A brief, honest word about the worry, paired with a simple request for next time, clears the air without letting lateness spoil the whole day.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

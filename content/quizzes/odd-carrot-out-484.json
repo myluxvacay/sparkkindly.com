@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Apples, bananas and grapes are fruits, while a carrot is a vegetable that grows underground.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

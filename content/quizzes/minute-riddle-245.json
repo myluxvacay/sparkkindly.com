@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "It is a word riddle: the letter M appears once in 'minute', twice in 'moment', and not at all in 'a thousand years'.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -5,6 +5,9 @@
   "contentType": "activity",
   "title": "The price-drop piggy: refunds for prices that fall after you buy",
   "description": "Many shops refund the difference when an item's price drops shortly after you bought it — but only if you ask. Keep the receipts, check the prices for a fortnight, and feed every refund straight into the pig.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-22",
   "updatedAt": "2026-11-22",
   "author": "SparkKindly · AI-assisted",

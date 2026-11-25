@@ -27,6 +27,9 @@
   "correctOptionId": "a",
   "explanation": "The passage says the penguins on the cold edge shuffle to the middle and the warm ones move out, so every penguin gets a turn being warm.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Emperor penguin | Wikipedia",

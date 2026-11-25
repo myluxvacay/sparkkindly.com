@@ -6,6 +6,10 @@
   "title": "Spot the difference: pond",
   "prompt": "Three things changed between the two pond pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The red hat changed colour from yellow to red, the orange crab vanished and the orange crab vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

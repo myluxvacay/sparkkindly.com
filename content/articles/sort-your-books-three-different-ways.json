@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Sort your books three different ways",
   "description": "Your bookshelf is a puzzle. Take your books out and sort them three different ways — by colour, by size, and by how much you love them. Which way looks best?",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "publishedAt": "2026-11-24",
   "updatedAt": "2026-11-24",
   "author": "SparkKindly · AI-assisted",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "About 78% of the air is nitrogen, while oxygen makes up roughly 21%.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Atmosphere of Earth",

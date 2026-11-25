@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "The money of Dominica is the East Caribbean dollar (XCD).",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Dominica | Encyclopaedia Britannica",

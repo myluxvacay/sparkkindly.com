@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "First, 9 and 7 more makes 16 pebbles. Then share 16 fairly into 2 boxes, and each box gets 8. Great two-step work!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

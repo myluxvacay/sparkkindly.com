@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A brief, specific acknowledgement shares the moment without embarrassing your sibling or starting a family argument. Teasing adds to the sting, and a dramatic rejection makes your sibling the centre of a scene they did not ask for.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

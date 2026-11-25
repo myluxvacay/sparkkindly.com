@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "A square has 4 sides, and all four sides are the same length.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

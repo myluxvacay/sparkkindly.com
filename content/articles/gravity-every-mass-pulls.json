@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Gravity is not only Earth pulling you down — every mass pulls on every other mass, and you pull back on Earth too.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

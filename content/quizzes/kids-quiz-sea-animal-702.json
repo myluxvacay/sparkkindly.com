@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "The blue whale lives in the ocean. It is the largest animal that has ever lived on Earth — as long as about three school buses and as heavy as 200 tons — yet it eats tiny sea creatures called krill. Dogs, robins, and rabbits all live on land.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Animals 101: Blue Whales — National Geographic Education",

@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Magnesium hydroxide is a base. It neutralises excess hydrochloric acid — base + acid gives a salt plus water — which raises stomach pH and relieves the burning sensation of excess acid.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Antacid",

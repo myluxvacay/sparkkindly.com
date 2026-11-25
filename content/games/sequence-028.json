@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came third?",
   "prompt": "Spark showed some things in order. What came third?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The order was: first the purple fish, second the green book, third the white star. So the third one was the white star.",
   "sources": [],
   "reviewStatus": "approved",

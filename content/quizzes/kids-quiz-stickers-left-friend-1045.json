@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Great counting! 14 - 6 = 8, so you have 8 stickers left.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "The African elephant is the largest land animal, with large males weighing around six tonnes, more than a hippo, giraffe or rhino.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "African elephant",

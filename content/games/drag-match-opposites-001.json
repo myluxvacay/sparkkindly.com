@@ -1,6 +1,9 @@
 {
   "brand": "play",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Hot is the opposite of cold, up is the opposite of down, big is the opposite of little, and open is the opposite of closed.",
   "gameType": "drag-match",
   "id": "drag-match-opposites-001",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Test each box. If the coin were in A, statements (1) and (2) would both be true. If it were in C, statements (2) and (3) would both be true. If it is in B, only statement (3) is true, which matches 'exactly one', so the coin is in B.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

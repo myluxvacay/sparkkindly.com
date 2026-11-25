@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "That is right! Fast means moving quickly, and slow is the opposite.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

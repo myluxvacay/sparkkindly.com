@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Refusing to join in, supporting the person targeted, and reporting harm are the three moves that actually help.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

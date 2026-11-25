@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "A warmer house for less heating",
   "description": "Feeling warm at home is about stopping heat escaping and warming the rooms you actually use.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-06-08",
   "updatedAt": "2026-06-08",
   "tags": [

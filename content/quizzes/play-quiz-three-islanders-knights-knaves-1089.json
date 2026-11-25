@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Suppose Ana is a knight: then Ben is a knave, so Ben's claim is false and Cara is a knave, but then Cara's claim would be false, meaning Ana and Ben are the same type - they are not, so this fails. So Ana is a knave, Ben is a knight, and Ben's true claim makes Cara a knight, whose claim that Ana and Ben differ is indeed true.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "20% of $50 is one fifth of 50, which is $10.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

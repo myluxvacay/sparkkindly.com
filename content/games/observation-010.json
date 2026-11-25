@@ -6,6 +6,9 @@
   "title": "Look closely: classroom present",
   "prompt": "Which of these can you see in the classroom?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The yellow bird is right there in the picture. The other three choices are not in this scene at all.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "An offer made out of loyalty does not make it fair to accept. Owning up protects your sibling and your honesty, while score-keeping favours turn a kind offer into a transaction.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

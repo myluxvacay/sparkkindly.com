@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Steel is far denser than water, yet steel ships float. The answer is displaced water, a hollow hull and average density.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

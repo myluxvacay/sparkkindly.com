@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Yes! Rabbits dig a home under the ground called a burrow.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

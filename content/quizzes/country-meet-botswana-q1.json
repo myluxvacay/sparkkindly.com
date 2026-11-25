@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Botswana is in Southern Africa, part of Africa.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Botswana | Encyclopaedia Britannica",

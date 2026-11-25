@@ -6,6 +6,10 @@
   "title": "Spot the difference: train station",
   "prompt": "Three things changed between the two train station pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The gray owl changed colour from brown to gray, the yellow ball vanished and the green book vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

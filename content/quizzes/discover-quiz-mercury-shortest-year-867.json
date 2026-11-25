@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Mercury, the closest planet to the Sun, has the shortest year: about 88 Earth days per orbit.",
   "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Mercury (planet)",

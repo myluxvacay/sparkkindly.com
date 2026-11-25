@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Nice spotting! The colours repeat red, blue, yellow, so yellow comes next.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

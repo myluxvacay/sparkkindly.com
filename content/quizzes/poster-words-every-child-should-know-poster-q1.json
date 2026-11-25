@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Safe adults never ask children to keep secrets from their parents. Telling a trusted adult is always right.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Child safety | Wikipedia",

@@ -6,6 +6,9 @@
   "title": "Look closely: market stall sign",
   "prompt": "What does the sign in the market stall say?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The sign in the picture reads \"Cafe\" — it is written in big letters on the board.",
   "sources": [],
   "reviewStatus": "approved",

@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "Maputo is the capital of Mozambique. It is the city where the country's government works.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Mozambique | Encyclopaedia Britannica",

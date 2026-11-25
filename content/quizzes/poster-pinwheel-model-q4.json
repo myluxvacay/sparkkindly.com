@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Same machine, bigger job: blades, hub and wind — plus a generator to turn spin into power.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Wind turbine | Wikipedia",

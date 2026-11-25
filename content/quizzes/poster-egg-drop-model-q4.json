@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Engineers treat failures as data: inspect, redesign, retest — that loop is the whole method.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Egg drop competition | Wikipedia",

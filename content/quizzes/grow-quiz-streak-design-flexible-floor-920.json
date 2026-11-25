@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "An all-or-nothing target turns a busy day into a broken habit. A defined minimum keeps the cue-routine loop alive through hard periods, and full sessions resume when time returns.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

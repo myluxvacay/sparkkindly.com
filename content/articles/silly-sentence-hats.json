@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Silly Sentence Hats",
   "description": "For ages 6–9 with an adult: pick words from three hats and read out the silliest sentence you can make.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-06-02",
   "updatedAt": "2026-06-02",
   "author": "SparkKindly · AI-assisted",

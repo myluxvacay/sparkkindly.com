@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "A square's four sides are all the same length.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Shape | Wikipedia",

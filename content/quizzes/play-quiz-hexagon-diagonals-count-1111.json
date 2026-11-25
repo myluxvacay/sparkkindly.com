@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "From each of the 6 corners you can draw diagonals to 3 corners (every corner except itself and its two neighbours), giving 6 x 3 = 18. Each diagonal has been counted from both ends, so halve it: 9 diagonals.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Hexagon",

@@ -6,6 +6,10 @@
   "title": "Spot the difference: meadow",
   "prompt": "Three things changed between the two meadow pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The green train changed colour from red to green, the moon moved and the bee vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

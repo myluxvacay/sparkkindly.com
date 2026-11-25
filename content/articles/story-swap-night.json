@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Everyone brings one true story and one invented one, and the family guesses which is which.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

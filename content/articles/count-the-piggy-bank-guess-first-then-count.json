@@ -5,6 +5,9 @@
   "contentType": "activity",
   "title": "Count the piggy bank: guess first, then count",
   "description": "Before you open a piggy bank or savings jar, guess what is inside — in writing. Then count it properly, in sorted stacks. The gap between the guess and the truth is the lesson.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-23",
   "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",

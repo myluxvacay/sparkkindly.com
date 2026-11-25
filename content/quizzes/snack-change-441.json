@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "$20 minus $13 is $7, so you should get $7 back in change.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

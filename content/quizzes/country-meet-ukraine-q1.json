@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "People in Ukraine speak Ukrainian.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Ukraine | Encyclopaedia Britannica",

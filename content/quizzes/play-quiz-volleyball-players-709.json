@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A volleyball team has six players on the court at once — three in the front row and three in the back row. Players rotate positions each time their team wins back the serve.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Volleyball | Britannica",

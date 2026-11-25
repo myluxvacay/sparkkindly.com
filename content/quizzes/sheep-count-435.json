@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "'All but 9' means 9 sheep stayed behind. The other 8 ran away, so 9 are left.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

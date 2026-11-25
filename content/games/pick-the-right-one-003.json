@@ -6,6 +6,9 @@
   "title": "Pick the right one: the bird that cannot fly",
   "prompt": "Which of these birds cannot fly?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Penguins cannot fly — their wings are flippers for swimming. Owls, flamingos and ducks all fly.",
   "sources": [],
   "reviewStatus": "approved",

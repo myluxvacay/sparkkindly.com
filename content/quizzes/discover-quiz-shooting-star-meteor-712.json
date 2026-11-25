@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A shooting star is a meteor: usually a grain of rock or dust, often no bigger than a pea, hitting Earth's atmosphere at enormous speed and burning up in a bright streak. No star is involved at all.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Meteoroid | Wikipedia",

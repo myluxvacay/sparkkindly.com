@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "An LED makes light when electrons drop to a lower energy level in a semiconductor — no glowing wire required.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

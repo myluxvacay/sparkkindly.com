@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "The money of Gabon is the Central African CFA franc (XAF).",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Gabon | Encyclopaedia Britannica",

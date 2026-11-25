@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "People in Democratic Republic of the Congo speak French, Lingala and Kongo.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Democratic Republic of the Congo | Encyclopaedia Britannica",

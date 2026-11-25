@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Albania is in Southern Europe, part of Europe.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Albania | Encyclopaedia Britannica",
@@ -32,7 +36,7 @@
       "accessedAt": "2026-11-21"
     },
     {
-      "title": "Albania \u2014 Wikipedia",
+      "title": "Albania — Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Albania",
       "accessedAt": "2026-11-21"
     }
@@ -46,7 +50,7 @@
     "alt": "Spark and Mango visiting white houses with many windows climbing a hill to Berat castle",
     "width": 832,
     "height": 1248,
-    "credit": "AI-generated image \u00b7 SparkKindly",
+    "credit": "AI-generated image · SparkKindly",
     "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
   }
 }

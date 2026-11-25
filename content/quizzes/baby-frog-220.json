@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "A baby frog is a tadpole. It swims with a tail, then grows legs and turns into a frog!",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tadpole",

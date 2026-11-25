@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "People in Kiribati speak Gilbertese and English.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Kiribati | Encyclopaedia Britannica",

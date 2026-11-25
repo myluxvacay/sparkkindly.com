@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "The Great Wall of China stretches for thousands of kilometres across northern China and was built and rebuilt over many centuries.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Great Wall of China - Wikipedia",

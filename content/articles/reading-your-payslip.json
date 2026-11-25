@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "Your payslip, line by line",
   "description": "A payslip looks crowded, but it tells one story: what you earned, what was taken off, and what you actually received.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-09-04",
   "updatedAt": "2026-09-04",
   "author": "SparkKindly · AI-assisted",

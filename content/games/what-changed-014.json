@@ -6,6 +6,9 @@
   "title": "What changed: street",
   "prompt": "One thing changed between the before and after street pictures. What changed?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the white chicken changed colour from brown to white. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Naming your partner's real contributions in the moment corrects the record while it matters. False modesty erases your own work, and a private promise to mention them later rarely fixes a public misunderstanding.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

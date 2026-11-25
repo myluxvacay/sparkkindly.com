@@ -101,6 +101,9 @@ describe('client components', () => {
       .sort();
     expect(client).toEqual([
       'app/error.tsx',
+      'components/BandControl.tsx', // the footer age-band control: "Exploring as: … · Change" (age bands, 24 Nov 2026)
+      'components/BandLead.tsx', // the band-first grid reorder island: leads listings with the visitor's band, hides nothing (24 Nov 2026)
+      'components/BandPicker.tsx', // the first-visit "Who's exploring today?" band picker hosted by Spark (24 Nov 2026)
       'components/Header.tsx',
       'components/SocialLinks.tsx',
       'components/SparkAssistant.tsx', // the homepage Spark guide: tap-to-play greeting, dismissal remembered on device
@@ -116,6 +119,7 @@ describe('client components', () => {
       'components/me/InterestsEnhancer.tsx', // the interests island: the live 30-cap counter on the picker (17 Nov 2026)
       'components/printables/PrintableActions.tsx', // the printables island: copy-link share button on printable pages + hub (print/share anchors work without JS) (22 Nov 2026)
       'components/printables/PrintablesHub.tsx', // the /printables/ hub island: category + age-band filtering over the server-rendered shelf (22 Nov 2026)
+      'lib/age-band-client.ts', // the age-band browser helpers: the single retained 'sk-age-band' value + band events (24 Nov 2026)
     ]);
   });
 

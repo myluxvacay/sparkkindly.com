@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Power is voltage × current, so raising voltage lowers the current needed for the same power. Resistive heating loss is I²R, so a lower current cuts wasted heat in transmission lines dramatically.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Electric power transmission",

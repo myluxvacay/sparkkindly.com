@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Naming the problem calmly and agreeing a repair shares responsibility fairly instead of turning a careless moment into a lasting grudge.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

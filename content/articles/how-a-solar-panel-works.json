@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Sunlight knocks electrons loose in silicon, and a built-in electric field sweeps them into a useful current.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

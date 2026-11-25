@@ -6,6 +6,10 @@
   "title": "Sequence recall: what came third?",
   "prompt": "Spark showed some things in order. What came third?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The order was: first the blue balloon, second the brown chicken, third the green bunch of grapes, fourth the red rocket. So the third one was the green bunch of grapes.",
   "sources": [],
   "reviewStatus": "approved",

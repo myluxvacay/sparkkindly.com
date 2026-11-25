@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came first?",
   "prompt": "Spark showed some things in order. What came first?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The order was: first the yellow ball, second the pink shell, third the brown mushroom. So the first one was the yellow ball.",
   "sources": [],
   "reviewStatus": "approved",

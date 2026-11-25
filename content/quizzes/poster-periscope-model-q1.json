@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "45 degrees turns a horizontal light ray exactly 90 degrees — down the tube, then out again.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Periscope | Wikipedia",

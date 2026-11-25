@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "When everything changes at once, improvement cannot be attributed to any single change — and a harmful change can hide inside a good overall result. Testing changes in small steps builds knowledge she can reuse in every future talk.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

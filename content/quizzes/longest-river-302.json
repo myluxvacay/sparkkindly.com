@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "The Nile flows about 6,650 kilometres through north-eastern Africa, slightly longer than the Amazon by most measurements.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Nile",

@@ -6,6 +6,9 @@
   "title": "Spot the difference: park",
   "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The bee moved, the moon moved and the pink pig vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Yeast is a living fungus that eats sugar and gives off carbon dioxide — and those trapped gas bubbles are what puff up bread dough.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

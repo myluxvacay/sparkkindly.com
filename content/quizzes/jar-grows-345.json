@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Three weeks of adding $7 makes $21 extra, and $23 + $21 = $44.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

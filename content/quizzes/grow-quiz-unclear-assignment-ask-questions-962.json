@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "If confusion is what is stopping you, more pressure will not fix it. Naming the exact unknowns and asking specific questions removes the blockage so starting becomes straightforward.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

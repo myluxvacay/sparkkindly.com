@@ -1,1 +1,41 @@
-{"brand":"discover","correctOptionId":"b","difficulty":"easy","explanation":"An element is a pure substance whose atoms are all the same kind — every atom of gold, for example, has exactly the same number of protons in its nucleus.","id":"one-kind-of-atom-556","options":[{"id":"a","text":"It cannot be melted"},{"id":"b","text":"It is made of only one kind of atom"},{"id":"c","text":"It is always a shiny metal"},{"id":"d","text":"It can only be made in a laboratory"}],"prompt":"What makes a substance an element?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-03-10","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Chemical element","url":"https://en.wikipedia.org/wiki/Chemical_element"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "b",
+  "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
+  "explanation": "An element is a pure substance whose atoms are all the same kind — every atom of gold, for example, has exactly the same number of protons in its nucleus.",
+  "id": "one-kind-of-atom-556",
+  "options": [
+    {
+      "id": "a",
+      "text": "It cannot be melted"
+    },
+    {
+      "id": "b",
+      "text": "It is made of only one kind of atom"
+    },
+    {
+      "id": "c",
+      "text": "It is always a shiny metal"
+    },
+    {
+      "id": "d",
+      "text": "It can only be made in a laboratory"
+    }
+  ],
+  "prompt": "What makes a substance an element?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-03-10",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Chemical element",
+      "url": "https://en.wikipedia.org/wiki/Chemical_element"
+    }
+  ]
+}

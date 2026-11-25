@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Contamination is an information and routine problem, not an effort problem. Knowing the local accepted list and making clean sorting easy at the point of disposal fixes the actual failure point.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

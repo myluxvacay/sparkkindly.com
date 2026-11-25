@@ -6,6 +6,10 @@
   "title": "Memory: kitchen color",
   "prompt": "From memory: what colour is the gift box in the kitchen?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The gift box in the picture is green — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

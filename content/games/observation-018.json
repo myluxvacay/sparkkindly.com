@@ -6,6 +6,9 @@
   "title": "Look closely: space scene color",
   "prompt": "What colour is the rocket in the space scene?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The rocket in the picture is blue — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

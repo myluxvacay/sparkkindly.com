@@ -5,6 +5,9 @@
   "contentType": "article",
   "title": "6174: the number every four-digit number falls into",
   "description": "Pick any four-digit number, shuffle its digits into the biggest and smallest arrangements, subtract — and repeat. Within seven steps you will always land on 6174.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-07-16",
   "updatedAt": "2026-07-16",
   "author": "SparkKindly · AI-assisted",

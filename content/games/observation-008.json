@@ -6,6 +6,10 @@
   "title": "Look closely: classroom color",
   "prompt": "What colour is the tree in the classroom?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The tree in the picture is orange — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

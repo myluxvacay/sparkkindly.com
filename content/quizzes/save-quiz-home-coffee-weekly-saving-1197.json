@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Shop coffees cost 5 x $4 = $20. Homemade coffees cost 5 x $1 = $5, so you save $20 - $5 = $15.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

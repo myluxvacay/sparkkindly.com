@@ -20,6 +20,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Every grandparent is a library that will not stay open forever — and most of the collection has never been asked for.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

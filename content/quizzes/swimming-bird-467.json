@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Penguins use their wings like flippers to swim, even though they cannot fly.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Penguin - Wikipedia",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Each term is a cube plus 1: 0 cubed + 1 = 1, 1 cubed + 1 = 2, 2 cubed + 1 = 9, 3 cubed + 1 = 28, 4 cubed + 1 = 65. The next is 5 cubed + 1 = 125 + 1 = 126.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

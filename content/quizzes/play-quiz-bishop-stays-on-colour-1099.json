@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A diagonal move changes the row and column by the same amount, which always lands on a square of the same colour. So a bishop that starts on a light square stays on light squares forever.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Bishop (chess)",

@@ -6,6 +6,10 @@
   "title": "Flags & places: which flag is Australia?",
   "prompt": "Which flag belongs to Australia?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Australia’s flag is dark blue with a small Union Jack and white stars. The other flags belong to France, United Kingdom, Portugal.",
   "sources": [],
   "reviewStatus": "approved",

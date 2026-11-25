@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A wheelbarrow is a second-class lever: the wheel axle is the fulcrum, the load sits between it and your hands, so your lift is multiplied.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Lever",

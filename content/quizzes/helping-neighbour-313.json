@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Asking first offers real help while respecting their independence and letting them stay in charge.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

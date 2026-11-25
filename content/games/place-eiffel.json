@@ -6,6 +6,9 @@
   "title": "Flags & places: the Eiffel Tower",
   "prompt": "This famous tower stands in which country?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The Eiffel Tower stands in Paris, the capital of France. It was finished in 1889 for the World’s Fair.",
   "sources": [],
   "reviewStatus": "approved",

@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "One standing question each week — what would make this week easier for you? — turns guesswork into small, fulfilable requests.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

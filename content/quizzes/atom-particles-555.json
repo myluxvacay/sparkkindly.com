@@ -1,1 +1,42 @@
-{"brand":"discover","correctOptionId":"a","difficulty":"easy","explanation":"Atoms are built from protons and neutrons packed together in the nucleus, with electrons moving around it. Photons are particles of light, not building blocks of atoms.","id":"atom-particles-555","options":[{"id":"a","text":"Protons, neutrons and electrons"},{"id":"b","text":"Protons, photons and electrons"},{"id":"c","text":"Neutrons, ions and electrons"},{"id":"d","text":"Protons, neutrons and photons"}],"prompt":"Which three particles make up a typical atom?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-03-09","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Atom","url":"https://en.wikipedia.org/wiki/Atom"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "a",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "explanation": "Atoms are built from protons and neutrons packed together in the nucleus, with electrons moving around it. Photons are particles of light, not building blocks of atoms.",
+  "id": "atom-particles-555",
+  "options": [
+    {
+      "id": "a",
+      "text": "Protons, neutrons and electrons"
+    },
+    {
+      "id": "b",
+      "text": "Protons, photons and electrons"
+    },
+    {
+      "id": "c",
+      "text": "Neutrons, ions and electrons"
+    },
+    {
+      "id": "d",
+      "text": "Protons, neutrons and photons"
+    }
+  ],
+  "prompt": "Which three particles make up a typical atom?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-03-09",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Atom",
+      "url": "https://en.wikipedia.org/wiki/Atom"
+    }
+  ]
+}

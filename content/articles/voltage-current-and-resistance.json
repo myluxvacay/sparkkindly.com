@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Voltage is pressure, current is flow, resistance is the blockage — a water-pipe picture that makes Ohm's law almost visible.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

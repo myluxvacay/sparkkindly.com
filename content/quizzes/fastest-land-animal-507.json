@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A cheetah can sprint at about 60 to 70 kilometres per hour, faster than any other land animal.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Cheetah - Wikipedia",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The unit price is $12.50 / 2.5 litres = $5 per litre.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

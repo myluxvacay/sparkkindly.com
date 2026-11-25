@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "After 20% off you pay 80% of the original price, so original = $64 divided by 0.80 = $80. Check: 20% of $80 is $16, and $80 - $16 = $64.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

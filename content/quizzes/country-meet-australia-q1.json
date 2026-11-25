@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "The money of Australia is the Australian dollar (AUD).",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Australia | Encyclopaedia Britannica",

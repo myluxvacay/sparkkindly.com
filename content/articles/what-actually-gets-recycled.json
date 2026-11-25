@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "What actually gets recycled",
   "description": "Not everything with a recycling symbol becomes something new, and knowing what really does helps you sort with confidence.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-07-04",
   "updatedAt": "2026-07-04",
   "tags": [

@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "A Poem from Your Name",
   "description": "For ages 6–9 with an adult: write your name down the page and start one happy line with each letter.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-06-04",
   "updatedAt": "2026-06-04",
   "author": "SparkKindly · AI-assisted",

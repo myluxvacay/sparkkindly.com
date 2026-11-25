@@ -1,1 +1,41 @@
-{"brand":"discover","correctOptionId":"d","difficulty":"medium","explanation":"Water is H₂O — every molecule holds two hydrogen atoms for each oxygen atom — so electrolysis collects about two volumes of hydrogen for every one volume of oxygen.","id":"splitting-water-564","options":[{"id":"a","text":"Equal amounts of each gas"},{"id":"b","text":"Twice as much oxygen as hydrogen"},{"id":"c","text":"Four times as much hydrogen as oxygen"},{"id":"d","text":"Twice as much hydrogen as oxygen"}],"prompt":"When an electric current splits water into its two gases, how do the amounts collected compare?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-03-18","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Electrolysis of water","url":"https://en.wikipedia.org/wiki/Electrolysis_of_water"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "d",
+  "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
+  "explanation": "Water is H₂O — every molecule holds two hydrogen atoms for each oxygen atom — so electrolysis collects about two volumes of hydrogen for every one volume of oxygen.",
+  "id": "splitting-water-564",
+  "options": [
+    {
+      "id": "a",
+      "text": "Equal amounts of each gas"
+    },
+    {
+      "id": "b",
+      "text": "Twice as much oxygen as hydrogen"
+    },
+    {
+      "id": "c",
+      "text": "Four times as much hydrogen as oxygen"
+    },
+    {
+      "id": "d",
+      "text": "Twice as much hydrogen as oxygen"
+    }
+  ],
+  "prompt": "When an electric current splits water into its two gases, how do the amounts collected compare?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-03-18",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Electrolysis of water",
+      "url": "https://en.wikipedia.org/wiki/Electrolysis_of_water"
+    }
+  ]
+}

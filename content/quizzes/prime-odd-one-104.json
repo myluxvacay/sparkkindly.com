@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "9 can be divided by 3 (3x3=9), so it is not prime; 2, 5 and 7 can only be divided by 1 and by themselves.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

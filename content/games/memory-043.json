@@ -6,6 +6,10 @@
   "title": "Memory: pond color",
   "prompt": "From memory: what colour is the fish in the pond?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The fish in the picture is blue — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

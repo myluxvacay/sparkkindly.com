@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Social feeds show carefully selected best moments. Comparing your everyday life with everyone's highlights is an unfair comparison.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

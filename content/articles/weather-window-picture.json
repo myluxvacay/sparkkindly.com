@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "The Weather Window",
   "description": "For ages 6–9 with an adult: draw the view from one window today, then draw it again when the weather changes.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-07-11",
   "updatedAt": "2026-07-11",
   "author": "SparkKindly · AI-assisted",

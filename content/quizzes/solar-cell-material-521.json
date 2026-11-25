@@ -1,1 +1,42 @@
-{"brand":"discover","correctOptionId":"c","difficulty":"easy","explanation":"Solar cells are almost always made from silicon, the semiconductor in computer chips, specially layered so that light frees electrons and an internal field drives them into a current.","id":"solar-cell-material-521","options":[{"id":"a","text":"Copper"},{"id":"b","text":"Glass"},{"id":"c","text":"Silicon"},{"id":"d","text":"Aluminium"}],"prompt":"Most solar cells are made from which material?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-02-03","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Solar cell","url":"https://en.wikipedia.org/wiki/Solar_cell"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "c",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "explanation": "Solar cells are almost always made from silicon, the semiconductor in computer chips, specially layered so that light frees electrons and an internal field drives them into a current.",
+  "id": "solar-cell-material-521",
+  "options": [
+    {
+      "id": "a",
+      "text": "Copper"
+    },
+    {
+      "id": "b",
+      "text": "Glass"
+    },
+    {
+      "id": "c",
+      "text": "Silicon"
+    },
+    {
+      "id": "d",
+      "text": "Aluminium"
+    }
+  ],
+  "prompt": "Most solar cells are made from which material?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-02-03",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Solar cell",
+      "url": "https://en.wikipedia.org/wiki/Solar_cell"
+    }
+  ]
+}

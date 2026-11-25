@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "The visible savings jar",
   "description": "Coins and notes you can see growing make saving feel real, especially for children and anyone who finds apps abstract.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-08-09",
   "updatedAt": "2026-08-09",
   "tags": [

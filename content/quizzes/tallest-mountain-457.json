@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Mount Everest rises about 8,849 metres above sea level, higher than any other mountain.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Mount Everest - Wikipedia",

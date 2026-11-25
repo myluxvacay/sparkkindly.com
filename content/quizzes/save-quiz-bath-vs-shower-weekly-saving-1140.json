@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Shower water: 9 x 6 = 54 litres. Saving each time: 80 - 54 = 26 litres. Over 5 swaps: 26 x 5 = 130 litres.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

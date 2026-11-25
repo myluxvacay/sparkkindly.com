@@ -2,6 +2,9 @@
   "brand": "play",
   "correctOptionId": "b",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Hide and seek needs only players and somewhere to hide — no board, cards, ball or pieces of any kind. Chess needs a board and pieces, a jigsaw needs its pieces, and darts needs a board and darts.",
   "id": "play-quiz-no-equipment-games-701",
   "options": [

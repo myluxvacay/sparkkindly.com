@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A pawn that reaches the furthest rank is promoted — replaced by a queen, rook, bishop or knight of the same colour. Almost everyone chooses a queen, which is why this rule is often called 'queening'.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Promotion (chess) | Wikipedia",

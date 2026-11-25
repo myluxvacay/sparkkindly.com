@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Add the parts: three 2-point baskets make 6, two 3-point baskets make 6, and the free throw adds 1. The total is 6+6+1=13 points.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The saving is $54 - $18 = $36.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

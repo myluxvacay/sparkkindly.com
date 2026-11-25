@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Great adding! 8 + 6 = 14, so there are 14 birds on the fence.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Moving the phone out of reach removes the cue and adds friction, which changes the habit far more reliably than promising yourself you will resist it in the moment.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

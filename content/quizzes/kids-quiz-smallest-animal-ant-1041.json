@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Well done! An ant is tiny and much smaller than a cat, dog or horse.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

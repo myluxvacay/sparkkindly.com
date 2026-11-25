@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A friendly invitation can make someone feel welcome, and accepting a 'no thanks' kindly respects their choice too.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

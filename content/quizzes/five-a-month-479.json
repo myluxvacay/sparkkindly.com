@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Saving $5 a month for 4 months gives 5 x 4 = $20.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

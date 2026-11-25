@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Heat travels by conduction through solids, convection in flowing fluids, and radiation across empty space — a flask defeats all three.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

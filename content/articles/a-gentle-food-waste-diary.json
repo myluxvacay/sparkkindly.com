@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "A gentle food waste diary",
   "description": "Writing down what gets thrown away for one week, without blame, shows exactly where a household can waste less.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-06-18",
   "updatedAt": "2026-06-18",
   "tags": [

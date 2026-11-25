@@ -6,6 +6,10 @@
   "title": "Flags & places: green, gold and a starry globe",
   "prompt": "This flag — green, with a yellow diamond and a blue globe — belongs to which country?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "That is Brazil’s flag. The blue globe shows stars as they appeared over Rio de Janeiro on 15 November 1889.",
   "sources": [],
   "reviewStatus": "approved",

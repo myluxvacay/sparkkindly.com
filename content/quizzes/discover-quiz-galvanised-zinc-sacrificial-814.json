@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "This is sacrificial protection: zinc is more reactive than iron, so when both are exposed and in electrical contact, the zinc oxidises instead of the iron, protecting the steel even at a scratch.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Galvanization",

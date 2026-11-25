@@ -6,6 +6,9 @@
   "title": "Look closely: park count",
   "prompt": "How many birds are in the park?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "Count the birds one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

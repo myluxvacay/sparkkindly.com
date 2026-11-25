@@ -6,6 +6,10 @@
   "title": "Counting: cupcakes at the kitchen",
   "prompt": "How many cupcakes can you count in the kitchen?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the cupcakes one by one: there are exactly 4.",
   "sources": [],
   "reviewStatus": "approved",

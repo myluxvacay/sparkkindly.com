@@ -5,6 +5,10 @@
   "contentType": "article",
   "title": "My first library card",
   "description": "A library card is a small card with a big power: it lets you borrow books, take them home, and swap them for new ones when you are done. Here is how getting your first card works.",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "publishedAt": "2026-11-21",
   "updatedAt": "2026-11-21",
   "author": "SparkKindly · AI-assisted",

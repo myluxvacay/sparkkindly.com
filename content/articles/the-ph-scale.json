@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "The pH scale runs from 0 to 14 and measures how acidic or basic a liquid is — and each single step is ten times stronger than the last.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

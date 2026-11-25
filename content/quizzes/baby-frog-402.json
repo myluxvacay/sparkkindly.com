@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A frog starts life as an egg, hatches into a swimming tadpole, and then slowly grows legs and becomes a frog.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tadpole",

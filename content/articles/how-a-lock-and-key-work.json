@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "In a pin tumbler lock, only the right key lifts every pin stack exactly to the shear line, letting the plug turn.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

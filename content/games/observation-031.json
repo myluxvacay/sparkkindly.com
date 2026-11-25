@@ -6,6 +6,9 @@
   "title": "Look closely: classroom clock",
   "prompt": "What time does the clock in the classroom show?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The clock's short hand points past 7 and its long hand shows 30 minutes, so the clock reads 7:30.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A gentle check-in - without pressure to explain - tells your friend they are noticed and not alone.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

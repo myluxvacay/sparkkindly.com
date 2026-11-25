@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Pretend Post Office",
   "description": "For ages 6–9 with an adult: write tiny letters, stamp them, and deliver them around your home.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-07-22",
   "updatedAt": "2026-07-22",
   "author": "SparkKindly · AI-assisted",

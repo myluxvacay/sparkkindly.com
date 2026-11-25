@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "People in India speak Hindi and English.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "India | Encyclopaedia Britannica",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Tenpin bowling uses ten pins, arranged in a triangle with four rows: one pin at the front, then two, then three, then four at the back. Knocking down all ten with one ball is a strike.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Bowling | Britannica",

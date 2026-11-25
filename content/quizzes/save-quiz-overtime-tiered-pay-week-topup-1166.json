@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Normal hours: 35 x $12 = $420. Overtime hours: 42 - 35 = 7 hours, at 7 x $18 = $126. Total pay: $420 + $126 = $546. The $504 option pays all 42 hours at the normal rate (42 x $12), and $630 wrongly pays only the first 35 hours at the overtime rate (35 x $18) and forgets the extra 7 hours.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

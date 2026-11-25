@@ -1,1 +1,41 @@
-{"brand":"discover","correctOptionId":"d","difficulty":"medium","explanation":"Phone screens are capacitive: a charged electrode grid lies under the glass, and your conductive finger steals a tiny amount of charge at the touch point, which the controller locates.","id":"touchscreen-capacitive-525","options":[{"id":"a","text":"A tiny camera under the glass watches for shadows"},{"id":"b","text":"It feels the warmth of your skin"},{"id":"c","text":"It measures how hard the glass bends"},{"id":"d","text":"Your finger disturbs the screen's faint electric field"}],"prompt":"How does a typical phone touchscreen detect your finger?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-02-07","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Touchscreen","url":"https://en.wikipedia.org/wiki/Touchscreen"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "d",
+  "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
+  "explanation": "Phone screens are capacitive: a charged electrode grid lies under the glass, and your conductive finger steals a tiny amount of charge at the touch point, which the controller locates.",
+  "id": "touchscreen-capacitive-525",
+  "options": [
+    {
+      "id": "a",
+      "text": "A tiny camera under the glass watches for shadows"
+    },
+    {
+      "id": "b",
+      "text": "It feels the warmth of your skin"
+    },
+    {
+      "id": "c",
+      "text": "It measures how hard the glass bends"
+    },
+    {
+      "id": "d",
+      "text": "Your finger disturbs the screen's faint electric field"
+    }
+  ],
+  "prompt": "How does a typical phone touchscreen detect your finger?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-02-07",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Touchscreen",
+      "url": "https://en.wikipedia.org/wiki/Touchscreen"
+    }
+  ]
+}

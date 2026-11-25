@@ -6,7 +6,8 @@ import { isChildScope } from '@/lib/public/share';
 import { getDb } from '@/lib/db';
 import type { SearchParams } from '@/lib/public/play-params';
 import { latestQuiz } from '@/lib/public/reads';
-import { currentScope } from '@/lib/accounts/scope-next';
+import { currentScope, currentViewer } from '@/lib/accounts/scope-next';
+import { loadDailyQuiz } from '@/lib/play/daily-quiz';
 import { metadata as seo } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -21,8 +22,12 @@ export async function generateMetadata() {
 }
 
 export default async function QuizPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
-  const scope = await currentScope();
-  const quiz = await latestQuiz(getDb(), scope);
+  const viewer = await currentViewer();
+  const scope = viewer.scope;
+  // Today's Spark advance (24 Nov 2026): a signed-in viewer who already answered today's
+  // question is served the first unanswered one in the chain; guests advance in the island
+  // from the embedded daily model (device seen store).
+  const { quiz, daily } = await loadDailyQuiz(getDb(), viewer);
   return (
     <div className="container section quiz-page">
       <p className="eyebrow">THE DAILY SPARK</p>
@@ -31,7 +36,7 @@ export default async function QuizPage({ searchParams }: { searchParams: Promise
       {quiz ? (
         <>
           {showsMoneyDisclaimer(quiz.world) && <MoneyDisclaimer />}
-          <PlayPanel item={quiz} searchParams={await searchParams} trackSeen={false} />
+          <PlayPanel item={quiz} searchParams={await searchParams} trackSeen={false} daily={daily} />
           <ShareButtons item={quiz} childContext={isChildScope(scope)} />
         </>
       ) : (

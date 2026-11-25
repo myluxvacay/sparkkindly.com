@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Well done! A baby horse is called a foal. It stays close to its mother.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

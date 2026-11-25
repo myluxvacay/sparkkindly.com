@@ -1,1 +1,42 @@
-{"brand":"discover","correctOptionId":"c","difficulty":"medium","explanation":"The toaster's nichrome elements glow hot and flood the bread with infrared radiation, which the surface absorbs — drying it and driving the browning reactions that create toast's flavour.","id":"toaster-browning-532","options":[{"id":"a","text":"Hot air blown over the bread by a small fan"},{"id":"b","text":"Direct contact with a hot metal plate"},{"id":"c","text":"Infrared radiation from the glowing elements"},{"id":"d","text":"Steam rising from the bread itself"}],"prompt":"How does an electric toaster mainly brown the surface of bread?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-02-14","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Toaster","url":"https://en.wikipedia.org/wiki/Toaster"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "c",
+  "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "explanation": "The toaster's nichrome elements glow hot and flood the bread with infrared radiation, which the surface absorbs — drying it and driving the browning reactions that create toast's flavour.",
+  "id": "toaster-browning-532",
+  "options": [
+    {
+      "id": "a",
+      "text": "Hot air blown over the bread by a small fan"
+    },
+    {
+      "id": "b",
+      "text": "Direct contact with a hot metal plate"
+    },
+    {
+      "id": "c",
+      "text": "Infrared radiation from the glowing elements"
+    },
+    {
+      "id": "d",
+      "text": "Steam rising from the bread itself"
+    }
+  ],
+  "prompt": "How does an electric toaster mainly brown the surface of bread?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-02-14",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Toaster",
+      "url": "https://en.wikipedia.org/wiki/Toaster"
+    }
+  ]
+}

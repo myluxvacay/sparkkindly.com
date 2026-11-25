@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Each number is double the one before it, and double 16 is 32.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

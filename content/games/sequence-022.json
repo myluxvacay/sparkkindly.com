@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The order was: first the white shell, second the red mushroom, third the purple umbrella. So the second one was the red mushroom.",
   "sources": [],
   "reviewStatus": "approved",

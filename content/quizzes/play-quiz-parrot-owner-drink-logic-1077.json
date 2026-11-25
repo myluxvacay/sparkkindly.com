@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Sam drinks milk, so Sam owns neither the parrot (juice) nor the dog (tea), and Priya owns the cat, so Sam must own the rabbit. Priya's cat means her drink is not juice, tea or milk, so she drinks coffee. That leaves the parrot and dog for Maya and Noah, paired with juice and tea. Maya does not own the dog, so Maya owns the parrot and drinks juice, leaving Noah with the dog and tea. The clues force this one arrangement.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

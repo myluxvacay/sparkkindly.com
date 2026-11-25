@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Two converted touchdowns give 2x7=14 points. Adding the field goal makes 17, and adding the safety makes 14+3+2=19 points.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "The bacteria turn sugar into acid, and acid is what damages teeth and causes cavities.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tooth brushing | Wikipedia",

@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Practice without feedback can entrench mistakes. Checking results and studying where his reasoning diverged turns repetition into deliberate practice.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

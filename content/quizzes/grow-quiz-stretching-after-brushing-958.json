@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Attaching the new habit to an existing one — brushing your teeth — gives it a reliable daily cue, and having the mat ready removes the small friction that often stops a start.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Habit",

@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Filtering is sieving at many sizes — gravel catches big bits, fine sand and cotton catch the small cloudiness.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Water purification | Wikipedia",

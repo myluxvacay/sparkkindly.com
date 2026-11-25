@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "Count the legs by fours: one dog has 4 legs, two dogs have 8 legs. 4 and 4 makes 8!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

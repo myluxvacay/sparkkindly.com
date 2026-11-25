@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A light, direct suggestion aimed at a shared habit is more likely to change the behaviour than silent washing, copying, or tricks.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

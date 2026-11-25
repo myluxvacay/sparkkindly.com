@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "$20 minus $16 is $4, so your change is $4.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

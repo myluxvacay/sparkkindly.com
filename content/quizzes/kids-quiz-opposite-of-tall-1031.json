@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "That is right! Tall and short are opposites when we talk about height.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

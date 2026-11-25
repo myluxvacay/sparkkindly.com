@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Microwaves make water molecules in food twist and jostle, and that molecular motion is heat.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

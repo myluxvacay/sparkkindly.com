@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Paying for needs first makes sure essentials like food and school supplies are covered before treats.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

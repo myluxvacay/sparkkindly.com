@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Printer A total: $80 + (3 x $30) = $80 + $90 = $170. Printer B total: $120 + (3 x $15) = $120 + $45 = $165. B costs $170 - $165 = $5 less overall, despite its higher shelf price.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

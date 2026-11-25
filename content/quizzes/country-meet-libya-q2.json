@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Leptis Magna is one of the two places we'd love to visit in Libya. Leptis Magna is one of the best-preserved Roman cities anywhere — marble streets, a huge theatre and triumphal arches standing by the Mediterranean Sea.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Libya | Encyclopaedia Britannica",

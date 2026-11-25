@@ -2,6 +2,9 @@
   "brand": "discover",
   "correctOptionId": "c",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Mars has two small moons, Phobos and Deimos — both named after the Greek gods of fear and panic who rode with Ares, the god of war. They are lumpy, cratered rocks, far smaller and rougher than Earth's single round Moon.",
   "id": "discover-quiz-mars-moons-701",
   "options": [

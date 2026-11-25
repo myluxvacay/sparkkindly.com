@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Attention does not switch for free. The seconds spent checking are minor compared with the repeated cost of reconstructing the thread of the work after each interruption.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

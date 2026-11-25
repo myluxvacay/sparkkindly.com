@@ -1,1 +1,42 @@
-{"brand":"discover","correctOptionId":"c","difficulty":"medium","explanation":"The needle is a small magnet free to turn, and Earth's field swings it into line, pointing toward the magnetic pole that sits near — though not exactly at — the geographic North Pole, which is why compass north and true north differ slightly.","id":"compass-points-north-552","options":[{"id":"a","text":"It is pulled toward the North Star"},{"id":"b","text":"Polar winds push the needle around"},{"id":"c","text":"The magnetised needle lines up with Earth's magnetic field, toward the magnetic pole near the geographic north"},{"id":"d","text":"All metal needles naturally settle pointing north"}],"prompt":"A compass needle points roughly north. Why?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-03-06","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Compass","url":"https://en.wikipedia.org/wiki/Compass"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "c",
+  "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "explanation": "The needle is a small magnet free to turn, and Earth's field swings it into line, pointing toward the magnetic pole that sits near — though not exactly at — the geographic North Pole, which is why compass north and true north differ slightly.",
+  "id": "compass-points-north-552",
+  "options": [
+    {
+      "id": "a",
+      "text": "It is pulled toward the North Star"
+    },
+    {
+      "id": "b",
+      "text": "Polar winds push the needle around"
+    },
+    {
+      "id": "c",
+      "text": "The magnetised needle lines up with Earth's magnetic field, toward the magnetic pole near the geographic north"
+    },
+    {
+      "id": "d",
+      "text": "All metal needles naturally settle pointing north"
+    }
+  ],
+  "prompt": "A compass needle points roughly north. Why?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-03-06",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Compass",
+      "url": "https://en.wikipedia.org/wiki/Compass"
+    }
+  ]
+}

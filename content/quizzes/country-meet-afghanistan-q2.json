@@ -23,8 +23,12 @@
     }
   ],
   "correctOptionId": "a",
-  "explanation": "Band-e Amir lakes is one of the two places we'd love to visit in Afghanistan. Band-e Amir is a chain of deep-blue lakes held back by natural travertine dams in the Hindu Kush mountains \u2014 Afghanistan's first national park and a place of striking beauty.",
+  "explanation": "Band-e Amir lakes is one of the two places we'd love to visit in Afghanistan. Band-e Amir is a chain of deep-blue lakes held back by natural travertine dams in the Hindu Kush mountains — Afghanistan's first national park and a place of striking beauty.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Afghanistan | Encyclopaedia Britannica",
@@ -32,7 +36,7 @@
       "accessedAt": "2026-11-21"
     },
     {
-      "title": "Afghanistan \u2014 Wikipedia",
+      "title": "Afghanistan — Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Afghanistan",
       "accessedAt": "2026-11-21"
     }
@@ -46,7 +50,7 @@
     "alt": "Spark and Mango visiting deep blue lakes of Band-e Amir between pale cliffs in the Hindu Kush mountains",
     "width": 832,
     "height": 1248,
-    "credit": "AI-generated image \u00b7 SparkKindly",
+    "credit": "AI-generated image · SparkKindly",
     "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
   }
 }

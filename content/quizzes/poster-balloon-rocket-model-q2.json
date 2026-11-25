@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Order matters in engineering: the guide must be on the track before the rocket is mounted and inflated.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Newton's laws of motion | Wikipedia",

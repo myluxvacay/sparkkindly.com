@@ -20,6 +20,9 @@
   "brand": "discover",
   "contentType": "activity",
   "description": "With a paper plate, a pencil and a sunny afternoon, build the oldest clock there is — and watch the Sun do the telling.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-16",
   "fiction": false,
   "hero": {

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Time saved per shower: 8 - 5 = 3 minutes. Water saved per shower: 3 x 12 = 36 litres. Over 30 days: 36 x 30 = 1,080 litres.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Earth's gravity constantly pulls the Moon towards it, bending its path into an orbit instead of letting it fly off in a straight line.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Gravity",

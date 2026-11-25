@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "An LED is a one-way street for current — connect it backwards and nothing flows.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Electric circuit | Wikipedia",

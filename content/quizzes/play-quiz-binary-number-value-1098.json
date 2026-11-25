@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Read the 1 digits from the left: 101101 has 1s in the 32, 8, 4 and 1 places. Adding them gives 32 + 8 + 4 + 1 = 45.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

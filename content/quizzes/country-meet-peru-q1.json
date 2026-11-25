@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "Lima is the capital of Peru. It is the city where the country's government works.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Peru | Encyclopaedia Britannica",

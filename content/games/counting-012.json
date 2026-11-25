@@ -6,6 +6,10 @@
   "title": "Counting: white flowers at the garden",
   "prompt": "How many white flowers can you count in the garden?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the white flowers one by one: there are exactly 9. Only the white ones count — the other colours are decoys.",
   "sources": [],
   "reviewStatus": "approved",

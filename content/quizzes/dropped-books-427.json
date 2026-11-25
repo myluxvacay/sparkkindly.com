@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Helping for ten seconds turns an embarrassing moment into a reminder that people look out for each other.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Well done! A zebra has black and white stripes all over its body.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

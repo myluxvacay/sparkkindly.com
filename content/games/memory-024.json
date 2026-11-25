@@ -6,6 +6,10 @@
   "title": "Memory: classroom count",
   "prompt": "From memory: how many horses are in the classroom?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the horses one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

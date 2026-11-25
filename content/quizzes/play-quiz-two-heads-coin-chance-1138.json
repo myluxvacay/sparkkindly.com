@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "There are four equally likely results: HH, HT, TH and TT. Only one of them is heads both times, so the chance is 1 in 4.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

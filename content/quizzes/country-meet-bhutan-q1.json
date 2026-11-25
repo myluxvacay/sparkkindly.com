@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "People in Bhutan speak Dzongkha.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Bhutan | Encyclopaedia Britannica",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "12 - 9 = $3, so you need $3 more to reach the $12 price.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

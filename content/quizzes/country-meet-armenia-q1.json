@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "People in Armenia speak Armenian and Russian.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Armenia | Encyclopaedia Britannica",

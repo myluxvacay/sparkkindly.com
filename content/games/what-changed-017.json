@@ -6,6 +6,9 @@
   "title": "What changed: farm",
   "prompt": "One thing changed between the before and after farm pictures. What changed?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the green bunch of grapes moved. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

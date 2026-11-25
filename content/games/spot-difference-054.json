@@ -6,6 +6,10 @@
   "title": "Spot the difference: classroom",
   "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The turtle changed colour from green to plain, the pink flower vanished and the white cat vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

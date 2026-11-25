@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Refusing to push others back while offering a different help keeps loyalty to your friend without being unfair to strangers in the queue.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

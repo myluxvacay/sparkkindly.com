@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A giraffe can grow up to about 5.5 metres tall, thanks to its very long legs and neck.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Giraffe",

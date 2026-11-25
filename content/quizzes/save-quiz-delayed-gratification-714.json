@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Children who waited successfully tended to manage their attention — looking away, covering the treat, or inventing distractions — rather than staring at the reward and relying on raw resistance. The same trick powers waiting lists and out-of-sight savings.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Stanford marshmallow experiment | Wikipedia",

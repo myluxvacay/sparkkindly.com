@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Maldives covers about 300 square kilometres of land and inland water.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Maldives | Encyclopaedia Britannica",

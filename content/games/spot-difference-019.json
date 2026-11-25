@@ -6,6 +6,10 @@
   "title": "Spot the difference: classroom",
   "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The pine tree changed colour from green to plain, the white duck changed colour from yellow to white and the black cat changed colour from orange to black. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

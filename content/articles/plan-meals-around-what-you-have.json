@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "Plan meals around what you already have",
   "description": "Starting the weekly plan from the cupboard and freezer, rather than from a recipe book, quietly prevents most food waste.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-06-23",
   "updatedAt": "2026-06-23",
   "tags": [

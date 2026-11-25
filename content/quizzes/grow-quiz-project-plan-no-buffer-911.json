@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "This is the planning fallacy in action: single-point optimistic estimates with zero slack. Buffers and a pre-chosen drop-list turn a slip into an adjustment instead of a collapse.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Planning fallacy",

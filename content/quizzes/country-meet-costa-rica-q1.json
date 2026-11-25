@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "The money of Costa Rica is the Costa Rican colón (CRC).",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Costa Rica | Encyclopaedia Britannica",

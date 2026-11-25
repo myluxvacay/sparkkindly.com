@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "A giraffe's long neck helps it munch leaves from the very tops of tall trees.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Giraffe",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A quarter of an hour is 15 minutes, so quarter past three is written as 3:15.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -6,6 +6,9 @@
   "title": "Pick the right one: find the owl",
   "prompt": "Which animal is an owl?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The owl is the brown bird with huge round eyes. Owls hunt at night and can turn their heads a long way round.",
   "sources": [],
   "reviewStatus": "approved",

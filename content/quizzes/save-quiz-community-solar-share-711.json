@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Community solar members subscribe to a share of a shared array — typically a solar farm — rather than panels on their own roof. The electricity enters the grid and the member receives a credit on their bill, which is why renters can join.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Community solar | Wikipedia",

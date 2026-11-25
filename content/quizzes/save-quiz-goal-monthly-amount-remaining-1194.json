@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Amount still needed: $1,200 - $450 = $750. Spread over 6 months: $750 divided by 6 = $125 a month.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

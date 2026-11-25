@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A dime is the 10-cent coin; a penny is 1 cent, a nickel 5 cents and a quarter 25 cents.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Dime (United States coin) - Wikipedia",

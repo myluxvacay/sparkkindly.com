@@ -6,6 +6,10 @@
   "title": "Counting: cars at the street",
   "prompt": "How many cars can you count in the street?",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the cars one by one: there are exactly 6.",
   "sources": [],
   "reviewStatus": "approved",

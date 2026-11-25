@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Reading the first two pages specifies an action and a stopping point. You can decide afterwards whether to continue; there is no timer or score.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

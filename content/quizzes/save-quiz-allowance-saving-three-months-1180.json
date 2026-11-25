@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "You save $80 x 25 / 100 = $20 each month. Over 3 months that is $20 x 3 = $60.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

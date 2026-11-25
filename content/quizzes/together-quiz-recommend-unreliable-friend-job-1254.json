@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A false recommendation risks children's safety and your own credibility. Being direct with your friend, while offering support towards a better-fitting role, is honest to everyone involved.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

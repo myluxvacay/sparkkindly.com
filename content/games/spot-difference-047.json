@@ -6,6 +6,9 @@
   "title": "Spot the difference: park",
   "prompt": "Three things changed between the two park pictures. Which list names all three changes?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The bee moved, the white star changed colour from yellow to white and the green turtle vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

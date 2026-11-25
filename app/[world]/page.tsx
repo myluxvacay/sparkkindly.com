@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ItemCard from '@/components/item/ItemCard';
+import BandLead from '@/components/BandLead';
 import Breadcrumb from '@/components/Breadcrumb';
 import Pager from '@/components/Pager';
 import MoneyDisclaimer, { showsMoneyDisclaimer } from '@/components/item/MoneyDisclaimer';
@@ -83,9 +84,11 @@ export default async function WorldPage({ params, searchParams }: Props) {
       <section className="section">
         <p className="eyebrow">KEEP EXPLORING</p>
         <h2>More from {w.name}</h2>
-        <div className="content-grid two-col">
+        {/* BandLead reorders only this page's rendered items (per-page scope: it cannot pull
+            a band match forward from a later paginated page). */}
+        <BandLead className="content-grid two-col">
           {rest.map((i) => <ItemCard item={i} world={w} key={i.id} variant="strip" />)}
-        </div>
+        </BandLead>
         {!items.length && page === 1 && <p>Our first pieces are being reviewed. Please come back for a little more wonder.</p>}
         <Pager
           prev={page > 1 ? (page === 2 ? here : `${here}?page=${page - 1}`) : undefined}

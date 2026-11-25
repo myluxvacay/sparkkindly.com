@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "An if-then plan works when the cue is specific and observable and the response is a concrete action, such as 'If I reach for my phone, then I will put it in the hallway and restart a 10-minute timer.'",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Implementation intention",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The failure last time was forgetting, not deciding. A dated reminder set at sign-up — when the trial end date is known — arrives while there is still time to cancel, unlike memory or a note he may never look at.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

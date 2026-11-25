@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Gravity is the attraction between masses; Earth's gravity pulls everything toward its centre, which is why things fall down instead of floating away.",
   "difficulty": "easy",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Gravity",

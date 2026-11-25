@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Paying per visit costs 10 x $8 = $80. The monthly deal costs $55, so you save $80 - $55 = $25.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

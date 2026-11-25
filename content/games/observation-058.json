@@ -6,6 +6,9 @@
   "title": "Look closely: classroom color",
   "prompt": "What colour is the car in the classroom?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The car in the picture is blue — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

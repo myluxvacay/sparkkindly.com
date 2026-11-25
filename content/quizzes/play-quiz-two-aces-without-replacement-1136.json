@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The first card is an ace with probability 4/52. With one ace gone, the second is an ace with probability 3/51. Multiply: 4/52 x 3/51 = 12/2652 = 1/221.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "Electricity needs a complete loop — break it anywhere and the flow stops.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Electric circuit | Wikipedia",

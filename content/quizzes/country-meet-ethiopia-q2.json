@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "the Simien Mountains is one of the two places we'd love to visit in Ethiopia. The Simien Mountains are a rooftop of jagged peaks and deep cliffs where gelada monkeys graze in troops and lammergeier vultures soar overhead.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Ethiopia | Encyclopaedia Britannica",

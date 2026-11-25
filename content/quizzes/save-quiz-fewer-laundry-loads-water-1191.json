@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The saving is 50 litres per load x 2 loads = 100 litres.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "A farmer is a person. The others name a place and things.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Noun | Wikipedia",

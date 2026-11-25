@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Genuine interest in the hobby restores your cousin's standing in the conversation without a confrontation. Laughing along endorses the put-down, and a loud argument makes your cousin the centre of a family clash.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

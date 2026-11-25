@@ -25,6 +25,9 @@
   "correctOptionId": "d",
   "explanation": "People in Poland speak Polish.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Poland | Encyclopaedia Britannica",

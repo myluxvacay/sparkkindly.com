@@ -6,6 +6,10 @@
   "title": "Memory: train station sign",
   "prompt": "From memory: what does the sign in the train station say?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The sign in the picture reads \"Toys\" — it is written in big letters on the board.",
   "sources": [],
   "reviewStatus": "approved",

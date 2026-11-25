@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The order was: first the white boat, second the green car, third the orange orange. So the second one was the green car.",
   "sources": [],
   "reviewStatus": "approved",

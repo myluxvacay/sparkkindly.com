@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Madagascar is in Eastern Africa, part of Africa.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Madagascar | Encyclopaedia Britannica",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Interest: $2,400 x 15% = $360 per year, and $360 x 2 = $720. Total repaid: $2,400 + $720 = $3,120. Monthly payment: $3,120 / 24 months = $130. The $100 option forgets the interest ($2,400 / 24), and $115 adds only one year of interest.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

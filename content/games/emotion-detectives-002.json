@@ -2,6 +2,9 @@
   "brand": "kids",
   "correctOptionId": "a",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "Spark feels proud. The clues are that he finished something tricky all by himself, and sat up tall with a smile.",
   "gameType": "emotion-detectives",
   "id": "emotion-detectives-002",

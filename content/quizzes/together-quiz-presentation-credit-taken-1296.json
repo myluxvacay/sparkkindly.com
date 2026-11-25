@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Raising it privately first and clarifying contributions together corrects the record honestly without humiliating anyone in public.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The gaps grow each time: B to D is +2, D to G is +3, then +4 and +5, so the next jump is +6: P + 6 = V.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

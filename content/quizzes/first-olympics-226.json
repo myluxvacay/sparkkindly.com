@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "The games began at Olympia in ancient Greece in 776 BC and were held every four years for nearly twelve centuries.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Ancient Olympic Games",

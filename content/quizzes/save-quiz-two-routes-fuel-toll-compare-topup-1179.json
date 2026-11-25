@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Route A fuel: 240 / 40 = 6 gallons, at 6 x $4 = $24, plus the $6 toll = $30. Route B fuel: 160 / 40 = 4 gallons, at 4 x $4 = $16, plus the $18 toll = $34. Difference: $34 - $30 = $4, so Route A is cheaper even though it is longer. Comparing fuel alone gives an $8 gap and misses the tolls.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

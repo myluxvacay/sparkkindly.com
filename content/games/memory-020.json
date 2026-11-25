@@ -6,6 +6,10 @@
   "title": "Memory: meadow absent",
   "prompt": "From memory: which of these was NOT in the meadow?",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The blue fish never appeared in the picture. The other three choices were all there to be spotted.",
   "sources": [],
   "reviewStatus": "approved",

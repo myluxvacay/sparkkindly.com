@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A short wait separates an impulse from a genuine want, and weighing what the money would otherwise buy makes the trade-off visible before you spend, not after.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

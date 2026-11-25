@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Paying monthly costs 12 x $12 = $144 a year. Annual payment is $120. Saving: $144 - $120 = $24.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

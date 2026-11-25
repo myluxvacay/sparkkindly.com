@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "You need $110 - $50 = $60 more. Saving $15 a week, $60 divided by $15 = 4 weeks.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

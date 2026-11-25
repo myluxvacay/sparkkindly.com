@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Dim light and a break from screens before bed help your body clock wind down, making it easier to fall asleep.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Sleep hygiene",

@@ -6,6 +6,10 @@
   "title": "Memory: pond count",
   "prompt": "From memory: how many turtles are in the pond?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the turtles one by one, pointing at each so none is counted twice: there are 2.",
   "sources": [],
   "reviewStatus": "approved",

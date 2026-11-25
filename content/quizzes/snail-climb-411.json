@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Each full day gains the snail 1 metre (3 up, 2 back), so after 7 days it sits at 7 metres. On day 8 it climbs 3 more metres and reaches 10 before any slip.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

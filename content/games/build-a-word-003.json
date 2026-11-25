@@ -1,6 +1,10 @@
 {
   "brand": "kids",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "D-U-C-K spells DUCK — the bird that quacks and loves to swim.",
   "gameType": "build-a-word",
   "id": "build-a-word-003",

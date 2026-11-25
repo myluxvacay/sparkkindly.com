@@ -6,6 +6,10 @@
   "title": "Memory: classroom color",
   "prompt": "From memory: what colour is the mushroom in the classroom?",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The mushroom in the picture is brown — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

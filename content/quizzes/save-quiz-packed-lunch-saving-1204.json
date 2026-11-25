@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Buying lunch costs 10 x $9 = $90. Packed lunches cost 10 x $5 = $50, so you save $90 - $50 = $40.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

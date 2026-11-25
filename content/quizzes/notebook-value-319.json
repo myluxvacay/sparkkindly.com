@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "In the pack, each notebook costs $10 ÷ 4 = $2.50, which is less than $3 for a single one.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

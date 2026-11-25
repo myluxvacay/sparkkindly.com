@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "The motherboard is the computer's main circuit board. The processor, memory and storage all plug into it, and its tracks carry signals between them — it is the meeting place that lets every part talk to the others.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Motherboard | Wikipedia",

@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Be the Weather Presenter",
   "description": "For ages 6–9 with an adult: look at the sky, check the weather clues, and present your own weather report show.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-11-13",
   "updatedAt": "2026-11-13",
   "author": "SparkKindly · AI-assisted",

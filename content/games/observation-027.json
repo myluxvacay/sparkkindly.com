@@ -6,6 +6,9 @@
   "title": "Look closely: train station sign",
   "prompt": "What does the sign in the train station say?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The sign in the picture reads \"Post\" — it is written in big letters on the board.",
   "sources": [],
   "reviewStatus": "approved",

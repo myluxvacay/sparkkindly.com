@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Yes! Pandas eat bamboo. They munch on its stems and leaves.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

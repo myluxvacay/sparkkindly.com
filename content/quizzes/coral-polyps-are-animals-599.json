@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "A polyp is an animal — a soft tube with stinging tentacles, kin to jellyfish and sea anemones. Colonies of polyps build the limestone skeletons we call coral reefs.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Wikipedia: Coral",

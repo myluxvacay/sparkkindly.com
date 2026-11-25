@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "From a1 the rook can reach the other 7 squares in its column and the other 7 squares in its row. That is 7+7=14 squares in total.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Rook (chess)",

@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "People in Andorra speak Catalan.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Andorra | Encyclopaedia Britannica",

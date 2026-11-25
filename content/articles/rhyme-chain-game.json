@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Rhyme Chain",
   "description": "For ages 6–9 with an adult: pass a rhyming word around the circle and see how long the chain can grow.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-06-01",
   "updatedAt": "2026-06-01",
   "author": "SparkKindly · AI-assisted",

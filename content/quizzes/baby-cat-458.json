@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "A baby cat is called a kitten; a puppy is a baby dog and a calf is a baby cow.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

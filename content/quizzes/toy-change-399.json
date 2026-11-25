@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "$25 - $18 = $7 left over, and that $7 can go straight back into your savings for the next goal.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

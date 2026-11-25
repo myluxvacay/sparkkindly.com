@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Blocking the distracting sites for just that hour removes the temptation at the moment it usually strikes, instead of depending on resisting it repeatedly while you work.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

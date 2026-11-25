@@ -6,6 +6,10 @@
   "title": "Spot the difference: meadow",
   "prompt": "Three things changed between the two meadow pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The fox changed colour from orange to plain, the pink flower changed colour from yellow to pink and the snowman vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "10 W = 0.01 kW. Hours in a year of full days: 24 x 365 = 8,760. Energy: 0.01 x 8,760 = 87.6 kWh, even though the device is never actively used.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

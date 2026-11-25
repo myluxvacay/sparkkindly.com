@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Basket total: $18 + $24 + $13 = $55. With 10% off you pay 90%: $55 x 0.90 = $49.50.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

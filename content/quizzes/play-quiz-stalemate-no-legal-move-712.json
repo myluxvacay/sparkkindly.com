@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "This is stalemate. A player who is not in check but has no legal move has stalemated the game, and the result is a draw — even if the other player has far more pieces left.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Stalemate | Wikipedia",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "In 4 seconds the sound covers 1,500 × 4 = 6,000 metres in total, but that is the round trip down and back. The one-way distance to the seabed is half of that: about 3,000 metres.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Speed of sound",

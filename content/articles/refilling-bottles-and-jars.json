@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "Refilling bottles and jars you already own",
   "description": "Refill shops and supermarket stations let sturdy containers work for years instead of minutes.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-07-30",
   "updatedAt": "2026-07-30",
   "tags": [

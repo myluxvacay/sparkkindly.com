@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The testing effect depends on trying to retrieve the answer from memory before feedback. Closing the book, writing an answer, and only then checking turns each question into real retrieval practice.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Testing effect",

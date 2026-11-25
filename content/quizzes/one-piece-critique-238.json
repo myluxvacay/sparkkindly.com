@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Specific feedback on one piece gives you one clear, practisable next step instead of vague praise or discouragement.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

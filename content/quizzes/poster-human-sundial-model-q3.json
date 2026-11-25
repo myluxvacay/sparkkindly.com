@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Earth's rotation makes the sun appear to arc overhead — the sundial reads that turning.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sundial | Wikipedia",

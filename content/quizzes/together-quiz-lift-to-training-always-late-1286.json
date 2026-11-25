@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Gratitude plus a concrete suggestion about timing addresses the real problem honestly while valuing the kindness behind the lifts.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

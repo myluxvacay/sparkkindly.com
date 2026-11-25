@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Underground, molten rock is called magma. Only once it erupts onto the surface is it called lava.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Magma",

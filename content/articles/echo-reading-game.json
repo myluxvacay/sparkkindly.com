@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Echo Reading",
   "description": "For ages 6–9 with an adult: listen as your adult reads a line, then echo it back in the same funny voice.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-06-22",
   "updatedAt": "2026-06-22",
   "author": "SparkKindly · AI-assisted",

@@ -6,6 +6,10 @@
   "title": "What changed: classroom",
   "prompt": "One thing changed between the before and after classroom pictures. What changed?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: Only one thing changed: the brown bear changed colour from black to brown. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

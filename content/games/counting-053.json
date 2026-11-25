@@ -6,6 +6,10 @@
   "title": "Counting: crabs at the beach",
   "prompt": "How many crabs can you count in the beach?",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the crabs one by one: there are exactly 6.",
   "sources": [],
   "reviewStatus": "approved",

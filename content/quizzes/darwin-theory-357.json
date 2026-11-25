@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Charles Darwin set out his theory in his 1859 book 'On the Origin of Species', after years of carefully observing wildlife.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Charles Darwin - Wikipedia",

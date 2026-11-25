@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The letters add up to 3+1+1=5. The Double Word square doubles the whole word total, so the word scores 5x2=10 points.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Scrabble",

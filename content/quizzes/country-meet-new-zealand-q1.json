@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "New Zealand is in Australia and New Zealand, part of Oceania.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "New Zealand | Encyclopaedia Britannica",

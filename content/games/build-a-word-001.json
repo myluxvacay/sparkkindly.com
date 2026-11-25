@@ -1,6 +1,10 @@
 {
   "brand": "kids",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "C-A-T spells CAT — the animal in the picture, with soft fur and whiskers.",
   "gameType": "build-a-word",
   "id": "build-a-word-001",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Two notebooks cost 2 x $3 = $6, and $10 minus $6 leaves $4.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

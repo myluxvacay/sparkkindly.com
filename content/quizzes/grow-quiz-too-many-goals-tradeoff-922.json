@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The constraint is not ambition but hours and attention. Choosing a lead goal for this season and parking the rest, with a review date, protects progress on something instead of thin progress on everything.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

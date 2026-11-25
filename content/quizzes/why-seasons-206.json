@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Earth's axis is tilted, so each hemisphere takes turns leaning toward the Sun during the year, changing the sunlight and temperatures it receives.",
   "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Axial tilt",

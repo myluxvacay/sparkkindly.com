@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "$20 - $13 = $7 change. It is always worth a quick count before you leave the till.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

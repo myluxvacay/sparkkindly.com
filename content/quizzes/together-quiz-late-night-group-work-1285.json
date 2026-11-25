@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Fixing what you can for the deadline while addressing the lateness honestly afterwards is fairer than secretly erasing someone's contribution.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "That is right! Hot and cold are opposites, like summer and winter days.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

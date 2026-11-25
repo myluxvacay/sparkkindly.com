@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Cara finished immediately ahead of Ben, so the pair is either 1st-2nd or 2nd-3rd. If they were 1st and 2nd, Ana would be 3rd, but Ana did not finish last. So Cara is 2nd and Ben is 3rd, leaving Ana in 1st.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

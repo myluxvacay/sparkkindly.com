@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came fourth?",
   "prompt": "Spark showed some things in order. What came fourth?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the white star, second the brown owl, third the green train, fourth the yellow balloon, fifth the red apple. So the fourth one was the yellow balloon.",
   "sources": [],
   "reviewStatus": "approved",

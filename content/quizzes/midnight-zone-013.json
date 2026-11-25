@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The bathypelagic or midnight zone is about 1,000 to 4,000 metres deep. It is part of the aphotic region where sunlight does not reach.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "NOAA: How far does light travel in the ocean?",

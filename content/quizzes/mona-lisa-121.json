@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Leonardo da Vinci painted the Mona Lisa in the early 1500s, during the Italian Renaissance.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Mona Lisa",

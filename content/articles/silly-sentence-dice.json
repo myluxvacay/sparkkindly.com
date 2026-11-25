@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Silly Sentence Dice",
   "description": "For ages 6–9 with an adult: make paper dice covered in words and roll them to build the silliest sentences ever.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-10-11",
   "updatedAt": "2026-10-11",
   "author": "SparkKindly · AI-assisted",

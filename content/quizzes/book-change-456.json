@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "$10 minus $8 is $2, so your change is $2.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

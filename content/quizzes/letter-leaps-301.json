@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The jumps grow: A to C is +2, C to F is +3, F to J is +4, J to O is +5, so the next jump is +6, landing on U.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

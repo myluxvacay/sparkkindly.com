@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The final grade is a lagging measure she cannot change until the end. Weekly leading measures — sessions done and specific errors corrected — tell her what to adjust while there is still time.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

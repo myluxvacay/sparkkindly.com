@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The letters jump forward by 2, then 3, then 4, then 5 places. The next jump is 6 places from O, which lands on U.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

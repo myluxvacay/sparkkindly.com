@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The digit 9 appears 10 times in the ones place (9, 19, and so on up to 99) and 10 times in the tens place (90 to 99), making 20 in total.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

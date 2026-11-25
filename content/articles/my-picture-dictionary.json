@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "My Picture Dictionary",
   "description": "For ages 6–9 with an adult: make a little book of your favourite words, with your own drawing for every one.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-06-14",
   "updatedAt": "2026-06-14",
   "author": "SparkKindly · AI-assisted",

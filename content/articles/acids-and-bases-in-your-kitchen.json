@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Lemon juice, vinegar, soap and baking soda: your kitchen shelves hold both acids and bases, and you can tell the two apart.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

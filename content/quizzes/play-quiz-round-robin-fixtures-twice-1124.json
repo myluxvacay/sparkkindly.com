@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The number of different pairings is 8 x 7 / 2 = 28. Each pairing plays twice, home and away, so the total is 28 x 2 = 56 matches. The 28 figure forgets the second meeting.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

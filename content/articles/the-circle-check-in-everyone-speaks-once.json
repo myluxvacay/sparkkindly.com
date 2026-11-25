@@ -5,6 +5,9 @@
   "contentType": "activity",
   "title": "The circle check-in: everyone speaks once",
   "description": "Before a family discussion or a group decision, go around the circle: each person speaks once, briefly, with no interruptions, before anyone speaks twice. It changes what gets heard.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-11-23",
   "updatedAt": "2026-11-23",
   "author": "SparkKindly · AI-assisted",

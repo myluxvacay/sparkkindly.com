@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "A reduced, functionless version of a structure that was fully functional in ancestors is a vestigial structure. The whale pelvis matches the hind-limb support of land mammals, consistent with whales descending from four-legged land ancestors.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Vestigiality",

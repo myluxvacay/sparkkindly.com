@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "A caterpillar wraps itself in a chrysalis and slowly changes into a butterfly.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Butterfly - Wikipedia",

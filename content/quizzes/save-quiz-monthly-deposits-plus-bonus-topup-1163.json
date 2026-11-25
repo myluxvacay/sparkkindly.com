@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Total saved: 12 x $80 = $960. Bonus: 5% of $960 = $48. Total: $960 + $48 = $1,008. The $960 option forgets the bonus, and $964 wrongly works out 5% of one month's $80 ($4) instead of 5% of the whole $960.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

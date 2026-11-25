@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A single, always-available place for a one-line note takes seconds to use, so ideas are stored before they fade — without derailing whatever you were doing when they arrived.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

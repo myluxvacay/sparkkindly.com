@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "A square has four sides, and they are all the same length. Count them: 1, 2, 3, 4!",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

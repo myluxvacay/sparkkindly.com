@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "There are 4 aces and 4 kings, so 8 winning cards out of 52. That gives 8/52, and dividing top and bottom by 4 simplifies it to 2/13.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

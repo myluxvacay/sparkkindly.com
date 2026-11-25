@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Under the fifty-move rule, a player to move can claim a draw if the last 50 moves by each player were completed without a pawn move or a capture. At 75 such moves the draw is automatic.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Fifty-move rule | Wikipedia",

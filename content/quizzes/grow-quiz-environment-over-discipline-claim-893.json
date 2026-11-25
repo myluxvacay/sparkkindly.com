@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "You cannot directly do 'be disciplined', but you can move the phone, change rooms and agree on quiet time. System changes beat self-image resolutions because they work on tired days too.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

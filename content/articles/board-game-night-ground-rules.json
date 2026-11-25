@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "A few agreed rules about winning, losing, and quitting keep family game night fun for the youngest and oldest players alike.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

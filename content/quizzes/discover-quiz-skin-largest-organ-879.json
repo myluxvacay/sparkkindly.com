@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "The skin is the body's largest organ, covering about two square metres in an adult and acting as a protective barrier.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Skin",

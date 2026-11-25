@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "LED bulbs, room by room",
   "description": "Replacing bulbs gradually, starting where lights burn longest, is a calm way to cut lighting costs.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-06-03",
   "updatedAt": "2026-06-03",
   "tags": [

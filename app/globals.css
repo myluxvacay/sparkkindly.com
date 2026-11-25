@@ -715,3 +715,15 @@ a.watch-chip{display:inline-flex;align-items:center;text-decoration:none}
 .printable-share li a:hover,.share-copy:hover{background:#f2ebf6}
 @media(max-width:900px){.printable-cats,.printable-grid{grid-template-columns:repeat(2,1fr)}.sheet-cards{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:580px){.printable-cats,.printable-grid,.sheet-steps{grid-template-columns:1fr}.sheet-cards{grid-template-columns:repeat(2,1fr)}.printable-sheet{padding:22px 18px}.sheet-letter-grid td{width:40px;height:40px;font-size:22px}.trace-row{font-size:32px;gap:16px}.sheet-logo{width:72px;height:72px}.sheet-spark{height:84px}.sheet-header{gap:12px}}
+
+.band-chip{background:#f7c94866;border-radius:3px;padding:2px 8px;font-weight:600}
+.band-chip-label{margin-bottom:14px}
+.band-control{font-size:11px;color:#665b65;margin:0}
+.band-lead-bar{font-size:12px;color:var(--muted);margin-bottom:18px}
+.band-picker-backdrop{position:fixed;inset:0;background:rgba(30,19,38,.55);display:flex;align-items:center;justify-content:center;z-index:90;padding:20px}
+.band-picker{background:var(--paper);color:var(--ink);border-radius:7px;padding:32px;max-width:440px;width:100%;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.band-picker:focus-visible{outline:3px solid var(--plum);outline-offset:5px}
+.band-picker-spark{margin:0 auto 10px;height:110px;width:auto}
+.band-picker-options{display:grid;gap:10px;margin:20px 0 14px}
+.band-picker-option{width:100%}
+.band-picker-skip{min-height:44px}

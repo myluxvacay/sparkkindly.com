@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Yes, cat and hat rhyme. They both end with the same at sound.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

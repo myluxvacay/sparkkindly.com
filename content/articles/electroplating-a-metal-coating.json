@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Electroplating uses electricity to coat an object with a thin skin of metal — the trick behind chrome taps and gold-plated jewellery.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

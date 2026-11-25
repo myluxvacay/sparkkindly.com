@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The order was: first the white cow, second the brown owl, third the purple cupcake, fourth the bee, fifth the yellow duck. So the second one was the brown owl.",
   "sources": [],
   "reviewStatus": "approved",

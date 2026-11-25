@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Gas exchange in alveoli is by diffusion: oxygen moves from where its partial pressure is higher (fresh air in the alveolus) to where it is lower (deoxygenated blood in the capillary), across a wall only about one cell thick.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Pulmonary alveolus",

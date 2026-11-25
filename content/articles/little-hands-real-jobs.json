@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Children who are given real, right-sized jobs around the home become people who notice what needs doing.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

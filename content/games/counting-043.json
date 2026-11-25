@@ -6,6 +6,10 @@
   "title": "Counting: flowers at the meadow",
   "prompt": "How many flowers can you count in the meadow?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the flowers one by one: there are exactly 2.",
   "sources": [],
   "reviewStatus": "approved",

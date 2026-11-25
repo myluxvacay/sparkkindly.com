@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "The hour marks were drawn for that exact position; stand elsewhere and the geometry — and the time — shifts.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Sundial | Wikipedia",

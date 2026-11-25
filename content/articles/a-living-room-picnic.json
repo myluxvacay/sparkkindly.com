@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Ordinary food on a blanket on the floor turns a tired weekday evening into a small occasion.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

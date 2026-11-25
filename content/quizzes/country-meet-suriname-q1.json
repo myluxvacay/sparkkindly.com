@@ -25,6 +25,10 @@
   "correctOptionId": "a",
   "explanation": "Suriname is in South America.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Suriname | Encyclopaedia Britannica",

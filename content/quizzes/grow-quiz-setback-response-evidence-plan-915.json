@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "A single bad performance, influenced by sleep, weather or illness, does not outweigh a trend. Reviewing the record calmly separates a blip from a real pattern worth changing.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The saving is the normal price minus the sale price: 30 - 18 = $12.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

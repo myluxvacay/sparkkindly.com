@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The multiples of 7 up to 50 are 7, 14, 21, 28, 35, 42 and 49 - that is 7 numbers.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

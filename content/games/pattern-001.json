@@ -2,6 +2,9 @@
   "brand": "play",
   "correctOptionId": "c",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The pattern takes turns: rocket, planet, rocket, planet — so the missing piece is another rocket.",
   "gameType": "pattern",
   "id": "pattern-001",

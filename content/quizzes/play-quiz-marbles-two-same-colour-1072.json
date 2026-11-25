@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Both red: 4/7 x 3/6 = 12/42. Both blue: 3/7 x 2/6 = 6/42. Adding the two cases gives 18/42, which simplifies to 3/7.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -6,6 +6,10 @@
   "title": "Memory: market stall color",
   "prompt": "From memory: what colour is the orange in the market stall?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "The orange in the picture is orange — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

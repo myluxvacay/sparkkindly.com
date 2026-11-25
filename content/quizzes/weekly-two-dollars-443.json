@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Saving $2 a week for 6 weeks gives 2 x 6 = $12 in total.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

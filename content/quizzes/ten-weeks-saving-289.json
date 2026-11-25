@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "$7 a week for 10 weeks is 7 × 10 = $70.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

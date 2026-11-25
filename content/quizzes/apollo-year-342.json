@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Apollo 11 landed on the Moon on 20 July 1969, and Neil Armstrong and Buzz Aldrin walked on its surface.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Apollo 11 - Wikipedia",

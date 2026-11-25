@@ -21,6 +21,9 @@
   "fiction": false,
   "title": "Checking your local recycling rules",
   "description": "Rules genuinely differ from town to town, so one five-minute check replaces years of guessing and kitchen debates.",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-07-17",
   "updatedAt": "2026-07-17",
   "tags": [

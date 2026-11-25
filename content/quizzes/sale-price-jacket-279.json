@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "25% of $80 is $20, so the sale price is $80 − $20 = $60.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Jump is something you can DO, so it is an action word.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Verb | Wikipedia",

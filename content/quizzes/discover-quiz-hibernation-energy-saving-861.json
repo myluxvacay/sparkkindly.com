@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Hibernation is an energy-saving state: by letting body temperature fall and metabolism slow right down, an animal burns its stored fat very slowly, which can carry it through months when food is too scarce to replace the energy it would use while active.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "accessedAt": "2026-11-17",

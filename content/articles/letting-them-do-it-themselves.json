@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Letting children do things themselves is slower and messier in the moment, and it is exactly how they become capable.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

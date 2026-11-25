@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Tides come from differences in the Moon's pull across Earth. On the far side the pull is weakest, so that water lags behind Earth's motion toward the Moon, forming a second bulge opposite the first.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Tide",

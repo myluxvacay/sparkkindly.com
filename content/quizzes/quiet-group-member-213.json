@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "A private, curious conversation may reveal a problem you can solve together; public blame rarely helps anyone.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "'You're welcome' answers a thank-you and means you were glad to help.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Etiquette | Wikipedia",

@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The knight takes 'N' because 'K' already belongs to the king. So 'Nf3' means a knight moved to f3; pawns get no letter at all.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Algebraic notation (chess) | Wikipedia",

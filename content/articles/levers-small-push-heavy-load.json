@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "A crowbar lets one person shift a boulder. The secret is a pivot point and a simple trade: force for distance.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

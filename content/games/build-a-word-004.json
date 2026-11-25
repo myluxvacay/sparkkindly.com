@@ -1,6 +1,9 @@
 {
   "brand": "kids",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "A-P-P-L-E spells APPLE — the crunchy red fruit. Watch out: the S tile was a spare that the word does not need!",
   "gameType": "build-a-word",
   "id": "build-a-word-004",

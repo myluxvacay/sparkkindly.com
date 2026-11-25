@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Orville and Wilbur Wright flew at Kitty Hawk on 17 December 1903, staying airborne for 12 seconds on the first flight.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Wright brothers",

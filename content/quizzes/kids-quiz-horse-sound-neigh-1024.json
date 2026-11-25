@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Yes, a horse says neigh. You remembered the horse sound, well done!",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

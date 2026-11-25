@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The 15 red-black pairs score 15 x (1 + 7) = 120. The final colours add 2 + 3 + 4 + 5 + 6 + 7 = 27. The total is 120 + 27 = 147.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Maximum break",

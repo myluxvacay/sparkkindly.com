@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Take 1, leaving 3. If the other player takes 1, 2 remain and you take both to win. If they take 2, 1 remains and you take it to win. Taking 2 first would let them take the last 2 instead.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

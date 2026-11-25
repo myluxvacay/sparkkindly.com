@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "GOD is an anagram of DOG: it uses the same three letters D, O and G, just in a different order.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

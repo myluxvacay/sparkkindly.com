@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Mirrors obey one exact rule — angle in equals angle out — and two mirrors at 45 degrees build a periscope that sees over walls.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

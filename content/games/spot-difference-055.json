@@ -6,6 +6,10 @@
   "title": "Spot the difference: garden",
   "prompt": "Three things changed between the two garden pictures. Which list names all three changes?",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Compare the two pictures bit by bit: The orange changed colour from orange to plain, the green balloon changed colour from blue to green and the green pine tree vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

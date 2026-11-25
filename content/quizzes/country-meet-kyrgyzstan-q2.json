@@ -25,6 +25,9 @@
   "correctOptionId": "c",
   "explanation": "Lake Issyk-Kul is one of the two places we'd love to visit in Kyrgyzstan. Issyk-Kul is one of the world's largest mountain lakes, ringed by snowy peaks.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Kyrgyzstan | Encyclopaedia Britannica",

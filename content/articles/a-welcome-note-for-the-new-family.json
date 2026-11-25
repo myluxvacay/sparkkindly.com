@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "A short note and something edible in the first week can turn new neighbours from strangers into a small community.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

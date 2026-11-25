@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Sound is not stuff that flies through the air — it is a pattern of squeezes and stretches passed from particle to particle.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

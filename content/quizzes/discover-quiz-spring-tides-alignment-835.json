@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "At new and full moon the Sun, Moon and Earth are in line, so solar and lunar tidal forces add together, producing higher high tides and lower low tides — a larger tidal range.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Tide",

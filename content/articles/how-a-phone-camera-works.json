@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "A phone camera focuses light onto a chip of millions of light sensors, counts what each one catches, and computes a photo.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

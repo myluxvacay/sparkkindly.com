@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Tariff A: $120 + (4,000 x $0.25 = $1,000) = $1,120. Tariff B: $60 + (4,000 x $0.30 = $1,200) = $1,260. Difference: $1,260 - $1,120 = $140. The $60 option compares only the standing charges and the $200 option compares only the unit costs; you need both parts of each tariff.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

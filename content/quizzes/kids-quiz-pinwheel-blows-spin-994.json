@@ -24,6 +24,10 @@
   "correctOptionId": "a",
   "explanation": "Your gentle blow pushes the pinwheel and makes it spin round and round. Whee!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

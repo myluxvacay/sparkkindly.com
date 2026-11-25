@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Granite is an intrusive igneous rock. Slow cooling underground gave its crystals time to grow large enough to see as speckles.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Granite",

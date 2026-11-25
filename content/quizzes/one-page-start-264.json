@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "One page tied to an existing routine is so small it is hard to skip, and small starts build into steady habits.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

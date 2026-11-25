@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "People in Belarus speak Belarusian and Russian.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Belarus | Encyclopaedia Britannica",

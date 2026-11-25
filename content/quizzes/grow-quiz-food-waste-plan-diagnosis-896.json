@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "The waste is produced at the buying step, not the throwing-away step. A short meal plan and list target the decision that creates the surplus, which 'buy less' as a vague intention never reaches.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

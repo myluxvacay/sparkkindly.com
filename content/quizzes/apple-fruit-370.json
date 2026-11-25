@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "An apple is a fruit that grows on a tree - and it has little seeds inside.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

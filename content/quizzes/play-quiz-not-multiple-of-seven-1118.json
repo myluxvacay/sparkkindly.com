@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The multiples of 7 here are 14 (7x2), 28 (7x4) and 42 (7x6). 36 is not divisible by 7, since 7x5=35 and 7x6=42.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The total is $24 + $6 = $30, and $30 shared equally by 3 friends is $10 each.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

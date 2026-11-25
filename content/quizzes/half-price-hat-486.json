@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "50% off means you pay half the price, and half of $10 is $5.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

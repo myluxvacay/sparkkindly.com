@@ -24,6 +24,10 @@
   "correctOptionId": "c",
   "explanation": "A week has 7 days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

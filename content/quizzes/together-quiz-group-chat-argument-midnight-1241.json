@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Tired, public arguments reward quick reactions over understanding. A pause protects both friendships and lets the two people involved sort it out properly, while side-taking and dramatic exits raise the stakes.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

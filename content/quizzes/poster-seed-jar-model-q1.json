@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Germination starts when water, warmth and air arrive together.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Germination | Wikipedia",

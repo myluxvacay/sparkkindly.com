@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "The wind pushes the big tail downwind, so the arrow settles pointing into the wind — its source.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Anemometer | Wikipedia",

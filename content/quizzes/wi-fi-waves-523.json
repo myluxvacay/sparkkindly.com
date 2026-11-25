@@ -1,1 +1,41 @@
-{"brand":"discover","correctOptionId":"a","difficulty":"easy","explanation":"Wi-Fi encodes data as rapid changes in radio waves in the 2.4 and 5 gigahertz bands; the receiving device decodes those changes back into data.","id":"wi-fi-waves-523","options":[{"id":"a","text":"Radio waves"},{"id":"b","text":"Sound waves too high to hear"},{"id":"c","text":"Pulses of light through the air"},{"id":"d","text":"Vibrations in the power cables"}],"prompt":"Wi-Fi carries data from a router to a laptop using what?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-02-05","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Wi-Fi","url":"https://en.wikipedia.org/wiki/Wi-Fi"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "a",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
+  "explanation": "Wi-Fi encodes data as rapid changes in radio waves in the 2.4 and 5 gigahertz bands; the receiving device decodes those changes back into data.",
+  "id": "wi-fi-waves-523",
+  "options": [
+    {
+      "id": "a",
+      "text": "Radio waves"
+    },
+    {
+      "id": "b",
+      "text": "Sound waves too high to hear"
+    },
+    {
+      "id": "c",
+      "text": "Pulses of light through the air"
+    },
+    {
+      "id": "d",
+      "text": "Vibrations in the power cables"
+    }
+  ],
+  "prompt": "Wi-Fi carries data from a router to a laptop using what?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-02-05",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Wi-Fi",
+      "url": "https://en.wikipedia.org/wiki/Wi-Fi"
+    }
+  ]
+}

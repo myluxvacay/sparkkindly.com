@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "Canada is in Northern America, part of North America.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Canada | Encyclopaedia Britannica",

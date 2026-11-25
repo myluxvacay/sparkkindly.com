@@ -1,6 +1,10 @@
 {
   "brand": "kids",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Bear begins with B, Cat begins with C, Dog begins with D, and Frog begins with F. Listen for the very first sound!",
   "gameType": "drag-match",
   "id": "drag-match-sounds-001",

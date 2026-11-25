@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Yes! The Moon shines in the night sky, sometimes round and bright.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

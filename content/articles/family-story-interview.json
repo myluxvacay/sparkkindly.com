@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Interview a Storyteller",
   "description": "For ages 6–9 with an adult: ask a family member five questions and collect a real story from when they were young.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-10-08",
   "updatedAt": "2026-10-08",
   "author": "SparkKindly · AI-assisted",

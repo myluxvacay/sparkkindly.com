@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The saving is $13 x 3 months = $39.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

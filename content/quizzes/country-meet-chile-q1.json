@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Chile is in South America.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Chile | Encyclopaedia Britannica",

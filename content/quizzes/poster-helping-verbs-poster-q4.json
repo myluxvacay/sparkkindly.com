@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "'I' always pairs with am: 'I am going to the library.'",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Auxiliary verb | Wikipedia",

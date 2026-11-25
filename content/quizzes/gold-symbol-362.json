@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Gold's symbol Au comes from 'aurum', its Latin name. Ag is the symbol for silver.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Gold - Wikipedia",

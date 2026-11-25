@@ -6,6 +6,10 @@
   "title": "Look closely: beach present",
   "prompt": "Which of these can you see in the beach?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The yellow balloon is right there in the picture. The other three choices are not in this scene at all.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "At 3:30 the minute hand points at 6, which is 180 degrees from 12. The hour hand has moved halfway between 3 and 4, so it sits at 3 x 30 + 15 = 105 degrees. The difference is 180 - 105 = 75 degrees.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

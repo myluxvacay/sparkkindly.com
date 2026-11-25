@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Distance works better than willpower: a phone in another room cannot interrupt you with sights, sounds or temptation.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

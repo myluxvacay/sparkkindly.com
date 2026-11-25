@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A piano has 88 keys, but they make music rather than opening locks.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

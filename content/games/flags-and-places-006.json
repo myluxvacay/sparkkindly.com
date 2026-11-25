@@ -6,6 +6,10 @@
   "title": "Flags & places: which flag is United Kingdom?",
   "prompt": "Which flag belongs to United Kingdom?",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "The United Kingdom’s Union Jack layers red and white crosses on blue. The other flags belong to Mexico, Australia, Japan.",
   "sources": [],
   "reviewStatus": "approved",

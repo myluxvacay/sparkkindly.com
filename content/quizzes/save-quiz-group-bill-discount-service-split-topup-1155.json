@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Discounted meal: $96 x 0.75 = $72 (that is, $96 - 25% of $96 = $96 - $24 = $72). Add the service charge: $72 + $8 = $80. Split between 4 friends: $80 / 4 = $20 each. The $26 option adds the service charge before the discount and splits $104 / 4, and $18 forgets the service charge ($72 / 4).",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

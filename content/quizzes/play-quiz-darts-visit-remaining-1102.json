@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Treble 20 is 60, treble 19 is 57 and double 16 is 32, so the visit scores 60 + 57 + 32 = 149. Subtracting from 501 gives 501 - 149 = 352.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Darts",

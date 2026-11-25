@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Ten take away four leaves six: count back 9, 8, 7, 6.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -1,1 +1,42 @@
-{"brand":"discover","correctOptionId":"d","difficulty":"medium","explanation":"Dissolved salt gets in the way of water molecules trying to lock into ice crystals, so salty water only freezes at a lower temperature. Ice on a salted path therefore melts, and the meltwater stays liquid.","id":"salt-and-ice-575","options":[{"id":"a","text":"Salt warms up when it touches ice"},{"id":"b","text":"Salt darkens the ice so sunlight heats it"},{"id":"c","text":"Salt roughens the ice so it cracks apart"},{"id":"d","text":"Salt lowers the freezing point of water"}],"prompt":"Why does spreading salt on an icy path make the ice melt?","reviewNote":"Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.","reviewStatus":"approved","reviewedAt":"2026-11-15","reviewer":"SparkKindly site owner","scheduledDate":"2027-03-29","sources":[{"accessedAt":"2026-11-15","title":"Wikipedia: Freezing-point depression","url":"https://en.wikipedia.org/wiki/Freezing-point_depression"}]}
+{
+  "brand": "discover",
+  "correctOptionId": "d",
+  "difficulty": "medium",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "explanation": "Dissolved salt gets in the way of water molecules trying to lock into ice crystals, so salty water only freezes at a lower temperature. Ice on a salted path therefore melts, and the meltwater stays liquid.",
+  "id": "salt-and-ice-575",
+  "options": [
+    {
+      "id": "a",
+      "text": "Salt warms up when it touches ice"
+    },
+    {
+      "id": "b",
+      "text": "Salt darkens the ice so sunlight heats it"
+    },
+    {
+      "id": "c",
+      "text": "Salt roughens the ice so it cracks apart"
+    },
+    {
+      "id": "d",
+      "text": "Salt lowers the freezing point of water"
+    }
+  ],
+  "prompt": "Why does spreading salt on an icy path make the ice melt?",
+  "reviewNote": "Science pack approved by the site owner through an explicit instruction in chat on 15 November 2026. AI-generated content; this records owner publication approval, not an independent specialist review.",
+  "reviewStatus": "approved",
+  "reviewedAt": "2026-11-15",
+  "reviewer": "SparkKindly site owner",
+  "scheduledDate": "2027-03-29",
+  "sources": [
+    {
+      "accessedAt": "2026-11-15",
+      "title": "Wikipedia: Freezing-point depression",
+      "url": "https://en.wikipedia.org/wiki/Freezing-point_depression"
+    }
+  ]
+}

@@ -6,6 +6,10 @@
   "title": "Counting: sheep at the farm",
   "prompt": "How many sheep can you count in the farm?",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the sheep one by one: there are exactly 7.",
   "sources": [],
   "reviewStatus": "approved",

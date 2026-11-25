@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Tickets first: 3 x $18 = $54. Then take the voucher off the total: $54 - $9 = $45. The $9 option is just the voucher, and $51 wrongly takes only $3 off the total instead of the full $9 voucher.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

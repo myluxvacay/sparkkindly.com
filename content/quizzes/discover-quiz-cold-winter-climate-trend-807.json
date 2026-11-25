@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "Weather describes short-term conditions that fluctuate widely from year to year, while climate is the long-term average pattern. A single cold winter sits within natural variability and does not by itself change a multi-decade trend.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Climate",

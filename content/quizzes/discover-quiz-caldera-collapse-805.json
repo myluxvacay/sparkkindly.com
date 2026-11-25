@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Calderas are collapse features: when a magma chamber is partly emptied by a major eruption, the roof of rock above it is unsupported and sinks, leaving a broad depression much larger than an ordinary crater.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Caldera",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Good work! Monday comes after Sunday and starts a new week.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Groceries are essential for living. Games, concerts and fashion trainers are wants - enjoyable, but not necessary.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

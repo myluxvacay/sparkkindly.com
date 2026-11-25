@@ -5,6 +5,9 @@
   "contentType": "activity",
   "title": "Number Detective",
   "description": "A familiar sequence, a new way to see it. Can you find the next number?",
+  "ageBands": [
+    "family"
+  ],
   "publishedAt": "2026-10-19",
   "updatedAt": "2026-10-19",
   "author": "SparkKindly · AI-assisted",

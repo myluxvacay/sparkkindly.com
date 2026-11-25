@@ -24,6 +24,10 @@
   "correctOptionId": "d",
   "explanation": "The colours swap red, blue, red, blue, so next is blue. The shapes go circle, square, triangle, so next is triangle. Well done!",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

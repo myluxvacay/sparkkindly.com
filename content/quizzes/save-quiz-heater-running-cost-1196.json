@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "The heater uses 2 x 3 = 6 kilowatt-hours. The cost is 6 x $0.20 = $1.20.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

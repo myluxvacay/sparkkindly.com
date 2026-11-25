@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Linking a new habit to a reliable daily cue — like brushing your teeth — means the cue reminds you automatically.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

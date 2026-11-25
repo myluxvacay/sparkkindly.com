@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Sticking to what you witnessed is honest to your manager and fair to your friend. Lying protects neither of you for long, and adding extra complaints turns a factual account into a pile-on.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

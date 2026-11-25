@@ -6,6 +6,9 @@
   "title": "Look closely: park color",
   "prompt": "What colour is the fox in the park?",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "explanation": "The fox in the picture is orange — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

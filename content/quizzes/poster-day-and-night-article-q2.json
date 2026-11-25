@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "The sun keeps shining; night is just our side of Earth turned away from it.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Earth's rotation | Wikipedia",

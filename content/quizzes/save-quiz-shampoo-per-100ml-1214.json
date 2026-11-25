@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "750 ml contains 7.5 lots of 100 ml. $10.50 divided by 7.5 = $1.40 per 100 ml.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

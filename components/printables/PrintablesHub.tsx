@@ -1,6 +1,7 @@
 'use client';
 import { useMemo, useRef, useState } from 'react';
-import { AGE_BANDS, PRINTABLE_CATEGORIES } from '@/lib/printables';
+import { PRINTABLE_CATEGORIES } from '@/lib/printables';
+import { BAND_LABEL, CHILD_BANDS, type AgeBand } from '@/lib/age-bands';
 
 export type HubItem = {
   slug: string;
@@ -10,7 +11,9 @@ export type HubItem = {
   imageAlt: string;
   categoryTopic: string | null;
   categoryName: string | null;
-  ageTopic: string | null;
+  // Canonical age bands (lib/age-bands.ts), unified from the item's topics by the hub page —
+  // the one age filter on this page (the legacy ages-5-8 / ages-6-10 topics no longer filter).
+  ageBands: AgeBand[];
   ageLabel: string | null;
 };
 
@@ -19,7 +22,7 @@ export type HubItem = {
 // band — the same chip pattern as the Watch catalogue.
 export default function PrintablesHub({ items }: { items: HubItem[] }) {
   const [category, setCategory] = useState<string>('all');
-  const [age, setAge] = useState<string>('all');
+  const [age, setAge] = useState<AgeBand | 'all'>('all');
   const browseRef = useRef<HTMLDivElement>(null);
 
   const counts = useMemo(() => {
@@ -29,7 +32,7 @@ export default function PrintablesHub({ items }: { items: HubItem[] }) {
   }, [items]);
 
   const shown = items.filter(
-    (i) => (category === 'all' || i.categoryTopic === category) && (age === 'all' || i.ageTopic === age),
+    (i) => (category === 'all' || i.categoryTopic === category) && (age === 'all' || i.ageBands.includes(age)),
   );
 
   function pickCategory(topic: string) {
@@ -77,15 +80,15 @@ export default function PrintablesHub({ items }: { items: HubItem[] }) {
           <button type="button" className={age === 'all' ? 'watch-chip active' : 'watch-chip'} aria-pressed={age === 'all'} onClick={() => setAge('all')}>
             All ages
           </button>
-          {AGE_BANDS.map((a) => (
+          {CHILD_BANDS.map((b) => (
             <button
-              key={a.topic}
+              key={b}
               type="button"
-              className={age === a.topic ? 'watch-chip active' : 'watch-chip'}
-              aria-pressed={age === a.topic}
-              onClick={() => setAge(a.topic)}
+              className={age === b ? 'watch-chip active' : 'watch-chip'}
+              aria-pressed={age === b}
+              onClick={() => setAge(b)}
             >
-              {a.label}
+              {BAND_LABEL[b]}
             </button>
           ))}
         </div>

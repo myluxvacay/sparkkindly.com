@@ -20,6 +20,14 @@ and you can fix it and send it again. The authoritative definition is `lib/items
 - **`image`** is optional. Without one the site makes a branded template image. If you give one, say where it came from:
   `origin` is `template`, `stock`, `generated` or `owner-supplied`, with its `licence`.
 - **`publishAt`** (ISO date-time) is optional; the server uses the next free slot if it is missing or in the past.
+- **`ageBands`**: REQUIRED on every article, quiz and game. Every item must carry `ageBands` at creation —
+  one or more of `3-5`, `6-8`, `9-12`, `family` (the canonical bands in `lib/age-bands.ts`; `family` means
+  all-ages / grown-ups and carries no child band). An approved item without bands fails validation (the
+  schema gate in `lib/schemas.ts`), and reviewers must reject an unbanded item rather than approve it.
+  Age-appropriateness is NOT difficulty: it is topic familiarity, vocabulary/reading level and concept
+  abstractness. A memory game can suit ages 3–5 even when it is challenging; a question about mercury the
+  metal never suits ages 3–5, however easy its wording is. Band an item for the youngest band that could
+  genuinely meet its subject, words and ideas — not for how hard it is to answer.
 - **`world`** is only needed by the master agent. A world agent can only submit to its own world.
 
 ## Article

@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "A deep ridged shape resists bending much better than a thin flat sheet, and the ridges share the load.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Bridge | Wikipedia",

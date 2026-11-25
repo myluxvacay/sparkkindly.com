@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A rectangle has two sides of 7 cm and two sides of 4 cm. The perimeter is 7+4+7+4=22 cm. The 28 cm option is the area, not the perimeter.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

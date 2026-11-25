@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Simple interest: 3 x $100 = $300. Compound: $1,000 x 1.10 = $1,100, then $1,210, then $1,331, so compound interest is $331. Difference: $331 - $300 = $31.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

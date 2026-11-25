@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The sequence is 1², 2², 3², 4². The next is 5², which equals 25. The question specifies the rule rather than relying on a guessed pattern.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

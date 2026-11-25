@@ -6,6 +6,9 @@
   "title": "Pick the right one: find the penguin",
   "prompt": "Which animal is a penguin?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The penguin is the black-and-white bird with a white belly, orange beak and feet. Penguins cannot fly, but they swim beautifully.",
   "sources": [],
   "reviewStatus": "approved",

@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A specific goal with a time, a place and a small size is easy to start and easy to check; vague wishes rarely turn into action.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "A tower crane lifts loads heavier than its own jib by balancing them against counterweights behind the mast.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

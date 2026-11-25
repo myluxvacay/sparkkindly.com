@@ -6,6 +6,10 @@
   "title": "Counting: fish at the pond",
   "prompt": "How many fish can you count in the pond?",
   "difficulty": "medium",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the fish one by one: there are exactly 8.",
   "sources": [],
   "reviewStatus": "approved",

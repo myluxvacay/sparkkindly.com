@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Gears trade speed for force: a low gear turns the wheel less per pedal stroke, but with far more push.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

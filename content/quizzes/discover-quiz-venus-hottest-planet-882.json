@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Venus's thick carbon dioxide atmosphere creates a runaway greenhouse effect, trapping heat so the surface reaches about 465°C — hotter than Mercury's.",
   "difficulty": "medium",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Venus",

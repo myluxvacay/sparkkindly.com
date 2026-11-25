@@ -6,6 +6,10 @@
   "title": "Spot the difference: classroom",
   "prompt": "Three things changed between the two classroom pictures. Which list names all three changes?",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "explanation": "Compare the two pictures bit by bit: The blue bird turned around, the yellow bird changed colour from blue to yellow and the yellow duck vanished. Nothing else is different.",
   "sources": [],
   "reviewStatus": "approved",

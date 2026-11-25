@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "$2.50 x 4 = $10.00: two snacks cost $5.00, so four cost twice that.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

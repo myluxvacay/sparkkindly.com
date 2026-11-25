@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Nice listening! The pattern is clap, clap, stomp, so stomp comes next.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

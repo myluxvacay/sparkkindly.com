@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "Pair the numbers from the ends: 1 + 100 = 101, 2 + 99 = 101, and so on. There are 50 such pairs, so the total is 50 x 101 = 5050.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

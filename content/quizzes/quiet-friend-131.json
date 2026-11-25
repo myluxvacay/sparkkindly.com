@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "A gentle, private check-in shows you noticed and care, and it leaves the choice to talk, or not, with your friend.",
   "difficulty": "easy",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

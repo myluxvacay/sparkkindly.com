@@ -6,6 +6,10 @@
   "title": "Counting: flowers at the garden",
   "prompt": "How many flowers can you count in the garden?",
   "difficulty": "hard",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "explanation": "Count the flowers one by one: there are exactly 9.",
   "sources": [],
   "reviewStatus": "approved",

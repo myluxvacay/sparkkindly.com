@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "Orbit is free fall that keeps missing Earth. The station and crew fall together under gravity with nothing pushing up against them, which produces the sensation and appearance of weightlessness.",
   "difficulty": "hard",
+  "ageBands": [
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Weightlessness",

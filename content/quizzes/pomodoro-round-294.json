@@ -24,6 +24,9 @@
   "correctOptionId": "c",
   "explanation": "The technique uses focused bursts of about 25 minutes on one task, followed by a short break to recharge.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [
     {
       "title": "Pomodoro Technique",

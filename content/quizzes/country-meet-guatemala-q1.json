@@ -25,6 +25,9 @@
   "correctOptionId": "a",
   "explanation": "People in Guatemala speak Spanish.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Guatemala | Encyclopaedia Britannica",

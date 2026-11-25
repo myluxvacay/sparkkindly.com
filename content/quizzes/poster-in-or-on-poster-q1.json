@@ -25,6 +25,10 @@
   "correctOptionId": "b",
   "explanation": "You can stand up and walk in a bus, so we say on the bus.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Preposition and postposition | Wikipedia",

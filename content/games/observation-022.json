@@ -6,6 +6,9 @@
   "title": "Look closely: beach sign",
   "prompt": "What does the sign in the beach say?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The sign in the picture reads \"Toys\" — it is written in big letters on the board.",
   "sources": [],
   "reviewStatus": "approved",

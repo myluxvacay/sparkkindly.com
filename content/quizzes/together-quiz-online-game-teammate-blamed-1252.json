@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "Redirecting to shared responsibility and the next game lowers the temperature without starting a counter-attack. Joining in is unfair, and insulting the critic just swaps the target of the pile-on.",
   "difficulty": "hard",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

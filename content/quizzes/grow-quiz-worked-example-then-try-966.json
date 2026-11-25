@@ -24,6 +24,9 @@
   "correctOptionId": "a",
   "explanation": "A worked example shows the method clearly, and immediately trying a similar problem yourself — without looking — is what turns watching into being able to do it.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

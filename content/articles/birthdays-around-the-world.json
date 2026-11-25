@@ -27,6 +27,9 @@
   "brand": "together",
   "contentType": "article",
   "description": "Face-first cake bites in Mexico, flags in Denmark, long noodles for a long life: birthdays carry the same wish in very different costumes.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

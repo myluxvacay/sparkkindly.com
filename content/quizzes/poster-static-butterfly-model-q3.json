@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "Static's pull is gentle — only something very light, like tissue, can answer it.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Static electricity | Wikipedia",

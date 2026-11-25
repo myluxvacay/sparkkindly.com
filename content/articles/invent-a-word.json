@@ -5,6 +5,10 @@
   "contentType": "activity",
   "title": "Invent a Word",
   "description": "For ages 6–9 with an adult: invent a brand-new word for something that has no name, and teach it to your family.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "publishedAt": "2026-06-21",
   "updatedAt": "2026-06-21",
   "author": "SparkKindly · AI-assisted",

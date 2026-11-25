@@ -24,6 +24,9 @@
   "correctOptionId": "d",
   "explanation": "You still need $240 - $90 = $150. Saving $25 a week, $150 / $25 = 6 weeks.",
   "difficulty": "medium",
+  "ageBands": [
+    "family"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

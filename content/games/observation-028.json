@@ -6,6 +6,9 @@
   "title": "Look closely: market stall color",
   "prompt": "What colour is the apple in the market stall?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The apple in the picture is red — look at it closely and you can see its colour.",
   "sources": [],
   "reviewStatus": "approved",

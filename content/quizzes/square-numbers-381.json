@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "Each number is a square: 1x1, 2x2, 3x3, 4x4, 5x5, so the next one is 6x6 = 36.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly site owner",

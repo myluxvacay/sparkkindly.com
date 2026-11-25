@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Rabbits dig burrows — tunnels and rooms under the ground.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Animal shelter | Wikipedia",

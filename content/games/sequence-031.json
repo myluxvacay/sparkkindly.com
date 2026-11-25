@@ -6,6 +6,9 @@
   "title": "Sequence recall: what came second?",
   "prompt": "Spark showed some things in order. What came second?",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8"
+  ],
   "explanation": "The order was: first the white cat, second the green balloon, third the white horse. So the second one was the green balloon.",
   "sources": [],
   "reviewStatus": "approved",

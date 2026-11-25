@@ -25,6 +25,10 @@
   "correctOptionId": "d",
   "explanation": "the Cliffs of Moher is one of the two places we'd love to visit in Ireland. The Cliffs of Moher rise 214 metres straight from the Atlantic, with seabirds wheeling below and views to the Aran Islands on clear days.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Ireland | Encyclopaedia Britannica",

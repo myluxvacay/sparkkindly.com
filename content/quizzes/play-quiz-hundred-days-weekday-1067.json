@@ -24,6 +24,9 @@
   "correctOptionId": "b",
   "explanation": "The weekday repeats every 7 days. 100 divided by 7 leaves a remainder of 2, since 98 is exactly 14 weeks. So 100 days later is 2 weekdays after Friday, which is Sunday.",
   "difficulty": "hard",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [],
   "reviewStatus": "approved",
   "reviewer": "SparkKindly reviewer agent",

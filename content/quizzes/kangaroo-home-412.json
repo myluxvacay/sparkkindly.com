@@ -24,6 +24,10 @@
   "correctOptionId": "b",
   "explanation": "Kangaroos are marsupials native to Australia, where they live in habitats from forests to open plains.",
   "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
   "sources": [
     {
       "title": "Kangaroo",

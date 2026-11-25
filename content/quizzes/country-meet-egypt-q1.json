@@ -25,6 +25,9 @@
   "correctOptionId": "b",
   "explanation": "People in Egypt speak Arabic.",
   "difficulty": "medium",
+  "ageBands": [
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Egypt | Encyclopaedia Britannica",

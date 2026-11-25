@@ -27,6 +27,9 @@
   "brand": "discover",
   "contentType": "article",
   "description": "Air conditioning pumps heat out of a room like a fridge with the door open — and wrings moisture from the air too.",
+  "ageBands": [
+    "family"
+  ],
   "factualClaimsReviewedAt": "2026-11-15",
   "fiction": false,
   "hero": {

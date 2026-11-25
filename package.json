@@ -26,6 +26,7 @@
     "worker:video:build": "esbuild worker/video.ts --bundle --platform=node --format=esm --target=node24 --external:pg --outfile=release/video-worker.mjs",
     "content:update-heroes": "tsx scripts/update-hero-images.ts",
     "content:update-topics": "tsx scripts/backfill-item-topics.ts",
+    "content:update-age-bands": "tsx scripts/update-age-bands.ts",
     "content:update-games": "tsx scripts/update-game-items.ts",
     "content:update-section-images": "tsx scripts/update-section-images.ts",
     "images:step-share-card": "tsx scripts/make-step-share-card.ts",

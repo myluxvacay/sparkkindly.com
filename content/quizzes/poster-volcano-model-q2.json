@@ -25,6 +25,10 @@
   "correctOptionId": "c",
   "explanation": "Same molten rock, new address: underground it is magma; flowing on the surface it is lava.",
   "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
   "sources": [
     {
       "title": "Volcano | Wikipedia",
