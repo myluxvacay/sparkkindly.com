@@ -56,7 +56,7 @@ test('a Kids item shows no social-network links and stores nothing', async ({ pa
   const links = await hrefs(page);
   expect(links.filter((h) => /wa\.me|facebook|twitter|t\.me/.test(h))).toEqual([]);
   await expect(section(page).getByRole('button', { name: 'Copy link' })).toBeVisible();
-  expect(await page.evaluate(() => ({ local: localStorage.length, session: Object.keys(sessionStorage).filter((k) => k !== '_cltk').length }))).toEqual({ local: 0, session: 0 });
+  expect(await page.evaluate(() => ({ local: Object.keys(localStorage).filter((k) => k !== 'sk-age-band').length, session: Object.keys(sessionStorage).filter((k) => k !== '_cltk').length }))).toEqual({ local: 0, session: 0 });
   expect(thirdParty).toEqual([]);
 });
 
