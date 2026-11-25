@@ -101,7 +101,7 @@ describe('client components', () => {
       .sort();
     expect(client).toEqual([
       'app/error.tsx',
-      'components/BandControl.tsx', // the footer age-band control: "Exploring as: … · Change" (age bands, 24 Nov 2026)
+      'components/BandControl.tsx', // the age-band control: "Exploring as: … · Change" in the top strip + footer (age bands, 24 Nov 2026; top strip 25 Nov 2026)
       'components/BandLead.tsx', // the band-first grid reorder island: leads listings with the visitor's band, hides nothing (24 Nov 2026)
       'components/BandPicker.tsx', // the first-visit "Who's exploring today?" band picker hosted by Spark (24 Nov 2026)
       'components/Header.tsx',

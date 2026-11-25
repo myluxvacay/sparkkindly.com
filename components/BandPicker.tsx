@@ -4,7 +4,8 @@ import { BAND_OPEN_EVENT, BAND_PICKER_OPTIONS, loadAgeBand, saveAgeBand, type St
 
 // Spark's first-visit age-band picker (owner rules, 24 Nov 2026): a visitor picks a BAND only —
 // never an exact age or birthdate — and the choice is kept in the browser (lib/age-band-client)
-// until they change it via the footer control, which reopens this dialog with 'sk-band-open'.
+// until they change it via the band controls (top strip and footer), which reopen this dialog
+// with 'sk-band-open'.
 // Nothing is hard-hidden by the band anywhere; it only leads listings and the daily question.
 // Shows only when no stored value exists, so a returning visitor is never asked twice.
 export default function BandPicker() {
@@ -81,7 +82,7 @@ export default function BandPicker() {
         <h2 id="band-picker-heading">Who&rsquo;s exploring today?</h2>
         <p>
           Pick an age band and SparkKindly will lead with things that fit. We never ask an exact age,
-          and you can change this any time in the footer.
+          and you can change this any time from the top or bottom of the page.
         </p>
         <div className="band-picker-options" role="group" aria-label="Age bands">
           {BAND_PICKER_OPTIONS.map((o) => (
