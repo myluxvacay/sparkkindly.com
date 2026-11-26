@@ -741,3 +741,33 @@ html[data-theme="dark"] .band-control-top{color:var(--muted)}
 .band-picker-options{display:grid;gap:10px;margin:20px 0 14px}
 .band-picker-option{width:100%}
 .band-picker-skip{min-height:44px}
+
+/* Topic hubs (26 Nov 2026): the master hub search, cluster sections and topic pages. */
+.hub-search-controls{display:flex;flex-wrap:wrap;gap:18px;margin:34px 0 6px}
+.hub-search-field{display:flex;flex-direction:column;gap:7px}
+.hub-search-field label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.hub-search-field input,.hub-search-field select{min-height:48px;padding:10px 14px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);font-size:15px}
+.hub-search-field input{min-width:min(420px,78vw)}
+.hub-search-field select{min-width:220px}
+.hub-search-empty{margin-top:26px;color:var(--muted)}
+.hub-cluster{margin-top:44px}
+.hub-cluster h2{font-size:30px;margin-bottom:16px}
+.hub-cluster h2 a{text-decoration:none}
+.hub-cluster h2 a:hover{text-decoration:underline}
+.hub-topic-list{list-style:none;padding:0;margin:0;columns:3 240px}
+.hub-topic-list li{min-height:44px;break-inside:avoid;margin:0}
+.hub-topic-list a{display:inline-flex;align-items:center;min-height:44px}
+.hub-count{color:var(--muted);font-size:13px}
+.hub-count-line{font-size:13px;color:var(--muted);margin-bottom:26px}
+.hub-note{margin-top:44px;font-size:14px}
+.hub-topic-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:36px}
+.hub-topic-card{border:1px solid var(--line);border-radius:5px;padding:24px 26px;background:var(--paper)}
+.hub-topic-card h2{font-size:25px;margin-bottom:6px}
+.hub-topic-card h2 a{text-decoration:none}
+.hub-topic-card h2 a:hover{text-decoration:underline}
+.hub-topic-card .hub-count-line{margin-bottom:10px}
+.hub-topic-card p:last-child{font-size:13.5px;color:#625862;margin-bottom:0}
+.hub-group{margin-top:48px}
+.hub-group h2{margin-bottom:8px}
+@media(max-width:800px){.hub-topic-cards{grid-template-columns:1fr}}
+html[data-theme="dark"] .hub-topic-card p:last-child{color:var(--muted)}
