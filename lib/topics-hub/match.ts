@@ -16,7 +16,7 @@ import { bandTopicsFor, type AgeBand } from '@/lib/age-bands';
 import type { PublicItem, Audience } from '@/lib/items/repo';
 import type { World } from '@/lib/public/worlds';
 import type { Scope } from '@/lib/public/scope';
-import { CLUSTERS, TOPICS, type TopicDef } from './data';
+import { CLUSTERS, TOPICS, topicBySlug, type TopicDef } from './data';
 
 export type HubGroupKey = 'read' | 'printables' | 'games' | 'quizzes';
 export const HUB_GROUPS: { key: HubGroupKey; label: string }[] = [
@@ -150,8 +150,20 @@ export function matchTopicItems(def: TopicDef, scope: Scope): HubItem[] {
   return ITEMS.filter((i) => scope.audiences.includes(i.pub.audience) && matchesTopic(i, def)).sort(byNewest);
 }
 
-export function topicCount(def: TopicDef, scope: Scope): number {
+function countTopicItems(def: TopicDef, scope: Scope): number {
   return ITEMS.reduce((n, i) => (scope.audiences.includes(i.pub.audience) && matchesTopic(i, def) ? n + 1 : n), 0);
+}
+
+export function topicCount(def: TopicDef, scope: Scope): number {
+  // A cached hub-counts snapshot for this scope already holds this topic's count, computed by
+  // the identical scan below — serve it from there when the def is the canonical topic entry.
+  // The snapshot is only ever read here, never computed: a lone topic count stays a lone scan.
+  const snap = peekHubCounts(scope);
+  if (snap && topicBySlug(def.slug) === def) {
+    const n = snap.perTopic.get(def.slug);
+    if (n !== undefined) return n;
+  }
+  return countTopicItems(def, scope);
 }
 
 const GROUP_OF: Record<ItemType, HubGroupKey> = { article: 'read', printable: 'printables', game: 'games', quiz: 'quizzes' };
@@ -162,17 +174,52 @@ export function groupItems(items: HubItem[]): Record<HubGroupKey, PublicItem[]> 
   return groups;
 }
 
-/** Live counts for the hubs: every topic's count for this viewer, and each cluster's item total. */
-export function hubCounts(scope: Scope): { perTopic: Map<string, number>; perCluster: Map<string, number> } {
+export type HubCounts = { perTopic: Map<string, number>; perCluster: Map<string, number> };
+
+// Hub-counts snapshot cache. A full hubCounts pass scans the library once per topic (78 scans),
+// far too much to repeat on every master-hub request. The counts depend only on the library
+// (which changes solely on deploy/import — a process restart, so a module-level snapshot can
+// never outlive the content it counted) and on the viewer's scope. The cache key is therefore
+// everything the counts actually depend on: the scope's audience set, plus the scope's date at
+// day granularity — scopes are date-aware, so a snapshot is never served across a midnight
+// boundary. One entry per audience set (the day's snapshot replaces yesterday's), so the cache
+// stays a handful of small maps however long the process runs.
+const countsCache = new Map<string, { day: string; counts: HubCounts }>();
+
+function countsCacheKey(scope: Scope): { audiences: string; day: string } {
+  return {
+    audiences: [...scope.audiences].sort().join(','),
+    day: scope.now.toISOString().slice(0, 10),
+  };
+}
+
+/** The cached counts snapshot for this scope, if one exists — never computes one. */
+function peekHubCounts(scope: Scope): HubCounts | undefined {
+  const { audiences, day } = countsCacheKey(scope);
+  const hit = countsCache.get(audiences);
+  return hit && hit.day === day ? hit.counts : undefined;
+}
+
+function computeHubCounts(scope: Scope): HubCounts {
   const perTopic = new Map<string, number>();
   const perCluster = new Map<string, number>();
   for (const t of TOPICS) {
-    const n = topicCount(t, scope);
+    const n = countTopicItems(t, scope);
     perTopic.set(t.slug, n);
     perCluster.set(t.cluster, (perCluster.get(t.cluster) ?? 0) + n);
   }
   for (const c of CLUSTERS) if (!perCluster.has(c.slug)) perCluster.set(c.slug, 0);
   return { perTopic, perCluster };
+}
+
+/** Live counts for the hubs: every topic's count for this viewer, and each cluster's item total. */
+export function hubCounts(scope: Scope): HubCounts {
+  const cached = peekHubCounts(scope);
+  if (cached) return cached;
+  const counts = computeHubCounts(scope);
+  const { audiences, day } = countsCacheKey(scope);
+  countsCache.set(audiences, { day, counts });
+  return counts;
 }
 
 /** A few items to feature on a cluster hub: the newest reads and printables across its topics. */

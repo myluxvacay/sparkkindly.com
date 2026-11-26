@@ -6,8 +6,8 @@ import { describe, expect, it } from 'vitest';
 import {
   CLUSTERS, TOPICS, clusterBySlug, hubSitemapPaths, sitemapTopicSplit, topicBySlug, topicSearchText,
 } from '@/lib/topics-hub/data';
-import { groupItems, matchTopicItems, topicCount } from '@/lib/topics-hub/match';
-import { anonymousScope } from '@/lib/public/scope';
+import { groupItems, hubCounts, matchTopicItems, topicCount } from '@/lib/topics-hub/match';
+import { anonymousScope, type Scope } from '@/lib/public/scope';
 import { buildSitemap } from '@/lib/public/sitemap';
 import { topicChildren, topicParents, topicRoots } from '@/db/seed/topics';
 import { generateMetadata } from '@/app/topics/[slug]/page';
@@ -81,6 +81,47 @@ describe('topic hub data', () => {
     const text = topicSearchText(topicBySlug('counting-worksheets')!, 'Numbers & Early Math');
     expect(text).toContain('counting');
     expect(text).toContain('numbers');
+  });
+});
+
+describe('topic hub counts snapshot cache', () => {
+  const noon = anonymousScope(new Date('2026-11-26T12:00:00Z'));
+  // A scope on a day no snapshot is ever taken for: topicCount with it always takes the
+  // direct per-topic scan, so it is the uncached truth the snapshot is checked against.
+  const directAnon = anonymousScope(new Date('2026-11-25T12:00:00Z'));
+
+  it('serves a repeated hubCounts call for the same audiences and day from the snapshot', () => {
+    const first = hubCounts(noon);
+    const again = hubCounts(anonymousScope(new Date('2026-11-26T18:30:00Z')));
+    expect(again).toBe(first);
+  });
+
+  it('recomputes on a new day, with identical counts', () => {
+    const today = hubCounts(noon);
+    const tomorrow = hubCounts(anonymousScope(new Date('2026-11-27T00:00:01Z')));
+    expect(tomorrow).not.toBe(today);
+    expect([...tomorrow.perTopic.entries()]).toEqual([...today.perTopic.entries()]);
+    expect([...tomorrow.perCluster.entries()]).toEqual([...today.perCluster.entries()]);
+  });
+
+  it('snapshot counts equal the direct per-topic counts for every topic and cluster', () => {
+    const snap = hubCounts(noon);
+    for (const t of TOPICS) expect(snap.perTopic.get(t.slug), t.slug).toBe(topicCount(t, directAnon));
+    for (const c of CLUSTERS) {
+      const sum = TOPICS.filter((t) => t.cluster === c.slug)
+        .reduce((n, t) => n + (snap.perTopic.get(t.slug) ?? 0), 0);
+      expect(snap.perCluster.get(c.slug), c.slug).toBe(sum);
+    }
+  });
+
+  it('keys the snapshot by audience set: a child scope gets its own, audit-true counts', () => {
+    const child: Scope = { audiences: ['kids', 'all'], now: new Date('2026-11-26T12:00:00Z') };
+    const childDirect: Scope = { audiences: ['kids', 'all'], now: new Date('2026-11-25T12:00:00Z') };
+    const snap = hubCounts(child);
+    expect(snap).not.toBe(hubCounts(noon));
+    for (const t of TOPICS) expect(snap.perTopic.get(t.slug), t.slug).toBe(topicCount(t, childDirect));
+    // topicCount served from the child's own snapshot agrees with the snapshot itself.
+    for (const t of TOPICS) expect(topicCount(t, child), t.slug).toBe(snap.perTopic.get(t.slug));
   });
 });
 
