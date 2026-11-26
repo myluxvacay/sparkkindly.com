@@ -37,6 +37,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = await loadItem(slug);
   if (!item) return {};
   return seo(item.title, item.summary, `/printables/${item.slug}/`, {
+    // The item page is the canonical home of the printable (it is the URL the sitemap lists); this sheet view
+    // stays live and shareable but declares that canonical so the two URLs do not compete.
+    canonical: `/${item.world}/${item.slug}/`,
     image: { url: printableCardPath(item.slug), width: 1200, height: 630, alt: `${item.title} — a free SparkKindly printable` },
   });
 }

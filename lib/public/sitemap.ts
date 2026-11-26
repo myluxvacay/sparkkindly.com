@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const STATIC = ['/', '/quiz/archive/', '/topics/', '/about/', '/privacy/', '/terms/','/editorial-policy/', '/accessibility/', '/contact/', '/watch/'];
+const STATIC = ['/', '/quiz/archive/', '/topics/', '/about/', '/privacy/', '/terms/','/editorial-policy/', '/accessibility/', '/contact/', '/watch/', '/printables/', '/games/', '/leaderboard/', '/printables/request/'];
 
 // One file holds at most 50,000 URLs; items are capped below that so static pages, worlds and topics always fit
 // (SEO audit M4). ponytail: a single file; split into generateSitemaps() chunks with an index when items near the cap.
