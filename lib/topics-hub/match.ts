@@ -146,15 +146,18 @@ const byNewest = (a: HubItem, b: HubItem): number =>
   b.pub.publishedAt.getTime() - a.pub.publishedAt.getTime() || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 
 /** The items a topic page shows this viewer: strong matches the viewer's scope allows, newest first. */
-export function matchTopicItems(def: TopicDef, scope: Scope): HubItem[] {
-  return ITEMS.filter((i) => scope.audiences.includes(i.pub.audience) && matchesTopic(i, def)).sort(byNewest);
+export function matchTopicItems(def: TopicDef, scope: Scope, items: readonly HubItem[] = ITEMS): HubItem[] {
+  return items.filter((i) => scope.audiences.includes(i.pub.audience) && matchesTopic(i, def)).sort(byNewest);
 }
 
-function countTopicItems(def: TopicDef, scope: Scope): number {
-  return ITEMS.reduce((n, i) => (scope.audiences.includes(i.pub.audience) && matchesTopic(i, def) ? n + 1 : n), 0);
+function countTopicItems(def: TopicDef, scope: Scope, items: readonly HubItem[]): number {
+  return items.reduce((n, i) => (scope.audiences.includes(i.pub.audience) && matchesTopic(i, def) ? n + 1 : n), 0);
 }
 
-export function topicCount(def: TopicDef, scope: Scope): number {
+export function topicCount(def: TopicDef, scope: Scope, items?: readonly HubItem[]): number {
+  // An explicit item source (tests, with synthetic fixtures) is counted directly and never
+  // touches the snapshot cache, which is keyed to the library alone.
+  if (items) return countTopicItems(def, scope, items);
   // A cached hub-counts snapshot for this scope already holds this topic's count, computed by
   // the identical scan below — serve it from there when the def is the canonical topic entry.
   // The snapshot is only ever read here, never computed: a lone topic count stays a lone scan.
@@ -163,7 +166,7 @@ export function topicCount(def: TopicDef, scope: Scope): number {
     const n = snap.perTopic.get(def.slug);
     if (n !== undefined) return n;
   }
-  return countTopicItems(def, scope);
+  return countTopicItems(def, scope, ITEMS);
 }
 
 const GROUP_OF: Record<ItemType, HubGroupKey> = { article: 'read', printable: 'printables', game: 'games', quiz: 'quizzes' };
@@ -200,11 +203,11 @@ function peekHubCounts(scope: Scope): HubCounts | undefined {
   return hit && hit.day === day ? hit.counts : undefined;
 }
 
-function computeHubCounts(scope: Scope): HubCounts {
+function computeHubCounts(scope: Scope, items: readonly HubItem[]): HubCounts {
   const perTopic = new Map<string, number>();
   const perCluster = new Map<string, number>();
   for (const t of TOPICS) {
-    const n = countTopicItems(t, scope);
+    const n = countTopicItems(t, scope, items);
     perTopic.set(t.slug, n);
     perCluster.set(t.cluster, (perCluster.get(t.cluster) ?? 0) + n);
   }
@@ -213,10 +216,12 @@ function computeHubCounts(scope: Scope): HubCounts {
 }
 
 /** Live counts for the hubs: every topic's count for this viewer, and each cluster's item total. */
-export function hubCounts(scope: Scope): HubCounts {
+export function hubCounts(scope: Scope, items?: readonly HubItem[]): HubCounts {
+  // An explicit item source (tests) is counted directly; the snapshot cache serves the library.
+  if (items) return computeHubCounts(scope, items);
   const cached = peekHubCounts(scope);
   if (cached) return cached;
-  const counts = computeHubCounts(scope);
+  const counts = computeHubCounts(scope, ITEMS);
   const { audiences, day } = countsCacheKey(scope);
   countsCache.set(audiences, { day, counts });
   return counts;

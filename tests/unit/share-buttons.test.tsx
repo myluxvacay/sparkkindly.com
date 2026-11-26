@@ -119,6 +119,7 @@ describe('client components', () => {
       'components/me/InterestsEnhancer.tsx', // the interests island: the live 30-cap counter on the picker (17 Nov 2026)
       'components/printables/PrintableActions.tsx', // the printables island: copy-link share button on printable pages + hub (print/share anchors work without JS) (22 Nov 2026)
       'components/printables/PrintablesHub.tsx', // the /printables/ hub island: category + age-band filtering over the server-rendered shelf (22 Nov 2026)
+      'components/topics/TopicSearch.tsx', // the /topics/ master hub island: search + cluster filter over the server-rendered topic list (26 Nov 2026)
       'lib/age-band-client.ts', // the age-band browser helpers: the single retained 'sk-age-band' value + band events (24 Nov 2026)
     ]);
   });
