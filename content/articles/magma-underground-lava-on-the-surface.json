@@ -1,0 +1,59 @@
+{
+  "id": "discover-draft-2026-11-26-magma-underground-lava-o",
+  "slug": "magma-underground-lava-on-the-surface",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Magma underground, lava on the surface: one rock, two names",
+  "description": "Molten rock has two names, and the difference is simply address. Underground it is magma; the moment it erupts onto the surface, scientists call the very same material lava.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "hero": {
+    "src": "/images/earth.webp",
+    "alt": "A volcano erupting under a daytime sky",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "volcanoes",
+    "earth",
+    "rocks"
+  ],
+  "sources": [
+    {
+      "title": "Lava | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lava",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-26",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 26 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Where magma waits",
+      "paragraphs": [
+        "Deep beneath a volcano, melted rock collects in a magma chamber. It is not pure liquid like water — it is a thick, slow mixture of molten rock, crystals and trapped gases, hotter than 700 degrees Celsius.",
+        "Those trapped gases matter. Like the fizz in a shaken bottle, they build pressure as magma rises, which is why some eruptions ooze gently and others explode."
+      ]
+    },
+    {
+      "heading": "The moment it becomes lava",
+      "paragraphs": [
+        "When molten rock breaks through the surface — from a crater, a crack or a side vent — its name changes to lava. Nothing about the rock itself changes at that instant; only its location does.",
+        "As lava flows and cools it hardens into new rock, building cones, islands and whole landscapes. Given enough eruptions over enough time, lava does not just cover the land — it becomes the land."
+      ]
+    }
+  ],
+  "takeaway": "Magma is molten rock underground; lava is the same molten rock after it erupts onto the surface.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

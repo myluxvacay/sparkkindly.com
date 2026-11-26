@@ -1,0 +1,59 @@
+{
+  "id": "play-draft-2026-11-26-how-a-king-and-rook-fini",
+  "slug": "how-a-king-and-rook-finish-a-chess-game",
+  "brand": "play",
+  "contentType": "article",
+  "title": "How a king and rook finish a chess game",
+  "description": "The simplest chess ending is also the most useful: a king and rook working together can force checkmate by slowly shrinking the enemy king's world, one rank at a time.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "hero": {
+    "src": "/images/games.webp",
+    "alt": "Wooden chess pieces on a board",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chess",
+    "games",
+    "endings"
+  ],
+  "sources": [
+    {
+      "title": "Rook (chess) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rook_(chess)",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-26",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 26 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Shrink the box",
+      "paragraphs": [
+        "With only a king and rook against a lone king, the rook cannot mate on its own. The method is teamwork: the rook cuts off a rank or file, your king walks closer, and the space the enemy king can use gets smaller with every few moves.",
+        "Think of the rook as a moving fence. Each time the lone king approaches, your king steps in to protect the rook, and the fence advances one line. The box shrinks until the king is trapped on the edge of the board."
+      ]
+    },
+    {
+      "heading": "Mate on the edge",
+      "paragraphs": [
+        "Checkmate with a rook only works on the edge, because in the middle of the board the king always has an escape square behind it. Once the king is on the back rank, your king stands opposite it and the rook delivers check along the edge with nowhere left to run.",
+        "It is worth practising against a computer until it feels automatic. This one ending appears in real games more than almost any other, and knowing it turns a winning position into a certain win instead of a nervous scramble."
+      ]
+    }
+  ],
+  "takeaway": "King and rook mate by shrinking the box: rook as fence, king as escort, checkmate on the edge of the board.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

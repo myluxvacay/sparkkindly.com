@@ -1,0 +1,60 @@
+{
+  "id": "discover-draft-2026-11-26-a-sea-turtles-flippers-a",
+  "slug": "a-sea-turtles-flippers-are-built-for-distance",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "A sea turtle's flippers are built for distance",
+  "description": "A sea turtle cannot pull its flippers into its shell, and it does not need to. Those long front flippers work like wings underwater, flying the turtle across whole oceans.",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "hero": {
+    "src": "/images/oceans.webp",
+    "alt": "A sea turtle swimming underwater",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "sea turtles",
+    "oceans",
+    "animals"
+  ],
+  "sources": [
+    {
+      "title": "Sea turtle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sea_turtle",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-26",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 26 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Flying, not paddling",
+      "paragraphs": [
+        "Most turtles paddle. Sea turtles fly: their long, flattened front flippers beat in a figure-of-eight like a bird's wings, pushing water down and back, while the smaller rear flippers steer like a rudder.",
+        "The trade-off is life on land. Flippers built for the open ocean are clumsy on sand, which is why a nesting female's slow haul up the beach looks like such hard work — it is."
+      ]
+    },
+    {
+      "heading": "Built to travel",
+      "paragraphs": [
+        "That flying stroke is efficient enough to cross oceans. Some sea turtles migrate thousands of kilometres between feeding grounds and the beaches where they nest, navigating by senses scientists are still working to fully explain.",
+        "Seven species of sea turtle exist today, and all are threatened or endangered — one more reason the long journeys those flippers make deserve our protection, not just our admiration."
+      ]
+    }
+  ],
+  "takeaway": "Sea turtles fly through water on wing-like front flippers — magnificent for crossing oceans, clumsy on the sand where they nest.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

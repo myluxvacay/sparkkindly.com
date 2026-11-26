@@ -1,0 +1,42 @@
+{
+  "id": "discover-quiz-moon-phase-order-716",
+  "scheduledDate": "2031-02-16",
+  "brand": "discover",
+  "prompt": "The Moon's phases follow the same order every month. Which phase comes immediately after a full moon?",
+  "options": [
+    {
+      "id": "a",
+      "text": "New moon"
+    },
+    {
+      "id": "b",
+      "text": "Waxing crescent"
+    },
+    {
+      "id": "c",
+      "text": "Waning gibbous"
+    },
+    {
+      "id": "d",
+      "text": "First quarter"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "After full moon the lit part begins to shrink — that shrinking is called waning, and the first shrinking phase is the waning gibbous.",
+  "difficulty": "medium",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Lunar phase | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lunar_phase",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

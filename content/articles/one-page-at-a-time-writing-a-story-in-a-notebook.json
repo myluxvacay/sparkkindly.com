@@ -1,0 +1,59 @@
+{
+  "id": "play-draft-2026-11-26-one-page-at-a-time-writi",
+  "slug": "one-page-at-a-time-writing-a-story-in-a-notebook",
+  "brand": "play",
+  "contentType": "article",
+  "title": "One page at a time: writing a story in a notebook",
+  "description": "A notebook story asks for no audience, no likes and no deadline. One page a day is enough — and a story written slowly, by hand, belongs to its writer in a way typed drafts rarely do.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "A child writing in a notebook",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "writing",
+    "stories",
+    "notebooks"
+  ],
+  "sources": [
+    {
+      "title": "Notebook | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Notebook",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-26",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 26 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Start smaller than the story",
+      "paragraphs": [
+        "Do not begin with a plot. Begin with one page about one moment: a character opening a door, finding a strange key, hearing a noise in the attic. A single vivid scene is a promise you can keep tomorrow, when page two asks what happened next.",
+        "Write by hand if you can. Handwriting is slower than typing, and that slowness is a feature: sentences get thought about, crossings-out stay visible, and the notebook becomes a record of the story growing, not just the story."
+      ]
+    },
+    {
+      "heading": "Keep the chain unbroken",
+      "paragraphs": [
+        "One page a day sounds modest until you count: in a school term that is a short novel's worth of pages. The rule that makes it work is forgiving — a bad page still counts, because the habit being built is returning, not performing.",
+        "Keep the notebook private unless you choose to share it. Stories grow braver when nobody is watching, and you can always copy out the best pages later for an audience."
+      ]
+    }
+  ],
+  "takeaway": "One handwritten page a day, kept private and forgiven when it is bad, quietly adds up to a whole story.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

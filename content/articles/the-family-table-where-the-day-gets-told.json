@@ -1,0 +1,58 @@
+{
+  "id": "together-draft-2026-11-26-the-family-table-where-t",
+  "slug": "the-family-table-where-the-day-gets-told",
+  "brand": "together",
+  "contentType": "article",
+  "title": "The family table: where the day gets told",
+  "description": "Dinner is rarely just dinner. Around a shared table, the small events of separate days become family knowledge — and that quiet exchange does more work than it looks like.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family holding hands while walking",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "meals",
+    "conversation"
+  ],
+  "sources": [
+    {
+      "title": "Family meal | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Family_meal",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-26",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 26 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "News travels at the table",
+      "paragraphs": [
+        "Families spend their days apart — school, work, errands, screens. The shared meal is often the one reliable hour when everyone's news can be pooled: the test result, the funny thing the bus driver said, the worry that has been carried around all day.",
+        "Children who regularly hear adults talk through ordinary problems at the table absorb something valuable: how people describe a difficulty, disagree kindly and make a plan, in real sentences, at normal volume."
+      ]
+    },
+    {
+      "heading": "Protect the hour lightly",
+      "paragraphs": [
+        "The table works best unforced. Phones in another room help; interrogation does not. One open question — what was the strangest part of your day? — usually opens more doors than a round of reports.",
+        "It does not need to be dinner, or daily, or everyone. A weekend breakfast or a shared snack after school can carry the same conversation. The meal is the excuse; the telling is the point."
+      ]
+    }
+  ],
+  "takeaway": "A shared meal is the family's daily news exchange: protect the hour lightly, ask one open question, and let the day get told.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

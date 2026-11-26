@@ -1,0 +1,43 @@
+{
+  "id": "together-quiz-compromise-two-games-716",
+  "scheduledDate": "2031-02-19",
+  "brand": "together",
+  "prompt": "You want to play chess and your friend wants to play cards, and there is only time for one game today. Which plan is the fairest compromise?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Play your game today and your friend's game tomorrow"
+    },
+    {
+      "id": "b",
+      "text": "Play your game today and your game again tomorrow"
+    },
+    {
+      "id": "c",
+      "text": "Refuse to play anything at all"
+    },
+    {
+      "id": "d",
+      "text": "Let a coin flip decide every single time, forever"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Taking turns across two days gives both friends their choice in full — a compromise where nobody has to lose today and be forgotten tomorrow.",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Compromise | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Compromise",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

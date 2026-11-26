@@ -1,0 +1,67 @@
+{
+  "id": "play-draft-2026-11-26-set-a-chess-puzzle-for-a",
+  "slug": "set-a-chess-puzzle-for-a-friend",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Set a chess puzzle for a friend",
+  "description": "Take a finished chess game, rewind to its most exciting moment, and set it up as a puzzle: can your friend find the winning move you found — or one you missed?",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "hero": {
+    "src": "/images/games.webp",
+    "alt": "Wooden chess pieces on a board",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chess",
+    "puzzles",
+    "games"
+  ],
+  "sources": [
+    {
+      "title": "Chess puzzle | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chess_puzzle",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-26",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 26 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Find the moment",
+      "paragraphs": [
+        "Play or replay a short game and stop at the position just before something dramatic happened — a capture, a check, a sacrifice. Set that exact position up on a fresh board and write down whose move it is.",
+        "Solve it yourself first, twice. A fair puzzle has one clearly best move; if you find three equally good answers, rewind one move earlier or later until the position has a single shining solution."
+      ]
+    },
+    {
+      "heading": "Present it like a setter",
+      "paragraphs": [
+        "Give your friend the board, the side to move, and nothing else — no hints about what happened in the real game. Time is not the test; finding the idea is.",
+        "Afterwards, show the game's real continuation. If your friend found a better move than the one actually played, the puzzle has done something wonderful: it has improved on history."
+      ]
+    }
+  ],
+  "takeaway": "Rewind a real game to its most dramatic moment, check it has one best move, and set it as a puzzle with no hints.",
+  "fiction": false,
+  "materials": [
+    "A chess set or chess app",
+    "Paper to note the position"
+  ],
+  "supervision": "No special supervision required; an adult can help younger children set up the board accurately.",
+  "safetyNotes": [
+    "Keep small chess pieces away from children under three — choking hazard."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

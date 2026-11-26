@@ -1,0 +1,42 @@
+{
+  "id": "grow-quiz-sleep-and-memory-716",
+  "scheduledDate": "2031-02-18",
+  "brand": "grow",
+  "prompt": "Students revise for a test, then one group sleeps well and the other stays up all night. What does research generally find the next day?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The all-night group remembers more"
+    },
+    {
+      "id": "b",
+      "text": "Both groups remember exactly the same"
+    },
+    {
+      "id": "c",
+      "text": "The well-slept group usually remembers more"
+    },
+    {
+      "id": "d",
+      "text": "Sleep has no effect on memory at all"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Sleep helps the brain consolidate memories formed during the day, so a good night's sleep after studying usually beats an all-night session.",
+  "difficulty": "medium",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Sleep and memory | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sleep_and_memory",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

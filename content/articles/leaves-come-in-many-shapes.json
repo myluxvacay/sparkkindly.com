@@ -1,0 +1,69 @@
+{
+  "id": "kids-draft-2026-11-26-leaves-come-in-many-shap",
+  "slug": "leaves-come-in-many-shapes",
+  "brand": "kids",
+  "contentType": "article",
+  "title": "Leaves come in many shapes",
+  "description": "Some leaves are round like coins. Some are long like ribbons. Some have wiggly edges, and some look like little hearts. Let's go and look at leaves!",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "hero": {
+    "src": "/images/plants.webp",
+    "alt": "Young green sprouts growing in soil",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "leaves",
+    "shapes",
+    "nature"
+  ],
+  "sources": [
+    {
+      "title": "Leaf | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Leaf",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-26",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 26 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Round, long and wiggly",
+      "paragraphs": [
+        "Walk around a garden or a park and look at the leaves. This leaf is round. That leaf is long and thin. Here is a leaf shaped like a heart!",
+        "Leaves are not all the same green, either. Some are dark green, some are light green, and some are soft and fuzzy to touch — touch gently, with one finger."
+      ]
+    },
+    {
+      "heading": "Count the shapes",
+      "paragraphs": [
+        "How many leaf shapes can you find? One, two, three, more? Point at each new shape and say what it looks like: a coin, a ribbon, a star, a hand.",
+        "You can draw your favourite leaf when you get home. Draw its shape first. Then colour it the right green."
+      ]
+    }
+  ],
+  "takeaway": "Leaves come in many shapes — round, long, wiggly and heart-shaped — and spotting them is a game anyone can play.",
+  "fiction": false,
+  "ageGuidance": "Ages 3-8: read aloud with a grown-up, ideally before a walk.",
+  "materials": [
+    "This is a reading item — no materials needed"
+  ],
+  "supervision": "Read together with a grown-up; leaf-spotting outdoors must be with a grown-up.",
+  "safetyNotes": [
+    "Look at leaves without picking them from other people's gardens.",
+    "Do not eat any leaves or berries — some can make you poorly. Wash hands after touching plants."
+  ],
+  "screenFreeExtension": "On your next walk, find one leaf shaped like a heart and one shaped like a star.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

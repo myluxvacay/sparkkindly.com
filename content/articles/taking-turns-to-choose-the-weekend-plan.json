@@ -1,0 +1,58 @@
+{
+  "id": "together-draft-2026-11-26-taking-turns-to-choose-t",
+  "slug": "taking-turns-to-choose-the-weekend-plan",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Taking turns to choose the weekend plan",
+  "description": "One family, four Saturdays, four different ideas of fun. A simple rota — this week you choose, next week I do — ends the weekend negotiation and quietly teaches everyone to plan for others.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "A group of friends with their hands joined together",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "fairness",
+    "weekends"
+  ],
+  "sources": [
+    {
+      "title": "Turn-taking | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Turn-taking",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-26",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 26 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The rota ends the argument",
+      "paragraphs": [
+        "Weekend plans fail in the choosing, not the doing: the loudest voice wins, or nobody decides and Saturday evaporates. A choosing rota replaces the contest with a calendar. When it is your turn, you choose — within the household's real limits of time and money — and everyone else's job is to come along in good faith.",
+        "Knowing your turn is coming changes how you spend other people's turns. You attend their museum or their match the way you hope they will attend yours."
+      ]
+    },
+    {
+      "heading": "Plan for your audience",
+      "paragraphs": [
+        "The advanced version is the real lesson: when your turn comes, choose something you love that you also think the others might enjoy, and say why you picked it. Choosing-for-others is a skill adults use constantly — in gifts, in work, in hosting — and the weekend rota is a gentle place to learn it.",
+        "Keep a list of past choices on the fridge. Patterns appear quickly: who always picks food, who never picks outdoors — and the list itself becomes a small family history."
+      ]
+    }
+  ],
+  "takeaway": "Rotate who chooses the weekend plan, attend each other's choices in good faith, and learn to plan with your audience in mind.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

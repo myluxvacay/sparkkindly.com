@@ -1,0 +1,42 @@
+{
+  "id": "save-quiz-save-first-716",
+  "scheduledDate": "2031-02-21",
+  "brand": "save",
+  "prompt": "You receive £20 as a birthday gift and want to save some of it. When is the best moment to move money into your savings?",
+  "options": [
+    {
+      "id": "a",
+      "text": "After you have spent on everything else, if anything is left"
+    },
+    {
+      "id": "b",
+      "text": "Right away, before spending starts"
+    },
+    {
+      "id": "c",
+      "text": "Never — gifts should all be spent"
+    },
+    {
+      "id": "d",
+      "text": "Only when the savings jar looks empty"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Saving first — moving a set amount aside as soon as money arrives — works because it happens before spending can quietly use the money up.",
+  "difficulty": "easy",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Personal finance | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Personal_finance",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

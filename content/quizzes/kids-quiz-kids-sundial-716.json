@@ -1,0 +1,42 @@
+{
+  "id": "kids-quiz-kids-sundial-716",
+  "scheduledDate": "2031-02-20",
+  "brand": "kids",
+  "prompt": "A sundial tells the time using something in the sky. What does a sundial use?",
+  "options": [
+    {
+      "id": "a",
+      "text": "The Moon"
+    },
+    {
+      "id": "b",
+      "text": "The Sun and its shadows"
+    },
+    {
+      "id": "c",
+      "text": "The stars"
+    },
+    {
+      "id": "d",
+      "text": "The wind"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A sundial uses the Sun: as the Sun moves, the shadow on the sundial moves too, and where the shadow falls shows the time. That is why sundials cannot work at night.",
+  "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
+  "sources": [
+    {
+      "title": "Sundial | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sundial",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-26",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
