@@ -7,6 +7,7 @@ import { sitemapRows } from '@/lib/public/reads';
 import { anonymousScope } from '@/lib/public/scope';
 import { buildSitemap, flagPages } from '@/lib/public/sitemap';
 import { listWorlds } from '@/lib/public/worlds';
+import { sitemapTopicSplit } from '@/lib/topics-hub/data';
 
 export const dynamic = 'force-dynamic';
 
@@ -34,12 +35,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     contributorSlugs(db, new Date()), // plan 8: empty with the flag off
     promoUrls(db),
   ]);
+  // The topic hubs (26 Nov 2026) own their slugs under /topics/: hub URLs travel as extra
+  // paths and any curated topic with the same slug is dropped from the topics channel, so
+  // every hub URL is listed exactly once.
+  const split = sitemapTopicSplit(topics);
   return [
-    ...buildSitemap(items, worlds.map((w) => w.slug), site.url, topics, flagPages({
+    ...buildSitemap(items, worlds.map((w) => w.slug), site.url, split.topics, [...flagPages({
       comments: commentsEnabled(),
       sponsorship: sponsorshipEnabled(),
       contributors: contributorsEnabled(),
-    })),
+    }), ...split.extra]),
     ...contributors.map((slug) => ({ url: `${site.url}/contributors/${slug}/` })),
     ...promos,
   ];
