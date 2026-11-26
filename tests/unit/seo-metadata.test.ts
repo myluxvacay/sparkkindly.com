@@ -23,6 +23,14 @@ describe('seo()', () => {
     expect(home.openGraph?.title).toBe('SparkKindly — Think sharp. Be kind.');
   });
 
+  it('canonical defaults to the page path; an override moves only the canonical tag, not og:url', async () => {
+    const { metadata } = await load('true');
+    expect(metadata('T', 'd', '/x/').alternates?.canonical).toBe('/x/');
+    const view = metadata('T', 'd', '/printables/x/', { canonical: '/kids/x/' });
+    expect(view.alternates?.canonical).toBe('/kids/x/');
+    expect(view.openGraph?.url).toBe('/printables/x/');
+  });
+
   it('sets og:locale en_GB', async () => {
     const { metadata } = await load('true');
     expect(metadata('T', 'd', '/x/').openGraph).toMatchObject({ locale: 'en_GB' });

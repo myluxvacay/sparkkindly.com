@@ -6,6 +6,10 @@ const config: NextConfig = {
   images: { unoptimized: true },
   poweredByHeader: false,
   serverExternalPackages: ['pg'],
+  // /sponsors/ was cited in sponsor outreach before the page settled at /sponsorship/; keep the cited URL working.
+  async redirects() {
+    return [{ source: '/sponsors', destination: '/sponsorship/', permanent: true }];
+  },
   // Invite pages (plan 4B): never cached, and the token in the URL never leaves in a Referer.
   async headers() {
     return [
