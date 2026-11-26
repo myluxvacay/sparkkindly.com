@@ -12,6 +12,7 @@ describe('buildSitemap', () => {
     expect(urls).toEqual(expect.arrayContaining([
       `${base}/`, `${base}/quiz/archive/`, `${base}/about/`, `${base}/privacy/`, `${base}/terms/`,
       `${base}/play/`, `${base}/kids/`, `${base}/topics/`, `${base}/topics/owls/`, `${base}/play/a-quiz/`,
+      `${base}/printables/`, `${base}/games/`, `${base}/leaderboard/`, `${base}/printables/request/`,
     ]));
     expect(urls.every((u) => u.endsWith('/'))).toBe(true);
   });

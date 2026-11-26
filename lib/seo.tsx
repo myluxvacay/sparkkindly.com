@@ -8,6 +8,9 @@ const BANNER_ALT = 'SparkKindly — Think sharp. Be kind. Brand artwork for Play
 export type SeoOptions = {
   absoluteTitle?: boolean;
   image?: { url: string; width?: number; height?: number; alt?: string };
+  // canonical: overrides only the canonical tag (openGraph.url keeps the page's own path) — for a view whose
+  // canonical home is another page, e.g. a printable sheet whose item page is the canonical URL.
+  canonical?: string;
 };
 
 // Released and indexable pages allow large image previews (SEO audit L3); preview builds are never indexed.
@@ -19,7 +22,7 @@ export function metadata(title: string, description: string, path: string, o: Se
   return {
     title: o.absoluteTitle ? { absolute: title } : title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: o.canonical ?? path },
     openGraph: {
       title,
       description,
