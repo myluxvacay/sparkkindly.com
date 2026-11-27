@@ -13,6 +13,12 @@ const config: NextConfig = {
   // Invite pages (plan 4B): never cached, and the token in the URL never leaves in a Referer.
   async headers() {
     return [
+      // Service worker (Phase 2.5): the browser must re-check for a new worker on every
+      // visit, or a fixed worker would take a day to reach installed devices.
+      {
+        source: '/sw.js',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }],
+      },
       {
         source: '/circles/join/:path*',
         headers: [

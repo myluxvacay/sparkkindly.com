@@ -5,6 +5,9 @@ import { listActivity, listOccurrences, myCircles, type Occurrence } from '@/lib
 import { zonedDayRange } from '@/lib/family-hub/rules';
 import Avatar from '@/components/family-hub/Avatar';
 import { listKids } from '@/lib/family-hub/repo';
+import HubInstallCard from '@/components/pwa/HubInstallCard';
+import HubPushCard from '@/components/pwa/HubPushCard';
+import { pushEnabled, vapidPublicKey } from '@/lib/family-hub/push-config';
 
 export const dynamic = 'force-dynamic';
 
@@ -47,6 +50,8 @@ export default async function FamilyHome() {
     <>
       <h1>Family Hub</h1>
       <p>Your family&rsquo;s shared schedule, pickup &amp; drop-off runs and plans — private to your circle.</p>
+      <HubInstallCard />
+      <HubPushCard enabled={pushEnabled()} publicKey={vapidPublicKey()} />
       {circles.length === 0 ? (
         <p>
           You are not in a family circle yet. <Link href="/family/new/">Create your family circle</Link> to get started.

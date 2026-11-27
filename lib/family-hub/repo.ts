@@ -6,6 +6,7 @@ import type { Db, Queryable } from '@/lib/db';
 import { isUuid } from '@/lib/accounts/pin';
 import { hash, newToken } from '@/lib/tokens';
 import { LIMITS, cleanName, expandOccurrences, isAvatarId, isColour, isHubAgeGroup, parsePhone, type HubAgeGroup } from './rules';
+import { notifyRunClaimed, notifyRunUncovered } from './push';
 
 export type Role = 'organizer' | 'member';
 
@@ -312,7 +313,7 @@ export async function createEvent(db: Db, circleId: string, actorId: string, inp
   if (!(await memberRole(db, circleId, actorId))) return null;
   const p = parseEvent(input);
   if (!p) return 'invalid';
-  return db.transaction(async (tx) => {
+  const created = await db.transaction(async (tx) => {
     if (!(await validatePeople(tx, circleId, p))) return 'invalid' as const;
     const count = await tx.query<{ n: number }>('SELECT count(*)::int AS n FROM hub_events WHERE circle_id = $1', [circleId]);
     if ((count.rows[0]?.n ?? 0) >= LIMITS.eventsPerCircle) return 'limit' as const;
@@ -328,18 +329,26 @@ export async function createEvent(db: Db, circleId: string, actorId: string, inp
     await writeParticipants(tx, r.rows[0].id, p);
     return { id: r.rows[0].id };
   });
+  // A run created without a driver starts uncovered: tell the circle's other adults
+  // (Phase 2.5 push; a silent no-op until VAPID keys are configured).
+  if (typeof created === 'object' && p.isRun && !p.driverUserId) {
+    await notifyRunUncovered(db, circleId, created.id, actorId);
+  }
+  return created;
 }
 
 export async function updateEvent(db: Db, circleId: string, actorId: string, eventId: string, input: EventInput): Promise<boolean> {
   if (!isUuid(eventId) || !(await memberRole(db, circleId, actorId))) return false;
   const p = parseEvent(input);
   if (!p) return false;
-  return db.transaction(async (tx) => {
+  const before = await db.query<{ run_status: string | null }>('SELECT run_status FROM hub_events WHERE circle_id = $1 AND id = $2', [circleId, eventId]);
+  const wasUncovered = before.rows[0]?.run_status === 'uncovered';
+  const ok = await db.transaction(async (tx) => {
     if (!(await validatePeople(tx, circleId, p))) return false;
     const r = await tx.query(
       `UPDATE hub_events SET title = $3, starts_at = $4, ends_at = $5, recurrence = $6, recurrence_until = $7,
          location = $8, notes = $9, is_run = $10, driver_user_id = $11,
-         run_status = CASE WHEN $10 THEN (CASE WHEN $11 IS NOT NULL THEN 'covered' ELSE 'uncovered' END) ELSE NULL END,
+         run_status = CASE WHEN $10 THEN (CASE WHEN $11::uuid IS NOT NULL THEN 'covered' ELSE 'uncovered' END) ELSE NULL END,
          updated_at = now()
        WHERE circle_id = $1 AND id = $2`,
       [
@@ -352,6 +361,12 @@ export async function updateEvent(db: Db, circleId: string, actorId: string, eve
     await writeParticipants(tx, eventId, p);
     return true;
   });
+  // An edit that leaves a run driverless (and it wasn't already) is a fresh uncovered
+  // run: notify like a release. Staying uncovered across edits does not re-notify.
+  if (ok && p.isRun && !p.driverUserId && !wasUncovered) {
+    await notifyRunUncovered(db, circleId, eventId, actorId);
+  }
+  return ok;
 }
 
 export async function deleteEvent(db: Db, circleId: string, actorId: string, eventId: string): Promise<boolean> {
@@ -452,6 +467,7 @@ export async function claimRun(db: Db, circleId: string, actorId: string, eventI
   );
   if (r.rowCount !== 1) return false;
   await logActivity(db, circleId, actorId, 'run', 'A run was claimed.');
+  await notifyRunClaimed(db, circleId, eventId, actorId);
   return true;
 }
 
@@ -468,6 +484,7 @@ export async function releaseRun(db: Db, circleId: string, actorId: string, even
   );
   if (r.rowCount !== 1) return false;
   await logActivity(db, circleId, actorId, 'run', 'A run was released and needs a driver.');
+  await notifyRunUncovered(db, circleId, eventId, actorId);
   return true;
 }
 
