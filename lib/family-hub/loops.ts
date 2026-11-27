@@ -56,6 +56,15 @@ export async function balanceOf(db: Queryable, circleId: string, kidProfileId: s
   return r.rows[0]?.total ?? 0;
 }
 
+// The per-kid serialisation point for every balance-spending transaction: locking the
+// profile row means two decisions for the same kid can never check the same balance
+// concurrently (READ COMMITTED alone would let both pass and drive it below zero).
+async function lockKid(tx: Queryable, circleId: string, kidProfileId: string): Promise<boolean> {
+  if (!isUuid(kidProfileId)) return false;
+  const r = await tx.query('SELECT 1 FROM hub_kid_profiles WHERE circle_id = $1 AND id = $2 FOR UPDATE', [circleId, kidProfileId]);
+  return r.rows.length === 1;
+}
+
 // ---- Chores (parent) ----
 
 export async function listChores(db: Queryable, circleId: string, userId: string): Promise<Chore[] | null> {
@@ -161,6 +170,7 @@ export async function adjustPoints(
   const note = typeof noteRaw === 'string' ? noteRaw.trim().slice(0, 300) : '';
   if (delta === null || note === '' || !(await kidName(db, circleId, kidProfileId))) return 'invalid';
   return db.transaction(async (tx) => {
+    if (!(await lockKid(tx, circleId, kidProfileId))) return 'invalid' as const;
     const balance = await balanceOf(tx, circleId, kidProfileId);
     if (balance + delta < 0) return 'balance' as const;
     await tx.query(
@@ -227,6 +237,7 @@ export async function decideRedemption(db: Db, circleId: string, actorId: string
     const row = r.rows[0];
     if (!row || row.state !== 'pending') return false as const;
     if (approve) {
+      if (!(await lockKid(tx, circleId, row.kid_profile_id))) return false as const;
       const balance = await balanceOf(tx, circleId, row.kid_profile_id);
       if (balance < row.cost_points) return 'balance' as const;
       const led = await tx.query<{ id: string }>(
@@ -294,8 +305,10 @@ export async function listMealRequests(db: Queryable, circleId: string, userId: 
 export async function decideMealRequest(
   db: Db, circleId: string, actorId: string, requestId: string,
   decision: { accept: boolean; dateStr?: unknown; declineMessage?: unknown }, now: Date,
-): Promise<'accepted' | 'declined' | 'invalid' | false> {
+): Promise<'accepted' | 'declined' | 'invalid' | 'limit' | false> {
   if (!isUuid(requestId) || !(await memberRole(db, circleId, actorId))) return false;
+  // A date the parent actually typed must be a real date — never silently re-interpreted.
+  if (decision.accept && typeof decision.dateStr === 'string' && decision.dateStr !== '' && !isDateString(decision.dateStr)) return 'invalid';
   return db.transaction(async (tx) => {
     const r = await tx.query<{ kid_profile_id: string; requested_text: string; desired_day: string | null; state: string; first_name: string }>(
       `SELECT mr.kid_profile_id, mr.requested_text, mr.desired_day::text, mr.state, k.first_name FROM hub_meal_requests mr
@@ -305,6 +318,8 @@ export async function decideMealRequest(
     const row = r.rows[0];
     if (!row || row.state !== 'pending') return false as const;
     if (decision.accept) {
+      const count = await tx.query<{ n: number }>('SELECT count(*)::int AS n FROM hub_meal_plan WHERE circle_id = $1', [circleId]);
+      if ((count.rows[0]?.n ?? 0) >= LOOPS_LIMITS.planEntriesPerCircle) return 'limit' as const;
       const tz = await circleTz(tx, circleId);
       const planDate = isDateString(decision.dateStr) ? decision.dateStr : row.desired_day ? String(row.desired_day).slice(0, 10) : localDateString(now, tz);
       await tx.query('UPDATE hub_meal_requests SET state = \'accepted\', decided_by = $3, decided_at = $4 WHERE id = $1 AND circle_id = $2', [
@@ -521,6 +536,7 @@ export async function kidRewards(db: Queryable, ctx: KidViewContext): Promise<{ 
 export async function kidRequestRedemption(db: Db, ctx: KidViewContext, rewardId: string): Promise<'ok' | 'balance' | 'already' | 'invalid'> {
   if (!isUuid(rewardId)) return 'invalid';
   return db.transaction(async (tx) => {
+    if (!(await lockKid(tx, ctx.circleId, ctx.kidProfileId))) return 'invalid' as const;
     const w = await tx.query<{ title: string; cost_points: number }>('SELECT title, cost_points FROM hub_rewards WHERE circle_id = $1 AND id = $2 AND active', [ctx.circleId, rewardId]);
     const reward = w.rows[0];
     if (!reward) return 'invalid' as const;

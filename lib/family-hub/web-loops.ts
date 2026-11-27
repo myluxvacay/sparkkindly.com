@@ -72,7 +72,7 @@ export const mealDecideRequest = (request: Request, d: HubDeps, circleId: string
     const r = await decideMealRequest(d.db, circleId, ctx.account.id, f(form, 'request_id'), {
       accept, dateStr: form.get('plan_date'), declineMessage: form.get('decline_message'),
     }, d.now);
-    return back(circleId, 'meals/', r === 'accepted' ? 'meal-accepted' : r === 'declined' ? 'meal-declined' : 'no');
+    return back(circleId, 'meals/', r === 'accepted' ? 'meal-accepted' : r === 'declined' ? 'meal-declined' : r === 'limit' ? 'limit' : r === 'invalid' ? 'invalid' : 'no');
   });
 
 export const createPlanRequest = (request: Request, d: HubDeps, circleId: string) =>

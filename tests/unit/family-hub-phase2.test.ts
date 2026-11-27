@@ -263,8 +263,7 @@ describe('scoping: other circles and other kids are invisible', () => {
   });
 });
 
-describe('kid view PIN gate and sessions', () => {
-  it('no PIN means the view is off; a wrong PIN is refused; five wrong tries lock it', async () => {
+describe('kid view PIN gate and sessions', () => {  it('no PIN means the view is off; a wrong PIN is refused; five wrong tries lock it', async () => {
     const { parent, circleId, kidId } = await family();
     expect((await kidViewStatus(db, circleId, kidId)).hasPin).toBe(false);
     expect(await verifyKidPin(db, circleId, kidId, '1357', T0)).toBe('off');
@@ -294,5 +293,80 @@ describe('kid view PIN gate and sessions', () => {
     await setKidPin(db, circleId, parent.id, kidId, '1357'); // replacing the PIN revokes sessions
     expect(await resolveKidView(db, token2, T0)).toBeNull();
     expect(await resolveKidView(db, 'not-a-real-token', T0)).toBeNull();
+  });
+});
+
+describe('review regressions: concurrency, deletion, strict dates', () => {
+  it('two concurrent redemption approvals cannot spend the same points twice', async () => {
+    const { parent, circleId, kidId } = await family();
+    const r1 = mustId(await createReward(db, circleId, parent.id, { title: 'Big one', costPoints: 50 }));
+    const r2 = mustId(await createReward(db, circleId, parent.id, { title: 'Second', costPoints: 40 }));
+    const ctx = await kidCtx(circleId, kidId, parent.id);
+    await adjustPoints(db, circleId, parent.id, kidId, 90, 'Seed points');
+    await kidRequestRedemption(db, ctx, r1);
+    await kidRequestRedemption(db, ctx, r2);
+    await adjustPoints(db, circleId, parent.id, kidId, -40, 'Spent some'); // balance now 50
+    const pending = (await listPendingRedemptions(db, circleId, parent.id))!;
+    expect(pending.length).toBe(2);
+    const results = await Promise.all(pending.map((p) => decideRedemption(db, circleId, parent.id, p.id, true, T0)));
+    expect(results.filter((x) => x === 'ok').length).toBe(1);
+    expect(results.filter((x) => x === 'balance').length).toBe(1);
+    const balance = await balanceOf(db, circleId, kidId);
+    expect(balance).toBeGreaterThanOrEqual(0);
+    expect(balance).toBeLessThanOrEqual(10);
+  });
+
+  it('a concurrent negative adjustment and redemption approval cannot both spend', async () => {
+    const { parent, circleId, kidId } = await family();
+    const rewardId = mustId(await createReward(db, circleId, parent.id, { title: 'Prize', costPoints: 50 }));
+    const ctx = await kidCtx(circleId, kidId, parent.id);
+    await adjustPoints(db, circleId, parent.id, kidId, 50, 'Seed points');
+    await kidRequestRedemption(db, ctx, rewardId);
+    const pending = (await listPendingRedemptions(db, circleId, parent.id))!;
+    const [decision, adjustment] = await Promise.all([
+      decideRedemption(db, circleId, parent.id, pending[0].id, true, T0),
+      adjustPoints(db, circleId, parent.id, kidId, -50, 'Concurrent spend'),
+    ]);
+    const spent = (decision === 'ok' ? 1 : 0) + (adjustment === 'ok' ? 1 : 0);
+    expect(spent).toBe(1);
+    expect(await balanceOf(db, circleId, kidId)).toBe(0);
+  });
+
+  it('two concurrent requests for the same reward still make only one pending request', async () => {
+    const { parent, circleId, kidId } = await family();
+    const rewardId = mustId(await createReward(db, circleId, parent.id, { title: 'Prize', costPoints: 10 }));
+    const ctx = await kidCtx(circleId, kidId, parent.id);
+    await adjustPoints(db, circleId, parent.id, kidId, 20, 'Seed points');
+    const results = await Promise.all([kidRequestRedemption(db, ctx, rewardId), kidRequestRedemption(db, ctx, rewardId)]);
+    expect(results.sort()).toEqual(['already', 'ok']);
+    expect((await listPendingRedemptions(db, circleId, parent.id))!.length).toBe(1);
+  });
+
+  it("deleting a member's account keeps their catalogue rows and every child's balance", async () => {
+    const { parent, circleId, kidId } = await family();
+    const member = await adult();
+    await db.query("INSERT INTO hub_circle_members (circle_id, user_id, role) VALUES ($1, $2, 'member')", [circleId, member.id]);
+    const choreId = mustId(await createChore(db, circleId, member.id, { kidProfileId: kidId, title: 'Member chore', cadence: 'daily', points: 7 }));
+    mustId(await createReward(db, circleId, member.id, { title: 'Member reward', costPoints: 5 }));
+    const ctx = await kidCtx(circleId, kidId, parent.id);
+    await kidMarkChore(db, ctx, choreId, T0);
+    const pending = (await listPendingCompletions(db, circleId, parent.id))!;
+    await decideCompletion(db, circleId, parent.id, pending[0].id, true, T0);
+    expect(await balanceOf(db, circleId, kidId)).toBe(7);
+    await db.query('DELETE FROM accounts WHERE id = $1', [member.id]);
+    expect(await balanceOf(db, circleId, kidId)).toBe(7); // the balance is untouched
+    const chores = (await listChores(db, circleId, parent.id))!;
+    expect(chores.some((c) => c.title === 'Member chore')).toBe(true); // the catalogue survives
+    const rewards = await db.query<{ n: number }>("SELECT count(*)::int AS n FROM hub_rewards WHERE circle_id = $1 AND title = 'Member reward'", [circleId]);
+    expect(rewards.rows[0].n).toBe(1);
+  });
+
+  it('accepting a meal request with a nonsense date is invalid, not silently re-dated', async () => {
+    const { parent, circleId, kidId } = await family();
+    const ctx = await kidCtx(circleId, kidId, parent.id);
+    await kidMealRequest(db, ctx, { text: 'Tacos' });
+    const pending = (await listMealRequests(db, circleId, parent.id, 'pending'))!;
+    expect(await decideMealRequest(db, circleId, parent.id, pending[0].id, { accept: true, dateStr: 'next friday-ish' }, T0)).toBe('invalid');
+    expect((await listMealRequests(db, circleId, parent.id, 'pending'))!.length).toBe(1); // still waiting
   });
 });

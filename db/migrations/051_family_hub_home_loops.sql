@@ -6,9 +6,14 @@
 -- no mutable counter anywhere. Points are created only by a parent's approval of a chore
 -- completion or a parent's manual adjustment, and spent only by a parent's approval of a
 -- redemption request; both write the ledger row in the same transaction as the state flip,
--- and the flip is guarded on the pending state so nothing can be decided twice.
--- Ledger rows survive an adult leaving the circle (actor columns are ON DELETE SET NULL):
--- deleting the ledger would rewrite a child's balance, which must never happen silently.
+-- and the flip is guarded on the pending state so nothing can be decided twice. Every
+-- balance-spending transaction locks the kid's profile row first, so concurrent decisions
+-- for the same kid serialise and a balance can never be checked twice against the same
+-- points. Ledger rows survive an adult leaving the circle (actor columns are ON DELETE
+-- SET NULL): deleting the ledger would rewrite a child's balance, which must never happen
+-- silently. The same applies to catalogue rows an adult created (chores, rewards,
+-- favourites, plan entries): their created_by is SET NULL, never a cascade — a departing
+-- adult must not take the family's lists with them.
 --
 -- Kid view: hub_kid_profiles gains a parent-set PIN (scrypt hash, same 'salt:hash' format as
 -- lib/accounts/pin.ts) plus the account system's lockout shape (5 failures, 15 minutes).
@@ -17,9 +22,10 @@
 -- grants nothing outside that one kid view — the parent routes never read it and the kid
 -- routes never read the account cookie. Setting a new PIN or clearing it revokes every
 -- outstanding kid-view session for that profile.
--- Rollback: DROP TABLE hub_kid_view_sessions, hub_grocery_items, hub_meal_plan,
---   hub_meal_requests, hub_favourite_meals, hub_redemption_requests, hub_rewards,
---   hub_points_ledger, hub_chore_completions, hub_chores;
+-- Rollback: ALTER TABLE hub_points_ledger DROP CONSTRAINT hub_points_ledger_redemption_fk;
+--   DROP TABLE hub_kid_view_sessions, hub_grocery_items, hub_meal_plan,
+--   hub_meal_requests, hub_favourite_meals, hub_redemption_requests, hub_points_ledger,
+--   hub_rewards, hub_chore_completions, hub_chores;
 --   ALTER TABLE hub_kid_profiles DROP COLUMN dietary_notes, DROP COLUMN kid_view_pin_hash,
 --   DROP COLUMN kid_view_pin_failures, DROP COLUMN kid_view_pin_locked_until;
 --   DELETE FROM schema_migrations WHERE name = '051_family_hub_home_loops.sql'.
@@ -48,7 +54,7 @@ CREATE TABLE hub_chores (
   cadence       text NOT NULL CHECK (cadence IN ('daily', 'weekly', 'one_off')),
   points        integer NOT NULL CHECK (points BETWEEN 1 AND 10000),
   active        boolean NOT NULL DEFAULT true,
-  created_by    uuid NOT NULL REFERENCES accounts (id) ON DELETE CASCADE,
+  created_by    uuid REFERENCES accounts (id) ON DELETE SET NULL,
   created_at    timestamptz NOT NULL DEFAULT now()
 );
 
@@ -93,7 +99,7 @@ CREATE TABLE hub_rewards (
   title         text NOT NULL CHECK (char_length(title) BETWEEN 1 AND 80),
   cost_points   integer NOT NULL CHECK (cost_points BETWEEN 1 AND 100000),
   active        boolean NOT NULL DEFAULT true,
-  created_by    uuid NOT NULL REFERENCES accounts (id) ON DELETE CASCADE,
+  created_by    uuid REFERENCES accounts (id) ON DELETE SET NULL,
   created_at    timestamptz NOT NULL DEFAULT now()
 );
 
@@ -118,6 +124,8 @@ CREATE TABLE hub_redemption_requests (
 
 CREATE INDEX hub_redemption_requests_circle_state_idx ON hub_redemption_requests (circle_id, state);
 
+CREATE UNIQUE INDEX hub_redemption_requests_pending_key ON hub_redemption_requests (kid_profile_id, reward_id) WHERE state = 'pending';
+
 ALTER TABLE hub_points_ledger
   ADD CONSTRAINT hub_points_ledger_redemption_fk
   FOREIGN KEY (redemption_id) REFERENCES hub_redemption_requests (id) ON DELETE SET NULL;
@@ -126,7 +134,7 @@ CREATE TABLE hub_favourite_meals (
   id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   circle_id     uuid NOT NULL REFERENCES hub_circles (id) ON DELETE CASCADE,
   title         text NOT NULL CHECK (char_length(title) BETWEEN 1 AND 80),
-  created_by    uuid NOT NULL REFERENCES accounts (id) ON DELETE CASCADE,
+  created_by    uuid REFERENCES accounts (id) ON DELETE SET NULL,
   created_at    timestamptz NOT NULL DEFAULT now()
 );
 
@@ -157,7 +165,7 @@ CREATE TABLE hub_meal_plan (
   meal_text     text NOT NULL CHECK (char_length(meal_text) BETWEEN 1 AND 80),
   kid_profile_id uuid REFERENCES hub_kid_profiles (id) ON DELETE SET NULL,
   source_request_id uuid UNIQUE REFERENCES hub_meal_requests (id) ON DELETE SET NULL,
-  created_by    uuid NOT NULL REFERENCES accounts (id) ON DELETE CASCADE,
+  created_by    uuid REFERENCES accounts (id) ON DELETE SET NULL,
   created_at    timestamptz NOT NULL DEFAULT now()
 );
 
