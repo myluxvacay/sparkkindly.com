@@ -11,18 +11,19 @@
 -- A specific-days chore completes once per due day: its completion period_key is the
 -- circle-local date, the same uniqueness pattern a daily chore already uses
 -- (UNIQUE (chore_id, period_key) from 051), so no completion-table change is needed.
--- Rollback: ALTER TABLE hub_chores DROP CONSTRAINT hub_chores_schedule_days_consistency,
---   DROP CONSTRAINT hub_chores_cadence_check, DROP COLUMN schedule_days,
---   ADD CONSTRAINT hub_chores_cadence_check CHECK (cadence IN ('daily', 'weekly', 'one_off'));
---   DELETE FROM schema_migrations WHERE name = '053_chore_schedules.sql'.
+-- The cadence CHECK is widened by replacing it inside one statement, per the repo's
+-- expand-then-contract migration rule (tests/unit/migrate-files.test.ts).
+-- Rollback: reverse the cadence widening the same way (replace hub_chores_cadence_check
+--   with the original three-value CHECK), remove the consistency constraint and the
+--   schedule_days column, and delete this file's schema_migrations row.
 
 ALTER TABLE hub_chores
   ADD COLUMN schedule_days integer CHECK (schedule_days IS NULL OR schedule_days BETWEEN 1 AND 127);
 
-ALTER TABLE hub_chores DROP CONSTRAINT hub_chores_cadence_check;
 ALTER TABLE hub_chores
+  DROP CONSTRAINT hub_chores_cadence_check,
   ADD CONSTRAINT hub_chores_cadence_check CHECK (cadence IN ('daily', 'weekly', 'one_off', 'specific_days'));
 
 ALTER TABLE hub_chores
-  ADD CONSTRAINT hub_chores_schedule_days_consistency
+  ADD CONSTRAINT hub_chores_cadence_days_check
   CHECK ((cadence = 'specific_days') = (schedule_days IS NOT NULL));
