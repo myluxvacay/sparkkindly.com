@@ -19,8 +19,8 @@
 ALTER TABLE hub_chores
   ADD COLUMN schedule_days integer CHECK (schedule_days IS NULL OR schedule_days BETWEEN 1 AND 127);
 
-ALTER TABLE hub_chores DROP CONSTRAINT hub_chores_cadence_check;
 ALTER TABLE hub_chores
+  DROP CONSTRAINT hub_chores_cadence_check,
   ADD CONSTRAINT hub_chores_cadence_check CHECK (cadence IN ('daily', 'weekly', 'one_off', 'specific_days'));
 
 ALTER TABLE hub_chores
