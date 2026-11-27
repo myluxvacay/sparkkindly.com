@@ -263,7 +263,8 @@ describe('scoping: other circles and other kids are invisible', () => {
   });
 });
 
-describe('kid view PIN gate and sessions', () => {  it('no PIN means the view is off; a wrong PIN is refused; five wrong tries lock it', async () => {
+describe('kid view PIN gate and sessions', () => {
+  it('no PIN means the view is off; a wrong PIN is refused; five wrong tries lock it', async () => {
     const { parent, circleId, kidId } = await family();
     expect((await kidViewStatus(db, circleId, kidId)).hasPin).toBe(false);
     expect(await verifyKidPin(db, circleId, kidId, '1357', T0)).toBe('off');

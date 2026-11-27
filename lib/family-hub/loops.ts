@@ -37,8 +37,13 @@ export type MealRequest = {
 export type PlanEntry = { id: string; planDate: string; mealText: string; kidProfileId: string | null; kidName: string | null; sourceRequestId: string | null };
 export type GroceryItem = { id: string; mealPlanId: string | null; itemText: string; quantityText: string | null; checked: boolean };
 
-const isDateString = (v: unknown): v is string =>
-  typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(new Date(`${v}T00:00:00Z`).getTime());
+const isDateString = (v: unknown): v is string => {
+  if (typeof v !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(v)) return false;
+  const d = new Date(`${v}T00:00:00Z`);
+  // Round-trip: JS Date rolls impossible dates over (2026-02-30 → Mar 2), so equality is
+  // what makes it a real calendar date rather than a well-formed string.
+  return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === v;
+};
 
 async function circleTz(db: Queryable, circleId: string): Promise<string> {
   const r = await db.query<{ time_zone: string }>('SELECT time_zone FROM hub_circles WHERE id = $1', [circleId]);
