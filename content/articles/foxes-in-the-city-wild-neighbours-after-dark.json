@@ -1,0 +1,59 @@
+{
+  "id": "discover-draft-2026-11-27-foxes-in-the-city-wild-n",
+  "slug": "foxes-in-the-city-wild-neighbours-after-dark",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Foxes in the city: wild neighbours after dark",
+  "description": "When the streets empty, red foxes pad out of gardens and railway banks to patrol the city they share with us — same species as the snow fox of the countryside, living a completely different life.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/animals.webp",
+    "alt": "A red fox standing in snow",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "foxes",
+    "cities",
+    "wildlife"
+  ],
+  "sources": [
+    {
+      "title": "Red fox | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Red_fox",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The night shift",
+      "paragraphs": [
+        "Urban foxes keep rural hours in reverse: they rest by day in quiet corners — under sheds, in overgrown gardens — and emerge at dusk to hunt and scavenge. A city offers rich pickings: fallen fruit, spilled bins, rodents, and earthworms after rain.",
+        "Studies of city foxes show territories far smaller than country ones, because food is packed so densely. A fox family can live its whole life within a few streets without ever meeting the humans above it."
+      ]
+    },
+    {
+      "heading": "Good neighbours, wild animals",
+      "paragraphs": [
+        "The golden rule is to enjoy them at a distance. Feeding foxes by hand teaches them to approach people, which ends badly for the fox; watching quietly from a window teaches you their routes, their cubs in spring, and their alarm bark — a short, sharp triple-yap in the dark.",
+        "If you spot a fox at dusk, note the time and place. Foxes are creatures of routine, and the patient watcher is often rewarded with the same animal, same corner, same hour, tomorrow."
+      ]
+    }
+  ],
+  "takeaway": "City foxes live a whole wild life within a few streets of us — watch quietly from a distance, never feed by hand, and their routines will reveal themselves.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

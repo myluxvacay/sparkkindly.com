@@ -1,0 +1,69 @@
+{
+  "id": "grow-draft-2026-11-27-balance-on-one-leg-a-qui",
+  "slug": "balance-on-one-leg-a-quiet-test-of-steady",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "Balance on one leg: a quiet test of steady",
+  "description": "Standing on one leg looks like nothing. Done slowly, beside a wall, it trains the ankles, hips and inner ear that keep you upright — and it quietly measures how steady you are.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/body.webp",
+    "alt": "A stethoscope close-up",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "balance",
+    "body",
+    "movement"
+  ],
+  "sources": [
+    {
+      "title": "Balance (ability) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Balance_(ability)",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Set up safely",
+      "paragraphs": [
+        "Stand side-on to a wall or a sturdy chair, close enough to touch. Lift one foot just off the floor and time yourself. Most of the work happens invisibly: your ankle makes dozens of tiny corrections a minute, and your eyes and inner ear feed it constant reports.",
+        "Swap legs — almost everyone has a steadier side. Note both times; the gap between them is as interesting as the numbers themselves."
+      ]
+    },
+    {
+      "heading": "Make it a practice, not a contest",
+      "paragraphs": [
+        "A few short stands a day, perhaps while the kettle boils, genuinely improve balance over weeks, because the correction system learns like any other skill. Progress means longer, calmer stands — not heroic ones.",
+        "Stop the moment you need to hop or grab hard, and never practise where a fall would land on something sharp or hard. Steady is built slowly, which is rather the point."
+      ]
+    }
+  ],
+  "takeaway": "Practise short one-leg stands beside a wall, both sides, a few times a day: balance improves quietly, and steady is built slowly.",
+  "fiction": false,
+  "materials": [
+    "A wall or sturdy chair to stand beside",
+    "A timer or phone stopwatch",
+    "Flat, non-slip floor space"
+  ],
+  "supervision": "An adult should stay beside younger children and anyone unsteady; this is a supported exercise, not a dare.",
+  "safetyNotes": [
+    "Always practise within reach of the wall or chair.",
+    "Stop at once if you feel dizzy.",
+    "Never practise on wet, sloped or cluttered floors."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

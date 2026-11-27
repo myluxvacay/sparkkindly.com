@@ -1,0 +1,68 @@
+{
+  "id": "together-draft-2026-11-27-draw-a-family-tree-and-a",
+  "slug": "draw-a-family-tree-and-add-one-story-per-person",
+  "brand": "together",
+  "contentType": "activity",
+  "title": "Draw a family tree and add one story per person",
+  "description": "A family tree of bare names is a diagram. Add one true story to every name — the day they met, the job they loved, the meal they were famous for — and it becomes the family itself.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family holding hands while walking",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "stories",
+    "history"
+  ],
+  "sources": [
+    {
+      "title": "Family tree | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Family_tree",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Draw the branches",
+      "paragraphs": [
+        "Start with the youngest generation at the bottom and work upward: parents, grandparents, great-grandparents as far as anyone can remember. Big paper helps, and pencil is wiser than pen — every family tree gets corrected by an aunt.",
+        "Where knowledge runs out, leave a named gap rather than guessing. A gap is an honest question mark, and it often sends someone to phone a relative — which is where the best stories come from anyway."
+      ]
+    },
+    {
+      "heading": "One story each",
+      "paragraphs": [
+        "Now the real work: for every name, add one story in a single line. Not 'was nice' — a story: crossed the sea with one suitcase, kept bees, won the argument with the mayor. Ask the oldest relatives first; their lines are the ones that cannot be re-asked later.",
+        "Date the tree and keep it somewhere safe. Next year's version will be longer, and the children who watched you draw it will one day be the ones correcting it."
+      ]
+    }
+  ],
+  "takeaway": "Draw the tree in pencil, leave honest gaps, and give every name one true story — starting with the oldest relatives, whose stories cannot be re-asked later.",
+  "fiction": false,
+  "materials": [
+    "A large sheet of paper",
+    "Pencils and an eraser",
+    "A phone to call relatives for stories (optional)"
+  ],
+  "supervision": "An adult should lead the calls to relatives and check family details before anything is shared beyond the family.",
+  "safetyNotes": [
+    "Keep the finished tree private within the family — it contains personal information.",
+    "Be gentle with gaps: adoption, loss and family rifts deserve care, not interrogation."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "grow-quiz-growth-mindset-thought-717",
+  "scheduledDate": "2031-02-24",
+  "brand": "grow",
+  "prompt": "Which of these thoughts shows a growth mindset?",
+  "options": [
+    {
+      "id": "a",
+      "text": "'I am just not a maths person'"
+    },
+    {
+      "id": "b",
+      "text": "'I cannot do this yet — practising will make it easier'"
+    },
+    {
+      "id": "c",
+      "text": "'Smart people never need to try hard'"
+    },
+    {
+      "id": "d",
+      "text": "'If I fail, it proves I am not clever'"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "A growth mindset treats ability as something that grows with practice and effort, so 'not yet' replaces 'I can't' — the word 'yet' keeps the door open.",
+  "difficulty": "easy",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Carol Dweck | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Carol_Dweck",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

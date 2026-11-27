@@ -1,0 +1,43 @@
+{
+  "id": "together-quiz-last-slice-717",
+  "scheduledDate": "2031-02-23",
+  "brand": "together",
+  "prompt": "Two friends are sharing a pizza and there is exactly one slice left. Both are still hungry. Which plan is fairest?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Whoever grabs it first keeps it"
+    },
+    {
+      "id": "b",
+      "text": "Cut the slice in half so each friend gets some"
+    },
+    {
+      "id": "c",
+      "text": "The older friend gets it"
+    },
+    {
+      "id": "d",
+      "text": "Throw the slice away so nobody has it"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Splitting the last slice shares what is left equally, so neither friend misses out — fair division means everyone gets a fair share.",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Fair division | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fair_division",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

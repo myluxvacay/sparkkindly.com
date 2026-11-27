@@ -1,0 +1,72 @@
+{
+  "id": "kids-draft-2026-11-27-open-a-bean-seed-and-fin",
+  "slug": "open-a-bean-seed-and-find-the-baby-plant",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Open a bean seed and find the baby plant",
+  "description": "Inside a dry bean seed there is a tiny baby plant, all folded up and waiting. Soak a bean overnight, open it gently, and you can meet the plant before it even starts to grow.",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/plants.webp",
+    "alt": "Young green sprouts growing in soil",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "seeds",
+    "beans",
+    "plants"
+  ],
+  "sources": [
+    {
+      "title": "Seed | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Seed",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Soak and open",
+      "paragraphs": [
+        "Put a big dried bean, like a kidney bean or butter bean, in water overnight. In the morning it will be fat and soft, and its skin will wrinkle like fingers after a long bath.",
+        "A grown-up helps you slip off the skin and gently open the bean into its two halves. Look inside: can you see a tiny pale sprout, curled up small? That is the baby plant."
+      ]
+    },
+    {
+      "heading": "A packed lunch for a plant",
+      "paragraphs": [
+        "The two big halves of the bean are the baby plant's packed lunch. When the seed starts to grow, the baby plant eats this food until its own leaves open and it can make food from sunlight.",
+        "You can draw the baby plant in a notebook, or take a photo with a grown-up's help. Then plant another soaked bean in a pot of soil and watch the real thing grow."
+      ]
+    }
+  ],
+  "takeaway": "A soaked bean opens into two halves — the baby plant's packed lunch — with a tiny folded sprout waiting inside.",
+  "fiction": false,
+  "ageGuidance": "Ages 3-8: grown-up leads throughout; younger children watch and point while the grown-up opens the bean.",
+  "materials": [
+    "Dried kidney beans or butter beans",
+    "A cup of water",
+    "A small pot and soil (optional, for planting afterwards)"
+  ],
+  "supervision": "A grown-up must soak, open and handle the beans; children help by looking, pointing and drawing.",
+  "safetyNotes": [
+    "Raw dried kidney beans must never be eaten — they can make you very poorly. Beans in this activity are for looking and planting only.",
+    "Wash hands after handling soaked beans and soil.",
+    "Keep dried beans away from younger toddlers, who may put them in their mouths."
+  ],
+  "screenFreeExtension": "Plant a soaked bean in soil by a sunny window and check it every morning for a week, drawing what changes.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

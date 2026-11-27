@@ -1,0 +1,71 @@
+{
+  "id": "save-draft-2026-11-27-run-a-pretend-shop-price",
+  "slug": "run-a-pretend-shop-price-three-things-you-made",
+  "brand": "save",
+  "contentType": "activity",
+  "title": "Run a pretend shop: price three things you made",
+  "description": "Drawings, pebble pets, paper planes — a pretend shop turns your own creations into stock, and forces the first real question of every business: what should this cost?",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money",
+    "shops",
+    "pretend play"
+  ],
+  "sources": [
+    {
+      "title": "Play (activity) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Play_(activity)",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Stock and price tags",
+      "paragraphs": [
+        "Make or choose three things to sell and give each a price tag. Pricing is the game: too dear and the shopkeeper's family-customers walk past; too cheap and the till is empty by closing time. Think about what each thing cost you in time and materials.",
+        "Write the prices in real money amounts and set out play money or drawn notes for change. Making change correctly is where pretend shops quietly teach real arithmetic."
+      ]
+    },
+    {
+      "heading": "Open for trading",
+      "paragraphs": [
+        "Invite customers, take turns being shopkeeper and buyer, and haggle politely. At closing time, count the till together: which price worked, which was too high, and what would you change tomorrow?",
+        "That closing count is the lesson real shops learn from too: prices are not wishes, they are experiments — and every experiment teaches something."
+      ]
+    }
+  ],
+  "takeaway": "Price three homemade things, trade with play money, make real change, then count the till: prices are experiments, and the closing count is the lesson.",
+  "fiction": false,
+  "materials": [
+    "Three homemade items to sell",
+    "Paper price tags and a pencil",
+    "Play money or drawn notes and coins",
+    "A box or tray for a till"
+  ],
+  "supervision": "Play money only — no real money, cards or accounts are used in this game.",
+  "safetyNotes": [
+    "Use pretend prices and play money throughout; never real payment details.",
+    "Small coins of play money should be kept away from very young children."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

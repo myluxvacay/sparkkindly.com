@@ -1,0 +1,59 @@
+{
+  "id": "grow-draft-2026-11-27-deja-vu-the-feeling-of-h",
+  "slug": "deja-vu-the-feeling-of-having-lived-this-before",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Déjà vu: the feeling of having lived this before",
+  "description": "You walk into a new place and your brain insists you have been here before. Déjà vu is a tiny glitch in memory's filing system — and it reveals how memory normally works.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/mind.webp",
+    "alt": "Resting on a bench at a mountain viewpoint",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "memory",
+    "brain",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Déjà vu | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/D%C3%A9j%C3%A0_vu",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "A filing error",
+      "paragraphs": [
+        "Memory is not one system but several: one registers a scene as new, another judges how familiar it feels. In déjà vu the familiarity signal fires a fraction too early or too strongly, so a brand-new moment arrives wearing the feeling of an old one.",
+        "Researchers can trigger mild déjà vu in laboratories with scenes that resemble earlier ones, which supports the filing-error idea: the brain recognises a pattern — a layout, a doorway — and mislabels the whole scene as remembered."
+      ]
+    },
+    {
+      "heading": "Common, brief, and a clue",
+      "paragraphs": [
+        "Most people experience déjà vu occasionally, more often when tired or travelling, and it usually lasts seconds. Far from being mysterious, it is evidence of a healthy checking system: a part of the brain notices the mismatch and flags it, which is why the feeling is eerie rather than convincing.",
+        "If episodes are very frequent, long, or come with confusion or blackouts, that is a conversation for a doctor. Ordinary déjà vu, though, is just your memory showing its working for a moment."
+      ]
+    }
+  ],
+  "takeaway": "Déjà vu is a filing glitch: the brain's familiarity signal fires too strongly for a new scene — eerie, brief, and a sign the checking system works.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

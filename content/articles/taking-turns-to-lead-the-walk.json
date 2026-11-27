@@ -1,0 +1,58 @@
+{
+  "id": "together-draft-2026-11-27-taking-turns-to-lead-the",
+  "slug": "taking-turns-to-lead-the-walk",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Taking turns to lead the walk",
+  "description": "On a family walk, the person in front quietly makes a dozen decisions. Sharing the lead — ten minutes each, navigator's word is final — turns a stroll into a small lesson in leading and following.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "A group of friends with their hands joined together",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "walking",
+    "family",
+    "leading"
+  ],
+  "sources": [
+    {
+      "title": "Hiking | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hiking",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The leader's invisible job",
+      "paragraphs": [
+        "The leader picks the pace, chooses at every fork, watches for traffic at crossings and decides when to stop. Followers rarely notice any of it — until they take the front and feel the gentle weight of a group trusting their choices.",
+        "Rotating the lead every ten minutes gives everyone that feeling in safe doses, children included. The rule that makes it work: during your ten minutes your route choices stand, unless safety says otherwise."
+      ]
+    },
+    {
+      "heading": "Following is a skill too",
+      "paragraphs": [
+        "The followers' job is not passive. Good followers keep the group together, call out hazards the leader cannot see, and save their better idea for their own turn at the front — a discipline some adults find harder than leading.",
+        "End the walk by naming one good decision each leader made. It closes the loop kindly, and the youngest navigator will remember the compliment far longer than the route."
+      ]
+    }
+  ],
+  "takeaway": "Rotate the lead every ten minutes, let each navigator's choices stand, and finish by naming one good decision each leader made.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

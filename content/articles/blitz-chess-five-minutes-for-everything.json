@@ -1,0 +1,59 @@
+{
+  "id": "play-draft-2026-11-27-blitz-chess-five-minutes",
+  "slug": "blitz-chess-five-minutes-for-everything",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Blitz chess: five minutes for everything",
+  "description": "In blitz chess each player gets only a few minutes for the whole game. The clock stops being furniture and becomes a second opponent — and that changes which moves are good.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/games.webp",
+    "alt": "Wooden chess pieces on a board",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chess",
+    "games",
+    "speed"
+  ],
+  "sources": [
+    {
+      "title": "Fast chess | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fast_chess",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "A second opponent",
+      "paragraphs": [
+        "In a slow game you can spend twenty minutes on one hard move. In blitz, with five minutes for everything, that same move costs you the game even if it is brilliant — the flag falls, the clock reads zero, and the position no longer matters.",
+        "So blitz rewards a different skill: deciding quickly which moves are good enough. Strong blitz players do not calculate less deeply on every move; they save their seconds for the two or three moments that truly decide the game."
+      ]
+    },
+    {
+      "heading": "What blitz teaches",
+      "paragraphs": [
+        "Blitz exposes what you actually know. Openings you merely memorised collapse under time pressure, while patterns you truly understand appear instantly. That is why coaches use short blitz sessions as a diagnostic, not just as fun.",
+        "Play it as training, not as a verdict. A blunder at one minute left is information about your patterns, not your worth as a player — write it down, check it slowly later, and let the slow game teach what the fast one revealed."
+      ]
+    }
+  ],
+  "takeaway": "Blitz makes the clock a second opponent: spend your seconds only on the moves that decide the game, and treat fast blunders as lessons for slow chess.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

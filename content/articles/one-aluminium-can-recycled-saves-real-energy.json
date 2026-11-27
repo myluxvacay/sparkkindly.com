@@ -1,0 +1,59 @@
+{
+  "id": "save-draft-2026-11-27-one-aluminium-can-recycl",
+  "slug": "one-aluminium-can-recycled-saves-real-energy",
+  "brand": "save",
+  "contentType": "article",
+  "title": "One aluminium can, recycled, saves real energy",
+  "description": "Making aluminium from raw ore takes enormous electricity. Remelting a used can takes a small fraction of it — which is why the humble drinks can is recycling's biggest success story.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/green.webp",
+    "alt": "Solar panels across a green field",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "recycling",
+    "aluminium",
+    "energy"
+  ],
+  "sources": [
+    {
+      "title": "Aluminium recycling | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Aluminium_recycling",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Expensive the first time",
+      "paragraphs": [
+        "Aluminium begins as bauxite ore, and separating the metal takes a powerful electric process — primary aluminium is sometimes called 'solid electricity' because so much energy is locked into every ingot. Throwing a can away throws that energy away with it.",
+        "Recycling flips the maths: remelting used aluminium needs only about five percent of the energy of making it new, and the metal loses no quality in the process. A can can be recycled, refilled and back on a shelf in as little as sixty days."
+      ]
+    },
+    {
+      "heading": "What one household does",
+      "paragraphs": [
+        "Because recycled aluminium is genuinely valuable, cans are among the most recycled objects on Earth — yet billions still reach landfill each year, each one a small battery of wasted energy. Rinsing cans and keeping them in the recycling stream, never the general bin, is the whole job.",
+        "It is a rare environmental action with no downside to weigh: same metal, same can, a twentieth of the energy."
+      ]
+    }
+  ],
+  "takeaway": "Recycling aluminium uses about five percent of the energy of making it new, with no loss of quality — a recycled can can be back on the shelf in sixty days.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

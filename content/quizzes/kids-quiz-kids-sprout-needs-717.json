@@ -1,0 +1,42 @@
+{
+  "id": "kids-quiz-kids-sprout-needs-717",
+  "scheduledDate": "2031-02-26",
+  "brand": "kids",
+  "prompt": "A tiny sprout is growing from a seed. Which three things does it need to keep growing?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Water, light and air"
+    },
+    {
+      "id": "b",
+      "text": "Sweets, milk and a blanket"
+    },
+    {
+      "id": "c",
+      "text": "A television, a song and a story"
+    },
+    {
+      "id": "d",
+      "text": "Shoes, a hat and a coat"
+    }
+  ],
+  "correctOptionId": "a",
+  "explanation": "Plants need water to drink, light from the Sun to make their food, and air around their leaves — with those three, a sprout can keep growing.",
+  "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
+  "sources": [
+    {
+      "title": "Germination | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Germination",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

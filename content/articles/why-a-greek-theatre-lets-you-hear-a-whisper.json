@@ -1,0 +1,59 @@
+{
+  "id": "discover-draft-2026-11-27-why-a-greek-theatre-lets",
+  "slug": "why-a-greek-theatre-lets-you-hear-a-whisper",
+  "brand": "discover",
+  "contentType": "article",
+  "title": "Why a Greek theatre lets you hear a whisper",
+  "description": "Ancient Greek theatres were carved into hillsides in a perfect half-circle of stone seats — and their shape is so good that a whisper on stage can carry to the very back row.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/history.webp",
+    "alt": "An ancient stone pillar in grass",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "greece",
+    "theatres",
+    "sound"
+  ],
+  "sources": [
+    {
+      "title": "Theatre of ancient Greece | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Theatre_of_ancient_Greece",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "A hillside, hollowed",
+      "paragraphs": [
+        "Greek builders chose a slope and carved the seating — the theatron, or 'seeing place' — directly into it, rising in concentric curved rows around a flat circular orchestra. Theatres like Epidaurus held well over ten thousand people, all facing the stage, all without a single speaker or microphone.",
+        "The curve does the work. Sound from the stage reflects off the orchestra floor and the stone seats in a way that carries voices upward and outward instead of letting them scatter, and the rising rows lift every listener clear of the heads — and the sound shadows — in front."
+      ]
+    },
+    {
+      "heading": "Designed by ear",
+      "paragraphs": [
+        "Later research found the seat rows themselves help: the regular corrugations of stone filter out low background rumble while passing the higher frequencies of speech, a stone-age sound engineer built into the furniture.",
+        "Actors also wore masks with mouth openings that may have helped project the voice. But the theatre itself was the amplifier — proof that careful shape can do what we now ask electronics to do."
+      ]
+    }
+  ],
+  "takeaway": "A Greek theatre is a stone amplifier: curved hillside seats, a reflecting floor and rows that filter rumble, carrying a stage whisper to the back row.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,59 @@
+{
+  "id": "save-draft-2026-11-27-why-money-comes-in-coins",
+  "slug": "why-money-comes-in-coins-and-notes",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Why money comes in coins and notes",
+  "description": "Coins rattle, notes fold. Money comes in two forms because the two materials solve opposite problems: small amounts need something nearly indestructible, large amounts need something light.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank on a table",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "money",
+    "coins",
+    "notes"
+  ],
+  "sources": [
+    {
+      "title": "Banknote | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Banknote",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Coins: built to outlive us",
+      "paragraphs": [
+        "A coin may pass through thousands of hands over decades, so coins are struck from hard metal alloys that shrug off pockets, tills and washing machines. Minting a coin costs more than printing a note of the same value — but spread over thirty years of use, the coin is far cheaper per year.",
+        "That is also why coins stay small in value: a heavy purse of high-value coins would be secure but miserable to carry, and a lost coin purse loses real metal-era value with every step."
+      ]
+    },
+    {
+      "heading": "Notes: light, printable, replaceable",
+      "paragraphs": [
+        "Notes — today usually printed on polymer or cotton paper — carry large values in almost no weight, and their surfaces hold the detailed artwork, threads and watermarks that make forgery hard. Their weakness is wear: notes tear and soil, and are withdrawn and replaced after a few years.",
+        "So the system splits the job: coins for the small, constant, hard-wearing traffic of daily life; notes for the larger sums that move less often. Two forms, one wallet, each doing what its material does best."
+      ]
+    }
+  ],
+  "takeaway": "Coins are expensive to make but last for decades of daily use; notes are light and hard to forge but wear out — money's two forms split the job by material.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

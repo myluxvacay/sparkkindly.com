@@ -1,0 +1,59 @@
+{
+  "id": "play-draft-2026-11-27-a-notebook-of-questions-",
+  "slug": "a-notebook-of-questions-one-question-a-day",
+  "brand": "play",
+  "contentType": "article",
+  "title": "A notebook of questions: one question a day",
+  "description": "Not answers — questions. A notebook that collects one genuine question a day becomes, within a year, a map of what your mind actually wonders about.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "A child writing in a notebook",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "questions",
+    "notebooks",
+    "curiosity"
+  ],
+  "sources": [
+    {
+      "title": "Commonplace book | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Commonplace_book",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Questions only",
+      "paragraphs": [
+        "The rule is strict: one question a day, written down, with no obligation to answer it. Why do we dream in colour? Who decides what a word means? The notebook is a commonplace book turned inside out — a collection of not-knowing, kept proudly.",
+        "Writing the question matters. A question held only in the head dissolves by bedtime; a question on paper waits patiently, and some questions improve with age, gathering partial answers from books, lessons and conversations you have months later."
+      ]
+    },
+    {
+      "heading": "Reviewing the map",
+      "paragraphs": [
+        "Every few months, read the notebook through. Some questions will have answered themselves. Some will look naive. A few — usually the ones you almost did not write down — will still glow, and those are the ones worth chasing properly.",
+        "You will also see your interests drift across the year: a spring of space questions, an autumn of animals. That drift is the real contents page of your curiosity, and no test can show it to you."
+      ]
+    }
+  ],
+  "takeaway": "One unanswered question a day, written down and reviewed every few months, draws a map of your curiosity that nothing else can.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

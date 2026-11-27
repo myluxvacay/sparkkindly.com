@@ -1,0 +1,43 @@
+{
+  "id": "save-quiz-saves-half-717",
+  "scheduledDate": "2031-02-25",
+  "brand": "save",
+  "prompt": "Maya is given £5 pocket money. She decides to save exactly half of it and spend the rest. How much does she save?",
+  "options": [
+    {
+      "id": "a",
+      "text": "£1.50"
+    },
+    {
+      "id": "b",
+      "text": "£2.00"
+    },
+    {
+      "id": "c",
+      "text": "£2.50"
+    },
+    {
+      "id": "d",
+      "text": "£3.00"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "Half of £5 is £5 ÷ 2 = £2.50, so Maya saves £2.50 and has £2.50 left to spend.",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Saving | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Saving",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

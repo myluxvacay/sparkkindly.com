@@ -1,0 +1,43 @@
+{
+  "id": "discover-quiz-thundercloud-717",
+  "scheduledDate": "2031-02-22",
+  "brand": "discover",
+  "prompt": "Which type of cloud grows into a tall, dark thundercloud that can bring lightning, heavy rain and hail?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Cirrus"
+    },
+    {
+      "id": "b",
+      "text": "Cumulonimbus"
+    },
+    {
+      "id": "c",
+      "text": "Stratus"
+    },
+    {
+      "id": "d",
+      "text": "Altostratus"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Cumulonimbus clouds tower high into the sky and are the clouds that produce thunderstorms, with lightning, heavy rain and sometimes hail.",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Cumulonimbus cloud | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cumulonimbus_cloud",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

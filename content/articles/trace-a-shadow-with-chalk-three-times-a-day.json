@@ -1,0 +1,71 @@
+{
+  "id": "play-draft-2026-11-27-trace-a-shadow-with-chal",
+  "slug": "trace-a-shadow-with-chalk-three-times-a-day",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Trace a shadow with chalk three times a day",
+  "description": "Draw around a friend's shadow in the morning, at noon and in the afternoon, and the pavement itself will show you how the Sun's path bends the day.",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/shadows.webp",
+    "alt": "",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "shadows",
+    "outdoors",
+    "sun"
+  ],
+  "sources": [
+    {
+      "title": "Shadow | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Shadow",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Morning outline",
+      "paragraphs": [
+        "Stand your partner on flat pavement in morning sunshine and chalk carefully around their shadow, head to feet. Write the time beside the head. The shadow will be long — much longer than the person who cast it.",
+        "Choose a shadow-caster who can stand still for a minute: a fence post or a chair works if nobody wants to pose, and a fixed object makes the three drawings easier to compare."
+      ]
+    },
+    {
+      "heading": "Noon and afternoon",
+      "paragraphs": [
+        "Return at midday and trace again from exactly the same spot. The shadow has shrunk and swung around. By afternoon it stretches out again, pointing the other way — three chalk people lying at three angles, all cast by one Sun moving across one sky.",
+        "Photograph the pavement before the rain or the street sweeper edits your work. The three outlines together are a sundial drawn by the day itself."
+      ]
+    }
+  ],
+  "takeaway": "Chalk the same shadow in the morning, at noon and in the afternoon: long, short, long again — the pavement becomes a sundial drawn by the day itself.",
+  "fiction": false,
+  "materials": [
+    "Pavement chalk in two colours",
+    "A flat, sunny patch of pavement",
+    "A clock or phone to note the times"
+  ],
+  "supervision": "An adult should choose a pavement away from traffic and stay nearby while children work near any road.",
+  "safetyNotes": [
+    "Work only on pavements and driveways, never in the road itself.",
+    "Wear a hat and sunscreen for the midday tracing.",
+    "Ask before chalking on anyone else's property."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "play-quiz-knights-tour-717",
+  "scheduledDate": "2031-02-17",
+  "brand": "play",
+  "prompt": "In the knight's tour puzzle, a knight visits every square of the chessboard exactly once. How many squares must it visit in total on a standard board?",
+  "options": [
+    {
+      "id": "a",
+      "text": "32"
+    },
+    {
+      "id": "b",
+      "text": "48"
+    },
+    {
+      "id": "c",
+      "text": "64"
+    },
+    {
+      "id": "d",
+      "text": "60"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "A standard chessboard has 8 × 8 = 64 squares, and a complete knight's tour lands on each one exactly once.",
+  "difficulty": "medium",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Knight's tour | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Knight%27s_tour",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

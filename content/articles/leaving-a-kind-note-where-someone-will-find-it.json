@@ -1,0 +1,58 @@
+{
+  "id": "together-draft-2026-11-27-leaving-a-kind-note-wher",
+  "slug": "leaving-a-kind-note-where-someone-will-find-it",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Leaving a kind note where someone will find it",
+  "description": "A note costs nothing, takes two minutes, and is found at exactly the moment it is needed: inside a lunchbox, on a colleague's desk, tucked into a returned book.",
+  "ageBands": [
+    "family"
+  ],
+  "publishedAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-27",
+  "hero": {
+    "src": "/images/kindness.webp",
+    "alt": "Friends stacking their hands together",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "kindness",
+    "notes",
+    "neighbours"
+  ],
+  "sources": [
+    {
+      "title": "Kindness | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kindness",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-27",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 27 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Found, not sent",
+      "paragraphs": [
+        "A spoken compliment evaporates; a note waits. That is its whole magic. The note you leave in the morning is discovered at the tired moment of someone else's afternoon, and it can be re-read — most kind notes are read at least twice, the second time more slowly.",
+        "Keep it short and specific. 'Your soup got me through last week' beats a paragraph of general praise, because specifics prove the kindness was noticed, not performed."
+      ]
+    },
+    {
+      "heading": "Where notes land best",
+      "paragraphs": [
+        "Good hiding places are private, not public: inside a coat pocket, on a pillow, in the book someone is halfway through. A note is a gift for one reader, not a display for an audience — never post a photograph of one you wrote.",
+        "Sign it or do not; both work. Anonymous notes sparkle with mystery, signed notes strengthen a friendship. The only wrong version is the note never left."
+      ]
+    }
+  ],
+  "takeaway": "Leave short, specific kind notes where one person will find them privately — they are re-read, kept, and cost nothing but two minutes.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
