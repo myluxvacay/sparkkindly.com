@@ -30,6 +30,10 @@ export const contributorsEnabled = (): boolean => accountsEnabled() && ['true', 
 // its record is live in /admin — so the surface ships with accounts. PROMOS_ENABLED=false is an emergency
 // kill switch only; while off, /promos/ and /admin/promos/ do not exist.
 export const promosEnabled = (): boolean => accountsEnabled() && (process.env.PROMOS_ENABLED ?? '') !== 'false';
+// Family Hub (Phase 1, owner direction 27 November 2026) needs accounts. Like promotions it has no opt-in
+// switch — whether a family uses it is itself data (they create a circle) — so the surface ships with
+// accounts. FAMILY_HUB_ENABLED=false is an emergency kill switch only; while off, /family/ does not exist.
+export const familyHubEnabled = (): boolean => accountsEnabled() && (process.env.FAMILY_HUB_ENABLED ?? '') !== 'false';
 // Public leaderboard (Project 4.11, ADR 0004) needs accounts AND its own switch; with either unset the /leaderboard/
 // route and the settings section do not exist.
 export const leaderboardEnabled = (): boolean => accountsEnabled() && ['true', '1'].includes(process.env.LEADERBOARD_ENABLED ?? '');
