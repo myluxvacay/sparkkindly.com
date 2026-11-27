@@ -7,7 +7,7 @@ import { kidPageState } from '@/lib/family-hub/web-kid';
 import {
   kidChores, kidDay, kidFavourites, kidMealRequests, kidRewards, kidSelf,
 } from '@/lib/family-hub/loops';
-import { CADENCE_LABEL, localDateString } from '@/lib/family-hub/rules';
+import { localDateString, scheduleLabel } from '@/lib/family-hub/rules';
 import Avatar from '@/components/family-hub/Avatar';
 
 export const dynamic = 'force-dynamic';
@@ -21,6 +21,7 @@ type Props = { params: Promise<{ circleId: string; kidProfileId: string }>; sear
 const RESULTS: Record<string, { text: string; ok: boolean }> = {
   marked: { text: 'Marked! A grown-up will check it, and then your points land.', ok: true },
   already: { text: 'That one is already marked for now.', ok: true },
+  notdue: { text: 'That chore is not for today — check its next day below.', ok: false },
   'reward-asked': { text: 'Asked! A grown-up will say yes if the points are there.', ok: true },
   saving: { text: 'Not quite enough points yet — keep going!', ok: false },
   'meal-asked': { text: 'Request sent! Fingers crossed for dinner.', ok: true },
@@ -123,10 +124,12 @@ export default async function KidViewPage({ params, searchParams }: Props) {
         <p>No chores right now.</p>
       ) : (
         <ul className="admin-list">
-          {chores.map(({ chore, state: cs }) => (
-            <li key={chore.id} style={{ marginBottom: 8 }}>
-              <strong>{chore.title}</strong> — {chore.points} points ({CADENCE_LABEL[chore.cadence].toLowerCase()}){' '}
-              {cs === 'approved' ? (
+          {chores.map(({ chore, state: cs, dueToday, nextDueWeekday }) => (
+            <li key={chore.id} style={{ marginBottom: 8, ...(dueToday ? {} : { opacity: 0.55 }) }}>
+              <strong>{chore.title}</strong> — {chore.points} points ({scheduleLabel(chore.cadence, chore.scheduleDays).toLowerCase()}){' '}
+              {!dueToday ? (
+                <span>Next: {nextDueWeekday}</span>
+              ) : cs === 'approved' ? (
                 <span>Done — points added!</span>
               ) : cs === 'pending' ? (
                 <span>Marked — waiting for a grown-up.</span>
@@ -137,7 +140,7 @@ export default async function KidViewPage({ params, searchParams }: Props) {
                   <button type="submit">{cs === 'declined' ? 'I did it this time' : 'I did it'}</button>
                 </form>
               )}
-              {cs === 'declined' ? <span> (a grown-up sent this one back — have another go)</span> : null}
+              {dueToday && cs === 'declined' ? <span> (a grown-up sent this one back — have another go)</span> : null}
             </li>
           ))}
         </ul>

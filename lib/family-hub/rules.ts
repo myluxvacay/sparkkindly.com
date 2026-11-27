@@ -132,12 +132,64 @@ export function expandOccurrences(e: EventLike, from: Date, to: Date): Date[] {
 
 // ---- Phase 2: chores, points, meals, kid view ----
 
-export const CHORE_CADENCES = ['daily', 'weekly', 'one_off'] as const;
+export const CHORE_CADENCES = ['daily', 'weekly', 'one_off', 'specific_days'] as const;
 export type ChoreCadence = (typeof CHORE_CADENCES)[number];
 export const isChoreCadence = (v: unknown): v is ChoreCadence =>
   typeof v === 'string' && (CHORE_CADENCES as readonly string[]).includes(v);
 
-export const CADENCE_LABEL: Record<ChoreCadence, string> = { daily: 'Every day', weekly: 'Every week', one_off: 'One time' };
+export const CADENCE_LABEL: Record<ChoreCadence, string> = { daily: 'Every day', weekly: 'Every week', one_off: 'One time', specific_days: 'Specific days' };
+
+// Weekday bitmask for specific-days chores (migration 053): Mon=1 … Sun=64, indexed here by
+// ISO position 0=Mon … 6=Sun. The bit — never a weekday name — is what gets stored, so the
+// schedule means the same thing in every locale.
+export const WEEKDAY_SHORT = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] as const;
+export const WEEKDAY_FULL = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const;
+
+// ISO position (0=Mon … 6=Sun) of a 'YYYY-MM-DD' date.
+export const weekdayIndex = (dateStr: string): number => (dateOf(dateStr).getUTCDay() + 6) % 7;
+export const weekdayBit = (dateStr: string): number => 1 << weekdayIndex(dateStr);
+
+// Accepts what the chore form submits (an array of ISO weekday numbers '1'..'7', Mon=1) or a
+// ready bitmask number, and returns the bitmask 1..127 — or null for anything unusable
+// (empty, out of range, mixed junk). At least one day is required, so 0 is null too.
+export function parseScheduleDays(v: unknown): number | null {
+  if (typeof v === 'number') return Number.isInteger(v) && v >= 1 && v <= 127 ? v : null;
+  const items = Array.isArray(v) ? v : typeof v === 'string' || typeof v === 'number' ? [v] : null;
+  if (!items || items.length === 0) return null;
+  let mask = 0;
+  for (const item of items) {
+    const n = typeof item === 'number' ? item : typeof item === 'string' && item.trim() !== '' ? Number(item) : NaN;
+    if (!Number.isInteger(n) || n < 1 || n > 7) return null;
+    mask |= 1 << (n - 1);
+  }
+  return mask >= 1 ? mask : null;
+}
+
+// Is a chore due on this circle-local date? Daily and one-off chores are actionable any day
+// (the one-off's single 'once' period is what limits it); a weekly chore can be done any day
+// of its week; a specific-days chore only on its weekdays.
+export function isDueOn(cadence: ChoreCadence, scheduleDays: number | null, dateStr: string): boolean {
+  if (cadence !== 'specific_days') return true;
+  return scheduleDays !== null && (scheduleDays & weekdayBit(dateStr)) !== 0;
+}
+
+// The next date strictly after fromDateStr on which a specific-days chore is due (at most a
+// week away, since a valid mask has at least one bit). Null for other cadences / bad masks.
+export function nextDueDate(cadence: ChoreCadence, scheduleDays: number | null, fromDateStr: string): string | null {
+  if (cadence !== 'specific_days' || scheduleDays === null) return null;
+  for (let i = 1; i <= 7; i++) {
+    const d = addDays(fromDateStr, i);
+    if ((scheduleDays & weekdayBit(d)) !== 0) return d;
+  }
+  return null;
+}
+
+// The schedule in words for parents and kids: 'Tue · Thu' for specific days, the plain
+// cadence label otherwise.
+export function scheduleLabel(cadence: ChoreCadence, scheduleDays: number | null): string {
+  if (cadence !== 'specific_days' || scheduleDays === null) return CADENCE_LABEL[cadence];
+  return WEEKDAY_SHORT.filter((_, i) => (scheduleDays & (1 << i)) !== 0).join(' · ');
+}
 
 export const LOOPS_LIMITS = {
   choresPerKid: 50, rewardsPerCircle: 50, favouritesPerCircle: 50,
@@ -174,12 +226,13 @@ export function mondayOf(dateStr: string): string {
 
 export const weekOf = (mondayDateStr: string): string[] => Array.from({ length: 7 }, (_, i) => addDays(mondayDateStr, i));
 
-// The completion period a chore mark belongs to, in the circle's zone: a daily chore is
-// per local day, a weekly chore per local week (keyed by its Monday), a one-off just once.
+// The completion period a chore mark belongs to, in the circle's zone: a daily or
+// specific-days chore is per local day, a weekly chore per local week (keyed by its
+// Monday), a one-off just once.
 export function periodKeyFor(cadence: ChoreCadence, instant: Date, timeZone: string): string {
   if (cadence === 'one_off') return 'once';
   const day = localDateString(instant, timeZone);
-  return cadence === 'daily' ? day : mondayOf(day);
+  return cadence === 'weekly' ? mondayOf(day) : day;
 }
 
 const parseIntIn = (v: unknown, min: number, max: number): number | null => {

@@ -66,7 +66,7 @@ export const kidActRequest = (request: Request, d: KidDeps, circleId: string, ki
     const action = form.get('action') ?? '';
     if (action === 'mark') {
       const r = await kidMarkChore(d.db, ctx, form.get('chore_id') ?? '', d.now);
-      return seeOther(kidHome(circleId, kidProfileId, r === 'marked' ? 'marked' : r === 'already' ? 'already' : 'invalid'));
+      return seeOther(kidHome(circleId, kidProfileId, r === 'marked' ? 'marked' : r === 'already' ? 'already' : r === 'notdue' ? 'notdue' : 'invalid'));
     }
     if (action === 'reward') {
       const r = await kidRequestRedemption(d.db, ctx, form.get('reward_id') ?? '');
