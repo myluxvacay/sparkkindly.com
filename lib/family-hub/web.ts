@@ -19,9 +19,9 @@ export type HubDeps = { db: Db; now: Date };
 
 const SIGN_IN = '/account/sign-in/';
 const HOME = '/family/';
-const back = (circleId: string, page: string, code: string) => seeOther(`/family/${circleId}/${page}?r=${code}#result`);
+export const back = (circleId: string, page: string, code: string) => seeOther(`/family/${circleId}/${page}?r=${code}#result`);
 
-async function asAdult(
+export async function asAdult(
   request: Request,
   d: HubDeps,
   act: (ctx: AdultContext, form: URLSearchParams) => Promise<Response>,
@@ -35,7 +35,7 @@ async function asAdult(
   return act(adult, (await readForm(request)) ?? new URLSearchParams());
 }
 
-const f = (form: URLSearchParams, name: string) => form.get(name) ?? '';
+export const f = (form: URLSearchParams, name: string) => form.get(name) ?? '';
 
 export const createCircleRequest = (request: Request, d: HubDeps) =>
   asAdult(request, d, async (ctx, form) => {
@@ -80,6 +80,7 @@ const kidInput = (form: URLSearchParams) => ({
   avatarId: form.get('avatar_id'),
   colour: form.get('colour'),
   phone: form.get('phone'),
+  dietaryNotes: form.get('dietary_notes'),
 });
 
 export const createKidRequest = (request: Request, d: HubDeps, circleId: string) =>

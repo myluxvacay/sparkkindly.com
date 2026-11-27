@@ -51,6 +51,16 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   hub_events: 'Family Hub data shared by the circle\u2019s members (the shared schedule and runs), not one account\u2019s own record',
   hub_event_participants: 'Family Hub data shared by the circle\u2019s members (who takes part in a shared event), not one account\u2019s own record',
   hub_activity: 'Family Hub data shared by the circle\u2019s members (the circle activity feed), not one account\u2019s own record',
+  hub_kid_view_sessions: 'Family Hub kid-view session credentials (token hashes) bound to one child profile; handing them out would weaken the PIN gate',
+  hub_chores: 'Family Hub data shared by the circle\u2019s members (chore lists the circle\u2019s adults manage together), not one account\u2019s own record',
+  hub_chore_completions: 'Family Hub data shared by the circle\u2019s members (chore marks and the approvals given by the circle\u2019s adults), not one account\u2019s own record',
+  hub_points_ledger: 'Family Hub data shared by the circle\u2019s members (a child\u2019s points history, kept by the circle\u2019s adults together), not one account\u2019s own record',
+  hub_rewards: 'Family Hub data shared by the circle\u2019s members (the rewards catalogue the circle\u2019s adults set), not one account\u2019s own record',
+  hub_redemption_requests: 'Family Hub data shared by the circle\u2019s members (reward requests and the decisions of the circle\u2019s adults), not one account\u2019s own record',
+  hub_favourite_meals: 'Family Hub data shared by the circle\u2019s members (the family favourites list), not one account\u2019s own record',
+  hub_meal_requests: 'Family Hub data shared by the circle\u2019s members (meal requests and the decisions of the circle\u2019s adults), not one account\u2019s own record',
+  hub_meal_plan: 'Family Hub data shared by the circle\u2019s members (the shared week meal board), not one account\u2019s own record',
+  hub_grocery_items: 'Family Hub data shared by the circle\u2019s members (the shared grocery list), not one account\u2019s own record',
 };
 
 // Columns of the tables exported row by row: each is exported or deliberately excluded with its reason.

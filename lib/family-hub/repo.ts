@@ -11,7 +11,7 @@ export type Role = 'organizer' | 'member';
 
 export type Circle = { id: string; name: string; timeZone: string; role: Role; createdBy: string };
 export type Member = { userId: string; email: string; role: Role };
-export type Kid = { id: string; firstName: string; ageGroup: HubAgeGroup; avatarId: string; colour: string; phone: string | null };
+export type Kid = { id: string; firstName: string; ageGroup: HubAgeGroup; avatarId: string; colour: string; phone: string | null; dietaryNotes: string | null; hasKidPin: boolean };
 export type HubEvent = {
   id: string;
   title: string;
@@ -165,29 +165,42 @@ export async function inviteCircleName(db: Queryable, token: string, now: Date):
 
 // ---- Kid profiles ----
 
-export type KidInput = { firstName: unknown; ageGroup: unknown; avatarId: unknown; colour: unknown; phone: unknown };
+export type KidInput = { firstName: unknown; ageGroup: unknown; avatarId: unknown; colour: unknown; phone: unknown; dietaryNotes?: unknown };
 
-function parseKid(input: KidInput): { firstName: string; ageGroup: HubAgeGroup; avatarId: string; colour: string; phone: string | null } | null {
+function parseKid(input: KidInput): { firstName: string; ageGroup: HubAgeGroup; avatarId: string; colour: string; phone: string | null; dietaryNotes: string | null } | null {
   const firstName = cleanName(input.firstName, 30);
   if (!firstName || !isHubAgeGroup(input.ageGroup)) return null;
   const phone = parsePhone(input.phone);
   if (!phone.ok) return null;
+  let dietaryNotes: string | null = null;
+  if (input.dietaryNotes !== undefined && input.dietaryNotes !== null && input.dietaryNotes !== '') {
+    if (typeof input.dietaryNotes !== 'string') return null;
+    dietaryNotes = input.dietaryNotes.trim().slice(0, 500) || null;
+  }
   return {
     firstName,
     ageGroup: input.ageGroup,
     avatarId: isAvatarId(input.avatarId) ? input.avatarId : 'spark',
     colour: isColour(input.colour) ? input.colour : 'purple',
     phone: phone.phone,
+    dietaryNotes,
   };
 }
 
+type KidRow = { id: string; first_name: string; age_group: HubAgeGroup; avatar_id: string; colour: string; phone: string | null; dietary_notes: string | null; kid_view_pin_hash: string | null };
+const kidOf = (x: KidRow): Kid => ({
+  id: x.id, firstName: x.first_name, ageGroup: x.age_group, avatarId: x.avatar_id, colour: x.colour,
+  phone: x.phone, dietaryNotes: x.dietary_notes, hasKidPin: x.kid_view_pin_hash !== null,
+});
+const KID_COLS = 'id, first_name, age_group, avatar_id, colour, phone, dietary_notes, kid_view_pin_hash';
+
 export async function listKids(db: Queryable, circleId: string, userId: string): Promise<Kid[] | null> {
   if (!(await memberRole(db, circleId, userId))) return null;
-  const r = await db.query<{ id: string; first_name: string; age_group: HubAgeGroup; avatar_id: string; colour: string; phone: string | null }>(
-    'SELECT id, first_name, age_group, avatar_id, colour, phone FROM hub_kid_profiles WHERE circle_id = $1 ORDER BY created_at',
+  const r = await db.query<KidRow>(
+    `SELECT ${KID_COLS} FROM hub_kid_profiles WHERE circle_id = $1 ORDER BY created_at`,
     [circleId],
   );
-  return r.rows.map((x) => ({ id: x.id, firstName: x.first_name, ageGroup: x.age_group, avatarId: x.avatar_id, colour: x.colour, phone: x.phone }));
+  return r.rows.map(kidOf);
 }
 
 export async function createKid(db: Db, circleId: string, actorId: string, input: KidInput): Promise<Kid | 'invalid' | 'limit' | null> {
@@ -197,11 +210,11 @@ export async function createKid(db: Db, circleId: string, actorId: string, input
   const count = await db.query<{ n: number }>('SELECT count(*)::int AS n FROM hub_kid_profiles WHERE circle_id = $1', [circleId]);
   if ((count.rows[0]?.n ?? 0) >= LIMITS.kidsPerCircle) return 'limit';
   const r = await db.query<{ id: string }>(
-    'INSERT INTO hub_kid_profiles (circle_id, first_name, age_group, avatar_id, colour, phone) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id',
-    [circleId, k.firstName, k.ageGroup, k.avatarId, k.colour, k.phone],
+    'INSERT INTO hub_kid_profiles (circle_id, first_name, age_group, avatar_id, colour, phone, dietary_notes) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id',
+    [circleId, k.firstName, k.ageGroup, k.avatarId, k.colour, k.phone, k.dietaryNotes],
   );
   await logActivity(db, circleId, actorId, 'kid', `${k.firstName} was added to the circle.`);
-  return { id: r.rows[0].id, ...k };
+  return { id: r.rows[0].id, ...k, hasKidPin: false };
 }
 
 export async function updateKid(db: Db, circleId: string, actorId: string, kidId: string, input: KidInput): Promise<boolean> {
@@ -209,8 +222,8 @@ export async function updateKid(db: Db, circleId: string, actorId: string, kidId
   const k = parseKid(input);
   if (!k) return false;
   const r = await db.query(
-    'UPDATE hub_kid_profiles SET first_name = $3, age_group = $4, avatar_id = $5, colour = $6, phone = $7, updated_at = now() WHERE circle_id = $1 AND id = $2',
-    [circleId, kidId, k.firstName, k.ageGroup, k.avatarId, k.colour, k.phone],
+    'UPDATE hub_kid_profiles SET first_name = $3, age_group = $4, avatar_id = $5, colour = $6, phone = $7, dietary_notes = $8, updated_at = now() WHERE circle_id = $1 AND id = $2',
+    [circleId, kidId, k.firstName, k.ageGroup, k.avatarId, k.colour, k.phone, k.dietaryNotes],
   );
   return r.rowCount === 1;
 }
@@ -403,6 +416,21 @@ export async function listOccurrences(db: Queryable, circleId: string, userId: s
 export async function listRuns(db: Queryable, circleId: string, userId: string, from: Date, to: Date): Promise<Occurrence[] | null> {
   const occ = await listOccurrences(db, circleId, userId, from, to);
   return occ ? occ.filter((o) => o.event.isRun) : null;
+}
+
+// Kid-view reads (Phase 2): scoped by the (circle, kid) pair itself — the kid-view session
+// token is the credential (lib/family-hub/kid-session.ts), never an account. Only events
+// the kid takes part in are returned; there is deliberately no membership parameter here.
+export async function listOccurrencesForKid(db: Queryable, circleId: string, kidProfileId: string, from: Date, to: Date): Promise<Occurrence[]> {
+  if (!isUuid(circleId) || !isUuid(kidProfileId)) return [];
+  const events = await loadEvents(db, circleId, from, to);
+  const out: Occurrence[] = [];
+  for (const e of events) {
+    if (!e.kidIds.includes(kidProfileId)) continue;
+    const dur = e.endsAt.getTime() - e.startsAt.getTime();
+    for (const s of expandOccurrences(e, from, to)) out.push({ event: e, startsAt: s, endsAt: new Date(s.getTime() + dur) });
+  }
+  return out.sort((a, b) => a.startsAt.getTime() - b.startsAt.getTime());
 }
 
 export async function getEvent(db: Queryable, circleId: string, userId: string, eventId: string): Promise<HubEvent | null> {

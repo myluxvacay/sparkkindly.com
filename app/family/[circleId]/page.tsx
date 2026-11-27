@@ -31,7 +31,9 @@ export default async function CirclePage({ params, searchParams }: Props) {
       <h1>{circle.name}</h1>
       <p>
         <Link href="/family/">Family Hub home</Link> · <Link href={`/family/${circle.id}/calendar/`}>Calendar</Link> ·{' '}
-        <Link href={`/family/${circle.id}/runs/`}>Runs board</Link> · <Link href={`/family/${circle.id}/kids/`}>Kids</Link>
+        <Link href={`/family/${circle.id}/runs/`}>Runs board</Link> · <Link href={`/family/${circle.id}/kids/`}>Kids</Link> ·{' '}
+        <Link href={`/family/${circle.id}/chores/`}>Chores &amp; points</Link> · <Link href={`/family/${circle.id}/rewards/`}>Rewards</Link> ·{' '}
+        <Link href={`/family/${circle.id}/meals/`}>Meals</Link>
       </p>
       {r && RESULTS[r] && (
         <p id="result" role={RESULTS[r].ok ? undefined : 'alert'}>

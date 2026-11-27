@@ -7,7 +7,9 @@ export const metadata: Metadata = {
   referrer: 'strict-origin',
 };
 
-// Display only (noindex, spacing). Every /family page also calls requireHubAdult() itself.
+// Display only (noindex, spacing). Every /family page also gates itself: parent pages call
+// requireHubAdult(); the kid view (/family/[circleId]/kid/[kidProfileId]/) is the one
+// exception — it is gated by the kid-view PIN session instead (kid-session.ts).
 export default function FamilyLayout({ children }: { children: React.ReactNode }) {
   return <div className="container trust-page admin">{children}</div>;
 }

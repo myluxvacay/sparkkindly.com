@@ -15,6 +15,9 @@ const RESULTS: Record<string, { text: string; ok: boolean }> = {
   deleted: { text: 'Profile deleted.', ok: true },
   invalid: { text: 'Please check the profile: a first name, a valid age group, and a phone that looks like a phone number.', ok: false },
   limit: { text: 'This circle already has the maximum number of kid profiles.', ok: false },
+  pin: { text: 'Kid-view PIN updated.', ok: true },
+  'pin-ok': { text: 'Kid-view PIN updated.', ok: true },
+  'pin-no': { text: 'That PIN change could not be made — a PIN is 4 to 6 digits.', ok: false },
   no: { text: 'That could not be done.', ok: false },
 };
 
@@ -72,6 +75,13 @@ function KidFields({ kid }: { kid?: Kid }) {
           <input name="phone" type="tel" maxLength={24} defaultValue={kid?.phone ?? ''} />
         </label>
       </p>
+      <p>
+        <label>
+          Dietary / allergy notes (optional — yours, shown only inside the circle at meal-planning time)
+          <br />
+          <input name="dietary_notes" maxLength={500} defaultValue={kid?.dietaryNotes ?? ''} size={48} />
+        </label>
+      </p>
     </>
   );
 }
@@ -126,6 +136,40 @@ export default async function KidsPage({ params, searchParams }: Props) {
                   <input type="hidden" name="kid_id" value={k.id} />
                   <button type="submit">Delete profile</button>
                 </form>
+              </details>
+              <details>
+                <summary>Kid view (their own page, opened with a PIN)</summary>
+                <p>
+                  The kid view shows {k.firstName} only their day, their chores, their points and dinner requests — no settings,
+                  no phone numbers, nothing to administer. It opens with a 4–6 digit PIN you set; setting a new PIN or clearing
+                  it locks the view on every device.{' '}
+                  <Link href={`/family/${circle.id}/kid/${k.id}/`}>Open {k.firstName}&rsquo;s kid view</Link>
+                </p>
+                <form method="post" action={`/family/${circle.id}/kids/pin/`}>
+                  <input type="hidden" name="kid_id" value={k.id} />
+                  <input type="hidden" name="action" value="set" />
+                  <p>
+                    <label>
+                      {k.hasKidPin ? 'New PIN (replaces the old one)' : 'Set a PIN'}{' '}
+                      <input name="pin" type="password" inputMode="numeric" autoComplete="off" required minLength={4} maxLength={6} size={8} />
+                    </label>{' '}
+                    <button type="submit">{k.hasKidPin ? 'Replace PIN' : 'Set PIN'}</button>
+                  </p>
+                </form>
+                {k.hasKidPin && (
+                  <>
+                    <form method="post" action={`/family/${circle.id}/kids/pin/`} style={{ display: 'inline' }}>
+                      <input type="hidden" name="kid_id" value={k.id} />
+                      <input type="hidden" name="action" value="lock" />
+                      <button type="submit">Lock kid view everywhere</button>
+                    </form>{' '}
+                    <form method="post" action={`/family/${circle.id}/kids/pin/`} style={{ display: 'inline' }}>
+                      <input type="hidden" name="kid_id" value={k.id} />
+                      <input type="hidden" name="action" value="clear" />
+                      <button type="submit">Turn kid view off (clear PIN)</button>
+                    </form>
+                  </>
+                )}
               </details>
             </li>
           ))}

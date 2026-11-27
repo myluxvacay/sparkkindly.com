@@ -129,3 +129,66 @@ export function expandOccurrences(e: EventLike, from: Date, to: Date): Date[] {
   }
   return out;
 }
+
+// ---- Phase 2: chores, points, meals, kid view ----
+
+export const CHORE_CADENCES = ['daily', 'weekly', 'one_off'] as const;
+export type ChoreCadence = (typeof CHORE_CADENCES)[number];
+export const isChoreCadence = (v: unknown): v is ChoreCadence =>
+  typeof v === 'string' && (CHORE_CADENCES as readonly string[]).includes(v);
+
+export const CADENCE_LABEL: Record<ChoreCadence, string> = { daily: 'Every day', weekly: 'Every week', one_off: 'One time' };
+
+export const LOOPS_LIMITS = {
+  choresPerKid: 50, rewardsPerCircle: 50, favouritesPerCircle: 50,
+  pendingMealRequestsPerKid: 10, groceryItemsPerCircle: 500, planEntriesPerCircle: 1000,
+} as const;
+
+// The kid-view PIN: 4–6 digits (the parent chooses), stored only as a scrypt hash. Distinct
+// from the account PIN (exactly 4) because it guards a child's view, not the account.
+export const isKidPin = (v: unknown): v is string => typeof v === 'string' && /^[0-9]{4,6}$/.test(v);
+
+export const KID_VIEW_TTL_MS = 12 * 60 * 60 * 1000; // a family-tablet day, then the PIN again
+
+export const DEFAULT_DECLINE_MESSAGE = 'Not this time — but great asking! We will find a day for it soon.';
+
+// The calendar date ('YYYY-MM-DD') of an instant in an IANA zone.
+export function localDateString(instant: Date, timeZone: string): string {
+  try {
+    return new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit' }).format(instant);
+  } catch {
+    return instant.toISOString().slice(0, 10);
+  }
+}
+
+const DAY_MS = 24 * 60 * 60 * 1000;
+const dateOf = (dateStr: string): Date => new Date(`${dateStr}T00:00:00Z`);
+const stringOf = (d: Date): string => d.toISOString().slice(0, 10);
+export const addDays = (dateStr: string, n: number): string => stringOf(new Date(dateOf(dateStr).getTime() + n * DAY_MS));
+
+// The Monday ('YYYY-MM-DD') of the week containing a 'YYYY-MM-DD' date.
+export function mondayOf(dateStr: string): string {
+  const dow = dateOf(dateStr).getUTCDay(); // 0 = Sunday
+  return addDays(dateStr, -((dow + 6) % 7));
+}
+
+export const weekOf = (mondayDateStr: string): string[] => Array.from({ length: 7 }, (_, i) => addDays(mondayDateStr, i));
+
+// The completion period a chore mark belongs to, in the circle's zone: a daily chore is
+// per local day, a weekly chore per local week (keyed by its Monday), a one-off just once.
+export function periodKeyFor(cadence: ChoreCadence, instant: Date, timeZone: string): string {
+  if (cadence === 'one_off') return 'once';
+  const day = localDateString(instant, timeZone);
+  return cadence === 'daily' ? day : mondayOf(day);
+}
+
+const parseIntIn = (v: unknown, min: number, max: number): number | null => {
+  const n = typeof v === 'number' ? v : typeof v === 'string' && v.trim() !== '' ? Number(v) : NaN;
+  return Number.isInteger(n) && n >= min && n <= max ? n : null;
+};
+export const parsePoints = (v: unknown): number | null => parseIntIn(v, 1, 10000);
+export const parseCost = (v: unknown): number | null => parseIntIn(v, 1, 100000);
+export const parseAdjustment = (v: unknown): number | null => {
+  const n = parseIntIn(v, -100000, 100000);
+  return n === 0 ? null : n;
+};
