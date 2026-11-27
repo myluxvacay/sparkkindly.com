@@ -136,6 +136,8 @@ describe('export inventory', () => {
       'comments',
       'contributions',
       'contributor_profiles',
+      'hub_circle_invites',
+      'hub_circle_members',
       'item_responses',
       'profile_interests',
       'promo_entries',

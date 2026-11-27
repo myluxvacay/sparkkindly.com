@@ -10,6 +10,7 @@ import {
   getCircle, listKids, listMembers, listOccurrences, listRuns, myCircles, releaseRun, updateKid,
 } from '@/lib/family-hub/repo';
 import { expandOccurrences, rideEligible, rideLinks, zonedDayRange, zonedLocalToUtc } from '@/lib/family-hub/rules';
+import { exportAccount } from '@/lib/accounts/export';
 
 type TestDb = Awaited<ReturnType<typeof newTestDb>>;
 let db: TestDb;
@@ -83,6 +84,15 @@ describe('circles and membership', () => {
     expect((await acceptInvite(db, inv!.token, b.id, b.email, T0)).result).toBe('gone');
     // A non-member cannot mint invites.
     expect(await createInvite(db, id, c.id, null, T0)).toBeNull();
+  });
+  it('the account export lists the hub membership and created invites, never a token', async () => {
+    const a = await adult();
+    const id = await circleOf(a);
+    await createInvite(db, id, a.id, null, T0);
+    const x = await exportAccount(db, a.id, T0);
+    expect(x?.hubCircles).toEqual([{ circle: 'The Test Family', role: 'organizer', joinedAt: expect.any(String) }]);
+    expect(x?.hubInvites.length).toBe(1);
+    expect(JSON.stringify(x)).not.toContain('token');
   });
 });
 

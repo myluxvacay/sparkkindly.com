@@ -24,6 +24,8 @@ export const EXPORTED_TABLES = [
   'contributor_profiles',
   'contributions',
   'promo_entries',
+  'hub_circle_members',
+  'hub_circle_invites',
 ] as const;
 
 // Personal-data tables deliberately left out, each with its reason.
@@ -44,6 +46,11 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   invite_address_log: 'keyed hash of an invited address and send times (anti-harassment cap); no address and no account link, pruned after 8 days',
   invite_suppressions: 'keyed hash of an address that refused invite emails; no address and no account link, kept so the refusal holds',
   contact_messages: 'visitor contact-form messages (name, email, message) with no account link; a sender need not hold an account, and the owner answers them directly',
+  hub_circles: "Family Hub circle data shared by its members; the export lists the account's own memberships",
+  hub_kid_profiles: 'Family Hub data shared by the circle\u2019s members (a child\u2019s first name, age group, avatar and an optional phone, managed by the circle\u2019s adults together), not one account\u2019s own record',
+  hub_events: 'Family Hub data shared by the circle\u2019s members (the shared schedule and runs), not one account\u2019s own record',
+  hub_event_participants: 'Family Hub data shared by the circle\u2019s members (who takes part in a shared event), not one account\u2019s own record',
+  hub_activity: 'Family Hub data shared by the circle\u2019s members (the circle activity feed), not one account\u2019s own record',
 };
 
 // Columns of the tables exported row by row: each is exported or deliberately excluded with its reason.
@@ -220,6 +227,11 @@ type ExportContribution = {
   createdAt: string;
   updatedAt: string;
 };
+// One of the account's own Family Hub circle memberships: the circle's name and the account's
+// role — nothing about the circle's other members (Family Hub Phase 1, 27 Nov 2026).
+type ExportHubMembership = { circle: string; role: string; joinedAt: string };
+// A Family Hub invite the account created: never the token, and never the invited address.
+type ExportHubInvite = { circle: string; createdAt: string; expiresAt: string; acceptedAt: string | null };
 type ExportChild = {
   displayName: string;
   ageBand: string;
@@ -261,6 +273,8 @@ export type AccountExport = {
   contributor: ExportContributor | null;
   contributions: ExportContribution[];
   promoEntries: ExportPromoEntry[];
+  hubCircles: ExportHubMembership[];
+  hubInvites: ExportHubInvite[];
   childProfiles: ExportChild[];
 };
 
@@ -536,6 +550,25 @@ async function promoEntriesOf(tx: Queryable, accountId: string): Promise<ExportP
   return r.rows.map((x) => ({ promotion: x.slug, title: x.title, attestedAdult: x.att, enteredAt: iso(x.e) as string }));
 }
 
+async function hubCirclesOf(tx: Queryable, accountId: string): Promise<ExportHubMembership[]> {
+  const r = await tx.query<{ name: string; role: string; j: Date }>(
+    `SELECT c.name, m.role, m.created_at AS j FROM hub_circle_members m JOIN hub_circles c ON c.id = m.circle_id
+     WHERE m.user_id = $1 ORDER BY m.created_at, c.name`,
+    [accountId],
+  );
+  return r.rows.map((x) => ({ circle: x.name, role: x.role, joinedAt: iso(x.j) as string }));
+}
+
+async function hubInvitesOf(tx: Queryable, accountId: string): Promise<ExportHubInvite[]> {
+  const r = await tx.query<{ name: string; c: Date; e: Date; a: Date | null }>(
+    `SELECT c.name, i.created_at AS c, i.expires_at AS e, i.accepted_at AS a
+     FROM hub_circle_invites i JOIN hub_circles c ON c.id = i.circle_id
+     WHERE i.created_by = $1 ORDER BY i.created_at, i.id`,
+    [accountId],
+  );
+  return r.rows.map((x) => ({ circle: x.name, createdAt: iso(x.c) as string, expiresAt: iso(x.e) as string, acceptedAt: iso(x.a) }));
+}
+
 async function readExport(tx: Queryable, accountId: string, now: Date): Promise<AccountExport | null> {
   const a = await tx.query<AccountRow>(
     `SELECT email, to_char(date_of_birth, 'YYYY-MM-DD') AS dob, time_zone, consent_state, consent_at,
@@ -572,6 +605,8 @@ async function readExport(tx: Queryable, accountId: string, now: Date): Promise<
     contributor: await contributorOf(tx, accountId),
     contributions: await contributionsOf(tx, accountId),
     promoEntries: await promoEntriesOf(tx, accountId),
+    hubCircles: await hubCirclesOf(tx, accountId),
+    hubInvites: await hubInvitesOf(tx, accountId),
     childProfiles: children.rows.map((c) => ({
       displayName: c.display_name,
       ageBand: c.age_band,
