@@ -61,6 +61,7 @@ export const EXCLUDED_TABLES: Readonly<Record<string, string>> = {
   hub_meal_requests: 'Family Hub data shared by the circle\u2019s members (meal requests and the decisions of the circle\u2019s adults), not one account\u2019s own record',
   hub_meal_plan: 'Family Hub data shared by the circle\u2019s members (the shared week meal board), not one account\u2019s own record',
   hub_grocery_items: 'Family Hub data shared by the circle\u2019s members (the shared grocery list), not one account\u2019s own record',
+  hub_push_subscriptions: 'Family Hub Web Push subscription for one account\u2019s own browser (endpoint plus encryption keys); the keys are sending credentials, so the row is not handed out',
 };
 
 // Columns of the tables exported row by row: each is exported or deliberately excluded with its reason.
