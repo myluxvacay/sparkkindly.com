@@ -6,7 +6,7 @@ import { asAdult, back, f, type HubDeps } from './web';
 import {
   addGroceryItem, adjustPoints, createChore, createFavourite, createPlanEntry, createReward, decideCompletion,
   decideMealRequest, decideRedemption, deleteFavourite, deleteGroceryItem, deletePlanEntry, setChoreActive,
-  setGroceryChecked, setRewardActive,
+  setGroceryChecked, setRewardActive, updateChore,
 } from './loops';
 import { clearKidPin, lockKidView, setKidPin } from './kid-session';
 
@@ -14,8 +14,17 @@ export const createChoreRequest = (request: Request, d: HubDeps, circleId: strin
   asAdult(request, d, async (ctx, form) => {
     const r = await createChore(d.db, circleId, ctx.account.id, {
       kidProfileId: form.get('kid_id'), title: form.get('title'), cadence: form.get('cadence'), points: form.get('points'),
+      scheduleDays: form.getAll('days'),
     });
     return back(circleId, 'chores/', r === null ? 'no' : r === 'invalid' ? 'invalid' : r === 'limit' ? 'limit' : 'added');
+  });
+
+export const updateChoreRequest = (request: Request, d: HubDeps, circleId: string) =>
+  asAdult(request, d, async (ctx, form) => {
+    const r = await updateChore(d.db, circleId, ctx.account.id, f(form, 'chore_id'), {
+      title: form.get('title'), cadence: form.get('cadence'), points: form.get('points'), scheduleDays: form.getAll('days'),
+    });
+    return back(circleId, 'chores/', r === null ? 'no' : r === 'invalid' ? 'invalid' : 'chore-ok');
   });
 
 export const choreActiveRequest = (request: Request, d: HubDeps, circleId: string) =>

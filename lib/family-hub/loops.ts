@@ -8,17 +8,22 @@
 // Points integrity: balances are sums over hub_points_ledger; points move only inside the
 // transaction that flips a pending completion/redemption to approved, guarded on the
 // pending state, so a double decision writes nothing twice.
-// No Next.js imports. Verified by tests/unit/family-hub-phase2.test.ts.
+// No Next.js imports. Verified by tests/unit/family-hub-phase2.test.ts and, for chore
+// schedules and the weekly chart, tests/unit/family-hub-chore-schedules.test.ts.
 import type { Db, Queryable } from '@/lib/db';
 import { isUuid } from '@/lib/accounts/pin';
-import { listOccurrencesForKid, logActivity, memberRole, type Occurrence } from './repo';
+import { listKids, listOccurrencesForKid, logActivity, memberRole, type Occurrence } from './repo';
 import type { KidViewContext } from './kid-session';
 import {
-  DEFAULT_DECLINE_MESSAGE, LOOPS_LIMITS, cleanName, isChoreCadence, localDateString, parseAdjustment,
-  parseCost, parsePoints, periodKeyFor, zonedDayRange, type ChoreCadence,
+  DEFAULT_DECLINE_MESSAGE, LOOPS_LIMITS, WEEKDAY_FULL, cleanName, isChoreCadence, isDueOn, localDateString,
+  mondayOf, nextDueDate, parseAdjustment, parseCost, parsePoints, parseScheduleDays, periodKeyFor, weekOf,
+  weekdayIndex, zonedDayRange, type ChoreCadence,
 } from './rules';
 
-export type Chore = { id: string; kidProfileId: string; kidName: string; title: string; cadence: ChoreCadence; points: number; active: boolean };
+export type Chore = {
+  id: string; kidProfileId: string; kidName: string; title: string; cadence: ChoreCadence;
+  points: number; active: boolean; scheduleDays: number | null;
+};
 export type Completion = {
   id: string; choreId: string; choreTitle: string; points: number; kidProfileId: string; kidName: string;
   periodKey: string; state: 'pending' | 'approved' | 'declined'; markedAt: Date;
@@ -72,33 +77,70 @@ async function lockKid(tx: Queryable, circleId: string, kidProfileId: string): P
 
 // ---- Chores (parent) ----
 
+type ChoreRow = { id: string; kid_profile_id: string; first_name: string; title: string; cadence: ChoreCadence; points: number; active: boolean; schedule_days: number | null };
+const choreOf = (x: ChoreRow): Chore => ({
+  id: x.id, kidProfileId: x.kid_profile_id, kidName: x.first_name, title: x.title, cadence: x.cadence,
+  points: x.points, active: x.active, scheduleDays: x.schedule_days,
+});
+const CHORE_COLS = 'c.id, c.kid_profile_id, k.first_name, c.title, c.cadence, c.points, c.active, c.schedule_days';
+
+// The stored schedule_days for a cadence + raw form value: a specific-days chore MUST name
+// at least one weekday (else 'invalid'); every other cadence stores NULL, whatever the form
+// sent, so the column and the cadence can never disagree (migration 053 enforces it too).
+function resolveScheduleDays(cadence: ChoreCadence, raw: unknown): number | null | 'invalid' {
+  if (cadence !== 'specific_days') return null;
+  return parseScheduleDays(raw) ?? 'invalid';
+}
+
 export async function listChores(db: Queryable, circleId: string, userId: string): Promise<Chore[] | null> {
   if (!(await memberRole(db, circleId, userId))) return null;
-  const r = await db.query<{ id: string; kid_profile_id: string; first_name: string; title: string; cadence: ChoreCadence; points: number; active: boolean }>(
-    `SELECT c.id, c.kid_profile_id, k.first_name, c.title, c.cadence, c.points, c.active FROM hub_chores c
+  const r = await db.query<ChoreRow>(
+    `SELECT ${CHORE_COLS} FROM hub_chores c
      JOIN hub_kid_profiles k ON k.id = c.kid_profile_id WHERE c.circle_id = $1 ORDER BY k.first_name, c.created_at`,
     [circleId],
   );
-  return r.rows.map((x) => ({ id: x.id, kidProfileId: x.kid_profile_id, kidName: x.first_name, title: x.title, cadence: x.cadence, points: x.points, active: x.active }));
+  return r.rows.map(choreOf);
 }
 
 export async function createChore(
   db: Db, circleId: string, actorId: string,
-  input: { kidProfileId: unknown; title: unknown; cadence: unknown; points: unknown },
+  input: { kidProfileId: unknown; title: unknown; cadence: unknown; points: unknown; scheduleDays?: unknown },
 ): Promise<Chore | 'invalid' | 'limit' | null> {
   if (!(await memberRole(db, circleId, actorId))) return null;
   const title = cleanName(input.title, 80);
   const points = parsePoints(input.points);
   if (!title || !isChoreCadence(input.cadence) || points === null || !isUuid(input.kidProfileId)) return 'invalid';
+  const scheduleDays = resolveScheduleDays(input.cadence, input.scheduleDays);
+  if (scheduleDays === 'invalid') return 'invalid';
   const name = await kidName(db, circleId, input.kidProfileId);
   if (!name) return 'invalid';
   const count = await db.query<{ n: number }>('SELECT count(*)::int AS n FROM hub_chores WHERE circle_id = $1 AND kid_profile_id = $2 AND active', [circleId, input.kidProfileId]);
   if ((count.rows[0]?.n ?? 0) >= LOOPS_LIMITS.choresPerKid) return 'limit';
   const r = await db.query<{ id: string }>(
-    'INSERT INTO hub_chores (circle_id, kid_profile_id, title, cadence, points, created_by) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id',
-    [circleId, input.kidProfileId, title, input.cadence, points, actorId],
+    'INSERT INTO hub_chores (circle_id, kid_profile_id, title, cadence, points, schedule_days, created_by) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id',
+    [circleId, input.kidProfileId, title, input.cadence, points, scheduleDays, actorId],
   );
-  return { id: r.rows[0].id, kidProfileId: input.kidProfileId, kidName: name, title, cadence: input.cadence, points, active: true };
+  return { id: r.rows[0].id, kidProfileId: input.kidProfileId, kidName: name, title, cadence: input.cadence, points, active: true, scheduleDays };
+}
+
+// Editing a chore rewrites its title/points/schedule in place. Completions already recorded
+// keep the period keys they were made under — changing the schedule shapes the future, it
+// never rewrites a past approval.
+export async function updateChore(
+  db: Db, circleId: string, actorId: string, choreId: string,
+  input: { title: unknown; cadence: unknown; points: unknown; scheduleDays?: unknown },
+): Promise<'ok' | 'invalid' | null> {
+  if (!isUuid(choreId) || !(await memberRole(db, circleId, actorId))) return null;
+  const title = cleanName(input.title, 80);
+  const points = parsePoints(input.points);
+  if (!title || !isChoreCadence(input.cadence) || points === null) return 'invalid';
+  const scheduleDays = resolveScheduleDays(input.cadence, input.scheduleDays);
+  if (scheduleDays === 'invalid') return 'invalid';
+  const r = await db.query(
+    'UPDATE hub_chores SET title = $3, cadence = $4, points = $5, schedule_days = $6 WHERE circle_id = $1 AND id = $2',
+    [circleId, choreId, title, input.cadence, points, scheduleDays],
+  );
+  return r.rowCount === 1 ? 'ok' : null;
 }
 
 export async function setChoreActive(db: Db, circleId: string, actorId: string, choreId: string, active: boolean): Promise<boolean> {
@@ -147,6 +189,83 @@ export async function decideCompletion(db: Db, circleId: string, actorId: string
     await logActivity(tx, circleId, actorId, 'chore', approve ? `${row.first_name}'s “${row.title}” was approved — ${row.points} points.` : `${row.first_name}'s “${row.title}” was sent back.`);
     return true;
   });
+}
+
+// ---- The weekly chore chart (parent) ----
+
+export type ChartEntry = { choreId: string; title: string; points: number; state: 'approved' | 'pending' | 'due' };
+export type ChoreChart = {
+  monday: string; days: string[]; today: string;
+  rows: { kidId: string; kidName: string; cells: ChartEntry[][] }[];
+};
+
+// One Mon–Sun week of scheduled chores per kid, in the circle's timezone. A cell lists only
+// chores SCHEDULED that day: daily chores every day, specific-days chores on their weekdays.
+// Weekly and one-off chores have no fixed day, so they appear once: on the day they were
+// marked, if they were marked this week (with that completion's state); a weekly chore not
+// yet done this week sits on today's cell as 'due' (in the current week only). A declined
+// mark reads as 'due' again — the kid can have another go. weekDate may be any date in the
+// wanted week; null means the current week.
+export async function choreChart(
+  db: Queryable, circleId: string, userId: string, weekDate: string | null, now: Date,
+): Promise<ChoreChart | null> {
+  const chores = await listChores(db, circleId, userId);
+  if (!chores) return null;
+  const tz = await circleTz(db, circleId);
+  const today = localDateString(now, tz);
+  const monday = mondayOf(weekDate && isDateString(weekDate) ? weekDate : today);
+  const days = weekOf(monday);
+  const daySet = new Set(days);
+
+  const roster = await listKids(db, circleId, userId);
+  if (!roster) return null;
+  const kids = roster.map((k) => ({ kidId: k.id, kidName: k.firstName }));
+
+  // Every completion that can land in this week: daily/specific-days rows key by their date
+  // and weekly rows by the week's Monday (both inside `days`); one-offs key 'once', so they
+  // are placed by their marked day instead.
+  const comp = await db.query<{ chore_id: string; period_key: string; state: 'pending' | 'approved' | 'declined'; marked_at: string }>(
+    'SELECT chore_id, period_key, state, marked_at FROM hub_chore_completions WHERE circle_id = $1 AND (period_key = ANY($2::text[]) OR period_key = \'once\')',
+    [circleId, days],
+  );
+  const byDate = new Map<string, 'approved' | 'pending' | 'declined'>(); // `${choreId}|${date}`
+  const floating = new Map<string, { date: string; state: 'pending' | 'approved' | 'declined' }>(); // weekly/one-off, by choreId
+  const choreById = new Map(chores.map((c) => [c.id, c]));
+  for (const row of comp.rows) {
+    const chore = choreById.get(row.chore_id);
+    if (!chore) continue;
+    if (chore.cadence === 'daily' || chore.cadence === 'specific_days') {
+      if (daySet.has(row.period_key)) byDate.set(`${row.chore_id}|${row.period_key}`, row.state);
+    } else {
+      const markedDay = localDateString(new Date(row.marked_at), tz);
+      if (daySet.has(markedDay)) floating.set(row.chore_id, { date: markedDay, state: row.state });
+    }
+  }
+  const stateOf = (s: 'approved' | 'pending' | 'declined' | undefined): ChartEntry['state'] =>
+    s === 'approved' ? 'approved' : s === 'pending' ? 'pending' : 'due';
+
+  const rows = kids.map((k) => {
+    const cells: ChartEntry[][] = days.map(() => []);
+    for (const c of chores) {
+      if (c.kidProfileId !== k.kidId || !c.active) continue;
+      const entry = (state: ChartEntry['state']): ChartEntry => ({ choreId: c.id, title: c.title, points: c.points, state });
+      if (c.cadence === 'daily' || c.cadence === 'specific_days') {
+        days.forEach((d, i) => {
+          if (isDueOn(c.cadence, c.scheduleDays, d)) cells[i].push(entry(stateOf(byDate.get(`${c.id}|${d}`))));
+        });
+      } else {
+        const done = floating.get(c.id);
+        if (done && done.state !== 'declined') {
+          cells[days.indexOf(done.date)].push(entry(stateOf(done.state)));
+        } else if (c.cadence === 'weekly' && daySet.has(today)) {
+          cells[days.indexOf(today)].push(entry('due'));
+        }
+      }
+    }
+    for (const cell of cells) cell.sort((a, b) => a.title.localeCompare(b.title));
+    return { kidId: k.kidId, kidName: k.kidName, cells };
+  });
+  return { monday, days, today, rows };
 }
 
 // ---- Points (parent) ----
@@ -464,16 +583,23 @@ export async function kidDay(db: Queryable, ctx: KidViewContext, now: Date): Pro
   return { events, timeZone: tz };
 }
 
-export type KidChore = { chore: Chore; periodKey: string; state: 'pending' | 'approved' | 'declined' | null };
+export type KidChore = {
+  chore: Chore; periodKey: string; state: 'pending' | 'approved' | 'declined' | null;
+  // Schedule awareness: dueToday says whether the chore can be marked right now; for a
+  // specific-days chore on an off day, nextDueWeekday names the next due day ('Saturday')
+  // so the kid view can teach the schedule instead of just hiding the chore.
+  dueToday: boolean; nextDueWeekday: string | null;
+};
 
 export async function kidChores(db: Queryable, ctx: KidViewContext, now: Date): Promise<KidChore[]> {
   const tz = await circleTz(db, ctx.circleId);
   const name = await kidName(db, ctx.circleId, ctx.kidProfileId);
   if (!name) return [];
-  const r = await db.query<{ id: string; title: string; cadence: ChoreCadence; points: number }>(
-    'SELECT id, title, cadence, points FROM hub_chores WHERE circle_id = $1 AND kid_profile_id = $2 AND active ORDER BY created_at',
+  const r = await db.query<{ id: string; title: string; cadence: ChoreCadence; points: number; schedule_days: number | null }>(
+    'SELECT id, title, cadence, points, schedule_days FROM hub_chores WHERE circle_id = $1 AND kid_profile_id = $2 AND active ORDER BY created_at',
     [ctx.circleId, ctx.kidProfileId],
   );
+  const today = localDateString(now, tz);
   const out: KidChore[] = [];
   for (const c of r.rows) {
     const periodKey = periodKeyFor(c.cadence, now, tz);
@@ -481,27 +607,35 @@ export async function kidChores(db: Queryable, ctx: KidViewContext, now: Date): 
       'SELECT state FROM hub_chore_completions WHERE chore_id = $1 AND period_key = $2',
       [c.id, periodKey],
     );
+    const dueToday = isDueOn(c.cadence, c.schedule_days, today);
+    const next = dueToday ? null : nextDueDate(c.cadence, c.schedule_days, today);
     out.push({
-      chore: { id: c.id, kidProfileId: ctx.kidProfileId, kidName: name, title: c.title, cadence: c.cadence, points: c.points, active: true },
+      chore: { id: c.id, kidProfileId: ctx.kidProfileId, kidName: name, title: c.title, cadence: c.cadence, points: c.points, active: true, scheduleDays: c.schedule_days },
       periodKey,
       state: comp.rows[0]?.state ?? null,
+      dueToday,
+      nextDueWeekday: next ? WEEKDAY_FULL[weekdayIndex(next)] : null,
     });
   }
-  return out;
+  // Due chores first (stable: creation order kept inside each group) so today's work leads.
+  return out.sort((a, b) => Number(b.dueToday) - Number(a.dueToday));
 }
 
 // Marking a chore creates a PENDING completion and nothing else — points exist only after
 // a parent approves (decideCompletion). A declined mark for the same period can be re-marked
 // (the kid may have gone back and done it); a pending or approved one cannot be doubled.
-export async function kidMarkChore(db: Db, ctx: KidViewContext, choreId: string, now: Date): Promise<'marked' | 'already' | 'invalid'> {
+// A specific-days chore marked on a day it is not scheduled returns 'notdue' and writes
+// nothing — the schedule is the rule, not a suggestion the server waves through.
+export async function kidMarkChore(db: Db, ctx: KidViewContext, choreId: string, now: Date): Promise<'marked' | 'already' | 'invalid' | 'notdue'> {
   if (!isUuid(choreId)) return 'invalid';
   const tz = await circleTz(db, ctx.circleId);
-  const c = await db.query<{ title: string; cadence: ChoreCadence }>(
-    'SELECT title, cadence FROM hub_chores WHERE circle_id = $1 AND kid_profile_id = $2 AND id = $3 AND active',
+  const c = await db.query<{ title: string; cadence: ChoreCadence; schedule_days: number | null }>(
+    'SELECT title, cadence, schedule_days FROM hub_chores WHERE circle_id = $1 AND kid_profile_id = $2 AND id = $3 AND active',
     [ctx.circleId, ctx.kidProfileId, choreId],
   );
   const chore = c.rows[0];
   if (!chore) return 'invalid';
+  if (!isDueOn(chore.cadence, chore.schedule_days, localDateString(now, tz))) return 'notdue';
   const periodKey = periodKeyFor(chore.cadence, now, tz);
   const r = await db.query(
     `INSERT INTO hub_chore_completions (chore_id, circle_id, kid_profile_id, period_key) VALUES ($1, $2, $3, $4)

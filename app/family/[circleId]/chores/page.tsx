@@ -3,13 +3,50 @@ import { getDb } from '@/lib/db';
 import { circleOr404, requireHubAdult } from '@/lib/family-hub/next';
 import { getCircle, listKids } from '@/lib/family-hub/repo';
 import {
-  kidPoints, listChores, listLedger, listPendingCompletions,
+  choreChart, kidPoints, listChores, listLedger, listPendingCompletions,
 } from '@/lib/family-hub/loops';
-import { CADENCE_LABEL, CHORE_CADENCES } from '@/lib/family-hub/rules';
+import { WEEKDAY_SHORT, addDays, scheduleLabel, weekdayIndex, type ChoreCadence } from '@/lib/family-hub/rules';
 
 export const dynamic = 'force-dynamic';
 
-type Props = { params: Promise<{ circleId: string }>; searchParams: Promise<{ r?: string }> };
+type Props = { params: Promise<{ circleId: string }>; searchParams: Promise<{ r?: string; week?: string }> };
+
+// The schedule control's four rhythms, in the order a parent thinks of them. The weekday
+// checkboxes only matter for 'specific_days' — CSS reveals them when that rhythm is picked
+// (see .chore-days in globals.css); the server refuses a specific-days chore with no day.
+const FORM_CADENCES: { value: ChoreCadence; label: string }[] = [
+  { value: 'daily', label: 'Every day' },
+  { value: 'weekly', label: 'Once a week' },
+  { value: 'specific_days', label: 'Specific days' },
+  { value: 'one_off', label: 'One-off' },
+];
+
+function ScheduleFields({ cadence, days }: { cadence: ChoreCadence; days: number | null }) {
+  return (
+    <>
+      <p>
+        <label>
+          Rhythm{' '}
+          <select name="cadence" defaultValue={cadence}>
+            {FORM_CADENCES.map((c) => (
+              <option key={c.value} value={c.value}>
+                {c.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      </p>
+      <fieldset className="chore-days">
+        <legend>On which days?</legend>
+        {WEEKDAY_SHORT.map((d, i) => (
+          <label key={d} style={{ marginRight: 14 }}>
+            <input type="checkbox" name="days" value={i + 1} defaultChecked={days !== null && (days & (1 << i)) !== 0} /> {d}
+          </label>
+        ))}
+      </fieldset>
+    </>
+  );
+}
 
 const RESULTS: Record<string, { text: string; ok: boolean }> = {
   added: { text: 'Chore added.', ok: true },
@@ -17,19 +54,20 @@ const RESULTS: Record<string, { text: string; ok: boolean }> = {
   decided: { text: 'Done — points land only when you approve, and they just did (or the mark was sent back).', ok: true },
   adjusted: { text: 'Points adjusted.', ok: true },
   balance: { text: 'That would take the balance below zero — points are recognition, not a debt.', ok: false },
-  invalid: { text: 'Please check the form: a title, a rhythm, and a whole number of points.', ok: false },
+  invalid: { text: 'Please check the form: a title, a rhythm (with at least one day ticked for specific days), and a whole number of points.', ok: false },
   limit: { text: 'That list is full.', ok: false },
   no: { text: 'That could not be done.', ok: false },
 };
 
 export default async function ChoresPage({ params, searchParams }: Props) {
   const ctx = await requireHubAdult();
-  const [{ circleId }, { r }] = await Promise.all([params, searchParams]);
+  const [{ circleId }, { r, week }] = await Promise.all([params, searchParams]);
   const db = getDb();
   const circle = circleOr404(await getCircle(db, circleId, ctx.account.id));
   const kids = (await listKids(db, circleId, ctx.account.id)) ?? [];
   const chores = (await listChores(db, circleId, ctx.account.id)) ?? [];
   const pending = (await listPendingCompletions(db, circleId, ctx.account.id)) ?? [];
+  const chart = await choreChart(db, circleId, ctx.account.id, week ?? null, new Date());
   const balances = new Map<string, number>();
   const ledgers = new Map<string, Awaited<ReturnType<typeof listLedger>>>();
   for (const k of kids) {
@@ -78,6 +116,62 @@ export default async function ChoresPage({ params, searchParams }: Props) {
         </ul>
       )}
 
+      {chart && (
+        <>
+          <h2>Chore chart — week of {chart.days[0]}</h2>
+          <p>
+            <Link href={`/family/${circle.id}/chores/?week=${addDays(chart.monday, -7)}`}>← Last week</Link> ·{' '}
+            <Link href={`/family/${circle.id}/chores/`}>This week</Link> ·{' '}
+            <Link href={`/family/${circle.id}/chores/?week=${addDays(chart.monday, 7)}`}>Next week →</Link>
+          </p>
+          <div className="admin-table">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Kid</th>
+                  {chart.days.map((d) => (
+                    <th key={d} scope="col">
+                      {WEEKDAY_SHORT[weekdayIndex(d)]} {d.slice(5)}
+                      {d === chart.today ? ' (today)' : ''}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {chart.rows.map((row) => (
+                  <tr key={row.kidId}>
+                    <th scope="row">{row.kidName}</th>
+                    {row.cells.map((cell, i) => (
+                      <td key={chart.days[i]}>
+                        {cell.length === 0 ? (
+                          '—'
+                        ) : (
+                          <ul className="chore-cell">
+                            {cell.map((e) => (
+                              <li key={e.choreId}>
+                                {e.state === 'approved' ? '✓ ' : ''}
+                                {e.title} ({e.points})
+                                {e.state === 'pending' ? ' — waiting' : ''}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <small>
+              A ✓ means approved and paid. “Waiting” means marked done, not yet approved. Once-a-week and one-off chores
+              appear on the day they were done — or on today&rsquo;s square while they are still to do this week.
+            </small>
+          </p>
+        </>
+      )}
+
       {kids.map((k) => (
         <section key={k.id}>
           <h2>
@@ -86,12 +180,32 @@ export default async function ChoresPage({ params, searchParams }: Props) {
           <ul className="admin-list">
             {chores.filter((c) => c.kidProfileId === k.id).map((c) => (
               <li key={c.id}>
-                {c.title} — {CADENCE_LABEL[c.cadence]}, {c.points} points{c.active ? '' : ' (retired)'}{' '}
+                {c.title} — {scheduleLabel(c.cadence, c.scheduleDays)}, {c.points} points{c.active ? '' : ' (retired)'}{' '}
                 <form method="post" action={`/family/${circle.id}/chores/active/`} style={{ display: 'inline' }}>
                   <input type="hidden" name="chore_id" value={c.id} />
                   <input type="hidden" name="active" value={c.active ? 'false' : 'true'} />
                   <button type="submit">{c.active ? 'Retire' : 'Restore'}</button>
                 </form>
+                <details>
+                  <summary>Edit {c.title}</summary>
+                  <form method="post" action={`/family/${circle.id}/chores/update/`}>
+                    <input type="hidden" name="chore_id" value={c.id} />
+                    <p>
+                      <label>
+                        Chore
+                        <br />
+                        <input name="title" required maxLength={80} defaultValue={c.title} />
+                      </label>
+                    </p>
+                    <ScheduleFields cadence={c.cadence} days={c.scheduleDays} />
+                    <p>
+                      <label>
+                        Points <input name="points" type="number" min={1} max={10000} defaultValue={c.points} required />
+                      </label>
+                    </p>
+                    <button type="submit">Save changes</button>
+                  </form>
+                </details>
               </li>
             ))}
           </ul>
@@ -106,17 +220,8 @@ export default async function ChoresPage({ params, searchParams }: Props) {
                   <input name="title" required maxLength={80} />
                 </label>
               </p>
+              <ScheduleFields cadence="daily" days={null} />
               <p>
-                <label>
-                  Rhythm{' '}
-                  <select name="cadence" defaultValue="daily">
-                    {CHORE_CADENCES.map((c) => (
-                      <option key={c} value={c}>
-                        {CADENCE_LABEL[c]}
-                      </option>
-                    ))}
-                  </select>
-                </label>{' '}
                 <label>
                   Points <input name="points" type="number" min={1} max={10000} defaultValue={10} required />
                 </label>
