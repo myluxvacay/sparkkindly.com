@@ -1,0 +1,59 @@
+{
+  "id": "play-draft-2026-11-28-keep-a-scorebook-the-gam",
+  "slug": "keep-a-scorebook-the-game-after-the-game",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Keep a scorebook: the game after the game",
+  "description": "The notebook in the picture is where games go to be understood. A scorebook — moves, scores, dates, one honest line about what happened — turns matches you played into lessons you keep.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "A child writing in a notebook",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "notebooks",
+    "games",
+    "records"
+  ],
+  "sources": [
+    {
+      "title": "Scorebook | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Scorebook",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "One page per game",
+      "paragraphs": [
+        "Give every game a page: the date, the players, the result, and the turning point in a single sentence. Chess players write the moves themselves; for any other game, the score by rounds and one line — 'lost the lead at the market card' — is enough.",
+        "The turning-point line is the treasure. Scores tell you who won; the turning point tells you why, and the why is the only part you can practise."
+      ]
+    },
+    {
+      "heading": "Read it monthly",
+      "paragraphs": [
+        "Once a month, read the scorebook through. Patterns step forward: you always fade in long games, you always win the rematch, one opponent's opening always troubles you. None of that is visible from inside a single game.",
+        "A scorebook also settles the oldest argument in games — who is really ahead between two rivals — with evidence instead of mythology. Keep it kindly: it is a record, not a weapon."
+      ]
+    }
+  ],
+  "takeaway": "One page per game — date, players, result, and the turning point in one sentence — read monthly, turns matches into lessons and rivalry into evidence.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

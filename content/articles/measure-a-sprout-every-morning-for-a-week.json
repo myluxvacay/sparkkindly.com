@@ -1,0 +1,72 @@
+{
+  "id": "grow-draft-2026-11-28-measure-a-sprout-every-m",
+  "slug": "measure-a-sprout-every-morning-for-a-week",
+  "brand": "grow",
+  "contentType": "activity",
+  "title": "Measure a sprout every morning for a week",
+  "description": "A sprout on a windowsill grows whether you watch or not — but measure it every morning and the week turns into a chart, a race and a small lesson in how living things actually grow: in spurts.",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/plants.webp",
+    "alt": "Young green sprouts growing from soil",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "plants",
+    "measuring",
+    "growing"
+  ],
+  "sources": [
+    {
+      "title": "Sprouting | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sprouting",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Set up the race",
+      "paragraphs": [
+        "Plant fast seeds — beans or cress — in a clear cup against damp paper or soil, so roots show as well as shoots. Mark day one with a ruler photograph: seed, date, and the height of anything green, even if the honest answer is zero.",
+        "Measure at the same time each morning, from the soil line to the tip of the tallest leaf, and write the number in a table before you water. Same time, same method — that is what makes it science rather than impressions."
+      ]
+    },
+    {
+      "heading": "Read the week's story",
+      "paragraphs": [
+        "Most sprouts do nothing, then leap. Growth comes in spurts tied to water, warmth and light, and your chart will show flat days and sudden jumps rather than a smooth staircase.",
+        "At week's end, graph the numbers: days across, height up. You have grown two things — a plant, and a record no memory could have kept as honestly."
+      ]
+    }
+  ],
+  "takeaway": "Measure one sprout at the same time every morning for a week and graph it: growth arrives in spurts, and the chart proves what memory would smooth away.",
+  "fiction": false,
+  "materials": [
+    "Fast seeds (beans or cress)",
+    "A clear cup, soil or damp paper",
+    "A ruler",
+    "A notebook for the daily table"
+  ],
+  "supervision": "An adult should supervise planting and watering near windowsills and keep seeds away from very young children who might eat them.",
+  "safetyNotes": [
+    "Use untreated seeds sold for sprouting or planting.",
+    "Wash hands after handling soil.",
+    "Keep the cup where it cannot be knocked into food areas."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

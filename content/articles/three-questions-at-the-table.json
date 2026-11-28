@@ -1,0 +1,60 @@
+{
+  "id": "together-draft-2026-11-28-three-questions-at-the-t",
+  "slug": "three-questions-at-the-table",
+  "brand": "together",
+  "contentType": "article",
+  "title": "Three questions at the table that aren't 'how was your day'",
+  "description": "'How was your day?' earns a one-word answer because it asks for a report. Questions that ask for a moment, a person or a surprise earn stories — and stories are what a family table is for.",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/family.webp",
+    "alt": "A family spending time together outdoors",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "family",
+    "conversation",
+    "meals"
+  ],
+  "sources": [
+    {
+      "title": "Conversation | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Conversation",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Ask for a moment, not a summary",
+      "paragraphs": [
+        "Try: 'What was the funniest thing that happened today?' 'Who did something kind that you noticed?' 'What surprised you?' Each question points at one scene, and a scene can be told. A whole day cannot — which is why the summary question collapses into 'fine'.",
+        "Take turns being the asker, youngest included. The person who asks must also answer someone else's question; a table where only adults interview children becomes an interrogation, not a conversation."
+      ]
+    },
+    {
+      "heading": "Keep a family deck",
+      "paragraphs": [
+        "Write your best questions on cards and keep the deck on the table. Add new ones when a question produces a story worth retelling — those proven questions are family property now.",
+        "Retire questions that flop without ceremony. The deck evolves toward your family's actual humour and history, which is why it will outlast any printed list, including this one."
+      ]
+    }
+  ],
+  "takeaway": "Replace 'how was your day?' with questions that ask for a moment, a kindness or a surprise, take turns asking, and keep the proven ones as a family deck on the table.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

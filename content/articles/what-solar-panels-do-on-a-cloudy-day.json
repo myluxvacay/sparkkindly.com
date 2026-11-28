@@ -1,0 +1,59 @@
+{
+  "id": "save-draft-2026-11-28-what-solar-panels-do-on-",
+  "slug": "what-solar-panels-do-on-a-cloudy-day",
+  "brand": "save",
+  "contentType": "article",
+  "title": "What solar panels do on a cloudy day",
+  "description": "Panels do not switch off when clouds arrive — they fade. On a grey day a solar roof still makes power, just less of it, and knowing roughly how much less turns weather into something you can plan around.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/green.webp",
+    "alt": "Solar panels under a bright sky",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "solar",
+    "energy",
+    "saving"
+  ],
+  "sources": [
+    {
+      "title": "Solar panel | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Solar_panel",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Less light, not no light",
+      "paragraphs": [
+        "Solar panels convert light, not heat or direct sunshine alone. Clouds scatter sunlight but much of it still reaches the ground as diffuse light, and panels keep working on it — typically producing a fraction of their clear-day output rather than zero.",
+        "Thin cloud might cost a fifth of the power; heavy storm cloud can cost most of it. The panel's job is unchanged; the sky is simply turning the dimmer down."
+      ]
+    },
+    {
+      "heading": "Why it matters for saving",
+      "paragraphs": [
+        "Because cloudy output is reduced rather than absent, a household's yearly savings depend on the whole year's weather, not on counting perfect days. Overcast climates still run large, worthwhile solar fleets for exactly this reason.",
+        "If you track a home system, compare months, not days: one grey week is weather, while a season's trend is information about your roof, your usage and your bill."
+      ]
+    }
+  ],
+  "takeaway": "Clouds dim solar panels rather than stopping them: output falls to a fraction on grey days, so judge a solar roof by its year, never by one cloudy week.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

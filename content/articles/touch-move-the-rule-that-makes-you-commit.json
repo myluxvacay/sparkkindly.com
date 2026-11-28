@@ -1,0 +1,59 @@
+{
+  "id": "play-draft-2026-11-28-touch-move-the-rule-that",
+  "slug": "touch-move-the-rule-that-makes-you-commit",
+  "brand": "play",
+  "contentType": "article",
+  "title": "Touch-move: the rule that makes you commit",
+  "description": "In serious chess, if you touch a piece you must move it. Touch-move sounds like etiquette; it is actually a training rule for the mind — it punishes the hover and rewards deciding before you reach.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/games.webp",
+    "alt": "Wooden chess pieces arranged on a chessboard",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chess",
+    "games",
+    "rules"
+  ],
+  "sources": [
+    {
+      "title": "Touch-move rule | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Touch-move_rule",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Touch it, move it",
+      "paragraphs": [
+        "The rule is simple: a player who deliberately touches one of their own pieces must move it if a legal move exists, and a player who touches an opponent's piece must capture it if they can. The only escape is announcing 'I adjust' before touching a piece just to centre it on its square.",
+        "Casual games often waive the rule, and that is fine between friends. But playing a few games with touch-move on changes your habits within an hour: the hand stops wandering over the board auditioning moves."
+      ]
+    },
+    {
+      "heading": "Decide first, reach second",
+      "paragraphs": [
+        "Strong players calculate with their eyes, not their fingers. Touch-move forces that discipline early — you learn to hold a move in your head, check it once more, and only then commit your hand.",
+        "Try it as a house rule for one evening and notice the second effect: games get calmer. No hovering, no take-backs, no arguments — just decisions, owned."
+      ]
+    }
+  ],
+  "takeaway": "Touch-move turns chess into decision training: announce 'I adjust' or commit — calculate with your eyes first and let your hand move only once.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

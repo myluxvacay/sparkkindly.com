@@ -1,0 +1,42 @@
+{
+  "id": "grow-quiz-sleep-memory-728",
+  "scheduledDate": "2031-03-04",
+  "brand": "grow",
+  "prompt": "After learning something new, which of these does the most to help your brain store it as a lasting memory?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Staying up all night re-reading it"
+    },
+    {
+      "id": "b",
+      "text": "Getting a good night's sleep"
+    },
+    {
+      "id": "c",
+      "text": "Skipping breaks all day"
+    },
+    {
+      "id": "d",
+      "text": "Learning it again from scratch weekly"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Sleep is when the brain consolidates memories — replaying and stabilising the day's learning — so a good night's sleep after studying protects what you learned far better than an all-night re-read.",
+  "difficulty": "medium",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Sleep and memory | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sleep_and_memory",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

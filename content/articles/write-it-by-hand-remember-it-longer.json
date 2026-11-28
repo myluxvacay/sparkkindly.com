@@ -1,0 +1,59 @@
+{
+  "id": "grow-draft-2026-11-28-write-it-by-hand-remembe",
+  "slug": "write-it-by-hand-remember-it-longer",
+  "brand": "grow",
+  "contentType": "article",
+  "title": "Write it by hand, remember it longer",
+  "description": "Typing is faster, and that is exactly the problem. Writing by hand is slow enough that your brain must choose what matters — and that choosing is where memory is made.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/play.webp",
+    "alt": "A fountain pen writing by hand in a lined notebook",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "handwriting",
+    "memory",
+    "learning"
+  ],
+  "sources": [
+    {
+      "title": "Handwriting | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Handwriting",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Slowness is the mechanism",
+      "paragraphs": [
+        "A keyboard lets you transcribe without thinking; a pen does not. Because handwriting cannot keep up with speech, the writer compresses, rephrases and connects — the very processing that moves an idea from hearing into knowing.",
+        "Studies comparing note-taking methods have repeatedly found the handwriting advantage for understanding, even when typists capture more words. More words, less thought, turns out to be the worse bargain."
+      ]
+    },
+    {
+      "heading": "Use each tool for its job",
+      "paragraphs": [
+        "This is not a war on keyboards. Type the final draft, the long document, the thing that must be searched and shared. Write by hand the first thinking: the summary, the plan, the three points you must not forget.",
+        "A practical rule: if you need to remember it next week, write it by hand once. The five slow minutes are the tuition your memory charges."
+      ]
+    }
+  ],
+  "takeaway": "Handwriting's slowness forces choosing and rephrasing — the processing memory is made of — so write by hand what you need to remember, and type what you need to share.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

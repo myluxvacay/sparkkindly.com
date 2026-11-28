@@ -1,0 +1,59 @@
+{
+  "id": "together-draft-2026-11-28-one-meal-four-jobs",
+  "slug": "one-meal-four-jobs",
+  "brand": "together",
+  "contentType": "article",
+  "title": "One meal, four jobs",
+  "description": "A family meal cooked by a crew runs on job titles, not on one tired person doing everything. Split any meal into four jobs — planner, shopper, cook, host — and rotate them weekly.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/together.webp",
+    "alt": "People sharing an activity together",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "cooking",
+    "family",
+    "teamwork"
+  ],
+  "sources": [
+    {
+      "title": "Meal | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Meal",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "The four jobs",
+      "paragraphs": [
+        "The planner picks the meal and writes the list. The shopper gathers ingredients and keeps the budget. The cook runs the stove and the timings. The host sets the table, serves, and leads the clearing. Every job is real work, and every job is visible.",
+        "Rotation is the point: the person who only ever washes up never learns the timings, and the person who only ever cooks never sees the cost. A month of rotation gives everyone the full picture of what a meal actually takes."
+      ]
+    },
+    {
+      "heading": "Start smaller than you think",
+      "paragraphs": [
+        "Begin with one crew meal a week and a simple menu. Give the youngest crew member a job with real edges — washing, tearing, timing, tasting — rather than a pretend task; people rise to genuine responsibility and wilt under fake jobs.",
+        "Debrief over the meal itself: what ran late, what was wasted, what to repeat. A kitchen crew that reviews itself gets faster and calmer within a month."
+      ]
+    }
+  ],
+  "takeaway": "Planner, shopper, cook, host — rotate the four jobs weekly and a family meal becomes a crew performance everyone understands, instead of one person's invisible work.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

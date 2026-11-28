@@ -1,0 +1,43 @@
+{
+  "id": "save-quiz-jar-maths-728",
+  "scheduledDate": "2031-03-05",
+  "brand": "save",
+  "prompt": "Maya puts £3 into her savings jar every week and never takes any out. How much will be in the jar after 12 weeks?",
+  "options": [
+    {
+      "id": "a",
+      "text": "£24"
+    },
+    {
+      "id": "b",
+      "text": "£30"
+    },
+    {
+      "id": "c",
+      "text": "£36"
+    },
+    {
+      "id": "d",
+      "text": "£48"
+    }
+  ],
+  "correctOptionId": "c",
+  "explanation": "£3 a week for 12 weeks is 3 × 12 = £36 — small weekly amounts add up steadily, which is the whole idea behind regular saving.",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Saving | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Saving",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

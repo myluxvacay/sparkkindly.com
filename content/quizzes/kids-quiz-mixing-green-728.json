@@ -1,0 +1,52 @@
+{
+  "id": "kids-quiz-mixing-green-728",
+  "scheduledDate": "2031-03-06",
+  "brand": "kids",
+  "prompt": "You are painting a leaf. Which two paint colours can you mix together to make green?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Red and blue"
+    },
+    {
+      "id": "b",
+      "text": "Blue and yellow"
+    },
+    {
+      "id": "c",
+      "text": "Red and yellow"
+    },
+    {
+      "id": "d",
+      "text": "Black and white"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "In paint, blue and yellow are primary colours that mix to make green — the classic colour-mixing rule every painter learns first.",
+  "difficulty": "easy",
+  "ageBands": [
+    "3-5",
+    "6-8"
+  ],
+  "sources": [
+    {
+      "title": "Color mixing | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Color_mixing",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "ageGuidance": "Ages 3-8; a colour-mixing question for young painters, best tried afterwards with real paint and a grown-up.",
+  "materials": [
+    "No materials needed to answer; optional afterwards: blue and yellow paint, paper and a brush"
+  ],
+  "supervision": "A grown-up should supervise any follow-up painting and hand-washing.",
+  "safetyNotes": [
+    "Use child-safe, non-toxic washable paints only.",
+    "Cover clothes and tables before painting; wash hands afterwards."
+  ],
+  "screenFreeExtension": "Mix blue and yellow paint on paper and paint the biggest leaf you can — then try adding a tiny bit more blue or yellow to change the green.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

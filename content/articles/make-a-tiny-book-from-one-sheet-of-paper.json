@@ -1,0 +1,72 @@
+{
+  "id": "kids-draft-2026-11-28-make-a-tiny-book-from-on",
+  "slug": "make-a-tiny-book-from-one-sheet-of-paper",
+  "brand": "kids",
+  "contentType": "activity",
+  "title": "Make a tiny book from one sheet of paper",
+  "description": "One sheet of paper, folded and snipped just once, becomes a real little book with eight pages — small enough to fit in your pocket and big enough for a whole story.",
+  "ageBands": [
+    "6-8",
+    "9-12"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/kids.webp",
+    "alt": "School books with a red apple on top",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "books",
+    "making",
+    "stories"
+  ],
+  "sources": [
+    {
+      "title": "Book | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Book",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Fold, fold, snip",
+      "paragraphs": [
+        "Fold your sheet in half, then in half again, then in half again, pressing every fold flat with your thumbnail. Open it up: you should see eight boxes, like a chocolate bar.",
+        "A grown-up makes one careful snip along the middle fold. Then fold the sheet into a star, push the ends together, and wrap the pages round — suddenly it is a book!"
+      ]
+    },
+    {
+      "heading": "Fill your tiny book",
+      "paragraphs": [
+        "Page one is your cover: a title and a picture. Then one sentence and one drawing per page tells a whole story in seven tiny steps.",
+        "Make a pocket library: a weather book, a joke book, a book of your cat's adventures. Tiny books love company."
+      ]
+    }
+  ],
+  "takeaway": "Fold one sheet, snip once, and you have an eight-page pocket book — one sentence and one drawing per page tells the whole story.",
+  "fiction": false,
+  "ageGuidance": "Ages 6-12; younger children (6-8) need a grown-up for the snip and the tricky fold.",
+  "materials": [
+    "One sheet of A4 or letter paper",
+    "Scissors (grown-up use)",
+    "Pencils or crayons"
+  ],
+  "supervision": "A grown-up must do or closely supervise the single scissor cut and help with the final fold.",
+  "safetyNotes": [
+    "Scissors are for the grown-up or used sitting down with supervision — no walking with scissors.",
+    "Press folds with a thumbnail, not against skin or eyes.",
+    "Keep finished tiny books away from babies, who may chew paper."
+  ],
+  "screenFreeExtension": "Tell the tiny book's story out loud as a play: one page, one scene, with voices for every character.",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

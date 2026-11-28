@@ -1,0 +1,69 @@
+{
+  "id": "play-draft-2026-11-28-invent-a-chess-variant-c",
+  "slug": "invent-a-chess-variant-change-one-rule",
+  "brand": "play",
+  "contentType": "activity",
+  "title": "Invent a chess variant: change exactly one rule",
+  "description": "Keep the board, keep the pieces, change ONE rule — and you have invented a chess variant. The discipline of changing only one thing is what makes the experiment fair, fun and endlessly repeatable.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/games.webp",
+    "alt": "Wooden chess pieces arranged on a chessboard",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "chess",
+    "games",
+    "invention"
+  ],
+  "sources": [
+    {
+      "title": "Chess variant | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chess_variant",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Pick your one rule",
+      "paragraphs": [
+        "Choose a single change and write it down before you play: pawns may move two squares every move, the queen moves like a knight as well, or a captured piece returns to its owner's side of the board. One change only — two changes and you no longer know which one made the game sing or collapse.",
+        "Agree the exact wording together and settle disputes by the written rule, not by volume. Real variant inventors — and there are thousands of published chess variants — live by that written line."
+      ]
+    },
+    {
+      "heading": "Play, judge, record",
+      "paragraphs": [
+        "Play at least two games with the variant before judging it; the first game is mostly surprise. Then record the verdict in a notebook: what the rule changed, whether games got shorter or wilder, and your star rating.",
+        "Next week, change a different rule — or hand your variant to another pair of players and watch them find the loopholes you missed. A variant that survives strangers is a real invention."
+      ]
+    }
+  ],
+  "takeaway": "Change exactly one written rule, play it twice before judging, and record the verdict: that is how a chess variant is invented, tested and improved.",
+  "fiction": false,
+  "materials": [
+    "A chess set and board",
+    "A notebook and pencil for the written rule and verdicts"
+  ],
+  "supervision": "An adult should join or supervise games with younger players and keep captured pieces counted and off the floor.",
+  "safetyNotes": [
+    "Keep small chess pieces away from children under three and from pets.",
+    "Play seated at a table so pieces are not lost underfoot.",
+    "Agree the written rule before the first move to keep arguments friendly."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

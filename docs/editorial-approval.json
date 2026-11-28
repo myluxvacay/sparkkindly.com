@@ -52194,6 +52194,228 @@
         "factualClaimsReviewedAt": "2026-11-27",
         "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
       }
+    },
+    {
+      "kind": "quiz",
+      "id": "discover-quiz-stratus-sheet-728",
+      "priorHash": "cc0a9075ebcec7f62a43dfe844492bd3ffb582598bd21b1b116f7cfd91804682",
+      "approvedHash": "b870d9923180a1cdea41a5c20c67aa4410cc0d99084581547e3ced7d555eaa8d",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "grow-quiz-sleep-memory-728",
+      "priorHash": "b2b4a133a62a33ca7d8ff1062329d4b575a1da0ddb4671424aabdaedeca67008",
+      "approvedHash": "f6e5026b2e07553d086643699bc196d3e00ebe85c1fce6300964387284f6e535",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "play-draft-2026-11-28-invent-a-chess-variant-c",
+      "priorHash": "d09852ff151cd5c76642094d41b837e8065f1fb51064bb4a81be162ad41fc375",
+      "approvedHash": "a35b94d9fb0178d863dce9dae7fbf666da7a7863ccffa54eecff31addb3b9e9f",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "play-draft-2026-11-28-keep-a-scorebook-the-gam",
+      "priorHash": "8cb3635081b7898eccfb30f3394b64513908623ba6c624bdf8f9bd489b4a0edb",
+      "approvedHash": "51a763c4ba57b88cb2a20a34c4852eb7ae721741e31de42830cc67578a8371be",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "kids-quiz-mixing-green-728",
+      "priorHash": "2f872aaacc327c9398f19622ab94bbf3cbd996af039bd430419700cff1dd7be2",
+      "approvedHash": "3c3793c250232020f3fe1cc747f420e30683746a85dfff6f0f09badcd56ac02b",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "discover-draft-2026-11-28-make-a-cardboard-telesco",
+      "priorHash": "754dc48d85b6a3bad3cee17eb6d1c2634d536b6daed4f922cf10eb9209df0c15",
+      "approvedHash": "eea95cf399699d54648da66543ae0fdc8f66ad949a63aa26f91cc0fa26ed433d",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "kids-draft-2026-11-28-make-a-tiny-book-from-on",
+      "priorHash": "813670c258194bc0499b0d85898f194da305d7da2757bc4167e57e4cf5829b64",
+      "approvedHash": "d9568b81220f848ae40916a90ba3267000fb600953530d39c86e8ff46f466082",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "grow-draft-2026-11-28-measure-a-sprout-every-m",
+      "priorHash": "a7569bb628d2d180dc8a30e83efca1f531d59a7f23fcf024804e9bfeb5363eef",
+      "approvedHash": "6f1051bce522d6fe94fc552752810407e29354104851391d7c4c13211e5ebb51",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "together-draft-2026-11-28-one-meal-four-jobs",
+      "priorHash": "3922ccb5623e27e5008cfc2619798cbf76a798df6e5c49951a42f1547da57a49",
+      "approvedHash": "8e8b86bc2b3d65d9f9bb2059b3150e5f602a438a42ea0722e667973b68778516",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "play-quiz-pawn-count-728",
+      "priorHash": "d4df031dc1255bf8f572cfd5b248d1799a54cdd543cea2c2942e888459e60e2e",
+      "approvedHash": "339d201d8167331669720ae038df8a700619e949268661c23d3693d038a39163",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "save-draft-2026-11-28-round-up-savings-spare-c",
+      "priorHash": "888a56abf09721c75f6a52966b02aa3a8e83ffd603551c2e5b5078becf1a9ef9",
+      "approvedHash": "41d66fa6590e263a71f8e5ee3a39a030c37c0bc72bd221295dd9fc44ac2af7a3",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "quiz",
+      "id": "save-quiz-jar-maths-728",
+      "priorHash": "872034d81cfde602d63ec4e05119aae877132cb9fa445623e0a6a981422499a9",
+      "approvedHash": "236d630d55cbe0611ad415b9aa220e88559cd6408da6e7189a330ed9b8120ce5",
+      "fields": {
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "together-draft-2026-11-28-three-questions-at-the-t",
+      "priorHash": "0d580f09a9d8440e17f22e246ade7f89aa63c36413f8f3b75649703daf0794b5",
+      "approvedHash": "8192eb17a4a3f70f1338bc992ad593ff09e828d23ee9d4289406dc297b2aa5fa",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "play-draft-2026-11-28-touch-move-the-rule-that",
+      "priorHash": "05b6640a54d5c158563cf83f77e4a51137a85753999dd84680503f2b9893d2c7",
+      "approvedHash": "24481591a372ee42305cee2c5f38e502e05e20fed3b9c6ef61fc9d92a1d6403e",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "save-draft-2026-11-28-what-solar-panels-do-on-",
+      "priorHash": "ddfa7f659da119db8c03d2442b2bcb50ad65bc6ed76a47d7cdc8685287197d5a",
+      "approvedHash": "a05906cf11f106b1ed73a73763cc572c80bea2ff3c8db2b78527cc95ca6b0d30",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
+    },
+    {
+      "kind": "article",
+      "id": "grow-draft-2026-11-28-write-it-by-hand-remembe",
+      "priorHash": "77b11f828b17d13e699ec48b671406f2820a386a44fa206702a851400cad6271",
+      "approvedHash": "a7ee88ec592c3694020814f8c2739f1636b35aa809681e26fee04193fcf50ffc",
+      "fields": {
+        "publishedAt": "2026-11-28",
+        "reviewStatus": "approved",
+        "reviewer": "SparkKindly reviewer agent",
+        "reviewedAt": "2026-11-28",
+        "hero": {
+          "src": "/images/play.webp",
+          "alt": "A fountain pen writing by hand in a lined notebook",
+          "width": 1200,
+          "height": 800,
+          "credit": "Development reference photograph · Unsplash",
+          "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+        },
+        "factualClaimsReviewedAt": "2026-11-28",
+        "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+      }
     }
   ]
 }

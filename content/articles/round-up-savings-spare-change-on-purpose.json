@@ -1,0 +1,59 @@
+{
+  "id": "save-draft-2026-11-28-round-up-savings-spare-c",
+  "slug": "round-up-savings-spare-change-on-purpose",
+  "brand": "save",
+  "contentType": "article",
+  "title": "Round-up savings: spare change, on purpose",
+  "description": "The piggy bank used to fill itself with whatever coins a pocket surrendered. Round-up savings is the digital version: every purchase rounds up to the next pound or dollar, and the difference quietly moves into savings.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/money.webp",
+    "alt": "A pink piggy bank for saving coins",
+    "width": 1200,
+    "height": 800,
+    "credit": "Development reference photograph · Unsplash",
+    "rights": "Reference use; provenance and final image approval pending; see public/images/manifest.json"
+  },
+  "tags": [
+    "saving",
+    "apps",
+    "habits"
+  ],
+  "sources": [
+    {
+      "title": "Saving | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Saving",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Small change, serious totals",
+      "paragraphs": [
+        "A coffee at 3.60 rounds to 4.00 and saves 0.40. Trivial once — but a household makes hundreds of small purchases a month, and the round-ups typically gather into a sum that surprises people at year's end.",
+        "The trick works because the amounts sit below the pain threshold. Nobody budgets around forty pence; everybody benefits when forty pences gather somewhere useful instead of evaporating."
+      ]
+    },
+    {
+      "heading": "Do it with or without an app",
+      "paragraphs": [
+        "Many banks and savings apps offer automatic round-ups into a separate pot. Without one, the cash version still works: empty your pockets into the piggy bank nightly, and sweep notes' worth of coins into a real account monthly so the habit has a total.",
+        "One caution: round-ups are a savings starter, not a savings plan. Once the pot proves the habit, graduate to a fixed amount on payday as well — the spare change opened the door; walk through it."
+      ]
+    }
+  ],
+  "takeaway": "Round every purchase up and sweep the difference into savings: painless forty-pence pieces gather into real money — then graduate to a fixed payday amount too.",
+  "fiction": false,
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

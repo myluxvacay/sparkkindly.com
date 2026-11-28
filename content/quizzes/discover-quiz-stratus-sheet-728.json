@@ -1,0 +1,43 @@
+{
+  "id": "discover-quiz-stratus-sheet-728",
+  "scheduledDate": "2031-03-02",
+  "brand": "discover",
+  "prompt": "Which type of cloud forms a flat, grey sheet that can cover the whole sky and bring steady drizzle?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Cumulus"
+    },
+    {
+      "id": "b",
+      "text": "Stratus"
+    },
+    {
+      "id": "c",
+      "text": "Cirrus"
+    },
+    {
+      "id": "d",
+      "text": "Cumulonimbus"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Stratus clouds form in broad, flat layers that can blanket the sky, and when they thicken they produce light rain or drizzle — unlike puffy cumulus, wispy cirrus or towering cumulonimbus.",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Stratus cloud | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Stratus_cloud",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

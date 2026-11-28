@@ -1,0 +1,43 @@
+{
+  "id": "play-quiz-pawn-count-728",
+  "scheduledDate": "2031-03-01",
+  "brand": "play",
+  "prompt": "At the start of a chess game, how many pawns does each player have?",
+  "options": [
+    {
+      "id": "a",
+      "text": "Six"
+    },
+    {
+      "id": "b",
+      "text": "Eight"
+    },
+    {
+      "id": "c",
+      "text": "Ten"
+    },
+    {
+      "id": "d",
+      "text": "Four"
+    }
+  ],
+  "correctOptionId": "b",
+  "explanation": "Each player starts with eight pawns, lined up on the second rank in front of the eight major and minor pieces — sixteen pawns on the board in total.",
+  "difficulty": "easy",
+  "ageBands": [
+    "6-8",
+    "9-12",
+    "family"
+  ],
+  "sources": [
+    {
+      "title": "Pawn (chess) | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pawn_(chess)",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}

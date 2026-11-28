@@ -1,0 +1,71 @@
+{
+  "id": "discover-draft-2026-11-28-make-a-cardboard-telesco",
+  "slug": "make-a-cardboard-telescope-and-find-the-moon",
+  "brand": "discover",
+  "contentType": "activity",
+  "title": "Make a cardboard telescope and find the Moon",
+  "description": "The telescope in the picture is cardboard and patience. You can build a simple version from two tubes and two lenses — and its first and best target is hanging in the evening sky.",
+  "ageBands": [
+    "9-12",
+    "family"
+  ],
+  "publishedAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "author": "SparkKindly · AI-assisted",
+  "reviewStatus": "approved",
+  "reviewer": "SparkKindly reviewer agent",
+  "reviewedAt": "2026-11-28",
+  "hero": {
+    "src": "/images/telescope.webp",
+    "alt": "A handmade cardboard telescope by a window at night",
+    "width": 1600,
+    "height": 1067,
+    "credit": "AI-generated image · SparkKindly",
+    "rights": "Generated for SparkKindly; owner-approved for publication on 2026-11-16"
+  },
+  "tags": [
+    "telescopes",
+    "moon",
+    "making"
+  ],
+  "sources": [
+    {
+      "title": "Telescope | Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Telescope",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "factualClaimsReviewedAt": "2026-11-28",
+  "aiDisclosure": "Created with AI assistance as a draft for owner review on 28 November 2026. Not yet reviewed or approved.",
+  "body": [
+    {
+      "heading": "Two lenses, two tubes",
+      "paragraphs": [
+        "A refracting telescope is a long tube with a large lens at the front to gather light and a small eyepiece lens at the back to magnify. Slide one cardboard tube inside another so you can change the length — that sliding is how you focus.",
+        "Lens sets from a craft or science kit are the reliable route; magnifying glasses can work for a first experiment, though the image will be softer. Tape the front lens firmly so it cannot slip and scratch."
+      ]
+    },
+    {
+      "heading": "First light: the Moon",
+      "paragraphs": [
+        "Aim at the Moon on a clear evening — never at the Sun, which can permanently damage eyes even through a homemade tube. Slide the inner tube slowly until the Moon's edge sharpens, and the grey seas and bright highlands appear.",
+        "A homemade telescope will not rival a shop instrument, and that is its lesson: Galileo's telescope was cruder than yours, and it still showed him Jupiter's moons. The instrument matters less than the looking."
+      ]
+    }
+  ],
+  "takeaway": "Two lenses and sliding cardboard tubes make a working telescope: focus it on the Moon — never the Sun — and you are looking with better tools than Galileo had.",
+  "fiction": false,
+  "materials": [
+    "Two cardboard tubes that slide inside each other",
+    "A telescope lens kit or two magnifying lenses",
+    "Strong tape",
+    "A clear evening with a visible Moon"
+  ],
+  "supervision": "An adult must supervise building and use, and must make the never-look-at-the-Sun rule absolute before the telescope is pointed anywhere.",
+  "safetyNotes": [
+    "NEVER point any telescope or lens at the Sun — it can cause permanent eye damage instantly.",
+    "Use the telescope outdoors after dark with an adult present.",
+    "Store lenses covered so they do not gather dust or scratches."
+  ],
+  "reviewNote": "Reviewed and approved by the SparkKindly reviewer agent under the site owner's standing authorization of 16 November 2026 (automated publishing with critical-agent review in place of per-batch owner approval). Checks passed: schema validation, duplicate scan, sources, factual and answer accuracy, safety, hero relevance. This records agent review under owner authorization, not per-item owner approval."
+}
